@@ -1,0 +1,835 @@
+[
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 1,
+    "text": "\\partial_{y}(u^{2})+\\partial_{t}(u)+\\partial_{x}(u)+\\partial_{y}(u^{2}\\cdot \\partial_{x}(u))+\\partial_{x}(u\\cdot \\partial_{x}(u))=0\\\\p(u)=0\\\\(v)(u)=0",
+    "status": "REJECTED",
+    "fit_pass": true,
+    "r2": [
+      0.0210470307142282,
+      -0.04284208218026486,
+      -0.036207315689735786
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          0.008710196593365995,
+          0.06173000763446929,
+          -1.949111664376216,
+          -0.028560508823952495
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "residual_scales": [
+        0.3726028184299478,
+        0.016838329842706546,
+        0.001276530491992007
+      ],
+      "fit_points": 17509,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "error": "Implicit rollout budget exceeded",
+    "seconds": 15.74377703294158
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 2,
+    "text": "\\partial_{t}(u)+\\partial_{x}(u\\cdot u^{3}+\\partial_{x}(u))+\\Delta(v)=0\\\\\\partial_{t}(p)+\\Delta(v)\\cdot u+u+\\Delta(u)+\\Delta(p)+\\partial_{t}(u)=0\\\\\\Delta(v)+\\partial_{t}(u)=0",
+    "status": "REJECTED",
+    "fit_pass": true,
+    "r2": [
+      0.0668524028845131,
+      0.057423188234835276,
+      -7.072560853438326e-05
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          6445.399908334459,
+          239.03788594560896,
+          0.10403015239349957
+        ],
+        [
+          1.0,
+          2.4675967112497417,
+          2.122921720807823e-06,
+          7.2155423757200355e-06,
+          -0.0014348427940001642,
+          -0.8827322565449952
+        ],
+        [
+          1.0,
+          -1.549884331711954e-07
+        ]
+      ],
+      "residual_scales": [
+        98.82170728582489,
+        0.2928578042301453,
+        0.022416364465509847
+      ],
+      "fit_points": 17509,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "error": "Implicit step failed: status=0, normalized residual=0.00437",
+    "seconds": 13.02094011195004
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 6,
+    "text": "u+\\partial_{t}(u)+u+\\Delta(u)+u+\\Delta(u)+p=0\\\\v^{2}+u^{2}+p+\\partial_{t}(p)=0 \\\\pv^{2}+1+\\partial_{t}(u)+v+u^{2}=0",
+    "status": "REJECTED",
+    "fit_pass": true,
+    "r2": [
+      0.0002895476557113197,
+      0.11920771509335504,
+      0.0034850970175374085
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          8.258222613087294e-07,
+          0.0005386375088372423,
+          0.0057265828213650515
+        ],
+        [
+          1.0,
+          -10.939175999999032,
+          22.735155571434706,
+          0.3284248797542498
+        ],
+        [
+          1.0,
+          3.229135428821443,
+          -0.00014789616263941258,
+          0.14007008222438672,
+          0.049278334465668976
+        ]
+      ],
+      "residual_scales": [
+        0.022416364465509847,
+        0.2928578042301453,
+        0.022416364465509847
+      ],
+      "fit_points": 17509,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "error": "Implicit Jacobian solve is unreliable under the probe budget",
+    "seconds": 1.8322151005268097
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 9,
+    "text": "\\Delta(u)+\\partial_{t}(u)=0\\\\v+u\\cdot v+\\nabla\\cdot(\\nabla(p)\\cdot u)+\\Delta(v\\cdot p)+\\partial_{t}(v)+v\\cdot p=0\\\\p+\\partial_{t}(p)=0",
+    "status": "PASS",
+    "fit_pass": true,
+    "r2": [
+      4.3118450852253076e-05,
+      -0.0031570799210158818,
+      0.09773505326683452
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          6.935563262272422e-07
+        ],
+        [
+          1.0,
+          1.9632373590090677e-06,
+          1.7612172739939035e-05,
+          0.49334529051504233,
+          1.511637798455839,
+          -0.15107584596763216
+        ],
+        [
+          1.0,
+          0.3315745511841929
+        ]
+      ],
+      "residual_scales": [
+        0.022416364465509847,
+        0.04291919011362934,
+        0.2928578042301453
+      ],
+      "fit_points": 17509,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "prediction_score": 0.9904836052908601,
+    "diagnostics": {
+      "method": "generic implicit residual / sparse least squares",
+      "boundary": "non-active context and required outer/interface collar frozen at last visible values",
+      "boundary_collar_cells": 1,
+      "temporal": "backward first difference / second difference",
+      "residual_calls": 2780,
+      "seconds": 6.95673949457705,
+      "steps": [
+        {
+          "time": 11.500000000000002,
+          "normalized_residual": 2.22828748650963e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.505,
+          "normalized_residual": 2.2585141527768174e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.510000000000002,
+          "normalized_residual": 2.2873527178880387e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.515,
+          "normalized_residual": 2.317670365389601e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.520000000000001,
+          "normalized_residual": 2.346749948942084e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.525,
+          "normalized_residual": 2.375891930564996e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.530000000000001,
+          "normalized_residual": 2.407323319750839e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.535,
+          "normalized_residual": 2.437929017811799e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.540000000000001,
+          "normalized_residual": 2.470179576591051e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.545000000000002,
+          "normalized_residual": 2.502675013153858e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.55,
+          "normalized_residual": 2.535863747336697e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.555000000000001,
+          "normalized_residual": 2.570003198491552e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.56,
+          "normalized_residual": 2.607109757220052e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.565000000000001,
+          "normalized_residual": 2.644172517536701e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.57,
+          "normalized_residual": 2.6828791074803724e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.575000000000001,
+          "normalized_residual": 2.7246351669010186e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.58,
+          "normalized_residual": 2.7670757801492733e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.585,
+          "normalized_residual": 2.813026767828318e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.590000000000002,
+          "normalized_residual": 2.860596337038452e-13,
+          "nfev": 3
+        },
+        {
+          "time": 11.595,
+          "normalized_residual": 2.9111656159932886e-13,
+          "nfev": 3
+        }
+      ],
+      "jacobian_check": {
+        "method": "sparse structural rank and linear solve probe",
+        "relative_residual": 1.2226438919013161e-05
+      },
+      "imposed_physical_template": false,
+      "future_fields_read": false
+    },
+    "seconds": 7.2683322206139565
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 18,
+    "text": "\\partial_{t}(u)+u+u^{2}+v+p\\cdot u=0\\\\v=0\\\\u+u\\cdot p+\\Delta(p)+p+u=0",
+    "status": "REJECTED",
+    "fit_pass": true,
+    "r2": [
+      0.0015318525010532547,
+      -0.04658759317989425,
+      0.1754208021212862
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          -0.034870482132276455,
+          0.1045102344414601,
+          -0.006805612859916004,
+          0.024711958216468575
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0,
+          -34019.250078721314,
+          4254.133399922865,
+          812.0800066353409
+        ]
+      ],
+      "residual_scales": [
+        0.022416364465509847,
+        0.023084433450385935,
+        1953.987487828618
+      ],
+      "fit_points": 17509,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "error": "Implicit step failed: status=0, normalized residual=0.0294",
+    "seconds": 11.455870928242803
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 19,
+    "text": "u+u+v\\cdot p+\\Delta(u)+u^{2}+u\\cdot ux^{2}\\cdot u+\\partial_{t}(u)+\\Delta(v)+u^{2}=0\\\\\\partial_{t}(p)+\\Delta(p)+p+u+\\Delta(p\\cdot u)=0\\\\v\\cdot \\partial_{x}(u\\cdot v)=0",
+    "status": "REJECTED",
+    "fit_pass": true,
+    "r2": [
+      0.010320264051558947,
+      0.1378941641357141,
+      -0.0001306148788855488
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          9.47338996109046e-07,
+          4.3670888075818835e-06,
+          14.434889266659683,
+          -0.30432352571856486,
+          0.31268910688485363,
+          -0.022405560233263407
+        ],
+        [
+          1.0,
+          1.2223716636523208e-05,
+          2.4680360135256676e-05,
+          0.3740801610156008,
+          -0.5688217435094522
+        ],
+        [
+          1.0
+        ]
+      ],
+      "residual_scales": [
+        0.022416364465509847,
+        0.2928578042301453,
+        0.0019299430534705341
+      ],
+      "fit_points": 17509,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "error": "Implicit rollout budget exceeded",
+    "seconds": 16.278027461841702
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 22,
+    "text": "u+p\\cdot u+v+\\partial_{x}(v)+\\partial_{x}(\\partial_{x}(u))+\\partial_{t}(u)+\\Delta(v)=0\\\\\\partial_{y}(v^{2})+\\partial_{t}(v)+\\partial_{y}(p\\cdot u)+\\partial_{y}(v^{2})+\\partial_{t}(v)=0\\\\(\\partial_{y}(u)+\\Delta(p)+\\partial_{y}(u)+\\partial_{y}(v^{2})\\cdot u+\\partial_{t}(p)+\\partial_{y}(u)+\\partial_{y}(\\Delta(p)\\cdot \\Delta(p))p^{2})+\\partial_{y}(u)\\cdot u\\cdot \\partial_{x}(u)+\\partial_{t}(v)=0",
+    "status": "REJECTED",
+    "fit_pass": true,
+    "r2": [
+      0.10875189426260023,
+      0.10566827658597788,
+      0.0621990503820824
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          110.51216424056405,
+          -4.883823801643384,
+          0.12189400006191976,
+          -797.9711547910778,
+          98.76798776197076,
+          -11.67603176943416
+        ],
+        [
+          1.0,
+          6.2350270829952805,
+          -4.086680789938194
+        ],
+        [
+          1.0,
+          0.019322504443528333,
+          -0.5736962862274673,
+          3.5574884147772344e-06,
+          9.365281168029735e-12,
+          -28.995034579586143,
+          0.159395345684228
+        ]
+      ],
+      "residual_scales": [
+        97.69580717429707,
+        0.9474609352279746,
+        0.29292267145487544
+      ],
+      "fit_points": 19280,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "error": "Implicit rollout budget exceeded",
+    "seconds": 16.840073918923736
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 24,
+    "text": "\\partial_{y}(3\\cdot u)+\\partial_{x}(u)+\\partial_{t}(u)+\\partial_{y}(u\\cdot \\partial_{x}(u)\\cdot u)=0\\\\pp(\\partial_{t}(u))^{2}+\\partial_{x}(v)=0\\\\\\partial_{x}(p^{2})+\\partial_{y}(u\\cdot \\ln(\\partial_{t}(u))+\\partial_{x}(u^{2}\\cdot \\partial_{x}(u))\\cdot \\partial_{y}(u)\\cdot u)=0",
+    "status": "REJECTED",
+    "error": "Term evaluation failed: Nonfinite or complex term on valid points",
+    "seconds": 0.0720287449657917
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 25,
+    "text": "\\Delta(u)+\\Delta(u\\cdot v)+\\partial_{t}(u)=0\\\\\\partial_{t}(v)+\\Delta(v)+p\\cdot v+\\Delta(p)=0\\\\\\partial_{x}(p^{2})+\\Delta(v)=0",
+    "status": "REJECTED",
+    "fit_pass": true,
+    "r2": [
+      0.01071098327615827,
+      -0.007468363260999977,
+      0.016518989777743798
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          -0.00013964069489637805,
+          6.943032557474469e-07
+        ],
+        [
+          1.0,
+          3.495537664212847e-08,
+          -4.26161404742256e-06,
+          0.5045122296813523
+        ],
+        [
+          1.0,
+          -0.006858910088686685
+        ]
+      ],
+      "residual_scales": [
+        0.022416364465509847,
+        0.04291919011362934,
+        11.129955611696285
+      ],
+      "fit_points": 17509,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "error": "Implicit step failed: status=0, normalized residual=0.017",
+    "seconds": 8.855723932385445
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 27,
+    "text": "\\partial_{t}(u)+u^{2}+\\Delta(u)+v^{2}\\nabla\\cdot(\\nabla(v)\\cdot u)=0\\\\\\partial_{t}(v)+\\Delta(v)+p+u\\cdot v=0\\\\\\Delta(v)+v+\\Delta(p)+u+p^{2}+\\partial_{t}(p)=0",
+    "status": "PASS",
+    "fit_pass": true,
+    "r2": [
+      0.0014476892264111418,
+      0.002180891931026663,
+      0.020363932344199864
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          7.537315823530964e-07,
+          -0.03763843853088346,
+          0.07774945065632564
+        ],
+        [
+          1.0,
+          -6.590525464165003e-07,
+          -2.0527753782389535,
+          0.01555407057580239
+        ],
+        [
+          1.0,
+          4.811469944349306e-07,
+          -4.272027210152895e-05,
+          0.0686705016773955,
+          -0.9731353378588937,
+          -0.11616380451983117
+        ]
+      ],
+      "residual_scales": [
+        0.022416364465509847,
+        0.04291919011362934,
+        0.2928578042301453
+      ],
+      "fit_points": 17509,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "prediction_score": 0.9904718950265912,
+    "diagnostics": {
+      "method": "generic implicit residual / sparse least squares",
+      "boundary": "non-active context and required outer/interface collar frozen at last visible values",
+      "boundary_collar_cells": 1,
+      "temporal": "backward first difference / second difference",
+      "residual_calls": 2780,
+      "seconds": 7.560776527971029,
+      "steps": [
+        {
+          "time": 11.500000000000002,
+          "normalized_residual": 4.7006570905230404e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.505,
+          "normalized_residual": 4.780024630241466e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.510000000000002,
+          "normalized_residual": 4.8601039892056655e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.515,
+          "normalized_residual": 4.9419738047499e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.520000000000001,
+          "normalized_residual": 5.025483741344763e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.525,
+          "normalized_residual": 5.110376025965009e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.530000000000001,
+          "normalized_residual": 5.196076693570552e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.535,
+          "normalized_residual": 5.28315982760631e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.540000000000001,
+          "normalized_residual": 5.371253679019153e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.545000000000002,
+          "normalized_residual": 5.460865435767163e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.55,
+          "normalized_residual": 5.552126715596967e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.555000000000001,
+          "normalized_residual": 5.646917783100454e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.56,
+          "normalized_residual": 5.745585152879667e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.565000000000001,
+          "normalized_residual": 5.851811541681375e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.57,
+          "normalized_residual": 5.965315734825553e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.575000000000001,
+          "normalized_residual": 6.087386182039386e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.58,
+          "normalized_residual": 6.217968383499513e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.585,
+          "normalized_residual": 6.355007488174425e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.590000000000002,
+          "normalized_residual": 6.498190267368173e-12,
+          "nfev": 3
+        },
+        {
+          "time": 11.595,
+          "normalized_residual": 6.645615780757036e-12,
+          "nfev": 3
+        }
+      ],
+      "jacobian_check": {
+        "method": "sparse structural rank and linear solve probe",
+        "relative_residual": 2.359980820142575e-05
+      },
+      "imposed_physical_template": false,
+      "future_fields_read": false
+    },
+    "seconds": 7.856106637045741
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 28,
+    "text": "\\partial_{t}(u)+\\Delta(v)\\cdot u+u\\cdot p\\cdot u+\\partial_{t}(u)=0\\\\u\\cdot u^{2}+p+v+\\Delta(v)+v\\cdot v^{2}+v\\cdot p\\cdot p+\\Delta(v)\\cdot v^{2}\\cdot p\\cdot \\Delta(p)\\cdot p+\\Delta(u)=0\\\\p\\cdot p+\\Delta(p)+p\\cdot p\\cdot p\\cdot p\\cdot p\\cdot v+t\\cdot p+u^{2}\\cdot v+\\partial_{t}(p)+\\partial_{xx}(v^{2}\\cdot u\\cdot v^{2}+\\partial_{t}(p)\\cdot p\\cdot p+p\\cdot p+u\\cdot \\Delta+p\\cdot u+\\Delta(p)+p^{2}+\\Delta(p))+v\\cdot p\\cdot p\\cdot p\\cdot p^{2}+\\partial_{t}(p)\\cdot p^{2}+p\\cdot p\\cdot p+v^{2}\\cdot v^{2}\\cdot (\\partial_{t}(u^{2}\\cdot p+p^{2}+\\Delta^{2}+u+\\partial_{t}(v)+v\\cdot p+\\partial_{t}(p))+\\partial_{t}(p)++v\\cdot p\\cdot p+\\cos(p)\\cdot v+p+u\\cdot p\\cdot u+\\Delta(u)\\cdot p+v\\cdot \\Delta(v))=0",
+    "status": "REJECTED",
+    "fit_pass": true,
+    "r2": [
+      0.0028080353618045173,
+      0.06516502175014027,
+      0.6796312199089836
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          1.0284189403591596e-05,
+          -1.021460162486859
+        ],
+        [
+          1.0,
+          0.11388473647045495,
+          -0.060943688270974294,
+          -1096.3699734476636,
+          237843.0836024763,
+          -447737.80345465685,
+          46.73965421614007,
+          291.93585079318865
+        ],
+        [
+          1.0,
+          2211.710744891979,
+          -170.81231619257449,
+          -5148330109.038803,
+          -32970.023528132464,
+          -2662767.718872132,
+          15787.900803044362,
+          652613318978.4625,
+          3984499964209.311,
+          1465.9610750278418,
+          -1028266697158597.9,
+          27676535944059.06,
+          5580365931410.631,
+          271811643.3963474,
+          3492761496261.117,
+          50329852684335.04,
+          -31931356970.26508,
+          245812905112.3052,
+          210138255619498.56,
+          6455470335.779024,
+          -2807623643981558.5,
+          -59584401009.69579,
+          -7989642089965.918,
+          -4317120.979211703,
+          48843690.04825701,
+          209983944.8597565
+        ]
+      ],
+      "residual_scales": [
+        0.02291483867819197,
+        313.6272555049914,
+        154430407.42556533
+      ],
+      "fit_points": 19280,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "error": "Implicit rollout budget exceeded",
+    "seconds": 23.35215768776834
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 29,
+    "text": "u=0\\\\\\partial_{t}(p)+p+\\Delta(u)+u+\\partial_{t}(u)+\\nabla\\cdot(\\nabla(u))+\\partial_{t}(v)=0\\\\v+p+v+\\partial_{t}(v)\\cdot u+u=0",
+    "status": "REJECTED",
+    "error": "Rank-deficient coefficient regression",
+    "seconds": 0.020706171169877052
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 30,
+    "text": "\\partial_{t}(v)+\\Delta(u)+u^+\\partial_{t}(u)+\\Delta(u)=0\\\\\\partial_{t}(p)+\\Delta(v)=0\\\\\\partial_{t}(u)+\\Delta(p)+\\Delta(p)=0",
+    "status": "REJECTED",
+    "error": "Term evaluation failed: Nonfinite or complex term on valid points",
+    "seconds": 0.01610109582543373
+  },
+  {
+    "split": "622",
+    "vocab": 128,
+    "index": 31,
+    "text": "u^{2}+u+\\Delta(u)+\\nabla\\cdot(\\nabla(p)\\cdot u)+\\nabla\\cdot(\\nabla(p)\\cdot u)+p+u=0\\\\\\Delta(v)+v+\\Delta(v)\\cdot v=0  \\\\pu+v\\cdot u+v\\cdot v+v\\cdot p(u)+1+\\partial_{t}(p)\\cdot u+u\\cdot v=0",
+    "status": "REJECTED",
+    "fit_pass": true,
+    "r2": [
+      0.2013184824907106,
+      0.16496616167668376,
+      0.18961540870666638
+    ],
+    "coefficients": {
+      "rows": [
+        [
+          1.0,
+          0.07076782273615076,
+          14971.73714792199,
+          129.2026126399434,
+          -856.8008426559788
+        ],
+        [
+          1.0,
+          -1.879895401784824,
+          4067.3980203329343
+        ],
+        [
+          1.0,
+          0.3176790192030867,
+          13.017774457499245,
+          2.730904666373029,
+          -0.0032080935051922717,
+          1.8567001386284372
+        ]
+      ],
+      "residual_scales": [
+        94.18833025807152,
+        242.40391747405818,
+        0.017137147883397506
+      ],
+      "fit_points": 17509,
+      "source": "visible history only",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "anchor_coefficients": 1.0
+    },
+    "error": "Implicit rollout budget exceeded",
+    "seconds": 16.123559080064297
+  }
+]

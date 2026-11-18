@@ -1,0 +1,13 @@
+TEXT v\cdot p+u+\Delta(u)+\partial_{t}(v)=0\\\Delta\Delta(u)+u+\partial_{t}(u)=0\\\partial_{t}(p)+\nabla\cdot(\nabla(v)\cdot u)+\partial_{t}(v)=0
+STAGE compile_term ('d', ('v', 'v'), 't')
+STAGE compile_term ('lap', ('v', 'u'), 1)
+STAGE compile_term ('mul', ('v', 'p'), ('v', 'v'))
+STAGE compile_term ('v', 'u')
+STAGE compile_term ('d', ('v', 'u'), 't')
+STAGE compile_term ('lap', ('lap', ('v', 'u'), 1), 1)
+STAGE compile_term ('v', 'u')
+STAGE compile_term ('d', ('v', 'p'), 't')
+STAGE compile_term ('d', ('v', 'v'), 't')
+STAGE compile_term ('divergence', ('mul', ('grad', ('v', 'v')), ('v', 'u')))
+STAGE equivalence_key
+PASS (4, 3, 3)

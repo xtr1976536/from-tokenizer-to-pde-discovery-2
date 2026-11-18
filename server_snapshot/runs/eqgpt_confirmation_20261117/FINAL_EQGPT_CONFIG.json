@@ -1,0 +1,173 @@
+{
+  "status": "FINAL_RECOMMENDED_AFTER_87_RUN_REVIEW",
+  "method": "eqgpt_reference",
+  "scope": "stage1 pretraining only",
+  "cohorts": [
+    {
+      "scale": 212,
+      "split": "811",
+      "learning_rate": 0.0001,
+      "weight_decay_matrix": 0.001,
+      "cosine_epochs": 20
+    },
+    {
+      "scale": 212,
+      "split": "622",
+      "learning_rate": 5e-05,
+      "weight_decay_matrix": 0.001,
+      "cosine_epochs": 20
+    },
+    {
+      "scale": 636,
+      "split": "811",
+      "learning_rate": 5e-05,
+      "weight_decay_matrix": 0.0,
+      "cosine_epochs": 20
+    },
+    {
+      "scale": 636,
+      "split": "622",
+      "learning_rate": 0.0001,
+      "weight_decay_matrix": 0.001,
+      "cosine_epochs": 25
+    }
+  ],
+  "common": {
+    "optimizer": "Adam",
+    "layers": 6,
+    "batch_size": 128,
+    "gradient_clip": 1.0,
+    "minimum_learning_rate": 1e-06,
+    "minimum_completed_epochs": 30,
+    "patience": 15,
+    "min_delta": 0.0001,
+    "maximum_epochs": 80
+  },
+  "l2_scope": "parameters ndim>=2 only; bias and other1D excluded",
+  "schedule": "step after completing epochs1..T; use eta_min from epochT+1 and hold",
+  "checkpoint": "save any strict improvement in validation CE; reset patience only if loss improves beyond effective-reference minus1e-4",
+  "data": "original GRE encoding; frozen grouped811/622 split; train-only optimization;32 commutative variants per source for train/validation; test unused",
+  "seed_repeats": [
+    525,
+    526,
+    527
+  ],
+  "positions": 72,
+  "selection_note": "636/622 T25 is stability-efficiency compromise; T30 has0.030% lower mean CE; no significant-equivalence claim",
+  "limits": [
+    "not a global hyperparameter optimum",
+    "old-strategy comparison paired only at525",
+    "212/622 gain is small and generalization gap remains",
+    "no downstream EqGPT recovery evaluated"
+  ],
+  "selected_model_records": [
+    {
+      "scale": 212,
+      "split": "811",
+      "seed": 525,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_tuning_20261117/jobs/212-811-eqgpt-t20-lr0.0001-l20.001-seed525",
+      "checkpoint": "best.pt",
+      "best_epoch": 17,
+      "best_validation_ce": 1.639090779622396
+    },
+    {
+      "scale": 212,
+      "split": "811",
+      "seed": 526,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_confirmation_20261117/jobs/212-811-eqgpt-selected-seed526",
+      "checkpoint": "best.pt",
+      "best_epoch": 17,
+      "best_validation_ce": 1.6427881622314453
+    },
+    {
+      "scale": 212,
+      "split": "811",
+      "seed": 527,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_confirmation_20261117/jobs/212-811-eqgpt-selected-seed527",
+      "checkpoint": "best.pt",
+      "best_epoch": 17,
+      "best_validation_ce": 1.64910036722819
+    },
+    {
+      "scale": 212,
+      "split": "622",
+      "seed": 525,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_tuning_20261117/jobs/212-622-eqgpt-t20-lr5e-05-l20.001-seed525",
+      "checkpoint": "best.pt",
+      "best_epoch": 21,
+      "best_validation_ce": 1.8764734268188477
+    },
+    {
+      "scale": 212,
+      "split": "622",
+      "seed": 526,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_confirmation_20261117/jobs/212-622-eqgpt-selected-seed526",
+      "checkpoint": "best.pt",
+      "best_epoch": 21,
+      "best_validation_ce": 1.88408916823718
+    },
+    {
+      "scale": 212,
+      "split": "622",
+      "seed": 527,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_confirmation_20261117/jobs/212-622-eqgpt-selected-seed527",
+      "checkpoint": "best.pt",
+      "best_epoch": 21,
+      "best_validation_ce": 1.8633571936159719
+    },
+    {
+      "scale": 636,
+      "split": "811",
+      "seed": 525,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_tuning_20261117/jobs/636-811-eqgpt-t20-lr5e-05-l20-seed525",
+      "checkpoint": "best.pt",
+      "best_epoch": 21,
+      "best_validation_ce": 1.5290771922709778
+    },
+    {
+      "scale": 636,
+      "split": "811",
+      "seed": 526,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_confirmation_20261117/jobs/636-811-eqgpt-selected-seed526",
+      "checkpoint": "best.pt",
+      "best_epoch": 21,
+      "best_validation_ce": 1.5393751156256066
+    },
+    {
+      "scale": 636,
+      "split": "811",
+      "seed": 527,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_confirmation_20261117/jobs/636-811-eqgpt-selected-seed527",
+      "checkpoint": "best.pt",
+      "best_epoch": 21,
+      "best_validation_ce": 1.5388882737722456
+    },
+    {
+      "scale": 636,
+      "split": "622",
+      "seed": 525,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_tuning_20261117/jobs/636-622-eqgpt-t25-lr0.0001-l20.001-seed525",
+      "checkpoint": "best.pt",
+      "best_epoch": 27,
+      "best_validation_ce": 1.5830305731491383
+    },
+    {
+      "scale": 636,
+      "split": "622",
+      "seed": 526,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_confirmation_20261117/jobs/636-622-eqgpt-alternateT25-seed526",
+      "checkpoint": "best.pt",
+      "best_epoch": 26,
+      "best_validation_ce": 1.5868265483567123
+    },
+    {
+      "scale": 636,
+      "split": "622",
+      "seed": 527,
+      "directory": "/data1/users/liugang/src/eq-bpe/project/runs/eqgpt_confirmation_20261117/jobs/636-622-eqgpt-alternateT25-seed527",
+      "checkpoint": "best.pt",
+      "best_epoch": 26,
+      "best_validation_ce": 1.5808750906458227
+    }
+  ]
+}

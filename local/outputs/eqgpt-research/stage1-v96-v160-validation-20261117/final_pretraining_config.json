@@ -1,0 +1,48 @@
+{
+  "status": "RECOMMENDED_FINAL_SHARED_PRETRAINING_CONFIG_AFTER_V96_V128_V160_REVIEW",
+  "vocabularies": [
+    96,
+    128,
+    160
+  ],
+  "splits": [
+    "811",
+    "622"
+  ],
+  "seeds": [
+    525,
+    526,
+    527
+  ],
+  "scale_settings": {
+    "212": {
+      "learning_rate": 0.0001,
+      "weight_decay_matrix": 0.001
+    },
+    "636": {
+      "learning_rate": 5e-05,
+      "weight_decay_matrix": 0.0
+    }
+  },
+  "common": {
+    "optimizer": "Adam",
+    "layers": 6,
+    "batch_size": 128,
+    "gradient_clip": 1.0,
+    "cosine_epochs": 20,
+    "minimum_learning_rate": 1e-06,
+    "minimum_completed_epochs": 30,
+    "patience": 15,
+    "min_delta": 0.0001,
+    "maximum_epochs": 80
+  },
+  "schedule": "step after completed epoch through epoch20; hold1e-6 from epoch21",
+  "selection": "save true minimum validation CE checkpoint; reset patience only after effective improvement",
+  "positions": "at least72, 636/811/v96 uses73 to avoid truncation",
+  "limitations": [
+    "shared strategy validated, not per-vocabulary global hyperparameter optimum",
+    "old-strategy controls paired only at525",
+    "212/622 generalization gap remains",
+    "no PDE downstream or test data evaluated"
+  ]
+}

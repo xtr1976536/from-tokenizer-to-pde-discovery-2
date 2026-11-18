@@ -1,0 +1,11 @@
+TEXT v=0\\p+v+v^{3}+\Delta(v)+\partial_{t}(v)=0\\u+\partial_{t}(p)=0
+STAGE compile_term ('v', 'v')
+STAGE compile_term ('d', ('v', 'v'), 't')
+STAGE compile_term ('lap', ('v', 'v'), 1)
+STAGE compile_term ('pow', ('v', 'v'), ('n', 3))
+STAGE compile_term ('v', 'p')
+STAGE compile_term ('v', 'v')
+STAGE compile_term ('d', ('v', 'p'), 't')
+STAGE compile_term ('v', 'u')
+STAGE equivalence_key
+PASS (1, 5, 2)

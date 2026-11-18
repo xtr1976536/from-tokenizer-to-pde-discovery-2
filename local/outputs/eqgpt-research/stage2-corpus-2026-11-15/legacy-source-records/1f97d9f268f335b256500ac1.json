@@ -1,0 +1,131 @@
+{
+  "broad_family": "inhomogeneous_nonlinear_elliptic",
+  "context_checked": true,
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "1",
+      "1",
+      "2",
+      "1",
+      "-1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "x**2*Derivative(u(x, y, z, t), (x, 2)) + 2*x*Derivative(u(x, y, z, t), x) + y*Derivative(u(x, y, z, t), (y, 2)) - sinh(u(x, y, z, t)) + Derivative(u(x, y, z, t), y)",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      32,
+      2,
+      9,
+      3,
+      35,
+      2,
+      8,
+      3,
+      22,
+      2,
+      23,
+      3,
+      34,
+      2,
+      30,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "uy",
+      "+",
+      "uxx",
+      "*",
+      "x^2",
+      "+",
+      "ux",
+      "*",
+      "x",
+      "+",
+      "uyy",
+      "*",
+      "y",
+      "+",
+      "sinh(u)",
+      "E"
+    ],
+    "normalized_latex": "(u_{y})+(u_{xx})\\cdot ({x}^{2})+(u_{x})\\cdot (x)+(u_{yy})\\cdot (y)+(\\sinh{u})=0",
+    "reconstructed_support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(1)))",
+      "Mul(Pow(Symbol('x'), Integer(2)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2))))",
+      "Mul(Symbol('x'), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(1))))",
+      "Mul(Symbol('y'), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2))))",
+      "sinh(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')))"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(1)))",
+      "Mul(Pow(Symbol('x'), Integer(2)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2))))",
+      "Mul(Symbol('x'), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(1))))",
+      "Mul(Symbol('y'), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2))))",
+      "sinh(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')))"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "family": "inhomogeneous_nonlinear_elliptic",
+  "gre_ids": [
+    5,
+    32,
+    2,
+    9,
+    3,
+    35,
+    2,
+    8,
+    3,
+    22,
+    2,
+    23,
+    3,
+    34,
+    2,
+    30,
+    1
+  ],
+  "latex_origin": "declared_function_representative_not_literal_published_instance",
+  "normalized_latex": "(u_{y})+(u_{xx})\\cdot ({x}^{2})+(u_{x})\\cdot (x)+(u_{yy})\\cdot (y)+(\\sinh{u})=0",
+  "original_latex": "\\partial_x(x^{2}u_x)+\\partial_y(y^{1}u_y)=(\\sinh(u))",
+  "parameters": {
+    "a": 1,
+    "b": 1,
+    "f": "\\sinh(u)",
+    "m": 1,
+    "n": 2
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [
+    "x>0,y>0,u>0 where roots or inverse powers appear",
+    "All displayed scalar constants fixed nonzero1 unless specified; no source terms removed"
+  ],
+  "source_file": "data/formulas/diverse_pde_v4/sources/npde3201.pdf",
+  "source_group": "eqworld:npde3201",
+  "source_id": "balanced636:1f97d9f268f335b256500ac1",
+  "source_kind": "source_class_review_candidate",
+  "source_location": "first governing equation; function choices explicitly declared",
+  "source_sha256": "6135c0cf1ab752ea908c20ff05fc2fbb0e9f796adc56a9fa608a0569318b41f8",
+  "source_template_latex": "\\partial_x(a x^n u_x)+\\partial_y(b y^m u_y)=f(u)",
+  "source_transformations": [
+    "source field w -> u",
+    "small named function choice from source-defined class, not independent physical family",
+    "exact derivative expansion independently checked before coefficient stripping"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/npde/npde3201.pdf"
+}

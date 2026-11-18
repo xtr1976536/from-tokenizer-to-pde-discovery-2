@@ -1,0 +1,816 @@
+Exact solitary wave solutionsfor a coupled gKdV-Schrodinger systemby a new ODE reduction method Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Introduction 2 Hamiltonian structure and dimensionless form 2.1 Dimensionless variables 3 Symmetries and conservation laws 3.1 Conservation laws 4 ODE system for phase-modulated travelling waves 4.1 Variational formulation and symmetries 4.2 Reduction to a decoupled second-order ODE 4.3 First integrals from symmetry multi-reduction 4.4 Hodograph transformation to triangular form 5 Abundant solitary wave solutions for nonlinearity powers $p=1,2,3,4$ 5.1 Polynomial solutions of the decoupled ODE 5.2 Classification of solitary wave solutions 5.3 Solutions for $\boldsymbol{p=1}$ 5.4 Solutions for $\boldsymbol{p=2}$ 5.5 Solutions for $\boldsymbol{p=3}$ 5.6 Solutions for $\boldsymbol{p=4}$ 6 Phase-modulated solitary waves 6.1 Features of solitary wave solutions 6.2 Conserved integrals 6.3 Remarks on stability 7 Concluding remarks A Computational remarks B Solution families References License: arXiv.org perpetual non-exclusive license arXiv:2407.00424v2 [nlin.SI] 02 Nov 2024 Exact solitary wave solutions for a coupled gKdV-Schrodinger system by a new ODE reduction method Stephen C. Anco 1 ,
+James Hornick 2 , Sicheng Zhao 3 ,
+Thomas Wolf 1 1 D epartment of Mathematics and Statistics Brock University St. Catharines, Ontario, Canada 2 Department of Mathematics and Statistics McMaster University Hamilton, Ontario, Canada 3 Department of Mathematics and Statistics Queen’s University Kingston, Ontario, Canada Abstract. A new method is developed for finding exact solitary wave solutions of
+a generalized Korteweg-de Vries equation with $p$ -power nonlinearity
+coupled to a linear Schrödinger equation
+arising in many different physical applications.
+This method yields 22 solution families, with $p=1,2,3,4$ .
+No solutions for $p>1$ were known previously in the literature.
+For $p=1$ ,
+four of the solution families contain bright/dark Davydov solitons of the 1st and 2nd kind,
+obtained in recent literature by basic ansatze applied to the ODE system for travelling waves.
+All of the new solution families have interesting features,
+including bright/dark peaks
+with (up to) $p$ symmetric pairs of side peaks in the amplitude
+and a kink profile for the nonlinear part in the phase.
+The present method is fully systematic and involves several novel steps
+which reduce the travelling wave ODE system to a single nonlinear base ODE
+for which all polynomial solutions are found by symbolic computation.
+It is applicable more generally to other coupled nonlinear dispersive wave equations
+as well as to nonlinear ODE systems of generalized Hénon-Heiles form. 1. Introduction A wide class of physical wave propagation phenomena are modeled by
+nonlinear dispersive systems.
+The simplest model that combines dispersion and weak nonlinearity is given by
+the Korteweg-de Vries (KdV) equation $u_{t}+\alpha uu_{x}+\beta u_{xxx}=0$ for uni-directional wave motion $u(t,x)$ ,
+which describes [ 1 , 2 ] surface waves in shallow water,
+internal waves in stratified fluids,
+ion-acoustic waves in plasmas,
+atmospheric Rossby waves,
+compression waves in granular chains,
+deformations of long-chain molecules and anharmonic lattices,
+and numerous other physical applications.
+Higher-order nonlinearities are of physical interest in several of these applications [ 3 , 4 , 5 , 6 ] . In more complex physical systems,
+nonlinear dispersive wave motion is coupled to high-frequency waves,
+as modeled by a linear Schrödinger equation (LS) $i\psi_{t}+\kappa\psi_{xx}=\sigma u\psi$ for $\psi(t,x)$ in which $u(t,x)$ acts as a potential well.
+Physical applications include
+electron propagation coupled to nonlinear ion-acoustic waves in a collisionless plasma [ 7 , 8 ] ,
+resonant interaction of capillary-gravity waves and internal water waves [ 9 ] ,
+electron propagation along deformable molecular chains [ 10 , 11 , 12 ] ,
+and energy transport by electrons in anharmonic lattices [ 13 , 14 ] .
+See Ref. [ 15 , 16 ] for further discussion. This motivates the study of a general coupled gKdV-LS system $\displaystyle u_{t}+\alpha u^{p}u_{x}+\beta u_{xxx}$ $\displaystyle=\gamma(|\psi|^{2})_{x},$ (1.1) $\displaystyle i\psi_{t}+\kappa\psi_{xx}$ $\displaystyle=\sigma u\psi,$ (1.2) where $p>0$ is the nonlinearity power and $\alpha$ is the nonlinearity coefficient, $\beta$ and $\kappa$ are the dispersion coefficients,
+while $\gamma$ and $\sigma$ are the coupling constants.
+All of these parameters are non-zero, real constants.
+Here, $u(t,x)$ is the (real) gKdV field and $\psi$ is the (complex) LS field,
+which respectively describe the wave amplitude or lattice deformation,
+and the electron wave function or envelope of high-frequency waves. One main question is understanding the nature of
+coherent propagating structures in this system, in particular,
+solitary wave solutions of different shapes and subsonic/supersonic speeds.
+Such solutions have the form of phase-modulated travelling waves $u=U(\xi),\quad\psi=e^{-i\omega t}\Psi(\xi),\quad\xi=x-ct,$ (1.3) where $c$ is the wave speed, and $\omega$ is the frequency.
+In physical applications,
+a travelling wave is supersonic if $c>0$ and subsonic if $c<0$ [ 11 , 13 , 16 ] .
+Here $U$ is a real function and $\Psi$ is a complex function,
+which satisfy a coupled nonlinear system of ordinary differential equations (ODEs) $\beta U^{\prime\prime\prime}+(\alpha U^{p}-c)U^{\prime}+\gamma(|\Psi|^{2})^{\prime}=0,\quad\kappa\Psi^{\prime\prime}-ic\Psi^{\prime}+(\sigma U+\omega)\Psi=0.$ (1.4) Solitary wave solutions require that $U$ decays exponentially for large $|\xi|$ to a constant, $b$ ,
+and likewise that $|\Psi|$ has a similar decay. For a KdV nonlinearity, $p=1$ ,
+some exact solutions are known
+which were obtained by use of elementary ODE methods combined with trial ansatze [ 7 , 13 ] and also by the bi-linear ansatz method [ 17 ] ;
+for a mKdV nonlinearity, $p=2$ ,
+only approximate solutions have been found [ 14 ] .
+No work has been done to-date on higher nonlinearities. The primary goal of the present paper is to develop and apply a new general method
+that yields numerous exact families of solitary wave solutions ( 1.3 ).
+In total,
+nine solution families are obtained for $p=1$ ,
+eight families for $p=2$ ,
+four families for $p=3$ ,
+and a single family for $p=4$ .
+All of the solutions are non-singular.
+The gKdV component $U(\xi)$ has • sech-squared profile • bright/dark peak with exponential decay • width $w$ and height/depth $h$ related by $w^{2}h\propto|\alpha|^{\frac{1}{p}}|\beta|^{\frac{1}{p}-2}|\kappa|^{3-\frac{2}{p}}/|\sigma|$ • zero or non-zero (asymptotic) background, $b$ More interestingly,
+the magnitude of the LS component $|\Psi(\xi)|$ has • bright/dark central peak • asymptotic tail which is bright/dark relative to the central peak • in some cases, symmetric pairs of side peaks (up to $p$ in total) while the LS phase $\arg(\Psi(\xi))$ has • a linear part $\frac{c}{2}\xi$ • in some cases, a nonlinear part with a kink profile For $p=2,3,4$ , the solutions are new.
+For $p=1$ , five families are new,
+while the other four families contain the previously known solutions
+in Ref. [ 7 , 13 ] as particular subfamilies.
+Qualitatively novel features are the kink part in the LS phase
+and the presence of multiple symmetric side peaks in the LS amplitude. The new method consists of the following main steps: (1) express the form of the travelling waves as a symmetry-invariant solution
+and obtain first integrals for the ODE system by use of multi-reduction symmetry theory [ 18 ] ; (2) change to polar variables and apply a hodograph transformation that
+leads to a triangular (decoupled) system in which the base ODE has a polynomial form; (3) employ a power-balance technique to determine the general form for polynomial solutions of the base ODE; (4) characterize conditions under which such solutions yield solitary waves; (5) with those conditions, solve an overdetermined algebraic system
+for the coefficients in the polynomial solutions
+along with the power $p$ and the parameters $\alpha,\beta,\gamma,\kappa,\sigma$ in the original gKdV-LS system
+in addition to $c,\omega,b$ in the form of the travelling wave. This algebraic system is nonlinear, with $p$ appearing in exponents,
+and so it is very non-trivial to solve.
+All solutions are found by employing the symbolic computer algebra package Crack [ 24 ] which is able to do non-polynomial case distinctions and splittings systematically.
+There is a further non-trivial aspect, stemming
+from the conditions for a solution to yield a solitary wave.
+Some of these conditions consist of inequalities on the parameters in the solution,
+while each solution has a different subset of the parameters that are free,
+up to reparameterization freedom.
+An optimal choice of free parameters must be found so that
+all of the inequalities can be solved explicitly,
+thereby yielding the allowed kinematic region in parameter space.
+This is carried out by use of Maple,
+which is also used to verify the final simplified explicit form
+for each family of solitary wave solutions. Some additional results are obtained.
+All Lie point symmetries and low-order conservation laws are derived for
+the coupled gKdV-LS system ( 1.1 )–( 1.2 ).
+Through these conservation laws,
+a variational principle for phase-modulated travelling waves ( 1.3 ) is found
+and conserved quantities describing mass, charge, energy, and momentum
+are evaluated for each family of solitary waves.
+The variational principle provides a starting point for analysis of stability of the solitary waves. The present method is applicable more generally to
+other coupled nonlinear dispersive wave equations
+as well as to nonlinear ODE systems of generalized Hénon-Heiles form. The rest of the paper is organized as follows.
+Section 2 discusses the Hamiltonian and Lagrangian formulation of
+the coupled gKdV-LS system ( 1.1 )–( 1.2 ),
+and gives the dimensionless form of this system which is used for subsequent results.
+Section 3 gives the derivation of the Lie point symmetries and low-order conservation laws
+and describes the physical meaning of the conserved quantities.
+Section 4 states the variational principle for phase-modulated travelling waves
+and sets up the first two steps in the new method for finding solitary wave solutions.
+The remaining three steps in this method are carried out in section 5 ,
+and a classification of all of the solution families is provided.
+Section 6 outlines the main features of each family,
+including a few remarks on stability for these solitary wave solutions.
+Finally, some concluding remarks are made in section 7 . Computational steps of the method are given in Appendix A ;
+the output for each case $p=1,2,3,4$ is shown in Appendix B ,
+which also contains the solved inequalities giving the allowed kinematic region in parameter space for each solution family. 2. Hamiltonian structure and dimensionless form The gKdV-LS system ( 1.1 )–( 1.2 )
+has a Hamiltonian structure $\frac{\partial}{\partial t}\begin{pmatrix}u\\
+\psi\end{pmatrix}=\mathcal{D}\begin{pmatrix}\delta H/\delta u\\
+\delta H/\delta\bar{\psi}\end{pmatrix}$ (2.1) in which $\mathcal{D}={\rm diag}(D_{x},-\tfrac{\sigma}{\gamma}i)$ (2.2) is a Hamiltonian operator,
+and $H=\int_{\mathbb{R}}\big(\tfrac{1}{2}\beta u_{x}^{2}-\tfrac{1}{(p+1)(p+2)}\alpha u^{p+2}+(\kappa\gamma/\sigma)|\psi_{x}|^{2}+\gamma u|\psi|^{2}\big)\,dx$ (2.3) is the Hamiltonian functional.
+The associated Poisson bracket is given by $\{F,G\}={\rm Re}\int_{\mathbb{R}}\begin{pmatrix}\delta F/\delta u\\
+\delta F/\delta\bar{\psi}\end{pmatrix}^{\dagger}\mathcal{D}\begin{pmatrix}\delta G/\delta u\\
+\delta G/\delta\bar{\psi}\end{pmatrix}\,dx,$ (2.4) where $F$ and $G$ are arbitrary functionals of $u$ , $\psi$ , $\bar{\psi}$ and their $x$ -derivatives.
+This bracket is skew and satisfies the Jacobi identity
+as a consequence of $\mathcal{D}$ being a Hamiltonian operator,
+as follows from general results in the theory of Hamiltonian PDEs [ 20 ] . A Lagrangian formulation can be obtained via introduction of a potential by $u=\theta_{x}$ .
+The system ( 1.1 )–( 1.2 ) then takes the form $\displaystyle\theta_{tx}+\alpha\theta_{x}^{p}\theta_{xx}+\beta\theta_{xxxx}$ $\displaystyle=\gamma(|\psi|^{2})_{x},$ (2.5) $\displaystyle i\psi_{t}+\kappa\psi_{xx}$ $\displaystyle=\sigma\theta_{x}\psi,$ (2.6) which is readily seen to be the Euler-Lagrange equations of the Lagrangian $L=-\tfrac{1}{2}\theta_{t}\theta_{x}-\tfrac{1}{(p+1)(p+2)}\theta_{x}^{p+2}+\tfrac{1}{2}\beta\theta_{xx}^{2}+\tfrac{1}{2}(\gamma/\sigma)i(\bar{\psi}_{t}\psi-\bar{\psi}\psi_{t})+(\gamma\kappa/\sigma)|\psi_{x}|^{2}+\gamma\theta_{x}|\psi|^{2}.$ (2.7) Specifically, $\delta L/\delta\theta=\theta_{tx}+\alpha\theta_{x}^{p}\theta_{xx}+\beta\theta_{xxxx}-\gamma(|\psi|^{2})_{x}$ and $i(\sigma/\gamma)\delta L/\delta\bar{\psi}=i\psi_{t}+\kappa\psi_{xx}-\sigma\theta_{x}\psi$ . 2.1. Dimensionless variables It will be convenient to work in dimensionless variables,
+whereby the number of constants in the system ( 1.1 )–( 1.2 )
+is reduced from five to one. Proposition 1 . The dimensionless form of the gKdV-LS system ( 1.1 )–( 1.2 )
+is given by $\displaystyle u_{t}+s_{1}u^{p}u_{x}+u_{xxx}+s_{2}(|\psi|^{2})_{x}=0,$ (2.8) $\displaystyle i\psi_{t}+\psi_{xx}+ku\psi=0,$ (2.9) where $s_{1}=\begin{cases}1,&p=\text{ odd }\\
+{\rm sgn}(\alpha){\rm sgn}(\beta),&p=\text{ even }\end{cases},\quad s_{2}=\begin{cases}-{\rm sgn}(\alpha){\rm sgn}(\gamma),&p=\text{ odd }\\
+1,&p=\text{ even }\end{cases}$ (2.10) and $k=s_{2}\;{\rm sgn}(\beta){\rm sgn}(\gamma){\rm sgn}(\kappa)\sigma|\beta|^{2-1/p}|\alpha|^{-1/p}/|\kappa|^{3-2/p}.$ (2.11) The transformation to this form is given by $\begin{gathered}\lambda_{1}=\beta/\kappa,\quad\lambda_{2}=\beta^{2}/\kappa^{3},\quad|\lambda_{3}|=(\kappa^{2}/|\alpha\beta|)^{1/p},\quad\lambda_{4}=\sqrt{(\kappa^{2}/|\beta|)^{1+1/p}/(|\alpha|^{1/p}|\gamma|)},\\
+{\rm sgn}(\lambda_{3})=\begin{cases}{\rm sgn}(\alpha){\rm sgn}(\beta),&p\text{ is odd}\\
+-{\rm sgn}(\beta){\rm sgn}(\gamma),&p\text{ is even}\end{cases}.\end{gathered}$ (2.12) Note that the sign $s_{1}$ of the nonlinear convective term in equation ( 2.8 )
+has been chosen to match the conventional form of the gKdV equation.
+The signs $s_{1}$ and $s_{2}$ , along with ${\rm sgn}(k)$ , control the sign properties of the Hamiltonian,
+as discussed in subsection 3.1 . Proof. Consider the general transformation group $x\to\lambda_{1}x,\quad t\to\lambda_{2}t,\quad u\to\lambda_{3}u,\quad\psi\to\lambda_{4}\psi$ (2.13) where each $\lambda$ is a non-zero parameter.
+The constants in the equations ( 1.1 )–( 1.2 )
+transform as $\begin{gathered}\alpha\to\lambda_{1}^{-1}\lambda_{2}^{\mathstrut}\lambda_{3}^{p}\alpha=\tilde{\alpha},\quad\beta\to\lambda_{1}^{-3}\lambda_{2}^{\mathstrut}\beta=\tilde{\beta},\\
+\gamma\to\lambda_{1}^{-1}\lambda_{2}^{\mathstrut}\lambda_{3}^{-1}\lambda_{4}^{2}\gamma=\tilde{\gamma},\quad\kappa\to\lambda_{1}^{-2}\lambda_{2}^{\mathstrut}\kappa=\tilde{\kappa},\quad\sigma\to\lambda_{2}\lambda_{3}\sigma=\tilde{\sigma}.\end{gathered}$ (2.14) First, scalings, with $\lambda_{i}>0$ ,
+can be used to put $|\tilde{\alpha}|=|\tilde{\beta}|=|\tilde{\gamma}|=|\tilde{\kappa}|=1$ (2.15) via $\lambda_{1}=|\beta|/|\kappa|,\quad\lambda_{2}=\beta^{2}/|\kappa|^{3},\quad\lambda_{3}=(\kappa^{2}/|\alpha\beta|)^{1/p},\quad\lambda_{4}=\sqrt{(\kappa^{2}/|\beta|)^{1+1/p}/(|\alpha|^{1/p}|\gamma|)}.$ (2.16) Next, reflections, with $\lambda_{i}=\pm 1$ ,
+can be used to obtain $\tilde{\alpha}=1\text{ if $p$ is odd},\quad\tilde{\beta}=1,\quad\tilde{\gamma}=1\text{ if $p$ is even},\quad\tilde{\kappa}=1$ (2.17) via $\lambda_{1}={\rm sgn}(\beta){\rm sgn}(\kappa),\quad\lambda_{2}={\rm sgn}(\kappa),\quad\lambda_{3}=\begin{cases}{\rm sgn}(\alpha){\rm sgn}(\beta),&p\text{ is odd}\\
+-{\rm sgn}(\beta){\rm sgn}(\gamma),&p\text{ is even}\end{cases}.$ (2.18) Under these transformations, $\tilde{\sigma}={\rm sgn}(\kappa)\sigma|\alpha|^{-1/p}|\beta|^{2-1/p}|\kappa|^{-3+2/p}{\rm sgn}(\lambda_{3})$ .
+∎ In Ref. [ 13 , 17 ] , which considers only the KdV nonlinearity,
+the coefficients are chosen to be $\alpha=-6$ , $\beta=1$ , $\gamma=-1$ , $\kappa=24/V_{s}$ , $\sigma=24/V_{s}$ ,
+where $V_{s}$ is an arbitrary positive constant.
+This corresponds to the values $s_{1}=1$ , $s_{2}=-1$ , $k=1/6$ for the scaled system ( 2.8 )–( 2.9 ) with $p=1$ . 3. Symmetries and conservation laws The symmetry group of the scaled gKdV-LS system ( 2.8 )–( 2.9 )
+will provide a foundation for the subsequent analysis.
+Generators of continuous point symmetries can be obtained by
+the standard Lie symmetry method [ 20 , 21 ] ,
+which yields the following result. Proposition 2 . (i)
+The continuous symmetries of the gKdV-LS system ( 2.8 )–( 2.9 )
+for general $p\neq 0$ are generated by $\mathbf{X}_{1}=\partial_{t},\quad\mathbf{X}_{2}=\partial_{x},\quad\mathbf{X}_{3}=i\psi\partial_{\psi}-i\bar{\psi}\partial_{\bar{\psi}}.$ (3.1) Respectively, they comprise time-translations, space-translations, and phase rotations, $t\to t+\epsilon_{1},\quad x\to x+\epsilon_{2},\quad\psi\to\exp(i\epsilon_{3})\psi,$ (3.2) where $\epsilon_{1}$ , $\epsilon_{2}$ , $\epsilon_{3}$ $\in{\mathbb{R}}$ are group parameters.
+(ii)
+Additional continuous symmetries arise only for $p=1$ .
+They are generated by $\mathbf{X}_{4}=t\partial_{x}+\partial_{u}+(s_{1}kt+\tfrac{1}{2}x)(i\psi\partial_{\psi}-i\bar{\psi}\partial_{\bar{\psi}}),$ (3.3) which constitutes a Galilean boost $\quad x\to x+\epsilon_{4}t,\quad u\to u+\epsilon_{4},\quad\psi\to\exp\big(i(\epsilon_{4}(kt+\tfrac{1}{2}x)+\epsilon_{4}{}^{2}\tfrac{1}{4}t)\big)\psi$ (3.4) with group parameter $\epsilon_{4}$ $\in{\mathbb{R}}$ . These transformations ( 3.2 ) and ( 3.4 )
+generate, respectively,
+a three-dimensional abelian symmetry group and a four-dimensional non-abelian symmetry group with the commutator structure $[\mathbf{X}_{1},\mathbf{X}_{4}]=\mathbf{X}_{2}+s_{1}k\mathbf{X}_{3},\quad[\mathbf{X}_{2},\mathbf{X}_{4}]=\mathbf{X}_{3}.$ (3.5) The gKdV-LS system ( 2.8 )–( 2.9 ) also possesses
+a discrete point symmetry $t\to-t$ , $x\to-x$ , $\psi\to\bar{\psi}$ ,
+which is a space-time reflection combined with complex conjugation. 3.1. Conservation laws A conservation law is a continuity equation $D_{t}T+D_{x}X=0$ (3.6) that holds for all formal solutions $(u(t,x),\psi(t,x))$ of the gKdV-LS system ( 2.8 )–( 2.9 ),
+where $D_{t}$ and $D_{x}$ denote total derivatives with respect to $t$ and $x$ ,
+which act by the chain rule [ 20 , 21 ] .
+Here $T$ is the conserved density and $X$ is the spatial flux; the pair $(T,X)$ is called the conserved current.
+In general, $T$ and $X$ can be functions of $t$ , $x$ , $u$ , $\psi$ , $\bar{\psi}$ , and $x$ -derivatives of $u$ , $\psi$ , $\bar{\psi}$ ,
+with $t$ -derivatives being eliminated through the equations ( 2.8 ) and ( 2.9 ). Conservation laws in which $T=D_{x}\Theta$ and $X=-D_{t}\Theta$ hold
+for all formal solutions $(u(t,x),\psi(t,x))$ are trivial,
+since the continuity equation reduces to an identity via commutativity of derivatives.
+Trivial conservation laws thus contain no information about solutions.
+Any conservation laws that differ just by a trivial conservation law
+can be viewed as being locally equivalent.
+Consequently,
+only non-trivial conservation laws up to local equivalence are of interest. Any non-trivial conservation law yields a corresponding conserved integral $\int_{\Omega}T\,dx$ which satisfies $\frac{d}{dt}\int_{\Omega}T\,dx=-X|_{\partial\Omega}$ ,
+on any given spatial domain $\Omega\subset{\mathbb{R}}$ of interest.
+Under appropriate boundary conditions posed at $\partial\Omega$ for solutions $(u(t,x),\psi(t,x))$ ,
+the conserved integral will be time-independent.
+In the situation when $\Omega={\mathbb{R}}$ is the real line,
+the necessary boundary conditions take the form of spatial decay conditions on $u(t,x)$ and $|\psi(t,x)|$ as $|x|\to\infty$ , so that the spatial flux $X\to 0$ , whereby $\frac{d}{dt}\int_{\mathbb{R}}T\,dx=0.$ (3.7) Note that the conserved integral $\int_{\mathbb{R}}T\,dx$ is unchanged
+if $T$ is replaced by a locally equivalent conserved density,
+satisfying suitable spatial decay conditions.
+The differential order of a conserved integral will refer to
+the minimum of the differential orders of all conserved densities
+that are locally equivalent to $T$ .
+Conserved integrals of most physical interest typically have a differential order
+that is no higher than the differential order of the Hamiltonian. For the method applied in subsequent sections for deriving
+explicit solutions $(u(t,x),\psi(t,x))$ of the gKdV-LS system ( 2.8 )–( 2.9 ),
+it will be essential to know both the conserved density $T$ and the spatial flux $X$ in a conservation law. The generators of continuous point symmetries can be used to obtain
+conservation laws of the gKdV-LS system ( 2.8 )–( 2.9 )
+through the Hamiltonian version of Noether’s theorem.
+Additional conservation laws arise from the Casimirs of the Hamiltonian structure. Alternatively, conservation laws can be obtained directly by use of the standard multiplier method [ 20 , 21 , 22 , 23 , 24 ] ,
+which does not rely on existence of any variational structure. Both of these methods for finding conservation laws yield the following result. Proposition 3 . For general $p\neq 0$ ,
+all non-trivial conservation laws of the gKdV-LS system ( 2.8 )–( 2.9 )
+with conserved densities of differential order at most $1$ are spanned by the conserved currents $\displaystyle\begin{aligned} T_{1}=u,\quad X_{1}=u_{xx}+s_{1}\tfrac{1}{p+1}u^{p+1}+s_{2}|\psi|^{2};\end{aligned}$ (3.8) $\displaystyle\begin{aligned} T_{2}=\tfrac{1}{2}|\psi|^{2},\quad X_{2}=|\psi|^{2}\arg(\psi)_{x};\end{aligned}$ (3.9) $\displaystyle\begin{aligned} T_{3}&=\tfrac{1}{2}ku^{2}-s_{2}|\psi|^{2}\arg(\psi)_{x},\\
+X_{3}&=k(uu_{xx}-\tfrac{1}{2}u_{x}^{2}+s_{1}\tfrac{1}{p+2}u^{p+2})-s_{2}|\psi_{x}|^{2}+s_{2}|\psi|^{2}\arg(\psi)_{t};\end{aligned}$ (3.10) $\displaystyle\begin{aligned} T_{4}&=\tfrac{1}{2}u_{x}^{2}-s_{1}\tfrac{1}{(p+1)(p+2)}u^{p+2}+(s_{2}/k)|\psi_{x}|^{2}-s_{2}u|\psi|^{2},\\
+X_{4}&=-\tfrac{1}{2}(u_{xx}+s_{1}\tfrac{1}{p+1}u^{p+1}+s_{2}|\psi|^{2})^{2}-u_{t}u_{x}-(s_{2}/k)(\psi_{t}\bar{\psi}_{x}+\psi_{x}\bar{\psi}_{t}).\end{aligned}$ (3.11) Additional conservation laws of differential order at most $1$ arise only for $p=1$ .
+They are spanned by $\displaystyle T_{5}$ $\displaystyle=s_{2}k(\tfrac{1}{2}tu^{2}-s_{1}xu)-t|\psi|^{2}\arg(\psi)_{x}+(s_{1}kt+\tfrac{1}{2}x)|\psi|^{2},$ (3.12) $\displaystyle X_{5}$ $\displaystyle=s_{2}k((tu-s_{1}x)u_{xx}+s_{1}u_{x}-\tfrac{1}{2}tu_{x}^{2}-\tfrac{1}{2}xu^{2}+s_{1}\tfrac{1}{3}tu^{3})-t|\psi_{x}|^{2}-s_{1}kx|\psi|^{2}$ $\displaystyle+t|\psi|^{2}\arg(\psi)_{t}+(s_{1}2kt+x)|\psi|^{2}\arg(\psi)_{x}.$ The corresponding conserved integrals consist of $\displaystyle{M}=\int_{\mathbb{R}}u\,dx\quad\text{mass,}$ (3.13) $\displaystyle{J}=\int_{\mathbb{R}}\tfrac{1}{2}|\psi|^{2}\,dx\quad\text{charge,}$ (3.14) $\displaystyle{P}=\int_{\mathbb{R}}\big(\tfrac{1}{2}u^{2}-s_{2}\tfrac{1}{k}|\psi|^{2}\arg(\psi)_{x}\big)\,dx\quad\text{momentum,}$ (3.15) $\displaystyle{H}=\int_{\mathbb{R}}\big(\tfrac{1}{2}u_{x}^{2}-s_{1}\tfrac{1}{(p+1)(p+2)}u^{p+2}+s_{2}\tfrac{1}{k}|\psi_{x}|^{2}-s_{2}u|\psi|^{2}\big)\,dx\quad\text{(Hamiltonian) energy,}$ (3.16) for $p\neq 0$ ,
+and $\displaystyle{G}=\int_{\mathbb{R}}\big(s_{2}k(\tfrac{1}{2}tu^{2}-s_{1}xu)-t|\psi|^{2}\arg(\psi)_{x}+(s_{1}kt+\tfrac{1}{2}x)|\psi|^{2}\big)\,dx\quad\text{Galilean momentum}$ (3.17) for $p=1$ . With respect to the Hamiltonian structure ( 2.1 )–( 2.2 ),
+mass is a Casimir,
+while charge, momentum, energy, and Galilean momentum
+arise respectively from the
+phase rotation symmetry, space-translation symmetry, time-translation symmetry.
+and Galilean boost symmetry.
+Two remarks on these conserved integrals will be worthwhile. The energy (Hamiltonian) will be non-negative when $s_{1}=-1$ , $s_{2}={\rm sgn}(k)=-{\rm sgn}(u)$ ,
+and otherwise it will have an indefinite sign.
+The sign of $s_{1}$ controls the gKdV portion of the energy,
+while the signs of $s_{2}$ and $k$ control the LS portion.
+When the sign is indefinite,
+conservation of energy does not preclude blow-up of $|u|$ , $|u_{x}|$ , $|\psi|$ , $|\psi_{x}|$ caused by concentration of the energy density, which is referred to as focusing ;
+in contrast, when the sign is non-negative,
+conservation of energy prevents such blow-up, which is referred to as defocusing (see e.g. Ref. [ 25 ] ). The Galilean momentum can be expressed as ${G}=kt(s_{2}{P}+s_{1}{J})-\chi(t)$ where $\chi(t)=\int_{\mathbb{R}}(s_{1}s_{2}ku-\tfrac{1}{2}|\psi|^{2})x\,dx$ is like a center of mass-charge.
+In particular,
+under decay conditions such that ${G}$ , ${P}$ , ${J}$ are conserved integrals, $\chi(t)$ satisfies $\frac{d}{dt}\chi(t)=k(s_{2}{P}+s_{1}{J})$ .
+This implies $\chi(t)=\chi(0)+tV$ , where $V=k(s_{2}{P}+s_{1}{J})$ is the speed
+at which the center of mass-charge moves. 4. ODE system for phase-modulated travelling waves Phase-modulated travelling waves ( 1.3 )
+have a symmetry characterization that they are invariant under
+a Galilean transformation $x\to x+c\epsilon$ , $t\to t+\epsilon$ to a reference frame moving with speed $c$ ,
+combined with a phase rotation $\psi\to e^{-i\omega\epsilon}\psi$ having angular speed $\omega$ .
+Specifically, the symmetry generator $\mathbf{X}=\partial_{t}+c\partial_{x}-i\omega\psi\partial_{\psi}+i\omega\bar{\psi}\partial_{\bar{\psi}}$ (4.1) has the invariants $U=u$ , $\Psi=e^{i\omega t}\psi$ , $\xi=x-ct$ ,
+and hence a phase-modulated travelling wave is an invariant solution of
+the gKdV-LS system ( 2.8 )–( 2.9 )
+under this symmetry. Substitution of the invariant form ( 1.3 ) into the coupled equations ( 2.8 ) and ( 2.9 )
+yields a coupled nonlinear ODE system for $U(\xi)$ and $\Psi(\xi)$ : $\displaystyle U^{\prime\prime\prime}+(s_{1}U^{p}-c)U^{\prime}+s_{2}(|\Psi|^{2})^{\prime}=0,$ (4.2a) $\displaystyle\Psi^{\prime\prime}-ic\Psi^{\prime}+(kU+\omega)\Psi=0.$ (4.2b) It will be useful to consider the polar form of this system,
+which arises from expressing $\Psi$ in amplitude-phase form $\Psi=A\exp(i\Phi).$ (4.3) The polar variables $A(\xi)$ and $\Phi(\xi)$ , along with $U(\xi)$ , satisfy
+the coupled nonlinear ODEs $\displaystyle U^{\prime\prime\prime}+(s_{1}U^{p}-c)U^{\prime}+2s_{2}AA^{\prime}=0,$ (4.4a) $\displaystyle A^{\prime\prime}+(kU+c\Phi^{\prime}-\Phi^{\prime}{}^{2}+\omega)A=0,$ (4.4b) $\displaystyle A\Phi^{\prime\prime}+(2\Phi^{\prime}-c)A^{\prime}=0.$ (4.4c) 4.1. Variational formulation and symmetries The ODE system ( 4.4 ) for phase-modulated travelling waves
+has a variational formulation in terms of the conserved integrals
+( 3.13 )–( 3.16 )
+for mass, charge, momentum, and energy
+evaluated for solutions $U(\xi)$ , $A(\xi)$ , $\Phi(\xi)$ .
+These conserved integrals consist of $\displaystyle{M}[U]=\int_{-\infty}^{\infty}U\,d\xi,$ (4.5) $\displaystyle{J}[A]=\int_{-\infty}^{\infty}\tfrac{1}{2}A^{2}\,d\xi,$ (4.6) $\displaystyle{P}[U,A,\Phi]=\int_{-\infty}^{\infty}(\tfrac{1}{2}U^{2}-s_{2}\tfrac{1}{k}A^{2}\Phi^{\prime})\,d\xi,$ (4.7) $\displaystyle{H}[U,A,\Phi]=\int_{-\infty}^{\infty}(\tfrac{1}{2}U^{\prime}{}^{2}-s_{1}\tfrac{1}{(p+1)(p+2)}U^{p+2}+s_{2}\tfrac{1}{k}(A^{\prime}{}^{2}+A^{2}\Phi^{\prime}{}^{2})-s_{2}UA^{2})\,d\xi.$ (4.8) Consider the conserved integral $W[U,A,\Phi]={H}[U,A,\Phi]+c{P}[U,A,\Phi]-s_{2}(2\omega/k){J}[A]+C_{1}{M}[U],$ (4.9) where $C_{1}$ is an arbitrary constant.
+Then the three ODEs ( 4.4a ), ( 4.4b ), ( 4.4c ) are
+respectively equivalent to the Euler-Lagrange equations $\begin{pmatrix}\delta W/\delta U\\
+\delta W/\delta A\\
+\delta W/\delta\Phi\end{pmatrix}=0.$ (4.10) In particular, the first of these equations yields the integral of ODE ( 4.4a )
+with $C_{1}$ being the constant of integration. This variational formulation is a generalization of the known variational formulations
+respectively for travelling waves of the gKdV equation [ 26 ] and phase-modulated travelling waves of the Schrödinger equation [ 27 ] . The Euler-Lagrange equations ( 4.10 ) manifestly inherit
+a translation symmetry and a phase-shift symmetry $\mathbf{X}_{\rm trans.}=\partial_{\xi},\quad\mathbf{X}_{\rm phas.}=\partial_{\Phi}$ (4.11) from the symmetries of the gKdV-LS system ( 2.8 )–( 2.9 ).
+A complete classification of all continuous symmetries is straightforwardly obtained
+by the Lie symmetry method. Proposition 4 . (i)
+For general $p\neq 0$ ,
+the continuous symmetries of the Euler-Lagrange equations ( 4.10 )
+are generated by the translation and phase-shift symmetries ( 4.11 ),
+which yield the transformation groups $\xi\to\xi+\epsilon$ and $\Phi\to\Phi+\epsilon$ ,
+where $\epsilon\in{\mathbb{R}}$ is the group parameter for each transformation.
+(ii)
+Additional symmetries exist only when $p=1$ .
+They are generated by $\displaystyle\mathbf{X}_{\rm scal.}=-\xi\partial_{\xi}+2(U-s_{1}c)\partial_{U}+2A\partial_{A}-\frac{c}{2}\xi\partial_{\Phi},$ (4.12) $\displaystyle\omega=-s_{1}kc-\frac{c^{2}}{4},\quad C_{1}=-s_{1}\frac{c^{2}}{2},\quad p=1,$ which yields the scaling-type transformation group $\xi\to\lambda^{-1}\xi$ , $U\to\lambda^{2}U+s_{1}c(1-\lambda^{2})$ , $A\to\lambda^{2}A$ , $\Phi\to\Phi+(1-\lambda^{-1})c\xi/2$ ,
+where $\lambda\neq 0\in{\mathbb{R}}$ is the group parameter. These symmetries have a key role in the analysis of stability of solutions. 4.2. Reduction to a decoupled second-order ODE Ideally, the goal would be to solve the ODE system ( 4.4 )
+in explicit form for $U(\xi)$ , $A(\xi)$ , $\Phi(\xi)$ .
+Note that physically non-trivial solutions must have $U^{\prime}\not\equiv 0$ and $A^{\prime}\not\equiv 0$ . This system consists of one third-order ODE ( 4.4a ) and two second-order ODEs ( 4.4b ) and ( 4.4c ).
+Therefore, finding the general solution would require a total of seven integrations.
+As noted in the work Ref. [ 13 , 14 ] ,
+inspection of the ODEs suggest that only a few explicit integrations are possible. Nevertheless, remarkably,
+the system ( 4.4 ) can be reduced to a single second-order ODE
+from which $U(\xi)$ , $A(\xi)$ , $\Phi(\xi)$ can be obtained by quadratures.
+This reduction is found by the following new method which involves two main steps. In the first step, symmetry multi-reduction is applied,
+which gives a set of three functionally independent first integrals.
+These first integrals arise from conservation laws of
+the gKdV-LS system ( 2.8 )–( 2.9 )
+such that the conservation law is invariant (up to local equivalence)
+under the symmetry ( 4.1 ) which characterizes
+phase-modulated travelling waves.
+The multi-reduction method yields the first integrals directly,
+without the need to know in advance any conservation laws.
+From the first integrals,
+an explicit reduction to a system of one second-order ODE and two first-order ODEs
+is obtained. The second step starts from observing that
+the resulting second-order ODE in the first step
+can be expressed in the form of a nonlinear oscillator equation.
+This equation admits an energy-type first integral,
+which can be combined with the remaining two first-order ODEs to get
+a decoupled second-order ODE by employing a hodograph transformation.
+The resulting system of ODEs is triangular such that every solution of
+the transformed second-order ODE yields a solution $(U(\xi)$ , $A(\xi)$ , $\Phi(\xi))$ by quadratures.
+Furthermore,
+two of these quadratures can be carried out explicitly to obtain $U(\xi)$ and $A(\xi)$ ,
+while $\Phi(\xi)$ is expressed as a final quadrature in terms of $(U(\xi),A(\xi))$ . The preceding steps will be carried out in the next subsections. 4.3. First integrals from symmetry multi-reduction The first step consists of deriving first integrals of the ODE system ( 4.4 )
+by use of the method of symmetry multi-reduction [ 18 ] .
+This method relies on the property if a conservation law ( 3.6 )
+of the gKdV-LS system ( 2.8 )–( 2.9 )
+is invariant under the symmetry ( 4.1 ) that characterizes the ODE system,
+then the conserved density $T$ and the flux $X$ yield a first integral $\tfrac{dC}{d\xi}=0$ given by $C=(X-cT)|_{u=U,\psi=e^{i\omega t}\Psi}=\text{const.}$ (4.13) for all solutions $(U(\xi)$ , $A(\xi)$ , $\Phi(\xi))$ .
+This expression ( 4.13 ) has the physical meaning of the net flux
+in the moving reference frame of travelling wave. All symmetry-invariant conservation laws can be derived in a systematic way
+based on the use of multipliers.
+Specifically, there is an explicit condition characterizing multipliers that yield symmetry-invariant conservation laws. For the gKdV-LS system ( 2.8 )–( 2.9 ),
+a multiplier is a pair of functions $(Q^{u},Q^{\psi})$ of $t$ , $x$ , $u$ , $\psi$ , $\bar{\psi}$ , and $x$ -derivatives of $u$ , $\psi$ , $\bar{\psi}$ ,
+such that $\displaystyle(u_{t}+s_{1}u^{p}u_{x}+u_{xxx}+s_{2}(|\psi|^{2})_{x})Q^{u}+(i\psi_{t}+\psi_{xx}+ku\psi)Q^{\psi}+(-i\bar{\psi}_{t}+\bar{\psi}_{xx}+ku\bar{\psi})\bar{Q}^{\psi}$ (4.14) $\displaystyle=D_{t}T+D_{x}X$ for some functions $T$ and $X$ .
+Since the system ( 2.8 )–( 2.9 ) is comprised of evolution equations,
+the general theory of multipliers shows that, firstly,
+every non-trivial conservation law (up to local equivalence)
+will arise from a multiplier,
+and that, secondly,
+multipliers are related to $(T,X)$ by a variational derivative, $Q^{u}=E_{u}(T)$ and $Q^{\psi}=E_{\bar{\psi}}(T)$ ,
+where $E_{v}$ denotes the Euler operator (variational derivative) with respect to a variable $v$ .
+These expressions show that any conserved density of differential order at most $1$ will arise from a multiplier of differential order at most $2$ .
+Hence, only multipliers given by functions of $t$ , $x$ , $u$ , $\psi$ , $\bar{\psi}$ , and $x$ -derivatives of $u$ , $\psi$ , $\bar{\psi}$ up to second-order
+will be considered hereafter. All multipliers of differential order at most $2$ are the solutions of the linear system of determining equations $\displaystyle E_{v}\big((u_{t}+s_{1}u^{p}u_{x}+u_{xxx}+s_{2}(|\psi|^{2})_{x})Q^{u}+(i\psi_{t}+\psi_{xx}+ku)Q^{\psi}+(-i\bar{\psi}_{t}+\bar{\psi}_{xx}+ku\bar{\psi})\bar{Q}^{\psi}\big)$ (4.15) $\displaystyle=0,\quad v=\{u,\psi,\bar{\psi}\}.$ These three equations split with respect to $u_{t}$ , $\psi_{t}$ , $\bar{\psi}_{t}$ , and their $x$ -derivatives,
+yielding an overdetermined linear system for $(Q^{u},Q^{\psi})$ .
+For each solution, a corresponding conserved current $(T,X)$ can be recovered
+by use of a homotopy integral formula. The theory of symmetry multi-reduction shows that the condition
+for a multiplier to yield a symmetry-invariant conservation law is given by ${\rm pr}\mathbf{X}(Q^{u},Q^{\psi})=0$ ,
+where ${\rm pr}\mathbf{X}$ is the prolongation of the symmetry generator ( 4.1 ).
+This condition is a linear system of two equations $\displaystyle i\omega\big(\psi_{xx}Q^{u}_{\psi_{xx}}-\bar{\psi}_{xx}Q^{u}_{\bar{\psi}_{xx}}+\psi_{x}Q^{u}_{\psi_{x}}-\bar{\psi}_{x}Q^{u}_{\bar{\psi}_{x}}+\psi Q^{u}_{\psi}-\bar{\psi}Q^{u}_{\bar{\psi}}\big)-cQ^{u}_{x}-Q^{u}_{t}=0,$ (4.16a) $\displaystyle i\omega\big(\psi_{xx}Q^{\psi}_{\psi_{xx}}-\bar{\psi}_{xx}Q^{\psi}_{\bar{\psi}_{xx}}+\psi_{x}Q^{\psi}_{\psi_{x}}-\bar{\psi}_{x}Q^{\psi}_{\bar{\psi}_{x}}+\psi Q^{\psi}_{\psi}-\bar{\psi}Q^{\psi}_{\bar{\psi}}+Q^{\psi}\big)-cQ^{\psi}_{x}-Q^{\psi}_{t}=0.$ (4.16b) Hence, all symmetry-invariant conservation laws arise from the solutions of
+the overdetermined linear system given by splitting the five equations ( 4.15 )–( 4.16 )
+with respect to $u_{t}$ , $\psi_{t}$ , $\bar{\psi}_{t}$ , and their $x$ -derivatives.
+Each solution $(Q^{u},Q^{\psi})$ determines a symmetry-invariant conserved current $(T,X)$ which in turn yields a first integral ( 4.13 ) of the ODE system ( 4.4 ). The result is that the four conservation laws ( 3.8 ), ( 3.9 ), ( 3.10 ), ( 3.11 )
+from Proposition 3 are symmetry invariant,
+while the fifth conservation law ( 3.12 ) which holds only for $p=1$ is not symmetry invariant.
+Hence, symmetry multi-reduction yields four first integrals.
+In polar variables, they are given by $\displaystyle\begin{aligned} C_{1}=U^{\prime\prime}+s_{2}A^{2}-cU+s_{1}\tfrac{1}{p+1}U^{p+1},\end{aligned}$ (4.17) $\displaystyle\begin{aligned} C_{2}=A^{2}(\Phi^{\prime}-\tfrac{1}{2}c),\end{aligned}$ (4.18) $\displaystyle\begin{aligned} C_{3}&=k(UU^{\prime\prime}-\tfrac{1}{2}U^{\prime}{}^{2}-\tfrac{1}{2}cU^{2}+s_{1}\tfrac{1}{p+2}U^{p+2})-s_{2}A^{\prime}{}^{2}-s_{2}A^{2}(\Phi^{\prime}{}^{2}+\omega),\end{aligned}$ (4.19) $\displaystyle\begin{aligned} C_{4}&=\tfrac{1}{2}k(U^{\prime\prime}+s_{1}\tfrac{1}{p+1}U^{p+1}+s_{2}A^{2})^{2}-kc(\tfrac{1}{2}U^{\prime}{}^{2}+s_{1}\tfrac{1}{(p+1)(p+2)}U^{p+2})\\
+&\qquad-s_{2}cA^{\prime}{}^{2}-s_{2}A^{2}(c\Phi^{\prime}{}^{2}+2\omega\Phi^{\prime}+kcU).\end{aligned}$ (4.20) It is straightforward to see that these first integrals satisfy an algebraic relation $\tfrac{1}{2}kC_{1}{}^{2}-s_{2}2\omega C_{2}+cC_{3}-C_{4}=0,$ (4.21) and so only three of them are functionally independent.
+This leads to the following result. Lemma 1 . The conservation laws ( 3.8 ), ( 3.9 ), ( 3.10 ), ( 3.11 )
+of the gKdV-LS system ( 2.8 )–( 2.9 )
+yield three functionally independent first integrals of the ODE system ( 4.4 )
+for phase-modulated travelling waves ( 1.3 ).
+This gives a reduction of this system to one second-order ODE and two first-order ODEs $\displaystyle\begin{aligned} U^{\prime\prime}=cU-s_{1}\tfrac{1}{p+1}U^{p+1}-s_{2}A^{2}+C_{1},\end{aligned}$ (4.22) $\displaystyle\begin{aligned} \tfrac{1}{2}kU^{\prime}{}^{2}+s_{2}A^{\prime}{}^{2}&=kC_{1}U+\tfrac{1}{2}kcU^{2}-s_{1}\tfrac{1}{(p+2)(p+1)}kU^{p+2}-s_{2}kUA^{2}\\
+&\qquad-s_{2}(\tfrac{1}{4}c^{2}+\omega)A^{2}-s_{2}C_{2}{}^{2}A^{-2}-\tilde{C}_{3},\end{aligned}$ (4.23) $\displaystyle\begin{aligned} \Phi^{\prime}=\tfrac{1}{2}c+C_{2}A^{-2},\end{aligned}$ (4.24) where $C_{1}$ , $C_{2}$ , $\tilde{C}_{3}$ ( $=C_{3}+s_{2}cC_{2}$ ) are free parameters. This completes the first step in the analysis. 4.4. Hodograph transformation to triangular form The second step consists of showing that the ODE system ( 4.22 )–( 4.24 )
+can be decoupled into a triangular form,
+without any assumptions. Consider a hodograph transformation $A=F(U).$ (4.25) Note that, since non-trivial solutions of the ODE system ( 4.4 )
+must have $A\neq\text{const.}$ ,
+this transformation thereby exists (at least) locally. Substitution of relation ( 4.25 ) into the system yields $\displaystyle\begin{aligned} U^{\prime\prime}=cU-s_{1}\tfrac{1}{p+1}U^{p+1}-s_{2}F(U)^{2}+C_{1},\end{aligned}$ (4.26) $\displaystyle\begin{aligned} U^{\prime}{}^{2}&=\frac{(kC_{1}U+\tfrac{1}{2}kcU^{2}-s_{1}\tfrac{1}{(p+2)(p+1)}kU^{p+2}-s_{2}((\tfrac{1}{4}c^{2}+\omega)+kU)F(U)^{2}-\tilde{C}_{3})F(U)^{2}-s_{2}C_{2}{}^{2}}{F(U)^{2}(\tfrac{1}{2}k+s_{2}F^{\prime}(U)^{2})},\end{aligned}$ (4.27) $\displaystyle\begin{aligned} \Phi^{\prime}=\tfrac{1}{2}c+C_{2}F(U)^{-2}.\end{aligned}$ (4.28) The second-order ODE ( 4.26 ) now has the form of a nonlinear oscillator equation.
+It possesses the first integral $\tilde{C}_{4}=\tfrac{1}{2}U^{\prime}{}^{2}+s_{2}G(U)+s_{1}\tfrac{1}{(p+1)(p+2)}U^{p+2}-\tfrac{1}{2}cU^{2}-C_{1}U,$ (4.29) where $\tilde{C}_{4}$ is a constant,
+and where $G(U)=\int F(U)^{2}\,dU.$ (4.30) This gives $U^{\prime}{}^{2}=-s_{2}2G(U)-s_{1}\tfrac{2}{(p+1)(p+2)}U^{p+2}+cU^{2}+2C_{1}U+2\tilde{C}_{4}.$ (4.31) Equating equations ( 4.31 ) and ( 4.27 ),
+and replacing $F(U)^{2}=G^{\prime}(U),\quad F^{\prime}(U)=2G^{\prime\prime}(U)/F(U),$ (4.32) yields $\displaystyle\tfrac{1}{2}(s_{2}G(U)+s_{1}\tfrac{1}{(p+1)(p+2)}U^{p+2}-\tfrac{1}{2}cU^{2}-C_{1}U-\tilde{C}_{4})G^{\prime\prime}(U)^{2}$ (4.33) $\displaystyle=(kU+\tfrac{1}{4}c^{2}+\omega)G^{\prime}(U)^{2}-(kG(U)-s_{2}(\tilde{C}_{3}+k\tilde{C}_{4}))G^{\prime}(U)+C_{2}{}^{2},$ which is a second-order ODE for $G(U)$ .
+Hence, the following result has been obtained. Lemma 2 . The hodograph transformation $A=\sqrt{G^{\prime}(U)}$ (4.34) converts the reduced ODE system ( 4.22 )–( 4.24 )
+into a triangular form consisting of
+a second-order ODE ( 4.33 ) for $G(U)$ ,
+a first-order ODE ( 4.31 ) for $U(\xi)$ ,
+and an elementary ODE ( 4.28 ) for $\Phi(\xi)$ . Lemma 2 combined with Lemma 1 effectively provides a reduction of the original ODE system ( 4.22 )–( 4.24 )
+to a single second-order ODE ( 4.33 ).
+As a consequence,
+phase-modulated travelling waves ( 1.3 )
+can be obtained by the following direct method. Theorem 1 . Any solution of the second-order ODE ( 4.33 ) for $G(U)$ yields a solution of the ODE system ( 4.22 )–( 4.24 )
+by quadratures:
+First, integrate ODE ( 4.31 ), which is separable, to get $U(\xi)$ .
+Second, substitute $U(\xi)$ into transformation ( 4.34 ) to get $A(\xi)$ .
+Last, substitute $A(\xi)$ into ODE ( 4.24 ) and integrate to get $\Phi(\xi)$ .
+The resulting expressions $(U(\xi),A(\xi),\Phi(\xi))$ give
+a phase-modulated travelling wave $u=U(\xi),\quad\psi=e^{i(\omega t+\Phi(\xi))}A(\xi),\quad\xi=x-ct.$ (4.35) Since non-trivial solutions of the ODE system ( 4.22 )–( 4.24 )
+must have $A\neq\text{const.}$ ,
+corresponding solutions of the second-order ODE ( 4.33 ) for $G(U)$ must satisfy $G^{\prime\prime}(U)\not\equiv 0$ (4.36) 5. Abundant solitary wave solutions for nonlinearity powers $p=1,2,3,4$ The main result in Theorem 1 reduces the problem of obtaining
+explicit phase-modulated travelling waves ( 4.35 )
+to the much more tractable problem of finding explicit solutions of
+the decoupled second-order ODE ( 4.33 ).
+Moreover, this ODE admits abundant polynomial solutions,
+which lead to explicit families of phase-modulated solitary waves,
+on zero and non-zero backgrounds, in the cases $p=1,2,3,4$ .
+By comparison,
+starting with an ansatz for solutions of the original ODE system ( 4.4 ),
+as seen in Ref. [ 13 , 14 ] ,
+yields only a few solutions in the case $p=1$ and no solutions for $p\geq 2$ . In the next two subsections,
+the general polynomial form for solutions will be introduced
+and the types of phase-modulated solitary waves that arise from it
+will be characterized.
+In the final four subsections,
+the explicit solutions of the second-order ODE ( 4.33 ) will be summarized
+in each of the cases $p=1,2,3,4$ ,
+which leads to the phase-modulated solitary waves
+given in section 6 . 5.1. Polynomial solutions of the decoupled ODE The second-order ODE ( 4.33 ) for $G(U)$ is quadratic in $G$ , $G^{\prime}$ , $G^{\prime\prime}$ , and also is polynomial in $U$ when $p$ is a positive integer. All polynomial solutions for $G(U)$ can be obtained by the following analysis. First, the possible degree of a polynomial solution
+is determined by balancing powers in the ODE ( 4.33 ).
+Suppose that the highest power of $U$ in $G(U)$ is $U^{q}$ ,
+with $q>1$ due to condition ( 4.36 ).
+Then, on the lefthand side in the ODE ( 4.33 ),
+the terms containing highest powers of $U$ are $G(U)G^{\prime\prime}(U)^{2}$ and $U^{p+2}G^{\prime\prime}(U)^{2}$ , since $p\geq 1$ .
+Their leading powers are, respectively, $3q-4$ and $2q+p-2$ .
+On the righthand side, the terms containing highest powers of $U$ are $UG^{\prime}(U)^{2}$ and $G(U)G^{\prime}(U)$ ,
+both of which have the leading power $2q-1$ .
+There are now several different possibilities for balancing powers. The first possibility is to balance the leading powers on opposite sides.
+If $2q+p-2>3q-4$ ,
+then this balance is given by $2q+p-2=2q-1>3q-4$ ,
+which implies $p=1$ and $q<3$ .
+If $2q+p-2\leq 3q-4$ ,
+then the balance is $3q-4=2q-1\geq 2q+p-2$ which implies $q=3$ and $p\leq 1$ .
+Thus, a consistent balance holds only for $p=1$ and $q\leq 3$ . The second possibility is that the two terms with leading powers $2q+p-2$ and $3q-4$ cancel on the lefthand side, whereby the term with the subleading power
+must be balanced by the leading power term on the righthand side.
+In this case, equality of the powers $2q+p-2=3q-4$ implies $q=p+2$ .
+Suppose the subleading term in $G(U)$ has power $l<q$ , $l\geq 0$ .
+Then the subleading term on the lefthand side will be
+the leading term in $(G(U)+s_{1}s_{2}\tfrac{1}{(p+1)(p+2)}U^{p+2})G^{\prime\prime}(U)^{2}$ ,
+with corresponding highest power $l+2q-4=l+2p$ .
+The leading terms on the righthand side have highest power $2q-1=2p+3$ .
+Hence, the balance gives $l=3$ , with no restriction on $p$ . The last possibility is that the two terms with leading power $2q-1$ on the righthand side cancel each other,
+whereby the term with the subleading power
+must be balanced by the leading power term on the lefthand side.
+In this case, the cancellation requires that the highest power term in $kUG^{\prime}(U)^{2}-kG(U)G^{\prime}(U)=kG^{\prime}(U)(UG^{\prime}(U)-G(U))$ vanishes.
+Clearly, this implies that $q=1$ , and thus no balance exists with $q>1$ . The preceding possibilities can be merged into the form $G(U)=-s_{1}s_{2}\tfrac{1}{(p+1)(p+2)}U^{p+2}+\tfrac{1}{3}g_{3}U^{3}+\tfrac{1}{2}g_{2}U^{2}+g_{1}U+g_{0},$ (5.1) where the coefficients $g_{0},g_{1},g_{2},g_{3}$ are constant parameters to be determined.
+When this polynomial form is substituted in the ODE ( 4.33 ),
+a polynomial equation of degree $2p+3$ in $U$ is obtained.
+All solutions of interest will be listed after the discussion in the next subsection. 5.2. Classification of solitary wave solutions Rather than systematically work out all solutions $(U(\xi),A(\xi),\Phi(\xi))$ produced by the polynomial form ( 5.1 ) for $G(U)$ ,
+it will be more effective to proceed by imposing conditions so that
+only solutions of physical interest will be obtained.
+This will considerably simplify the necessary steps to find $(U(\xi),A(\xi),\Phi(\xi))$ . As discussed in section 1 ,
+the solutions that will be of most physical interest
+describe phase-modulated solitary waves on either a zero background or a non-zero background.
+In particular, both $A(\xi)$ and $U(\xi)$ should have an exponentially localized profile
+that asymptotically approaches a constant as $|\xi|$ goes to infinity. The conditions under which such solutions will arise
+can be derived explicitly by studying the ODE ( 4.31 ) for $U(\xi)$ appearing in Theorem 1 .
+This ODE has the form of a nonlinear oscillator energy equation: $\tfrac{1}{2}U^{\prime}{}^{2}+V(U)=E,$ (5.2) where, from the polynomial form ( 5.1 ) for $G(U)$ , $V(U)=s_{2}\tfrac{1}{3}g_{3}U^{3}+(s_{2}\tfrac{1}{2}g_{2}-\tfrac{1}{2}c)U^{2}+(s_{2}g_{1}-C_{1})U$ (5.3) represents the potential energy,
+and $E=\tilde{C}_{4}-s_{2}g_{0}$ (5.4) represents the total energy.
+Consequently,
+existence of solitary wave solutions for $U(\xi)$ can be examined
+by using a standard energy analysis method applied to the potential ( 5.3 ). To begin,
+observe that the potential is a cubic polynomial,
+which is independent of the nonlinearity power $p$ .
+The conditions for such a potential to support
+solitary waves on zero and non-zero backgrounds
+are well known from the cubic potential for travelling waves of the KdV equation: $V(U)$ must have both a local minimum and a local maximum.
+This requires that the discriminant of $V^{\prime}(U)$ is positive, $d=(c-s_{2}g_{2})^{2}+4(s_{2}C_{1}-g_{1})g_{3}>0.$ (5.5) The resulting shape of the potential is shown in Fig. 1 . Figure 1. Shape of potential for bright/dark solitary wave solutions Proposition 5 . The potential ( 5.3 ) supports a single solitary wave,
+with $E$ being the local maximum of the potential.
+The corresponding solution for $U(\xi)$ is given by $U(\xi)=b+s_{3}h\,{\rm sech}^{2}\big(\sqrt{a}\,\xi\big),$ (5.6) where $h=\tfrac{3}{2}\sqrt{d}/|g_{3}|,\quad a=\tfrac{1}{4}\sqrt{d},\quad b=-s_{3}\tfrac{1}{2}(\sqrt{d}-c+s_{2}g_{2}),\quad E=(\tfrac{1}{2}\sqrt{d}+s_{3}\tfrac{1}{3}|g_{3}|)b^{2},$ (5.7) and $s_{3}=s_{2}\,{\rm sgn}(g_{3})=\pm 1.$ (5.8) This solitary wave ( 5.6 ) will be bright (namely, a positive peak) when $s_{3}=+1$ ,
+or dark (namely, a negative peak) when $s_{3}=-1$ .
+Its background is $b$ and its height/depth relative to the background is $h>0$ .
+Its width is proportional to $w=2/\sqrt{a}$ , with $a>0$ .
+The height/depth and width are related by $hw^{2}=12/|g_{3}|$ . Fig. 2 illustrates bright and dark peaks for $U(\xi)$ . Figure 2. Bright ( $s_{3}=1$ ) and dark ( $s_{3}=-1$ ) peaks for $U(\xi)$ on zero background Next, from Theorem 1 ,
+the solutions for $A(\xi)$ and $\Phi(\xi)$ respectively are given by $A(\xi)=\sqrt{g_{1}+g_{2}U(\xi)+g_{3}U(\xi)^{2}-s_{1}s_{2}\tfrac{1}{p+1}U(\xi)^{p+1}}$ (5.9) and $\Phi(\xi)=\frac{c}{2}\xi\pm\sqrt{\mu}\int_{0}^{\xi}\frac{d\xi}{A(\xi)^{2}}+\phi,$ (5.10) where $\phi\quad\text{ and }\quad\mu=C_{2}{}^{2}$ (5.11) are constants.
+When $U(\xi)$ has a localized profile, then so does $A(\xi)$ ,
+and thus the resulting solution will describe a solitary wave. Some conditions are required for expressions ( 5.9 )–( 5.10 )
+to be well-defined. First, the square-root ( 5.9 ) must have $g_{1}+g_{2}U(\xi)+g_{3}U(\xi)^{2}-s_{1}s_{2}\tfrac{1}{p+1}U(\xi)^{p+1}\geq 0$ (5.12) for all $\xi$ .
+Since the extremal values of $U(\xi)$ are $U(\pm\infty)=b$ and $U(0)=b+s_{3}h$ ,
+necessary conditions are given by $A(\pm\infty)^{2}\geq 0$ and $A(0)^{2}\geq 0$ ,
+where $\displaystyle A(\pm\infty)^{2}=$ $\displaystyle g_{1}+g_{2}b+g_{3}b^{2}-s_{1}s_{2}\tfrac{1}{p+1}b^{p+1},$ (5.13) $\displaystyle A(0)^{2}=$ $\displaystyle g_{1}+g_{2}(b+s_{3}h)+g_{3}(b+s_{3}h)^{2}-s_{1}s_{2}\tfrac{1}{p+1}(b+s_{3}h)^{p+1}.$ Second, if $\mu\neq 0$ ,
+convergence of the integral ( 5.10 ) at $\xi=0$ requires $A(0)^{2}>0$ ,
+since otherwise $A(0)=0$ implies $A(\xi)^{2}\sim O(\xi^{2})$ as $\xi\sim 0$ ,
+which leads to a singularity at $\xi=0$ .
+Likewise,
+convergence for $|\xi|\to\infty$ requires $A(\pm\infty)^{2}>0$ ,
+since otherwise a singularity occurs due to $A(\xi)^{2}\sim O(e^{-a|\xi|})$ as $\xi\sim\pm\infty$ . Therefore, the conditions $\displaystyle A(\pm\infty)^{2}>0,\quad A(0)^{2}>0,\quad\text{ if }\mu\neq 0,$ (5.14a) $\displaystyle A(\pm\infty)^{2}\geq 0,\quad A(0)^{2}\geq 0,\quad\text{ if }\mu=0,$ (5.14b) together with $h>0,\quad a>0,\quad\mu\geq 0$ (5.15) are necessary.
+Note that if $\mu=0$ and $A(0)=A(\pm\infty)=0$ then the full condition ( 5.12 ) must be checked. Now, the final step will be to solve the second-order ODE ( 4.33 )
+with $G(U)$ having the polynomial form ( 5.1 ).
+Hereafter, it will be convenient to re-parameterize this polynomial by
+using the solitary wave parameters $b,h,a,E$ , and $s_{3}=\pm 1$ : $g_{0}=s_{2}(\tilde{C}_{4}-E),\quad g_{1}=s_{2}(C_{1}+2bha+s_{3}3b^{2}a),\quad g_{2}=s_{2}(c-2(h-s_{3}3b)a),\quad g_{3}=s_{2}s_{3}3a.$ (5.16) It will also be useful to put $\omega=\varpi-\tfrac{1}{4}c^{2}$ (5.17) in terms of a modified frequency parameter $\varpi$ .
+Substitution of the re-parameterized polynomial expression ( 5.1 ) and ( 5.16 )–( 5.17 )
+into the ODE ( 4.33 ) yields a polynomial equation in $U$ with powers $1$ , $2$ , $3$ , $4$ , $5$ , $p$ , $p+1$ , $p+2$ , $p+3$ , $p+4$ , $2p$ , $2p+1$ , $2p+2$ , $2p+3$ ,
+and with coefficients that involve the constants $C_{1},\tilde{C}_{3},E$ (cf ( 5.4 )),
+the solitary wave parameters $b,h,a$ ,
+the physical constants $p,k,\varpi,c,\mu$ ,
+and the signs $s_{1},s_{2},s_{3}$ ,
+which are subject to the inequalities $p\neq 0$ , $k\neq 0$ , $c\neq 0$ , $h\neq 0$ , $a\neq 0$ as well as the sign conditions ( 2.10 ) and ( 5.8 ). To solve the resulting polynomial equation,
+it must be split with respect to all distinct powers of $U$ .
+Since $p$ is an unknown,
+case distinctions arise when any two powers with at least one involving $p$ are equal.
+In each such case,
+the splitting gives an overdetermined algebraic system for the unknowns $C_{1},\tilde{C}_{3},E,p,k,b,h,a,c,\varpi,\mu$ , and $s_{1},s_{2},s_{3}$ .
+All of the case distinctions and subsequent splitting and solving of the algebraic system
+have been carried out by using the computer algebra package Crack [ 24 ] .
+Further computational remarks are summarized in Appendix A . This computational analysis shows that solutions exist only for $p=1,2,3,4$ .
+For each case,
+explicit expressions for $g_{1}$ , $g_{2}$ , $g_{3}$ , $E$ ,
+and the determined parameters among $b,h,a,\mu,\varpi,c,k$ and also the signs $s_{1},s_{2},s_{3}$ ,
+are given in Appendix B . Simplification of the solutions
+followed by analysis of the conditions ( 5.14 ) and ( 5.15 )
+has been done in Maple.
+This step is highly non-trivial and relies heavily on the use of
+the parameterization in terms of $b,h,a,c,\varpi,\mu$ .
+A key aspect is finding an optimal subset of these parameters for each solution
+such that, firstly, there are no unsolved algebraic equations,
+and secondly, conditions ( 5.14 ) and ( 5.15 )
+reduce to a simple form characterized by
+a minimal set of inequalities holding on the free parameters.
+In some cases, a case splitting arises from this reduction,
+through the two subcases $\mu\neq 0$ and $\mu=0$ in the conditions ( 5.14 ),
+since the solution of the inequalities can have disconnected components when $\mu=0$ .
+The best outcome turns out to be achieved by
+giving a lower priority for $b$ to be solved for among the set of parameters
+rather than assuming that $c$ should be an arbitrary free parameter.
+This analysis is shown in Appendix B . A classification of the resulting set of solution families is summarized in Table 1 .
+These solution families will be listed in the subsequent four subsections.
+Every family determines a corresponding explicit
+gKdV-LS solution ( 5.6 )–( 5.10 ) for $(U(\xi),A(\xi),\Phi(\xi))$ ,
+which are presented and discussed in section 6 . A final remark here is that the lack of solutions for any $p>4$ is likely due to
+the limitation of considering only a polynomial form ( 5.1 ) for $G(U)$ .
+It should be possible to extend the computational analysis to
+a rational form for $G(U)$ ,
+which may yield additional solutions, possibly involving higher powers for $p$ .
+Such a form could also be relevant for seeking non-solitary wave solutions of the ODE system ( 4.4 ),
+such as heavy-tail solutions which have a power decay for large $|\xi|$ [ 28 ] . $p$ $b$ $\mu$ free determined no. of label families $4$ non-zero non-zero $k$ $b$ , $h$ , $a$ , $\mu$ , $\varpi$ , $c$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $1$ 4-i $3$ non-zero non-negative $k$ , $b$ $h$ , $a$ , $\mu$ , $\varpi$ , $c$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $1$ 3-i non-zero zero $k$ $b$ , $h$ , $a$ , $\mu$ , $\varpi$ , $c$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $3$ 3-i.1 $2$ arbitrary non-zero $k$ , $b$ , $c$ $h$ , $a$ , $\mu$ , $\varpi$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $1$ 2-i arbitrary zero $k$ , $b$ $h$ , $a$ , $\mu$ , $\varpi$ , $c$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $3$ 2-i.1 non-zero zero $k$ , $c$ $b$ , $h$ , $a$ , $\mu$ , $\varpi$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $1$ 2-i.2 non-zero non-zero $b$ , $\varpi$ $k$ , $h$ , $a$ , $\mu$ , $c$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $1$ 2-ii non-zero zero $b$ $k$ , $h$ , $a$ , $\mu$ , $\varpi$ , $c$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $2$ 2-ii.1 $1$ arbitrary non-negative $k$ , $b$ , $c$ , $\varpi$ $a$ , $h$ , $\mu$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $1$ 1-i arbitrary zero $k$ , $b$ , $c$ $a$ , $h$ , $\mu$ , $\varpi$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $2$ 1-i.1 arbitrary non-negative $b$ , $a$ , $c$ , $\varpi$ ; $s_{2}$ $k$ , $h$ , $\mu$ ; $s_{1}$ , $s_{3}$ $1$ 1-ii arbitrary zero $b$ , $c$ , $\varpi$ ; $s_{2}$ $k$ , $a$ , $h$ , $\mu$ ; $s_{1}$ , $s_{3}$ $1$ 1-ii.1 arbitrary non-zero $b$ , $a$ , $c$ $k$ , $h$ , $\mu$ , $\varpi$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $1$ 1-iii arbitrary zero $b$ , $c$ $k$ , $h$ , $a$ , $\mu$ , $\varpi$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $2$ 1-iii.1 non-zero zero $b$ , $a$ $k$ , $h$ , $\mu$ , $\varpi$ , $c$ ; $s_{1}$ , $s_{2}$ , $s_{3}$ $1$ 1-iii.2 Table 1. Solution families 5.3. Solutions for $\boldsymbol{p=1}$ Solution family (1-i) has: signs $s_{1}=1,\quad s_{2}={\rm sgn}(k-1/2),\quad s_{3}={\rm sgn}(k);$ (5.18a) background $b$ , width and height of $U$ $\displaystyle w=\frac{2}{\sqrt{a}},\quad h=\frac{6a}{|k|},\quad a=\frac{kc+(2k-1)\varpi}{4(1-k)}-\frac{bk}{2};$ (5.18b) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{|2k-1|}{k^{2}}\Big(\frac{4k^{2}(c+\varpi)^{2}+3(kc+\varpi)^{2}}{8(k-1)^{2}}-\frac{6a^{2}}{k^{2}}\Big),$ (5.18c) $\displaystyle g_{2}=\frac{|2k-1|(c+\varpi)}{k-1},\quad g_{3}={\rm sgn}(k-1/2)\;k,$ (5.18d) $\displaystyle\mu=\frac{4(2k-1)^{2}}{k^{4}}(kb+\varpi)(kb+\varpi+4a)^{2}(kb+\varpi+a)^{2}\geq 0;$ (5.18e) speed $c$ and frequency $\omega=\varpi-\frac{c^{2}}{4};$ (5.18f) where the solution parameters $k\neq 0$ , $b$ , $c$ , $\varpi$ are required to satisfy the inequalities $\displaystyle k\neq\frac{1}{2},1$ (5.19a) $\displaystyle\varpi\geq-kb,$ (5.19b) and $\displaystyle c>2(1-k)b+\frac{(1-2k)\varpi}{k}\text{ if }0<k<1,$ (5.19c) $\displaystyle c<2(1-k)b+\frac{(1-2k)\varpi}{k}\text{ if }k<0\text{ or }k>1.$ The peak and tail expressions ( 5.13 ) for $A$ in this family are given by $\displaystyle A(0)$ $\displaystyle=\sqrt{2|2k-1|}\frac{|kb+\varpi+a|}{|k|}>0,$ (5.20) $\displaystyle A(\pm\infty)$ $\displaystyle=\frac{\sqrt{2|2k-1|}}{|k|}\sqrt{(kb+\varpi+a)(kb+\varpi+4a)}>0.$ The first of the two solution families (1-i.1) has: signs $s_{1}=1,\quad s_{2}={\rm sgn}(k-1/2),\quad s_{3}={\rm sgn}(k);$ (5.21a) background $b$ , width and height of $U$ $\displaystyle w=\frac{2}{\sqrt{a}},\quad h=\frac{6a}{|k|},\quad a=\frac{c-b}{4};$ (5.21b) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{|2k-1|b^{2}}{2},\quad g_{2}=-|2k-1|b,\quad g_{3}={\rm sgn}(k-1/2)\;k,\quad\mu=0;$ (5.21c) speed $c$ and frequency $\omega=-(k-1)b-\frac{c(c+4)}{4};$ (5.21d) where the solution parameters $k\neq 0$ , $b$ , $c$ are required to satisfy the inequalities $\displaystyle k\neq\frac{1}{2},$ (5.22a) $\displaystyle c>b.$ (5.22b) The peak and tail expressions ( 5.13 ) for $A$ are given by $A(0)=\frac{3(c-b)}{2|k|}\sqrt{|2k-1|}>0,\quad A(\pm\infty)=0.$ (5.23) The second of the solution families (1-i.1) has: signs $s_{1}=1,\quad s_{2}=-{\rm sgn}(k-1/2),\quad s_{3}={\rm sgn}(k);$ (5.24a) background $b$ , width and height of $U$ $\displaystyle w=\frac{2}{\sqrt{a}},\quad h=\frac{6a}{|k|},\quad a=\frac{k(c-b)}{2k-3};$ (5.24b) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=|2k-1|b\Big(\frac{3c}{2k-3}-\frac{b}{2}\Big),\quad g_{2}=|2k-1|\frac{2kb-3c}{2k-3},\quad g_{3}=-{\rm sgn}(k-1/2)\;k,\quad\mu=0;$ (5.24c) speed $c$ and frequency $\omega=\frac{k(c-2(k-1)b)}{2k-3}-\frac{c^{2}}{4};$ (5.24d) where the solution parameters $k\neq 0$ , $b$ , $c$ are required to satisfy the inequalities $\displaystyle k\neq\frac{1}{2},$ (5.25a) $\displaystyle\begin{aligned} &c>b\text{ if }0<k<3/2,\\
+&c<b\text{ if }k<0\text{ or }k>3/2.\end{aligned}$ (5.25b) The peak and tail expressions ( 5.13 ) for $A$ vanish, $A(0)=A(\pm\infty)=0.$ (5.26) Solution family (1-ii) has: interaction coefficient $k=\frac{1}{6};$ (5.27a) signs $s_{1}=1,\quad s_{2}=\pm 1,\quad s_{3}=1;$ (5.27b) background $b$ , width and height of $U$ $\displaystyle w=\frac{2}{\sqrt{a}},\quad h=12a;$ (5.27c) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=s_{2}3(b-c+4a)(b+4a+4\varpi),\quad g_{2}=-s_{2}(b-c+4a),\quad g_{3}=s_{2}\frac{1}{2},$ (5.27d) $\displaystyle\mu=\frac{2(b-c+4a)^{2}(b+6(\varpi+a))^{2}(b+6\varpi)}{3}\geq 0;$ (5.27e) speed $c$ and frequency $\omega=\varpi-\frac{c^{2}}{4};$ (5.27f) where the solution parameters $a>0$ , $b$ , $c$ , $\varpi$ are required to satisfy the inequalities $\varpi\geq-\frac{b}{6},$ (5.28a) and $\displaystyle c<b+4a\text{ if }s_{2}=1,$ (5.28b) $\displaystyle c>b+4a\text{ if }s_{2}=-1.$ The peak and tail expressions ( 5.13 ) for $A$ are given by $A(0)=\sqrt{2(b+6\varpi)|b-c+4a|},\quad A(\pm\infty)=\sqrt{2(b+6(\varpi+a))|b-c+4a|}.$ (5.29) Solution family (1-ii.1) has: interaction coefficient $k=\frac{1}{6};$ (5.30a) signs $s_{1}=1,\quad s_{2}=\pm 1,\quad s_{3}=1;$ (5.30b) background $b$ , width and height of $U$ $\displaystyle w=\frac{2}{\sqrt{a}},\quad h=12a,\quad a=-\varpi-\frac{b}{6};$ (5.30c) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=s_{2}\frac{b(b-3c-12\varpi)}{3},\quad g_{2}=-s_{2}\frac{b-3c-12\varpi}{3},\quad g_{3}=s_{2}\frac{1}{2},\quad\mu=0;$ (5.30d) speed $c$ and frequency $\omega=\varpi-\frac{c^{2}}{4};$ (5.30e) where the solution parameters $a>0$ , $b$ , $c$ , $\varpi$ are required to satisfy the inequalities $\varpi>-\frac{b}{6},$ (5.31a) and $\displaystyle c>\frac{b}{3}-4\varpi\text{ if }s_{2}=1,$ (5.31b) $\displaystyle c<\frac{b}{3}-4\varpi\text{ if }s_{2}=-1.$ In this family, the peak and tail expressions ( 5.13 ) for $A$ are given by $A(0)=\sqrt{2(b+6\varpi)\Big|\frac{b}{3}-c-4\varpi\Big|},\quad A(\pm\infty)=0.$ (5.32) Solution family (1-iii) has: interaction coefficient $k=1;$ (5.33a) signs $s_{1}=1,\quad s_{2}=1,\quad s_{3}=1;$ (5.33b) background $b$ , width and height of $U$ $\displaystyle w=\frac{2}{\sqrt{a}},\quad h=6a;$ (5.33c) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{7(7b-8c+8a)(7b-2c+8a)}{4}-\frac{3b(7b-10c)}{8},\quad g_{2}=c-2b-4a,\quad g_{3}=1,$ (5.33d) $\displaystyle\mu=4(b-c)(b-c+a)^{2}(b-c+4a)^{2}>0;$ (5.33e) speed $c$ and frequency $\omega=-\frac{c(c+4)}{4};$ (5.33f) where the solution parameters $a>0$ , $b$ , $c$ are required to satisfy the inequality $c<b.$ (5.34) The peak and tail expressions ( 5.13 ) for $A$ are given by $A(0)=\sqrt{2(b-c+a)},\quad A(\pm\infty)=\sqrt{2(b-c+a)(b-c+4a)}.$ (5.35) The first solution family (1-iii.1) has: interaction coefficient $k=1;$ (5.36a) signs $s_{1}=1,\quad s_{2}=1,\quad s_{3}=1;$ (5.36b) background $b$ , width and height of $U$ $\displaystyle w=\frac{2}{\sqrt{a}},\quad h=6a,\quad a=\frac{c-b}{4};$ (5.36c) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{b^{2}}{2},\quad g_{2}=-b,\quad g_{3}=1,\quad\mu=0;$ (5.36d) speed $c$ and frequency $\omega=-\frac{c(c+4)}{4};$ (5.36e) where the solution parameters $b$ , $c$ are required to satisfy the inequality $c>b.$ (5.37) The peak and tail expressions ( 5.13 ) for $A$ are given by $A(0)=\frac{3}{2}\sqrt{\frac{c-b}{2}},\quad A(\pm\infty)=0.$ (5.38) The second solution family (1-iii.1) has: interaction coefficient $k=1;$ (5.39a) signs $s_{1}=1,\quad s_{2}=-1,\quad s_{3}=1;$ (5.39b) background $b$ , width and height of $U$ $\displaystyle w=\frac{2}{\sqrt{a}},\quad h=6a,\quad a=c-b;$ (5.39c) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{b(5b-6c)}{2},\quad g_{2}=3c-2b,\quad g_{3}=-1,\quad\mu=0;$ (5.39d) speed $c$ and frequency $\omega=-\frac{c(c+4)}{4};$ (5.39e) where the solution parameters $b$ , $c$ are required to satisfy the inequality $c>b.$ (5.40) The peak and tail expressions ( 5.13 ) for $A$ vanish, $A(0)=A(\pm\infty)=0.$ (5.41) Solution family (1-iii.2) has: interaction coefficient $k=1;$ (5.42a) signs $s_{1}=1,\quad s_{2}=1,\quad s_{3}=1;$ (5.42b) background $b$ , width and height of $U$ $\displaystyle w=\frac{2}{\sqrt{a}},\quad h=6a;$ (5.42c) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{(b+4a)^{2}}{2},\quad g_{2}=-b-4a,\quad g_{3}=1,\quad\mu=0;$ (5.42d) speed and frequency $c=b,\quad\omega=-\frac{b(b+4)}{4};$ (5.42e) where the solution parameters are $b$ , $a>0$ . The peak and tail expressions ( 5.13 ) for $A$ are given by $A(0)=\sqrt{2}a,\quad A(\pm\infty)=2\sqrt{2}a.$ (5.43) 5.4. Solutions for $\boldsymbol{p=2}$ Solution family (2-i) has: signs $s_{1}={\rm sgn}(k),\quad s_{2}=1,\quad s_{3}={\rm sgn}(k);$ (5.44a) background $b$ , width and height of $U$ $w=\frac{2}{\sqrt{a}},\quad h=\frac{12a}{|k|},\quad a=\frac{|k|c}{8(|k|-b)}+\frac{(2b(b-2|k|)+k^{2})k}{16(|k|-b)};$ (5.44b) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=s_{1}\frac{|k|-2b}{(|k|-b)^{2}}\Big(s_{1}c+\frac{3|k|b}{16}-\frac{5k^{2}}{16}-\frac{3b^{2}}{8}\Big)^{2}-s_{1}\Big(|k|-\frac{22b}{3}\Big)\Big(\frac{3|k|}{16}-\frac{b}{8}\Big)^{2},$ (5.44c) $\displaystyle g_{2}=\frac{(|k|-2b)(s_{1}2c-k^{2})}{4(|k|-b)}-\frac{kb}{2},\quad g_{3}=\frac{k}{2},$ (5.44d) $\displaystyle\mu=8|k|(|k|-2b)^{2}\Big(\frac{2a}{|k|}+\frac{5(kb-2c)}{4(|k|-b)}\Big)\Big(\frac{2a}{|k|}+\frac{5(kb-2c)}{8(|k|-b)}\Big)^{2}\Big(\frac{2a}{|k|}+\frac{kb-2c}{4(|k|-b)}\Big)^{2}>0;$ (5.44e) speed $c$ and frequency $\omega=-\frac{c^{2}}{4}-bk+\frac{k(2b^{2}+6|k|b+k^{2})-18|k|c)}{16(|k|-b)};$ (5.44f) where the solution parameters $k\neq 0$ , $b$ , $c$ are required to satisfy the inequalities $b<k/2,\quad-b^{2}-k^{2}/2+2kb<c\leq b^{2}/9+k^{2}/18+kb/3,\quad\text{ if }k>0,$ (5.45a) and $\begin{aligned} |k|/2<b<|k|,&\quad b^{2}+k^{2}/2-2|k|b<c\leq-b^{2}/9-k^{2}/18-|k|b/3\\
+b>|k|,&\quad-b^{2}/9-k^{2}/18-|k|b/3\leq c<b^{2}+k^{2}/2-2|k|b\end{aligned}\quad\text{ if }k<0$ (5.45b) The peak and tail expressions ( 5.13 ) for $A$ in this family are given by $\displaystyle A(0)$ $\displaystyle=\sqrt{\frac{5k(|k|-2b)-72a}{|k|}}\;\frac{\big|k(|k|-2b)-8a\big|}{|k|}>0,$ (5.46) $\displaystyle A(\pm\infty)$ $\displaystyle=\sqrt{\frac{|k|-2b}{8k|k|}\big(5k(|k|-2b)-64a\big)\big(k(|k|-2b)-8a\big)}>0.$ The three solution families (2-i.1) have: values $(\nu_{1},\nu_{2})=(1/8,1/8),\quad(1/3,1/18),\quad(-1,1/2);$ (5.47) signs $s_{1}=\begin{cases}{\rm sgn}(k)&\text{ for }(\nu_{1},\nu_{2})=(1/3,1/18),(-1,1/2)\\
+-{\rm sgn}(k)&\text{ for }(\nu_{1},\nu_{2})=(1/8,1/8)\end{cases},\quad s_{2}=1,\quad s_{3}={\rm sgn}(k);$ (5.48a) background $b$ , width and height of $U$ $w=\frac{2}{\sqrt{a}},\quad h=\frac{12a}{|k|},\quad a=\frac{k}{8(k-s_{1}b)}\Big(bk(\nu_{1}-2)+s_{1}(2\nu_{2}+1)\Big(b^{2}+\frac{k^{2}}{2}\Big)\Big);$ (5.48b) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle\begin{aligned} g_{1}=&-\frac{2s_{1}b-k}{(s_{1}b-k)^{2}}\Big(\Big(2\nu_{2}-\frac{3}{8}\Big)b^{2}+\Big(2\nu_{2}-\frac{5}{8}\Big)\frac{k^{2}}{2}+s_{1}\Big(\nu_{1}+\frac{3}{16}\Big)bk\Big)^{2}\\
+&\qquad+\frac{(2s_{1}b-3k)^{2}}{3(16(s_{1}b-k))^{2}}\big(22s_{1}b-3k\big),\end{aligned}$ (5.48c) $\displaystyle g_{2}=\frac{2s_{1}b-k}{2(s_{1}b-k)}\big(s_{1}\nu_{2}(2b^{2}+k^{2})+\nu_{1}bk\big)-\frac{s_{1}k(2b^{2}-k^{2})}{4(s_{1}b-k)},\quad g_{3}=\frac{k}{2},$ (5.48d) $\displaystyle\mu=0;$ (5.48e) speed $c=\nu_{1}bk+s_{1}\nu_{2}(2b^{2}+k^{2});$ (5.48f) and frequency $\omega=\frac{k}{8(s_{1}b-k)}\Big((9\nu_{1}+5)bk+s_{1}\Big(9(2\nu_{2}-1)b^{2}+(18\nu_{1}-1)\frac{k^{2}}{2}\Big)\Big);$ (5.48g) where the solution parameters $k\neq 0$ , $b$ are required to satisfy the inequalities $\displaystyle b<s_{1}k/2\quad\text{ if }k>0,$ (5.49a) $\displaystyle b>-s_{1}|k|/2\quad\text{ if }k<0.$ (5.49b) The peak and tail expressions ( 5.13 ) for $A$ in this family are given by $\displaystyle A(0)$ $\displaystyle=\begin{cases}\dfrac{3}{64}\sqrt{5(s_{1}2b-k)^{3}},&(\nu_{1},\nu_{2})=(1/8,1/8)\\
+0,&(\nu_{1},\nu_{2})=(1/3,1/18),(-1,1/2)\end{cases},$ (5.50) $\displaystyle A(\pm\infty)$ $\displaystyle=\begin{cases}0,&(\nu_{1},\nu_{2})=(1/8,1/8),(-1,1/2)\\
+\dfrac{1}{18}\sqrt{10(k-s_{1}2b)^{3}},&(\nu_{1},\nu_{2})=(1/3,1/18)\end{cases}.$ Solution family (2-i.2) has: signs $s_{1}=-{\rm sgn}(k),\quad s_{2}=1,\quad s_{3}={\rm sgn}(k);$ (5.51a) background, height, width of $U$ $b=-|k|/2<0,\quad h=\frac{12a}{|k|},\quad w=\frac{2}{\sqrt{a}},\quad a=\frac{k|k|+4c}{16};$ (5.51b) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{k^{3}}{24},\quad g_{2}=\frac{k|k|}{4},\quad g_{3}=\frac{k}{2},\quad\mu=0;$ (5.51c) speed $c$ and frequency $\omega=-\frac{c(c+9)}{4}-\frac{k|k|}{16};$ (5.51d) where the solution parameters $k\neq 0$ and $c$ are required to satisfy the inequalities $c>-k|k|.$ (5.52) The peak and tail expressions ( 5.13 ) for $A$ are given by $A(0)=3\sqrt{\Big(\frac{k}{4}+\frac{c}{|k|}\Big)^{3}},\quad A(\pm\infty)=0.$ (5.53) Solution family (2-ii) has: signs $s_{1}=-1,\quad s_{2}=1,\quad s_{3}=-1;$ (5.54a) background, height, width of $U$ $b=|k|>0,\quad h=\frac{12a}{|k|},\quad w=\frac{2}{\sqrt{a}},\quad a=\frac{13k^{2}-4\varpi}{72};$ (5.54b) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{61|k|^{3}}{81}+\frac{64\varpi^{2}}{81|k|}-\frac{127|k|\varpi}{81},\quad g_{2}=\frac{4\varpi}{9}-\frac{2k^{2}}{9},\quad g_{3}=-\frac{|k|}{2},$ (5.54c) $\displaystyle\mu=\frac{\varpi-k^{2}}{2|k|}\Big(\frac{(2\varpi-k^{2})(64\varpi-59k^{2})}{81}\Big)^{2}>0;$ (5.54d) frequency $\omega=\varpi-\frac{k^{4}}{16}$ (5.54e) and speed $c=-\frac{k^{2}}{2}<0;$ (5.54f) where the solution parameters $k\neq 0$ and $\varpi$ are required to satisfy the inequalities $k<0,$ (5.55a) and $k^{2}<\varpi<13k^{2}/8.$ (5.55b) In this family, the peak and tail expressions ( 5.13 ) for $A$ are given by $A(0)=\frac{4}{9}(2\varpi-k^{2})\sqrt{\frac{\varpi-k^{2}}{|k|^{3}}}>0,\quad A(\pm\infty)=\frac{1}{18}\sqrt{\frac{2(64\varpi-59k^{2})(2\varpi-k^{2})}{|k|}}>0.$ (5.56) Solution family (2-ii.1) has: signs $s_{1}=-1,\quad s_{2}=1,\quad s_{3}=\begin{cases}1,&\text{ for }\lambda=59/64\\
+-1,&\text{ for }\lambda=1/2\end{cases};$ (5.57a) background, height, width of $U$ $b=-k,\quad h=\frac{12a}{|k|},\quad w=\frac{2}{\sqrt{a}},\quad a=\frac{k^{2}(13-8\lambda)}{72};$ (5.57b) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{k^{3}(-64\lambda^{2}+127\lambda-61)}{81},\quad g_{2}=\frac{2k^{2}(2\lambda-1)}{9},\quad g_{3}=\frac{k}{2},\quad\mu=0;$ (5.57c) frequency $\omega=\frac{k^{2}(16\lambda-k^{2})}{16}$ (5.57d) and speed $c=-\frac{k^{2}}{2}<0;$ (5.57e) where the solution parameter is $k\neq 0$ . The tail and peak expressions ( 5.13 ) for $A$ are given by $A(\pm\infty)=0,\quad A(0)=\begin{cases}0,&\text{ for }\lambda=1/2\\
+\dfrac{3\sqrt{10}}{32},&\text{ for }\lambda=59/64\end{cases}.$ (5.58) 5.5. Solutions for $\boldsymbol{p=3}$ Solution family (3-i) has: signs $s_{1}=1,\quad s_{2}=-1,\quad s_{3}={\rm sgn}(k);$ (5.59a) background $b$ , width and height of $U$ $\displaystyle w=\frac{2}{\sqrt{a}},\quad h=\frac{20a}{|k|},\quad a=\frac{|k|(k+3b^{2})}{40|b|};$ (5.59b) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{b^{4}}{4}-\frac{11kb^{2}}{15}+\frac{91k^{2}}{150}-\frac{k^{3}}{10b^{2}},\quad g_{2}=\frac{(2k-b^{2})(3k-5b^{2})}{45b},\quad g_{3}=-\frac{3k}{10},$ (5.59c) $\displaystyle\mu=\frac{4k(2k-b^{2})(k-5b^{2})^{2}(3k-5b^{2})^{2}(15k-11b^{2})^{2}}{3(15b)^{5}}\geq 0;$ (5.59d) frequency $\omega=\frac{2k(k+3b^{2})}{5b}-\Big(\frac{b^{2}}{18}-\frac{53k}{180}+\frac{7k^{2}}{60b^{2}}\Big)^{2};$ (5.59e) and speed $c=\frac{7k(3b^{2}-k)}{30b}-\frac{b(b^{2}+k)}{9};$ (5.59f) where the solution parameters are $k\neq 0$ , $b$ .
+These parameters are required to satisfy the inequalities $\displaystyle b<0,\quad b^{2}\geq 2k$ $\displaystyle\text{ if }k>0,$ (5.60) $\displaystyle b>0,\quad b^{2}>|k|/3$ $\displaystyle\text{ if }k<0.$ The peak and tail expressions ( 5.13 ) for $A$ in this family are given by $A(0)=\frac{(5b^{2}-k)(11b^{2}-15k)}{120b^{2}}>0,\quad A(\pm\infty)=\frac{\sqrt{(5b^{2}-k)(5b^{2}-3k)(11b^{2}-15k)}}{15\sqrt{2}|b|}>0.$ (5.61) The three solution families (3-i.1) have: values $\lambda=\frac{1}{5},\quad\frac{3}{5},\quad\frac{15}{11};$ (5.62a) signs $s_{1}=1,\quad s_{2}=\begin{cases}1&\text{ for }\lambda=1/5,15/11\\
+-1&\text{ for }\lambda=3/5\end{cases},\quad s_{3}=1;$ (5.62b) background, width and height of $U$ $\displaystyle b=-\lambda\sqrt{k}<0,\quad w=\frac{2\sqrt{\lambda}}{\sqrt{1+3\lambda^{2}}}\frac{1}{\sqrt[4]{k^{3}}},\quad h=\frac{(1+3\lambda^{2})}{2\lambda}\sqrt{k};$ (5.62c) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\Big(\frac{1}{10\lambda^{2}}-\frac{91}{150}+\frac{11\lambda^{2}}{15}-\frac{\lambda^{4}}{4}\Big)k^{2},\quad g_{2}=\frac{(\lambda^{2}-2)(3-5\lambda^{2})}{45\lambda}\sqrt{k^{3}},\quad g_{3}=\frac{3k}{10},\quad\mu=0;$ (5.62d) speed $c=\Big(\frac{7(3\lambda^{2}-1)}{30\lambda}-\frac{\lambda(1+\lambda^{2})}{9}\Big)\sqrt{k^{3}}$ (5.62e) and frequency $\omega=\frac{2(1-3\lambda^{2})}{5\lambda}\sqrt{k^{3}}-\frac{c^{2}}{4};$ (5.62f) where the solution parameters are $k\neq 0$ , $\lambda$ ,
+with $k$ required to satisfy the inequality $k>0.$ (5.63) In these families, the tail and peak expressions ( 5.13 ) are given by $\begin{gathered}A(\pm\infty)=A(0)=0\quad\text{ for $\lambda=\frac{1}{5},\frac{15}{11}$ },\\
+A(\pm\infty)=0,\quad A(0)=\dfrac{7k^{2}}{30},\quad\text{ for $\lambda=\frac{3}{5}$ }.\end{gathered}$ (5.64) 5.6. Solutions for $\boldsymbol{p=4}$ Solution family (4-i) has: signs $s_{1}=1,\quad s_{2}=1,\quad s_{3}=1;$ (5.65a) background, height, width of $U$ $\displaystyle b=-\sqrt[3]{2k}<0,\quad h=\frac{3\sqrt[3]{2k}}{2},\quad w=\frac{4\sqrt{10}}{\sqrt[3]{2k}^{2}};$ (5.65b) parameters for amplitude $A$ and phase $\Phi$ $\displaystyle g_{1}=\frac{9\sqrt[3]{2k}^{5}}{25},\quad g_{2}=-\frac{3\sqrt[3]{2k}^{4}}{20},\quad g_{3}=\frac{k}{5},\quad\mu=2\Big(\frac{81\sqrt[3]{2k}^{7}}{400}\Big)^{2}>0;$ (5.65c) frequency $\omega=\frac{\sqrt[3]{2k}^{4}(40-\sqrt[3]{2k}^{4})}{64};$ (5.65d) and speed $c=-\frac{\sqrt[3]{2k}^{4}}{4}<0;$ (5.65e) where the solution parameter $k$ is required to satisfy the inequality $k>0.$ (5.66) In this family, the tail and peak expressions ( 5.13 ) for $A$ are given by $A(\pm\infty)=\frac{9\sqrt[6]{2k}^{5}}{10}>0,\quad A(0)=\sqrt{\frac{3}{8}}A(\pm\infty).$ (5.67) 6. Phase-modulated solitary waves From the results in section 5 ,
+the explicit solitary wave solutions ( 4.35 ) of the gKdV-LS system ( 2.8 )–( 2.9 )
+will now be presented and their kinematic features will be discussed.
+These solutions hold for the nonlinearity powers $p=1,2,3,4$ ,
+covering all physically interesting cases for the nonlinearity in the gKdV-LS system. The gKdV variable $u=U(\xi)$ is given by the sech-squared expression ( 5.6 ).
+Physically, it describes a solitary wave on a background $b$ ,
+with a height/depth $h>0$ ,
+where the wave is bright when $s_{3}>0$ and dark when $s_{3}<0$ .
+Its width is proportional to $w=2/\sqrt{a}$ in terms of the parameter $a>0$ . The LS variable $\psi=A(\xi)\exp(i(\omega t+\Phi(\xi))$ is given by
+the amplitude expression ( 5.9 ) and the phase expression ( 5.10 ).
+These expressions exhibit a wide variety of features. The amplitude $A(\xi)$ has the form of a solitary wave
+which is the square-root of a linear combination of $U(\xi)$ , $U(\xi)^{2}$ , $U(\xi)^{p+1}$ terms plus a constant term.
+Note that the resulting profile for $A(\xi)$ can contain up to $2p+1$ local peaks
+on a tail (background) $A_{\infty}=A(\pm\infty)$ ,
+with the central peak at $\xi=0$ having the amplitude $A_{0}=A(0)$ ,
+as given by expressions ( 5.13 ).
+This central peak will be bright/dark if $A^{\prime\prime}(0)\gtrless 0$ respectively,
+while the tail will be called bright/dark if $A_{\infty}\gtrless A_{0}$ .
+These features are illustrated in Fig. 3 . Figure 3. Bright/dark peaks and tails for $A(\xi)$ Side peaks occur in symmetrical pairs.
+Their location and height can be found straightforwardly by considering $B(z)=A\big(\tfrac{1}{\sqrt{a}}{\rm arccosh}(1/\sqrt{z})\big)^{2}=g_{1}+g_{2}(b+s_{3}hz)+g_{3}(b+s_{3}hz)^{2}-s_{1}s_{2}\tfrac{1}{p+1}(b+s_{3}hz)^{p+1},$ (6.1) which is polynomial of degree $p+1$ in $z={\rm sech}(\sqrt{a}\,\xi)^{2}$ with $0<z\leq 1$ .
+In this interval, each non-zero root $z=z^{*}$ of $B^{\prime}(z)=s_{3}h(g_{2}+2g_{3}(b+s_{3}hz)-s_{1}s_{2}(b+s_{3}hz)^{p})=0$ (6.2) determines that a pair of side peaks exist at $\xi^{*}=\pm\tfrac{1}{\sqrt{a}}{\rm arccosh}(1/\sqrt{z^{*}})\big)^{2}$ .
+These peaks will be bright/dark if $H^{\prime\prime}(z^{*})\gtrless 0$ respectively.
+The case of one pair of side peaks is illustrated in Fig. 3 . The phase $\Phi(\xi)$ is given by a linear term in $\xi$ plus a quadrature term that is odd in $\xi$ with a coefficient $\pm\sqrt{\mu}$ .
+In the case when this coefficient vanishes, the phase is thereby linear in $\xi$ $\Phi(\xi)=\frac{c}{2}\xi+\phi,\quad\text{ if }\mu=0.$ (6.3) In the general case, $\mu>0$ ,
+the quadrature term in the phase can be expressed more conveniently
+as the integral of a rational function, based on the identities ${\rm sech}^{2}({\rm arctanh}(\zeta))=1-\zeta^{2}$ and ${\rm arctanh}^{\prime}(\zeta)=1/(1-\zeta^{2})$ : $\int_{0}^{\xi}\frac{d\xi}{A(\xi)^{2}}=\frac{1}{\sqrt{a}}\int_{0}^{\tanh(\sqrt{a}\,\xi)}\frac{d\zeta}{(1-\zeta^{2})B(1-\zeta^{2})},$ (6.4) where the degree of $B(1-\zeta^{2})$ as a polynomial in $\zeta^{2}$ is $p+1$ .
+For $\xi\to\pm\infty$ , this quadrature has the asymptotic behaviour $\int_{0}^{\xi}\frac{d\xi}{A(\xi)^{2}}\sim\frac{1}{A_{\infty}^{2}}\,\xi+{\rm sgn}(\xi)\int_{0}^{\infty}\Big(\frac{1}{A(\xi)^{2}}-\frac{1}{A_{\infty}^{2}}\Big)d\xi,$ (6.5) where $A_{\infty}\neq 0$ due to condition ( 5.14 ).
+This motivates a decomposition of $\Phi(\xi)$ into linear and nonlinear terms: $\Phi(\xi)=\Phi_{\text{lin.}}(\xi)+\Phi_{\text{nonlin.}}(\xi)+\phi\quad\text{ if }\mu>0,$ (6.6) where $\displaystyle\Phi_{\text{lin.}}(\xi)=$ $\displaystyle\Big(\pm\frac{\sqrt{\mu}}{A_{\infty}^{2}}+\frac{c}{2}\Big)\xi,$ (6.7) $\displaystyle\Phi_{\text{nonlin.}}(\xi)=$ $\displaystyle\frac{\pm\sqrt{\mu}}{\sqrt{a}}\int_{0}^{\tanh(\sqrt{a}\,\xi)}\Big(\frac{1}{B(1-\zeta^{2})}-\frac{1}{A_{\infty}^{2}}\Big)\frac{d\zeta}{(1-\zeta^{2})}.$ Evaluation of $\Phi_{\text{nonlin.}}(\xi)$ will yield a linear combination of
+arctan and arctanh (or ln) functions in terms of $\zeta=\tanh(\sqrt{a}\,\xi)$ .
+Note that its graph will be kink shaped, since $\Phi_{\text{nonlin.}}(\infty)=-\Phi_{\text{nonlin.}}(-\infty)$ and $\Phi_{\text{nonlin.}}(0)=0$ .
+The sign of the kink is determined by the slope of $\Phi_{\text{nonlin.}}(\xi)$ at $\xi=0$ : ${\rm sgn}(\Phi_{\text{nonlin.}}(\infty))={\rm sgn}(\Phi_{\text{nonlin.}}^{\prime}(0))=\pm{\rm sgn}(A_{\infty}-A_{0})$ (6.8) using condition ( 5.14 ),
+where “ $\pm$ ” refers to the sign in expressions ( 6.7 ).
+Consequently, the asymptotic behaviour of the phase is $\Phi(\xi)\sim\phi+\Phi_{\text{lin.}}(\xi)\pm\Phi_{\text{nonlin.}}(\infty)\text{ as }\xi\to\pm\infty$ (6.9) in terms of the asymptote $\Phi_{\text{nonlin.}}(\infty)\neq 0$ of the kink. All of these features,
+in addition to the sign of the wave speed $c$ and the gKdV-LS coupling $k$ ,
+are summarized for each nonlinearity power $p=1,2,3,4$ in the next section
+(cf Tables 2 to 8 ). 6.1. Features of solitary wave solutions free no. of coupling speed gKdV LS side freq. phase fam. peak backgrnd. tail & peak peaks parm. kink $k$ , $b$ , $c$ , $\varpi$ $1$ $k>1$ $c<c_{\text{crit.}}$ bright $b\gtrless 0$ , $b=0$ bright & bright $1$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu\geq 0$ $c>c_{\text{crit.}}$ bright $b\gtrless 0$ , $b=0$ bright & dark $0$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu>0$ $0<k<1$ $c>c_{\text{crit.}}$ bright $b\gtrless 0$ , $b=0$ bright & bright $1$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu\geq 0$ $c<c_{\text{crit.}}$ bright $b\gtrless 0$ , $b=0$ bright & dark $0$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu>0$ $k<0$ $c<c_{\text{crit.}}$ dark $b\gtrless 0$ , $b=0$ bright & bright $1$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu\geq 0$ $c>c_{\text{crit.}}$ dark $b\gtrless 0$ , $b=0$ bright & dark $0$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu>0$ $k$ , $b$ , $c$ $2$ $k>0$ $c\gtrless 0$ bright $b\gtrless 0$ , $b=0$ $0$ & bright $0$ $\varpi\gtrless 0$ $\mu=0$ $0$ & dark $1$ $\varpi\gtrless 0$ $\mu=0$ $k<0$ $c\gtrless 0$ dark $b\gtrless 0$ , $b=0$ $0$ & bright $0$ $\varpi\gtrless 0$ $\mu=0$ $0$ & dark $1$ $\varpi\gtrless 0$ $\mu=0$ Table 2. $p=1$ : features of solitary wave family (1-i), (1-i.1) $c_{\text{crit.}}=4(1-k)b+(3-4k)\varpi/k$ free no. of coupling speed gKdV LS tail side freq. phase fam. peak backgrnd. & peak peaks parm. kink $b$ , $c$ , $\varpi$ , $a$ , $s_{2}$ $1$ $k=1/6$ $c\gtrless 0$ bright $b\gtrless 0$ , $b=0$ bright & dark $0$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu\geq 0$ $b$ , $c$ , $\varpi$ , $s_{2}$ $1$ $k=1/6$ $c\gtrless 0$ bright $b\gtrless 0$ , $b=0$ $0$ & bright $0$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu=0$ Table 3. $p=1$ : features of solitary wave family (1-ii), (1-ii.1) free no. of coupling speed gKdV LS tail side freq. phase fam. peak backgrnd. & peak peaks parm. kink $b$ , $c$ , $a$ $1$ $k=1$ $c\gtrless 0$ bright $b<b_{\text{crit.}}$ bright & bright $1$ $\varpi\gtrless 0$ $\mu>0$ $c\gtrless 0$ bright $b>b_{\text{crit.}}$ bright & dark $0$ $\varpi\gtrless 0$ $\mu>0$ $b$ , $c$ $2$ $k=1$ $c\gtrless 0$ bright $b\gtrless 0$ , $b=0$ $0$ & bright $0$ $\varpi\gtrless 0$ $\mu=0$ $c\gtrless 0$ bright $b\gtrless 0$ , $b=0$ $0$ & dark $1$ $\varpi\gtrless 0$ $\mu=0$ $b$ , $a$ $1$ $k=1$ $c\gtrless 0$ bright $b\gtrless 0$ bright & bright $1$ $\varpi\gtrless 0$ $\mu=0$ Table 4. $p=1$ : features of solitary wave family (1-iii), (1-iii.1), (1-iii.2) $b_{\text{crit.}}=c-2a$ free no. of coupling speed gKdV LS tail side freq. phase families peak backgrnd. & peak peaks parm. kink $k$ , $b$ , $c$ $1$ $k>0$ $c\gtrless 0$ bright $b>b_{\text{crit.}}$ bright & dark $0$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu>0$ $b=b_{\text{crit.}}$ bright & dark $1$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu>0$ $b<b_{\text{crit.}}$ bright & dark $2$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu>0$ $k<0$ $c\gtrless 0$ dark $0<b<b_{\text{crit.}}$ bright & dark $0$ $\varpi>0$ $\mu>0$ $b=b_{\text{crit.}}$ bright & dark $1$ $\varpi>0$ $\mu>0$ $b>b_{\text{crit.}}$ bright & dark $2$ $\varpi>0$ $\mu>0$ $k$ , $b$ $3$ $k>0$ $c\gtrless 0$ bright $b\gtrless 0$ , $b=0$ bright & dark $2$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu=0$ $c>0$ bright $b\gtrless 0$ , $b=0$ $0$ & dark $1$ $\varpi<0$ $\mu=0$ $c<0$ bright $b<0$ $0$ & bright $2$ $\varpi>0$ $\mu=0$ $k<0$ $c>0$ dark $b\gtrless 0$ , $b=0$ $0$ & bright $2$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu=0$ $c<0$ dark $b>0$ bright & dark $2$ $\varpi>0$ $\mu=0$ $c<0$ dark $b>0$ $0$ & dark $1$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu=0$ $k$ , $c$ $1$ $k>0$ $c\gtrless 0$ bright $b<0$ $0$ & bright $0$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu=0$ $k<0$ $c>0$ dark $b<0$ $0$ & bright $0$ $\varpi\gtrless 0$ , $\varpi=0$ $\mu=0$ Table 5. $p=2$ : features of solitary wave family (2-i), (2-i.1), (2-i.2) $b_{\text{crit.}}=2c/|k|$ free no. of coupling speed gKdV LS tail side freq. phase families peak backgrnd. & peak peaks parm. kink $b$ , $\varpi$ $1$ $k<0$ $c<0$ dark $b>0$ bright & dark $0$ $\varpi>\varpi_{\text{side}}$ $\mu\geq 0$ $1$ $\varpi=\varpi_{\text{side}}$ $\mu\geq 0$ $2$ $\varpi<\varpi_{\text{side}}$ $\mu\geq 0$ $b$ $2$ $k>0$ $c<0$ bright $b<0$ $0$ & bright $2$ $\varpi>0$ $\mu=0$ $k<0$ $c<0$ dark $b>0$ $0$ & dark $1$ $\varpi>0$ $\mu=0$ Table 6. $p=2$ : features of solitary wave family (2-ii), (2-ii.1) $\varpi_{\text{side}}=17b^{2}/16$ free no. of coupling speed gKdV LS tail side freq. phase families peak backgrnd. & peak peaks parm. kink $k,b$ $1$ $k>0$ $c\gtrless 0$ bright $b<b_{\text{side}}<0$ bright & bright $1$ $\varpi>0$ $\mu\geq 0$ $b=b_{\text{side}}<0$ bright & bright $2$ $\varpi>0$ $\mu\geq 0$ $0>b>b_{\text{side}}$ bright & bright $3$ $\varpi>0$ $\mu\geq 0$ $k<0$ $c<0$ dark $b>b_{\text{crit.}}>0$ bright & bright $1$ $\varpi>0$ $\mu>0$ $0<b<b_{\text{crit.}}$ bright & dark $0$ $\varpi>0$ $\mu>0$ $k$ $3$ $k>0$ $c<0$ bright $b<0$ $0$ & bright $2$ $\varpi>0$ $\mu=0$ $0$ & dark $1$ $\varpi>0$ $\mu=0$ $0$ & dark $3$ $\varpi>0$ $\mu=0$ Table 7. $p=3$ : features of solitary wave family (3-i), (3-i.1) $b_{\text{side}}$ is the real negative root of $25b^{6}-125kb^{4}+204k^{2}b^{2}-180k^{3}=0$ $b_{\text{crit.}}$ is the real positive root of $5b^{6}-131|k|b^{4}-21|k|^{2}b^{2}-45|k|^{3}=0$ free no. of coupling speed gKdV LS tail side freq. phase families peak backgrnd. & peak peaks parm. kink $k$ $1$ $k>0$ $c<0$ bright $b<0$ bright & dark $0$ $\varpi>0$ $\mu>0$ Table 8. $p=4$ : features of solitary wave family (4-i) 6.2. Conserved integrals All of the solitary wave solutions ( 4.35 )
+with expressions ( 5.6 ), ( 5.9 ), ( 5.10 )
+have a total mass, charge, momentum, and energy
+given respectively by the four conserved integrals ( 4.5 )–( 4.8 ).
+The latter two integrals ( 4.7 )–( 4.8 ) can be simplified
+by use of the ODEs ( 4.23 ) for $U(\xi)$ and ( 4.24 ) for $\Phi(z)$ . Each integral will be finite if $u$ has a zero background and $|\psi|$ has a zero tail,
+namely $b=0$ and $g_{1}=0$ ,
+since then the density goes to $0$ exponentially in $|\xi|$ . If a density otherwise has a non-zero asymptotic tail as $|\xi|\to\infty$ ,
+the conserved integral will diverge.
+Nevertheless, the divergent contribution can be removed by subtraction of
+the asymptotic tail in the density, yielding a regularized integral
+which is conserved and finite. The regularized integrals for mass, charge, momentum, and energy are given by $\displaystyle\tilde{M}[U]=\int_{-\infty}^{\infty}(U-b)\,d\xi,$ (6.10) $\displaystyle\tilde{J}[A]=\int_{-\infty}^{\infty}\tfrac{1}{2}(A^{2}-A_{0}^{2})\,d\xi,$ (6.11) $\displaystyle\tilde{P}[U,A,\Phi]=\int_{-\infty}^{\infty}\big(\tfrac{1}{2}(U^{2}-b^{2})-s_{2}\tfrac{c}{2k}(A^{2}-A_{0}^{2})\big)\,d\xi,$ (6.12) $\displaystyle\begin{aligned} \tilde{H}[U,A,\Phi]=&\int_{-\infty}^{\infty}\big(\tfrac{1}{2}U^{\prime}{}^{2}+s_{2}\tfrac{1}{k}A^{\prime}{}^{2}-s_{1}\tfrac{1}{(p+1)(p+2)}(U^{p+2}-b^{p+2})\\
+&\qquad+s_{2}\tfrac{c^{2}}{4k}(A^{2}-A_{0}^{2})-s_{2}(UA^{2}-bA_{0}^{2})\big)\,d\xi\\
+=&\int_{-\infty}^{\infty}\big(\tfrac{1}{2}(U^{2}-b^{2})+C_{1}(U-b)-s_{1}\tfrac{2}{(p+1)(p+2)}(U^{p+2}-b^{p+2})\\
+&\qquad-s_{2}\tfrac{\omega}{k}(A^{2}-A_{0}^{2})-s_{2}2(UA^{2}-bA_{0}^{2})\big)\,d\xi,\end{aligned}$ (6.13) which are finite for all solitary wave solutions ( 5.6 ), ( 5.9 ), ( 5.10 ). It is straightforward to evaluate the mass integral ( 6.10 ): $\tilde{M}[U]=\int_{-\infty}^{\infty}s_{3}h\,{\rm sech}^{2}(\sqrt{a}\,\xi)d\xi=s_{3}\frac{2h}{\sqrt{a}}.$ (6.14) This is the same general expression as the mass of the mKdV solitary wave
+and depends on $p$ only implicitly through $h$ when it is evaluated for
+a specific solution family. It is similarly straightforward to evaluate the charge integral ( 6.11 )
+for each power $p=1,2,3,4$ ,
+where the density is given by $\frac{1}{2}g_{3}h^{2}\,{\rm sech}^{4}(\sqrt{a}\,\xi)+s_{3}\frac{1}{2}(2bg_{3}+g_{2})h\,{\rm sech}^{2}(\sqrt{a}\,\xi)+s_{1}s_{2}\frac{1}{2(p+1)}\big(b^{p+1}-\big(s_{3}h\,{\rm sech}^{2}(\sqrt{a}\,\xi)+b\big)^{p+1}\big)$ .
+Alternatively, a single expression that holds for all $p$ can be obtained
+by applying the following integration steps to the third term in the density.
+Make a binomial expansion of this term
+and change the integration variable via ${\rm sech}(\sqrt{a}\,\xi)=2y/(1+y^{2})$ .
+Since the density is even in $\xi$ , the charge integral can be expressed as
+twice the expanded density integrated over $y$ from $0$ to $1$ .
+Each term is given by an associated Legendre function and the sum of all the terms
+can be shown to yield a generalized hypergeometric function ${}_{3}F_{2}$ [ 29 ] .
+When combined with the integral of the first and second terms in the density,
+this gives a simple general expression $\tilde{J}[U]=s_{3}\frac{h}{\sqrt{a}}\Big(2g_{3}(b+s_{3}h/3)+g_{2}+s_{1}s_{2}b^{p}\,{}_{3}F_{2}\big([1,1,-p],[3/2,2],{-s_{3}}h/b\big)\Big),\quad p=1,2,3,4.$ (6.15) This expression involves $p$ explicitly as well as implicitly through $b,h,g_{2},g_{3}$ when it is evaluated for a specific solution family.
+The generalized hypergeometric function ${}_{3}F_{2}\big([1,1,-p],[3/2,2],{-s_{3}}h/b\big)$ is a polynomial of degree $p$ in $h/b$ . The same steps can be used to evaluate the momentum and energy integrals,
+which yields the respective expressions $\displaystyle\begin{aligned} \tilde{P}[U,A,\Phi]=s_{3}\frac{h}{k\sqrt{a}}\Big(&2(k-s_{2}cg_{3})(b+s_{3}h/3)-s_{2}cg_{2}\\
+&\quad+s_{1}cb^{p}\,{}_{3}F_{2}\big([1,1,-p],[3/2,2],{-s_{3}}h/b\big)\Big),\quad p=1,2,3,4;\end{aligned}$ (6.16) $\displaystyle\begin{aligned} \tilde{E}[U,A,\Phi]=s_{3}\frac{h}{\sqrt{a}}\Big(&s_{2}4\big(g_{3}(b+s_{3}h/3)^{2}-(g_{3}(b+s_{3}h/3)+g_{2}/2)(4(b+s_{3}h/3)+\omega/k)\\
+&\qquad-g_{3}h^{2}/5-g_{1}\big)+2c(b+s_{3}h/3)+2C_{1}\\
+&\quad+s_{1}2b^{p}\big(2b\,{}_{3}F_{2}\big([1,1,-p-1],[3/2,2],{-s_{3}}h/b\big)\\
+&\qquad\qquad\quad+\omega/k\,{}_{3}F_{2}\big([1,1,-p],[3/2,2],{-s_{3}}h/b\big)\big)\Big),\quad p=1,2,3,4.\end{aligned}$ (6.17) Proposition 6 . Solitary wave solutions ( 5.6 ), ( 5.9 ), ( 5.10 )
+have regularized mass ( 6.14 ), charge ( 6.15 ), momentum ( 6.16 ), and energy ( 6.17 ),
+all of which are finite. 6.3. Remarks on stability A basic notion of stability for a solution $(U(\xi),A(\xi),\Phi(z))$ is linear (spectral) stability
+under perturbations.
+For a parametric family of solutions, a stronger notion is orbital stability.
+Both notions are related to convexity of the integral quantity ( 4.9 )
+in the variational principle ( 4.10 ) for the ODE system ( 4.4 )
+that determines solutions.
+In the case of solutions that have a non-zero background,
+a regularized version of this integral quantity can be used, $\widetilde{W}[U,A,\Phi]=\tilde{H}[U,A,\Phi]+c\tilde{P}[U,A,\Phi]-s_{2}(2\omega/k)\tilde{J}[A]+C_{1}\tilde{M}[U],$ (6.18) where the conserved integrals ( 4.5 )–( 4.8 ) are replaced by
+their regularized counterparts ( 6.10 )–( 6.13 ),
+which does not change the Euler-Lagrange ODEs. Convexity is determined by the eigenvalues of the Hessian operator of
+the regularized integral quantity ( 6.18 ).
+After reverting from amplitude and phase variables to the LS variable ( 4.3 ),
+the Hessian is given by matrix operator $\displaystyle\partial^{2}\widetilde{W}[U,\Psi,\bar{\Psi};p]=$ (6.19) $\displaystyle-\begin{pmatrix}\dfrac{d^{2}}{d\xi^{2}}-c+s_{1}U^{p}&s_{2}\bar{\Psi}&s_{2}\Psi\\
+s_{2}\Psi&(s_{2}/k)\Big(\dfrac{d^{2}}{d\xi^{2}}-ic\dfrac{d}{d\xi}+\omega\Big)+s_{2}U&0\\
+s_{2}\bar{\Psi}&0&(s_{2}/k)\Big(\dfrac{d^{2}}{d\xi^{2}}+ic\dfrac{d}{d\xi}+\omega\Big)+s_{2}U\end{pmatrix}.$ This operator is formally self-adjoint with respect to a joint $L^{2}$ inner product for the $U$ -component
+and a hermitian $L^{2}$ inner product for the $\Psi,\bar{\Psi}$ -components.
+It can be brought to a diagonal form by the change of variables $\Psi=s_{2}(k/2)e^{i\frac{c}{2}\xi}(\Theta_{1}+i\Theta_{2}),\quad\bar{\Theta}_{1}=\Theta_{1},\quad\bar{\Theta}_{2}=\Theta_{2},$ (6.20) yielding ${\mathcal{L}}={\mathcal{I}}\dfrac{d^{2}}{d\xi^{2}}+{\mathcal{V}}$ (6.21) with ${\mathcal{I}}={\rm diag}\big(1,s_{2}k/2,s_{2}k/2\big),\quad{\mathcal{V}}=\begin{pmatrix}-c+s_{1}U^{p}&s_{2}(k^{2}/2)\Theta_{1}&s_{2}(k^{2}/2)\Theta_{2}\\
+s_{2}(k^{2}/2)\Theta_{1}&s_{2}(k/2)(\varpi+kU)&0\\
+s_{2}(k^{2}/2)\Theta_{2}&0&s_{2}(k/2)(\varpi+kU)\end{pmatrix},$ (6.22) where $\varpi$ is expression ( 5.17 ).
+This is a linear self-adjoint matrix operator with respect to a real $L^{2}$ inner product
+for the real components $(U,\Theta_{1},\Theta_{2})$ . From Proposition 4 ,
+there are three infinitesimal symmetries ( 4.11 )–( 4.12 )
+of the Euler-Lagrange ODEs ( 4.4 ).
+A standard argument shows that the translation and phase rotation symmetries
+will each give rise to a zero eigenvalue of the operator ( 6.21 ).
+The key question for determining stability is whether
+this operator has a negative eigenvalue [ 30 ] .
+This will be addressed in subsequent work. 7. Concluding remarks The new method developed in the present work
+has yielded 22 families of exact solitary wave solutions ( 1.3 )
+for the coupled nonlinear gKdV-LS system ( 1.1 )–( 1.2 )
+with nonlinearity powers $p=1,2,3,4$ .
+No solutions for $p>1$ were known previously. For $p=1$ ,
+four of the solution families contain the solitary waves that were first found
+in Ref. [ 7 , 13 ] .
+The former one arose in the context of nonlinear plasma waves
+and coincides with the first of the two families 1-i.1 (i.e. dark LS peak).
+The latter ones come from nonlinear waves in anharmonic lattices
+and were named bright/dark Davydov solitons of the 1st and 2nd kind:
+they are respectively given by
+the case $s_{2}=-1$ of families 1-ii with $\mu\neq 0$ and 1-ii.1;
+and the case $k=1/6$ of family 1-i with $\mu=0$ and $c<c_{\text{crit.}}$ and the case $k=1/6$ of the second family 1-i.1 (i.e. bright LS peak).
+These particular solitary waves are characterized by respective relations $|\psi|^{2}\propto$ $(u-b)(u-u_{0})$ , $u-b$ , $(u-u_{0})^{2}$ ,
+for some constant $u_{0}$ ,
+which allows them to be derived by basic ODE methods.
+The corresponding relations for the travelling wave ODE system ( 1.4 )
+have the form $A^{2}\propto$ $(U-b)(U-U_{0})$ , $U-b$ , $(U-U_{0})^{2}$ in terms of the variables ( 4.3 ). The additional five solution families for $p=1$ describe new solitary waves.
+Physical properties and applications,
+as well as stability analysis based on the variational principle ( 4.10 ),
+for all of the new solution families for $p=1,2,3,4$ will be discussed elsewhere. The main results obtained here illustrate the power of
+modern symmetry analysis methods combined with advanced symbolic computation packages
+for the study of exact solitary wave solutions of coupled nonlinear ODE systems. As further applications,
+one direction would be a generalization of the gKdV-LS system to include
+a self-interaction $\nu|\psi|^{q}\psi$ in equation ( 1.2 ) for the Schrodinger field $\psi$ ,
+where $q>0$ is a nonlinearity power.
+Only a few exact solutions are known for this nonlinear coupled system [ 31 ] .
+Another direction would be to consider a coupled Boussinesq-LS system [ 32 ] and its $p$ -power generalizations,
+for which exact solitary wave solutions are of physical interest. A more general direction would be to extend the present method to the study of
+nonlinearly generalized Hénon-Heiles ODE systems,
+which arise in wide variety of physical and applied mathematical problems. Appendix A Computational remarks The computation leading to the results summarized in Table 1 will be outlined here. As explained in Section 5.2 ,
+the computation involves solving a polynomial equation obtained by
+substitution of the general polynomial ansatz ( 5.1 )
+into the ODE ( 4.33 ) for $G(U)$ .
+This polynomial equation has 436 terms,
+containing 16 powers $0,1,2,3,4,5,p,p+1,p+2,p+3,p+4,2p,2p+1,2p+2,2p+3$ .
+There are 14 unknowns, consisting of $p$ , $k$ , $b$ , $h$ , $a$ , $c$ , $\varpi$ , $\mu$ , $C_{1}$ , $\tilde{C}_{3}$ , $E$ ,
+and $s_{1},s_{2},s_{3}$ ,
+which are required to obey 8 conditions, $p\neq 0,-1$ , $k\neq 0$ , $h\neq 0$ , $a\neq 0$ , $c\neq 0$ ,
+and $s_{1}{}^{2}=s_{2}{}^{2}=s_{3}{}^{2}=1$ .
+These conditions together with the polynomial equation
+constitute the algebraic system to be solved.
+This is a non-polynomial algebraic problem, because $p$ appears in exponents
+and because products of the unknowns (including $p$ ) appear in the coefficients of some terms. The computer algebra package Crack [ 24 ] , written in REDUCE,
+is able to solve nonlinear problems (algebraic as well as differential).
+Specifically, it is able to split equations with respect to independent variables, including when a variable appears as an exponent.
+It is also able to make case distinctions as needed.
+In an automatic run, all splitting with respect to the independent variables
+has a high priority. The system here has a single independent variable, $U$ .
+Crack splits the system with respect to $U$ if all exponents are known to be different.
+Since $p$ is an unknown that appears in exponents,
+Crack proceeds by systematically taking the difference between two exponents,
+with at least one of the exponents containing $p$ ,
+and starting a case distinction in which the pivot is given by the expression
+for the difference being zero or non-zero.
+In the non-zero case, this inequality is simply appended to the system.
+In the zero case,
+Crack determines $p$ and then substitutes it back into the system.
+If the resulting system either has all exponents of $U$ being distinct,
+or has no exponents of $U$ involving $p$ ,
+then it can be split into a system of algebraic equations that involve only the unknowns.
+Crack is able to solve these equations straightforwardly.
+If an equation factorizes,
+then a further case distinction is made with respect to each factor.
+This process is repeated until all possible case distinctions have been considered,
+and the system has been either fully solved or reduced to irreducible equations
+such as high degree polynomials in the unknowns.
+In the system under consideration,
+every case leads to an algebraic system that is explicitly solved
+in the sense that its solution is given by explicit expressions
+together with at most low-degree polynomials whose solution set is non-empty. The final result is 56 solutions that can be merged into non-overlapping families
+organized by $p$ as shown in Table 9 . nonlinearity no. of determined free $p$ families $4$ $1$ $b$ , $h$ , $a$ , $\mu$ , $\varpi$ , $c$ ; $s_{2}$ $k$ ; $s_{1}$ , $s_{3}$ $3$ $1$ $h$ , $a$ , $\mu$ , $\varpi$ , $c$ ; $s_{1}$ $k$ , $b$ ; $s_{2}$ , $s_{3}$ $2$ $2$ $h$ , $a$ , $\mu$ , $\varpi$ ; $s_{2}$ $k$ , $b$ , $c$ ; $s_{1}$ , $s_{3}$ $b$ , $h$ , $a$ , $\mu$ , $c$ ; $s_{2}$ $k$ , $\varpi$ ; $s_{1}$ , $s_{3}$ $1$ $3$ $a$ , $h$ , $\mu$ ; $s_{1}$ $k$ , $b$ , $c$ , $\varpi$ ; $s_{2}$ , $s_{3}$ $k$ , $h$ , $\mu$ ; $s_{1}$ $b$ , $a$ , $c$ , $\varpi$ ; $s_{2}$ , $s_{3}$ $k$ , $h$ , $\mu$ , $\varpi$ ; $s_{1}$ $b$ , $a$ , $c$ ; $s_{2}$ , $s_{3}$ Table 9. Solution cases Appendix B Solution families Firstly, the output for the non-overlapping families of solutions listed in Table 9 will be summarized.
+Secondly, for each solution family,
+the conditions ( 5.14 ) and ( 5.15 ) will be analyzed
+to derive a minimal set of inequalities on the free parameters. In the special case $\mu=0$ and $A(0)=A(\pm\infty)=0$ when the necessary conditions ( 5.14 ) are not sufficient,
+the following stronger conditions will be used: $\begin{gathered}s_{3}\big(g_{2}+2g_{3}(b+s_{3}h)-s_{1}s_{2}(b+s_{3}h)^{p}\big)\leq 0,\\
+s_{3}\big(g_{2}+2g_{3}b-s_{1}s_{2}b^{p}\big)\geq 0.\end{gathered}$ (B.1) These conditions are derived straightforwardly
+from an asymptotic expansion of expression ( 5.9 )
+for $A(\xi)^{2}$ with $\xi\sim 0$ and $\xi\sim\pm\infty$ , respectively,
+applied to the full condition ( 5.12 ).
+The expansion uses $U(\xi)-U(0)\sim-s_{3}h\xi^{2}$ as $\xi\sim 0$ where $U(0)=b+s_{3}h$ ,
+and $U(\xi)-b\sim 2s_{3}he^{-\sqrt{a}|\xi|}$ as $\xi\sim\pm\infty$ from expression ( 5.6 ). Solution families for $\boldsymbol{p=1}$ : The first family has free parameters $b$ , $c$ , $\varpi$ , $k\neq 0,1$ .
+The determined parameters and signs are given by $\displaystyle s_{1}=1,\quad a=-\frac{kc+(2k-1)\varpi}{4(k-1)}-\frac{kb}{2},\quad h=s_{3}\frac{6a}{k},$ (B.2a) $\displaystyle g_{1}=s_{2}\frac{(2k-1)(4k^{2}(c+\varpi)^{2}+3(kc+\varpi)^{2})}{8k^{2}(k-1)^{2}}-\frac{6a^{2}}{k^{2}},$ (B.2b) $\displaystyle g_{2}=s_{2}\frac{(2k-1)(c+\varpi)}{k-1},\quad g_{3}=s_{2}k,$ (B.2c) $\displaystyle E=b^{2}\Big(\frac{kb}{3}+2a\Big),$ (B.2d) $\displaystyle\begin{aligned} \mu=&\frac{(2k-1)^{2}}{4k^{2}(k-1)^{4}}(kb+\varpi)((k-1)b+c+\varpi)^{2}(2(k-1)(kb+\varpi)-(kc+\varpi))^{2},\end{aligned}$ (B.2e) which are subject to the conditions ( 5.14 )–( 5.15 ). The first two of the three conditions ( 5.15 ) yield $s_{3}={\rm sgn}(k)$ (B.3) and $2(kb+\varpi)+\frac{kc+\varpi}{k-1}<0,$ (B.4) while the third condition gives $kb+\varpi>0\quad\text{when $\mu\neq 0$},$ (B.5) and $\begin{gathered}(2k-1)(kb+\varpi)(kc+\varpi+(k-1)(kb+\varpi))(kc+\varpi-2(k-1)(kb+\varpi))=0\\
+\quad\text{when $\mu=0$}.\end{gathered}$ (B.6) In the case $\mu\neq 0$ ,
+conditions ( 5.14a ) combined with the inequalities ( B.4 )–( B.5 )
+are found to yield $s_{2}={\rm sgn}(k-1/2).$ (B.7) The inequalities themselves reduce to $\displaystyle c>2(1-k)b-(2k-1)\varpi/k\quad\text{ if $0<k<1$},$ (B.8) $\displaystyle c<2(1-k)b-(2k-1)\varpi/k\quad\text{ if $k<0$ or $k>1$}.$ In the case $\mu=0$ ,
+condition ( B.6 ) splits into four subcases: $\displaystyle\varpi=-kb,$ (B.9) $\displaystyle\varpi=-(k-1)b-c,$ (B.10) $\displaystyle\varpi=-\frac{k(2(k-1)b-c)}{2k-3},$ (B.11) and $k=1/2$ .
+In the latter subcase, $A(\xi)$ turns out to be identically zero,
+which need not be considered further. For subcase ( B.9 ),
+the inequality ( B.4 ) combined with conditions ( 5.14b ) give $s_{2}={\rm sgn}(k-1/2),\quad k\neq 1/2$ (B.12) and $\displaystyle c>b\quad\text{ if $0<k<1$},$ (B.13) $\displaystyle c<b\quad\text{ if $k<0$ or $k>1$}.$ Similarly, for subcase ( B.10 ),
+the inequality ( B.4 ) combined with conditions ( 5.14b )
+give the sign condition ( B.12 )
+and $c>b.$ (B.14) In subcase ( B.11 ),
+conditions ( 5.14b ) hold as equalities
+and therefore the further condition ( B.1 ) is necessary,
+This yields $s_{2}=-{\rm sgn}(k-1/2),\quad k\neq 1/2,$ (B.15) while the inequality ( B.4 ) gives $\displaystyle c>b\quad\text{ if $0<k<3/2$},$ (B.16) $\displaystyle c<b\quad\text{ if $k<0$ or $k>3/2$}.$ Note that the subcase
+( B.9 )
+can be merged with the main case
+( B.4 ),
+since inequalities ( B.5 ), ( B.8 )
+reduce respectively to inequalities ( B.12 ) and ( B.13 )
+when ( B.9 ) holds. The second family has free parameters $b$ , $c$ , $\varpi$ , $a>0$ .
+The determined parameters and signs are given by $\displaystyle s_{1}=1,\quad k=\frac{1}{6},\quad h=s_{3}12a,$ (B.17a) $\displaystyle g_{1}=s_{2}3(b-c+4a)(b+4a+4\varpi),\quad g_{2}=-s_{2}(b-c+4a),\quad g_{3}=s_{2}\frac{1}{2},$ (B.17b) $\displaystyle E=\frac{b^{2}(b+12a)}{6},\quad\mu=\frac{2(b-c+4a)^{2}(b+6(\varpi+a))^{2}(b+6\varpi)}{3}.$ (B.17c) The three conditions ( 5.15 ) give $s_{3}=1$ (B.18) and $\displaystyle b+6\varpi>0\quad\text{when $\mu\neq 0$},$ (B.19) $\displaystyle(b+6\varpi)(b+6(\varpi+a))(b-c+4a)=0\quad\text{when $\mu=0$}.$ (B.20) For $\mu\neq 0$ ,
+the two conditions ( 5.14a ) reduce to $0<s_{2}(b-c+4a)$ after use of $a>0$ .
+This yields $\begin{aligned} &c<b+4a\text{ if }s_{2}=1\\
+&c>b+4a\text{ if }s_{2}=-1\end{aligned}\quad\text{when $\mu\neq 0$},$ (B.21) which are independent of inequality ( B.19 ). For $\mu=0$ ,
+condition ( B.20 ) splits into three subcases: $\displaystyle\varpi=-\frac{b}{6},$ (B.22) $\displaystyle a=-\frac{b}{6}-\varpi>0,$ (B.23) and $a=(c-b)/4>0$ .
+In the latter subcase, $A(\xi)$ is found to be identically zero,
+which will not be considered further. In subcase ( B.22 ),
+the two conditions ( 5.14b ) give $\displaystyle c<b+4a\text{ if }s_{2}=1,$ (B.24) $\displaystyle c>b+4a\text{ if }s_{2}=-1.$ In subcase ( B.23 ),
+conditions ( 5.14b ) similarly yield $\displaystyle c>\frac{b}{3}-4\varpi\text{ if }s_{2}=1,$ (B.25) $\displaystyle c<\frac{b}{3}-4\varpi\text{ if }s_{2}=-1.$ There are no further conditions. Note that the subcase ( B.22 ) with $\mu=0$ and the case ( B.19 ) with $\mu\neq 0$ can be merged: $\varpi\geq-b/6$ with $\mu\geq 0$ . The third family has free parameters $b$ , $c$ , $a>0$ .
+The determined parameters and signs are given by $\displaystyle s_{1}=1,\quad k=1,\quad h=s_{3}6a,$ (B.26a) $\displaystyle g_{1}=s_{2}\Big(\frac{7(7b-8c+8a)(7b-2c+8a)}{4}-\frac{3b(7b-10c)}{8}\Big),\quad g_{2}=-s_{2}(2b-c+4a),\quad g_{3}=s_{2},$ (B.26b) $\displaystyle E=\frac{b^{2}(b+6a)}{3},\quad\mu=4(b-c)(b-c+a)^{2}(b-c+4a)^{2},\quad\varpi=-c.$ (B.26c) The three conditions ( 5.15 ) give $s_{3}=1$ (B.27) and $\displaystyle b-c>0\quad\text{when $\mu\neq 0$},$ (B.28) $\displaystyle(b-c)(b-c+a)(b-c+4a)=0\quad\text{when $\mu=0$}.$ (B.29) For $\mu\neq 0$ ,
+the two conditions ( 5.14a ) reduce to $s_{2}=1$ (B.30) due to $a>0$ . For $\mu=0$ ,
+condition ( B.29 ) splits into three subcases: $\displaystyle c=b,$ (B.31) $\displaystyle a=\frac{c-b}{4}>0,$ (B.32) $\displaystyle a=c-b>0.$ (B.33) In both subcases ( B.31 ) and ( B.32 ),
+the two conditions ( 5.14b ) reduce to $s_{2}=1.$ (B.34) In subcase ( B.33 ),
+conditions ( 5.14b ) hold as equalities,
+and so the stronger condition ( B.1 ) is necessary.
+This stronger condition yields $s_{2}=-1.$ (B.35) There are no further conditions in any of the subcases. Solution families for $\boldsymbol{p=2}$ : The first family has free parameters $b$ , $c$ , $k\neq 0$ .
+The determined parameters and signs are given by $\displaystyle s_{2}=1,$ (B.36a) $\displaystyle a=\frac{(2c-4kb+s_{1}(2b^{2}+k^{2}))k}{16(k-s_{1}b)},\quad h=s_{3}\frac{12a}{k},$ (B.36b) $\displaystyle g_{1}=\frac{k-s_{1}2b}{(k-s_{1}b)^{2}}\Big(c+\frac{3kb}{16}-s_{1}\frac{5k^{2}}{16}-s_{1}\frac{3b^{2}}{8}\Big)^{2}-\Big(k-s_{1}\frac{22b}{3}\Big)\Big(\frac{3k}{16}-s_{1}\frac{b}{8}\Big)^{2},$ (B.36c) $\displaystyle g_{2}=\frac{(k-s_{1}2b)(2c-s_{1}k^{2})}{4(k-s_{1}b)}-\frac{kb}{2},\quad g_{3}=\frac{k}{2},$ (B.36d) $\displaystyle\varpi=\frac{k}{8(k-s_{1}b)}\Big(s_{1}9b^{2}+s_{1}\frac{k^{2}}{2}-5bk-9c\Big),$ (B.36e) $\displaystyle E=\frac{kb^{2}}{4(k-s_{1}b)}\Big(c-\frac{4kb}{3}+s_{1}\frac{b^{2}}{3}+s_{1}\frac{k^{2}}{2}\Big),$ (B.36f) $\displaystyle\begin{aligned} \mu=&8k(k-2s_{1}b)^{2}\Big(\frac{2a}{k}+\frac{5(kb-2c)}{4(k-s_{1}b)}\Big)\Big(\frac{2a}{k}+\frac{5(kb-2c)}{8(k-s_{1}b)}\Big)^{2}\Big(\frac{2a}{k}+\frac{kb-2c}{4(k-s_{1}b)}\Big)^{2},\end{aligned}$ (B.36g) which are subject to the conditions ( 5.14 )–( 5.15 ). The first two of the three conditions ( 5.15 ) yield $s_{3}={\rm sgn}(k)$ (B.37) and $k(k-s_{1}b)(2c-4kb+s_{1}(k^{2}+2b^{2})>0,$ (B.38) while the third condition gives $k(k-s_{1}b)(6kb-18c+s_{1}(k^{2}+2b^{2})>0\quad\text{when $\mu\neq 0$},$ (B.39) and $\begin{gathered}(k-s_{1}2b)(2b^{2}+k^{2}+s_{1}(bk-8c))(2b^{2}+k^{2}-s_{1}(2bk+2c))(2b^{2}+k^{2}+s_{1}(6bk-18c))=0\\
+\quad\text{when $\mu=0$}.\end{gathered}$ (B.40) In the case $\mu\neq 0$ ,
+the first of the two conditions ( 5.14a )
+combined with inequality ( B.38 )
+yields $s_{1}k>0$ ,
+which gives $s_{1}={\rm sgn}(k).$ (B.41) The second of the two conditions ( 5.14a ) consists of $(s_{1}2b-k)(kb-8c+s_{1}(k^{2}+2b^{2}))(2kb+2c-s_{1}(k^{2}+2b^{2}))>0.$ (B.42) Inequalities ( B.42 ), ( B.39 ), ( B.38 )
+are straightforward to solve after splitting into cases $k>0$ and $k<0$ .
+This yields $b<k/2,\quad-b^{2}+2kb-k^{2}/2<c<b^{2}/9+kb/3+k^{2}/18,\quad\text{ if }k>0,$ (B.43a) and $\begin{aligned} b>|k|,&\quad-b^{2}/9+kb/3-k^{2}/18<c<b^{2}+2kb+k^{2}/2,\\
+|k|/2<b<|k|,&\quad b^{2}+2kb+k^{2}/2<c<-b^{2}/9+kb/3-k^{2}/18,\end{aligned}\quad\text{ if }k<0.$ (B.43b) For the case $\mu=0$ ,
+conditions ( B.40 ) and ( B.38 )
+can be split into two subcases: $b=s_{1}k/2,\quad c>s_{1}k^{2}/4$ (B.44) and $c=\nu_{1}bk+s_{1}\nu_{2}(2b^{2}+k^{2}),\quad(\nu_{1},\nu_{2})=(1/8,1/8),(1/3,1/18),(-1,1/2),$ (B.45) $\displaystyle b<s_{1}k/2\quad\text{ if }k>0,$ (B.46a) $\displaystyle b>s_{1}k/2\quad\text{ if }k<0.$ (B.46b) In the first subcase ( B.44 ),
+conditions ( 5.14b ) reduce to $s_{1}k<0$ ,
+which yields $s_{1}=-{\rm sgn}(k).$ (B.47) There are no additional conditions. In the second subcase ( B.45 )–( B.46 ),
+conditions ( 5.14b ) consist of $\displaystyle k\leq s_{1}2b\quad\text{ for }(\nu_{1},\nu_{2})=(1/8,1/8),$ (B.48a) $\displaystyle k\geq s_{1}2b\quad\text{ for }(\nu_{1},\nu_{2})=(1/3,1/18),$ (B.48b) while when $(\nu_{1},\nu_{2})=(-1,1/2)$ they hold as equalities.
+For the latter, the further condition ( B.1 ) is necessary,
+which yields $s_{1}k>0$ and thus $s_{1}={\rm sgn}(k)\quad\text{ for }(\nu_{1},\nu_{2})=(-1,1/2).$ (B.48c) These inequalities ( B.48 )
+along with inequalities ( B.46 )
+finally give $\displaystyle s_{1}=1,\quad b>-|k|/2,\quad k<0,\quad\text{ when }(\nu_{1},\nu_{2})=(1/8,1/8),$ (B.49a) $\displaystyle s_{1}=1,\quad b<k/2,\quad k>0,\quad\text{ when }(\nu_{1},\nu_{2})=(1/3,1/18),(-1,1/2),$ (B.49b) and $\displaystyle s_{1}=-1,\quad b>|k|/2,\quad k<0,\quad\text{ when }(\nu_{1},\nu_{2})=(1/3,1/18),(-1,1/2),$ (B.50a) $\displaystyle s_{1}=-1,\quad b<-k/2,\quad k>0,\quad\text{ when }(\nu_{1},\nu_{2})=(1/8,1/8).$ (B.50b) The second family has two free parameters $\varpi$ , $k\neq 0$ ,
+The determined parameters and signs are given by $\displaystyle s_{2}=1,\quad a=-\frac{13c+4\varpi}{36},\quad h=-s_{3}s_{1}\frac{13c+4\varpi}{3b},$ (B.51a) $\displaystyle g_{1}=-s_{1}\Big(\frac{61b^{3}}{81}+\frac{64\varpi^{2}}{81b}\Big)-\frac{127b\varpi}{81},\quad g_{2}=s_{1}\frac{2b^{2}}{9}+\frac{4\varpi}{9},\quad g_{3}=s_{1}\frac{b}{2},$ (B.51b) $\displaystyle\mu=s_{1}\frac{2(2c+\varpi)}{c}\Big(\frac{(c+\varpi)(59c+32\varpi)}{81}\Big)^{2},\quad E=-s_{1}\frac{c(7c+4\varpi)}{9},$ (B.51c) $\displaystyle c=s_{1}\frac{b^{2}}{2},\quad b=s_{1}k,$ (B.51d) which are subject to the conditions ( 5.14 )–( 5.15 ). Relation ( B.51d ) implies ${\rm sgn}(k)=s_{1}{\rm sgn}(b)$ ,
+and then the first of the three conditions ( 5.15 ) yields $s_{3}={\rm sgn}(k)$ (B.52) The remaining two conditions give $13s_{1}b^{2}+8\varpi<0$ (B.53) in addition to $s_{1}b^{2}+\varpi>0\quad\text{when $\mu\neq 0$},$ (B.54) and $(s_{1}b^{2}+\varpi)(s_{1}b^{2}+2\varpi)(59s_{1}b^{2}+34\varpi)=0\quad\text{when $\mu=0$}.$ (B.55) In the case $\mu\neq 0$ ,
+the first of the two conditions ( 5.14a ) reduces to the inequality $b>0,$ (B.56) whence $s_{1}={\rm sgn}(k)$ (B.57) from relation ( B.51d ).
+The second condition then reduces to $s_{1}(s_{1}b^{2}+2\varpi)(s_{1}59b^{2}+64\varpi)<0$ (B.58) It is straightforward to solve inequalities ( B.58 )
+and ( B.53 )–( B.54 )
+after splitting into cases $s_{1}=\pm 1$ .
+There is no solution for $s_{1}=1$ ,
+whereas $s_{1}=-1$ gives $b^{2}<\varpi<13b^{2}/8$ (B.59) This implies $s_{1}=-1,\quad s_{3}=-1,\quad k<0$ (B.60) In the case $\mu=0$ ,
+conditions ( 5.14b ) consist of $s_{1}b(s_{1}b^{2}+\varpi)(s_{1}b^{2}+2\varpi)^{2}\geq 0,\quad s_{1}b(s_{1}59b^{2}+64\varpi)(s_{1}b^{2}+2\varpi)^{2}\leq 0$ (B.61) These inequalities together with the previous conditions ( B.53 ) and ( B.55 )
+are straightforward to solve after splitting into cases $s_{1}=\pm 1$ .
+This yields three subcases: $\displaystyle s_{1}=-1,\quad b<0,\quad\varpi=59b^{2}/64$ (B.62a) $\displaystyle s_{1}=-1,\quad b>0,\quad\varpi=b^{2}$ (B.62b) and also $s_{1}=-1$ , $\varpi=b^{2}/2$ , $b\gtrless 0$ .
+In the latter subcase, conditions ( B.61 ) hold as equalities,
+and this requires imposing the further condition ( B.1 ),
+which yields $s_{1}=-1,\quad b>0,\quad\varpi=b^{2}/2$ (B.62c) Combining the relations ( B.62 ) with expression ( B.51d ) then gives $\displaystyle k>0\quad\text{ for }\varpi=59b^{2}/64$ (B.63a) $\displaystyle k<0\quad\text{ for }\varpi=b^{2},b^{2}/2$ (B.63b) Note that the subcase $b^{2}=\varpi$ for $\mu=0$ can be merged with
+the subcase $b^{2}<\varpi$ for $\mu>0$ : $b^{2}\leq\varpi$ for $\mu\geq 0$ . Solution family for $\boldsymbol{p=3}$ : This family has two free parameters $b\neq 0$ , $k\neq 0$ .
+The determined parameters and signs are given by $\displaystyle s_{1}=1,\quad a=-\frac{k(k+3b^{2})}{40b},\quad h=-s_{3}\frac{k+3b^{2}}{2b},$ (B.64a) $\displaystyle g_{1}=-s_{2}\frac{75b^{6}-220kb^{4}+182k^{2}b^{2}-30k^{3}}{300b^{2}},\quad g_{2}=-s_{2}\frac{(2k-b^{2})(3k-5b^{2})}{45b},\quad g_{3}=s_{2}\frac{3k}{10},$ (B.64b) $\displaystyle E=-\frac{kb(k+b^{2})}{20},\quad\mu=\frac{4k(2k-b^{2})(k-5b^{2})^{2}(3k-5b^{2})^{2}(15k-11b^{2})^{2}}{3(15b)^{5}},$ (B.64c) $\displaystyle\varpi=\frac{2k(k-3b^{2})}{5b},\quad c=-\frac{21k^{2}-53kb^{2}+10b^{4}}{90b}$ (B.64d) which are subject to the conditions ( 5.14 )–( 5.15 ). The first of the three conditions ( 5.15 ) gives $s_{3}={\rm sgn}(k)$ (B.65) while the other two conditions reduce to $kb(k+3b^{2})<0$ in addition to $kb(2k-b^{2})>0$ for $\mu\neq 0$ ,
+and $(2k-b^{2})(k-5b^{2})(3k-5b^{2})(15k-11b^{2})=0$ for $\mu=0$ . In the case $\mu\neq 0$ ,
+these inequalities yield $\displaystyle b<0,\quad b^{2}>2k$ $\displaystyle\text{ if }k>0$ (B.66) $\displaystyle b>0,\quad b^{2}>-k/3$ $\displaystyle\text{ if }k<0$ whereas in the case $\mu=0$ they give $k>0,\quad b<0,\quad b^{2}=2k,k/5,3k/5,15k/11$ (B.67) Conditions ( 5.14a ) give $s_{2}=-1\quad\text{when $\mu\neq 0$}.$ (B.68) Conditions ( 5.14b ) give $s_{2}=-1\quad\text{ for }b^{2}=2k,3k/5\quad\text{when $\mu=0$},$ (B.69) while for $b^{2}=k/5,15k/11$ ,
+conditions ( 5.14b ) hold as equalities.
+Hence, the stronger conditions ( B.1 ) need to be considered.
+Substitution of expressions ( B.64a ), ( B.64b ), and ( B.65 )
+into those conditions, followed by evaluation for the two values of $b$ ,
+yields $s_{2}k>0$ .
+Since $k>0$ ,
+this gives $s_{2}=1\quad\text{ for }b^{2}=k/5,15k/11\quad\text{when $\mu=0$}.$ (B.70) Note that the case $b^{2}=2k$ for $\mu=0$ can be merged with
+the case $b^{2}>2k$ for $\mu=0$ : $b^{2}\geq 2k$ for $\mu\geq 0$ . Solution family for $\boldsymbol{p=4}$ : This family has a single free parameter $k\neq 0$ .
+The determined parameters and signs are given by $\displaystyle s_{2}=1,\quad a=-\frac{kb}{10},\quad h=-s_{3}\frac{3b}{2},$ (B.71a) $\displaystyle g_{1}=-\frac{18kb^{2}}{25},\quad g_{2}=\frac{3kb}{10},\quad g_{3}=\frac{k}{5},\quad E=s_{1}\frac{k^{2}}{15},$ (B.71b) $\displaystyle\mu=s_{1}2\Big(\frac{81k^{2}b}{100}\Big)^{2},$ (B.71c) $\displaystyle\varpi=-\frac{5kb}{4},\quad c=\frac{kb}{2},$ (B.71d) $\displaystyle 2k+s_{1}b^{3}=0,$ (B.71e) which are subject to the conditions ( 5.14 )–( 5.15 ). Relation ( B.71e ) implies ${\rm sgn}(k)=-s_{1}{\rm sgn}(b)$ , with $b\neq 0$ .
+Then, conditions ( 5.15 ) show that $s_{1}=1,\quad s_{3}={\rm sgn}(k)$ (B.72) where ${\rm sgn}(k)=-{\rm sgn}(b)\neq 0$ and hence $\mu>0$ from expression ( B.71c ).
+Substitution of these signs into conditions ( 5.14a )
+yields $b^{5}<0$ .
+This gives $b<0,\quad k>0$ (B.73) References [1] D.G. Crighton,
+Applications of KdV,
+Acta Applic. Math. 39 (1995), 39–67. [2] T. Dauxois, M. Peyrard, Physics of Solitons , Cambridge University Press, 2006. [3] H. Ono,
+Wave propagation in an inhomogeneous anharmonic lattice,
+J. Phys. Soc. Jpn. 32 (1972), 332–336. [4] R. Grimshaw, E. Pelinovsky, O. Poloukhina,
+Higher-order Korteweg-de Vries models for internal solitary waves in a stratified shear flow with a free surface,
+Nonlinear Processes Geophys. 9 (2002), 221–235. [5] A.A. Mamun,
+Nonlinear propagation of ion-acoustic waves in a hot magnetized plasma with vortex-like electron distribution,
+Phys. Plasmas 5 (1998), 322–324. [6] A. Mushtaq, H.A. Shah,
+Study of non-maxwellian trapped electrons by using generalized (r,q) distribution function and their effects on the dynamics of ion acoustic solitary wave,
+Phys. Plasmas 13 (2006), 012303. [7] K. Nishikawa, H. Hojo, K. Mima, H. Ikezi,
+Coupled nonlinear electron-plasma and ion-acoustic waves,
+Phys. Rev. Lett. 33(3) (1974), 148-–151. [8] N.N. Rao,
+Nonlinear wave modulations in plasmas,
+Pramana J. Phys. 49(1) (1997), 109–127. [9] T. Kawahara, N. Sugimoto, T. Kakutani,
+Nonlinear interaction between short and long capillary-gravity waves,
+J. Phys. Soc. Jap. 39(5) (1975), 1379–1386. [10] S. Davydov, Solitons in Molecular Systems (Reidel: Dordrecht), 1987. [11] A.S. Davydov and A.V. Zolotariuk,
+Subsonic and supersonic solitons in nonlinear molecular chains,
+Phys. Scr. 30 (1984), 426– [12] A.V. Zolotaryuk, K.H. Spatschek, A.V. Savin,
+Supersonic mechanisms for charge and energy transfers in anharmonic molecular chains,
+Phys. Rev. B 54 (1996), 266– [13] L.A. Cisneros-Ake, J.F. Solano Peláez,
+Bright and dark solitons in the unidirectional long wave limit for the energy transfer on anharmonic crystal lattices,
+Physica D 346 (2017), 20–27. [14] L.A. Cisneros-Ake, H.P. Prado, D.J. López Villatoro, R. Carretero-González,
+Multi-hump bright solitons in a Schrödinger-mKdV system,
+Phys. Lett. A 382(12) (2018), 837–845. [15] T. Yoshinaga, M. Wakamiya, T. Kakutani,
+Recurrence and chaotic behavior resulting from nonlinear interaction between long and short waves,
+Phys. Fluids A 3 (1991), 83–89. [16] E. Gromov, B. Malomed,
+Solitons of the coupled Schrödinger-Korteweg-de Vries system with arbitrary strengths of the nonlinearity and dispersion,
+Chaos 27 (2017), 113107. [17] H.P. Prado, L.A. Cisneros-Ake,
+Multi-hump bright and dark solitons for the Schrödinger-Korteweg-de Vries coupled system,
+Chaos 29 (2019), 053133. [18] S.C. Anco, M. Gandarias,
+Symmetry multi-reduction method for partial differential equations with conservation laws,
+Commun. Nonlin. Sci. Numer. Simul. 91 (2020), 105349 (16 pages) [19] T. Wolf,
+in: Application of CRACK in the classification of integrable systems,
+283–300,
+CRM Proceedings and Lecture Notes, Volume 37 (2004). [20] P.J. Olver, Applications of Lie Groups to Differential Equations ,
+Springer-Verlag, New York, 1993. [21] G.W. Bluman, A. Cheviakov, S.C. Anco, Applications of Symmetry Methods to Partial Differential Equations ,
+Springer, New York, 2009. [22] S.C. Anco and G. Bluman,
+Direct construction method for conservation laws of partial differential equations Part I:
+Examples of conservation law classifications,
+Euro. Jour. Appl. Math. 13 (2002), 545–566;
+ibid.,
+Direct construction method for conservation laws of partial differential equations Part II: General treatment,
+Euro. J. Appl. Math. 41 (2002), 567–585. [23] S.C. Anco,
+Generalization of Noether’s theorem in modern form to non-variational partial differential equations.
+In: Recent progress and Modern Challenges in Applied Mathematics, Modeling and Computational Science, 119–182,
+Fields Institute Communications, Volume 79 (2017). [24] T. Wolf,
+A comparison of four approaches to the calculation of conservation laws,
+Euro. J. Applied Math. 13 (2002), 129–152. [25] T. Tao, Nonlinear Dispersive Equations: Local and Global Analysis ,
+CBMS Regional Conference Series in Mathematics, No. 106,
+American Mathematical Society, 2006. [26] J.L. Bona, P.E. Souganidis, W.A. Strauss,
+Stability and instability of solitary waves of Korteweg-de Vries type,
+Proc. Roy. Soc. A 411 (1987), 395–412. [27] T. Cazenave, P.L. Lions,
+Orbital stability of standing waves for some nonlinear Schrödinger equations,
+Commun. Math. Phys. 85 (1982), 549–561. [28] S.C. Anco, H.-R. Nayeri, E. Recio,
+Travellling wave solutions on a non-zero background for the generalized Korteweg-de Vries equation,
+J. Phys. A: Math. Theor. 54 (2021), 085701. [29] M. Abramowitz, I. Stegun, Handbook of Mathematical Functions ,
+Applied Mathematics Series 55, National Bureau of Standards, 1964. [30] A. Geyer, D.E. Pelinovsky, Stability of nonlinear waves in Hamiltonian dynamical systems ,
+American Mathematical Society, Providence RI, 2025 [31] M. Labidi, G. Ebadi, E. Zerrad, A. Biswas,
+Analytical and numerical solutions of the Schr odinger-KdV equation,
+Pramana J. Phys. 78 (2012), 59– [32] Y.B. Gaididei, P.L. Christiansen, S.F. Mingaleev,
+Bound states of envelope and Boussinesq solitons in anharmonic lattices,
+Phys. Scr. 51 (1995) 289–299. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

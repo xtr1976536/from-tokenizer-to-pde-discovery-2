@@ -1,0 +1,542 @@
+THE SINGULAR LIMIT OF A CHEMOTAXIS-GROWTH SYSTEM WITH GENERAL INITIAL DATA Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 Some preliminaries 2.1 Formal derivation 2.2 A comparison principle 3 Generation of interface 3.1 The perturbed bistable ordinary differential equation 3.2 Construction of sub and super-solutions 3.3 Proof of Theorem 4 Motion of interface 4.1 Construction of sub- and super-solutions 4.2 Proof of Lemma 4.3 Proof of Lemma 5 Proof of the main results 5.1 Proof of Theorem 5.2 Proof of Theorem References License: arXiv.org perpetual non-exclusive license arXiv:0909.2944v1 [math.AP] 16 Sep 2009 THE SINGULAR LIMIT OF A CHEMOTAXIS-GROWTH SYSTEM WITH GENERAL INITIAL DATA Abstract We study the singular limit of a system of partial differential
+equations which is a model for an aggregation of amoebae subjected
+to three effects: diffusion, growth and chemotaxis. The limit
+problem involves motion by mean curvature together with a nonlocal
+drift term. We consider rather general initial data. We prove a
+generation of interface property and study the motion of
+interface. We also obtain an optimal estimate of the thickness and
+the location of the transition layer that develops. 1 1 1 AMS
+Subject Classifications: 35K57, 35B50, 35R35, 92C17. MATTHIEU ALFARO Analyse Numérique et EDP, Université de Paris Sud, 91405 Orsay Cedex, France. 1 Introduction Let us start by a short description of life-cycles of the cellular
+slime molds ( amoebae ). The cells feed and divide until
+exhaustion of food supply. Then, the amoebae aggregate to form a
+multicellular assembly called a slug. It migrates to a new
+location, then forms into a fruiting body, consisting of a stalk
+formed from dead amoebae and spores on the top (fruiting bodies
+that are visible to the naked eye are often referred to as
+mushrooms). Under suitable conditions of moisture, temperature,
+spores release new amoebae. The cycle then repeats itself. It is known that the aggregation stage is mediated by chemotaxis , i.e. the tendency of biological individuals to direct
+their movements according to certain chemicals in their
+environment. The chemotactant ( acrasin ) is produced by the
+amoebae themselves and degraded by an extracellular enzyme ( acrasinase ). For more details on the biological background, we
+refer to [ 15 ] , [ 20 ] or [ 10 ] . So the amoebae have a random motion analogous to diffusion coupled
+with an oriented chemotactic motion in the direction of a positive
+gradient of acrasin. In 1970, Keller and Segel [ 15 ] proposed
+the following system as a model to describe such movements leading
+to slime mold aggregation: $(KS)\quad\begin{cases}u_{t}&=\nabla\cdot(D_{2}\nabla u)-\nabla\cdot(D_{1}\nabla v),\\
+v_{t}&=D_{v}\Delta v+f(v)u-k(v)v,\end{cases}$ inside a closed region $\Omega$ . Here, $u$ , respectively $v$ , denotes
+the concentration of amoebae, respectively of acrasin; $f(v)$ is
+the production rate of acrasin, and $k(v)$ the degradation rate of
+acrasin (due to acrasinase); $D_{2}=D_{2}(u,v)$ , respectively $D_{1}=D_{1}(u,v)$ , measures the vigor of the random motion of the
+amoebae, respectively the strength of the influence of the acrasin
+gradient on the flow of amoebae; $D_{v}$ is a positive and constant
+diffusion coefficient. The problem is completed by initial data $u_{0}$ and $v_{0}$ and, assuming that there is now flow of the
+amoebae or the acrasin across the boundary $\partial\Omega$ , by homogeneous
+Neumann boundary conditions $\nabla u\cdot\nu=\nabla v\cdot\nu=0\quad\ \textrm{on}\ \;\partial\Omega\times(0,+\infty),$ $\nu$ being the unit outward normal to $\partial\Omega$ . An often used simplified model is obtained as follows. By some
+receptor mechanism, cells do not measure the gradient of $v$ but
+of some $\chi(v)$ , with a sensitive function $\chi$ satisfying $\chi^{\prime}>0$ , so that $D_{1}(u,v)=u\chi^{\prime}(v)$ . By taking $D_{2}$ , $f$ and $k$ as constant functions and using some rescaling arguments,
+the system reduces to $(KS\,^{\prime})\quad\begin{cases}\;\;u_{t}&=d_{u}\Delta u-\nabla\cdot(u\nabla\chi(v)),\\
+\tau v_{t}&=d_{v}\Delta v+u-\gamma v,\end{cases}$ with $d_{u}$ , $d_{v}$ , $\tau$ and $\gamma$ some positive constants. Many analyses of the Keller-Segel model for the aggregation
+process were proposed. Chemotaxis having some features of
+“negative diffusion”, Nanjundiah [ 20 ] suggests that the
+whole population concentrates in a single point; we refer to this
+phenomenon as the chemotactic collapse . In mathematical
+terms, this amounts to blow up in finite time. As a matter of
+fact, it turns out that the possibility of collapse depends upon
+the space dimension. In particular it never happens in the
+one-dimensional case whereas in two space dimensions, assuming
+radially symmetric situations, it only occurs if the total amoebae
+number is sufficiently large. The problem of global existence and
+blow up of solutions has been intensively studied; we refer in
+particular to [ 9 ] , [ 22 ] , [ 16 ] , [ 13 ] , [ 19 ] , [ 11 ] , [ 12 ] . In a different framework, Mimura and Tsujikawa [ 17 ] , consider
+aggregating pattern-dynamics arising in the following
+chemotaxis model with growth: $(MT^{\varepsilon})\quad\begin{cases}\;\;u_{t}&=\varepsilon^{2}\Delta u-\varepsilon\nabla\cdot(u\nabla\chi(v))+f(u),\\
+\tau v_{t}&=\Delta v+u-\gamma v,\end{cases}$ where $\varepsilon>0$ is a small parameter. The function $f$ is cubic, 0
+and 1 being its stable zeros, and satisfies $\int_{0}^{1}f>0$ . In
+this model, the population is subjected to three effects:
+diffusion, growth and chemotaxis. The diffusion rate and the
+chemotactic rate are both very small compared with the growth
+rate. They observe that, in a first stage, internal layers
+— which describe the boundaries of aggregating regions —
+develop; in a second stage, the motion of the aggregating regions
+— which can be described by that of internal layers — takes
+place. The balance of the three effects (diffusion, growth and
+chemotaxis) makes the aggregation mechanism possible. Taking the
+limit $\varepsilon\to 0$ , they formally derive the equation for the motion
+of the limit interface and study the stability of radially
+symmetric equilibrium solutions. The purpose of this paper is to extend some of the results
+obtained by Bonami, Hilhorst, Logak and Mimura [ 4 ] about
+the singular limit of a variant of system $(MT^{\varepsilon})$ , where the
+second equation is elliptic ( $\tau=0$ ): $(P^{\varepsilon})\quad\begin{cases}u_{t}=\Delta u-\nabla\cdot(u\nabla\chi(v))+\displaystyle{\frac{1}{\varepsilon^{2}}}f_{\varepsilon}(u)&\textrm{ in }\Omega\times(0,+\infty),\\
+0=\Delta v+u-\gamma v&\textrm{ in }\Omega\times(0,+\infty),\\
+\displaystyle{\frac{\partial u}{\partial\nu}}=\displaystyle{\frac{\partial v}{\partial\nu}}=0&\textrm{ on }\partial\Omega\times(0,+\infty),\\
+u(x,0)=u_{0}(x)&\textrm{ in }\Omega,\end{cases}$ where $\Omega$ is a smooth bounded domain in $\mathbb{R}^{N}$ ( $N\geq 2$ ), $\nu$ is the Euclidian unit normal vector exterior to $\partial\Omega$ . We assume that $\gamma$ is a positive constant and that the
+nonlinearity $f_{\varepsilon}$ is given by $\begin{array}[]{ll}f_{\varepsilon}(u)&=u(1-u)(u-\displaystyle{\frac{1}{2}})+\varepsilon\alpha u(1-u)\\
+&=:f(u)+\varepsilon g(u),\end{array}$ (1.1) with $\alpha>0$ . The role of the function $g$ is to break the
+balance of the two stable zeros slightly. The sensitive function $\chi$ is smooth and satisfies $\chi^{\prime}(v)>0$ for $v>0$ . We also assume that the initial datum satisfies $u_{0}\in C^{2}(\overline{\Omega})$ and $u_{0}\geq 0$ . Throughout the present paper, we
+fix a constant $C_{0}>1$ that satisfies $\|u_{0}\|_{C^{0}(\overline{\Omega})}+\|\nabla u_{0}\|_{C^{0}(\overline{\Omega})}+\|\Delta u_{0}\|_{C^{0}(\overline{\Omega})}\leq C_{0}.$ (1.2) Furthermore we define the “initial interface” $\Gamma_{0}$ by $\Gamma_{0}:=\{x\in\Omega,\;u_{0}(x)=1/2\}.$ We suppose that $\Gamma_{0}$ is a $C^{2+\vartheta}$ hypersurface
+without boundary, for a $\vartheta\in(0,1)$ , such that, $n$ being the Euclidian unit normal vector exterior to $\Gamma_{0}$ , $\Gamma_{0}\subset\subset\Omega\quad\mbox{ and }\quad\nabla u_{0}(x)\cdot n(x)\neq 0\quad\text{if $x\in\Gamma_{0},$}$ (1.3) $u_{0}>1/2\quad\ \text{in}\;\ \Omega^{(1)}_{0},\quad u_{0}<1/2\quad\ \text{in}\;\ \Omega^{(0)}_{0},$ (1.4) where $\Omega^{(1)}_{0}$ denotes the region enclosed by $\Gamma_{0}$ and $\Omega^{(0)}_{0}$ the region enclosed between $\partial\Omega$ and $\Gamma_{0}$ . The existence of a unique smooth solution to Problem $(P^{\;\!\varepsilon})$ is
+proved in [ 4 ] , Lemma 4.2: Lemma 1.1 . There exists $\varepsilon_{0}>0$ such that, for all $\varepsilon\in(0,\varepsilon_{0})$ ,
+there exists a unique solution $(u^{\varepsilon},v^{\varepsilon})$ to Problem $(P^{\;\!\varepsilon})$ on $\Omega\times[0,+\infty)$ , with $0\leq u^{\varepsilon}\leq C_{0}$ on $Q_{T}$ . To study the interfacial behavior associated with this model, it
+is useful to consider a formal asymptotic limit of Problem $(P^{\;\!\varepsilon})$ as $\varepsilon\rightarrow 0$ . Then the limit solution $u^{0}(x,t)$ will be
+a step function taking the value $1$ on one side of the interface,
+and $0$ on the other side. This sharp interface, which we will
+denote by $\Gamma_{t}$ , obeys a law of motion, which can be
+obtained by formal analysis (see Section 2 ): $(P^{0})\quad\begin{cases}V_{n}=-(N-1)\kappa+\displaystyle{\frac{\partial{\chi(v^{0})}}{\partial n}}+\sqrt{2}\alpha&\textrm{ on }\Gamma_{t},\\
+\vskip 3.0pt\Gamma_{t}\big|_{t=0}=\Gamma_{0}\\
+\vskip 3.0pt-\Delta v^{0}+\gamma v^{0}=u^{0}&\textrm{ in }\Omega\times(0,T],\\
+\displaystyle{\frac{\partial{v^{0}}}{\partial\nu}}=0&\textrm{ on }\partial\Omega\times(0,T],\\
+\end{cases}$ where $V_{n}$ is the normal velocity of $\Gamma_{t}$ in the exterior
+direction, $\kappa$ the mean curvature at each point of $\Gamma_{t}$ . We set $Q_{T}:=\Omega\times[0,T]$ and for each $t\in[0,T]$ , we define $\Omega_{t}^{(1)}$ as the region enclosed by the
+hypersurface $\Gamma_{t}$ and $\Omega_{t}^{(0)}$ as the region enclosed
+between $\partial\Omega$ and $\Gamma_{t}$ . The step function $u^{0}$ is
+determined straightforwardly from $\Gamma_{t}$ by $u^{0}(x,t)=\begin{cases}1&\text{in }\Omega_{t}^{(1)}\\
+0&\text{in }\Omega_{t}^{(0)}\end{cases}\quad\text{for }t\in[0,T].$ (1.5) By a contraction fixed-point argument in suitable Hölder
+spaces, the well-posedness, locally in time, of the free boundary
+Problem $(P^{0})$ is proved in [ 4 ] , Theorem 2.1: Lemma 1.2 . There exists a time $T>0$ such that $(P^{0})$ has a unique solution $(v^{0},\Gamma)$ on $[0,T]$ , with $\Gamma=\bigcup_{0\leq t\leq T}(\Gamma_{t}\times\{t\})\in C^{2+\vartheta,\frac{2+\vartheta}{2}},$ and $v^{0}|_{\Gamma}\in C^{2+\vartheta,\frac{2+\vartheta}{2}}$ . Bonami, Hilhorst, Logak and Mimura [ 4 ] have proved a
+motion of interface property; more precisely, for some prepared
+initial data, they show that $(u^{\varepsilon},v^{\varepsilon})$ converges to $(u^{0},v^{0})$ as $\varepsilon\rightarrow 0$ , on the interval $(0,T)$ . So the evolution
+of $\Gamma_{t}$ determines the aggregating patterns of the
+individuals. Here we consider the case of arbitrary initial data.
+Our first main result, Theorem 1.3 , describes the
+profile of the solution after a very short initial period. It
+asserts that, given a virtually arbitrary initial datum $u_{0}$ , the
+solution $u^{\varepsilon}$ quickly becomes close to $1$ or $0$ , except in a
+small neighborhood of the initial interface $\Gamma_{0}$ , creating
+a steep transition layer around $\Gamma_{0}$ ( generation of
+interface ). The time needed to develop such a transition layer,
+which we will denote by $t^{\varepsilon}$ , is of order $\varepsilon^{2}|\ln\varepsilon|$ . The
+theorem then states that the solution $u^{\varepsilon}$ remains close to the
+step function $u^{0}$ on the time interval $[t^{\varepsilon},T]$ ( motion
+of interface ). Moreover, as is clear from the estimates in the
+theorem, the “thickness” of the transition layer is of order $\varepsilon$ . Theorem 1.3 (Generation and motion of interface) . Let $\eta\in(0,1/4)$ be arbitrary and set $\mu=f^{\prime}(1/2)=1/4.$ Then there exist positive constants $\varepsilon_{0}$ and $C$ such that,
+for all $\,\varepsilon\in(0,\varepsilon_{0})$ , all $\,t^{\varepsilon}\leq t\leq T$ , where $t^{\varepsilon}=\mu^{-1}\varepsilon^{2}|\ln\varepsilon|$ , we have $u^{\varepsilon}(x,t)\in\begin{cases}{}[-\eta,1+\eta]&\quad\text{if}\quad x\in\mathcal{N}_{C\varepsilon}(\Gamma_{t})\\
+{}[-\eta,\eta]&\quad\text{if}\quad x\in\Omega_{t}^{(0)}\setminus\mathcal{N}_{C\varepsilon}(\Gamma_{t})\\
+{}[1-\eta,1+\eta]&\quad\text{if}\quad x\in\Omega_{t}^{(1)}\setminus\mathcal{N}_{C\varepsilon}(\Gamma_{t}),\end{cases}$ (1.6) where $\mathcal{N}_{r}(\Gamma_{t}):=\{x\in\Omega,dist(x,\Gamma_{t})<r\}$ denotes the $r$ -neighborhood of $\Gamma_{t}$ . Corollary 1.4 (Convergence) . As $\varepsilon\to 0$ , the solution $(u^{\varepsilon},v^{\varepsilon})$ converges to $(u^{0},v^{0})$ everywhere in $\bigcup_{0<t\leq T}(\Omega^{(0\ \text{or}\ 1)}_{t}\times\{t\})$ . The next theorem deals with the relation between the
+set $\Gamma^{\varepsilon}_{t}:=\{x\in\Omega,u^{\varepsilon}(x,t)=1/2\}$ and the
+solution $\Gamma_{t}$ of Problem $(P^{0})$ . Theorem 1.5 (Error estimate) . There exists $C>0$ such that $\Gamma_{t}^{\varepsilon}\subset\mathcal{N}_{C\varepsilon}(\Gamma_{t})\quad\ \text{for}\;\ 0\leq t\leq T.$ (1.7) Corollary 1.6 (Convergence of interface) . There exists $C>0$ such that $d_{\mathcal{H}}(\Gamma^{\varepsilon}_{t},\Gamma_{t})\leq C\varepsilon\quad\ \text{for}\;\ 0\leq t\leq T,$ (1.8) where $d_{\mathcal{H}}(A,B):=\max\{\sup_{a\in A}d(a,B),\,\sup_{b\in B}d(b,A)\}$ denotes the Hausdorff distance between two compact sets $A$ and $B$ . Consequently, $\Gamma^{\varepsilon}_{t}\to\Gamma_{t}$ as $\varepsilon\to 0$ ,
+uniformly in $0\leq t\leq T$ , in the sense of the Hausdorff
+distance. As far as we know, the best thickness estimate in the literature
+was of order $\varepsilon|\ln\varepsilon|$ (see [ 5 ] , [ 6 ] ). We refer
+to a forthcoming article [ 14 ] , respectively [ 1 ] , in
+which an order $\varepsilon$ estimate is established for a Lotka-Volterra
+competition-diffusion system, respectively for the FitzHugh-Nagumo
+system. The organization of this paper is as follows. Section 2 is devoted to preliminaries: we recall
+the method of asymptotic expansions to derive the equation of the
+interface motion; we also recall a relaxed comparison principle
+used in [ 4 ] . In Section 3 , we prove
+a generation of interface property. The corresponding sub- and
+super-solutions are constructed by modifying the solution of the
+ordinary differential equation $u_{t}=\varepsilon^{-2}f(u)$ , obtained by
+neglecting diffusion and chemotaxis. In Section 4 , in order to study the motion of interface, we
+construct a pair of sub- and super-solutions that rely on a
+related one-dimensional stationary problem. Finally, in Section 5 , by fitting the two pairs of sub- and
+super-solutions into each other, we prove Theorem 1.3 , Theorem 1.5 and theirs
+corollaries. 2 Some preliminaries 2.1 Formal derivation A formal derivation of the equation of interface motion was given
+in [ 3 ] . Nevertheless we briefly present it in a slightly
+different way: we use arguments similar to those in [ 21 ] where the first two terms of the asymptotic expansion determine
+the interface equation. The observations we make here will help
+the rigorous analysis in later sections, in particular for the
+construction of sub- and super-solutions for the study of the
+motion of interface in Section 4 . Let $(u^{\varepsilon},v^{\varepsilon})$ be the solution of Problem $(P^{\;\!\varepsilon})$ . We recall
+that $\Gamma_{t}^{\varepsilon}:=\{x\in\Omega,u^{\varepsilon}(x,t)=1/2\}$ is the
+interface at time $t$ and call $\Gamma^{\varepsilon}:=\bigcup_{t\geq 0}(\Gamma_{t}^{\varepsilon}\times\{t\})$ the interface. Let $\Gamma=\bigcup_{0\leq t\leq T}(\Gamma_{t}\times\{t\})$ be the solution of the
+limit geometric motion problem and let $\widetilde{d}$ be the
+signed distance function to $\Gamma$ defined by: $\widetilde{d}(x,t)=\begin{cases}&\mbox{dist}(x,\Gamma_{t})\quad\text{for }x\in\Omega_{t}^{(0)}\\
+-&\mbox{dist}(x,\Gamma_{t})\quad\text{for }x\in\Omega_{t}^{(1)},\end{cases}$ (2.1) where $\mbox{dist}(x,\Gamma_{t})$ is the distance from $x$ to the
+hypersurface $\Gamma_{t}$ in $\Omega$ . We remark that $\widetilde{d}=0$ on $\Gamma$ and that $|\nabla\widetilde{d}|=1$ in a
+neighborhood of $\Gamma.$ We then define $Q^{(1)}_{T}=\bigcup_{\,0<t\leq T}(\Omega^{(1)}_{t}\times\{t\}),\qquad Q^{(0)}_{T}=\bigcup_{\,0<t\leq T}(\Omega^{(0)}_{t}\times\{t\}).$ We assume that the solution $u^{\varepsilon}$ has the expansions $u^{\varepsilon}(x,t)=\{0\;\text{or}\;1\}+\varepsilon u_{1}(x,t)+\cdots$ (2.2) away from the interface $\Gamma$ (the outer expansion) and $u^{\varepsilon}(x,t)=U_{0}(x,t,\frac{\widetilde{d}(x,t)}{\varepsilon})+\varepsilon U_{1}(x,t,\frac{\widetilde{d}(x,t)}{\varepsilon})+\cdots$ (2.3) near $\Gamma$ (the inner expansion). Here, the functions $U_{k}(x,t,z)$ , $k=0,1,\cdots$ , are defined for $x\in\overline{\Omega}$ , $t\geq 0$ , $z\in\mathbb{R}$ . The stretched space variable $\xi:=\widetilde{d}(x,t)/\varepsilon$ gives exactly the right spatial
+scaling to describe the rapid transition between the regions $\{u^{\varepsilon}\approx 1\}$ and $\{u^{\varepsilon}\approx 0\}$ . We use the
+normalization conditions $U_{0}(x,t,0)=1/2,\quad U_{k}(x,t,0)=0,$ for all $k\geq 1$ . The matching conditions between the outer and
+the inner expansion are given by $\begin{array}[]{ll}U_{0}(x,t,+\infty)=0,&U_{k}(x,t,+\infty)=0,\\
+U_{0}(x,t,-\infty)=1,&U_{k}(x,t,-\infty)=0,\end{array}$ (2.4) for all $k\geq 1$ . We also assume that the solution $v^{\varepsilon}$ has the
+expansion $v^{\varepsilon}(x,t)=v_{0}(x,t)+\varepsilon v_{1}(x,t)+\cdots$ (2.5) in $\Omega\times(0,T)$ . We now substitute the inner expansion ( 2.3 ) and the
+expansion ( 2.5 ) into the parabolic equation of $(P^{\;\!\varepsilon})$ and collect the $\varepsilon^{-2}$ terms. We omit the calculations
+and, using $|\nabla\tilde{d}|=1$ near $\Gamma_{t}$ , the
+normalization and matching conditions, we deduce that $U_{0}(x,t,z)=U_{0}(z)$ is the unique solution of the stationary
+problem $\left\{\begin{array}[]{ll}{U_{0}}^{\prime\prime}+f(U_{0})=0\\
+U_{0}(-\infty)=1,\quad U_{0}(0)=1/2,\quad U_{0}(+\infty)=0.\end{array}\right.$ (2.6) This solution represents the first approximation of the profile of
+a transition layer around the interface observed in the stretched
+coordinates. Recalling that the nonlinearity is given by $f(u)=u(1-u)(u-1/2)$ , we have $U_{0}(z)=\frac{1}{2}\big(1-\tanh\frac{z}{2\sqrt{2}}\big)=\frac{e^{-z/\sqrt{2}}}{1+e^{-z/\sqrt{2}}}\ .$ (2.7) We claim that $U_{0}$ has the following properties. Lemma 2.1 . There exist positive constants $C$ and $\lambda$ such that the
+following estimates hold. $\begin{array}[]{ll}0<\,\,\,\,U_{0}(z)&\leq Ce^{-\lambda|z|}\quad\text{ for }z\geq 0,\\
+0<1-U_{0}(z)&\leq Ce^{-\lambda|z|}\quad\text{ for }z\leq 0.\\
+\end{array}$ In addition, $U_{0}$ is a strictly decreasing function and $|{U_{0}}^{\prime}(z)|+|{U_{0}}^{\prime\prime}(z)|\leq Ce^{-\lambda|z|}\quad\text{ for }z\in\mathbb{R}.$ Next we collect the $\varepsilon^{-1}$ terms. Since $U_{0}$ depends only on the variable $z$ , we have $\nabla U_{0z}=0$ which,
+combined with the fact that $|\nabla\tilde{d}|=1$ near $\Gamma_{t}$ ,
+yields $U_{1zz}+f^{\prime}(U_{0})U_{1}={U_{0}}^{\prime}(\widetilde{d}_{t}-\Delta\widetilde{d}+\nabla\widetilde{d}\cdot\nabla\chi(v^{0}))-g(U_{0}),$ (2.8) a linearized problem corresponding to ( 2.6 ). The
+solvability condition for the above equation, which can be seen as
+a variant of the Fredholm alternative, plays the key role for
+deriving the equation of interface motion. It is is given by $\int_{\bf R}\Big[{{U_{0}}^{\prime}}^{2}(z)(\widetilde{d}_{t}-\Delta\widetilde{d}+\nabla\widetilde{d}\cdot\nabla\chi(v^{0}))(x,t)-g(U_{0}(z)){U_{0}}^{\prime}(z)\Big]dz=0,$ for all $(x,t)\in Q_{T}$ . By the definition of $g$ in
+( 1.1 ), we compute $\int_{\mathbb{R}}g(U_{0}(z)){U_{0}}^{\prime}(z)dz=-\int_{0}^{1}g(u)du=-\alpha/6,$ whereas the equality ( 2.7 ) yields $\int_{\mathbb{R}}{U_{0}}^{\prime 2}(z)dz=\frac{1}{\sqrt{2}}\int_{0}^{+\infty}\frac{u}{1+u^{4}}du=1/6\sqrt{2}.$ Combining the above expressions, we obtain $\Big(\widetilde{d}_{t}-\Delta\widetilde{d}+\nabla\widetilde{d}\cdot\nabla\chi(v^{0})\Big)(x,t)=-\sqrt{2}\alpha.$ (2.9) Since $\nabla\widetilde{d}$ $(=\nabla_{x}\,\widetilde{d}(x,t))$ coincides with the outward normal unit vector to the hypersurface $\Gamma_{t}$ , we have $\widetilde{d}_{t}(x,t)=-V_{n}$ , where $V_{n}$ is
+the normal velocity of the interface $\Gamma_{t}$ . It is also known
+that the mean curvature $\kappa$ of the interface is equal to $\Delta\widetilde{d}/(N-1)$ . Thus the above equation reads as $V_{n}=-(N-1)\kappa+\displaystyle{\frac{\partial{\chi(v^{0})}}{\partial n}}+\sqrt{2}\alpha\quad\ \textrm{on}\ \;\Gamma_{t},$ (2.10) that is the equation of interface motion in $(P^{0})$ . Summarizing,
+under the assumption that the solution $u^{\varepsilon}$ of Problem $(P^{\;\!\varepsilon})$ satisfies $u^{\varepsilon}\to\begin{cases}1&\quad\textrm{ in }Q_{T}^{(1)}\\
+0&\quad\textrm{ in }Q_{T}^{(0)}\end{cases}\qquad\hbox{as}\ \ \varepsilon\to 0,$ we have formally showed that the boundary $\Gamma_{t}$ between $\Omega_{t}^{(0)}$ and $\Omega_{t}^{(1)}$ moves according to the law
+( 2.10 ). One can note that, using the equality
+( 2.7 ), we clearly have $\sqrt{2}\alpha{U_{0}}^{\prime}+g(U_{0})\equiv 0$ so that, substituting ( 2.9 )
+into ( 2.8 ) yields $U_{1}\equiv 0$ . 2.2 A comparison principle The definition of sub- and super-solutions is the one proposed in [ 4 ] . Definition 2.2 . Let $(u_{\varepsilon}^{-},u_{\varepsilon}^{+})$ be two smooth functions with $u_{\varepsilon}^{-}\leq u_{\varepsilon}^{+}$ on $Q_{T}$ and $\frac{\partial u_{\varepsilon}^{-}}{\partial\nu}\leq 0\leq\frac{\partial u_{\varepsilon}^{+}}{\partial\nu}\quad\ \text{on}\;\ \partial\Omega\times(0,T).$ By definition, $(u_{\varepsilon}^{-},u_{\varepsilon}^{+})$ is a pair of sub- and
+super-solutions if, for any $v^{\varepsilon}$ which satisfies $\begin{cases}u_{\varepsilon}^{-}\leq-\Delta v^{\varepsilon}+\gamma v^{\varepsilon}\leq u_{\varepsilon}^{+}\quad&\text{ on }Q_{T},\\
+\displaystyle{\frac{\partial v^{\varepsilon}}{\partial\nu}}=0\quad&\text{ on }\partial\Omega\times(0,T),\end{cases}$ (2.11) we have $L_{v^{\varepsilon}}[u_{\varepsilon}^{-}]\leq 0\leq L_{v^{\varepsilon}}[u_{\varepsilon}^{+}],$ where the operator $L_{v^{\varepsilon}}$ is defined by $L_{v^{\varepsilon}}[\phi]=\phi_{t}-\Delta\phi+\nabla\cdot(\phi\nabla\chi(v^{\varepsilon}))-\displaystyle{\frac{1}{\varepsilon^{2}}}f_{\varepsilon}(\phi).$ As proved in [ 4 ] , the following comparison
+principle holds. Proposition 2.3 . Let a pair of sub- and super-solutions be given. Assume that, for
+all $x\in\Omega$ , $u_{\varepsilon}^{-}(x,0)\leq u_{0}(x)\leq u_{\varepsilon}^{+}(x,0).$ Then, if we denote by $(u^{\varepsilon},v^{\varepsilon})$ the solution of Problem $(P^{\;\!\varepsilon})$ ,
+the function $u^{\varepsilon}$ satisfies, for all $(x,t)\in Q_{T}$ , $u_{\varepsilon}^{-}(x,t)\leq u^{\varepsilon}(x,t)\leq u_{\varepsilon}^{+}(x,t).$ 3 Generation of interface In this section we study the rapid formation of internal layers in
+a neighborhood of $\Gamma_{0}=\{x\in\Omega,u_{0}(x)=1/2\}$ within a very
+short time interval of order $\varepsilon^{2}|\ln\varepsilon|$ . In the sequel, we
+shall always assume that $0<\eta<1/4$ . The main result of this
+section is the following. Theorem 3.1 . Let $\eta$ be arbitrary and define $\mu$ as the derivative of $f(u)$ at the unstable equilibrium $u=1/2$ , that is $\mu=f^{\prime}(1/2)=1/4.$ (3.1) Then there exist positive constants $\varepsilon_{0}$ and $M_{0}$ such that,
+for all $\,\varepsilon\in(0,\varepsilon_{0})$ , • for all $x\in\Omega$ , $-\eta\leq u^{\varepsilon}(x,\mu^{-1}\varepsilon^{2}|\ln\varepsilon|)\leq 1+\eta,$ (3.2) • for all $x\in\Omega$ such that $|u_{0}(x)-\frac{1}{2}|\geq M_{0}\varepsilon$ ,
+we have that $\displaystyle\text{if}\;~~u_{0}(x)\geq 1/2+M_{0}\varepsilon\;~~\text{then}\;~~u^{\varepsilon}(x,\mu^{-1}\varepsilon^{2}|\ln\varepsilon|)\geq 1-\eta,$ (3.3) $\displaystyle\text{if}\;~~u_{0}(x)\leq 1/2-M_{0}\varepsilon\;~~\text{then}\;~~u^{\varepsilon}(x,\mu^{-1}\varepsilon^{2}|\ln\varepsilon|)\leq\eta.$ (3.4) The above theorem will be proved by constructing a
+suitable pair of sub and super-solutions. 3.1 The perturbed bistable ordinary differential equation We first consider a slightly perturbed nonlinearity: $f_{\delta}(u)=f(u)+\delta,$ where $\delta$ is any constant. For $|\delta|$ small enough, this
+function is still cubic and bistable; more precisely, we claim
+that it has the following properties. Lemma 3.2 . Let $\delta_{0}>0$ be small enough. Then, for all $\delta\in(-\delta_{0},\delta_{0})$ , • $f_{\delta}$ has exactly three zeros, namely $\alpha_{-}(\delta)<a(\delta)<\alpha_{+}(\delta)$ . More
+precisely, $f_{\delta}(u)=(u-\alpha_{-}(\delta))(\alpha_{+}(\delta)-u)(u-a(\delta)),$ (3.5) and there exists a positive constant $C$ such that $|\alpha_{-}(\delta)|+|a(\delta)-1/2|+|\alpha_{+}(\delta)-1|\leq C|\delta|.$ (3.6) • We have that $\begin{array}[]{ll}f_{\delta}\quad\text{ is strictly
+positive in }\quad(-\infty,\alpha_{-}(\delta))\cup(a(\delta),\alpha_{+}(\delta)),\\
+f_{\delta}\quad\text{ is strictly negative in }\quad(\alpha_{-}(\delta),a(\delta))\cup(\alpha_{+}(\delta),+\infty).\end{array}$ (3.7) • Set $\mu(\delta):=f_{\delta}^{\prime}(a(\delta))=f^{\prime}(a(\delta)),$ then there exists a positive constant, which we denote again by $C$ , such that $|\mu(\delta)-\mu|\leq C|\delta|.$ (3.8) In order to construct a pair of sub and
+super-solutions for Problem $(P^{\;\!\varepsilon})$ we define $Y(\tau,\xi;\delta)$ as
+the solution of the ordinary differential equation $\left\{\begin{array}[]{ll}Y_{\tau}(\tau,\xi;\delta)&=f_{\delta}(Y(\tau,\xi;\delta))\quad\ \text{for}\;\ \tau>0,\\
+Y(0,\xi;\delta)&=\xi,\end{array}\right.$ (3.9) for $\delta\in(-\delta_{0},\delta_{0})$ and $\xi\in(-2C_{0},2C_{0})$ , where $C_{0}$ has been chosen in ( 1.2 ). We present below
+basic properties of $Y$ . Lemma 3.3 . We have $Y_{\xi}>0$ , for all $\xi\in(-2C_{0},2C_{0})\setminus\{\alpha_{-}(\delta),a(\delta),\alpha_{+}(\delta)\}$ , all $\delta\in(-\delta_{0},\delta_{0})$ and
+all $\tau>0$ . Furthermore, $Y_{\xi}(\tau,\xi;\delta)=\frac{f_{\delta}(Y(\tau,\xi;\delta))}{f_{\delta}(\xi)}.$ Proof. We differentiate ( 3.9 ) with
+respect to $\xi$ to obtain $\left\{\begin{array}[]{ll}Y_{\xi\tau}=Y_{\xi}f^{\prime}(Y),\\
+Y_{\xi}(0,\xi;\delta)=1,\end{array}\right.$ which is integrated as follows: $Y_{\xi}(\tau,\xi;\delta)=\exp\Big[\int_{0}^{\tau}f^{\prime}(Y(s,\xi;\delta))ds\Big]>0.$ (3.10) Then differentiating ( 3.9 ) with respect to $\tau$ , we
+obtain $\left\{\begin{array}[]{ll}Y_{\tau\tau}=Y_{\tau}f^{\prime}(Y),\\
+Y_{\tau}(0,\xi;\delta)=f_{\delta}(\xi),\end{array}\right.$ which in turn implies $Y_{\tau}(\tau,\xi;\delta)=f_{\delta}(\xi)\exp\Big[\int_{0}^{\tau}f^{\prime}(Y(s,\xi;\delta))ds\Big],$ which enables to conclude. ∎ We define a function $A(\tau,\xi;\delta)$ by $A(\tau,\xi;\delta)=\frac{f^{\prime}(Y(\tau,\xi;\delta))-f^{\prime}(\xi)}{f_{\delta}(\xi)}.$ (3.11) Lemma 3.4 . We have, for all $\xi\in(-2C_{0},2C_{0})\setminus\{\alpha_{-}(\delta),a(\delta),\alpha_{+}(\delta)\}$ , all $\delta\in(-\delta_{0},\delta_{0})$ and
+all $\tau>0$ , $A(\tau,\xi;\delta)=\int_{0}^{\tau}f^{\prime\prime}(Y(s,\xi;\delta))Y_{\xi}(s,\xi;\delta)ds.$ Proof. We differentiate the equality of Lemma 3.3 with respect to $\xi$ to obtain $Y_{\xi\xi}(\tau,\xi;\delta)=A(\tau,\xi;\delta)Y_{\xi}(\tau,\xi;\delta).$ (3.12) Then differentiating ( 3.10 ) with respect to $\xi$ yields $Y_{\xi\xi}=Y_{\xi}\int_{0}^{\tau}f^{\prime\prime}(Y(s,\xi;\delta))Y_{\xi}(s,\xi;\delta)ds.$ These two last results complete the proof of Lemma 3.4 .
+∎ Next we prove estimates on the growth of $Y$ , $A$ and
+theirs derivatives. We first consider the case where the initial
+value $\xi$ is far from the stable equilibria, more precisely when
+it lies between $\eta$ and $1-\eta$ . Lemma 3.5 . Let $\eta$ be arbitrary. Then there exist positive constants $\delta_{0}=\delta_{0}(\eta)$ , $\widetilde{C}_{1}=\widetilde{C}_{1}(\eta)$ , $\tilde{C}_{2}=\tilde{C}_{2}(\eta)$ and $C_{3}=C_{3}(\eta)$ such that, for
+all $\delta\in(-\delta_{0},\delta_{0})$ , for all $\tau>0$ , • if $\xi\in(a(\delta),1-\eta)$ then, for every $\tau>0$ such that $Y(\tau,\xi;\delta)$ remains in the interval $(a(\delta),1-\eta)$ , we have $\tilde{C}_{1}e^{\mu(\delta)\tau}\leq Y_{\xi}(\tau,\xi;\delta)\leq\tilde{C}_{2}e^{\mu(\delta)\tau},$ (3.13) and $|A(\tau,\xi;\delta)|\leq C_{3}(e^{\mu(\delta)\tau}-1);$ (3.14) • if $\xi\in(\eta,a(\delta))$ then, for every $\tau>0$ such that $Y(\tau,\xi;\delta)$ remains in the interval $(\eta,a(\delta))$ ,
+( 3.13 ) and ( 3.14 ) hold as well. Proof. We take $\xi\in(a(\delta),1-\eta)$ and
+suppose that for $s\in(0,\tau)$ , $Y(s,\xi;\delta)$ remains in the
+interval $(a(\delta),1-\eta)$ . Integrating the equality $\frac{Y_{\tau}(s,\xi;\delta)}{f_{\delta}(Y(s,\xi;\delta))}=1$ from $0$ to $\tau$ and using the change of variable $q=Y(s,\xi;\delta)$ leads to $\int_{\xi}^{Y(\tau,\xi;\delta)}\frac{dq}{f_{\delta}(q)}=\tau.$ (3.15) Moreover, the equality in Lemma 3.3 enables to write $\begin{array}[]{lll}\ln Y_{\xi}(\tau,\xi;\delta)&=\displaystyle{\int_{\xi}^{Y(\tau,\xi;\delta)}}\frac{f^{\prime}(q)}{f_{\delta}(q)}dq\\
+&=\displaystyle{\int_{\xi}^{Y(\tau,\xi;\delta)}}\big[\frac{f^{\prime}(a(\delta))}{f_{\delta}(q)}+\frac{f^{\prime}(q)-f^{\prime}(a(\delta))}{f_{\delta}(q)}\big]dq\\
+&=\mu(\delta)\tau+\displaystyle{\int_{\xi}^{Y(\tau,\xi;\delta)}}h_{\delta}(q)dq,\end{array}$ (3.16) where $h_{\delta}(q)=\frac{f^{\prime}(q)-f^{\prime}(a(\delta))}{f_{\delta}(q)}.$ In view of ( 3.8 ), respectively ( 3.6 ), we can
+choose $\delta_{0}=\delta_{0}(\eta)>0$ small enough so that, for all $\delta\in[-\delta_{0},\delta_{0}]$ , we have $\mu(\delta)\geq\mu/2>0$ ,
+respectively $(a(\delta),1-\eta]\subset(a(\delta),\alpha_{+}(\delta))$ . Since $h_{\delta}(q)\to\frac{f_{\delta}^{\prime\prime}(a(\delta))}{f_{\delta}^{\prime}(a(\delta))}=\frac{f^{\prime\prime}(a(\delta))}{f^{\prime}(a(\delta))}\quad\ \hbox{as}\ \ q\to a(\delta),$ we see that the function $(q,\delta)\mapsto h_{\delta}(q)$ is continuous
+in the compact region $\{\,|\delta|\leq\delta_{0},\;a(\delta)\leq q\leq 1-\eta\,\}$ . It follows that $|h_{\delta}(q)|$ is bounded by a constant $H=H(\eta)$ as $(q,\delta)$ varies in this region. Since $|Y(\tau,\xi;\delta)-\xi|$ takes its values in the interval $[0,1-\eta-a(\delta)]\subset[0,1]$ , it follows from
+( 3.16 ) that $\mu(\delta)\tau-H\leq\ln Y_{\xi}(\tau,\xi;\delta)\leq\mu(\delta)\tau+H,$ which, in turn, proves ( 3.13 ). Next Lemma 3.4 and ( 3.13 ) yield $\begin{array}[]{ll}|A(\tau,\xi;\delta)|&\leq\|f^{\prime\prime}\|_{L^{\infty}(0,1)}\displaystyle{\int_{0}^{\tau}}\tilde{C}_{2}e^{\mu(\delta)s}ds\\
+&\leq\displaystyle{\frac{\|f^{\prime\prime}\|_{L^{\infty}(0,1)}\tilde{C}_{2}}{\mu(\delta)}}(e^{\mu(\delta)\tau}-1)\\
+&\leq\displaystyle{\frac{2}{\mu}}\|f^{\prime\prime}\|_{L^{\infty}(0,1)}\tilde{C}_{2}(e^{\mu(\delta)\tau}-1),\end{array}$ which completes the proof of ( 3.14 ). The case
+where $\xi$ and $Y(\tau,\xi;\delta)$ are in $(\eta,a(\delta))$ is
+similar and omitted. ∎ Corollary 3.6 . Let $\eta$ be arbitrary. Then there exist positive constants $\delta_{0}=\delta_{0}(\eta)$ , $C_{1}=C_{1}(\eta)$ and $C_{2}=C_{2}(\eta)$ such
+that, for all $\delta\in(-\delta_{0},\delta_{0})$ , for all $\tau>0$ , • if $\xi\in(a(\delta),1-\eta)$ then, for every $\tau>0$ such that $Y(\tau,\xi;\delta)$ remains in the interval $(a(\delta),1-\eta)$ , we have $C_{1}e^{\mu(\delta)\tau}(\xi-a(\delta))\leq Y(\tau,\xi;\delta)-a(\delta)\leq C_{2}e^{\mu(\delta)\tau}(\xi-a(\delta)),$ (3.17) • if $\xi\in(\eta,a(\delta))$ then, for every $\tau>0$ such that $Y(\tau,\xi;\delta)$ remains in the interval $(\eta,a(\delta))$ , we have $C_{2}e^{\mu(\delta)\tau}(\xi-a(\delta))\leq Y(\tau,\xi;\delta)-a(\delta)\leq C_{1}e^{\mu(\delta)\tau}(\xi-a(\delta)).$ (3.18) Proof. In view of ( 3.8 ), respectively
+( 3.6 ), we can choose $\delta_{0}=\delta_{0}(\eta)>0$ small
+enough so that, for all $\delta\in[-\delta_{0},\delta_{0}]$ , we have $\mu(\delta)\geq\mu/2>0$ , respectively $(a(\delta),1-\eta]\subset(a(\delta),\alpha_{+}(\delta))$ . Since $\frac{f_{\delta}(q)}{q-a(\delta)}\to\mu(\delta)\quad\ \hbox{as}\ \ q\to a(\delta),$ it follows that $(q,\delta)\mapsto f_{\delta}(q)/(q-a(\delta))$ is a strictly
+positive and continuous function in the compact region $\{\,|\delta|\leq\delta_{0},\;a(\delta)\leq q\leq 1-\eta\,\}$ , which insures
+the existence of constants $B_{1}=B_{1}(\eta)>0$ and $B_{2}=B_{2}(\eta)>0$ such that, for all $q\in(a(\delta),1-\eta)$ , all $\delta\in(-\delta_{0},\delta_{0})$ , $B_{1}(q-a(\delta))\leq f_{\delta}(q)\leq B_{2}(q-a(\delta)).$ (3.19) We write the inequalities ( 3.19 ) for $q=Y(\tau,\xi;\delta)\in(a(\delta),1-\eta)$ and then for $q=\xi\in(a(\delta),1-\eta)$ , which,
+together with Lemma 3.3 , implies that $\frac{B_{1}}{B_{2}}(Y(\tau,\xi;\delta)-a(\delta))\leq(\xi-a(\delta))Y_{\xi}(\tau,\xi;\delta)\leq\frac{B_{2}}{B_{1}}(Y(\tau,\xi;\delta)-a(\delta)).$ In view of ( 3.13 ), this completes the proof of
+inequalities ( 3.17 ). The proof of
+( 3.18 ) is similar and omitted.∎ We now present estimates in the case that the initial
+value $\xi$ is smaller than $\eta$ or larger than $1-\eta$ . Lemma 3.7 . Let $\eta$ and $M>0$ be arbitrary. Then there exist positive
+constants $\delta_{0}=\delta_{0}(\eta,M)$ and $C_{4}=C_{4}(M)$ such that, for
+all $\delta\in(-\delta_{0},\delta_{0})$ , • if $\xi\in[1-\eta,1+M]$ , then, for all $\tau>0$ , $Y(\tau,\xi;\delta)$ remains in the interval $[1-\eta,1+M]$ and $|A(\tau,\xi;\delta)|\leq C_{4}\tau\quad\hbox{for}\ \ \tau>0\,;$ (3.20) • if $\xi\in[-M,\eta]$ , then, for all $\tau>0$ , $Y(\tau,\xi;\delta)$ remains in the interval $[-M,\eta]$ and
+( 3.20 ) holds as well. Proof. Since the two statements can be treated in
+the same way, we will only prove the former. The fact that $Y(\tau,\xi;\delta)$ ,
+the solution of the ordinary differential equation
+( 3.9 ), remains in the interval $[1-\eta,1+M]$ directly
+follows from the bistable properties of $f_{\delta}$ , or, more precisely,
+from the sign conditions $f_{\delta}(1-\eta)>0$ , $f_{\delta}(1+M)<0$ valid if $\delta_{0}=\delta_{0}(\eta,M)$ is small enough. To prove ( 3.20 ), suppose first that $\xi\in[\alpha_{+}(\delta),1+M]$ . By the above arguments, $Y(\tau,\xi;\delta)$ remains in this interval.
+Moreover $f^{\prime}$ is negative in this interval. Hence, it follows from
+( 3.10 ) that $Y_{\xi}(\tau,\xi;\delta)\leq 1$ . We then use Lemma 3.4 to deduce that $|A(\tau,\xi;\delta)|\leq\|f^{\prime\prime}\|_{L^{\infty}(-M,1+M)}\tau=:C_{4}\tau.$ The case $\xi\in[1-\eta,\alpha_{+}(\delta)]$ being similar, this completes the
+proof of the lemma. ∎ Now we choose the constant $M$ in the above lemma
+sufficiently large so that $[-2C_{0},2C_{0}]\subset[-M,1+M]$ , and fix $M$ hereafter. Therefore the constant $C_{4}$ is fixed as well.
+Using the fact that $\tau\mapsto\tau(e^{\mu(\delta)\tau}-1)^{-1}$ is uniformly bounded for $\delta\in(-\delta_{0},\delta_{0})$ , with $\delta_{0}$ small enough (see ( 3.8 )), and for $\tau>0$ , one can
+easily deduce from ( 3.14 ) and
+( 3.20 ) the following general estimate. Lemma 3.8 . Let $\eta$ be arbitrary and let $C_{0}$ be the constant defined in
+( 1.2 ). Then there exist positive constants $\delta_{0}=\delta_{0}(\eta)$ , $C_{5}=C_{5}(\eta)$ such that, for all $\delta\in(-\delta_{0},\delta_{0})$ , all $\xi\in(-2C_{0},2C_{0})$ and all $\tau>0$ , $|A(\tau,\xi;\delta)|\leq C_{5}(e^{\mu(\delta)\tau}-1).$ 3.2 Construction of sub and super-solutions We now use $Y$ to construct a pair of sub- and super-solutions for
+the proof of the generation of interface theorem. We set $w_{\varepsilon}^{\pm}(x,t)=Y\Big(\frac{t}{\varepsilon^{2}},u_{0}(x)\pm\varepsilon^{2}r(\pm\varepsilon G,\frac{t}{\varepsilon^{2}});\pm\varepsilon G\Big),$ (3.21) where the constant $G$ is defined by $G=\sup_{u\in[-2C_{0},2C_{0}]}|g(u)|,$ and the function $r(\delta,\tau)$ is given by $r(\delta,\tau)=C_{6}(e^{\mu(\delta)\tau}-1).$ For simplicity, we make the following additional assumption: $\frac{\partial u_{0}}{\partial\nu}=0\quad\ \textrm{on}\ \;\partial\Omega.$ (3.22) In the general case where ( 3.22 ) does not necessary
+hold, we have to slightly modify $w_{\varepsilon}^{\pm}$ near the boundary $\partial\Omega$ . This will be discussed in the next remark. Lemma 3.9 . There exist positive constants $\varepsilon_{0}$ and $C_{6}$ such that for
+all $\,\varepsilon\in(0,\varepsilon_{0})$ , the functions $w_{\varepsilon}^{-}$ and $w_{\varepsilon}^{+}$ are respectively sub- and super-solutions for Problem $(P^{\varepsilon})$ ,
+in the domain $\big\{(x,t)\in Q_{T},\;x\in\Omega,\;0\leq t\leq\mu^{-1}\varepsilon^{2}|\ln\varepsilon|\big\}.$ Proof. First, ( 3.22 ) implies the
+homogeneous Neumann boundary condition $\frac{\partial w_{\varepsilon}^{\pm}}{\partial\nu}=0\quad\ \textrm{on}\ \;\partial\Omega\times(0,+\infty).$ Let $v^{\varepsilon}$ be such that $\begin{cases}w_{\varepsilon}^{-}\leq-\Delta v^{\varepsilon}+\gamma v^{\varepsilon}\leq w_{\varepsilon}^{+}\vskip 8.0pt\\
+\displaystyle{\frac{\partial v^{\varepsilon}}{\partial\nu}}=0.\end{cases}$ (3.23) According to Definition 2.2 , what we have to
+show is $L_{v^{\varepsilon}}[w_{\varepsilon}^{+}]:=(w_{\varepsilon}^{+})_{t}-\Delta w_{\varepsilon}^{+}+\nabla\cdot(w_{\varepsilon}^{+}\nabla\chi(v^{\varepsilon}))-\frac{1}{\varepsilon^{2}}f_{\varepsilon}(w_{\varepsilon}^{+})\geq 0.$ Let $C_{6}$ be a positive constant which does not depend on $\varepsilon$ .
+If $\varepsilon_{0}$ is sufficiently small, we note that $\pm\varepsilon G\in(-\delta_{0},\delta_{0})$ and that, in the range $0\leq t\leq\mu^{-1}\varepsilon^{2}|\ln\varepsilon|$ , $|\varepsilon^{2}C_{6}(e^{\mu(\pm\varepsilon G)t/\varepsilon^{2}}-1)|\leq\varepsilon^{2}C_{6}(\varepsilon^{-\mu(\pm\varepsilon G)/\mu}-1)\leq C_{0},$ which implies that $u_{0}(x)\pm\varepsilon^{2}r(\pm\varepsilon G,t/\varepsilon^{2})\in(-2C_{0},2C_{0}).$ These observations allow us to use the results of the previous
+subsection with $\tau=t/\varepsilon^{2}$ , $\xi=u_{0}(x)+\varepsilon^{2}r(\varepsilon G,t/\varepsilon^{2})$ and $\delta=\varepsilon G$ . In particular, setting $F_{1}:=\|f^{\prime}\|_{L^{\infty}(-2C_{0},2C_{0})}$ , this implies, using
+( 3.10 ), that $e^{-F_{1}T}\leq Y_{\xi}\leq e^{F_{1}T}.$ Straightforward computations yield $\displaystyle L_{v^{\varepsilon}}[w_{\varepsilon}^{+}]$ $\displaystyle=$ $\displaystyle\displaystyle{\frac{1}{\varepsilon^{2}}}Y_{\tau}+C_{6}\mu(\varepsilon G)e^{\mu(\varepsilon G)t/\varepsilon^{2}}Y_{\xi}-\Delta u_{0}Y_{\xi}-|\nabla u_{0}|^{2}Y_{\xi\xi}$ $\displaystyle{}+Y_{\xi}\nabla u_{0}\cdot\nabla\chi(v^{\varepsilon})+Y\Delta\chi(v^{\varepsilon})-\displaystyle{\frac{1}{\varepsilon^{2}}}f(Y)-\frac{1}{\varepsilon}g(Y),$ and then, in view of the ordinary differential equation
+( 3.9 ), $\varepsilon G$ playing the role of $\delta$ , $L_{v^{\varepsilon}}[w_{\varepsilon}^{+}]=\displaystyle{\frac{1}{\varepsilon}}\big[G-g(Y)\big]+Y_{\xi}\Big[C_{6}\mu(\varepsilon G)e^{\mu(\varepsilon G)t/\varepsilon^{2}}-\Delta u_{0}-\displaystyle{\frac{Y_{\xi\xi}}{Y_{\xi}}}|\nabla u_{0}|^{2}\vskip 8.0pt\\
++\nabla u_{0}\cdot\nabla\chi(v^{\varepsilon})+\displaystyle{\frac{Y}{Y_{\xi}}}\Delta\chi(v^{\varepsilon})\Big].$ (3.24) By the definition of $G$ the first term above is positive. Now,
+using the choice of $C_{0}$ in ( 1.2 ), the fact that $Y_{\xi\xi}/Y_{\xi}=A$ and Lemma 3.8 , we obtain, for
+a $C_{5}$ independent of $\varepsilon$ , $\displaystyle L_{v^{\varepsilon}}[w_{\varepsilon}^{+}]\geq$ $\displaystyle Y_{\xi}\Big[C_{6}\mu(\varepsilon G)e^{\mu(\varepsilon G)t/\varepsilon^{2}}-C_{0}-C_{5}(e^{\mu(\varepsilon G)t/\varepsilon^{2}}-1)C_{0}^{2}$ $\displaystyle{}{}{}-C_{0}|\nabla\chi(v^{\varepsilon})|-2C_{0}e^{F_{1}T}|\Delta\chi(v^{\varepsilon})|\Big].$ Moreover, the inequalities in ( 3.23 ) can be
+written as $-\Delta v^{\varepsilon}+\gamma v^{\varepsilon}=h^{\varepsilon}$ , with $-2C_{0}\leq h^{\varepsilon}\leq 2C_{0}$ , so that the standard theory of elliptic
+equations gives a uniform bound $M$ for $|v^{\varepsilon}|$ , $|\nabla v^{\varepsilon}|$ and $|\Delta v^{\varepsilon}|$ . Hence, using the smoothness of $\chi$ , we
+have a uniform bound $M^{\prime}$ for $|\nabla\chi(v^{\varepsilon})|$ and $|\Delta\chi(v^{\varepsilon})|$ . It follows that $L_{v^{\varepsilon}}[w_{\varepsilon}^{+}]\geq Y_{\xi}\Big[(C_{6}\mu(\varepsilon G)-C_{5}C_{0}^{2})e^{\mu(\varepsilon G)t/\varepsilon^{2}}-C_{0}+C_{5}C_{0}^{2}-C_{0}M^{\prime}-2C_{0}e^{F_{1}T}M^{\prime}\Big].$ Hence, in view of ( 3.8 ), we have, for $\varepsilon_{0}$ small
+enough (recall that $Y_{\xi}>0$ ), $Lw_{\varepsilon}^{+}\geq Y_{\xi}\Big[(C_{6}\frac{1}{2}\mu-C_{5}C_{0}^{2})-C_{0}-C_{0}M^{\prime}-2C_{0}e^{F_{1}T}M^{\prime}\Big]\geq 0,$ for $C_{6}$ large enough, so that $w_{\varepsilon}^{+}$ is a super-solution for
+Problem $(P^{\;\!\varepsilon})$ . We omit the proof that $w_{\varepsilon}^{-}$ is a sub-solution.
+∎ Now, since $w_{\varepsilon}^{\pm}(x,0)=Y(0,u_{0}(x);\pm\varepsilon G)=u_{0}(x)$ , the comparison principle set in Proposition 2.3 asserts that, for all $x\in\Omega$ , for
+all $0\leq t\leq\mu^{-1}\varepsilon^{2}|\ln\varepsilon|$ , $w_{\varepsilon}^{-}(x,t)\leq u^{\varepsilon}(x,t)\leq w_{\varepsilon}^{+}(x,t).$ (3.25) Remark 3.10 . In the more general case where ( 3.22 ) is not
+valid, one can proceed in the following way: in view of
+( 1.3 ) and ( 1.4 ) there exist
+positive constants $d_{1}$ and $\rho$ such that $u_{0}(x)\leq 1/2-\rho$ if $d(x,\partial\Omega)\leq d_{1}$ . Let $\chi$ be a
+smooth cut-off function defined on $[0,+\infty)$ such that $0\leq\chi\leq 1$ , $\chi(0)=\chi^{\prime}(0)=0$ and $\chi(z)=1$ for $z\geq d_{1}$ . Then define $u_{0}^{+}(x)=\chi(d(x,\partial\Omega))u_{0}(x)+(1-\chi(d(x,\partial\Omega))(1/2-\rho),$ $u_{0}^{-}(x)=\chi(d(x,\partial\Omega))u_{0}(x)+(1-\chi(d(x,\partial\Omega))\min_{x\in\overline{\Omega}}u_{0}(x).$ Clearly, $u_{0}^{-}\leq u_{0}\leq u_{0}^{+}$ , and both $u_{0}^{\pm}$ satisfy
+( 3.22 ). Now we set $\tilde{w}_{\varepsilon}^{\pm}(x,t)=Y\Big(\frac{t}{\varepsilon^{2}},\,u^{\pm}_{0}(x)\pm\varepsilon^{2}r(\pm\varepsilon G,\frac{t}{\varepsilon^{2}});\pm\varepsilon G\Big).$ Then the same argument as in Lemma 3.9 shows that $(\tilde{w}_{\varepsilon}^{-},\tilde{w}_{\varepsilon}^{+})$ is a pair of sub and
+super-solutions for Problem $(P^{\varepsilon})$ . Furthermore, since $\tilde{w}_{\varepsilon}^{-}(x,0)=u_{0}^{-}(x)\leq u_{0}(x)\leq u_{0}^{+}(x)=\tilde{w}_{\varepsilon}^{+}(x,0)$ , Proposition 2.3 asserts
+that, for all $x\in\Omega$ , for all $0\leq t\leq\mu^{-1}\varepsilon^{2}|\ln\varepsilon|$ , we have $\tilde{w}_{\varepsilon}^{-}(x,t)\leq u^{\varepsilon}(x,t)\leq\tilde{w}_{\varepsilon}^{+}(x,t)$ . $\square$ 3.3 Proof of Theorem 3.1 In order to prove Theorem 3.1 we first present a
+key estimate on the function $Y$ after a time of order $\tau\sim|\ln\varepsilon|.$ Lemma 3.11 . Let $\eta$ be arbitrary; there exist positive constants $\varepsilon_{0}=\varepsilon_{0}(\eta)$ and $C_{7}=C_{7}(\eta)$ such that, for all $\varepsilon\in(0,\varepsilon_{0})$ , • for all $\xi\in(-2C_{0},2C_{0})$ , $-\eta\leq Y(\mu^{-1}|\ln\varepsilon|,\xi;\pm\varepsilon G)\leq 1+\eta,$ (3.26) • for all $\xi\in(-2C_{0},2C_{0})$ such that $|\xi-\frac{1}{2}|\geq C_{7}\varepsilon$ , we have that $\displaystyle\text{if}\;~~\xi\geq 1/2+C_{7}\varepsilon\;~~\text{then}\;~~Y(\mu^{-1}|\ln\varepsilon|,\xi;\pm\varepsilon G)\geq 1-\eta,\vskip 3.0pt$ (3.27) $\displaystyle\text{if}\;~~\xi\leq 1/2-C_{7}\varepsilon\;~~\text{then}\;~~Y(\mu^{-1}|\ln\varepsilon|,\xi;\pm\varepsilon G)\leq\eta.$ (3.28) Proof. We first prove ( 3.27 ). In
+view of ( 3.6 ), we have, for $C_{7}$ large enough, $1/2+C_{7}\varepsilon\geq a(\pm\varepsilon G)+\frac{1}{2}C_{7}\varepsilon$ , for all $\varepsilon\in(0,\varepsilon_{0})$ , with $\varepsilon_{0}$ small enough. Hence for $\xi\geq 1/2+C_{7}\varepsilon$ , as long as $Y(\tau,\xi;\pm\varepsilon G)$ has not reached $1-\eta$ , we can use ( 3.17 ) to deduce that $\begin{array}[]{llll}Y(\tau,\xi;\pm\varepsilon G)&\geq a(\pm\varepsilon G)+C_{1}e^{\mu(\pm\varepsilon G)\tau}(\xi-a(\pm\varepsilon G))\\
+&\geq a(\pm\varepsilon G)+\frac{1}{2}C_{1}C_{7}\varepsilon e^{\mu(\pm\varepsilon G)\tau}\\
+&\geq\frac{1}{2}-\varepsilon CG+\frac{1}{2}C_{1}C_{7}\varepsilon e^{\mu(\pm\varepsilon G)\tau}\\
+&\geq 1-\eta\end{array}$ provided that $\tau\geq\tau^{\varepsilon}:=\frac{1}{\mu(\pm\varepsilon G)}\ln\frac{1/2-\eta+CG\varepsilon}{C_{1}C_{7}\varepsilon/2}.$ To complete the proof of ( 3.27 ) we must choose $C_{7}$ so that $\mu^{-1}|\ln\varepsilon|-\tau^{\varepsilon}\geq 0$ . A simple
+computation shows that $\begin{array}[]{ll}\mu^{-1}|\ln\varepsilon|-\tau^{\varepsilon}=\displaystyle{\frac{\mu(\pm\varepsilon G)-\mu}{\mu(\pm\varepsilon G)\mu}}|\ln\varepsilon|&-\displaystyle{\frac{1}{\mu(\pm\varepsilon G)}}\ln\frac{1/2-\eta+CG\varepsilon}{C_{1}/2}\\
+&+\displaystyle{\frac{1}{\mu(\pm\varepsilon G)}}\ln C_{7}.\end{array}$ Thanks to ( 3.8 ), as $\varepsilon\to 0$ , the first term above is
+of order $\varepsilon|\ln\varepsilon|$ and the second one of order $1$ . Hence,
+for $C_{7}$ large enough, the quantity $\mu^{-1}|\ln\varepsilon|-\tau^{\varepsilon}$ is positive, for all $\varepsilon\in(0,\varepsilon_{0})$ , with $\varepsilon_{0}$ small enough. The proof of ( 3.28 ) is similar and
+omitted. Next we prove ( 3.26 ). First note that, by taking $\varepsilon_{0}$ small enough, the stable equilibria of $f_{\pm\varepsilon G}$ ,
+namely $\alpha_{-}(\pm\varepsilon G)$ and $\alpha_{+}(\pm\varepsilon G)$ , are in $[-\eta,1+\eta]$ . Hence, $f_{\pm\varepsilon G}$ being a bistable
+function, if we leave from a $\xi\in[-\eta,1+\eta]$ then $Y(\tau,\xi;\pm\varepsilon G)$ will remain in the interval $[-\eta,1+\eta]$ . Now suppose that $1+\eta\leq\xi\leq 2C_{0}$ (note that this work is useless if $2C_{0}<1+\eta$ ). We check below
+that $Y(\mu^{-1}|\ln\varepsilon|,\xi;\pm\varepsilon G)\leq 1+\eta$ . As long
+as $1+\eta\leq Y\leq 2C_{0}$ , ( 3.9 ) leads to the
+inequality $Y_{\tau}\leq f(1+\eta)+\varepsilon G\leq\frac{1}{2}f(1+\eta)<0$ , for $\varepsilon_{0}=\varepsilon_{0}(\eta)$ small enough. By
+integration from $0$ to $\tau$ , it follows that $\begin{array}[]{lll}Y(\tau,\xi;\pm\varepsilon G)&\leq\xi+\frac{1}{2}f(1+\eta)\tau\\
+&\leq 2C_{0}+\frac{1}{2}f(1+\eta)\tau\\
+&\leq 1+\eta,\end{array}$ provided that $\tau\geq\frac{2C_{0}-1-\eta}{-f(1+\eta)/2},$ and a fortiori for $\tau=\mu^{-1}|\ln\varepsilon|$ , which completes the
+proof of ( 3.26 ). ∎ We are now ready to prove Theorem 3.1 .
+By setting $t=\mu^{-1}\varepsilon^{2}|\ln\varepsilon|$ in ( 3.25 ),
+we obtain $Y\Big(\mu^{-1}|\ln\varepsilon|,u_{0}(x)-\varepsilon^{2}r(-\varepsilon G,\mu^{-1}|\ln\varepsilon|);-\varepsilon G\Big)\\
+\leq u^{\varepsilon}(x,\mu^{-1}\varepsilon^{2}|\ln\varepsilon|)\leq Y\Big(\mu^{-1}|\ln\varepsilon|,u_{0}(x)+\varepsilon^{2}r(\varepsilon G,\mu^{-1}|\ln\varepsilon|);+\varepsilon G\Big).$ (3.29) In view of ( 3.8 ), $\lim_{\varepsilon\rightarrow 0}\frac{\mu-\mu(\pm\varepsilon G)}{\mu}\ln\varepsilon=0,$ (3.30) so that, for $\varepsilon_{0}$ small enough, we have $\varepsilon^{2}r(\pm\varepsilon G,\mu^{-1}|\ln\varepsilon|)=C_{6}\varepsilon(\varepsilon^{(\mu-\mu(\pm\varepsilon G))/\mu}-\varepsilon)\in(\frac{1}{2}C_{6}\varepsilon,\frac{3}{2}C_{6}\varepsilon).$ It follows that $u_{0}(x)\pm\varepsilon^{2}r(\pm\varepsilon G,\mu^{-1}|\ln\varepsilon|)\in(-2C_{0},2C_{0})$ . Hence the result ( 3.2 ) of Theorem 3.1 is a direct consequence of ( 3.26 )
+and ( 3.29 ). Next we prove ( 3.3 ). We take $x\in\Omega$ such that $u_{0}(x)\geq 1/2+M_{0}\varepsilon$ so that $\begin{array}[]{ll}u_{0}(x)-\varepsilon^{2}r(-\varepsilon G,\mu^{-1}|\ln\varepsilon|)&\geq 1/2+M_{0}\varepsilon-\frac{3}{2}C_{6}\varepsilon\\
+&\geq 1/2+C_{7}\varepsilon,\end{array}$ if we choose $M_{0}$ large enough. Using ( 3.29 ) and
+( 3.27 ) we obtain ( 3.3 ), which
+completes the proof of Theorem 3.1 .∎ 4 Motion of interface We have seen in Section 3 that, after a very
+short time, the solution $u^{\varepsilon}$ develops a clear transition layer.
+In the present section, we show that it persists and that its law
+of motion is well approximated by the interface equation in $(P^{0})$ obtained by formal asymptotic expansions in subsection 2.1 . More precisely, take the first term of the formal asymptotic
+expansion ( 2.3 ) as a formal expansion of the
+solution: $u^{\varepsilon}(x,t)\,\approx\,\tilde{u}^{\varepsilon}(x,t):=U_{0}\Big(\frac{\widetilde{d}(x,t)}{\varepsilon}\Big),$ (4.1) where $U_{0}$ is defined in ( 2.6 ). The right-hand
+side is a function having a well-developed transition layer, and
+its interface lies exactly on $\Gamma_{t}$ . We show that this
+function is a good approximation of the solution; more precisely: If $u^{\varepsilon}$ becomes very close to $\tilde{u}^{\varepsilon}$ at some time
+moment $t=t_{0}$ , then it stays close to $\tilde{u}^{\varepsilon}$ for the
+rest of time. Consequently, $\Gamma^{\varepsilon}_{t}$ evolves roughly like $\Gamma_{t}$ . To that purpose, we will construct a pair of sub- and
+super-solutions $u_{\varepsilon}^{-}$ and $u_{\varepsilon}^{+}$ for Problem $(P^{\varepsilon})$ by
+slightly modifying $\tilde{u}^{\varepsilon}$ . It then follows that, if the
+solution $u^{\varepsilon}$ satisfies $u_{\varepsilon}^{-}(x,t_{0})\leq u^{\varepsilon}(x,t_{0})\leq u_{\varepsilon}^{+}(x,t_{0}),$ for some $t_{0}\geq 0$ , then $u_{\varepsilon}^{-}(x,t)\leq u^{\varepsilon}(x,t)\leq u_{\varepsilon}^{+}(x,t),$ for $t_{0}\leq t\leq T$ . As a result, since both $u_{\varepsilon}^{+},u_{\varepsilon}^{-}$ stay close to $\tilde{u}^{\varepsilon}$ , the solution $u^{\varepsilon}$ also stays close
+to $\tilde{u}^{\varepsilon}$ for $t_{0}\leq t\leq T$ . 4.1 Construction of sub- and super-solutions To begin with we present mathematical tools which are essential
+for the construction of sub and super-solutions. A modified signed distance function. Rather than working with the usual signed distance function $\widetilde{d}$ , defined in ( 2.1 ), we define a
+“cut-off signed distance function” $d$ as follows. Choose $d_{0}>0$ small enough so that $\widetilde{d}(\cdot,\cdot)$ is smooth in the
+tubular neighborhood of $\Gamma$ $\{(x,t)\in\overline{Q_{T}},\;|\widetilde{d}(x,t)|<3d_{0}\},$ and such that $\mbox{dist}(\Gamma_{t},\partial\Omega)>4d_{0}\quad\textrm{ for all
+}t\in[0,T].$ (4.2) Next let $\zeta(s)$ be a smooth increasing function on $\mathbb{R}$ such
+that $\zeta(s)=\left\{\begin{array}[]{ll}s&\textrm{ if }\ |s|\leq 2d_{0}\\
+-3d_{0}&\textrm{ if }\ s\leq-3d_{0}\\
+3d_{0}&\textrm{ if }\ s\geq 3d_{0}.\end{array}\right.$ We define the cut-off signed distance function $d$ by $d(x,t)=\zeta\big(\tilde{d}(x,t)\big).$ (4.3) Note that $|\nabla d|=1$ in the region $\{(x,t)\in\overline{Q_{T}},\,|d(x,t)|<2d_{0}\}$ and that, in view of the above
+definition, $\nabla d=0$ in a neighborhood of $\partial\Omega$ . Note
+also that the equation of motion interface in $(P^{0})$ , which is
+equivalent to ( 2.9 ), is now written as $d_{t}=\Delta d-\nabla d\cdot\nabla\chi(v^{0})-\sqrt{2}\alpha\quad\ \textrm{on}\ \;\Gamma_{t}.$ (4.4) Construction. We look for a pair of
+sub- and super-solutions $u_{\varepsilon}^{\pm}$ for Problem $(P^{\;\!\varepsilon})$ of the
+form $u_{\varepsilon}^{\pm}(x,t)=U_{0}\Big(\frac{d(x,t)\mp\varepsilon p(t)}{\varepsilon}\Big)\pm q(t),$ (4.5) where $U_{0}$ is the solution of ( 2.6 ), and where $\begin{array}[]{ll}p(t)=-e^{-\beta t/\varepsilon^{2}}+e^{Lt}+K,\\
+q(t)=\sigma(\beta e^{-\beta t/\varepsilon^{2}}+\varepsilon^{2}Le^{Lt}).\end{array}$ (4.6) Note that $q=\sigma\varepsilon^{2}\,p_{t}$ . Let us remark that the
+construction ( 4.5 ) is more precise than the procedure
+of only taking a zeroth order term of the form $U_{0}$ , since we
+have shown in the formal derivation that the first order term $U_{1}$ in ( 2.3 ) vanishes. It is clear from the
+definition of $u_{\varepsilon}^{\pm}$ that $\lim_{\varepsilon\rightarrow 0}u_{\varepsilon}^{\pm}(x,t)=\left\{\begin{array}[]{ll}1&\textrm{ for all }(x,t)\in Q_{T}^{(1)}\\
+0&\textrm{ for all }(x,t)\in Q_{T}^{(0)}.\\
+\end{array}\right.$ (4.7) The main result of this section is the following. Lemma 4.1 . There exist positive constants $\beta,\,\sigma$ with the following
+properties. For any $K>1$ , we can find positive constants $\varepsilon_{0}$ and $L$ such that, for any $\varepsilon\in(0,\varepsilon_{0})$ , the functions $u_{\varepsilon}^{-}$ and $u_{\varepsilon}^{+}$ are respectively sub- and super-solutions
+for Problem $(P^{\varepsilon})$ in the range $x\in\overline{\Omega}$ , $0\leq t\leq T$ . 4.2 Proof of Lemma 4.1 First, since $\nabla d=0$ in a neighborhood of $\partial\Omega$ , we
+have the homogeneous Neumann boundary condition $\displaystyle{\frac{\partial u_{\varepsilon}^{\pm}}{\partial\nu}}=0\quad\ \textrm{on}\ \;\partial\Omega\times[0,T].$ Let $v^{\varepsilon}$ be such that
+( 2.11 ) holds. We have to show that $L_{v^{\varepsilon}}[u_{\varepsilon}^{+}]:=(u_{\varepsilon}^{+})_{t}-\Delta u_{\varepsilon}^{+}+\nabla u_{\varepsilon}^{+}\cdot\nabla\chi(v^{\varepsilon})+u_{\varepsilon}^{+}\Delta\chi(v^{\varepsilon})-\displaystyle{\frac{1}{\varepsilon^{2}}}f_{\varepsilon}(u_{\varepsilon}^{+})\geq 0,$ the proof of inequality $L_{v^{\varepsilon}}[u_{\varepsilon}^{-}]\leq 0$ following by
+the same arguments. Computation of $L_{v^{\varepsilon}}[u_{\varepsilon}^{+}$ ]. By straightforward computations we obtain the following terms: $\begin{array}[]{lll}(u_{\varepsilon}^{+})_{t}={U_{0}}^{\prime}(\displaystyle{\frac{d_{t}}{\varepsilon}}-p_{t})+q_{t},\\
+\nabla u_{\varepsilon}^{+}={U_{0}}^{\prime}\displaystyle{\frac{\nabla d}{\varepsilon}},\\
+\Delta u_{\varepsilon}^{+}={U_{0}}^{\prime\prime}\displaystyle{\frac{|\nabla d|^{2}}{\varepsilon^{2}}}+{U_{0}}^{\prime}\displaystyle{\frac{\Delta d}{\varepsilon}},\end{array}$ where the function $U_{0}$ , as well as its derivatives, is taken at
+the point $\big(d(x,t)-\varepsilon p(t)\big)/\varepsilon$ . We also use
+expansions of the reaction terms: $\begin{array}[]{ll}f(u_{\varepsilon}^{+})=f(U_{0})+qf^{\prime}(U_{0})+\displaystyle{\frac{1}{2}}q^{2}f^{\prime\prime}(\theta),\\
+g(u_{\varepsilon}^{+})=g(U_{0})+qg^{\prime}(\omega),\end{array}$ where $\theta(x,t)$ and $\omega(x,t)$ are some functions
+satisfying $U_{0}<\theta<u_{\varepsilon}^{+},\;U_{0}<\omega<u_{\varepsilon}^{+}$ . Combining
+the above expressions with equation ( 2.6 ) and the
+fact that $\sqrt{2}\alpha{U_{0}}^{\prime}+g(U_{0})\equiv 0$ , we obtain $L_{v^{\varepsilon}}[u_{\varepsilon}^{+}]=E_{1}+\cdots+E_{5},$ where: $E_{1}=-\displaystyle{\frac{1}{\varepsilon^{2}}}q[f^{\prime}(U_{0})+\frac{1}{2}qf^{\prime\prime}(\theta)]-{U_{0}}^{\prime}p_{t}+q_{t}$ , $E_{2}=\displaystyle{\frac{{U_{0}}^{\prime\prime}}{\varepsilon^{2}}}(1-|\nabla d|^{2})$ , $E_{3}=\displaystyle{\frac{{U_{0}}^{\prime}}{\varepsilon}}(d_{t}-\Delta d+\nabla d\cdot\nabla\chi(v^{0})+\sqrt{2}\alpha)$ , $E_{4}=-\displaystyle{\frac{1}{\varepsilon}}qg^{\prime}(\omega)$ , $E_{5}=\displaystyle{\frac{{U_{0}}^{\prime}}{\varepsilon}}\nabla d\cdot\nabla(\chi(v^{\varepsilon})-\chi(v^{0}))+u_{\varepsilon}^{+}\Delta\chi(v^{\varepsilon}).$ In order to estimate the terms above, we first present some useful
+inequalities. As $f^{\prime}(0)=f^{\prime}(1)=-1/2$ , we can find strictly positive
+constants $b$ and $m$ such that $\textrm{ if }\quad U_{0}(z)\in[0,b]\cup[1-b,1]\quad\quad\textrm{ then }\quad f^{\prime}(U_{0}(z))\leq-m.$ (4.8) On the other hand, since the region $\{z\in\mathbb{R}\,|\,U_{0}(z)\in[b,1-b]\,\}$ is compact and since ${U_{0}}^{\prime}<0$ on $\mathbb{R}$ , there
+exists a constant $a_{1}>0$ such that $\textrm{ if }\quad U_{0}(z)\in[b,1-b]\quad\textrm{ then }\quad{U_{0}}^{\prime}(z)\leq-a_{1}.$ (4.9) We then define $F=\sup_{-1\leq z\leq 2}|f(z)|+|f^{\prime}(z)|+|f^{\prime\prime}(z)|,$ (4.10) $\beta=\frac{m}{4},$ (4.11) and choose $\sigma$ that satisfies $0<\sigma\leq\min\,(\sigma_{0},\sigma_{1},\sigma_{2}),$ (4.12) where $\sigma_{0}:=\frac{a_{1}}{m+F},\quad\sigma_{1}:=\frac{1}{\beta+1},\quad\sigma_{2}:=\frac{4\beta}{F(\beta+1)}.$ Hence, combining ( 4.8 ) and ( 4.9 ), we
+obtain, using that $\sigma\leq\sigma_{0}$ , $-{U_{0}}^{\prime}(z)-\sigma f^{\prime}(U_{0}(z))\geq 4\sigma\beta\qquad\hbox{for}\ \ -\infty<z<\infty.$ (4.13) Now let $K>1$ be arbitrary. In what follows we will show that $L_{v^{\varepsilon}}[u_{\varepsilon}^{+}]\geq 0$ provided that the constants $\varepsilon_{0}$ and $L$ are appropriately chosen. From now on, we suppose that the
+following inequality is satisfied: $\varepsilon_{0}^{2}Le^{LT}\leq 1\,.$ (4.14) Then, given any $\varepsilon\in(0,\varepsilon_{0})$ , since $\sigma\leq\sigma_{1}$ ,
+we have $0\leq q(t)\leq 1$ , hence, recalling that $0<U_{0}<1$ , $-1\leq u_{\varepsilon}^{\pm}(x,t)\leq 2\,.$ (4.15) We first estimate the term $E_{1}$ . A
+direct computation gives $E_{1}=\frac{\beta}{\varepsilon^{2}}\,e^{-\beta t/\varepsilon^{2}}(I-\sigma\beta)+Le^{Lt}(I+\varepsilon^{2}\sigma L),$ where $I=-{U_{0}}^{\prime}-\sigma f^{\prime}(U_{0})-\frac{\sigma^{2}}{2}f^{\prime\prime}(\theta)(\beta e^{-\beta t/\varepsilon^{2}}+\varepsilon^{2}Le^{Lt}).$ In virtue of ( 4.13 ) and ( 4.15 ), we
+obtain $I\geq 4\sigma\beta-\frac{\sigma^{2}}{2}F(\beta+\varepsilon^{2}Le^{LT}).$ Then, in view of ( 4.14 ), using that $\sigma\leq\sigma_{2}$ , we have $I\geq 2\sigma\beta.$ Consequently, the following inequality holds. $E_{1}\geq\frac{\sigma\beta^{2}}{\varepsilon^{2}}e^{-\beta t/\varepsilon^{2}}+2\sigma\beta Le^{Lt}=:\frac{C_{1}}{\varepsilon^{2}}e^{-\beta t/\varepsilon^{2}}+{C_{1}}^{\prime}Le^{Lt}.$ The term $E_{2}$ . First, in the points
+where where $|d(x,t)|<d_{0}$ , we have that $|\nabla d|=1$ so that $E_{2}=0$ . Next we consider the points where $|d(x,t)|\geq d_{0}.$ We
+deduce from Lemma 2.1 that: $\begin{array}[]{ll}|E_{2}|&\leq\displaystyle{\frac{C}{\varepsilon^{2}}}(1+\|\nabla d\|_{\infty}^{2})e^{-\lambda|d+\varepsilon p|/\varepsilon}\\
+&\leq\displaystyle{\frac{C}{\varepsilon^{2}}}(1+\|\nabla d\|_{\infty}^{2})e^{-\lambda(d_{0}/\varepsilon-|p|)}.\end{array}$ In view of the definition of $p$ in ( 4.6 ), we have
+that $0<K-1\leq p\leq e^{LT}+K$ , and suppose from now that the
+following assumption holds: $e^{LT}+K\leq\frac{d_{0}}{2\varepsilon_{0}}.$ (4.16) Then $\displaystyle{\frac{d_{0}}{\varepsilon}}-|p|\geq\displaystyle{\frac{d_{0}}{2\varepsilon}}$ , so that $\begin{array}[]{ll}|E_{2}|&\leq\displaystyle{\frac{C}{\varepsilon^{2}}}(1+\|\nabla d\|_{\infty}^{2})e^{-\lambda d_{0}/(2\varepsilon)}\\
+&\leq C_{2}:=\displaystyle{\frac{16C}{(e\lambda d_{0})^{2}}}(1+\|\nabla d\|_{\infty}^{2}).\end{array}$ Next we consider the term $E_{3}$ . We
+recall that $d_{t}-\Delta d+\nabla d\cdot\nabla\chi(v^{0})+\sqrt{2}\alpha=0\quad\ \textrm{on}\ \;\Gamma_{t}=\{x\in\Omega,d(x,t)=0\}.$ Since $v^{0}$ is of class $C^{1+\vartheta^{\prime},\frac{1+\vartheta^{\prime}}{2}}$ ,
+for any $\vartheta^{\prime}\in(0,1)$ , and since the interface $\Gamma_{t}$ is of class $C^{2+\vartheta,\frac{2+\vartheta}{2}}$ , the functions $\nabla d$ , $\Delta d$ , $d_{t}$ and $\nabla\chi(v^{0})$ are Lipschitz
+continuous near $\Gamma_{t}$ . It then follows, from the mean value
+theorem applied separately on both sides of $\Gamma_{t}$ , that there
+exists $N_{0}>0$ such that: $|(d_{t}-\Delta d+\nabla d\cdot\nabla\chi(v^{0})+\sqrt{2}\alpha)(x,t)|\leq N_{0}|d(x,t)|\quad\ \textrm{for all}\ \;(x,t)\in Q_{T}.$ Applying Lemma 2.1 we deduce that $\begin{array}[]{lll}|E_{3}|&\leq N_{0}C\displaystyle{\frac{|d(x,t)|}{\varepsilon}}e^{-\lambda|d(x,t)/\varepsilon+p(t)|}\\
+&\leq N_{0}C\max_{y\in\mathbb{R}}|y|e^{-\lambda|y+p(t)|}\\
+&\leq N_{0}C\max\big(|p(t)|,\displaystyle{\frac{1}{\lambda}}\big)\\
+&\leq N_{0}C\big(|p(t)|+\displaystyle{\frac{1}{\lambda}}\big).\end{array}$ Taking the expression of $p$ into account, we see that $|p(t)|\leq e^{Lt}+K$ , which implies $|E_{3}|\leq C_{3}(e^{Lt}+K)+{C_{3}}^{\prime},$ where $C_{3}:=N_{0}C$ and ${C_{3}}^{\prime}:=N_{0}C/\lambda$ . The term $E_{4}$ . We set $G_{1}:=\|g^{\prime}\|_{L^{\infty}(-1,2)}$ and, substituting the expression for $q$ , obtain that $\begin{array}[]{ll}|E_{4}|&\leq\sigma G_{1}\Big(\displaystyle{\frac{\beta}{\varepsilon}}e^{-\beta t/\varepsilon^{2}}+\varepsilon Le^{Lt}\Big)\\
+&\leq\displaystyle{\frac{C_{4}}{\varepsilon}}e^{-\beta t/\varepsilon^{2}}+{C_{4}}^{\prime}\varepsilon Le^{Lt}.\end{array}$ We continue with the term $E_{5}$ . This
+term requires a more delicate analysis. We need a precise
+estimate of $v^{\varepsilon}-v^{0}$ . We recall that $v^{0}$ satisfies $-\Delta v^{0}+\gamma v^{0}=u^{0}$ , with $u^{0}$ a step function discontinuous
+when crossing the interface. Lemma 4.2 . There exists a positive constant $C_{G}$ such that, for all $(x,t)\in Q_{T}$ , $\Big(|v^{\varepsilon}|+|\nabla v^{\varepsilon}|+|\Delta v^{\varepsilon}|\Big)(x,t)\leq C_{G},$ (4.17) $\Big(|v^{\varepsilon}-v^{0}|+|\nabla d\cdot\nabla(v^{\varepsilon}-v^{0})|\Big)(x,t)\leq C_{G}(\varepsilon p(t)+q(t)).$ (4.18) We postpone the proof of this lemma and
+pursue the proof of Lemma 4.1 . Using the smoothness of $\chi$ and ( 4.17 ), we obtain a uniform
+bound ${C_{G}}^{\prime}$ for $\Delta\chi(v^{\varepsilon})$ . Moreover, we write $\nabla d\cdot\nabla\big(\chi(v^{\varepsilon})-\chi(v^{0})\big)={\chi}^{\prime}(v^{\varepsilon})\nabla d\cdot\nabla(v^{\varepsilon}-v^{0})+\big(\chi^{\prime}(v^{\varepsilon})-\chi^{\prime}(v^{0})\big)\nabla d\cdot\nabla v^{0}.$ (4.19) Since $v^{0}$ is of class $C^{1+\vartheta^{\prime},\frac{1+\vartheta^{\prime}}{2}}$ ,
+for any $\vartheta^{\prime}\in(0,1)$ , there exists a constant, which we
+denote again by $C_{G}$ , such that $\|v^{0}\|_{L^{\infty}(Q_{T})}+\|\nabla v^{0}\|_{L^{\infty}(Q_{T})}\leq C_{G},$ which, combined with ( 4.19 ), yields $|\nabla d\cdot\nabla\big(\chi(v^{\varepsilon})-\chi(v^{0})\big)|\leq\|\chi^{\prime}\|_{\infty}|\nabla d\cdot\nabla(v^{\varepsilon}-v^{0})|\\
++|v^{\varepsilon}-v^{0}|\ \|\chi^{\prime\prime}\|_{\infty}\|\nabla d\|_{\infty}C_{G},$ where the $L^{\infty}$ -norms of $\chi^{\prime}$ and $\chi^{\prime\prime}$ are
+considered on the interval $(-C_{G},C_{G})$ . It follows from the above
+inequality and ( 4.18 ) that there exists a
+constant ${C_{G}}^{\prime\prime}$ such that, for all $(x,t)\in Q_{T}$ , $|\nabla d\cdot\nabla\big(\chi(v^{\varepsilon})-\chi(v^{0})\big)|(x,t)\leq{C_{G}}^{\prime\prime}(\varepsilon p(t)+q(t)).$ Hence, using ( 4.15 ) and the above estimates, we
+obtain, $|E_{5}|\leq\frac{C}{\varepsilon}{C_{G}}^{\prime\prime}(\varepsilon p(t)+q(t))+2{C_{G}}^{\prime}.$ Then, substituting the expressions for $p$ and $q$ , we easily
+obtain positive constants $C_{5}$ , ${C_{5}}^{\prime}$ and ${C_{5}}^{\prime\prime}$ such that $|E_{5}|\leq C_{5}+\frac{{C_{5}}^{\prime}}{\varepsilon}e^{-\beta t/\varepsilon^{2}}+{C_{5}}^{\prime\prime}(1+\varepsilon L)e^{Lt}.$ Completion of the proof. Collecting
+the above estimates of $E_{1}$ — $E_{5}$ yields $L_{v^{\varepsilon}}[u_{\varepsilon}^{+}]\geq\frac{C_{1}-\varepsilon C_{4}-\varepsilon{C_{5}}^{\prime}}{\varepsilon^{2}}e^{-\beta t/\varepsilon^{2}}+\big(L({C_{1}}^{\prime}-\varepsilon{C_{4}}^{\prime}-\varepsilon{C_{5}}^{\prime\prime})-C_{3}-{C_{5}}^{\prime\prime}\big)e^{Lt}-C_{7},$ where $C_{7}:=C_{2}+KC_{3}+{C_{3}}^{\prime}+C_{5}$ . Now, we set $L:=\frac{1}{T}\ln\frac{d_{0}}{4\varepsilon_{0}},$ which, for $\varepsilon_{0}$ small enough, validates assumptions
+( 4.14 ) and ( 4.16 ). If $\varepsilon_{0}$ is chosen
+sufficiently small (i.e. $L$ large enough), $C_{1}/\varepsilon^{2}-(C_{4}+{C_{5}}^{\prime})/\varepsilon$ is positive, ${C_{1}}^{\prime}-\varepsilon{C_{4}}^{\prime}-\varepsilon{C_{5}}^{\prime\prime}\geq\frac{1}{2}{C_{1}}^{\prime}$ , and $\begin{array}[]{lll}L_{v^{\varepsilon}}[u_{\varepsilon}^{+}]&\geq\big[\frac{1}{2}L{C_{1}}^{\prime}-C_{3}-{C_{5}}^{\prime\prime}\big]e^{Lt}-C_{7}\\
+&\geq\frac{1}{4}L{C_{1}}^{\prime}-C_{7}\\
+&\geq 0.\end{array}$ The proof of Lemma 4.1 is now completed, with the
+choice of the constants $\beta,\sigma$ as in ( 4.11 ),
+( 4.12 ).∎ 4.3 Proof of Lemma 4.2 Lemma 4.2 is inspired by Lemma 4.9 in [ 4 ] .
+Since our pair of sub- and super-solutions is different from the
+one in [ 4 ] , we need to perform some minor changes. First
+we give a useful estimate on “shifted $U_{0}$ ”. Lemma 4.3 . For all $a\in\mathbb{R}$ , all $z\in\mathbb{R}$ , we have $|U_{0}(z+a)-\chi_{]-\infty,0]}(z)|\leq Ce^{-\lambda|z+a|}+\chi_{[-a,a]}(z)$ Proof. Let us give the proof for $a>0$ . We
+distinguish three cases and use the estimates of Lemma 2.1 . For $z\leq-a$ , we have $|U_{0}(z+a)-1|\leq Ce^{-\lambda|z+a|}$ . For $-a<z\leq 0$ , we have $|U_{0}(z+a)-1|\leq|U_{0}(z+a)|+1\leq Ce^{-\lambda|z+a|}+1$ . For $z>0$ , we have $|U_{0}(z+a)|\leq Ce^{-\lambda|z+a|}$ . We proceed in
+the same way for $a<0$ . ∎ We turn to the proof of Lemma 4.2 . First,
+we recall that $v^{\varepsilon}$ is such that ( 2.11 )
+holds; hence, in view of ( 4.15 ), the estimate
+( 4.17 ) is a direct consequence of the
+standard theory of elliptic equations. Next we prove
+( 4.18 ). The function $w=w^{\varepsilon}:=v^{\varepsilon}-v^{0}$ is
+solution of $\begin{cases}-\Delta w+\gamma w=h&\textrm{ on }Q_{T},\\
+\displaystyle{\frac{\partial w}{\partial\nu}}=0&\textrm{ on }\partial\Omega\times(0,T),\end{cases}$ (4.20) with $u_{\varepsilon}^{-}-u^{0}\leq h=h^{\varepsilon}\leq u_{\varepsilon}^{+}-u^{0}$ , where $u^{0}$ is the step function defined by $u^{0}(x,t)=\chi_{\{d(x,t)\leq 0\}}$ . The key idea of the proof is the fact that $h$ is
+exponentially small with respect to $\varepsilon$ , except possibly in a
+thin neighborhood of $\Gamma_{t}$ of width of order $\varepsilon p(t)$ .
+More precisely, from the definitions of $u_{\varepsilon}^{\pm}$ in
+( 4.5 ) and from the above lemma for $z=d(x,t)/\varepsilon$ and $a=\pm p(t)$ , we deduce that $|h(x,t)|\leq C(e^{-\lambda|d(x,t)/\varepsilon+p(t)|}+e^{-\lambda|d(x,t)/\varepsilon-p(t)|})+\chi_{\{|d(x,t)|\leq\varepsilon p(t)\}}+q(t).$ (4.21) By linearity, we successively consider equation ( 4.20 )
+with the various terms appearing in the right-hand side of
+( 4.21 ). By the standard elliptic estimates, the
+solution $w$ of ( 4.20 ) satisfies $|w(x,t)|+|\nabla w(x,t)|\leq C^{\prime}\sup_{y\in\Omega}|h(y,t)|,$ (4.22) which gives the term $C_{G}q(t)$ that appears in the right-hand
+side of inequality ( 4.18 ) for $h(y,t)=q(t)$ . We
+now suppose that the function $h$ satisfies one of the three
+following assumptions: $\begin{array}[]{ll}(H_{1})&|h(y,t)|\leq\displaystyle{\chi}_{\displaystyle{\{}|d(y,t)|\leq\varepsilon p(t)\displaystyle{\}}}\\
+(H_{2}^{\pm})&|h(y,t)|\leq\exp\Big(-\lambda|\displaystyle{\frac{d(y,t)}{\varepsilon}}\pm p(t)|\Big),\end{array}$ and write $h(y,t)=h(y,t)\chi_{\{|d(y,t)|\leq d_{0}\}}+h(y,t)\chi_{\{|d(y,t)|>d_{0}\}}.$ We first consider the term $h(y,t)\chi_{\{|d(y,t)|>d_{0}\}}$ . In
+virtue of ( 4.16 ), we have $0<K-1\leq p(t)\leq d_{0}/2\varepsilon_{0}.$ (4.23) Under assumption $(H_{1})$ , it follows that $h$ is supported in $\{|d(y,t)|\leq d_{0}/2\}$ , which implies $h(y,t)\chi_{\{|d(y,t)|>d_{0}\}}=0$ . Moreover, under assumption $(H_{2}^{\pm})$ , using again
+( 4.23 ), $\begin{array}[]{llll}|h(y,t)|\chi_{\{|d(y,t)|>d_{0}\}}&\leq\exp\big[-\lambda(d_{0}/\varepsilon-p(t))\big]\\
+&\leq\exp(-\lambda d_{0}/2\varepsilon)\\
+&\leq\displaystyle{\frac{2}{\lambda d_{0}e}}\;\varepsilon\\
+&\leq\displaystyle{\frac{2}{\lambda d_{0}e}}\frac{1}{K-1}\varepsilon p(t).\end{array}$ Thus, under either of the assumptions $(H_{1})$ or $(H_{2}^{\pm})$ , the
+estimate ( 4.18 ) — for the term $h(y,t)\chi_{\{|d(y,t)|>d_{0}\}}$ — directly follows from
+inequality ( 4.22 ). From now on, we assume that $h$ is supported in $\{|d(y,t)|\leq d_{0}\}$ . We have that $w(x,t)=\int_{|d(y,t)|\leq d_{0}}G(x,y)h(y,t)dy,$ and $\nabla d(x,t)\cdot\nabla w(x,t)=\int_{|d(y,t)|\leq d_{0}}(\nabla_{x}G(x,y)\cdot\nabla d(x,t))h(y,t)dy,$ where $G$ is the Green’s function associated to the homogeneous
+Neumann boundary value problem on $\Omega$ for the operator $-\Delta+\gamma$ . More precisely, $G(x,y)=g_{\gamma}(|x-y|)+H_{\gamma}(x,y)$ ,
+where $g_{\gamma}(|x-y|)$ is the Green’s function associated to the
+operator $-\Delta+\gamma$ on $\mathbb{R}^{N}$ and where $H_{\gamma}(x,y)$ is smooth for $x$ and $y$ far away from $\partial\Omega$ . It is
+known that $g_{\gamma}$ is the Bessel function defined by $g_{\gamma}(r)=c_{N}\int_{0}^{+\infty}e^{-\frac{r^{2}}{2s}}e^{-\gamma\frac{s}{2}}s^{\frac{-N+2}{2}}\frac{ds}{s},$ with $c_{N}>0$ a normalization constant. We use the following
+estimates (see [ 4 ] ): $|G(x,y)|\leq\begin{cases}\displaystyle{\frac{C}{|y-x|^{N-2}}}\quad&\text{ for }N\geq 3\\
+C|\ln|y-x||\quad&\text{ for }N=2,\end{cases}$ (4.24) $|\nabla_{x}G(x,y)\cdot\nabla d(x,t)|\leq\displaystyle{\frac{C|d(y,t)-d(x,t)|}{|y-x|^{N}}}+\displaystyle{\frac{C}{|y-x|^{N-2}}}\quad\text{ for }N\geq 2.$ (4.25) This last inequality follows from $|\nabla_{x}G(x,y)\cdot\nabla d(x,t)|\leq\displaystyle{\frac{C|\nabla d(x,t)\cdot(y-x)|}{|y-x|^{N}}},$ and from $d(y,t)-d(x,t)=\nabla d(x,t)\cdot(y-x)+O(|y-x|^{2})$ . Now,
+under respectively assumptions $(H_{1})$ , $(H_{2}^{\pm})$ , we define a
+function $\tilde{h}=\tilde{h}^{\varepsilon}$ on $\mathbb{R}\times[0,T]$ ,
+respectively by $\tilde{h}(r,t):=\begin{cases}\chi_{\displaystyle{\{}|r|\leq\varepsilon p(t)\displaystyle{\}}}\vskip 8.0pt\\
+\exp\Big(-\lambda|\displaystyle{\frac{r}{\varepsilon}}\pm p(t)|\Big).\end{cases}$ (4.26) Note that $|h(y,t)|\leq\tilde{h}\big(d(y,t),t\big)$ . Moreover,
+using ( 4.23 ), straightforward computations show
+that, under either of the assumptions $(H_{1})$ or $(H_{2}^{\pm})$ ,
+there exists $\tilde{C}>0$ such that $0\leq\int_{-d_{0}}^{d_{0}}\tilde{h}(r,t)dr\leq\tilde{C}\varepsilon p(t),$ (4.27) which is an analogue of $(4.20)$ in [ 4 ] . The end of the
+proof is now identical to that of Lemma 4.10 in [ 4 ] . We
+omit the details and refer to this article. ∎ 5 Proof of the main results In this section, we prove our main results by fitting the two
+pairs of sub- and super-solutions, constructed for the study of
+the generation and the motion of interface, into each other. 5.1 Proof of Theorem 1.3 Let $\eta\in(0,1/4)$ be arbitrary. Choose $\beta$ and $\sigma$ that satisfy ( 4.11 ), ( 4.12 ) and $\sigma\beta\leq\frac{\eta}{3}.$ (5.1) By the generation of interface Theorem 3.1 , there
+exist positive constants $\varepsilon_{0}$ and $M_{0}$ such that
+( 3.2 ), ( 3.3 ) and ( 3.4 )
+hold with the constant $\eta$ replaced by $\sigma\beta/2$ .
+Since $\nabla u_{0}\cdot n\neq 0$ everywhere on the initial interface $\Gamma_{0}=\{x\in\Omega,\;u_{0}(x)=1/2\}$ and since $\Gamma_{0}$ is a
+compact hypersurface, we can find a positive constant $M_{1}$ such
+that $\begin{array}[]{ll}\text{ if }\quad d_{0}(x)\geq\quad M_{1}\varepsilon&\text{ then }\quad u_{0}(x)\leq 1/2-M_{0}\varepsilon,\\
+\text{ if }\quad d_{0}(x)\leq-M_{1}\varepsilon&\text{ then }\quad u_{0}(x)\geq 1/2+M_{0}\varepsilon.\end{array}$ (5.2) Here $d_{0}(x):=d(x,0)$ denotes the cut-off signed distance function
+associated with the hypersurface $\Gamma_{0}$ . Now we define
+functions $H^{+}(x),H^{-}(x)$ by $\begin{array}[]{l}H^{+}(x)=\left\{\begin{array}[]{ll}1+\frac{1}{2}\sigma\beta&\hbox{if}\ \ d_{0}(x)<M_{1}\varepsilon\\
+\;\;\;\;\;\;\frac{1}{2}\sigma\beta&\hbox{if}\ \ d_{0}(x)\geq M_{1}\varepsilon,\end{array}\right.\\
+H^{-}(x)=\left\{\begin{array}[]{ll}1-\frac{1}{2}\sigma\beta&\hbox{if}\ \ d_{0}(x)\leq\;-M_{1}\varepsilon\\
+\;\;\;-\frac{1}{2}\sigma\beta&\hbox{if}\ \ d_{0}(x)>\;-M_{1}\varepsilon.\end{array}\right.\end{array}$ Then from the above observation we see that $H^{-}(x)\,\leq\,u^{\varepsilon}(x,\mu^{-1}\varepsilon^{2}|\ln\varepsilon|)\,\leq\,H^{+}(x)\qquad\hbox{for}\ \ x\in\Omega.$ (5.3) Next we fix a sufficiently large constant $K>1$ such that $U_{0}(M_{1}-K)\geq 1-\frac{\sigma\beta}{3}\quad\text{ and }\quad U_{0}(-M_{1}+K)\leq\frac{\sigma\beta}{3}.$ (5.4) For this $K$ , we choose $\varepsilon_{0}$ and $L$ as in Lemma 4.1 . We claim that $u_{\varepsilon}^{-}(x,0)\leq H^{-}(x),\quad\ H^{+}(x)\leq u_{\varepsilon}^{+}(x,0)\qquad\hbox{for}\ \ x\in\Omega.$ (5.5) We only prove the former inequality, as the proof of the latter is
+virtually the same. Then it amounts to showing that $u_{\varepsilon}^{-}(x,0)=U_{0}\big(\frac{d_{0}(x)}{\varepsilon}+K\big)-\sigma(\beta+\varepsilon^{2}L)\;\leq\;H^{-}(x).$ (5.6) In the range where $d_{0}(x)>-M_{1}\varepsilon$ , the second inequality in
+( 5.4 ) and the fact that $U_{0}$ is a decreasing function
+imply $U_{0}\big(\frac{d_{0}(x)}{\varepsilon}+K\big)-\sigma(\beta+\varepsilon^{2}L)\leq\frac{1}{3}\sigma\beta-\sigma\beta\;\leq\;H^{-}(x).$ On the other hand, in the range where $d_{0}(x)\leq-M_{1}\varepsilon$ , we
+have $U_{0}\big(\frac{d_{0}(x)}{\varepsilon}+K\big)-\sigma(\beta+\varepsilon^{2}L)\leq\;1-\sigma\beta\;\leq\;H^{-}(x).$ This proves ( 5.6 ), hence ( 5.5 ) is
+established. Combining ( 5.3 ) and ( 5.5 ), we obtain $u_{\varepsilon}^{-}(x,0)\leq u^{\varepsilon}(x,\mu^{-1}\varepsilon^{2}|\ln\varepsilon|)\leq u_{\varepsilon}^{+}(x,0).$ Since $u_{\varepsilon}^{-}$ and $u_{\varepsilon}^{+}$ are sub- and super-solutions for
+Problem $(P^{\;\!\varepsilon})$ thanks to Lemma 4.1 , the comparison
+principle yields $u_{\varepsilon}^{-}(x,t)\leq u^{\varepsilon}(x,t+t^{\varepsilon})\leq u_{\varepsilon}^{+}(x,t)\quad\text{ for }\quad 0\leq t\leq T-t^{\varepsilon},$ (5.7) where $t^{\varepsilon}=\mu^{-1}\varepsilon^{2}|\ln\varepsilon|$ . Note that, in view of
+( 4.7 ), this is enough to prove Corollary 1.4 . Now let $C$ be a positive constant such that $U_{0}(-C+e^{LT}+K)\geq 1-\frac{\eta}{2}\quad\text{ and }\quad U_{0}(C-e^{LT}-K)\leq\frac{\eta}{2}.$ (5.8) One then easily checks, using successively ( 5.7 ),
+( 4.5 ), ( 5.8 ) and ( 5.1 ), that,
+for $\varepsilon_{0}$ small enough, for $0\leq t\leq T-t^{\varepsilon}$ , we have $\begin{array}[]{ll}\text{ if }\quad d(x,t)\geq\quad C\varepsilon&\text{ then }\quad u^{\varepsilon}(x,t+t^{\varepsilon})\leq\eta,\\
+\text{ if }\quad d(x,t)\leq-C\varepsilon&\text{ then }\quad u^{\varepsilon}(x,t+t^{\varepsilon})\geq 1-\eta,\end{array}$ (5.9) and $u^{\varepsilon}(x,t+t^{\varepsilon})\in[-\eta,1+\eta],$ which completes the proof of Theorem 1.3 .∎ 5.2 Proof of Theorem 1.5 In the case where $\mu^{-1}\varepsilon^{2}|\ln\varepsilon|\leq t\leq T$ , the
+assertion of the theorem is a direct consequence of Theorem 1.3 . All we have to consider is the case where $0\leq t\leq\mu^{-1}\varepsilon^{2}|\ln\varepsilon|$ . We shall use the sub-
+and super-solutions constructed for the study of the generation of
+interface in Section 3 . To that purpose, we
+first prove the following lemma concerning $Y(\tau,\xi;\delta)$ , the
+solution of the ordinary differential equation ( 3.9 ),
+in the initial time interval. Lemma 5.1 . There exist constants $C_{8}>0$ and $\varepsilon_{0}>0$ such that, for all $\varepsilon\in(0,\varepsilon_{0})$ , $\begin{array}[]{ll}\text{ if }\quad\xi\geq 1/2+C_{8}\varepsilon&\text{then}\quad Y(\tau,\xi;\pm\varepsilon G)>1/2\quad\hbox{for}\quad 0\leq\tau\leq\mu^{-1}|\ln\varepsilon|,\\
+\text{ if }\quad\xi\leq 1/2-C_{8}\varepsilon&\text{then}\quad Y(\tau,\xi;\pm\varepsilon G)<1/2\quad\hbox{for}\quad 0\leq\tau\leq\mu^{-1}|\ln\varepsilon|.\end{array}$ (5.10) Proof. We only prove the first inequality. Assume $\xi\geq 1/2+C_{8}\varepsilon$ . By ( 3.6 ), for $C_{8}\geq CG$ , we
+have that $\xi\geq 1/2+C_{8}\varepsilon\geq a(\pm\varepsilon G)$ . It then follows
+from ( 3.17 ) that $\begin{array}[]{llll}Y(\tau,\xi;\pm\varepsilon G)&\geq a(\pm\varepsilon G)+C_{1}e^{\mu(\pm\varepsilon G)\tau}(1/2+C_{8}\varepsilon-a(\pm\varepsilon G))\\
+&\geq 1/2-CG\varepsilon+C_{1}(-CG\varepsilon+C_{8}\varepsilon)\\
+&\geq 1/2+\varepsilon(C_{1}C_{8}-CG(C_{1}+1))\\
+&>1/2,\end{array}$ provided that $C_{8}$ is sufficiently large. ∎ Now we turn to the proof of Theorem 1.5 .
+We first claim that there exists a positive constant $M_{2}$ such
+that for all $t\in[0,\mu^{-1}\varepsilon^{2}|\ln\varepsilon|]$ , $\Gamma_{t}^{\varepsilon}\subset\mathcal{N}_{M_{2}\varepsilon}(\Gamma_{0}).$ (5.11) To see this, we choose ${M_{0}}^{\prime}$ large enough, so that ${M_{0}}^{\prime}\geq C_{8}+2C_{6}$ , where $C_{6}$ is as in Lemma 3.9 . As is done
+for ( 5.2 ), there is a positive constant $M_{2}$ such
+that $\begin{array}[]{ll}\text{ if }\quad d_{0}(x)\geq\quad M_{2}\varepsilon&\text{ then }\quad u_{0}(x)\leq 1/2-{M_{0}}^{\prime}\varepsilon,\\
+\text{ if }\quad d_{0}(x)\leq-M_{2}\varepsilon&\text{ then }\quad u_{0}(x)\geq 1/2+{M_{0}}^{\prime}\varepsilon.\end{array}$ (5.12) In view of this last condition, we see that, if $\varepsilon_{0}$ is small
+enough, if $d_{0}(x)\geq M_{2}\varepsilon$ , then for all $0\leq t\leq\mu^{-1}\varepsilon^{2}|\ln\varepsilon|$ , $\begin{array}[]{llll}u_{0}(x)+\varepsilon^{2}r(\varepsilon G,\displaystyle{\frac{t}{\varepsilon^{2}}})&\leq 1/2-{M_{0}}^{\prime}\varepsilon+\varepsilon^{2}C_{6}\big[e^{\mu(\varepsilon G)|\ln\varepsilon|/\mu}-1\big]\\
+&\leq 1/2+\varepsilon\big[-{M_{0}}^{\prime}+C_{6}\varepsilon^{(\mu-\mu(\pm\varepsilon G))/\mu}-\varepsilon C_{6}\big]\\
+&\leq 1/2+\varepsilon(-{M_{0}}^{\prime}+2C_{6})\quad\quad\leftarrow\text{thanks
+to \eqref{point-chemo}}\\
+&\leq 1/2-C_{8}\varepsilon.\end{array}$ This inequality and Lemma 5.1 imply $w_{\varepsilon}^{+}(x,t)<1/2$ , where $w_{\varepsilon}^{+}$ is the sub-solution defined in
+( 3.21 ). Consequently, by
+( 3.25 ), $u^{\varepsilon}(x,t)<1/2\qquad\hbox{if}\ \ d_{0}(x)\geq M_{2}\varepsilon.$ In the case where $d_{0}(x)\leq-M_{2}\varepsilon$ , similar arguments lead to $u^{\varepsilon}(x,t)>1/2$ . This completes the proof of
+( 5.11 ). Note that we have proved that, for all $0\leq t\leq\mu^{-1}\varepsilon^{2}|\ln\varepsilon|$ , $\begin{array}[]{ll}u^{\varepsilon}(x,t)>1/2\quad\text{if}\quad x\in\Omega_{0}^{(1)}\setminus\mathcal{N}_{M_{2}\varepsilon}(\Gamma_{0}),\\
+u^{\varepsilon}(x,t)<1/2\quad\text{if}\quad x\in\Omega_{0}^{(0)}\setminus\mathcal{N}_{M_{2}\varepsilon}(\Gamma_{0}).\end{array}$ (5.13) Next, since $\Gamma_{t}$ depends on $t$ smoothly, there is a
+constant $\tilde{C}>0$ such that, for all $t\in[0,\mu^{-1}\varepsilon^{2}|\ln\varepsilon|]$ , $\Gamma_{0}\subset\mathcal{N}_{\tilde{C}\varepsilon^{2}|\ln\varepsilon|}(\Gamma_{t}),$ (5.14) and $\begin{array}[]{ll}\Omega_{t}^{(1)}\setminus\mathcal{N}_{\tilde{C}\varepsilon}(\Gamma_{t})\subset\Omega_{0}^{(1)}\setminus\mathcal{N}_{M_{2}\varepsilon}(\Gamma_{0}),\\
+\Omega_{t}^{(0)}\setminus\mathcal{N}_{\tilde{C}\varepsilon}(\Gamma_{t})\subset\Omega_{0}^{(0)}\setminus\mathcal{N}_{M_{2}\varepsilon}(\Gamma_{0}).\end{array}$ (5.15) As a consequence of ( 5.11 ) and ( 5.14 )
+we get $\Gamma_{t}^{\varepsilon}\subset\mathcal{N}_{M_{2}\varepsilon+\tilde{C}\varepsilon^{2}|\ln\varepsilon|}(\Gamma_{t})\subset\mathcal{N}_{C\varepsilon}(\Gamma_{t}),$ which completes the proof of Theorem 1.5 .∎ Proof of Corollary 1.6 . In view of Theorem 1.5 and the
+definition of the Hausdorff distance, to prove this corollary we
+only need to show the reverse inclusion, that is $\Gamma_{t}\subset\mathcal{N}_{C^{\prime}\varepsilon}(\Gamma_{t}^{\varepsilon})\quad\text{ for }\quad 0\leq t\leq T,$ (5.16) for some constant $C^{\prime}>0$ . To that purpose let $C^{\prime}$ be a constant
+satisfying $C^{\prime}>\max(\tilde{C},C)$ , where $C$ is as in Theorem 1.3 and $\tilde{C}$ as in ( 5.15 ). Choose $t\in[0,T]$ , $x_{0}\in\Gamma_{t}$ arbitrarily and, $n$ being the
+Euclidian normal vector exterior to $\Gamma_{t}$ at point $x_{0}$ ,
+define a pair of points: $x^{(0)}:=x_{0}+C^{\prime}\varepsilon n\quad\text{and}\quad x^{(1)}:=x_{0}-C^{\prime}\varepsilon n.$ Since $C^{\prime}>C$ and since the curvature of $\Gamma_{t}$ is uniformly
+bounded as $t$ varies over $[0,T]$ , we see that, if $\varepsilon_{0}$ is
+sufficiently small, $x^{(0)}\in\Omega^{(0)}_{t}\setminus\mathcal{N}_{C\varepsilon}(\Gamma_{t})\quad\text{and}\quad x^{(1)}\in\Omega^{(1)}_{t}\setminus\mathcal{N}_{C\varepsilon}(\Gamma_{t}).$ Therefore, if $t\in[\mu^{-1}\varepsilon^{2}|\ln\varepsilon|,T]$ , then, by
+Theorem 1.3 , we have $u^{\varepsilon}(x^{(0)},t)<1/2<u^{\varepsilon}(x^{(1)},t).$ (5.17) On the other hand, if $t\in[0,\mu^{-1}\varepsilon^{2}|\ln\varepsilon|]$ , then
+from ( 5.13 ), ( 5.15 ) and the fact that $C^{\prime}>\tilde{C}$ , we again obtain ( 5.17 ). Thus
+( 5.17 ) holds for all $t\in[0,T]$ . Now, by the mean
+value theorem, we see that, for each $t\in[0,T]$ , there exists a
+point $\tilde{x}$ such that $\tilde{x}\in[x^{(0)},x^{(1)}]\quad\text{and}\quad u^{\varepsilon}(\tilde{x},t)=1/2.$ This implies $\tilde{x}\in\Gamma_{t}^{\varepsilon}$ . Furthermore we have $|x_{0}-\tilde{x}|\leq C^{\prime}\varepsilon$ , since $\tilde{x}$ lies on the line
+segment $[x^{(0)},x^{(1)}]$ . This proves ( 5.16 ). ∎ References [1] M. Alfaro, D. Hilhorst and H. Matano, The singular limit of the Allen-Cahn equation and the
+FitzHugh-Nagumo system , in preparation. [2] S. Allen and J. Cahn, A microscopic theory for antiphase boundary motion and its
+application to antiphase domain coarsening , Acta Metall. 27 (1979), 1084–1095. [3] A. Bonami, D. Hilhorst, E. Logak and M. Mimura, A free boundary problem arising in a chemotaxis model , in
+”Free Boundary Problems, Theory and Applications”, M. Niezgódka
+and P. Strzelecki Eds, Pitman Res. Notes in Math. Series 363 (1996). [4] A. Bonami, D. Hilhorst, E. Logak and M. Mimura, Singular limit of a chemotaxis-growth model , Advances in
+Differential Equations 6 (2001), 1173–1218. [5] X. Chen, Generation and propagation of interfaces for
+reaction-diffusion equations , J. Differential equations 96 (1992), 116–141. [6] X. Chen, Generation and propagation of interfaces
+for reaction-diffusion systems , Trans. Amer. Math. Soc. 334 (1992), 877–913. [7] X. Chen and F. Reitich, Local existence and uniqueness of solutions of the Stefan
+problem with surface tension and kinetic undercooling ,
+J. Math. Anal. Appl. 164(2) (1992), 350–362. [8] X. Y. Chen, Dynamics of interfaces in reaction
+diffusion systems , Hiroshima Math. J. 21 (1991), 47–83. [9] S. Childress and J. K. Percus, Nonlinear aspects of chemotaxis ,
+Math. Biosci. 56 (1981), 217–237. [10] R. M. Ford and D. A. Lauffenburger, Analysis of chemotactic bacterial
+distributions in population migration assays using a mathematical
+model applicable to steep or shallow attractant gradients ,
+Bull. Math. Biol. 53 (1991), 721–749. [11] M. A. Herrero and J. Velazquez, Chemotactic collapse for
+the Keller-Segel model , J. Math. Biol. 35 (1996), no. 2,
+177–194. [12] M. A. Herrero and J. Velazquez, A blow-up mechanism for a chemotaxis
+model , Ann. Scuola. Norm. Sup. Pisa Cl. Sci. 24 (1997), no.
+4, 633–683. [13] W. Jäger and S. Luckhaus, On explosions of solutions to a system
+of partial differential equations modelling chemotaxis , Trans.
+Amer. Math. Soc. 329 (1992), 819–824. [14] G. Karali, K. Nakashima, D. Hilhorst and H. Matano, Singular limit of a spatially inhomogeneous Lotka-Volterra
+competition-diffusion system , in preparation. [15] E. F. Keller and L. A. Segel, Initiation of slime mold aggregation
+viewed as an instability , J. Theor. Biol. 26 (1970),
+399–415. [16] C. S. Lin, W. M. Ni and I. Takagi, Large amplitude stationary solutions to a chemotaxis system ,
+J. Differential Equations 72 (1988), 1–27. [17] M. Mimura and T. Tsujikawa, Aggregating pattern dynamics
+in a chemotaxis model including growth , Physica A 230 (1996), 499–543. [18] M. Mimura, T. Tsujikawa, R. Kobayashi and D. Ueyama, Dynamics of aggregation patterns in a
+chemotaxis-diffusion-growth model equation. Proceedings of the
+Workshop on Principles of Pattern Formation and Morphogenesis in
+Biological Systems (Kasugai, 1992/93) , Forma 8 (1993),
+179–195. [19] T. Nagai, Blow-up of radially symmetric solutions to
+a chemotaxis pattern , Advances in Math. Sciences and Appl. Vol.
+5, no. 2 (1995), 581-601. [20] V. Nanjundiah, Chemotaxis, signal relaying and aggregation
+morphology , J. Theor. Biol. 42 (1973), 63–105. [21] K.-I. Nakamura, H. Matano, D. Hilhorst and
+R. Schätzle, Singular limit of a reaction-diffusion
+equation with a spatially inhomogeneous reaction term ,
+J. Stat. Phys. 95 (1999), 1165-1185. [22] R. Schaaf, Stationary solutions of chemotaxis systems , Trans.
+Amer. Math. Soc. 292 (1985), 531–556. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

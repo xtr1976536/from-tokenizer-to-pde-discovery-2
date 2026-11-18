@@ -1,0 +1,18 @@
+TEXT u^{3}+1+\partial_{t}(u)+u\cdot \partial_{y}(u)\cdot u=0\\\partial_{x}(u)+\partial_{xx}\partial_{y}(u)=0\\{x}\cdot \cos(\partial_{y}(p))^{2}\cdot v+\Delta(v)+v\cdot (\partial_{x}(u))^{2}+\Delta(v)+p\cdot v+p\cdot (\partial_{y}(u))^{2}+\partial_{t}(p)+v+u\cdot (\partial_{y}(p))^{2}+(\partial_{x}(p))^{2}=0
+STAGE compile_term ('d', ('v', 'u'), 't')
+STAGE compile_term ('mul', ('d', ('v', 'u'), 'y'), ('pow', ('v', 'u'), ('n', 2)))
+STAGE compile_term ('n', 1)
+STAGE compile_term ('pow', ('v', 'u'), ('n', 3))
+STAGE compile_term ('d', ('d', ('v', 'u'), 'y'), 'xx')
+STAGE compile_term ('d', ('v', 'u'), 'x')
+STAGE compile_term ('d', ('v', 'p'), 't')
+STAGE compile_term ('lap', ('v', 'v'), 1)
+STAGE compile_term ('mul', ('pow', ('d', ('v', 'p'), 'y'), ('n', 2)), ('v', 'u'))
+STAGE compile_term ('mul', ('pow', ('d', ('v', 'u'), 'x'), ('n', 2)), ('v', 'v'))
+STAGE compile_term ('mul', ('pow', ('d', ('v', 'u'), 'y'), ('n', 2)), ('v', 'p'))
+STAGE compile_term ('mul', ('pow', ('fn', 'cos', ('d', ('v', 'p'), 'y')), ('n', 2)), ('v', 'v'), ('v', 'x'))
+STAGE compile_term ('mul', ('v', 'p'), ('v', 'v'))
+STAGE compile_term ('pow', ('d', ('v', 'p'), 'x'), ('n', 2))
+STAGE compile_term ('v', 'v')
+STAGE equivalence_key
+PASS (4, 2, 9)

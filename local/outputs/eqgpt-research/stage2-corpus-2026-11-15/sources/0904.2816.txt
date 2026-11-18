@@ -1,0 +1,491 @@
+Invariant Gibbs Measures and a.s. Global Well-Posedness for Coupled KdV Systems Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Introduction 2 Notation 3 Gaussian Measure in Hilbert Space and Abstract Wiener Space 4 Function Spaces and Linear Estimates 5 New Local Well-Posedness Result for $\alpha\in(0,4)\setminus\{1\}$ 6 Global Well-Posedness on the Statistical Ensemble and the Invariance of the Gibbs Measure 7 Appendix References License: arXiv.org perpetual non-exclusive license arXiv:0904.2816v1 [math.AP] 19 Apr 2009 Invariant Gibbs Measures and a.s. Global Well-Posedness for Coupled KdV Systems Tadahiro Oh Address: Tadahiro Oh Department of Mathematics University of Toronto 40 St. George St, Rm 6290,
+Toronto, ON M5S 2E4, Canada Email address: oh@math.toronto.edu Abstract. We continue our study of the well-posedness theory of a one-parameter family of coupled KdV-type systems in the periodic setting.
+When the value of a coupling parameter $\alpha\in(0,4)\setminus\{1\}$ , we show that
+the Gibbs measure is invariant under the flow and
+the system is globally well-posed almost surely on the statistical ensemble,
+provided that certain Diophantine conditions are satisfied. Key words and phrases: KdV; well-posedness; Gibbs measure; Diophantine Conditions 2000 Mathematics Subject Classification 35Q53 1. Introduction In this paper, we consider coupled KdV systems of the form: (1) $\begin{cases}u_{t}+a_{11}u_{xxx}+a_{12}v_{xxx}+b_{1}uu_{x}+b_{2}uv_{x}+b_{3}u_{x}v+b_{4}vv_{x}=0\\
+v_{t}+a_{21}u_{xxx}+a_{22}v_{xxx}+b_{5}uu_{x}+b_{6}uv_{x}+b_{7}u_{x}v+b_{8}vv_{x}=0\\
+(u,v)\big|_{t=0}=(u_{0},v_{0})\end{cases}$ in the periodic setting, where $A=\bigl(\begin{smallmatrix}a_{11}&a_{12}\\
+a_{21}&a_{22}\end{smallmatrix}\bigr)$ is self-adjoint, and $u$ and $v$ are real-valued functions.
+There are several systems of this type: the Gear-Grimshaw system [ 9 ] , the Hirota-Satsuma system [ 12 ] ,
+the Majda-Biello system [ 16 ] , etc.
+By applying the space-time scale changes along with the diagonalization of $A$ , one can reduce ( 1 ) to (2) $\begin{cases}u_{t}+u_{xxx}+\widetilde{b_{1}}uu_{x}+\widetilde{b_{2}}uv_{x}+\widetilde{b_{3}}u_{x}v+\widetilde{b_{4}}vv_{x}=0\\
+v_{t}+\alpha v_{xxx}+\widetilde{b_{5}}uu_{x}+\widetilde{b_{6}}uv_{x}+\widetilde{b_{7}}u_{x}v+\widetilde{b_{8}}vv_{x}=0\\
+(u,v)\big|_{t=0}=(u_{0},v_{0}),\end{cases}$ where $\alpha\neq 0$ , $(x,t)\in\mathbb{T}\times\mathbb{R}$ with $\mathbb{T}=[0,2\pi)$ . In this paper, we assume that
+( 2 ) has a Hamiltonian $H$ of the form
+“ $H(u,v)=\frac{1}{2}\int u_{x}^{2}+\alpha v_{x}^{2}+$ nonlinear terms”
+and that both $H$ and $N(u,v)=\frac{1}{2}\int u^{2}+bv^{2}$ , for some $b>0$ , are conserved under the flow of ( 2 ).
+(Note that this is the case for the Gear-Grimshaw and the Majda-Biello systems among other coupled KdV systems.)
+When $\alpha\neq 1$ , it is shown in [ 18 ] that
+there is an interval $I_{0}$ around $\alpha=1$ such that particular resonances occur for $\alpha\in I_{0}\setminus\{1\}$ which are not present when $\alpha=1$ .
+We show that, for $\alpha\in I_{0}\setminus\{1\}$ ,
+the Gibbs measure $d\mu=Z^{-1}\exp(-\beta H(u,v))\prod_{x\in\mathbb{T}}du(x)\otimes dv(x)$ is invariant under the flow ( 2 )
+and that ( 2 ) is globally well-posed almost surely on the statistical ensemble,
+provided that certain Diophantine conditions are satisfied. As a model example, we consider the Majda-Biello system: (3) $\begin{cases}u_{t}+u_{xxx}+vv_{x}=0\\
+v_{t}+\alpha v_{xxx}+(uv)_{x}=0\\
+(u,v)\big|_{t=0}=(u_{0},v_{0}),\end{cases}\ (x,t)\in\mathbb{T}\times\mathbb{R},$ where $\mathbb{T}=[0,2\pi)$ , $0<\alpha\leq 4$ , and $u$ and $v$ are real-valued functions.
+This system has been proposed by Majda and Biello [ 16 ] as a reduced asymptotic model to study the nonlinear resonant interactions of
+long wavelength equatorial Rossby waves and barotropic Rossby waves with a significant mid-latitude projection,
+in the presence of suitable horizontally and vertically sheared zonal mean flows.
+In [ 16 ] , the values of $\alpha$ are numerically determined and they are $0.899$ , $0.960$ , and $0.980$ for different equatorial Rossby waves.
+Of particular interest to us is the periodic case because of its challenging mathematical nature
+as well as its physical relevance of the proposed model (the spatial period for the system before scaling is set as $40,000$ km in [ 16 ] .) Several conservation laws are known for the system: (4) $E_{1}=\int u\,dx,\ E_{2}=\int v\,dx,\ N(u,v)=\frac{1}{2}\int u^{2}+v^{2}dx,\ H(u,v)=\frac{1}{2}\int u_{x}^{2}+\alpha v_{x}^{2}-uv^{2}dx,$ where $H(u,v)$ is the Hamiltonian of the system.
+There seems to be no other conservation law, suggesting that the Majda-Biello system may not be completely integrable.
+The system has scaling which is similar to that of KdV and the critical Sobolev index $s_{c}$ is $-\frac{3}{2}$ just like KdV. First, we review the local and global well-posedness (LWP and GWP) results of ( 3 ) from [ 18 ] , [ 19 ] .
+Note that all the results, except for the global well-posedness on $\mathbb{T}$ for $\alpha\in(0,1)\cup(1,4)$ , are sharp in the sense that
+the smoothness/uniform continuity of the solution map fails below the specified regularities.
+When $\alpha=1$ , we showed in [ 19 ] that ( 3 ) is globally well-posed
+in $H^{-\frac{1}{2}}(\mathbb{T})\times H^{-\frac{1}{2}}(\mathbb{T})$ without the mean 0 condition on the initial data,
+via the $I$ -method developed by Colliander-Keel-Staffilani-Takaoka-Tao [ 7 ] in the vector-valued variants $X^{s,b}_{p,q}$ of the Bourgain space $X^{s,b}$ [ 2 ] . Now, let’s turn to the case $\alpha\in(0,1)\cup(1,4]$ .
+In this case, we have two distinct linear semigroups $S(t)=e^{-t\partial_{x}^{3}}$ and $S_{\alpha}(t)=e^{-\alpha t\partial_{x}^{3}}$ corresponding to the linear equations for $u$ and $v$ .
+Thus, we need to define two distinct Bourgain spaces $X^{s,b}$ and $X_{\alpha}^{s,b}$ to encompass the situation.
+For $s,b\in\mathbb{R}$ , let $X^{s,b}(\mathbb{T}\times\mathbb{R})$ and $X_{\alpha}^{s,b}(\mathbb{T}\times\mathbb{R})$ be the completion of
+the Schwartz class $\mathcal{S}(\mathbb{T}\times\mathbb{R})$ with respect to the norms (5) $\displaystyle\|u\|_{X^{s,b}(\mathbb{T}\times\mathbb{R})}=\big\|\langle n\rangle^{s}\langle\tau-n^{3}\rangle^{b}\widehat{u}(n,\tau)\big\|_{L^{2}_{n,\tau}(\mathbb{Z}\times\mathbb{R})}$ (6) $\displaystyle\|v\|_{X_{\alpha}^{s,b}(\mathbb{T}\times\mathbb{R})}=\big\|\langle n\rangle^{s}\langle\tau-\alpha n^{3}\rangle^{b}\widehat{v}(n,\tau)\big\|_{L^{2}_{n,\tau}(\mathbb{Z}\times\mathbb{R})},$ where $\langle\,\cdot\,\rangle=1+|\cdot|$ .
+Then, two of the crucial bilinear estimates in establishing the LWP of ( 3 ) are: (7) $\displaystyle\|\partial_{x}(v_{1}v_{2})\|_{X^{s,-\frac{1}{2}}(\mathbb{T}\times\mathbb{R})}$ $\displaystyle\lesssim\|v_{1}\|_{X_{\alpha}^{s,\frac{1}{2}}(\mathbb{T}\times\mathbb{R})}\|v_{2}\|_{X_{\alpha}^{s,\frac{1}{2}}(\mathbb{T}\times\mathbb{R}).}$ (8) $\displaystyle\|\partial_{x}(uv)\|_{X_{\alpha}^{s,-\frac{1}{2}}(\mathbb{T}\times\mathbb{R})}$ $\displaystyle\lesssim\|u\|_{X^{s,\frac{1}{2}}(\mathbb{T}\times\mathbb{R})}\|v\|_{X_{\alpha}^{s,\frac{1}{2}}(\mathbb{T}\times\mathbb{R}).}$ First, consider the first bilinear estimate ( 7 ).
+As in Kenig-Ponce-Vega [ 13 ] , we define the bilinear operator $\mathcal{B}_{s,b}(\cdot,\cdot)$ by $\mathcal{B}_{s,b}(f,g)(n,\tau)=\frac{n\langle n\rangle^{s}}{\langle\tau-n^{3}\rangle^{\frac{1}{2}}}\frac{1}{2\pi}\sum_{n_{1}+n_{2}=n}\intt_{\tau_{1}+\tau_{2}=\tau}\frac{f(n_{1},\tau_{1})g(n_{2},\tau_{2})}{\langle n_{1}\rangle^{s}\langle n_{2}\rangle^{s}\langle\tau_{1}-\alpha n_{1}^{3}\rangle^{\frac{1}{2}}\langle\tau_{2}-\alpha n_{2}^{3}\rangle^{\frac{1}{2}}}d\tau_{1}.$ Then, ( 7 ) holds if and only if $\left\|\mathcal{B}_{s,b}(f,g)\right\|_{L^{2}_{n,\tau}}\lesssim\|f\|_{L^{2}_{n,\tau}}\|g\|_{L^{2}_{n,\tau}}.$ As in the KdV case, $\partial_{x}$ appears on the left hand side of ( 7 ) and thus
+we need to make up for this loss of derivative from $\langle\tau-n^{3}\rangle^{\frac{1}{2}}\langle\tau_{1}-\alpha n_{1}^{3}\rangle^{\frac{1}{2}}\langle\tau_{2}-\alpha n_{2}^{3}\rangle^{\frac{1}{2}}$ in the denominator.
+Recall that we basically gain $\frac{3}{2}$ derivatives in the KdV case (with $n,n_{1},n_{2}\neq 0$ )
+thanks to the algebraic identity (9) $n^{3}-n_{1}^{3}-n_{2}^{3}=3nn_{1}n_{2}$ for $n=n_{1}+n_{2}$ .
+However, when $\alpha\neq 1$ , we no longer have such an identity and
+we have $\displaystyle\max\big($ $\displaystyle\langle\tau-n^{3}\rangle,\langle\tau_{1}-\alpha n_{1}^{3}\rangle,\langle\tau_{2}-\alpha n_{2}^{3}\rangle\big)\sim\langle\tau-n^{3}\rangle+\langle\tau_{1}-\alpha n_{1}^{3}\rangle+\langle\tau_{2}-\alpha n_{2}^{3}\rangle$ (10) $\displaystyle\gtrsim\big|(\tau-n^{3})-(\tau_{1}-\alpha n_{1}^{3})-(\tau_{2}-\alpha n_{2}^{3})\big|=|n^{3}-\alpha n_{1}^{3}-\alpha n_{2}^{3}|,$ where $n=n_{1}+n_{2}$ and $\tau=\tau_{1}+\tau_{2}$ .
+Note that the last expression in ( 10 ) can be 0 for infinitely many (nonzero) values of $n,\>n_{1},$ and $n_{2}$ ,
+causing resonances.
+By solving the resonance equation: (11) $n^{3}-\alpha n_{1}^{3}-\alpha n_{2}^{3}=0\text{ with }n=n_{1}+n_{2},$ we have $(n_{1},n_{2})=(c_{1}n,c_{2}n)$ or $(c_{2}n,c_{1}n)$ , where (12) $c_{1}=\tfrac{1}{2}+\tfrac{\sqrt{-3+12\alpha^{-1}}}{6}\ \text{ and }\ c_{2}=\tfrac{1}{2}-\tfrac{\sqrt{-3+12\alpha^{-1}}}{6}.$ Note that $c_{1}+c_{2}=1$ and that $c_{1},c_{2}\in\mathbb{R}$ if and only if $0<\alpha\leq 4$ .
+If $c_{1}\in\mathbb{Q}$ (and thus $c_{2}\in\mathbb{Q}$ ), then there are infinitely many values of $n\in\mathbb{Z}$ such that $c_{1}n,\>c_{2}n\in\mathbb{Z}$ . This causes resonances for infinitely many values of $n$ , and
+thus we do not have any gain of derivative from $\langle\tau-n^{3}\rangle\langle\tau_{1}-\alpha n_{1}^{3}\rangle\langle\tau_{2}-\alpha n_{2}^{3}\rangle$ in this case. If $c_{1}\in\mathbb{R}\setminus\mathbb{Q}$ , then $c_{1}n\notin\mathbb{Z}$ for any $n\in\mathbb{Z}$ .
+i.e. $n-\alpha n_{1}^{3}-\alpha n_{2}^{3}\neq 0$ for any $n,n_{1},n_{2}\in\mathbb{Z}$ .
+However, generally speaking, $n-\alpha n_{1}^{3}-\alpha n_{2}^{3}$ can be arbitrarily close to 0,
+since $c_{1}n$ can be arbitrarily close to an integer.
+Therefore, we need to measure how “close” $c_{1}$ is to rational numbers .
+In [ 18 ] , we used the following definition regarding the Diophantine conditions commonly used in dynamical systems. Definition 1 (Arnold [ 1 ] ) . A real number $\rho$ is called of type $(K,\nu)$ ( or simply of type ${\nu}$ ) if there exist positive $K$ and $\nu$ such that for all pairs of integers $(m,n)$ , we have (13) $\left|\rho-\frac{m}{n}\right|\geq\frac{K}{|n|^{2+\nu}}.$ Also, for our purpose, we defined the minimal type index of a given real number $\rho$ . Definition 2 . Given a real number $\rho$ , define the minimal type index ${\nu_{\rho}}$ of ${\rho}$ by $\nu_{\rho}=\begin{cases}\infty\text{, if }\rho\in\mathbb{Q}\\
+\inf\{\nu>0:\rho\text{ is of type }\nu\}\text{, if }\rho\notin\mathbb{Q}.\end{cases}$ Remark 1.1 . Then, by Dirichlet Theorem [ 1 , p.112] and [ 1 , p.116, lemma 3] ,
+it follows that $\nu_{\rho}\geq 0$ for any $\rho\in\mathbb{R}$ and $\nu_{\rho}=0$ for almost every $\rho\in\mathbb{R}$ . Using the minimal type index $\nu_{c_{1}}$ of $c_{1}$ , for any $\varepsilon>0$ , we have (14) $|n^{3}-\alpha n_{1}^{3}-\alpha n_{2}^{3}|\gtrsim|n|^{1-\nu_{c_{1}}-\varepsilon}$ for all sufficiently large $n\in\mathbb{Z}$ , which provides a good lower bound on ( 10 ).
+With ( 14 ), we proved that ( 7 ) holds for $s>\frac{1}{2}+\frac{1}{2}\nu_{c_{1}}$ . The resonance equation of the second bilinear estimate ( 8 )
+is given by (15) $\alpha n^{3}-n_{1}^{3}-\alpha n_{2}^{3}=0\text{ with }n=n_{1}+n_{2}.$ By solving ( 15 ), we obtain $(n_{1},n_{2})=\big(d_{1}n,(1-d_{1})n\big),\big(d_{2}n,(1-d_{2})n\big),(0,n)$ , where (16) $d_{1}=\tfrac{-3\alpha+\sqrt{3\alpha(4-\alpha)}}{2(1-\alpha)}\ \text{ and }\ d_{2}=\tfrac{-3\alpha-\sqrt{3\alpha(4-\alpha)}}{2(1-\alpha)}.$ Note that $d_{1},d_{2}\in\mathbb{R}$ if and only if $\alpha\in[0,1)\cup(1,4]$ .
+Then,
+for any $\varepsilon>0$ , we have (17) $|\alpha n^{3}-n_{1}^{3}-\alpha n_{2}^{3}|\gtrsim|n|^{1-\max(\nu_{d_{1}},\nu_{d_{2}})-\varepsilon}$ for all sufficiently large $n\in\mathbb{Z}$ .
+With ( 17 ), we proved that
+( 8 ) holds for $s>\frac{1}{2}+\frac{1}{2}\max(\nu_{d_{1}},\nu_{d_{2}})$ with the mean 0 assumption on $u$ .
+Note that the mean 0 assumption on $u$ is needed
+since $n_{1}=0$ is a solution of ( 15 ) for any $n\in\mathbb{Z}$ .
+Indeed, it is shown in [ 18 ] that ( 8 ) fails for any $s\in\mathbb{R}$ without the mean 0 assumption on $u$ . Remark 1.2 . We point out that the bilinear estimates ( 7 ) and ( 8 ) hold for $s\geq 0$ away from the resonance sets, i.e.
+( 7 ) holds for $s\geq 0$ on $\{(n,n_{1}):|n|\gtrsim 1,|n_{1}-c_{1}n|\geq 1\text{ and }|n_{1}-c_{2}n|\geq 1\}$ ,
+and
+( 8 ) holds for $s\geq 0$ on $\{(n,n_{1}):|n|\gtrsim 1,|n_{1}-d_{1}n|\geq 1\text{ and }|n_{1}-d_{2}n|\geq 1\}$ . Now, let $s_{0}(\alpha)=\frac{1}{2}+\frac{1}{2}\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})$ .
+Note that $s_{0}=\frac{1}{2}$ for almost every $\alpha\in(0,4]$ in view of Remark 1.1 .
+In [ 18 ] , we proved that, for $\alpha\in(0,4]\setminus\{1\}$ ,
+the Majda-Biello system ( 3 ) is locally well-posed in $H^{s}(\mathbb{T})\times H^{s}(\mathbb{T})$ for $s\geq s^{\ast}(\alpha):=\min(1,s_{0}+)$ ,
+assuming the mean 0 condition on $u_{0}$ . We’d like to point out the following.
+On the one hand, we have $s^{\ast}(\alpha)=s_{0}(\alpha)=\frac{1}{2}+$ for almost every $\alpha\in(0,4]\setminus\{1\}$ .
+On the other hand, for any interval $I\subset(0,4]$ , there exists $\alpha\in I$ such that $s^{\ast}(\alpha)=1$ .
+This shows that the well-posedness (below $H^{1}$ ) of the periodic Majda-Biello system
+is very unstable under a slight perturbation of the parameter $\alpha$ . Using the Hamiltonian $H(u,v)$ ,
+one can easily obtain the GWP of ( 3 ) in $H^{1}(\mathbb{T})\times H^{1}(\mathbb{T})$ .
+This result is sharp when $s^{\ast}=1$ ,
+i.e. when $\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})\geq 1$ .
+In particular, it is sharp for $\alpha=4$ , since $c_{1}\in\mathbb{Q}$ for $\alpha=4$ . When $\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})<1$ , we used the $I$ -method
+to generate a sequence of modified energies (modified Hamiltonians) $H^{(j)}(u,v)(t)$ .
+Using the second modified energy $H^{(2)}$ ,
+it is shown in [ 19 ] that
+( 3 ) is globally well-posed in $H^{s}(\mathbb{T})\times H^{s}(\mathbb{T})$ for $s\geq s^{**}:=\max\Big(\frac{6(s_{0}+)-2(s_{0}+)^{2}}{5-(s_{0}+)},\frac{2(s_{0}+)+9}{14}\Big)$ .
+In particular, we have $s^{**}(\alpha)=\frac{5}{7}+$ for almost every $\alpha\in(0,4]\setminus\{1\}$ .
+We also showed that the Fourier multiplier for the time derivative of the third modified energy $H^{(3)}$ is unbounded on a nontrivial set.
+i.e. the $I$ -method fails before the GWP result matches the LWP one.
+This shows that the GWP obtained via $H^{(2)}$ is the best possible result using the $I$ -method.
+Note that there is a gap between $s^{*}(\alpha)$ and $s^{**}(\alpha)$ , unless $s^{*}=1$ .
+In particular, $s^{*}=\frac{1}{2}+>s^{**}=\frac{5}{7}+$ for a.e. $\alpha\in(0,4]\setminus\{1\}$ . In an attempt to fill the gap between the LWP and the GWP results,
+we consider the Gibbs measure of the form “ $d\mu=Z^{-1}\exp(-\beta H(u,v))\prod_{x\in\mathbb{T}}du(x)\otimes dv(x)$ ”.
+First recall the following; Given a Hamiltonian flow $\begin{cases}\dot{p}_{i}=\frac{\partial H}{\partial q_{i}}\\
+\dot{q}_{i}=-\frac{\partial H}{\partial p_{i}}\end{cases}$ on $\mathbb{R}^{2n}$ with Hamiltonian $H=H(p_{1},\cdots,p_{n},q_{1},\cdots,q_{n})$ ,
+Liouville’s theorem states that the Lebesgue measure on $\mathbb{R}^{2n}$ is invariant under the flow.
+From the conservation of the Hamiltonian $H$ , the Gibbs measures $e^{-\beta H}\prod_{i=1}^{n}dp_{i}dq_{i}$ are also invariant,
+where $\beta$ is the reciprocal temperature.
+In our context, the Hamiltonian $H(u,v)$ is conserved under the flow of ( 3 ).
+Then, we’d like to use the invariance of the Gibbs measure $\mu$ (which holds true in finite dimensional case)
+to prove a GWP result.
+At this point, everything is merely formal, which needs to be made rigorous. In the context of NLS, Lebowitz-Rose-Speer [ 15 ] considered the Gibbs measure of the form $d\mu=\exp(-\beta H(u))\prod_{x\in\mathbb{T}}du(x)$ where $H(u)$ is the Hamiltonian given by $H(u)=\frac{1}{2}\int|u_{x}|^{2}\pm\frac{1}{p}\int|u|^{p}dx$ .
+In the focusing case (with $-$ ), $H(u)$ is not bounded from below and this causes a problem.
+Using the conservation of the $L^{2}$ norm,
+they instead considered the Gibbs measure of the form $d\mu=\exp(-\beta H(u))\chi_{\{\|u\|_{L^{2}}\leq B\}}\prod_{x\in\mathbb{T}}du(x)$ , i.e. with an $L^{2}$ -cutoff.
+This turned out to be a well-defined measure on $H^{\frac{1}{2}-}(\mathbb{T})=\bigcap_{s<\frac{1}{2}}H^{s}(\mathbb{T})$ (for $p<6$ with any $B>0$ , and $p=6$ with sufficiently small $B$ .)
+Bourgain [ 4 ] continued this study and
+proved the invariance of $\mu$ under the flow of NLS
+and the global well-posedness almost surely on the statistical ensemble.
+Note that [ 4 ] appeared before the so-called Bourgain’s method [ 3 ] or the $I$ -method [ 7 ] ,
+i.e. there was virtually no method available to establish any GWP result
+from a LWP result whose regularity was between two conservation laws.
+This was the case for NLS for $4<p\leq 6$ .
+We use this idea to obtain a.s. GWP of the Majda-Biello system ( 3 ).
+Recently, Burq-Tzvetkov [ 6 ] independently and simultaneously used
+similar ideas to prove a.s. GWP for
+the nonlinear wave equation on the unit ball in $\mathbb{R}^{3}$ under the radial symmetry.
+Also, see other work by Tzvetkov related to this subject [ 21 ] , [ 22 ] . For the Majda-Biello system ( 3 ), we have $H(u,v)=\frac{1}{2}\int u_{x}^{2}+\alpha v_{x}^{2}-uv^{2}dx$ .
+It is known (c.f. Zhidokov [ 23 ] ) that the Wiener measure $d\rho=\widetilde{Z}^{-1}\exp(-\frac{1}{2}\int u_{x}^{2}+\alpha v_{x}^{2}dx)\prod_{x\in\mathbb{T}}du(x)\otimes dv(x)$ is a well-defined countably additive measure on $H^{\frac{1}{2}-}(\mathbb{T})\times H^{\frac{1}{2}-}(\mathbb{T})$ .
+Since $-\frac{1}{2}\int uv^{2}dx$ is not sign-definite,
+we need to add an $L^{2}$ cutoff in considering the Gibbs measure (weighted Wiener measure) as in [ 15 ] and [ 4 ] .
+Then, $d\mu=Z^{-1}\exp(\frac{1}{2}\int uv^{2}dx)\chi_{\{\|(u,v)\|_{L^{2}}\leq B\}}d\rho$ is a well-defined countably additive measure on $H^{\frac{1}{2}-}(\mathbb{T})\times H^{\frac{1}{2}-}(\mathbb{T})$ .
+When $\alpha=1$ , the invariance of the Gibbs measure $\mu$ directly follows
+from Bourgain’s argument for KdV in [ 4 ] and the GWP of ( 3 ) in $H^{-\frac{1}{2}}(\mathbb{T})\times H^{-\frac{1}{2}}(\mathbb{T})$ obtained in [ 19 ] . Now, recall that for $\alpha\in(0,4)\setminus\{1\}$ ,
+the Majda-Biello system ( 3 ) is LWP in $H^{s}(\mathbb{T})\times H^{s}(\mathbb{T})$ only for $s>\frac{1}{2}+\frac{1}{2}\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})\geq\frac{1}{2}$ and is $C^{3}$ ill-posed for $s<\frac{1}{2}+\frac{1}{2}\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})$ in the sense that the solution map is not $C^{3}$ (c.f. [ 18 ] .)
+i.e. the flow of ( 3 ) is not well-defined on the support of the Gibbs measure $\mu$ in terms of the usual Sobolev spaces.
+We instead consider the Cauchy problem for $(u_{0},v_{0})\in H^{s_{1},s_{2}}(\mathbb{T})\times H^{s_{1},s_{2}}(\mathbb{T})$ ,
+where (18) $\|\phi\|_{H^{s_{1},s_{2}}}=\|\phi\|_{H^{s_{1}}}+\sup_{n}\langle n\rangle^{s_{2}}|\widehat{\phi}(n)|<\infty$ for some $s_{1},s_{2}$ with $0<s_{1}<\frac{1}{2}<s_{2}<1$ (to be determined later.)
+First, recall that, as mentioned in Remark 1.2 ,
+the bilinear estimates ( 7 ) and ( 8 )
+fail for $s\leq\frac{1}{2}$ only at 4 frequencies near the resonances. $\sup_{n}\langle n\rangle^{s_{2}}|\widehat{\phi}(n)|$ in ( 18 ) exactly controls these particular resonances with the higher regularity $s_{2}>\frac{1}{2}+\frac{1}{2}\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})$ .
+We have the following theorem. Theorem 1 . Let $\alpha\in(0,4)\setminus\{1\}$ and $\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})<1$ . Assume the mean 0 condition on $u_{0}$ .
+Let $\frac{1}{4}<s_{1}<\frac{1}{2}<s_{2}<1$ with $2s_{1}>s_{2}>\frac{1}{2}+\frac{1}{2}\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})$ .
+Then, the Majda-Biello system ( 3 ) is locally well-posed in $H^{s_{1},s_{2}}(\mathbb{T})\times H^{s_{1},s_{2}}(\mathbb{T})$ . As seen in Bourgain’s work on mKdV and Zakharov system [ 4 ] , [ 5 ] ,
+we have $\mu(H^{s_{1},s_{2}}\times H^{s_{1},s_{2}})=1$ for $0<s_{1}<\frac{1}{2}<s_{2}<1$ .
+i.e. $H^{s_{1},s_{2}}(\mathbb{T})\times H^{s_{1},s_{2}}(\mathbb{T})$ contains the full support of $\mu$ .
+In [ 4 ] , Bourgain proved the invariance of the Gibbs measure and a.s. GWP of mKdV
+by establishing an improved local well-posedness in $H^{s_{1},s_{2}}$ with $s_{1}=\frac{1}{2}-$ and $s_{2}=1-$ .
+Following his argument,
+we obtain the a.s. global well-posedness of ( 3 ),
+using the finite dimensional approximation to ( 3 )
+along with the invariance of the finite dimensional Gibbs measure. Theorem 2 . Let $\alpha\in(0,4)\setminus\{1\}$ and $\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})<1$ . Assume the mean 0 condition on $u_{0}$ .
+Then, the Gibbs measure $\mu$ (with an $L^{2}$ -cutoff) is invariant under the flow of ( 3 ),
+and ( 3 ) is globally well-posed a.s. on the statistical ensemble. We point out that Theorem 2 does not fill the gap between the LWP and GWP of ( 3 )
+as we initially hoped.
+However, it does establish a new GWP result
+for almost every $\alpha\in(0,4)\setminus\{1\}$ which can not be obtained by the methods in [ 18 ] and [ 19 ] . This work is a part of the author’s Ph.D. thesis [ 17 ] .
+This paper is organized as follows:
+In Section 2, we introduce some standard notations.
+In Section 3, we go over the basic theory of Gaussian Hilbert spaces and abstract Wiener spaces, and
+we give the precise meaning to the Gibbs measure $\mu$ .
+In Section 4, we introduce the function spaces and linear estimates.
+Then, we prove Theorem 1 in Section 5,
+and extend this local result to a.s. GWP in Section 6.
+We also establish the invariance of the Gibbs measure $\mu$ .
+In Appendix, we present the proof of a probabilistic lemma from Section 3. Acknowledgements: The author would like to express his sincere gratitude to his Ph.D. advisor, Prof. Andrea R. Nahmod.
+He acknowledges the NSF summer support in 2005–06 under Prof. Nahmod’s grant DMS 0503542.
+He is also grateful to Prof. Luc Rey-Bellet for helpful discussions in probability
+and abstract Wiener spaces. 2. Notation On $\mathbb{T}$ , the spatial Fourier domain is $\mathbb{Z}$ .
+Let $dn$ be the normalized counting measure on $\mathbb{Z}$ ,
+and we say $f\in L^{p}(\mathbb{Z})$ , $1\leq p<\infty$ , if $\|f\|_{L^{p}(\mathbb{Z})}=\bigg(\int_{\mathbb{Z}}|f(n)|^{p}dn\bigg)^{\frac{1}{p}}:=\bigg(\frac{1}{2\pi}\sum_{n\in\mathbb{Z}}|f(n)|^{p}\bigg)^{\frac{1}{p}}<\infty.$ If $p=\infty$ , we have the obvious definition involving the essential supremum.
+We often drop $2\pi$ for simplicity.
+If the function depends on both $x$ and $t$ , we use ${}^{\wedge_{x}}$ (and ${}^{\wedge_{t}}$ ) to denote the spatial (and temporal) Fourier transform, respectively.
+However, when there is no confusion, we simply use ∧ to denote the spatial Fourier transform,
+temporal Fourier transform, and the space-time Fourier transform, depending on the context. Let $X^{s,b}$ and $X_{\alpha}^{s,b}$ be as in ( 5 ) and ( 6 ).
+Given any time interval $I=[t_{1},t_{2}]\subset\mathbb{R}$ , we define the local in time $X^{s,b}(\mathbb{T}\times I)$ (or simply $X^{s,b}[t_{1},t_{2}]$ ) by $\|u\|_{X_{I}^{s,b}}=\|u\|_{X^{s,b}(\mathbb{T}\times I)}=\inf\big\{\|\widetilde{u}\|_{X^{s,b}(\mathbb{T}\times\mathbb{R})}:{\widetilde{u}|_{I}=u}\big\}.$ We define the local in time $X^{s,b}_{\alpha}(\mathbb{T}\times I)$ analogously.
+Also, in dealing with a product space of two copies of a Banach space $X$ ,
+we may use $X\times X$ and $X$ interchangeably. Let $\eta\in C^{\infty}_{c}(\mathbb{R})$ be a smooth cutoff function supported on $[-2,2]$ with $\eta\equiv 1$ on $[-1,1]$ and let $\eta_{{}_{T}}(t)=\eta(T^{-1}t)$ .
+We use $c,$ $C$ to denote various constants, usually depending only on $s_{1},s_{2},b$ , and $\alpha$ .
+If a constant depends on other quantities, we will make it explicit.
+We use $A\lesssim B$ to denote an estimate of the form $A\leq CB$ .
+Similarly, we use $A\sim B$ to denote $A\lesssim B$ and $B\lesssim A$ and use $A\ll B$ when there is no general constant $C$ such that $B\leq CA$ .
+We also use $a+$ (and $a-$ ) to denote $a+\varepsilon$ (and $a-\varepsilon$ ), respectively,
+for arbitrarily small $\varepsilon\ll 1$ . 3. Gaussian Measure in Hilbert Space and Abstract Wiener Space In this section, we go over the basic theory of Gaussian measures in Hilbert spaces
+and abstract Wiener spaces
+and provide the precise meaning of the Gibbs measure
+“ $d\mu=Z^{-1}\exp(-\beta H(u,v))\prod_{x\in\mathbb{T}}du(x)\otimes dv(x)$ ”
+appearing in Section 1.
+For simplicity, we set the reciprocal temperature $\beta=1$ .
+For details, see Zhidokov [ 23 ] , Gross [ 11 ] , and Kuo [ 14 ] . First, recall (centered) Gaussian measures in $\mathbb{R}^{n}$ .
+Let $n\in\mathbb{N}$ and $B$ be a symmetric positive $n\times n$ matrix
+with real entries.
+The Borel measure $\rho$ in $\mathbb{R}^{n}$ with the density $d\rho(x)=\frac{1}{\sqrt{(2\pi)^{n}\det(B)}}\exp\big(-\tfrac{1}{2}\langle B^{-1}x,x\rangle_{\mathbb{R}^{n}}\big)$ is called a (nondegenerate centered ) Gaussian measure in $\mathbb{R}^{n}$ .
+Note that $\rho(\mathbb{R}^{n})=1$ . Now, we consider the analogous definition for the infinite dimensional (centered) Gaussian measures.
+Let $H$ be a real separable Hilbert space and $B:H\to H$ be a linear positive self-adjoint operator
+(generally not bounded) with eigenvalues $\{\lambda_{n}\}_{n\in\mathbb{N}}$ and the corresponding eigenvectors $\{e_{n}\}_{n\in\mathbb{N}}$ forming an orthonormal basis of $H$ .
+We call a set $M\subset H$ cylindrical if there exists an integer $n\geq 1$ and a Borel set $F\subset\mathbb{R}^{n}$ such that (19) $M=\big\{x\in H:(\langle x,e_{1}\rangle_{H},\cdots,\langle x,e_{n}\rangle_{H})\in F\big\}.$ For a fixed operator $B$ as above, we denote by $\mathcal{A}$ the set of all cylindrical subsets of $H$ .
+Note that $\mathcal{A}$ is a field.
+Then, the centered Gaussian measure in $H$ with the correlation operator $B$ is defined as
+the additive (but not countably additive in general) measure $\rho$ defined on the field $\mathcal{A}$ via (20) $\rho(M)=(2\pi)^{-\frac{n}{2}}\prod_{j=1}^{n}\lambda_{j}^{-\frac{1}{2}}\int_{F}e^{-\frac{1}{2}\sum_{j=1}^{n}\lambda_{j}^{-1}x_{j}^{2}}dx_{1}\cdots dx_{n},\text{ for }M\in\mathcal{A}\text{ as in \eqref{CYLINDER}. }$ The following theorem tells us when this Gaussian measure $\rho$ is countably additive. Theorem 3.1 . The Gaussian measure $\rho$ defined in ( 20 ) is countably additive
+on the field $\mathcal{A}$ if and only if $B$ is an operator of trace class,
+i.e. $\sum_{n=1}^{\infty}\lambda_{n}<\infty$ .
+If the latter holds, then
+the minimal $\sigma$ -field $\mathcal{M}$ containing the field $\mathcal{A}$ of all cylindrical sets is the Borel $\sigma$ -field on $H$ . Consider a sequence of the finite dimensional Gaussian measures $\{\rho_{n}\}_{n\in\mathbb{N}}$ as follows.
+For fixed $n\in\mathbb{N}$ , let $\mathcal{M}_{n}$ be the set of all cylindrical sets in $H$ of the form ( 19 ) with this fixed $n$ and arbitrary Borel sets $F\subset\mathbb{R}^{n}$ .
+Clearly, $\mathcal{M}_{n}$ is a $\sigma$ -field, and setting $\rho_{n}(M)=(2\pi)^{-\frac{n}{2}}\prod_{j=1}^{n}\lambda_{j}^{-\frac{1}{2}}\int_{F}e^{-\frac{1}{2}\sum_{j=1}^{n}\lambda_{j}^{-1}x_{j}^{2}}dx_{1}\cdots dx_{n}$ for $M\in\mathcal{M}_{n}$ , we obtain a countably additive measure $\rho_{n}$ defined on $\mathcal{M}_{n}$ .
+Then, one can show that each measure $\rho_{n}$ can be naturally extended onto the whole Borel $\sigma$ -field $\mathcal{M}$ of $H$ by $\rho_{n}(A):=\rho_{n}(A\cap\text{span}\{e_{1},\cdots,e_{n}\})$ for $A\in\mathcal{M}$ .
+Then, we have Proposition 3.2 . Let $\rho$ in ( 20 ) be countably additive.
+Then, $\{\rho_{n}\}_{n\in\mathbb{N}}$ constructed above converges weakly to $\rho$ as $n\to\infty$ . Now, we construct the Gaussian measure which comes from the quadratic part of the Hamiltonian $H(\phi,\psi)=\frac{1}{2}\int\phi^{2}_{x}+\alpha\psi^{2}_{x}-\phi\psi^{2}dx$ , $\alpha>0$ .
+First, we identify a pair of real-valued functions $(\phi,\psi)$ on $\mathbb{T}$ with their Fourier coefficients $(a,b)=(a_{n},b_{n})_{n\in\mathbb{Z}}$ .
+Since $\phi$ and $\psi$ are real-valued, we have $a_{-n}=\overline{a_{n}}$ and $b_{-n}=\overline{b_{n}}$ .
+Then, define the finite dimensional Gaussian measure $\rho_{N}$ on $\mathbb{C}^{N}\times\mathbb{C}^{N}=\big\{(a_{n},b_{n}):1\leq n\leq N\big\}$ with the normalized density (21) $d\rho_{N}=\widetilde{Z}_{N}^{-1}e^{-\frac{1}{2}\sum_{n=1}^{N}n^{2}(|a_{n}|^{2}+\alpha|b_{n}|^{2})}\textstyle\prod_{n=1}^{N}d(a_{n}\otimes b_{n}),$ where $\widetilde{Z}_{N}=\int_{\mathbb{C}^{N}\times\mathbb{C}^{N}}e^{-\frac{1}{2}\sum_{n=1}^{N}n^{2}(|a_{n}|^{2}+\alpha|b_{n}|^{2})}\prod_{n=1}^{N}d(a_{n}\otimes b_{n}).$ Note that this measure is the induced probability measure on $\mathbb{C}^{N}\times\mathbb{C}^{N}$ under the map $\omega\mapsto\big\{\big(n^{-1}{f_{n}(\omega)},{\alpha^{-\frac{1}{2}}n^{-1}}{g_{n}(\omega)}\big):1\leq n\leq N\big\},$ where $\{f_{n}(\omega)\}$ and $\{g_{n}(\omega)\}$ are i.i.d. standard complex Gaussian random variables.
+In particular, $\rho_{N}$ is a Wiener measure on $\mathbb{C}^{2N}$ .
+Next, define (22) $d\rho=\widetilde{Z}^{-1}e^{-\frac{1}{2}\sum_{n\geq 1}n^{2}(|a_{n}|^{2}+\alpha|b_{n}|^{2})}\textstyle\prod_{n\geq 1}d(a_{n}\otimes b_{n}),$ where $\widetilde{Z}=\int e^{-\frac{1}{2}\sum_{n\geq 1}n^{2}(|a_{n}|^{2}+\alpha|b_{n}|^{2})}\prod_{n\geq 1}d(a_{n}\otimes b_{n}).$ For now, assume the means of $\phi$ and $\psi$ on $\mathbb{T}$ are 0, i.e. $a_{0}=b_{0}=0$ .
+Let $\dot{H}^{s}_{0}$ be the homogeneous Sobolev space restricted to the real-valued mean 0 elements.
+Then, we’d like to know for which $s\in\mathbb{R}$ the Gaussian measure $\rho$ with the density
+can be a well-defined countably additive measure on $\dot{H}^{s}_{0}\times\dot{H}^{s}_{0}$ . For simplicity, we consider a Gaussian on a space of a single real-valued function.
+Let $\langle\cdot,\cdot\rangle_{\dot{H}^{s}}$ be the usual inner product in $\dot{H}^{s}$ .
+i.e. $\big\langle\sum c_{n}e^{inx},\sum d_{n}e^{inx}\big\rangle_{\dot{H}^{s}}=\sum_{n\neq 0}|n|^{2s}c_{n}\overline{d_{n}}$ .
+Let $B_{s}=\sqrt{-\Delta}\vphantom{|}^{2s-2}$ .
+Then, the weighted exponentials $\{|n|^{-s}e^{inx}\}_{n\neq 0}$ are the eigenvectors of $B_{s}$ with the eigenvalue $|n|^{2s-2}$ ,
+forming an orthonormal basis of $H^{s}_{0}$ .
+Note that $-\tfrac{1}{2}\langle B^{-1}\phi,\phi\rangle_{\dot{H^{s}}}=-\tfrac{1}{2}\Big\langle\sum_{n\neq 0}|n|^{2-2s}a_{n}e^{inx},\sum_{n\neq 0}a_{n}e^{inx}\Big\rangle_{\dot{H}^{s}}=-\tfrac{1}{2}\sum_{n\neq 0}|n|^{2}|a_{n}|^{2}.$ The right hand side is exactly the expression appearing in the exponent in ( 22 ).
+By Theorem 3.1 , $\rho$ is countably additive
+if and only if $B$ is of trace class, i.e. $\sum_{n\neq 0}|n|^{2s-2}<\infty$ if and only if $s<\frac{1}{2}.$ Hence, $\bigcap_{s<\frac{1}{2}}H^{s}\times H^{s}$ is a natural space to work on. Unfortunately, it is shown in [ 18 ] that
+( 3 ) is ill-posed in $H^{s}\times H^{s}$ for $s<\frac{1}{2}$ when $\alpha\in(0,4)\setminus\{1\}$ .
+In view of Theorems 1 ,
+we consider the property of $\rho$ on $H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ for $0<s_{1}<\frac{1}{2}<s_{2}<1$ .
+Since $H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ is not a Hilbert space, we now turn to the basic theory of abstract Wiener spaces. Recall the following definitions [ 14 ] :
+Given a real separable Hilbert space $H$ with norm $\|\cdot\|$ ,
+let $\mathcal{F}$ denote the set of finite dimensional orthogonal projections $\mathbb{P}$ of $H$ .
+Then, define a cylinder set $E$ by $E=\{x\in H:\mathbb{P}x\in F\}$ where $\mathbb{P}\in\mathcal{F}$ and $F$ is a Borel subset of $\mathbb{P}H$ ,
+and let $\mathcal{R}$ denote the collection of such cylinder sets.
+Note that $\mathcal{R}$ is a field but not a $\sigma$ -field.
+Then, the Gauss measure $\rho$ on $H$ is defined
+by $\rho(E)=(2\pi)^{-\frac{n}{2}}\int_{F}e^{-\frac{\|x\|^{2}}{2}}dx$ for $E\in\mathcal{R}$ , where $n=\text{dim}\mathbb{P}H$ and $dx$ is the Lebesgue measure on $\mathbb{P}H$ .
+It is known that $\rho$ is finitely additive but not countably additive in $\mathcal{R}$ . A seminorm $|||\cdot|||$ in $H$ is called measurable if for every $\varepsilon>0$ ,
+there exists $\mathbb{P}_{0}\in\mathcal{F}$ such that $\rho(|||\mathbb{P}x|||>\varepsilon)<\varepsilon$ for $\mathbb{P}\in\mathcal{F}$ orthogonal to $\mathbb{P}_{0}$ .
+Any measurable seminorm is weaker than the norm of $H$ ,
+and $H$ is not complete with respect to $|||\cdot|||$ unless $H$ is finite dimensional.
+Let $B$ be the completion of $H$ with respect to $|||\cdot|||$ and denote by $i$ the inclusion map of $H$ into $B$ .
+The triple $(i,H,B)$ is called an abstract Wiener space. Now, regarding $y\in B^{\ast}$ as an element of $H^{\ast}\equiv H$ by restriction,
+we embed $B^{\ast}$ in $H$ .
+Define, for a Borel set $F\subset\mathbb{R}^{n}$ , $\widetilde{\rho}(\{x\in B:((x,y_{1}),\cdots,(x,y_{n}))\in F\})=\rho(\{x\in H:(\langle x,y_{1}\rangle_{H},\cdots,\langle x,y_{n}\rangle_{H})\in F\}),$ where $y_{j}$ ’s are in $B^{\ast}$ and $(\cdot,\cdot)$ denote the natural pairing between $B$ and $B^{\ast}$ .
+Let $\mathcal{R}_{B}$ denote the collection of cylinder sets $\{x\in B:((x,y_{1}),\cdots,(x,y_{n}))\in F\}$ in $B$ . Theorem 3.3 (Gross [ 11 ] ) . $\widetilde{\rho}$ is countably additive in the $\sigma$ -field generated by $\mathcal{R}_{B}$ . In the present context, let $H=H^{1}_{0}\times H^{1}_{0}$ and $B=H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ with $0<s_{1}<\frac{1}{2}<s_{2}<1$ .
+Then, it basically follows from (the proof of) Lemma 3.5 that the seminorms $\|\cdot\|_{B}$ is measurable.
+Hence, $(i,H,B)$ is an abstract Wiener space,
+and $\rho$ in ( 22 ) is countably additive in $B$ . Next, we consider the full Gibbs measure “ $d\mu=Z^{-1}\exp(-H(\phi,\psi))\prod_{x\in\mathbb{T}}d\phi(x)\otimes d\psi(x)$ ”
+where $H(\phi,\psi)=\frac{1}{2}\int\phi_{x}^{2}+\alpha\psi_{x}^{2}-\phi\psi^{2}dx$ .
+As for the KdV case, $\int\phi\psi^{2}dx$ is not sign-definite
+and thus we restrict ourselves to the ball of radius $B>0$ in $L^{2}\times L^{2}$ . See [ 15 ] , [ 4 ] . Let $\Omega_{N}=\{(a_{n},b_{n}):{0\leq n\leq N}\}$ and $\Omega=\{(a_{n},b_{n}):{n\geq 0}\}$ .
+Let $B$ be a cutoff on the $L^{2}$ norm and consider the ball in $\mathbb{C}^{N+1}\times\mathbb{C}^{N+1}$ given by $\Omega_{N,B}=\big\{(a_{n},b_{n})_{0\leq n\leq N}:\|(a_{n},b_{n})\|_{L^{2}_{n}}\leq B\big\}.$ (Recall $a_{-n}=\overline{a_{n}}$ and $b_{-n}=\overline{b_{n}}$ .)
+Also, define $\Omega_{B}=\left\{(a_{n},b_{n})_{n\geq 0}:\|(a_{n},b_{n})\|_{L^{2}_{n}}\leq B\right\}.$ Let $\mathbb{P}_{N}$ be the projection onto the Fourier modes $\leq N$ given by $\mathbb{P}_{N}\phi=\phi^{N}=\sum_{|n|\leq N}a_{n}e^{inx}.$ Then, we have $\rho\circ\mathbb{P}_{N}^{-1}=\rho_{N}$ .
+Now, define the weighted Wiener measure $\mu_{N}$ on $\mathbb{C}^{N+1}\times\mathbb{C}^{N+1}=\big\{(a_{n},b_{n}):{0\leq n\leq N}\big\}$ by (23) $d\mu_{N}=Z_{N}^{-1}\exp\bigg(\frac{1}{2}\int\mathbb{P}_{N}\phi(\mathbb{P}_{N}\psi)^{2}dx\bigg)\chi_{\Omega_{N,B}}\ d(a_{0},b_{0})\otimes d\rho_{N},$ where $Z_{N}=\int_{\mathbb{C}^{N+1}\times\mathbb{C}^{N+1}}\exp\big(\frac{1}{2}\int\mathbb{P}_{N}\phi(\mathbb{P}_{N}\psi\big)^{2}dx\big)\chi_{\Omega_{N,B}}\ d(a_{0},b_{0})\otimes d\rho_{N}$ ,
+and $da_{0}$ and $db_{0}$ are the Lebesgue measures on $\mathbb{C}$ .
+Similarly, the weighted Wiener measure $\mu$ on $\big\{(a_{n},b_{n}):{n\geq 0}\big\}$ by (24) $d\mu=Z^{-1}\exp\left(\frac{1}{2}\int\phi\,\psi^{2}dx\right)\chi_{\Omega_{B}}\ d(a_{0},b_{0})\otimes d\rho,$ where $Z=\int\exp\left(\frac{1}{2}\int\phi\,\psi^{2}dx\right)\chi_{\Omega_{B}}\ d(a_{0},b_{0})\otimes d\rho.$ At this point, $Z$ need not be finite.
+Indeed, the result below follows from [ 15 ] and [ 4 ] . Lemma 3.4 . For any $r<\infty$ , we have (25) $\displaystyle\exp\left(\frac{1}{2}\int\mathbb{P}_{N}\phi(\mathbb{P}_{N}\psi)^{2}dx\right)\chi_{\Omega_{N,B}}$ $\displaystyle\in L^{r}(d(a_{0},b_{0})\otimes d\rho_{N})$ (26) $\displaystyle\exp\left(\frac{1}{2}\int\phi\,\psi^{2}dx\right)\chi_{\Omega_{B}}$ $\displaystyle\in L^{r}(d(a_{0},b_{0})\otimes d\rho).$ In particular, $d\mu$ is a probability measure.
+Moreover, we have $d\mu_{N}\ll d(a_{0},b_{0})\otimes d\rho_{N}$ and $d\mu\ll d(a_{0},b_{0})\otimes d\rho$ .
+For our application (in Theorem 2 ), we assume that $u_{0}$ (and $u(t)$ for any $t$ ) has mean 0.
+Hence, in the following, we let $da_{0}$ in ( 23 ) and ( 24 )
+to be the delta measure at $n=0$ rather than the Lebesgue measure on $\mathbb{C}$ .
+Note that $da_{0}$ plays no significant role in any case. Finally, define $\Omega_{N,B}(s_{1},s_{2},K)$ and $\Omega_{B}(s_{1},s_{2},K)$ by $\displaystyle\Omega_{N,B}(s_{1},s_{2},K)$ $\displaystyle=\Big\{(a_{n},b_{n})_{0\leq n\leq N}\in\Omega_{N,B}:\Big\|\sum_{|n|\leq N}(a_{n},b_{n})e^{inx}\Big\|_{H^{s_{1},s_{2}}}\leq K\Big\}$ $\displaystyle\Omega_{B}(s_{1},s_{2},K)$ $\displaystyle=\Big\{(a_{n},b_{n})_{n\geq 0}\in\Omega_{B}:\Big\|\sum_{n\in\mathbb{Z}}(a_{n},b_{n})e^{inx}\Big\|_{H^{s_{1},s_{2}}}\leq K\Big\}.$ Then, we have Lemma 3.5 (tightness) . Let $0<s_{1}<\frac{1}{2}<s_{2}<1$ .
+Then, for large $K>0$ , there exists $c>0$ , independent of $N$ , such that (27) $\displaystyle\mu_{N}\big(\Omega_{N,B}\setminus\Omega_{N,B}(s_{1},s_{2},K)\big)\leq e^{-cK^{2}}\text{ and }\ \mu\big(\Omega_{B}\setminus\Omega_{B}(s_{1},s_{2},K)\big)\leq e^{-cK^{2}}.$ The proof is analogous to that of Lemma 3.4 in [ 4 ] .
+We prove Lemma 3.5 in Appendix. 4. Function Spaces and Linear Estimates In this section, we go over the basic function spaces and linear estimates
+needed to establish Theorems 1 .
+First, we define a variant of the Bourgain spaces for $H^{s_{1},s_{2}}$ defined in ( 18 ).
+Let $X^{s_{2},\infty,b}$ and $X_{\alpha}^{s_{2},\infty,b}$ be the space given by the norms $\displaystyle\|u\|_{X^{s_{2},\infty,b}}=\|\langle n\rangle^{s_{2}}\langle\tau-n^{3}\rangle^{b}\widehat{u}(n,\tau)\|_{L^{\infty}_{n}L^{2}_{\tau}}$ $\displaystyle\|v\|_{X_{\alpha}^{s_{2},\infty,b}}=\|\langle n\rangle^{s_{2}}\langle\tau-\alpha n^{3}\rangle^{b}\widehat{v}(n,\tau)\|_{L^{\infty}_{n}L^{2}_{\tau}}.$ Recall that when $b>\frac{1}{2}$ , the $X^{s_{1},b}\times X_{\alpha}^{s_{1},b}$ norm controls the $C([-T,T];H^{s_{1}}\times H^{s_{1}})$ norm.
+This, however, does not hold when $b=\frac{1}{2}$ .
+Now, define $Y^{s_{1},s_{2}}$ and $Y_{\alpha}^{s_{1},s_{2}}$ where the norm is given by $\displaystyle\|u\|_{Y^{s_{1},s_{2}}}=\|u\|_{Y^{s_{1}}}+\|u\|_{Y^{s_{2},\infty}},\text{ and }\|v\|_{Y_{\alpha}^{s_{1},s_{2}}}=\|v\|_{Y_{\alpha}^{s_{1}}}+\|v\|_{Y_{\alpha}^{s_{2},\infty}},$ where $\|u\|_{Y^{s_{1}}}=\|u\|_{X^{s_{1},\frac{1}{2}}}+\|\langle n\rangle^{s_{1}}\widehat{u}(n,\tau)\|_{L^{2}_{n}L^{1}_{\tau}},\text{ and }\|u\|_{Y^{s_{2},\infty}}=\|u\|_{X^{s_{2},\infty,\frac{1}{2}}}+\|\langle n\rangle^{s_{2}}\widehat{u}(n,\tau)\|_{L^{\infty}_{n}L^{1}_{\tau}}.$ $Y_{\alpha}^{s_{1}}$ and $Y_{\alpha}^{s_{2},\infty}$ for $v$ are analogously defined with the obvious change of $\tau-n^{3}$ by $\tau-\alpha n^{3}$ .
+Recall (c.f. [ 7 ] )
+that the $Y^{s_{1}}\times Y_{\alpha}^{s_{1}}$ norm controls the $C([-T,T];H^{s_{1}}\times H^{s_{1}})$ norm.
+Also, we have $\sup_{n}\langle n\rangle^{s_{2}}|\widehat{u}(n,t)|\leq\sup_{n}\langle n\rangle^{s_{2}}\int|\widehat{u}(n,\tau)|d\tau\leq\|u\|_{Y^{s_{2},\infty}}$ for any $t\in\mathbb{R}$ .
+Hence, the $Y^{s_{1},s_{2}}\times Y_{\alpha}^{s_{1},s_{2}}$ norm controls
+the $C([-T,T];H^{s_{1},s_{2}}\times H^{s_{1},s_{2}})$ norm.
+We prove Theorem 1 by a contraction argument on a ball in $Y^{s_{1},s_{2}}\times Y_{\alpha}^{s_{1},s_{2}}$ for appropriate $s_{1}$ , $s_{2}$ . Next, we discuss the linear estimates.
+By writing ( 3 ) in the integral form, we see that $(u,v)$ is a solution to ( 3 )
+with the initial condition $(u_{0},v_{0})$ for $|t|\leq T\leq 1$ if and only if $\begin{pmatrix}u(t)\\
+v(t)\end{pmatrix}=\begin{pmatrix}\vphantom{\Big|}\eta(t)S(t)u_{0}-\eta_{{}_{T}}(t)\int_{0}^{t}S(t-t^{\prime})\partial_{x}\big(\frac{v^{2}}{2}\big)(t^{\prime})dt^{\prime}\\
+\vphantom{\Big|}\eta(t)S_{\alpha}(t)v_{0}-\eta_{{}_{T}}(t)\int_{0}^{t}S_{\alpha}(t-t^{\prime})\partial_{x}\big(uv\big)(t^{\prime})dt^{\prime}\\
+\end{pmatrix},$ where $S(t)=e^{-t\partial_{x}^{3}}$ and $S_{\alpha}(t)=e^{-\alpha t\partial_{x}^{3}}$ .
+First, note that $(\eta(t)S(t)u_{0})^{\wedge}(n,\tau)=\widehat{\eta}(\tau-n^{3})\widehat{u_{0}}(n)$ and $(\eta(t)S_{\alpha}(t)v_{0})^{\wedge}(n,\tau)=\widehat{\eta}(\tau-\alpha n^{3})\widehat{v_{0}}(n)$ . Lemma 4.1 . The following estimates hold for any $s_{1},s_{2},b\in\mathbb{R}$ . $\|\eta(t)S(t)u_{0}\|_{Y^{s_{1},s_{2}}}\lesssim\|u_{0}\|_{H^{s_{1},s_{2}}},\text{ and }\ \|\eta(t)S_{\alpha}(t)v_{0}\|_{Y_{\alpha}^{s_{1},s_{2}}}\lesssim\|v_{0}\|_{H^{s_{1},s_{2}}}.$ Now, let $-\frac{1}{2}<b^{\prime}\leq 0\leq b\leq b^{\prime}+1$ and $T\leq 1$ .
+Then, from (2.25) in Lemma 2.1 (ii) in Ginibre-Tsutsumi-Velo [ 10 ] , we have (28) $\|\eta_{{}_{T}}(S*_{R}F)\|_{X^{s_{1},b}}\lesssim T^{1-b+b^{\prime}}\|F\|_{X^{s_{1},b^{\prime}}},$ where $S*_{R}F(t)=\int_{0}^{t}S(t-t^{\prime})F(t^{\prime})dt^{\prime}$ .
+From [ 7 , Lemma 7.2] , we have (29) $\|\eta(S*_{R}F)\|_{Y^{s_{1}}}\lesssim\|F\|_{Z^{s_{1}}},\text{ and }\|\eta(S_{\alpha}*_{R}G)\|_{Y_{\alpha}^{s_{1}}}\lesssim\|G\|_{Z_{\alpha}^{s_{1}}},$ where $\|u\|_{Z^{s_{1}}}=\|u\|_{X^{s_{1},-\frac{1}{2}}}+\big\|\langle n\rangle^{s_{1}}\langle\tau-n^{3}\rangle^{-1}\widehat{u}(n,\tau)\big\|_{L^{2}_{n}L^{1}_{\tau}}$ and $Z^{s_{1}}_{\alpha}$ is analogously defined with the change of $\tau-n^{3}$ by $\tau-\alpha n^{3}$ .
+Recall from [ 2 ] , [ 10 ] that a factor of $T^{0-}$ appears on the right hand sides of ( 29 )
+if we replace $\eta$ by $\eta_{{}_{T}}$ in ( 29 ).
+By the standard computation [ 2 ] , we have $\displaystyle\eta(t)(S*_{R}F)(t)\sim\ $ $\displaystyle\eta(t)\sum_{k\geq 1}\frac{i^{k}t^{k}}{k!}\sum_{n\in\mathbb{Z}}e^{i(nx+n^{3}t)}\int\eta(\tau-n^{3})\big(\tau-n^{3}\big)^{k-1}\widehat{F}(n,\tau)d\tau$ $\displaystyle+\eta(t)\sum_{n\in\mathbb{Z}}e^{inx}\int\frac{\big(1-\eta\big)(\tau-n^{3})}{\tau-n^{3}}e^{i\tau t}\widehat{F}(n,\tau)d\tau$ $\displaystyle+\eta(t)\sum_{n\in\mathbb{Z}}e^{i(nx+n^{3}t)}\int\frac{\big(1-\eta\big)(\tau-n^{3})}{\tau-n^{3}}\widehat{F}(n,\tau)d\tau$ $\displaystyle=:\hskip 1.42262pt\text{I}\hskip 1.42262pt+\text{I \hskip-7.96677pt I}+\text{I \hskip-8.25128pt I \hskip-8.25128pt I}.$ Then, a direct computation shows that $\begin{cases}\vphantom{\Big|}\|\hskip 1.42262pt\text{I}\hskip 1.42262pt\|_{Y^{s_{2},\infty}},\,\|\text{I \hskip-8.25128pt I \hskip-8.25128pt I}\|_{Y^{s_{2},\infty}}\lesssim\|\langle n\rangle^{s_{2}}\langle\tau-n^{3}\rangle^{-1}\widehat{F}(n,\tau)\|_{L^{\infty}_{n}L^{2}_{\tau}}\\
+\|\text{I \hskip-7.96677pt I}\|_{Y^{s_{2},\infty}}\lesssim\|F\|_{X^{s_{2},\infty,-\frac{1}{2}}}+\|\langle n\rangle^{s_{2}}\langle\tau-n^{3}\rangle^{-1}\widehat{F}(n,\tau)\|_{L^{\infty}_{n}L^{2}_{\tau}}.\end{cases}$ i.e. we have (30) $\|\eta(S*_{R}F)\|_{Y^{s_{2},\infty}}\lesssim\|F\|_{Z^{s_{2},\infty}},$ where $\|u\|_{Z^{s_{2},\infty}}=\|u\|_{X^{s_{2},\infty,-\frac{1}{2}}}+\|\langle n\rangle^{s_{2}}\langle\tau-n^{3}\rangle^{-1}\widehat{u}(n,\tau)\|_{L^{\infty}_{n}L^{2}_{\tau}}.$ As before, a factor of $T^{0-}$ appears on the right hand sides of ( 30 )
+if we replace $\eta$ by $\eta_{{}_{T}}$ in ( 30 ).
+Similarly, we have $\|\eta(S_{\alpha}*_{R}G)\|_{Y_{\alpha}^{s_{2},\infty}}\lesssim\|G\|_{Z_{\alpha}^{s_{2},\infty}},$ where $Z_{\alpha}^{s_{2},\infty}$ is analogously defined with the change of $\tau-n^{3}$ by $\tau-\alpha n^{3}$ .
+Lastly, define $Z^{s_{1},s_{2}}$ and $Z_{\alpha}^{s_{1},s_{2}}$ by $\|u\|_{Z^{s_{1},s_{2}}}=\|u\|_{Z^{s_{1}}}+\|u\|_{Z^{s_{2},\infty}}\text{ and }\|v\|_{Z_{\alpha}^{s_{1},s_{2}}}=\|v\|_{Z_{\alpha}^{s_{1}}}+\|v\|_{Z_{\alpha}^{s_{2},\infty}}.$ Then, we have the following Duhamel estimates for $b=\frac{1}{2}$ and $b^{\prime}=-\frac{1}{2}$ . Lemma 4.2 . Let $0<T\leq 1$ . Then, we have $\|\eta_{{}_{T}}(S*_{R}F)\|_{Y^{s_{1},s_{2}}}\lesssim T^{0-}\|F\|_{Z^{s_{1},s_{2}}}\text{ and }\|\eta_{{}_{T}}(S_{\alpha}*_{R}G)\|_{Y_{\alpha}^{s_{1},s_{2}}}\lesssim T^{0-}\|G\|_{Z_{\alpha}^{s_{1},s_{2}}}.$ 5. New Local Well-Posedness Result for $\alpha\in(0,4)\setminus\{1\}$ In this section, we prove Theorem 1 by constructing a contraction in $Y^{s_{1},s_{2}}\times Y_{\alpha}^{s_{1},s_{2}}$ ,
+where $\frac{1}{4}<s_{1}<\frac{1}{2}<s_{2}<1$ with $2s_{1}>s_{2}>\frac{1}{2}+\frac{1}{2}\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})$ and $\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})<1$ .
+Once we prove the bilinear estimates (31) $\displaystyle\|\partial_{x}(v_{1}v_{2})\|_{Z^{s_{1},s_{2}}}$ $\displaystyle\lesssim\|v_{1}\|_{Y_{\alpha}^{s_{1},s_{2}}}\|v_{2}\|_{Y_{\alpha}^{s_{1},s_{2}}}$ (32) $\displaystyle\|\partial_{x}(uv)\|_{Z_{\alpha}^{s_{1},s_{2}}}$ $\displaystyle\lesssim\|u\|_{Y^{s_{1},s_{2}}}\|v\|_{Y_{\alpha}^{s_{1},s_{2}}}$ with the mean 0 condition on $u$ ,
+the local well-posedness of ( 3 ) in $H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ on a time interval of size $\sim 1$ follows
+from Lemmata 4.1 , 4.2 , ( 31 ), and ( 32 ),
+provided that $\|(u_{0},v_{0})\|_{H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}}$ is sufficiently small. To establish the LWP for the general initial data $(u_{0},v_{0})$ without the smallness assumption,
+we need to gain a positive power of $T$ from the bilinear estimates ( 31 ) and ( 32 ),
+assuming that the functions are supported on the time interval $[-2T,2T]$ .
+In particular, we need to prove (33) $\displaystyle\left\|\eta_{{}_{2T}}\partial_{x}(v_{1}v_{2})\right\|_{Z^{s_{1},s_{2}}}$ $\displaystyle\lesssim T^{\theta}\|v_{1}\|_{Y_{\alpha}^{s_{1},s_{2}}}\|v_{2}\|_{Y_{\alpha}^{s_{1},s_{2}}}$ (34) $\displaystyle\left\|\eta_{{}_{2T}}\partial_{x}(uv)\right\|_{Z_{\alpha}^{s_{1},s_{2}}}$ $\displaystyle\lesssim T^{\theta}\|u\|_{Y^{s_{1},s_{2}}}\|v\|_{Y_{\alpha}^{s_{1},s_{2}}},$ for some $\theta>0$ .
+For the rest of this section, we first present the proof of ( 31 ) and ( 32 )
+in Propositions 5.2 , 5.3 , and 5.4 .
+Then, we mention how to obtain the positive power of $T$ as in ( 33 ) and ( 34 ). First, recall the following result in [ 18 ] . (See Remark 1.2 .) Lemma 5.1 . Let $s_{1}\geq 0$ .
+Then, we have (35) $\left\|\partial_{x}(v_{1}v_{2})\right\|_{Z^{s_{1}}}\lesssim\|v_{1}\|_{Y_{\alpha}^{s_{1}}}\|v_{2}\|_{Y_{\alpha}^{s_{1}}}$ on $\{|n|\lesssim 1\}$ or (36) $A=\{(n,n_{1},n_{2}):n=n_{1}+n_{2},|n|\gtrsim 1,|n_{1}-c_{1}n|\geq 1\text{ and }|n_{1}-c_{2}n|\geq 1\},$ where $n,$ $n_{1}$ , and $n_{2}$ are the spatial Fourier variables of $v_{1}v_{2}$ , $v_{1}$ , and $v_{2}$ .
+Also, we have (37) $\left\|\partial_{x}(uv)\right\|_{Z_{\alpha}^{s_{1}}}\lesssim\|u\|_{Y^{s_{1}}}\|v\|_{Y_{\alpha}^{s_{1}}},$ on $\{|n|\lesssim 1\}$ or (38) $C=\{(n,n_{1},n_{2}):n=n_{1}+n_{2},|n|\gtrsim 1,|n_{1}-d_{1}n|\geq 1\text{ and }|n_{1}-d_{2}n|\geq 1\},$ where $n,$ $n_{1}$ , and $n_{2}$ are the spatial Fourier variables of $uv$ , $u$ , and $v$ . We point out that the proof of ( 35 ) and ( 37 )
+are basically the same as that of the bilinear estimate for KdV for $s\geq 0$ in [ 2 ] .
+Hence, by assuming that $v_{1}v_{2}$ in ( 35 ) and $uv$ in ( 37 )
+are supported on time interval $[-2T,2T]$ , we gain a positive power $T^{\theta}$ on the right hand sides.
+For details, see [ 2 ] . Now, we prove ( 31 ) in Propositions 5.2 and 5.3 . Proposition 5.2 . Assume $\nu_{c_{1}}<1$ .
+Then, for $\frac{1}{4}\leq s_{1}<\frac{1}{2}<s_{2}<1$ with $s_{2}>\frac{1}{2}+\frac{1}{2}\nu_{c_{1}}$ , we have (39) $\left\|\partial_{x}(v_{1}v_{2})\right\|_{Z^{s_{1}}}\lesssim\|v_{1}\|_{Y_{\alpha}^{s_{1},s_{2}}}\|v_{2}\|_{Y_{\alpha}^{s_{1},s_{2}}}.$ Proof. In view of Lemma 5.1 , we restrict our attention
+to (40) $B=\{(n,n_{1},n_{2})\in\mathbb{Z}^{3}:n=n_{1}+n_{2},|n|\gtrsim 1,|n_{1}-c_{1}n|<1\text{ and }|n_{1}-c_{2}n|<1\}.$ For fixed $n\in\mathbb{Z}$ , there are only 4 values of $n_{1}$ in $B$ , i.e. $n_{1}=[c_{1}n],[c_{1}n]+1,[c_{2}n],$ or $[c_{2}n]+1$ ,
+where $[\,\cdot\,]$ is the integer part function.
+Thus, there are 4 terms contributing in the convolution in the spatial Fourier variable.
+Note that we have $|n|\sim|n_{1}|\sim|n_{2}|$ on $B$ .
+By the definition of the minimal type index $\nu_{c_{1}}$ (see ( 14 )), we have (41) $\MAX:=\max(\langle\tau-n^{3}\rangle,\langle\tau_{1}-\alpha n_{1}^{3}\rangle,\langle\tau_{2}-\alpha n_{2}^{3}\rangle)\gtrsim|n^{3}-\alpha n_{1}^{3}-\alpha n_{2}^{3}|\gtrsim|n|^{1-\nu_{c_{1}}-\varepsilon}$ for any $\varepsilon>0$ .
+Without loss of generality, assume $\langle\tau-n^{3}\rangle,\langle\tau_{1}-\alpha n_{1}^{3}\rangle\gtrsim\langle\tau_{2}-\alpha n_{2}^{3}\rangle$ . First, consider the $X^{s_{1},-\frac{1}{2}}$ part of the $Z^{s_{1}}$ norm.
+It suffices to show (42) $\bigg\|\intt_{\tau=\tau_{1}+\tau_{2}}\frac{1}{\langle\tau-n^{3}\rangle^{\frac{1}{2}}}\frac{\langle n\rangle^{s_{1}+1}}{\langle n_{1}\rangle^{s_{1}}\langle n_{2}\rangle^{s_{2}}}\frac{f(n_{1},\tau_{1})}{\langle\tau_{1}-\alpha n_{1}^{3}\rangle^{\frac{1}{2}}}g(n_{2},\tau_{2})d\tau_{1}\bigg\|_{L^{2}_{n,\tau}}\lesssim\|f\|_{L^{2}_{n,\tau}}\|g\|_{L^{\infty}_{n}L^{1}_{\tau}}$ for each $n_{1}=[c_{1}n],[c_{1}n]+1,[c_{2}n],$ or $[c_{2}n]+1$ .
+From ( 41 ), we have (43) $\frac{\langle n\rangle^{s_{1}+1}}{\langle n_{1}\rangle^{s_{1}}\langle n_{2}\rangle^{s_{2}}}\frac{1}{\MAX^{\frac{1}{2}}}\lesssim|n|^{-s_{2}+\frac{1}{2}+\frac{1}{2}\nu_{c_{1}}+\frac{1}{2}\varepsilon}\lesssim 1$ for $s_{2}\geq\tfrac{1}{2}+\tfrac{1}{2}\nu_{c_{1}}+\tfrac{1}{2}\varepsilon$ .
+The rest follows from Hölder inequality in $n$ and Young’s inequality in $\tau$ . Now, consider the second part of the $Z^{s_{1}}$ norm.
+It suffices to show $\bigg\|\intt_{\tau=\tau_{1}+\tau_{2}}\frac{1}{\langle\tau-n^{3}\rangle}\frac{\langle n\rangle^{s_{1}+1}}{\langle n_{1}\rangle^{s_{1}}\langle n_{2}\rangle^{s_{2}}}\frac{f(n_{1},\tau_{1})}{\langle\tau_{1}-\alpha n_{1}^{3}\rangle^{\frac{1}{2}}}g(n_{2},\tau_{2})d\tau_{1}\bigg\|_{L^{2}_{n}L^{1}_{\tau}}\lesssim\|f\|_{L^{2}_{n_{,}\tau}}\|g\|_{L^{\infty}_{n}L^{1}_{\tau}}$ for $n_{1}=[c_{1}n],[c_{1}n]+1,[c_{2}n],$ or $[c_{2}n]+1$ .
+By Hölder’s inequality in $\tau$ , we have $\text{LHS}\leq c\,\bigg\|\int\frac{1}{\langle\tau-n^{3}\rangle^{\frac{1}{2}-}}\frac{\langle n\rangle^{s_{1}+1}}{\langle n_{1}\rangle^{s_{1}}\langle n_{2}\rangle^{s_{2}}}\frac{f(n_{1},\tau_{1})}{\langle\tau_{1}-\alpha n_{1}^{3}\rangle^{\frac{1}{2}}}g(n_{2},\tau_{2})d\tau_{1}\bigg\|_{L^{2}_{n,\tau}},$ where $c=\sup_{n}\big(\int\langle\tau-n^{3}\rangle^{-1-}d\tau\big)^{1/2}<\infty$ .
+The rest follows from the previous part
+as long as $s_{2}>\tfrac{1}{2}+\tfrac{1}{2}\nu_{c_{1}}+\tfrac{1}{2}\varepsilon$ .
+∎ Proposition 5.3 . Assume $\nu_{c_{1}}<1$ .
+Then, for $\frac{1}{4}\leq s_{1}<\frac{1}{2}<s_{2}<1$ with $2s_{1}>s_{2}>\frac{1}{2}+\frac{1}{2}\nu_{c_{1}}$ , we have (44) $\left\|\partial_{x}(v_{1}v_{2})\right\|_{Z^{s_{2},\infty}}\lesssim\|v_{1}\|_{Y_{\alpha}^{s_{1},s_{2}}}\|v_{2}\|_{Y_{\alpha}^{s_{1},s_{2}}}.$ Proof. For $|n|\lesssim 1$ , we have $\langle n\rangle^{s_{2}}\sim\langle n\rangle^{s_{1}}$ and $L^{\infty}_{n}$ -norm $\sim$ $L^{2}_{n}$ -norm.
+i.e. it reduces to Proposition 5.2 .
+Thus, assume $|n|\gtrsim 1$ .
+Without loss of generality, assume $\langle\tau-n^{3}\rangle,\langle\tau_{1}-\alpha n_{1}^{3}\rangle\gtrsim\langle\tau_{2}-\alpha n_{2}^{3}\rangle$ .
+First, consider the $X^{s_{2},\infty,-\frac{1}{2}}$ part of the $Z^{s_{2},\infty}$ norm. $\bullet$ Case (1): Away from resonances, i.e. on $A$ in ( 36 ) From [ 18 ] , we have (45) $\MAX:=\max(\langle\tau-n^{3}\rangle,\langle\tau_{1}-\alpha n_{1}^{3}\rangle,\langle\tau_{2}-\alpha n_{2}^{3}\rangle)\gtrsim|n^{3}-\alpha n_{1}^{3}-\alpha n_{2}^{3}|\gtrsim n^{2}.$ This can be seen from the fact that $P_{n}(n_{1}):=n^{3}-\alpha n_{1}^{3}-\alpha n_{2}^{3}$ is a quadratic polynomial in $n_{1}$ for fixed $n$ and that $\partial_{n_{1}}P_{n}(n_{1})$ at $n_{1}=c_{1}n,c_{2}n$ (i.e. at the zeros of $P_{n}(n_{1})$ ) is of order $n^{2}$ .
+It suffices to show $\bigg\|\sum_{n=n_{1}+n_{2}}\intt_{\tau=\tau_{1}+\tau_{2}}\frac{\langle n\rangle^{s_{2}+1}}{\langle n_{1}\rangle^{s_{1}}\langle n_{2}\rangle^{s_{1}}}\frac{f(n_{1},\tau_{1})g(n_{2},\tau_{2})d\tau_{1}}{\langle\tau-n^{3}\rangle^{\frac{1}{2}}\langle\tau_{1}-\alpha n_{1}^{3}\rangle^{\frac{1}{2}}}\bigg\|_{L^{\infty}_{n}L^{2}_{\tau}}\lesssim\|f\|_{L^{2}_{n_{1},\tau_{1}}}\|g\|_{L^{2}_{n_{2}}L^{1}_{\tau_{2}}}.$ If $|n_{1}|,|n_{2}|\gtrsim|n|$ , then we have, from ( 45 ), $\frac{\langle n\rangle^{s_{2}+1}}{\langle n_{1}\rangle^{s_{1}}\langle n_{2}\rangle^{s_{1}}}\frac{1}{\MAX^{\frac{1}{2}}}\lesssim|n|^{s_{2}-2s_{1}}\lesssim 1$ for $2s_{1}\geq s_{2}.$ Otherwise, we have $|n_{1}|\ll|n|$ or $|n_{2}|\ll|n|$ .
+In this case, we have $\MAX\gtrsim|n^{3}-\alpha n_{1}^{3}-\alpha n_{2}^{3}|\gtrsim|n|^{3}$ and this gives us $\frac{\langle n\rangle^{s_{2}+1}}{\langle n_{1}\rangle^{s_{1}}\langle n_{2}\rangle^{s_{1}}}\frac{1}{\MAX^{\frac{1}{2}}}\lesssim|n|^{s_{2}-s_{1}-\frac{1}{2}}\lesssim 1$ for $s_{1}+\frac{1}{2}\geq s_{2}.$ Then, the rest follows from Young’s inequality in $n$ and $\tau$ . $\bullet$ Case (2): Near resonances, i.e. on $B$ in ( 40 ) It suffices to show, for $n_{1}=[c_{1}n],[c_{1}n]+1,[c_{2}n],$ or $[c_{2}n]+1$ , $\bigg\|\intt_{\tau=\tau_{1}+\tau_{2}}\frac{\langle n\rangle^{s_{2}+1}}{\langle n_{1}\rangle^{s_{2}}\langle n_{2}\rangle^{s_{2}}}\frac{f(n_{1},\tau_{1})g(n_{2},\tau_{2})d\tau_{1}}{\langle\tau-n^{3}\rangle^{\frac{1}{2}}\langle\tau_{1}-\alpha n_{1}^{3}\rangle^{\frac{1}{2}}}\bigg\|_{L^{\infty}_{n}L^{2}_{\tau}}\lesssim\|f\|_{L^{\infty}_{n_{1}}L^{2}_{\tau_{1}}}\|g\|_{L^{\infty}_{n_{2}}L^{1}_{\tau_{2}}}.$ From ( 41 ), we have $\frac{\langle n\rangle^{s_{2}+1}}{\langle n_{1}\rangle^{s_{2}}\langle n_{2}\rangle^{s_{2}}}\frac{1}{\MAX^{\frac{1}{2}}}\lesssim|n|^{-s_{2}+\frac{1}{2}+\frac{1}{2}\nu_{c_{1}}+\frac{1}{2}\varepsilon}\lesssim 1$ for $s_{2}\geq\tfrac{1}{2}+\tfrac{1}{2}\nu_{c_{1}}+\tfrac{1}{2}\varepsilon$ .
+Then, the rest follows
+from Hölder inequality in $n$ and Young’s inequality in $\tau$ . Now, consider the $L^{\infty}_{n}L^{1}_{\tau}$ part of $Z^{s_{2},\infty}$ norm. $\bullet$ Case (3): Away from resonance. It suffices to show $\bigg\|\sum_{n=n_{1}+n_{2}}\intt_{\tau=\tau_{1}+\tau_{2}}\frac{\langle n\rangle^{s_{2}+1}}{\langle n_{1}\rangle^{s_{1}}\langle n_{2}\rangle^{s_{1}}}\frac{f(n_{1},\tau_{1})g(n_{2},\tau_{2})d\tau_{1}}{\langle\tau-n^{3}\rangle\langle\tau_{1}-\alpha n_{1}^{3}\rangle^{\frac{1}{2}}}\bigg\|_{L^{\infty}_{n}L^{1}_{\tau}}\lesssim\|f\|_{L^{2}_{n_{1},\tau_{1}}}\|g\|_{L^{2}_{n_{2}}L^{1}_{\tau_{2}}}.$ As in the proof of Proposition 5.2 ,
+apply Hölder’s inequality in $\tau$ ,
+and the rest follows from Case (1) for $2s_{1}>s_{2}$ . $\bullet$ Case (4): Near resonances. In this case, it suffices to show, for $n_{1}=[c_{1}n],[c_{1}n]+1,[c_{2}n],$ or $[c_{2}n]+1$ , $\bigg\|\intt_{\tau=\tau_{1}+\tau_{2}}\frac{\langle n\rangle^{s_{2}+1}}{\langle n_{1}\rangle^{s_{2}}\langle n_{2}\rangle^{s_{2}}}\frac{f(n_{1},\tau_{1})g(n_{2},\tau_{2})d\tau_{1}}{\langle\tau-n^{3}\rangle\langle\tau_{1}-\alpha n_{1}^{3}\rangle^{\frac{1}{2}}}\bigg\|_{L^{\infty}_{n}L^{1}_{\tau}}\lesssim\|f\|_{L^{\infty}_{n_{1}}L^{2}_{\tau_{1}}}\|g\|_{L^{\infty}_{n_{2}}L^{1}_{\tau_{2}}}.$ As in Case(3), apply Hölder’s inequality in $\tau$ , and the rest follows from Case (2)
+as long as for $s_{2}>\tfrac{1}{2}+\tfrac{1}{2}\nu_{c_{1}}+\tfrac{1}{2}\varepsilon$ .
+∎ Proposition 5.4 . Assume $\max(\nu_{d_{1}},\nu_{d_{2}})<1$ and the mean 0 condition for $u$ .
+Then, for $\frac{1}{4}\leq s_{1}<\frac{1}{2}<s_{2}<1$ with $s_{2}>\frac{1}{2}+\frac{1}{2}\max(\nu_{d_{1}},\nu_{d_{2}})$ , we have (46) $\left\|\partial_{x}(uv)\right\|_{Z_{\alpha}^{s_{1},s_{2}}}\lesssim\|u\|_{Y^{s_{1},s_{2}}}\|v\|_{Y_{\alpha}^{s_{1},s_{2}}}.$ Proof. We omit the details
+of the proof of Proposition 5.4 since it is basically the same as those of Propositions 5.2 and 5.3 once we point out the following.
+Let $\MAX:=\max(\langle\tau-\alpha n^{3}\rangle,\langle\tau_{1}-n_{1}^{3}\rangle,\langle\tau_{2}-\alpha n_{2}^{3}\rangle)$ .
+Then, we have $\MAX\gtrsim|\alpha n^{3}-n_{1}^{3}-\alpha n_{2}^{3}|\gtrsim|n_{1}n|$ on $C$ in ( 38 ), i.e. away from resonances.
+Moreover, if $|n_{1}|\ll|n|$ or $|n_{2}|\ll|n|$ , then we have $\MAX\gtrsim|\alpha n^{3}-n_{1}^{3}-\alpha n_{2}^{3}|\gtrsim|n_{1}n^{2}|.$ Now, define the resonance set $D$ by (47) $D=\{(n,n_{1},n_{2}):|n|\gtrsim 1,|n_{1}-d_{1}n|<1\text{ and }|n_{1}-d_{2}n|<1\}.$ i.e. the left hand side of ( 15 ) can be small on $D$ .
+As before, for fixed $n\in\mathbb{Z}$ , there are only 4 values of $n_{1}$ in $D$ ,
+i.e. $n_{1}=[d_{1}n],[d_{1}n]+1,[d_{2}n],$ or $[d_{2}n]+1$ .
+Thus, there are 4 terms contributing in the convolution in the spatial Fourier variable.
+Note that we have $|n|\sim|n_{1}|\sim|n_{2}|$ on $D$ .
+By the definition of the minimal type indices $\nu_{d_{1}},\nu_{d_{2}}$ (see ( 17 )), we have $\displaystyle\MAX:=\gtrsim$ $\displaystyle|\alpha n^{3}-n_{1}^{3}-\alpha n_{2}^{3}|\gtrsim|n_{1}||n|^{0-}\gtrsim|n|^{1-\max(\nu_{d_{1}},\nu_{d_{2}})-\varepsilon}.$ for any $\varepsilon>0$ .
+The rest follows as in the proof of
+Propositions 5.2 and 5.3 ∎ This establishes the LWP for the periodic Majda-Biello system ( 3 )
+for small initial data $(u_{0},v_{0})\in H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ .
+For the general data without the smallness assumption,
+one can exploit small time intervals $[-2T,2T]$ , $T\ll 1$ to gain an extra factor $T^{\theta}$ for some $\theta>0$ as in ( 33 ) and ( 34 ).
+We discuss how to gain $T^{\theta}$ in ( 42 ) assuming the functions are localized in time,
+i.e. by replacing $f$ (or $g$ ) by $\widehat{\eta_{{}_{2T}}}*f$ (or $\widehat{\eta_{{}_{2T}}}*g$ ) in ( 42 ). Suppose $\MAX=\langle\tau-n^{3}\rangle$ .
+Then, it suffices to prove (48) $\text{LHS of }\eqref{timelocal1}\text{ with $f$ replaced by }\widehat{\eta_{{}_{2T}}}*f\lesssim T^{\theta}\|f\|_{L^{2}_{n}L^{1}_{\tau}}\|g\|_{L^{\infty}_{n}L^{1}_{\tau}}.$ By ( 42 ), Hölder in $n$ , and Young’s inequality in $\tau$ , we have $\text{LHS of }\eqref{timelocal3}\lesssim\|\widehat{\eta_{{}_{2T}}}*f\|_{L^{2}_{n,\tau}}\|g\|_{L^{\infty}_{n}L^{1}_{\tau}}$ ,
+and the first factor is bounded by $\|\widehat{\eta_{{}_{2T}}}\|_{L^{2}_{\tau}}\|f\|_{L^{2}_{n}L^{1}_{\tau}}\sim T^{\frac{1}{2}}\|f\|_{L^{2}_{n}L^{1}_{\tau}}$ by Young’s inequality.
+Next, suppose $\MAX=\langle\tau_{1}-\alpha n_{1}^{3}\rangle$ .
+Then, it suffices to prove (49) $\text{LHS of }\eqref{timelocal1}\text{ with $g$ replaced by }\widehat{\eta_{{}_{2T}}}*g\lesssim T^{\theta}\|f\|_{L^{2}_{n,\tau}}\|g\|_{L^{\infty}_{n}L^{1}_{\tau}}.$ By ( 42 ), Hölder in $n,\tau$ , and Young’s inequality in $\tau$ , we have LHS $\displaystyle\text{ of }\eqref{timelocal4}\lesssim\|\langle\tau-n^{3}\rangle^{-\frac{1}{2}}f*(\widehat{\eta_{{}_{2T}}}*g)\|_{L^{2}_{n,\tau}}\leq\|\langle\tau-n^{3}\rangle^{-\frac{1}{2}}\|_{L^{\infty}_{n}L^{3}_{\tau}}\|f*(\widehat{\eta_{{}_{2T}}}*g)\|_{L^{2}_{n}L^{6}_{\tau}}$ $\displaystyle\lesssim\|f\|_{L^{2}_{n,\tau}}\|\widehat{\eta_{{}_{2T}}}*g\|_{L^{\infty}_{n}L^{3/2}_{\tau}}\leq\|\widehat{\eta_{{}_{2T}}}\|_{L^{3/2}_{\tau}}\|f\|_{L^{2}_{n,\tau}}\|g\|_{L^{\infty}_{n}L^{1}_{\tau}}\sim T^{\frac{1}{3}}\|f\|_{L^{2}_{n,\tau}}\|g\|_{L^{\infty}_{n}L^{1}_{\tau}}.$ All the other estimates in Propositions 5.2 , 5.3 , and 5.4 can be modified in a similar manner to gain $T^{\theta}$ and we omit the detail.
+(Note that
+we have $L^{2}_{\tau}$ on the left hand side,
+possibly after Hölder inequality in $\tau$ ,
+and $L^{2}_{\tau}$ and $L^{1}_{\tau}$ on the right hand side
+for all the estimates.)
+This yields the local well-posedness on the general data $(u_{0},v_{0})\in H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ without smallness assumption.
+Note that the time interval $[-T,T]$ of existence depends
+on the size of $\|(u_{0},v_{0})\|_{H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}}$ in an inverted polynomial way.
+See [ 2 ] . 6. Global Well-Posedness on the Statistical Ensemble and the Invariance of the Gibbs Measure Once we establish the local well-posedness of ( 3 ) via the fixed point theorem
+and tightness of $\mu_{N}$ and $\mu$ (Lemma 3.5 ),
+Bourgain’s argument in [ 4 ] yields the global well-posedness a.s. on the statistical ensemble.
+As for the invariance of the Gibbs measure $\mu$ (Theorem 6.6 ),
+we follow the argument in Rey-Bellet and Thomas [ 20 ] .
+We include these arguments for the sake of completeness. Consider the finite dimensional approximation to ( 3 ): (50) $\left\{\begin{array}[]{l}u^{N}_{t}+u^{N}_{xxx}+\mathbb{P}_{N}(v^{N}v^{N}_{x})=0\\
+v^{N}_{t}+\alpha v^{N}_{xxx}+\mathbb{P}_{N}\big((u^{N}v^{N})_{x}\big)=0,\end{array}\right.$ with $\big(u^{N}(x,0),v^{N}(x,0)\big)=\big(u_{0}^{N}(x),v_{0}^{N}(x)\big)=\big(\mathbb{P}_{N}u_{0}(x),\mathbb{P}_{N}v_{0}(x)\big)$ for $N\to\infty$ .
+In the following, we assume that the mean of $u_{0}$ is 0.
+Note that $\int(u^{N})^{2}+(v^{N})^{2}dx$ is conserved under the finite dimensional flow.
+Moreover, the finite dimensional truncation of the Hamiltonian (51) $H_{N}(u,v)=\frac{1}{2}\int(u^{N}_{x})^{2}+\alpha(v^{N}_{x})^{2}-\mathbb{P}_{N}\big(u^{N}(v^{N})^{2}\big)dx$ is conserved as well.
+Therefore, by Liouville’s Theorem, $\mu_{N}$ is invariant under the flow of ( 50 ). In the following, we first establish the a.s. GWP of ( 50 )
+(with an explicit growth bound modulo small set), independent of $N$ .
+Then, using this and the invariance of $\mu_{N}$ , we show the a.s. GWP of ( 3 ) and
+the invariance of $\mu$ . Lemma 6.1 . Let $\frac{1}{4}<s_{1}<\frac{1}{2}<s_{2}<1$ with $2s_{1}>s_{2}>\frac{1}{2}+\frac{1}{2}\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})$ , $T<\infty$ , and $\varepsilon>0$ .
+There exists a set $\Omega_{N,\varepsilon}\subset H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ such that $\mu_{N}(\Omega_{N,\varepsilon}^{c})<\varepsilon$ and for $(u^{N}_{0},v^{N}_{0})\in\Omega_{N,\varepsilon}$ ,
+the solution $(u^{N},v^{N})$ to the IVP ( 50 )
+satisfies, for $|t|\leq T$ , $\big\|\big(u^{N},v^{N}\big)(t)\big\|_{H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}}\lesssim\bigg(\log\frac{T}{\varepsilon}\bigg)^{\frac{1}{2}}.$ Proof. Let $S_{N}(t)$ be the flow map corresponding to ( 50 ).
+By Liouville’s theorem, $\mu_{N}$ is invariant under $S_{N}(t)$ for all $t$ (as long as the solution exists.)
+Note that $\mathbb{P}_{N}$ acts continuously on the function spaces used for the local theory of ( 3 ) in $H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ .
+Then, from the local well-posedness of ( 3 ) in $H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ ,
+we obtain the local well-posedness of ( 50 ) in $H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ with the same bound; i.e. if $(u^{N}_{0},v^{N}_{0})\in\Omega_{N,B}(s_{1},s_{2},K)$ , then $\big\|\big(u^{N},v^{N}\big)(t)\big\|_{H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}}\leq 2K$ for $|t|\leq\delta\sim K^{-\theta}$ with some $\theta>0$ .
+Note that this is independent of $N$ . Let $S=S_{N}(\delta)$ and consider the set $\Omega_{N,\varepsilon}=\bigcap_{j=-[\frac{T}{\delta}]}^{[\frac{T}{\delta}]}S^{j}\Omega_{N,B}(s_{1},s_{2},K)$ .
+From the invariance of $\mu_{N}$ , we have $\mu_{N}(\Omega_{N,\varepsilon}^{c})\leq\frac{T}{\delta}\,\mu_{N}\big((\Omega_{N,B}(s_{1},s_{2},K))^{c}\big)\sim TK^{\theta}e^{-cK^{2}}.$ Hence, we have $\mu_{N}(\Omega_{N,\varepsilon}^{c})<\varepsilon$ for $K\sim\big(\log\frac{T}{\varepsilon}\big)^{\frac{1}{2}}$ .
+If $(u^{N}_{0},v^{N}_{0})\in\Omega_{N,\varepsilon}$ , then
+by construction we have $\big\|\big(u^{N},v^{N}\big)(j\delta)\big\|_{H^{s_{1},s_{2}}}\leq K$ for $j=0,1,\cdots,[\frac{T}{\delta}].$ Thus, we have the well-posedness on each subinterval $[j\delta,(j+1)\delta]$ of $[0,T]$ for $j=0,1,\cdots,[\frac{T}{\delta}]-1$ (with bounds independent of $N$ )
+and $\big\|\big(u^{N},v^{N}\big)(t)\big\|_{H^{s_{1},s_{2}}}\leq 2K\sim\bigg(\log\frac{T}{\varepsilon}\bigg)^{\frac{1}{2}}\text{ for }0\leq t\leq T.$ Since the flow is time-reversible, we have $\big\|\big(u^{N},v^{N}\big)(t)\big\|_{H^{s_{1},s_{2}}}\lesssim\left(\log\frac{T}{\varepsilon}\right)^{\frac{1}{2}}$ for $|t|\leq T$ .
+∎ Corollary 6.2 . Let $\frac{1}{4}<s_{1}<\frac{1}{2}<s_{2}<1$ with $2s_{1}>s_{2}>\frac{1}{2}+\frac{1}{2}\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})$ and $\varepsilon>0$ .
+There exists a set $\Omega^{\prime}_{N,\varepsilon}\subset H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ such that $\mu_{N}\big((\Omega_{N,\varepsilon}^{\prime})^{c}\big)<\varepsilon$ and for $(u^{N}_{0},v^{N}_{0})\in\Omega^{\prime}_{N,\varepsilon}$ ,
+the solution $(u^{N},v^{N})$ to the IVP ( 50 )
+satisfies, for all $t\in\mathbb{R}$ , (52) $\big\|\big(u^{N},v^{N}\big)(t)\big\|_{H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}}\lesssim\bigg(\log\frac{1+|t|}{\varepsilon}\bigg)^{\frac{1}{2}}.$ Proof. With $T_{j}=2^{j}$ and $\varepsilon_{j}=\frac{\varepsilon}{2^{j+1}}$ , construct $\Omega^{(j)}_{N,\varepsilon_{j}}$ described in Lemma 6.1 .
+Then, let $\Omega^{\prime}_{N,\varepsilon}=\bigcap_{j=1}^{\infty}\Omega^{(j)}_{N,\varepsilon_{j}}$ .
+By construction, we have ( 52 ) for $(u^{N}_{0},v^{N}_{0})\in\Omega^{\prime}_{N,\varepsilon_{j}}$ ,
+and $\mu_{N}\big((\Omega_{N,\varepsilon}^{\prime})^{c}\big)\leq\sum_{j=1}^{\infty}\mu_{N}\big((\Omega^{(j)}_{N,\varepsilon_{j}})^{c}\big)<\varepsilon.$ ∎ Proposition 6.3 . Let $\frac{1}{4}<s_{1}<\frac{1}{2}<s_{2}<1$ with $2s_{1}>s_{2}>\frac{1}{2}+\frac{1}{2}\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})$ and $\varepsilon>0$ .
+Then, there exists a set $\Omega_{\varepsilon}\subset H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}$ such that $\mu(\Omega_{\varepsilon}^{c})<\varepsilon$ and,
+for a set of data $(u_{0},v_{0})\in\Omega_{\varepsilon}$ ,
+the Majda-Biello system ( 3 )
+is globally well-posed with the bound $\|(u,v)(t)\|_{H^{s_{1},s_{2}}\times H^{s_{1},s_{2}}}\lesssim\bigg(\log\frac{1+|t|}{\varepsilon}\bigg)^{\frac{1}{2}}\text{ for all }t\in\mathbb{R}.$ Proof. First, fix $\sigma_{1},\sigma_{2}$ such that $\frac{1}{4}<s_{1}<\sigma_{1}<\frac{1}{2}<s_{2}<\sigma_{2}<1$ with $2\sigma_{1}>\sigma_{2}$ .
+Also, fix $T<\infty$ , $\varepsilon>0$ , and large $N=N(T,\varepsilon)$ (to be determined later.)
+Consider ( 50 )
+with $(U,V)=(u^{N},v^{N})$ and $(U,V)|_{t=0}=(U_{0},V_{0})=(\mathbb{P}_{N}u_{0},\mathbb{P}_{N}v_{0})$ .
+Then, with $\gamma=\min(\sigma_{1}-s_{1},\sigma_{2}-s_{2})>0$ , we have (53) $\|(u_{0},v_{0})-(U_{0},V_{0})\|_{H^{s_{1},s_{2}}}\lesssim N^{-\gamma}\|(u_{0},v_{0})\|_{H^{\sigma_{1},\sigma_{2}}}.$ As in the proof of Lemma 6.1 , construct the $\Omega_{N,\varepsilon}$ set with
+the large radius $K\sim\big(\log\frac{T}{\varepsilon^{2}}\big)^{\frac{1}{2}}$ such that $d(a_{0},b_{0})\otimes\rho_{N}(\Omega_{N,\varepsilon}^{c})<Z^{-\frac{1}{2}}{\varepsilon^{2}}$ .
+Now, let $\widetilde{\Omega}_{\varepsilon}=\{(a_{n},b_{n})_{n\geq 0}\in\Omega_{B}(\sigma_{1},\sigma_{2},K):(a_{n},b_{n})_{0\leq n\leq N}\in\Omega_{N,\varepsilon}\}$ .
+Note that $\widetilde{\Omega}_{\varepsilon}$ really depends on both $\varepsilon$ and $T$ since $N$ depends on $\varepsilon$ and $T$ .
+This dependence is explicitly discussed in the last paragraph of the proof.
+Then, with the understanding that $\widetilde{\Omega}_{\varepsilon}^{c}=\Omega_{B}\setminus\widetilde{\Omega}_{\varepsilon}$ , we have $d(a_{0},b_{0})\otimes\rho(\widetilde{\Omega}_{\varepsilon}^{c})<Z^{-\frac{1}{2}}{\varepsilon^{2}}$ .
+Then, by Lemma 3.4 and Cauchy-Schwarz inequality,
+we have $\mu(\widetilde{\Omega}_{\varepsilon}^{c})<{\varepsilon}$ . Let $(u_{0},v_{0})\in\widetilde{\Omega}_{\varepsilon}$ .
+This implies that for $(U_{0},V_{0})=(u_{0}^{N},v_{0}^{N})\in\Omega_{N,\varepsilon}$ .
+Then, as in the proof of Lemma 6.1 , we have $\|(U,V)(j\delta)\|_{H^{s_{1},s_{2}}}\leq K$ for $j=0,1,\cdots,\big[\frac{T}{\delta}\big]$ .
+Also, from the local theory, we have $\|(u,v)(t)\|_{H^{s_{1},s_{2}}}$ , $\|(U,V)(t)\|_{H^{s_{1},s_{2}}}\leq 2K$ for $|t|\leq\delta$ . Now, consider the difference of the solutions $(u,v)$ and $(U,V)$ to ( 3 )and ( 50 ).
+By writing as integral equations, we have $\begin{cases}u(t)-U(t)=S(t)\big(u_{0}-U_{0}\big)-\int_{0}^{t}S(t-t^{\prime})F(t^{\prime})dt^{\prime}\\
+v(t)-V(t)=S_{\alpha}(t)\big(v_{0}-V_{0}\big)-\int_{0}^{t}S_{\alpha}(t-t^{\prime})G(t^{\prime})dt^{\prime},\end{cases}$ where $F(t)=\partial_{x}\big(\frac{v^{2}}{2}\big)(t)-\mathbb{P}_{N}\partial_{x}\big(\frac{V^{2}}{2}\big)(t)$ and $G(t)=\partial_{x}\big(uv\big)(t)-\mathbb{P}_{N}\partial_{x}\big(UV\big)(t)$ .
+Now, let $w=(u,v)$ and $W=(U,V)$ .
+From the linear estimates, we have (54) $\big\|\eta(t)\big(S(t),S_{\alpha}(t)\big)(w_{0}-W_{0})\big\|_{Y^{s_{1},s_{2}}}\lesssim\|w_{0}-W_{0}\|_{H^{s_{1},s_{2}}}.$ Since $\mathbb{P}_{N}\Big(\big(\mathbb{P}_{\frac{N}{2}}v\big)^{2}\Big)=\big(\mathbb{P}_{\frac{N}{2}}v\big)^{2}$ , we have $\displaystyle F=\frac{1}{2}\partial_{x}\Big(v^{2}-\big(\mathbb{P}_{\frac{N}{2}}v\big)^{2}\Big)+\frac{1}{2}\mathbb{P}_{N}\partial_{x}\Big(\big(\mathbb{P}_{\frac{N}{2}}v\big)^{2}-v^{2}\Big)+\frac{1}{2}\mathbb{P}_{N}\partial_{x}(v^{2}-V^{2}).$ Then, from the local theory along with the boundedness of $\mathbb{P}_{N}$ , we have $\displaystyle\bigg\|\eta_{{}_{\delta}}$ $\displaystyle(t)\int_{0}^{t}S(t-t^{\prime})F(t^{\prime})dt^{\prime}\bigg\|_{Y^{s_{1},s_{2}}[-\delta,\delta]}\lesssim\big\|F\big\|_{Z^{s_{1},s_{2}}[-\delta,\delta]}$ $\displaystyle\lesssim\left\|\partial_{x}\big(v+\mathbb{P}_{\frac{N}{2}}v\big)\big(v-\mathbb{P}_{\frac{N}{2}}v\big)\right\|_{Z^{s_{1},s_{2}}[-\delta,\delta]}+\left\|\partial_{x}\big(v+V\big)\big(v-V\big)\right\|_{Z^{s_{1},s_{2}}[-\delta,\delta]}$ $\displaystyle\lesssim\delta^{\theta}\Big(\big\|v+\mathbb{P}_{\frac{N}{2}}v\big\|_{Y_{\alpha}^{s_{1},s_{2}}}\big\|v-\mathbb{P}_{\frac{N}{2}}v\big\|_{Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}+\|v+V\|_{Y_{\alpha}^{s_{1},s_{2}}}\|v-V\|_{Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}\Big)$ for some $\theta>0$ .
+Note that $\big\|v-\mathbb{P}_{\frac{N}{2}}v\big\|_{Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}\lesssim N^{-\gamma}K$ and $\big\|\mathbb{P}_{\frac{N}{2}}v\big\|_{Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}$ , $\|V\|_{Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}\leq 2K$ .
+Hence, we have (55) $\bigg\|\eta_{{}_{\delta}}(t)\int_{0}^{t}S(t-t^{\prime})F(t^{\prime})dt^{\prime}\bigg\|_{Y^{s_{1},s_{2}}[-\delta,\delta]}\leq C\delta^{\theta}\big(N^{-\gamma}+\|w-W\|_{Y^{s_{1},s_{2}}\times Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}\big).$ Similarly, we have $\displaystyle G$ $\displaystyle=\partial_{x}\big(u-\mathbb{P}_{\frac{N}{2}}u\big)v+\partial_{x}(\mathbb{P}_{\frac{N}{2}}u)(v-\mathbb{P}_{\frac{N}{2}}v)+\mathbb{P}_{N}\partial_{x}(\mathbb{P}_{\frac{N}{2}}u)(\mathbb{P}_{\frac{N}{2}}v-v)$ $\displaystyle+\mathbb{P}_{N}\partial_{x}(\mathbb{P}_{\frac{N}{2}}u-u)v+\mathbb{P}_{N}\partial_{x}u(v-V)+\mathbb{P}_{N}\partial_{x}(u-U)V$ and thus (56) $\bigg\|\eta_{{}_{\delta}}(t)\int_{0}^{t}S_{\alpha}(t-t^{\prime})G(t^{\prime})dt^{\prime}\bigg\|_{Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}\leq C\delta^{\theta}\big(N^{-\gamma}+\|w-W\|_{Y^{s_{1},s_{2}}\times Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}\big).$ From ( 54 ), ( 55 ), and ( 56 ),
+we have $\displaystyle\|w-W\|_{Y^{s_{1},s_{2}}\times Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}$ $\displaystyle\leq C\|w_{0}-W_{0}\|_{H^{s_{1},s_{2}}}$ $\displaystyle+C\delta^{\theta}\big(N^{-\gamma}+\|w-W\|_{Y^{s_{1},s_{2}}\times Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}\big).$ Then, by choosing $\delta$ sufficiently small, it follows from ( 53 ) that $\displaystyle\|(w-W)(\delta)\|_{H^{s_{1},s_{2}}}\lesssim\|w-W\|_{Y^{s_{1},s_{2}}\times Y_{\alpha}^{s_{1},s_{2}}[-\delta,\delta]}\lesssim\|w_{0}-W_{0}\|_{H^{s_{1},s_{2}}}\lesssim N^{-\gamma}K.$ By choosing $N$ large such that $\big[\frac{T}{\delta}\big]KN^{-\gamma}\ll 1$ ,
+we can repeat this argument $\big[\frac{T}{\delta}\big]$ times over the intervals $[j\delta,(j+1)\delta]$ for $j=0,1,\cdots,\big[\frac{T}{\delta}\big]-1$ and obtain $\|(u,v)(j\delta)\|_{H^{s_{1},s_{2}}}\leq K+1$ for $j=0,1,\cdots,\big[\frac{T}{\delta}\big]$ .
+Hence, from the local theory and the time-reversibility of the equation, the solution $(u,v)$ with the initial data $(u_{0},v_{0})\in\widetilde{\Omega}_{\varepsilon}$ exists on $[-T,T]$ and moreover we have $\|(u,v)(t)\|_{H^{s_{1},s_{2}}}\leq 2(K+1)\sim\big(\log\frac{T}{\varepsilon}\big)^{\frac{1}{2}}$ for all $|t|\leq T$ . Note that $\widetilde{\Omega}_{\varepsilon}$ constructed above depends on $N$ , $T$ , and $\varepsilon$ ,
+where $N$ , in turn, depends on $T$ and $\varepsilon$ .
+To be explicit about this dependence,
+let us denote $\widetilde{\Omega}_{\varepsilon}$ and $N$ by $\widetilde{\Omega}(T,\varepsilon)$ and $N(T,\varepsilon)$ .
+Now, fix $\varepsilon>0$ , and
+let $T_{j}=2^{j}$ and $\varepsilon_{j}=\frac{\varepsilon}{2^{j+1}}$ for $j\in\mathbb{N}$ .
+Then, construct $\widetilde{\Omega}^{(j)}_{\varepsilon}=\widetilde{\Omega}(T_{j},\varepsilon_{j})$ with $N_{j}=N(T_{j},\varepsilon_{j})$ .
+By construction, $\mu\big(({\widetilde{\Omega}^{(j)}_{\varepsilon}})^{c}\big)<\varepsilon_{j}$ .
+Note that $K_{j}\sim\big(\log\frac{T_{j}}{\varepsilon^{2}_{j}}\big)^{\frac{1}{2}}=\big(\log\frac{2^{3j+2}}{\varepsilon^{2}}\big)^{\frac{1}{2}}\sim\big(\log\frac{{T_{j}}}{\varepsilon}\big)^{\frac{1}{2}}$ .
+Thus, we can choose $N_{j}$ sufficiently large so that $\big[\frac{T_{j}}{\delta_{j}}\big]K_{j}N_{j}^{-\gamma}\lesssim T_{j}^{1+}N_{j}^{-\gamma}\ll 1$ .
+Also, for $(u_{0},v_{0})\in\widetilde{\Omega}^{(j)}_{\varepsilon}$ , we have $\|(u,v)(t)\|_{H^{s_{1},s_{2}}}\lesssim\Big(\log\frac{T_{j}\cdot 2^{j+1}}{\varepsilon}\Big)^{\frac{1}{2}}=\Big(\log\frac{2^{2j+1}}{\varepsilon}\Big)^{\frac{1}{2}}\sim\Big(\log\frac{2^{j}}{\varepsilon}\Big)^{\frac{1}{2}}=\Big(\log\frac{T_{j}}{\varepsilon}\Big)^{\frac{1}{2}}$ for $|t|\leq T_{j}$ .
+Finally, let $\Omega_{\varepsilon}=\bigcap_{j=1}^{\infty}\widetilde{\Omega}^{(j)}_{\varepsilon}$ .
+Then, $\Omega_{\varepsilon}$ has the desired property.
+∎ Remark 6.4 . This establishes the global well-posedness of the Majda-Biello system
+almost surely on the statistical ensemble (with the $L^{2}$ cutoff and the mean 0 assumption on $u_{0}$ .) As a corollary, we obtain Corollary 6.5 . Let $\frac{1}{4}<s_{1}<\sigma_{1}<\frac{1}{2}<s_{2}<\sigma_{2}<1$ with $2s_{1}>s_{2}>\frac{1}{2}+\frac{1}{2}\max(\nu_{c_{1}},\nu_{d_{1}},\nu_{d_{2}})$ and $2\sigma_{1}>\sigma_{2}$ .
+Also, let $\Omega_{\varepsilon}$ be as in Proposition 6.3 .
+Then, for $T<\infty$ , we have $\big\|(u,v)-(u^{N},v^{N})\big\|_{C([-T,T];H^{s_{1},s_{2}}\times H^{s_{1},s_{2}})}\to 0$ as $N\to\infty$ uniformly for $(u_{0},v_{0})\in\Omega_{\varepsilon}$ . Now, we are ready to prove the invariance of $\mu$ .
+Let $X=\bigcup_{M}\big\{f=f\big((a_{n})_{|n|\leq M},(b_{n})_{|n|\leq M}\big)\text{ continuous and bounded}\big\}.$ i.e. $f\in X$ is bounded and there exists $M$ such that $f$ depends continuously on a finitely many modes $\{|n|\leq M\}$ .
+Let $\overline{X}$ be the closure of $X$ .
+Also, for $|t|<\infty$ , let $S^{t}$ be the flow map for the Majda-Biello system ( 3 )
+and $S_{N}^{t}$ be the flow map for its finite dimensional approximation ( 50 ). Note that $\rho_{N}$ is obtained from $\rho$ by integrating in $(a_{n},b_{n})_{n>N}$ .
+From Sobolev inequality, $\bigg|\int\mathbb{P}_{N}\phi(\mathbb{P}_{N}\psi)^{2}-\phi\psi^{2}dx\bigg|\lesssim\|\phi^{N}-\phi\|_{H^{\frac{1}{6}}}\|\psi\|_{H^{\frac{1}{6}}}^{2}+\|\phi\|_{H^{\frac{1}{6}}}\|\psi\|_{H^{\frac{1}{6}}}\|\psi^{N}-\psi\|_{H^{\frac{1}{6}}}\to 0,\text{ a.s.}$ as $N\to\infty$ since $(\phi,\psi)\in H^{\frac{1}{6}}$ a.s.
+Also,
+we have $e^{\frac{1}{2}\int(\mathbb{P}_{N}\phi-a_{0})(\mathbb{P}_{N}\psi-b_{0})^{2}}\chi_{\Omega_{N,B}}\leq e^{c_{1}\|\phi-a_{0}\|_{H^{\frac{1}{6}}}+c_{2}\|\psi-b_{0}\|_{H^{\frac{1}{6}}}}\chi_{\Omega_{B}}\in L^{1}(d\rho)$ for any $N$ .
+Thus, by Dominated Convergence Theorem, we have $\lim_{N\to\infty}Z_{N}=Z$ .
+Then, from the boundedness of $f$ and Dominated Convergence Theorem, we see that (57) $\displaystyle I_{N}:=\int f\big(S^{t}_{N}(\mathbb{P}_{N}\phi,\mathbb{P}_{N}\psi)\big)(d\mu-d\mu_{N})$ $\displaystyle=\int\Big\{Z_{N}^{-1}e^{\frac{1}{2}\int\mathbb{P}_{N}\phi(\mathbb{P}_{N}\psi)^{2}}\chi_{\Omega_{N,B}}-Z^{-1}e^{\frac{1}{2}\int\phi\psi^{2}}\chi_{\Omega_{B}}\Big\}f\big(S^{t}_{N}(\mathbb{P}_{N}\phi,\mathbb{P}_{N}\psi)\big)d(a_{0},b_{0})\otimes d\rho$ tends to 0 as $N\to\infty$ . Theorem 6.6 . The Gibbs measure $\mu$ is invariant under the flow of the Majda-Biello system ( 3 ) in the sense that $\int f\big(S^{t}(\phi,\psi)\big)\,\mu(d\phi,d\psi)=\int f(\phi,\psi)\,\mu(d\phi,d\psi)$ for all $f\in\overline{X}$ . Proof. Fix $f\in X$ , $t>0$ , and $\varepsilon>0$ .
+Let $\widetilde{I}_{N}(A)=\big|\int_{A}f(S^{t}\varphi)-f(S_{N}^{t}\mathbb{P}_{N}\varphi)d\mu\big|$ ,
+where $\varphi=(\phi,\psi)$ .
+By Corollary 6.5 , we have $\|S^{t}\varphi-S^{t}_{N}\mathbb{P}_{N}\varphi\|_{H^{s_{1},s_{2}}}\to 0$ as $N\to\infty$ uniformly for $(\phi,\psi)\in\Omega_{\varepsilon}$ .
+Since $f$ is continuous, there exists $N_{1}$ such that $\widetilde{I}_{N}(\Omega_{\varepsilon})\leq\sup_{\varphi\in\Omega_{\varepsilon}}|f(S^{t}\varphi)-f(S_{N}^{t}\mathbb{P}_{N}\varphi)|<\varepsilon,$ for all $N\geq N_{1}$ .
+On $\Omega_{\varepsilon}^{c}$ , we have $\widetilde{I}_{N}(\Omega^{c}_{\varepsilon})\leq 2\|f\|_{L^{\infty}}\mu(\Omega^{c}_{\varepsilon})\lesssim\varepsilon.$ From ( 57 ), there exists $N_{2}$ such that $|I_{N}|<\varepsilon$ for all $N\geq N_{2}$ .
+Putting all together, we have (58) $\displaystyle\bigg|\int f$ $\displaystyle(S^{t}\varphi)d\mu-\int f(S_{N}^{t}\mathbb{P}_{N}\varphi)d\mu_{N}\bigg|\leq\widetilde{I}_{N}(\Omega_{\varepsilon})+\widetilde{I}_{N}(\Omega_{\varepsilon}^{c})+|I_{N}|\lesssim\varepsilon$ for all $N\geq\max(N_{1},N_{2})$ .
+Therefore, from ( 58 ) and the invariance of $\mu_{N}$ , we have (59) $\displaystyle\int f(S^{t}\varphi)d\mu$ $\displaystyle=\lim_{N\to\infty}\int f(S_{N}^{t}\mathbb{P}_{N}\varphi)d\mu_{N}=\lim_{N\to\infty}\int f(\mathbb{P}_{N}\varphi)d\mu_{N}=\int f(\varphi)d\mu.$ By density, ( 59 ) holds for all $f\in\overline{X}.$ ∎ 7. Appendix In this appendix, we present the proof of
+Lemma 3.5 following the notations introduced in Section 3.
+We only show the second estimate in ( 27 ).
+From Hölder inequality and Lemma 3.4 , we have $\displaystyle\mu$ $\displaystyle\big(\Omega_{B}\setminus\Omega_{B}(s_{1},s_{2},K)\big)=\int_{\{\|(\phi,\psi)\|_{H^{s_{1},s_{2}}}>K\}}\chi_{\Omega_{B}}d\mu$ $\displaystyle\lesssim B^{2}\bigg(\int_{\{\|(\phi,\psi)\|_{H^{s_{1},s_{2}}}>K\}}\chi_{\Omega_{B}}d\rho\bigg)^{\frac{1}{2}}\Big\|\chi_{\left\{\|(\phi,\psi)\|_{H^{s_{1},s_{2}}}>K\right\}}\chi_{\Omega_{B}}e^{\frac{1}{2}\int\phi\psi^{2}dx}\Big\|_{L^{2}(d(a_{0},b_{0})\otimes d\rho)}$ $\displaystyle\lesssim\rho\big(\|(\phi,\psi)\|_{H^{s_{1},s_{2}}}>K,\ \|(\phi,\psi)\|_{L^{2}}\leq B,\phi,\psi\text{ mean }0\big)^{\frac{1}{2}}.$ For notational simplicity, we assume $\phi$ and $\psi$ have mean 0 in the following.
+By the definition of the $H^{s_{1},s_{2}}$ norm, we have $\displaystyle\rho\big(\|(\phi,\psi)\|_{H^{s_{1},s_{2}}}>K,\ \|(\phi,\psi)\|_{L^{2}}\leq B\big)\leq\rho\big(\|(\phi,\psi)\|_{H^{s_{1}}}>\tfrac{1}{2}K,\ \|(\phi,\psi)\|_{L^{2}}\leq B\big)$ (60) $\displaystyle+\rho\big(\sup_{n}\langle n\rangle^{s_{2}}|\widehat{\phi}(n)|+\sup_{n}\langle n\rangle^{s_{2}}|\widehat{\psi}(n)|>\tfrac{1}{2}K,\ \|(\phi,\psi)\|_{L^{2}}\leq B\big).$ Let $d\rho_{1}=d\rho\big|_{(a_{n})_{n\geq 1}}$ and $d\rho_{2}=d\rho\big|_{(b_{n})_{n\geq 1}}$ .
+Then, we have $\displaystyle\rho\big(\|(\phi,\psi)\|_{H^{s_{1}}}>\tfrac{1}{2}K,\ \|(\phi,\psi)\|_{L^{2}}\leq B\big)\leq\ $ $\displaystyle\rho_{1}\big(\{\|\phi\|_{H^{s}}\geq\tfrac{1}{4}K,\|\phi\|_{L^{2}}\leq B\}\big)$ $\displaystyle+$ $\displaystyle\rho_{2}\big(\{\|\psi\|_{H^{s}}\geq\tfrac{1}{4}K,\|\psi\|_{L^{2}}\leq B\}\big).$ We only prove the estimate on $\rho_{1}$ .
+Fix $M_{0}$ dyadic (to be specified later.) Then, we have $\big\|\sum_{|n|\leq M_{0}}\widehat{\phi}(n)e^{inx}\big\|_{H^{s}}\leq CM_{0}^{s}\big(\sum_{|n|\leq M_{0}}|\widehat{\phi}(n)|^{2}\big)^{\frac{1}{2}}\leq CM_{0}^{s}B.$ By choosing $CM_{0}^{s}B=\frac{1}{8}K$ , we have $\big\|\sum_{|n|\leq M_{0}}\widehat{\phi}(n)e^{inx}\big\|_{H^{s}}\leq\frac{1}{8}K$ and $M_{0}\sim\big(\frac{K}{B}\big)^{\frac{1}{s}}.$ Now, let $\sigma_{j}=C2^{-\varepsilon j}$ for some small $\varepsilon>0$ ,
+where $C$ is chosen such that $\sum_{j\geq 1}\sigma_{j}=\frac{1}{8}$ .
+Also, let $M_{j}=M_{0}2^{j}$ dyadic.
+Note that $\sigma_{j}=CM_{0}^{\varepsilon}M_{j}^{-\varepsilon}$ .
+Then, we have $\rho_{1}\big(\|\phi\|_{H^{s}}>\tfrac{1}{4}K,\ \|\phi\|_{L^{2}}\leq B\big)\leq\sum_{j=1}^{\infty}\rho_{1}\big[\Big\|\sum_{|n|\sim M_{j}}\widehat{\phi}(n)e^{inx}\Big\|_{H^{s}}>\sigma_{j}K\big].$ Recall that $\widehat{\phi}(n)=\frac{f_{n}(\omega)}{n}$ ,
+where $\{f_{n}(\omega)\}_{n\geq 1}$ are i.i.d. standard complex Gaussian random variables
+and $f_{-n}=\overline{f_{n}}$ .
+Thus, if $\big\|\sum_{|n|\sim M_{j}}\widehat{\phi}(n)e^{inx}\big\|_{H^{s}}\geq\sigma_{j}K$ , then we have $\big(\sum_{n\sim M_{j}}|f_{n}(\omega)|^{2}\big)^{\frac{1}{2}}\gtrsim R_{j}:=\sigma_{j}KM_{j}^{1-s}$ .
+Then, using the polar coordinates, we have (61) $\displaystyle\mathbb{P}_{\omega}\big[\Big(\sum_{n\sim M_{j}}|f_{n}(\omega)|^{2}\Big)^{\frac{1}{2}}\gtrsim R_{j}\big]\sim\int_{B^{c}(0,R_{j})}e^{-\frac{|f|^{2}}{2}}\prod_{n\sim M_{j}}df_{n}\lesssim\int_{R_{j}}^{\infty}e^{-\frac{r^{2}}{2}}r^{2\cdot\#\{n\sim M_{j}\}-1}dr.$ Note that the implicit constant in the inequality is $\sigma(S^{2\cdot\#\{n\sim M_{j}\}-1})$ ,
+a surface measure of the $2\cdot\#\{n\sim M_{j}\}-1$ dimensional unit sphere.
+We drop it since $\sigma(S^{n})=2\pi^{\frac{n}{2}}/\Gamma(\frac{n}{2})\lesssim 1$ .
+By change of variables $t=M_{j}^{-\frac{1}{2}}r$ , we have $r^{2\cdot\#\{n\sim M_{j}\}-2}\lesssim r^{4M_{j}}\sim M_{j}^{2M_{j}}t^{4M_{j}}.$ Since $t\geq M_{j}^{-\frac{1}{2}}R_{j}=CKM_{0}^{\varepsilon}M_{j}^{\frac{1}{2}-s-\varepsilon}\gtrsim KM_{0}^{\varepsilon}M_{j}^{0+}$ as long as $s<\frac{1}{2}$ (with $\varepsilon>0$ sufficiently small), we have (62) $M_{j}^{2M_{j}}=e^{2M_{j}\ln M_{j}}<e^{\frac{1}{8}M_{j}t^{2}},\ \text{ and }\ t^{4M_{j}}=(t^{4})^{M}_{j}<(e^{\frac{1}{8}t^{2}})^{M_{j}}=e^{\frac{1}{8}M_{j}t^{2}}$ for $K$ sufficiently large, independent of $M_{j}>M_{0}$ .
+Thus, we have $r^{2\cdot\#\{n\sim M_{j}\}-2}<e^{\frac{1}{4}M_{j}t^{2}}=e^{\frac{1}{4}r^{2}}$ for $r>R$ .
+From this and ( 61 ), we have $\mathbb{P}_{\omega}\big[\Big(\sum_{n\sim M_{j}}|f_{n}(\omega)|^{2}\Big)^{\frac{1}{2}}\gtrsim R_{j}\big]\leq C\int_{R_{j}}^{\infty}e^{-\frac{1}{4}r^{2}}rdr=Ce^{-\frac{1}{4}R_{j}^{2}}\leq e^{-cR_{j}^{2}}=e^{-c\sigma_{j}^{2}K^{2}M_{j}^{2-2s}}.$ Then, by summing up over $j$ ,
+we obtain $\rho_{1}\big(\|\phi\|_{H^{s}}>\tfrac{1}{4}K,\ \|\phi\|_{L^{2}}\leq B\big)\leq\sum_{j=1}^{\infty}e^{-c\sigma_{j}^{2}K^{2}M_{j}^{2-2s}}\leq e^{-c^{\prime}K^{2}M_{0}^{2-2s}}\leq e^{-c^{\prime\prime}K^{2}}.$ As for the second term in ( 60 ), we have $\displaystyle\rho\big(\sup_{n}\langle n\rangle^{s_{2}}$ $\displaystyle|\widehat{\phi}(n)|+\sup_{n}\langle n\rangle^{s_{2}}|\widehat{\psi}(n)|>\tfrac{1}{2}K,\ \|(\phi,\psi)\|_{L^{2}}\leq B\big)$ $\displaystyle\leq\rho_{1}\big(\sup_{n}\langle n\rangle^{s_{2}}|\widehat{\phi}(n)|>\tfrac{1}{4}K\big)+\rho_{2}\big(\sup_{n}\langle n\rangle^{s_{2}}|\widehat{\psi}(n)|>\tfrac{1}{4}K\big).$ First, recall the following integrability result due to Fernique [ 8 ] for an abstract Wiener space $(i,H,B)$ . Proposition 7.1 (Theorem 3.1 in [ 14 ] ) . Let $(i,H,B)$ be an abstract Wiener space.
+Then, there exists $c>0$ such that $\int_{B}e^{c\|x\|_{B}^{2}}\mu(dx)<\infty$ .
+Hence, there exists $c^{\prime}>0$ such that $\rho(\|x\|_{B}>K)\leq e^{-c^{\prime}K^{2}}$ . Now, define a Banach space $B^{s_{2}}$ via the norm $\|\cdot\|_{B^{s_{2}}}=\sup_{n}\langle n\rangle^{s_{2}}|\widehat{\phi}(n)|$ .
+Then, ( 27 ) follows once we show that $(i,H^{1}_{0},B^{s_{2}})$ is an abstract Wiener space. First, recall that $\langle n\rangle^{s_{2}}|\widehat{\phi}(n)|\sim\langle n\rangle^{s_{2}-1}|f_{n}(\omega)|$ .
+Let $X_{n}(\omega)=|f_{n}(\omega)|^{\frac{1}{1-s_{2}}}$ .
+Then, we have $\mathbb{E}[X_{n}]<\infty$ ,
+which immediately implies that $\langle n\rangle^{-1}X_{n}\to 0$ a.s.
+Then, by Egoroff’s Theorem, given $\varepsilon>0$ there exists a set $E\subset\Omega$ with $\rho(E^{c})<\varepsilon$ such that $\langle n\rangle^{s_{2}}|\widehat{\phi}(n)|\to 0$ uniformly on $E$ .
+Then, choose $N_{0}$ sufficiently large such that $\langle n\rangle^{s_{2}}|\widehat{\phi}(n)|<\varepsilon$ on $E$ for all $|n|\geq N_{0}$ .
+This shows that $\rho(\|\mathbb{P}_{\geq N_{0}}\phi\|_{B^{s_{2}}}\geq\varepsilon)<\varepsilon$ as desired. References [1] V. Arnold, Geometrical Methods in the Theory of Ordinary Differential Equations ,
+2nd ed., Springer-Verlag, New York, 1988. [2] J. Bourgain, Fourier transform restriction phenomena for certain lattice subsets and applications to
+nonlinear evolution equations II , GAFA., 3 (1993), 209–262. [3] J. Bourgain, Refinements of Strichartz’ inequality and applications to 2D-NLS with critical nonlinearity, Internat. Math. Res. Notice, 5 (1998), 253–283. [4] J. Bourgain, Periodic nonlinear Schrödinger equation and invariant measures, Comm. Math. Phys. 166 (1994), 1–26. [5] J. Bourgain, On the Cauchy and invariant measure problem for the periodic Zakharov system, Duke Math. J. 76 (1994), 175–202. [6] N. Burq, N. Tzvetkov, Invariant measure for a three dimensional nonlinear wave equation, Int. Math. Res. Not. (2007), no. 22, Art. ID rnm108, 26pp. [7] J. Colliander, M. Keel, G. Staffilani, H. Takaoka, T. Tao, Sharp Global Well-Posedness for KdV and Modified KdV
+on $\mathbb{R}$ and $\mathbb{T}$ , J. Amer. Math. Soc. 16 (2003), no. 3, 705–749. [8] M.X. Fernique, Intégrabilité des Vecteurs Gaussiens, Academie des Sciences, Paris, Comptes Rendus, 270, Séries A (1970), 1698–1699. [9] J.A. Gear, R. Grimshaw, Weak and Strong interactions between internal solitary waves, Stud. Appl. Math. 70 (1984), no. 3, 235–258. [10] J. Ginibre, Y. Tsutsumi, G. Velo, On the Cauchy Problem for the Zakharov System, J. Funct. Anal., 151 (1997), 384–436. [11] L. Gross, Abstract Wiener spaces, Proc. 5th Berkeley Sym. Math. Stat. Prob. 2 (1965), 31–42. [12] R. Hirota, J. Satsuma, Soliton solutions of a coupled Korteweg-de Vries equation, Partial Diff. Eq. 2 (1981), 408–409. [13] C. Kenig, G. Ponce, and L. Vega, A bilinear estimate with applications to the KdV equation, J. Amer. Math. Soc. 9 (1996), no. 2 573–603. [14] H. Kuo, Gaussian Measures in Banach Spaces, Lec. Notes in Math. 463, Springer-Verlag, New York, 1975. [15] J. Lebowitz, H. Rose, E. Speer, Statistical Mechanics of the Nonlinear Schrödinger Equation, J. Stat. Phys. 50 (1988), no.3, 657–687. [16] A. Majda, J. Biello, The nonlinear interaction of barotropic and equatorial baroclinic Rossby waves, J. Atmospheric Sci. 60(2003), no. 15, 1809 –1821. [17] C. (T.) Oh, Well-posedness theory of a one parameter family of coupled KdV-type systems
+and their invariant measures, Ph.D. Thesis, University of Massachusetts Amherst (2007). [18] T. Oh, Diophantine Conditions in Well-Posedness Theory of Coupled KdV-Type Systems: Local Theory, to appear in Internat. Math. Res. Not. [19] T. Oh, Diophantine conditions in global well-posedness
+for coupled KdV-type systems, Electron. J. Diff. Eqns.,
+Vol. 2009(2009), No. 52, pp. 1-48. [20] L. Rey-Bellet, L. Thomas, Low regularity solutions to a gently stochastic nonlinear wave equation in nonequilibrium statistical mechanics, Stoch. Proc. and their Appl. 115 (2005), 1041–1059. [21] N. Tzvetkov, Invariant measures for the nonlinear Schrödinger equation on the disc, Dyn. Partial Differ. Equ. 3 (2006), no. 2, 111–160. [22] N. Tzvetkov, Invariant measures for the defocusing NLS, to appear in Annales de l’Institut Fourier. [23] P. Zhidkov, Korteweg-de Vries and Nonlinear Schrödinger Equations: Qualitative Theory, Lec. Notes in Math. 1756, Springer-Verlag, 2001. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

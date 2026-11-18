@@ -1,0 +1,51 @@
+{
+  "status": "SEED525_CANDIDATES_PENDING_MULTI_SEED",
+  "cohorts": [
+    {
+      "scale": 212,
+      "split": "811",
+      "lr": 0.0001,
+      "l2_matrix": 0.001,
+      "cosine_epochs": 20,
+      "job": "212-811-eqgpt-t20-lr0.0001-l20.001-seed525"
+    },
+    {
+      "scale": 212,
+      "split": "622",
+      "lr": 5e-05,
+      "l2_matrix": 0.001,
+      "cosine_epochs": 20,
+      "job": "212-622-eqgpt-t20-lr5e-05-l20.001-seed525"
+    },
+    {
+      "scale": 636,
+      "split": "811",
+      "lr": 5e-05,
+      "l2_matrix": 0.0,
+      "cosine_epochs": 20,
+      "job": "636-811-eqgpt-t20-lr5e-05-l20-seed525"
+    },
+    {
+      "scale": 636,
+      "split": "622",
+      "lr": 0.0001,
+      "l2_matrix": 0.001,
+      "cosine_epochs": 30,
+      "job": "636-622-eqgpt-t30-lr0.0001-l20.001-seed525"
+    }
+  ],
+  "common": {
+    "minimum_completed_epochs": 30,
+    "patience": 15,
+    "min_delta": 0.0001,
+    "maximum_epochs": 80,
+    "eta_min": 1e-06
+  },
+  "additional_proposal": {
+    "first_choice_replications": 8,
+    "alternate_T25_636_622": 2,
+    "recovery_T30_212_622_minimum45": 1,
+    "total": 11
+  },
+  "new_experiments_launched": false
+}

@@ -1,0 +1,680 @@
+Cahn-Hilliard Equations and Phase Transition Dynamics for Binary Systems Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Introduction 2 Dynamic Phase Transition Models for Binary Systems 3 Phase Transition in General Domains 4 Phase Transition in Rectangular Domains 5 Phase Transitions Under Periodic Boundary Conditions 6 Cahn-Hilliard Equations Coupled with Entropy 7 Physical remarks 7.1 Equation of critical parameters 7.2 Physical explanations of phase transition theorems 7.3 Symmetry and periodic structure 7.4 Critical exponents A Dynamic Transition Theory for Nonlinear Systems A.1 New classification scheme A.2 Transitions from simple eigenvalues A.3 Singular Separation A.4 Transition and Singular Separation of Perturbed Systems B Ginzburg-Landau Models References License: arXiv.org perpetual non-exclusive license arXiv:0806.1286v1 [math-ph] 07 Jun 2008 Cahn-Hilliard Equations and Phase Transition Dynamics for Binary Systems Thanks: The work was supported in part by the
+Office of Naval Research and by the National Science Foundation. Tian Ma TM Department of Mathematics, Sichuan University,
+Chengdu, P. R. China and Shouhong Wang SW Department of Mathematics,
+Indiana University, Bloomington, IN 47405 Email address: showang@indiana.edu Abstract. The process of phase separation of binary systems is described by the Cahn-Hilliard equation. The main objective of this article is to give a classification on the dynamic phase transitions for binary systems using either the classical Cahn-Hilliard equation or the Cahn-Hilliard equation coupled with entropy, leading to some interesting physical predictions.
+The analysis is based on dynamic transition theory for nonlinear systems and new classification scheme for dynamic transitions, developed recently by the authors. Contents 1 Introduction 2 Dynamic Phase Transition Models for Binary Systems 3 Phase Transition in General Domains 4 Phase Transition in Rectangular Domains 5 Phase Transitions Under Periodic Boundary Conditions 6 Cahn-Hilliard Equations Coupled with Entropy 7 Physical remarks 7.1 Equation of critical parameters 7.2 Physical explanations of phase transition theorems 7.3 Symmetry and periodic structure 7.4 Critical exponents A Dynamic Transition Theory for Nonlinear Systems A.1 New classification scheme A.2 Transitions from simple eigenvalues A.3 Singular Separation A.4 Transition and Singular Separation of Perturbed Systems B Ginzburg-Landau Models References 1. Introduction Cahn-Hilliard equation describes the process of phase separation, by which the two components of a binary fluid spontaneously separate and form domains pure in each component. The main objective of this article is to provide a theoretical approach to dynamic phase transitions for binary systems. Classically, phase transitions are classified by the Ehrenfest classification scheme, based on the lowest derivative of the free energy that is discontinuous at the transition.
+In general, it is a difficult task to classify phase transitions of higher order, which appears in many equilibrium phase transition systems, such as the PVT system, the ferromagnetic system, superfluids as well as the binary systems studied in this article. For this purpose, a new dynamic transition theory is developed recently by the authors. This new theory provides an efficient tool to analyze phase transitions of higher order. With this theory in our disposal, a new dynamic classification scheme is obtained, and classifies phase transitions into three categories: Type-I, Type-II and Type-III, corresponding mathematically to continuous, jump, and mixed transitions, respectively; see the Appendix as well as two recent books by the authors [ 3 , 4 ] for details. There have been extensive studies in the past on the dynamics of
+the Cahn-Hilliard equations. However, very little is known about the higher order transitions encountered for this problem, and this article gives a complete classification of the dynamics transitions for binary systems. The results obtained lead in particular to various physical predictions. First, the order of phase transitions is precisely determined by the sign of a nondimensional
+parameter $K$ such that if $K>0$ , the transition is first-order with latent heat and if $K<0$ , the transition is second-order. Second, a theoretical transition diagram is derived, leading in particular to a prediction that there is only second-order transition for molar fraction near $1/2$ . This is different from the prediction made by the classical transition diagram. Third, a critical length scale is derived such that no phase separation occurs at any temperature if the length of the container is smaller than the critical length scale. These physical predictions will be addressed in another article. This article is organized as follows. In Section 2, both the classical Cahn-Hilliard equation and the Cahn-Hilliard equation coupled with entropy are introduced in a unified fashion using a general principle for equilibrium phase transitions outlined in Appendix B. Sections 3-6 analyze dynamic transitions for
+the Cahn-Hilliard equation in general domain, rectangular domain, with periodic boundary conditions, and for the Cahn-Hilliard equation coupled with entropy.
+Physical conclusions are given in Section 7, and the dynamic transition theory is recalled in Appendix A. 2. Dynamic Phase Transition Models for Binary Systems Materials compounded by two components $A$ and $B$ , such as binary
+alloys, binary solutions and polymers, are called binary
+systems. Sufficient cooling of a binary system may lead to phase
+separations, i.e., at the critical temperature, the concentrations
+of both components $A$ and $B$ with homogeneous distribution undergo changes,
+leading to heterogeneous distributions in space. Phase separation
+of binary systems observed will be in one of two main ways. The first is by nucleation in which sufficiently large nuclei of the
+second phase appear randomly and grow, and this corresponds to Type-II phase transitions. The second is by spinodal
+decomposition in which the systems appear to nuclear at once, and
+periodic or semi-periodic structure is seen, and this corresponds to Type-I phase transitions. Since binary systems are conserved, the equations describing the
+Helmholtz process and the Gibbs process are the same. Hence,
+without distinction we use the term ”free energy” to discuss this
+problem. Let $u_{A}$ and $u_{B}$ be the concentrations of components $A$ and $B$ respectively, then $u_{B}=1-u_{A}$ . In a homogeneous state, $u_{B}=\bar{u}_{B}$ is a constant, and the
+entropy density $S_{0}=\bar{S}_{0}$ is also a constant. We take $u,S$ the concentration and entropy density deviations: $u=u_{B}-\bar{u}_{B},\ \ \ \ S=S_{0}-\bar{S}_{0}$ By ( B.1 ) and ( B.2 ), the free energy is given
+by (2.1) $F(u,S)=F_{0}+\int_{\Omega}\Big[\frac{\mu_{1}}{2}|\nabla u|^{2}+\frac{\mu_{2}}{2}|\nabla S|^{2}+\frac{\beta_{1}}{2}|S|^{2}+\beta_{0}Su+\beta_{2}Su^{2}+\sum^{2p}_{k=1}\alpha_{k}u^{k}\Big]dx.$ Since entropy is increasing as $u\rightarrow 0$ , and by $\frac{\delta}{\delta S}F(u,S)=-\mu_{2}\Delta S+\beta_{1}S+\beta_{0}u+\beta_{2}u^{2}=0,$ we have (2.2) $\beta_{0}=0,\ \ \ \ \beta_{1}>0,\ \ \ \ \beta_{2}>0,$ which implies that $S$ is a decreasing function of $|u|$ . According ( B.11 ) and ( B.5 ), we derive from ( 2.1 ) and
+( 2.2 ) the following equations governing a binary system: (2.3) $\left.\begin{aligned} &\frac{\partial S}{\partial t}=k_{1}\Delta S-a_{1}S-a_{2}u^{2},\\
+&\frac{\partial u}{\partial t}=-k_{2}\Delta^{2}u+b_{0}\Delta(Su)+\Delta f(u),\\
+&\int_{\Omega}u(x,t)dx=0,\end{aligned}\right.$ where $k_{1},k_{2},b_{0},a_{1},a_{2}$ are positive constants, and (2.4) $f(u)=\sum^{2p-1}_{k=1}b_{k}u^{k},\ \ \ \ b_{2p-1}>0\ \ \ \ (p\geq 2).$ Physically sound boundary condition for ( 2.3 ) is either the Neumann boundary condition: (2.5) $\frac{\partial u}{\partial n}=\frac{\partial\Delta u}{\partial n}=0,\ \ \ \ \frac{\partial S}{\partial n}=0\ \ \ \ \text{on}\ \partial\Omega,$ with $\Omega\subset\mathbb{R}^{n}$ $(1\leq n\leq 3)$ being a bounded domain, or
+the periodic boundary condition: (2.6) $u(x+KL)=u(x),\ \ \ \ S(x+KL)=S(x)$ with $\Omega=[0,L]^{n},K=(k_{1},\cdots,k_{n}),1\leq n\leq 3.$ For simplicity, in this section we always assume that $p=2$ . Thus,
+function ( 2.4 ) is rewritten as (2.7) $f(u)=b_{1}u+b_{2}u^{2}+b_{3}u^{3},\ \ \ \ b_{3}>0.$ Based on Theorem A.1 , we have to assume that there exists a
+temperature $T_{1}>0$ such that $b_{1}=b_{1}(T)$ satisfies (2.8) $b_{1}(T)\left\{\begin{aligned} &>0&&\quad\text{ if }T>T_{1},\\
+&=0&&\quad\text{ if }T=T_{1},\\
+&<0&&\quad\text{ if }T<T_{1}.\end{aligned}\right.$ If we ignore the coupled action of entropy in ( 2.1 ), then
+the free energy $F$ is in the following form $F(u)=F_{0}+\int_{\Omega}\left[\frac{\mu_{1}}{2}|\nabla u|^{2}+\frac{\alpha_{1}}{2}u^{2}+\frac{\alpha_{2}}{3}u^{3}+\frac{\alpha_{3}}{4}u^{4}\right]dx,$ and the equations ( 2.3 ) are the following classical Cahn-Hilliard
+equation: (2.9) $\left.\begin{aligned} &\frac{\partial u}{\partial t}=-k\Delta^{2}u+\Delta f(u),\\
+&\int_{\Omega}u(x,t)dx=0,\end{aligned}\right.$ where $f(u)$ is as in ( 2.7 ). 3. Phase Transition in General Domains In this section, we shall discuss
+the Cahn-Hilliard equation from the mathematical point of view. We start with the nondimensional form of equation. Let $\displaystyle x=lx^{\prime},$ $\displaystyle t=\frac{l^{4}}{k}t^{\prime},$ $\displaystyle u=u_{0}u^{\prime},$ $\displaystyle\lambda=-\frac{l^{2}b_{1}}{k},$ $\displaystyle\gamma_{2}=\frac{l^{2}b_{2}u_{0}}{k},$ $\displaystyle\gamma_{3}=\frac{l^{2}b_{3}u^{2}_{0}}{k},$ where $l$ is a given length, $u_{0}=\bar{u}_{B}$ is the constant
+concentration of $B$ , and $\gamma_{3}>0$ . Then the equation ( 2.9 ) can be
+rewritten as follows (omitting the primes) (3.1) $\left.\begin{aligned} &\frac{\partial u}{\partial t}=-\Delta^{2}u-\lambda\Delta u+\Delta(\gamma_{2}u^{2}+\gamma_{3}u^{3}),\\
+&\int_{\Omega}u(x,t)dx=0,\\
+&u(x,0)=\varphi.\end{aligned}\right.$ Let $H=\left\{u\in L^{2}(\Omega)\ |\ \int_{\Omega}udx=0\right\}.$ For the Neumann boundary condition ( 2.5 ) we define $H_{1}=\left\{u\in H^{4}(\Omega)\cap H\ \Big|\ \frac{\partial u}{\partial n}=\frac{\partial\Delta u}{\partial n}=0\ \text{ on }\partial\Omega\right\},$ and for the periodic boundary
+condition ( 2.6 ) we define $H_{1}=\left\{u\in H^{4}(\Omega)\cap H\ \Big|\ u(x+KL)=u(x)\ \ \forall K\in\mathbb{Z}^{n}\right\}.$ Then we define the operators $L_{\lambda}=-A+B_{\lambda}$ and $G:H_{1}\rightarrow H$ by (3.2) $\left.\begin{aligned} &Au=\Delta^{2}u,\\
+&B_{\lambda}u=-\lambda\Delta u,\\
+&G(u)=\gamma_{2}\Delta u^{2}+\gamma_{3}\Delta u^{3}.\end{aligned}\right.$ Thus, the Cahn-Hilliard equation ( 3.1 ) is equivalent to the
+following operator equation (3.3) $\left.\begin{aligned} &\frac{du}{dt}=L_{\lambda}u+G(u),\\
+&u(0)=\varphi\end{aligned}\right.$ It is known that the operators defined by ( 3.2 ) satisfy the
+conditions ( A.2 ) and ( A.3 ). We first consider the case where $\Omega\subset\mathbb{R}^{n}(1\leq n\leq 3)$ is a general bounded and smooth domain. Let $\rho_{k}$ and $e_{k}$ be the
+eigenvalues and eigenfunctions of the following eigenvalue problem: (3.4) $\left.\begin{aligned} &-\Delta e_{k}=\rho_{k}e_{k},\\
+&\frac{\partial e_{k}}{\partial n}|_{\partial\Omega}=0,\\
+&\int_{\Omega}e_{k}dx=0.\end{aligned}\right.$ The eigenvalues of ( 3.4 ) satisfy $0<\rho_{1}\leq\rho_{2}\leq\cdots\leq\rho_{k}\leq\cdots,$ and $\lim_{k\to\infty}\rho_{k}=\infty$ . The eigenfunctions $\{e_{k}\}$ of ( 3.4 )
+constitute an orthonormal basis of $H$ . Furthermore, the
+eigenfunctions of ( 3.4 ) satisfy $\frac{\partial\Delta e_{k}}{\partial n}|_{\partial\Omega}=0,\ \ \ \ k=1,2,\cdots.$ Hence, $\{e_{k}\}$ is also an orthogonal basis of $H_{1}$ under the following equivalent norm $\|u\|_{1}=\left[\int_{\Omega}|\Delta^{2}u|^{2}dx\right]^{{1}/{2}}.$ We are now in position to give a phase transition theorem
+for the problem ( 3.1 ) with the following
+Neumann boundary condition: (3.5) $\frac{\partial u}{\partial n}=0,\ \ \ \ \frac{\partial\Delta u}{\partial n}=0\qquad\text{ on }\partial\Omega.$ Theorem 3.1 . Assume that $\gamma_{2}=0$ and $\gamma_{3}>0$ in
+( 3.1 ), then the following assertions hold true: (1) If the first eigenvalue $\rho_{1}$ of ( 3.4 ) has
+multiplicity $m\geq 1$ , then the problem ( 3.1 ) with
+( 3.5 ) bifurcates from $(u,\lambda)=(0,\rho_{1})$ on $\lambda>\rho_{1}$ to an attractor $\Sigma_{\lambda}$ , homeomorphic to an $(m-1)$ -dimensional sphere $S^{m-1}$ , and $\Sigma_{\lambda}$ attracts $H\setminus\Gamma$ , where $\Gamma$ is the stable manifold of $u=0$ with codimension $m$ . (2) $\Sigma_{\lambda}$ contains at
+least $2m$ singular points. If $m=1,\Sigma_{\lambda}$ has exactly
+two steady states $\pm u_{\lambda}$ , and if $m=2,\Sigma_{\lambda}=S^{1}$ has at most eight singular points. (3) Each singular point $u_{\lambda}$ in $\Sigma_{\lambda}$ can be expressed as $u_{\lambda}=\left(\lambda-\rho_{1}\right)^{{1}/{2}}w+o(|\lambda-\rho_{1}|^{{1}/{2}}),$ where $w$ is an eigenfunction corresponding to the first eigenvalue of ( 3.4 ). Proof. We proceed in several steps as follows. Step 1. It is clear that the eigenfunction $\{e_{k}\}$ of
+( 3.4 ) are also eigenvectors of the linear operator $L_{\lambda}=-A+B_{\lambda}$ defined by ( 3.2 ) and the
+eigenvalues of $L_{\lambda}$ are given by (3.6) $\beta_{k}(\lambda)=\rho_{k}(\lambda-\rho_{k}),\ \ \ \ k=1,2,\cdots.$ It is easy to verify the conditions ( A.4 ) and ( A.5 )
+in our case at $\lambda_{0}=\rho_{1}$ . We shall prove this theorem
+using the attractor bifurcation theory introduced in [ 3 ] . We need to verify that $u=0$ is a global asymptotically stable
+singular point of ( 3.3 ) at $\lambda=\rho_{1}$ . By $\gamma_{2}=0$ , from the energy integration of ( 3.1 ) we can
+obtain (3.7) $\frac{1}{2}\frac{d}{dt}\int_{\Omega}u^{2}dx=\int_{\Omega}\left[-|\Delta u|^{2}+\rho_{1}|\nabla u|^{2}-3\gamma_{3}u^{2}|\nabla u|^{2}\right]dx$ $\leq-C\int_{\Omega}|\Delta v|^{2}dx-3\gamma_{3}\int_{\Omega}u^{2}|\nabla u|^{2}dx,$ where $C>0$ is a
+constant, $u=v+w$ , and $\int_{\Omega}vwdx=0$ , and $w$ is a first engenfunction. It follows from
+( 3.7 ) that $u=0$ is global asymptotically stable.
+Hence, for Assertion (1), we only have to prove that $\Sigma_{\lambda}$ is homeomorphic to $S^{m-1}$ , as the rest of this assertion follows directly from the attractor bifurcation theory introduced in [ 3 ] . Step 2. Now we prove that the bifurcated attractor $\Sigma_{\lambda}$ from $(0,\rho_{1})$ contains at least $2m$ singular points. Let $g(u)=-\Delta u-\lambda u+\gamma_{3}u^{3}$ . Then the stationary
+equation of ( 3.1 ) is given by $\displaystyle\Delta g(u)=0,$ $\displaystyle\int_{\Omega}udx=0,$ which is equivalent, by the maximum principle, to (3.8) $\left.\begin{aligned} &-\Delta u-\lambda u+\gamma_{3}u^{3}=\text{constant},\\
+&\int_{\Omega}udx=0,\\
+&\frac{\partial u}{\partial n}|_{\partial\Omega}=0.\end{aligned}\right.$ By the Lagrange multiplier theorem, ( 3.8 ) is the Euler
+equation of the following functional with zero average constraint: (3.9) $\displaystyle F(u)=\int_{\Omega}\left[\frac{1}{2}|\nabla u|^{2}-\frac{\lambda}{2}u^{2}+\frac{\gamma_{3}}{4}u^{4}\right]dx,$ $\displaystyle u\in\left\{u\in H^{1}(\Omega)\cap H\ \Big|\ \ \frac{\partial u}{\partial n}|_{\partial\Omega}=0\quad\int_{\Omega}udx=0\right\}.$ Since $F$ is an even functional, by the classical Krasnoselskii bifurcation theorem for even functionals,
+( 3.9 ) bifurcates from $\lambda>\rho_{1}$ at least to $2m$ mini-maximum points, i.e.,
+equation ( 3.8 ) has at least $2m$ bifurcated solutions on $\lambda>\rho_{1}$ . Hence, the attractor $\Sigma_{\lambda}$ contains at least $2m$ singular points. Step 3. To complete the proof, we reduce the equation ( 3.3 ) to the
+center manifold near $\lambda=\rho_{1}$ .
+By the approximation formula given in [ 3 ] ,
+the reduced equation of ( 3.3 ) is given by: (3.10) $\frac{dx_{i}}{dt}=\beta_{1}(\lambda)x_{i}-\gamma_{3}\rho_{1}\int_{\Omega}v^{3}e_{1i}dx+o(|x|^{3})\qquad\text{ for }1\leq i\leq m,$ where $\beta_{1}(\lambda)=\rho_{1}(\lambda-\rho_{1})$ , $v=\sum^{m}_{i=1}x_{i}e_{1i}$ ,
+and $\{e_{11},\cdots,e_{1m}\}$ are the first eigenfunctions
+of ( 3.4 ). Equations ( 3.10 ) can be rewritten as (3.11) $\frac{dx_{i}}{dt}=\beta_{1}(\lambda)x_{i}-\gamma_{3}\rho_{1}\int_{\Omega}\left(\sum^{m}_{j=1}x_{j}e_{1j}\right)^{3}e_{1i}dx+o(|x|^{3}).$ Let $g(x)=\left(\int_{\Omega}v^{3}e_{11}dx,\cdots,\int_{\Omega}v^{3}e_{1m}dx\right),\qquad v(x)=\sum^{m}_{j=1}x_{j}e_{1j}.$ Then for any $x\in\mathbb{R}^{m}$ , (3.12) $<g(x),x>=\sum^{m}_{i=1}x_{i}\int_{\Omega}v^{3}e_{1i}dx=\int_{\Omega}v^{4}dx\geq C|x|^{4},$ for some constant $C>0$ . Thus by the attractor bifurcation theorem [ 3 ] ,
+it follows from ( 3.11 ) and ( 3.12 )
+that the attractor $\Sigma_{\lambda}$ is homeomorphic to $S^{m-1}$ . Hence, Assertion (1) is proved. The other conclusions
+in Assertions (2) and (3) can be derived from ( 3.11 ) and
+( 3.12 ). The proof is complete.
+∎∎ Physically, the coefficients $\gamma_{2}$ and $\gamma_{3}$ depend on $u_{0}=\bar{u}_{B}$ , the temperature $T$ , and the pressure $p$ : $\gamma_{k}=\gamma_{k}(u_{0},T,p),\qquad k=2,3.$ The set of points satisfying $\gamma_{2}(u_{0},T,p)=0$ has measure zero in $(u_{0},T,p)\in\mathbb{R}^{3}$ .
+Hence, it is more interesting to consider the case where $\gamma_{2}\neq 0$ . For this purpose, let the multiplicity of the first eigenvalue $\rho_{1}$ of
+( 3.4 ) be $m\geq 1$ , and $\{e_{1},\cdots,e_{m}\}$ be the first
+eigenfunctions. We introduce the following quadratic equations (3.13) $\left.\begin{aligned} &\sum^{m}_{i,j=1}a^{k}_{ij}x_{i}x_{j}=0\quad&&\text{ for }1\leq k\leq m,\\
+&a^{k}_{ij}=\int_{\Omega}e_{i}e_{j}e_{k}dx.\end{aligned}\right.$ Theorem 3.2 . Let $\gamma_{2}\neq 0$ , $\gamma_{3}>0$ , and $x=0$ be an isolated singular point of ( 3.13 ). Then the
+phase transition of ( 3.1 ) and ( 3.5 ) is either
+Type-II or Type-III. Furthermore, the problem ( 3.1 ) with
+( 3.5 ) bifurcates to at least one singular point on each side
+of $\lambda=\rho_{1}$ , and has a saddle-node bifurcation on $\lambda<\rho_{1}$ . In particular, if $m=1$ , then the following
+assertions hold true: (1) The phase transition is Type-III, and a neighborhood $U\subset H$ of $u=0$ can be decomposed into two sectorial regions $\bar{U}=\bar{D}_{1}(\pi)+\bar{D}_{2}(\pi)$ such that the phase
+transition in $D_{1}(\pi)$ is the first order, and in $D_{2}(\pi)$ is the $n$ -th order with $n\geq 3$ . (2) The bifurcated
+singular point $u_{\lambda}$ on $\lambda>\rho_{1}$ attracts $D_{2}(\pi)$ , which can be expressed as (3.14) $u_{\lambda}=(\lambda-\rho_{1})e_{1}/\gamma_{2}a+o(|\lambda-\rho_{1}|),$ where, by assumption, $a=\int_{\Omega}e^{3}_{1}dx\neq 0$ . (3) When $|\gamma_{2}a|=\varepsilon$ is small, the
+assertions in the transition perturbation theorems (Theorems A.8 and A.9 ) hold true. Remark 3.1 . We shall see later that when $\Omega$ is a
+rectangular domain, i.e., $\Omega=\Pi^{n}_{k=1}(0,L_{k})\subset\mathbb{R}^{n}\qquad(1\leq n\leq 3),$ then $a=\int_{\Omega}e_{1}^{3}dx=0$ . However, for almost all non-rectangular
+domains $\Omega$ , the first eigenvalues are
+simple and $a\neq 0$ . Hence, the Type-III phase transitions for
+general domains are generic.∎ Proof of Theorem 3.2 . Assertions (1)-(3) can be directly
+proved using Theorems A.5 , A.8 , and A.9 .
+By assumption, $u=0$ is a
+second order non-degenerate singular point of ( 3.3 ) at $\lambda=\rho_{1}$ , which implies that $u=0$ is not locally
+asymptotically stable. Hence, it follows from Theorems A.3 and
+the steady state bifurcation theorem for even-order
+nondegenerate singular points [ 3 ] that the phase transition of ( 3.1 ) with ( 3.5 )
+is either Type-II or Type-III, and there is at least one singular
+point bifurcated on each side of $\lambda=\rho_{1}$ . Finally, we shall apply Theorem A.6 to prove that there exists a
+saddle-node bifurcation on $\lambda<\rho_{1}$ . It is known that $\text{ind}(L_{\lambda}+G,0)=\left\{\begin{aligned} &\text{even}&&\text{ if }\lambda=\rho_{1},\\
+&1&&\text{ if }\lambda<\rho_{1}.\end{aligned}\right.$ Moreover, since $L_{\lambda}+G$ defined by ( 3.2 )
+is a gradient-type operator, we can
+derive that $\text{ind}(L_{\rho_{1}}+G,0)\leq 0.$ Hence there is a bifurcated branch $\Sigma_{\lambda}$ on $\lambda<\rho_{1}$ such that $\text{ind}(L_{\lambda}+G,u_{\lambda})=-1\qquad\forall u_{\lambda}\in\Sigma_{\lambda},\ \ \ \ \lambda<\rho_{1}.$ It is
+clear that the eigenvalues ( 3.6 ) of $L_{\lambda}$ satisfy
+( A.4 ) and ( A.5 ). For any $\lambda\in\mathbb{R}^{1}$ ( 3.3 ) possesses a global attractor.
+Therefore, for bounded $\lambda,b<\lambda\leq\rho_{1}$ , the
+bifurcated branch $\Sigma_{\lambda}$ is bounded: $\|u_{\lambda}\|_{H}\leq C\qquad\forall u_{\lambda}\in\Sigma_{\lambda},\ \ \ \ -\infty<b<\lambda\leq\rho_{1}.$ We need to prove that there exists $\widetilde{\lambda}<\rho_{1}$ such that for all $\lambda<\widetilde{\lambda}$ equation ( 3.3 ) has no nonzero
+singular points. By the energy estimates of ( 3.3 ),
+for any $\lambda<\widetilde{\lambda}=-{\gamma^{2}_{2}}/{2\gamma_{3}}$ and $u\neq 0$ in $H$ , $\displaystyle\int_{\Omega}\left[|\Delta u|^{2}-\lambda|\nabla u|^{2}+2\gamma_{2}u|\nabla u|^{2}+3\gamma_{3}u^{2}|\nabla u|^{2}\right]dx$ $\displaystyle\geq\int_{\Omega}|\Delta u|^{2}dx+\int_{\Omega}|\nabla u|^{2}(-\lambda-2|\gamma_{2}u|+3\gamma_{3}u^{2})dx$ $\displaystyle\geq\int_{\Omega}|\nabla u|^{2}dx+\int_{\Omega}|\nabla u|^{2}(-\lambda+\gamma_{3}u^{2}+2\gamma_{3}(u-\frac{\gamma_{2}}{\gamma_{3}})^{2}-\frac{\gamma^{2}_{2}}{2\gamma_{3}})dx$ $\displaystyle\geq\int_{\Omega}|\nabla u|^{2}dx+\int_{\Omega}|\nabla u|^{2}(-\lambda-\frac{\gamma^{2}_{2}}{2\gamma_{3}})dx$ $\displaystyle>0.$ Therefore, when $\lambda<\widetilde{\lambda}$ ,
+( 3.3 ) has no nontrivial singular points in $H$ . Thus we
+infer from Theorem A.6 that there exists a saddle-node bifurcation
+on $\lambda<\rho_{1}$ . This proof is complete.
+∎ 4. Phase Transition in Rectangular Domains The dynamical properties of phase separation of a binary system in
+a rectangular container is very different from that in a general
+container. We see in the previous section that the phase
+transitions in general domains are Type-III, and we shall show
+in the following that the phase transitions in rectangular domains
+are either Type-I or Type-II, which are distinguished by a critical
+size of the domains. Let $\Omega=\Pi^{n}_{k=1}(0,L_{k})\subset\mathbb{R}^{n}$ $(1\leq n\leq 3)$ be a
+rectangular domain.
+We first consider the case where (4.1) $L=L_{1}>L_{j}\qquad\forall 2\leq j\leq n.$ Theorem 4.1 . Let $\Omega=\Pi^{n}_{k=1}(0,L_{k})$ satisfy
+( 4.1 ). The following assertions hold true: (1) If $\gamma_{3}<\frac{2L^{2}}{9\pi^{2}}\gamma^{2}_{2},$ then the
+phase transition of ( 3.1 ) and ( 3.5 ) at $\lambda=\lambda_{0}=\pi^{2}/L^{2}$ is Type-II. In particular, the problem
+( 3.1 ) with ( 3.5 ) bifurcates from $(u,\lambda)=(0,\pi^{2}/L^{2})$ on $\lambda<\pi^{2}/L^{2}$ to exactly two equilibrium
+points which are saddles, and there are two saddle-node
+bifurcations on $\lambda<{\pi^{2}}/{L^{2}}$ as shown in Figure 4.1 . (2) If $\gamma_{3}>\frac{2L^{2}}{9\pi^{2}}\gamma^{2}_{2},$ then the transition is Type-I. In particular,
+the problem bifurcates on $\lambda>\pi^{2}/L^{2}$ to exactly two
+attractors $u^{T}_{1}$ and $u^{T}_{2}$ which can be expressed as (4.2) $u^{T}_{1,2}=\pm\frac{\sqrt{2}(\lambda-\frac{\pi^{2}}{L^{2}})^{{1}/{2}}}{\sigma^{{1}/{2}}}\cos\frac{\pi x_{1}}{L}+o(|\lambda-\frac{\pi^{2}}{L^{2}}|^{{1}/{2}}),$ where $\sigma=\frac{3\gamma_{3}}{2}-\frac{L^{2}\gamma^{2}_{2}}{3\pi^{2}}.$ Figure 4.1. Type-II transition as given by Theorem 4.1 . Proof. With the spatial domain as given, the first eigenvalue and eigenfunction of
+( 3.4 ) are given by $\rho_{1}=\pi^{2}/L^{2},\ \ \ \ e_{1}=\cos\frac{\pi x_{1}}{L}.$ The eigenvalues and eigenfunctions of $L_{\lambda}=-A+B_{\lambda}$ defined by ( 3.2 ) are as follows: (4.3) $\displaystyle\beta_{K}=|K|^{2}(\lambda-|K|^{2}),$ (4.4) $\displaystyle e_{K}=\cos\frac{k_{1}\pi x_{1}}{L_{1}}\cdots\cos\frac{k_{n}\pi x_{n}}{L_{n}},$ where $\displaystyle K=\left(\frac{k_{1}\pi}{L_{1}},\cdots,\frac{k_{n}\pi}{L_{n}}\right)$ $\displaystyle\forall k_{i}\in\mathbb{Z},\ \ \ \ 1\leq i\leq n,$ $\displaystyle|K|^{2}=\pi^{2}\sum^{n}_{i=1}k^{2}_{i}/L^{2}_{i}$ $\displaystyle|K|^{2}\neq 0.$ By the approximation of the center manifold obtained in [ 3 ] , the reduced equation of
+( 3.3 ) to the center manifold is given by (4.5) $\frac{dy}{dt}=\beta_{1}(\lambda)y-\frac{2\pi^{2}}{(L_{1}\cdots L_{n})L^{2}_{1}}\int_{\Omega}\left[\gamma_{2}y^{2}e^{3}_{1}+\gamma_{3}y^{3}e^{4}_{1}+\gamma_{2}(ye_{1}+\Phi(y))^{2}e_{1}\right]dx,$ where $y\in\mathbb{R}^{1}$ , $\Phi(y)$ is the center manifold function, and (4.6) $\beta_{1}(\lambda)=\frac{\pi^{2}}{L^{2}}(\lambda-\frac{\pi^{2}}{L^{2}}).$ Direct calculation implies that (4.7) $\displaystyle\int_{\Omega}e^{3}_{1}dx=\int^{L_{1}}_{0}\cdots\int^{L_{n}}_{0}\cos^{3}\frac{\pi x_{1}}{L}dx=0,$ (4.8) $\displaystyle\int_{\Omega}e^{4}_{1}dx=L_{2}\cdots L_{n}\int^{L}_{0}\cos^{4}\frac{\pi x_{1}}{L}dx_{1}=\frac{3}{8}L_{1}\cdots L_{n}.$ By ( 4.7 ) and $\Phi(y)=O(|y|^{2})$ we obtain (4.9) $\int_{\Omega}(ye_{1}+\Phi)^{2}e_{1}dx=2y\int_{\Omega}\Phi(y)e^{2}_{1}dx+o(|y|^{3})$ It follows that $\displaystyle\Phi(y)=\sum^{\infty}_{|K|^{2}>\pi^{2}/L^{2}}\phi_{K}(y)e_{K}+o(|y|^{2})$ $\displaystyle\phi_{K}(y)=\frac{\gamma_{2}y^{2}}{-\beta_{K}\|e_{K}\|^{2}_{H}}\int_{\Omega}\Delta e^{2}_{1}\cdot e_{K}dx=\frac{|K|^{2}\gamma_{2}y^{2}}{\beta_{K}\|e_{K}\|^{2}_{H}}\int_{\Omega}e_{K}e^{2}_{1}dx.$ Notice that $\int_{\Omega}e_{K}e^{2}_{1}dx=\left\{\begin{aligned} &0&&\forall K\neq\left(\frac{2\pi}{L_{1}},0,\cdots,0\right),\\
+&L_{1}\cdots L_{n}/4&&\forall K=\left(\frac{2\pi}{L_{1}},0,\cdots,0\right).\end{aligned}\right.$ Then we have $\Phi(y)=\frac{\gamma_{2}y^{2}}{2(\lambda-4\pi^{2}/L^{2})}\cos\frac{2\pi x_{1}}{L}+o(|y|^{2}).$ Inserting $\Phi(y)$ into ( 4.9 ) we find (4.10) $\displaystyle\int_{\Omega}(ye_{1}+\Phi)^{2}e_{1}dx=$ $\displaystyle\frac{\gamma_{2}y^{3}}{\lambda-\frac{4\pi^{2}}{L^{2}}}\int_{\Omega}\cos\frac{2\pi x_{1}}{L}e^{2}_{1}dx+o(|y|^{3})$ $\displaystyle=$ $\displaystyle\frac{L_{1}\cdots L_{n}}{4}\cdot\frac{\gamma_{2}}{\lambda-\frac{4\pi^{2}}{L^{2}}}y^{3}+o(|y|^{3}).$ Finally, by ( 4.7 ), ( 4.8 ) and ( 4.10 ), we derive from ( 4.5 )
+the following reduced equation of ( 3.3 ): (4.11) $\frac{dy}{dt}=\beta_{1}(\lambda)y-\frac{\pi^{2}}{2L^{2}}\left(\frac{3\gamma_{3}}{2}+\frac{\gamma^{2}_{2}}{\lambda-\frac{4\pi^{2}}{L^{2}}}\right)y^{3}+o(|y|^{3}).$ Near the critical point $\lambda_{0}=\pi^{2}/L^{2}$ , the coefficient $\frac{3\gamma_{3}}{2}+\frac{\gamma^{2}_{2}}{\lambda-\frac{4\pi^{2}}{L^{2}}}=\frac{3\gamma_{3}}{2}-\frac{L^{2}\gamma^{2}_{2}}{3\pi^{2}}.$ Thus, by Theorem A.2 we derive from ( 4.11 ) the assertions of
+the theorem except the claim for the saddle-node bifurcation in
+Assertion (1), which can be proved in the same fashion as used
+in Theorem 3.2 . The proof is complete.
+∎ We now consider the case where $\Omega=\Pi^{n}_{k=1}(0,L_{k})$ satisfies that (4.12) $L=L_{1}=\cdots=L_{m}>L_{j}\qquad\text{for }2\leq m\leq 3,m<j\leq n.$ Theorem 4.2 . Let $\Omega=\Pi^{n}_{k=1}(0,L_{k})$ satisfy
+( 4.12 ). Then the following assertions hold true: (1) If $\gamma_{3}>\frac{26L^{2}}{27\pi^{2}}\gamma^{2}_{2},$ then the phase transition of the problem ( 3.1 ) with ( 3.5 ) at $\lambda_{0}=\pi^{2}/L^{2}$ is Type-I, satisfying the following properties: (a) The problem bifurcates on $\lambda>\pi^{2}/L^{2}$ to an attractor $\Sigma_{\lambda}$ , containing exactly $3^{m}-1$ non-degenerate singular points,
+and $\Sigma_{\lambda}$ is homeomorphic to an $(m-1)$ -dimensional
+sphere $S^{m-1}$ . (b) For $m=2$ , the attractor $\Sigma_{\lambda}=S^{1}$ contains 4 minimal attractors, as shown in Figure 4.2 . (c) For $m=3,\Sigma_{\lambda}=S^{2}$ contains $8$ minimal attractors as shown in Figure 4.3 (a), if $\gamma_{3}<\frac{22L^{2}}{9\pi^{2}}\gamma_{2}^{2},$ and contains $6$ minimal attractors as shown in Figure 4.3 (b)
+if $\gamma_{3}>\frac{22L^{2}}{9\pi^{2}}\gamma_{2}^{2}.$ (2) If $\gamma_{3}<\frac{26L^{2}}{27\pi^{2}}\gamma^{2}_{2},$ then the transition is Type-II.
+In particular, the problem has
+a saddle-node bifurcation on $\lambda<\lambda_{0}=\pi^{2}/L^{2}$ , and
+bifurcates on both side of $\lambda=\lambda_{0}$ to exactly $3^{m}-1$ singular points which are non-degenerate. Figure 4.2. For $m=2,\Sigma_{\lambda}=S^{1}$ and $Z_{2k}$ $(1\leq k\leq 4)$ are attractors. Figure 4.3. For $m=3$ , $\Sigma_{\lambda}=S^{2}$ , (a) $\pm Z_{k}$ $(1\leq k\leq 4)$ are attractors, (b) $\pm Y_{k}$ $(1\leq k\leq 3)$ are attractors. Proof. We proceed in several steps as follows. Step 1. Consider the center manifold reduction. It is known
+that the eigenvalues and eigenfunctions of $L_{\lambda}=-A+B_{\lambda}$ are given by ( 4.3 ) and
+( 4.4 ) with $L_{1}=\cdots=L_{m}$ . As before, the reduced
+equations of ( 3.3 ) are given by (4.13) $\frac{dy}{dt}=\beta_{1}(\lambda)y+g(y)+o(|y|^{3}),$ where $y=(y_{1},\cdots,y_{m})\in\mathbb{R}^{m}$ , $\beta_{1}(\lambda)$ is as in
+( 4.6 ), and $\displaystyle g(y)=\frac{2\pi^{2}}{L_{1}\cdots L_{n}L^{2}_{1}}(G_{2}(y)+G_{3}(y)+G_{23}(y)),$ $\displaystyle G_{2}(y)=-\gamma_{2}\left(\int_{\Omega}v^{2}e_{1}dx,\cdots,\int_{\Omega}v^{2}e_{m}dx\right),$ $\displaystyle G_{3}(y)=-\gamma_{3}\left(\int_{\Omega}v^{3}e_{1}dx,\cdots,\int_{\Omega}v^{3}e_{m}dx\right),$ $\displaystyle G_{23}(y)=-\gamma_{2}\left(\int_{\Omega}u^{2}e_{1}dx,\cdots,\int_{\Omega}u^{2}e_{m}dx\right).$ Here $e_{i}=\cos\pi x_{i}/L$ for $1\leq i\leq m$ , $L$ is given by ( 4.12 ), $v=\sum^{m}_{i=1}y_{i}e_{i},$ $u=v+\Phi(y)$ and $\Phi$ is the center manifold function.
+Direct computation shows that (4.14) $\displaystyle\left.\begin{aligned} \int_{\Omega}v^{2}e_{i}dx=&\int_{\Omega}\left(\sum^{m}_{j=1}y_{j}\cos\pi x_{j}/L\right)^{2}\cos\pi x_{i}/Ldx=0,\\
+\int_{\Omega}v^{3}e_{i}dx=&\int_{\Omega}\left(\sum^{n}_{j=1}y_{k}\cos\pi x_{j}/L\right)^{3}\cos\pi x_{i}/Ldx\\
+=&\frac{3}{4}L_{1}\cdots L_{n}\left(\frac{1}{2}y^{3}_{i}+y_{i}\sum_{j\neq i}y^{2}_{j}\right),\end{aligned}\right.$ $\displaystyle\int_{\Omega}u^{2}e_{i}dx=\int_{\Omega}\left(\sum^{m}_{j=1}y_{j}e_{j}+\Phi(y)\right)^{2}e_{i}dx$ (4.15) $\displaystyle\qquad\qquad=2\sum^{m}_{j=1}y_{j}\int_{\Omega}\Phi(y)e_{j}e_{i}dx+\int_{\Omega}\Phi^{2}(y)e_{i}dx.$ We need to compute the center manifold function $\Phi(y)$ .
+As in [ 3 ] , we have (4.16) $\Phi(y)=\sum^{\infty}_{|K|>\pi^{2}/L^{2}}\phi_{K}(y)e_{K}+o(|y|^{2})+O(|y|^{2}|\beta_{1}|),$ where $\displaystyle\phi_{K}(y)=$ $\displaystyle\frac{\gamma_{2}}{-\beta_{K}(\lambda)<e_{K},e_{K}>}\int_{\Omega}\Delta v^{2}e_{K}dx$ $\displaystyle=$ $\displaystyle\frac{|K|^{2}\gamma_{2}}{\beta_{K}(\lambda)<e_{K},e_{K}>}\int_{\Omega}v^{2}e_{K}dx$ $\displaystyle=$ $\displaystyle\frac{|K|^{2}\gamma_{2}}{\beta_{K}<e_{K},e_{K}>}\sum^{m}_{i,j=1}y_{i}y_{i}\int_{\Omega}e_{i}e_{i}e_{K}dx.$ It is clear that $\int_{\Omega}e_{i}e_{j}e_{K}dx=\int_{\Omega}\cos\frac{\pi x_{i}}{L}\cos\frac{\pi x_{j}}{L}e_{k}dx=0,$ if $K\neq K_{i}+K_{j},\qquad K_{i}=\left(\frac{\pi}{L_{1}}\delta_{1i},\cdots,\frac{\pi}{L_{n}}\delta_{ni}\right).$ By ( 4.3 ) and ( 4.4 ) we have $\displaystyle\phi_{K}(y)=$ $\displaystyle\frac{\gamma_{2}y_{i}y_{j}(2-\delta_{ij})}{(\lambda-|K|^{2})<e_{K},e_{K}>}\int_{\Omega}e_{i}e_{j}e_{K}dx$ $\displaystyle=$ $\displaystyle\left\{\begin{aligned} &\frac{\gamma_{2}y^{2}_{i}}{2(\lambda-\frac{4\pi^{2}}{L^{2}})}&&\text{ if }i=j,\\
+&\frac{2\gamma_{2}y_{i}y_{j}}{(\lambda-\frac{2\pi^{2}}{L^{2}})}&&\text{ if }i\neq j,\end{aligned}\right.$ for $K=K_{i}+K_{j}$ .
+Thus, by ( 4.16 ), we obtain $\Phi(y)=\sum^{m}_{i=1}\frac{\gamma_{2}}{2(\lambda-\frac{4\pi^{2}}{L^{2}})}y^{2}_{i}\cos\frac{2\pi x_{i}}{L}+\sum^{m}_{l>r}\frac{2\gamma_{2}}{(\lambda-\frac{2\pi^{2}}{L^{2}})}y_{l}y_{r}\cos\frac{\pi x_{l}}{L}\cos\frac{\pi x_{r}}{L}.$ Inserting $\Phi(y)$ into ( 4.15 ) we derive $\displaystyle\int_{\Omega}u^{2}e_{i}dx=$ $\displaystyle\frac{\gamma_{2}}{\lambda-\frac{4\pi^{2}}{L^{2}}}\int_{\Omega}\left[y^{3}_{i}\cos^{2}\frac{\pi x_{i}}{L}\cos\frac{2\pi x_{i}}{L}+4y_{i}\sum_{j\neq i}y^{2}_{j}\cos^{2}\frac{\pi x_{j}}{L}\cos^{2}\frac{\pi x_{i}}{L}\right]dx$ $\displaystyle+o(|y|^{3}).$ Direct computation gives that (4.17) $\int_{\Omega}u^{2}e_{i}dx=\frac{\gamma_{2}L_{1}\cdots L_{n}}{4}\left[\frac{y^{3}_{i}}{\lambda-\frac{4\pi^{2}}{L^{2}}}+\frac{4y_{i}}{\lambda-\frac{2\pi^{2}}{L^{2}}}\sum_{j\neq i}y^{2}_{j}\right]+o(|y|^{3}).$ Putting ( 4.14 ) and ( 4.17 ) in ( 4.13 ), we get the
+reduced equations in the following form (4.18) $\frac{dy_{i}}{dt}=\beta_{1}(\lambda)y_{i}-\frac{\pi^{2}}{2L^{2}}\left[\sigma_{1}y^{3}_{i}+\sigma_{2}y_{i}\sum_{j\neq i}y^{2}_{j}\right]+o(|y|^{3})\quad\forall 1\leq i\leq m,$ where (4.19) $\sigma_{1}=\frac{3\gamma_{3}}{2}+\frac{\gamma^{2}_{2}}{\lambda-\frac{4\pi^{2}}{L^{2}}},\qquad\sigma_{2}=3\gamma_{3}+\frac{4\gamma^{2}_{2}}{\lambda-\frac{2\pi^{2}}{L^{2}}}.$ Step 2. It is known that the transition type of ( 3.3 ) at
+the critical point $\lambda_{0}=\pi^{2}/L^{2}$ is completely determined
+by ( 4.18 ), i.e., by the following equations (4.20) $\frac{dy_{i}}{dt}=-\frac{\pi^{2}}{2L^{2}}\left[\sigma^{0}_{1}y^{3}_{i}+\sigma^{0}_{2}y_{i}\sum_{k\neq i}y^{2}_{k}\right]\qquad\forall 1\leq i\leq m,$ where $\sigma^{0}_{1}=\frac{3\gamma_{3}}{2}-\frac{L^{2}\gamma^{2}_{2}}{3\pi^{2}},\qquad\sigma^{0}_{2}=3\gamma_{3}-\frac{4L^{2}\gamma^{2}_{2}}{\pi^{2}}.$ It is easy to see that (4.21) $\left.\begin{aligned} &\sigma^{0}_{1}+\sigma^{0}_{2}>0\Leftrightarrow\gamma_{3}>\frac{26L^{2}}{27\pi^{2}}\gamma^{2}_{2},\\
+&\sigma^{0}_{1}+\sigma^{0}_{2}<0\Leftrightarrow\gamma_{3}<\frac{26L^{2}}{27\pi^{2}}\gamma^{2}_{2}.\end{aligned}\right.$ Step 3. We consider the case where $m=2$ . Thus, the transition
+type of ( 4.20 ) is equivalent to that of the following equations (4.22) $\left.\begin{aligned} &\frac{dy_{1}}{dt}=-y_{1}[\sigma^{0}_{1}y^{2}_{1}+\sigma^{0}_{2}y^{2}_{2}],\\
+&\frac{dy_{2}}{dt}=-y_{2}[\sigma^{0}_{1}y^{2}_{2}+\sigma^{0}_{2}y^{2}_{1}].\end{aligned}\right.$ We can see that on the straight lines (4.23) $y^{2}_{1}=y^{2}_{2},$ equations ( 4.22 ) satisfy that $\frac{dy_{2}}{dy_{1}}=\frac{y_{2}}{y_{1}}\qquad\text{ for }\ \sigma^{0}_{1}+\sigma^{0}_{2}\neq 0,\ \ \ \ (y_{1},y_{2})\neq 0.$ Hence the straight lines ( 4.23 ) are orbits of
+( 4.22 ) if $\sigma^{0}_{1}+\sigma^{0}_{2}\neq 0$ . Obviously, the
+straight lines (4.24) $y_{1}=0\text{ and }y_{2}=0$ are also orbits of ( 4.22 ). There are four straight lines determined by ( 4.23 ) and
+( 4.24 ), and each of them contains two orbits. Hence, the
+system ( 4.22 ) has at least eight straight line orbits.
+Hence it is not hard to see that the number of straight line orbits of
+( 4.22 ), if finite, is eight. Since ( 3.3 ) is a gradient-type equation,
+there are no elliptic regions at $y=0$ ; see [ 3 ] . Hence, when $\sigma^{0}_{1}+\sigma^{0}_{2}>0$ all the straight line orbits on
+( 4.23 ) and ( 4.24 ) tend to $y=0$ , as shown in Figure 4.4 (a), which implies that the regions are parabolic and
+stable, therefore $y=0$ is asymptotically stable for ( 4.22 ).
+Accordingly, by the attractor bifurcation theorem in [ 3 ] , the transition of ( 4.18 ) at $\lambda_{0}=\pi^{2}/L^{2}$ is Type-I. When $\sigma^{0}_{1}+\sigma^{0}_{2}<0$ and $\sigma^{0}_{1}>0$ , namely $\frac{2}{9}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}}<\gamma_{3}<\frac{26}{27}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}},$ the four straight line orbits on ( 4.23 ) are outward from $y=0$ , and other four on ( 4.24 ) are toward $y=0$ , as shown
+in Figure 4.4 (b), which implies that all regions at $y=0$ are
+hyperbolic. Hence, by Theorem A.3 , the transition of ( 4.18 )
+at $\lambda_{0}=\pi^{2}/L^{2}$ is Type-II. When $\sigma^{0}_{1}\leq 0$ , then $\sigma^{0}_{2}<0$ too. In this case, no
+orbits of ( 4.22 ) are toward $y=0$ , as shown in Figure 4.4 (c), which implies by Theorem A.3 that the transition is Type-II. Thus by ( 4.21 ), for $m=2$ we prove that the transition is
+Type-I if $\gamma_{3}>\frac{26L^{2}}{27\pi^{2}}\gamma^{2}_{2}$ , and Type-II
+if $\gamma_{3}<\frac{26L^{2}}{27\pi^{2}}\gamma^{2}_{2}$ . Figure 4.4. The topological structure of flows of
+( 4.18 ) at $\lambda_{0}=\pi^{2}/L^{2}$ , (a) as $\gamma_{3}>\frac{26L^{2}}{27\pi^{2}}\gamma^{2}_{2}$ ; (b) as $\frac{2L^{2}}{9\pi^{2}}\gamma^{2}_{2}<\gamma_{3}<\frac{26L^{2}}{27\pi^{2}}\gamma^{2}_{2}$ ;
+and (c) $\gamma_{3}\leq\frac{2L^{2}}{9\pi^{2}}\gamma^{2}_{2}$ . Step 4. Consider the case where $m=3$ . Thus, ( 4.20 ) are
+written as (4.25) $\left.\begin{aligned} &\frac{dy_{1}}{dt}=-y_{1}[\sigma^{0}_{1}y^{2}_{1}+\sigma^{0}_{2}(y^{2}_{2}+y^{2}_{3})],\\
+&\frac{dy_{2}}{dt}=-y_{2}[\sigma^{0}_{1}y^{2}_{2}+\sigma^{0}_{2}(y^{2}_{1}+y^{2}_{3})],\\
+&\frac{dy_{3}}{dt}=-y_{3}[\sigma^{0}_{1}y^{2}_{3}+\sigma^{0}_{2}(y^{2}_{1}+y^{2}_{2})].\end{aligned}\right.$ It is clear that the straight lines (4.26) $\displaystyle y_{i}=0,\quad y_{j}=0\qquad\text{ for }i\neq j,\ 1\leq i,\ j\leq 3,$ (4.27) $\displaystyle\left\{\begin{aligned} &y^{2}_{i}=y^{2}_{j},\quad y_{k}=0&&\text{ for }i\neq j,i\neq k,j\neq k,1\leq i,j,k\leq 3,\\
+&y^{2}_{1}=y^{2}_{2}=y^{2}_{3},\end{aligned}\right.$ consist of orbits of ( 4.25 ). There are total 13 straight
+lines in ( 4.26 ) and ( 4.27 ), each of which consists of
+two orbits. Thus, ( 4.25 ) has at least 26 straight line
+orbits. We shall show that ( 4.25 ) has just the straight
+line orbits given by ( 4.26 ) and ( 4.27 ). In fact, we
+assume that the line $y_{2}=z_{1}y_{1},\ \ \ \ y_{3}=z_{2}y_{1}\ \ \ \ (z_{1},z_{2}\ \text{are\ real\ numbers})$ is a straight line orbit of ( 4.25 ). Then $z_{1},z_{2}$ satisfy (4.28) $\left.\begin{aligned} &\frac{dy_{2}}{dy_{1}}=z_{1}=z_{1}\frac{\sigma^{0}_{1}z^{2}_{1}+\sigma^{0}_{2}(1+z^{2}_{2})}{\sigma^{0}_{1}+\sigma^{0}_{2}(z^{2}_{1}+z^{2}_{2})},\\
+&\frac{dy_{3}}{dy_{1}}=z_{2}=z_{2}\frac{\sigma^{0}_{1}z^{2}_{2}+\sigma^{0}_{2}(1+z^{2}_{1})}{\sigma^{0}_{1}+\sigma^{0}_{2}(z^{2}_{1}+z^{2}_{2})}.\end{aligned}\right.$ It is easy to see that when $\sigma^{0}_{1}\neq\sigma^{0}_{2}$ the
+solutions $z_{1}$ and $z_{2}$ of ( 4.28 ) take only the values $z_{1}=0,\pm 1;\ \ \ \ z_{2}=0,\pm 1.$ In the same fashion, we can prove that the straight line orbits of
+( 4.25 ) given by $y_{1}=\alpha_{1}y_{3},\ \ \ \ y_{2}=\alpha_{2}y_{3},\ \ \ \ \text{and}\ y_{1}=\beta_{1}y_{2},\ \ \ \ y_{3}=\beta_{2}y_{2}$ have to satisfy that $\alpha_{i}=0,\pm 1\ \ \ \ \text{and}\ \ \ \ \beta_{i}=0,\pm 1\ \ \ \ (i=1,2).$ Thus, we prove that when $\sigma^{0}_{1}\neq\sigma^{0}_{2}$ ,
+the number of straight line orbits of ( 4.25 ) is exactly 26. When $\sigma^{0}_{1}=\sigma^{0}_{2}$ , we have that $\gamma_{3}=\frac{22}{9}\frac{L^{2}}{\pi^{2}}\gamma^{2}_{2}$ which implies
+that $\sigma^{0}_{1}=\sigma^{0}_{2}>0$ . In this case, it is clear that $y=0$ is an asymptotically stable singular point of ( 4.25 ).
+Hence, the transition of ( 4.18 ) at $\lambda_{0}=\pi^{2}/L^{2}$ is
+I-type. When $\sigma^{0}_{1}+\sigma^{0}_{2}>0$ and $\sigma^{0}_{1}\neq\sigma^{0}_{2}$ , all
+straight line orbits of ( 4.25 ) are toward $y=0$ , which
+implies that the regions at $y=0$ , are stable, and $y=0$ is asymptotically stable; see [ 3 ] . Thereby the transition of
+( 4.18 ) is Type-I. When $\sigma^{0}_{1}+\sigma^{0}_{2}<0$ with $\sigma^{0}_{1}>0$ , we can see, as
+in the case of $m=2$ , that the regions at $y=0$ are hyperbolic,
+and when $\sigma^{0}_{1}+\sigma^{0}_{2}<0$ with $\sigma_{1}\leq 0$ the
+regions at $y=0$ are unstable. Hence, the transition is Type-II. Step 5. We prove Assertion (1). By Steps 3 and 4, if $\gamma_{3}>\frac{26L^{2}}{27\pi^{2}}\gamma^{2}_{2}$ ,
+the reduced equation
+( 4.18 ) bifurcates on $\lambda>\lambda_{0}=\pi^{2}/L^{2}$ to an
+attractor $\Sigma_{\lambda}$ . All bifurcated equilibrium points of
+( 3.3 ) are one to one correspondence to the bifurcated
+singular points of ( 4.18 ). Therefore, we only have to consider the stationary equations: (4.29) $\beta_{1}(\lambda)y_{i}-\frac{\pi^{2}}{2L^{2}}[\sigma_{1}y^{3}_{i}+\sigma_{2}y_{i}\sum_{j\neq i}y^{2}_{j}]+o(|y|^{3})=0,\ \ \ \ 1\leq i\leq m,$ where $\sigma_{1}$ and $\sigma_{2}$ are as in ( 4.19 ). Consider the following approximative equations of ( 4.29 ) (4.30) $\beta_{1}(\lambda)y_{i}-y_{i}(a_{1}y^{2}_{i}+a_{2}\sum_{j\neq i}y^{2}_{j})=0\qquad\text{ for }1\leq i\leq m,$ where $a_{1}=\pi^{2}\sigma_{1}/2L^{2},a_{2}=\pi^{2}\sigma_{2}/2L^{2}$ . It is
+clear that each regular bifurcated solution of ( 4.30 )
+corresponds to a regular bifurcated solution of ( 4.29 ). We first prove that ( 4.30 ) has $3^{m}-1$ bifurcated solutions
+on $\lambda>\lambda_{0}$ . For each $k$ $(0\leq k\leq m-1)$ ,
+( 4.30 ) has $C^{k}_{m}\times 2^{m-k}$ solutions as follows: (4.31) $\left.\begin{aligned} &y_{j_{1}}=0,\cdots,y_{j_{k}}=0&&\text{ for }1\leq j_{l}\leq m,\\
+&y^{2}_{r_{1}}=\cdots=y^{2}_{r_{m-k}}=\beta_{1}(a_{1}+(m-k-1)a_{2})^{-1}&&\text{ for }r_{i}\neq j_{l}.\end{aligned}\right.$ Hence, the number of all bifurcated solutions of ( 4.30 ) is $\sum^{m-1}_{k=0}C^{k}_{m}\times 2^{m-k}=(2+1)^{m}-1=3^{m}-1.$ We need to prove that all bifurcated solutions of ( 4.30 )
+are regular. The Jacobian matrix of ( 4.30 ) is given by (4.32) $Dv=\begin{pmatrix}\beta_{1}-h_{1}(y)&2a_{2}y_{1}y_{2}&\cdots&2a_{2}y_{1}y_{m}\\
+2a_{2}y_{2}y_{1}&\beta_{1}-h_{2}(y)&\cdots&2a_{2}y_{2}y_{m}\\
+\vdots&\vdots&&\vdots\\
+2a_{2}y_{m}y_{1}&2a_{2}y_{m}y_{2}&\cdots&\beta_{1}-h_{m}(y)\end{pmatrix},$ where $h_{i}(y)=3a_{1}y^{2}_{i}+a_{2}\sum_{j\neq i}y^{2}_{j}.$ For the solutions in ( 4.31 ), without loss of generality, we
+take $\displaystyle y_{0}=(y^{0}_{1},\cdots,y^{0}_{m}),$ $\displaystyle y^{0}_{i}=0\qquad\qquad 1\leq i\leq k,$ $\displaystyle y^{0}_{k+1}=\cdots=y^{0}_{m}=\beta^{{1}/{2}}_{1}(a_{1}+(m-k-1)a_{2})^{-{1}/{2}}$ Inserting them into ( 4.32 ) we find (4.33) $Dv(y_{0})=\left(\begin{matrix}\beta I_{k}&0\\
+0&A_{m-k}\end{matrix}\right),$ where $\displaystyle\beta=\beta_{1}\left(1-\frac{(m-k)a_{2}}{a_{1}+(m-k-1)a_{2}}\right)=\frac{(\sigma_{1}-\sigma_{2})\beta_{1}}{\sigma_{1}+(m-k-1)\sigma_{2}},$ $\displaystyle A_{m-k}=\left(\begin{matrix}\beta_{1}-(3a_{1}+(m-k-1)a_{2})(y^{0}_{k+1})^{2}&\cdots&2a_{2}(y^{0}_{k+1})^{2}\\
+\vdots&&\vdots\\
+2a_{2}(y^{0}_{k+1})^{2}&\cdots&\beta_{1}-(3a_{1}+(m-k-1)a_{2})(y^{0}_{k+1})^{2}\end{matrix}\right).$ Direct computation shows that $\text{det}A_{m-k}=\frac{\pi^{2m}\beta^{m}_{1}}{(a_{1}+(m-k-1)a_{2})^{m}L^{2m}}\text{det}\left(\begin{matrix}-\sigma_{1}&\sigma_{2}&\cdots&\sigma_{2}\\
+\sigma_{2}&-\sigma_{1}&\cdots&\sigma_{2}\\
+\vdots&\vdots&&\vdots\\
+\sigma_{2}&\sigma_{2}&\cdots&-\sigma_{1}\end{matrix}\right),$ where $\sigma_{1},\sigma_{2}$ are given by ( 4.19 ). Obviously, there are only finite number of $\lambda>\pi^{2}/L^{2}$ satisfying $\displaystyle\beta(\lambda)=\frac{(\sigma_{1}(\lambda)-\sigma_{2}(\lambda))\beta_{1}(\lambda)}{\sigma_{1}(\lambda)+(m-k-1)\sigma_{2}(\lambda)}=0,$ $\displaystyle\text{det}A_{m-k}(\lambda)=0.$ Hence, for any $\lambda-\pi^{2}/L^{2}>0$ sufficiently small
+the Jacobian matrices ( 4.32 ) at the singular points
+( 4.31 ) are non-degenerate. Thus, the bifurcated solutions of
+( 4.30 ) are regular. Since all bifurcated singular points of ( 3.1 ) with
+( 3.5 ) are non-degenerate, and when $\Sigma_{\lambda}$ is
+restricted on $x_{i}x_{j}$ -plane $(1\leq i,j\leq m)$ the singular
+points are connected by their stable and unstable manifolds.
+Hence all singular points in $\Sigma_{\lambda}$ are
+connected by their stable and unstable manifolds. Therefore, $\Sigma_{\lambda}$ must be homeomorphic to a sphere $S^{m-1}$ . Assertion (1) is proved. Step 6. Proof of Assertions (2) and (3). When $m=2$ , by
+Step 5, $\Sigma_{\lambda}=S^{1}$ contains 8 non-degenerate singular
+points. By a theorem on minimal attractors in [ 3 ] , $4$ singular points must be
+attractors and the others are repellors, as shown in Figure 4.2 . When $m=3$ , we take the six singular points $\pm Y_{1}=(\pm\beta_{1}a^{-1}_{1},0,0),\pm Y_{2}=(0,\pm\beta_{1}a^{-1}_{1},0),\pm Y_{3}=(0,0,\pm\beta_{1}a^{-1}_{1})$ Then the Jacobian matrix ( 4.32 ) at $Y_{i}$ $(1\leq i\leq 3)$ is $Dv(\pm Y_{i})=\left(\begin{array}[]{lll}\rho_{1}&&0\\
+&\rho_{2}\\
+0&&\rho_{3}\end{array}\right),$ where $\rho_{j}=\beta_{1}\left(1-\frac{\sigma_{2}}{\sigma_{1}}\right)$ as $j\neq i$ and $\rho_{i}=-2\beta_{1}$ . Obviously, as $\sigma_{2}<\sigma_{1}$ , $0<\rho_{j}$ $(j\neq i)$ and $\rho_{i}<0$ , in this case, $\pm Y_{k}$ $(1\leq k\leq 3)$ are repellors in $\Sigma_{\lambda}=S^{2}$ , which implies
+that $\Sigma_{\lambda}$ contains $8$ attractors $\pm z_{k}$ $(1\leq k\leq 4)$ as shown in Figure 4.3 (a). As $\sigma_{2}>\sigma_{1},\rho_{j}<0$ $(1\leq j\leq 3)$ , the six singular point $\pm Y_{k}$ $(1\leq k\leq 3)$ are attractors, which implies that $\Sigma_{\lambda}$ contains only six minimal attractors as shown in Figure 4.3 (b).
+Thus Assertion (2) is proved. The claim for the saddle-node bifurcation in Assertion (3) can be
+proved by using the same method as in the proof of Theorem 3.2 , and the claim
+for the singular point bifurcation can be proved by the same
+fashion as used in Step 5. The proof of this theorem is complete.
+∎ Remark 4.1 . For the domain $\Omega=[0,L]^{m}\times D\subset\mathbb{R}^{n}(1\leq m<n)$ where $n\geq 2$ is arbitrary and $D\subset\mathbb{R}^{n-m}$ a bounded open set, Theorems 4.1 and 4.2 are also valid
+provided $\pi^{2}/L^{2}<\lambda_{1}$ , where $\lambda_{1}$ is the first
+eigenvalue of the equation $\left.\begin{aligned} &-\Delta e=\lambda e,&\ \ \ \ x\in D\subset\mathbb{R}^{n-m},\\
+&\frac{\partial e}{\partial n}|_{\partial D}=0,\\
+&\int_{D}edx=0.\end{aligned}\right.$ Remark 4.2 . In Theorem 4.2 , the minimal
+attractors in the bifurcated attractor $\Sigma_{\lambda}$ can be
+expressed as (4.34) $u_{\lambda}=(\lambda-\pi^{2}/L^{2})^{{1}/{2}}e+o(|\lambda-\pi^{2}/L^{2}|^{{1}/{2}}),$ where $e$ is a first eigenfunction of ( 3.4 ). The expression
+( 4.34 ) can be derived from the reduced equations
+( 4.18 ). We address here that the exponent $\beta={1}/{2}$ in
+( 4.34 ), called the critical exponent in physics, is an
+important index in the phase transition theory in statistical
+physics, which arises only in the Type-I or the continuous phase
+transitions. It is interesting to point out that the critical
+exponent $\beta=1$ in ( 3.14 ) is different from these $\beta={1}/{2}$ appearing in ( 4.2 ) and ( 4.34 ). The
+first one occurs when the container $\Omega\subset\mathbb{R}^{3}$ is a
+non rectangular region, and the second one occurs when $\Omega$ is a
+rectangle or a cube. We shall continue to discuss this problem later
+from the physical viewpoint. ∎ 5. Phase Transitions Under Periodic Boundary Conditions When the sample or container $\Omega$ is a loop, or a torus, or
+bulk in size, then the periodic boundary conditions are necessary.
+In this section, we shall discuss the problems in a loop domain
+and in the whole space $\Omega=\mathbb{R}^{n}$ . Let $\Omega=S^{1}\times(r_{1},r_{2})\subset\mathbb{R}^{2}$ be a loop domain, $0<r_{1}<r_{2}$ . Then the boundary condition is given by (5.1) $\left.\begin{aligned} &u(\theta+2k\pi,r)=u(\theta,r)&&\text{ for }0\leq\theta\leq 2\pi,\ r_{1}<r<r_{2},\ k\in\mathbb{Z},\\
+&\frac{\partial u}{\partial r}=0,\ \ \ \ \frac{\partial^{3}u}{\partial r^{3}}=0&&\text{ at }r=r_{1},r_{2}.\end{aligned}\right.$ Assume that the gap $r_{2}-r_{1}$ is small in comparison with the mean
+radius $r_{0}=(r_{1}+r_{2})/2$ . With proper scaling, we take
+the gap $r_{2}-r_{1}$ as $r_{2}-r_{1}=1$ . Then this assumption is (5.2) $r_{0}=(r_{1}+r_{2})/2\gg 1,\qquad r_{2}-r_{1}=1.$ With this condition, the Laplacian operator can be
+approximately expressed as (5.3) $\Delta=\frac{\partial^{2}}{\partial r^{2}}+\frac{1}{r^{2}_{0}}\frac{\partial^{2}}{\partial\theta^{2}}.$ With the boundary condition ( 5.1 ) and the operator
+( 5.3 ), the eigenvalues and eignfunctions of the linear
+operator $L_{\lambda}=-A+B_{\lambda}$ defined by ( 3.2 ) are
+given by $\displaystyle\beta_{K}(\lambda)=K^{2}(\lambda-K^{2}),$ $\displaystyle e^{1}_{K}=\cos k_{1}\theta\cos k_{2}\pi(r-r_{1}),$ $\displaystyle e^{2}_{K}=\sin k_{1}\theta\cos k_{2}\pi(r-r_{1}),$ $\displaystyle K^{2}=\frac{k^{2}_{1}}{r^{2}_{0}}+k^{2}_{2}$ $\displaystyle k_{1},k_{2}\in\mathbb{Z}.$ By ( 5.2 ), the first eigenvalue of $L_{\lambda}$ is $\beta_{1}(\lambda)=\frac{1}{r^{2}_{0}}(\lambda-\frac{1}{r^{2}_{0}}),$ which has multiplicity 2, and the first eigenfunctions are $e^{1}_{1}=\cos\theta$ and $e^{2}_{1}=\sin\theta.$ Theorem 5.1 . Let $\Omega=S^{1}\times(r_{1},r_{2})$ satisfy ( 5.2 ). Then the following assertions hold true: (1) If $\gamma_{3}>\frac{2r^{2}_{0}}{9}\gamma^{2}_{2},$ then
+the phase transition of ( 3.1 ) with ( 5.1 ) at $\lambda_{0}=1/r^{2}_{0}$ is Type-I. Furthermore, the problem
+( 3.1 ) with ( 5.1 ) bifurcates on $\lambda>\lambda_{0}=r^{-2}_{0}$ to a cycle attractor $\Sigma_{\lambda}=S^{1}$ which consists of singular points, as shown in Figure 5.1 , and
+the singular points in $\Sigma_{\lambda}$ can be expressed as $\displaystyle u_{\lambda}=\sigma^{-{1}/{2}}\left(\lambda-\frac{1}{r^{2}_{0}}\right)^{{1}/{2}}\cos(\theta+\theta_{0})+o\left(|\lambda-\frac{1}{r^{2}_{0}}|^{{1}/{2}}\right),$ $\displaystyle\sigma=\frac{3}{4}\gamma_{3}-\frac{1}{6}r^{2}_{0}\gamma^{2}_{2},$ where $\theta_{0}$ is the angle of $u_{\lambda}$ in $\Sigma_{\lambda}$ . (2) If $\gamma_{3}<\frac{2r^{2}_{0}}{9}\gamma^{2}_{2},$ then the transition is Type-II. Moreover, the problem bifurcates on $\lambda<\lambda_{0}$ to a cycle invariant set $\Gamma_{\lambda}=S^{1}$ consisting of singular points, and there is a singularity
+separation at $\lambda^{*}<\lambda_{0}$ , where $\Gamma_{\lambda}$ and an $S^{1}$ attractor $\Sigma_{\lambda}=S^{1}$ are generated such
+that the system undergoes a transition at $\lambda=\lambda_{0}$ from $u=0$ to $u_{\lambda}\in\Sigma_{\lambda}$ , as shown in Figure 5.2 . Figure 5.1. All points in $\Sigma_{\lambda}$ are singular
+points. Figure 5.2. The point $\lambda^{*}$ is a singularity separation point
+from where two invariant sets $\Sigma_{\lambda}$ and $\Gamma_{\lambda}$ are separated with $\Sigma_{\lambda}$ being an
+attractor, and $\Gamma_{\lambda}\rightarrow 0$ as $\lambda\rightarrow\lambda_{0}$ . Proof. Let $v=y\cos\theta+z\sin\theta$ , $u=v+\Phi(y,z)$ , and $\Phi$ is the center manifold function. Then the
+reduced equations of ( 3.1 ) with ( 5.1 ) are given by (5.4) $\left.\begin{aligned} &\frac{dy}{dt}=\beta_{1}(\lambda)y+\frac{1}{\pi}\int^{r_{1}+1}_{r_{1}}\int^{2\pi}_{0}[\gamma_{2}\Delta v^{2}+\gamma_{3}\Delta v^{3}+\gamma_{2}\Delta u^{2}]e^{1}_{1}drd\theta,\\
+&\frac{dz}{dt}=\beta_{1}(\lambda)z+\frac{1}{\pi}\int^{r_{1}+1}_{r_{1}}\int^{2\pi}_{0}[\gamma_{2}\Delta v^{2}+\gamma_{3}\Delta v^{3}+\gamma_{2}\Delta u^{2}]e^{2}_{1}drd\theta.\end{aligned}\right.$ Direct computation shows that ( 5.4 ) can be rewritten as (5.5) $\left.\begin{aligned} &\frac{dy}{dt}=\beta_{1}y-\frac{1}{\pi r^{2}_{0}}\left[\frac{3\pi}{4}\gamma_{3}y(y^{2}+z^{2})+\int^{2\pi}_{0}2\gamma_{2}\Phi[y\cos^{2}\theta+z\sin\theta\cos\theta]d\theta\right],\\
+&\frac{dz}{dt}=\beta_{1}z-\frac{1}{\pi r^{2}_{0}}\left[\frac{3\pi}{4}\gamma_{3}z(y^{2}+z^{2})+\int^{2\pi}_{0}2\gamma_{2}\Phi[z\sin^{2}\theta+y\cos\theta\sin\theta]d\theta\right],\end{aligned}\right.$ and the center manifold function $\Phi=\Phi(y,z)$ is $\Phi=\frac{2\gamma_{2}}{\beta_{2}(\lambda)r^{2}_{0}}(y^{2}-z^{2})\cos 2\theta+\frac{4\gamma_{2}}{\beta_{2}(\lambda)r^{2}_{0}}yz\sin 2\theta,$ where $\beta_{2}(\lambda)=\frac{4}{r^{2}_{0}}(\lambda-\frac{4}{r^{2}_{0}}).$ Putting $\Phi$ into ( 5.5 ), we obtain the approximate
+equations of ( 5.4 ) as follows (5.6) $\left.\begin{aligned} &\frac{dy}{dt}=\beta_{1}y-\frac{1}{r^{2}_{0}}\left(\frac{3}{4}\gamma_{3}+\frac{\gamma^{2}_{2}}{2(\lambda-4r^{-2}_{0})}\right)y(y^{2}+z^{2}),\\
+&\frac{dz}{dt}=\beta_{1}z-\frac{1}{r^{2}_{0}}\left(\frac{3}{4}\gamma_{3}+\frac{\gamma^{2}_{2}}{2(\lambda-4r^{-2}_{0})}\right)z(y^{2}+z^{2}).\end{aligned}\right.$ At $\lambda=\lambda_{0}=r^{-2}_{0}$ , we have $\frac{3}{4}\gamma_{3}+\frac{\gamma^{2}_{2}}{2(\lambda-4r^{-2}_{0})}=\frac{3}{4}\gamma_{3}-\frac{1}{6}r^{2}_{0}\gamma^{2}_{2}.$ In the same fashion as used in Theorem 4.2 , we derive from ( 5.6 ) the assertions of this theorem. Here the statement that the
+bifurcated cycle $\Sigma_{\lambda}=S^{1}$ consists of singular
+points can proved by that the equation ( 3.1 ) with
+( 5.1 ) is invariant under the translation $u(\theta,r)\rightarrow u(\theta+\theta_{0},r)\ \ \ \ \forall\theta_{0}\in\mathbb{R}^{1},$ which ensures that the singular points
+of ( 3.1 ) with ( 5.1 ) arise as a cycle $S^{1}$ . Thus,
+the theorem is proved.
+∎ Now, we consider the problem that the equation ( 3.1 ) is
+defined in the whole space $\Omega=\mathbb{R}^{n}$ $(n\geq 2)$ , with the
+periodic boundary condition (5.7) $u(x+2K\pi)=u(x)\qquad\forall K=(k_{1},\cdots,k_{n})\in\mathbb{Z}^{n}.$ In this case, the eigenvalues and eigenfunctions of $L_{\lambda}$ are given by $\displaystyle\beta_{K}(\lambda)=|K|^{2}(\lambda-|K|^{2}),$ $\displaystyle K=(k_{1},\cdots,k_{n}),\quad|K|^{2}=k^{2}_{1}+\cdots+k^{2}_{n},$ $\displaystyle e^{1}_{K}=\cos(k_{1}x_{1}+\cdots+k_{n}x_{n}),$ $\displaystyle e^{2}_{K}=\sin(k_{1}x_{1}+\cdots+k_{n}x_{n}).$ It is clear that the first eigenvalue $\beta_{1}(\lambda)=\lambda-1$ of $L_{\lambda}$ has multiplicity $2n$ , and the
+first eigenfunctions are $e^{1}_{j}=\cos x_{j},\ \ \ \ e^{2}_{j}=\sin x_{j}\qquad\forall 1\leq j\leq n.$ Theorem 5.2 . (1) If $\gamma_{3}>\frac{14}{27}\gamma^{2}_{2},$ then the phase transition of
+( 3.1 ) with ( 5.7 ) at $\lambda_{0}=1$ is Type-I. Moreover, (a) the problem bifurcates
+from $(u,\lambda)=(0,1)$ to an attractor $\Sigma_{\lambda}$ homeomorphic to a $(2n-1)$ -dimensional sphere $S^{2n-1}$ , and (b) for each $k\ (0\leq k\leq n-1)$ , the attractor $\Sigma_{\lambda}$ contains $C^{k}_{n}$ -dimensional tori $\mathbb{T}^{n-k}$ consisting of singular points. (2) If $\gamma_{3}<\frac{14}{27}\gamma^{2}_{2},$ then the transition is Type-II. Proof. We only have to prove Assertion (2), as the remaining part of the theorem is
+essentially the same as the proof for Theorem 4.2 . Since the space of all even functions is an invariant space of $L_{\lambda}+G$ defined by ( 3.2 ), the problem ( 3.1 )
+with ( 5.7 ) has solutions given in ( 4.31 ) with $m=n$ in the space of even functions. By the translation invariance of ( 3.1 ) and ( 5.7 ),
+for each $k$ $(0\leq k\leq n-1)$ and a fixed index $(j_{1},\cdots,j_{k})$ , the steady state solution associated with
+( 4.31 ) generates an $(n-k)$ -dimensional torus $\mathbb{T}^{n-k}$ which
+consists of steady state solutions of ( 3.1 ) and
+( 5.7 ). For example if $(j_{1},\cdots,j_{k})=(1,\cdots,k)$ , the $(n-k)$ -dimensional singularity torus $\mathbb{T}^{n-k}$ is $\mathbb{T}^{k}=\left\{u(x+\theta)=\sum^{n}_{j=k+1}y_{j}\cos(x_{j}+\theta_{j})+o(|y|),\ \ \ \ \forall(\theta_{n+1},\cdots,\theta_{n})\in\mathbb{R}^{n-k}\right\},$ where $u(x)$ is the steady state solution of ( 3.1 ) with
+( 5.7 ) associated with ( 4.31 ) with $y_{1}=\cdots=y_{k}=0,y_{k+1}=\cdots=y_{n}$ . Obviously, for a fixed $(j_{1},\cdots,j_{k})$ , the $2^{n-k}$ steady
+state solutions of ( 3.1 ) and ( 5.7 ) associated with
+( 4.31 ) are in the same singular torus $\mathbb{T}^{n-k}$ .
+Furthermore, for two different index $k$ -tuples $(j_{1},\cdots,j_{k})$ and $(i_{1},\cdots,i_{k})$ , the two associated singularity tori are
+different. Hence, for each $0\leq k\leq n-1$ , there are exactly $C^{k}_{n}$ $(n-k)$ -dimensional singularity tori in $\Sigma_{\lambda}$ .
+Thus the proof is complete.
+∎ 6. Cahn-Hilliard Equations Coupled with Entropy When a phase separation takes place in a binary system, the entropy
+varies, and if the phase transition is Type-II, it will yield
+latent heat. Hence, it is necessary to discuss the equations
+( 2.3 ), which are called the Cahn-Hilliard equations coupled
+with entropy. To make the equations ( 2.3 ) non-dimensional, let $\displaystyle x=lx^{\prime},$ $\displaystyle t=\frac{1}{k_{2}}l^{4}t^{\prime},$ $\displaystyle u=u_{0}u^{\prime},$ $\displaystyle S=S_{0}S^{\prime},$ $\displaystyle\mu=\frac{k_{1}}{k_{2}}l^{2},$ $\displaystyle\alpha_{1}=\frac{1}{k_{2}}l^{4}a_{1},$ $\displaystyle\alpha_{2}=\frac{l^{2}}{k_{2}S_{0}}u^{2}_{0}a_{2},$ $\displaystyle\lambda=-\frac{l^{2}}{k_{2}}b_{1},$ $\displaystyle\gamma_{1}=\frac{l^{2}}{k_{2}}S_{0}b_{0},$ $\displaystyle\gamma_{2}=\frac{l^{2}}{k_{2}}u_{0}b_{2},$ $\displaystyle\gamma_{3}=\frac{l^{2}}{k_{2}}u^{2}_{0}b_{3}.$ Omitting the primes, equations ( 2.3 ) are in the following
+form (6.1) $\left.\begin{aligned} &\frac{\partial S}{\partial t}=\mu\Delta S-\alpha_{1}S-\alpha_{2}u^{2},\\
+&\frac{\partial u}{\partial t}=-\Delta^{2}u-\lambda\Delta u+\Delta(\gamma_{1}Su+\gamma_{2}u^{2}+\gamma_{3}u^{3}),\\
+&\int_{\Omega}u(x,t)dx=0,\\
+&\frac{\partial}{\partial n}(u,\Delta u,S)=0\qquad\text{ on }\partial\Omega,\\
+&u(x,0)=\varphi(x).\end{aligned}\right.$ By assumptions ( 2.2 ) and ( 2.4 ), the coefficients
+satisfy $\mu>0,\ \ \ \ \alpha_{1}>0,\ \ \ \ \alpha_{2}>0,\ \ \ \ \gamma_{1}>0,\ \ \ \ \gamma_{3}>0.$ Theorem 6.1 . Let $\Omega=\Pi^{n}_{k=1}(0,L_{k})\subset\mathbb{R}^{n}$ satisfy that $L=L_{1}=\cdots=L_{m}>L_{j}(1\leq m\leq n)$ for any $j>m$ . (1) For the case where $m=1$ , let $\sigma=\frac{3}{2}\gamma_{3}-\frac{\alpha_{2}\gamma_{1}}{\alpha_{1}}-\frac{\alpha_{2}\gamma_{1}L^{2}}{2(\alpha_{1}L^{2}+4\pi^{2}\mu)}-\frac{L^{2}\gamma^{2}_{2}}{3\pi^{2}}.$ (a) If $\sigma<0$ , then the phase transition of
+( 6.1 ) at $\lambda=\pi^{2}/L^{2}$ is Type-II and Assertion (1)
+in Theorem 4.1 holds true. (b) If $\sigma>0$ the phase transition is
+Type-I and Assertion (2) in Theorem 4.1 holds true. (2) For the case where $m\geq 2$ , let $\widetilde{\sigma}=\frac{9}{2}\gamma_{3}-\alpha_{2}\gamma_{1}\left(\frac{2}{\alpha_{1}}+\frac{L^{2}}{2(\alpha_{1}L^{2}+4\pi^{2}\mu)}+\frac{2L^{2}}{\alpha_{1}L^{2}+2\pi^{2}\mu}\right)-\frac{13L^{2}\gamma^{2}_{2}}{3\pi^{2}}.$ (a) If $\widetilde{\sigma}>0$ , the phase transition of ( 6.1 ) at $\lambda=\pi^{2}/L^{2}$ is Type-I and Assertions (1) and (2) in
+Theorem 4.2 hold true. (b) If $\widetilde{\sigma}<0$ , then the phase transition
+is Type-II and Assertion (3) in Theorem 4.2 holds true. Proof. It suffices to compute the reduced equations of
+( 6.1 ) on the center manifold. Similar to ( 4.18 ), the
+second order approximation of the reduced equation can be
+expressed as (6.2) $\displaystyle\frac{dy_{i}}{dt}=$ $\displaystyle\beta_{1}y_{i}-\frac{\pi^{2}}{2L^{2}}[\sigma_{1}y^{3}_{i}+\sigma_{2}y_{i}\sum_{j\neq i}y^{2}_{j}]$ $\displaystyle-\frac{2\pi^{2}}{L_{1}\cdots L_{n}L^{2}}\gamma_{1}\sum^{m}_{j=1}y_{j}\int_{\Omega}\Phi_{1}(y)\cos\frac{\pi x_{i}}{L}\cos\frac{\pi x_{j}}{L}dx,$ where $\beta_{1},\sigma_{1}$ and $\sigma_{2}$ are as in ( 4.18 ),
+and the center manifold function $\Phi_{1}(y)$ derived
+from the first equation in ( 6.1 ) can be expressed as (6.3) $\left.\begin{aligned} &\Phi_{1}(y)=\sum^{\infty}_{|K|\geq 0}\Phi_{K}(y)\varphi_{K}\\
+&\Phi_{K}(y)=\frac{-\alpha_{2}}{\lambda_{K}\|\varphi_{K}\|^{2}}\int_{\Omega}\left(\sum^{m}_{i=1}y_{i}\cos\frac{\pi x_{i}}{L}\right)^{2}\varphi_{K}dx\end{aligned}\right.$ where $\lambda_{K}$ and $\varphi_{K}$ are the eigenvalues and
+eigenfunctions of the following equation $\displaystyle-\mu\Delta\varphi_{K}+\alpha_{1}\varphi_{K}=\lambda_{K}\varphi_{K},$ $\displaystyle\frac{\partial\varphi_{K}}{\partial n}|_{\partial\Omega}=0,$ which are given by $\displaystyle\lambda_{K}=\alpha_{1}+\mu K^{2}\pi^{2},$ $\displaystyle\varphi_{0}=1,\ \ \ \ \varphi_{K}=\cos\frac{k_{1}\pi x_{1}}{L^{2}_{1}}\cdots\cos\frac{k_{n}\pi x_{n}}{L^{2}_{n}},$ $\displaystyle K=(k_{1}/L_{1},\cdots,k_{n}/L_{n}),\quad|K|^{2}=\sum^{n}_{i=1}k^{2}_{i}/L^{2}_{i}$ $\displaystyle\text{ for }k_{i}\in\mathbb{Z},\ \ \ \ 1\leq i\leq n.$ Let $K_{i}=(\delta_{i1}/L_{1},\cdots,\delta_{in}/L_{n}).$ Then we find $\displaystyle\Phi_{0}=$ $\displaystyle\frac{-\alpha_{2}}{\alpha_{1}L_{1}\cdots L_{n}}\int_{\Omega}\left(\sum^{n}_{i=1}y_{i}\cos\frac{\pi x_{i}}{L}\right)^{2}dx=\frac{-\alpha_{2}}{2\alpha_{1}}\sum^{m}_{j=1}y^{2}_{j},$ $\displaystyle\Phi_{k}=$ $\displaystyle\frac{-\alpha_{2}}{\lambda_{K}\|\varphi_{K}\|^{2}}\int_{\Omega}\left(\sum^{m}_{i=1}y_{i}\cos\frac{\pi x_{i}}{L}\right)^{2}dx$ $\displaystyle=$ $\displaystyle\left\{\begin{aligned} &0&&\text{ if }K\neq K_{l}+K_{r},\\
+&\frac{-\alpha_{2}}{\lambda_{K}\|\varphi_{K}\|^{2}}\sum^{m}_{i,j=1}y_{i}y_{j}\int_{\Omega}\cos\frac{\pi x_{i}}{L}\cos\frac{\pi x_{j}}{L}\varphi_{K}dx&&\text{ if }K=K_{l}+K_{r},\end{aligned}\right.$ for some $1\leq r,l\leq m$ . Thus we derive that $\displaystyle\Phi_{K}=$ $\displaystyle\left\{\begin{aligned} &\frac{-\alpha_{2}}{\lambda_{K}\|\varphi_{K}\|^{2}}y^{2}_{j}\int_{\Omega}\cos^{2}\frac{\pi x_{j}}{L}e_{k}&&\text{ if }K=K_{j}+K_{j},\ \ 1\leq j\leq m\\
+&\frac{-2\alpha_{2}}{\lambda_{K}\|\varphi_{K}\|^{2}}y_{i}y_{j}\int_{\Omega}\cos\frac{\pi x_{i}}{L}\cos\frac{\pi x_{j}}{L}e_{K}&&\text{ if }K=K_{i}+K_{j},\ \ i\neq j\end{aligned}\right.$ $\displaystyle=$ $\displaystyle\left\{\begin{aligned} &\frac{-\alpha_{2}}{2(\alpha_{1}+4\pi^{2}\mu/L^{2})}y^{2}_{j}\qquad\qquad&&\text{ if }K=2K_{j},\ \ 1\leq j\leq m,\\
+&\frac{-2\alpha_{2}}{\alpha_{1}+2\pi^{2}\mu/L^{2}}y_{i}y_{j}&&\text{ if }K=K_{i}+K_{j},\ \ i\neq j,\ \ 1\leq i,j\leq m.\end{aligned}\right.$ Putting $\Phi_{0}$ and $\Phi_{K}$ in ( 6.3 ) we obtain $\displaystyle\Phi_{1}=$ $\displaystyle\frac{-\alpha_{2}}{2\alpha_{1}}\sum^{n}_{j=1}y^{2}_{j}-\frac{\alpha_{2}}{2(\alpha_{1}+4\pi^{2}\mu/L^{2})}\sum^{n}_{j=1}y^{2}_{j}\cos\frac{2\pi x_{j}}{L}$ $\displaystyle-\frac{2\alpha_{2}}{\alpha_{1}+2\pi^{2}\mu/L^{2}}\sum_{i<j}y_{i}y_{j}\cos\frac{\pi x_{i}}{L}\cos\frac{\pi x_{j}}{L}.$ Then, inserting $\Phi_{1}$ into ( 6.2 ), we derive the following reduced
+equations: (6.4) $\displaystyle\frac{dy_{i}}{dt}=$ $\displaystyle\beta_{1}(\lambda)y_{i}-\frac{\pi^{2}}{2L^{2}}\left[\left(\sigma_{1}-\frac{\alpha_{2}\gamma_{1}}{\alpha_{1}}-\frac{\alpha_{2}\gamma_{1}}{2(\alpha_{1}+4\pi^{2}\mu/L^{2}}\right)y^{3}_{i}\right.$ $\displaystyle+\left.\left(\sigma_{2}-\frac{\alpha_{2}\gamma_{1}}{\alpha_{1}}-\frac{2\alpha_{2}\gamma_{1}}{\alpha_{1}+2\pi^{2}\mu/L^{2}}\right)y_{i}\sum_{j\neq i}y^{2}_{j}\right],\ \ \ \ 1\leq i\leq m.$ Then the remaining part of the proof can be achieved in the same fashion as the proofs for Theorems 4.1 and 4.2 . The proof is complete.
+∎ Remark 6.1 . From the phenomenological viewpoint, the
+coefficient $\mu>0$ in ( 6.1 ) is small. If let $\mu=0$ ,
+then in the equilibrium state we have that $S=-\frac{\alpha_{2}}{\alpha_{1}}u^{2}$ . In this case, ( 6.1 ) are
+referred to the original Cahn-Hilliard equation ( 3.1 ) with $\gamma^{\prime}_{3}=\gamma_{3}-\alpha_{2}\gamma_{1}/\alpha_{1}$ as
+the coefficient of the cubic term, and the
+criterion $\sigma=0$ in Assertions (1) and (2) of Theorem 6.1 are respectively equivalent to $\gamma^{\prime}_{3}=\frac{2}{9}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}}\ \ \ \ \text{and}\ \ \ \ \gamma^{\prime}_{3}=\frac{26}{27}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}},$ which coincide with these in Theorems 4.1 and 4.2 . Hence, if we
+consider the coefficient $\mu>0$ small, then the criterion $\sigma=0$ are respectively equivalent to $\gamma^{\prime}_{3}=\frac{2}{9}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}}-\frac{4}{3}\frac{\pi^{2}\mu\alpha_{2}\gamma_{1}}{\alpha^{2}_{1}L^{2}},\ \ \ \ \text{and}\ \ \ \ \ \gamma^{\prime}_{3}=\frac{26}{27}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}}-\frac{4}{3}\frac{\pi^{2}\mu\alpha_{2}\gamma_{1}}{\alpha^{2}_{1}L^{2}}.$ Hence the item $-(4\pi^{2}\mu\alpha_{2}\gamma_{1})/3\alpha^{2}_{1}L^{2}$ is
+the effect yielded by $\mu\Delta S$ .
+∎ 7. Physical remarks We now address the physical significance for the phase
+transition theorems obtained in the previous sections. 7.1. Equation of critical parameters For a binary system, the equation describing the control
+parameters $T,p,\Omega$ at the critical states is simple. We first
+consider the critical temperature $T_{c}$ . There are two different
+critical temperatures $T_{1}$ and $T_{0}$ in the Cahn-Hilliard
+equation. $T_{1}$ is the one given by ( 2.8 ), at which the
+coefficient $b_{1}(T,p)$ or $\lambda=-l^{2}b_{1}(T,p)/k$ will change its
+sign, and $T_{0}$ satisfies that $\lambda_{0}<\lambda_{1}$ , and for
+fixed $p$ , (7.1) $\lambda(T)\left\{\begin{aligned} &<\rho_{1}&&\text{ if }T>T_{0},\\
+&=\rho_{1}&&\text{ if }T=T_{0},\\
+&>\rho_{1}&&\text{ if }T<T_{0},\end{aligned}\right.$ where $\rho_{1}$ is the first eigenvalue of ( 3.4 ), which
+depends on the geometrical properties of the material such as the size of the container of the sample $\Omega$ . When $\Omega=(0,L)^{m}\times D\subset\mathbb{R}^{n}$ is a
+rectangular domain with $L>$ diameter of $D,\rho_{1}=\pi^{2}/L^{2}$ .
+Hence, in general at the critical temperature $T_{1}$ a binary
+system does not undergo any phase transitions, but the phase transition does occur at $T=T_{0}$ . At $T_{1}$ and $T_{0}$ we know that (7.2) $\lambda(T_{1})=0,\ \ \ \ \lambda(T_{0})=\rho_{1}.$ For a rectangular domain, $\rho_{1}=\pi^{2}/L^{2}$ , therefore from
+( 7.2 ) we see that $T_{1}$ is a limit of the critical
+temperature $T_{0}$ of phase transition as the size of $\Omega$ tends to infinite. In fact, for a general domain, it is easy to see that the first eigenvalue $\rho_{1}$ of the Laplace operator
+is inversely proportional to the square of the maximum diameter of $\Omega$ : (7.3) $\rho_{1}\sim\frac{1}{L^{2}},$ where $L$ represents the diameter scaling of $\Omega$ . Thus the equation of critical parameters in the
+Cahn-Hilliard equation, by ( 7.2 ) and ( 7.3 ), is
+given by (7.4) $\lambda(T,p)=\frac{C}{L^{2}},$ where $C>0$ is a constant depending on the geometry of $\Omega$ .
+According to the Hildebrand theory (see Reichl [ 7 ] ), the function $\lambda(T,p)$ can be expressed in a explicit formula. If
+regardless of the term $|\nabla u|^{2}$ , the molar Gibbs free energy
+takes the following form (7.5) $g=\mu_{A}(1-u)+\mu_{B}u+RT(1-u)\ln(1-u)+RTu\ln u+au(1-u),$ where $\mu_{A},\mu_{B}$ are the chemical potential of $A$ and $B$ respectively, $R$ the molar gas constant, $a>0$ the measure of
+repel action between $A$ and $B$ . Therefore, the coefficient $b_{1}$ in ( 2.7 ) with constant $p$ is $b_{1}=\frac{\partial^{2}g}{\partial u^{2}}|_{u=u_{0}}=\frac{1}{u_{0}(1-u_{0})}RT-a\ \ \ \ (a=a(p)),$ where $u_{0}=\bar{u}_{B}$ is the constant concentration of $B$ . Hence $\lambda(T,p)=-\frac{l^{2}}{k}b_{1}=\frac{2al^{2}}{k}-\frac{l^{2}R}{ku_{0}(1-u_{0})}T.$ Thus, equation ( 7.4 ) is expressed as (7.6) $\frac{l^{2}R}{ku_{0}(1-u_{0})}T=\frac{2al^{2}}{K}-\frac{C}{L^{2}}.$ Equation ( 7.6 ) gives the critical parameter curve of a
+binary system with constant pressure for temperature $T$ and
+diameter scaling $L$ of container $\Omega$ . Because $T\geq 0$ ,
+from ( 7.5 ) we can deduce the following physical
+conclusion. Physical Conclusion 7.1. Under constant pressure, for any
+binary system with given geometrical shape of the container $\Omega$ ,
+there is a value $L_{0}>0$ such that as the diameter scaling $L<L_{0}$ , no phase separation takes place at all temperature $T\geq 0$ , and as $L>L_{0}$ phase separation will occur at some critical
+temperature $T_{0}>0$ satisfying ( 7.6 ). We shall see later that it is a universal property that the dynamical
+properties of phase transitions depend on the geometrical shape
+and size of the container or sample $\Omega$ . 7.2. Physical explanations of phase transition theorems We first briefly recall the classical
+thermodynamic theory for a binary system. Physically, phase
+separation processes taking place in an unstable state are called
+spinodal decompositions; see Cahn and Hilliard [ 1 ] and Onuki [ 6 ] .
+When consider the concentration $u$ as homogeneous in $\Omega$ ,
+then by ( 7.5 ) the dynamic equation of a binary system is
+an ordinary differential equation: (7.7) $\frac{du}{dt}=-\frac{dg}{du}=2au-RT\ln\frac{u}{1-u}+\mu_{A}-\mu_{B}-a.$ Let $u_{0}$ $(0<u_{0}<1)$ be the steady state solution of ( 7.7 ).
+Then, by the Taylor expansion at $u=u_{0}$ , omitting the $n$ th order
+terms with $n\geq 4$ , ( 7.7 ) can be rewritten as (7.8) $\frac{dv}{dt}=\lambda v+b_{2}v^{2}+b_{3}v^{3},$ where $\displaystyle v=u-u_{0},$ $\displaystyle\lambda=2a-\frac{1}{u_{0}(1-u_{0})}RT,$ $\displaystyle b_{2}=\frac{1-2u_{0}}{2u^{2}_{0}(1-u_{0})^{2}}RT,$ $\displaystyle b_{3}=-\frac{1}{3}\frac{1-u_{0}-2u^{2}_{0}+3u^{3}_{0}}{u^{3}_{0}(1-u_{0})^{4}}RT.$ It is easy to see that $\displaystyle b_{2}\left\{\begin{aligned} &=0&&\text{ if }u_{0}=\frac{1}{2},\\
+&\neq 0&&\text{ if }u_{0}\neq\frac{1}{2},\end{aligned}\right.$ $\displaystyle b_{3}<0\qquad\forall 0<u_{0}<1.$ It is clear that the critical parameter curve $\lambda=0$ in the $T-u_{0}$ plane is given by $T_{0}=2au_{0}(1-u_{0})/R,$ which is schematically illustrated in the classical phase diagram; see the dotted line in Figure 7.1 . We obtain from ( 7.8 ) the following transition steady states: $v^{\pm}=\frac{-1}{2b_{3}}(b_{2}\pm\sqrt{b_{2}^{2}-4b_{3}\lambda})\qquad\text{ for }b_{2}^{2}-4b_{3}\lambda>0.$ By Theorem 3.2 , we see that there is $T^{*}=T^{*}(u_{0})$ satisfying
+that $b_{2}^{2}-4b_{3}\lambda=0$ ; namely, (7.9) $T^{*}=\frac{2au_{0}(1-u_{0})}{R(1-\beta(u_{0}))},\qquad\beta(u_{0})=\frac{3(1-2u_{0})^{2}(1-u_{0})}{16(1-u_{0}-2u_{0}^{2}+3u_{0}^{3})},$ such that if $T_{0}<T<T^{*}$ , $\displaystyle v^{+}\text{ is }\left\{\begin{aligned} &\text{ locally stable (metastable) }&&\text{ for }0<u_{0}<\frac{1}{2},\\
+&\text{ unstable }&&\text{ for }\frac{1}{2}<u_{0}<1,\end{aligned}\right.$ $\displaystyle v^{-}\text{ is }\left\{\begin{aligned} &\text{ locally stable (metastable) }&&\text{ for }\frac{1}{2}<u_{0}<1,\\
+&\text{ unstable }&&\text{ for }0<u_{0}<\frac{1}{2}.\end{aligned}\right.$ Here $T^{*}(u_{0})=\frac{T_{0}(u_{0})}{1-\beta_{0}(u_{0})}\geq T_{0}(u_{0})$ is illustrated by the solid line in Figure 7.1 .
+This shows that the region $T_{0}(u_{0})<T<T^{*}(u_{0})$ is metastable, which is marked
+by the shadowed region in Figure 7.1 . See, among others, Reichl [ 7 ] ,
+Novick-Cohen and Segal [ 5 ] , and Langer [ 2 ] for the phase transition diagram from the classical thermodynamic theory. Figure 7.1. Typical phase diagram from classical
+thermodynamic theory. In the following we shall discuss the spinodal decomposition in a unified fashion by
+applying the phase transition theorems presented in the previous sections. As mentioned in the Introduction, phase separation processes
+of binary systems occur in two ways, one of which proceeds
+continuously depending on $T$ , and the other one does not.
+Obviously, the classical theory does not explain these phenomena.
+In fact, the first one can be described by the Type-I phase
+transition, and the second one can be explained by the Type-II and
+Type-III phase transitions. We first consider the case where the container $\Omega=\Pi^{n}_{i=1}(0,L_{i})$ with $L=L_{1}=\cdots=L_{m}>L_{j}(j>m)$ is a
+rectangular domain. Thus, by Theorems 4.1 and 4.2 (or Theorem 6.1 )
+there are only two phase transition types: Type-I and Type-II,
+with the type of transition depending on $L$ . We see that if $L^{2}<\left\{\begin{aligned} &\frac{9}{2}\frac{\pi^{2}\gamma_{3}}{\gamma^{2}_{2}}&&\text{for}\ m=1,\\
+&\frac{27}{26}\frac{\pi^{2}\gamma_{3}}{\gamma^{2}_{2}}&&\text{for}\ m\geq 2,\end{aligned}\right.$ then the transition is Type-I, i.e., the phase
+pattern formation gradually varies as the temperature
+decreases. In this case, no meta-stable states and no latent heat
+appear. The phase diagram is given by Figure 7.2 ,
+where the solid lines $u_{i}^{T}$ ( $i=1,2$ ) represent the transition solutions. Figure 7.2. The state $u_{0}=\bar{u}_{B}$ is
+stable if $T_{c}=T_{0}<T$ , and the state $u_{0}$ is unstable if $T<T_{0}$ , where $T_{0}$ is as in ( 7.1 ). If $L$ satisfies that $L^{2}>\left\{\begin{aligned} &\frac{9}{2}\frac{\pi^{2}\gamma_{3}}{\gamma^{2}_{2}}&&\text{for}\ m=1,\\
+&\frac{27}{26}\frac{\pi^{2}\gamma_{3}}{\gamma^{2}_{2}}&&\text{for}\ m\geq 2,\end{aligned}\right.$ then the phase transition is Type-II. Namely, there is a
+leaping change in phase pattern formation at the critical temperature $T_{c}$ . The phase diagram for Type-II transition is given by Figure 7.3 . Figure 7.3. A Type-II phase transition. In Figure 7.3 , $T_{0}$ is the critical temperature as in ( 7.1 ), $T^{*}$ is defined by ( 7.9 ) and is the saddle-node bifurcation point of ( 7.8 ).
+The constant concentration $u=u_{0}$ is stable in $T_{c}<T$ , is
+meta-stable in $T_{0}<T<T_{c}$ , and is unstable in $T<T_{0}$ .
+The two bifurcated states $U^{T}_{1}$ and $U^{T}_{2}$ from $T^{*}$ are meta-stable in $T_{0}<T<T^{*}$ , and are stable in $T<T_{0}$ .
+Here for $i=1,2$ , $U_{i}^{T}=u^{T}_{i}+u_{0}$ , and $u_{i}$ are the separated solutions of
+( 3.1 ) with ( 3.5 ) from $T^{*}$ . There is a remarkable difference between Type-I and Type-II transitions. The
+Type-I phase transition occurs at $T=T_{0}$ and Type-II does in $T_{0}<T<T^{*}$ . Furthermore, latent heat is
+accompanied the Type-II phase transition. Actually, when a binary
+system undergoes a transition from $u_{0}$ to $U^{T}_{i}$ $(i=1,2)$ ,
+there is a gap $|U^{T}_{i}-u_{0}|^{2}=|u_{i}^{T}|^{2}>\varepsilon>0$ for any $T_{0}<T<T^{*}$ .
+By the first
+equation in ( 6.1 ) it yields a jump of entropy between $u_{0}$ and $U^{T}_{i}$ : $\delta S_{i}=\int_{\Omega}Sdx=-\frac{\alpha_{2}}{\alpha_{1}}\int_{\Omega}|u^{T}_{i}|^{2}dx<0,$ where $S=S_{i}-\bar{S}_{0}$ represents the entropy density deviation.
+Hence the latent heat is given by $\delta H=T\delta S_{i}=-\frac{\alpha_{2}T}{\alpha_{1}}\int_{\Omega}|u^{T}_{i}|^{2}dx<0,$ which implies that the process from $u_{0}$ to $U^{T}_{i}$ is
+exothermic, and the process from $U^{T}_{i}$ to $u_{0}$ is endothermic. Now, we consider the case where the container $\Omega$ is
+non rectangular. Thus, by Theorem 3.2 the transition is Type-III, and its
+phase diagram is given by Figure 7.4 . Figure 7.4. A Type-III phase transition. In Figure 7.4 , $T_{0}$ and $T^{*}$ are the same as those in Figure 7.3 . The state $u_{0}$ is stable in $T^{*}<T$ , is metastable in $T_{0}<T<T^{*}$ , and unstable in $T<T_{0}$ .
+The equilibrium state $U^{T}_{1}$ separated from $T^{*}$ is metastable in $T_{0}<T<T^{*}$ , and is stable in $T<T_{0}$ . However, the equilibrium
+state $U^{T}_{2}$ separated from $T^{*}$ is unstable in $T_{0}<T<T^{*}$ , and
+is metastable in $T<T_{0}$ . Similar to the Type-II, the Type-III phase transition has also
+latent heat, which occurs in $T_{0}<T<T^{*}$ . But the difference
+between Type-II and Type-III is that Type-II has $2m$ $(m\geq 1)$ stable equilibrium states separated from $T=T^{*}$ , but Type-III has
+just one. The $2m$ stable states of a Type-II transition are of some symmetry
+caused by $\Omega$ , and we shall investigate it later. A
+particular aspect of Type-III is that there is a state $U^{T}_{2}$ bifurcated from $(u,T)=(u_{0},T_{0})$ , which is rarely
+observed in experiments. 7.3. Symmetry and periodic structure Physical experiments have shown that in pattern formation via
+phase separation, periodic or semi-periodic structure appears. From
+Theorems 5.1 and 5.2 we see that for the loop domains and bulk
+domains which can be considered as $\mathbb{R}^{n}$ or $\mathbb{R}^{m}\times D$ $(D\subset\mathbb{R}^{n-m})$ the steady state solutions of the Cahn-Hilliard equation
+are periodic, and for rectangular domains they are semi-periodic, and the periodicity is associated with the mirror image symmetry. Let $\Omega=(0,L)^{m}\times D$ $(m\geq 1)$ . By Remark 4.1 ,
+Theorem 4.1 is valid for $\Omega$ . Actually, in this case the
+following space $\widetilde{H}=\left\{u\in L^{2}(\Omega)|\ u=\sum^{\infty}_{|K|=1}y_{k}\cos\frac{k_{1}\pi}{L}x_{1}\cdots\cos\frac{k_{m}\pi}{L}x_{m}\right\}\subset H$ is invariant for the Cahn-Hilliard equation ( 3.1 ) and
+( 3.5 ). All separated equilibrium states in Theorem 4.1 are
+in $\widetilde{H}$ . From the physical viewpoint, all equilibrium states $u(x)$ and their mirror image states $u(L-x^{\prime},x^{\prime\prime})$ are the same to describe the pattern
+formation. Mathematically, under the mirror image transformation $x\rightarrow(L-x^{\prime},x^{\prime\prime}),\ \ \ \ x^{\prime}=(x_{1},\cdots,x_{m}),\ \ \ \ x^{\prime\prime}=(x_{m+1},\cdots,x_{n}),$ the Cahn-Hilliard equation ( 3.1 ) with ( 3.5 ) is invariant. Hence,
+the steady state solutions will appear in pairs. In
+particular, for Type-I phase transition, there is a remarkable mirror
+image symmetric. We address this problem as follows. Let $m=1$ in $\Omega=(0,L)^{m}\times D$ . By ( 4.2 ) there are
+two bifurcated stable equilibrium states, and their projections on
+the first eigenspace are $\displaystyle u_{1}=y\cos\frac{\pi x_{1}}{L},\ \ \ \ u_{2}=-y\cos\frac{\pi x_{1}}{L},$ $\displaystyle y=\sqrt{2(\lambda-\pi^{2}/L^{2})}/\left(\frac{3}{2}\gamma_{3}-\frac{L^{2}}{3\pi^{2}}\gamma^{2}_{2}\right).$ It is clear that $u_{2}(x_{1})=u_{1}(L-x_{1})$ . Let $m=2$ . By Theorem 4.2 the bifurcated attractor $\Sigma_{\lambda}$ contains 8 equilibrium states, whose projections
+are given by $\displaystyle u^{\pm}_{1}=\pm y_{0}e_{1},\ \ \ \ u^{\pm}_{2}=\pm y_{1}(e_{1}+e_{2}),$ $\displaystyle u^{\pm}_{3}=\pm y_{0}e_{2},\ \ \ \ u^{\pm}_{4}=\pm y_{1}(-e_{1}+e_{2}),$ where $e_{1}=\left(\cos\frac{\pi x_{1}}{L},0\right)$ and $e_{2}=\left(0,\cos\frac{\pi x_{2}}{L}\right)$ form an
+orthogonal basis in $\mathbb{R}^{2}$ , and $\displaystyle y_{0}=\sqrt{2(\lambda-\pi^{2}/L^{2})}/\sqrt{\sigma_{1}},$ $\displaystyle y_{1}=\sqrt{2(\lambda-\pi^{2}/L^{2})}/\sqrt{\sigma_{1}+\sigma_{2}}\ \ \ \ \text{ with }\sigma_{1},\sigma_{2}\ \text{as\ in\ (\ref{8.90})}.$ These eight equilibrium states constitute an octagon in $\mathbb{R}^{2}$ , as
+shown in Figure 7.5 , and they are divided into two classes: ${\mathcal{A}}_{1}=\left\{u^{\pm}_{1},u^{\pm}_{3}\right\}$ and ${\mathcal{A}}_{3}=\left\{u^{\pm}_{2},u^{\pm}_{4}\right\}$ by the $\frac{\pi}{2}$ -rotation group $G(\frac{\pi}{2})$ .
+Namely, with the action of $G(\frac{\pi}{2}),{\mathcal{A}}_{i}$ $(i=1,2)$ are
+invariant: $Bu\in{\mathcal{A}}_{i},\ \ \ \ \forall u\in{\mathcal{A}}_{i}\ \text{and}\ B\in G(\frac{\pi}{2}),$ where $G(\frac{\pi}{2})$ consists of
+the orthogonal matrices $B^{\pm}_{1}=\pm\left(\begin{matrix}1&0\\
+0&1\end{matrix}\right),\ \ \ \ B^{\pm}_{2}=\pm\left(\begin{matrix}1&0\\
+0&-1\end{matrix}\right),\ \ \ \ B^{\pm}_{3}=\pm\left(\begin{matrix}0&-1\\
+1&0\end{matrix}\right),\ \ \ \ B^{\pm}_{4}=\pm\left(\begin{matrix}0&1\\
+1&0\end{matrix}\right).$ The stability of the equilibrium states $u_{k}$ is associated
+with both classes ${\mathcal{A}}_{1}$ and ${\mathcal{A}}_{2}$ ,
+i.e., either the elements in ${\mathcal{A}}_{1}$ are stable, or those
+in ${\mathcal{A}}_{2}$ are stable; see Figure 4.2 . By ( 4.33 )
+we can derive the criterion as follows $\displaystyle u^{\pm}_{2k+1}\in{\mathcal{A}}_{1}\text{ are stable }$ $\displaystyle\Leftrightarrow\quad\frac{22}{9}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}}>\gamma_{3}>\frac{26}{27}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}}$ $\displaystyle\text{ for }k=0,1,$ $\displaystyle u^{\pm}_{2k}\in{\mathcal{A}}_{2}\text{ are stable }$ $\displaystyle\Leftrightarrow\quad\gamma_{3}>\frac{22}{9}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}}$ $\displaystyle\text{ for }k=1,2,$ Figure 7.5. The eight equilibrium states in the case where $m=2$ given by Theorem 4.2 . In Figure 7.5 , we see that elements in ${\mathcal{A}}_{1}$ and ${\mathcal{A}}_{2}$ have a $\frac{\pi}{4}$ difference in their phase
+angle. However, in their pattern structure, $u^{\pm}_{2K+1}\in{\mathcal{A}}_{1}$ and $u^{\pm}_{2k}\in{\mathcal{A}}_{2}$ also have a $\pi/4$ deference at
+the angle between the lines of $u^{\pm}_{2K+1}=0$ and $u^{\pm}_{2K}=0$ . In fact, the lines that $\displaystyle u^{+}_{1}=-u^{-}_{1}=y_{0}\cos\frac{\pi x_{1}}{L}=0,\ \ \ \ \text{and}$ $\displaystyle u^{+}_{3}=-u^{-}_{3}=y_{0}\cos\frac{\pi x_{2}}{L}=0$ are given by $x_{1}=L/2$ and $x_{2}=L/2$ respectively, as shown in
+Figure 7.6 (a), and the lines $\displaystyle u^{+}_{2}=-u^{-}_{2}=y_{1}\left(\cos\frac{\pi x_{1}}{L}+\cos\frac{\pi x_{2}}{L}\right)=0,\ \ \ \ \text{and}$ $\displaystyle u^{+}_{4}=-u^{-}_{4}=y_{1}\left(-\cos\frac{\pi x_{1}}{L}+\cos\frac{\pi x_{2}}{L}\right)=0$ are given by $x_{2}=L-x_{1}$ and $x_{2}=x_{1}$ respectively as shown in
+Figure 7.6 (b). Figure 7.6. Let $m=3$ . Then the bifurcated attractor $\Sigma_{\lambda}$ contains 26 equilibrium states which can by divide into three
+classes by the 3-dimensional $\left(\frac{\pi}{2},\frac{\pi}{2},\frac{\pi}{2}\right)$ -rotation
+group $G\left(\frac{\pi}{2},\frac{\pi}{2},\frac{\pi}{2}\right)$ as
+follows $\displaystyle{\mathcal{A}}_{1}=\left\{u^{\pm}_{1}=\pm y_{0}e_{1},u^{\pm}_{2}=\pm y_{0}e_{2},u^{\pm}_{3}=\pm y_{0}e_{3}\right\},$ $\displaystyle{\mathcal{A}}_{2}=\left\{u^{\pm}_{4}=\pm y_{1}(e_{1}+e_{2}),u^{\pm}_{5}=\pm y_{1}(e_{1}+e_{3}),u^{\pm}_{6}=\pm y_{1}(e_{2}+e_{3}),\right.$ $\displaystyle\ \ \ \ u^{\pm}_{7}=\pm y_{1}(-e_{1}+e_{2}),u^{\pm}_{8}=\pm y_{1}(-e_{1}+e_{3}),u^{\pm}_{9}=\pm y_{1}(-e_{2}+e_{3})\},$ $\displaystyle{\mathcal{A}}_{3}=\{u^{\pm}_{10}=\pm y_{1}(e_{1}+e_{2}+e_{3}),u^{\pm}_{11}=\pm y_{1}(-e_{1}+e_{2}+3_{3}),$ $\displaystyle\ \ \ \ u^{\pm}_{12}=\pm y_{1}(e_{1}-e_{2}+e_{3}),u^{\pm}_{13}=\pm y_{1}(e_{1}+e_{2}-e_{3})\}.$ Only these elements in ${\mathcal{A}}_{1}$ or in ${\mathcal{A}}_{3}$ are stable, and they are determined by the
+following criterion $\displaystyle\text{elements in}\ {\mathcal{A}}_{1}\ \text{is\ stable}\Leftrightarrow\frac{22}{9}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}}>\gamma_{3}>\frac{26}{27}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}},$ $\displaystyle\text{elements\ in}\ {\mathcal{A}}_{3}\ \text{is\ stable}\Leftrightarrow\gamma_{3}>\frac{22}{9}\frac{L^{2}\gamma^{2}_{2}}{\pi^{2}}.$ 7.4. Critical exponents From ( 4.2 ) and ( 4.34 ) we see that for Type-I phase
+transition of a binary system the critical exponent $\beta=\frac{1}{2}$ . In this case, it is a second order phase transition with the Ehrenfest classification scheme,
+and there is a gap in heat capacity at critical temperature $T_{0}$ .
+To see this, by ( 4.2 ) and ( 4.34 ) we have $u^{T}=\left\{\begin{aligned} &0&&\text{if}\ T_{0}<T,\\
+&\alpha(\lambda(T)-\pi^{2}/L^{2})^{{1}/{2}}e_{1}+o(|\lambda-\pi^{2}/L^{2}|^{{1}/{2}})&&\text{if}\ T<T_{0},\end{aligned}\right.$ and the free energy for ( 3.1 ) at $u^{T}$ is $\displaystyle F(u^{T})=$ $\displaystyle\int_{\Omega}\left[\frac{1}{2}|\nabla u^{T}|^{2}-\frac{\lambda}{2}|u^{T}|^{2}+o(|u^{T}|^{2})\right]dx$ $\displaystyle=$ $\displaystyle\int_{\Omega}\frac{1}{2}[-\Delta u^{T}-\lambda u^{T}]u^{T}+\frac{1}{3}\gamma_{2}(u^{T})^{3}+\frac{1}{4}\gamma_{3}(u^{T})^{4}dx$ $\displaystyle=$ $\displaystyle\left\{\begin{aligned} &0&&\text{if}\ T_{0}<T,\\
+&-\frac{\alpha^{2}}{2}(\lambda-\pi^{2}/L^{2})^{2}\cdot\int_{\Omega}[e^{2}_{1}+\frac{\alpha^{2}}{4}\gamma_{3}e^{4}_{1}]dx+o(|\lambda-\pi^{2}/L^{2}|^{2})&&\text{if}\ T>T_{0}.\end{aligned}\right.$ Thus, the heat capacity $C$ at $T=T_{0}$ satisfies $C^{+}-C^{-}=-T_{0}\frac{\partial^{2}F(u^{T})}{\partial T^{2}}\Big|_{T_{0}^{+}}+T_{0}\frac{\partial^{2}F(u^{T})}{\partial T^{2}}\Big|_{T_{0}^{-}}=\alpha_{1}T_{0}\left(\frac{d\lambda}{dT}\right)^{2}|_{T=T_{0}}.$ It is known that $d\lambda/dT\neq 0$ ; hence the heat capacity at $T=T_{0}$ has a finite jump. From ( 3.14 ) we know that for the Type-III case, the critical
+exponent $\beta=1$ . Thus, it is not hard to deduce
+that the continuous phase transition in Type-III is of the 3rd order. Appendix A Dynamic Transition Theory for Nonlinear Systems In this appendix we recall some basic elements of the dynamic transition theory developed by the authors [ 3 , 4 ] , which are used to carry out the dynamic transition analysis for the binary systems in this article. A.1. New classification scheme Let $X$ and $X_{1}$ be two Banach spaces, and $X_{1}\subset X$ a compact and
+dense inclusion. In this chapter, we always consider the following
+nonlinear evolution equations (A.1) $\left.\begin{aligned} &\frac{du}{dt}=L_{\lambda}u+G(u,\lambda),\\
+&u(0)=\varphi,\end{aligned}\right.$ where $u:[0,\infty)\rightarrow X$ is unknown function, and $\lambda\in\mathbb{R}^{1}$ is the system parameter. Assume that $L_{\lambda}:X_{1}\rightarrow X$ is a parameterized
+linear completely continuous field depending continuously on $\lambda\in\mathbb{R}^{1}$ , which satisfies (A.2) $\left.\begin{aligned} &L_{\lambda}=-A+B_{\lambda}&&\text{a sectorial operator},\\
+&A:X_{1}\rightarrow X&&\text{a linear homeomorphism},\\
+&B_{\lambda}:X_{1}\rightarrow X&&\text{a linear compact operator}.\end{aligned}\right.$ In this case, we can define the fractional order spaces $X_{\sigma}$ for $\sigma\in\mathbb{R}^{1}$ . Then we also assume that $G(\cdot,\lambda):X_{\alpha}\rightarrow X$ is $C^{r}(r\geq 1)$ bounded mapping for some $0\leq\alpha<1$ , depending continuously
+on $\lambda\in\mathbb{R}^{1}$ , and (A.3) $G(u,\lambda)=o(\|u\|_{X_{\alpha}}),\ \ \ \ \forall\lambda\in\mathbb{R}^{1}.$ Hereafter we always assume the conditions ( A.2 ) and
+( A.3 ), which represent that the system ( A.1 ) has
+a dissipative structure. Definition A.1 . We say that the system ( A.1 ) has a
+transition of equilibrium from $(u,\lambda)=(0,\lambda_{0})$ on $\lambda>\lambda_{0}$ (or $\lambda<\lambda_{0})$ if the following two conditions are
+satisfied: (1) when $\lambda<\lambda_{0}$ (or $\lambda>\lambda_{0}),u=0$ is locally asymptotically stable for ( A.1 ); and (2) when $\lambda>\lambda_{0}$ (or $\lambda<\lambda_{0})$ ,
+there exists a neighborhood $U\subset X$ of $u=0$ independent of $\lambda$ , such that for any $\varphi\in U\setminus\Gamma_{\lambda}$ the
+solution $u_{\lambda}(t,\varphi)$ of ( A.1 ) satisfies that $\left.\begin{aligned} &\limsup_{t\rightarrow\infty}\|u_{\lambda}(t,\varphi)\|_{X}\geq\delta(\lambda)>0,\\
+&\lim_{\lambda\rightarrow\lambda_{0}}\delta(\lambda)\geq 0,\end{aligned}\right.$ where $\Gamma_{\lambda}$ is the stable manifold of $u=0$ , with codim $\Gamma_{\lambda}\geq 1$ in $X$ for $\lambda>\lambda_{0}$ (or $\lambda<\lambda_{0})$ . Obviously, the attractor bifurcation of ( A.1 ) is a type of
+transition. However, bifurcation and
+transition are two different, but related concepts.
+Definition A.1 defines the transition of ( A.1 ) from a stable
+equilibrium point to other states (not necessary equilibrium state).
+In general, we can define transitions from one attractor to
+another as follows. Let the eigenvalues (counting multiplicity) of $L_{\lambda}$ be given by $\{\beta_{j}(\lambda)\in\mathbb{C}\ \ |\ \ j=1,2,\cdots\}$ Assume that (A.4) $\displaystyle\text{Re}\ \beta_{i}(\lambda)\left\{\begin{aligned} &<0&&\text{ if }\lambda<\lambda_{0},\\
+&=0&&\text{ if }\lambda=\lambda_{0},\\
+&>0&&\text{ if }\lambda>\lambda_{0},\end{aligned}\right.$ $\displaystyle\forall 1\leq i\leq m,$ (A.5) $\displaystyle\text{Re}\ \beta_{j}(\lambda_{0})<0$ $\displaystyle\forall j\geq m+1.$ The following theorem is a basic principle of transitions from
+equilibrium states, which provides sufficient conditions and a basic
+classification for transitions of nonlinear dissipative systems.
+This theorem is a direct consequence of the center manifold
+theorems and the stable manifold theorems; we omit the proof. Theorem A.1 . Let the conditions ( A.4 ) and
+( A.5 ) hold true. Then, the system ( A.1 ) must have a
+transition from $(u,\lambda)=(0,\lambda_{0})$ , and there is a
+neighborhood $U\subset X$ of $u=0$ such that the transition is one
+of the following three types: (1) Continuous Transition :
+there exists an open and dense set $\widetilde{U}_{\lambda}\subset U$ such that for any $\varphi\in\widetilde{U}_{\lambda}$ , the solution $u_{\lambda}(t,\varphi)$ of ( A.1 ) satisfies $\lim\limits_{\lambda\rightarrow\lambda_{0}}\limsup_{t\rightarrow\infty}\|u_{\lambda}(t,\varphi)\|_{X}=0.$ In particular, the attractor bifurcation of ( A.1 )
+at $(0,\lambda_{0})$ is a continuous transition. (2) Jump Transition :
+for any $\lambda_{0}<\lambda<\lambda_{0}+\varepsilon$ with some $\varepsilon>0$ , there is an open
+and dense set $U_{\lambda}\subset U$ such that
+for any $\varphi\in U_{\lambda}$ , $\limsup_{t\rightarrow\infty}\|u_{\lambda}(t,\varphi)\|_{X}\geq\delta>0,$ where $\delta>0$ is independent of $\lambda$ .
+This type of transition is also called the discontinuous
+transition. (3) Mixed Transition :
+for any $\lambda_{0}<\lambda<\lambda_{0}+\varepsilon$ with some $\varepsilon>0$ , $U$ can be decomposed into two open sets $U^{\lambda}_{1}$ and $U^{\lambda}_{2}$ ( $U^{\lambda}_{i}$ not necessarily
+connected): $\bar{U}=\bar{U}^{\lambda}_{1}+\bar{U}^{\lambda}_{2},\ \ \ \ U^{\lambda}_{1}\cap U^{\lambda}_{2}=\emptyset,$ such that $\displaystyle\lim\limits_{\lambda\rightarrow\lambda_{0}}\limsup_{t\rightarrow\infty}\|u(t,\varphi)\|_{X}=0$ $\displaystyle\forall\varphi\in U^{\lambda}_{1},$ $\displaystyle\limsup_{t\rightarrow\infty}\|u(t,\varphi)\|_{X}\geq\delta>0$ $\displaystyle\forall\varphi\in U^{\lambda}_{2}.$ With this theorem in our disposal, we are in position to give a new dynamic classification scheme for dynamic phase transitions. Definition A.1 (Dynamic Classification of Phase Transition) . The phase transitions for ( A.1 ) at $\lambda=\lambda_{0}$ is classified using their dynamic properties: continuous, jump, and mixed as given in Theorem A.1 , which are called Type-I, Type-II and Type-III respectively. An important aspect of the transition theory is to determine which
+of the three types of transitions given by Theorem A.1 occurs in
+a specific problem. By reduction to the center manifold of
+( A.1 ), we know that the type of transitions for ( A.1 ) at $(0,\lambda_{0})$ is completely dictated by its reduction equation
+near $\lambda=\lambda_{0}$ , which can be
+expressed as: (A.6) $\frac{dx}{dt}=J_{\lambda}x+PG(x+\Phi(x,\lambda),\lambda)\ \ \ \ \text{ for }x\in\mathbb{R}^{m},$ where $J_{\lambda}$ is the $m\times m$ order Jordan matrix
+corresponding to the eigenvalues given by ( A.4 ), $\Phi(x,\lambda)$ is the center manifold function of ( A.1 ) near $\lambda_{0}$ , $P:X\rightarrow E_{\lambda}$ is the canonical
+projection, and $E_{\lambda}=\cup_{1\leq i\leq m}\cup_{k\in N}\{u\in X_{1}|\ \ (L_{\lambda}-\beta_{i}(\lambda))^{k}u=0\}$ is the eigenspace of $L_{\lambda}$ . By the spectral theorem, ( A.6 ) can be expressed into the
+following explicit form (A.7) $\frac{dx}{dt}=J_{\lambda}x+g(x,\lambda),$ where (A.8) $\left.\begin{aligned} &g(x,\lambda)=(g_{1}(x,\lambda),\cdots,g_{m}(x,\lambda)),\\
+&g_{j}(x,\lambda)=<G(\sum^{m}_{i=1}x_{i}e_{i}+\Phi(x,\lambda),\lambda),e^{*}_{j}>\quad\forall 1\leq j\leq m.\end{aligned}\right.$ Here $e_{j}$ and $e^{*}_{j}$ $(1\leq j\leq m)$ are the eigenvectors of $L_{\lambda}$ and $L^{*}_{\lambda}$ respectively corresponding to the
+eigenvalues $\beta_{j}(\lambda)$ as in ( A.4 ). In particular, if $G(u,\lambda)$ has the Taylor expansion (A.9) $G(u,\lambda)=G_{k}(u,\lambda)+o(\|u\|^{k}_{X_{\alpha}}),$ for some $k\geq 2$ , where $G_{k}(u,\lambda)$ is a $k$ -multilinear operator, then ( A.7 ) can be rewritten as (A.10) $\frac{dx}{dt}=J_{\lambda}x+g_{k}(x,\lambda)+o(|x|^{k}),$ where $\displaystyle g_{k}(x,\lambda)=(g_{k1}(x,\lambda),\cdots,g_{km}(x,\lambda)),$ $\displaystyle g_{kj}(x,\lambda)=<G_{k}(\sum^{n}_{i=1}x_{i}e_{i},\lambda),e^{*}_{j}>$ $\displaystyle\forall 1\leq j\leq m.$ When $x=0$ is an isolated singular point of $g_{k}(x,\lambda)$ , in
+general the transition of ( A.1 ) is determined by the
+first-order approximate bifurcation equation of ( A.10 ) as follows: (A.11) $\frac{dx}{dt}=J_{\lambda}x+g_{k}(x,\lambda).$ The following theorem is useful to distinguish the transition
+types of ( A.1 ) at $(u,\lambda)=(0,\lambda_{0})$ . Theorem A.2 . Let the conditions ( A.4 ) and
+( A.5 ) hold true, and $U\subset\mathbb{R}^{m}$ be a neighborhood of $x=0$ .
+Then we have the following assertions: (1) If the transition of ( A.1 ) at $(0,\lambda_{0})$ is
+continuous, then there is an open and dense set $\widetilde{U}\subset U$ such that for any $x_{0}\in\widetilde{U}$ the solution $x(t,x_{0})$ of ( A.7 ) at $\lambda=\lambda_{0}$ with $x(0,x_{0})=x_{0}$ satisfies that $\lim\limits_{t\rightarrow\infty}x(t,x_{0})=0.$ (2) If there exists an open and dense set $\widetilde{U}\subset U$ such that for any $x_{0}\in\widetilde{U}$ the solution $x(t,x_{0})$ of ( A.7 ) at $\lambda=\lambda_{0}$ satisfies $\limsup_{t\rightarrow\infty}|x(t,x_{0})|\neq 0,$ then the transition is a jump transition. (3) If the transition is
+mixed, then there exists an open set $\widetilde{U}\subset U$ such that for any $x_{0}\in\widetilde{U}$ the solution $x(t,x_{0})$ of
+( A.7 ) at $\lambda=\lambda_{0}$ with $x(0,x_{0})=x_{0}$ satisfies $\lim\limits_{t\rightarrow\infty}x(t,x_{0})=0.$ (4) If the vector field in ( A.7 ) at $\lambda=\lambda_{0}$ satisfies $<J_{\lambda_{0}}x+g(x,\lambda_{0}),x><0\quad\forall x\in U,\ x\neq 0,$ then the transition of ( A.1 ) at $(0,\lambda_{0})$ is an $S^{m-1}$ -attractor bifurcation, and the transition is continuous. (5) If the vector field $g(x,\lambda_{0})$ given by ( A.8 )
+satisfies $<g(x,\lambda_{0}),x>>0\ \ \ \ \forall x\in U,\ \ \ \ x\neq 0,$ then the transition is jump. In general, the conditions in Assertions (1)-(3) of Theorem A.2 are not sufficient. They, however, do give sufficient conditions when ( A.1 ) has
+a variational structure. To see this, let ( A.1 ) be a gradient-type equation. Under the conditions ( A.4 ) and ( A.5 ), in a
+neighborhood $U\subset X$ of $u=0$ , the center manifold $M^{c}$ in $U$ at $\lambda=\lambda_{0}$ consists three subsets $M^{c}=W^{u}+W^{s}+D,$ where $W^{s}$ is the stable set, $W^{u}$ is the unstable set, and $D$ is the
+hyperbolic set of ( A.7 ). Then we have the following
+theorem. Theorem A.3 . Let ( A.1 ) be a gradient-type equation,
+and the conditions ( A.4 ) and ( A.5 ) hold true. If $u=0$ is an isolated singular point of ( A.1 ) at $\lambda=\lambda_{0}$ , then we have the following assertions: (1) The transition of ( A.1 ) at $(u,\lambda)=(0,\lambda_{0})$ is continuous if and only if $u=0$ is locally asymptotically stable at $\lambda=\lambda_{0}$ , i.e., the center
+manifold is stable: $M^{c}=W^{s}$ . Moreover, ( A.1 )
+bifurcates from $(0,\lambda_{0})$ to minimal attractors consisting of
+singular points of ( A.1 ). (2) If the stable set $W^{s}$ of ( A.1 ) has no interior points in $M^{c}$ , i.e., $M^{c}=\bar{W}^{u}+\bar{D}$ , then the transition is jump. A.2. Transitions from simple eigenvalues We consider the transition of ( A.1 ) from a simple critical
+eigenvalue. Let the eigenvalues $\beta_{j}(\lambda)$ of $L_{\lambda}$ satisfy ( A.4 ) and ( A.5 ) with $m=1$ .
+Then the first eigenvalue $\beta_{1}(\lambda)$ must be a real eigenvalue.
+Let $e_{1}(\lambda)$ and $e^{*}_{1}(\lambda)$ be the eigenvectors of $L_{\lambda}$ and $L^{*}_{\lambda}$ respectively corresponding to $\beta_{1}(\lambda)$ with $L_{\lambda_{0}}e_{1}=0,\ \ \ \ L^{*}_{\lambda_{0}}e^{*}_{1}=0,\ \ \ \ <e_{1},e^{*}_{1}>=1.$ Let $\Phi(x,\lambda)$ be the center manifold
+function of ( A.1 ) near $\lambda=\lambda_{0}$ . We assume that (A.12) $<G(xe_{1}+\Phi(x,\lambda_{0}),\lambda_{0}),e^{*}_{1}>=\alpha x^{k}+o(|x|^{k}),$ where $k\geq 2$ an integer and $\alpha\neq 0$ a real number. Figure A.1. Topological structure of the jump transition of
+( A.1 ) when $k$ =odd and $\alpha>0$ : (a) $\lambda<\lambda_{0}$ ; (b) $\lambda\geq\lambda_{0}$ . Here the horizontal line
+represents the center manifold. Figure A.2. Topological structure of the continuous transition
+of ( A.1 ) when $k$ =odd and $\alpha<0$ : (a) $\lambda\leq\lambda_{0}$ ; (b) $\lambda>\lambda_{0}$ . Figure A.3. Topological structure of the mixing transition of
+( A.1 ) when $k$ =even and $\alpha\neq 0$ : (a) $\lambda<\lambda_{0}$ ; (b) $\lambda=\lambda_{0}$ ; (c) $\lambda>\lambda_{0}$ . Here $U^{\lambda}_{1}$ is the unstable domain, and $U^{\lambda}_{2}$ the
+stable domain. Theorem A.4 . Assume ( A.4 ) and ( A.5 ) with $m=1$ , and ( A.12 ). If $k$ =odd and $\alpha\neq 0$ in ( A.12 ) then
+the following assertions hold true: (1) If $\alpha>0$ , then ( A.1 ) has a jump
+transition from $(0,\lambda_{0})$ , and bifurcates on $\lambda<\lambda_{0}$ to exactly two saddle points $v^{\lambda}_{1}$ and $v^{\lambda}_{2}$ with the Morse index one, as shown in Figure A.1 . (2) If $\alpha<0$ , then ( A.1 ) has a continuous
+transition from $(0,\lambda_{0})$ , which is an attractor bifurcation
+as shown in Figure A.2 . (3) The bifurcated singular points $v^{\lambda}_{1}$ and $v^{\lambda}_{2}$ in the above cases can
+be expressed in the following form $v^{\lambda}_{1,2}=\pm|\beta_{1}(\lambda)/\alpha|^{{1}/{k-1}}e_{1}(\lambda)+o(|\beta_{1}|^{{1}/{k-1}}).$ Theorem A.5 . Assume ( A.4 ) and ( A.5 ) with $m=1$ , and
+( A.12 ). If $k$ =even and $\alpha\neq 0$ , then we have the
+following assertions: (1) ( A.1 ) has a mixed transition from $(0,\lambda_{0})$ . More precisely, there exists a neighborhood $U\subset X$ of $u=0$ such that $U$ is separated into two disjoint
+open sets $U^{\lambda}_{1}$ and $U^{\lambda}_{2}$ by the stable
+manifold $\Gamma_{\lambda}$ of $u=0$ satisfying the following properties: (a) $U=U^{\lambda}_{1}+U^{\lambda}_{2}+\Gamma_{\lambda}$ , (b) the transition in $U^{\lambda}_{1}$ is jump, and (c) the transition in $U^{\lambda}_{2}$ is
+continuous. The local transition structure is as shown in Figure A.3 . (2) ( A.1 ) bifurcates in $U^{\lambda}_{2}$ to a unique
+singular point $v^{\lambda}$ on $\lambda>\lambda_{0}$ , which is an
+attractor such that for any $\varphi\in U^{\lambda}_{2}$ , $\lim\limits_{t\rightarrow\infty}\|u(t,\varphi)-v^{\lambda}\|_{X}=0,$ where $u(t,\varphi)$ is the solution of ( A.1 ). (3) ( A.1 ) bifurcates on $\lambda<\lambda_{0}$ to a unique saddle
+point $v^{\lambda}$ with the Morse index one. (4) The bifurcated singular point $v^{\lambda}$ can be expressed as $v^{\lambda}=-(\beta_{1}(\lambda)/\alpha)^{{1}/{(k-1)}}e_{1}+o(|\beta_{1}|^{{1}/{(k-1)}}).$ A.3. Singular Separation In this section, we study an important
+problem associated with the discontinuous transition of
+( A.1 ), which we call the singular separation. Definition A.2 . (1) An invariant set $\Sigma$ of ( A.1 ) is called a singular
+element if $\Sigma$ is either a singular point or a periodic
+orbit. (2) Let $\Sigma_{1}\subset X$ be a singular
+element of ( A.1 ) and $U\subset X$ a neighborhood of $\Sigma_{1}$ . We say that ( A.1 ) has a singular separation of $\Sigma$ at $\lambda=\lambda_{1}$ if (a) ( A.1 ) has no singular
+elements in $U$ as $\lambda<\lambda_{1}$ (or $\lambda>\lambda_{1}$ ),
+and generates a singular element $\Sigma_{1}\subset U$ at $\lambda=\lambda_{1}$ , and (b) there are branches of singular elements $\Sigma_{\lambda}$ , which are separated from $\Sigma_{1}$ for $\lambda>\lambda_{1}$ (or $\lambda<\lambda_{1}$ ), i.e., $\lim\limits_{\lambda\rightarrow\lambda_{1}}\max_{x\in\Sigma_{\lambda}}\text{dist}(x,\Sigma_{1})=0.$ A special case of singular separation is the saddle-node
+bifurcation defined as follows. Definition A.3 . Let $u_{1}\in X$ be a singular point of
+( A.1 ) at $\lambda=\lambda_{1}$ with $u_{1}\neq 0$ . We say that
+( A.1 ) has a saddle-node bifurcation at $(u_{1},\lambda_{1})$ if (1) the index of $L_{\lambda}+G$ at $(u_{1},\lambda_{1})$ is zero, i.e.,
+ind $(-(L_{\lambda_{1}}+G),u_{1})=0$ , (2) there are two branches $\Gamma_{1}(\lambda)$ and $\Gamma_{2}(\lambda)$ of singular points
+of ( A.1 ), which are separated from $u_{1}$ for $\lambda>\lambda_{1}$ (or $\lambda<\lambda_{1})$ , i.e., for any $u_{\lambda}\in\Gamma_{i}(\lambda)$ $(i=1,2)$ we have $u_{\lambda}\rightarrow u_{1}\ \text{in}\ X\ \ \ \ \text{as}\ \lambda\rightarrow\lambda_{1},$ and (3) the indices of $u^{i}_{\lambda}\in\Gamma_{i}(\lambda)$ are as follows $\text{ind}(-(L_{\lambda}+G),u_{\lambda})=\left\{\begin{aligned} &1&&\text{ if }u_{\lambda}\in\Gamma_{2}(\lambda),\\
+&-1&&\text{ if }u_{\lambda}\in\Gamma_{1}(\lambda).\end{aligned}\right.$ Intuitively, the saddle-node bifurcation is
+schematically shown as in Figure A.4 , where the singular points in $\Gamma_{1}(\lambda)$ are saddle points and in $\Gamma_{2}(\lambda)$ are nodes, and the singular separation of periodic orbits is as in
+shown Figure A.5 . Figure A.4. Saddle-node bifurcation. Figure A.5. Singular separation of periodic orbits. For the singular separation we can give a general principle as
+follows, which provides a basis for singular separation theory. Theorem A.6 . Let the conditions ( A.4 ) and
+( A.5 ) hold true. Then we have the following assertions. (1) If ( A.1 ) bifurcates from $(u,\lambda)=(0,\lambda_{0})$ to a branch $\Sigma_{\lambda}$ of singular elements on $\lambda<\lambda_{0}$ which is bounded in $X\times(-\infty,\lambda_{0})$ then ( A.1 ) has a singular separation of
+singular elements at some $(\Sigma_{0},\lambda_{1})\subset X\times(-\infty,\lambda_{0})$ . (2) If the bifurcated branch $\Sigma_{\lambda}$ consists of singular points which has index $-1$ ,
+i.e., $\text{ind}(-(L_{\lambda}+G),u_{\lambda})=-1\ \ \ \ \forall u_{\lambda}\in E_{\lambda},\ \ \ \ \lambda<\lambda_{0},$ then the singular
+separation is a saddle-node bifurcation from some $(u_{1},\lambda_{1})\in X\times(-\infty,\lambda_{0}).$ We consider the equation ( A.1 ) defined on the Hilbert spaces $X=H,X_{1}=H_{1}$ . Let $L_{\lambda}=-A+\lambda B$ . For $L_{\lambda}$ and $G(\cdot,\lambda):H_{1}\rightarrow H$ , we assume that $A:H_{1}\rightarrow H$ is symmetric, and (A.13) $\displaystyle<Au,u>_{H}\geq c\|u\|^{2}_{H_{{1}/{2}}},$ (A.14) $\displaystyle<Bu,u>_{H}\geq c\|u\|^{2}_{H},$ (A.15) $\displaystyle<Gu,u>_{H}\leq-c_{1}\|u\|^{p}_{H}+c_{2}\|u\|^{2}_{H},$ where $p>2,c,c_{1},c_{2}>0$ are constants. Theorem A.7 . Assume the conditions ( A.3 ),
+( A.4 ) and ( A.13 )-( A.15 ), then ( A.1 ) has a
+transition at $(u,\lambda)=(0,\lambda_{0})$ , and the following
+assertions hold true: (1) If $u=0$ is an even-order nondegenerate singular point
+of $L_{\lambda}+G$ at $\lambda=\lambda_{0}$ , then ( A.1 ) has a
+singular separation of singular points at some $(u_{1},\lambda_{1})\in H\times(-\infty,\lambda_{0})$ . (2) If $m=1$ and $G$ satisfies ( A.12 ) with $\alpha>0$ if $k$ =odd and $\alpha\neq 0$ if $k$ =even, then ( A.1 ) has a saddle-node bifurcation at
+some singular point $(u_{1},\lambda_{1})$ with $\lambda_{1}<\lambda_{0}$ . A.4. Transition and Singular Separation of Perturbed Systems We consider the following perturbed equation of ( A.1 ): (A.16) $\frac{du}{dt}=(L_{\lambda}+S^{\varepsilon}_{\lambda})u+G(u,\lambda)+T^{\varepsilon}(u,\lambda),$ where $L_{\lambda}$ and $G_{\lambda}$ are as in ( A.1 ), $S^{\varepsilon}_{\lambda}:X_{\sigma}\rightarrow X$ is a linear
+perturbed operator, $T^{\varepsilon}_{\lambda}:X_{\sigma}\rightarrow X$ a $C^{1}$ nonlinear perturbed operator, and $X_{\sigma}$ the fractional order
+space, $0\leq\sigma<1$ . Also assume that $G_{\lambda},T^{\varepsilon}_{\lambda}$ are $C^{3}$ on $u$ , and (A.17) $\left.\begin{aligned} &\|S^{\varepsilon}_{\lambda}\|<\varepsilon,\\
+&\|T^{\varepsilon}_{\lambda}\|<\varepsilon,\\
+&T^{\varepsilon}(u,\lambda)=o(\|u\|_{X_{\alpha}}).\end{aligned}\right.$ Let ( A.4 ) and ( A.5 ) with $m=1$ hold true, $G(u,\lambda)=G_{2}(u,\lambda)+o(\|u\|^{2}_{X_{1}})$ , where $G_{2}(\cdot,\lambda)$ is a bilinear
+operator, and (A.18) $b=<G_{2}(e,\lambda_{0}),e^{*}>\neq 0,$ where $e\in X$ and $e^{*}\in X^{*}$ are the eigenvectors of $L_{\lambda}$ and $L^{*}_{\lambda}$ corresponding to $\beta_{1}(\lambda)$ at $\lambda=\lambda_{0}$ respectively. We now consider the transition associated with the saddle-node
+bifurcation of the perturbed system ( A.16 ). Let $h(x,\lambda)$ be the center manifold function of ( A.1 ) near $\lambda=\lambda_{0}$ . Assume that (A.19) $<G(xe+h(x,\lambda_{0}),\lambda_{0}),e^{*}>=b_{1}x^{3}+o(|x|^{3}),$ where $b_{1}\neq 0$ , and $e$ and $e^{*}$ are as in ( A.18 ). Then we have the following theorems. Theorem A.8 . Let the conditions ( A.4 ) and ( A.5 ) with $m=1$ , and
+( A.19 ) hold true, and $b_{1}<0$ . Then there is an $\varepsilon>0$ such that if $S^{\varepsilon}_{\lambda}$ and $T^{\varepsilon}_{\lambda}$ satisfy ( A.17 ), then the transition of
+( A.16 ) is either continuous or mixed. If the transition is
+continuous, then Assertions (2) and (3) of Theorem A.4 are valid
+for ( A.16 ). If the transition is mixed, then the
+following assertions hold true: (1) ( A.16 ) has a saddle-node bifurcation at some
+point $(u_{1},\lambda_{1})\in X\times(-\infty,\lambda^{\varepsilon}_{0})$ , and there are exactly two branches $\Gamma^{\lambda}_{i}=\{(u^{\lambda}_{i},\lambda)|\ \lambda_{1}<\lambda<\lambda^{\varepsilon}_{0}+\delta\}\qquad i=1,2,$ separated from $(u_{1},\lambda_{1})$ as shown in Figure A.4 , which satisfy that $\displaystyle\|u^{\lambda}_{2}\|_{X}\neq 0$ $\displaystyle\forall(u^{\lambda}_{2},\lambda)\in\Gamma^{\lambda}_{2},\ \ \ \ \lambda_{1}<\lambda<\lambda^{\varepsilon}_{0}+\delta,$ $\displaystyle\lim_{\lambda\rightarrow\lambda^{\varepsilon}_{0}}\|u^{\lambda}_{1}\|_{X}=0$ $\displaystyle\forall(u^{\lambda}_{1},\lambda)\in\Gamma^{\lambda}_{1}.$ (2) There is a neighborhood $U\subset X$ of $u=0$ , such that for each $\lambda$ with $\lambda_{1}<\lambda<\lambda^{\varepsilon}_{0}+\delta$ and $\lambda\neq\lambda^{\varepsilon}_{0},U$ contains only two
+nontrivial singular points $u^{\lambda}_{1}$ and $u^{\lambda}_{2}$ of
+( A.16 ). (3) For each $\lambda_{1}<\lambda<\lambda^{\varepsilon}_{0}+\delta,U$ can be decomposed into two
+open sets $\bar{U}=\bar{U}^{\lambda}_{1}+\bar{U}^{\lambda}_{2}$ with $U^{\lambda}_{1}\cap U^{\lambda}_{2}=\emptyset$ , such that (a) if $\lambda_{1}<\lambda<\lambda^{\varepsilon}_{0}$ , $0\in U^{\lambda}_{1},\ \ \ \ u^{\lambda}_{2}\in U^{\lambda}_{2},\ \ \ \ u^{\lambda}_{1}\in\partial U^{\lambda}_{1}\cap\partial U^{\lambda}_{2},$ with $u=0$ and $u^{\lambda}_{2}$ being
+attractors which attract $U^{\lambda}_{1}$ and $U^{\lambda}_{2}$ respectively, and (b) if $\lambda^{\varepsilon}_{0}<\lambda<\lambda^{\varepsilon}_{0}+\delta$ , $u^{\lambda}_{1}\in U^{\lambda}_{1},\ \ \ \ u^{\lambda}_{2}\in U^{\lambda}_{2},\ \ \ \ 0\in\partial U^{\lambda}_{1}\cap\partial U^{\lambda}_{2},$ with $u^{\lambda}_{1}$ and $u^{\lambda}_{2}$ being attractors which attract $U^{\lambda}_{1}$ and $U^{\lambda}_{2}$ respectively. (4) Near $(u,\lambda)=(0,\lambda^{\varepsilon}_{0}),u^{\lambda}_{1}$ and $u^{\lambda}_{2}$ can be expressed as (A.20) $\left.\begin{aligned} &u^{\lambda}_{1}=\alpha_{1}(\lambda,\varepsilon)e+o(|\alpha_{1}|),\\
+&u^{\lambda}_{2}=\alpha_{2}(\lambda,\varepsilon)e+o(|\alpha_{2}|),\\
+&\lim_{\lambda\rightarrow\lambda^{\varepsilon}_{0}}\alpha_{1}(\lambda,\varepsilon)=0,\\
+&\alpha_{2}(\lambda^{\varepsilon}_{0},\varepsilon)\neq 0,\end{aligned}\right.$ where $e$ is as in ( A.19 ). Theorem A.9 . Assume the conditions ( A.4 ) and ( A.5 ) with $m=1$ , and
+( A.19 ) with $b_{1}>0$ . Then, there is an $\varepsilon>0$ such
+that when $S^{\varepsilon}_{\lambda}$ and $T^{\varepsilon}_{\lambda}$ satisfy ( A.17 ), the transition of
+( A.16 ) is either jump or mixed. If it is jump transition, then
+Assertions (1) and (3) of Theorem A.4 are valid for ( A.16 ).
+If it is mixed, then the following assertions hold true: (1) ( A.16 ) has a saddle-node bifurcation at some
+point $(u_{1},\lambda_{1})\in X\times(\lambda^{\varepsilon}_{0},+\infty)$ , and there are exactly two branches $\Gamma^{\lambda}_{i}=\{(u^{\lambda}_{i},\lambda)|\ \lambda^{\varepsilon}_{0}-\delta<\lambda<\lambda_{1}\}\qquad(i=1,2),$ separated from $(u_{1},\lambda_{1})$ , which satisfy $\displaystyle\|u^{\lambda}_{2}\|_{X}=0$ $\displaystyle\forall(u^{\lambda}_{2},\lambda)\in\Gamma^{*}_{2},\ \ \ \ \lambda^{\varepsilon}_{0}-\varepsilon<\lambda<\lambda_{1},$ $\displaystyle\lim\limits_{\lambda\rightarrow\lambda^{\varepsilon}_{0}}\|u^{\lambda}_{1}\|_{X}=0$ $\displaystyle\forall(u^{\lambda}_{1},\lambda)\in\Gamma^{\lambda}_{1}.$ (2) There is a neighborhood $U\subset X$ of $u=0$ , such that for each $\lambda$ with $\lambda^{\varepsilon}_{0}-\delta<\lambda<\lambda_{1},U$ contains
+only two nontrivial singular points $u^{\lambda}_{1}$ and $u^{\lambda}_{2}$ of ( A.16 ). (3) For every $\lambda^{\varepsilon}_{0}-\delta<\lambda<\lambda_{1},U$ can be
+decomposed into three open sets $\bar{U}=\bar{U}_{0}+\bar{U}_{1}+\bar{U}_{2}$ with $U_{i}\cap U_{j}=\emptyset$ $(i\neq j)$ such that (a) if $\lambda^{\varepsilon}_{0}-\delta<\lambda<\lambda^{\varepsilon}_{0}$ ,
+then $u=0\in U^{\lambda}_{0},\ \ \ \ u^{\lambda}_{i}\in\partial U^{\lambda}_{i}\cap\partial U^{\lambda}_{0}(i=1,2),$ with $u=0$ being an attractor which
+attracts $U^{\lambda}_{0}$ and $U^{\lambda}_{i}(i=1,2)$ two saddle
+points with the Morse index one, and (b) if $\lambda^{\varepsilon}_{0}<\lambda<\lambda_{1}$ , then $u^{\lambda}_{1}\in U^{\lambda}_{1},\ \ \ \ u^{\lambda}_{2}\in\partial U^{\lambda}_{2}\cap\partial U^{\lambda}_{1},\ \ \ \ 0\in\partial U^{\lambda}_{1}\cap\partial U^{\lambda}_{0},$ with $u^{\lambda}_{1}$ being an attractor which attracts $U^{\lambda}_{1}$ and $u^{\lambda}_{2}$ and $u=0$ being saddle points with the Morse index
+one. (4) Near $(0,\lambda^{0}_{\varepsilon}),u^{\lambda}_{1}$ and $u^{\lambda}_{2}$ can be expressed by ( A.20 ). Appendix B Ginzburg-Landau Models In this subsection, we introduce the time-dependent Ginzburg-Landau model for equilibrium phase transitions. We start with thermodynamic potentials and the Ginzburg-Landau free energy. As we know, four thermodynamic potentials– internal energy, the enthalpy, the Helmholtz free energy and the Gibbs free energy–are useful in the chemical thermodynamics of reactions and non-cyclic processes. Consider a thermal system, its order parameter $u$ changes in $\Omega\subset\mathbb{R}^{n}$ $(1\leq n\leq 3)$ . In this situation, the free energy of this system is of the form (B.1) ${\mathcal{H}}(u,\lambda)={\mathcal{H}}_{0}+\int_{\Omega}\Big[\frac{1}{2}\sum^{m}_{i=1}\mu_{i}|\nabla u_{i}|^{2}+g(u,\nabla u,\lambda)\Big]dx$ where $N\geq 3$ is an integer, $u=(u_{1},\cdots,u_{m}),\mu_{i}=\mu_{i}(\lambda)>0$ , and $g(u,\nabla u,\lambda)$ is a $C^{r}(r\geq 2)$ function of $(u,\nabla u)$ with
+the Taylor expansion (B.2) $g(u,\nabla u,\lambda)=\sum\alpha_{ijk}u_{i}D_{j}u_{k}+\sum^{N}_{|I|=1}\alpha_{I}u^{I}+o(|u|^{N})-fX,$ where $I=(i_{1},\cdots,i_{m}),i_{k}\geq 0$ are integer, $|I|=\sum^{m}_{k=1}i_{k}$ , the coefficients $\alpha_{ijk}$ and $\alpha_{I}$ continuously depend on $\lambda$ , which are determined
+by the concrete physical problem, $u^{I}=u^{i_{1}}_{1}\cdots u^{im}_{m}$ and $fX$ the generalized work. A thermal system is controlled by some parameter $\lambda$ . When $\lambda$ is far from the critical point $\lambda_{0}$ the system
+lies on a stable equilibrium state $\Sigma_{1}$ , and when $\lambda$ reaches or exceeds $\lambda_{0}$ the state $\Sigma_{1}$ becomes unstable, and
+meanwhile the system will undergo a transition from $\Sigma_{1}$ to another stable
+state $\Sigma_{2}$ . The basic principle is that there often exists fluctuations in the system leading to a deviation from the equilibrium states, and the phase transition process is a
+dynamical behavior, which should be described by a time-dependent
+equation. To derive a general time-dependent model, first we recall that the classical
+le Châtelier principle amounts to saying that
+for a stable equilibrium state of a system $\Sigma$ , when the system deviates from $\Sigma$ by a small perturbation or fluctuation, there will be a
+resuming force to restore this system to return to the stable state $\Sigma$ .
+Second, we know that a stable equilibrium state of a thermal system must
+be the minimal value point of the thermodynamic potential. By the mathematical characterization of gradient systems and the le Châtelier principle, for a system with
+thermodynamic potential ${\mathcal{H}}(u,\lambda)$ , the governing
+equations are essentially determined by the functional ${\mathcal{H}}(u,\lambda)$ .
+When the order parameters $(u_{1},\cdots,u_{m})$ are nonconserved
+variables, i.e., the integers $\int_{\Omega}u_{i}(x,t)dx=a_{i}(t)\neq\text{constant}.$ then the time-dependent equations are given by (B.3) $\left.\begin{aligned} &\frac{\partial u_{i}}{\partial t}=-\beta_{i}\frac{\delta}{\delta u_{i}}{\mathcal{H}}(u,\lambda)+\Phi_{i}(u,\nabla u,\lambda),\\
+&\frac{\partial u}{\partial n}|_{\partial\Omega}=0\ \ \ \ (\text{or}\ u|_{\partial\Omega}=0),\\
+&u(x,0)=\varphi(x),\end{aligned}\right.$ for any $1\leq i\leq m$ ,
+where $\delta/\delta u_{i}$ are the variational derivative, $\beta_{i}>0$ and $\Phi_{i}$ satisfy (B.4) $\int_{\Omega}\sum_{i}\Phi_{i}\frac{\delta}{\delta u_{i}}{\mathcal{H}}(u,\lambda)dx=0.$ The condition ( B.4 ) is required by
+the Le Châtelier principle. In the concrete problem, the terms $\Phi_{i}$ can be determined by physical laws and ( B.4 ). When the order parameters are the number density and the system
+has no material exchange with the external, then $u_{j}$ $(1\leq j\leq m)$ are conserved, i.e., (B.5) $\int_{\Omega}u_{j}(x,t)dx=\text{constant}.$ This conservation law requires a continuous equation (B.6) $\frac{\partial u_{j}}{\partial t}=-\nabla\cdot J_{j}(u,\lambda),$ where $J_{j}(u,\lambda)$ is the flux of component $u_{j}$ . In
+addition, $J_{j}$ satisfy (B.7) $J_{j}=-k_{j}\nabla(\mu_{j}-\sum_{i\neq j}\mu_{i}),$ where $\mu_{l}$ is the chemical potential of component $u_{l}$ , (B.8) $\mu_{j}-\sum_{i\neq j}\mu_{i}=\frac{\delta}{\delta u_{j}}{\mathcal{H}}(u,\lambda)-\phi_{j}(u,\nabla u,\lambda),$ and $\phi_{j}(u,\lambda)$ is a function depending on the other
+components $u_{i}$ $(i\neq j)$ . When $m=1$ , i.e., the system consists of
+two components $A$ and $B$ , this term $\phi_{j}=0$ . Thus, from
+( B.6 )-( B.8 ) we obtain the dynamical equations as
+follows (B.9) $\left.\begin{aligned} &\frac{\partial u_{j}}{\partial t}=\beta_{j}\Delta\left[\frac{\delta}{\delta u_{j}}{\mathcal{H}}(u,\lambda)-\phi_{j}(u,\nabla u,\lambda)\right],\\
+&\frac{\partial u}{\partial n}|_{\partial\Omega}=0,\ \ \ \ \frac{\partial\Delta u}{\partial n}|_{\partial\Omega}=0,\\
+&u(x,0)=\varphi(x),\end{aligned}\right.$ for $1\leq j\leq m$ ,
+where $\beta_{j}>0$ are constants, $\phi_{j}$ satisfy (B.10) $\int_{\Omega}\sum_{j}\Delta\phi_{j}\cdot\frac{\delta}{\delta u_{j}}{\mathcal{H}}(u,\lambda)dx=0.$ If the order parameters $(u_{1},\cdots,u_{k})$ are coupled to the
+conserved variables $(u_{k+1},\cdots,u_{m})$ , then the dynamical
+equations are (B.11) $\left.\begin{aligned} &\frac{\partial u_{i}}{\partial t}=-\beta_{i}\frac{\delta}{\delta u_{i}}{\mathcal{H}}(u,\lambda)+\Phi_{i}(u,\nabla u,\lambda),\\
+&\frac{\partial u_{j}}{\partial t}=\beta_{j}\Delta\left[\frac{\delta}{\delta u_{j}}{\mathcal{H}}(u,\lambda)-\phi_{j}(u,\nabla u,\lambda)\right],\\
+&\frac{\partial u_{i}}{\partial n}|_{\partial\Omega}=0\ \ \ \ (\text{or}\ u_{i}|_{\partial\Omega}=0),\\
+&\frac{\partial u_{j}}{\partial n}|_{\partial\Omega}=0,\ \ \ \ \frac{\partial\Delta u_{j}}{\partial n}|_{\partial\Omega}=0,\\
+&u(x,0)=\varphi(x).\end{aligned}\right.$ for $1\leq i\leq k$ and $k+1\leq j\leq m$ . The model ( B.11 ) gives a general form of the governing
+equations to thermodynamic phase transitions. Hence, the dynamics of
+equilibrium phase transition in statistic physics is based on the new Ginzburg-Landau formulation ( B.11 ). Physically, the initial value condition $u(0)=\varphi$ in
+( B.11 ) stands for the fluctuation of system or perturbation
+from the external. Hence, $\varphi$ is generally small. However,
+we can not exclude the possibility of a bigger noise $\varphi$ . References [1] J. Cahn and J. E. Hilliard , Free energy of a nonuniform system I.
+interfacial energy , J. Chemical Physics, 28 (1957), pp. 258–267. [2] J. Langer , Theory of spinodal decomposition in allays , Ann. of
+Physics, 65 (1971), pp. 53–86. [3] T. Ma and S. Wang , Bifurcation theory and applications , vol. 53 of
+World Scientific Series on Nonlinear Science. Series A: Monographs and
+Treatises, World Scientific Publishing Co. Pte. Ltd., Hackensack, NJ, 2005. [4] , Stability and
+Bifurcation of Nonlinear Evolutions Equations , Science Press (in Chinese),
+Beijing, 2007. [5] A. Novick-Cohen and L. A. Segel , Nonlinear aspects of the
+Cahn-Hilliard equation , Phys. D, 10 (1984), pp. 277–298. [6] O. Onuki , Phase transition dynamics , Combridge Univ. Press.,
+(2002). [7] L. E. Reichl , A modern course in statistical physics , A
+Wiley-Interscience Publication, John Wiley & Sons Inc., New York,
+second ed., 1998. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

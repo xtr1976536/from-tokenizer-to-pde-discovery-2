@@ -1,0 +1,137 @@
+{
+  "broad_family": "nonlinear_anisotropic_elliptic",
+  "context_checked": true,
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "1",
+      "1",
+      "-2",
+      "1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "u(x, y, z, t)*Derivative(u(x, y, z, t), (y, 2)) + Derivative(u(x, y, z, t), y)**2 + Derivative(u(x, y, z, t), (x, 2))/u(x, y, z, t)**2 - 2*Derivative(u(x, y, z, t), x)**2/u(x, y, z, t)**3",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      7,
+      3,
+      23,
+      2,
+      9,
+      4,
+      7,
+      4,
+      7,
+      2,
+      14,
+      4,
+      7,
+      4,
+      7,
+      4,
+      7,
+      2,
+      37,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "u",
+      "*",
+      "uyy",
+      "+",
+      "uxx",
+      "/",
+      "u",
+      "/",
+      "u",
+      "+",
+      "ux^2",
+      "/",
+      "u",
+      "/",
+      "u",
+      "/",
+      "u",
+      "+",
+      "uy^2",
+      "E"
+    ],
+    "normalized_latex": "(u)\\cdot (u_{yy})+(u_{xx})/(u)/(u)+({u_{x}}^{2})/(u)/(u)/(u)+({u_{y}}^{2})=0",
+    "reconstructed_support": [
+      "Mul(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2))))",
+      "Mul(Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(-2)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2))))",
+      "Mul(Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(-3)), Pow(Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(1))), Integer(2)))",
+      "Pow(Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(1))), Integer(2))"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Mul(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2))))",
+      "Mul(Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(-2)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2))))",
+      "Mul(Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(-3)), Pow(Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(1))), Integer(2)))",
+      "Pow(Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(1))), Integer(2))"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "family": "nonlinear_anisotropic_elliptic",
+  "gre_ids": [
+    5,
+    7,
+    3,
+    23,
+    2,
+    9,
+    4,
+    7,
+    4,
+    7,
+    2,
+    14,
+    4,
+    7,
+    4,
+    7,
+    4,
+    7,
+    2,
+    37,
+    1
+  ],
+  "latex_origin": "declared_function_representative_not_literal_published_instance",
+  "normalized_latex": "(u)\\cdot (u_{yy})+(u_{xx})/(u)/(u)+({u_{x}}^{2})/(u)/(u)/(u)+({u_{y}}^{2})=0",
+  "original_latex": "\\partial_x((1/u^2)u_x)+\\partial_y((u)u_y)=0",
+  "parameters": {
+    "f(u)": "1/u^2",
+    "g(u)": "u"
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [
+    "x>0,y>0,u>0 where roots or inverse powers appear",
+    "All displayed scalar constants fixed nonzero1 unless specified; no source terms removed"
+  ],
+  "source_file": "data/formulas/diverse_pde_v4/sources/npde3303.pdf",
+  "source_group": "eqworld:npde3303",
+  "source_id": "balanced636:5e9d57d9c0d7d1c6c9519926",
+  "source_kind": "source_class_review_candidate",
+  "source_location": "first governing equation; function choices explicitly declared",
+  "source_sha256": "8ee03bd1ba1b4e2002b03de1ce7514a72aa1ba55d9c84eff65ecd2f52bb8e5c8",
+  "source_template_latex": "\\partial_x(f(u)u_x)+\\partial_y(g(u)u_y)=0",
+  "source_transformations": [
+    "source field w -> u",
+    "small named function choice from source-defined class, not independent physical family",
+    "exact derivative expansion independently checked before coefficient stripping"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/npde/npde3303.pdf"
+}

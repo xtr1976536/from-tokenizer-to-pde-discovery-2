@@ -1,0 +1,585 @@
+Large time behavior of solutions to a cooperative model with population flux by attractive transition Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Introduction 2 Main results 3 Existence of the $L^{\infty}(\Omega)$ absorbing set 3.1 A priori estimates for $w=u+\gamma v$ 3.2 Hölder estimate 3.3 $W^{1,4}(\Omega)$ estimate 4 Global asymptotic stability of the positive constant
+steady state 5 Relationship between stationary and nonstationary solutions References License: arXiv.org perpetual non-exclusive license arXiv:2504.04166v1 [math.AP] 05 Apr 2025 Large time behavior of solutions to a cooperative
+model with population flux by attractive transition Thanks: This research was
+partially supported by JSPS KAKENHI Grant Number 22K03379. Thanks: ${\dagger}$ Department of Pure and Applied Mathematics,
+Graduate School of Fundamental Science and Engineering,
+Waseda University,
+3-4-1 Ohkubo, Shinjuku-ku, Tokyo 169-8555, Japan. Thanks: ${\ddagger}$ Department of Applied Mathematics,
+Waseda University,
+3-4-1 Ohkubo, Shinjuku-ku, Tokyo 169-8555, Japan. Thanks: E-mail: kuto@waseda.jp Ryuichi Kato † and Kousuke Kuto ‡ Date: August 24, 2026 Abstract. This paper is concerned with
+a diffusive Lotka-Volterra cooperative model
+with population flux by attractive transition.
+We study the time-global well-posedness
+and the large time behavior of solutions in
+a case where the habitat is a bounded convex
+domain and random diffusion rates equal to each other.
+A main result shows that when the spatial dimension is less than or equal to 3, under a weaker cooperative condition, a classical solution exists
+globally in time if the initial data belongs to a suitable functional space.
+Furthermore, it is shown that if there exists a positive steady state
+and the equal random diffusion rate is sufficiently large, then
+all positive solutions asymptotically approach the positive
+steady state as time tends to infinity. Key words and phrases: nonlinear diffusion,
+population model,
+parabolic system,
+global existence,
+absorbing set,
+stability 2020 Mathematics Subject Classification 35A01, 35B45, 35K51, 35B35, 92D25 1. Introduction In this paper, we are concerned with the following
+diffusive Lotka-Volterra cooperative model
+with strongly coupled nonlinear diffusion terms: $\begin{cases}u_{t}=d_{1}\Delta u+\alpha\nabla\cdot\biggl[v^{2}\,\nabla\biggl(\dfrac{u}{v}\biggr)\biggr]+u(a_{1}-b_{1}u+c_{1}v),\ \ \ &(x,t)\in\Omega\times(0,T),\\
+v_{t}\,=d_{2}\Delta v+\beta\nabla\cdot\biggl[u^{2}\,\nabla\biggl(\dfrac{v}{u}\biggr)\biggr]+v(a_{2}+b_{2}u-c_{2}v),\ \ \ &(x,t)\in\Omega\times(0,T),\\
+\dfrac{\partial u}{\partial\nu}=\dfrac{\partial v}{\partial\nu}=0,\ \ \ &(x,t)\in\partial\Omega\times(0,T),\\
+u(x,0)=u_{0}(x)\geq 0,\ \ v(x,0)=v_{0}(x)\geq 0,\ \ \ &x\in\Omega,\end{cases}$ (1.1) where $\Omega\,(\subset\mathbb{R}^{N})$ is a bounded domain with smooth boundary $\partial\Omega$ ,
+corresponding to the habitat of two species in a symbiotic relationship
+with each other.
+The unknown functions $u(x,t)$ and $v(x,t)$ represent the population densities
+of the two species
+at location $x\in\Omega$ and time $t>0$ .
+The homogeneous Neumann boundary conditions will be imposed so
+that
+each species has zero derivative in the direction of
+the outward unit normal vector $\nu$ on the boundary $\partial\Omega$ of the habitat $\Omega$ .
+The coefficients $a_{i}$ $(i=1,2)$ in reaction terms of the Lotka-Volterra type are
+real constants that can be negative,
+whereas $b_{i}$ and $c_{i}$ are positive constants.
+The coefficients $a_{i}$ are corresponding to the growth rate of each species,
+and $b_{1}$ and $c_{2}$ are determined from
+the carrying capacity of environment
+for each species. Here $c_{1}$ and $b_{2}$ represent
+the degree of interaction due to the symbiosis between different species.
+Various examples of such symbiotic pairs of species are known,
+e.g.
+the symbiotic relationship between ants and aphids is often cited.
+The coefficient $d_{i}$ $(i=1,2)$ in the linear part of diffusion terms
+correspond to the the random diffusion rate of each individual
+of the species.
+The strongly coupled nonlinear diffusion terms $\nabla\cdot[v^{2}\nabla(u/v)]$ and $\nabla\cdot[u^{2}\nabla(v/u)]$ are
+expressed as in the following forms: $\begin{split}&\nabla\cdot\biggl[v^{2}\,\nabla\biggl(\dfrac{u}{v}\biggr)\biggr]=\nabla\cdot(v\nabla u-u\nabla v)=v\Delta u-u\Delta v,\\
+&\nabla\cdot\biggl[u^{2}\,\nabla\biggl(\dfrac{v}{u}\biggr)\biggr]=\nabla\cdot(u\nabla v-v\nabla u)=u\Delta v-v\Delta u.\end{split}$ (1.2) These terms
+describe an ecological situation where
+each individual of species migrates with higher probability
+to location with higher density of the other species.
+From the perspective of the diffusion process in ecology,
+such strongly coupled diffusion terms in ( 1.2 )
+microscopically model
+a situation where the transition probability of
+each individual of each species depends on the density
+of the other species at the point of arrival
+(Okubo and Levin [ 14 , Section 5.4] ).
+When modeling the diffusion process of symbiotic relationship,
+it makes sense to set such a population flux by attractive transition
+to both species. In terms of the mechanisms of ecological diffusion process,
+the nonlinear diffusion as in ( 1.2 ) is as typical
+as so-called cross-diffusion $\Delta(uv)$ and
+chemotaxis $\nabla\cdot(u\nabla v)$ .
+Actually, in the well-known monograph [ 14 ] , the above three types
+of diffusion processes are described in parallel.
+In terms of partial differential equations,
+the cross-diffusion and the chemotaxis have been studied pure mathematically
+through the Shigesada-Kawasaki-Teramoto model and the Keller-Segel model,
+respectively, while the nonlinear diffusion as in ( 1.2 )
+has not been studied pure mathematically much.
+In this sense, the purpose of this paper is to
+form the basis for mathematical prescriptions
+to deal with the nonlinear diffusion through the analysis of
+the cooperative model ( 1.1 ). The following are studies from the viewpoint of partial differential equations
+for the strongly coupled nonlinear diffusion term such as ( 1.2 ):
+For the predator-prey model with $\beta=0$ and $b_{2}<0$ in ( 1.1 ),
+Heihoff and Yokota [ 9 ] established the global solvability in time
+if $N\leq 3$ and derived
+the convergence of solutions to a positive steady state as $t\to\infty$ with some additional conditions.
+For the predator-prey model, the stationary problem was also discussed
+by Oeda and the second author [ 13 , 10 ] under homogeneous Dirichlet boundary conditions.
+For ( 1.1 ) itself, Adachi and the second author [ 1 ] obtained the bifurcation structure of
+the non-constant positive steady states and
+the asymptotic behavior of the steady states as $\alpha$ , $\beta\to\infty$ under a weak cooperative condition. Based on the existing studies mentioned above,
+in this paper we study the solvability of ( 1.1 ).
+As for the time-local solvability,
+we can resort to the unique existence theorem for
+time-local classical solutions
+established by the series of papers by Amann [ 2 , 3 , 4 , 5 ] that
+considered the solvability of a class of
+quasilinear parabolic equations
+including ( 1.1 ).
+Actually, by virtue of ( 1.2 ), the parabolic equations
+of ( 1.1 ) are represented as the following divergence form: $\biggl[\begin{array}[]{c}u_{t}\\
+v_{t}\end{array}\biggr]=\sum^{N}_{j=1}\dfrac{\partial}{\partial x_{j}}\biggl(A(u,v)\dfrac{\partial}{\partial x_{j}}\biggl[\begin{array}[]{c}u\\
+v\end{array}\biggr]\biggr)+\biggl[\begin{array}[]{c}u(a_{1}-b_{1}u+c_{1}v)\\
+v(a_{2}+b_{2}u-c_{2}v)\end{array}\biggr],$ and all the eigenvalues of $A(u,v):=\biggl[\begin{array}[]{cc}d_{1}+\alpha v&-\alpha u\\
+-\beta v&d_{2}+\beta u\end{array}\biggr]$ are contained in $\{\,\lambda\in\mathbb{C}\,:\,\mbox{Re}\,\lambda>0\,\}$ for any nonnegative $u$ and $v$ .
+Then it is possible to check all the conditions
+for use of [ 4 , Theorem on p.17] to
+know the following unique existence of
+time-local classical solutions of ( 1.1 ): Theorem 1.1 ( [ 4 ] ) . Assume that $u_{0}$ and $v_{0}$ are nonnegative functions belonging to $W^{1,\infty}(\Omega)$ .
+Then there exist $T_{{\rm max}}\in(0,\infty]$ and nonnegative $(u,v)\in[\,C(\overline{\Omega}\times[0,T_{{\rm max}}))\cap C^{2,1}(\overline{\Omega}\times(0,T_{{\rm max}}))\,]^{2}$ which solves ( 1.1 ) classically in $\overline{\Omega}\times(0,T_{{\rm max}})$ .
+Furthermore,
+if $T_{{\rm max}}<\infty$ , then $\limsup_{t\nearrow T_{{\rm max}}}\left(\|u(\,\cdot\,,t)\|_{W^{1,p}(\Omega)}+\|v(\,\cdot\,,t)\|_{W^{1,p}(\Omega)}\right)=\infty\quad\mbox{for all}\ p>N.$ (1.3) Once the time-local well-posedness has been established,
+as in Theorem 1.1 , one is naturally interested
+in the time-global solvability.
+It should be noted that concerning
+cooperative models such as ( 1.1 ),
+even in the corresponding ODE system
+with $d_{1}=d_{2}=\alpha=\beta=0$ ,
+there exist solutions that blow up in finite times
+under the strong cooperative condition $b_{1}c_{2}<b_{2}c_{1}$ .
+With homogeneous Neumann boundary conditions,
+such solutions of the ODE system
+are also solutions of ( 1.1 ).
+Then it follows that
+( 1.1 ) possesses finite time
+blow-up solutions when $b_{1}c_{2}<b_{2}c_{1}$ .
+On the other hand,
+under the weak cooperative condition $b_{1}c_{2}>b_{2}c_{1}$ ,
+it is known that all positive solutions of
+the linear diffusive system with $\alpha=\beta=0$ are global in time and uniformly bounded
+( [ 8 ] , [ 18 ] ).
+It is natural to ask whether
+even with the strongly coupled diffusion terms as ( 1.2 ),
+all the classical solutions of
+( 1.1 ) still exist globally in time
+under the same weak
+cooperative condition. The first main result of this paper
+will show that under a weaker cooperative condition involving $\gamma:=\alpha/\beta$ (which leads to $b_{1}c_{2}>b_{2}c_{1}$ ),
+if $d_{1}=d_{2}$ and the habitat $\Omega$ is a bounded convex domain
+of spatial dimension $3$ or less,
+then all classical solutions exist globally in time.
+Furthermore, in this case, the existence of
+an $L^{\infty}(\Omega)$ absorbing set will be shown.
+From the point of view of Theorem 1.1 ,
+for any solution $(u,v)$ ,
+if it can be shown that $\|u(\,\cdot\,,t)\|_{W^{1,4}(\Omega)}+\|v(\,\cdot\,,t)\|_{W^{1,4}(\Omega)}$ remains bounded for $t\in(0,T_{{\rm max}})$ ,
+the time-global solvability of the solution
+(i.e. $T_{{\rm max}}=\infty$ ) can be obtained.
+In order to establish the $W^{1,4}(\Omega)$ a priori estimate,
+we first derive the $L^{\infty}(\Omega)$ a priori estimate by
+the comparison argument for a semilinear parabolic
+equation with unknown function $w:=u+\gamma v$ , and then,
+combine this $L^{\infty}(\Omega)$ estimate with the
+maximum regularity and the energy estimate for $u$ and $v$ .
+For the energy estimate, we refer to ideas
+developed by Lou and Winkler [ 12 ] in a priori estimates of all the solutions to
+the Shigesada-Kawasaki-Teramoto model with equal random diffusion. In the weak cooperative case where $b_{1}c_{2}>b_{2}c_{1}$ ,
+it is known that
+all positive solutions of
+the linear diffusive system with $\alpha=\beta=0$ converge to the positive steady state
+as $t\to\infty$ if it exists (e.g. [ 18 ] ).
+Under the same conditions as in the first main result, the second
+main result will show that if the positive constant steady state $(u^{*},v^{*})$ exists,
+then it is globally asymptotically stable in the sense that
+all positive solutions of ( 1.1 )
+asymptotically approach $(u^{*},v^{*})$ as $t\to\infty$ if the equal random diffusion rate $d\,(\,=d_{1}=d_{2})$ is sufficiently large.
+The proof is based on the construction of a Lyapunov function.
+On the other hand, if $d$ is sufficiently small with the above setting, $(u^{*},v^{*})$ can no longer be globally asymptotically stable,
+since the result by [ 1 ] implies the existence of
+nonconstant positive steady states
+due to the effect of the strongly coupled nonlinear diffusion terms. This paper is organized as follows:
+Section 2 presents the main results.
+Section 3 proves the first main result, which ensures
+the existence of the $L^{\infty}(\Omega)$ absorbing set of all positive solutions.
+Section 4 proves the second main result,
+which states the global asymptotic stability of
+the positive constant steady state.
+Section 5 discusses the relevance of the global bifurcation structure
+of positive steady states obtained by [ 1 ] to the behavior of the nonstationary solutions obtained in
+Sections 3 and 4. 2. Main results In this section, we state main results of this paper.
+The first result asserts that in any convex domain $\Omega$ of space $3$ dimensions or less,
+all the solutions guaranteed by Theorem 1.1 exist globally in time, i.e., $T_{{\rm max}}=\infty$ ,
+with equal random diffusion rates and a weaker cooperative condition.
+Moreover, we also obtain the existence of an $L^{\infty}(\Omega)$ absorbing set: Theorem 2.1 . Let $\Omega$ be a bounded convex domain in $\mathbb{R}^{N}$ with $N\leq 3$ .
+Assume that $d_{1}=d_{2}$ and $2\sqrt{\gamma b_{1}c_{2}}>c_{1}+\gamma b_{2}\quad\mbox{with}\quad\gamma=\dfrac{\alpha}{\beta}.$ (2.1) If nonnegative $u_{0}$ and $v_{0}$ belong to $W^{1,\infty}(\Omega)$ ,
+then $T_{{\rm max}}=\infty$ in Theorem 1.1,
+that is,
+( 1.1 )
+admits a time-global solution $(u,v)\in[\,C(\overline{\Omega}\times[0,\infty))\cap C^{2,1}(\overline{\Omega}\times(0,\infty))\,]^{2}.$ Furthermore,
+there exist $K=K(a_{i},b_{i},c_{i},\gamma)>0$ and $t_{0}=t_{0}(\|u_{0}+\gamma v_{0}\|_{L^{\infty}(\Omega)})>0$ such that $t\geq t_{0}\ \Longrightarrow\ \|u(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}+\gamma\|v(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}\leq K.$ (2.2) It is noted that
+( 2.1 ) leads to
+the weak cooperative condition $b_{1}c_{2}>b_{2}c_{1}$ since $c_{1}+\gamma b_{2}\geq\sqrt{\gamma b_{2}c_{1}}$ .
+In this sense,
+the condition ( 2.1 ) involving $\gamma$ is an even
+weaker cooperative than the usual weak cooperative condition $b_{1}c_{2}>b_{2}c_{1}$ . It is easy to check that,
+in the weak cooperative case where $b_{1}c_{2}>b_{2}c_{1}$ ,
+( 1.1 ) admits a unique positive constant solution $(u^{*},v^{*}):=\biggl(\dfrac{a_{1}c_{2}+a_{2}c_{1}}{b_{1}c_{2}-b_{2}c_{1}},\dfrac{a_{1}b_{2}+a_{2}b_{1}}{b_{1}c_{2}-b_{2}c_{1}}\biggr)$ (2.3) provided that
+either of the following three conditions holds: $\begin{array}[]{rll}\text{(i) }&0<a_{1},\,a_{2};\\
+\text{(ii) }&a_{2}<0<a_{1}\quad\mbox{and}\quad\dfrac{b_{1}}{b_{2}}<\dfrac{a_{1}}{|a_{2}|};\\
+\text{(iii) }&a_{1}<0<a_{2}\quad\mbox{and}\quad\dfrac{|a_{1}|}{a_{2}}<\dfrac{c_{1}}{c_{2}}.\end{array}$ (2.4) The next result asserts that
+under the same conditions as Theorem 2.1 ,
+if there is a positive constant steady state $(u^{*},v^{*})$ and the
+equal random diffusion rate is sufficiently large, then $(u^{*},v^{*})$ is globally asymptotically stable
+(GAS): Theorem 2.2 . Let $d_{1}=d_{2}\,(\,=:d\,)$ and $\Omega$ be a bounded convex domain in $\mathbb{R}^{N}$ with $N\leq 3$ .
+Assume ( 2.1 ) and either of (i)-(iii) in ( 2.4 ),
+Then there exists $\overline{d}=\overline{d}(\alpha,\beta,a_{i},b_{i},c_{i})>0$ such that if $d\geq\overline{d}$ , then
+any positive solution $(u,v)$ of
+( 1.1 )
+satisfies $\lim_{t\to\infty}(u(\,\cdot\,,t),v(\,\cdot\,,t))=(u^{*},v^{*})\quad\mbox{in}\quad L^{2}(\Omega)\times L^{2}(\Omega).$ (2.5) Here we refer to some results on the existence of
+nonconstant positive steady states found by Adachi and
+the second author [ 1 ] .
+According to an interpretation of [ 1 , Theorem 1] for the case where $d_{1}=d_{2}\,(\,=:d)$ and either of (ii) or (iii) in ( 2.4 ) is imposed,
+if some additional conditions involving $(\alpha,\beta)$ are assumed,
+then there exists a positive sequence $\{d^{(j)}_{*}\}$ with $d^{(j)}_{*}\to 0$ $(j\to\infty)$ such that
+nonconstant positive steady states
+bifurcate from $(u^{*},v^{*})$ at $d=d^{(j)}_{*}$ (see Theorem 5.1 below
+in the case where (ii) of ( 2.4 )
+is assumed).
+Then,
+in a range of small $d>0$ ,
+infinitely many bifurcation points appear on the branch $\{(d,u^{*},v^{*})\}$ of the positive constant steady state
+from which nonconstant steady states bifurcate
+due to the effect of $\alpha$ and $\beta$ .
+Hence for such a small range of $d$ , $(u^{*},v^{*})$ is no longer globally asymptotically stable.
+This scenario is totally different from that of
+the weak cooperative linear diffusive system with $\alpha=\beta=0$ in ( 1.1 ), where all positive solutions tend to $(u^{*},v^{*})$ as $t\to\infty$ . 3. Existence of the $L^{\infty}(\Omega)$ absorbing set This section is devoted to the proof of Theorem 2.1 . 3.1. A priori estimates for $w=u+\gamma v$ Taking an advantage of the equal random diffusion rates,
+we first show the $L^{\infty}(\Omega)$ a priori estimate for $w=u+\gamma v$ using the comparison theorem for
+a semilinear heat equation which $w$ satisfies. Lemma 3.1 . Let $d_{1}=d_{2}$ and assume ( 2.1 ).
+For any
+nonnegative functions $u_{0}$ ,
+and $v_{0}$ belong to $W^{1,\infty}(\Omega)$ ,
+let $(u,v)\in[\,C(\overline{\Omega}\times[0,T_{{\rm max}}))\cap C^{2,1}(\Omega\times(0,T_{{\rm max}}))\,]^{2}$ be the solution of ( 1.1 ), which is ensured by
+Theorem 1.1 .
+Then,
+there exist
+a positive function $\xi(t)$ uniformly bounded in $[0,\infty)$ and a positive constant $\lambda^{*}=\lambda^{*}(b_{i},c_{i},\gamma)$ such that $\xi(0)=\|u_{0}+\gamma v_{0}\|_{L^{\infty}(\Omega)}$ , $w(x,t):=u(x,t)+\gamma v(x,t)\leq\xi(t)\quad\mbox{for all}\ (x,t)\in\Omega\times(0,T_{{\rm max}}),$ and $\lim_{t\to\infty}\xi(t)=\dfrac{(1+\gamma^{2})\widetilde{a}}{\lambda^{*}},$ where $\widetilde{a}:=\max\{a_{1}^{+},a_{2}^{+}\}$ for $a_{i}^{+}=\max\{a_{i},0\}$ $(i=1,2)$ . Proof. We set $d:=d_{1}=d_{2}$ and $\gamma:=\alpha/\beta$ .
+By adding $\gamma$ times of the second equation
+to the first equation in ( 1.1 ),
+we find that $w=u+\gamma v$ satisfies the following semilinear heat equation: $\begin{split}w_{t}&=d\Delta w+u(a_{1}-b_{1}u+c_{1}v)+\gamma v(a_{2}+b_{2}u-c_{2}v)\\
+&=d\Delta w+a_{1}u+\gamma a_{2}v-[u,v]\left[\begin{array}[]{cc}b_{1}&-\frac{c_{1}+\gamma b_{2}}{2}\\
+-\frac{c_{1}+\gamma b_{2}}{2}&\gamma c_{2}\end{array}\right]\left[\begin{array}[]{c}u\\
+v\end{array}\right].\end{split}$ (3.1) Here we note that the matrix $A:=\left[\begin{array}[]{cc}b_{1}&-\frac{c_{1}+\gamma b_{2}}{2}\\
+-\frac{c_{1}+\gamma b_{2}}{2}&\gamma c_{2}\end{array}\right]$ (3.2) satisfies $\begin{split}\det A&=\gamma b_{1}c_{2}-\biggl(\dfrac{c_{1}+\gamma b_{2}}{2}\biggr)^{2}\\
+&=\biggl(\sqrt{\gamma b_{1}c_{2}}+\dfrac{c_{1}+\gamma b_{2}}{2}\biggr)\biggl(\sqrt{\gamma b_{1}c_{2}}-\dfrac{c_{1}+\gamma b_{2}}{2}\biggr)>0\end{split}$ by ( 2.1 ).
+Then $A$ is positive definite and
+there exists $\lambda^{*}=\lambda^{*}(b_{i},c_{i},\gamma)>0$ $(i=1,2)$ such that $\boldsymbol{X}A\boldsymbol{X}^{T}\geq\lambda^{*}|\boldsymbol{X}|^{2}\quad\mbox{for all}\ \boldsymbol{X}=(X_{1},X_{2})\in\mathbb{R}^{2}.$ (3.3) Then it follows from ( 3.1 ) that $\begin{split}w_{t}&\leq d\Delta w+a_{1}u+\gamma a_{2}v-\lambda^{*}(u^{2}+v^{2})\\
+&\leq d\Delta w+w\biggl(\widetilde{a}-\dfrac{\lambda^{*}}{1+\gamma^{2}}w\biggr)\quad\mbox{for all}\ (x,t)\in\Omega\times(0,T_{{\rm max}}),\end{split}$ (3.4) where $\widetilde{a}:=\max\{a_{1}^{+},a_{2}^{+}\}$ for $a_{i}^{+}=\max\{a_{i},0\}$ $(i=1,2)$ .
+Let $\xi(t)$ be the solution to the following initial value problem
+of the logistic equation: $\begin{cases}\dfrac{d}{dt}\xi(t)=\xi(t)\biggl(\widetilde{a}-\dfrac{\lambda^{*}}{1+\gamma^{2}}\xi(t)\biggr),\quad t>0,\\
+\xi(0)=\|u_{0}+\gamma v_{0}\|_{L^{\infty}(\Omega)}.\end{cases}$ Hence it follows that $\lim_{t\to\infty}\xi(t)=\dfrac{(1+\gamma^{2})\widetilde{a}}{\lambda^{*}}.$ Owing to ( 3.4 ),
+the usual comparison argument implies that $0\leq w(x,t)\leq\xi(t)\quad\mbox{for all}\ (x,t)\in\Omega\times(0,T_{{\rm max}}).$ Then the proof of Lemma 3.1 is complete.
+∎ The following lemma is based on the maximal regularity theory
+for ( 3.1 ) and will help in the derivation of
+the $W^{1,4}(\Omega)$ a priori estimate of $u$ and $v$ . Lemma 3.2 . Assume $d_{1}=d_{2}$ and ( 2.1 ).
+For
+nonnegative functions $u_{0}$ and $v_{0}$ belonging to $W^{1,\infty}(\Omega)$ ,
+let $(u,v)\in[\,C(\overline{\Omega}\times[0,T_{{\rm max}}))\cap C^{2,1}(\Omega\times(0,T_{{\rm max}}))\,]^{2}$ be the solution of ( 1.1 ), which is ensured by
+Theorem 1.1 .
+Then there exists a positive constant $\widehat{C}$ such that $w=u+\gamma v$ satisfies $\int^{t+\tau}_{t}\|\Delta w(\,\cdot\,,s)\|_{L^{3}(\Omega)}^{3}\,ds\leq\widehat{C}\quad\mbox{for all}\ t\in(\tau,\widehat{T}_{{\rm max}}),$ where $\tau:=\begin{cases}1\quad&\mbox{if}\ T_{{\rm max}}\geq 3,\\
+T_{\rm max}/3\quad&\mbox{if}\ T_{{\rm max}}<3\end{cases}\qquad\mbox{and}\qquad\widehat{T}_{{\rm max}}=\begin{cases}T_{{\rm max}}-\tau\quad&\mbox{if}\ T_{{\rm max}}<\infty,\\
+\infty&\mbox{if}\ T_{{\rm max}}=\infty\end{cases}$ (3.5) and $\widehat{C}$ depends on $\|u(\,\cdot\,,\tau)+\gamma v(\,\cdot\,,\tau)\|_{W^{2,3}(\Omega)}$ but is independent of $t\in(\tau,\widehat{T}_{{\rm max}})$ . Proof. For any solution $(u,v)$ of ( 1.1 ), we set $h(x,t):=u(x,t)(a_{1}-b_{1}u(x,t)+c_{1}v(x,t))+\gamma v(x,t)(a_{2}+b_{2}u(x,t)-c_{2}v(x,t)).$ Then $w=u+\gamma v$ satisfies $\begin{cases}w_{t}=d\Delta w+h(x,t),\quad&(x,t)\in\Omega\times(0,T_{{\rm max}}),\\
+\dfrac{\partial w}{\partial\nu}=0,\quad&(x,t)\in\partial\Omega\times(0,T_{{\rm max}}).\end{cases}$ Under the assumption of Lemma 3.2 ,
+we know from Lemma 3.1 that $\|h(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}\leq C_{0}$ (3.6) with some positive constant $C_{0}$ independently of $t\in(0,T_{{\rm max}})$ .
+By usual application of the maximum regularity theory
+(e.g. [ 7 ] ) for
+the above heat equation,
+one can find a positive constant $\widehat{C}_{1}=\widehat{C}_{1}(p,q)$ for any $p$ , $q\in(1,\infty)$ such that $\widehat{C}_{1}$ is independent of $t\in(\tau,\widehat{T}_{{\rm max}})$ and $\begin{split}&\int^{t+\tau}_{t}\left(\|w(\,\cdot\,,s)\|^{q}_{W^{2,p}(\Omega)}+\|w_{t}(\,\cdot\,,s)\|^{q}_{L^{p}(\Omega)}\right)\,ds\\
+&\leq\widehat{C}_{1}\biggl(\|u(\,\cdot\,,\tau)+\gamma v(\,\cdot\,,\tau)\|^{q}_{W^{2,p}(\Omega)}+\int^{t+\tau}_{t}\|h(\,\cdot\,,s)\|_{L^{p}(\Omega)}^{q}\,ds\biggr)\quad\mbox{for all}\ t\in(\tau,\widehat{T}_{{\rm max}}).\end{split}$ (3.7) By setting $p=q=3$ ,
+we derive the desired estimate
+from ( 3.6 ) and ( 3.7 ),
+∎ 3.2. Hölder estimate It has already been shown that $u$ and $v$ are uniformly bounded on $\Omega\times(0,T_{{\rm max}})$ under the assumptions of
+Lemma 3.1 .
+The following lemma gives the Hölder estimate of $u$ and $v$ .
+This Hölder estimate will play a role of a condition for application of
+an Ehring-type inequality when deriving the $W^{1,4}(\Omega)$ a priori estimate later. Lemma 3.3 . Assume $d_{1}=d_{2}$ and ( 2.1 ).
+For
+nonnegative functions $u_{0}$ ,
+and $v_{0}$ belonging to $W^{1,\infty}(\Omega)$ ,
+let $(u,v)\in[\,C(\overline{\Omega}\times[0,T_{{\rm max}}))\cap C^{2,1}(\overline{\Omega}\times(0,T_{{\rm max}}))\,]^{2}$ be the solution of ( 1.1 ), which is ensured by
+Theorem 1.1 .
+Then there exist $\theta\in(0,1)$ and $\widehat{C}>0$ independently of $t\in(\tau,\widehat{T}_{{\rm max}})$ such that $\|u\|_{C^{\theta,\theta/2}(\overline{\Omega}\times[t,t+\tau])}+\|v\|_{C^{\theta,\theta/2}(\overline{\Omega}\times[t,t+\tau])}\leq\widehat{C}\quad\mbox{for all}\ t\in(\tau,\widehat{T}_{{\rm max}}),$ (3.8) where $\tau$ and $\widehat{T}_{{\rm max}}$ are defined by
+( 3.5 ). Proof. In the following proof of Lemma 3.3 ,
+we denote by $C_{i}$ , $\widetilde{C}_{i}$ and $\widehat{C}_{i}$ positive constants
+that are independent of $t\in(0,T_{{\rm max}})$ , $t\in(\tau,T_{{\rm max}})$ and $t\in(\tau,\widehat{T}_{{\rm max}})$ ,
+respectively.
+It should be noted that the proof relies on that of [ 12 , Lemma 4.13] .
+By setting $q=p\in(1,\infty)$ in ( 3.7 ), we see $\int^{t+\tau}_{t}\left(\|w(\,\cdot\,,s)\|^{p}_{W^{2,p}(\Omega)}+\|w_{t}(\,\cdot\,,s)\|^{p}_{L^{p}(\Omega)}\right)\,ds\leq\widehat{C}_{1}\quad\mbox{for all}\ t\in(\tau,\widehat{T}_{{\rm max}})$ with some $\widehat{C}_{1}>0$ .
+By the embedding theorem [ 5 , Theorem 5.2] with suitably large $p$ , one can find $\widetilde{C}_{1}$ such that $\|\nabla w(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}\leq\widetilde{C}_{1}\quad\mbox{for all}\ t\in(\tau,T_{{\rm max}}).$ (3.9) Obviously, Lemma 3.1 yields $C_{1}$ and $C_{2}$ such that $u(x,t)\leq C_{1},\quad v(x,t)\leq C_{2}\quad\mbox{for all}\ (x,t)\in\Omega\times(0,T_{{\rm max}}).$ (3.10) In order to apply the Hölder regularity theory
+for a class of quasilinear parabolic equations
+by Porzio and Vespri [ 15 , Theorem 1.3 and Remark 1.4] ,
+we note the following divergence form by substituting
+( 1.2 ) and $\nabla v=(\nabla w-\nabla u)/\gamma$ into the first equation of ( 1.1 ): $\begin{split}u_{t}&=\nabla\cdot(\,d\,\nabla u+\alpha v\nabla u-\alpha u\nabla v\,)+u(a_{1}-b_{1}u+c_{1}v)\\
+&=\nabla\cdot(\,d\,\nabla u+\alpha v\nabla u-\beta u\nabla w+\beta u\nabla u\,)+u(a_{1}-b_{1}u+c_{1}v)\\
+&=\nabla\cdot\{\,(\,d+\beta u+\alpha v\,)\nabla u-\beta u\nabla w\,\}+f(u,v),\end{split}$ (3.11) where $f(u,v):=u(a_{1}-b_{1}u+c_{1}v)$ .
+In view of ( 3.11 ),
+we define
+an $\mathbb{R}^{N}$ valued function $\boldsymbol{A}(x,t,\xi)$ and
+a real valued function $B(x,t)$ as follows: $\begin{split}\boldsymbol{A}(x,t,\xi):=(d+\beta u(x,t)+\alpha v(x,t))\xi-\beta u(x,t)\nabla w(x,t),\quad&(x,t,\xi)\in\Omega\times(0,T_{{\rm max}})\times\mathbb{R}^{N},\\
+B(x,t):=f(u(x,t),v(x,t)),\quad&(x,t)\in\Omega\times(0,T_{{\rm max}}).\end{split}$ Hence ( 3.11 ) can be represented as $u_{t}=\nabla\cdot\boldsymbol{A}(x,t,\nabla u)+B(x,t).$ Let us check the structural conditions for use of [ 15 , Theorem 1.3 and Remark 1.4] .
+By ( 3.9 ), ( 3.10 ) and the Young inequality,
+we have $\begin{split}\boldsymbol{A}(x,t,\nabla u)\cdot\nabla u&=(d+\beta u+\alpha v)|\nabla u|^{2}-\beta u\nabla u\cdot\nabla w\\
+&\geq(d+\beta u+\alpha v)|\nabla u|^{2}-\beta u|\nabla u||\nabla w|\\
+&\geq(d+\alpha v)|\nabla u|^{2}-\dfrac{\beta}{4}u|\nabla w|^{2}\\
+&\geq d|\nabla u|^{2}-\dfrac{\beta}{4}C_{1}\widetilde{C}_{1}^{2}\qquad\mbox{for all}\ (x,t)\in\Omega\times(\tau,T_{{\rm max}}).\end{split}$ (3.12) Furthermore it follows from ( 3.9 ) and ( 3.10 ) that $|\boldsymbol{A}(x,t,\nabla u)|\leq(d+\beta C_{1}+\alpha C_{2})|\nabla u|+\beta C_{1}\widetilde{C}_{1}$ (3.13) and $|B(x,t)|\leq C_{1}(a_{1}^{+}+c_{1}C_{2})$ (3.14) for all $(x,t)\in\Omega\times(\tau,T_{{\rm max}})$ .
+Owing to the structural conditions
+( 3.12 ), ( 3.13 ) and ( 3.14 ),
+one can use [ 15 , Theorem 1.3 and Remark 1.4] to
+find $\theta\in(0,1)$ and $\widehat{C}_{2}$ such that $\|u\|_{C^{\theta,\theta/2}(\overline{\Omega}\times[t,t+\tau])}\leq\widehat{C}_{2}\qquad\mbox{for all}\ t\in(\tau,\widehat{T}_{{\rm max}}).$ In the same manner, we can also get the desired Hölder estimate for $v$ .
+∎ 3.3. $W^{1,4}(\Omega)$ estimate We have seen that under the conditions $d_{1}=d_{2}$ and ( 2.1 ),
+any nonnegative solution $(u,v)$ of ( 1.1 )
+remains bounded in the sense that $\|u(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}+\|v(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}$ never blows up as $t\nearrow T_{{\rm max}}$ .
+It should be noted that this fact alone does not allow us to conclude $T_{{\rm max}}=\infty$ .
+This is because, although the maximum values of $u$ and $v$ remain bounded as $t\nearrow T_{{\rm max}}$ ,
+the possibility of blowing up of any of partial derivatives of $u$ or $v$ below the second order cannot be ruled out.
+In view of Theorem 1.1 , we recall that
+if $T_{{\rm max}}<\infty$ , then $\|u(\,\cdot\,,t)\|_{W^{1,p}(\Omega)}+\|v(\,\cdot\,,t)\|_{W^{1,p}(\Omega)}$ blows up as $t\nearrow T_{{\rm max}}$ for any $p>N$ . Therefore, focusing on its counterpart,
+if it can be shown that $\|u(\,\cdot\,,t)\|_{W^{1,p}(\Omega)}+\|v(\,\cdot\,,t)\|_{W^{1,p}(\Omega)}$ remains bounded as $t\nearrow T_{\rm max}$ with some $p>N$ , then
+we can conclude not only $T_{{\rm max}}=\infty$ but also what the solution $(u,v)$ becomes a time-global classical solution. Therefore, in this subsection, we show
+the uniform $W^{1,4}(\Omega)$ a priori estimate for any
+nonnegative solution $(u,v)$ with additional conditions that $N\leq 3$ and $\Omega$ is convex.
+To this end, we note a useful inequality of the Gronwall type
+described in [ 16 , Lemma 3.4] . Lemma 3.4 ( [ 16 ] ) . Let $T>0$ and $y(t)\in[0,\infty)$ be an
+absolutely
+continuous function for $t\in[0,T)$ satisfying $\dfrac{d}{dt}y(t)+ay(t)\leq h(t)\quad\mbox{for a.e.}\ t\in(0,T)$ (3.15) with some $a>0$ and a nonnegative
+measurable function $h(t)$ for which
+there exists $b>0$ such that $\int^{t+1}_{t}h(s)\,ds\leq b\quad\mbox{for all}\ t\in[0,T-1).$ Then $y(t)\leq\max\biggl\{y(0)+b,\dfrac{b}{a}+2b\biggr\}\quad\mbox{for all}\ t\in(0,T).$ (3.16) Hereafter we derive ( 3.15 )
+for $y(t):=\|\nabla u(\,\cdot\,,t)\|_{L^{4}(\Omega)}^{4}+\|\nabla v(\,\cdot\,,t)\|_{L^{4}(\Omega)}^{4}$ with some $h(t)$ for the boundedness of $y(t)$ on $t\in(0,T_{{\rm max}})$ as ( 3.16 ).
+The proof is inspired by the idea of Lou and Winkler [ 12 , Lemma 5.2] on the construction of time-global solutions of
+the Shigesada-Kawasaki-Teramoto model. Lemma 3.5 . Let $\Omega$ be a bounded convex domain in $\mathbb{R}^{N}$ with $N\leq 3$ .
+Assume $d_{1}=d_{2}\,(\,=:d)$ and ( 2.1 ).
+For
+nonnegative $u_{0}$ , $v_{0}\in W^{1,\infty}(\Omega)$ ,
+let $(u,v)\in[\,C(\overline{\Omega}\times[0,T_{{\rm max}}))\cap C^{2,1}(\overline{\Omega}\times(0,T_{{\rm max}}))\,]^{2}$ be the solution of ( 1.1 ).
+Then there exists $C>0$ such that $C$ is independent of $t\in(0,T_{{\rm max}})$ and $\|u(\,\cdot\,,t)\|_{W^{1,4}(\Omega)}+\|v(\,\cdot\,,t)\|_{W^{1,4}(\Omega)}\leq C\quad\mbox{for all}\ t\in(0,T_{{\rm max}}).$ Proof. In the proof, $x$ and the dot symbol for the spatial variable
+and $t$ for the time variable are omitted
+unless there is confusion.
+Substituting
+the first equation of ( 1.1 ) into $\dfrac{1}{4}\dfrac{d}{dt}\|\nabla u\|^{4}_{L^{4}(\Omega)}=\displaystyle\int_{\Omega}|\nabla u|^{2}\nabla u\cdot\nabla u_{t},$ we get $\begin{split}&\dfrac{1}{4}\dfrac{d}{dt}\|\nabla u\|^{4}_{L^{4}(\Omega)}-d\int_{\Omega}|\nabla u|^{2}\nabla u\cdot\nabla\Delta u\\
+=\,&\alpha\int_{\Omega}|\nabla u|^{2}\nabla u\cdot\nabla(v\Delta u-u\Delta v)+\int_{\Omega}|\nabla u|^{2}\nabla u\cdot\nabla f(u,v),\end{split}$ (3.17) where $f(u,v)=u(a_{1}-b_{1}u+c_{1}v)$ .
+Substituting the identity $\nabla u\cdot\nabla\Delta u=\dfrac{1}{2}\Delta|\nabla u|^{2}-|D^{2}u|^{2}$ into the
+random diffusion term gives $-d\int_{\Omega}|\nabla u|^{2}\nabla u\cdot\nabla\Delta u=d\,\biggl(-\dfrac{1}{2}\int_{\Omega}|\nabla u|^{2}\Delta|\nabla u|^{2}+\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}\biggr).$ We integrate by parts in the first term of the right-hand side
+to get $\int_{\Omega}|\nabla u|^{2}\Delta|\nabla u|^{2}=\int_{\partial\Omega}|\nabla u|^{2}\dfrac{\partial|\nabla u|^{2}}{\partial\nu}-\int_{\Omega}|\nabla|\nabla u|^{2}|^{2}.$ Since $\partial|\nabla u|^{2}/\partial\nu\leq 0$ on $\partial\Omega$ when $\Omega$ is convex
+(e.g., [ 11 , Lemma 1.1] ), then $-d\int_{\Omega}|\nabla u|^{2}\nabla u\cdot\nabla\Delta u\geq d\,\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}.$ Then, together with integration by parts in the first term of
+the right-hand side of ( 3.17 ), we obtain $\dfrac{1}{4}\dfrac{d}{dt}\|\nabla u\|^{4}_{L^{4}(\Omega)}+d\,\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}\leq I(t)+J(t)+\int_{\Omega}|\nabla u|^{2}\nabla u\cdot\nabla f(u,v),$ (3.18) where $I:=-\alpha\int_{\Omega}(v\Delta u-u\Delta v)|\nabla u|^{2}\Delta u,\qquad J:=-\alpha\int_{\Omega}(v\Delta u-u\Delta v)\nabla|\nabla u|^{2}\cdot\nabla u.$ Substituting $\Delta v=(\Delta w-\Delta u)/\gamma$ and $\gamma v+u=w$ into $I$ gives $I=-\beta\int_{\Omega}w|\nabla u|^{2}|\Delta u|^{2}+\beta\int_{\Omega}u|\nabla u|^{2}\Delta u\Delta w.$ (3.19) Substituting $\Delta v=(\Delta w-\Delta u)/\gamma$ into $J$ gives $J=\int_{\Omega}(-\alpha v\Delta u+\beta u\Delta w-\beta u\Delta u)\nabla|\nabla u|^{2}\cdot\nabla u.$ Owing to the facts that $\partial|\nabla u|^{2}/\partial\nu\leq 0$ on $\partial\Omega$ and $\nabla\Delta u\cdot\nabla u=\frac{1}{2}\Delta|\nabla u|^{2}-|D^{2}u|^{2}$ ,
+straight forward calculations using integration by parts lead to $\begin{split}J&\leq\,\alpha\int_{\Omega}\,\biggl(\,v|\nabla u|^{2}|\Delta u|^{2}+|\nabla u|^{2}(\nabla u\cdot\nabla v)\Delta u-\dfrac{1}{2}|\nabla u|^{2}\nabla v\cdot\nabla|\nabla u|^{2}\,\biggr)\\
+&+\beta\int_{\Omega}u\Delta w\,\nabla|\nabla u|^{2}\cdot\nabla u\\
+&+\beta\int_{\Omega}\biggl(\,u|\nabla u|^{2}|\Delta u|^{2}+|\nabla u|^{4}\Delta u-\dfrac{1}{2}|\nabla u|^{2}\nabla u\cdot\nabla|\nabla u|^{2}\,\biggr).\end{split}$ Since $\beta u+\alpha v=\beta w$ , we see $\begin{split}J&\leq\beta\int_{\Omega}w|\nabla u|^{2}|\Delta u|^{2}+\alpha\int_{\Omega}\biggl(|\nabla u|^{2}(\nabla u\cdot\nabla v)\Delta u-\dfrac{1}{2}\,|\nabla u|^{2}\nabla v\cdot\nabla|\nabla u|^{2}\biggr)\\
+&+\beta\int_{\Omega}\biggl(u\Delta w\,\nabla|\nabla u|^{2}\cdot\nabla u+|\nabla u|^{4}\Delta u-\dfrac{1}{2}\,|\nabla u|^{2}\nabla u\cdot\nabla|\nabla u|^{2}\biggr).\end{split}$ (3.20) Adding ( 3.19 ) and ( 3.20 ) cancels each other’s first terms
+in the right-hand sides and results in $\begin{split}&I+J\\
+&\leq\beta\int_{\Omega}u|\nabla u|^{2}\Delta u\Delta w+\alpha\int_{\Omega}|\nabla u|^{2}(\nabla u\cdot\nabla v)\Delta u-\dfrac{\alpha}{2}\int_{\Omega}|\nabla u|^{2}\nabla v\cdot\nabla|\nabla u|^{2}\\
+&+\beta\int_{\Omega}u\Delta w\,\nabla|\nabla u|^{2}\cdot\nabla u+\beta\int_{\Omega}|\nabla u|^{4}\Delta u-\dfrac{\beta}{2}\int_{\Omega}|\nabla u|^{2}\nabla u\cdot\nabla|\nabla u|^{2}\\
+&=:I_{1}+J_{2}+J_{3}+J_{4}+J_{5}+J_{6}.\end{split}$ By virtue of $|\Delta u|\leq\sqrt{N}|D^{2}u|$ and $\nabla|\nabla u|^{2}=2(\nabla u)(D^{2}u)$ ,
+the Young and the Hölder inequalities yield $\begin{split}&I_{1}\leq\dfrac{d}{2}\displaystyle\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}+\dfrac{N\beta^{2}\|u\|_{L^{\infty}(\Omega)}^{2}}{2d}\left(\|\nabla u\|^{6}_{L^{6}(\Omega)}+\|\Delta w\|_{L^{3}(\Omega)}^{3}\right),\\
+&J_{2}\leq\dfrac{d}{4}\displaystyle\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}+\dfrac{N\alpha^{2}}{d}\left(\|\nabla u\|_{L^{6}(\Omega)}^{6}+\|\nabla v\|_{L^{6}(\Omega)}^{6}\right),\\
+&J_{3}\leq\dfrac{d}{8}\displaystyle\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}+\dfrac{2\alpha^{2}}{d}\left(\|\nabla u\|_{L^{6}(\Omega)}^{6}+\|\nabla v\|_{L^{6}(\Omega)}^{6}\right),\vskip 2.84526pt\\
+&J_{4}\leq\dfrac{d}{16}\displaystyle\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}+\dfrac{16\beta^{2}\|u\|_{L^{\infty}(\Omega)}^{2}}{d}\left(\|\nabla u\|_{L^{6}(\Omega)}^{6}+\|\Delta w\|_{L^{3}(\Omega)}^{3}\right),\\
+&J_{5}\leq\dfrac{d}{32}\displaystyle\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}+\dfrac{8N\beta^{2}}{d}\|\nabla u\|_{L^{6}(\Omega)}^{6},\\
+&J_{6}\leq\dfrac{d}{64}\displaystyle\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}+\dfrac{16\beta^{2}}{d}\|\nabla u\|_{L^{6}(\Omega)}^{6}\end{split}$ for all $t\in(0,T_{{\rm max}})$ .
+Recalling Lemma 3.1 , we note $\|u\|_{L^{\infty}(\Omega)},\ \ \gamma\|v\|_{L^{\infty}(\Omega)}\leq\max\biggl\{\|u_{0}+\gamma v_{0}\|_{L^{\infty}(\Omega)},\,\dfrac{(1+\gamma^{2})\widetilde{a}}{\lambda^{*}}\biggr\}$ (3.21) for all $t\in(0,T_{{\rm max}})$ .
+In what follows in the proof, $C_{i}$ represent positive constants depending on $(d,\alpha,\beta,a_{i},b_{i},c_{i},N,|\Omega|,\|u_{0}+\gamma v_{0}\|_{L^{\infty}(\Omega)})$ .
+It is possible to find $C_{1}$ such that $\displaystyle\int_{\Omega}|\nabla u|^{2}\nabla u\cdot\nabla f(u,v)+\|\nabla u\|^{4}_{L^{4}(\Omega)}\leq C_{1}(\|\nabla u\|_{L^{6}(\Omega)}^{6}+\|\nabla v\|_{L^{6}(\Omega)}^{6}+1).$ Therefore, we add $\|\nabla u\|^{4}_{L^{4}(\Omega)}$ in both sides of ( 3.18 ) to obtain $\begin{split}&\dfrac{1}{4}\dfrac{d}{dt}\|\nabla u\|^{4}_{L^{4}(\Omega)}+\|\nabla u\|^{4}_{L^{4}(\Omega)}+\dfrac{d}{64}\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}\\
+&\leq C_{2}\left(\|\nabla u\|^{6}_{L^{6}(\Omega)}+\|\nabla v\|^{6}_{L^{6}(\Omega)}+\|\Delta w\|^{3}_{L^{3}(\Omega)}+1\right)\quad\mbox{for all}\ t\in(0,T_{{\rm max}})\end{split}$ with some $C_{2}$ .
+Together with the same procedure to the second equation of
+( 1.1 ), we find $C_{3}$ such that $\begin{split}&\dfrac{1}{4}\dfrac{d}{dt}\left(\|\nabla u\|^{4}_{L^{4}(\Omega)}+\|\nabla v\|^{4}_{L^{4}(\Omega)}\right)+\|\nabla u\|_{L^{4}(\Omega)}^{4}+\|\nabla v\|_{L^{4}(\Omega)}^{4}+\dfrac{d}{64}\int_{\Omega}(|\nabla u|^{2}|D^{2}u|^{2}+|\nabla v|^{2}|D^{2}v|^{2})\\
+&\leq C_{3}\left(\|\nabla u\|^{6}_{L^{6}(\Omega)}+\|\nabla v\|^{6}_{L^{6}(\Omega)}+\|\Delta w\|^{3}_{L^{3}(\Omega)}+1\right)\quad\mbox{for all}\ t\in(0,T_{{\rm max}}).\end{split}$ (3.22) Thanks to Lemma 3.3 ,
+we can use
+the Ehrling-type lemma [ 12 , Lemma 5.1] to obtain $\begin{split}&\|\nabla u\|^{6}_{L^{6}(\Omega)}\leq\dfrac{d}{64}\int_{\Omega}|\nabla u|^{2}|D^{2}u|^{2}+C_{4}\|u\|^{6}_{L^{\infty}(\Omega)},\\
+&\|\nabla v\|^{6}_{L^{6}(\Omega)}\leq\dfrac{d}{64}\int_{\Omega}|\nabla v|^{2}|D^{2}v|^{2}+C_{4}\|v\|^{6}_{L^{\infty}(\Omega)}\end{split}$ (3.23) with some $C_{4}$ .
+From ( 3.21 ), ( 3.22 ) and ( 3.23 ),
+we find $C_{5}$ such that $y(t):=\|\nabla u(\,\cdot\,,t)\|^{4}_{L^{4}(\Omega)}+\|\nabla v(\,\cdot\,,t)\|^{4}_{L^{4}(\Omega)}$ satisfies $\dfrac{1}{4}\dfrac{d}{dt}y(t)+y(t)\leq C_{5}(\|\Delta w\|^{3}_{L^{3}(\Omega)}+1)\quad\mbox{for all}\quad t\in(0,T_{{\rm max}}).$ By Lemma 3.2 , there exists $C_{6}$ such that $\int^{t+\tau}_{t}\|\Delta w(\,\cdot\,,s)\|^{3}_{L^{3}(\Omega)}\,ds\leq C_{6}\quad\mbox{for all}\ t\in(\tau,\widehat{T}_{{\rm max}}),$ where $\tau$ and $\widehat{T}_{{\rm max}}$ are defined by ( 3.5 ).
+By Lemma 3.4 ,
+there exists $C_{7}$ such that $y(t)=\|\nabla u(\,\cdot\,,t)\|^{4}_{L^{4}(\Omega)}+\|\nabla v(\,\cdot\,,t)\|^{4}_{L^{4}(\Omega)}\leq C_{7}\quad\mbox{for all}\ t\in(\tau,T_{{\rm max}}).$ By virtue of Theorem 1.1 ,
+there exists $C_{8}$ such that $y(t)\leq C_{8}$ for all $t\in[0,\tau]$ .
+Together with ( 3.21 ),
+we obtain the desired estimate.
+∎ Proof of Theorem 2.1 . Suppose by contradiction that $T_{{\rm max}}<\infty$ .
+Then ( 1.3 ) has to follow by Theorem 1.1 .
+On the other hand, Lemma 3.5 proves that
+( 1.3 ) never occurs under the assumptions of Theorem 2.1 .
+This contradiction enables us to conclude $T_{{\rm max}}=\infty$ .
+Furthermore,
+Lemma 3.1 asserts that,
+if $\widetilde{a}=\max\{a_{1}^{+},a_{2}^{+}\}=0$ ,
+namely, $a_{1}$ , $a_{2}\leq 0$ , then
+all nonnegative solutions of ( 1.1 )
+asymptotically decay to zero
+in the sense that
+for any $\varepsilon>0$ ,
+there exists $t_{0}=t_{0}(\varepsilon,\|u_{0}+\gamma v_{0}\|_{L^{\infty}(\Omega)})>0$ such that $t\geq t_{0}\ \Longrightarrow\ \|u(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}+\gamma\|v(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}\leq\varepsilon;$ whereas if $\widetilde{a}=\max\{a_{1}^{+},a_{2}^{+}\}>0$ ,
+then there exists $t_{0}=t_{0}(\|u_{0}+\gamma v_{0}\|_{L^{\infty}(\Omega)})>0$ such that $t\geq t_{0}\ \Longrightarrow\ \|u(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}+\gamma\|v(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}\leq\dfrac{2(1+\gamma^{2})\widetilde{a}}{\lambda^{*}}.$ Then ( 2.2 ) holds true with $K=\begin{cases}\varepsilon\quad&\mbox{if}\ a_{1}\leq 0\ \mbox{and}\ a_{2}\leq 0,\\
+\frac{2(1+\gamma^{2})\widetilde{a}}{\lambda^{*}}\quad&\mbox{if}\ a_{1}>0\ \mbox{or}\ a_{2}>0.\end{cases}$ (3.24) The proof of Theorem 2.1 is complete.
+∎ 4. Global asymptotic stability of the positive constant
+steady state In this section, we give a proof of Theorem 2.2 .
+In order to show the global asymptotic stability of
+the positive constant steady state $(u^{*},v^{*})$ stated as ( 2.5 ),
+we construct a Lyapunov function.
+To do so, we introduce a nonnegative function $H(\eta;\xi)$ as follows: $H(\eta;\xi):=\eta-\xi-\xi\log\dfrac{\eta}{\xi}\qquad\mbox{for}\ \eta>0,\ \xi>0.$ Hence $(0,\infty)\ni\eta\mapsto H(\eta;\xi)\in[0,\infty)$ is monotone decreasing for $\eta\in(0,\xi)$ ,
+attains the minimum zero at $\eta=\xi$ and
+is monotone increasing for $\eta\in(\xi,\infty)$ with $\lim_{\eta\searrow 0}H(\eta;\xi)=\lim_{\eta\to\infty}H(\eta;\xi)=\infty$ .
+Under the assumptions
+of Theorem 2.2 ,
+let $(u,v)$ be the positive solution
+of ( 1.1 )
+(which exists globally in time by Theorem 2.1 ).
+For the solution $(u,v)$ , we define an energy functional $\mathcal{F}(t)$ as follows: $\mathcal{F}(t):=\int_{\Omega}\{\,H(u(x,t);u^{*})+\gamma H(v(x,t);v^{*})\,\},$ where the positive constant steady state $(u^{*},v^{*})$ exists in the form ( 2.3 )
+when ( 2.1 ) and either of (i)-(iii) in ( 2.4 )
+are assumed.
+We further define a function $\mathcal{D}(t)$ that measures the $L^{2}(\Omega)$ distance between $(u,v)$ and $(u^{*},v^{*})$ as follows: $\mathcal{D}(t):=\|u(\,\cdot\,,t)-u^{*}\|_{L^{2}(\Omega)}^{2}+\|v(\,\cdot\,,t)-v^{*}\|_{L^{2}(\Omega)}^{2}.$ It will be shown that
+the energy function $\mathcal{F}(t)$ is monotone decreasing
+along the trajectory $(u(\,\cdot\,,t),v(\,\cdot\,,t))$ for $t>0$ , and moreover,
+the derivative $\mathcal{F}^{\prime}(t)$ is
+less than a negative multiple of the $L^{2}(\Omega)$ distance $\mathcal{D}(t)$ between $(u(\,\cdot\,,t),v(\,\cdot\,,t))$ and $(u^{*},v^{*})$ if $t>0$ is sufficiently large.
+This fact together with
+the uniform continuity of $\mathcal{D}(t)$ ensured by
+Lemma 3.3 will show the convergence
+( 2.5 ). Lemma 4.1 . Let $d_{1}=d_{2}\,(\,=:d\,)$ and $\Omega$ be a bounded convex domain
+in $\mathbb{R}^{N}$ with $N\leq 3$ .
+Assume ( 2.1 ) and either of (i)-(iii) in ( 2.4 ).
+Then, if $d\geq\dfrac{(\beta u^{*}+\alpha v^{*})K}{2\sqrt{\gamma u^{*}v^{*}}},$ then any positive solution $(u,v)$ of
+( 1.1 )
+fulfills $\dfrac{d}{dt}\mathcal{F}(t)+\lambda^{*}\mathcal{D}(t)\leq 0\quad\mbox{for all}\ t\in[t_{0},\infty),$ (4.1) where $(u^{*},v^{*})$ , $\lambda^{*}$ , $K$ and $t_{0}$ are introduced by
+( 2.3 ),
+( 3.3 ),
+( 3.24 )
+and
+( 2.2 ), respectively. Proof. From the first equation of ( 1.1 ) and
+the fact that $a_{1}-b_{1}u^{*}+c_{1}v^{*}=0$ ,
+one can verify that any solution $(u,v)$ of ( 1.1 )
+satisfies $\begin{split}\dfrac{d}{dt}\int_{\Omega}H(u(x,t);u^{*})=&\int_{\Omega}\dfrac{\partial}{\partial t}\biggl(u-u^{*}-u^{*}\log\dfrac{u}{u^{*}}\biggr)=\int_{\Omega}\biggl(1-\dfrac{u^{*}}{u}\biggr)u_{t}\\
+=&-u^{*}\int_{\Omega}(d+\alpha v)\biggl|\dfrac{\nabla u}{u}\biggr|^{2}+\alpha u^{*}\int_{\Omega}\dfrac{\nabla u\cdot\nabla v}{u}+\int_{\Omega}(u-u^{*})(a_{1}-b_{1}u+c_{1}v)\\
+=&-u^{*}\int_{\Omega}(d+\alpha v)\biggl|\dfrac{\nabla u}{u}\biggr|^{2}+\alpha u^{*}\int_{\Omega}\dfrac{\nabla u\cdot\nabla v}{u}\\
+&-b_{1}\int_{\Omega}(u-u^{*})^{2}+c_{1}\int_{\Omega}(u-u^{*})(v-v^{*})\qquad\mbox{for all}\ t>0.\end{split}$ (4.2) Similarly, the second equation of ( 1.1 ) and
+the fact that $a_{2}+b_{2}u^{*}-c_{2}v^{*}=0$ yield $\begin{split}\dfrac{d}{dt}\int_{\Omega}H(v(x,t);v^{*})=&-v^{*}\int_{\Omega}(d+\beta u)\biggl|\dfrac{\nabla v}{v}\biggr|^{2}+\beta v^{*}\int_{\Omega}\dfrac{\nabla u\cdot\nabla v}{v}\\
+&-c_{2}\int_{\Omega}(v-v^{*})^{2}+b_{2}\int_{\Omega}(u-u^{*})(v-v^{*})\qquad\mbox{for all}\ t>0.\end{split}$ (4.3) By adding $\gamma$ times of ( 4.3 ) to ( 4.2 ),
+we obtain the integral of quadratic forms as follows: $\dfrac{d}{dt}\underbrace{\int_{\Omega}\{\,H(u(x,t),u^{*})+\gamma H(v(x,t),v^{*})\,\}}_{\mathcal{F}(t)}=-\int_{\Omega}\boldsymbol{X}A\boldsymbol{X}^{T}-\sum^{N}_{j=1}\int_{\Omega}\boldsymbol{Y}_{j}B\boldsymbol{Y}_{j}^{T},$ (4.4) where $\boldsymbol{X}=\boldsymbol{X}(x,t):=(u(x,t)-u^{*},v(x,t)-v^{*}),\quad\boldsymbol{Y}_{j}=\boldsymbol{Y}_{j}(x,t):=\biggl(\dfrac{1}{u}\biggl(\dfrac{\partial u}{\partial x_{j}}\biggr),\dfrac{1}{v}\biggl(\dfrac{\partial v}{\partial x_{j}}\biggr)\biggr),$ and $B=B(x,t):=\left[\begin{array}[]{cc}u^{*}(d+\alpha v)&-\frac{\alpha(u^{*}v+v^{*}u)}{2}\\
+-\frac{\alpha(u^{*}v+v^{*}u)}{2}&v^{*}(\gamma d+\alpha u)\end{array}\right]$ and $A$ is the matrix with constant entries defined by ( 3.2 ).
+In view of ( 3.3 ),
+we recall that $A$ is positive definite,
+and therefore, $\boldsymbol{X}A\boldsymbol{X}^{T}\geq\lambda^{*}\{\,(u(x,t)-u^{*})^{2}+(v(x,t)-v^{*})^{2}\,\}\quad\mbox{for all}\ (x,t)\in\Omega\times(0,\infty).$ (4.5) It follows from Theorem 2.1 and ( 3.24 ) that
+there exists $t_{0}=t_{0}(\|u_{0}+\gamma v_{0}\|_{L^{\infty}(\Omega)})>0$ such that if $t\geq t_{0}$ , then $\|u(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}\leq K\quad\mbox{and}\quad\|v(\,\cdot\,,t)\|_{L^{\infty}(\Omega)}\leq\dfrac{\beta K}{\alpha},$ where $K$ is the positive number defined by ( 3.24 ).
+It is noted that $\begin{split}\det B&=u^{*}v^{*}(d+\alpha v)(\gamma d+\alpha u)-\biggl(\dfrac{\alpha(u^{*}v+v^{*}u)}{2}\biggr)^{2}\\
+&>\gamma u^{*}v^{*}d^{2}-\biggl(\dfrac{(\beta u^{*}+\alpha v^{*})K}{2}\biggr)^{2}\quad\mbox{for all}\ (x,t)\in\Omega\times[t_{0},\infty).\end{split}$ Therefore, if $d\geq\dfrac{(\beta u^{*}+\alpha v^{*})K}{2\sqrt{\gamma u^{*}v^{*}}}\,(\,=:\overline{d}\,),$ then $B=B(x,t)$ is positive definite
+for all $(x,t)\in\Omega\times[t_{0},\infty)$ ,
+thereby $\boldsymbol{Y}_{j}B\boldsymbol{Y}_{j}^{T}>0\quad\mbox{for all}\ (x,t)\in\Omega\times[t_{0},\infty)\quad\mbox{and}\quad j=1,\ldots,N.$ By virtue of ( 4.4 ) and ( 4.5 ), we know that
+if $d\geq\overline{d}$ , then $\dfrac{d}{dt}\mathcal{F}(t)+\lambda^{*}\mathcal{D}(t)\leq 0\quad\mbox{for all}\ t\in[t_{0},\infty).$ Then the proof of Lemma 4.1 is complete.
+∎ Proof of Theorem 2.2 . By integrating ( 4.1 ) over $(t_{0},t)$ , one can see $\mathcal{F}(t)-\mathcal{F}(t_{0})+\lambda^{*}\int^{t}_{t_{0}}\mathcal{D}(s)ds\leq 0.$ Since $\mathcal{F}(t)>0$ for all $t\in[t_{0},\infty)$ , then $\int^{t}_{t_{0}}\mathcal{D}(s)\,ds<\dfrac{\mathcal{F}(t_{0})}{\lambda^{*}}\quad\mbox{for all}\ t\in(t_{0},\infty).$ Hence
+we set $t\to\infty$ in the above inequality to get $\int^{\infty}_{t_{0}}\mathcal{D}(t)\,dt\leq\dfrac{\mathcal{F}(t_{0})}{\lambda^{*}}<\infty.$ (4.6) We show $\mathcal{D}(t)\to 0$ as $t\to\infty$ .
+Suppose for contradiction that $\limsup_{t\to\infty}D(t)>0$ .
+Then there exist a constant $\varepsilon>0$ and
+a sequence $\{t_{n}\}$ with $\lim_{n\to\infty}t_{n}=\infty$ such that $\mathcal{D}(t_{n})>\varepsilon\quad\mbox{for all}\ n\in\mathbb{N}.$ In view of Lemma 3.3 ,
+we recall that the constant $\widehat{C}$ in the Hölder estimate
+( 3.8 ) can be taken independently $t\in(\tau,\infty)$ .
+(Note that $\widehat{T}_{{\rm max}}=\infty$ under the assumption
+of Theorem 2.2 .)
+This fact implies that $\mathcal{D}(t)$ is uniformly continuous for $t\in[t_{0},\infty)$ .
+Therefore, for the above $\varepsilon>0$ ,
+there exists $\delta>0$ such that $|t-t_{n}|<\delta\ \Longrightarrow\ |\mathcal{D}(t)-\mathcal{D}(t_{n})|<\dfrac{\varepsilon}{2}\quad\mbox{for all}\ t\in[t_{0},\infty)\quad\mbox{and}\quad n\in\mathbb{N}.$ Then it follows that $\mathcal{D}(t)\geq\mathcal{D}(t_{n})-|\mathcal{D}(t_{n})-\mathcal{D}(t)|\geq\varepsilon-\dfrac{\varepsilon}{2}=\dfrac{\varepsilon}{2}$ if $t\in(t_{n},t_{n}+\delta)$ with each $n\in\mathbb{N}$ .
+Therefore, we know that $\int^{t_{n}+\delta}_{t_{n}}\mathcal{D}(t)\,dt\geq\int^{t_{n}+\delta}_{t_{n}}\dfrac{\varepsilon}{2}\,dt=\dfrac{\delta\varepsilon}{2}>0\quad\mbox{for all}\ n\in\mathbb{N},$ whereas
+( 4.6 ) obviously leads to $\int^{t_{n}+\delta}_{t_{n}}\mathcal{D}(t)\,dt\to 0\quad\mbox{as}\ n\to\infty.$ This contradiction enables us to conclude that $\mathcal{D}(t)\to 0$ as $t\to\infty$ , namely, $\lim_{t\to\infty}(u(\,\cdot\,,t),v(\,\cdot\,,t))=(u^{*},v^{*})\quad\mbox{in}\ L^{2}(\Omega)\times L^{2}(\Omega).$ Then we complete the proof of Theorem 2.2 .
+∎ 5. Relationship between stationary and nonstationary solutions In this section, we discuss the relationship between
+the bifurcation structure of the nonconstant
+positive steady states obtained in [ 1 ] and
+the time-global nonstationary solutions obtained
+up to the previous section.
+In [ 1 ] ,
+Adachi and the second author of the present paper studied
+the corresponding stationary problem in the weak cooperative case $b_{1}c_{2}>b_{2}c_{1}$ .
+Among other things, they showed that
+nonconstant positive steady states bifurcate
+from the positive constant steady state $(u^{*},v^{*})$ when either of (ii) or (iii) of ( 2.4 )
+(under $b_{1}c_{2}>b_{2}c_{1}$ ) is satisfied
+in addition to some conditions.
+In [1], $d_{i}$ $(i=1\ \mbox{or}\ 2)$ is adopted as the bifurcation parameter,
+but in order to relate the results of [ 1 ] to the properties of the nonstationary solutions of ( 1.1 )
+obtained up to the previous section,
+we state the results of [ 1 ] for the stationary problem
+with equal random diffusion rates. $\begin{cases}d\Delta u+\alpha\nabla\cdot\biggl[v^{2}\,\nabla\biggl(\dfrac{u}{v}\biggr)\biggr]+u(a_{1}-b_{1}u+c_{1}v)=0,\ \ \ &x\in\Omega,\\
+d\Delta v+\beta\nabla\cdot\biggl[u^{2}\,\nabla\biggl(\dfrac{v}{u}\biggr)\biggr]+v(a_{2}+b_{2}u-c_{2}v)=0,\ \ \ &x\in\Omega,\\
+\dfrac{\partial u}{\partial\nu}=\dfrac{\partial v}{\partial\nu}=0,\ \ \ &x\in\partial\Omega\end{cases}$ (5.1) with bifurcation parameter $d$ , as Theorem 5.1 below.
+Since results in cases (ii) and (iii) of ( 2.4 )
+can be described similarly,
+the result in case (ii) will be discussed.
+In the bifurcation structure,
+the eigenvalue problem: $-\Delta\phi=\lambda\phi\quad\mbox{in}\ \Omega,\qquad\dfrac{\partial\phi}{\partial\nu}=0\quad\mbox{on}\ \partial\Omega$ (5.2) will play an important role.
+We denote all the eigenvalues by $0=\lambda_{0}<\lambda_{1}\leq\lambda_{2}\leq\cdots\leq\lambda_{j}\leq\cdots$ counting multiplicity and
+denote by $\varPhi_{j}$ any $L^{2}(\Omega)$ normalized eigenfunciton
+corresponding to the eigenvalue $\lambda_{j}$ . Theorem 5.1 ( [ 1 ] ) . Assume that $a_{2}<0<a_{1},\quad\dfrac{c_{1}}{c_{2}}<\dfrac{b_{1}}{b_{2}}<\dfrac{a_{1}}{|a_{2}|}$ (5.3) and $P_{j}(\alpha,\beta):=\lambda_{j}(\alpha|a_{2}|v^{*}-\beta a_{1}u^{*})-(a_{1}c_{2}-|a_{2}|c_{1})v^{*}>0$ for some $j\in\mathbb{N}$ .
+If $\lambda_{j}$ is a simple eigenvalue, then
+the curve of nonconstant solutions of ( 5.1 )
+bifurcates from $(u^{*},v^{*})$ at $d=d^{(j)}_{*}(\alpha,\beta):=\dfrac{1}{2\lambda_{j}}\left(\sqrt{Q_{j}^{2}+4P_{j}}-Q_{j}\right),$ (5.4) where $Q_{j}(\alpha,\beta):=\lambda_{j}(\beta u^{*}+\alpha v^{*})+b_{1}u^{*}+c_{1}v^{*}$ .
+There exist a neighborhood $\mathcal{U}_{j}\subset\mathbb{R}\times W^{2,p}_{\nu}(\Omega)^{2}$ of $(d^{(j)}_{*},u^{*},v^{*})$ and
+a small positive number $\delta_{j}$ such that
+all solutions of ( 5.1 )
+(treating $d$ as a positive parameter) contained in $\mathcal{U}_{j}$ consist of the union of $\{(d,u^{*},v^{*})\in\mathcal{U}_{j}\}$ and
+a simple curve $\varGamma_{j}\,:\,\left[\begin{array}[]{c}d\\
+u\\
+v\end{array}\right]=\left[\begin{array}[]{l}d^{(j)}_{*}(\alpha,\beta)\\
+u^{*}\\
+v^{*}\end{array}\right]+\left[\begin{array}[]{l}q(s)\\
+s(\varPhi_{j}+\widetilde{u}(s))\\
+s(\kappa_{j}\varPhi_{j}+\widetilde{v}(s))\\
+\end{array}\right]\quad\mbox{for}\ s\in(-\delta_{j},\delta_{j})$ (5.5) with some $\kappa_{j}>0$ , where $(q(s),\widetilde{u}(s),\widetilde{v}(s))\in\mathbb{R}\times W^{2,p}_{\nu}(\Omega)^{2}$ is continuously differentiable for $s\in(-\delta_{j},\delta_{j})$ with $(q(0),\widetilde{u}(0),\widetilde{v}(0))=(0,0,0)$ and $\int_{\Omega}\varPhi_{j}\widetilde{u}(s)=\int_{\Omega}\varPhi_{j}\widetilde{v}(s)=0$ for $s\in(-\delta_{j},\delta_{j})$ . Figure 1. $\mathcal{R}_{j}$ and $\gamma=A\tau^{*}$ on the $\alpha\beta$ plane From the viewpoint of the effect of the strongly coupled
+diffusion terms on the bifurcation structure,
+one can see that
+if $(\alpha,\beta)\in\bigcup^{\infty}_{j=1}\mathcal{R}_{j},\quad\mbox{where}\ \ \mathcal{R}_{j}:=\{\,(\alpha,\beta)\in\mathbb{R}^{2}_{>0}\,:\,P_{j}(\alpha,\beta)>0\,\},$ then there appear infinitely many bifurcation points $(d_{*}^{(j)},u^{*},v^{*})$ with $j\geq k:=\min\{\,j\in\mathbb{N}\,:\,(\alpha,\beta)\in\mathcal{R}_{j}\,\}$ such that $\lambda_{j}$ is a simple eigenvalue of
+( 5.2 ).
+Indeed, it is possible to check that $\mathcal{R}_{j}$ expands to the positive cone below the
+line $\gamma=A\tau^{*},\qquad\mbox{where}\ \ A=\dfrac{a_{1}}{|a_{2}|},\quad\tau^{*}=\dfrac{u^{*}}{v^{*}},$ as $j\to\infty$ on the $\alpha\beta$ plane (see Figure 1).
+Furthermore, from ( 5.4 ),
+one can verify that $d^{(j)}_{*}(\alpha,\beta)\to 0$ as $j\to\infty$ if $(\alpha,\beta)\in\cup^{\infty}_{j=1}\mathcal{R}_{j}$ .
+This fact implies that $(\alpha,\beta)\in\cup^{\infty}_{j=1}\mathcal{R}_{j}$ can produce various stationary patterns
+when equal random diffusion $d$ is small enough.
+In Figure 2,
+when $(a_{1},a_{2},b_{1},b_{2},c_{1},c_{2})=(1,-1,4,5,2,3)$ and $(\alpha,\beta)=(2,1)$ ,
+the numerical bifurcation diagram by
+the continuation software pde2path ( [ 17 ] )
+is exhibited, where the horizontal axis represents $d$ ,
+and the vertical axis represents $\|u\|_{L^{2}(\Omega)}$ (with $s\in(0,\delta_{j})$ in ( 5.5 )).
+The bifurcation point $d_{*}^{(j)}$ and
+the bifurcation branches $\varGamma_{j}$ of Theorem 5.1 can be
+observed within the numerically traceable range. Figure 2. Bifurcation branches of solutions to ( 5.1 ) with bifurcation parameter $d$ in case $(\alpha,\beta,a_{1},a_{2},b_{1},b_{2},c_{1},c_{2})=(2,1,1,-1,4,5,2,3)$ According to [ 1 ] ,
+in the nonlinear diffusion limit where $\alpha$ and $\beta$ tend to infinity
+keeping $(\alpha,\beta)\in\cup^{\infty}_{j=1}\mathcal{R}_{j}$ ,
+the positive steady states approach a positive steady state
+to the scalar field equation as follows: Theorem 5.2 ( [ 1 ] ) . Assume ( 5.3 ) and $N\leq 3$ .
+Let $\{(\alpha_{n},\beta_{n})\}$ be any positive sequence satisfying $\alpha_{n}\to\infty$ , $\beta_{n}\to\infty$ and $\alpha_{n}/\beta_{n}\to\gamma$ with some $\gamma>A\tau^{*}$ .
+Let $\{(u_{n},v_{n})\}$ be any sequence of positive nonconstant
+solutions of ( 5.1 ) with $(\alpha,\beta)=(\alpha_{n},\beta_{n})$ .
+Then there exists a positive function $v\in C^{2}(\overline{\Omega})$ such that $\lim_{n\to\infty}(u_{n},v_{n})=(\tau^{*},1)v\quad\mbox{in}\ C^{1}(\overline{\Omega})\times C^{1}(\overline{\Omega}),$ passing to a subsequence if necessary.
+Furthermore, $v$ satisfies $\begin{cases}d\Delta v+\xi^{*}v(v-v^{*})=0,\qquad&x\in\Omega,\\
+\dfrac{\partial v}{\partial\nu}=0,\qquad&x\in\partial\Omega,\end{cases}$ (5.6) where $\xi^{*}=\dfrac{\gamma|a_{2}|-\tau^{*}a_{1}}{u^{*}+\gamma v^{*}}.$ It is well-known that the set of positive solutions
+to the stationary scalar field equation such as ( 5.6 )
+with small $d>0$ is very complicated from various viewpoints,
+e.g. multiplicity, profiles and the bifurcation structure.
+Naturally it can be expected that the spatio-temporal structure
+of ( 1.1 ) with small equal random diffusion rates and the
+weak cooperative setting is very rich
+from the dynamical viewpoint
+involving the bifurcation theory,
+such a complicated dynamical picture of the strongly coupled
+diffusion system is in stark contrast with that of
+the weak cooperative linear diffusion system
+( $\alpha=\beta=0$ and $b_{1}c_{2}>b_{2}c_{1}$ ),
+where $(u^{*},v^{*})$ is globally asymptotically stable
+attracting all the positive nonstationary solutions
+as $t\to\infty$ regardless of the degree of
+the random diffusion rates. Here in view of Theorem 2.2 ,
+we recall that if the equal random diffusion $d$ is sufficiently
+large, then all positive solutions of ( 1.1 ) with
+the weak cooperative setting tend to $(u^{*},v^{*})$ as $t\to\infty$ .
+This scenario is same to the weak cooperative linear diffusion
+system.
+Consequently,
+for the global dynamics of the weakly cooperative strongly coupled diffusion system ( 1.1 ), we find that if
+the equal random diffusion $d$ is sufficiently large,
+all positive nonstationary solutions asymptotically approach $(u^{*},v^{*})$ ,
+as is the case for the corresponding linear diffusion system,
+whereas if $d$ is sufficiently small,
+a variety of dynamics can be expected where
+a lot of positive nonconstant steady states exist. References [1] M. Adachi , K. Kuto , Bifurcation structure of steady-states for a cooperative model with population flux by attractive transition. Stud. Appl. Math. 153 (2024), e12761. [2] H. Amann , Dynamic theory of quasilinear parabolic equations I.
+Abstract evolution equations. Nonlinear Anal. 12 (1989), 895–919. [3] H. Amann , Dynamic theory of quasilinear parabolic equations III.
+Global existence. Math Z. 202 (1989), 219–250. [4] H. Amann , Dynamic theory of quasilinear parabolic equations II. Reaction-diffusion systems. Diff. Int. Equs. 3 (1990), 13–75. [5] H. Amann , Nonhomogeneous linear and quasilinear elliptic and
+parabolic boundary value problems.
+In: H. Schmeisser, H. Triebel eds.
+Function Spaces, Differential Operators and Nonlinear Analysis Teubner-Texte Zur Math.,
+vol. 133.
+Stuttgart-Leipzig:
+Teubner
+(1993), 9–126. [6] H. Amann , Compact embeddings of vector-valued Sobolev and Besov spaces. Glansik Mathematic̆ki 35 (2000), 161–177. [7] Y. Giga , H. Sohr, Abstract $L^{p}$ estimates for the Cauchy problem with applications to the Navier-Stokes equations in exterior domains. J. Funct. Anal. 102 , (1991) 72–94. [8] B. S. Goh , Stability in models of mutualisum. Am. Nat.
+Proc. Roy. Soc. Edin. Sect. A 113 (1979), 261–275. [9] T. Heihoff , T. Yokota , Global existence and stabilization in a diffusive predator-prey model with population flux by attractive transition. Nonlinear Anal. RWA, 69 (2023), Article 103757. [10] K. Kuto , K. Oeda , Bifurcation structure of coexistence states for a prey-predator model with large population flux by attractive transition. Proc. Roy. Soc. Edin. Sect. A 152 (2022), 965–988. [11] P. L. Lions , Résolution de problèmes elliptiques quasilinéaries. Arch. Rational Mech. Anal. 74 (1980), 335–353. [12] Y. Lou , M. Winkler Global existence and uniform boundedness of smooth
+solutions to a cross-diffusion system with equal diffusion rates. Commun. Partial. Differ. Equ. 45 (2015), 1905–1941. [13] K. Oeda , K. Kuto , Positive steady states for a prey-predator model
+with population flux by attractive transition. Nonlinear Anal. RWA, 44 (2018), 589–615. [14] A. Okubo , S.A. Levin , Diffusion and Ecological Problems: Modern Perspectives, second ed. Interdisciplinary Applied
+Mathematics, vol. 14, Springer-Verlag, New York, 2001. [15] M. Porzio , V. Vespri , H $\ddot{o}$ lder estimates for local solutions of some doubly nonlinear degenerate parabolic equations. J. Differential Equations 103 (1993), 146–178. [16] C. Stinner , C. Surulescu, M. Winkler, Global weak solutions in a PDE-ODE system modeling multiscale cancer cell invasion. SIAM J. Math. Anal. 46 (2014), 1969–2007. [17] U. Uecker, D. Watzel, J. M. Rademacher , pde2path -
+A Matlab package for continuation and bifurcation
+in 2D elliptic systems ,
+Numer. Math. Theory Methods Appl., 7 (2014), 58–106. [18] H. F. Weinberger , Invariant sets for weakly coupled parabolic and elliptic systems. Rend. Mat. 8 (1975), 295–310. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

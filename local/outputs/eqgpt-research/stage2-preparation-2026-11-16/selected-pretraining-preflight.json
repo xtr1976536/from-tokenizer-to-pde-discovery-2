@@ -1,0 +1,104 @@
+{
+  "cosine_epochs": 25,
+  "runs": [
+    {
+      "split": "811",
+      "vocab": 128,
+      "train_samples": 4866,
+      "validation_samples": 21,
+      "max_sequence_tokens": 143,
+      "context_limit": 2048,
+      "status": "PASS"
+    },
+    {
+      "split": "811",
+      "vocab": 160,
+      "train_samples": 4866,
+      "validation_samples": 21,
+      "max_sequence_tokens": 141,
+      "context_limit": 2048,
+      "status": "PASS"
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "train_samples": 4866,
+      "validation_samples": 21,
+      "max_sequence_tokens": 107,
+      "context_limit": 2048,
+      "status": "PASS"
+    },
+    {
+      "split": "811",
+      "vocab": 320,
+      "train_samples": 4866,
+      "validation_samples": 21,
+      "max_sequence_tokens": 91,
+      "context_limit": 2048,
+      "status": "PASS"
+    },
+    {
+      "split": "811",
+      "vocab": 416,
+      "train_samples": 4866,
+      "validation_samples": 21,
+      "max_sequence_tokens": 87,
+      "context_limit": 2048,
+      "status": "PASS"
+    },
+    {
+      "split": "622",
+      "vocab": 128,
+      "train_samples": 3558,
+      "validation_samples": 42,
+      "max_sequence_tokens": 140,
+      "context_limit": 2048,
+      "status": "PASS"
+    },
+    {
+      "split": "622",
+      "vocab": 160,
+      "train_samples": 3558,
+      "validation_samples": 42,
+      "max_sequence_tokens": 121,
+      "context_limit": 2048,
+      "status": "PASS"
+    },
+    {
+      "split": "622",
+      "vocab": 192,
+      "train_samples": 3558,
+      "validation_samples": 42,
+      "max_sequence_tokens": 109,
+      "context_limit": 2048,
+      "status": "PASS"
+    },
+    {
+      "split": "622",
+      "vocab": 320,
+      "train_samples": 3558,
+      "validation_samples": 42,
+      "max_sequence_tokens": 102,
+      "context_limit": 2048,
+      "status": "PASS"
+    },
+    {
+      "split": "622",
+      "vocab": 416,
+      "train_samples": 3558,
+      "validation_samples": 42,
+      "max_sequence_tokens": 92,
+      "context_limit": 2048,
+      "status": "PASS"
+    }
+  ],
+  "formal_training_started": false,
+  "seed": 525,
+  "selection": "user: both primary splits; 128,160,192,320,416",
+  "cosine_schedule": "25 epochs then hold minimum learning rate",
+  "downstream_pending": [
+    "pretrained checkpoints",
+    "Cylinder full-grid backend acceptance and cost",
+    "baseline three-channel adaptation and checkpoint selection audit"
+  ]
+}

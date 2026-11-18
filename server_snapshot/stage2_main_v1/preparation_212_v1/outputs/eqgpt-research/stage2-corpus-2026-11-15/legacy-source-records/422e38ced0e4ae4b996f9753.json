@@ -1,0 +1,97 @@
+{
+  "broad_family": "forced_Poisson_2D",
+  "context_checked": true,
+  "context_review_note": "",
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "x + y + Derivative(u(x, y, z, t), (x, 2)) + Derivative(u(x, y, z, t), (y, 2))",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      9,
+      2,
+      23,
+      2,
+      22,
+      2,
+      34,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "uxx",
+      "+",
+      "uyy",
+      "+",
+      "x",
+      "+",
+      "y",
+      "E"
+    ],
+    "normalized_latex": "(u_{xx})+(u_{yy})+(x)+(y)=0",
+    "reconstructed_support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Symbol('x')",
+      "Symbol('y')"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Symbol('x')",
+      "Symbol('y')"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "domain_conditions": "Use domains where declared square roots and denominators are defined; x>0,y>0,u>0 suffice for applicable profiles",
+  "family": "lpde302_forced_Poisson_2D",
+  "gre_ids": [
+    5,
+    9,
+    2,
+    23,
+    2,
+    22,
+    2,
+    34,
+    1
+  ],
+  "latex_origin": "declared_function_family_instance",
+  "normalized_latex": "(u_{xx})+(u_{yy})+(x)+(y)=0",
+  "original_latex": "u_{xx}+u_{yy}+(x)+(y)=0",
+  "parameters": {
+    "Phi(x,y)": "(x)+(y)",
+    "constant_policy": "all displayed scalar constants1 except specified integer exponents"
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [],
+  "source_file": "data/formulas/diverse_pde_v4/research/eqworld_more/lpde302.pdf",
+  "source_group": "eqworld:lpde302",
+  "source_id": "eqworld:422e38ced0e4ae4b996f9753",
+  "source_kind": "eqworld_context_review_candidate",
+  "source_location": "first governing equation, source function choices below",
+  "source_sha256": "59c0f68070036a36f77e81f3b44424f69205cd3453f50ef92bcab76208c5dd26",
+  "source_template_latex": "u_{xx}+u_{yy}+\\Phi(x,y)=0",
+  "source_transformations": [
+    "source dependent variable w -> u",
+    "explicit function choices below; nonzero constants set to1; no coefficient ablations"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/lpde/lpde302.pdf"
+}

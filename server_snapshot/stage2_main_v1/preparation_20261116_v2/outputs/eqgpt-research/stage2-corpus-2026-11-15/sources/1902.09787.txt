@@ -1,0 +1,856 @@
+1Introduction Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme 1 Introduction 2 Preliminaries 3 An estimate for $\frac{1}{p}\int_{\Omega}\left(u(\cdot,t)+\alpha\right)^{p}$ 4 An estimate for $\frac{1}{q}\int_{\Omega}\left|\nabla v(\cdot,t)\right|^{2q}$ 5 Proof of the main theorem References License: arXiv.org perpetual non-exclusive license arXiv:1902.09787v1 [math.AP] 26 Feb 2019 0 0 0 2010 Mathematics
+Subject Classification .
+Primary: 35B44, 35K51, 35K59; Secondary:
+35Q92, 92C17. 0 0 0 Key words and phrases :
+blow-up time;
+chemotaxis system;
+nonlinear diffusion. Effect of nonlinear diffusion on a lower bound for the blow-up time in a fully parabolic chemotaxis system Teruto Nishino 0 0 0 E-mail addresses: teruto.nishino@gmail.com , yokota@rs.kagu.tus.ac.jp Tomomi Yokota * * * Corresponding author. † † † Partially supported by Grant-in-Aid
+for Scientific Research (C),
+No. 25400119. Department of Mathematics Tokyo University of Science August 24, 2026 Abstract. This paper deals with
+a lower bound
+for the blow-up time
+for solutions
+of the fully parabolic chemotaxis system $\begin{cases}u_{t}=\nabla\cdot[(u+\alpha)^{m_{1}-1}\nabla u-\chi u(u+\alpha)^{m_{2}-2}\nabla v]&{\rm in}\;\Omega\times(0,T),\\[2.84526pt]
+v_{t}=\Delta v-v+u&{\rm in}\;\Omega\times(0,T)\\[2.84526pt]
+\end{cases}$ under Neumann boundary conditions
+and initial conditions,
+where $\Omega$ is a general bounded domain
+in $\mathbb{R}^{n}$ with smooth boundary, $\alpha>0$ , $\chi>0$ , $m_{1},m_{2}\in\mathbb{R}$ and $T>0$ .
+Recently,
+Anderson–Deng [ 1 ] gave a lower bound for the blow-up time
+in the case that $m_{1}=1$ and $\Omega$ is a convex
+bounded domain.
+The purpose of this paper is to generalize
+the result in [ 1 ] to the case that $m_{1}\neq 1$ and $\Omega$ is a non-convex bounded domain.
+The key to the proof is
+to make a sharp estimate by using
+the Gagliardo–Nirenberg inequality
+and an inequality for boundary integrals.
+As a consequence, the main result of this paper
+reflects the effect of nonlinear diffusion
+and
+need not assume the convexity of $\Omega$ . 1 Introduction In this paper we consider a
+lower bound for the blow-up time
+in the following
+fully parabolic chemotaxis system
+with nonlinear diffusion: (1.1) $\begin{cases}u_{t}=\nabla\cdot[(u+\alpha)^{m_{1}-1}\nabla u-\chi u(u+\alpha)^{m_{2}-2}\nabla v]&{\rm in}\ \Omega\times(0,T),\\[2.84526pt]
+v_{t}=\Delta v-v+u&{\rm in}\ \Omega\times(0,T),\\[5.69054pt]
+\nabla u\cdot\nu=\nabla v\cdot\nu=0&{\rm on}\ \partial\Omega\times(0,T),\\[2.84526pt]
+u(\cdot,0)=u_{0},\ v(\cdot,0)=v_{0}&{\rm in}\ \Omega,\end{cases}$ where $\Omega$ is a general bounded domain
+in $\mathbb{R}^{n}$ ( $n\in\mathbb{N}$ )
+with smooth boundary $\partial\Omega$ and $\nu$ is the outward normal vector
+to $\partial\Omega$ and $T>0$ .
+The initial data $u_{0}$ and $v_{0}$ are
+supposed to be nonnegative functions
+such that $u_{0}\in C(\overline{\Omega})$ and $v_{0}\in C^{1}(\overline{\Omega})$ .
+Also we assume that $\displaystyle\alpha>0,\quad\chi>0,\quad m_{1},m_{2}\in\mathbb{R}.$ In the system ( 1.1 ),
+the unknown function $u(x,t)$ represents the density of the cell
+population and the unknown function $v(x,t)$ shows the concentration of the signal substance
+at place $x$ and time $t$ .
+The
+system ( 1.1 ) with the
+simplest choices $m_{1}=1$ and $m_{2}=2$ describes a part of life cycle of
+cellular slime molds with chemotaxis and it
+was proposed by
+Keller–Segel [ 18 ] in 1970.
+After that,
+a quasilinear system such as ( 1.1 )
+was proposed by Painter–Hillen [ 25 ] .
+A number of variations of the original
+Keller–Segel system
+are proposed and investigated
+(see e.g.,
+Bellomo–Bellouquid–Tao–Winkler [ 2 ] ,
+Hillen–Painter [ 9 ] and
+Horstmann [ 10 , 11 ] ). According to a continuity
+model, the first equation in ( 1.1 )
+has the flux vector $F=-\left[(u+\alpha)^{m_{1}-1}\nabla u-\chi u(u+\alpha)^{m_{2}-2}\nabla v\right]$ .
+We can recognize that $(u+\alpha)^{m_{1}-1}\nabla u$ represents
+the diffusive flux and $-\chi u(u+\alpha)^{m_{2}-2}\nabla v$ represents
+the chemotactic flux
+modelling
+undirected cell migration
+and the advective flux with velocity
+dependent
+on the gradient of the signal.
+More precisely, when cellular slime molds
+plunge into hunger, they move towards higher
+concentrations of the chemical substance
+secreted by cells. From a mathematical point of view, $u$ in
+( 1.1 )
+enjoys the mass conservation
+property: $\displaystyle\int_{\Omega}u(\cdot,t)=\int_{\Omega}u_{0}$ for all $t\in(0,T)$ .
+It is a meaningful question
+whether solutions of ( 1.1 )
+remain bounded
+or blow up.
+As to this question,
+it is known that
+the borderline
+between boundedness and
+blow-up is
+the case that $m_{2}=m_{1}+\frac{2}{n}$ , $m_{1}\geq 1$ , $m_{2}\geq 2$ .
+According to the result
+established by
+Horstmann–Winkler [ 12 , Theorems 4.1 and 6.1] in the case $m_{1}=1$ ,
+it can be expected that
+( 1.1 ) has a global bounded solution
+in the case that $m_{2}<m_{1}+\frac{2}{n}$ and
+a blow-up solution
+in the case that $m_{2}>m_{1}+\frac{2}{n}$ .
+Indeed, in the case that $\Omega$ is a bounded domain and $m_{2}<m_{1}+\frac{2}{n}$ ,
+there exists
+a global bounded solution
+of
+( 1.1 ) (see Tao–Winkler [ 33 ] ,
+Ishida–Seki–Yokota [ 13 ] and
+Senba–Suzuki [ 31 ] ).
+In addition, this result
+was shown also for the
+degenerate chemotaxis system
+(( 1.1 )
+with $\alpha=0$ )
+(see Ishida–Yokota [ 14 , 16 ] when $\Omega=\mathbb{R}^{n}$ and $m_{2}<m_{1}+\frac{2}{n}$ ; [ 13 ] when $\Omega$ is a bounded domain
+and $m_{2}<m_{1}+\frac{2}{n}$ ;
+Mimura [ 23 ] when $\Omega$ is a bounded domain with
+Dirichlet–Neumann boundary condition, $m_{2}=2$ and $m_{1}>2-\frac{2}{n}$ ).
+If $m_{2}\geq m_{1}+\frac{2}{n}$ , then
+the results are
+divided by the size of initial data.
+For example,
+the system ( 1.1 ) has a
+global solution
+with small initial data when $\Omega=\mathbb{R}^{n}$ and $\alpha=0$ even if $m_{2}\geq m_{1}+\frac{2}{n}$ (see Ishida–Yokota [ 15 ] ).
+On the other hand,
+in the case that $\Omega=B_{R}:=\{x\in\mathbb{R}^{n}\big||x|<R\}$ $(R>0)$ , $m_{1}=1$ , $m_{2}=2$ , $n\geq 3$ , which implies $m_{2}>m_{1}+\frac{2}{n}$ ,
+there exist
+initial data such that the
+radially symmetric solution
+of ( 1.1 ) blows up in finite time
+(see Winkler [ 34 ] ).
+The result was extended to the case that $\Omega=B_{R}$ , $m_{2}>m_{1}+\frac{2}{n}$ , $n\geq 2$ (see Cieślak–Stinner [ 3 , 4 ] when $\alpha>0$ ,
+Hashira–Ishida–Yokota [ 8 ] when $\alpha=0$ ).
+In the most important case that $\Omega=B_{R}$ , $m_{1}=1$ , $m_{2}=2$ , $n=2$ ,
+which implies $m_{2}=m_{1}+\frac{2}{n}$ ,
+there
+exist initial data such that the corresponding
+solutions of ( 1.1 )
+blow up
+in finite time
+(see Mizoguchi–Winkler [ 24 ] ). We are especially interested in
+a lower bound for the blow-up time
+for
+solutions of ( 1.1 ),
+because
+it seems to be
+important to know how $m_{1}$ affects on the blow-up time
+for solutions of ( 1.1 ).
+The study
+of a lower bound for
+the blow-up time seems
+to be interesting
+widely for general
+parabolic systems
+(see Payne–Schaefer [ 27 ] and
+Enache [ 5 ] ),
+wave equations
+(see Philippin [ 30 ] )
+and heat equations
+(see Payne–Philippin–Vernier Piro [ 26 ] ).
+Moreover,
+explicit lower bounds for the blow-up time
+for solutions of
+various semilinear parabolic equations
+were obtained by [ 27 ] .
+As to chemotaxis systems,
+Payne–Song [ 28 , 29 ] established a lower bound of blow-up time
+for solutions of ( 1.1 ) with $m_{1}=1$ and $m_{2}=2$ in the form $\displaystyle\widetilde{t}^{\ast}\geq\int_{\Phi_{1}(0)}^{\infty}\frac{d\xi}{V{\xi}^{\frac{3}{2}}+W{\xi}^{2}}\quad(n=2)$ and $\displaystyle\widetilde{t}^{\ast}\geq\int_{\Phi_{1}(0)}^{\infty}\frac{d\xi}{X{\xi}^{\frac{3}{2}}+Y{\xi}^{3}}\quad(n=3);$ note that $\widetilde{t}^{\ast}$ means
+the blow-up time
+in $\Phi_{1}$ -measure,
+i.e., $\lim_{t\nearrow\widetilde{t}^{\ast}}\Phi_{1}(t)=\infty$ , where $\Phi_{1}(t)$ is defined as (1.2) $\displaystyle\Phi_{1}(t):=\kappa\int_{\Omega}{u(\cdot,t)}^{2}+\int_{\Omega}|\Delta v(\cdot,t)|^{2}\quad(t>0)$ with some $\kappa>0$ .
+When $\Omega$ is a convex bounded domain and $m_{1}=1$ ,
+Li–Zheng [ 19 ] gave
+a lower bound for the blow-up time for
+solutions of ( 1.1 ) by using ( 1.2 )
+in the case that $m_{2}\in(\frac{5}{3},2]$ , $n=3$ and in the case that $m_{2}\in[2,3)$ , $n=2$ .
+After that,
+when $\Omega=B_{1}$ , $\alpha=1$ and $m_{1}=1$ ,
+in the case that $m_{2}\in[\frac{5}{3},3]$ and $n=3$ ,
+Tao–Vernier Piro [ 32 ] introduced
+the measure $\Phi_{2}(t)$ in the form (1.3) $\displaystyle\Phi_{2}(t):=\int_{\Omega}\left(u(\cdot,t)+1\right)^{p}+\int_{\Omega}\left|\nabla v(\cdot,t)\right|^{2q}\quad(t>0)$ for suitable $p,q>1$ ( $p=2$ and $q=4$ when $m_{2}\in[\frac{5}{3},2]$ ; $p=5$ and $q=22$ when $m_{2}\in(2,3]$ )
+from the view point of local existence
+of classical solutions to ( 1.1 ) and
+an initial datum $v_{0}\in W^{1,q}(\Omega)$ (see [ 2 , Lemma 3.1] ).
+This restriction on $m_{2}$ and $n$ was removed by
+Anderson–Deng [ 1 ] when $\Omega$ is a
+convex bounded domain
+and $m_{1}=1$ .
+Furthermore,
+as a new attempt to
+estimating a lower bound
+for the blow-up time in the above sense,
+Marras–Vernier Piro–Viglialoro [ 21 , 22 ] obtained a lower bound for the blow-up
+time of the
+more generalized equation with a source
+term: (1.4) $\begin{cases}u_{t}=\nabla\cdot[\nabla u-k_{1}(t)u^{m_{2}-1}\nabla v]+{\boldmath f(u)}&{\rm in}\;\Omega\times(0,T),\\[2.84526pt]
+v_{t}=k_{2}(t)\Delta v-k_{3}(t)v+k_{4}(t)u&{\rm in}\;\Omega\times(0,T)\\[2.84526pt]
+\end{cases}$ under Neumann boundary conditions
+and initial conditions,
+where $k_{i}(t)\ (i=1,2,3,4)$ are nonnegative
+smooth functions of $t$ , $m_{2}\in[2,3)$ when $n=2$ , $m_{2}\in(\frac{5}{3},2)$ when $n=3$ , $f$ satisfies $f(u)\leq cu^{2}$ with $c>0$ .
+A similar result
+for the parabolic–elliptic version
+of ( 1.4 )
+was deduced by Jiao–Zeng [ 17 ] . Now we focus on the
+studies
+obtained by [ 32 ] and [ 1 ] which gave
+a lower bound for
+the blow-up time for solutions of ( 1.1 )
+under the following conditions: • “ $m_{1}=1$ ”, $m_{2}\in[\frac{5}{3},3]$ , $n=3$ , $\Omega$ is a unit ball $B_{1}\subset\boldmath\mathbb{R}^{3}$ ( [ 32 ] ); • “ $m_{1}=1$ ”, $m_{2}\in\mathbb{R}$ , $n\in\mathbb{N}$ , $\Omega$ is a convex bounded domain
+in $\mathbb{R}^{n}$ ( [ 1 ] ). However, there is
+still room
+for improvements
+in these results.
+More precisely,
+we cannot find any results in
+the nonlinear case that $m_{1}\neq 1$ and $\Omega$ is
+a non-convex bounded domain.
+Hence
+the current situation is summarized in
+Table 1 . No work Table 1: The known results
+on lower bounds for the blow-up time
+in ( 1.1 ) Here,
+if some results
+can be given in
+the nonlinear case that $m_{1}\neq 1$ ,
+then the following natural question
+arises: (Question) How does $m_{1}$ affect on the blow-up time
+for solutions of ( 1.1 )? Since the
+blow-up for solutions of the system ( 1.1 )
+describes the aggregation
+of cells and
+strong diffusion seems to
+prevent the aggregation
+and to cause delay in the blow-up,
+we can intuitively
+conjecture
+the answer to this question as follows: (Conjecture) The larger $m_{1}$ is, the larger
+the blow time $t^{\ast}$ for solutions of ( 1.1 ) is. The first purpose of this paper
+is completely
+to fill in “No work” in Table 1 .
+The second purpose of this paper is
+to present
+an answer to the above question
+and justify the above conjecture,
+that is, to give an explanation for
+effect of
+nonlinear diffusion
+and the
+chemotaxis term for the
+blow-up time
+in a parabolic–parabolic chemotaxis system. Furthermore, we should mention
+how we can derive an explicit
+lower bound
+for the blow-up time for solutions
+of ( 1.1 ). In the previous works,
+the blow-up time for classical solutions of
+( 1.1 ) can be obtained by using the
+energy function $\Phi_{2}(t)$ defined as ( 1.3 ).
+However, there is a gap
+between the blow-up time for $\Phi_{2}(t)$ with $L^{p}(\Omega)\times W^{1,2q}(\Omega)$ -norm
+of $(u,v)$ and that for solutions
+in the classical sense, i.e.,
+in the sense of $L^{\infty}(\Omega)$ -norm
+of $u$ (for details see
+Definition 1.2 ).
+Indeed,
+assume that $\Omega$ is a bounded domain. Then we know that (1.5) $\displaystyle\|u(\cdot,t)\|_{L^{p}(\Omega)}\leq|\Omega|^{\frac{1}{p}}\|u(\cdot,t)\|_{L^{\infty}(\Omega)}.$ In view of ( 1.5 )
+we see that if a solution of
+( 1.1 ) blows up
+in $L^{p}(\Omega)$ -norm, then it
+blows up in $L^{\infty}(\Omega)$ -norm
+at the same time; however,
+even if
+a solution of ( 1.1 )
+blows up in $L^{\infty}(\Omega)$ -norm, we
+cannot predicate whether the solution
+blows up or not
+in $L^{p}(\Omega)$ -norm.
+From the numerical resolution method,
+it seems that the
+blow-up time for solutions
+of ( 1.1 )
+in $\Phi_{2}$ -measure has a long delay
+(see
+Farina–Marras–Viglialoro [ 6 , FIGURE 1] ). Another purpose of this paper is to
+bridge a gap between
+the blow-up time for
+solutions of ( 1.1 )
+in $\Phi_{2}$ -measure
+and that
+in the classical sense.
+The key to accomplishing this purpose is
+a refined extensibility criterion
+established
+by Freitag [ 7 , Theorem 2.2] . Before stating
+the main result,
+we define classical solutions of ( 1.1 )
+and the
+blow-up time as follows: Definition 1.1 . A pair $(u,v)$ is
+called a classical solution
+of ( 1.1 ) if $\displaystyle u\in C\left(\overline{\Omega}\times[0,T)\right)\cap C^{2,1}\left(\overline{\Omega}\times(0,T)\right),$ $\displaystyle v\in C\left(\overline{\Omega}\times[0,T)\right)\cap C^{2,1}\left(\overline{\Omega}\times(0,T)\right)\cap L_{\rm loc}^{\infty}\left([0,T);W^{1,\infty}(\Omega)\right)$ and $u,v$ satisfy ( 1.1 )
+in the classical sense. Remark 1.1 . Local existence
+and uniqueness
+of classical solutions to
+( 1.1 ) are
+known (see Lemma 2.4 and Remark 2.2 (i) below). Definition 1.2 . Let $t^{\ast}$ be a
+maximal
+time
+for which a solution of ( 1.1 )
+exists
+for $0\leq t<t^{\ast}$ .
+Then $t^{\ast}$ is called a blow-up time in the
+classical sense if $t^{\ast}<\infty$ and (1.6) $\displaystyle\lim\limits_{t\nearrow t^{\ast}}(\|u(\cdot,t)\|_{L^{\infty}(\Omega)}+\|v(\cdot,t)\|_{W^{1,\infty}(\Omega)})=\infty.$ In order to state the main theorem
+we shall give the following conditions
+for the parameters $p>1$ and $q>\frac{1}{\eta-1}$ : (C1) $\displaystyle p>\max\left\{\frac{n}{2}(m_{2}-m_{1}),\ n(m_{2}-m_{1}-1),\ n\right\},$ (C2) $\displaystyle p>{\rm max}\left\{\frac{q(2m_{2}-m_{1}-3)}{q\eta-q-1},\ -2m_{2}+m_{1}+3,\ \frac{2q}{q\eta-q+1},\ \frac{\eta(m_{1}-1)}{(\eta-1)(\eta-2)}\right\},$ where $\eta$ is defined as (1.7) $\displaystyle\begin{cases}\eta\in(1,2)\ \text{is any}&(n=1,2),\\[5.69054pt]
+\eta:=\dfrac{n}{n-1}&(n\geq 3).\end{cases}$ We now state the main result of this paper.
+The main result
+gives a lower bound
+for the blow-up time
+for solutions of ( 1.1 )
+with nonlinear diffusion. Theorem 1.1 . Let $t^{\ast}<\infty$ be
+the blow-up time in the classical sense
+for a classical solution $(u,v)$ of ( 1.1 ).
+Then
+there exist constants $A=A(m_{1})>0$ , $B>0$ , $C=C(m_{1})>0$ , $D\geq 0$ and $p>1$ , $q>\frac{1}{\eta-1}$ fulfilling ( C1 ), ( C2 ) such that (1.8) $\displaystyle t^{\ast}\geq\int_{\Phi(0)}^{\infty}\frac{d\tau}{A{\tau}^{f(\eta,r)}+B{\tau}^{f(\eta,1)}+C\tau^{\eta}+D},$ where $\Phi>0$ , $f>1$ and $r>0$ are defined as (1.9) $\displaystyle\Phi(t):=\frac{1}{p}\int_{\Omega}\left(u(\cdot,t)+\alpha\right)^{p}+\frac{1}{q}\int_{\Omega}|\nabla v(\cdot,t)|^{2q}\quad(t>0),$ (1.10) $\displaystyle f(\eta,s):=1+\frac{\eta-1}{n\left(\frac{1}{n}-\frac{\eta}{2}+\frac{1}{2s}\right)}\quad(s>0),$ (1.11) $\displaystyle r=r(m_{1}):=\frac{p}{p+m_{1}-1},$ and $\eta\in(1,2)$ is defined as ( 1.7 ). Remark 1.2 . Theorem 1.1 covers the case that $\Omega$ is a
+general non-convex bounded domain and $m_{1}=1$ (see [ 1 , Theorem 1.1] ).
+Moreover, the constants $A,B,C,D$ in ( 1.8 )
+are better than the previous.
+If $\Omega$ is a
+convex bounded domain, then
+we can take $D=0$ (see Corollary 4.2 below). Remark 1.3 . The estimate ( 1.8 ) implies
+that the larger $m_{1}$ is, the larger
+the blow-up time $t^{\ast}$ for solutions $(u,v)$ of ( 1.1 ) is.
+Indeed, we shall
+consider the effect of $m_{1}$ .
+When we fix $p,q>1$ , $f(\eta,r(m_{1}))$ is
+decreasing in $m_{1}$ .
+This entails that if $m_{1}$ is
+sufficiently large, then $t^{\ast}$ will be large.
+In other words,
+if the power of diffusion is strong,
+then a solution of ( 1.1 )
+blows up with a delay.
+On the other hand, we automatically see
+that if the power
+of diffusion is weak, then
+a solution of ( 1.1 )
+blows up early. Remark 1.4 . As to the assumption of Theorem 1.1 ,
+we need not suppose that
+a solution of ( 1.1 ) blows up
+in finite time in the proof
+of Theorem 1.1 . Namely,
+this means that
+we can essentially estimate
+the “life span” for solutions
+of ( 1.1 ). Since we are interested in
+the blow-up time for solutions of ( 1.1 ),
+the assumption concerning
+the blow-up
+is added
+in Theorem 1.1 . By computing the integral appearing
+in ( 1.8 ),
+we can establish
+a lower bound for $t^{\ast}$ in the simple form as follows: Corollary 1.2 . Under the assumption of
+Theorem 1.1 ,
+if $\Phi(0)<1$ , then ( 1.8 )
+is
+rewritten as follows : $\displaystyle s\geq 1\ \,\Longrightarrow\ \,t^{\ast}\geq\frac{1}{f(\eta,r)-1}\cdot\frac{\Phi(0)}{A{\Phi(0)}^{f(\eta,r)-1}+B{\Phi(0)}^{f(\eta,1)-1}+C{\Phi(0)}^{\eta-1}+D},$ $\displaystyle s<1\ \,\Longrightarrow\ \,t^{\ast}\geq\frac{1}{f(\eta,1)-1}\cdot\frac{\Phi(0)}{B{\Phi(0)}^{f(\eta,1)-1}+A{\Phi(0)}^{f(\eta,r)-1}+C{\Phi(0)}^{\eta-1}+D}.$ The strategy for the proof of Theorem 1.1 is to
+derive an ordinary differential inequality
+for $\Phi(t)$ defined as ( 1.9 ).
+We first
+construct
+the inequality $\displaystyle\frac{d\Phi}{dt}+\frac{p-1}{2}{\left(\frac{2}{p+m_{1}-1}\right)}^{2}\int_{\Omega}\left|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right|^{2}+\left(\frac{2(q-1)}{q^{2}}-\delta\right)\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}$ $\displaystyle\leq\frac{{\chi}^{2}(p-1)}{2}\int_{\Omega}(u+\alpha)^{p+2m_{2}-m_{1}-3}|\nabla v|^{2}+\frac{4(q-1)+n}{2}\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}+D_{\delta}$ for some $\delta\in(0,\frac{2(q-1)}{q^{2}})$ and $D_{\delta}>0$ . We next estimate
+the first and second terms
+on the right-hand side
+by using Young’s inequality and
+Hölder’s inequality
+to make $\int_{\Omega}\left(u+\alpha\right)^{p\eta}$ .
+In [ 1 ] dealing
+with the case that $m_{1}=1$ ,
+by applying
+the Sobolev embedding $W^{1,1}(\Omega)\hookrightarrow L^{\eta}(\Omega)$ ,
+the quantity $\int_{\Omega}\left(u+\alpha\right)^{p\eta}$ is estimated
+as $\displaystyle\int_{\Omega}\left(u+\alpha\right)^{p\eta}\leq C\left(\int_{\Omega}(u+\alpha)^{p}+\int_{\Omega}|\nabla(u+\alpha)^{p}|\right)^{\eta}$ with some $C>0$ ,
+and hence we need an
+additional deformation to obtain $\int_{\Omega}|\nabla(u+\alpha)^{\frac{p}{2}}|^{2}$ ,
+because of the difference
+from $\int_{\Omega}|\nabla(u+\alpha)^{p}|^{2}$ .
+Our technical innovation
+in this paper
+is to apply
+the Gagliardo–Nirenberg inequality
+instead of using the Sobolev embedding
+as $\displaystyle\int_{\Omega}\left(u+\alpha\right)^{p\eta}\leq c\left\|\nabla(u+\alpha)^{\frac{p}{2}}\right\|_{L^{2}(\Omega)}^{\eta}\left\|(u+\alpha)^{\frac{p}{2}}\right\|_{L^{2}(\Omega)}^{\eta}+\widetilde{c}\left\|(u+\alpha)^{\frac{p}{2}}\right\|_{L^{2}(\Omega)}^{2\eta}$ for some $c,\widetilde{c}>0$ in the case $m_{1}=1$ (we extend
+this inequality
+to the case $m_{1}\neq 1$ ).
+We thus obtain
+the factor $\int_{\Omega}|\nabla(u+\alpha)^{\frac{p}{2}}|^{2}$ directly and
+a sharp lower bound
+for the blow-up time can be
+established.
+In addition,
+the key to removing
+the convexity of $\Omega$ is the estimate for $\int_{\partial\Omega}|\nabla v|^{2q-2}\nabla\left(|\nabla v|^{2}\right)\cdot\nu$ which is estimated by $0$ in the previous works [ 1 ] and [ 32 ] .
+In this paper
+it is estimated by the
+combination of the embedding $W^{\beta+\frac{1}{2}}(\Omega)\hookrightarrow L^{2}(\partial\Omega)\ (\beta\in(0,\frac{1}{2}))$ with the fractional
+Gagliardo–Nirenberg inequality. This paper is organized as follows.
+In Section 2 we will collect lemmas which
+will be used in this paper.
+In Section 3 we will
+present an estimate for
+the first term of $\Phi(t)$ defined in Theorem 1.1 .
+In Section 4 we will give
+an estimate for
+the second term of $\Phi(t)$ .
+We will complete
+the proof of Theorem 1.1 in
+Section 5 through a series of four steps.
+An important thing is
+to obtain
+an ordinary differential inequality
+of $\Phi(t)$ without wasting
+effect of $m_{1}$ . 2 Preliminaries In this section
+we recall some known
+basic results.
+Let us begin with
+the well-known
+Gagliardo–Nirenberg inequality
+(for details, see e.g.,
+Li–Lankeit [ 20 , Lemma 2.3] ): Lemma 2.1 . Suppose that $\Omega$ is a bounded domain in $\mathbb{R}^{n}$ with
+smooth boundary.
+Let $r\geq 1$ , $0<q\leq p\leq\infty$ , $s>0$ be such that $\frac{1}{r}\leq\frac{1}{n}+\frac{1}{p}$ .
+Then there exists $c>0$ such that $\displaystyle\|w\|_{L^{p}(\Omega)}\leq c\left(\|\nabla w\|_{L^{r}(\Omega)}^{a}\|w\|_{L^{q}(\Omega)}^{1-a}+\|w\|_{L^{s}(\Omega)}\right)$ for all $w\in W^{1,p}(\Omega)\cap L^{q}(\Omega)$ ,
+where $a:=\frac{\frac{1}{q}-\frac{1}{p}}{\frac{1}{q}+\frac{1}{n}-\frac{1}{r}}$ . Next we give an
+estimate for a particular boundary
+integral which
+enables us to
+cover possibly non-convex bounded
+domains
+(see [ 20 , Lemma 2.1] ). Lemma 2.2 . Let $\Omega$ be
+a bounded domain in $\mathbb{R}^{n}$ with smooth boundary.
+Suppose that $q\in[1,\infty)$ .
+Then for all $\delta>0$ there exists $C_{\delta}>0$ independent of $q$ such that
+for all $w\in C^{2}(\overline{\Omega})$ satisfying $\frac{\partial w}{\partial\nu}=0\ {\rm on}\ \partial\Omega$ , $\displaystyle\int_{\partial\Omega}|\nabla w|^{2q-2}\frac{\partial|\nabla w|^{2}}{\partial\nu}\leq\delta\int_{\Omega}\left|\nabla|\nabla w|^{q}\right|^{2}+C_{\delta}.$ If $\Omega$ is a
+convex bounded
+domain, then the following holds
+(see [ 33 , Lemma 3.2] ): Lemma 2.3 . Assume that $\Omega$ is a convex bounded
+domain,
+and that $w\in C^{2}(\overline{\Omega})$ satisfies $\frac{\partial w}{\partial\nu}=0\ {\rm on}\ \partial\Omega$ . Then $\displaystyle\frac{\partial|\nabla w|^{2}}{\partial\nu}\leq 0\quad{\rm on}\ \partial\Omega.$ We finally introduce
+the fundamental fact
+for classical solutions of ( 1.1 ) and
+results
+for the blow-up time.
+We recall the result
+for local existence of
+classical solutions
+(see [ 33 , Lemma 1.1] ). Lemma 2.4 . Let $u_{0}\in C(\overline{\Omega})$ and $v_{0}\in C^{1}(\overline{\Omega})$ .
+Then there
+exist $T_{\rm max}\in(0,\infty]$ and a uniquely determined
+pair $(u,v)$ of nonnegative functions
+in $C(\overline{\Omega}\times[0,T_{\rm max}))\cap C^{2,1}(\overline{\Omega}\times(0,T_{\rm max}))$ solving ( 1.1 ) classically in $\Omega\times(0,T_{\rm max})$ .
+Additionally we either have $\displaystyle T_{\rm max}=\infty\quad\text{or}\quad\limsup_{t\nearrow T_{\rm max}}\,\left(\|u(\cdot,t)\|_{L^{\infty}(\Omega)}+\|v(\cdot,t)\|_{L^{\infty}(\Omega)}\right)=\infty.$ The following lemma,
+which was proved in [ 12 , Lemma 4.1] , plays
+an important role in considering
+the blow-up time for solutions of
+( 1.1 ) defined in Definition 1.2 . Lemma 2.5 . Let $(u,v)$ be a classical solution of
+( 1.1 ).
+Suppose that there
+exist $p\geq 1$ and $C>0$ such that $\displaystyle\|u(\cdot,t)\|_{L^{p}(\Omega)}\leq C\quad\text{for all}\ t\in(0,T).$ Then $\displaystyle\|v\|_{L^{\infty}\left(0,T;W^{1,q}(\Omega)\right)}<\infty$ for any $q\in[1,\frac{np}{(n-p)_{+}})$ and
+even $q=\infty$ if $p>n$ . Remark 2.1 . Let a pair of $(u,v)$ solve ( 1.1 ) classically.
+As to $\Phi(t)$ defined as
+( 1.9 ),
+we note that
+it is sufficient only
+to deal with the blow-up time for $u$ in $L^{p}(\Omega)$ -norm
+under the condition $p>n$ guaranteed by
+( C1 ).
+In other words,
+the blow-up time for $v$ does not affect
+on that
+for $\Phi(t)$ .
+We should
+explain that
+the blow-up time for $u$ in $L^{p}(\Omega)$ -norm is
+larger than or equal to that for $v$ in $W^{1,\infty}(\Omega)$ -norm
+(see Definition 1.2 ).
+Indeed,
+by the contraposition of Lemma 2.5 ,
+we can find that
+if $v$ blows up in $W^{1,\infty}(\Omega)$ -norm,
+then $u$ blows up in $L^{p}(\Omega)$ -norm
+for all $p>n$ ,
+and hence
+the blow-up time for $u$ in $L^{p}(\Omega)$ -norm is
+larger than or equal to that for $v$ in $W^{1,\infty}(\Omega)$ -norm
+under the condition $p>n$ . Remark 2.2 . The condition ( 1.6 ) in the
+definition of
+a blow-up time in the classical sense
+can be replaced with (2.1) $\displaystyle\lim\limits_{t\nearrow t^{\ast}}(\|u(\cdot,t)\|_{L^{\infty}(\Omega)}+\|v(\cdot,t)\|_{W^{1,k}(\Omega)})=\infty,$ where $k>n$ because of the condition $q>\frac{1}{\eta-1}=n-1$ in Theorem 1.1 .
+Indeed,
+we see from Remark 2.1 and
+the continuous embedding $W^{1,\infty}(\Omega)\hookrightarrow W^{1,2q}(\Omega)$ for all $q\geq 1$ and $W^{1,2q}(\Omega)\hookrightarrow L^{\infty}(\Omega)$ for $q>\frac{n}{2}$ that if $v$ in $W^{1,2q}(\Omega)$ -norm
+or in $L^{\infty}(\Omega)$ -norm blows up,
+then that in $W^{1,\infty}(\Omega)$ -norm
+also blows up
+for $n\geq 2$ .
+An argument
+similar to that in
+Remark 2.1 implies
+that ( 1.6 ) can be replaced with
+( 2.1 ). The following lemma enables us to
+show that
+a maximal existence time
+results in unboundedness in $L^{p}$ -spaces for smaller $p\in[1,\infty)$ (see [ 7 , Theorem 2.2] ). Lemma 2.6 . Let $u_{0}\in C(\overline{\Omega})$ and $v_{0}\in C^{1}(\overline{\Omega})$ .
+If a
+solution $(u,v)$ of ( 1.1 )
+in $\Omega\times(0,T_{\rm max})$ has a blow-up time $T_{\rm max}<\infty$ in the classical sense,
+then there exists $p\geq 1$ fulfilling $p\geq\max\left\{\frac{n}{2}\left(m_{2}-m_{1}\right),\ n\left(m_{2}-m_{1}-1\right)\right\}$ such that $\displaystyle\limsup_{t\nearrow T_{\rm max}}\,\left\|u(\cdot,t)\right\|_{L^{p_{0}}(\Omega)}=\infty$ for all $p_{0}>p$ . In the proof of Theorem 1.1 we will use
+the following corollary
+in order to remove a gap
+between the blow up time for solutions $(u,v)$ of ( 1.1 ) in the classical sense
+and that in $\Phi$ -measure. Corollary 2.7 . Let $1\leq p,q\leq\infty$ .
+Let $t^{\ast}$ be the blow-up time in the
+classical sense
+and $t_{p,q}^{\ast}$ the blow-up time
+in the measure $\Phi(t)$ defined as
+( 1.9 ) : $\displaystyle\lim\limits_{t\nearrow t_{p,q}^{\ast}}\Phi(t)=\infty.$ Then under the condition ( C1 ), (2.2) $\displaystyle t^{\ast}=t_{p,q}^{\ast}.$ Proof. We obtain from the continuous embedding $L^{\infty}(\Omega)\hookrightarrow L^{p}(\Omega)$ such as ( 1.5 ) that
+if $\Phi(t)$ blows up at $t=t_{p,q}^{\ast}$ ,
+then $u$ in $L^{\infty}(\Omega)$ -norm
+also blows up,
+and hence it is obvious that $\displaystyle t^{\ast}\leq t_{p,q}^{\ast}.$ Here we note from
+Remark 2.1 that
+the blow-up for $\Phi(t)$ implies that for $u$ in $L^{p}(\Omega)$ -norm.
+On the other hand,
+we can find from
+Lemma 2.6 that
+the blow-up in the classical sense
+implies that in $\Phi$ -measure
+for $p$ satisfying ( C1 ).
+Therefore, under the condition
+( C1 ),
+we can attain that $\displaystyle t^{\ast}\geq t_{p,q}^{\ast}.$ Thus we obtain ( 2.2 ).
+∎ Hereafter,
+we assume that a pair $(u,v)$ is a classical solution of
+( 1.1 ). 3 An estimate for $\frac{1}{p}\int_{\Omega}\left(u(\cdot,t)+\alpha\right)^{p}$ In this section
+we estimate the first term of $\Phi(t)$ : $\displaystyle\frac{1}{p}\int_{\Omega}\left(u(\cdot,t)+\alpha\right)^{p}.$ The following lemma gives
+an estimate for
+the derivative of the first term in $\Phi(t)$ . Lemma 3.1 . For $p\geq 1$ , we have (3.1) $\displaystyle\frac{1}{p}\frac{d}{dt}\int_{\Omega}(u+\alpha)^{p}+\frac{p-1}{2}\int_{\Omega}(u+\alpha)^{p+m_{1}-3}|\nabla u|^{2}$ $\displaystyle\leq\frac{{\chi}^{2}(p-1)}{2}\int_{\Omega}(u+\alpha)^{p+2m_{2}-m_{1}-3}|\nabla v|^{2}.$ Proof. The first equation of ( 1.1 )
+and integration by parts enable us to
+see $\displaystyle\frac{1}{p}\dfrac{d}{dt}\int_{\Omega}(u+\alpha)^{p}$ $\displaystyle=-\int_{\Omega}\nabla(u+\alpha)^{p-1}\cdot\left[(u+\alpha)^{m_{1}-1}\nabla u-\chi u(u+\alpha)^{m_{2}-2}\nabla v\right]$ $\displaystyle=-(p-1)\int_{\Omega}(u+\alpha)^{p+m_{1}-3}|\nabla u|^{2}+\chi(p-1)\int_{\Omega}(u+\alpha)^{p+m_{2}-4}u\nabla u\cdot\nabla v$ $\displaystyle\leq-(p-1)\int_{\Omega}(u+\alpha)^{p+m_{1}-3}|\nabla u|^{2}+\chi(p-1)\int_{\Omega}(u+\alpha)^{p+m_{2}-3}|\nabla u\cdot\nabla v|.$ By using Young’s inequality,
+we obtain $\displaystyle\chi(p-1)(u+\alpha)^{p+m_{2}-3}|\nabla u\cdot\nabla v|$ $\displaystyle=\sqrt{p-1}(u+\alpha)^{\frac{p+m_{1}-3}{2}}|\nabla u|\cdot\chi\sqrt{p-1}(u+\alpha)^{\frac{p+2m_{2}-m_{1}-3}{2}}|\nabla v|$ $\displaystyle\leq\frac{p-1}{2}(u+\alpha)^{p+m_{1}-3}|\nabla u|^{2}+\frac{{\chi}^{2}(p-1)}{2}(u+\alpha)^{p+2m_{2}-m_{1}-3}|\nabla v|^{2},$ and hence
+we have $\displaystyle\frac{1}{p}\frac{d}{dt}\int_{\Omega}(u+\alpha)^{p}$ $\displaystyle\leq-\frac{p-1}{2}\int_{\Omega}(u+\alpha)^{p+m_{1}-3}|\nabla u|^{2}+\frac{{\chi}^{2}(p-1)}{2}\int_{\Omega}{(u+\alpha)}^{p+2m_{2}-m_{1}-3}|\nabla v|^{2}.$ Therefore we can attain
+the conclusion ( 3.1 ).
+∎ 4 An estimate for $\frac{1}{q}\int_{\Omega}\left|\nabla v(\cdot,t)\right|^{2q}$ In this section
+we estimate the second term of $\Phi(t)$ : $\displaystyle\frac{1}{q}\int_{\Omega}|\nabla v(\cdot,t)|^{2q}.$ Although the following lemma is proved
+in a similar way as in the proof
+of the previous work (see [ 1 , Lemma 2.1] ),
+we shall reconstruct the method in [ 1 ] and
+remove the convexity assumption.
+The following lemma presents
+an estimate
+for the derivative of the second term of $\Phi(t)$ . Lemma 4.1 . If $\delta\in(0,\frac{2(q-1)}{q^{2}})$ ,
+then
+there exists $D_{\delta}>0$ such that (4.1) $\displaystyle\frac{1}{q}\frac{d}{dt}\int_{\Omega}|\nabla v|^{2q}+\left(\frac{2(q-1)}{q^{2}}-\delta\right)\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}+2\int_{\Omega}|\nabla v|^{2q}$ $\displaystyle\leq\frac{4(q-1)+n}{2}\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}+D_{\delta}$ for all q $\geq$ 1. Proof. We fix $\delta\in(0,\frac{2(q-1)}{q^{2}})$ .
+Then we
+infer that (4.2) $\displaystyle\frac{1}{q}\frac{d}{dt}\int_{\Omega}|\nabla v|^{2q}$ $\displaystyle=\int_{\Omega}|\nabla v|^{2(q-1)}\frac{\partial}{\partial t}|\nabla v|^{2}.$ Due to ( 1.1 ), the second equation
+in ( 1.1 ) entails us to see (4.3) $\displaystyle\frac{\partial}{\partial t}|\nabla v|^{2}$ $\displaystyle=2\nabla v\cdot\nabla v_{t}$ $\displaystyle=2\nabla v\cdot\nabla[\Delta v-v+u]$ $\displaystyle=2\nabla v\cdot\nabla\Delta v-2|\nabla v|^{2}+2\nabla u\cdot\nabla v.$ Noticing from the chain rule that $\displaystyle\Delta|\nabla v|^{2}$ $\displaystyle=\sum_{i=1}^{n}\frac{\partial^{2}}{\partial x_{i}^{2}}\left(\sum_{j=1}^{n}\left(\frac{\partial v}{\partial x_{j}}\right)^{2}\right)$ $\displaystyle=\sum_{i,j=1}^{n}\frac{\partial}{\partial x_{i}}\left(2\frac{\partial v}{\partial x_{j}}\cdot\frac{\partial^{2}v}{\partial x_{i}\partial x_{j}}\right)$ $\displaystyle=2\left|D^{2}v\right|^{2}+2\nabla v\cdot\nabla\Delta v,$ where $D^{2}v$ denotes the
+Hessian matrix,
+we obtain $\displaystyle 2\nabla v\cdot\nabla\Delta v=\Delta|\nabla v|^{2}-2|D^{2}v|.$ This together with
+( 4.3 ) yields $\displaystyle\frac{\partial}{\partial t}|\nabla v|^{2}=\Delta|\nabla v|^{2}-2\left|D^{2}v\right|^{2}-2|\nabla v|^{2}+2\nabla u\cdot\nabla v.$ Applying this identity to
+( 4.2 ), we have (4.4) $\displaystyle\frac{1}{q}\dfrac{d}{dt}\int_{\Omega}|\nabla v|^{2q}+2\int_{\Omega}|\nabla v|^{2(q-1)}|D^{2}v|^{2}+2\int_{\Omega}|\nabla v|^{2q}$ $\displaystyle=\int_{\Omega}|\nabla v|^{2(q-1)}\Delta|\nabla v|^{2}+2\int_{\Omega}|\nabla v|^{2(q-1)}\nabla u\cdot\nabla v.$ Here we
+see from integration by parts that $\displaystyle\int_{\Omega}|\nabla v|^{2(q-1)}\Delta|\nabla v|^{2}=\int_{\partial\Omega}|\nabla v|^{2q-2}\nabla\left(|\nabla v|^{2}\right)\cdot\nu-\int_{\Omega}\nabla\left(|\nabla v|^{2(q-1)}\right)\cdot\nabla\left(|\nabla v|^{2}\right).$ If $\delta\in(0,\frac{2(q-1)}{q^{2}})$ , then
+there exists $D_{\delta}>0$ such that (4.5) $\displaystyle\int_{\partial\Omega}|\nabla v|^{2q-2}\nabla\left(|\nabla v|^{2}\right)\cdot\nu\leq\delta\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}+D_{\delta}$ (see Lemma 2.2 ),
+and hence we rewrite
+( 4.4 ) as (4.6) $\displaystyle\frac{1}{q}\dfrac{d}{dt}\int_{\Omega}|\nabla v|^{2q}+\int_{\Omega}\nabla\left(|\nabla v|^{2(q-1)}\right)\cdot\nabla\left(|\nabla v|^{2}\right)+2\int_{\Omega}|\nabla v|^{2(q-1)}|D^{2}v|^{2}$ $\displaystyle\quad\,+2\int_{\Omega}|\nabla v|^{2q}$ $\displaystyle\leq 2\int_{\Omega}|\nabla v|^{2(q-1)}\nabla u\cdot\nabla v+\delta\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}+D_{\delta}.$ Applying integration by parts
+to the first term on the right-hand side
+of ( 4.6 ) gives (4.7) $\displaystyle 2\int_{\Omega}|\nabla v|^{2(q-1)}\nabla u\cdot\nabla v$ $\displaystyle=-2(q-1)\int_{\Omega}u|\nabla v|^{2(q-2)}\nabla\left(|\nabla v|^{2}\right)\cdot\nabla v-2\int_{\Omega}u|\nabla v|^{2(q-1)}\Delta v.$ Now we estimate the following quantities: $\displaystyle u|\nabla v|^{2(q-2)}\nabla\left(|\nabla v|^{2}\right)\cdot\nabla v,\quad u|\nabla v|^{2(q-1)}\Delta v.$ Using the inequality $u\leq u+\alpha$ ,
+the pointwise inequality $|\Delta v|^{2}\leq n|D^{2}v|^{2}$ and
+the Young inequality,
+we can
+notice that (4.8) $\displaystyle-u|\nabla v|^{2(q-2)}\nabla\left(|\nabla v|^{2}\right)\cdot\nabla v$ $\displaystyle\leq 2\cdot\frac{1}{2}|\nabla v|^{q-2}\left|\nabla|\nabla v|^{2}\right|\cdot(u+\alpha)|\nabla v|^{q-1}$ $\displaystyle\leq\frac{1}{4}\left(|\nabla v|^{q-2}\left|\nabla|\nabla v|^{2}\right|\right)^{2}+\left((u+\alpha)|\nabla v|^{q-1}\right)^{2},$ (4.9) $\displaystyle-u|\nabla v|^{2(q-1)}|\Delta v|$ $\displaystyle\leq 2\cdot\sqrt{\frac{1}{n}}|\nabla v|^{q-1}\Delta v\cdot\sqrt{\frac{n}{4}}(u+\alpha)|\nabla v|^{q-1}$ $\displaystyle\leq\frac{1}{n}|\nabla v|^{2(q-1)}|\Delta v|^{2}+\frac{n}{4}\left((u+\alpha)|\nabla v|^{q-1}\right)^{2}$ $\displaystyle\leq\int_{\Omega}|\nabla v|^{2(q-1)}|D^{2}v|^{2}+\frac{n}{4}\left((u+\alpha)|\nabla v|^{q-1}\right)^{2}.$ Applying ( 4.8 ) and ( 4.9 )
+to ( 4.7 ), we obtain
+that (4.10) $\displaystyle 2\int_{\Omega}|\nabla v|^{2(q-1)}\nabla u\cdot\nabla v$ $\displaystyle\leq\frac{q-1}{2}\int_{\Omega}|\nabla v|^{2(q-2)}\left|\nabla|\nabla v|^{2}\right|^{2}$ $\displaystyle\quad\,+\frac{4(q-1)+n}{2}\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}$ $\displaystyle\quad\,+2\int_{\Omega}|\nabla v|^{2(q-1)}|D^{2}v|^{2}.$ From ( 4.6 ) and ( 4.10 ),
+by using that $\displaystyle|\nabla v|^{2(q-2)}\left|\nabla|\nabla v|^{2}\right|^{2}=\frac{4}{q^{2}}\left|\nabla|\nabla v|^{q}\right|^{2}$ as well as $\displaystyle\nabla(|\nabla v|^{2(q-1)})\cdot\nabla(|\nabla v|^{2})=(q-1)|\nabla v|^{2(q-2)}\left|\nabla|\nabla v|^{2}\right|^{2}$ for $q>1$ ,
+we can confirm that $\displaystyle\frac{1}{q}\dfrac{d}{dt}\int_{\Omega}|\nabla v|^{2q}+\frac{2(q-1)}{q^{2}}\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}+2\int_{\Omega}|\nabla v|^{2q}$ $\displaystyle\leq\frac{4(q-1)+n}{2}\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}+\delta\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}+D_{\delta}.$ Thus we arrive at ( 4.1 ).
+∎ Corollary 4.2 . If $\Omega$ is a convex bounded
+domain,
+then
+( 4.1 ) is rewritten as $\displaystyle\frac{1}{q}\frac{d}{dt}\int_{\Omega}|\nabla v|^{2q}+\frac{2(q-1)}{q^{2}}\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}+2\int_{\Omega}|\nabla v|^{2q}$ $\displaystyle\leq\frac{4(q-1)+n}{2}\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}$ for all $q\geq 1$ .
+In
+other words, $\delta$ and $D_{\delta}$ are taken as $0$ in Lemma 4.1 . Proof. Suppose that $\Omega$ is a convex
+bounded
+domain.
+Then we see from Lemma 2.3 that $\displaystyle\nabla\left(|\nabla v|^{2}\right)\cdot\nu\leq 0,$ and so
+we can rewrite ( 4.5 )
+as $\displaystyle\int_{\partial\Omega}|\nabla v|^{2q-2}\nabla\left(|\nabla v|^{2}\right)\cdot\nu\leq 0.$ By
+an argument similar to
+the proof of Lemma 4.1 ,
+we can attain the
+conclusion.
+∎ 5 Proof of the main theorem In this section we prove
+Theorem 1.1 .
+The following lemma plays
+an important role in the proof of Theorem 1.1 . Lemma 5.1 . Let $p,q\geq 1$ , $p\neq-m_{1}+1$ , $\delta\in(0,\frac{2(q-1)}{q^{2}})$ , and let $\Phi(t)$ be
+defined as ( 1.9 ).
+Then
+there exists $D_{\delta}>0$ such that (5.1) $\displaystyle\frac{d\Phi}{dt}+\frac{p-1}{2}\left(\frac{2}{p+m_{1}-1}\right)^{2}\int_{\Omega}\left|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right|^{2}+\left(\frac{2(q-1)}{q^{2}}-\delta\right)\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}$ $\displaystyle\leq\frac{{\chi}^{2}(p-1)}{2}\int_{\Omega}(u+\alpha)^{p+2m_{2}-m_{1}-3}|\nabla v|^{2}+\frac{4(q-1)+n}{2}\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}+D_{\delta}.$ Proof. The combination of ( 3.1 )
+and ( 4.1 )
+yields ( 5.1 ).
+In fact, due to ( 3.1 )
+and ( 4.1 ), we can find that
+for $p,q\geq 1$ ,
+there exists $\delta\in(0,\frac{2(q-1)}{q^{2}})$ such that $\displaystyle\frac{1}{p}\frac{d}{dt}\int_{\Omega}(u+\alpha)^{p}+\frac{1}{q}\frac{d}{dt}\int_{\Omega}|\nabla v|^{2q}$ $\displaystyle+\frac{p-1}{2}\int_{\Omega}(u+\alpha)^{p+m_{1}-3}|\nabla u|^{2}+\left(\frac{2(q-1)}{q^{2}}-\delta\right)\int_{\Omega}|\nabla|\nabla v|^{q}|^{2}$ $\displaystyle\leq\frac{{\chi}^{2}(p-1)}{2}\int_{\Omega}(u+\alpha)^{p+2m_{2}-m_{1}-3}|\nabla v|^{2}+\frac{4(q-1)+n}{2}\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}+D_{\delta}.$ On the other hand,
+we notice that
+if $p\neq-m_{1}+1$ , then $\displaystyle\int_{\Omega}(u+\alpha)^{p+m_{1}-3}|\nabla u|^{2}=\left(\frac{2}{p+m_{1}-1}\right)^{2}\int_{\Omega}\left|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right|^{2}.$ This together with ( 1.9 )
+clearly proves ( 5.1 ). ∎ We are now in a position to complete
+the proof of Theorem 1.1 . Proof of Theorem 1.1 . We divide the proof
+into four steps: (Step 1): Estimates
+for $\int_{\Omega}\left(u+\alpha\right)^{p+2m_{2}-m_{1}-3}|\nabla v|^{2}$ and $\int_{\Omega}\left(u+\alpha\right)^{2}|\nabla v|^{2q-2}$ . (Step 2): Estimates for $\int_{\Omega}(u+\alpha)^{p\eta}$ and $\int_{\Omega}|\nabla v|^{2q\eta}$ . (Step 3): Deriving an ordinary
+differential inequality
+for $\Phi(t)$ . (Step 4): Establishing a lower bound
+for the blow-up time $t^{\ast}$ in the classical sense. By means of these processes,
+we can argue a method to obtain
+a lower bound for the blow-up time
+for solutions of ( 1.1 ). (Step 1) We shall show that (5.2) $\displaystyle\int_{\Omega}(u+\alpha)^{p+2m_{2}-m_{1}-3}|\nabla v|^{2}\leq\frac{1}{(q\eta)^{\prime}}\left(\int_{\Omega}(u+\alpha)^{p\eta}\right)^{\frac{1}{\beta_{1}}}|\Omega|^{\frac{1}{{\beta_{1}}^{\prime}}}+\frac{1}{q\eta}\int_{\Omega}|\nabla v|^{2q\eta},$ (5.3) $\displaystyle\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}\leq\frac{1}{(q^{\prime}\eta)^{\prime}}\left(\int_{\Omega}(u+\alpha)^{p\eta}\right)^{\frac{1}{\beta_{2}}}|\Omega|^{\frac{1}{{\beta_{2}}^{\prime}}}+\frac{1}{q^{\prime}\eta}\int_{\Omega}|\nabla v|^{2q\eta},$ where $\eta$ is the constant defined
+as ( 1.7 )
+and ′ denotes the Hölder conjugate
+exponent
+e.g., $q^{\prime}:=\frac{q}{q-1}$ and $\displaystyle{\beta_{1}}:=\frac{p}{p+2m_{2}-m_{1}-3}\cdot\frac{q\eta-1}{q}>1,$ $\displaystyle{\beta_{2}}:=\frac{p}{2}\cdot\frac{q\eta-q+1}{q}>1.$ Applying Young’s inequality to the first term
+on the left-hand side of ( 5.2 )
+gives (5.4) $\displaystyle\int_{\Omega}(u+\alpha)^{p+2m_{2}-m_{1}-3}|\nabla v|^{2}\leq\frac{1}{(q\eta)^{\prime}}\int_{\Omega}(u+\alpha)^{(p+2m_{2}-m_{1}-3)(q\eta)^{\prime}}+\frac{1}{q\eta}\int_{\Omega}|\nabla v|^{2q\eta}.$ Thanks to boundedness
+of $\Omega$ ,
+using Hölder’s inequality,
+we have (5.5) $\displaystyle\int_{\Omega}(u+\alpha)^{(p+2m_{2}-m_{1}-3)(q\eta)^{\prime}}\leq\left(\int_{\Omega}(u+\alpha)^{p\eta}\right)^{\frac{1}{\beta_{1}}}|\Omega|^{\frac{1}{{\beta_{1}}^{\prime}}},$ where the condition ( C2 ) enables us
+to take $\beta_{1}>1$ as $\displaystyle{\beta_{1}}=\frac{p\eta}{(p+2m_{2}-m_{1}-3)(q\eta)^{\prime}}=\frac{p}{p+2m_{2}-m_{1}-3}\cdot\frac{q\eta-1}{q}.$ Plugging ( 5.5 )
+into ( 5.4 ),
+we obtain ( 5.2 ).
+Similarly,
+combining Young’s inequality with
+Hölder’s inequality yields $\displaystyle\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}$ $\displaystyle\leq\frac{1}{(q^{\prime}\eta)^{\prime}}\int_{\Omega}(u+\alpha)^{2(q^{\prime}\eta)^{\prime}}+\frac{1}{q^{\prime}\eta}\int_{\Omega}|\nabla v|^{2q\eta}$ $\displaystyle\leq\frac{1}{(q^{\prime}\eta)^{\prime}}\left(\int_{\Omega}(u+\alpha)^{p\eta}\right)^{\frac{1}{\beta_{2}}}|\Omega|^{\frac{1}{{\beta_{2}}^{\prime}}}+\frac{1}{q^{\prime}\eta}\int_{\Omega}|\nabla v|^{2q\eta},$ where the condition ( C2 ) enables us to
+take $\beta_{2}>1$ as $\displaystyle{\beta_{2}}=\frac{p\eta}{2(q^{\prime}\eta)^{\prime}}=\frac{p}{2}\cdot\frac{q\eta-q+1}{q}.$ Therefore we arrive
+at ( 5.3 ). (Step 2) The purpose of this step is
+to obtain
+the following inequalities: (5.6) $\displaystyle\int_{\Omega}{(u+\alpha)}^{p\eta}$ $\displaystyle\leq C_{1}(m_{1})\varepsilon\int_{\Omega}\left|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right|^{2}$ $\displaystyle\quad\,+\frac{C_{2}(m_{1})}{\varepsilon^{\frac{1-ar\eta}{ar\eta}}}\left(\int_{\Omega}(u+\alpha)^{p}\right)^{f(\eta,r)}\hskip-5.69054pt+C_{3}(m_{1})\left(\int_{\Omega}(u+\alpha)^{p}\right)^{\eta},$ (5.7) $\displaystyle\int_{\Omega}|\nabla v|^{2q\eta}$ $\displaystyle\leq C_{4}\varepsilon\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}+\frac{C_{5}}{\varepsilon^{\frac{\eta}{2-\eta}}}\left(\int_{\Omega}|\nabla v|^{2q}\right)^{f(\eta,1)}+C_{6}\left(\int_{\Omega}|\nabla v|^{2q}\right)^{\eta}$ for all $\varepsilon>0$ , where $\eta$ , $f$ and $r$ are defined as ( 1.7 ),
+( 1.10 ) and
+( 1.11 ), respectively, and $\displaystyle C_{1}(m_{1}):=2^{2r\eta-1}ar\eta{c_{1}}^{2r\eta},\quad C_{2}(m_{1}):=2^{2r\eta}(1-ar\eta){c_{1}}^{2r\eta},\quad C_{3}(m_{1}):=2^{2r\eta-1}{c_{1}}^{2r\eta},$ $\displaystyle C_{4}:=2^{2\eta-1}\cdot\frac{\eta}{2}\cdot{c_{2}}^{2\eta},\quad C_{5}:=2^{2\eta-1}\cdot\frac{2-\eta}{2}\cdot{c_{2}}^{2\eta},\quad C_{6}:=2^{2\eta-1}{c_{2}}^{2\eta}.$ In order to estimate $\int_{\Omega}(u+\alpha)^{p\eta}$ and $\int_{\Omega}|\nabla v|^{2q\eta}$ without wasting the power of diffusion,
+we apply Lemma 2.1 .
+Under the conditions ( C1 ) and
+( C2 ),
+we can show existence of $c_{1}>0$ such
+that $\displaystyle\int_{\Omega}{(u+\alpha)}^{p\eta}$ $\displaystyle=\left\|(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|_{L^{2r\eta}(\Omega)}^{2r\eta}$ $\displaystyle\leq{c_{1}}^{2r\eta}\left({\left\|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|_{L^{2}(\Omega)}^{a}}{{\left\|(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|}_{L^{2r}(\Omega)}^{1-a}}+{\left\|(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|_{L^{2r}(\Omega)}}\right)^{2r\eta}$ $\displaystyle\leq 2^{2r\eta-1}{c_{1}}^{2r\eta}\left({\left\|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|_{L^{2}(\Omega)}^{2ar\eta}}{{\left\|(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|}_{L^{2r}(\Omega)}^{2(1-a)r\eta}}+{\left\|(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|_{L^{2r}(\Omega)}^{2r\eta}}\right),$ where $\displaystyle a:=\frac{\frac{1}{2r}-\frac{1}{2r\eta}}{\frac{1}{2r}+\frac{1}{n}-\frac{1}{2}}\in(0,1).$ Noting that $2ar\eta<2$ which implies the condition $p>\frac{\eta(m_{1}-1)}{(\eta-1)(\eta-2)}$ guaranteed by ( C2 ),
+thanks to the Young inequality,
+we can estimate the first term
+on the right-hand side as $\displaystyle{\left\|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|_{L^{2}(\Omega)}^{2ar\eta}}{{\left\|(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|}_{L^{2r}(\Omega)}^{2(1-a)r\eta}}$ $\displaystyle\leq ar\eta\varepsilon{\left\|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|_{L^{2}(\Omega)}^{2}}+\frac{1-ar\eta}{\varepsilon^{\frac{1-ar\eta}{ar\eta}}}{\left\|(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right\|_{L^{2r}(\Omega)}^{2r\frac{(1-a)\eta}{1-ar\eta}}}$ for all $\varepsilon>0$ ,
+and we see
+that $\frac{(1-a)\eta}{1-ar\eta}$ is rewritten as $\displaystyle\frac{(1-a)\eta}{1-ar\eta}$ $\displaystyle=\frac{\left(1-\frac{\frac{1}{2r}-\frac{1}{2r\eta}}{\frac{1}{2r}+\frac{1}{n}-\frac{1}{2}}\right)\eta}{1-\frac{\frac{1}{2r}-\frac{1}{2r\eta}}{\frac{1}{2r}+\frac{1}{n}-\frac{1}{2}}\cdot r\eta}$ $\displaystyle=\frac{\left(\left(\frac{1}{2r}+\frac{1}{n}-\frac{1}{2}\right)-\left(\frac{1}{2r}-\frac{1}{2r\eta}\right)\right)\eta}{\frac{1}{2r}+\frac{1}{n}-\frac{1}{2}-\left(\frac{1}{2r}-\frac{1}{2r\eta}\right)r\eta}$ $\displaystyle=1+\frac{\eta-1}{n\left(\frac{1}{n}-\frac{\eta}{2}+\frac{1}{2r}\right)}=f(\eta,r).$ Thus
+we obtain $\displaystyle\int_{\Omega}{(u+\alpha)}^{p\eta}$ $\displaystyle\leq C_{1}(m_{1})\varepsilon\int_{\Omega}\left|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right|^{2}$ $\displaystyle\quad\,+\frac{C_{2}(m_{1})}{\varepsilon^{\frac{1-ar\eta}{ar\eta}}}\left(\int_{\Omega}(u+\alpha)^{p}\right)^{f(\eta,r)}+C_{3}(m_{1})\left(\int_{\Omega}(u+\alpha)^{p}\right)^{\eta},$ with $C_{1}(m_{1})=2^{2r\eta-1}ar\eta{c_{1}}^{2r\eta}$ , $C_{2}(m_{1})=2^{2r\eta-1}(1-ar\eta){c_{1}}^{2r\eta}$ and $C_{3}(m_{1})=2^{2r\eta-1}{c_{1}}^{2r\eta}$ for
+all $\varepsilon>0$ .
+In a similar way, there exists $c_{2}>0$ such that $\displaystyle\int_{\Omega}|\nabla v|^{2q\eta}$ $\displaystyle=\left\||\nabla v|^{q}\right\|_{L^{2\eta}(\Omega)}^{2\eta}$ $\displaystyle\leq{c_{2}}^{2\eta}\left({\left\|\nabla|\nabla v|^{q}\right\|_{L^{2}(\Omega)}^{\frac{1}{2}}}{\left\||\nabla v|^{q}\right\|_{L^{2}(\Omega)}^{\frac{1}{2}}}+{\left\||\nabla v|^{q}\right\|_{L^{2}(\Omega)}}\right)^{2\eta}$ $\displaystyle\leq 2^{2\eta-1}{c_{2}}^{2\eta}\left({\left\|\nabla|\nabla v|^{q}\right\|_{L^{2}(\Omega)}^{\eta}}{\left\||\nabla v|^{q}\right\|_{L^{2}(\Omega)}^{\eta}}+{\left\||\nabla v|^{q}\right\|_{L^{2}(\Omega)}^{2\eta}}\right)$ $\displaystyle\leq 2^{2\eta-1}{c_{2}}^{2\eta}\left(\frac{\eta}{2}\varepsilon{\left\|\nabla|\nabla v|^{q}\right\|_{L^{2}(\Omega)}^{2}}+\frac{2-\eta}{2\varepsilon^{\frac{\eta}{2-\eta}}}{\left\||\nabla v|^{q}\right\|_{L^{2}(\Omega)}^{\frac{2\eta}{2-\eta}}}+{\left\||\nabla v|^{q}\right\|_{L^{2}(\Omega)}^{2\eta}}\right)$ $\displaystyle=:C_{4}\varepsilon\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}+\frac{C_{5}}{\varepsilon^{\frac{\eta}{2-\eta}}}\left(\int_{\Omega}|\nabla v|^{2q}\right)^{f(\eta,1)}+C_{6}\left(\int_{\Omega}|\nabla v|^{2q}\right)^{\eta}$ for all $\varepsilon>0$ , where $C_{4}=2^{2\eta-1}\cdot\frac{\eta}{2}\cdot{c_{2}}^{2\eta}$ , $C_{5}=2^{2\eta-1}\cdot\frac{2-\eta}{2}\cdot{c_{2}}^{2\eta}$ and $C_{6}=2^{2\eta-1}{c_{2}}^{2\eta}$ .
+Hence
+we can obtain ( 5.6 )
+and ( 5.7 ). (Step 3) Plugging the results of Step $1$ and
+Step $2$ into ( 5.1 ),
+we shall show
+an ordinary
+differential inequality
+for $\Phi(t)$ : (5.8) $\displaystyle\frac{d\Phi}{dt}\leq A{\Phi}^{f(\eta,r)}+B{\Phi}^{f(\eta,1)}+C{\Phi}^{\eta}+D.$ To this end we first
+deal with the first and
+second terms
+on the right-hand side
+of ( 5.1 ).
+Applying ( 5.6 ) to $(\int_{\Omega}(u+\alpha)^{p\eta})^{\frac{1}{\beta_{1}}}$ and $(\int_{\Omega}(u+\alpha)^{p\eta})^{\frac{1}{\beta_{2}}}$ appearing in
+( 5.2 ) and
+( 5.3 ) yields (5.9) $\displaystyle\int_{\Omega}(u+\alpha)^{p+2m_{2}-m_{1}-3}|\nabla v|^{2}\leq\frac{1}{(q\eta)^{\prime}}\cdot R^{\frac{1}{\beta_{1}}}|\Omega|^{\frac{1}{{\beta_{1}}^{\prime}}}+\frac{1}{q\eta}\int_{\Omega}|\nabla v|^{2q\eta},$ (5.10) $\displaystyle\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}\leq\frac{1}{(q^{\prime}\eta)^{\prime}}\cdot R^{\frac{1}{\beta_{2}}}|\Omega|^{\frac{1}{{\beta_{2}}^{\prime}}}+\frac{1}{q^{\prime}\eta}\int_{\Omega}|\nabla v|^{2q\eta},$ where $R$ is given by (5.11) $\displaystyle R$ $\displaystyle:=C_{1}(m_{1})\varepsilon\int_{\Omega}\left|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right|^{2}$ $\displaystyle\quad\,+\frac{C_{2}(m_{1})}{\varepsilon^{\frac{1-ar\eta}{ar\eta}}}\left(\int_{\Omega}(u+\alpha)^{p}\right)^{f(\eta,r)}\hskip-5.69054pt+C_{3}(m_{1})\left(\int_{\Omega}(u+\alpha)^{p}\right)^{\eta}$ with $\varepsilon>0$ and $C_{1}(m_{1}),C_{2}(m_{1})$ and $C_{3}(m_{1})$ defined in Step 2.
+In order to show that $R^{\frac{1}{\beta_{i}}}\leq R$ $(i=1,2)$ ,
+we shall show that $R\geq 1$ .
+Indeed,
+focusing
+on the second term
+on the right-hand side of ( 5.11 ),
+by using
+the
+inequality $u+\alpha\geq\alpha>0$ and choosing $\varepsilon$ small enough, we
+obtain $\displaystyle\frac{C_{2}(m_{1})}{\varepsilon^{\frac{1-ar\eta}{ar\eta}}}\left(\int_{\Omega}(u+\alpha)^{p}\right)^{f(\eta,r)}\geq\frac{C_{2}(m_{1})}{\varepsilon^{\frac{1-ar\eta}{ar\eta}}}\left(\alpha^{p}|\Omega|\right)^{f(\eta,r)}\geq 1.$ Combining this inequality
+with ( 5.11 )
+entails that $R\geq 1$ .
+Therefore we arrive at $R^{\frac{1}{\beta_{i}}}\leq R\quad(i=1,2).$ Plugging this inequality
+into ( 5.9 ) and ( 5.10 ),
+we obtain $\displaystyle\int_{\Omega}(u+\alpha)^{p+2m_{2}-m_{1}-3}|\nabla v|^{2}\leq\frac{1}{(q\eta)^{\prime}}\cdot R|\Omega|^{\frac{1}{{\beta_{1}}^{\prime}}}+\frac{1}{q\eta}\int_{\Omega}|\nabla v|^{2q\eta},$ $\displaystyle\int_{\Omega}(u+\alpha)^{2}|\nabla v|^{2q-2}\leq\frac{1}{(q^{\prime}\eta)^{\prime}}\cdot R|\Omega|^{\frac{1}{{\beta_{2}}^{\prime}}}+\frac{1}{q^{\prime}\eta}\int_{\Omega}|\nabla v|^{2q\eta}.$ By applying these two inequalities
+to ( 5.1 ),
+we see (5.12) $\displaystyle\frac{d\Phi}{dt}+\frac{p-1}{2}{\left(\frac{2}{p+m_{1}-1}\right)}^{2}\int_{\Omega}\left|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right|^{2}$ $\displaystyle\quad\,+\left(\frac{2(q-1)}{q^{2}}-\delta\right)\int_{\Omega}\left|\nabla\left|\nabla v\right|^{q}\right|^{2}$ $\displaystyle\leq\frac{{\chi}^{2}(p-1)}{2}\left(\frac{1}{(q\eta)^{\prime}}\cdot R|\Omega|^{\frac{1}{{\beta_{1}}^{\prime}}}+\frac{1}{q\eta}\int_{\Omega}|\nabla v|^{2q\eta}\right)$ $\displaystyle\quad\,+\frac{4(q-1)+n}{2}\left(\frac{1}{(q^{\prime}\eta)^{\prime}}\cdot R|\Omega|^{\frac{1}{{\beta_{2}}^{\prime}}}+\frac{1}{q^{\prime}\eta}\int_{\Omega}|\nabla v|^{2q\eta}\right)+D_{\delta}$ $\displaystyle=E_{1}R+E_{2}\int_{\Omega}|\nabla v|^{2q\eta}+D_{\delta},$ where $\displaystyle E_{1}$ $\displaystyle:=\frac{{\chi}^{2}(p-1)}{2}\cdot\frac{1}{(q\eta)^{\prime}}\cdot|\Omega|^{\frac{1}{{\beta_{1}}^{\prime}}}+\frac{4(q-1)+n}{2}\cdot\frac{1}{(q^{\prime}\eta)^{\prime}}\cdot|\Omega|^{\frac{1}{{\beta_{2}}^{\prime}}},$ $\displaystyle E_{2}$ $\displaystyle:=\frac{{\chi}^{2}(p-1)}{2}\cdot\frac{1}{q\eta}+\frac{4(q-1)+n}{2}\cdot\frac{1}{q^{\prime}\eta}.$ Plugging ( 5.7 )
+into ( 5.12 ),
+we can rearrange
+( 5.1 )
+as follows: $\displaystyle\frac{d\Phi}{dt}+\frac{p-1}{2}{\left(\frac{2}{p+m_{1}-1}\right)}^{2}\int_{\Omega}\left|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right|^{2}+\left(\frac{2(q-1)}{q^{2}}-\delta\right)\int_{\Omega}|\nabla|\nabla v|^{q}|^{2}$ $\displaystyle\leq E_{1}R+E_{2}\left(C_{4}\varepsilon\int_{\Omega}\left|\nabla|\nabla v|^{q}\right|^{2}+\frac{C_{5}}{\varepsilon^{\frac{\eta}{2-\eta}}}\left(\int_{\Omega}|\nabla v|^{2q}\right)^{f(\eta,1)}+C_{6}\left(\int_{\Omega}|\nabla v|^{2q}\right)^{\eta}\right)+D_{\delta}.$ Recalling the definition of $R$ (see ( 5.11 )),
+we infer (5.13) $\displaystyle\frac{d\Phi}{dt}+\left(\frac{p-1}{2}{\left(\frac{2}{p+m_{1}-1}\right)}^{2}-E_{1}C_{1}(m_{1})\varepsilon\right)\int_{\Omega}\left|\nabla(u+\alpha)^{\frac{p+m_{1}-1}{2}}\right|^{2}$ $\displaystyle\quad\,+\left(\left(\frac{2(q-1)}{q^{2}}-\delta\right)-E_{2}C_{4}\varepsilon\right)\int_{\Omega}|\nabla|\nabla v|^{q}|^{2}$ $\displaystyle\leq E_{1}C_{2}(m_{1})\varepsilon^{-\frac{1-ar\eta}{ar\eta}}\left(\int_{\Omega}(u+\alpha)^{p}\right)^{f(\eta,r)}+E_{2}C_{5}\varepsilon^{-\frac{\eta}{2-\eta}}\left(\int_{\Omega}|\nabla v|^{2q}\right)^{f(\eta,1)}$ $\displaystyle\quad\,+E_{1}C_{3}(m_{1})\left(\int_{\Omega}(u+\alpha)^{p}\right)^{\eta}+E_{2}C_{6}\left(\int_{\Omega}|\nabla v|^{2q}\right)^{\eta}+D_{\delta}.$ Then it follows that
+the second and third terms
+on the left-hand side
+of ( 5.13 ) are nonnegative.
+We now fix $\delta\in(0,\frac{2(q-1)}{q^{2}})$ and choose $\varepsilon$ small enough to satisfy not only
+( 5.12 ) but also $\displaystyle E_{1}C_{1}(m_{1})\varepsilon\leq\frac{p-1}{2}{\left(\frac{2}{p+m_{1}-1}\right)}^{2},\quad E_{2}C_{2}(m_{1})\varepsilon\leq\frac{2(p-1)}{q^{2}}-\delta.$ Therefore
+we can rewrite ( 5.13 ) as $\displaystyle\frac{d\Phi}{dt}$ $\displaystyle\leq E_{1}C_{2}(m_{1})\varepsilon^{-\frac{1-ar\eta}{ar\eta}}\left(\int_{\Omega}(u+\alpha)^{p}\right)^{f(\eta,r)}+E_{2}C_{5}\varepsilon^{-\frac{\eta}{2-\eta}}\left(\int_{\Omega}|\nabla v|^{2q}\right)^{f(\eta,1)}$ $\displaystyle\quad\,+E_{1}C_{3}(m_{1})\left(\int_{\Omega}(u+\alpha)^{p}\right)^{\eta}+E_{2}C_{6}\left(\int_{\Omega}|\nabla v|^{2q}\right)^{\eta}+D_{\delta}.$ Noting that $\displaystyle\int_{\Omega}(u+\alpha)^{p}\leq p\Phi(t),\quad\int_{\Omega}|\nabla v|^{2q}\leq q\Phi(t),$ we can establish ( 5.8 ) with $\displaystyle A$ $\displaystyle=A(m_{1}):=p^{f(\eta,r)}E_{1}C_{2}(m_{1}){\varepsilon}^{-\frac{1-ar\eta}{ar\eta}},$ $\displaystyle B$ $\displaystyle:=q^{f(\eta,1)}E_{2}C_{5}{\varepsilon}^{-\frac{\eta}{2-\eta}},$ $\displaystyle C$ $\displaystyle=C(m_{1}):=p^{\eta}E_{1}C_{3}(m_{1})+q^{\eta}E_{2}C_{6},$ $\displaystyle D$ $\displaystyle:=D_{\delta}.$ Thus
+( 5.8 ) holds. (Step 4) In this step we establish
+the following lower bound
+for the blow-up time $t^{\ast}$ for solutions
+of ( 1.1 )
+in the classical sense: (5.14) $\displaystyle t^{\ast}\geq\int_{\Phi(0)}^{\infty}\frac{d\tau}{A{\tau}^{f(\eta,r)}+B{\tau}^{f(\eta,1)}+C\tau^{\eta}+D}.$ We first show
+that we can estimate
+a lower bound for the blow-up time
+in $\Phi$ -measure.
+Indeed, we put $\displaystyle G(\Phi(t)):=A{\Phi(t)}^{f(\eta,r)}+B{\Phi(t)}^{f(\eta,1)}+C{\Phi(t)^{\eta}}+D$ and $\displaystyle H(x):=\int_{\Phi(0)}^{x}\frac{d\tau}{G(\tau)}\quad(x\geq 0).$ Since $f(\eta,s)>1\ (s>0)$ , we notice that $\lim_{x\nearrow\infty}H(x)$ exists,
+and hence
+we obtain
+from
+the chain rule
+and the inequality $\frac{d\Phi(t)}{dt}\leq G(\Phi(t))$ (see ( 5.8 ))
+that $\displaystyle\frac{d}{dt}\left[H(\Phi(t))\right]$ $\displaystyle=\frac{1}{G(\Phi(t))}\cdot\frac{d\Phi(t)}{dt}\leq 1.$ By integrating
+from $0$ to $t_{p,q}^{\ast}$ , we have $\displaystyle H\left(\Phi(t_{p,q}^{\ast})\right)-H\left(\Phi(0)\right)\leq t_{p,q}^{\ast}.$ Noting that $\lim_{t\nearrow{t_{p,q}}^{\ast}}\Phi(t)=\infty$ and $H(\Phi(0))=0$ ,
+we can attain
+that (5.15) $\displaystyle t_{p,q}^{\ast}\geq\int_{\Phi(0)}^{\infty}\frac{d\tau}{A{\tau}^{f(\eta,r)}+B{\tau}^{f(\eta,1)}+C\tau^{\eta}+D}.$ Furthermore,
+we can
+regard the blow-up time for
+solutions of ( 1.1 )
+in $\Phi$ -measure
+as that in the classical sense
+under the condition ( C1 ),
+i.e., (5.16) $\displaystyle t_{p,q}^{\ast}=t^{\ast}$ (see Corollary 2.7 ).
+A combination of
+( 5.15 ) with
+( 5.16 )
+yields $\displaystyle t^{\ast}=t_{p,q}^{\ast}\geq\int_{\Phi(0)}^{\infty}\frac{d\tau}{A{\tau}^{f(\eta,r)}+B{\tau}^{f(\eta,1)}+C\tau^{\eta}+D}.$ Thus we arrive at ( 5.14 ).
+In
+conclusion,
+the proof of Theorem 1.1 is
+completed.
+∎ Acknowledgments The authors thank
+Dr. Masaaki Mizukami for his advice,
+especially for informing them
+a recent result by
+Freitag [ 7 ] .
+Thanks to his advice,
+the authors could eliminate a gap
+between the blow-up time
+for solutions of ( 1.1 )
+in $\Phi$ -measure
+and that in the classical sense. References [1] J. R. Anderson and K. Deng. A lower bound on the blow up time
+for solutions of a chemotaxis
+system with nonlinear chemotactic
+sensitivity. Nonlinear Anal. , 159:2–9,
+2017. [2] N. Bellomo, A. Bellouquid, Y. Tao, and
+M. Winkler. Toward a mathematical theory of
+Keller–Segel models of pattern
+formation in biological tissues. Math. Models Methods Appl. Sci. , 25(9):1663–1763, 2015. [3] T. Cieślak and C. Stinner. Finite-time blowup and
+global-in-time unbounded solutions to a
+parabolic–parabolic quasilinear
+Keller–Segel system in higher
+dimensions. J. Differential Equations ,
+252(10):5832–5851, 2012. [4] T. Cieślak and C. Stinner. Finite-time blowup in a
+supercritical quasilinear
+parabolic–parabolic Keller–Segel
+system in dimension 2. Acta Appl. Math. ,
+129:135–146, 2014. [5] C. Enache. Lower bounds for blow-up time in
+some non-linear parabolic problems
+under Neumann boundary conditions. Glasg. Math. J. ,
+53(3):569–575, 2011. [6] M. A. Farina, M. Marras, and G. Viglialoro. On explicit lower bounds and blow-
+up
+times in a model of chemotaxis. Discrete Contin. Dyn. Syst. ,
+(Dynamical systems, differential
+equations and applications. 10th AIMS
+Conference. Suppl.):409–417, 2015. [7] M. Freitag. Blow-up profiles and refined
+extensibility criteria in quasilinear
+Keller–Segel systems. J. Math. Anal. Appl. ,
+463(2):964–988, 2018. [8] T. Hashira, S. Ishida, and T. Yokota. Finite-time blow-up for quasilinear
+degenerate Keller–Segel
+systems of parabolic–parabolic type. J. Differential Equations ,
+264(10):6459–6485, 2018. [9] T. Hillen and K. J. Painter. A user’s guide to PDE models for
+chemotaxis. J. Math. Biol. ,
+58(1-2):183–217, 2009. [10] D. Horstmann. From 1970 until present: the
+Keller–Segel model in chemotaxis
+and its consequences. I. Jahresber. Deutsch. Math.–Verein. , 105(3):103–165, 2003. [11] D. Horstmann. From 1970 until present: the
+Keller–Segel model in chemotaxis
+and its consequences. II. Jahresber. Deutsch. Math.–Verein. , 106(2):51–69, 2004. [12] D. Horstmann and M. Winkler. Boundedness vs. blow-up in a
+chemotaxis system. J. Differential Equations ,
+215(1):52–107, 2005. [13] S. Ishida, K. Seki, and T. Yokota. Boundedness in quasilinear
+Keller–Segel systems of
+parabolic–parabolic type on non-convex
+bounded domains. J. Differential Equations ,
+256(8):2993–3010, 2014. [14] S. Ishida and T. Yokota. Global existence of weak solutions
+to quasilinear degenerate
+Keller–Segel systems of
+parabolic–parabolic type. J. Differential Equations ,
+252(2):1421–1440, 2012. [15] S. Ishida and T. Yokota. Global existence of weak solutions
+to quasilinear degenerate
+Keller–Segel systems of
+parabolic–parabolic type with small data. J. Differential Equations ,
+252(3):2469–2491, 2012. [16] S. Ishida and T. Yokota. Boundedness in a quasilinear fully
+parabolic Keller–Segel system
+via maximal Sobolev regularity. Discrete Contin. Dyn. Syst. Ser. S , 13(2):211–232, 2020. [17] Y. Jiao and W. Zeng. Blow-up and delay for a
+parabolic–elliptic Keller–Segel system
+with a source term. Bound. Value Probl. ,
+Paper No. 95, 10, 2018. [18] E. F. Keller and L. A. Segel. Initiation of slime mold
+aggregation
+viewed as an instability. J. Theoret. Biol. ,
+26:399–415, 1970. [19] J. Li and S. Zheng. A lower bound for blow-up time in a
+fully parabolic Keller–Segel
+system. Appl. Math. Lett. ,
+26(4):510–514, 2013. [20] Y. Li and J. Lankeit. Boundedness in a
+chemotaxis-haptotaxis model with nonlinear
+diffusion. Nonlinearity ,
+29(6):1564–1595, 2016. [21] M. Marras, S. Vernier Piro, and G. Viglialoro. Lower bounds for blow-up in a
+parabolic–parabolic Keller–Segel
+system. Discrete Contin. Dyn. Syst. ,
+(Dynamical systems, differential
+equations and applications. 10th AIMS
+Conference. Suppl.):809–816, 2015. [22] M. Marras, S. Vernier-Piro, and G. Viglialoro. Blow-up phenomena in chemotaxis
+systems with a source term. Math. Methods Appl. Sci. ,
+39(11):2787–2798, 2016. [23] Y. Mimura. The variational formulation of the
+fully parabolic Keller–Segel
+system with degenerate diffusion. J. Differential Equations ,
+263(2):1477–1521, 2017. [24] N. Mizoguchi and M. Winkler. Blow-up in the two-dimensional
+parabolic Keller–Segel system. preprint. [25] K. J. Painter and T. Hillen. Volume-filling and quorum-sensing
+in
+models for chemosensitive
+movement. Can. Appl. Math. Q. ,
+10(4):501–543, 2002. [26] L. E. Payne, G. A. Philippin, and
+S. Vernier Piro. Blow-up phenomena for a semilinear
+heat equation with nonlinear
+boundary condition, II. Nonlinear Anal. ,
+73(4):971–978, 2010. [27] L. E. Payne and P. W. Schaefer. Lower bounds for blow-up time in
+parabolic problems under Neumann
+conditions. Appl. Anal. ,
+85(10):1301–1311, 2006. [28] L. E. Payne and J. C. Song. Blow-up and decay criteria for a
+model of chemotaxis. J. Math. Anal. Appl. ,
+367(1):1–6, 2010. [29] L. E. Payne and J. C. Song. Lower bounds for blow-up in a model
+of chemotaxis. J. Math. Anal. Appl. ,
+385(2):672–676, 2012. [30] G. A. Philippin. Lower bounds for blow-up time in a
+class of nonlinear wave equations. Z. Angew. Math. Phys. ,
+66(1):129–134, 2015. [31] T. Senba and T. Suzuki. A quasi-linear parabolic system of
+chemotaxis. Abstr. Appl. Anal. , 2006. [32] Y. Tao and S. Vernier Piro. Explicit lower bound of blow-up
+time
+in a fully parabolic chemotaxis
+system with nonlinear cross-diffusion. J. Math. Anal. Appl. ,
+436(1):16–28, 2016. [33] Y. Tao and M. Winkler. Boundedness in a quasilinear
+parabolic–parabolic Keller–Segel
+system with subcritical sensitivity. J. Differential Equations ,
+252(1):692–715, 2012. [34] M. Winkler. Finite-time blow-up in the
+higher-dimensional parabolic–parabolic
+Keller–Segel system. J. Math. Pures Appl. (9) ,
+100(5):748–767, 2013. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

@@ -1,0 +1,223 @@
+Energy solution to Schrödinger-Poisson system in the two-dimensional whole space Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Introduction 1.1 Consequent results 2 Preliminaries 2.1 Strichartz estimate 2.2 Some estiamtes 3 Proof of the theorem 3.1 Local well-posedness 3.2 Global existence 4 Remarks on the problem with power nonlinearity References License: arXiv.org perpetual non-exclusive license arXiv:1001.4308v1 [math.AP] 25 Jan 2010 Energy solution to
+Schrödinger-Poisson system in the two-dimensional whole space Satoshi Masaki Address: Division of Mathematics Graduate School of Information Sciences Tohoku University Sendai 980-8579, Japan Email address: masaki@ims.is.tohoku.ac.jp Abstract. We consider the Cauchy problem of
+the two-dimensional Schrödinger-Poisson system in the energy class.
+Though the Newtonian potential diverges at the spatial infinity in the logarithmic order,
+global well-posedness is proven in both defocusing and focusing cases.
+The key is a decomposition of the nonlinearity into a sum of
+the linear logarithmic potential and a good remainder,
+which enables us to apply the perturbation method.
+Our argument can be adapted to the one-dimensional problem. 1. Introduction This paper is devoted to the study of the Schödinger-Poisson system (1.1) $\left\{\begin{aligned} &i{\partial}_{t}u+\frac{1}{2}\Delta u=\lambda Pu,\quad(t,x)\in\mathbb{R}^{1+2},\\
+&-\Delta P=|u|^{2},\\
+&u(0,x)=u_{0}(x),\end{aligned}\right.$ where $\lambda$ is a real constant.
+We suppose $P$ is the Newtonian potential (1.2) $P=-\frac{1}{2\pi}(\log|x|*|u|^{2})$ where $*$ denotes the convolution.
+For a suitable $u$ ,
+this is the unique strong solution of $-\Delta P=|u|^{2}$ under the condition $|\nabla P|\to 0\text{ as }|x|\to\infty,\quad\nabla P\in L^{\infty}(\mathbb{R}^{2}),\quad P(0)=\int_{\mathbb{R}^{2}}(\log|y|)|u(y)|^{2}dy$ (see [ 11 ] ).
+When the dimensions are larger than two, the Schrödinger-Poisson
+system is a special case of the Hartree equation and
+one of the typical example of the nonlinear Schrödinger equation
+with a nonlocal nonlinearity, and there is large amount of literature
+(see [ 6 ] and references therein).
+On the other hand, the two-dimensional case is less studied.
+In [ 1 , 18 ] , ( 1.1 ) is considered
+with some restrictive assumptions such as a neutrality condition
+which confirms that the Newtonian potential ( 1.2 )
+does not diverge at the spatial infinity and in particular belongs to $L^{2}$ space.
+The Poisson equation is sometimes posed with a background (or doping profile): $-\Delta P=|u|^{2}-b,$ where $b$ is a given positive function.
+Then, the neutrality condition is $\int|u|^{2}-bdx=0$ or equivalently $\mathcal{F}(|u|^{2}-b)(0)=0$ .
+When we consider the problem in dimensions less than three, this condition is useful to control $P$ .
+Notice that this condition excludes all nontrivial solutions when $b\equiv 0$ ,
+and that we need to remove this condition for the study of ( 1.1 ).
+In [ 11 ] , the above assumptions are removed and
+the existence of a unique local solution is proven
+for data in the usual Sobolev space $H^{s}(\mathbb{R}^{2})$ $(s>2)$ despite the fact that the nonlinear potential diverges at the spatial infinity.
+Since ( 1.2 ) is not necessarily defined for $u\in H^{s}$ ( $s>2$ )
+we introduced a new formula $P=-\frac{1}{2\pi}\int_{\mathbb{R}^{2}}\left(\log\frac{|x-y|}{|y|}\right)|u(y)|^{2}dy$ which makes sense merely if $|u|^{2}\in L^{p}(\mathbb{R}^{2})$ ( $p\in(1,2)$ ).
+We underline that the local solutions given there do not have finite energy
+(the energy is given in ( 1.5 ) below).
+Our aim in this paper is to prove that there exists a time-global solution
+if initial data has finite energy. For our analysis, the following reduction is crucial:
+We guess that the Newtonian potential ( 1.2 ) may behave like $-\frac{1}{2\pi}\left\lVert u\right\rVert_{L^{2}}^{2}\log|x|$ at the spatial infinity,
+which will be the bad part of the nonlinearity,
+and decompose the nonlinearity as $\lambda Pu=-\frac{\lambda}{2\pi}\left\lVert u\right\rVert_{L^{2}}^{2}(\log\left\langle x\right\rangle)u-\frac{\lambda}{2\pi}u\int_{\mathbb{R}^{2}}\left(\log\frac{|x-y|}{\left\langle x\right\rangle}\right)|u(y)|^{2}dy,$ where $\left\langle x\right\rangle=(1+|x|^{2})^{1/2}$ .
+We then
+obtain $i{\partial}_{t}u+\frac{1}{2}\Delta u+\frac{\lambda}{2\pi}\left\lVert u\right\rVert_{L^{2}}^{2}(\log\left\langle x\right\rangle)u=-\frac{\lambda}{2\pi}u\int_{\mathbb{R}^{2}}\left(\log\frac{|x-y|}{\left\langle x\right\rangle}\right)|u(y)|^{2}dy.$ It will turn out that the bad part of $P$ is correctly extracted from the original
+nonlinearity and
+therefore the behavior of the “new nonlinearity” becomes better.
+Notice that one can also expect that $\left\lVert u\right\rVert_{L^{2}}$ is conserved because $\lambda$ is a real number.
+Hence, putting $m:=-\frac{\lambda}{2\pi}\left\lVert u_{0}\right\rVert_{L^{2}}^{2},$ we reach to the equation (1.3) $\left\{\begin{aligned} &i{\partial}_{t}u+\left(\frac{1}{2}\Delta-m\log\left\langle x\right\rangle\right)u=-\frac{\lambda}{2\pi}u\int_{\mathbb{R}^{2}}\left(\log\frac{|x-y|}{\left\langle x\right\rangle}\right)|u(y)|^{2}dy,\\
+&u(0,x)=u_{0}(x).\end{aligned}\right.$ Notice that $-m\log\left\langle x\right\rangle$ is now completely independent of $u$ and that it therefore can be regarded as a linear potential.
+In what follows, we work with this equation.
+Observe that
+if there exists a solution to ( 1.3 ) conserving $\left\lVert u\right\rVert_{L^{2}}$ ,
+then it is also a solution of ( 1.1 ). Now, the linear part of the equation
+is not $i{\partial}_{t}+(1/2)\Delta$ but $i{\partial}_{t}+(1/2)\Delta-m\log\left\langle x\right\rangle$ .
+Thus, a natural choice of the function space on which we shall work is
+not the Sobolev space $H^{1}(\mathbb{R}^{2})$ any more, but the following one: (1.4) $\displaystyle\mathcal{H}:=\{u\in H^{1}(\mathbb{R}^{2});\sqrt{\log\left\langle x\right\rangle}u\in L^{2}\},$ $\displaystyle\left\lVert u\right\rVert_{\mathcal{H}}:=\left\lVert u\right\rVert_{H^{1}(\mathbb{R}^{2})}+\left\lVert\sqrt{\log\left\langle\cdot\right\rangle}u\right\rVert_{L^{2}(\mathbb{R}^{2})}.$ If $m>0$ , that is, if $\lambda<0$ , then
+the above space coincides with the form domain of
+the positive operator $-\frac{1}{2}\Delta+m\log\left\langle x\right\rangle$ .
+Our main result is the following: Theorem 1.1 . The problem ( 1.3 ) is globally well-posed in $\mathcal{H}$ .
+Moreover, the solution conserves $\left\lVert u(t)\right\rVert_{L^{2}}$ and the energy (1.5) $E(t)=\frac{1}{2}\left\lVert\nabla u(t)\right\rVert_{L^{2}}^{2}-\frac{\lambda}{4\pi}\int_{\mathbb{R}^{2}}(\log|x-y|)|u(t,x)|^{2}|u(t,y)|^{2}dxdy.$ Corollary 1.2 . The Problem ( 1.1 ) is globally well-posed in $\mathcal{H}$ . Remark 1.3 . Let $u\in C(\mathbb{R};\mathcal{H})$ be a solution of ( 1.3 ) (and of ( 1.1 )) given in
+Theorem 1.1 .
+Then, $v:=u\exp(-i\frac{\lambda}{2\pi}\int_{0}^{t}\|\sqrt{\log|\cdot|}u(s)\|_{L^{2}}^{2}ds)$ solves (1.6) $\left\{\begin{aligned} &i{\partial}_{t}v+\frac{1}{2}\Delta v=-\frac{\lambda}{2\pi}v\int_{\mathbb{R}^{2}}\left(\log\frac{|x-y|}{|y|}\right)|v(y)|^{2}dy,\\
+&v(0,x)=u_{0}(x).\end{aligned}\right.$ Notice that the nonlinearity of ( 1.6 ) makes sense without
+the momentum condition $\sqrt{\log|\cdot|}v\in L^{2}$ .
+This observation explains why existence of a time-local solution can be proven
+by assuming only $u_{0}\in H^{s}(\mathbb{R}^{2})$ ( $s>1$ ) in [ 11 ] . 1.1. Consequent results Our argument is also applicable to ( 1.1 )
+involving a power type nonlinearity: (1.7) $\left\{\begin{aligned} &i{\partial}_{t}u+\frac{1}{2}\Delta u=\lambda Pu+\eta|u|^{p-1}u,\quad(t,x)\in\mathbb{R}^{1+2},\\
+&-\Delta P=|u|^{2},\\
+&u(0,x)=u_{0}(x),\end{aligned}\right.$ where $\eta$ is a real number and $p\geqslant 2$ . Theorem 1.4 . The problem ( 1.7 ) is globally well-posed in $\mathcal{H}$ if either
+one of the following conditions is satisfied: (1) $\eta\geqslant 0$ , $\lambda\in\mathbb{R}$ and $p\geqslant 2$ ; (2) $\eta<0$ , $\lambda\in\mathbb{R}$ , and $2\leqslant p<3$ ; (3) $\eta<0$ , $\lambda>0$ , $p=3$ , and $\left\lVert u_{0}\right\rVert_{\mathcal{H}}$ is small; (4) $\eta<0$ , $\lambda<0$ , $p\geqslant 3$ , and $\left\lVert u_{0}\right\rVert_{\mathcal{H}}$ is small. Moreover, the solution conserves $\left\lVert u(t)\right\rVert_{L^{2}}$ and the energy (1.8) $\displaystyle E_{p}(t):={}$ $\displaystyle\frac{1}{2}\left\lVert\nabla u(t)\right\rVert_{L^{2}}^{2}-\frac{\lambda}{4\pi}\int_{\mathbb{R}^{2}}(\log|x-y|)|u(t,x)|^{2}|u(t,y)|^{2}dxdy$ $\displaystyle}{\displaystyle+\frac{\eta}{p+1}\left\lVert u(t)\right\rVert_{L^{p+1}}^{p+1}.$ The proof is done with a straight-forward modification (see Section 4 ).
+The case where $p=3$ is known as the $L^{2}$ -critical case.
+Since the $\mathcal{H}$ -norm contains derivative,
+it seems difficult to treat the case $1<p<2$ .
+Nevertheless, we can show global well-posed in a slightly smaller function space $\mathcal{H}^{1,2}:=\{u\in H^{1}(\mathbb{R}^{2});u\log\left\langle x\right\rangle\in L^{2}\}$ . Theorem 1.5 . Suppose $1<p<2$ . For $\eta,\lambda\in\mathbb{R}$ The problem ( 1.7 ) is globally well-posed in the space $\mathcal{H}^{1,2}$ .
+Moreover, the solution conserves $\left\lVert u(t)\right\rVert_{L^{2}}$ and the energy $E_{p}(t)$ given in ( 1.8 ). We can also handle the one-dimensional problem (1.9) $\left\{\begin{aligned} &i{\partial}_{t}u+\frac{1}{2}{\partial}_{xx}u=-\frac{\lambda}{2}(|x|*|u|^{2})u+\eta|u|^{p-1}u,\quad(t,x)\in\mathbb{R}^{1+1},\\
+&u(0,x)=u_{0}(x),\end{aligned}\right.$ where $\lambda,\eta\in\mathbb{R}$ and $p\geqslant 2$ .
+The one dimensional problem was studied in [ 7 , 14 , 15 ] .
+The global well-posedness of ( 1.9 ) was shown
+in the space $\{f\in H^{1}(\mathbb{R});|x|f\in L^{2}(\mathbb{R})\}$ in [ 15 ] ,
+and in the space $\{f\in H^{1}(\mathbb{R});\sqrt{|x|}f\in L^{2}(\mathbb{R})\}$ with a presence of background in [ 7 ] , provided $\lambda>0$ and data is small relative to the background.
+We can prove the global well-posedness result of ( 1.9 )
+including these results. Theorem 1.6 . The problem ( 1.9 ) is globally well-posed in $\{f\in H^{1}(\mathbb{R});\sqrt{|x|}f\in L^{2}(\mathbb{R})\}$ if $\lambda\in\mathbb{R}$ and either
+one of the following conditions is satisfied: (1) $\eta\geqslant 0$ , $\lambda\in\mathbb{R}$ , and $p\geqslant 2$ ; (2) $\eta<0$ , $\lambda\in\mathbb{R}$ , and $2\leqslant p<5$ ; (3) $\eta<0$ , $\lambda>0$ , $p=5$ , and $\left\lVert u_{0}\right\rVert_{H^{1}}+\|{\sqrt{|\cdot|}u_{0}}\|_{L^{2}}$ is small; (4) $\eta<0$ , $\lambda<0$ , $p\geqslant 5$ , and $\left\lVert u_{0}\right\rVert_{H^{1}}+\|{\sqrt{|\cdot|}u_{0}}\|_{L^{2}}$ is small. The solution conserves $\left\lVert u\right\rVert_{L^{2}}$ and the energy (1.10) $\widetilde{E}(t):=\frac{1}{2}\left\lVert{\partial}_{x}u\right\rVert_{L^{2}(\mathbb{R})}^{2}-\frac{\lambda}{2}\iint_{\mathbb{R}^{2}}|x-y||u(x)|^{2}|u(y)|^{2}dxdy+\frac{\eta}{p+1}\left\lVert u\right\rVert_{L^{p+1}(\mathbb{R})}^{p+1}.$ The one-dimensional version of Theorem 1.5 is as follows,
+which reproduce the same result in [ 15 , Theorem 2.1] when $\eta<0$ and $\lambda>0$ . Theorem 1.7 . Suppose $1<p<2$ . For $\eta,\lambda\in\mathbb{R}$ The problem ( 1.9 ) is globally well-posed in the space $\Sigma:=\{u\in H^{1}(\mathbb{R}^{2});|x|u\in L^{2}\}$ .
+Moreover, the solution conserves $\left\lVert u(t)\right\rVert_{L^{2}}$ and the energy $\widetilde{E}(t)$ given in ( 1.10 ). As in the two dimensional case, the key is a “reduction” of ( 1.9 ) to $\left\{\begin{aligned} &i{\partial}_{t}u+\frac{1}{2}{\partial}_{xx}u+\frac{\lambda\left\lVert u_{0}\right\rVert_{L^{2}}^{2}}{2}|x|u=-\frac{\lambda}{2}u\int_{\mathbb{R}}{(|x-y|-|x|)}|u(y)|^{2}dy+\eta|u|^{p-1}u,\\
+&u(0,x)=u_{0}(x).\end{aligned}\right.$ We briefly mention about other related works.
+Oh considered in [ 12 ] the Cauchy problem of
+the nonlinear Schrödinger equation with general potential and $L^{2}$ -subcritical power-type nonlinearity, and
+proved global well-posedness in the form domain of $-\frac{1}{2}\Delta+V$ ,
+provided the potential $V\geqslant 0$ satisfies ${\partial}^{\alpha}V\in L^{\infty}$ for $|\alpha|\geqslant 2$ (see also [ 6 ] ).
+In particular, the case where the potential $V$ is a quadratic polynomial
+is extensively studied.
+In this case, we have several special properties such as explicit representations
+of linear solutions, called Mehler’s formula, and/or of the Heisenberg observables.
+We refer the reader to [ 2 , 3 , 4 , 10 , 19 ] for $H^{1}$ -subcritical and $H^{1}$ -critical power-type nonlinearity
+and to [ 5 ] for $H^{1}$ -subcritical Hartree type nonlinearity.
+In [ 16 ] , the ground states of ( 1.1 ) is treated. The rest of the paper is organized as follows:
+We collect some basic estimates in Section 2 ,
+and, in Section 3 we prove Theorem 1.1 .
+Section 4 is devoted to the study of ( 1.7 ). 2. Preliminaries 2.1. Strichartz estimate We first summarize the properties on
+the operator (2.1) $A:=\frac{1}{2}\Delta-m\log\left\langle x\right\rangle,$ where $m\neq 0$ is a real constant.
+For any $m$ , $A$ is essentially self-adjoint on $C_{0}^{\infty}(\mathbb{R}^{2})$ (see [ 13 ] ).
+Since our potential is sub-quadratic, that is,
+since $|{\partial}^{\alpha}\log\left\langle x\right\rangle|\to 0$ as $|x|\to\infty$ for $|\alpha|=2$ and ${\partial}^{\alpha}\log\left\langle x\right\rangle\in L^{\infty}$ for $|\alpha|\geqslant 3$ ,
+the following estimate is established in [ 17 ] :
+For any $T>0$ , $\left\lVert e^{itA}\varphi\right\rVert_{L^{\infty}}\leqslant C|t|^{-1}\left\lVert\varphi\right\rVert_{L^{1}}$ for $t\in[-T,T]$ , where $C$ depends on $T$ (see also [ 8 ] ).
+Once we know this type of estimate, the Strichartz estimate follows by interpolation.
+We say that a pair $(q,r)$ is admissible if $2\leqslant r<\infty$ and $2/q=\delta(r):=1-2/r$ . Lemma 2.1 (Strichartz’s estimate) . For any $T>0$ ,
+the following properties hold: • Suppose $\varphi\in L^{2}(\mathbb{R}^{2})$ .
+For any admissible pair $(q,r)$ , there exists a constant $C=C(T,q,r)$ such that $\left\lVert e^{itA}\varphi\right\rVert_{L^{q}((-T,T);L^{r})}\leqslant C\left\lVert\varphi\right\rVert_{L^{2}}.$ • Let $I\subset(-T,T)$ be an interval and $t_{0}\in\overline{I}$ .
+For any admissible pairs $(q,r)$ and $(\gamma,\rho)$ ,
+there exists a constant $C=C(t,q,r,\gamma,\rho)$ such that $\left\lVert\int_{t_{0}}^{t}e^{i(t-s)A}F(s)ds\right\rVert_{L^{q}(I;L^{r})}\leqslant C\left\lVert F\right\rVert_{L^{\gamma^{\prime}}(I;L^{\rho^{\prime}})}$ for every $F\in L^{\gamma^{\prime}}(I;L^{\rho^{\prime}})$ . 2.2. Some estiamtes Lemma 2.2 . Let $W$ be an arbitrary weight function such that $\nabla W$ , $\Delta W\in L^{\infty}(\mathbb{R}^{2})$ .
+It holds for all $T>0$ , admissible pair $(q,r)$ ,
+and $\varphi\in\mathcal{H}$ that $\displaystyle\left\lVert[\nabla,e^{itA}]\varphi\right\rVert_{L^{q}((-T,T);L^{r})}\leqslant{}$ $\displaystyle C|T|\left\lVert\varphi\right\rVert_{2},$ $\displaystyle\left\lVert[W,e^{itA}]\varphi\right\rVert_{L^{q}((-T,T);L^{r})}\leqslant{}$ $\displaystyle C|T|\left\lVert(1+\nabla)\varphi\right\rVert_{2}.$ Proof. Since $v=e^{itA}\varphi$ solves $i{\partial}_{t}v+Av=0$ ,
+an explicit calculation shows $[\nabla,e^{itA}]\varphi=-i\int_{0}^{t}e^{i(t-s)A}\frac{mx}{1+x^{2}}e^{isA}\varphi ds$ and $[W,e^{itA}]\varphi=i\int_{0}^{t}e^{i(t-s)A}\left(\nabla W\cdot\nabla+\frac{1}{2}\Delta W\right)e^{isA}\varphi ds.$ The Strichartz estimate therefore gives the desired estimates.
+∎ The following is useful for estimates of the nonlinearity in ( 1.3 ). Lemma 2.3 . Set a function $K(x,y)=\frac{\log\frac{|x-y|}{\left\langle x\right\rangle}}{1+\log\left\langle y\right\rangle}$ of $x,y\in\mathbb{R}^{2}$ .
+For any $p\in[1,\infty)$ and $\varepsilon>0$ , there exist a function $W(x,y)\geqslant 0$ with $\left\lVert W\right\rVert_{L^{\infty}_{y}L^{p}_{x}}\leqslant\varepsilon$ and a constant $C_{0}$ such that $|K(x,y)|\leqslant C_{0}+W(x,y)$ holds for all $(x,y)\in\mathbb{R}^{2+2}$ . Proof. Take $\eta\in(0,1]$ and set $W(x,y)=|K(x,y)|{\bf 1}_{|x-y|\leqslant\eta}(x,y)$ .
+If $\eta$ is sufficiently small then $\left\lVert W(\cdot,y)\right\rVert_{L^{p}}\leqslant\frac{\left\lVert\log|x|\right\rVert_{L^{p}(|x|\leqslant\eta)}+\log\left\langle|y|+\eta\right\rangle\left\lVert 1\right\rVert_{L^{p}(|x|\leqslant\eta)}}{1+\log\left\langle y\right\rangle}\leqslant\varepsilon$ since $\log|x|$ belongs to $L^{p}_{\mathrm{loc}}(\mathbb{R}^{2})$ for all $p<\infty$ .
+Moreover,
+by (2.12) of [ 11 ] , $\sup_{|x-y|\geqslant\eta}K(x,y)\leqslant 1+\log\frac{\sqrt{3}}{\eta}$ for any $\eta\leqslant 1$ , which completes the proof.
+∎ Remark 2.4 . In 1D case, the corresponding estimate is $\left\lVert\frac{|x-y|-|x|}{1+|y|}\right\rVert_{L^{\infty}_{x,y}(\mathbb{R}^{2})}\leqslant 1.$ 3. Proof of the theorem 3.1. Local well-posedness Lemma 3.1 . Let $(q_{0},r_{0})$ be an admissible pair with $r_{0}>2$ .
+For any $u_{0}\in\mathcal{H}$ , there exist
+an existence time $T=T(\left\lVert u_{0}\right\rVert_{\mathcal{H}})$ and a unique solution $u\in C((-T,T);\mathcal{H})\cap L^{q_{0}}((-T,T);L^{r_{0}})\cap C^{1}((-T,T);\mathcal{H}^{*})$ .
+The solution conserves $\left\lVert u(t)\right\rVert_{L^{2}}$ and the energy ( 1.5 ).
+Moreover, the map $u_{0}\mapsto u$ is continuous from $\mathcal{H}$ to $C((-T,T);\mathcal{H})$ . Proof. We write $L^{p}((-T,T);X)=L^{p}_{T}X$ , for short.
+Define a Banach space $\mathcal{H}_{T,M}:=\{f\in L^{\infty}((-T,T);\mathcal{H});\left\lVert f\right\rVert_{\mathcal{H}_{T}}\leqslant M\}$ with norm $\displaystyle\left\lVert f\right\rVert_{\mathcal{H}_{T}}:={}$ $\displaystyle\left\lVert f\right\rVert_{L^{\infty}_{T}\mathcal{H}}+\left\lVert f\right\rVert_{L^{q_{0}}_{T}W^{1,r_{0}}}+\left\lVert\sqrt{\log\left\langle x\right\rangle}f\right\rVert_{L^{q_{0}}_{T}L^{r_{0}}}.$ We show that if $r_{0}>2$ then
+there exist $M=M(\left\lVert u_{0}\right\rVert_{\mathcal{H}})$ and $T=T(\left\lVert u_{0}\right\rVert_{\mathcal{H}})$ such that $Q[u](t,x):=(e^{itA}u_{0})(x)\\
++\frac{i}{2\pi}\left(\int_{0}^{t}e^{i(t-s)A}\left(\int_{\mathbb{R}^{2}}\log\frac{|\cdot-y|}{\left\langle\cdot\right\rangle}|u(s,y)|^{2}dy\right)u(s,\cdot)ds\right)(x)$ becomes a contraction map from $\mathcal{H}_{T,M}$ to itself,
+where $A$ is defined in ( 2.1 ). Set $K(x,y)=\frac{\log\frac{|x-y|}{\left\langle x\right\rangle}}{1+\log\left\langle y\right\rangle}.$ Then, by Lemma 2.3 ,
+there exist a nonnegative function $W\in L^{\infty}_{y}L_{x}^{r_{0}^{\prime}}$ and a
+constant $C_{0}$ such that $|K(x,y)|\leqslant C_{0}+W(x,y).$ Recall that $r_{0}\in(2,\infty)$ and so $r_{0}^{\prime}:=r_{0}/(r_{0}-1)\in(1,2)$ .
+We hence see that $Pu=\iint K(x,y)(1+\log\left\langle y\right\rangle)|u(y)|^{2}u(x)dy\,dx$ satisfies $\left\lVert Pu\right\rVert_{L^{2}}\leqslant C(\left\lVert u\right\rVert_{L^{2}}+\left\lVert u\right\rVert_{L^{r_{0}}})\left\lVert\sqrt{1+\log\left\langle x\right\rangle}u\right\rVert_{L^{2}}^{2}.$ Take $L^{1}_{T}$ norm to yield (3.1) $\left\lVert Pu\right\rVert_{L^{1}_{T}L^{2}}\leqslant C(T\left\lVert u\right\rVert_{L^{\infty}_{T}L^{2}}+T^{\frac{1}{2}+\frac{1}{r_{0}}}\left\lVert u\right\rVert_{L^{q_{0}}_{T}L^{r_{0}}})\left\lVert\sqrt{1+\log\left\langle x\right\rangle}u\right\rVert_{L^{\infty}_{T}L^{2}}^{2}.$ By the Strichartz estimate, we end up with (3.2) $\left\lVert Q[u]\right\rVert_{L^{\infty}_{T}L^{2}}+\left\lVert Q[u]\right\rVert_{L^{q_{0}}_{T}L^{r_{0}}}\leqslant C\left\lVert u_{0}\right\rVert_{L^{2}}+C(T+T^{\frac{1}{2}+\frac{1}{r_{0}}})\left\lVert u\right\rVert_{\mathcal{H}_{T}}^{3}.$ We next estimate $\nabla Q[u]$ .
+One easily sees that $\displaystyle\nabla Q[u]={}$ $\displaystyle e^{itA}\nabla u_{0}-i\int_{0}^{t}e^{i(t-s)A}\nabla(Pu)(s)ds$ $\displaystyle{}+[\nabla,e^{itA}]u_{0}-i\int_{0}^{t}[\nabla,e^{i(t-s)A}](Pu)(s)ds.$ We deduce from Lemma 2.2 with $(q,r)=(\infty,2)$ that $\int_{0}^{t}\left\lVert[\nabla,e^{i(t-s)A}](Pu)(s)\right\rVert_{L^{2}}ds\leqslant\int_{0}^{t}(t-s)\left\lVert Pu(s)\right\rVert_{L^{2}}ds\leqslant|t|\left\lVert Pu\right\rVert_{L^{1}_{T}L^{2}}.$ The right hand side is bounded as in ( 3.1 ). $[\nabla,e^{itA}]u_{0}$ is handled similarly.
+Mimicking ( 3.1 ), we infer that (3.3) $\left\lVert P\nabla u\right\rVert_{L^{1}_{T}L^{2}}\leqslant C(T\left\lVert\nabla u\right\rVert_{L^{\infty}_{T}L^{2}}+T^{\frac{1}{2}+\frac{1}{r_{0}}}\left\lVert\nabla u\right\rVert_{L^{q_{0}}_{T}L^{r_{0}}})\left\lVert\sqrt{1+\log\left\langle x\right\rangle}u\right\rVert_{L^{\infty}_{T}L^{2}}^{2}$ Now, let us estimate $(\nabla P)u$ . It writes $(\nabla P)(x)u(x)=\left(\int_{\mathbb{R}^{2}}\left(\frac{x-y}{|x-y|^{2}}-\frac{x}{1+x^{2}}\right)|u(y)|^{2}dy\right)u(x),$ and so $\displaystyle\left\lVert(\nabla P)u\right\rVert_{L^{2}}\leqslant{}$ $\displaystyle C\left\lVert(|x|^{-1}*|u|^{2})+\left\langle\cdot\right\rangle^{-1}\left\lVert u\right\rVert_{L^{2}}^{2}\right\rVert_{L^{\frac{2r_{0}}{r_{0}-2}}}\left\lVert u\right\rVert_{L^{r_{0}}}$ $\displaystyle\leqslant{}$ $\displaystyle C(\left\lVert u\right\rVert_{L^{\frac{2r_{0}}{r_{0}-1}}}^{2}+\left\lVert u\right\rVert_{L^{2}}^{2})\left\lVert u\right\rVert_{L^{r_{0}}}$ $\displaystyle\leqslant{}$ $\displaystyle C(\left\lVert u\right\rVert_{L^{2}}^{2}+\left\lVert\nabla u\right\rVert_{L^{2}}^{2})\left\lVert u\right\rVert_{L^{r_{0}}}$ by the Hardy-Littlewood-Sobolev and the Sobolev inequalities.
+We see that (3.4) $\left\lVert(\nabla P)u\right\rVert_{L^{1}_{T}L^{2}}\leqslant C(T\left\lVert u\right\rVert_{L_{T}^{\infty}L^{2}}^{2}+T^{\frac{1}{2}+\frac{1}{r_{0}}}\left\lVert u\right\rVert_{L_{T}^{q_{0}}L^{r_{0}}}^{2})\left\lVert u\right\rVert_{L_{T}^{\infty}L^{2}}.$ We deduce from the Strichartz estimate that (3.5) $\left\lVert\nabla Q[u]\right\rVert_{L^{\infty}_{T}L^{2}}+\left\lVert\nabla Q[u]\right\rVert_{L^{q_{0}}_{T}L^{r_{0}}}\leqslant C\left\lVert\nabla u_{0}\right\rVert_{\mathcal{H}}+C(T+T^{\frac{1}{2}+\frac{1}{r_{0}}})\left\lVert u\right\rVert_{\mathcal{H}_{T}}^{3}.$ Let us proceed to the estimate of $\sqrt{\log\left\langle x\right\rangle}Q[u]$ .
+It holds that $\displaystyle\sqrt{1+\log\left\langle x\right\rangle}Q[u]={}$ $\displaystyle e^{itA}\sqrt{1+\log\left\langle x\right\rangle}u_{0}-i\int_{0}^{t}e^{i(t-s)A}\sqrt{1+\log\left\langle x\right\rangle}Pu(s)ds$ $\displaystyle{}+R,$ where $R=[\sqrt{1+\log\left\langle x\right\rangle},e^{itA}]u_{0}-i\int_{0}^{t}[\sqrt{1+\log\left\langle x\right\rangle},e^{i(t-s)A}]Pu(s)ds.$ A use of Lemma 2.2 with $W=\sqrt{1+\log\left\langle x\right\rangle}$ yields $\displaystyle\left\lVert R\right\rVert_{L^{\infty}_{T}L^{2}}+\left\lVert R\right\rVert_{L^{q_{0}}_{T}L^{r_{0}}}$ $\displaystyle{}\leqslant CT\left\lVert u_{0}\right\rVert_{\mathcal{H}}+CT\left\lVert(1+\nabla)(Pu)\right\rVert_{L^{1}_{T}L^{2}}$ $\displaystyle{}\leqslant CT\left\lVert u_{0}\right\rVert_{\mathcal{H}}+CT(T+T^{\frac{1}{2}+\frac{1}{r_{0}}})\left\lVert u\right\rVert_{\mathcal{H}_{T}}^{3}$ where we have used ( 3.1 ), ( 3.3 ), and ( 3.4 ).
+As in ( 3.1 ), it holds that $\displaystyle\left\lVert P(Wu)\right\rVert_{L^{1}_{T}L^{2}}\leqslant{}$ $\displaystyle C(T\left\lVert Wu\right\rVert_{L^{\infty}_{T}L^{2}}+T^{\frac{1}{2}+\frac{1}{r_{0}}}\left\lVert Wu\right\rVert_{L^{q_{0}}_{T}L^{r_{0}}})\left\lVert Wu\right\rVert_{L^{\infty}_{T}L^{2}}^{2}$ $\displaystyle\leqslant{}$ $\displaystyle C(T+T^{\frac{1}{2}+\frac{1}{r_{0}}})\left\lVert u\right\rVert_{\mathcal{H}_{T}}^{3},$ where $W=\sqrt{1+\log\left\langle x\right\rangle}$ .
+We conclude from the Strichartz estimate, ( 3.2 ), and ( 3.5 ) that $\left\lVert Q[u]\right\rVert_{\mathcal{H}_{T}}\leqslant C_{1}\left\lVert u_{0}\right\rVert_{\mathcal{H}}+C_{2}(T+T^{\frac{1}{2}+\frac{1}{r_{0}}})\left\lVert u\right\rVert_{\mathcal{H}_{T}}^{3}.$ A similar argument shows $\left\lVert Q[u_{1}]-Q[u_{2}]\right\rVert_{\mathcal{H}_{T}}\leqslant C_{3}(T+T^{\frac{1}{2}+\frac{1}{r_{0}}})(\left\lVert u_{1}\right\rVert_{\mathcal{H}_{T}}+\left\lVert u_{2}\right\rVert_{\mathcal{H}_{T}})^{2}\left\lVert u_{1}-u_{2}\right\rVert_{\mathcal{H}_{T}}.$ Thus, if we take $M\geqslant 2C_{1}\left\lVert u_{0}\right\rVert_{\mathcal{H}}$ then there exists $T=T(M)$ such that $Q$ is a contraction map from $\mathcal{H}_{T,M}$ to itself. The conservations of $\left\lVert u(t)\right\rVert_{L^{2}}$ is shown by multiplying ( 1.3 )
+by $\overline{u}$ and integrating the imaginary part.
+To prove the energy conservation, we need a regularizing argument.
+Note that ( 1.3 ) can be solved also in the space $\{f\in H^{2}(\mathbb{R}^{2}):\log\left\langle x\right\rangle f\in L^{2}\}$ ,
+which is one of dense subsets of $\mathcal{H}$ ,
+in an essentially same way. We omit details.
+∎ 3.2. Global existence We first give a useful blow-up criteria. Lemma 3.2 . Suppose $u_{0}\in\mathcal{H}$ .
+Let $u\in C((-T_{\mathrm{min}},T_{\mathrm{max}});\mathcal{H})$ be a unique maximal solution given by Lemma 3.1 .
+If $T_{\mathrm{max}}<\infty$ (resp. $T_{\mathrm{min}}<\infty$ ), then $\left\lVert\nabla u(t)\right\rVert_{L^{2}}\to\infty$ as $t\uparrow T_{\mathrm{max}}$ (resp. $t\downarrow-T_{\mathrm{min}}$ ). Proof. We only consider positive time.
+Suppose $T_{\mathrm{max}}<\infty$ .
+Then, $\left\lVert u(t)\right\rVert_{\mathcal{H}}$ has to diverge as $t\uparrow T_{\mathrm{max}}$ .
+Otherwise, we can extend the solution beyond $T_{\mathrm{max}}$ by Lemma 3.1 .
+Recall that $\left\lVert u(t)\right\rVert_{L^{2}}=\left\lVert u_{0}\right\rVert_{L^{2}}$ .
+Since $\displaystyle\frac{d}{dt}\left\lVert\sqrt{\log\left\langle x\right\rangle}u(t)\right\rVert_{L^{2}}^{2}$ $\displaystyle{}=2\operatorname{Re}\int(\log\left\langle x\right\rangle){\partial}_{t}u(t)\overline{u(t)}dx$ $\displaystyle{}=-\operatorname{Im}\int(\log\left\langle x\right\rangle)\Delta u(t)\overline{u(t)}dx$ $\displaystyle{}=\operatorname{Im}\int\frac{x}{1+x^{2}}\cdot\nabla u(t)\overline{u(t)}dx,$ it holds that $\left\lVert\sqrt{\log\left\langle x\right\rangle}u(t_{2})\right\rVert_{L^{2}}^{2}\leqslant\left\lVert\sqrt{\log\left\langle x\right\rangle}u(t_{1})\right\rVert_{L^{2}}^{2}+|t_{2}-t_{1}|\left\lVert\nabla u\right\rVert_{L^{\infty}((t_{1},t_{2});L^{2})}\left\lVert u_{0}\right\rVert_{L^{2}}$ for all $-T_{\mathrm{min}}<t_{1}<t_{2}<T_{\mathrm{max}}$ .
+This implies that
+if we assume $\limsup_{t\uparrow T_{\mathrm{max}}}\left\lVert\nabla u(t)\right\rVert_{L^{2}}<\infty$ then $\left\lVert u(t)\right\rVert_{\mathcal{H}}$ never blows up.
+We hence obtain the lemma.
+∎ Remark 3.3 . As in [ 9 ] , the solution breaks down with concentration at a point
+if $\|\sqrt{\log\left\langle x\right\rangle}u(t)\|_{L^{2}}=0$ .
+However, this does not occur when $\|\nabla u(t)\|$ is bounded above.
+Indeed, since $\left\lVert u\right\rVert_{L^{2}(|x|<r)}\leqslant\left\lVert 1\right\rVert_{L^{4}(|x|<r)}\left\lVert u\right\rVert_{L^{4}}\leqslant Cr^{\frac{1}{2}}\left\lVert\nabla u\right\rVert_{L^{2}}^{\frac{1}{2}}$ for any $r>0$ and since $\left\lVert u\right\rVert_{L^{2}(|x|<r)}=\left\lVert u_{0}\right\rVert_{L^{2}}-\left\lVert u\right\rVert_{L^{2}(|x|\geqslant r)}\geqslant\left\lVert u_{0}\right\rVert_{L^{2}}-\frac{\|\sqrt{\log\left\langle x\right\rangle}u\|_{L^{2}}}{(\log\left\langle r\right\rangle)^{1/2}},$ by letting $r=\|\sqrt{\log\left\langle x\right\rangle}u\|_{L^{2}}$ , we obtain $\|\sqrt{\log\left\langle x\right\rangle}u\|_{L^{2}}^{-\frac{1}{2}}\leqslant C\left(\frac{\|\sqrt{\log\left\langle x\right\rangle}u\|_{L^{2}}}{\log\left\langle\|\sqrt{\log\left\langle x\right\rangle}u\|_{L^{2}}\right\rangle}\right)^{\frac{1}{2}}+C\left\lVert\nabla u\right\rVert_{L^{2}}^{\frac{1}{2}},$ which implies $\|\sqrt{\log\left\langle x\right\rangle}u\|_{L^{2}}$ is strictly positive if $\left\lVert\nabla u\right\rVert_{L^{2}}<\infty$ . Proof of Theorem 1.1 . Let us establish a priori estimate of $\left\lVert\nabla u(t)\right\rVert_{L^{2}}$ . We first consider the case $\lambda<0$ .
+Since $\log|x|\geqslant 0$ for $|x|\geqslant 1$ , $\displaystyle-\frac{\lambda}{4\pi}\iint_{\mathbb{R}^{2+2}}\log|x-y||u(x)|^{2}|u(y)|^{2}dxdy$ $\displaystyle{}\geqslant-\frac{|\lambda|}{4\pi}\iint_{|x-y|<1}\left\lvert\log|x-y|\right\rvert|u(x)|^{2}|u(y)|^{2}dxdy$ $\displaystyle{}\geqslant-\frac{|\lambda|}{4\pi}\left\lVert\log|x|\right\rVert_{L^{2}(|x|\leqslant 1)}^{2}\left\lVert u\right\rVert_{L^{4}}^{2}\left\lVert u\right\rVert_{L^{2}}^{2}$ By the $L^{2}$ -conservation and the Sobolev embedding,
+we have (3.6) $\left\lVert\nabla u(t)\right\rVert_{L^{2}}^{2}\leqslant 2E_{0}+C\left\lVert\nabla u(t)\right\rVert_{L^{2}}.$ Therefore, there exists a constant $M$ independent of $t$ such that $\left\lVert\nabla u(t)\right\rVert_{L^{2}}\leqslant M$ . We now suppose $\lambda>0$ .
+By Lemma 2.3 , for any $\varepsilon>0$ there exists a constant $C_{0}$ such that
+the following estimate holds: $\displaystyle\frac{\lambda}{4\pi}\iint_{\mathbb{R}^{2+2}}\log|x-y||u(x)|^{2}|u(y)|^{2}dxdy$ $\displaystyle{}\leqslant\frac{\lambda}{4\pi}\iint_{\mathbb{R}^{2+2}}\log\frac{|x-y|}{\left\langle x\right\rangle}|u(x)|^{2}|u(y)|^{2}dxdy+\frac{\lambda}{4\pi}\left\lVert u_{0}\right\rVert_{L^{2}}^{2}\left\lVert\sqrt{\log\left\langle x\right\rangle}u\right\rVert_{L^{2}}^{2}$ $\displaystyle{}\leqslant\frac{\lambda}{4\pi}(C_{0}\left\lVert u_{0}\right\rVert_{L^{2}}^{2}+\varepsilon\left\lVert u\right\rVert_{L^{4}}^{2})\left\lVert\sqrt{1+\log\left\langle x\right\rangle}u\right\rVert_{L^{2}}^{2}+\frac{\lambda}{4\pi}\left\lVert u_{0}\right\rVert_{L^{2}}^{2}\left\lVert\sqrt{\log\left\langle x\right\rangle}u\right\rVert_{L^{2}}^{2}$ $\displaystyle{}\leqslant\frac{\lambda C_{0}}{4\pi}\left\lVert u_{0}\right\rVert_{L^{2}}^{4}+\frac{\lambda(C_{0}+1)}{4\pi}\left\lVert u_{0}\right\rVert_{L^{2}}^{2}\left\lVert\sqrt{\log\left\langle x\right\rangle}u\right\rVert_{L^{2}}^{2}+C\varepsilon\left\lVert u_{0}\right\rVert_{L^{2}}^{3}\left\lVert\nabla u\right\rVert_{L^{2}}$ $\displaystyle\quad+C\varepsilon\left\lVert u_{0}\right\rVert_{L^{2}}\left\lVert\nabla u\right\rVert_{L^{2}}\left\lVert\sqrt{\log\left\langle x\right\rangle}u\right\rVert_{L^{2}}^{2}$ $\displaystyle{}\leqslant C_{1}+C_{2}(\varepsilon+|t|)\sup_{s\in[0,t]}\left\lVert\nabla u(s)\right\rVert_{L^{2}}+C_{3}\varepsilon|t|\sup_{s\in[0,t]}\left\lVert\nabla u(s)\right\rVert_{L^{2}}^{2},$ where $C_{i}$ ( $i=1,2,3$ ) depends only on $\lambda$ , $C_{0}$ , $\left\lVert u_{0}\right\rVert_{\mathcal{H}}$ , and $\varepsilon$ .
+Fix $T>0$ . Taking $\varepsilon<(8C_{3}T)^{-1}$ , we deduce from the conservation of $E(t)$ that (3.7) $\left(\sup_{s\in[0,t]}\left\lVert\nabla u(s)\right\rVert_{L^{2}}\right)^{2}\leqslant 4E(0)+4C_{1}+4C_{2}(\varepsilon+2T)\sup_{s\in[0,t]}\left\lVert\nabla u(s)\right\rVert_{L^{2}}$ for $0\leqslant t\leqslant 2T$ . This implies that $\sup_{t\in[0,2T]}\left\lVert\nabla u(t)\right\rVert_{L^{2}}\leqslant C(\left\lVert u_{0}\right\rVert_{\mathcal{H}},T)<\infty.$ Since $T$ is arbitrary, we obtain the global existence.
+∎ 4. Remarks on the problem with power nonlinearity We give a rough sketch of the proofs of Theorem 1.4 and 1.5 in this section. Proof of Theorem 1.4 . The local well-posedness part
+holds if $p\geqslant 2$ as in the proof of Lemma 3.1 .
+The restriction $p\geqslant 2$ is required when we estimate $|\nabla(|u_{1}|^{p-1}u_{1}-|u_{2}|^{p-1}u_{2})|\leqslant C_{p}(|u_{1}|^{p-2}+|u_{2}|^{p-2})(|\nabla u_{1}|+|\nabla u_{2}|)|u_{1}-u_{2}|\\
++C_{p}(|u_{1}|^{p-1}+|u_{2}|^{p-1})|\nabla(u_{1}-u_{2})|.$ By exactly the same argument as in Lemma 3.2 ,
+the problem of global existence boils down to obtaining an a priori
+bound of $\left\lVert\nabla u(t)\right\rVert_{L^{2}}$ .
+Recall that the conserved energy is $\displaystyle E_{p}(t):={}$ $\displaystyle\frac{1}{2}\left\lVert\nabla u(t)\right\rVert_{L^{2}}^{2}-\frac{\lambda}{4\pi}\int_{\mathbb{R}^{2}}(\log|x-y|)|u(t,x)|^{2}|u(t,y)|^{2}dxdy$ $\displaystyle{}+\frac{\eta}{p+1}\left\lVert u(t)\right\rVert_{L^{p+1}}^{p+1}.$ The case $\eta>0$ We have $\left\lVert\nabla u(t)\right\rVert_{L^{2}}^{2}\leqslant E_{p}(t)+\frac{\lambda}{4\pi}\int_{\mathbb{R}^{2}}(\log|x-y|)|u(t,x)|^{2}|u(t,y)|^{2}dxdy.$ By the same argument as in the case $\eta=0$ , we prove global existence. The case $\eta<0$ and $\lambda<0$ Since $\frac{|\eta|}{p+1}\left\lVert u(t)\right\rVert_{L^{p+1}}^{p+1}\leqslant C_{\eta,p}\left\lVert u_{0}\right\rVert_{L^{2}}^{2}\left\lVert\nabla u(t)\right\rVert_{L^{2}}^{p-1},$ we obtain $\left\lVert\nabla u(t)\right\rVert_{L^{2}}^{2}\leqslant 2E_{0}+C\left\lVert\nabla u(t)\right\rVert_{L^{2}}+2C_{\eta,p}\left\lVert u_{0}\right\rVert_{L^{2}}^{2}\left\lVert\nabla u(t)\right\rVert_{L^{2}}^{p-1}$ as in ( 3.6 ).
+Uniform bound of $\left\lVert\nabla u(t)\right\rVert_{L^{2}}$ is then obtained either
+the case $p<3$ or the case $p\geqslant 3$ and $\left\lVert u_{0}\right\rVert_{L^{2}}$ is small. The case $\eta<0$ and $\lambda>0$ As in ( 3.7 ), for any $T>0$ ,
+there exist $\varepsilon$ , $C_{1}$ , and $C_{2}$ such that $\displaystyle\left(\sup_{s\in[0,t]}\left\lVert\nabla u(s)\right\rVert_{L^{2}}\right)^{2}\leqslant{}$ $\displaystyle 4E(0)+4C_{1}+4C_{2}(\varepsilon+2T)\sup_{s\in[0,t]}\left\lVert\nabla u(s)\right\rVert_{L^{2}}$ $\displaystyle{}+4C_{\eta,p}\left\lVert u_{0}\right\rVert_{L^{2}}^{2}\left(\sup_{s\in[0,t]}\left\lVert\nabla u(s)\right\rVert_{L^{2}}\right)^{p-1}.$ for $t\leqslant 2T$ .
+Therefore, if $p<3$ or if $p=3$ and $\left\lVert u_{0}\right\rVert_{L^{2}}$ is small,
+we obtain $\sup_{t\in[0,2T]}\left\lVert\nabla u(t)\right\rVert_{L^{2}}\leqslant C(\left\lVert u_{0}\right\rVert_{\mathcal{H}},T)<\infty.$ This concludes the proof of Theorem 1.4 .
+∎ Proof of Theorem 1.5 . We denote $L^{p}((-T,T);X)=L^{p}_{T}X$ .
+Our strategy for local well-posedness is to use
+the contraction argument in a complete metric space $(\mathcal{H}^{1,2}_{T,M},d)$ , where $\displaystyle\mathcal{H}^{1,2}_{T,M}:=\{f\in C((-T,T);H^{1});\left\lVert f\right\rVert_{\mathcal{H}^{1,2}_{T}}\leqslant M\},$ $\displaystyle\left\lVert f\right\rVert_{\mathcal{H}^{1,2}_{T}}:=\left\lVert f\right\rVert_{L^{\infty}_{T}\mathcal{H}}+\left\lVert f\right\rVert_{L^{q_{0}}_{T}W^{1,r_{0}}}+\left\lVert f{\log\left\langle x\right\rangle}\right\rVert_{L^{q_{0}}_{T}L^{r_{0}}}$ for an admissible pair $(q_{0},r_{0})$ with $r_{0}>2$ , and the metric $d$ is given by (4.1) $d(f,g)=\left\lVert f-g\right\rVert_{L^{\infty}_{T}L^{2}}+\left\lVert f-g\right\rVert_{L^{q_{0}}_{T}L^{r_{0}}}.$ We shall show $Q[u](t,x):=(e^{itA}u_{0})(x)\\
++\frac{i}{2\pi}\left(\int_{0}^{t}e^{i(t-s)A}\left(\int_{\mathbb{R}^{2}}\log\frac{|\cdot-y|}{\left\langle\cdot\right\rangle}|u(s,y)|^{2}dy\right)u(s,\cdot)ds\right)(x)\\
+-i\eta\left(\int_{0}^{t}e^{i(t-s)A}(|u|^{p-1}u)(s)ds\right)(x)$ is a contraction map in $(\mathcal{H}^{1,2}_{T,M},d)$ .
+Mimicking the proof of Lemma 3.1 , one shows that
+for any $M>0$ , there exists $T>0$ such that $Q:\mathcal{H}^{1,2}_{T,M}\to\mathcal{H}^{1,2}_{T,M}$ .
+To prove $Q$ is a contraction with respect to the metric $d$ ,
+the following estimate is crucial: $\displaystyle\left\lVert\left(\int_{\mathbb{R}^{2}}\log\frac{|x-y|}{\left\langle x\right\rangle}|u_{1}(y)|^{2}dy\right)u_{1}-\left(\int_{\mathbb{R}^{2}}\log\frac{|x-y|}{\left\langle x\right\rangle}|u_{2}(y)|^{2}dy\right)u_{2}\right\rVert_{L^{2}}$ $\displaystyle{}\leqslant\left\lVert\left(\int_{\mathbb{R}^{2}}\log\frac{|x-y|}{\left\langle x\right\rangle}|u_{1}(y)|^{2}dy\right)(u_{1}-u_{2})\right\rVert_{L^{2}}$ $\displaystyle\quad+\left\lVert\left(\int_{\mathbb{R}^{2}}\log\frac{|x-y|}{\left\langle x\right\rangle}(|u_{1}(y)|^{2}-|u_{2}(y)|^{2})dy\right)u_{2}\right\rVert_{L^{2}}$ $\displaystyle{}\leqslant C(\left\lVert u_{1}\right\rVert_{L^{2}}^{2}+\|\sqrt{\log\left\langle x\right\rangle}u_{1}\|_{L^{2}}^{2})(\left\lVert u_{1}-u_{2}\right\rVert_{L^{2}}+\left\lVert u_{1}-u_{2}\right\rVert_{L^{r_{0}}})$ $\displaystyle\quad+C(\left\lVert|u_{1}|^{2}-|u_{2}|^{2}\right\rVert_{L^{1}}+\|(|u_{1}|^{2}-|u_{2}|^{2})\log\left\langle x\right\rangle\|_{L^{1}})(\left\lVert u_{2}\right\rVert_{L^{2}}+\left\lVert u_{2}\right\rVert_{L^{r_{0}}})$ $\displaystyle{}\leqslant C(\left\lVert u_{1}\right\rVert_{L^{2}}^{2}+\|\sqrt{\log\left\langle x\right\rangle}u_{1}\|_{L^{2}}^{2})(\left\lVert u_{1}-u_{2}\right\rVert_{L^{2}}+\left\lVert u_{1}-u_{2}\right\rVert_{L^{r_{0}}})$ $\displaystyle\quad+C(\left\lVert u_{1}\right\rVert_{L^{2}}+\left\lVert u_{2}\right\rVert_{L^{2}}+\|u_{1}\log\left\langle x\right\rangle\|_{L^{2}}+\|u_{2}\log\left\langle x\right\rangle\|_{L^{2}})$ $\displaystyle\quad\quad\times(\left\lVert u_{2}\right\rVert_{L^{2}}+\left\lVert u_{2}\right\rVert_{L^{r_{0}}})\left\lVert u_{1}-u_{2}\right\rVert_{L^{2}}.$ By the Strichartz estimate, letting $T$ smaller if necessary, we hence obtain $d(Q[u_{1}],Q[u_{2}])\leqslant\frac{1}{2}d(u_{1},u_{2})$ for any $u_{1},u_{2}\in\mathcal{H}^{1,2}_{T,M}$ . A similar result as Lemma 3.2 holds since $\left\lvert\frac{d}{dt}\left\lVert\log\left\langle x\right\rangle u(t)\right\rVert_{L^{2}}^{2}\right\rvert=\left\lvert\operatorname{Im}\int\frac{2x\log\left\langle x\right\rangle}{1+x^{2}}\cdot\nabla u(t)\overline{u(t)}dx\right\rvert\leqslant C\left\lVert\nabla u(t)\right\rVert_{L^{2}}.$ Now, we have a priori bound of $\left\lVert\nabla u(t)\right\rVert_{L^{2}}$ as in the case $2\leqslant p<3$ of Theorem 1.4 ,
+which proves the global well-posedness.
+∎ Acknowledgments The author expresses his deep gratitude
+to Professor Patric Gérard for fruitful discussions.
+Deep appreciation goes to Professor Hideo Kubo
+for his valuable advice and constant encouragement.
+This research is supported by Grant-in-Aid for JSPS Fellows. References [1] A. Arnold and F. Nier, The two-dimensional Wigner-Poisson problem for
+an electron gas in the charge neutral case , Math. Methods Appl. Sci. 14 (1991), no. 9, 595–613. [2] R. Carles, Remarks on nonlinear Schrödinger equations with harmonic
+potential , Ann. Henri Poincaré 3 (2002), no. 4, 757–772. [3] by same author, Nonlinear Schrödinger equations with repulsive harmonic
+potential and applications , SIAM J. Math. Anal. 35 (2003), no. 4,
+823–843 (electronic). [4] by same author, Global existence results for nonlinear Schrödinger equations
+with quadratic potentials , Discrete Contin. Dyn. Syst. 13 (2005),
+no. 2, 385–398. [5] R. Carles, N. J. Mauser, and H. P. Stimming, (semi)classical limit of the
+Hartree equation with harmonic potential , SIAM J. Appl. Math 66 (2005), no. 1, 29–56. [6] T. Cazenave, Semilinear Schrödinger equations , Courant Lecture Notes
+in Mathematics, vol. 10, New York University Courant Institute of
+Mathematical Sciences, New York, 2003. [7] M. De Leo and D. Rial, Well posedness and smoothing effect of
+Schrödinger-Poisson equation , J. Math. Phys. 48 (2007),
+no. 9, 093509, 15. [8] D. Fujiwara, Remarks on convergence of the Feynman path integrals ,
+Duke Math. J. 47 (1980), no. 3, 559–600. [9] R. T. Glassey, On the blowing up of solutions to the Cauchy problem for
+nonlinear Schrödinger equations , J. Math. Phys. 18 (1977),
+no. 9, 1794–1797. [10] R. Killip, M. Visan, and X. Zhang, Energy-critical NLS with quadratic
+potentials , Comm. Partial Differential Equations 34 (2009), no. 12,
+1531–1565. [11] S. Masaki, Local existence and WKB approximation of solutions to
+Schrödinger-Poisson system in the two-dimensional whole space ,
+archived as arXiv:0912.1388 , 2009. [12] Y.-G. Oh, Cauchy problem and Ehrenfest’s law of nonlinear
+Schrödinger equations with potentials , J. Differential Equations 81 (1989), no. 2, 255–274. [13] M. Reed and B. Simon, Methods of modern mathematical physics. II.
+Fourier analysis, self-adjointness , Academic Press [Harcourt Brace
+Jovanovich Publishers], New York, 1975. [14] H. Steinrück, The one-dimensional Wigner-Poisson problem and its
+relation to the Schrödinger-Poisson problem , SIAM J. Math. Anal. 22 (1991), no. 4, 957–972. [15] H. P. Stimming, The IVP for the Schrödinger-Poisson-X $\alpha$ equation in one dimension , Math. Models Methods Appl. Sci. 15 (2005), no. 8, 1169–1180. [16] J. Stubbe, Bound state for two-dimensional Schrödinger-Newton
+equations , archived as arXiv:0807.4059 , 2008. [17] K. Yajima, Smoothness and non-smoothness of the fundamental solution of
+time dependent Schrödinger equations , Comm. Math. Phys. 181 (1996), no. 3, 605–629. [18] P. Zhang, Wigner measure and the semiclassical limit of
+Schrödinger-Poisson equations , SIAM J. Math. Anal. 34 (2002),
+no. 3, 700–718 (electronic). [19] X. Zhang, Global wellposedness and scattering for 3D energy critical
+Schrödinger equation with repulsive potential and radial data , Forum
+Math. 19 (2007), no. 4, 633–675. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

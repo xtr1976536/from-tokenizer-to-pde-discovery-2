@@ -1,0 +1,5 @@
+{
+  "time": 1794905692.5299067,
+  "error": "Task failure; stop queue",
+  "traceback": "Traceback (most recent call last):\n  File \"/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/supervise_ast.py\", line 4, in <module>\n    try:runpy.run_path(str(r/'ast_only_queue.py'),run_name='__main__')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 286, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/ast_only_queue.py\", line 29, in <module>\n    execute(json.loads((r/'search_jobs.json').read_text()),'search',6,14)\n  File \"/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/ast_only_queue.py\", line 26, in execute\n    if failed and not active:raise RuntimeError('Task failure; stop queue')\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Task failure; stop queue\n"
+}

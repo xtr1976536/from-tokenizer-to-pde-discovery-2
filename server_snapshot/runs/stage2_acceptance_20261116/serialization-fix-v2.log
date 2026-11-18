@@ -1,0 +1,28 @@
+811-128-mix0.0.json valid 11 parsed 11
+811-192-mix0.0.json valid 10 parsed 10
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/data1/users/liugang/src/eq-bpe/project/stage2_main_v1/preparation_20261116_v2/stage2_main_v1/generation_diagnosis.py", line 35, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/stage2_main_v1/preparation_20261116_v2/stage2_main_v1/generation_diagnosis.py", line 28, in main
+    system=backend.parse(r['text']);r.update(numeric_parse=True,structure_key=system.structure_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/stage2_main_v1/preparation_20261116_v2/stage2_main_v1/implicit_backend.py", line 150, in parse
+    rows.append(tuple(compile_term(term) for term in terms))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/stage2_main_v1/preparation_20261116_v2/stage2_main_v1/implicit_backend.py", line 150, in <genexpr>
+    rows.append(tuple(compile_term(term) for term in terms))
+                      ^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/stage2_main_v1/preparation_20261116_v2/stage2_main_v1/implicit_backend.py", line 68, in compile_term
+    return CompiledTerm(tuple(keys),sp.lambdify(args,expression,modules='numpy',cse=True))
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/utilities/lambdify.py", line 919, in lambdify
+    c = compile(funcstr, filename, 'exec')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded during compilation
+811-320-mix0.0.json valid 13 parsed 12
+622-128-mix0.0.json valid 14 parsed 14
+622-192-mix0.0.json valid 17 parsed 17
+622-320-mix0.0.json valid 13 parsed 13

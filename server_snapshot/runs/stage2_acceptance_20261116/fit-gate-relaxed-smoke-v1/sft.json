@@ -1,0 +1,98 @@
+{
+  "top": [
+    {
+      "text": "\\partial_{t}(u)+v+\\partial_{y}(u)\\cdot 1+u^{2}\\cdot v=0\\\\v+\\Delta(v)+v^{2}+\\Delta(v)+\\Delta(v)=0\\\\1+\\partial_{t}(p)+p^{2}+p\\cdot v+\\partial_{t}(v)=0",
+      "structure_key": "expanded-v1:8147ee5d85dd2ff0e55e9d15c6b74fd3a7e9bf095ac1798416ce69987579ed8b",
+      "anchor_indices": [
+        0,
+        0,
+        1
+      ],
+      "reward": 0.0581787571740819,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.0741921022432303,
+      "r2_per_equation": [
+        0.0020753045765457,
+        0.16331773393767623,
+        0.057183268215468985
+      ],
+      "fit_windows": 2,
+      "term_counts": [
+        4,
+        3,
+        5
+      ],
+      "penalty": 0.7841637507904751
+    },
+    {
+      "text": "\\nabla\\cdot(u\\cdot \\nabla(p))+u+\\partial_{t}(u)=0\\\\\\partial_{t}(v)+\\Delta(v)+\\Delta(v)+\\partial_{t}(u)+p+u+p=0\\\\p^{2}+p\\cdot u^{2}+u^{3}+1+\\partial_{t}(v)+u^{2}=0",
+      "structure_key": "expanded-v1:97a6ad9b7f738f132d939baa78e16859c6d3a55eb8866e5e817faccb47e001ad",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "reward": 0.04241851010139936,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.05503362656323293,
+      "r2_per_equation": [
+        0.0002074238641874837,
+        0.11046604018133105,
+        0.054427415644180244
+      ],
+      "fit_windows": 2,
+      "term_counts": [
+        3,
+        5,
+        6
+      ],
+      "penalty": 0.7707743928643525
+    }
+  ],
+  "sft": {
+    "epochs": 5,
+    "early_stopping": false,
+    "settings": {
+      "epochs": 5,
+      "scheduler": "cosine",
+      "learning_rate": 1e-05,
+      "minimum_learning_rate": 1e-07,
+      "early_stopping": false,
+      "restore_previous_best": false,
+      "weight_decay": 0.0,
+      "batch_size": 128,
+      "token_budget": 8192,
+      "gradient_clip": 1.0
+    },
+    "history": [
+      {
+        "token_cross_entropy": 2.643867330348238,
+        "nats_per_byte": 0.40084440169795865,
+        "tokens": 47
+      },
+      {
+        "token_cross_entropy": 2.5135700956304023,
+        "nats_per_byte": 0.3810896596600932,
+        "tokens": 47
+      },
+      {
+        "token_cross_entropy": 2.4079568741169384,
+        "nats_per_byte": 0.36507733252740676,
+        "tokens": 47
+      },
+      {
+        "token_cross_entropy": 2.337107556931516,
+        "nats_per_byte": 0.3543356618573589,
+        "tokens": 47
+      },
+      {
+        "token_cross_entropy": 2.3008835163522274,
+        "nats_per_byte": 0.3488436298985635,
+        "tokens": 47
+      }
+    ]
+  },
+  "before": "a18bec35e415e8fb3cc1bd97fbb6292b0cfda11912abd22c417a32d80bf9ab9a",
+  "after": "24527e0d48a491f268ea7cc569f81d5135c4a633c10815ba4ea4e43e1b7645eb",
+  "restore_equal": true
+}

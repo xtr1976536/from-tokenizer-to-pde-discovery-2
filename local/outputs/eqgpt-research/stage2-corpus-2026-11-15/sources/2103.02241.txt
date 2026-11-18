@@ -1,0 +1,164 @@
+1Introduction Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme 1 Introduction 2 Main results and their proofs References License: arXiv.org perpetual non-exclusive license arXiv:2103.02241v3 [math.AP] 01 Jun 2021 0 0 0 2010 Mathematics Subject Classification .
+Primary: 35B44;
+Secondary: 35Q92, 92C17. 0 0 0 Key words and phrases :
+chemotaxis; attraction-repulsion; finite-time blow-up. Remarks on finite-time blow-up in a fully parabolic
+attraction-repulsion chemotaxis system via reduction to the Keller–Segel system Yutaro Chiyo, Tomomi Yokota * * * Corresponding author. † † † Partially supported by Grant-in-Aid for
+Scientific Research (C), No. 21K03278. 0 0 0 E-mail: ycnewssz@gmail.com , yokota@rs.tus.ac.jp Department of Mathematics,
+Tokyo University of Science 1-3, Kagurazaka, Shinjuku-ku,
+Tokyo 162-8601, Japan August 24, 2026 Abstract. This paper deals with the fully parabolic attraction-repulsion
+chemotaxis system $\displaystyle\begin{cases}u_{t}=\Delta u-\chi\nabla\cdot(u\nabla v)+\xi\nabla\cdot(u\nabla w),&x\in\Omega,\ t>0,\\
+v_{t}=\Delta v-v+u,&x\in\Omega,\ t>0,\\
+w_{t}=\Delta w-w+u,&x\in\Omega,\ t>0\end{cases}$ under homogeneous Neumann boundary conditions and initial conditions,
+where $\Omega$ is an open ball in $\mathbb{R}^{n}$ ( $n\geq 3$ ), $\chi,\xi>0$ are constants.
+When $w=0$ , finite-time blow-up in the
+corresponding Keller–Segel system has already been obtained.
+However, finite-time blow-up in the above attraction-repulsion
+chemotaxis system has not yet been established
+except for the case $n=3$ .
+This paper provides an answer to this open problem by using
+a transformation which leads to a system presenting structural advantages respect to the original. 1 Introduction In this paper we consider the fully parabolic attraction-repulsion
+chemotaxis system $\displaystyle\begin{cases}u_{t}=\Delta u-\chi\nabla\cdot(u\nabla v)+\xi\nabla\cdot(u\nabla w),&x\in\Omega,\ t>0,\\[2.98753pt]
+v_{t}=\Delta v-v+u,&x\in\Omega,\ t>0,\\[2.98753pt]
+w_{t}=\Delta w-w+u,&x\in\Omega,\ t>0,\\[4.2679pt]
+\nabla u\cdot\nu=\nabla v\cdot\nu=\nabla w\cdot\nu=0,&x\in\partial\Omega,\ t>0,\\[2.98753pt]
+u(x,0)=u_{0}(x),\ v(x,0)=v_{0}(x),\ w(x,0)=w_{0}(x),&x\in\Omega,\end{cases}$ (1.1) where $\Omega\coloneqq B(0,R)\subset\mathbb{R}^{n}$ ( $n\geq 3$ ) is an open ball
+centered at the origin with radius $R>0$ ; $\chi,\xi>0$ are constants; $\nu$ is the outward normal vector to $\partial\Omega$ .
+Moreover, the initial data $u_{0},v_{0},w_{0}$ are supposed to be
+radially symmetric and positive functions
+which satisfy that $(u_{0},v_{0},w_{0})\in C^{0}({\overline{\Omega}})\times W^{1,\infty}(\Omega)\times W^{1,\infty}(\Omega).$ In biology, the functions $u,v$ and $w$ represent the cell density,
+the concentration of attractive and repulsive chemical substances, respectively.
+The system ( 1.1 ) is one of variations of the chemotaxis system
+proposed by Keller and Segel [ 5 ] (see also Hillen–Painter [ 4 ] ).
+The first equation in ( 1.1 ) describes
+the time evolution of the cell density
+in response to its own chemical attractants and repellents.
+Specifically, it implies that the cell movement
+is directed toward a higher concentration of the attractive signal and
+away from the repulsive signal. On the other hand, in mathematics, it is important to consider
+whether a solution of the system ( 1.1 ) can blow up or not.
+In this paper we show finite-time blow-up of a solution to
+the system ( 1.1 ).
+The classical parabolic–elliptic Keller–Segel
+system and the parabolic–elliptic–elliptic attraction-repulsion chemotaxis
+system have been investigated in many literatures
+on chemotaxis systems (see e.g., Arumugam–Tyagi [ 1 ] ).
+Before presenting the main result, we give an overview of
+known results about some problems related to ( 1.1 ). We first focus on the parabolic–parabolic chemotaxis system $\displaystyle\begin{cases}u_{t}=\Delta u-\nabla\cdot(u\nabla v),\\[2.98753pt]
+v_{t}=\Delta v-v+u.\end{cases}$ (1.2) The first result on unboundedness of solutions to ( 1.2 )
+was established by Winkler [ 14 ] .
+After that, Winkler [ 15 ] succeeded in showing that
+a solution of ( 1.2 ) blows up in finite time
+under the condition that for all $m>0$ , $A>0$ ,
+the initial data belongs to $\mathcal{B}(m,A)$ which is the set of
+radially symmetric positive functions $(\varphi,\psi)\in C^{0}({\overline{\Omega}})\times W^{1,\infty}(\Omega)$ satisfying $\int_{\Omega}\varphi=m$ , $\|\psi\|_{W^{1,2}(\Omega)}\leq A$ and $\mathcal{F}(\varphi,\psi)\leq-K(m,A)$ with some $K(m,A)>0$ ,
+where $\mathcal{F}$ is the energy functional.
+Moreover, it was shown in [ 15 ] that $\mathcal{B}(m,A)$ is dense in the space of all
+radially symmetric positive functions in $C^{0}({\overline{\Omega}})\times W^{1,\infty}(\Omega)$ with respect to the topology in $L^{p}(\Omega)\times W^{1,2}(\Omega)$ for all $p\in(1,\frac{2n}{n+2})$ .
+Also, some related works which derive lower bound of blow-up time
+can be found in [ 2 , 8 , 9 ] . Secondly, we turn our eyes into the parabolic–elliptic
+chemotaxis system with signal-dependent sensitivity, $\displaystyle\begin{cases}u_{t}=\Delta u-\nabla\cdot(u\nabla v),\\[2.98753pt]
+0=\Delta v-v+u.\end{cases}$ (1.3) As to this system, Nagai [ 10 ] derived that
+a radially symmetric solution blows up in finite time
+under some condition for the energy function and the moment of $u$ in two or more space dimensions.
+After that, in the two-dimensional setting,
+Nagai [ 11 ] proved that if $\int_{\Omega}u_{0}(x)|x-x_{0}|^{2}\,dx$ for $x_{0}\in\Omega$ is sufficiently small and $\int_{\Omega}u_{0}(x)\,dx>\frac{8\pi}{\chi}$ holds,
+then there exists a non-radial solution which blows up in finite time. We now shift our attention to the parabolic–elliptic–elliptic
+version of the attraction-repulsion chemotaxis system $\displaystyle\begin{cases}u_{t}=\Delta u-\chi\nabla\cdot(u\nabla v)+\xi\nabla\cdot(u\nabla w),\\[2.98753pt]
+0=\Delta v+\alpha u-\beta v,\\[2.98753pt]
+0=\Delta w+\gamma u-\delta w,\end{cases}$ (1.4) where $\chi,\xi,\alpha,\beta,\gamma,\delta>0$ are constants.
+Existence of a solution which blows up in finite time
+was studied by [ 7 , 12 , 16 ] .
+More precisely, in the two-dimensional setting,
+Tao and Wang [ 12 ] derived finite-time blow-up
+under the conditions that $\int_{\Omega}u_{0}(x)|x-x_{0}|^{2}\,dx$ for $x_{0}\in\Omega$ is sufficiently small and that (i) $\chi\alpha-\xi\gamma>0$ , $\delta=\beta$ and $\int_{\Omega}u_{0}(x)\,dx>\frac{8\pi}{\chi\alpha-\xi\gamma}$ . The idea in [ 12 ] is to reduce ( 1.4 ) to the form ( 1.3 )
+by introducing the linear combination $z\coloneqq\chi v-\xi w$ .
+Also, in the two-dimensional setting, Li and Li [ 7 ] extended the above (i) to the following two conditions: (ii) $\chi\alpha-\xi\gamma>0$ , $\delta\geq\beta$ and $\int_{\Omega}u_{0}(x)\,dx>\frac{8\pi}{\chi\alpha-\xi\gamma}$ ; (iii) $\chi\alpha\delta-\xi\gamma\beta>0$ , $\delta<\beta$ and $\int_{\Omega}u_{0}(x)\,dx>\frac{8\pi}{\chi\alpha\delta-\xi\gamma\beta}$ . After that, Yu, Guo and Zheng [ 16 ] improved the above (iii) by replacing $\chi\alpha\delta-\xi\gamma\beta$ with $\chi\alpha-\xi\gamma$ in the first and third conditions in (iii)
+and filled the gap between the above (ii) and (iii);
+note that
+any relationship between $\delta$ and $\beta$ is no longer necessary.
+On the other hand, in the two dimensional setting,
+Viglialoro [ 13 ] provided
+an explicit lower bound of blow-up time for the system ( 1.4 ). For the fully parabolic attraction-repulsion system with positive parameters $\alpha,\beta,\gamma,\delta$ , i.e.,
+the fully parabolic version of ( 1.4 ),
+Lankeit [ 6 ] succeeded in establishing existence of radially symmetric solutions blowing up
+at some finite time under the condition that $\chi\alpha-\xi\gamma>0$ without any restriction on $\beta,\delta$ in the three-dimensional setting. In summary, finite-time blow-up has been shown
+for the parabolic–elliptic–elliptic attraction-repulsion chemotaxis
+system ( 1.4 ).
+However, finite-time blow-up in the fully parabolic system ( 1.1 )
+has not been obtained yet except for the case $n=3$ . The purpose of this paper is to give an answer to the above open problem,
+that is, to establish finite-time blow-up
+in the fully parabolic system ( 1.1 ).
+The strategy for proving finite-time blow-up is
+to apply the method in [ 15 ] to
+the system ( 1.1 ) via the linear combination of the solution components $v,w$ such that $z\coloneqq\chi v-\xi w$ .
+After this transformation, the analysis reduces to citing a well-known result
+from the literature, but a new information about blow-up in ( 1.1 ) is
+obtained. 2 Main results and their proofs In this section we give two main theorems.
+The first one asserts finite-time blow-up in the system ( 1.1 ).
+The statement and proof read as follows. Theorem 2.1 . Let $\Omega\coloneqq B(0,R)\subset\mathbb{R}^{n}$ $(n\geq 3)$ be an open ball centered at the origin with radius $R>0$ .
+Let $m>0$ , $A>0$ and $\chi>\xi$ .
+Then there exist constants $T=T(m,A)>0$ and $K=K(m,A)>0$ such that
+if $(u_{0},v_{0},w_{0})$ belongs to the set $\displaystyle\mathcal{C}(m,A):=\Big\{(u_{0},v_{0},w_{0})\in C^{0}({\overline{\Omega}})\times W^{1,\infty}(\Omega)\times W^{1,\infty}(\Omega)\,\Big|\,$ $\displaystyle\hskip 71.13188ptu_{0}\ {\it and}\ \chi v_{0}-\xi w_{0}\ {\it are\ radially\ symmetric\ and\ positive\ in}\ {\overline{\Omega}}$ $\displaystyle\hskip 71.13188pt{\it with}\ \int_{\Omega}u_{0}=m,\ \|\chi v_{0}-\xi w_{0}\|_{W^{1,2}(\Omega)}\leq A\ {\it and}\ \mathcal{G}(u_{0},v_{0},w_{0})\leq-K\Big\},$ (2.1) where $\mathcal{G}$ is the energy functional defined as $\displaystyle\mathcal{G}(u_{0},v_{0},w_{0})$ $\displaystyle:=\frac{1}{2}\int_{\Omega}|\nabla(\chi v_{0}-\xi w_{0})|^{2}+\frac{1}{2}\int_{\Omega}(\chi v_{0}-\xi w_{0})^{2}$ $\displaystyle\qquad\quad-(\chi-\xi)\int_{\Omega}u_{0}(\chi v_{0}-\xi w_{0})+(\chi-\xi)\int_{\Omega}u_{0}\ln u_{0},$ (2.2) then the corresponding solution $(u,v,w)$ of the system ( 1.1 )
+blows up before or at time $T$ . Remark 2.1 . For $n=3$ , the above result is covered
+by [ 6 , Theorem 1.1 with $\beta=\delta=1$ ] . Before proving the above theorem,
+we give the local solvability to clarify blow-up. Lemma 2.2 ( [ 12 , Lemma 3.1] ) . Let $(u_{0},v_{0},w_{0})\in C^{0}({\overline{\Omega}})\times W^{1,\infty}(\Omega)\times W^{1,\infty}(\Omega)$ .
+Then there exists $T_{\rm max}\in(0,\infty]$ such that
+( 1.1 ) possesses a unique classical solution $(u,v,w)$ such that $\displaystyle u,v,w\in C^{0}(\overline{\Omega}\times[0,T_{\rm max}))\cap C^{2,1}(\overline{\Omega}\times(0,T_{\rm max})),$ and $\displaystyle{\it if}\ T_{\rm max}<\infty,\quad{\it then}\ \lim_{t\nearrow T_{\rm max}}\|u(\cdot,t)\|_{L^{\infty}(\Omega)}=\infty.$ In particular, if $u_{0}\geq 0$ , then $u(\cdot,t)\geq 0$ for all $t\in(0,T_{\rm max})$ .
+Moreover, if $u_{0},v_{0},w_{0}$ are radially symmetric in ${\overline{\Omega}}$ ,
+then so are $u,v,w$ . Proof of Theorem 2.1 . We introduce the linear combination of the variables $(v,w)$ such that $z\coloneqq\chi v-\xi w$ . Then the system ( 1.1 ) is rewritten as $\displaystyle\begin{cases}u_{t}=\Delta u-\nabla\cdot(u\nabla z),&x\in\Omega,\ t\in(0,T_{\rm max}),\\[2.98753pt]
+z_{t}=\Delta z-z+(\chi-\xi)u,&x\in\Omega,\ t\in(0,T_{\rm max}),\\[4.2679pt]
+\nabla u\cdot\nu=\nabla z\cdot\nu=0,&x\in\partial\Omega,\ t\in(0,T_{\rm max}),\\[2.98753pt]
+u(x,0)=u_{0}(x),\ z(x,0)=z_{0}(x),&x\in\Omega,\end{cases}$ (2.3) where $z_{0}\coloneqq\chi v_{0}-\xi w_{0}$ and $\chi>\xi$ .
+We also define the energy functional for ( 2.3 ) as $\displaystyle\mathcal{F}(u,z):=\frac{1}{2}\int_{\Omega}|\nabla z|^{2}+\frac{1}{2}\int_{\Omega}z^{2}-(\chi-\xi)\int_{\Omega}uz+(\chi-\xi)\int_{\Omega}u\ln u.$ Then the functional $\mathcal{F}$ satisfies the energy inequality $\displaystyle\frac{d}{dt}\mathcal{F}(u(\cdot,t),z(\cdot,t))\leq-\mathcal{D}(u(\cdot,t),z(\cdot,t))\quad{\rm for\ all}\ t\in(0,T_{\rm max}),$ (2.4) where $\mathcal{D}$ is the dissipation rate defined as $\displaystyle\mathcal{D}(u,z)\coloneqq\int_{\Omega}z_{t}^{2}+(\chi-\xi)\int_{\Omega}u\cdot\big|\nabla\ln u-\nabla z\big|^{2}$ and $T_{\rm max}\in(0,\infty]$ is the maximal existence time of
+the solution $(u,z)$ to the system ( 2.3 ).
+Indeed, in order to confirm ( 2.4 ), multiplying the second equation in ( 2.3 )
+by $z_{t}$ , we have $\int_{\Omega}{z_{t}}^{2}+\frac{d}{dt}\Big[\frac{1}{2}\int_{\Omega}|\nabla z|^{2}+\frac{1}{2}\int_{\Omega}z^{2}-(\chi-\xi)\int_{\Omega}u(z-\ln u)\Big]=(\chi-\xi)\int_{\Omega}u_{t}(\ln u-z).$ This together with $\int_{\Omega}u_{t}(\ln u-z)=-\int_{\Omega}u\cdot\big|\nabla\ln u-\nabla z\big|^{2}$ implies ( 2.4 ).
+Now we shall verify the conditions for blow-up in [ 15 , Theorem 1.1] which asserts
+that for all $m>0$ and $A>0$ there exist $T=T(m,A)>0$ and $K=K(m,A)>0$ such that if $(u_{0},z_{0})$ belongs to the set $\displaystyle\mathcal{B}(m,A):=\Big\{(u_{0},z_{0})\in C^{0}({\overline{\Omega}})\times W^{1,\infty}(\Omega)\,\Big|\,$ $\displaystyle\hskip 71.13188ptu_{0},z_{0}\ {\rm are\ radially\ symmetric\ and\ positive\ in}\ {\overline{\Omega}}$ $\displaystyle\hskip 71.13188pt{\rm with}\ \int_{\Omega}u_{0}=m,\ \|z_{0}\|_{W^{1,2}(\Omega)}\leq A\ {\rm and}\ \mathcal{F}(u_{0},z_{0})\leq-K\Big\},$ (2.5) then the corresponding solution $(u,z)$ of ( 2.3 ) blows up
+before or at time $T$ , provided that $\chi-\xi=1$ .
+Recalling that $z=\chi v-\xi w$ , $z_{0}=\chi v_{0}-\xi w_{0}$ and $\mathcal{F}(u_{0},z_{0})=\mathcal{G}(u_{0},v_{0},w_{0}),$ we see by the assumption of Theorem 2.1 that all the above conditions for blow-up are satisfied
+at least in the case $\chi-\xi=1$ . In the case $\chi-\xi>0$ ,
+we can develop the proof similarly.
+Indeed, as in [ 15 , Theorem 5.1] ,
+we first find $c_{1}=c_{1}(m,A,n)>0$ such that $\mathcal{F}(\tilde{u},\tilde{z})\geq-c_{1}\left(\mathcal{D}^{\theta}(\tilde{u},\tilde{z})+1\right)$ (2.6) with $\theta:=\frac{n+2}{n+4}$ for all $(\tilde{u},\tilde{z})\in\{(u,z)\in C^{1}({\overline{\Omega}})\times C^{2}({\overline{\Omega}})\mid u,z$ are radially symmetric and positive with $\nabla z\cdot\nu=0$ on $\partial\Omega$ and $\int_{\Omega}u=m$ , $\int_{\Omega}z\leq M$ , $z(x)\leq B|x|^{-\kappa}$ for all $M,B>0$ and $\kappa>n-2\}$ .
+In particular, ( 2.6 )
+can be applied to $(\tilde{u},\tilde{z}):=(u(\cdot,t),z(\cdot,t))$ for each $t\in(0,T_{\rm max})$ with some suitable $M,B>0$ . Setting $y(t):=-\mathcal{F}(u(\cdot,t),z(\cdot,t)),\quad t\in[0,T_{\rm max}),$ we next combine ( 2.6 ) with ( 2.4 ) and consequently we have $y^{\prime}(t)\geq c_{2}y^{\frac{1}{\theta}}(t)\quad\text{for all}\ t\in(0,T_{\rm max})$ with some $c_{2}=c_{2}(m,A,n)>0$ . This yields that $y(t)\geq y(0)\cdot\left(1-\frac{1-\theta}{\theta}c_{2}y^{\frac{1-\theta}{\theta}}(0)\,t\right)^{-\frac{\theta}{1-\theta}}\quad\text{for all}\ t\in(0,T_{\rm max}).$ In particular, this leads us to the conclusion $T_{\rm max}<\infty$ . ∎ We next give and show the second main theorem,
+which guarantees that if the set $\mathcal{C}(m,A)$ defined in ( 2.1 ) equipped
+with a suitable topology, then it is dense in the space of
+radially symmetric positive functions. Theorem 2.3 . Let $\Omega\coloneqq B(0,R)\subset\mathbb{R}^{n}$ $(n\geq 3)$ be an open ball centered at the origin with radius $R>0$ .
+Let $p\in(1,\frac{2n}{n+2})$ .
+Then for all $m>0$ , $A>0$ , the set ${\color[rgb]{1,0,0}\mathcal{C}}(m,A)$ defined in ( 2.1 ) is dense in the space $\displaystyle Y:=\Big\{(u,v,w)\in C^{0}({\overline{\Omega}})\times W^{1,\infty}(\Omega)\times W^{1,\infty}(\Omega)\,\Big|\,$ $\displaystyle\hskip 38.41139ptu\ {\it and}\ \chi v-\xi w\ {\it are\ radially\ symmetric\ and\ positive\ in}\ {\overline{\Omega}}\Big\}$ with respect to the topology in $L^{p}(\Omega)\times W^{1,2}(\Omega)\times W^{1,2}(\Omega)$ ,
+that is, for all $(u_{0},v_{0},w_{0})\in\mathcal{C}(m,A)$ and all $\varepsilon>0$ there exists $(u_{0\varepsilon},v_{0\varepsilon},w_{0\varepsilon})\in Y$ such that $\displaystyle\|u_{0\varepsilon}-u_{0}\|_{L^{p}(\Omega)}+\|v_{0\varepsilon}-v_{0}\|_{W^{1,2}(\Omega)}+\|w_{0\varepsilon}-w_{0}\|_{W^{1,2}(\Omega)}<\varepsilon.$ In particular, the solution $(u_{\varepsilon},v_{\varepsilon},w_{\varepsilon})$ of the system ( 1.1 )
+with initial data $(u_{\varepsilon},v_{\varepsilon},w_{\varepsilon})|_{t=0}=(u_{0\varepsilon},v_{0\varepsilon},w_{0\varepsilon})$ blows up in finite time. Proof of Theorem 2.2 . Let $n\geq 3$ , $p\in(1,\frac{2n}{n+2})$ , $m>0$ and $A>0$ .
+Then we see from [ 15 , Theorem 1.2] that
+the set $\mathcal{B}(m,A)$ defined in ( 2.5 ) is dense
+in the space $\displaystyle X:=\Big\{(u,z)\in C^{0}({\overline{\Omega}})\times W^{1,\infty}(\Omega)\,\Big|\,u,z\ {\rm are\ radially\ symmetric\ and\ positive\ in}\ {\overline{\Omega}}\Big\},$ and that for all $(u_{0},z_{0})\in X$ and all $\varepsilon>0$ there exists $(u_{0\varepsilon},z_{0\varepsilon})\in X$ such that
+the solution $(u_{\varepsilon},z_{\varepsilon})$ of the system ( 2.3 )
+with initial data $(u_{\varepsilon},z_{\varepsilon})|_{t=0}=(u_{0\varepsilon},z_{0\varepsilon})$ blows up in finite time, which concludes the proof. ∎ Open problem . Consider the fully parabolic attraction-repulsion chemotaxis system with
+positive parameters $\alpha,\beta,\gamma,\delta$ : $\displaystyle\begin{cases}u_{t}=\Delta u-\chi\nabla\cdot(u\nabla v)+\xi\nabla\cdot(u\nabla w),&x\in\Omega,\ t>0,\\[2.98753pt]
+v_{t}=\Delta v-\beta v+\alpha u,&x\in\Omega,\ t>0,\\[2.98753pt]
+w_{t}=\Delta w-\delta w+\gamma u,&x\in\Omega,\ t>0.\end{cases}$ This cannot be reduced to the Keller–Segel system as in ( 2.3 )
+via the transformation $z=\chi u-\xi w$ in the case $\beta\neq\delta.$ In this case, Lankeit [ 6 ] established
+finite-time blow-up in the three dimensional-setting.
+However, for $n\geq 4$ , finite-time blow-up is left as an open problem. Note . After the completion of this paper,
+we confirmed that
+Fujie and Suzuki [ 3 , Remark 1.5] derived
+Theorem 2.1 by the same
+transformation $z=\chi u-\xi w$ . References [1] G. Arumugam and J. Tyagi. Keller–Segel chemotaxis models: A review. Acta Appl. Math. , 171 (6):82pp., 2021. [2] M. A. Farina, M. Marras, and G. Viglialoro. On explicit lower bounds and blow-up times in a model of chemotaxis. Discrete Contin. Dyn. Syst. , (Dynamical systems, differential
+equations and applications. 10th AIMS Conference. Suppl.):409–417, 2015. [3] K. Fujie, T. Suzuki. Global existence and boundedness in a fully parabolic 2D
+attraction-repulsion system: chemotaxis–dominant case, Adv. Math. Sci. Appl. , 28 :1–9, 2019. [4] T. Hillen and K. J. Painter. A user’s guide to PDE models for chemotaxis. J. Math. Biol. , 58 (1–2):183–217, 2009. [5] E. F. Keller and L. A. Segel. Initiation of slime mold aggregation viewed as an instability. J. Theoret. Biol. , 26 (3):399–415, 1970. [6] J. Lankeit. Finite-time blow-up in the three-dimensional fully parabolic
+attraction-dominated attraction-repulsion chemotaxis system. arXiv: 2103.17044 [math.AP] , 2021. [7] Y. Li and Y. Li. Blow-up of nonradial solutions to attraction-repulsion chemotaxis
+system in two dimensions. Nonlinear Anal. Real World Appl. , 30 :170–183, 2016. [8] M. Marras, S. Vernier-Piro, and G. Viglialoro. Lower bounds for blow-up in a parabolic–parabolic Keller–Segel
+system. Discrete Contin. Dyn. Syst. , (Dynamical systems, differential
+equations and applications. 10th AIMS Conference. Suppl.):809–816, 2015. [9] M. Marras, S. Vernier-Piro, and G. Viglialoro. Blow-up phenomena in chemotaxis systems with a source term. Math. Methods Appl. Sci. , 39 (11):2787–2798, 2016. [10] T. Nagai. Blow-up of radially symmetric solutions to a chemotaxis system. Adv. Math. Sci. Appl. , 5 (2):581–601, 1995. [11] T. Nagai. Blowup of nonradial solutions to parabolic–elliptic systems modeling
+chemotaxis in two-dimensional domains. J. Inequal. Appl. , 6 (1):37–55, 2001. [12] Y. Tao and Z-A. Wang. Competing effects of attraction vs. repulsion in chemotaxis. Math. Models Methods Appl. Sci. , 23 (1):1–36, 2013. [13] G. Viglialoro. Explicit lower bound of blow-up time for an attraction-repulsion
+chemotaxis system. J. Math. Anal. Appl. , 479 (1):1069–1077, 2019. [14] M. Winkler. Aggregation vs. global diffusive behavior in the higher-dimensional
+Keller–Segel model. J. Differential Equations , 248 (12):2889–2905, 2010. [15] M. Winkler. Finite-time blow-up in the higher-dimensional parabolic–parabolic
+Keller–Segel system. J. Math. Pures Appl. $(9)$ , 100 (5):748–767, 2013. [16] H. Yu, Q. Guo, and S. Zheng. Finite time blow-up of nonradial solutions in an attraction-repulsion
+chemotaxis system. Nonlinear Anal. Real World Appl. , 34 :335–342, 2017. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

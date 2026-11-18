@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage1_tuning_20261116/pretrain_tune.py", line 8, in <module>
+    from math_tokenizer.eqgpt.author import seed_all, training_namespace
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage1_tuning_20261116/src/math_tokenizer/eqgpt/author.py", line 40, in <module>
+    DICTIONARY = json.loads((CODE / "dict_datas_0725.json").read_text())
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/data1/users/liugang/src/eq-bpe/project/runs/stage1_tuning_20261116/eqgpt_original/code/dict_datas_0725.json'

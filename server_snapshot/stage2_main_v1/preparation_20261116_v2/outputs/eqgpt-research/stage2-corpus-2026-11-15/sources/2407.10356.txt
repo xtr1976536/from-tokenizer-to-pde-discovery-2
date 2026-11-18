@@ -1,0 +1,1093 @@
+1Introduction Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme 1 Introduction 2 Equivalence groupoids 3 Equivalence group and equivalence algebra of the original class 4 Equivalence group and equivalence algebra of the gauged class 5 Classification of Lie symmetries 6 Remarkable Fokker–Planck equation and its counterpart 7 Fine Kolmogorov backward equation and its counterpart 8 Generic case 8.1 Point symmetry pseudogroup 8.2 Classification of subalgebras 8.3 Lie reductions of codimension one 8.4 Lie reductions of codimensions two and three 8.5 Generating solutions 9 Conclusion A Algebraic method for computing equivalence groups A.1 The original class A.2 The gauged class B Darboux transformations of linear heat equations with potentials References License: arXiv.org perpetual non-exclusive license arXiv:2407.10356v2 [math-ph] 12 Sep 2025 Surprising symmetry properties and exact solutions of Kolmogorov backward equations with power diffusivity Serhii D. Koval †‡ , Elsa Dos Santos Cardoso-Bihlo † and Roman O. Popovych §‡ † Department of Mathematics and Statistics, Memorial University of Newfoundland, St. John’s (NL) A1C 5S7, Canada § Mathematical Institute, Silesian University in Opava, Na Rybníčku 1, 746 01 Opava, Czech Republic ‡ Institute of Mathematics of NAS of Ukraine, 3 Tereshchenkivska Str., 01024 Kyiv, Ukraine E-mails:
+skoval@mun.ca,
+ecardosobihl@mun.ca,
+rop@imath.kiev.ua Using the original advanced version of the direct method, we efficiently compute
+the equivalence groupoids and equivalence groups
+of two peculiar classes of Kolmogorov backward equations with power diffusivity
+and solve the problems of their complete group classifications.
+The results on the equivalence groups are double-checked with the algebraic method.
+Within these classes, the remarkable Fokker–Planck and the fine Kolmogorov backward equations are distinguished
+by their exceptional symmetry properties.
+We extend the known results on these two equations to their counterparts
+with respect to a nontrivial discrete equivalence transformation.
+Additionally, we carry out Lie reductions of the equations under consideration
+up to the point equivalence, exhaustively study their hidden Lie symmetries
+and generate wider families of their new exact solutions
+via acting by their recursion operators on constructed Lie-invariant solutions.
+This analysis reveals eight powers of the space variable
+with exponents $-1$ , 0, 1, 2, 3, 4, 5 and 6 as values of the diffusion coefficient
+that are prominent due to symmetry properties of the corresponding equations. 1 Introduction The Kolmogorov backward equations originated from the foundational work by Kolmogorov [ 26 ] ,
+where he extended the theory of discrete-time Markov processes to its continuous counterpart.
+Among the latter, Kolmogorov distinguished diffusion processes and, for describing their evolution,
+derived a pair of classes of equations,
+usually referred to as Kolmogorov forward (or Fokker–Planck) and Kolmogorov backward equations.
+Since these equations capture fundamental features of diffusion processes,
+they became the cornerstones of many branches of physics, natural sciences and even economics.
+For instance, in physics these equations are instrumental in modeling lasers
+and other nonlinear systems far from thermal equilibrium [ 49 , Chapter 12] .
+Specifically for the Kolmogorov backward equations,
+they are applied in evolutionary biology, ecology and environmental science
+to model and predict the dynamics of ecosystems and populations. In the present paper, we carry out extended symmetry analysis of
+the ultraparabolic (1+2)-dimensional Kolmogorov backward equations of the form $\displaystyle\mathcal{F}_{\alpha\beta}\colon\ u_{t}+xu_{y}=|x-\alpha|^{\beta}u_{xx},$ (1) which were formally introduced in [ 56 ] . 1 1 1 The formally adjoint to the Kolmogorov forward equation $u_{t}+xu_{y}=(|x-\alpha|^{\beta}u)_{xx}$ is the (true) Kolmogorov backward equation $-u_{t}-xu_{y}=|x-\alpha|^{\beta}u_{xx}$ .
+For convenience, we simultaneously change the signs of $t$ and $y$ ,
+obtaining the equation ( 1 ).
+This change is not essential from the point of view of symmetry analysis of differential equations,
+and we preserve the name “Kolmogorov backward equation” for the equations of the form ( 1 ). Here $\alpha$ and $\beta$ are arbitrary real parameters.
+The more general Kolmogorov backward equations $u_{t}+xu_{y}=a(x)u_{xx}+b(x)u_{x}$ ,
+appeared in [ 50 , Eq. (30)] as models for describing the evolution of cell populations,
+and then only the values $a={\rm const}$ and $b=0$ were selected as the simplest ones [ 50 , Eq. (32)] .
+Equations of the form ( 1 ) with $\alpha=0$ also arise
+in the course of considering path-dependent options in a constant elasticity variance environment [ 2 , Section 5.1] .
+It is also shown in [ 2 ] that
+the Kolmogorov equations modeling the price of the geometric and arithmetic average strike call option
+are reduced by point transformations to the above equations, where in addition $\beta=0$ and $\beta=2$ , respectively. Furthermore, the equations of the form ( 1 ) are important beyond their practical applications.
+They also constitute a family of interesting objects for theoretical studying
+within the field of symmetry analysis of differential equations.
+The study of their symmetries provides powerful insights
+into the dynamics of real-world phenomena these equations model.
+Moreover, it offers the potential for constructing their exact solutions. Switching to the established rigorous framework of group analysis of differential equations,
+the main object of the present paper is the class of differential equations of the form ( 1 )
+denoted by $\mathcal{F}$ with the tuple of arbitrary elements $\theta:=(\alpha,\beta)$ ,
+whose components as constants run through the solution set of the auxiliary system of differential equations $\alpha_{t}=\alpha_{x}=\alpha_{y}=0$ , $\beta_{t}=\beta_{x}=\beta_{y}=0$ .
+See [ 4 , 7 , 42 , 47 , 54 ] and references therein
+for the definition of classes of differential equations,
+a theoretical background on their transformational properties and related computational techniques.
+In contrast to the preliminary consideration of the class $\mathcal{F}$ in [ 56 ] ,
+we compute the (usual) equivalence group $G^{\sim}_{\mathcal{F}}$ and the equivalence groupoid $\mathcal{G}^{\sim}_{\mathcal{F}}$ of this class
+and thus find out unobvious discrete equivalences between equations from $\mathcal{F}$ .
+Moreover, we easily show that any equation from the class $\mathcal{F}$ is $G^{\sim}_{\mathcal{F}}$ -equivalent to the equation $\displaystyle\mathcal{F}^{\prime}_{\beta}\colon\ \ u_{t}+xu_{y}=|x|^{\beta}u_{xx}$ (2) with the same $\beta$ .
+The equations $\mathcal{F}^{\prime}_{\beta}$ constitute the class $\mathcal{F}^{\prime}$ ,
+where $\beta$ remains the sole arbitrary element.
+The above similarity between equations from the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ means that these classes are weakly similar [ 42 , Definition 3] .
+This is why their group classifications modulo their equivalence groupoids are in fact the same,
+but this is not the case for the analogous classifications modulo their equivalence groups.
+To relate the latter classifications, we perform more thorough analysis.
+As a result, we solve the complete group classification problems for the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ modulo both of the above kinds of equivalences.
+Developing results of [ 27 , 29 , 44 ] ,
+we describe other symmetry properties of equations from $\mathcal{F}$ and construct wide families of their exact solutions in closed form.
+Even though the arbitrary elements of the classes $\mathcal{F}^{\prime}$ and $\mathcal{F}$ are just constant parameters,
+symmetry analysis of these classes and their single elements is highly nontrivial. More specifically, we begin solving the equivalence problem for the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ by describing properties of their equivalence groupoids $\mathcal{G}^{\sim}_{\mathcal{F}}$ and $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ in Section 2 using the advanced version of the direct method.
+A disadvantage of the direct method is
+that its straightforward application to the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ leads to tedious and cumbersome computations.
+An additional complication is provided by the fact that these classes are not normalized in the usual sense.
+Nevertheless, the problem complexity can be reduced in the following way.
+We first embed the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ in the class $\bar{\mathcal{F}}$ of the linear (1+2)-dimensional second-order ultraparabolic equations of the form $\displaystyle\begin{split}&u_{t}+B(t,x,y)u_{y}=A^{2}(t,x,y)u_{xx}+A^{1}(t,x,y)u_{x}+A^{0}(t,x,y)u+C(t,x,y)\\
+&\text{with}\quad A^{2}\neq 0,\quad B_{x}\neq 0,\end{split}$ (3) which is normalized and whose equivalence pseudogroup $G^{\sim}_{\bar{\mathcal{F}}}$ and thus equivalence groupoid $\mathcal{G}^{\sim}_{\bar{\mathcal{F}}}$ are known [ 27 , 30 ] .
+The tuple $\bar{\theta}:=(B,A^{2},A^{1},A^{0},C)$ of arbitrary elements of the class $\bar{\mathcal{F}}$ runs through the solution set of the system of the inequalities $A^{2}\neq 0$ and $B_{x}\neq 0$ with no restrictions on $A^{0}$ , $A^{1}$ and $C$ .
+The class embeddings lead to the corresponding groupoid embeddings ${\mathcal{G}^{\sim}_{\mathcal{F}}\hookrightarrow\mathcal{G}^{\sim}_{\bar{\mathcal{F}}}}$ and ${\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}\hookrightarrow\mathcal{G}^{\sim}_{\bar{\mathcal{F}}}}$ .
+We use the description of $\mathcal{G}^{\sim}_{\bar{\mathcal{F}}}$ to derive basic properties
+of the equivalence groupoids $\mathcal{G}^{\sim}_{\mathcal{F}}$ and $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ in Section 2 ,
+which allows us to simplify the computation of the equivalence groups $G^{\sim}_{\mathcal{F}}$ and $G^{\sim}_{\mathcal{F}^{\prime}}$ and the equivalence algebras $\mathfrak{g}^{\sim}_{\mathcal{F}}$ and $\mathfrak{g}^{\sim}_{\mathcal{F}^{\prime}}$ of the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ in Sections 3 and 4 , respectively.
+We show that the equivalence group $G^{\sim}_{\mathcal{F}^{\prime}}$ contains the distinguished discrete equivalence transformation $\displaystyle\mathscr{J}^{\prime}\colon\hskip 10.00002pt\tilde{t}=y\mathop{\rm sgn}\nolimits x,\hskip 10.00002pt\tilde{x}=\frac{1}{x},\hskip 10.00002pt\tilde{y}=t\mathop{\rm sgn}\nolimits x,\hskip 10.00002pt\tilde{u}=\frac{u}{x},\hskip 10.00002pt\tilde{\beta}=5-\beta,$ (4) which turns out to be the only point equivalence transformation that is essential for carrying out
+the group classification of the class $\mathcal{F}^{\prime}$ .
+Due to this transformation, we can impose the gauge $\beta\leqslant 5/2$ . Remark 1 . Instead of the class $\mathcal{F}^{\prime}$ , we can consider the subset of its equations,
+where the constant arbitrary element $\beta$ takes only rational values with odd denominators,
+and replace such equations by their counterparts without the absolute value sign, $\displaystyle u_{t}+xu_{y}=x^{\beta}u_{xx}.$ (5) Then the equivalence transformation ( 4 )
+is replaced by the simpler transformation $\displaystyle\tilde{t}=y,\hskip 10.00002pt\tilde{x}=\frac{1}{x},\hskip 10.00002pt\tilde{y}=t,\hskip 10.00002pt\tilde{u}=\frac{u}{x},\hskip 10.00002pt\tilde{\beta}=5-\beta$ (6) between equations of the form ( 5 ).
+For the specific values $\beta=-1,1,3,5$ , when they are considered separately from the generic values of $\beta$ ,
+we present exact solutions of the corresponding equation ( 5 )
+but not ( 2 ). In Section A , we also compute the equivalence groups $G^{\sim}_{\mathcal{F}}$ and $G^{\sim}_{\mathcal{F}^{\prime}}$ using the automorphism-based version of the algebraic method,
+which was originally proposed by Hydon [ 20 , 21 , 22 , 23 ] for finding the point symmetry groups of single systems of differential equations
+and extended to finding the equivalence groups of classes of such systems in [ 5 ] .
+This gives the first example of such computation in the literature.
+Since the dimensions of the corresponding equivalence algebras $\mathfrak{g}^{\sim}_{\mathcal{F}}$ and $\mathfrak{g}^{\sim}_{\mathcal{F}^{\prime}}$ are relatively high, the straightforward construction of their automorphism groups is complicated,
+perhaps even impossible.
+To overcome this challenge, we first obtain a sufficient number of megaideals
+of the algebras $\mathfrak{g}^{\sim}_{\mathcal{F}}$ and $\mathfrak{g}^{\sim}_{\mathcal{F}^{\prime}}$ ,
+which allowed us, after fixing bases consistent with the constructed megaideal hierarchies,
+to preliminarily constraint automorphism matrices for proceeding with their computation in an efficient way.
+In total, we observe that the construction of the groups $G^{\sim}_{\mathcal{F}}$ and $G^{\sim}_{\mathcal{F}^{\prime}}$ by the algebraic method is more involved than that by the advanced version of the direct method.
+Nevertheless, this serves as an excellent cross-verification of the correctness of the obtained results.
+In addition, to the best of our knowledge, there has been no comparison in the literature of the capabilities
+of these two methods when applied to a particular class of differential equations. The results of the group classifications of the classes $\mathcal{F}^{\prime}$ and $\mathcal{F}$ are presented in Section 5 .
+We prove that there are only two $G^{\sim}_{\mathcal{F}^{\prime}}$ -inequivalent cases of essential Lie symmetry extensions
+in the class $\mathcal{F}^{\prime}$ , with $\beta=0$ and $\beta=2$ .
+The corresponding essential Lie invariance algebras $\mathfrak{g}^{\rm ess}_{0}$ and $\mathfrak{g}^{\rm ess}_{2}$ are eight- and five-dimensional, respectively.
+The essential Lie invariance algebra $\mathfrak{g}^{\rm ess}_{\beta}$ of the equation $\mathcal{F}^{\prime}_{\beta}$ in the generic case,
+where $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ , is four-dimensional and is isomorphic to the algebra $A_{3.4}^{a}\oplus A_{1}$ with $a=(\beta-2)/(\beta-3)$ in the notation of [ 46 ] .
+Among these Lie algebras with $\beta\in(-\infty,5/2]\setminus\{0,2\}$ , there are no pairwise isomorphic ones.
+Hence the corresponding equations are definitely $G^{\sim}_{\mathcal{F}^{\prime}}$ -inequivalent.
+The above implies that $\mathcal{G}^{\sim}_{\mathcal{F}}$ -equivalent cases of essential Lie symmetry extensions
+within the class $\mathcal{F}$ are exhausted by the equations $\mathcal{F}_{00}$ and $\mathcal{F}_{02}$ .
+Due to the inconsistency of the groups $G^{\sim}_{\mathcal{F}^{\prime}}$ and $G^{\sim}_{\mathcal{F}}$ ,
+the classification list for the class $\mathcal{F}$ up to the $G^{\sim}_{\mathcal{F}}$ -equivalence
+should also include the cases $\beta=5$ and $\beta=3$ with $\alpha=0$ ,
+which are $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalent to the cases $\beta=0$ and $\beta=2$ , respectively. The equations $\mathcal{F}^{\prime}_{0}$ and $\mathcal{F}^{\prime}_{2}$ are also singled out within the class $\bar{\mathcal{F}}$ by their exceptional Lie symmetry properties.
+The dimension of $\mathfrak{g}^{\rm ess}_{0}$ is maximum for the essential Lie invariance algebras of equations
+from this class.
+Moreover, the equation $\mathcal{F}^{\prime}_{0}$ is the unique equation
+with this property in $\bar{\mathcal{F}}$ modulo the point equivalence.
+The algebra $\mathfrak{g}^{\rm ess}_{2}$ is five-dimensional and nonsolvable
+and up to the point equivalence, the equation $\mathcal{F}^{\prime}_{2}$ is the unique equation in the class $\bar{\mathcal{F}}$ that satisfies this property.
+This is why the equations $\mathcal{F}^{\prime}_{0}$ and $\mathcal{F}^{\prime}_{2}$ were referred to
+as the remarkable Fokker–Planck equation and the fine Kolmogorov backward equation ,
+and their extended symmetry analysis was carried out in [ 27 ] and [ 29 ] , respectively. In Sections 6 and 7 ,
+we outline and complete the results of [ 27 , 29 , 44 ] on the equations $\mathcal{F}^{\prime}_{0}$ and $\mathcal{F}^{\prime}_{2}$ ,
+including the solution generation for these equations
+using their recursion operators related to their Lie symmetries.
+We also generate new solution families of the equation $\mathcal{F}^{\prime}_{2}$ using Darboux transformations of its codimension-one submodels,
+which are derived in Section B .
+All the known results on the equations $\mathcal{F}^{\prime}_{0}$ and $\mathcal{F}^{\prime}_{2}$ are extended to their $G^{\sim}_{\mathcal{F}^{\prime}}$ -counterparts $\mathcal{F}^{\prime}_{5}$ and $\mathcal{F}^{\prime}_{3}$ , respectively.
+In particular, this provides
+the point symmetry pseudogroups and wide families of exact solutions of $\mathcal{F}^{\prime}_{5}$ and $\mathcal{F}^{\prime}_{3}$ .
+To be precise, we actually consider the equations of the form ( 5 )
+with $\beta=5$ and $\beta=3$ instead of $\mathcal{F}^{\prime}_{5}$ and $\mathcal{F}^{\prime}_{3}$ and use the transformation ( 6 ) but not ( 4 ). Section 8 is devoted to the extended symmetry analysis
+of the equations $\mathcal{F}^{\prime}_{\beta}$ with $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ ,
+which constitute the case of zero essential Lie symmetry extension within the class $\mathcal{F}^{\prime}$ .
+An original combination of the direct and algebraic methods is applied in Section 8.1 for constructing the point symmetry pseudogroups of these equations.
+Jointly with the obtained descriptions of the analogous pseudogroups for the other values of $\beta$ , $\beta\in\{0,2,3,5\}$ ,
+it provides the exhaustive description of the fundamental groupoid $\mathcal{G}^{\rm f}_{\mathcal{F}^{\prime}}$ of the class $\mathcal{F}^{\prime}$ .
+Hence, combining it with results of Section 2 , we obtain the complete descriptions
+of the equivalence groupoids $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ and $\mathcal{G}^{\sim}_{\mathcal{F}}$ ,
+which are presented in Section 9 .
+After listing inequivalent subalgebras of the essential Lie invariance algebra $\mathfrak{g}^{\rm ess}_{\beta}$ of the equation $\mathcal{F}^{\prime}_{\beta}$ for each value of $\beta$ from $\mathbb{R}\setminus\{0,2,3,5\}$ in Section 8.2 ,
+we classify its Lie reductions of codimension one and two
+in Sections 8.3 and 8.4 up to the $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence.
+In the latter section, we also show that Lie reductions of codimension three
+do not lead to new solutions of $\mathcal{F}^{\prime}_{\beta}$ .
+Involving the $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence allows us to reduce the number of cases to be considered.
+We have found hidden symmetries and constructed wide families of exact solutions of the equations $\mathcal{F}^{\prime}_{\beta}$ with $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ that are associated with the codimension-one Lie reductions
+to the linear $(1+1)$ -dimensional heat equations with the zero or the inverse square potentials.
+The most prominent among them are the solutions associated with the value $\beta=1$ and their $G^{\sim}_{\mathcal{F}^{\prime}}$ -counterparts for $\beta=4$ .
+Another prominent case is given by some codimension-two Lie reductions for $\beta=-1$ and their $G^{\sim}_{\mathcal{F}^{\prime}}$ -counterparts for $\beta=6$ ,
+which results in Whittaker equations.
+What is particularly surprising is that these are both the prominent cases,
+where constructed families of solutions can be significantly extended
+using the action by recursion operators of $\mathcal{F}^{\prime}_{\beta}$ associated with Lie symmetries of $\mathcal{F}^{\prime}_{\beta}$ ,
+which is the subject of Section 8.5 .
+In total, Section 8 on its own gives
+an exhaustive symmetry analysis of the equations $\mathcal{F}^{\prime}_{\beta}$ for the generic case of $\beta$ . Summarizing the results of the present paper in Section 9 ,
+we highlight discovered remarkable and surprising properties
+of the classes $\mathcal{F}^{\prime}$ and $\mathcal{F}$ and their single elements,
+emphasize novel features of our study and
+outline research perspectives regarding these classes as well as the superclass $\bar{\mathcal{F}}$ . For readers’ convenience,
+the constructed exact solutions of the equations of the form ( 2 ) are marked by the bullet symbol $\bullet$ .
+Given a class of differential equations, $\pi$ denotes the natural projection of the joint space of the variables,
+and the arbitrary elements onto the space of the variables only. 2 Equivalence groupoids We first compute the equivalence groupoids and the equivalence groups
+of the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ using the advanced version of the direct method.
+See, e.g., [ 25 , 54 ] and references therein for required notions and techniques.
+Recall that the direct method is based on the definition of admissible transformations
+of a class of differential equations.
+Let $\mathcal{L}|_{\mathcal{S}}=\{\mathcal{L}_{\theta}\mid\theta\in\mathcal{S}\}$ be a class
+of systems of differential equations $\mathcal{L}_{\theta}$ for unknown functions $u=(u^{1},\ldots,u^{m})$ of independent variables $x=(x_{1},\ldots,x_{n})$ with the arbitrary-element tuple $\theta=(\theta^{1},\dots,\theta^{k})$ running through the solution set $\mathcal{S}$ of an auxiliary system of differential equations and inequalities.
+Suppose that a point transformation $\Phi$ in the space with the coordinates $(x,u)$ , $\Phi$ : $\tilde{x}=X(x,u)$ , $\tilde{u}=U(x,u)$ with nonzero Jacobian $|\partial(X,U)/\partial(x,u)|$ ,
+relates systems $\mathcal{L}_{\theta}$ and $\mathcal{L}_{\tilde{\theta}}$ from the class $\mathcal{L}|_{\mathcal{S}}$ , $\Phi_{*}\mathcal{L}_{\theta}=\mathcal{L}_{\tilde{\theta}}$ .
+Expressing the required derivatives of $\tilde{u}$ with respect to $\tilde{x}$ in terms of
+the original derivatives of $u$ with respect to $x$ using the chain rule,
+we substitute the derived expressions into the system $\mathcal{L}_{\tilde{\theta}}$ ,
+obtaining the system $(\Phi^{-1})_{*}\mathcal{L}_{\tilde{\theta}}$ ,
+which should be identically satisfied on the solutions of $\mathcal{L}_{\theta}$ .
+The splitting of the obtained condition with respect to the parametric derivatives of the system $\mathcal{L}_{\theta}$ usually results in an overdetermined coupled system of nonlinear differential equations,
+which is highly difficult to solve if possible at all.
+However, in the particular case of the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ ,
+we are able to perform the computations both efficiently and elegantly
+using the embedding of these classes in the class $\bar{\mathcal{F}}$ ,
+which is constituted by the equations of the form ( 3 ),
+and the explicit description of its known equivalence groupoid.
+Embedding a class $\mathcal{L}|_{\mathcal{S}}$ in a superclass with known or easier computed equivalence groupoid
+for deriving principal constraints for admissible transformations within $\mathcal{L}|_{\mathcal{S}}$ ,
+which simplifies the further required computations, is the essence of the advanced version of the direct method.
+A good choice for such a superclass is a normalized class of differential equations. Theorem 2 . The class $\bar{\mathcal{F}}$ is normalized.
+Its (usual) equivalence pseudogroup $G^{\sim}_{\bar{\mathcal{F}}}$ consists of the point transformations with the components $\displaystyle\tilde{t}=T(t,y),\hskip 10.00002pt\tilde{x}=X(t,x,y),\hskip 10.00002pt\tilde{y}=Y(t,y),\hskip 10.00002pt\tilde{u}=U^{1}(t,x,y)u+U^{0}(t,x,y),$ (7a) $\displaystyle\tilde{A}^{0}=\frac{-U^{1}}{T_{t}+BT_{y}}E\frac{1}{U^{1}},\hskip 10.00002pt\tilde{A}^{1}=A^{1}\frac{X_{x}}{T_{t}+BT_{y}}-\frac{X_{t}+BX_{y}}{T_{t}+BT_{y}}+A^{2}\frac{X_{xx}-2X_{x}U^{1}_{x}/U^{1}}{T_{t}+BT_{y}},$ (7b) $\displaystyle\tilde{A}^{2}=A^{2}\frac{X_{x}^{2}}{T_{t}+BT_{y}},\hskip 10.00002pt\tilde{B}=\frac{Y_{t}+BY_{y}}{T_{t}+BT_{y}},\hskip 10.00002pt\tilde{C}=\frac{U^{1}}{T_{t}+BT_{y}}\left(C-E\frac{U^{0}}{U^{1}}\right),$ (7c) where $T$ , $X$ , $Y$ , $U^{1}$ and $U^{0}$ are arbitrary smooth functions of their arguments with $(T_{t}Y_{y}-T_{y}Y_{t})X_{x}U^{1}\neq 0$ ,
+and $E:=\partial_{t}+B\partial_{y}-A^{2}\partial_{xx}-A^{1}\partial_{x}-A^{0}$ . There are the following embeddings for $\mathcal{F}^{\prime}$ , $\mathcal{F}$ and $\bar{\mathcal{F}}$ considered as sets of differential equations: $\mathcal{F}^{\prime}\hookrightarrow\mathcal{F}\hookrightarrow\bar{\mathcal{F}}.$ These embeddings arise from the embeddings $\mathcal{S}_{\mathcal{F}^{\prime}}\hookrightarrow\mathcal{S}_{\mathcal{F}}\hookrightarrow\mathcal{S}_{\bar{\mathcal{F}}}$ of the corresponding sets $\mathcal{S}_{\mathcal{F}^{\prime}}$ , $\mathcal{S}_{\mathcal{F}^{\prime}}$ and $\mathcal{S}_{\bar{\mathcal{F}}}$ of arbitrary elements, which are respectively defined via the mappings $\mathcal{S}_{\mathcal{F}^{\prime}}\ni(\beta)\mapsto(0,\beta)\in\mathcal{S}_{\mathcal{F}},\hskip 10.00002pt\mathcal{S}_{\mathcal{F}}\ni(\alpha,\beta)\mapsto(x,0,0,0,|x-\alpha|^{\beta})\in\mathcal{S}_{\bar{\mathcal{F}}},$ which can be treated as class reparameterizations.
+Thus, the embedding $\mathcal{F}^{\prime}\hookrightarrow\bar{\mathcal{F}}$ corresponds to their composition $\mathcal{S}_{\mathcal{F}^{\prime}}\hookrightarrow\mathcal{S}_{\bar{\mathcal{F}}}$ .
+The above maps also induce embeddings on the level of equivalence groupoids, $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}\hookrightarrow\mathcal{G}^{\sim}_{\mathcal{F}}\hookrightarrow\mathcal{G}^{\sim}_{\bar{\mathcal{F}}}$ . Under the successive embeddings, the class $\mathcal{F}^{\prime}$ can be considered as a subclass of $\mathcal{F}$ and a subclass $\bar{\mathcal{F}}$ ,
+which are singled out by the additional auxiliary constraints $\alpha=0$ and $A^{1}=A^{0}=C=0$ , $B=x$ , $A^{2}_{t}=A^{2}_{y}=0$ , $(x\ln|x|)A^{2}_{x}=A^{2}\ln A^{2}$ , respectively.
+At the same time, even after the embedding $\mathcal{F}\hookrightarrow\bar{\mathcal{F}}$ ,
+the class $\mathcal{F}$ cannot be interpreted as a subclass of $\bar{\mathcal{F}}$ according to the formal definition of subclass given in [ 47 ] since the set of $A^{2}$ of the form $A^{2}=|x-\alpha|^{\beta}$ , where $\alpha$ and $\beta$ are arbitrary constants,
+is the union of the solution sets of the systems $A^{2}=1$ and $A^{2}_{t}=A^{2}_{y}=0$ , $\Phi_{xx}=-\mathop{\rm sgn}\nolimits(x-\alpha)\Phi_{x}\exp\left(\Phi\Phi_{xx}/\Phi_{x}^{2}\right)$ with $\Phi=\ln A^{2}$ but not the solution set of a regular system of differential equations and differential inequalities.
+We can overcome this obstacle via extending the notion of class of differential equations
+by allowing arbitrary class elements to run the union of solution sets of auxiliary systems
+of differential equations and differential inequalities. The aforementioned arguments allow us to use Theorem 2 in the course of computing the equivalence groupoids $\mathcal{G}^{\sim}_{\mathcal{F}}$ and $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ and the equivalence groups $G^{\sim}_{\mathcal{F}}$ and $G^{\sim}_{\mathcal{F}^{\prime}}$ of the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ .
+For this computation, the following elementary lemma is useful. Lemma 3 . If the equality $C_{1}|x-\mu_{1}|^{\nu_{1}}|x-\mu_{2}|^{\nu_{2}}=C_{2}|x-\mu_{3}|^{\nu_{3}}$ holds,
+where $C_{1}$ , $C_{2}$ , $\nu_{1}$ , $\nu_{2}$ , $\nu_{3}$ , $\mu_{1}$ , $\mu_{2}$ , $\mu_{3}$ are constants with $C_{1}C_{2}\neq 0$ ,
+then $\mu_{1}=\mu_{2}=\mu_{3}$ and $\nu_{3}=\nu_{1}+\nu_{2}$ , $C_{1}=C_{2}$ . Theorem 4 . (i) The point transformations $\mathscr{S}(c_{1})$ : $(\tilde{t},\tilde{x},\tilde{y},\tilde{u},\tilde{\beta},\tilde{\alpha})=(t,x+c_{1},y+c_{1}t,u,\beta,\alpha+c_{1})$ where $c_{1}$ is arbitrary constant, constitute a one-parameter group of equivalence transformations
+of the class $\mathcal{F}$ . (ii) The wide family of admissible transformations $\mathcal{S}_{\alpha\beta}:=\big((\alpha,\beta),\pi_{*}\mathscr{S}(-\alpha),(0,\beta)\big)$ of the class $\mathcal{F}$ from the action groupoid of its equivalence group
+maps this class onto the class $\mathcal{F}^{\prime}$ interpreted as a subclass of $\mathcal{F}$ . (iii) The point transformation $\mathscr{J}^{\prime}$ given in ( 4 ) is a (discrete) equivalence transformation
+of the class $\mathcal{F}^{\prime}$ . (iv) The class $\mathcal{F}^{\prime}$ is semi-normalized
+with respect to the discrete equivalence subgroup generated by $\mathscr{J}^{\prime}$ .
+In other words, the equivalence groupoid $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ of $\mathcal{F}^{\prime}$ is the Frobenius product of the action groupoid of this subgroup
+and the fundamental equivalence groupoid $\mathcal{G}^{\rm f}_{\mathcal{F}^{\prime}}$ of $\mathcal{F}^{\prime}$ . Proof. Since items (i)–(iii) are straightforwardly verified,
+except the discreteness of $\mathscr{J}^{\prime}$ , which follows from item (iv),
+it suffices to prove only item (iv). The determining equations for admissible transformations of the class $\mathcal{F}^{\prime}$ can be derived by restricting their counterparts for the class $\bar{\mathcal{F}}$ in view of the embedding $\mathcal{F}^{\prime}$ in $\bar{\mathcal{F}}$ .
+Setting $(A^{0},A^{1},A^{2},B,C)=(0,0,|x|^{\beta},x,0)$ and $(\tilde{A}^{0},\tilde{A}^{1},\tilde{A}^{2},\tilde{B},\tilde{C})=(0,0,|\tilde{x}|^{\tilde{\beta}},\tilde{x},0)$ in ( 7b ) and ( 7c ),
+we obtain $\displaystyle\begin{split}&X=\frac{Y_{t}+xY_{y}}{T_{t}+xT_{y}},\quad|X|^{\tilde{\beta}}=|x|^{\beta}\frac{(T_{t}Y_{y}-T_{y}Y_{t})^{2}}{(T_{t}+xT_{y})^{5}},\quad X_{t}+xX_{y}=|x|^{\beta}\left(X_{xx}-2X_{x}\frac{U^{1}_{x}}{U^{1}}\right),\\
+&\left(\frac{1}{U^{1}}\right)_{t}+x\left(\frac{1}{U^{1}}\right)_{y}=|x|^{\beta}\left(\frac{1}{U^{1}}\right)_{xx},\quad\left(\frac{U^{0}}{U^{1}}\right)_{t}+x\left(\frac{U^{0}}{U^{1}}\right)_{y}=|x|^{\beta}\left(\frac{U^{0}}{U^{1}}\right)_{xx}.\end{split}$ (8) In view of Lemma 3 , the consequence $\displaystyle|Y_{t}+xY_{y}|^{\tilde{\beta}}=(T_{t}Y_{y}-T_{y}Y_{t})^{2}|x|^{\beta}|T_{t}+xT_{y}|^{\tilde{\beta}-5}\mathop{\rm sgn}\nolimits(T_{t}+xT_{y})$ (9) of the first two equations of ( 8 ) implies that $\tilde{\beta}=\beta$ if $T_{y}=0$ or $\tilde{\beta}=5-\beta$ if $T_{y}\neq 0$ and $Y_{y}=0$ or $\beta=5$ and $\tilde{\beta}\in\{0,5\}$ if $T_{y}Y_{y}\neq 0$ .
+Up to composing any admissible transformation of $\mathcal{F}^{\prime}$ with elements of the discrete equivalence subgroup generated by $\mathscr{J}^{\prime}$ ,
+we can assume that $\tilde{\beta}=\beta$ ,
+which means that this admissible transformation belongs to $\mathcal{G}^{\rm f}_{\mathcal{F}^{\prime}}$ .
+∎ Corollary 5 . (i) Different equations $\mathcal{F}^{\prime}_{\beta}$ and $\mathcal{F}^{\prime}_{\tilde{\beta}}$ are similar with respect to point transformations if and only if $\beta+\tilde{\beta}=5$ . (ii) Equations $\mathcal{F}_{\alpha\beta}$ and $\mathcal{F}_{\tilde{\alpha}\tilde{\beta}}$ are similar with respect to point transformations if and only if either $\tilde{\beta}=\beta$ or $\beta+\tilde{\beta}=5$ . (iii) The equivalence groupoid $\mathcal{G}^{\sim}_{\mathcal{F}}$ of $\mathcal{F}$ is generated by admissible transformations $\mathcal{S}_{\alpha\beta}$ and elements of $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ .
+More specifically, for each admissible transformation $\big((\alpha,\beta),\Phi,(\tilde{\alpha},\tilde{\beta})\big)$ of $\mathcal{F}$ ,
+we have $\Phi=\pi_{*}\mathscr{S}(\tilde{\alpha})\circ\breve{\Phi}\circ\pi_{*}\mathscr{S}(-\alpha)$ for some point transformation $\breve{\Phi}$ with $(\beta,\breve{\Phi},\tilde{\beta})\in\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ . 3 Equivalence group and equivalence algebra of the original class We compute the equivalence group of the class $\mathcal{F}$ of Kolmogorov backward equations with power diffusivity
+using two fundamentally different approaches,
+the direct method in this section
+and the algebraic method in Section A.1 .
+While each of them has its advantages and drawbacks as well as its scope of applicability,
+they complement each other
+and provide a robust cross-verification of the correctness of computations when used in conjunction.
+Moreover, in the literature, no one has compared the capabilities of these two methods
+when applied to constructing the equivalence group of a specific class;
+see [ 6 ] for a similar comparison in the case
+of computing the point symmetry group of a single system of differential equation.
+The class $\mathcal{F}$ can serve as an excellent instructive example for this particular purpose. Theorem 6 . The equivalence group $G^{\sim}_{\mathcal{F}}$ consists of the point transformations $\displaystyle\begin{split}&\tilde{t}=t+c_{0},\quad\tilde{x}=\epsilon x+c_{1},\quad\tilde{y}=\epsilon y+c_{1}t+c_{2},\quad\tilde{u}=c_{3}u+c_{4}(tx-y)+c_{5}x+c_{6},\\
+&\tilde{\alpha}=\epsilon\alpha+c_{1},\quad\tilde{\beta}=\beta,\end{split}$ (10) where $\epsilon=\pm 1$ , $c_{0}$ , …, $c_{6}$ are arbitrary constants with $c_{3}\neq 0$ . Proof. We apply the advanced version of the direct method.
+In view of the embedding $\mathcal{F}\hookrightarrow\bar{\mathcal{F}}$ ,
+the transformational parts of admissible transformations of the class $\mathcal{F}$ takes the form ( 7a ),
+where the involved parameter functions satisfy the equations ( 7b ) and ( 7c )
+specified for this class as a subclass of $\bar{\mathcal{F}}$ , $\displaystyle\begin{split}&X=\frac{Y_{t}+xY_{y}}{T_{t}+xT_{y}},\quad|X-\tilde{\alpha}|^{\tilde{\beta}}=|x-\alpha|^{\beta}\frac{(T_{t}Y_{y}-T_{y}Y_{t})^{2}}{(T_{t}+xT_{y})^{5}},\\[2.15277pt]
+&X_{t}+xX_{y}=|x-\alpha|^{\beta}\left(X_{xx}-2X_{x}\frac{U^{1}_{x}}{U^{1}}\right),\quad\left(\frac{1}{U^{1}}\right)_{t}+x\left(\frac{1}{U^{1}}\right)_{y}=|x-\alpha|^{\beta}\left(\frac{1}{U^{1}}\right)_{xx},\\[2.15277pt]
+&\left(\frac{U^{0}}{U^{1}}\right)_{t}+x\left(\frac{U^{0}}{U^{1}}\right)_{y}=|x-\alpha|^{\beta}\left(\frac{U^{0}}{U^{1}}\right)_{xx}.\end{split}$ (11) The first two equations of ( 11 ) imply $\displaystyle\big|Y_{t}-\tilde{\alpha}T_{t}+x(Y_{y}-\tilde{\alpha}T_{y})\big|^{\tilde{\beta}}=(Y_{y}T_{t}-Y_{t}T_{y})^{2}|x-\alpha|^{\beta}|T_{t}+xT_{y}|^{\tilde{\beta}-5}\mathop{\rm sgn}\nolimits(T_{t}+xT_{y}).$ (12) When looking for the equivalence transformation of $\mathcal{F}$ ,
+if only one of the pairs $(\alpha,\beta)$ or $(\tilde{\alpha},\tilde{\beta})$ appears in a derived equation, we can split it with respect to this pair.
+In view of item (ii) of Corollary 5 ,
+we have at most two cases for the $\beta$ -components of equivalence transformation of $\mathcal{F}$ , $\tilde{\beta}=\beta$ and $\tilde{\beta}=5-\beta$ .
+In the latter case, Lemma 3 , the equation ( 12 )
+and the nondegeneracy condition $T_{t}Y_{y}-T_{y}Y_{t}\neq 0$ successively imply under varying $\beta$ that $T_{y}=0$ , $T_{t}>0$ , $Y_{y}\neq 0$ , $|Y_{y}|^{\beta-2}=T_{t}^{\beta-3}$ and $\tilde{\alpha}T_{t}-Y_{t}=\alpha Y_{y}$ .
+Differentiating the last equation with respect to $y$ and splitting the result with respect to $\alpha$ ,
+we obtain $Y_{ty}=Y_{yy}=0$ .
+Then we differentiate the same equation with respect to $t$ and split the result with respect to $\tilde{\alpha}$ to derive $T_{tt}=Y_{tt}=0$ .
+Now the equation $|Y_{y}|^{\beta-2}=T_{t}^{\beta-3}$ splits with respect to $\beta$ into $T_{t}=1$ and $Y_{y}=\epsilon:=\pm 1$ .
+Therefore, $T=t+c_{0}$ , $Y=\epsilon y+c_{1}t+c_{2}$ , and thus $X=\epsilon x+c_{1}$ for some constants $c_{0}$ , $c_{1}$ and $c_{2}$ .
+The third equation of ( 11 ) reduces to the equation $U^{1}_{x}=0$ ,
+in view of which the fourth equation of ( 11 )
+splits with respect to $x$ into $U^{1}_{t}=U^{1}_{y}=0$ .
+Since $U^{1}$ is a constant, say $c_{3}$ ,
+the last equation of ( 11 ) splits with respect to $\beta$ into $U^{0}_{xx}=0$ and $U^{0}_{y}+xU^{0}_{y}=0$ , i.e., $U^{0}=U^{01}(t,y)x+U^{00}(t,y)$ ,
+where $U^{00}_{t}=U^{01}_{y}=U^{01}_{t}+U^{00}_{y}=0$ .
+Integrating these equation, we obtain $U^{0}=c_{4}(tx-y)+c_{5}x+c_{6}$ for some constants $c_{4}$ , $c_{5}$ and $c_{6}$ .
+∎ Remark 7 . The transformations of the form ( 10 )
+with $\epsilon=1$ and $c_{1}=0$ constitute a normal subgroup $\hat{G}^{\cap}_{\mathcal{F}}$ of $G^{\sim}_{\mathcal{F}}$ ,
+which is isomorphic, via the natural projection onto the space $\mathbb{R}^{4}_{t,x,y,u}$ ,
+to the kernel point symmetry group $G^{\cap}_{\mathcal{F}}$ of the class $\mathcal{F}$ ,
+cf. [ 14 , Proposition 3] .
+The quotient of $G^{\sim}_{\mathcal{F}}$ with respect to $\hat{G}^{\cap}_{\mathcal{F}}$ is isomorphic to the group $\mathbb{R}\times\mathbb{Z}_{2}$ and can be naturally identified with the subgroup of $G^{\sim}_{\mathcal{F}^{\prime}}$ that is generated by the transformations $\mathscr{J}^{\prime}$ and $\displaystyle\mathscr{S}(c_{1})\colon\hskip 10.00002pt\tilde{t}=t,\hskip 10.00002pt\tilde{x}=\epsilon x+c_{1},\hskip 10.00002pt\tilde{y}=\epsilon y+c_{1}t,\hskip 10.00002pt\tilde{u}=u,\hskip 10.00002pt\tilde{\alpha}=\epsilon\alpha+c_{1},\hskip 10.00002pt\tilde{\beta}=\beta.$ Hence, these transformations can be considered as the only
+essential equivalence transformations within the class $\mathcal{F}$ ,
+which establish relations between different elements of $\mathcal{F}$ . Knowing the equivalence group $G^{\sim}_{\mathcal{F}}$ of the class $\mathcal{F}$ ,
+we can easily construct the equivalence algebra $\mathfrak{g}^{\sim}_{\mathcal{F}}$ of this class
+as the set of generators of one-parameter subgroups of $G^{\sim}_{\mathcal{F}}$ . Corollary 8 . The equivalence algebra $\mathfrak{g}^{\sim}_{\mathcal{F}}$ of the class $\mathcal{F}$ is spanned by the vector fields $\partial_{t}$ , $\partial_{x}+t\partial_{y}+\partial_{\alpha}$ , $\partial_{y}$ , $u\partial_{u}$ , $(tx-y)\partial_{u}$ , $x\partial_{u}$ and $\partial_{u}$ . Corollary 9 . The usual equivalence group $G^{\sim}_{\mathcal{F}}$ of the class $\mathcal{F}$ is generated
+by the one-parameter groups associated with the basis vector fields of
+the equivalence algebra $\mathfrak{g}^{\sim}_{\mathcal{F}}$ of this class
+and its two discrete equivalence transformations, $\displaystyle\mathscr{I}_{u}\colon(t,x,y,u,\alpha,\beta)\mapsto(t,x,y,-u,\alpha,\beta)\hskip 10.00002pt\mbox{and}\hskip 10.00002pt\mathscr{I}_{\rm s}\colon(t,x,y,u,\alpha,\beta)\mapsto(t,-x,-y,u,-\alpha,\beta).$ The algebra $\mathfrak{g}^{\sim}_{\mathcal{F}}$ can be represented as the semidirect sum $\mathfrak{g}^{\sim}_{\mathcal{F}}=\langle\partial_{t}+t\partial_{y}+\partial_{\alpha}\rangle\mathbin{\mbox{$\hbox to0.0pt{$\displaystyle\hskip 3.31528pt\rule{0.4pt}{5.16663pt}$\hss}{\in}$}}\hat{\mathfrak{g}}^{\cap}_{\mathcal{F}}$ ,
+where the ideal $\hat{\mathfrak{g}}^{\cap}_{\mathcal{F}}$ spanned by the vector fields $\partial_{t}$ , $\partial_{y}$ , $u\partial_{u}$ , $(tx-y)\partial_{u}$ , $x\partial_{u}$ and $\partial_{u}$ is isomorphic to the kernel invariance algebra $\mathfrak{g}^{\cap}_{\mathcal{F}}$ of equations from the class $\mathcal{F}$ ,
+see Corollary 17 .
+Both the algebras $\mathfrak{g}^{\sim}_{\mathcal{F}}$ and $\hat{\mathfrak{g}}^{\cap}_{\mathcal{F}}$ are indecomposable, two-step solvable and not nilpotent.
+The nilradicals of the algebras $\mathfrak{g}^{\sim}_{\mathcal{F}}$ and $\hat{\mathfrak{g}}^{\cap}_{\mathcal{F}}$ respectively are $\mathfrak{n}^{\sim}_{\mathcal{F}}=\langle\partial_{x}+t\partial_{y}+\partial_{\alpha},\partial_{t},\partial_{y},(tx-y)\partial_{u},x\partial_{u},\partial_{u}\rangle\hskip 10.00002pt\mbox{and}\hskip 10.00002pt\mathfrak{n}^{\cap}_{\mathcal{F}}=\langle\partial_{t},\partial_{y},(tx-y)\partial_{u},x\partial_{u},\partial_{u}\rangle.$ The nilradical $\mathfrak{n}^{\cap}_{\mathcal{F}}$ and the algebra $\hat{\mathfrak{g}}^{\cap}_{\mathcal{F}}$ are isomorphic to the nilpotent algebra $L_{5}^{1}$ [ 36 ] (or $\mathrm{g}_{5.1}$ in the notation of [ 38 ] )
+and the solvable algebra $g_{6.54}$ with $\lambda=\gamma=1$ [ 39 ] , respectively.
+The nilradical $\mathfrak{n}^{\sim}_{\mathcal{F}}$ is indecomposable and six-dimensional
+with the four-dimensional maximal abelian ideal $\langle\partial_{u},x\partial_{u},\partial_{t},\partial_{y}\rangle$ and the one-dimensional center $\langle\partial_{u}\rangle$ .
+The lower central series of $\mathfrak{n}^{\sim}_{\mathcal{F}}$ is $\mathfrak{n}^{\sim}_{\mathcal{F}}\supset\langle\partial_{u},x\partial_{u},\partial_{y}\rangle\supset\langle\partial_{u}\rangle$ .
+These structural properties of the algebra $\mathfrak{n}^{\sim}_{\mathcal{F}}$ help
+us to identify it.
+It is isomorphic to the algebra B.14 with $\gamma=-1$ from Morozov’s classification of six-dimensional nilpotent algebras [ 36 ] . 4 Equivalence group and equivalence algebra of the gauged class The elements of the group $G^{\sim}_{\mathcal{F}}$ that preserve the subclass $\mathcal{F}_{0}$ constitute a proper subgroup $H$ of $G^{\sim}_{\mathcal{F}}$ .
+Let $\varpi$ denote the natural projection from the space with coordinates $(t,x,y,u,\alpha,\beta)$ onto the space with coordinates $(t,x,y,u,\beta)$ .
+The pushforward $\varpi_{*}H$ of the group $H$ by $\varpi$ is a subgroup of $G^{\sim}_{\mathcal{F}^{\prime}}$ .
+Nonetheless, since the class $\mathcal{F}$ is not normalized, we cannot guarantee that $\varpi_{*}H=G^{\sim}_{\mathcal{F}^{\prime}}$ .
+Moreover, we prove that $\varpi_{*}H\subsetneq G^{\sim}_{\mathcal{F}^{\prime}}$ .
+We cannot also use the embedding of the groupoid $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ in the groupoid $\mathcal{G}^{\sim}_{\mathcal{F}}$ induced by the embedding of $\mathcal{F}^{\prime}$ in $\mathcal{F}$ since the description of $\mathcal{G}^{\sim}_{\mathcal{F}}$ in Corollary 5 (iii)
+is based on that of $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ .
+This is why we proceed with computing the equivalence group $G^{\sim}_{\mathcal{F}^{\prime}}$ similarly to as it is done in Section 3 .
+We apply the advanced version of the direct method to the class $\mathcal{F}^{\prime}$ ,
+which is based on the embedding of the groupoid $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ in the groupoid $\mathcal{G}^{\sim}_{\bar{\mathcal{F}}}$ ;
+see Section A.2 for the same computation using the algebraic method. Theorem 10 . The usual equivalence group 2 2 2 Formally, the set of transformations $G^{\sim}_{\mathcal{F}^{\prime}}$ together with
+the standard transformation composition form a pseudogroup rather than a group,
+see [ 29 , Section A] for details.
+However, $G^{\sim}_{\mathcal{F}^{\prime}}$ can be turned into a group in a simple way
+following the approach from [ 27 , 28 , 29 ] .
+It is clear that the composition of two transformations of the form ( 13 )
+is also of this form and its natural domain is the entire space $\mathbb{R}^{5}:=\mathbb{R}^{5}_{t,x,y,u,\beta}$ .
+Similarly, composing ( 13 ) with ( 14 )
+results in a transformation of the form ( 14 )
+with the natural domain $\mathbb{R}^{5}\setminus M_{0}$ ,
+where $M_{0}\subset\mathbb{R}^{5}$ is the hyperplane defined by the equation $x=0$ .
+However, the composition of two transformations of the form ( 14 )
+is of the form ( 13 )
+and its domain is the set $\mathbb{R}^{5}\setminus M_{0}$ .
+We can modify this operation as follows: $\Phi_{1}\circ^{\rm mod}\Phi_{2}=\Phi_{1}\circ\Phi_{2}$ if $\Phi_{1}$ and $\Phi_{2}$ are both of the form ( 13 )
+or of the forms ( 13 ) and ( 14 ).
+If $\Phi_{1}$ and $\Phi_{2}$ are both of the form ( 14 ),
+then $\Phi_{1}\circ^{\rm mod}\Phi_{2}$ is the extension by continuity of $\Phi_{1}\circ\Phi_{2}$ to the set $\mathbb{R}^{5}$ and is of the form ( 13 ).
+In this way, the set $G^{\sim}_{\mathcal{F}^{\prime}}$ is a group with the modified composition $\circ^{\rm mod}$ . $G^{\sim}_{\mathcal{F}^{\prime}}$ of the class $\mathcal{F}^{\prime}$ consists of the transformations of the following two forms: $\displaystyle\tilde{t}=t+c_{0},\ \ \tilde{x}=\epsilon x,\ \ \tilde{y}=\epsilon y+c_{1},\ \ \tilde{u}=c_{2}u+c_{3}(tx-y)+c_{4}x+c_{5},\ \ \tilde{\beta}=\beta,$ (13) $\displaystyle\tilde{t}=\varepsilon^{\prime}y+c_{0}^{\prime},\ \ \tilde{x}=\frac{\epsilon^{\prime}}{x},\ \ \tilde{y}=\epsilon^{\prime}\varepsilon^{\prime}t+c_{1}^{\prime},\ \ \tilde{u}=\frac{c_{2}^{\prime}}{x}u+c_{3}^{\prime}\left(t-\frac{y}{x}\right)+\frac{c_{4}^{\prime}}{x}+c_{5}^{\prime},\ \ \tilde{\beta}=5-\beta,$ (14) where $\epsilon,\epsilon^{\prime}\in\{\pm 1\}$ , $\varepsilon^{\prime}=\mathop{\rm sgn}\nolimits x$ , $c_{0},\dots,c_{5}$ and $c_{0}^{\prime},\dots,c_{5}^{\prime}$ are arbitrary constants with $c_{2}c_{2}^{\prime}\neq 0$ . Proof. Items (iii) and (iv) of Theorem 4 essentially simplify the construction of the equivalence group $G^{\sim}_{\mathcal{F}^{\prime}}$ of the class $\mathcal{F}^{\prime}$ .
+Up to composing with the discrete equivalence subgroup generated by $\mathscr{J}^{\prime}$ ,
+it suffices to find only the equivalence transformations with the identity $\beta$ -components.
+Since $\beta$ varies when considering equivalence transformations and $\tilde{\beta}=\beta$ ,
+the equation ( 9 ), Lemma 3 and the inequality $T_{t}Y_{y}-T_{y}Y_{t}\neq 0$ implies $T_{y}=Y_{t}=0$ , $|Y_{y}|^{\beta-2}=|T_{t}|^{\beta-3}\mathop{\rm sgn}\nolimits T_{t}$ and thus $T_{t}$ and $Y_{y}$ are positive and nonzero constants, respectively.
+Then the system ( 8 ) reduces to $\displaystyle X=\frac{Y_{y}}{T_{t}}x,\hskip 10.00002pt|Y_{y}|^{\beta-2}=T_{t}^{\beta-3},\hskip 10.00002ptU^{1}_{x}=U^{1}_{t}=U^{1}_{y}=0,\hskip 10.00002ptU^{0}_{t}+xU^{0}_{y}=|x|^{\beta}U^{0}_{xx}$ with $T_{t}>0$ .
+Its second and fourth equations further split with respect to $\beta$ to $T_{t}=|Y_{y}|=1$ , $U^{0}_{xx}=0$ and $U^{0}_{t}+xU^{0}_{y}=0$ .
+Therefore, $U^{0}=U^{01}(t,y)x+U^{00}(t,y)$ , where $U^{00}_{t}=U^{01}_{y}=U^{01}_{t}+U^{00}_{y}=0$ .
+The solution set of the derived equations corresponds to the family of transformations ( 13 ).
+Its complement in $G^{\sim}_{\mathcal{F}^{\prime}}$ is obtained by composing its elements with $\mathscr{J}^{\prime}$ ,
+which leads to the family of transformations ( 14 ).
+∎ Remark 11 . The transformations of the form ( 13 )
+constitute a normal subgroup $\hat{G}^{\cap}_{\mathcal{F}^{\prime}}$ of $G^{\sim}_{\mathcal{F}^{\prime}}$ ,
+which is isomorphic, via the natural projection to the space $\mathbb{R}^{4}_{t,x,y,u}$ ,
+to the kernel point symmetry group $G^{\cap}_{\mathcal{F}^{\prime}}$ of the class $\mathcal{F}^{\prime}$ ,
+cf. [ 14 ] .
+The quotient of $G^{\sim}_{\mathcal{F}^{\prime}}$ with respect to $\hat{G}^{\cap}_{\mathcal{F}^{\prime}}$ is isomorphic to $\mathbb{Z}_{2}$ and can be naturally identified with the subgroup of $G^{\sim}_{\mathcal{F}^{\prime}}$ constituted by the identity transformation of $(t,x,y,u,\beta)$ and the transformation ( 4 ).
+Hence the latter transformation can be considered as the only essential equivalence transformation
+within the class $\mathcal{F}^{\prime}$ , which establishes a relation between different elements of $\mathcal{F}^{\prime}$ . Remark 12 . Modulo $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence, it suffices to consider a single value of $\beta$ in each pair $(\beta_{1},\beta_{2})$ with $\beta_{1}+\beta_{2}=5$ .
+As the canonical representative of such a pair, we choose the value $\beta\in(-\infty,5/2]$ . Corollary 13 . The equivalence algebra $\mathfrak{g}^{\sim}_{\mathcal{F}^{\prime}}$ of the class $\mathcal{F}^{\prime}$ is spanned by the vector fields $\partial_{t}$ , $\partial_{y}$ , $u\partial_{u}$ , $(tx-y)\partial_{u}$ , $x\partial_{u}$ and $\partial_{u}$ and is isomorphic to the kernel Lie invariance algebra of the class $\mathcal{F}^{\prime}$ via the natural projection to the space $\mathbb{R}^{4}_{t,x,y,u}$ . Corollary 14 . The usual equivalence group $G^{\sim}_{\mathcal{F}^{\prime}}$ of the class $\mathcal{F}^{\prime}$ is generated
+by the one-parameter groups associated with the basis vector fields of
+the equivalence algebra $\mathfrak{g}^{\sim}_{\mathcal{F}^{\prime}}$ of this class
+and its discrete equivalence transformations $\displaystyle\mathscr{I}^{\prime}_{u}\colon(t,x,y,u,\beta)\mapsto(t,x,y,-u,\beta),$ $\displaystyle\mathscr{I}^{\prime}_{\rm s}\colon(t,x,y,u,\beta)\mapsto(t,-x,-y,u,\beta),$ $\displaystyle\mathscr{J}^{\prime}\colon(t,x,y,u,\beta)\mapsto(y\mathop{\rm sgn}\nolimits x,1/x,t\mathop{\rm sgn}\nolimits x,u/x,5-\beta).$ In fact, there are only two independent 3 3 3 Throughout the paper,
+the independence of discrete elements in a transformation (pseudo)group is understood
+up to composing with each other and with elements from the identity component of this group.
+The independence of genuinely hidden Lie-symmetries vector fields is understood
+in a similar sense,
+up to linearly combining with each other and with induced Lie-symmetries vector fields
+of the corresponding reduced system. discrete equivalence transformations within the class $\mathcal{F}^{\prime}$ ,
+e.g., $\mathscr{I}^{\prime}_{u}$ and $\mathscr{I}^{\prime}_{\rm s}\circ\mathscr{J}^{\prime}$ . Corollary 15 . The quotient group of the group $G^{\sim}_{\mathcal{F}^{\prime}}$ with respect to its identity component
+is isomorphic to the degree-four dihedral group $\mathrm{D}_{4}$ .
+As the canonical subgroup of discrete equivalence transformations,
+one can take those generated by $\mathscr{I}^{\prime}_{u}$ , $\mathscr{I}^{\prime}_{\rm s}$ and $\mathscr{J}^{\prime}$ ,
+and a minimal set of generators is $\{\mathscr{I}^{\prime}_{u},\,\mathscr{I}^{\prime}_{\rm s}\circ\mathscr{J}^{\prime}\}$ . Proof. By $\pi$ we denote the natural projection of the group $G^{\sim}_{\mathcal{F}^{\prime}}$ onto the quotient group of this group by its identity component.
+The quotient group $\pi(G^{\sim}_{\mathcal{F}^{\prime}})$ is generated by the cosets $\pi(\mathscr{I}^{\prime}_{u})$ , $\pi(\mathscr{I}^{\prime}_{\rm s})$ and $\pi(\mathscr{J}^{\prime})$ .
+Using the power-commutator presentation $\langle a_{1},a_{2},a_{3}\mid{a_{1}^{2}=a_{2}^{2}=a_{3}^{2}=e}$ , $[a_{1},a_{2}]=a_{3},\,[a_{1},a_{3}]=[a_{2},a_{3}]=e\rangle$ of the group $\mathrm{D}_{4}$ ,
+we define an isomorphism between $\pi(G^{\sim}_{\mathcal{F}^{\prime}})$ and $\mathrm{D}_{4}$ by the generator correspondences $\pi(\mathscr{I}^{\prime}_{u})\mapsto a_{3}$ , $\pi(\mathscr{I}^{\prime}_{\rm s})\mapsto a_{1}$ and $\pi(\mathscr{J}^{\prime})\mapsto a_{2}$ .
+Then the canonical presentation $\langle a,b\mid a^{4}=b^{2}=e,\,bab^{-1}=a^{-1}\rangle$ of $\mathrm{D}_{4}$ ,
+where $a=a_{1}a_{2}$ and $b=a_{3}$ implies that
+a minimal set of generators of $\pi(G^{\sim}_{\mathcal{F}^{\prime}})$ is constituted by $\pi(\mathscr{I}^{\prime}_{\rm s}\circ\mathscr{J}^{\prime})$ and $\pi(\mathscr{I}^{\prime}_{u})$ .
+∎ It is clear that the kernel invariance algebras $\mathfrak{g}^{\cap}_{\mathcal{F}}$ and $\mathfrak{g}^{\cap}_{\mathcal{F}^{\prime}}$ of equations from the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ , respectively,
+coincide, see Theorem 16 and Corollary 17 below.
+At the same time, the corresponding kernel point symmetry groups $G^{\cap}_{\mathcal{F}}$ and $G^{\cap}_{\mathcal{F}^{\prime}}$ are different, $G^{\cap}_{\mathcal{F}}\varsubsetneq G^{\cap}_{\mathcal{F}^{\prime}}$ .
+More specifically, the group $G^{\cap}_{\mathcal{F}^{\prime}}$ is generated by elements of $G^{\cap}_{\mathcal{F}}$ and the transformation $(t,x,y,u)\mapsto(t,-x,-y,u)$ . Since $\mathfrak{g}^{\sim}_{\mathcal{F}^{\prime}}\subsetneq\varpi_{*}\mathfrak{g}^{\sim}_{\mathcal{F}}$ and $G^{\sim}_{\mathcal{F}^{\prime}}\not\subset\varpi_{*}G^{\sim}_{\mathcal{F}}$ ,
+we can interpret $G^{\sim}_{\mathcal{F}^{\prime}}$ as a nontrivial conditional equivalence group [ 47 , Section 2.6] of $\mathcal{F}$ associated with the constraint $\alpha=0$ ,
+but the algebra $\mathfrak{g}^{\sim}_{\mathcal{F}^{\prime}}$ is trivial
+when interpreted as a conditional equivalence algebra of $\mathcal{F}$ . 5 Classification of Lie symmetries In view of Corollary 5 ,
+the $\mathcal{G}^{\sim}_{\mathcal{F}}$ - and $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ -equivalences
+within the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ , respectively, are consistent.
+More specifically, the equations from the class $\mathcal{F}^{\prime}$ are $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ -equivalent
+if and only if their counterparts in $\mathcal{F}$ under the embedding $\mathcal{F}^{\prime}\hookrightarrow\mathcal{F}$ are $\mathcal{G}^{\sim}_{\mathcal{F}}$ -equivalent.
+The class $\mathcal{F}^{\prime}$ is semi-normalized in the usual sense,
+i.e., the $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence coincide with the $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence.
+This is why it is convenient to first carry out the group classification of the class $\mathcal{F}^{\prime}$ and
+then apply Corollary 5 , Theorem 6 and Remark 11 to the obtained results for solving the group classification problem for the class $\mathcal{F}^{\prime}$ . According to the classical Lie algorithm of computing continuous point symmetries [ 8 , 9 , 40 ] ,
+a Lie symmetry vector field $Q$ of the equation $\mathcal{F}^{\prime}_{\beta}$ takes the general form $Q=\tau(t,x,y,u)\partial_{t}+\xi^{x}(t,x,y,u)\partial_{x}+\xi^{y}(t,x,y,u)\partial_{y}+\eta(t,x,y,u)\partial_{u}$ with components that can be found from the infinitesimal invariance criterion $\displaystyle Q_{(2)}\big(u_{t}+xu_{y}-|x|^{\beta}u_{xx}\big)\big|_{\mathcal{F}^{\prime}_{\beta}}=\big(\eta^{t}+x\eta^{y}+\xi^{x}u_{y}-|x|^{\beta}\eta^{xx}-\beta\xi^{x}x^{-1}|x|^{\beta}u_{xx}\big)\big|_{\mathcal{F}^{\prime}_{\beta}}=0.$ Here $Q_{(2)}$ is the second-order prolongation of the vector field $Q$ , $\eta^{t}=\mathrm{D}_{t}Q[u]+\tau u_{tt}+\xi^{x}u_{tx}+\xi^{y}u_{ty}$ , $\eta^{y}=\mathrm{D}_{y}Q[u]+\tau u_{ty}+\xi^{x}u_{xy}+\xi^{y}u_{yy}$ , $\eta^{xx}=\mathrm{D}_{x}^{2}Q[u]+\tau u_{txx}+\xi^{x}u_{xxx}+\xi^{y}u_{xxy}$ ,
+the characteristic $Q[u]$ of the vector field $Q$ is defined as $Q[u]:=\eta-\tau u_{t}-\xi^{x}u_{x}-\xi^{y}u_{y}$ , $\mathrm{D}_{t}$ , $\mathrm{D}_{x}$ , $\mathrm{D}_{y}$ are the total derivative operators with respect to $t$ , $x$ and $y$ , respectively, $\mathrm{D}_{t}=\partial_{t}+u_{t}\partial_{u}+u_{tt}\partial_{u_{t}}+u_{tx}\partial_{u_{x}}+u_{ty}\partial_{u_{y}}+\cdots$ and similarly for $\mathrm{D}_{x}$ and $\mathrm{D}_{y}$ .
+The linear space of such vector fields with Lie bracket of vector fields
+is the maximal Lie invariance algebra $\mathfrak{g}_{\beta}$ of the equation $\mathcal{F}^{\prime}_{\beta}$ . The form of admissible transformations ( 7a )
+implies the principle part of the determining equations for the components of the vector field $Q$ , $\displaystyle\tau_{u}=\tau_{x}=0,\hskip 10.00002pt\xi^{x}_{u}=0,\hskip 10.00002pt\xi^{y}_{u}=\xi^{y}_{x}=0,\hskip 10.00002pt\eta_{uu}=0.$ (15a) The other determining equations, including the classifying ones, follow from the infinitesimal invariance criterion jointly with ( 15a ), $\displaystyle\begin{split}&\eta_{t}+x\eta_{y}-|x|^{\beta}\eta_{xx}=0,\\
+&-2|x|^{\beta}\eta_{ux}=\xi^{x}_{t}+x\xi^{x}_{y}-|x|^{\beta}\xi^{x}_{xx},\\
+&\xi^{y}_{t}+x\xi^{y}_{y}=2x\xi^{x}_{x}+(1-\beta)\xi^{x},\\
+&\xi^{y}_{t}+x\xi^{y}_{y}=\tau_{t}x+\tau_{y}x^{2}+\xi^{x}.\end{split}$ (15b) Unlike the group classification in [ 56 ] , we carry out the group classification of the class $\mathcal{F}^{\prime}$ up to the $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence, which coincides with the $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence
+in view of the semi-normalization of this class.
+In other words, without loss of generality we can impose the gauge $\beta\leqslant 5/2$ ,
+which in its turn reduces the number of cases we need to consider. Theorem 16 . The kernel Lie invariance algebra $\mathfrak{g}^{\cap}_{\mathcal{F}^{\prime}}$ of the equations from the class $\mathcal{F}^{\prime}$ is $\mathfrak{g}^{\cap}_{\mathcal{F}^{\prime}}=\langle\mathcal{P}^{t},\mathcal{P}^{y},\mathcal{I},(tx-y)\partial_{u},x\partial_{u},\partial_{u}\rangle,\hskip 10.00002pt\mbox{where}\hskip 10.00002pt\mathcal{P}^{t}:=\partial_{t},\hskip 10.00002pt\mathcal{P}^{y}:=\partial_{y},\hskip 10.00002pt\mathcal{I}:=u\partial_{u}.$ Any equation $\mathcal{F}^{\prime}_{\beta}$ from $\mathcal{F}^{\prime}$ is invariant with respect to the algebra $\mathfrak{g}^{\rm gen}_{\beta}=\langle\mathcal{P}^{t},\mathcal{P}^{y},\mathcal{I},\mathcal{D}^{\beta},\mathcal{Z}(f^{\beta})\rangle\ \ \mbox{with}\ \ \mathcal{D}^{\beta}:=(2-\beta)t\partial_{t}+x\partial_{x}+(3-\beta)y\partial_{y},\ \mathcal{Z}(f^{\beta}):=f^{\beta}\partial_{u},$ where the parameter function $f^{\beta}=f^{\beta}(t,x,y)$ runs through the solution set of this equation,
+and $\beta\in(-\infty,5/2]$ modulo the $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence.
+the maximal Lie invariance algebra $\mathfrak{g}_{\beta}$ of the equation $\mathcal{F}_{\beta}$ coincides with $\mathfrak{g}^{\rm gen}_{\beta}$ if and only if $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ .
+A complete list of $G^{\sim}_{\mathcal{F}^{\prime}}$ -inequivalent essential Lie symmetry extensions
+in the class $\mathcal{F}^{\prime}$ is exhausted by the following cases: $\displaystyle\beta=2\colon\ \ \mathfrak{g}_{2}=\mathfrak{g}^{\rm gen}_{2}\dotplus\langle\mathcal{K}_{2}\rangle\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\mathcal{K}_{2}=2xy\partial_{x}+y^{2}\partial_{y}-xu\partial_{u},$ $\displaystyle\beta=0\colon\ \ \mathfrak{g}_{0}=\mathfrak{g}^{\rm gen}_{0}\dotplus\langle\mathcal{K}_{0},\mathcal{P}^{3},\mathcal{P}^{2},\mathcal{P}^{1}\rangle\hskip 10.00002pt\mbox{with}\hskip 10.00002pt$ $\displaystyle\phantom{\beta=0\colon\ \ }\mathcal{K}_{0}=t^{2}\partial_{t}+(tx+3y)\partial_{x}+3ty\partial_{y}-(x^{2}\!+2t)u\partial_{u},$ $\displaystyle\phantom{\beta=0\colon\ \ }\mathcal{P}^{3}=3t^{2}\partial_{x}+t^{3}\partial_{y}+3(y-tx)u\partial_{u},\ \ \mathcal{P}^{2}=2t\partial_{x}+t^{2}\partial_{y}-xu\partial_{u},\ \ \mathcal{P}^{1}=\partial_{x}+t\partial_{y}.$ Proof. Splitting the system of determining equations ( 15 ) with respect to the arbitrary element $\beta$ ,
+we find the kernel Lie invariance algebra $\mathfrak{g}^{\cap}_{\mathcal{F}^{\prime}}$ of the equations from the class $\mathcal{F}^{\prime}$ . To find the algebra $\mathfrak{g}_{\beta}$ ,
+we start with solving the system of the equations ( 15a ) together with the fourth equation from ( 15b ),
+obtaining $\displaystyle\tau=\tau(t,y),\hskip 10.00002pt\xi^{x}=-x^{2}\tau_{y}+x\xi^{y}_{y}-x\tau_{t}+\xi^{y}_{t},\hskip 10.00002pt\xi^{y}=\xi^{y}(t,y),\hskip 10.00002pt\eta=\eta^{1}(t,x,y)u+\eta^{0}(t,x,y),$ where $\tau$ , $\xi^{y}$ , $\eta^{0}$ and $\eta^{1}$ are smooth functions of their arguments.
+Substituting this solution into the third equation from ( 15b )
+and splitting the result with respect to $x$ lead to the system $\displaystyle(\beta-5)\tau_{y}=0,\hskip 10.00002pt(\beta-3)\tau_{t}-(\beta-2)\xi^{y}_{y}=0,\hskip 10.00002pt\beta\xi^{y}_{t}=0,$ which is of maximal rank as a system of differential equations
+with the independent variables $(t,y)$ and the dependent variables $(\tau,\xi^{y})$ if and only if $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ .
+In this case, the general solution of the system is given by $\displaystyle\tau=c_{1}(2-\beta)t+c_{2},\hskip 10.00002pt\xi^{y}=c_{1}(3-\beta)y+c_{3}.$ Substituting this solution into the rest of the system ( 15b )
+gives the algebra $\mathfrak{g}_{\beta}$ for $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ ,
+or, equivalently, for $\beta\in(-\infty,5/2]\setminus\{0,2\}$ under the gauge $\beta\leqslant 5/2$ . The equivalence transformation ( 4 ) reduces the cases $\beta=5$ and $\beta=3$ to the cases $\beta=0$ and $\beta=2$ , respectively.
+Solving the determining equations for the latter two cases results in the algebras $\mathfrak{g}_{0}$ and $\mathfrak{g}_{2}$ .
+∎ For any $\beta$ , the vector fields $\mathcal{Z}(f^{\beta})$ constitute
+the infinite-dimensional abelian ideal $\mathfrak{g}^{\rm lin}_{\beta}$ of $\mathfrak{g}_{\beta}$ that is associated with the linear superposition of solutions of $\mathcal{F}^{\prime}_{\beta}$ , $\mathfrak{g}^{\rm lin}_{\beta}:=\{\mathcal{Z}(f^{\beta})\}$ .
+The algebra $\mathfrak{g}_{\beta}$ splits over this ideal, $\mathfrak{g}_{\beta}=\mathfrak{g}^{\rm ess}_{\beta}\mathbin{\mbox{$\hbox to0.0pt{$\displaystyle\hskip 3.31528pt\rule{0.4pt}{5.16663pt}$\hss}{\in}$}}\mathfrak{g}^{\rm lin}_{\beta}$ ,
+where $\mathfrak{g}^{\rm ess}_{\beta}$ is a (finite-dimensional) subalgebra of $\mathfrak{g}_{\beta}$ ,
+which is called the essential Lie invariance algebra of $\mathcal{F}^{\prime}_{\beta}$ .
+In the above notation, $\displaystyle\mathfrak{g}^{\rm ess}_{\beta}:=\langle\mathcal{P}^{t},\,\mathcal{P}^{y},\,\mathcal{I},\,\mathcal{D}^{\beta}\rangle,\hskip 10.00002pt\beta\in\mathbb{R}\setminus\{0,2,3,5\},$ $\displaystyle\mathfrak{g}^{\rm ess}_{2}:=\langle\mathcal{P}^{y},\mathcal{D}_{2},\mathcal{K},\mathcal{P}^{t},\mathcal{I}\rangle,$ $\displaystyle\mathfrak{g}^{\rm ess}_{0}:=\langle\mathcal{P}^{t},\mathcal{D}_{0},\mathcal{K},\mathcal{P}^{3},\mathcal{P}^{2},\mathcal{P}^{1},\mathcal{P}^{0},\mathcal{I}\rangle.$ Similar splitting occurs for the corresponding Lie symmetry pseudogroups $G_{\beta}$ for each $\beta$ .
+The set of point symmetry transformations $G^{\rm lin}_{\beta}=\{\mathscr{Z}(f)\colon\tilde{t}=t,\tilde{x}=x,\tilde{y}=y,\tilde{u}=f^{\beta}(t,x,y)\}$ ,
+where $f^{\beta}$ is an arbitrary solution of the equation $\mathcal{F}^{\prime}_{\beta}$ ,
+constitute a normal pseudosubgroup in $G_{\beta}$ .
+Moreover, the pseudogroup $G_{\beta}$ splits over $G^{\rm lin}_{\beta}$ , $G_{\beta}=G^{\rm ess}_{\beta}\ltimes G^{\rm lin}_{\beta}$ .
+Here $G^{\rm ess}_{\beta}$ is a pseudosubgroup in $G_{\beta}$ called essential Lie invariance pseudogroup. Theorems 4 and 16 and Corollary 5 jointly imply
+the solution of the group classification problem for the class $\mathcal{F}$ . Corollary 17 . The kernel Lie invariance algebra $\mathfrak{g}^{\cap}_{\mathcal{F}}$ of the equations from the class $\mathcal{F}$ coincides with that for the class $\mathcal{F}^{\prime}$ , $\mathfrak{g}^{\cap}_{\mathcal{F}}=\mathfrak{g}^{\cap}_{\mathcal{F}^{\prime}}$ .
+Any equation $\mathcal{F}_{\alpha\beta}$ from $\mathcal{F}$ is invariant with respect to the algebra $\mathfrak{g}^{\rm gen}_{\alpha\beta}=\big\langle\mathcal{P}^{t},\mathcal{P}^{y},\mathcal{I},\mathcal{D}^{\alpha\beta},\mathcal{Z}(f^{\alpha\beta})\big\rangle$ with $\mathcal{D}^{\alpha\beta}:=(2-\beta)t\partial_{t}+(x-\alpha)\partial_{x}+\big((3-\beta)y-\alpha t\big)\partial_{y}$ , $\mathcal{Z}(f^{\alpha\beta}):=f^{\alpha\beta}\partial_{u}$ ,
+and the parameter function $f^{\alpha\beta}=f^{\alpha\beta}(t,x,y)$ running through the solution set of this equation.
+Modulo the $\mathcal{G}^{\sim}_{\mathcal{F}}$ -equivalence, we can assume $\beta\in(-\infty,5/2]$ ,
+and a complete list of $\mathcal{G}^{\sim}_{\mathcal{F}}$ -inequivalent essential Lie symmetry extensions
+in the class $\mathcal{F}$ is exhausted by the counterparts of those in the class $\mathcal{F}^{\prime}$ , $\mathcal{F}_{00}$ and $\mathcal{F}_{02}$ .
+An analogous list up to the $G^{\sim}_{\mathcal{F}}$ -equivalence
+consists of the equations $\mathcal{F}_{00}$ , $\mathcal{F}_{02}$ , $\mathcal{F}_{03}$ and $\mathcal{F}_{05}$ . The maximal Lie invariance algebras of the equations $\mathcal{F}_{03}\sim\mathcal{F}^{\prime}_{3}$ and $\mathcal{F}_{05}\sim\mathcal{F}^{\prime}_{5}$ are presented in Propositions 24 and 20 , respectively. 6 Remarkable Fokker–Planck equation and its counterpart The equation $\mathcal{F}^{\prime}_{0}$ is of the simplest form
+among the equations from the classes $\mathcal{F}^{\prime}$ , $\mathcal{F}$ and even $\bar{\mathcal{F}}$ , $\displaystyle\mathcal{F}^{\prime}_{0}\colon\hskip 10.00002ptu_{t}+xu_{y}=u_{xx},$ (16) and its essential Lie invariance algebra is of the greatest dimension, which is equal to eight.
+Moreover, up to the equivalence with respect to point transformations,
+this is a unique equation with the above property within each of the above classes.
+This is why in [ 27 ] we called it the remarkable (1+2)-dimensional Fokker–Planck equation.
+We briefly review the results of [ 27 , 44 ] on this equation
+and then extend them to the equation ( 5 ) with $\beta=5$ using the point transformation ( 6 ). The maximal Lie invariance algebra of the equation ( 16 ) is
+(see, e.g., [ 31 ] ) $\displaystyle\mathfrak{g}_{0}:=\langle\mathcal{P}^{t},\,\mathcal{D},\,\mathcal{K},\,\mathcal{P}^{3},\,\mathcal{P}^{2},\,\mathcal{P}^{1},\,\mathcal{P}^{0},\,\mathcal{I},\mathcal{Z}(f)\rangle,$ where $\displaystyle\mathcal{P}^{t}=\partial_{t},\ \ \mathcal{D}=2t\partial_{t}+x\partial_{x}+3y\partial_{y}-2u\partial_{u},\ \ \mathcal{K}=t^{2}\partial_{t}+(tx+3y)\partial_{x}+3ty\partial_{y}-(x^{2}\!+2t)u\partial_{u},$ $\displaystyle\mathcal{P}^{3}=3t^{2}\partial_{x}+t^{3}\partial_{y}+3(y-tx)u\partial_{u},\ \ \mathcal{P}^{2}=2t\partial_{x}+t^{2}\partial_{y}-xu\partial_{u},\ \ \mathcal{P}^{1}=\partial_{x}+t\partial_{y},\ \ \mathcal{P}^{0}=\partial_{y},$ $\displaystyle\mathcal{I}=u\partial_{u},\hskip 10.00002pt\mathcal{Z}(f)=f(t,x,y)\partial_{u}.$ Here the parameter function $f$ runs through the solution set of the equation ( 16 ).
+The essential Lie invariance algebra $\mathfrak{g}_{0}^{\rm ess}$ splits over its radical $\mathfrak{r}_{0}=\langle\mathcal{P}^{3},\mathcal{P}^{2},\mathcal{P}^{1},\mathcal{P}^{0},\mathcal{I}\rangle$ ,
+which is isomorphic to the real rank-two Heisenberg algebra ${\rm h}(2,\mathbb{R})$ , $\mathfrak{g}_{0}^{\rm ess}=\mathfrak{f}_{0}\mathbin{\mbox{$\hbox to0.0pt{$\displaystyle\hskip 3.31528pt\rule{0.4pt}{5.16663pt}$\hss}{\in}$}}\mathfrak{r}_{0}$ ,
+where $\mathfrak{f}_{0}=\langle\mathcal{P}^{t},\mathcal{D},\mathcal{K}\rangle$ is a Levi factor of $\mathfrak{g}_{0}^{\rm ess}$ and it is isomorphic to the real order-two special linear Lie algebra ${\rm sl}(2,\mathbb{R})$ . Theorem 18 ( [ 27 ] ) . The complete point symmetry pseudogroup $G_{0}$ of the remarkable Fokker–Planck equation ( 16 )
+consists of the transformations of the form $\displaystyle\begin{split}&\tilde{t}=\frac{\alpha t+\beta}{\gamma t+\delta},\quad\tilde{x}=\frac{\hat{x}}{\gamma t+\delta}-\frac{3\gamma\hat{y}}{(\gamma t+\delta)^{2}},\quad\tilde{y}=\frac{\hat{y}}{(\gamma t+\delta)^{3}},\\[4.30554pt]
+&\tilde{u}=\sigma(\gamma t+\delta)^{2}\exp\left(\frac{\gamma\hat{x}^{2}}{\gamma t+\delta}-\frac{3\gamma^{2}\hat{x}\hat{y}}{(\gamma t+\delta)^{2}}+\frac{3\gamma^{3}\hat{y}^{2}}{(\gamma t+\delta)^{3}}\right)\\
+&\hphantom{\tilde{u}={}}\times\exp\big(3\lambda_{3}(y-tx)-\lambda_{2}x-(3\lambda_{3}^{2}t^{3}+3\lambda_{3}\lambda_{2}t^{2}+\lambda_{2}^{2}t)\big)\big(u+f(t,x,y)\big),\end{split}$ (17) where $\hat{x}:=x+3\lambda_{3}t^{2}+2\lambda_{2}t+\lambda_{1}$ , $\hat{y}:=y+\lambda_{3}t^{3}+\lambda_{2}t^{2}+\lambda_{1}t+\lambda_{0}$ ; $\alpha$ , $\beta$ , $\gamma$ and $\delta$ are arbitrary constants with $\alpha\delta-\beta\gamma=1$ ; $\lambda_{0}$ , …, $\lambda_{3}$ and $\sigma$ are arbitrary constants with $\sigma\neq 0$ ,
+and $f$ is an arbitrary solution of ( 16 ). Pulling back an arbitrary solution $u=h(t,x,y)$ of ( 16 )
+by an arbitrary point symmetry transformation of the form ( 17 ),
+we obtain, in the notation of Theorem 18 ,
+the formula of generating new solutions of ( 16 )
+from known ones under the action of elements of $G_{0}$ , $\displaystyle\begin{split}u={}&\frac{{\rm e}^{\lambda_{2}x-3\lambda_{3}(y-tx)+3\lambda_{3}^{2}t^{3}+3\lambda_{3}\lambda_{2}t^{2}+\lambda_{2}^{2}t}}{\sigma(\gamma t+\delta)^{2}}\exp\left(-\frac{\gamma\hat{x}^{2}}{\gamma t+\delta}+\frac{3\gamma^{2}\hat{x}\hat{y}}{(\gamma t+\delta)^{2}}-\frac{3\gamma^{3}\hat{y}^{2}}{(\gamma t+\delta)^{3}}\right)\\
+&\times h\left(\frac{\alpha t+\beta}{\gamma t+\delta},\,\frac{\hat{x}}{\gamma t+\delta}-\frac{3\gamma\hat{y}}{(\gamma t+\delta)^{2}},\,\frac{\hat{y}}{(\gamma t+\delta)^{3}}\right)-f(t,x,y).\end{split}$ (18) The following families of $G_{0}$ -inequivalent solutions of the equation ( 16 )
+that arise from its codimension-one Lie reductions were constructed in [ 27 ] : $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=0\colon\hskip 10.00002ptu=|x|^{-\frac{1}{4}}\vartheta^{\mu}\Big(\tfrac{9}{4}\tilde{\varepsilon}y,|x|^{\frac{3}{2}}\Big)\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\mu=\tfrac{5}{36},\hskip 10.00002pt\tilde{\varepsilon}:=\mathop{\rm sgn}\nolimits x,$ (19) $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=0\colon\hskip 10.00002ptu=|t|^{-\frac{1}{2}}{\rm e}^{-\frac{x^{2}}{4t}}\vartheta^{0}\Big(\tfrac{1}{3}{t^{3}}+2\varepsilon t-t^{-1},2y-(t+\varepsilon t^{-1})x\Big)\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\varepsilon\in\{-1,1\},$ (20) $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=0\colon\hskip 10.00002ptu=\vartheta^{0}\Big(\tfrac{1}{3}t^{3},y-tx\Big),$ (21) $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=0\colon\hskip 10.00002ptu=\vartheta^{0}(t,x),$ (22) where $\vartheta^{\mu}=\vartheta^{\mu}(z_{1},z_{2})$ is an arbitrary solution of the equation $\vartheta^{\mu}_{1}=\vartheta^{\mu}_{22}+\mu z_{2}^{-2}\vartheta^{\mu}$ . 4 4 4 A complete collection of inequivalent Lie invariant solutions of equations of such form with generic $\mu\neq 0$ is presented in [ 27 , Section A] , see also [ 17 , 18 ] .
+For $\mu=0$ , this equation is just the (1+1)-dimensional linear heat equation.
+An enhanced complete collection of inequivalent Lie invariant solutions of this equation
+was presented in [ 55 , Section A] , following Examples 3.3 and 3.17 in [ 40 ] . The algebra of generalized symmetries of the equation ( 16 ) was computed in [ 44 ] .
+The properties of the associative algebra of differential recursion operators of ( 16 )
+played the key role in that computation.
+Moreover, these operators were applied therein to generating new solutions of $\mathcal{F}_{0}$ from known ones.
+In particular, using the solution families ( 19 )–( 22 )
+of the Lie-invariant solutions as seed ones,
+large families of essentially new solutions of ( 16 ) were generated. More specifically, consider the operators in total derivatives
+that are associated with the Lie-symmetry vector fields $-\mathcal{P}^{3}$ , $-\mathcal{P}^{2}$ , $-\mathcal{P}^{1}$ , $-\mathcal{P}^{0}$ and $-\mathcal{P}^{t}$ , $-\mathcal{D}$ , $-\mathcal{K}$ of ( 16 ), $\displaystyle\mathrm{P}^{3}:=3t^{2}\mathrm{D}_{x}+t^{3}\mathrm{D}_{y}-3(y-tx),\ \ \mathrm{P}^{2}:=2t\mathrm{D}_{x}+t^{2}\mathrm{D}_{y}+x,\ \ \mathrm{P}^{1}:=\mathrm{D}_{x}+t\mathrm{D}_{y},\ \ \mathrm{P}^{0}:=\mathrm{D}_{y},$ $\displaystyle\mathrm{P}^{t}:=\mathrm{D}_{t},\ \ \mathrm{D}:=2t\mathrm{D}_{t}+x\mathrm{D}_{x}+3y\mathrm{D}_{y}+2,\ \ \mathrm{K}:=t^{2}\mathrm{D}_{t}+(tx+3y)\mathrm{D}_{x}+3ty\mathrm{D}_{y}+x^{2}+2t.$ These operators are recursion operators of the equation ( 16 ) [ 40 , Proposition 5.22] ,
+which we call Lie-symmetry operators.
+By $\Upsilon_{\mathfrak{r}_{0}}$ we denote the associative algebra
+generated by the operators $\mathrm{P}^{3}$ , $\mathrm{P}^{2}$ , $\mathrm{P}^{1}$ and $\mathrm{P}^{0}$ .
+On solutions of the equation ( 16 ),
+the operators $\mathrm{P}^{t}$ , $\mathrm{D}$ and $\mathrm{K}$ are equivalent to the elements $\displaystyle\hat{\mathrm{P}}^{t}:=(\mathrm{P}^{1})^{2}-\mathrm{P}^{2}\mathrm{P}^{0}=\mathrm{D}_{x}^{2}-x\mathrm{D}_{y},$ $\displaystyle\hat{\mathrm{D}}:=\mathrm{P}^{2}\mathrm{P}^{1}-\mathrm{P}^{3}\mathrm{P}^{0}+2=2t\mathrm{D}_{x}^{2}+x\mathrm{D}_{x}+(3y-2tx)\mathrm{D}_{y}+2,$ $\displaystyle\hat{\mathrm{K}}:=(\mathrm{P}^{2})^{2}-\mathrm{P}^{3}\mathrm{P}^{1}=t^{2}\mathrm{D}_{x}^{2}+(3y+tx)\mathrm{D}_{x}+t(3y-tx)\mathrm{D}_{y}+x^{2}+2t$ of the associative algebra $\Upsilon_{\mathfrak{r}_{0}}$ , respectively,
+and thus they are inessential in the course of generating solutions.
+The only nontrivial relations between the generators of the algebra $\Upsilon_{\mathfrak{r}_{0}}$ are given by the commutator relations $[\mathrm{P}^{1},\mathrm{P}^{2}]=1$ , $[\mathrm{P}^{0},\mathrm{P}^{3}]=-3$ .
+Using Bergman’s diamond lemma [ 3 ] , which extends the Gröbner bases technique to noncommutative rings,
+we explicitly construct a basis of the algebra $\Upsilon_{\mathfrak{r}_{0}}$ as follows.
+For any (ordered) basis $(\mathrm{Q}^{1},\mathrm{Q}^{2},\mathrm{Q}^{3},\mathrm{Q}^{4})$ of
+the span $\langle\mathrm{P}^{3},\mathrm{P}^{2},\mathrm{P}^{1},\mathrm{P}^{0}\rangle$ ,
+the monomials of the form $(\mathrm{Q}^{1})^{i_{1}}(\mathrm{Q}^{2})^{i_{2}}(\mathrm{Q}^{3})^{i_{3}}(\mathrm{Q}^{4})^{i_{4}}$ with $(i_{1},i_{2},i_{3},i_{4})\in\mathbb{N}_{0}^{4}$ constitute a basis of the vector space $\Upsilon_{\mathfrak{r}_{0}}$ . Theorem 19 ( [ 44 ] ) . The algebra of canonical representatives of generalized symmetries
+of the remarkable Fokker–Planck equation ( 16 ) is $\Sigma_{0}=\Lambda_{0}\mathbin{\mbox{$\hbox to0.0pt{$\displaystyle\hskip 3.31528pt\rule{0.4pt}{5.16663pt}$\hss}{\in}$}}\Sigma^{-\infty}_{0}$ ,
+where $\displaystyle\Lambda_{0}=\big\langle\big((\mathrm{P}^{3})^{i_{3}}(\mathrm{P}^{2})^{i_{2}}(\mathrm{P}^{1})^{i_{1}}(\mathrm{P}^{0})^{i_{0}}u\big)\partial_{u}\mid i_{0},i_{1},i_{2},i_{3}\in\mathbb{N}_{0}\big\rangle,\hskip 10.00002pt\Sigma^{-\infty}:=\big\{\mathcal{Z}(f)\big\}.$ Here the parameter function $f$ runs through the solution set of ( 16 ). Acting on an arbitrary solution $u=h(t,x,y)$ of the equation ( 16 ) by an element $\displaystyle Q=\sum_{(i_{1},i_{2},i_{3},i_{4})\in\mathbb{N}_{0}^{4}}c_{i_{1}i_{2}i_{3}i_{4}}(\mathrm{Q}^{1})^{i_{1}}(\mathrm{Q}^{2})^{i_{2}}(\mathrm{Q}^{3})^{i_{3}}(\mathrm{Q}^{4})^{i_{4}}$ of the algebra $\Upsilon_{\mathfrak{r}_{0}}$ ,
+where only finitely many real constants $c_{i_{1}i_{2}i_{3}i_{4}}$ are nonzero,
+we obtain a solution $Qh$ of ( 16 ).
+In fact, applying this procedure to a known solution, one may obtain a solution that is known as well.
+It is shown in [ 44 , Section 5.3] that for the solution
+families ( 19 ), ( 20 ), ( 21 ) and ( 22 ),
+only the action by the monomials $(\mathrm{P}^{1})^{k}$ , $(\mathrm{P}^{1})^{k}$ , $(\mathrm{P}^{2})^{k}$ and $(\mathrm{P}^{3})^{k}$ , $k\in\mathbb{N}$ ,
+respectively, in general leads to essentially new solutions of ( 16 ), $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=0\colon\hskip 10.00002ptu=(\mathrm{P}^{1})^{k}\Big(|x|^{-\frac{1}{4}}\vartheta^{\mu}\big(\tfrac{9}{4}\tilde{\varepsilon}y,|x|^{\frac{3}{2}}\big)\Big)\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\mu=\tfrac{5}{36},\hskip 10.00002pt\tilde{\varepsilon}:=\mathop{\rm sgn}\nolimits x,$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=0\colon\hskip 10.00002ptu=(\mathrm{P}^{1})^{k}\Big(|t|^{-\frac{1}{2}}{\rm e}^{-\frac{x^{2}}{4t}}\vartheta^{0}\big(\tfrac{1}{3}{t^{3}}+2\varepsilon t-t^{-1},2y-(t+\varepsilon t^{-1})x\big)\Big)\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\varepsilon\in\{-1,1\},$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=0\colon\hskip 10.00002ptu=(\mathrm{P}^{2})^{k}\vartheta^{0}\big(\tfrac{1}{3}t^{3},y-tx\big),\vphantom{\Big(}$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=0\colon\hskip 10.00002ptu=(\mathrm{P}^{3})^{k}\vartheta^{0}(t,x).\vphantom{\Big(}$ Note that for the above cases of solution generation,
+the generated solutions with $k=0,\dots,n-1$ , $n\in\mathbb{N}$ , span
+the spaces of solutions of the equation ( 16 )
+that are respectively invariant with respect to its generalized symmetries $\big((\mathrm{P}^{3})^{n}u\big)\partial_{u}$ , ${\big((\mathrm{P}^{2}+\varepsilon\mathrm{P}^{0})^{n}u\big)\partial_{u}}$ , $\big((\mathrm{P}^{1})^{n}u\big)\partial_{u}$ and $\big((\mathrm{P}^{0})^{n}u\big)\partial_{u}$ ,
+see [ 27 , Section 8] and [ 44 , Section 5.3] . Pushing forward the above results for the equation ( 16 ) by the transformation ( 4 ),
+we derive the analogous results for the equation $\mathcal{F}^{\prime}_{5}$ .
+Following Remark 1 ,
+instead of the latter equation, we consider its counterpart without the absolute value sign, $\displaystyle u_{t}+xu_{y}=x^{5}u_{xx},$ (23) and replace the transformation ( 4 ) by the simpler transformation ( 6 ). Proposition 20 . The maximal Lie invariance algebra $\mathfrak{g}_{5}$ of the equation ( 23 ) is spanned by the vector fields $\displaystyle\mathcal{P}^{y}=\partial_{y},\hskip 10.00002pt\mathcal{D}=3t\partial_{t}-x\partial_{x}+2y\partial_{y}-3u\partial_{u},$ $\displaystyle\mathcal{K}=3ty\partial_{t}-x(3tx+y)\partial_{x}+y^{2}\partial_{y}-(3tx+3y+x^{-2})u\partial_{u},$ $\displaystyle\mathcal{P}^{3}=y^{3}\partial_{t}-3x^{2}y^{2}\partial_{x}-3(xy^{2}-t+x^{-1}y)u\partial_{u},\hskip 10.00002pt\mathcal{P}^{2}=y^{2}\partial_{t}-2x^{2}y\partial_{x}-(2yx+x^{-1})u\partial_{u},$ $\displaystyle\mathcal{P}^{1}=y\partial_{t}-x^{2}\partial_{x}-xu\partial_{u},\hskip 10.00002pt\mathcal{P}^{0}=\partial_{t},\hskip 10.00002pt\mathcal{I}=u\partial_{u},\hskip 10.00002pt\mathcal{Z}(f)=f(t,x,y)\partial_{u},$ where the parameter function $f$ runs through the solution set of the equation ( 23 ). The algebra $\mathfrak{g}_{5}^{\rm ess}$ admits a Levi decomposition $\mathfrak{g}_{5}^{\rm ess}=\mathfrak{f}_{5}\mathbin{\mbox{$\hbox to0.0pt{$\displaystyle\hskip 3.31528pt\rule{0.4pt}{5.16663pt}$\hss}{\in}$}}\mathfrak{r}_{5}$ ,
+where $\mathfrak{f}_{5}$ and $\mathfrak{r}_{5}$ are the images of $\mathfrak{f}_{0}$ and $\mathfrak{r}_{0}$ under the pushforward by ( 4 ). Theorem 21 . The complete point symmetry pseudogroup $G_{5}$ of the equation ( 23 )
+consists of the transformations of the form $\displaystyle\begin{split}&\tilde{t}=\frac{\hat{t}}{(\gamma y+\delta)^{3}},\quad\tilde{x}=\frac{x(\gamma y+\delta)^{2}}{\hat{x}(\gamma y+\delta)-3\gamma\hat{t}x},\quad\tilde{y}=\frac{\alpha y+\beta}{\gamma y+\delta},\\[4.30554pt]
+&\tilde{u}=\frac{\sigma(\gamma y+\delta)^{4}}{\hat{x}(\gamma y+\delta)-3\gamma\hat{t}x}\exp\left(\frac{\gamma\hat{x}^{2}}{x^{2}(\gamma y+\delta)}-\frac{3\gamma^{2}\hat{x}\hat{t}}{x(\gamma y+\delta)^{2}}+\frac{3\gamma^{3}\hat{t}^{2}}{(\gamma y+\delta)^{3}}\right)\\
+&\hphantom{\tilde{u}={}}\times\exp\big(3\lambda_{3}(t-y/x)-\lambda_{2}/x-(3\lambda_{3}^{2}y^{3}+3\lambda_{3}\lambda_{2}y^{2}+\lambda_{2}^{2}y)\big)\big(u+f(t,x,y)\big),\end{split}$ where $\hat{x}:=1+3\lambda_{3}xy^{2}+2\lambda_{2}xy+\lambda_{1}x$ , $\hat{t}:=t+\lambda_{3}y^{3}+\lambda_{2}y^{2}+\lambda_{1}y+\lambda_{0}$ ; $\alpha$ , $\beta$ , $\gamma$ and $\delta$ are arbitrary constants with $\alpha\delta-\beta\gamma=1$ ; $\lambda_{0}$ , …, $\lambda_{3}$ and $\sigma$ are arbitrary constants with $\sigma\neq 0$ ,
+and $f$ is an arbitrary solution of ( 23 ). The counterpart of ( 18 ) for
+generating new solutions of the equation ( 23 )
+using elements of $G_{5}$ takes, in the notation of Theorem 21 ,
+the following form: $\displaystyle\begin{split}u={}&\frac{{\rm e}^{\lambda_{2}/x-3\lambda_{3}(t-y/x)+3\lambda_{3}^{2}y^{3}+3\lambda_{3}\lambda_{2}y^{2}+\lambda_{2}^{2}y}}{\sigma(\gamma y+\delta)^{4}}\exp\left(-\frac{\gamma\hat{x}^{2}}{x^{2}(\gamma y+\delta)}+\frac{3\gamma^{2}\hat{x}\hat{t}}{x(\gamma y+\delta)^{2}}-\frac{3\gamma^{3}\hat{t}^{2}}{(\gamma y+\delta)^{3}}\right)\\[2.15277pt]
+&\times\big(\hat{x}(\gamma y+\delta)-3\gamma\hat{t}x\big)h\left(\frac{\hat{t}}{(\gamma y+\delta)^{3}},\,\frac{x(\gamma y+\delta)^{2}}{\hat{x}(\gamma y+\delta)-3\gamma\hat{t}x},\,\frac{\alpha y+\beta}{\gamma y+\delta}\right)-f(t,x,y).\end{split}$ The essential Lie-invariant solutions of the equation ( 23 ) are exhausted by the families $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=5\colon\hskip 10.00002ptu=|x|^{\frac{5}{4}}\vartheta^{\mu}\big(\tfrac{9}{4}\tilde{\varepsilon}t,|x|^{-\frac{3}{2}}\big)\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\mu=\tfrac{5}{36},\hskip 10.00002pt\tilde{\varepsilon}:=\mathop{\rm sgn}\nolimits x,$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=5\colon\hskip 10.00002ptu=x|y|^{-\frac{1}{2}}{\rm e}^{-\frac{1}{4x^{2}y}}\vartheta^{0}\Big(\tfrac{1}{3}{y^{3}}+2\varepsilon y-y^{-1},2t-(y+\varepsilon y^{-1})x^{-1}\Big)\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\varepsilon\in\{-1,1\},$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=5\colon\hskip 10.00002ptu=x\vartheta^{0}\Big(\tfrac{1}{3}y^{3},t-yx^{-1}\Big),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=5\colon\hskip 10.00002ptu=x\vartheta^{0}\big(y,x^{-1}\big),$ where $\vartheta^{\mu}=\vartheta^{\mu}(z_{1},z_{2})$ is an arbitrary solution
+of the equation $\vartheta^{\mu}_{1}=\vartheta^{\mu}_{22}+\mu z_{2}^{-2}\vartheta^{\mu}$ ,
+see footnote 4 . The counterpart $\Upsilon_{\mathfrak{r}_{5}}$ of the algebra $\Upsilon_{\mathfrak{r}_{0}}$ is generated by the differential operators $\displaystyle\mathrm{P}^{3}:=y^{3}\mathrm{D}_{t}-3x^{2}y^{2}\mathrm{D}_{x}+3(xy^{2}-t+x^{-1}y),\ \ \mathrm{P}^{2}:=y^{2}\mathrm{D}_{t}-2x^{2}y\mathrm{D}_{x}+(2yx+x^{-1}),$ $\displaystyle\mathrm{P}^{1}:=y\mathrm{D}_{t}-x^{2}\mathrm{D}_{x}+x,\ \ \mathrm{P}^{0}:=\mathrm{D}_{t},$ which are associated with the Lie-symmetry vector fields $-\mathcal{P}^{3}$ , $-\mathcal{P}^{2}$ , $-\mathcal{P}^{1}$ and $-\mathcal{P}^{0}$ of the equation ( 23 ).
+The following assertion is just a particular case of a more general result [ 44 , Corollary 20] . Corollary 22 . The algebra of canonical representatives of generalized symmetries
+of the equation ( 23 ) is $\Sigma_{5}=\Lambda_{5}\mathbin{\mbox{$\hbox to0.0pt{$\displaystyle\hskip 3.31528pt\rule{0.4pt}{5.16663pt}$\hss}{\in}$}}\Sigma^{-\infty}_{5}$ ,
+where $\displaystyle\Lambda_{5}=\big\langle\big((\mathrm{P}^{3})^{i_{3}}(\mathrm{P}^{2})^{i_{2}}(\mathrm{P}^{1})^{i_{1}}(\mathrm{P}^{0})^{i_{0}}u\big)\partial_{u}\mid i_{0},i_{1},i_{2},i_{3}\in\mathbb{N}_{0}\big\rangle,\hskip 10.00002pt\Sigma^{-\infty}:=\big\{\mathcal{Z}(f)\big\}.$ Here the parameter function $f$ runs through the solution set of ( 23 ). To switch from the algebra $\Sigma_{5}$ to the algebra of standard canonical representatives of generalized symmetries
+of the equation ( 23 ) as an evolution equation,
+we need to replace, in view of this equation, the operator $\mathrm{D}_{t}$ in $\mathrm{P}^{3}$ , …, $\mathrm{P}^{0}$ by the operator $x^{5}\mathrm{D}_{x}^{\,2}-x\mathrm{D}_{y}$ ,
+which complicates the expanded form of the representatives and increases their order. The above solutions of the equation ( 16 ) generated by its recursion operators
+are mapped to the following solutions of ( 23 ): $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=5\colon\hskip 10.00002ptu=(\mathrm{P}^{1})^{k}\Big(|x|^{\frac{5}{4}}\vartheta^{\mu}\big(\tfrac{9}{4}\tilde{\varepsilon}t,|x|^{-\frac{3}{2}}\big)\Big)\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\mu=\tfrac{5}{36},\hskip 10.00002pt\tilde{\varepsilon}:=\mathop{\rm sgn}\nolimits x,$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=5\colon\hskip 10.00002ptu=(\mathrm{P}^{1})^{k}\Big(x|y|^{-\frac{1}{2}}{\rm e}^{-\frac{1}{4yx^{2}}}\vartheta^{0}\big(\tfrac{1}{3}y^{3}+2\varepsilon y-y^{-1},2t-x^{-1}(y+\varepsilon y^{-1})\big)\Big),\ \varepsilon\in\{-1,1\},$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=5\colon\hskip 10.00002ptu=(\mathrm{P}^{2})^{k}\Big(x\vartheta^{0}\big(\tfrac{1}{3}y^{3},t-x^{-1}y\big)\Big),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=5\colon\hskip 10.00002ptu=(\mathrm{P}^{3})^{k}\big(x\vartheta^{0}(y,x^{-1})\big).$ 7 Fine Kolmogorov backward equation and its counterpart Another distinguished equation within the classes $\mathcal{F}^{\prime}$ , $\mathcal{F}$ and $\bar{\mathcal{F}}$ is
+the Kolmogorov backward equation $\mathcal{F}^{\prime}_{2}$ , $\displaystyle\mathcal{F}^{\prime}_{2}\colon\hskip 10.00002ptu_{t}+xu_{y}=x^{2}u_{xx}.$ (24) Its essential Lie invariance algebra is five-dimensional and nonsolvable, and modulo the point equivalence,
+it is the only equation from the above classes with this property.
+This is why in [ 29 ] , we refer to $\mathcal{F}^{\prime}_{2}$ as to the fine Kolmogorov backward equation .
+Some of the results from [ 29 ] are reviewed below. The maximal Lie invariance algebra $\mathfrak{g}_{2}$ of ( 24 ) is spanned by the vector fields $\displaystyle\mathcal{P}^{y}=\partial_{y},\hskip 10.00002pt\mathcal{D}=x\partial_{x}+y\partial_{y},\hskip 10.00002pt\mathcal{K}=2xy\partial_{x}+y^{2}\partial_{y}-ux\partial_{u},$ $\displaystyle\mathcal{P}^{t}=\partial_{t},\hskip 10.00002pt\mathcal{I}=u\partial_{u},\hskip 10.00002pt\mathcal{Z}(f)=f(t,x,y)\partial_{u},$ where the parameter function $f$ ranges through the solution set of ( 24 ). Theorem 23 ( [ 29 ] ) . The point symmetry pseudogroup $G_{2}$ of the fine Kolmogorov backward equation ( 24 )
+consists of the point transformations of the form $\displaystyle\begin{split}&\tilde{t}=t+\lambda,\quad\tilde{x}=\frac{\alpha\delta-\beta\gamma}{(\gamma y+\delta)^{2}}x,\quad\tilde{y}=\frac{\alpha y+\beta}{\gamma y+\delta},\\[4.30554pt]
+&\tilde{u}=\sigma\exp\left(-\frac{\gamma x}{\gamma y+\delta}\right)\big(u+f(t,x,y)\big)\end{split}$ where $\alpha$ , $\beta$ , $\gamma$ and $\delta$ are arbitrary constants with $\alpha\delta-\beta\gamma=\pm 1$ that are defined up to simultaneously alternating their signs; $\lambda$ and $\sigma$ are arbitrary constants with $\sigma\neq 0$ ,
+and $f$ is an arbitrary solution of the equation ( 24 ). Given an arbitrary seed solution $u=h(t,x,y)$ of ( 24 ),
+an element of the group $G_{2}$ represented in the notation of Theorem 23 maps it
+to the solution $\displaystyle\tilde{u}=\sigma\exp\left(-\frac{\gamma x}{\alpha-\gamma y}\right)h\left(t-\lambda,\frac{\alpha\delta-\beta\gamma}{(\alpha-\gamma y)^{2}}x,\frac{\delta y-\beta}{\alpha-\gamma y}\right)+f(t,x,y).$ Essential $G_{2}^{\rm ess}$ -inequivalent Lie-invariant solutions of ( 24 ) in closed form
+were constructed in [ 29 ] only by codimension-one Lie reductions, $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=2\colon\hskip 10.00002ptu={\rm e}^{\mu t}|x|^{1/4}\vartheta^{4\mu+\frac{3}{4}}(\varepsilon y,2\sqrt{|x|})\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\varepsilon:=\mathop{\rm sgn}\nolimits x,$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=2\colon\hskip 10.00002ptu={\rm e}^{-\frac{1}{4}t}|x|^{1/2}\vartheta^{0}(t,\ln|x|),$ where $\vartheta^{\mu}=\vartheta^{\mu}(z_{1},z_{2})$ is an arbitrary solution of the linear (1+1)-dimensional heat equation with the inverse square potential $\vartheta^{\mu}_{1}=\vartheta^{\mu}_{22}+\mu z_{2}^{-2}\vartheta^{\mu}$ , see footnote 4 . For each of the values $\mu_{n}=\frac{1}{4}n(n+1)-\frac{3}{16}$ , $n\in\mathbb{N}$ , the first of the above solution families
+can be expressed using Darboux transformations in terms of the general solution $\vartheta^{0}$ of the linear (1+1)-dimensional heat equation, see Section B , $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=2\colon\hskip 10.00002ptu={\rm e}^{\mu_{n}t}|x|^{\frac{2n+1}{4}}\left(\partial_{x}-\frac{1}{2x}\right)^{n}\vartheta^{0}(\varepsilon y,2\sqrt{|x|})\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\mu_{n}:=\frac{n(n+1)}{4}-\frac{3}{16}.$ In [ 29 ] we also constructed two families of solutions of ( 24 )
+that are invariant with respect to generalized symmetries of ( 24 ), $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=2\colon\hskip 10.00002ptu={\rm e}^{-\frac{1}{4}t}|x|^{n-\frac{1}{2}}\sum_{s=0}^{n-1}\frac{y^{s}x^{-s}}{s!}\left(\prod_{k=n-s}^{n-1}(2kx\partial_{x}+k^{2})\right)\vartheta^{0}(t,\ln|x|),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=2\colon\hskip 10.00002ptu=|x|^{1/4}\Big(t\vartheta^{3/4}_{2}(\varepsilon y,2\sqrt{|x|})-(\tfrac{1}{4}t-1)|x|^{-1/2}\vartheta^{3/4}(\varepsilon y,2\sqrt{|x|})\Big),$ where $\vartheta^{\mu}_{2}$ denotes the derivative of $\vartheta^{\mu}$ with respect to its second argument.
+According to [ 29 , Theorem 14] ,
+for any $n\in\mathbb{N}$ , the solutions from the former family,
+which are invariant with respect to the generalized symmetries $(\mathrm{D}_{y}^{n}u)\partial_{u}$ ,
+can be expressed in terms of the iterative action by the Lie-symmetry operator $\mathrm{K}:=2xy\mathrm{D}_{x}+y^{2}\mathrm{D}_{y}+x$ on Lie invariant solutions of ( 24 ) from the second family of such solutions, $u={\rm K}^{n-1}\big({\rm e}^{-\frac{1}{4}t}|x|^{1/2}\theta(t,\ln|x|)\big)$ .
+Moreover, this is the only nontrivial case of generating new solutions of ( 24 )
+by acting Lie-symmetry operators. Following Remark 1 ,
+instead of $\mathcal{F}^{\prime}_{3}$ and the equivalence transformation ( 4 ),
+we can consider the equation $\displaystyle u_{t}+xu_{y}=x^{3}u_{xx}$ (25) as the counterpart of $\mathcal{F}^{\prime}_{2}$ with respect to the simpler transformation ( 6 )
+and push forward the above results for $\mathcal{F}^{\prime}_{2}$ by the latter transformation. Proposition 24 . The maximal Lie invariance algebra $\mathfrak{g}_{3}$ of the equation ( 25 ) is spanned by the vector fields $\displaystyle\mathcal{P}^{t}=\partial_{t},\ \ \mathcal{D}=t\partial_{t}-x\partial_{x}-u\partial_{u},\ \ \mathcal{K}=t^{2}\partial_{t}-2tx\partial_{x}-(2t+x^{-1})u\partial_{u},$ $\displaystyle\mathcal{P}^{y}=\partial_{y},\ \ \mathcal{I}=u\partial_{u},\ \ \mathcal{Z}(f)=f(t,x,y)\partial_{u},$ where the parameter function $f$ runs through the solution set of the equation ( 25 ). Theorem 25 . The point symmetry pseudogroup $G_{3}$ of the equation ( 25 )
+consists of the point transformations of the form $\displaystyle\begin{split}&\tilde{t}=\frac{\alpha t+\beta}{\gamma t+\delta},\quad\tilde{x}=\frac{(\gamma t+\delta)^{2}}{\alpha\delta-\beta\gamma}x,\quad\tilde{y}=y+\lambda,\\[4.30554pt]
+&\tilde{u}=\sigma\frac{(\gamma t+\delta)^{2}}{\alpha\delta-\beta\gamma}\exp\left(-\frac{\gamma x^{-1}}{\gamma t+\delta}\right)\big(u+f(t,x,y)\big),\end{split}$ (26) where $\alpha$ , $\beta$ , $\gamma$ and $\delta$ are arbitrary constants with $\alpha\delta-\beta\gamma=\pm 1$ that are defined up to simultaneously alternating their signs; $\lambda$ and $\sigma$ are arbitrary constants with $\sigma\neq 0$ ,
+and $f$ is an arbitrary solution of the equation ( 25 ). Thus, under the action of an element of $G_{3}$ , which is of the form ( 26 ),
+a given solution $u=h(t,x,y)$ of ( 25 ) is mapped to the solution $\displaystyle\tilde{u}=\sigma\frac{\alpha\delta-\beta\gamma}{(\alpha-\gamma t)^{2}}\exp\left(-\frac{\gamma x^{-1}}{\alpha-\gamma t}\right)h\left(\frac{\delta t-\beta}{\alpha-\gamma t},\frac{(\alpha-\gamma t)^{2}}{\alpha\delta-\beta\gamma}x,y-\lambda\right)+f(t,x,y).$ In the above notation, the constructed $G_{2}^{\rm ess}$ -inequivalent closed-form Lie invariant solutions of $\mathcal{F}^{\prime}_{3}$ are exhausted by the following: $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=3\colon\hskip 10.00002ptu={\rm e}^{\mu y}|x|^{3/4}\vartheta^{4\mu+\frac{3}{4}}(\varepsilon t,2|x|^{-1/2})\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\varepsilon:=\mathop{\rm sgn}\nolimits x,$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=3\colon\hskip 10.00002ptu={\rm e}^{-\frac{1}{4}y}|x|^{1/2}\vartheta^{0}(y,-\ln|x|).$ In the similar way for each of the values $\mu_{n}=\frac{1}{4}n(n+1)-\frac{3}{16}$ , $n\in\mathbb{N}$ ,
+the first of the above solution families can be expressed using Darboux transformations in terms of the general solution $\vartheta^{0}$ of the linear (1+1)-dimensional heat equation, $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=3\colon\hskip 10.00002ptu={\rm e}^{\mu_{n}y}x|x|^{-\frac{2n+1}{4}}\left(x^{2}\partial_{x}+\frac{x}{2}\right)^{n}\vartheta^{0}(\varepsilon t,2|x|^{-1/2})\hskip 10.00002pt\mbox{with}\hskip 10.00002pt\mu_{n}:=\frac{n(n+1)}{4}-\frac{3}{16}.$ The above solutions of the equation ( 24 )
+that are invariant with respect to generalized symmetries
+are mapped to the following solutions of ( 25 ): $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=3\colon\hskip 10.00002ptu={\rm e}^{-\frac{1}{4}y}x|x|^{\frac{1}{2}-n}\sum_{s=0}^{n-1}\frac{t^{s}x^{s}}{s!}\left(\prod_{k=n-s}^{n-1}(-2kx\partial_{x}+k^{2})\right)\vartheta^{0}(y,-\ln|x|),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=3\colon\hskip 10.00002ptu=x|x|^{-1/4}\Big(xy\vartheta^{3/4}_{2}(\varepsilon t,2|x|^{-1/2})-(\tfrac{1}{4}y-1)|x|^{1/2}\vartheta^{3/4}(\varepsilon t,2|x|^{-1/2})\Big).$ 8 Generic case As the generic case, we consider the case $\beta\neq 0,2,3,5$ .
+In view of Remark 12 , up to the $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence,
+it suffices to consider only the equations $\displaystyle\mathcal{F}^{\prime}_{\beta}\colon\hskip 10.00002ptu_{t}+xu_{y}=|x|^{\beta}u_{xx},\hskip 10.00002pt\beta\in(-\infty,5/2]\setminus\{0,2\}.$ According to Section 5 ,
+the essential Lie invariance algebra $\mathfrak{g}^{\rm ess}_{\beta}$ of the equation $\mathcal{F}^{\prime}_{\beta}$ with such a value of $\beta$ is spanned by the vector fields $\displaystyle\mathcal{P}^{t}:=\partial_{t},\hskip 10.00002pt\mathcal{P}^{y}:=\partial_{y},\hskip 10.00002pt\mathcal{D}^{\beta}:=(2-\beta)t\partial_{t}+x\partial_{x}+(3-\beta)y\partial_{y},\hskip 10.00002pt\mathcal{I}:=u\partial_{u}.$ Up to the skew-symmetry of the Lie bracket of vector fields, the only nonzero commutation relations
+among the basis elements of $\mathfrak{g}^{\rm ess}_{\beta}$ are the following: $\displaystyle[\mathcal{P}^{t},\mathcal{D}^{\beta}]=(2-\beta)\mathcal{P}^{t},\hskip 10.00002pt[\mathcal{P}^{y},\mathcal{D}^{\beta}]=(3-\beta)\mathcal{P}^{y}.$ The algebra $\mathfrak{g}^{\rm ess}_{\beta}$ is isomorphic to the algebra $A_{3.4}^{a}\oplus A_{1}$ with $a=(2-\beta)/(3-\beta)$ ,
+see [ 46 ] for notation, which is consistent with Mubarakzyanov’s algebra numeration [ 37 ] . 8.1 Point symmetry pseudogroup Theorem 26 . (i) For $\beta\in\mathbb{R}\setminus\{0,2,5/2,3,5\}$ , the point symmetry pseudogroup $G_{\beta}$ of the equation $\mathcal{F}^{\prime}_{\beta}$ consists of the point transformations $\displaystyle\tilde{t}=|\alpha|^{2-\beta}t+\lambda_{0},\hskip 10.00002pt\tilde{x}=\alpha x,\hskip 10.00002pt\tilde{y}=\alpha|\alpha|^{2-\beta}y+\lambda_{1},\hskip 10.00002pt\tilde{u}=\sigma u+f(t,x,y),$ (27) where $\alpha$ , $\lambda_{0}$ , $\lambda_{1}$ and $\sigma$ are arbitrary constants with $\alpha\sigma\neq 0$ ,
+and $f$ is an arbitrary solution of $\mathcal{F}^{\prime}_{\beta}$ . (ii) In comparison with the generic case of $\beta$ ,
+the point symmetry pseudogroup $G_{5/2}$ of the equation $\mathcal{F}^{\prime}_{5/2}$ is extended by the point transformations $\displaystyle\tilde{t}=\mathop{\rm sgn}\nolimits(x)\alpha|\alpha|^{2-\beta}y+\lambda_{1},\hskip 10.00002pt\tilde{x}=\frac{\alpha}{x},\hskip 10.00002pt\tilde{y}=\mathop{\rm sgn}\nolimits(x)|\alpha|^{2-\beta}t+\lambda_{0},\hskip 10.00002pt\tilde{u}=\sigma\frac{u}{x}+f(t,x,y).$ (28) Proof. The standard algebraic method and its known modifications for computing point symmetry (pseudo)groups of systems of differential equations,
+see, e.g., [ 6 , 11 , 15 , 20 , 21 , 22 , 23 , 34 , 41 ] and references therein,
+do not work properly in the case of linear well-determined systems of partial differential equations.
+This is why we combine the algebraic part of this method with the advanced direct method in an original way.
+More specifically, Theorem 2 implies
+that for any fixed $\beta$ , any point symmetry transformation $\Phi$ of the equation $\mathcal{F}^{\prime}_{\beta}$ is of the form ( 7a ), where $U^{0}/U^{1}$ is a solution of $\mathcal{F}^{\prime}_{\beta}$ in view of the last equation in ( 7c )
+and the homogeneousness of $\mathcal{F}^{\prime}_{\beta}$ (i.e., $C=0$ and $\tilde{C}=0$ ).
+Thus, up to composing with transformations of linear superposition of solutions,
+we can assume that $U^{0}=0$ .
+Then the transformation $\Phi$ preserves the algebra $\mathfrak{g}^{\rm ess}_{\beta}$ and thus induces an automorphism of this algebra. Fixing the basis $(\mathcal{P}^{t},\mathcal{P}^{y},\mathcal{D}^{\beta},\mathcal{I})$ ,
+we identify each automorphism of $\mathfrak{g}^{\rm ess}_{\beta}$ with its matrix in this basis.
+The automorphisms of the algebra $A_{3.4}^{a}\oplus A_{1}$ , which is isomorphic to $\mathfrak{g}^{\rm ess}_{\beta}$ ,
+were first computed in [ 12 , Table 1] in a consistent basis
+using a different algebra notation
+( $A_{3.4}\oplus A_{1}$ instead of $A_{3.4}^{-1}\oplus A_{1}$ and $A_{3.5}^{\alpha}\oplus A_{1}$ instead of $A_{3.4}^{\alpha}\oplus A_{1}$ for $-1<\alpha<1$ );
+see also [ 46 , Section A.2] for a more convenient exposition.
+In the case $\beta\neq 5/2$ ,
+the automorphism group ${\rm Aut}(\mathfrak{g}^{\rm ess}_{\beta})$ of $\mathfrak{g}^{\rm ess}_{\beta}$ is constituted by the matrices $\displaystyle\begin{pmatrix}a_{11}&0&a_{13}&0\\
+0&a_{22}&a_{23}&0\\
+0&0&1&0\\
+0&0&a_{43}&a_{44}\end{pmatrix},$ (29) where all the involved parameters $a_{ij}$ are arbitrary real constants with $a_{11}a_{22}a_{44}\neq 0$ .
+If $\beta=5/2$ , then the group ${\rm Aut}(\mathfrak{g}^{\rm ess}_{\beta})$ is extended, in comparison with the generic case, by the matrices $\displaystyle\begin{pmatrix}0&a_{12}&a_{13}&0\\
+a_{21}&0&a_{23}&0\\
+0&0&-1&0\\
+0&0&a_{43}&a_{44}\end{pmatrix},$ where all the involved parameters $a_{ij}$ are arbitrary real constants with $a_{12}a_{21}a_{44}\neq 0$ .
+The singularity of the value $\beta=5/2$ is related to the fact that the equivalence transformation $\mathscr{J}^{\prime}$ preserves this value of $\beta$ and, therefore,
+it induces an additional point symmetry transformation of $\mathcal{F}^{\prime}_{5/2}$ .
+Factoring out the induced transformation from $G_{5/2}$ ,
+we can consider only automorphisms of the form ( 29 ) for each relevant value $\beta$ . Pushing forward the basis elements of $\mathfrak{g}^{\rm ess}_{\beta}$ by $\Phi$ ,
+we obtain the equalities $\displaystyle\Phi_{*}(\mathcal{P}^{t})=a_{11}\mathcal{P}^{t},\hskip 10.00002pt\Phi_{*}(\mathcal{P}^{y})=a_{22}\mathcal{P}^{y},\hskip 10.00002pt\Phi_{*}(\mathcal{I})=a_{44}\mathcal{I},$ $\displaystyle\Phi_{*}(\mathcal{D}^{\beta})=\mathcal{D}^{\beta}+a_{13}\mathcal{P}^{t}+a_{23}\mathcal{P}^{y}+a_{43}\mathcal{I}.$ for some values the involved parameters $a_{ij}$ .
+Splitting these equalities componentwise results in the following system of determining equations
+for the components of $\Phi$ : $\displaystyle T_{t}=a_{11},\hskip 10.00002ptX_{t}=Y_{t}=U^{1}_{t}=0,\hskip 10.00002ptY_{y}=a_{22},\hskip 10.00002ptT_{y}=X_{y}=U^{1}_{y}=0,\hskip 10.00002ptU^{1}=a_{44},\hskip 10.00002ptxX_{x}=X,$ which integrates to $T=a_{11}t+b_{1},\hskip 10.00002ptX=cx,\hskip 10.00002ptY=a_{22}y+b_{2},\hskip 10.00002ptU=a_{44}u,$ where $b_{1}$ , $b_{2}$ and $c$ are real constants with $c\neq 0$ .
+Proceeding with the direct method, we take the equation $\mathcal{F}^{\prime}_{\beta}$ in the variables with tildes,
+expand, using the chain rule, all the involved derivatives in terms of the variables without tildes,
+substitute the expression for $u_{t}$ in view of the equation $\mathcal{F}^{\prime}_{\beta}$ into the expanded equation
+and split the result with respect to all the remaining jet variables.
+This gives two equations for the constant parameters $a_{11}$ , $a_{22}$ and $c$ , $a_{11}=|c|^{2-\beta},\hskip 10.00002pta_{22}=c|c|^{2-\beta}.$ The final step is to redenote the remaining constant parameters $b_{1}$ , $b_{2}$ , $c$ and $a_{44}$ .
+∎ Remark 27 . The essential point symmetry group $G^{\rm ess}_{\beta}$ coincides with the kernel point symmetry group $G^{\cap}_{\mathcal{F}^{\prime}}$ of the class $\mathcal{F}^{\prime}$ if $\beta\in\mathbb{R}\setminus\{0,2,5/2,3,5\}$ and with the group $\pi_{*}G^{\sim}_{\mathcal{F}^{\prime}}$ if $\beta\neq 5/2$ ,
+where $\pi$ is the natural projection $\pi\colon\mathbb{R}^{5}_{t,x,y,u,\beta}\to\mathbb{R}^{4}_{t,x,y,u}$ ,
+cf. Remark 11 .
+In other words, the group $G^{\rm ess}_{\beta}$ is extended for value $\beta=5/2$ by the element $\pi_{*}\mathscr{J}^{\prime}$ . Remark 28 . A complete list of independent discrete point symmetries
+of the equation $\mathcal{F}^{\prime}_{\beta}$ is exhausted by the transformations $\pi_{*}\mathscr{I}^{\prime}_{u}$ and $\pi_{*}\mathscr{I}^{\prime}_{\rm s}$ if $\beta\neq 5/2$ and by the transformations $\pi_{*}\mathscr{I}^{\prime}_{u}$ and $\pi_{*}(\mathscr{I}^{\prime}_{\rm s}\circ\mathscr{J}^{\prime})$ if $\beta\neq 5/2$ ,
+cf.  Remark 11 and Corollary 15 . 8.2 Classification of subalgebras The established isomorphism between $\mathfrak{g}^{\rm ess}_{\beta}$ and $A_{3.4}^{a}\oplus A_{1}$ with $a=(2-\beta)/(3-\beta)$ and results of [ 43 ] (in a different algebra notation with $A_{3.4}\oplus A_{1}$ instead of $A_{3.4}^{-1}\oplus A_{1}$ and $A_{3.5}^{\alpha}\oplus A_{1}$ instead of $A_{3.4}^{\alpha}\oplus A_{1}$ for $-1<\alpha<1$ )
+straightforwardly give the classification of subalgebras of $\mathfrak{g}^{\rm ess}_{\beta}$ . Lemma 29 . A complete list of inequivalent (with respect to inner automorphisms)
+subalgebras of the algebra $\mathfrak{g}_{\beta}^{\rm ess}$ with $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ is exhausted by the following subalgebras: $\displaystyle 1{\rm D}\colon\ \mathfrak{s}_{1.1}^{\kappa}:=\langle\mathcal{D}^{\beta}+\kappa\mathcal{I}\rangle,\hskip 10.00002pt\mathfrak{s}_{1.2}^{\varepsilon,\kappa}:=\langle\mathcal{P}^{y}+\varepsilon\mathcal{P}^{t}+\kappa\mathcal{I}\rangle,\hskip 10.00002pt\mathfrak{s}_{1.3}^{\delta}:=\langle\mathcal{P}^{y}+\delta\mathcal{I}\rangle,$ $\displaystyle\hphantom{1{\rm D}\colon\ }\mathfrak{s}_{1.4}^{\delta}:=\langle\mathcal{P}^{t}+\delta\mathcal{I}\rangle,\hskip 10.00002pt\mathfrak{s}_{1.5}:=\langle\mathcal{I}\rangle,$ $\displaystyle 2{\rm D}\colon\ \mathfrak{s}_{2.1}^{\delta}:=\langle\mathcal{P}^{y},\mathcal{P}^{t}+\delta\mathcal{I}\rangle,\hskip 10.00002pt\mathfrak{s}_{2.2}^{\varepsilon,\kappa}:=\langle\mathcal{P}^{y}+\varepsilon\mathcal{I},\mathcal{P}^{t}+\kappa\mathcal{I}\rangle,\hskip 10.00002pt\mathfrak{s}_{2.3}^{\kappa}:=\langle\mathcal{D}^{\beta}+\kappa\mathcal{I},\mathcal{P}^{y}\rangle,\hskip 10.00002pt$ $\displaystyle\hphantom{2{\rm D}\colon\ }\mathfrak{s}_{2.4}^{\kappa}:=\langle\mathcal{D}^{\beta}+\kappa\mathcal{I},\mathcal{P}^{t}\rangle,\ \mathfrak{s}_{2.5}:=\langle\mathcal{D}^{\beta},\mathcal{I}\rangle,\ \mathfrak{s}_{2.6}^{\delta}:=\langle\mathcal{P}^{y}+\delta\mathcal{P}^{t},\mathcal{I}\rangle,\ \mathfrak{s}_{2.7}:=\langle\mathcal{P}^{t},\mathcal{I}\rangle,$ $\displaystyle 3{\rm D}\colon\ \mathfrak{s}_{3.1}^{\kappa}:=\langle\mathcal{D}^{\beta}+\kappa\mathcal{I},\mathcal{P}^{t},\mathcal{P}^{y}\rangle,\hskip 10.00002pt\mathfrak{s}_{3.2}:=\langle\mathcal{D}^{\beta},\mathcal{P}^{y},\mathcal{I}\rangle,\hskip 10.00002pt\mathfrak{s}_{3.3}:=\langle\mathcal{D}^{\beta},\mathcal{P}^{t},\mathcal{I}\rangle,\hskip 10.00002pt$ where $\delta\in\{-1,0,1\}$ , $\varepsilon\in\{-1,1\}$ and $\kappa$ is an arbitrary constant. Corollary 30 . (i) For the generic case of $\beta\in\mathbb{R}\setminus\{0,2,5/2,3,5\}$ ,
+a complete list of $G^{\rm ess}_{\beta}$ -inequivalent
+subalgebras of the algebra $\mathfrak{g}_{\beta}^{\rm ess}$ is exhausted by the subalgebras $\displaystyle 1{\rm D}\colon\ \mathfrak{s}_{1.1}^{\kappa},\hskip 10.00002pt\mathfrak{s}_{1.2}^{1,\kappa},\hskip 10.00002pt\mathfrak{s}_{1.3}^{\delta^{\prime}},\hskip 10.00002pt\mathfrak{s}_{1.4}^{\delta},\hskip 10.00002pt\mathfrak{s}_{1.5},$ $\displaystyle 2{\rm D}\colon\ \mathfrak{s}_{2.1}^{\delta},\hskip 10.00002pt\mathfrak{s}_{2.2}^{1,\kappa},\hskip 10.00002pt\mathfrak{s}_{2.3}^{\kappa},\hskip 10.00002pt\mathfrak{s}_{2.4}^{\kappa},\hskip 10.00002pt\mathfrak{s}_{2.5},\hskip 10.00002pt\mathfrak{s}_{2.6}^{\delta^{\prime}},\hskip 10.00002pt\mathfrak{s}_{2.7},$ $\displaystyle 3{\rm D}\colon\ \mathfrak{s}_{3.1}^{\kappa},\hskip 10.00002pt\mathfrak{s}_{3.2},\hskip 10.00002pt\mathfrak{s}_{3.3},\hskip 10.00002pt$ where $\delta^{\prime}\in\{0,1\}$ and $\kappa$ is an arbitrary constant. (ii) An analogous list for $\beta=5/2$ is given by the subagebras $\displaystyle 1{\rm D}\colon\ \mathfrak{s}_{1.1}^{\kappa},\hskip 10.00002pt\mathfrak{s}_{1.2}^{1,\kappa},\hskip 10.00002pt\mathfrak{s}_{1.3}^{\delta^{\prime}},\hskip 10.00002pt\mathfrak{s}_{1.5},$ $\displaystyle 2{\rm D}\colon\ \mathfrak{s}_{2.1}^{\delta},\hskip 10.00002pt\mathfrak{s}_{2.2}^{1,\kappa},\hskip 10.00002pt\mathfrak{s}_{2.3}^{\kappa},\hskip 10.00002pt\mathfrak{s}_{2.5},\hskip 10.00002pt\mathfrak{s}_{2.6}^{\delta^{\prime}},\hskip 10.00002pt\mathfrak{s}_{2.7},$ $\displaystyle 3{\rm D}\colon\ \mathfrak{s}_{3.1}^{\kappa},\hskip 10.00002pt\mathfrak{s}_{3.2}.$ Among the subalgebras listed in Lemma 29 ,
+only the following satisfy the transversality condition and are thus appropriate for Lie reduction: $\displaystyle 1{\rm D}\colon\ \mathfrak{s}_{1.1}^{\kappa},\hskip 10.00002pt\mathfrak{s}_{1.2}^{\varepsilon,\kappa},\hskip 10.00002pt\mathfrak{s}_{1.3}^{\delta},\hskip 10.00002pt\mathfrak{s}_{1.4}^{\delta},$ $\displaystyle 2{\rm D}\colon\ \mathfrak{s}_{2.1}^{\delta},\hskip 10.00002pt\mathfrak{s}_{2.2}^{\varepsilon,\kappa},\hskip 10.00002pt\mathfrak{s}_{2.3}^{\kappa},\hskip 10.00002pt\mathfrak{s}_{2.4}^{\kappa},$ $\displaystyle 3{\rm D}\colon\ \mathfrak{s}_{3.1}^{\kappa}.$ Instead of the classification of Lie reductions of a single equation $\mathcal{F}^{\prime}_{\beta}$ modulo its essential point-symmetry (pseudo)group $G^{\rm ess}_{\beta}$ ,
+it is convenient to classify Lie reductions within the class $\mathcal{F}^{\prime}$ up to the $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence.
+More specifically, pushing forward the subalgebras $\mathfrak{s}_{1.3}^{\delta}$ and $\mathfrak{s}_{2.3}^{\kappa}$ of the algebra $\mathfrak{g}^{\rm ess}_{\beta}$ by the equivalence transformation ( 4 ),
+we obtain the subalgebras $\mathfrak{s}_{1.4}^{\delta}$ and $\mathfrak{s}_{2.4}^{\kappa}$ of the algebra $\mathfrak{g}^{\rm ess}_{5-\beta}$ , respectively.
+In view of this, we can without loss of generality omit the Lie reductions
+with respect to the subalgebras $\mathfrak{s}_{1.4}^{\delta}$ and $\mathfrak{s}_{2.4}^{\kappa}$ .
+However, this requires us to relax the restriction on the parameter $\beta$ ,
+from $\beta\in(-\infty,5/2]\setminus\{0,2\}$ to $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ .
+The suggested adjustment simplifies the Lie reduction procedure for
+the equations $\mathcal{F}^{\prime}_{\beta}$ with $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ by reducing the number of cases to be considered. 8.3 Lie reductions of codimension one We use the subalgebras $\mathfrak{s}_{1.1}^{\kappa}$ , $\mathfrak{s}_{1.2}^{\varepsilon,\kappa}$ and $\mathfrak{s}_{1.3}^{\delta}$ for carrying out codimension-one Lie reductions.
+For each of these subalgebras, we construct an ansatz for $u$ with new unknown function $w=w(z_{1},z_{2})$ of two new independent variables $(z_{1},z_{2})$ and the corresponding reduced partial differential equation for $w$ ,
+which are listed below.
+In what follows the subscripts in $w_{1}$ and $w_{2}$ indicate the derivatives of $w$ with respect to $z_{1}$ and $z_{2}$ , respectively. 1.1. $\mathfrak{s}_{1.1}^{\kappa}=\langle\mathcal{D}^{\beta}+\kappa\mathcal{I}\rangle$ with $\kappa\in\mathbb{R}$ . $\displaystyle z_{1}:=y|t|^{-(\beta-3)/(\beta-2)},\hskip 10.00002ptz_{2}:=x|t|^{1/(\beta-2)},\hskip 10.00002ptu=w(z_{1},z_{2})|t|^{\kappa(\beta-3)/(\beta-2)};$ $\displaystyle(\epsilon(\beta-2)z_{2}+(3-\beta)z_{1})w_{1}=\epsilon(\beta-2)|z_{2}|^{\beta}w_{22}-z_{2}w_{2}-\kappa(\beta-3)w,\hskip 10.00002pt\text{where}\hskip 10.00002pt\epsilon=\mathop{\rm sgn}\nolimits t.$ For each value of $(\kappa,\epsilon)$ ,
+the maximal Lie invariance algebra of reduced equation $1.1^{\kappa\epsilon}$ is trivial as for a linear homogeneous equation
+since it is spanned by the vector fields $w\partial_{w}$ and $f(z_{1},z_{2})\partial_{w}$ ,
+where the parameter function $f$ runs through the solution set of reduced equation $1.1^{\kappa\epsilon}$ . 5 5 5 The construction of the maximal Lie invariance algebras
+of reduced equations $1.1^{\kappa\epsilon}$ and $1.2^{\kappa\epsilon}$ is too complicated.
+The corresponding system of determining equations cannot be solved by standard symbolic computation programs
+for studying overdetermined systems of differential equations.
+The main reason for this is the parameterization of the determining equations
+by $\beta$ and $\kappa$ in a cumbersome way.
+To overcome the computational obstacles, we combine
+general techniques from the theory of compatibility of systems of differential equations
+and certain specific tools with
+the classical results by Lie on group classification of (1+1)-dimensional linear evolution equations [ 32 ] ;
+see modern treatment of these results in [ 42 ] . Moreover, this entire algebra is induced by
+the normalizer ${\rm N}_{\mathfrak{g}_{\beta}}(\mathfrak{s}_{1.1}^{\kappa})$ of the subalgebra $\mathfrak{s}_{1.1}^{\kappa}$ in the algebra $\mathfrak{g}_{\beta}$ , ${\rm N}_{\mathfrak{g}_{\beta}}(\mathfrak{s}_{1.1}^{\kappa})=\langle\mathcal{D}^{\beta},\mathcal{I}\rangle\mathbin{\mbox{$\hbox to0.0pt{$\displaystyle\hskip 3.31528pt\rule{0.4pt}{5.16663pt}$\hss}{\in}$}}\langle\hat{f}(t,x,y)\partial_{u}\rangle,$ where the parameter function $\hat{f}$ runs through the set of $\mathfrak{s}_{1.1}^{\kappa}$ -invariant solutions of $\mathcal{F}^{\prime}_{\beta}$ . 1.2. $\mathfrak{s}_{1.2}^{\varepsilon,\kappa}=\langle\mathcal{P}^{y}+\varepsilon\mathcal{P}^{t}+\kappa\mathcal{I}\rangle$ with $\varepsilon=\pm 1$ and $\kappa\in\mathbb{R}$ . $\displaystyle z_{1}:=y-\varepsilon t,\hskip 10.00002ptz_{2}:=x,\hskip 10.00002ptu={\rm e}^{\varepsilon\kappa t}w(z_{1},z_{2});$ $\displaystyle(z_{2}-\varepsilon)w_{1}=|z_{2}|^{\beta}w_{22}-\varepsilon\kappa w.$ For each value of $(\varepsilon,\kappa)$ ,
+the maximal Lie invariance algebra of reduced equation $1.2^{\varepsilon\kappa}$ coincides with the span $\langle\partial_{1},w\partial_{w},f(z_{1},z_{2})\partial_{w}\rangle$ ,
+where the parameter function $f$ runs through the solution set of this equation,
+see again footnote 5 .
+This entire algebra is induced by the normalizer ${\rm N}_{\mathfrak{g}_{\beta}}(\mathfrak{s}_{1.2}^{\varepsilon,\kappa})$ of the subalgebra $\mathfrak{s}_{1.2}^{\varepsilon,\kappa}$ in the algebra $\mathfrak{g}_{\beta}$ , ${\rm N}_{\mathfrak{g}_{\beta}}(\mathfrak{s}_{1.2}^{\varepsilon,\kappa})=\langle\mathcal{P}^{t},\mathcal{P}^{y},\mathcal{I}\rangle\mathbin{\mbox{$\hbox to0.0pt{$\displaystyle\hskip 3.31528pt\rule{0.4pt}{5.16663pt}$\hss}{\in}$}}\langle\hat{f}(t,x,y)\partial_{u}\rangle,$ where the parameter function $\hat{f}$ runs through
+the set of $\mathfrak{s}_{1.2}^{\varepsilon,\kappa}$ -invariant solutions of $\mathcal{F}^{\prime}_{\beta}$ . 1.3. $\mathfrak{s}_{1.3}^{\delta}=\langle\mathcal{P}^{y}+\delta\mathcal{I}\rangle$ with $\delta\in\{-1,0,1\}$ . $\displaystyle z_{1}:=t,\hskip 10.00002ptz_{2}:=x,\hskip 10.00002ptu={\rm e}^{\delta y}w(z_{1},z_{2});$ $\displaystyle w_{1}=|z_{2}|^{\beta}w_{22}-\delta z_{2}w.$ Using the point transformation $\tilde{z}_{1}=z_{1}$ , $\tilde{z}_{2}=2(\beta-2)^{-1}z_{2}|z_{2}|^{-\beta/2}$ and $\tilde{w}=|z_{2}|^{-\beta/4}w$ , we further map the reduced equation to its canonical form
+within the class of (1+1)-dimensional linear second-order evolution equations, $\displaystyle\tilde{w}_{1}=\tilde{w}_{22}+\left(\frac{\beta(\beta-4)}{4\tilde{z}_{2}^{2}(\beta-2)^{2}}-\epsilon\delta\left(\frac{(\beta-2)^{2}}{4}\tilde{z}_{2}^{2}\right)^{\frac{1}{2-\beta}}\right)\tilde{w},$ (30) where $\epsilon=\mathop{\rm sgn}\nolimits z_{2}$ . For any $\beta$ ,
+the normalizer ${\rm N}_{\mathfrak{g}_{\beta}}(\mathfrak{s}_{1.3}^{\delta})$ of the subalgebra $\mathfrak{s}_{1.3}^{\delta}$ in the algebra $\mathfrak{g}_{\beta}$ is $\displaystyle{\rm N}_{\mathfrak{g}_{\beta}}(\mathfrak{s}_{1.3}^{\delta})=\mathfrak{g}_{\beta}^{\rm ess}\mathbin{\mbox{$\hbox to0.0pt{$\displaystyle\hskip 3.31528pt\rule{0.4pt}{5.16663pt}$\hss}{\in}$}}\langle\hat{f}(t,x,y)\partial_{u}\rangle\hskip 10.00002pt\mbox{if}\hskip 10.00002pt\delta=0,$ $\displaystyle{\rm N}_{\mathfrak{g}_{\beta}}(\mathfrak{s}_{1.3}^{\delta})=\langle\mathcal{P}^{t},\mathcal{P}^{y},\mathcal{I}\rangle\mathbin{\mbox{$\hbox to0.0pt{$\displaystyle\hskip 3.31528pt\rule{0.4pt}{5.16663pt}$\hss}{\in}$}}\langle\hat{f}(t,x,y)\partial_{u}\rangle\hskip 10.00002pt\mbox{if}\hskip 10.00002pt\delta=\pm 1,$ where the parameter function $\hat{f}$ runs through the set of $\mathfrak{s}_{1.3}^{\delta}$ -invariant solutions
+of the equation $\mathcal{F}^{\prime}_{\beta}$ . The equation ( 30 ) with $\delta=0$ and $\beta=4$ coincides with the linear (1+1)-dimensional heat equation $\tilde{w}_{1}=\tilde{w}_{22}$ .
+Denoting its general solution by $\tilde{w}=\vartheta^{0}(\tilde{z}_{1},\tilde{z}_{2})$ , cf. footnote 4 ,
+results in the solution family $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=4\colon\ u=x\vartheta^{0}(t,x^{-1}).$ The maximal Lie invariance algebra of the linear (1+1)-dimensional heat equation $\tilde{w}_{1}=\tilde{w}_{22}$ is spanned by the vector fields $\displaystyle\partial_{1},\hskip 10.00002pt\mathcal{D}:=2z_{1}\partial_{1}+z_{2}\partial_{2}-\tfrac{1}{2}\tilde{w}\partial_{\tilde{w}},\hskip 10.00002pt\mathcal{K}:=z_{1}^{2}\partial_{1}+z_{1}z_{2}\partial_{2}-\tfrac{1}{4}(z_{2}^{2}+2z_{1})\tilde{w}\partial_{w},$ $\displaystyle z_{1}\partial_{2}-\tfrac{1}{2}z_{2}\tilde{w}\partial_{\tilde{w}},\hskip 10.00002pt\partial_{2},\hskip 10.00002pt\tilde{w}\partial_{\tilde{w}},\hskip 10.00002ptf(z_{1},z_{2})\partial_{\tilde{w}},$ where the parameter function $f$ runs through the solution set of this equation. The subalgebra $\langle\partial_{1},\mathcal{D},\tilde{w}\partial_{\tilde{w}},f(z_{1},z_{2})\partial_{\tilde{w}}\rangle$ is induced by the normalizer ${\rm N}_{\mathfrak{g}_{4}}(\mathfrak{s}_{1.3}^{0})$ .
+Thus, the vector fields $\mathcal{K}$ , $z_{1}\partial_{2}-\tfrac{1}{2}z_{2}\tilde{w}\partial_{\tilde{w}}$ and $\partial_{2}$ exhaust a complete list of independent genuine hidden symmetries of the equation $\mathcal{F}^{\prime}_{4}$ . If $\delta=0$ and $\beta\neq 4$ , then the equation ( 30 ) is the linear (1+1)-dimensional heat equation
+with the inverse square potential, $\tilde{w}_{1}=\tilde{w}_{22}+\frac{\beta(\beta-4)}{4\tilde{z}_{2}^{2}(\beta-2)^{2}}\tilde{w},$ and thus its general solution can be denoted as $\tilde{w}=\vartheta^{\mu}(\tilde{z}_{1},\tilde{z}_{2})$ with $\mu=\beta(\beta-4)(\beta-2)^{-2}/4$ .
+The maximal Lie invariance algebra of this equation is spanned by the vector fields $\displaystyle\partial_{\tilde{z}_{1}},\hskip 10.00002pt\tilde{\mathcal{D}}:=\tilde{z}_{1}\partial_{\tilde{z}_{1}}+\tfrac{1}{2}\tilde{z}_{2}\partial_{\tilde{z}_{2}}-\tfrac{1}{4}\tilde{w}\partial_{\tilde{w}},\hskip 10.00002pt\tilde{\mathcal{K}}:=\tilde{z}_{1}^{2}\partial_{\tilde{z}_{1}}+\tilde{z}_{1}\tilde{z}_{2}\partial_{\tilde{z}_{2}}-\tfrac{1}{4}(\tilde{z}_{2}^{2}-2\tilde{z}_{2})\tilde{w}\partial_{\tilde{w}},$ $\displaystyle\tilde{w}\partial_{\tilde{w}},\hskip 10.00002ptf(\tilde{z}_{1},\tilde{z}_{2})\partial_{\tilde{w}},$ where $f(\tilde{z}_{1},\tilde{z}_{2})$ is an arbitrary solution of it.
+The subalgebra $\langle\partial_{\tilde{z}_{1}},\tilde{\mathcal{D}},\tilde{w}\partial_{\tilde{w}},f(\tilde{z}_{1},\tilde{z}_{2})\partial_{\tilde{w}}\rangle$ is induced by the normalizer ${\rm N}_{\mathfrak{g}_{\beta}}(\mathfrak{s}_{1.3}^{0})$ .
+Thus, the vector field $\tilde{\mathcal{K}}$ is a single independent genuine hidden Lie-symmetry of the equation $\mathcal{F}^{\prime}_{\beta}$ with $\beta\neq 4$ . Pulling back the general solution $\tilde{w}=\vartheta^{\mu}(\tilde{z}_{1},\tilde{z}_{2})$ with $\mu=\beta(\beta-4)(\beta-2)^{-2}/4$ by the above transformation and substituting the resulting expression into the ansatz,
+we obtain the following solution family of the equation $\mathcal{F}^{\prime}_{\beta}$ : $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta\in\mathbb{R}\setminus\{0,2,3,5\}\colon\ u=|x|^{\beta/4}\vartheta^{\mu}(t,2(\beta-2)^{-1}x|x|^{-\beta/2}).$ (31) Let $\delta=\pm 1$ and $\beta\neq 1$ .
+The maximal Lie invariance algebra of the reduced equation $1.3^{\delta}$ is equal to the span $\langle\partial_{1},w\partial_{w},f(z_{1},z_{2})\partial_{w}\rangle$ with $f$ running through the solution set of this equation,
+which is entirely induced by the normalizer ${\rm N}_{\mathfrak{g}_{\beta}}(\mathfrak{s}_{1.3}^{\delta})$ . A specific value of $\beta$ for $\delta=\pm 1$ is $\beta=1$ .
+In this case, we can alternate the sign of $\tilde{z}_{2}$ and set $\tilde{z}_{2}=2|z_{2}|^{1/2}$ .
+The corresponding modified reduced equations ( 30 ) with $\epsilon\delta=-1$ and $\epsilon\delta=1$ , $\tilde{w}_{1}=\tilde{w}_{22}-\left(\frac{3}{4}\tilde{z}_{2}^{-2}+\frac{1}{4}\epsilon\delta\tilde{z}_{2}^{2}\right)\tilde{w},$ are respectively mapped by the point transformations $\displaystyle\hat{z}_{1}=\frac{1}{2}\tan\tilde{z}_{1},\ \hat{z}_{2}=\frac{\sqrt{2}}{2}\frac{\tilde{z}_{2}}{\cos\tilde{z}_{1}},\ \hat{w}=\sqrt{|\cos\tilde{z}_{1}|}{\rm e}^{-\frac{1}{4}\tilde{z}_{2}^{\,2}\tan\tilde{z}_{1}}\tilde{w},$ $\displaystyle\hat{z}_{1}=\frac{1}{4}{\rm e}^{2\tilde{z}_{1}},\ \hat{z}_{2}=\frac{\sqrt{2}}{2}{\rm e}^{\tilde{z}_{1}}\tilde{z}_{2},\ \hat{w}={\rm e}^{-\frac{1}{4}\tilde{z}_{2}^{\,2}-\frac{1}{2}\tilde{z}_{1}}\tilde{w}$ to the equation of the same form with $\delta=0$ in terms of the variables with hats.
+As a result, instead of the single solution family ( 31 ) as in the generic case of $\beta$ ,
+we construct three families of solutions that are parameterized by
+arbitrary solutions of the linear (1+1)-dimensional heat equation with the inverse square potential
+with $\mu=-\frac{3}{4}$ , $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=1\colon\ u=|x|^{1/4}\vartheta^{\mu}(t,2\sqrt{|x|}),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=1\colon\ u=|x|^{1/4}{\rm e}^{\delta y}\frac{{\rm e}^{|x|\tan t}}{\sqrt{|\cos t|}}\vartheta^{\mu}\left(\frac{1}{2}\tan t,\frac{\sqrt{2|x|}}{\cos t}\right),$ (32) $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=1\colon\ u=|x|^{1/4}{\rm e}^{x+\frac{1}{2}t+\delta y}\vartheta^{\mu}\left(\frac{1}{4}{\rm e}^{2t},\sqrt{2|x|}{\rm e}^{t}\right).$ (33) The maximal Lie invariance algebras of the modified reduced equations ( 30 )
+with $\epsilon\delta=-1$ and $\epsilon\delta=1$ are respectively spanned by the vector fields $\displaystyle\begin{split}&2\cos(2\tilde{z}_{1})\partial_{\tilde{z}_{1}}-2\sin(2\tilde{z}_{1})\tilde{z}_{2}\partial_{\tilde{z}_{2}}+(\cos(2z_{1})\tilde{z}_{2}^{2}+\sin(2z_{1}))\tilde{w}\partial_{\tilde{w}},\\
+&2\sin(2\tilde{z}_{1})\partial_{\tilde{z}_{1}}+2\cos(2z_{1})\tilde{z}_{2}\partial_{\tilde{z}_{2}}+(\sin(2\tilde{z}_{1})\tilde{z}_{2}^{2}-\cos(2z_{1}))\tilde{w}\partial_{\tilde{w}},\\
+&\partial_{\tilde{z}_{1}},\quad\tilde{w}\partial_{\tilde{w}},\quad f(\tilde{z}_{1},\tilde{z}_{2})\partial_{\tilde{w}}\end{split}$ (34) and $\displaystyle\begin{split}&{\rm e}^{-2\tilde{z}_{1}}\big(2\partial_{\tilde{z}_{1}}-2\tilde{z}_{2}\partial_{\tilde{z}_{2}}+(1-\tilde{z}_{2}^{2})\tilde{w}\partial_{\tilde{w}}\big),\quad{\rm e}^{2\tilde{z}_{1}}\big(2\partial_{\tilde{z}_{1}}+2\tilde{z}_{2}\partial_{\tilde{z}_{2}}-(1+\tilde{z}_{2}^{2})\tilde{w}\partial_{\tilde{w}}\big),\\
+&\partial_{\tilde{z}_{1}},\quad\tilde{w}\partial_{\tilde{w}},\quad f(\tilde{z}_{1},\tilde{z}_{2})\partial_{\tilde{w}},\end{split}$ (35) and the normalizer ${\rm N}_{\mathfrak{g}_{1}}(\mathfrak{s}_{1.3}^{\delta})$ induces
+the subalgebras $\langle\partial_{\tilde{z}_{1}},\tilde{w}\partial_{\tilde{w}},f(\tilde{z}_{1},\tilde{z}_{2})\partial_{\tilde{w}}\rangle$ in each of these algebras.
+Here the parameter function $f$ runs through the solution set of the respective equation.
+Therefore, a complete list of independent genuine hidden symmetries of the equation $\mathcal{F}^{\prime}_{1}$ related to each of the reductions under consideration
+is exhausted by the first two vector fields presented in ( 34 ) and ( 35 ). Remark 31 . Mapping the obtained solutions using the discrete equivalence transformation ( 4 )
+or its counterpart ( 6 ) for equations ( 5 ),
+we obtain the solutions of $\mathcal{F}^{\prime}_{\beta}$ invariant with respect to the subalgebra $\mathfrak{s}_{1.4}^{\delta}=\langle\mathcal{P}^{t}+\delta\mathcal{I}\rangle$ , $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=1\colon\ u=\vartheta^{0}(y,x),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta\in\mathbb{R}\setminus\{0,2,3,5\}\colon\ u=|x|^{(1-\beta)/4}\vartheta^{\mu}\big(y\mathop{\rm sgn}\nolimits x,2(3-\beta)^{-1}|x|^{(3-\beta)/2}\mathop{\rm sgn}\nolimits x\big),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=4\colon\ u=|x|^{3/4}\vartheta^{-3/4}\big(y,2|x|^{-1/2}\big),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=4\colon\ u=|x|^{3/4}{\rm e}^{\delta t}\frac{{\rm e}^{|x|^{-1}\tan y}}{\sqrt{|\cos y|}}\vartheta^{-3/4}\left(\frac{1}{2}\tan y,\frac{\sqrt{2|x|^{-1}}}{\cos y}\right),$ (36) $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=4\colon\ u=|x|^{3/4}{\rm e}^{x^{-1}+\frac{1}{2}y+\delta t}\vartheta^{-3/4}\left(\frac{1}{4}{\rm e}^{2y},\sqrt{2|x|^{-1}}{\rm e}^{y}\right).$ (37) 8.4 Lie reductions of codimensions two and three The Lie reductions with respect to the subalgebras $\mathfrak{s}_{2.1}^{\delta}$ , $\mathfrak{s}_{2.2}^{\varepsilon,0}$ , $\mathfrak{s}_{2.3}^{\kappa}$ , $\mathfrak{s}_{2.4}^{\kappa}$ and $\mathfrak{s}_{3.1}^{\kappa}$ do not give new solutions
+in comparison with the two-step Lie reductions,
+where the first step is associated with the subalgebra $\mathfrak{s}_{1.3}^{0}$ and leads to (1+1)-dimensional linear heat equations with zero or inverse square potentials
+as reduced equations, and such equations are well studied
+within the framework of symmetry analysis of differential equations. This is why the only essential codimension-two Lie reductions
+of the equations from the class $\mathcal{F}^{\prime}$ with $\beta\notin\{0,2,3,5\}$ are those
+associated with the subalgebras $\mathfrak{s}_{2.2}^{\varepsilon,\kappa}:=\langle\mathcal{P}^{y}+\varepsilon\mathcal{I},\mathcal{P}^{t}+\kappa\mathcal{I}\rangle$ ,
+where $\varepsilon\in\{-1,1\}$ and $\kappa\neq 0$ .
+A corresponding ansatz is $u=e^{\varepsilon y+\kappa t}\varphi(\omega)$ with $\omega=x$ ,
+and the reduced equation for $\varphi$ is $|\omega|^{\beta}\varphi_{\omega\omega}=(\varepsilon\omega+\kappa)\varphi.$ In some particular cases of parameters, we can construct closed-form solutions of this equation. For example, in the cases $\beta=1$ and $\beta=4$ ,
+the counterparts of this equation for the corresponding equations of the form ( 5 )
+coincide with the equations [ 24 , Chapter C, Section 2.273, Eq. (12)] with $a=-\kappa$ , $b^{2}=\varepsilon$ , $c=1$ and $a=-\varepsilon$ , $b^{2}=\kappa$ , $c=-1$ , respectively.
+At the same time, in view of results of Section 8.3 on $\mathfrak{s}_{1.3}^{\delta}$ -invariant solutions with $\delta\neq 0$ ,
+the consideration of the Lie reduction with respect to the subalgebras $\mathfrak{s}_{2.2}^{\varepsilon,\kappa}$ makes sense only for $\beta\neq 1,4$ . For the case $\beta=-1$ ,
+the change of variable $\tilde{\omega}=\omega+\frac{1}{2}\varepsilon\kappa$ results in the equation [ 24 , Chapter C, Section 2.273, Eq. (11)] with $a=0$ , $b=-\frac{1}{4}\varepsilon\kappa^{2}$ and $c^{2}=-\varepsilon$ ,
+whose general solution is $\displaystyle\varphi=|\tilde{\omega}|^{-1/2}\mathop{\rm Re}\Big((C_{1}+{\rm i}C_{2})W_{\frac{{\rm i}\kappa^{2}}{16},\frac{1}{4}}({\rm i}\tilde{\omega})\Big)\hskip 10.00002pt\mbox{if}\hskip 10.00002pt\varepsilon=1,$ $\displaystyle\varphi=|\tilde{\omega}|^{-1/2}\Big(C_{1}M_{\frac{\kappa^{2}}{16},\frac{1}{4}}(\tilde{\omega})+C_{2}W_{\frac{\kappa^{2}}{16},\frac{1}{4}}(\tilde{\omega})\Big)\hskip 10.00002pt\mbox{if}\hskip 10.00002pt\varepsilon=-1.$ Here $M_{a,b}(z)$ and $W_{a,b}(z)$ are the Whittaker functions,
+which constitute the fundamental solution set of the Whittaker equation $\displaystyle\varphi_{zz}+\left(-\frac{1}{4}+\frac{a}{z}+\frac{1/4-b^{2}}{z^{2}}\right)\varphi=0$ with constant parameters $a$ and $b$ .
+The corresponding solutions of the equation $\mathcal{F}^{\prime}_{-1}$ are $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=-1\colon\ u=\Big|x+\frac{\kappa}{2}\Big|^{-1/2}{\rm e}^{y+\kappa t}\mathop{\rm Re}\Big((C_{1}+{\rm i}C_{2})W_{\frac{{\rm i}\kappa^{2}}{16},\frac{1}{4}}\big({\rm i}(x+\tfrac{1}{2}\kappa)\big)\Big),$ (38) $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=-1\colon\ u=\Big|x-\frac{\kappa}{2}\Big|^{-1/2}{\rm e}^{-y+\kappa t}\Big(C_{1}M_{\frac{\kappa^{2}}{16},\frac{1}{4}}\big(x-\tfrac{1}{2}\kappa\big)+C_{2}W_{\frac{\kappa^{2}}{16},\frac{1}{4}}\big(x-\tfrac{1}{2}\kappa\big)\Big).$ (39) Using the transformation ( 6 ), we can map these solutions to solution of the equation $\mathcal{F}^{\prime}_{6}$ , $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=6\colon\ u=x\Big|x^{-1}+\frac{\kappa}{2}\Big|^{-1/2}{\rm e}^{t+\kappa y}\mathop{\rm Re}\Big((C_{1}+{\rm i}C_{2})W_{\frac{{\rm i}\kappa^{2}}{16},\frac{1}{4}}\big({\rm i}(x^{-1}+\tfrac{1}{2}\kappa)\big)\Big),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=6\colon\ u=x\Big|x^{-1}-\frac{\kappa}{2}\Big|^{-1/2}{\rm e}^{-t+\kappa y}\Big(C_{1}M_{\frac{\kappa^{2}}{16},\frac{1}{4}}\big(x^{-1}-\tfrac{1}{2}\kappa\big)+C_{2}W_{\frac{\kappa^{2}}{16},\frac{1}{4}}\big(x^{-1}-\tfrac{1}{2}\kappa\big)\Big).$ 8.5 Generating solutions The simplest way to generate solutions for an equation $\mathcal{F}^{\prime}_{\beta}$ with $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ is to use its point symmetry pseudogroup from Theorem 26 .
+More specifically, given a solution $u=h(t,x,y)$ of $\mathcal{F}^{\prime}_{\beta}$ ,
+the action of a transformation of the form ( 27 ) leads to the solution $\displaystyle u=\sigma h\big(|\alpha|^{\beta-2}t-\lambda_{0},\alpha^{-1}x,\alpha^{-1}|\alpha|^{\beta-2}y-\lambda_{1}\big)+f(t,x,y),$ of the same equation.
+In the case $\beta=5/2$ , we can in addition use a transformation of the form ( 28 )
+and derive the solution $\displaystyle u=\sigma h\big(\mathop{\rm sgn}\nolimits(x)|\alpha|^{\beta-2}y-\lambda_{0},\alpha x^{-1},\mathop{\rm sgn}\nolimits(x)\alpha^{-1}|\alpha|^{\beta-2}t-\lambda_{1}\big)+f(t,x,y).$ Since each equation $\mathcal{F}^{\prime}_{\beta}$ is linear, we can also apply its generalized symmetries
+to the solution generation following [ 29 ] .
+The differential operators in total derivatives that are associated with the Lie-symmetry vector fields $-\mathcal{P}^{t}$ , $-\mathcal{P}^{y}$ , $-\mathcal{D}^{\beta}$ and $\mathcal{I}$ are $\displaystyle\mathrm{P}^{t}:=\mathrm{D}_{t},\hskip 10.00002pt\mathrm{P}^{y}:=\mathrm{D}_{y},\hskip 10.00002pt\mathrm{D}^{\beta}:=(2-\beta)t\mathrm{D}_{t}+x\mathrm{D}_{x}+(3-\beta)y\mathrm{D}_{y}$ and the identity operator, respectively.
+These differential operators generate the associative algebra $\Upsilon_{\mathfrak{s}}$ associated with the subalgebra $\mathfrak{s}=\langle\mathcal{P}^{t},\mathcal{P}^{y},\mathcal{D}^{\beta}\rangle\simeq A_{3.4}^{a}$ of the algebra $\mathfrak{g}_{\beta}$ , where $a:=(\beta-2)/(\beta-3)$ .
+The operators $\mathrm{P}^{t}$ and $\mathrm{D}^{\beta}$ on the solutions of $\mathcal{F}^{\prime}_{\beta}$ respectively coincide with the operators $\displaystyle\hat{\mathrm{P}}^{t}:=-x\mathrm{D}_{y}+|x|^{\beta}\mathrm{D}_{x}^{2}\hskip 10.00002pt\mbox{and}\hskip 10.00002pt\hat{\mathrm{D}}^{\beta}:=(2-\beta)t\hat{\mathrm{P}}^{t}+x\mathrm{D}_{x}+(3-\beta)y\mathrm{D}_{y}.$ Consider the associative algebra $\bar{\Upsilon}_{\mathfrak{s}}$ generated by the operators $\hat{\mathrm{P}}^{t}$ , $\mathrm{P}^{y}$ and $\hat{\mathrm{D}}^{\beta}$ .
+In other words, the algebra $\bar{\Upsilon}_{\mathfrak{s}}$ is subjected to the presentation $\displaystyle\bar{\Upsilon}_{\mathfrak{s}}=\big\langle\hat{\mathrm{P}}^{t},\mathrm{P}^{y},\hat{\mathrm{D}}^{\beta}\mid[\hat{\mathrm{P}}^{t},\hat{\mathrm{D}}^{\beta}]=(2-\beta)\hat{\mathrm{P}}^{t},\,[\mathrm{P}^{y},\hat{\mathrm{D}}^{\beta}]=(3-\beta)\mathrm{P}^{y},\,[\hat{\mathrm{P}}^{t},\mathrm{P}^{y}]=0\big\rangle.$ (40) Lemma 32 . The monomials $\mathbf{Q}^{\alpha}:=(\mathrm{Q}^{1})^{\alpha_{1}}(\mathrm{Q}^{2})^{\alpha_{2}}(\mathrm{Q}^{3})^{\alpha_{3}}$ ,
+where $\alpha=(\alpha_{1},\alpha_{2},\alpha_{3})\in\mathbb{N}_{0}^{\,\,3}$ and $(\mathrm{Q}^{1},\mathrm{Q}^{2},\mathrm{Q}^{3})$ is any fixed ordering of $\hat{\mathrm{P}}^{t}$ , $\mathrm{P}^{y}$ and $\hat{\mathrm{D}}^{\beta}$ ,
+constitute a basis of the algebra $\bar{\Upsilon}_{\mathfrak{s}}$ . Proof. We again make use of Bergman’s diamond lemma [ 3 ] .
+Without loss of generality, we fix the ordering $\hat{\mathrm{D}}^{\beta}<\mathrm{P}^{y}<\hat{\mathrm{P}}^{t}$ and extend it to the degree lexicographic order on the words
+in the alphabet $(\hat{\mathrm{D}}^{\beta},\mathrm{P}^{y},\hat{\mathrm{P}}^{t})$ .
+According to the chosen ordering,
+the relations in the presentation ( 40 ) of the algebra $\bar{\Upsilon}_{\mathfrak{s}}$ can be written as the following reduction system: $\displaystyle\hat{\mathrm{P}}^{t}\hat{\mathrm{D}}^{\beta}=\hat{\mathrm{D}}^{\beta}\hat{\mathrm{P}}^{t}+(2-\beta)\hat{\mathrm{P}}^{t},\hskip 10.00002pt\mathrm{P}^{y}\hat{\mathrm{D}}^{\beta}=\hat{\mathrm{D}}^{\beta}\mathrm{P}^{y}+(3-\beta)\mathrm{P}^{y},\hskip 10.00002pt\hat{\mathrm{P}}^{t}\mathrm{P}^{y}=\mathrm{P}^{y}\hat{\mathrm{P}}^{t}.$ It has exactly one overlap ambiguity, $\hat{\mathrm{P}}^{t}\mathrm{P}^{y}\hat{\mathrm{D}}^{\beta}$ ,
+which is resolvable since $\displaystyle\begin{split}\hat{\mathrm{P}}^{t}\mathrm{P}^{y}\hat{\mathrm{D}}^{\beta}&{}=\mathrm{P}^{y}\hat{\mathrm{P}}^{t}\hat{\mathrm{D}}^{\beta}=\mathrm{P}^{y}\hat{\mathrm{D}}^{\beta}\hat{\mathrm{P}}^{t}+(2-\beta)\mathrm{P}^{y}\hat{\mathrm{P}}^{t}=\hat{\mathrm{D}}^{\beta}\mathrm{P}^{y}\hat{\mathrm{P}}^{t}+(3-\beta)\mathrm{P}^{y}\hat{\mathrm{P}}^{t}+(2-\beta)\mathrm{P}^{y}\hat{\mathrm{P}}^{t},\\[4.30554pt]
+\hat{\mathrm{P}}^{t}\mathrm{P}^{y}\hat{\mathrm{D}}^{\beta}&{}=\hat{\mathrm{P}}^{t}\hat{\mathrm{D}}^{\beta}\mathrm{P}^{y}+(3-\beta)\hat{\mathrm{P}}^{t}\mathrm{P}^{y}=\hat{\mathrm{D}}^{\beta}\hat{\mathrm{P}}^{t}\mathrm{P}^{y}+(2-\beta)\hat{\mathrm{P}}^{t}\mathrm{P}^{y}+(3-\beta)\hat{\mathrm{P}}^{t}\mathrm{P}^{y}\\
+&{}=\hat{\mathrm{D}}^{\beta}\mathrm{P}^{y}\hat{\mathrm{P}}^{t}+(2-\beta)\mathrm{P}^{y}\hat{\mathrm{P}}^{t}+(3-\beta)\mathrm{P}^{y}\hat{\mathrm{P}}^{t}.\end{split}$ Thus, the diamond lemma implies that the monomials of the form $(\hat{\mathrm{P}}^{t})^{\alpha_{1}}(\mathrm{P}^{y})^{\alpha_{2}}(\hat{\mathrm{D}}^{\beta})^{\alpha_{3}}$ constitute an $\mathbb{R}$ -basis of the algebra $\bar{\Upsilon}_{\mathfrak{s}}$ .
+Similar arguments work for all the other orderings of $\hat{\mathrm{P}}^{t}$ , $\mathrm{P}^{y}$ and $\hat{\mathrm{D}}^{\beta}$ .
+∎ Corollary 33 . The algebra $\bar{\Upsilon}_{\mathfrak{s}}$ is isomorphic to the universal enveloping algebra $\mathfrak{U}(A_{3.4}^{a})$ of the Lie algebra $A_{3.4}^{a}=\langle e_{1},e_{2},e_{3}\rangle$ , $[e_{1},e_{3}]=e_{1}$ , $[e_{2},e_{3}]=ae_{2}$ ,
+where $a=(2-\beta)/(3-\beta)$ . Proof. The correspondence $-\mathcal{P}^{t}\mapsto\hat{\mathrm{P}}^{t}$ , $-\mathcal{P}^{y}\mapsto\mathrm{P}^{y}$ and $-\mathcal{D}^{\beta}\mapsto\hat{\mathrm{D}}^{\beta}$ by linearity extends to the Lie algebra homomorphism $\varphi$ from $\mathfrak{s}=\langle\mathcal{P}^{t},\mathcal{P}^{y},\mathcal{D}^{\beta}\rangle$ to the Lie algebra $\bar{\Upsilon}_{\mathfrak{s}}^{(-)}$ associated with the associative algebra $\bar{\Upsilon}_{\mathfrak{s}}$ , $\varphi\colon\mathfrak{s}\to\smash{\bar{\Upsilon}_{\mathfrak{s}}^{(-)}}$ .
+By the universal property of the universal enveloping algebra $\mathfrak{U}(\mathfrak{s})$ ,
+the Lie algebra homomorphism $\varphi$ extends to the (unital) associative algebra homomorphism $\hat{\varphi}\colon\mathfrak{U}(\mathfrak{s})\to\bar{\Upsilon}_{\mathfrak{s}}$ ,
+i.e., $\varphi=\hat{\varphi}\circ\iota$ as homomorphisms of vector spaces,
+where $\iota\colon\mathfrak{s}\to\mathfrak{U}(\mathfrak{s})$ is the canonical embedding of $\mathfrak{s}$ in $\mathfrak{U}(\mathfrak{s})$ .
+Since the algebra $\Upsilon_{\mathfrak{s}}$ is generated by $\varphi(\mathfrak{s})$ ,
+the homomorphism $\hat{\varphi}$ is surjective.
+Fixed an ordering of the basis elements of $\mathfrak{s}$ ,
+in view of the Poincaré–Birkhoff–Witt theorem, the homomorphism $\hat{\varphi}$ maps
+the corresponding Poincaré–Birkhoff–Witt basis of $\mathfrak{U}(\mathfrak{s})$ to a basis of $\bar{\Upsilon}_{\mathfrak{s}}$ .
+Therefore, $\hat{\varphi}$ is an isomorphism.
+The isomorphism $\mathfrak{s}\simeq A_{3.4}^{a}$ implies the isomorphism $\mathfrak{U}(\mathfrak{s})\simeq\mathfrak{U}(A_{3.4}^{a})$ .
+∎ Corollary 34 . The algebra $\bar{\Upsilon}_{\mathfrak{s}}$ is isomorphic to
+the algebra $\big\langle(\mathbf{Q}^{\alpha}u)\partial_{u}\mid\alpha\in\mathbb{N}_{0}^{\,\,3}\big\rangle$ of canonical representatives
+for a subalgebra of the quotient algebra of generalized symmetries
+of an equation $\mathcal{F}^{\prime}_{\beta}$ with $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ with respect to the equivalence of generalized symmetries. Similarly to what has been indicated in Sections 6 and 7 ,
+we use elements of the algebra $\bar{\Upsilon}_{\mathfrak{s}}$ to generate solutions of the equation $\mathcal{F}_{\beta}^{\prime}$ .
+More specifically, acting on a solution $u=h(t,x,y)$ of this equation by an arbitrary element $Q=\sum_{(\alpha_{1},\alpha_{2},\alpha_{3})\in\mathbb{N}_{0}^{\,\,3}}c_{\alpha_{1}\alpha_{2}\alpha_{3}}(\mathrm{Q}^{1})^{\alpha_{1}}(\mathrm{Q}^{2})^{\alpha_{2}}(\mathrm{Q}^{3})^{\alpha_{3}}$ of the algebra $\bar{\Upsilon}_{\mathfrak{s}}$ , gives the solution $Qh$ of the same equation.
+Here all but finitely many (real) constants $c_{\alpha_{1}\alpha_{2}\alpha_{3}}$ are equal to zero,
+and any ordering in $\{\hat{\mathrm{D}}^{\beta},\mathrm{P}^{y},\hat{\mathrm{P}}^{t}\}$ can be fixed.
+In view of Corollary 34 , the latter generation is consistent with the
+generation of solutions using generalized symmetries as indicated in [ 29 , Section 6] ,
+however, since the algebra of generalized symmetries of $\mathcal{F}^{\prime}_{\beta}$ is yet not described,
+we use its known subalgebra. Nevertheless, depending on $h$ and $c_{\alpha_{1}\alpha_{2}\alpha_{3}}$ ,
+this formula can result in a known or even the zero solution.
+We analyze which solutions generated according to this
+from Lie invariant solutions of $\mathcal{F}^{\prime}_{\beta}$ may be of interest.
+It suffices to consider only the solutions that are invariant with respect to
+the subalgebras $\mathfrak{s}_{1.1}^{\kappa}=\langle\mathcal{D}^{\beta}+\kappa\mathcal{I}\rangle$ , $\mathfrak{s}_{1.2}^{\varepsilon,\kappa}=\langle\mathcal{P}^{y}+\varepsilon\mathcal{P}^{t}+\kappa\mathcal{I}\rangle$ , $\mathfrak{s}_{1.3}^{\delta}=\langle\mathcal{P}^{y}+\delta\mathcal{I}\rangle$ , $\mathfrak{s}_{2.2}^{\varepsilon,\kappa}=\langle\mathcal{P}^{y}+\varepsilon\mathcal{I},\mathcal{P}^{t}+\kappa\mathcal{I}\rangle$ ,
+with $\varepsilon=\pm 1$ , $\delta\in\{-1,0,1\}$ , $\kappa\in\mathbb{R}$ and, for the last subalgebra family, $\kappa\neq 0$ ,
+see Section 8.2 .
+These solutions were discussed in Sections 8.3 and 8.4 .
+In view of the structure of the algebra $\mathfrak{g}_{\beta}$ with $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ ,
+the analysis reduces to that for single monomials $(\hat{\mathrm{D}}^{\beta})^{\alpha_{1}}(\mathrm{P}^{y})^{\alpha_{2}}(\hat{\mathrm{P}}^{t})^{\alpha_{3}}$ . 1.1. The vector field $\mathcal{D}^{\beta}+\kappa\mathcal{I}$ corresponds to the differential operator $\hat{\mathrm{D}}^{\beta}-\kappa$ .
+Since $\hat{\mathrm{P}}^{t}\hat{\mathrm{D}}^{\beta}=(\hat{\mathrm{D}}^{\beta}+2-\beta)\hat{\mathrm{P}}^{t}$ and $\mathrm{P}^{y}\hat{\mathrm{D}}^{\beta}=(\hat{\mathrm{D}}^{\beta}+3-\beta)\mathrm{P}^{y}$ , we have $\displaystyle(\hat{\mathrm{D}}^{\beta})^{\alpha_{3}}(\hat{\mathrm{P}}^{t})^{\alpha_{1}}(\mathrm{P}^{y})^{\alpha_{2}}(\hat{\mathrm{D}}^{\beta}-\kappa)=(\hat{\mathrm{D}}^{\beta}+\alpha_{1}(2-\beta)+\alpha_{2}(3-\beta)-\kappa)(\hat{\mathrm{D}}^{\beta})^{\alpha_{3}}(\hat{\mathrm{P}}^{t})^{\alpha_{1}}(\mathrm{P}^{y})^{\alpha_{2}}.$ In other words, the monomial $(\hat{\mathrm{P}}^{t})^{\alpha_{1}}(\mathrm{P}^{y})^{\alpha_{2}}(\hat{\mathrm{D}}^{\beta})^{\alpha_{3}}$ maps any $\mathfrak{s}_{1.1}^{\kappa}$ -invariant solution to $\mathfrak{s}_{1.1}^{\tilde{\kappa}}$ -invariant solution
+with $\tilde{\kappa}=\kappa-\alpha_{1}(2-\beta)-\alpha_{2}(3-\beta)$ .
+Thus, any element of $\bar{\Upsilon}_{\mathfrak{s}}$ maps the space spanned by $\mathfrak{s}_{1.1}^{\kappa}$ -invariant solutions
+with $\kappa$ running through $\mathbb{R}$ into itself. 1.2. It is clear that any polynomial in $\hat{\mathrm{P}}^{t}$ and $\mathrm{P}^{y}$ commutes with $Q:=\mathrm{P}^{y}+\varepsilon\hat{\mathrm{P}}^{t}-\kappa$ .
+Therefore, its action maps the set of $\mathfrak{s}_{1.2}^{\kappa}$ -invariant solutions into itself.
+At the same time, the operator $\hat{\mathrm{D}}^{\beta}$ does not commute with $Q$ , $Q\hat{\mathrm{D}}^{\beta}=(\hat{\mathrm{D}}^{\beta}+2-\beta)Q+\mathrm{P}^{y}+(2-\beta)\kappa.$ Thus, for an $\mathfrak{s}_{1.2}^{\varepsilon,\kappa}$ -invariant solution $h$ ,
+the solution $\hat{\mathrm{D}}^{\beta}h$ is $\mathfrak{s}_{1.2}^{\varepsilon,\kappa}$ -invariant
+if and only if the solution $h$ is in addition $\langle\mathcal{P}^{y}+(\beta-2)\kappa\mathcal{I}\rangle$ -invariant.
+This is why to generate new solutions of $\mathcal{F}^{\prime}_{\beta}$ from $\mathfrak{s}_{1.2}^{\varepsilon,\kappa}$ - invariant solutions
+within the framework discussed, up to linearly combining solutions,
+it suffices to iteratively act by the operator $\hat{\mathrm{D}}^{\beta}$ on other $\mathfrak{s}_{1.2}^{\varepsilon,\kappa}$ -invariant solutions if they are known. 1.3. It is clear that acting by a polynomial in $\mathrm{P}^{y}$ or $\hat{\mathrm{P}}^{t}$ on $\mathfrak{s}_{1.3}^{\delta}$ -invariant solutions does not result in new solutions
+since it commutes with the operator $\mathrm{P}^{y}-\delta$ .
+To describe the action of powers of $\hat{\mathrm{D}}^{\beta}$ , we split the consideration into two cases. Assume that $\delta=0$ .
+Despite the fact that $\mathrm{P}^{y}$ and $\hat{\mathrm{D}}^{\beta}$ do not commute,
+the action by $\hat{\mathrm{D}}^{\beta}$ does not give us new solutions since $\mathrm{P}^{y}\hat{\mathrm{D}}^{\beta}=(\hat{\mathrm{D}}^{\beta}+3-\beta)\mathrm{P}^{y}$ .
+Therefore, any element of $\bar{\Upsilon}_{\mathfrak{s}}$ maps
+the space of $\mathfrak{s}_{1.3}^{0}$ -invariant solutions of $\mathcal{F}^{\prime}_{\beta}$ into itself. In the case $\delta\neq 0$ ,
+the equality $(\mathrm{P}^{y}+\delta)\hat{\mathrm{D}}^{\beta}=(\hat{\mathrm{D}}^{\beta}+3-\beta)(\mathrm{P}^{y}+\delta)-\delta(3-\beta)$ implies that for any $\mathfrak{s}_{1.3}^{\delta}$ -invariant solution $h$ ,
+the solution $\hat{\mathrm{D}}^{\beta}h$ is not $\mathfrak{s}_{1.3}^{\delta}$ -invariant.
+This is why to generate new solutions of $\mathcal{F}^{\prime}_{\beta}$ from $\mathfrak{s}_{1.3}^{\delta}$ -invariant solutions
+within the framework discussed, up to linearly combining solutions,
+it again suffices to iteratively act by the operator $\hat{\mathrm{D}}^{\beta}$ .
+Since for the specific case of $\beta=1$ , we constructed
+the families ( 32 ) and ( 33 ) of $\mathfrak{s}_{1.3}^{\delta}$ -invariant solutions with $\delta\neq 0$ ,
+we can extend them to more new wide families of solutions of the equation $\mathcal{F}^{\prime}_{\beta}$ , $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=1\colon\ u=(\hat{\mathrm{D}}^{1})^{k}\left(|x|^{1/4}{\rm e}^{\delta y}\frac{{\rm e}^{|x|\tan t}}{\sqrt{|\cos t|}}\vartheta^{-3/4}\left(\frac{\tan t}{2},\frac{\sqrt{2|x|}}{\cos t}\right)\right),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=1\colon\ u=(\hat{\mathrm{D}}^{1})^{k}\left(|x|^{1/4}{\rm e}^{x+\frac{1}{2}t+\delta y}\vartheta^{-3/4}\left(\frac{1}{4}{\rm e}^{2t},\sqrt{2|x|}{\rm e}^{t}\right)\right),$ where $\hat{\mathrm{D}}^{1}:=x(t\mathrm{D}_{x}+1)\mathrm{D}_{x}+(2y-tx)\mathrm{D}_{y}$ .
+These solution families can be mapped by the transformation ( 6 )
+to new solution families of the equation $\mathcal{F}^{\prime}_{4}$ ,
+which can be rearranged up to linearly combining.
+An equivalent but simpler way is to act on solutions of the form ( 36 ) and ( 37 )
+by the operator $\hat{\mathrm{D}}^{4}:=-2tx^{4}\mathrm{D}_{x}^{2}+x\mathrm{D}_{x}+(2tx-y)\mathrm{D}_{y}$ ,
+which is associated with the Lie-symmetry vector field $-\mathcal{D}^{4}$ of $\mathcal{F}^{\prime}_{4}$ and thus is the counterpart of $\hat{\mathrm{D}}^{1}$ , $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=4\colon\ u=(\hat{\mathrm{D}}^{4})^{k}\left(|x|^{3/4}{\rm e}^{\delta t}\frac{{\rm e}^{|x|^{-1}\tan y}}{\sqrt{|\cos y|}}\vartheta^{-3/4}\left(\frac{\tan y}{2},\frac{\sqrt{2|x|^{-1}}}{\cos y}\right)\right),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=4\colon\ u=(\hat{\mathrm{D}}^{4})^{k}\left(|x|^{3/4}{\rm e}^{x^{-1}+\frac{1}{2}y+\delta t}\vartheta^{-3/4}\left(\frac{1}{4}{\rm e}^{2y},\sqrt{2|x|^{-1}}{\rm e}^{y}\right)\right),$ Note that $\mathcal{J}^{\prime}_{*}\hat{\mathrm{D}}^{1}=-\hat{\mathrm{D}}^{4}+1$ . 2.2. Similarly to case 1.3,
+the operators $\mathrm{P}^{y}-\varepsilon$ and $\hat{\mathrm{P}}^{t}-\kappa$ commute with the operators $\hat{\mathrm{P}}^{t}$ and $\mathrm{P}^{y}$ and permute with the operator $\hat{\mathrm{D}}^{\beta}$ in the following way: $\displaystyle(\mathrm{P}^{y}-\varepsilon)\hat{\mathrm{D}}^{\beta}=(\hat{\mathrm{D}}^{\beta}+3-\beta)(\mathrm{P}^{y}-\varepsilon)+(3-\beta)\varepsilon,$ $\displaystyle(\hat{\mathrm{P}}^{t}-\kappa)\hat{\mathrm{D}}^{\beta}=(\hat{\mathrm{D}}^{\beta}+2-\beta)(\hat{\mathrm{P}}^{t}-\kappa)+(2-\beta)\kappa,$ therefore,
+for any $\mathfrak{s}_{2.2}^{\varepsilon,\kappa}$ -invariant solution $h$ ,
+the solution $\hat{\mathrm{D}}^{\beta}h$ is not $\mathfrak{s}_{2.2}^{\varepsilon,\kappa}$ -invariant.
+Therefore, to construct essentially new solutions of $\mathcal{F}^{\prime}_{\beta}$ ,
+it suffices, up to linearly combining solutions,
+to act by the powers of the operator $\hat{\mathrm{D}}^{\beta}$ . In Section 8.4 , we have constructed
+the solution families ( 38 ) and ( 39 )
+for the specific case $\beta=-1$ .
+Analogously to generating solutions in case 1.3 with $\delta\neq 0$ ,
+we extend these solutions to more new solution families of the equation $\mathcal{F}^{\prime}_{-1}$ and contract their counterparts for the equation $\mathcal{F}^{\prime}_{6}$ , $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=-1\colon\ u=(\hat{\mathrm{D}}^{-1})^{k}\mathop{\rm Re}\left(\Big|x+\frac{\kappa}{2}\Big|^{-1/2}e^{y+\kappa t}(C_{1}+{\rm i}C_{2})W_{\frac{{\rm i}\kappa^{2}}{16},\frac{1}{4}}\Big({\rm i}\big(x+\tfrac{1}{2}\kappa\big)\Big)\right),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=-1\colon\ u=(\hat{\mathrm{D}}^{-1})^{k}\left(\Big|x-\frac{\kappa}{2}\Big|^{-1/2}e^{-y+\kappa t}\Big(C_{1}M_{\frac{\kappa^{2}}{16},\frac{1}{4}}\big(x-\tfrac{1}{2}\kappa\big)+C_{2}W_{\frac{\kappa^{2}}{16},\frac{1}{4}}\big(x-\tfrac{1}{2}\kappa\big)\Big)\right),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=6\colon\ u=(\hat{\mathrm{D}}^{6})^{k}\mathop{\rm Re}\left(x\Big|x^{-1}+\frac{\kappa}{2}\Big|^{-1/2}e^{t+\kappa y}(C_{1}+{\rm i}C_{2})W_{\frac{{\rm i}\kappa^{2}}{16},\frac{1}{4}}\Big({\rm i}\big(x^{-1}+\tfrac{1}{2}\kappa\big)\Big)\right),$ $\displaystyle\hskip-15.00003pt\bullet\hskip 10.00002pt\beta=6\colon\ u=(\hat{\mathrm{D}}^{6})^{k}\left(x\Big|x^{-1}-\frac{\kappa}{2}\Big|^{-1/2}e^{\kappa y-t}\Big(C_{1}M_{\frac{\kappa^{2}}{16},\frac{1}{4}}\big(x^{-1}-\tfrac{1}{2}\kappa\big)+C_{2}W_{\frac{\kappa^{2}}{16},\frac{1}{4}}\big(x^{-1}-\tfrac{1}{2}\kappa\big)\Big)\right),$ where $\hat{\mathrm{D}}^{-1}:=3tx^{-1}\mathrm{D}_{x}^{2}+x\mathrm{D}_{x}+(4y-3tx)\mathrm{D}_{y}$ and $\hat{\mathrm{D}}^{6}:=-4tx^{6}\mathrm{D}_{x}^{2}+x\mathrm{D}_{x}+(4tx-3y)\mathrm{D}_{y}$ . 9 Conclusion The class of ultraparabolic (1+2)-dimensional Kolmogorov backward equations with power diffusivity $\mathcal{F}$ and its properly gauged counterpart $\mathcal{F}^{\prime}$ have many outstanding properties
+from the perspective of symmetry analysis of differential equations.
+As expected, the generic elements of the class $\mathcal{F}^{\prime}$ are related to one of the inequivalent cases of Lie symmetry extension
+within the superclass $\bar{\mathcal{F}}$ of the ultraparabolic linear (1+2)-dimensional second-order partial differential equations,
+which is a subcase of a case with at least four-dimensional decomposable solvable essential Lie invariance algebras.
+Moreover, specific exponents 0, 2, 3 and 5 of power diffusivity correspond to additional Lie symmetry extensions. At the same time, the number of surprising properties of the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ is essentially greater than those we expected. The class $\mathcal{F}^{\prime}$ admits the nontrivial discrete equivalence transformation ( 4 ),
+which is the only essential among elements of the equivalence group $G^{\sim}_{\mathcal{F}^{\prime}}$ in the course of group classification of this class.
+Under passing to the class $\mathcal{F}$ ,
+this transformation induces elements from the complement of the action groupoid of the group $G^{\sim}_{\mathcal{F}}$ in the groupoid $\mathcal{G}^{\sim}_{\mathcal{F}}$ , and thus it is associated with no element of $G^{\sim}_{\mathcal{F}}$ .
+This shows the naturality and, moreover, the necessity of the gauge $\alpha=0$ . There are only two $G^{\sim}_{\mathcal{F}^{\prime}}$ -inequivalent cases of essential Lie symmetry extensions within the class $\mathcal{F}^{\prime}$ .
+They are associated with
+the remarkable Fokker–Planck equation $\mathcal{F}^{\prime}_{0}$ and
+the fine Kolmogorov backward equation $\mathcal{F}^{\prime}_{2}$ .
+Furthermore, these are equations that are singular with respect to their symmetry properties
+in the entire superclass $\bar{\mathcal{F}}$ ,
+representing the cases with maximum eight-dimensional and nonsolvable five-dimensional
+essential Lie symmetry extensions, respectively.
+As a result, the study of $\mathcal{F}^{\prime}_{0}$ and $\mathcal{F}^{\prime}_{2}$ in [ 27 , 29 , 44 ] provides a significant part of symmetry analysis of elements of not only the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ but also their superclass $\bar{\mathcal{F}}$ . The equations $\mathcal{F}^{\prime}_{0}$ and $\mathcal{F}^{\prime}_{2}$ are also distinguished by other symmetry properties.
+They admit a number of nontrivial hidden Lie symmetries that are associated with their codimension-one Lie reductions
+to the (1+1)-dimensional linear heat equations with inverse square or zero potentials.
+Moreover, all the closed-form Lie invariant solutions that can be constructed for $\mathcal{F}^{\prime}_{0}$ and $\mathcal{F}^{\prime}_{2}$ are related to such reductions.
+These solutions constitute wide families and, furthermore, can be used as seeds for generating new solutions
+via acting by recursion operators related to Lie symmetries,
+and such generation indeed efficiently works for $\mathcal{F}^{\prime}_{0}$ and $\mathcal{F}^{\prime}_{2}$ . Even more surprising is that,
+among the other equations in the class $\mathcal{F}^{\prime}$ up to the $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalence,
+only the equation $\mathcal{F}^{\prime}_{1}$ possesses all the above properties
+of $\mathcal{F}^{\prime}_{0}$ and $\mathcal{F}^{\prime}_{2}$ , except the extension of essential Lie invariance algebras.
+This is why the singularity of $\mathcal{F}^{\prime}_{1}$ within the class $\mathcal{F}^{\prime}$ can be found out only after
+the comprehensive study of Lie reductions of the equations from this class. Another but less singular equation is $\mathcal{F}^{\prime}_{-1}$ .
+Its singularity becomes apparent only in the course of carrying out its codimension-two Lie reductions
+to ordinary differential equations that integrate,
+in contrast to their analogues for regular elements of the class $\mathcal{F}^{\prime}$ ,
+in terms of Whittaker functions.
+The solutions of $\mathcal{F}^{\prime}_{-1}$ constructed in this way
+can also be used as seeds for generating new solutions
+via acting by a recursion operator arising from a Lie symmetry. We have found hidden Lie symmetries for the generic equations from the class $\mathcal{F}^{\prime}$ ,
+but their number is essentially less than for the singular equations from these class
+with $\beta\in\{0,1,2,3,4,5\}$ .
+All of these symmetries are associated with codimension-one Lie reductions. In total, we have singled out eight values of the arbitrary element $\beta$ ,
+including $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalent counterparts, $-1$ , 0, 1, 2, 3, 4, 5 and 6.
+An open question is whether there exist other properties that distinguish the listed values.
+It is also not clear whether the study of more complicated structures like generalized symmetries or reduction modules
+can allow one to reveal the singularity of some values of $\beta$ that are regular from the point of view of Lie and hidden Lie symmetries,
+the construction of families of Lie-invariant solutions and their extension by recursion operators. The results of the present paper has several novel features. We not only have completely solved the properly posed group classification problems
+for the classes $\mathcal{F}^{\prime}$ and $\mathcal{F}$ with respect to equivalences of two kinds
+but have also computed the point symmetry pseudogroups of all equations from these classes.
+The point symmetry pseudogroups of the equations $\mathcal{F}^{\prime}_{\beta}$ with $\beta=0$ , $\beta=5$ , $\beta=2$ , $\beta=3$ and $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ are given in Theorems 18 , 21 , 23 , 25 and 26 , respectively,
+which provides the exhaustive descriptions of the fundamental groupoids $\mathcal{G}^{\rm f}_{\mathcal{F}^{\prime}}$ and, hence, $\mathcal{G}^{\rm f}_{\mathcal{F}}$ .
+Combining the above result on $\mathcal{G}^{\rm f}_{\mathcal{F}^{\prime}}$ with Theorem 4 (iv),
+we obtain the complete description of the entire equivalence groupoid $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ . Theorem 35 . The class $\mathcal{F}^{\prime}$ is semi-normalized.
+Its equivalence groupoid $\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ is the Frobenius product of the action groupoid of the subgroup
+generated by the discrete equivalence transformation $\mathscr{J}^{\prime}$ and the fundamental groupoid $\mathcal{G}^{\rm f}_{\mathcal{F}^{\prime}}=\{(\beta,\Phi,\beta)\mid\Phi\in G_{\beta},\,\beta\in\mathbb{R}\}$ ,
+where $G_{\beta}$ is the point-symmetry (pseudo)group of the equation $\mathcal{F}^{\prime}_{\beta}$ ,
+presented in Theorems 18 , 21 , 23 , 25 and 26 for $\beta=0$ , $\beta=5$ , $\beta=2$ , $\beta=3$ and $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ ,
+respectively. Corollary 5 combined with Theorem 35 completes the description of $\mathcal{G}^{\sim}_{\mathcal{F}}$ . Theorem 36 . The equivalence groupoid $\mathcal{G}^{\sim}_{\mathcal{F}}$ is constituted by the admissible transformations $\displaystyle\big((\alpha,\beta),\pi_{*}\mathscr{S}(\tilde{\alpha})\circ\Phi\circ\pi_{*}\mathscr{S}(-\alpha),(\tilde{\alpha},\tilde{\beta})\big),$ where $(\beta,\Phi,\tilde{\beta})\in\mathcal{G}^{\sim}_{\mathcal{F}^{\prime}}$ . We have first applied Hydon’s automorphism-based version of the algebraic method [ 20 , 21 , 22 , 23 ] to compute equivalence groups of classes of differential equations,
+which are the groups $G^{\sim}_{\mathcal{F}}$ and $G^{\sim}_{\mathcal{F}^{\prime}}$ .
+At the same time, the required automorphism groups
+of the associated equivalence algebras $\mathfrak{g}^{\sim}_{\mathcal{F}}$ and $\mathfrak{g}^{\sim}_{\mathcal{F}^{\prime}}$ cannot be found in the straightforward “brute-force” way.
+This is why we needed first to construct a sufficient number of megaideals of these algebras
+and then to take into account the derived constraints on entries of the automorphism matrices
+in the course of the regular computation of the automorphism groups.
+It was unexpected that
+the megaideals preliminarily constructed using their basic properties exhaust
+the entire sets of megaideals of the corresponding algebras. The groups $G^{\sim}_{\mathcal{F}}$ and $G^{\sim}_{\mathcal{F}^{\prime}}$ have also been constructed
+using the original advanced version of the direct method.
+There are two outputs of the double computation.
+It provides a cross-check of the correctness of the obtained groups,
+which is important
+since knowing them underlies all aspects of symmetry analysis of equations from the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ .
+Due to the double computation, we can also compare the effectiveness of the applied method.
+We did not expect that the advanced version of the direct method turns out to be more efficient than
+the algebraic method. In general, the study of the particular equivalence groupoids and equivalence groups in the present paper
+gives a justified insight into further development of computational tools for such studies. To find the point symmetry pseudogroup $G_{\beta}$ of a generic equation $\mathcal{F}^{\prime}_{\beta}$ in the class $\mathcal{F}^{\prime}$ ,
+we have used an original combination of the above methods, see the proof of Theorem 26 .
+We have first applied the advanced version of the direct method to prove
+the factorization of the pseudogroup $G_{\beta}$ and the maximal Lie invariance algebra $\mathfrak{g}_{\beta}$ of $\mathcal{F}^{\prime}_{\beta}$ into their essential parts and those associated with the linear superposition of solutions.
+The later parts are known and can be neglected.
+The fact that the adjoint action of the group $G^{\rm ess}_{\beta}$ preserves the algebra $\mathfrak{g}^{\rm ess}_{\beta}$ has allowed us to use techniques of Hydon’s algebraic method
+for obtaining a restrictive form for elements of the group $G^{\rm ess}_{\beta}$ ,
+which is parameterized by six constants.
+Then we complete the computation of this group by the direct method,
+deriving two constraints for these parameters. The classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ are constituted by linear differential equations.
+This is why it was natural and instructive to generate new wide solution families of equations from these classes
+by acting with recursion operators associated with their essential Lie symmetries.
+We have singled out, up to the $G^{\sim}_{\mathcal{F}}$ - and $G^{\sim}_{\mathcal{F}^{\prime}}$ -equivalences
+within the respective classes
+and up to the $G_{\beta}$ -equivalence for each particular value of $\beta$ ,
+all nontrivial generations among the above ones and then carried out them.
+This provided the first example in the literature
+on exhaustive study of such generations for a class of linear differential equations.
+The first similar examples for single differential linear equations
+were presented in [ 29 ] and [ 44 ] for the fine Kolmogorov backward equation $\mathcal{F}^{\prime}_{2}$ and the remarkable Fokker–Planck equation $\mathcal{F}^{\prime}_{0}$ , respectively. Despite the diverse results obtained for the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ and their particular elements
+in [ 27 , 29 , 44 ] and in the present paper,
+there are still many open problems on these objects, not to mention the superclass $\bar{\mathcal{F}}$ . We have comprehensively studied the generation of solutions of equations from $\mathcal{F}^{\prime}$ by their recursion operators that are related to their Lie symmetries.
+General linear recursion operators, which are associated with linear genuinely generalized symmetries,
+are also relevant for such generation
+but their classification is much more complicated than the classification of recursion operators stemming from Lie symmetries.
+We proved in [ 44 ] that the entire algebra of generalized symmetries
+of the remarkable Fokker–Planck equation $\mathcal{F}^{\prime}_{0}$ is generated
+with successively acting by its Lie-symmetry operators on the trivial Lie symmetry $u\partial_{u}$ .
+We also reasonably conjecture the analogous claim for the fine Kolmogorov backward equation $\mathcal{F}^{\prime}_{2}$ in [ 29 , Section 6] .
+At the same time, we have no conjecture on generalized symmetries of equations $\mathcal{F}^{\prime}_{\beta}$ with $\beta\in\mathbb{R}\setminus\{0,2,3,5\}$ . In the context of the theory of singular reduction modules [ 10 ] and in view of the ultraparabolicity of equations from the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ ,
+it will be instructive to study reduction modules of these equations.
+In comparison with Lie symmetries, the main obstacle of finding non-Lie reduction modules is that
+it reduces to solving nonlinear determining equations even for linear differential equations,
+which makes the related computations highly nontrivial and cumbersome.
+For example, even for the simplest class constituted by
+linear second-order partial differential equations with two independent variables,
+an analogous study was carried out only for the subclass of evolution equations [ 45 ] . Local conservation laws of equations from the class $\mathcal{F}$ were described in [ 56 ] ,
+which can be viewed as a preliminary step for the further consideration of nonlocal structures
+associated with these equations, e.g., potential conservation laws and potential symmetries.
+With this objective in mind, one should remember the principal difference
+between the two- and multi-dimensional cases in this aspect [ 1 , Theorem 2.7] .
+More specifically, for the existence of nontrivial potential structures in the latter case,
+one should gauge potentials arising from the conservation laws,
+and the selection of suitable and natural gauges can be still carried out only in a heuristic way. All the above problems can be extended to equations from the superclass $\bar{\mathcal{F}}$ .
+This class has been extensively studied for the past couple of decades.
+Its partial preliminary group classification was carried out in [ 13 ] .
+Some subclasses of $\bar{\mathcal{F}}$ were considered within the Lie-symmetry framework
+in [ 18 , 31 , 53 , 51 , 52 , 56 ] .
+Despite the number of papers on this subject, there are still many open problems
+in the symmetry analysis of the entire class $\bar{\mathcal{F}}$ ,
+its subclasses and even particular equations from this class,
+as can be seen from the above discussion on the classes $\mathcal{F}$ and $\mathcal{F}^{\prime}$ and on the equations $\mathcal{F}^{\prime}_{0}$ and $\mathcal{F}^{\prime}_{2}$ .
+We are close to completely solve the group classification problem for the class $\bar{\mathcal{F}}$ using the algebraic approach,
+and this involves almost all recently developed advanced techniques of group classification
+and the famous description of finite-dimensional Lie algebras of vector fields on the real plane,
+see [ 33 , pp. 122–178] for the first presentation and [ 16 ] for the modern and enhanced version of this result. Appendix A Algebraic method for computing equivalence groups The straightforward construction of the equivalence group of a class of differential equations
+by the direct method in general leads to cumbersome and complicated computations.
+We simplify finding the equivalence groups $G^{\sim}_{\mathcal{F}}$ and $G^{\sim}_{\mathcal{F}^{\prime}}$ due to using an advanced version of the direct method
+and knowing the equivalence groupoid of the superclass $\bar{\mathcal{F}}$ ,
+which is described in Theorem 2 .
+Nevertheless, it is still instructive
+to find the groups $G^{\sim}_{\mathcal{F}}$ and $G^{\sim}_{\mathcal{F}^{\prime}}$ by Hydon’s algebraic method [ 20 , 21 , 22 , 23 ] extended to equivalence groups in [ 5 ] ,
+which in addition leads to the double-check of Theorems 6 and 10 .
+The algebraic method is based on knowing the corresponding equivalence algebra,
+which should be computed independently using the infinitesimal approach.
+In the course of this computation, we can assume
+that the constant arbitrary elements $\alpha$ and $\beta$ of the class $\mathcal{F}$ (resp. $\beta$ of the class $\mathcal{F}^{\prime}$ )
+play the role of additional dependent variables satisfying the equations $\alpha_{t}=\alpha_{x}=\alpha_{y}=0$ and $\beta_{t}=\beta_{x}=\beta_{y}=0$ (resp. $\beta_{t}=\beta_{x}=\beta_{y}=0$ ).
+The corresponding infinitesimal invariance condition should be split
+with respect to both the parametric jet variables and the arbitrary elements $\alpha$ and $\beta$ (resp. the arbitrary element $\beta$ ).
+Since the equivalence algebras $\mathfrak{g}^{\sim}_{\mathcal{F}}$ and $\mathfrak{g}^{\sim}_{\mathcal{F}^{\prime}}$ are finite-dimensional,
+we proceed with the original automorphism-based version of the algebraic method by Hydon [ 20 , 21 , 22 , 23 ] .
+In fact, this is the first example of such a computation in the literature,
+see [ 5 , Section 4] for the first application of the megaideal-based version
+of the same method to finding the equivalence group of a class of differential equations. A.1 The original class Despite the fact that the dimension of the algebra $\mathfrak{g}:=\mathfrak{g}^{\sim}_{\mathcal{F}}$ is not high,
+see Corollary 8 ,
+the direct construction of the automorphism group ${\rm Aut}(\mathfrak{g})$ using symbolic computation programs seems expensive, if at all possible.
+To make the construction feasible, we first find a sufficient number of megaideals [ 46 ] of $\mathfrak{g}$ ,
+i.e., linear subspaces of $\mathfrak{g}$ that are stable with respect to the action of ${\rm Aut}(\mathfrak{g})$ ;
+another name for megaideals is fully characteristic ideals [ 19 , Exercise 14.1.1] .
+The choice of a basis of $\mathfrak{g}$ agreed with the megaideal hierarchy $\mathfrak{g}$ guarantees the presence of an essential number of zero entries in the matrix of a general automorphism of $\mathfrak{g}$ .
+The more megaideals we construct, the simpler computations become. In view of elementary properties of megaideals,
+all elements of the derived series, the upper and the lower central series of $\mathfrak{g}$ ,
+including the center $\mathfrak{z}(\mathfrak{g})$ and the derivative $\mathfrak{g}^{\prime}$ of $\mathfrak{g}$ ,
+are megaideals of $\mathfrak{g}$ .
+Thus, $\displaystyle\mathfrak{m}_{1}:=\mathfrak{g}^{\prime\prime}=\langle\partial_{u}\rangle,\ \ \mathfrak{m}_{2}:=\mathfrak{z}(\mathfrak{g}^{\prime})=\langle\partial_{u},x\partial_{u}\rangle,\ \ \mathfrak{m}_{4}:=\mathfrak{g}^{3}_{\mathcal{F}}=[\mathfrak{g},\mathfrak{g}^{\prime}_{\mathcal{F}}]=\langle\partial_{u},x\partial_{u},(tx-y)\partial_{u}\rangle$ are megaideals of $\mathfrak{g}$ .
+A useful tool for constructing megaideals of Lie algebras is [ 15 , Proposition 1] ,
+which states that if $\mathfrak{i}_{0}$ , $\mathfrak{i}_{1}$ and $\mathfrak{i}_{2}$ are the megaideals of $\mathfrak{g}$ ,
+then the set $\mathfrak{s}$ of elements from $\mathfrak{i}_{0}$ whose commutators with
+arbitrary elements from $\mathfrak{i}_{1}$ belong to $\mathfrak{i}_{2}$ is also a megaideal of $\mathfrak{g}$ .
+By considering $(\mathfrak{i}_{0},\mathfrak{i}_{1},\mathfrak{i}_{2})=(\mathfrak{g},\mathfrak{g},\mathfrak{m}_{1})$ and $(\mathfrak{i}_{0},\mathfrak{i}_{1},\mathfrak{i}_{2})=(\mathfrak{g},\mathfrak{g},\mathfrak{m}_{3})$ we respectively obtain the megaideals $\displaystyle\mathfrak{m}_{3}:=\langle\partial_{u},\partial_{y}\rangle,\hskip 10.00002pt\mathfrak{m}_{5}:=\langle\partial_{u},\partial_{y},\partial_{x}+t\partial_{y}+\partial_{\alpha}\rangle.$ The sum of megaideals is a megaideal.
+Taking $(\mathfrak{i}_{0},\mathfrak{i}_{1},\mathfrak{i}_{2})=(\mathfrak{m},\mathfrak{g},\{0\})$ ,
+we derive that the centralizer $\mathrm{C}_{\mathfrak{g}}(\mathfrak{m})$ of a megaideal $\mathfrak{m}$ is a megaideal.
+By this, we obtain the megaideal $\displaystyle\mathfrak{m}_{6}:=\mathrm{C}_{\mathfrak{g}}(\mathfrak{m}_{2}+\mathfrak{m}_{3})=\langle\partial_{u},x\partial_{u},\partial_{y},\partial_{t}\rangle.$ Applying the technique suggested in [ 11 , Lemma 10] ,
+we construct one more megaideal in $\mathfrak{g}$ . Proposition 37 . The span $\mathfrak{m}_{7}:=\langle\partial_{u},x\partial_{u},(tx-y)\partial_{u},u\partial_{u}\rangle$ is a megaideal. Proof. Consider the megaideal $\mathfrak{s}=\langle\partial_{u},x\partial_{u},(tx-y)\partial_{u},u\partial_{u},\partial_{y}\rangle$ of $\mathfrak{g}$ obtained using [ 15 , Proposition 1] for $(\mathfrak{i}_{0},\mathfrak{i}_{1},\mathfrak{i}_{2})=(\mathfrak{g},\mathfrak{g},\mathfrak{m}_{4})$ .
+The megaideals $\mathfrak{m}_{2}$ , $\mathfrak{m}_{4}$ and $\mathfrak{m}_{3}+\mathfrak{m}_{4}$ of $\mathfrak{g}$ are contained in $\mathfrak{s}$ .
+Fix an arbitrary element $\Phi$ of ${\rm Aut}(\mathfrak{g})$ .
+Since $\Phi(\mathfrak{m}_{2})=\mathfrak{m}_{2}$ , $\Phi(\mathfrak{m}_{4})=\mathfrak{m}_{4}$ , $\Phi(\mathfrak{m}_{3}+\mathfrak{m}_{4})=\mathfrak{m}_{3}+\mathfrak{m}_{4}$ , $\Phi(\mathfrak{s})=\mathfrak{s}$ , $(tx-y)\partial_{u}\in\mathfrak{m}_{4}\setminus\mathfrak{m}_{2}$ and $u\partial_{u}\in\mathfrak{s}\setminus(\mathfrak{m}_{3}+\mathfrak{m}_{4})$ ,
+we have that $\displaystyle\Phi((tx-y)\partial_{u})=\hat{c}_{1}\partial_{u}+\hat{c}_{2}x\partial_{u}+\hat{c}_{3}(tx-y)\partial_{u},$ $\displaystyle\Phi(u\partial_{u})=c_{1}\partial_{u}+c_{2}x\partial_{u}+c_{3}(tx-y)\partial_{u}+c_{4}u\partial_{u}+c_{5}\partial_{y}$ with $c_{4}\hat{c}_{3}\neq 0$ .
+Therefore, $\displaystyle\Phi([(tx-y)\partial_{u},u\partial_{u}])=\Phi((tx-y)\partial_{u})=\hat{c}_{1}\partial_{u}+\hat{c}_{2}x\partial_{u}+\hat{c}_{3}(tx-y)\partial_{u}$ $\displaystyle\hskip 20.00003pt=\big[\Phi((tx-y)\partial_{u}),\Phi(u\partial_{u})\big]=c_{4}(\hat{c}_{1}\partial_{u}+\hat{c}_{2}x\partial_{u}+\hat{c}_{3}(tx-y)\partial_{u})+c_{5}\hat{c}_{3}\partial_{u},$ which gives $c_{4}\hat{c}_{3}=\hat{c}_{3}$ and $\hat{c}_{1}=c_{4}\hat{c}_{1}+c_{5}\hat{c}_{3}$ , i.e.,
+that $c_{4}=1$ and $c_{5}=0$ .
+Hence $\Phi(u\partial_{u})\in\langle u\partial_{u}\rangle+\mathfrak{m}_{2}+\mathfrak{m}_{3}=\mathfrak{m}_{7}$ .
+Thus, we get that the span $\mathfrak{m}_{7}$ is stable under any $\Phi\in{\rm Aut}(\mathfrak{g})$ .
+∎ Fixing a basis of a Lie algebra, we identify automorphisms of this algebra with their matrices.
+In the algebra $\mathfrak{g}$ , we fix the basis $(\partial_{u},x\partial_{u},(tx-y)\partial_{u},\partial_{y},u\partial_{u},\partial_{t},\partial_{x}+t\partial_{y}+\partial_{\alpha})$ .
+In view of the presence of the megaideals $\mathfrak{m}_{1}$ , …, $\mathfrak{m}_{7}$ ,
+any automorphism $\Phi=(a_{ij})_{i,j=1,\dots,7}$ of $\mathfrak{g}$ satisfies the following constraints on its entries: $\displaystyle a_{ij}=0,\ \ 1\leqslant j<i\leqslant 7,\hskip 10.00002pta_{24}=a_{34}=a_{45}=a_{36}=a_{56}=a_{27}=a_{37}=a_{57}=a_{67}=0.$ We take into account these constraints and proceed with the direct construction of the group ${\rm Aut}(\mathfrak{g})$ using a symbolic computation program.
+As a result, we obtain that the automorphism group ${\rm Aut}(\mathfrak{g})$ of $\mathfrak{g}$ consists of the matrices $\displaystyle\begin{pmatrix}a_{33}a_{66}a_{77}&-a_{33}a_{46}&a_{13}&a_{35}a_{66}a_{77}&a_{15}&a_{35}a_{46}&a_{35}a_{47}-a_{25}a_{77}\\
+0&a_{33}a_{66}&a_{33}a_{47}a_{77}^{-1}&0&a_{25}&-a_{35}a_{66}&0\\
+0&0&a_{33}&0&a_{35}&0&0\\
+0&0&0&a_{66}a_{77}&0&a_{46}&a_{47}\\
+0&0&0&0&1&0&0\\
+0&0&0&0&0&a_{66}&0\\
+0&0&0&0&0&0&a_{77}\\
+\end{pmatrix},$ where the remaining parameters $a_{ij}$ are arbitrary real constants with $a_{33}a_{66}a_{77}\neq 0$ .
+It is clear from the form of automorphisms that
+a complete list of essential megaideals of the algebra $\mathfrak{g}$ ,
+which are not the sums of other megaideals, is exhausted by that constructed above: $\displaystyle\mathfrak{m}_{1},\hskip 10.00002pt\mathfrak{m}_{2},\hskip 10.00002pt\mathfrak{m}_{3},\hskip 10.00002pt\mathfrak{m}_{4},\hskip 10.00002pt\mathfrak{m}_{5},\hskip 10.00002pt\mathfrak{m}_{6},\hskip 10.00002pt\mathfrak{m}_{7}.$ The remaining nonzero megaideals of the algebra $\mathfrak{g}$ are $\displaystyle\mathfrak{m}_{2}+\mathfrak{m}_{3},\hskip 10.00002pt\mathfrak{m}_{3}+\mathfrak{m}_{4},\hskip 10.00002pt\mathfrak{m}_{2}+\mathfrak{m}_{5},\hskip 10.00002pt\mathfrak{m}_{3}+\mathfrak{m}_{7},\hskip 10.00002pt\mathfrak{m}_{4}+\mathfrak{m}_{6},\hskip 10.00002pt\mathfrak{m}_{4}+\mathfrak{m}_{5},\hskip 10.00002pt\mathfrak{m}_{5}+\mathfrak{m}_{6},$ $\displaystyle\mathfrak{m}_{5}+\mathfrak{m}_{7},\hskip 10.00002pt\mathfrak{m}_{6}+\mathfrak{m}_{7},\hskip 10.00002pt\mathfrak{m}_{4}+\mathfrak{m}_{5}+\mathfrak{m}_{6},\hskip 10.00002pt\mathfrak{m}_{5}+\mathfrak{m}_{6}+\mathfrak{m}_{7}=\mathfrak{g}.$ Lemma 38 . A complete list of independent discrete equivalence transformations of the class $\mathcal{F}$ of Kolmogorov backward equations
+with power diffusivity ( 1 ) is exhausted by two involutions,
+one alternating the sign of the dependent variable
+and one simultaneously alternating the signs of $x$ , $y$ and $\alpha$ , $(t,x,y,u,\alpha,\beta)\mapsto(t,x,y,-u,\alpha,\beta)$ and $(t,x,y,u,\alpha,\beta)\mapsto(t,-x,-y,u,-\alpha,\beta)$ . Proof. The inner automorphism group ${\rm Inn}(\mathfrak{g})$ is constituted by the matrices of the form $\displaystyle\begin{pmatrix}{\rm e}^{\delta_{5}}&\delta_{7}{\rm e}^{\delta_{5}}&-\delta_{4}{\rm e}^{\delta_{5}}&\delta_{3}&\delta_{1}&-\delta_{3}\delta_{7}&\delta_{3}\delta_{6}-\delta_{2}\\
+0&{\rm e}^{\delta_{5}}&\delta_{6}{\rm e}^{\delta_{5}}&0&\delta_{2}&-\delta_{3}&0\\
+0&0&{\rm e}^{\delta_{5}}&0&\delta_{3}&0&0\\
+0&0&0&1&0&-\delta_{7}&\delta_{6}\\
+0&0&0&0&1&0&0\\
+0&0&0&0&0&1&0\\
+0&0&0&0&0&0&1\\
+\end{pmatrix},$ where the parameters $\delta_{1}$ , …, $\delta_{7}$ are arbitrary real constants.
+Consider the subgroup $D\subset{\rm Aut}(\mathfrak{g})$ consisting of the diagonal matrices $\mathop{\rm diag}(\varepsilon b_{1}b_{2},\varepsilon b_{1},\varepsilon,b_{1}b_{2},1,b_{1},b_{2}),$ where $b_{1}$ and $b_{2}$ are arbitrary real constants with $b_{1}b_{2}\neq 0$ ,
+and $\varepsilon=\pm 1$ .
+The group of outer automorphisms ${\rm Out}(\mathfrak{g}):={\rm Aut}(\mathfrak{g})/{\rm Inn}(\mathfrak{g})$ is canonically isomorphic to $D$ .
+Moreover, the group ${\rm Aut}(\mathfrak{g})$ splits over its normal subgroup ${\rm Inn}(\mathfrak{g})$ , ${\rm Aut}(\mathfrak{g})=D\ltimes{\rm Inn}(\mathfrak{g})$ . The general form of a fiber-preserving point transformation $\mathcal{T}$ acting on the foliated space $\mathbb{R}^{4}_{t,x,y,u}\times\mathbb{R}^{2}_{\alpha,\beta}$ is $\displaystyle\mathcal{T}\colon\hskip 10.00002pt(\tilde{t},\tilde{x},\tilde{y},\tilde{u})=(T,X,Y,U)(t,x,y,u),\hskip 10.00002pt(\tilde{\alpha},\tilde{\beta})=(A,B)(t,x,y,u,\alpha,\beta).$ If $\mathcal{T}$ is an equivalence transformation of the class $\mathcal{F}$ ,
+then the pushforward $\mathcal{T}_{*}$ of vector fields by $\mathcal{T}$ is an automorphism of the algebra $\mathfrak{g}$ .
+Up factoring out continuous equivalence transformations, which are known,
+we can assume that $\mathcal{T}_{*}\in D$ .
+Therefore, $\displaystyle\mathcal{T}_{*}(\partial_{u})=\varepsilon b_{1}b_{2}\partial_{\tilde{u}},\hskip 10.00002pt\mathcal{T}_{*}(x\partial_{u})=\varepsilon b_{1}\tilde{x}\partial_{\tilde{u}},\hskip 10.00002pt\mathcal{T}_{*}((tx-y)\partial_{u})=\varepsilon(\tilde{t}\tilde{x}-\tilde{y})\partial_{\tilde{u}},\hskip 10.00002pt\mathcal{T}_{*}(\partial_{y})=b_{1}b_{2}\partial_{\tilde{y}}$ $\displaystyle\mathcal{T}_{*}(u\partial_{u})=\tilde{u}\partial_{\tilde{u}},\hskip 10.00002pt\mathcal{T}_{*}(\partial_{t})=b_{1}\partial_{\tilde{t}},\hskip 10.00002pt\mathcal{T}_{*}(\partial_{x}+t\partial_{y}+\partial_{\alpha})=b_{2}(\partial_{\tilde{x}}+\tilde{t}\partial_{\tilde{y}}+\partial_{\tilde{\alpha}}).$ This results in a system of determining equations for the components of $\mathcal{T}$ , $\displaystyle X_{t}=Y_{t}=U_{t}=A_{t}=B_{t}=0,\hskip 10.00002ptT_{t}=b_{1},$ $\displaystyle T_{x}=U_{x}=B_{x}+B_{\alpha}=0,\hskip 10.00002ptX_{x}=A_{x}+A_{\alpha}=b_{2},\hskip 10.00002ptY_{x}+tY_{y}=b_{2}T,$ $\displaystyle T_{y}=X_{y}=U_{y}=A_{y}=B_{y}=0,\hskip 10.00002ptY_{y}=b_{1}b_{2},$ $\displaystyle T_{u}=X_{u}=Y_{u}=A_{u}=B_{u}=0,\hskip 10.00002ptU_{u}=\varepsilon b_{1}b_{2},$ $\displaystyle xU_{u}=\varepsilon b_{1}X,\hskip 10.00002pt(tx-y)U_{u}=\varepsilon(TX-Y),\hskip 10.00002ptuU_{u}=U,$ whose general solution is $\displaystyle T=b_{1}t,\hskip 10.00002ptX=b_{2}x,\hskip 10.00002ptY=b_{1}b_{2}y,\hskip 10.00002ptU=\varepsilon b_{1}b_{2}u,$ $\displaystyle A=b_{2}\alpha+A^{0}(\omega,\beta),\hskip 10.00002ptB=B(\omega,\beta),\hskip 10.00002pt\omega:=x-\alpha.$ Using the chain rule we express all the required transformed derivatives in terms of the initial ones, $\tilde{u}_{\tilde{t}}=\varepsilon b_{2}u_{t}$ , $\tilde{u}_{\tilde{y}}=\varepsilon u_{y}$ , $\tilde{u}_{\tilde{x}\tilde{x}}=\varepsilon b_{1}b_{2}^{-1}u_{xx}$ , $\tilde{\alpha}_{\tilde{x}}=\alpha_{x}+b_{2}^{-1}\big(A^{0}_{\omega}(1-\alpha_{x})+A^{0}_{\beta}\beta_{x}\big)$ and $\tilde{\beta}_{\tilde{x}}=b_{2}^{-1}\big(B_{\omega}(1-\alpha_{x})+B_{\beta}\beta_{x}\big)$ .
+Then substitute the obtained expressions into the transformed counterpart of ( 1 ).
+The resulted equation should be satisfied identically for all the solutions of ( 1 ),
+which results in the constraints $b_{1}=1$ , $b_{2}^{2}=1$ , $A^{0}=0$ and $B=\beta$ .
+Therefore, the class $\mathcal{F}$ possesses only two independent discrete point equivalence transformations,
+which are the involutions $\mathscr{I}_{u}$ and $\mathscr{I}_{\rm s}$ associated with the values $\varepsilon=-1$ and $b_{2}=-1$ , respectively,
+where the other parameters take the values as for the identity transformation,
+see Corollary 9 .
+∎ A.2 The gauged class Similarly to what has been done in Section A.1 ,
+to find the automorphism group ${\rm Aut}(\hat{\mathfrak{g}})$ of the algebra $\hat{\mathfrak{g}}:=\mathfrak{g}^{\sim}_{\mathcal{F}^{\prime}}$ ,
+we start with constructing megaideals of the algebra $\hat{\mathfrak{g}}$ .
+Since the algebra is not abelian, we straightforwardly obtain the megaideal $\displaystyle\hat{\mathfrak{m}}_{2}:=\hat{\mathfrak{g}}^{\prime}=\langle\partial_{u},x\partial_{u},(tx-y)\partial_{u}\rangle.$ Recall that a nilradical of a Lie algebra and its derivatives are megaideals of the algebra.
+The nilradical of the algebra $\hat{\mathfrak{g}}$ and its derivative respectively are $\displaystyle\hat{\mathfrak{n}}=\langle\partial_{u},x\partial_{u},(tx-y)\partial_{u},\partial_{t},\partial_{y}\rangle\hskip 10.00002pt\mbox{and}\hskip 10.00002pt\hat{\mathfrak{m}}_{1}:=\hat{\mathfrak{n}}^{\prime}=\langle\partial_{u},x\partial_{u}\rangle.$ Applying [ 15 , Proposition 1] to the triple $(\mathfrak{i}_{0},\mathfrak{i}_{1},\mathfrak{i}_{2})=(\hat{\mathfrak{n}},\hat{\mathfrak{g}},\hat{\mathfrak{m}}_{1})$ ,
+we obtain the megaideal $\displaystyle\hat{\mathfrak{m}}_{4}=\langle\partial_{u},x\partial_{u},\partial_{t},\partial_{y}\rangle.$ Lemma 39 . The span $\hat{\mathfrak{m}}_{3}=\langle\partial_{u},x\partial_{u},(tx-y)\partial_{u},u\partial_{u}\rangle$ is a megaideal of the algebra $\hat{\mathfrak{g}}$ . Proof. Since $u\partial_{u}\in\hat{\mathfrak{g}}\setminus\hat{\mathfrak{n}}$ and $(tx-y)\partial_{u}\in\hat{\mathfrak{m}}_{2}\setminus\hat{\mathfrak{m}}_{1}$ ,
+for any $\Phi\in{\rm Aut}(\hat{\mathfrak{g}})$ we have $\displaystyle\Phi(u\partial_{u})=c_{1}\partial_{u}+c_{2}x\partial_{u}+c_{3}(tx-y)\partial_{u}+c_{4}u\partial_{u}+c_{5}\partial_{y}+c_{6}\partial_{t}\hskip 10.00002pt\mbox{and}$ $\displaystyle\Phi((tx-y)\partial_{u})=\hat{c}_{1}\partial_{u}+\hat{c}_{2}x\partial_{u}+\hat{c}_{3}(tx-y)\partial_{u},$ where $c_{1}$ ,…, $c_{6}$ , $\hat{c}_{1}$ , $\hat{c}_{2}$ and $\hat{c}_{3}$ are real constants with $\hat{c}_{3}c_{4}\neq 0$ .
+Therefore, $\displaystyle\Phi([(tx-y)\partial_{u},u\partial_{u}])=\Phi((tx-y)\partial_{u})=\hat{c}_{1}\partial_{u}+\hat{c}_{2}x\partial_{u}+\hat{c}_{3}(tx-y)\partial_{u}$ $\displaystyle\hskip 20.00003pt=\big[\Phi((tx-y)\partial_{u}),\Phi(u\partial_{u})\big]=c_{4}(\hat{c}_{1}\partial_{u}+\hat{c}_{2}x\partial_{u}+\hat{c}_{3}(tx-y)\partial_{u})+\hat{c}_{3}c_{5}\partial_{u}-\hat{c}_{3}c_{6}x\partial_{u},$ which results in the equations $\hat{c}_{1}=\hat{c}_{1}c_{4}+\hat{c}_{3}c_{5}$ , $\hat{c}_{2}=\hat{c}_{2}c_{4}-\hat{c}_{3}c_{6}$ and $\hat{c}_{3}=\hat{c}_{3}c_{4}$ ,
+i.e., $c_{4}=1$ and $c_{5}=c_{6}=0$ .
+Hence, $\Phi(u\partial_{u})\in\langle u\partial_{u}\rangle+\hat{\mathfrak{m}}_{2}$ .
+Thus, we get that $\hat{\mathfrak{m}}_{4}$ is stable under the action of the group ${\rm Aut}(\hat{\mathfrak{g}})$ .
+∎ Fixing the basis $(\partial_{u},x\partial_{u},(tx-y)\partial_{u},u\partial_{u},\partial_{t},\partial_{y})$ of the algebra $\hat{\mathfrak{g}}$ and using the knowledge of the proper megaideals $\hat{\mathfrak{m}}_{1}$ , …, $\hat{\mathfrak{m}}_{4}$ ,
+we can impose the following constraints on the matrix $(a_{ij})_{i,j=1,\dots,6}$ of an arbitrary automorphism of $\hat{\mathfrak{g}}$ in this basis: $\displaystyle a_{i1}=a_{i2}=a_{j3}=a_{j4}=a_{k5}=a_{k6}=0,\ \ i=3,4,5,6,\ \ j=5,6,\ \ k=3,4,\hskip 10.00002pta_{65}=0.$ Under the derived constraints, we complete the computation of ${\rm Aut}(\hat{\mathfrak{g}})$ in Maple .
+We obtain that the group ${\rm Aut}(\hat{\mathfrak{g}})$ consists of the matrices $\displaystyle\begin{pmatrix}a_{44}a_{55}&-a_{43}a_{55}&a_{43}a_{56}&a_{44}a_{56}&a_{15}&a_{16}\\
+-a_{34}a_{55}&a_{33}a_{55}&-a_{33}a_{56}&-a_{34}a_{56}&a_{25}&a_{26}\\
+0&0&a_{33}&a_{34}&0&0\\
+0&0&a_{43}&a_{44}&0&0\\
+0&0&0&0&a_{55}&a_{56}\\
+0&0&0&0&0&1\\
+\end{pmatrix},$ where the remaining parameters $a_{ij}$ are arbitrary real constants with $a_{33}(a_{55}a_{66}-a_{56}a_{65})\neq 0$ .
+It is then clear that the complete list of the essential megaideals of $\hat{\mathfrak{g}}$ ,
+which are not the sums of other megaideals, is exhausted by $\hat{\mathfrak{m}}_{1}$ , $\hat{\mathfrak{m}}_{2}$ , $\hat{\mathfrak{m}}_{3}$ and $\hat{\mathfrak{m}}_{4}$ .
+The only other nonzero megaideals are $\hat{\mathfrak{n}}=\hat{\mathfrak{m}}_{2}+\hat{\mathfrak{m}}_{4}$ and $\hat{\mathfrak{g}}=\hat{\mathfrak{m}}_{3}+\hat{\mathfrak{m}}_{4}$ .
+This is why the nilradical $\hat{\mathfrak{n}}$ and the entire algebra $\hat{\mathfrak{g}}$ are not essential in the course of computing
+the automorphisms of the algebra $\hat{\mathfrak{g}}$ and the equivalence group $G^{\sim}_{\mathcal{F}^{\prime}}$ by the algebraic method. The inner automorphism group ${\rm Inn}(\hat{\mathfrak{g}})$ is constituted by the matrices $\displaystyle\begin{pmatrix}{\rm e}^{\delta_{6}}&0&0&\delta_{5}&-\delta_{4}{\rm e}^{\delta_{6}}&-\delta_{4}\delta_{5}+\delta_{1}\\
+0&{\rm e}^{\delta_{6}}&-\delta_{5}&0&\delta_{3}{\rm e}^{\delta_{6}}&\delta_{3}\delta_{5}+\delta_{2}\\
+0&0&1&0&0&0\\
+0&0&0&1&0&0\\
+0&0&0&0&{\rm e}^{\delta_{6}}&\delta_{5}\\
+0&0&0&0&0&1\\
+\end{pmatrix},$ where the parameters $\delta_{1}$ , …, $\delta_{6}$ are arbitrary real constants.
+The group ${\rm Aut}(\hat{\mathfrak{g}})$ splits over its normal subgroup ${\rm Inn}(\hat{\mathfrak{g}})$ , ${\rm Aut}(\hat{\mathfrak{g}})=H\ltimes{\rm Inn}(\hat{\mathfrak{g}})$ .
+The subgroup $H\subset{\rm Aut}(\hat{\mathfrak{g}})$ consists of the matrices $\displaystyle\begin{pmatrix}\varepsilon c_{22}&-\varepsilon c_{21}\\
+-\varepsilon c_{12}&\varepsilon c_{11}\end{pmatrix}\oplus\begin{pmatrix}c_{11}&c_{12}\\
+c_{21}&c_{22}\end{pmatrix}\oplus{\rm diag}(\varepsilon,1),$ where the parameters $c_{kl}$ , $k,l=1,2$ , are arbitrary real constants with $c_{11}c_{22}-c_{21}c_{12}\neq 0$ ,
+and $\varepsilon=\pm 1$ .
+The general form of a point fiber-preserving transformation $\mathcal{T}$ in the foliated space $\mathbb{R}^{4}_{t,x,y,u}\times\mathbb{R}_{\beta}$ is $\displaystyle\mathcal{T}\colon\hskip 10.00002pt(\tilde{t},\tilde{x},\tilde{y},\tilde{u})=(T,X,Y,U)(t,x,y,u),\hskip 10.00002pt\tilde{\beta}=B(t,x,y,u,\beta).$ If $\mathcal{T}$ is an equivalence transformation of the class $\mathcal{F}^{\prime}$ ,
+then the pushforward $\mathcal{T}_{*}$ of vector fields by $\mathcal{T}$ is an automorphism of the algebra $\hat{\mathfrak{g}}$ .
+Moreover, up to composing $\mathcal{T}$ with elements of the identity component of $G^{\sim}_{\mathcal{F}^{\prime}}$ ,
+which is known if $\hat{\mathfrak{g}}$ is,
+we can assume that $\mathcal{T}_{*}\in H$ .
+Therefore, $\displaystyle\mathcal{T}_{*}(\partial_{u})=\varepsilon c_{22}\partial_{u}-\varepsilon c_{12}x\partial_{u},\hskip 10.00002pt\mathcal{T}_{*}(x\partial_{u})=-\varepsilon c_{21}\partial_{u}+\varepsilon c_{11}x\partial_{u},$ $\displaystyle\mathcal{T}_{*}(\partial_{t})=c_{11}\partial_{t}+c_{21}\partial_{y},\hskip 10.00002pt\mathcal{T}_{*}(\partial_{y})=c_{12}\partial_{t}+c_{22}\partial_{y},$ $\displaystyle\mathcal{T}_{*}((tx-y)\partial_{u})=\varepsilon(tx-y)\partial_{u},\hskip 10.00002pt\mathcal{T}_{*}(u\partial_{u})=u\partial_{u}.$ This leads to a system of linear differential equations on the components of $\mathcal{T}$ , $\displaystyle X_{t}=U_{t}=B_{t}=0,\hskip 10.00002ptT_{t}=c_{11},\hskip 10.00002ptY_{t}=c_{21},$ $\displaystyle X_{y}=U_{y}=B_{y}=0,\hskip 10.00002ptT_{y}=c_{12},\hskip 10.00002ptY_{y}=c_{22},$ $\displaystyle T_{u}=X_{u}=Y_{u}=B_{u}=0,\hskip 10.00002ptU_{u}=\varepsilon(c_{22}-c_{12}X),$ $\displaystyle xU_{u}=\varepsilon(c_{11}X-c_{21}),\hskip 10.00002ptuU_{u}=U,\hskip 10.00002pt(tx-y)U_{u}=\varepsilon(TX-Y),$ which integrates to $\displaystyle T=c_{11}t+c_{12}y,\hskip 10.00002ptX=\frac{c_{22}x+c_{21}}{c_{12}x+c_{11}},\hskip 10.00002ptY=c_{21}t+c_{22}y,\hskip 10.00002ptU=\varepsilon\frac{c_{11}c_{22}-c_{12}c_{21}}{c_{12}x+c_{11}}u,$ $\displaystyle B=B(x,\beta).$ This is the most restricted form of candidates for equivalence transformations of $\mathcal{F}^{\prime}$ that can be obtained within the framework of the algebraic method.
+We complete the computation of $G^{\sim}_{\mathcal{F}^{\prime}}$ , applying the direct method.
+Using the chain rule, we find the transformation components for involved derivatives, $\displaystyle\tilde{u}_{\tilde{t}}=\varepsilon\frac{c_{22}u_{t}-c_{21}u_{y}}{c_{12}x+c_{11}},\hskip 10.00002pt\tilde{u}_{\tilde{y}}=\varepsilon\frac{c_{11}u_{y}-c_{12}u_{t}}{c_{12}x+c_{11}},\hskip 10.00002pt\tilde{u}_{\tilde{x}\tilde{x}}=\frac{\varepsilon}{\Delta}(c_{12}x+c_{11})^{3}u_{xx},$ $\displaystyle\tilde{\beta}_{\tilde{x}}=\frac{(c_{12}x+c_{11})^{2}}{\Delta}(B_{x}+B_{\beta}\beta_{x}),$ where $\Delta:=c_{11}c_{22}-c_{12}c_{21}$ .
+The transformed counterpart $\tilde{u}_{\tilde{t}}+\tilde{x}\tilde{u}_{\tilde{y}}=|\tilde{x}|^{\tilde{\beta}}\tilde{u}_{\tilde{x}\tilde{x}}$ of the equation ( 2 )
+in the initial coordinates takes the form $\displaystyle u_{t}+xu_{y}=\left|\frac{c_{22}x+c_{21}}{c_{12}x+c_{11}}\right|^{\tilde{\beta}}\frac{(c_{12}x+c_{11})^{5}}{\Delta^{2}}u_{xx},$ which should coincide with ( 2 ).
+This results in the equation $|c_{22}x+c_{21}|^{\tilde{\beta}}=\Delta^{2}\mathop{\rm sgn}\nolimits(c_{12}x+c_{11})|x|^{\beta}|c_{12}x+c_{11}|^{\tilde{\beta}-5}.$ Hence $\mathop{\rm sgn}\nolimits(c_{12}x+c_{11})=1$ .
+In view of Lemma 3 and the inequality $c_{11}c_{22}-c_{21}c_{12}\neq 0$ ,
+in the case $c_{22}=0$ , we successively derive $c_{12}c_{21}\neq 0$ , $c_{11}=0$ , $c_{12}=\mathop{\rm sgn}\nolimits x$ , $c_{21}=\pm\mathop{\rm sgn}\nolimits x$ and $\beta=5-\tilde{\beta}$ .
+Analogously, for $c_{22}\neq 0$ we obtain $c_{12}=0$ , $c_{11}\neq 0$ , $c_{21}=0$ , $c_{11}=1$ , $\tilde{\beta}=\beta$ , $|c_{22}|^{\beta-2}=1$ and thus $c_{22}=\pm 1$ .
+Hence, there are only three independent discrete equivalence transformations in $G^{\sim}_{\mathcal{F}^{\prime}}$ , $\mathscr{I}^{\prime}_{u}$ , $\mathscr{I}^{\prime}_{\rm s}$ and $\mathscr{J}^{\prime}$ ,
+which are respectively associated with the values $\varepsilon=-1$ , $(\varepsilon,c_{22})=(-1,1)$ (if the other parameters in these two cases take the values as for the identity transformation)
+and $(c_{11},c_{12},c_{21},c_{22},\varepsilon)=(0,\mathop{\rm sgn}\nolimits x,\mathop{\rm sgn}\nolimits x,0,-\mathop{\rm sgn}\nolimits x)$ ,
+see Corollary 14 . Appendix B Darboux transformations of linear heat equations with potentials Consider a (1+1)-dimensional linear heat equations with an arbitrary potential $V=V(t,x)$ , $\displaystyle u_{t}-u_{xx}+V(t,x)u=0.$ (41) By $\mathrm{W}(f^{1},\dots,f^{k})$ we denote the Wronskian of sufficiently smooth functions $f^{1}$ , …, $f^{k}$ of $(t,x)$ with respect to $x$ , $\mathrm{W}(f^{1},\dots,f^{k})=\det(\partial_{x}^{l^{\prime}-1}f^{l})_{l,l^{\prime}=1,\dots,k}$ .
+The Darboux transformation $\tilde{u}=\mathrm{DT}[f^{1},\dots,f^{k}]u:=\frac{\mathrm{W}(f^{1},\dots,f^{k},u)}{\mathrm{W}(f^{1},\dots,f^{k})},$ with a fixed tuple $(f^{1},\dots,f^{k})$ of solutions of ( 41 )
+maps the solution set of ( 41 ) onto the solution set of the equation $\tilde{u}_{t}-\tilde{u}_{xx}+\tilde{V}(t,x)\tilde{u}=0$ , where $\tilde{V}=V-2\left(\frac{\big(\mathrm{W}(f^{1},\dots,f^{k})\big)_{x}}{\mathrm{W}(f^{1},\dots,f^{k})}\right)_{x},$ see [ 35 , 48 ] .
+An evident relation is established by Darboux transformations
+between (1+1)-dimensional linear heat equations with inverse square potentials, $V=-\mu x^{-2}$ , where $\mu$ is an arbitrary constant with $\mu\leqslant\frac{1}{4}$ .
+The function $u=|x|^{\alpha}$ with $\alpha=\frac{1}{2}\pm(\frac{1}{4}-\mu)^{1/2}$ is a solution of the equation $\displaystyle u_{t}=u_{xx}+\mu x^{-2}u,$ (42) and the corresponding Darboux transformation $\mathrm{DT}[|x|^{\alpha}]$ maps this equation to the equation $\tilde{u}_{t}=\tilde{u}_{xx}+\tilde{\mu}x^{-2}\tilde{u}$ with $\tilde{\mu}=\mu-2\alpha$ . The most interesting is the case when solutions of (1+1)-dimensional linear heat equations with inverse square potentials
+are expressed in terms of the general solution of the (1+1)-dimensional linear heat equation.
+Since the Darboux transformations $\mathrm{DT}[x^{n}]$ maps
+the equation of the form ( 42 ) with $\mu=n(n-1)$ to the equation of the same form with $\mu=n(n+1)$ .
+As a result, beginning from $n=1$ we derive the representation $\displaystyle u=\bigg(\partial_{x}-\frac{n}{x}\bigg)\bigg(\partial_{x}-\frac{n-1}{x}\bigg)\cdots\bigg(\partial_{x}-\frac{1}{x}\bigg)\vartheta^{0}(t,x)\ =\mathrm{DT}[P_{1},P_{3},\dots,P_{2n-1}]\vartheta^{0}(t,x)$ (43) for an arbitrary solution of the equation of the form ( 42 ) with $\mu=n(n+1)$ ,
+where $\vartheta^{0}$ is an arbitrary solution of the (1+1)-dimensional linear heat equation, for which $\mu=0$ .
+Here $P_{k}$ is the canonical heat polynomial of degree $k\in\mathbb{N}\cup\{0\}$ ,
+which is, for odd $k=2m-1$ with $m\in\mathbb{N}$ , of the form $\displaystyle P_{2m-1}(t,x)=\frac{x^{2m-1}}{(2m-1)!}+\frac{t}{1!}\frac{x^{2m-3}}{(2m-3)!}+\frac{t^{2}}{2!}\frac{x^{2m-5}}{(2m-5)!}+\cdots+\frac{t^{m-2}}{(m-2)!}\frac{x^{3}}{3!}+\frac{t^{m-1}}{(m-1)!}\frac{x}{1!}.$ To check the second equality in ( 43 ),
+it suffices to prove that $R_{m}R_{m-1}\cdots R_{1}P_{2m-1}=0,\hskip 10.00002pt\mbox{where}\hskip 10.00002ptR_{l}:=\partial_{x}-\frac{l}{x},\hskip 10.00002ptl\in\mathbb{N},$ which we carry out by induction.
+The induction base $m=1$ is clear since $P_{1}(t,x)=x$ and $(\partial_{x}-x^{-1})P_{1}=0$ .
+The induction step follows from the following facts: $\displaystyle P_{k}(t,x)=\frac{2^{k}}{k!}\mathrm{G}^{k}1,\hskip 10.00002pt\mbox{where}\hskip 10.00002pt\mathrm{G}:=t\partial_{x}+\frac{x}{2},\hskip 10.00002pt\partial_{x}P_{k}=P_{k-1},$ $\displaystyle R_{m}R_{m-1}\cdots R_{1}\mathrm{G}=\bigg(tR_{m}+\frac{x}{2}\bigg)R_{m-1}\cdots R_{1}\partial_{x}.$ Acknowledgments The authors are grateful to Alexander Bihlo for valuable discussions.
+This research was undertaken thanks to funding from the Canada Research Chairs program and the NSERC Discovery Grant program.
+It was also supported in part by the Ministry of Education, Youth and Sports of the Czech Republic (MŠMT ČR)
+under RVO funding for IČ47813059
+and by the National Academy of Science of Ukraine under the project 0116U003059.
+ROP expresses his gratitude for the hospitality shown by the University of Vienna during his long stay at the university. References [1] Anco S.C. and Bluman G.,
+Nonlocal symmetries and nonlocal conservation laws of Maxwell’s equations, J. Math. Phys. 38 (1997), 3508–3532. [2] Barucci E., Polidoro S. and Vespri V.,
+Some results on partial differential equations and Asian options, Math. Models Methods Appl. Sci. 11 (2001) 475–497. [3] Bergman G.M.,
+The diamond lemma for ring theory, Adv. in Math. 29 (1978), 178–218. [4] Bihlo A., Dos Santos Cardoso-Bihlo E. and Popovych R.O.,
+Complete group classification of a class of nonlinear wave equations, J. Math. Phys. 53 (2012), 123515, arXiv:1106.4801. [5] Bihlo A., Dos Santos Cardoso-Bihlo E. and Popovych R.O.,
+Algebraic method for finding equivalence groups, J. Phys. Conf. Ser. 621 (2015) 012001, arXiv:1503.06487. [6] Bihlo A. and Popovych R.O.,
+Point symmetry group of the barotropic vorticity equation,
+in Proceedings of 5th Workshop “Group Analysis of Differential Equations & Integrable Systems”
+(June 6–10, 2010, Protaras, Cyprus) , University of Cyprus, Nicosia, 2011, pp. 15–27, arXiv:1009.1523. [7] Bihlo A. and Popovych R.O.,
+Group classification of linear evolution equations, J. Math. Anal. Appl. 448 (2017), 982–2015, arXiv:1605.09251. [8] Bluman G.W., Cheviakov A.F. and Anco S.C., Applications of symmetry methods to partial differential equations ,
+Springer, New York, 2010. [9] Bluman G.W. and Kumei S., Symmetries and differential equations ,
+Springer, New York, 1989. [10] Boyko V.M., Kunzinger M. and Popovych R.O.,
+Singular reduction modules of differential equations, J. Math. Phys. 57 (2016), 101503, arXiv:1201.3223. [11] Boyko V.M., Popovych R.O. and Vinnichenko O.O.,
+Point- and contact-symmetry pseudogroups of dispersionless Nizhnik equation, Commun. Nonlinear Sci. Numer. Simul. 132 (2024), 107915, arXiv:2211.09759. [12] Christodoulakis T., Papadopoulos G.O. and Dimakis A.,
+Automorphisms of real four-dimensional Lie algebras and the invariant characterization of homogeneous 4-spaces, J. Phys. A 36 (2003), 427–441; Corrigendum, J. Phys. A 36 (2003), 2379. [13] Davydovych V.,
+Preliminary group classification of $(2+1)$ -dimensional linear ultraparabolic Kolmogorov–Fokker–Planck equations, Ufimsk. Mat. Zh. 7 (2015), 38–46. [14] Dos Santos Cardoso-Bihlo E., Bihlo A. and Popovych R.O.,
+Enhanced preliminary group classification of a class of generalized diffusion equations, Commun. Nonlinear Sci. Numer. Simulat. 16 (2011), 3622–3638, arXiv:1012.0297. [15] Dos Santos Cardoso-Bihlo E. and Popovych R.O.,
+Complete point symmetry group of the barotropic vorticity equation on a rotating sphere, J. Engrg. Math. 82 (2013), 31–38, arXiv:1206.6919. [16] González-López A., Kamran N. and Olver P.J.,
+Lie algebras of vector fields in the real plane, Proc. London Math. Soc. (3) 64 (1992), 339–368. [17] Güngör F.,
+Equivalence and symmetries for variable coefficient linear heat type equations. I, J. Math. Phys. 59 (2018), 051507, arXiv:1501.01481. [18] Güngör F.,
+Equivalence and symmetries for variable coefficient linear heat type equations. II. Fundamental solutions, J. Math. Phys. 59 (2018), 061507. [19] Hilgert J. and Neeb K.H., Structure and geometry of Lie groups ,
+Springer, New York, 2012. [20] Hydon P.E.,
+Discrete point symmetries of ordinary differential equations, Proc. R. Soc. Lond. Ser. A Math. Phys. Eng. Sci. 454 (1998), 1961–1972. [21] Hydon P.E.,
+How to find discrete contact symmetries, J. Nonlinear Math. Phys. 5 (1998), 405–416. [22] Hydon P.E.,
+How to construct the discrete symmetries of partial differential equations, Eur. J. Appl. Math. 11 (2000), 515–527. [23] Hydon P.E., Symmetry methods for differential equations. A beginner’s guide ,
+Cambridge University Press, Cambridge, 2000. [24] Kamke E., Differentialgleichungen. Lösungsmethoden und Lösungen. I: Gewöhnliche Differentialgleichungen ,
+B. G. Teubner, Stuttgart, 1977. [25] Kingston J.G. and Sophocleous C.,
+On form-preserving point transformations of partial differential equations, J. Phys. A 31 (1998), 1597–1619. [26] Kolmogoroff A.,
+Über die analytischen Methoden in der Wahrscheinlichkeitsrechnung, Math. Ann. 104 (1931), 415–458. [27] Koval S.D., Bihlo A. and Popovych R.O.,
+Extended symmetry analysis of remarkable (1+2)-dimensional Fokker–Planck equation, European J. Appl. Math. 34 (2023), 1067–1098, arXiv:2205.13526. [28] Koval S.D. and Popovych R.O.,
+Point and generalized symmetries of the heat equation revisited, J. Math. Anal. Appl. 527 (2023), 127430, arXiv:2208.11073. [29] Koval S.D. and Popovych R.O.,
+Extended symmetry analysis of (1+2)-dimensional fine Kolmogorov backward equation, Stud. Appl. Math. 153 (2024), e12695, arXiv:2402.08822. [30] Koval S.D. and Popovych R.O.,
+Linear generalized symmetries of linear systems of differential equations, in preparation. [31] Kovalenko S.S., Kopas I.M. and Stogniy V.I.,
+Preliminary group classification of a class of generalized linear Kolmogorov equations, Res. Bull. Natl. Tech. Univ. Ukraine “Kyiv Polytechnic Institute” 4 (2013), 67–72 (in Ukrainian). [32] Lie S.,
+Über die Integration durch bestimmte Integrale von einer Klasse linear partieller Differentialgleichungen, Arch. for Math. 6 (1881), 328–368;
+translation by N.H. Ibragimov:
+Lie S.,
+On integration of a class of linear partial differential equations by means of definite integrals,
+in CRC Handbook of Lie group analysis of differential equations , vol. 2, CRC Press, Boca Raton, FL, 1995, pp. 473–508. [33] Lie S., Theorie der Transformationsgruppen , vol. 3, B.G. Teubner, Leipzig, 1893. [34] Maltseva D.S. and Popovych R.O.,
+Complete point-symmetry group, Lie reductions and exact solutions of Boiti–Leon–Pempinelli system, Phys. D 460 (2024), 134081, arXiv:2103.08734. [35] Matveev V.B. and Salle M.A., Darboux transformations and solitons ,
+Springer, Berlin, 1991. [36] Morozov V.V.,
+Classification of nilpotent Lie algebras of sixth order, Izv. Vysš. Učebn. Zaved. Matematika (1958), no. 4, 161–171. [37] Mubarakzjanov G.M.,
+On solvable Lie algebras, Izv. Vysš. Učebn. Zaved. Matematika (1963), no. 1, 114–123. [38] Mubarakzjanov G.M.,
+Classification of real structures of Lie algebras of fifth order, Izv. Vysš. Učebn. Zaved. Matematika (1963), no. 3, 99–106. [39] Mubarakzjanov G.M.,
+Classification of solvable Lie algebras of sixth order with a non-nilpotent basis element, Izv. Vysš. Učebn. Zaved. Matematika (1963), no. 4, 104–116. [40] Olver P.J., Application of Lie groups to differential equations ,
+Springer, New York, 2000. [41] Opanasenko S., Bihlo A., Popovych R.O. and Sergyeyev A.,
+Extended symmetry analysis of isothermal no-slip drift flux model, Phys. D 402 (2020), 132188, arXiv:1705.09277. [42] Opanasenko S. and Popovych R.O.,
+Mapping method of group classification, J. Math. Anal. Appl. 513 (2022), 126209, arXiv:2109.11490. [43] Patera J. and Winternitz P.,
+Subalgebras of real three and four-dimensional Lie algebras, J. Math. Phys. 18 (1977), 1449–1455. [44] Popovych D.R., Koval S.D. and Popovych R.O.,
+Generalized symmetries of remarkable (1+2)-dimensional Fokker-Planck equation, European J. Appl. Math. (2025),
+doi: 10.1017/S0956792525100107 ,
+arXiv:2409.10348. [45] Popovych R.O.,
+Reduction operators of linear second-order parabolic equations, J. Phys. A 41 (2008), 185202, arXiv:0712.2764. [46] Popovych R.O., Boyko V.M., Nesterenko M.O. and Lutfullin M.W.,
+Realizations of real low-dimensional Lie algebras,
+arXiv:math-ph/0301029v7 (2005) (extended and revised version of paper J. Phys. A 36 (2003), 7337–7360). [47] Popovych R.O., Kunzinger M. and Eshraghi H.,
+Admissible transformations and normalized classes of nonlinear Schrödinger equations, Acta Appl. Math. 109 (2010), 315–359, arXiv:math-ph/0611061. [48] Popovych R.O., Kunzinger M. and Ivanova N.M.
+Conservation laws and potential symmetries of linear parabolic equations, Acta Appl. Math. 2 (2008), 113–185, arXiv:math-ph/0706.0443. [49] Risken H., The Fokker–Planck equation. Methods of solution and applications. Springer, Berlin, 1989. [50] Rotenberg M., Transport theory for growing cell population, J. Theor. Biol. 103 (1983), 181–199. [51] Spichak S. and Stogny V.,
+Symmetry analysis of the Kramers equation, Rep. Math. Phys. 40 (1997), 125–130. [52] Spichak S. and Stognii V.,
+Symmetry classification and exact solutions of the one-dimensional Fokker–Planck equation with arbitrary coefficients of drift and diffusion, J. Phys. A 32 (1999), 8341–8353. [53] Spichak S., Stogniy V. and Kopas I.,
+Symmetry properties and exact solutions of the linear Kolmogorov equation, Res. Bull. Natl. Tech. Univ. Ukraine “Kyiv Polytechnic Institute” 4 (2011), 93–97 (in Ukrainian). [54] Vaneeva O.O., Bihlo A. and Popovych R.O.,
+Generalization of the algebraic method of group classification with application to nonlinear wave and elliptic equations, Commun. Nonlinear Sci. Numer. Simul. 91 (2020), 105419,
+arXiv:2002.08939. [55] Vaneeva O.O., Popovych R.O. and Sophocleous C.,
+Extended symmetry analysis of two-dimensional degenerate Burgers equation, J. Geom. Phys. 169 (2021), 104336, arXiv:1908.01877. [56] Zhang Z.-Y., Zheng J., Guo L.-L. and Wu H.-F.,
+Lie symmetries and conservation laws of the Fokker–Planck equation with power diffusion, Math. Methods Appl. Sci. 43 (2020), 8894–8905. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

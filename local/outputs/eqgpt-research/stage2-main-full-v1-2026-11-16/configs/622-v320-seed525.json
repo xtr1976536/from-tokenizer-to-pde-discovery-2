@@ -1,0 +1,213 @@
+{
+  "version": "stage2-main-preparation-v2-20261116",
+  "dataset_revision": "0ae4426085d250787f96d5456bc0d30ce5f277d2",
+  "dataset_branch": "numerical",
+  "fields": [
+    "u",
+    "v",
+    "p"
+  ],
+  "spatial_dimensions": 2,
+  "equation_count": 3,
+  "input_frames": 20,
+  "output_frames": 20,
+  "batch_size": 32,
+  "successful_candidates_per_batch": 400,
+  "selection_candidates": 50,
+  "top_k": 10,
+  "reward_lambdas": [
+    1.0
+  ],
+  "sparsity_coefficient": 0.2,
+  "maximum_outer_epochs": 50,
+  "early_stop_patience": 10,
+  "relative_min_improvement": 0.01,
+  "seed": 525,
+  "maximum_sampling_attempts": 640000,
+  "pretraining": {
+    "maximum_epochs": 80,
+    "scheduler": "cosine_then_hold_minimum",
+    "learning_rate": 0.0001,
+    "minimum_learning_rate": 1e-06,
+    "validation_metric": "token_weighted_formula_cross_entropy",
+    "patience": 15,
+    "min_delta": 0.0001,
+    "checkpoint": "minimum_validation_cross_entropy",
+    "cosine_epochs": 30,
+    "minimum_epochs": 25,
+    "weight_decay": 0.01,
+    "optimizer": "Adam",
+    "weight_decay_semantics": "coupled L2 on matrix parameters; no bias/normalization decay",
+    "batch_size": 128,
+    "token_budget": 8192,
+    "gradient_clip": 1.0
+  },
+  "sft": {
+    "epochs": 5,
+    "scheduler": "cosine",
+    "learning_rate": 1e-05,
+    "minimum_learning_rate": 1e-07,
+    "early_stopping": false,
+    "restore_previous_best": false,
+    "weight_decay": 0.0,
+    "batch_size": 128,
+    "token_budget": 8192,
+    "gradient_clip": 1.0
+  },
+  "region": {
+    "outer_cells": 1,
+    "solid_interface_cells": 1,
+    "requires_geometry_audit": true
+  },
+  "baseline": {
+    "source": "baseline_code",
+    "modify_original_code": false,
+    "unet_batch_size": 12,
+    "unet_updates": 10000,
+    "fno_batch_size": 32,
+    "fno_updates": 4000,
+    "checkpoint_selection_audited": false,
+    "training_roles": [
+      "train_fit",
+      "reward_holdout"
+    ],
+    "checkpoint_selection_role": "validation_stop",
+    "required_for_model_run": false
+  },
+  "readiness": {
+    "simulation_data_audited": true,
+    "geometry_frozen": true,
+    "three_field_generator_available": true,
+    "three_equation_numerical_backend_available": true,
+    "system_term_count_audited": true,
+    "corpus_audited": true,
+    "selected_pretrained_checkpoint_available": true,
+    "cylinder_backend_acceptance_passed": true
+  },
+  "assets": {
+    "data_manifest": "data/cylinder_numerical_stage2_v1/manifest.json",
+    "data_storage": "server_only",
+    "legacy_eqgpt_reference": "stage2_main_v1/legacy_eqgpt/REFERENCE.json",
+    "legacy_training_corpus": "stage2_main_v1/legacy_eqgpt/training_corpus",
+    "legacy_checkpoint": "stage2_main_v1/legacy_eqgpt/checkpoint/model.pt",
+    "split_policy": "seen_temporal_blocks250_guard20_each_side_stride40_train75_val12p5_test12p5_v2",
+    "frozen_corpus": "outputs/eqgpt-research/stage2-corpus-2026-11-15/frozen/base-structures.jsonl",
+    "corpus_split_manifest": "outputs/eqgpt-research/stage2-corpus-2026-11-15/frozen/split-manifest.json"
+  },
+  "preparation": {
+    "corpus_structures": 212,
+    "three_field_structures": 80,
+    "upstream_selected_vocab_sizes": [
+      128,
+      192,
+      320
+    ],
+    "parameter_review_pending": false,
+    "formal_pretraining_started": true,
+    "main_experiment_started": true,
+    "upstream_selection": "user_selected_20261116",
+    "upstream_primary_splits": [
+      "811",
+      "622"
+    ],
+    "upstream_capacities": [
+      64,
+      96,
+      128,
+      160,
+      192,
+      224,
+      256,
+      288,
+      320,
+      352,
+      384,
+      416,
+      448,
+      480
+    ],
+    "command_integrity_threshold": null,
+    "selected_vocab_sizes_by_split": {
+      "811": [
+        128,
+        192,
+        320
+      ],
+      "622": [
+        128,
+        192,
+        320
+      ]
+    },
+    "numerical_spatial_order_limit": 4,
+    "numerical_temporal_order_limit": 2,
+    "generation_policy": "model probability only; uniform random token mixture prohibited by user"
+  },
+  "generator": {
+    "factory": "stage2_main_v1.generator:factory",
+    "tokenizer": "/data1/users/liugang/src/eq-bpe/project/runs/stage2_acceptance_20261116/models/622/320/ast-bpe-320.json",
+    "checkpoint": "/data1/users/liugang/src/eq-bpe/project/runs/stage2_acceptance_20261116/models/622/320/best.pt",
+    "positions": 2048,
+    "max_tokens": 1024,
+    "device": "cuda",
+    "smoke": false,
+    "random_fraction": 0.0
+  },
+  "numerics": {
+    "max_fit_points": 20000,
+    "max_nfev": 60,
+    "max_calls": 60000,
+    "max_seconds": 60,
+    "residual_tolerance": 0.0001
+  },
+  "scoring": {
+    "prediction_score_version": "train_fit_zscore_energy_v2",
+    "normalization": "(channel-frozen_train_fit_mean)/frozen_train_fit_std",
+    "channel_weights": [
+      1,
+      1,
+      1
+    ],
+    "fit_score": "unchanged anchor-normalized mean R2",
+    "sparsity_coefficient": 0.2,
+    "reward_lambdas": [
+      1.0
+    ],
+    "numerical_backend_units": "original physical fields",
+    "normalization_source": "unique train_fit visible frames only",
+    "reward_version": "stage1_fit_sparse_v1",
+    "prediction_in_search_reward": false,
+    "anchor_policy": "structural_pure_time_then_canonical_v1"
+  },
+  "candidate_filter": {
+    "minimum_equation_mean_r2": -0.0035,
+    "comparison": "strictly_greater",
+    "aggregation": "mean over current batch windows separately for each equation",
+    "validation_candidate_fit_windows": "first training batch of that epoch, before validation forecast",
+    "all_windows_must_fit": true,
+    "purpose": "coarse screening only; not a claim of good fit",
+    "calibration": {
+      "source": "512 deterministic vocab320 samples; two train_fit windows only",
+      "finite_fit_candidates": 192,
+      "threshold_rejected": 78,
+      "threshold_retained": 114,
+      "rejection_fraction": 0.40625,
+      "threshold_fixed_after_calibration": true
+    }
+  },
+  "checkpoint_retention": 2,
+  "acceptance_evidence": {
+    "path": "/data1/users/liugang/src/eq-bpe/project/runs/stage2_acceptance_20261116/fit-gate-relaxed-smoke-v1/result.json",
+    "scope": "reduced real Cylinder chain on 811/vocab320; other five checkpoints verified; full-scale feasibility is measured by this campaign",
+    "numerical_budget": "increased 2x after reduced acceptance; regression tests passed"
+  },
+  "campaign": {
+    "split": "622",
+    "vocab": 320,
+    "seed": 525,
+    "physical_gpu": 3,
+    "maximum_parallelism": 2,
+    "cuda_memory_fraction": 0.35,
+    "checkpoint_sha256": "d04efb534873fb17199852c6b4fe2b30619f7934b19520a4749ff3e6a774afdf"
+  }
+}

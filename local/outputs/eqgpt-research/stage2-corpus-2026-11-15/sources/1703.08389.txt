@@ -1,0 +1,484 @@
+1Introduction Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme 1 Introduction 2 Global existence and boundedness 3 Stabilization 3.1 Convergence. Case 1: $a_{1},a_{2}\in(0,1)$ 3.2 Convergence. Case 2: $a_{1}\geq 1>a_{2}$ References License: arXiv.org perpetual non-exclusive license arXiv:1703.08389v1 [math.AP] 24 Mar 2017 0 0 0 2010 Mathematics Subject Classification .
+Primary: 35K51; Secondary: 92C17, 35B40. 0 0 0 Key words and phrases:
+chemotaxis;
+Lotka–Volterra;
+global existence; stabilization. Boundedness and stabilization
+in a two-species
+chemotaxis-competition system
+of parabolic-parabolic-elliptic type Masaaki Mizukami 0 0 0 E-mail: masaaki.mizukami.math@gmail.com Department of Mathematics,
+Tokyo University of Science 1-3, Kagurazaka, Shinjuku-ku,
+Tokyo 162-8601, Japan August 24, 2026 Abstract. This paper deals with the two-species
+chemotaxis-competition system $\begin{cases}u_{t}=d_{1}\Delta u-\chi_{1}\nabla\cdot(u\nabla w)+\mu_{1}u(1-u-a_{1}v)&{\rm in}\ \Omega\times(0,\infty),\\
+v_{t}=d_{2}\Delta v-\chi_{2}\nabla\cdot(v\nabla w)+\mu_{2}v(1-a_{2}u-v)&{\rm in}\ \Omega\times(0,\infty),\\
+0=d_{3}\Delta w+\alpha u+\beta v-\gamma w&{\rm in}\ \Omega\times(0,\infty),\end{cases}$ where $\Omega$ is a bounded domain in $\mathbb{R}^{n}$ with smooth boundary $\partial\Omega$ , $n\geq 2$ ; $\chi_{i}$ and $\mu_{i}$ are constants satisfying
+some conditions. The above system was
+studied in the cases that $a_{1},a_{2}\in(0,1)$ and $a_{1}>1>a_{2}$ ,
+and it was proved that
+global existence and asymptotic stability hold
+when $\frac{\chi_{i}}{\mu_{i}}$ are small
+( [ 5 , 32 , 34 ] ).
+However, the conditions in the above two cases
+strongly depend on $a_{1},a_{2}$ , and
+have not been obtained in the case that $a_{1},a_{2}\geq 1$ .
+Moreover, convergence rates in the cases
+that $a_{1},a_{2}\in(0,1)$ and $a_{1}>1>a_{2}$ have not been studied.
+The purpose of this work is to construct conditions
+which derive
+global existence of classical bounded solutions
+for all $a_{1},a_{2}>0$ which covers the case that $a_{1},a_{2}\geq 1$ ,
+and lead to convergence rates
+for solutions of the above system
+in the cases that $a_{1},a_{2}\in(0,1)$ and $a_{1}\geq 1>a_{2}$ . 1 Introduction Many phenomena,
+which appear in natural science, especially,
+biology, chemistry and physics,
+support animals’
+lives.
+In this paper we focus on chemotaxis which is one of the important
+properties and is related to e.g., movement of sperm,
+migration of neurons or lymphocytes and tumor invasion.
+Chemotaxis is the property such that species move
+towards higher concentration of the chemical substance
+when they plunge into hunger. A mathematical problem which describes a part of the
+life cycle of cellular slime molds with chemotaxis
+is called the Keller–Segel system: $u_{t}=\Delta u-\chi\nabla\cdot(u\nabla v),\quad\tau v_{t}=\Delta v+u-v,$ where $\chi>0$ and $\tau\in\{0,1\}$ .
+Moreover, the chemotaxis system
+with growth terms $u_{t}=\Delta u+\chi\nabla\cdot(u\nabla v)+\kappa u-\mu u^{2},\quad\tau v_{t}=\Delta v+u-v$ was proposed by [ 25 , 31 ] ,
+where $\chi,\kappa,\mu>0$ and $\tau\in\{0,1\}$ .
+After the pioneering work of Keller–Segel [ 19 ] ,
+the Keller–Segel system and
+the chemotaxis system are intensively studied
+(see e.g., [ 2 , 13 , 15 ] ).
+A generalized problem
+of Keller–Segel systems,
+which means a two-species chemotaxis system,
+was proposed in [ 36 ] and also has studied
+(see e.g., [ 3 , 4 , 7 , 8 , 10 , 21 , 37 ] ;
+global existence
+was proved in [ 7 , 8 , 37 ] ;
+and thier asymptotic stability was shown in [ 37 ] ; related works which deal with
+blow-up of solutions can be seen in [ 3 , 4 , 7 , 8 , 10 , 21 ] ).
+Recently, a two-species chemotaxis system with
+competitive kinetics $\displaystyle u_{t}=\Delta u-\chi_{1}\nabla\cdot(u\nabla w)+\mu_{1}u(1-u-a_{1}v),$ $\displaystyle v_{t}=\Delta v-\chi_{2}\nabla\cdot(v\nabla w)+\mu_{2}v(1-a_{2}u-v),$ $\displaystyle\tau w_{t}=\Delta w+\alpha u+\beta v-\gamma w$ with some $\chi_{1},\chi_{2},\mu_{1},\mu_{2},a_{1},a_{2}>0$ and $\tau\in\{0,1\}$ ,
+which describes the evolution of
+two competing species which react
+on a single chemoattractant,
+was proposed
+by Tello–Winkler [ 34 ] and was studied
+(see [ 1 , 22 , 26 , 27 , 28 , 29 , 30 , 38 ] ).
+About this problem
+with $\tau=1$ ,
+global existence and boundedness
+was obtained in the 2-dimensional
+case ( [ 1 ] )
+and the $n$ -dimensional setting ( [ 22 ] );
+moreover, asymptotic behavior of solutions
+was established in [ 1 , 27 ] .
+Related works which dealt with global existence and
+boundedness in this two-species problem
+with sensitivity functions
+can be found in [ 27 , 38 ] ;
+and related works which treated
+the non-competition case are in [ 26 , 28 , 29 , 30 ] .
+These results in the case $\tau=1$ are motivated by the results ( [ 5 , 32 , 34 ] ) in the case $\tau=0$ .
+Therefore the parabolic-parabolic-elliptic problem
+reduced by letting $\tau=0$ seems to be helpful to analyze the fully parabolic case. In this paper we consider
+the two-species chemotaxis
+system with competitive kinetics
+of parabolic-parabolic-elliptic type $\begin{cases}u_{t}=d_{1}\Delta u-\chi_{1}\nabla\cdot(u\nabla w)+\mu_{1}u(1-u-a_{1}v),&x\in\Omega,\ t>0,\\[2.84526pt]
+v_{t}=d_{2}\Delta v-\chi_{2}\nabla\cdot(v\nabla w)+\mu_{2}v(1-a_{2}u-v),&x\in\Omega,\ t>0,\\[2.84526pt]
+0=d_{3}\Delta w+\alpha u+\beta v-\gamma w,&x\in\Omega,\ t>0,\\[2.84526pt]
+\nabla u\cdot\nu=\nabla v\cdot\nu=\nabla w\cdot\nu=0,&x\in\partial\Omega,\ t>0,\\[2.84526pt]
+u(x,0)=u_{0}(x),\;v(x,0)=v_{0}(x),&x\in\Omega,\end{cases}$ (1.1) where $\Omega$ is a bounded domain in $\mathbb{R}^{n}$ ( $n\geq 2$ )
+with smooth boundary $\partial\Omega$ and $\nu$ is the outward normal vector to $\partial\Omega$ .
+The constants $d_{1},d_{2},d_{3},\chi_{1},\chi_{2},\mu_{1},\mu_{2},a_{1},a_{2}$ and $\alpha,\beta,\gamma$ are positive.
+The initial data $u_{0},v_{0}$ are
+assumed to be nonnegative functions.
+The unknown functions $u(x,t)$ and $v(x,t)$ represent the population densities of
+two species and $w(x,t)$ shows the concentration of the
+chemical substance
+at place $x$ and time $t$ . The problem ( 1.1 ) is a problem
+on account of the influence of chemotaxis, diffusion,
+and the Lotka–Volterra competitive kinetics,
+i.e., with coupling coefficients $a_{1},a_{2}>0$ in $\displaystyle u_{t}=u(1-u-a_{1}v),\quad v_{t}=v(1-a_{2}u-v).$ (1.2) The mathematical difficulties of the problem ( 1.1 )
+are to deal with the chemotaxis term $\nabla\cdot(u\nabla w)$ and the competition term $u(1-u-a_{1}v)$ .
+To overcome these difficulties,
+in the case that $a_{1},a_{2}\in(0,1)$ and $d_{3}=\alpha=\beta=1$ in ( 1.1 ),
+Tello–Winkler [ 34 ] applied
+comparison methods to this problem and obtained
+global existence of classical bounded solutions
+and their asymptotic behavior under the conditions that $\displaystyle 2(\chi_{1}+\chi_{2})+a_{2}\mu_{1}<\mu_{2}\quad\mbox{and}\quad 2(\chi_{1}+\chi_{2})+a_{1}\mu_{2}<\mu_{1}.$ (1.3) However, if $\chi_{1}\to 0$ or $\mu_{1}\to\infty$ ,
+then these conditions break down.
+Recently, it was shown that the conditions $\displaystyle\frac{\chi_{1}}{\mu_{1}}\in\left[0,\frac{d_{3}}{2\alpha}\right)\cap\left[0,\frac{a_{1}d_{3}}{\beta}\right),\quad\frac{\chi_{2}}{\mu_{2}}\in\left[0,\frac{d_{3}}{2\beta}\right)\cap\left[0,\frac{a_{2}d_{3}}{\alpha}\right),$ (1.4) $\displaystyle a_{1}a_{2}d_{3}^{2}<\left(d_{3}-\frac{2\alpha\chi_{1}}{\mu_{1}}\right)\left(d_{3}-\frac{2\beta\chi_{2}}{\mu_{2}}\right)$ (1.5) lead to global existence and asymptotic stability
+in ( 1.1 ) in the case that $a_{1},a_{2}\in(0,1)$ ( [ 5 ] ).
+The conditions ( 1.4 )–( 1.5 )
+partially relax ( 1.3 )
+in view of the point mentioned above.
+On the other hand,
+in the case that $a_{1}>1>a_{2}$ and $d_{3}=\beta=1$ in ( 1.1 )
+Stinner–Tello–Winkler [ 32 ] established global existence and stabilization
+of global classical solutions when $\displaystyle\frac{\chi_{1}}{\mu_{1}}\leq a_{1},\quad\frac{\chi_{2}}{\mu_{2}}<\frac{1}{2}\quad\mbox{and}$ $\displaystyle\frac{\alpha\chi_{1}}{\mu_{1}}+\max\left\{\frac{\chi_{2}}{\mu_{2}},\frac{a_{2}(\mu_{2}-\chi_{2})}{\mu_{2}-2\chi_{2}},\frac{(\alpha-a_{2})\chi_{2}}{\mu_{2}-2\chi_{2}}\right\}<1$ are satisfied.
+In summary the two-species chemotaxis-competition model
+( 1.1 ) were studied in the cases that $a_{1},a_{2}\in(0,1)$ and $a_{1}>1>a_{2}$ ,
+and it was proved that
+global existence and same asymptotic behavior as
+solutions to the
+Lotka–Volterra competition model ( 1.2 )
+hold when $\frac{\chi_{i}}{\mu_{i}}$ are small.
+However, the conditions in the above two cases
+strongly depend on $a_{1},a_{2}$ , and
+have not been obtained in the case that $a_{1},a_{2}\geq 1$ .
+Moreover, convergence rates in the cases
+that $a_{1},a_{2}\in(0,1)$ and $a_{1}>1>a_{2}$ have not been studied. The purpose of this work is to construct conditions
+which derive
+global existence of classical bounded solutions
+for all $a_{1},a_{2}>0$ which covers the case that $a_{1},a_{2}\geq 1$ ,
+and lead to convergence rates
+for solutions of ( 1.1 )
+in the cases that $a_{1},a_{2}\in(0,1)$ and $a_{1}>1>a_{2}$ . For establishing global existence and boundedness
+we shall suppose that $\chi_{1},\chi_{2}$ and $\mu_{1},\mu_{2}$ satisfy
+the following conditions: $\displaystyle\frac{\chi_{1}}{\mu_{1}}<\frac{nd_{3}}{n-2}\min\left\{\frac{1}{\alpha},\frac{a_{1}}{\beta}\right\}\quad\mbox{and}\quad\frac{\chi_{2}}{\mu_{2}}<\frac{nd_{3}}{n-2}\min\left\{\frac{1}{\beta},\frac{a_{2}}{\alpha}\right\}.$ (1.6) We assume that the initial data $u_{0},v_{0}$ satisfy $\displaystyle 0\leq u_{0}\in C(\overline{\Omega})\setminus\{0\},\quad 0\leq v_{0}\in C(\overline{\Omega})\setminus\{0\}.$ (1.7) Now the main results read as follows.
+The first one is concerned
+with global existence and
+boundedness in ( 1.1 ). Theorem 1.1 . Let $d_{1},d_{2},d_{3}>0$ , $\mu_{1},\mu_{2}>0$ , $a_{1},a_{2}>0$ , $\chi_{1},\chi_{2}>0$ , $\alpha,\beta,\gamma>0$ and
+let $\Omega\subset\mathbb{R}^{n}$ $(n\geq 2)$ be a bounded domain
+with smooth boundary.
+Assume that ( 1.6 ) are satisfied.
+Then for any $u_{0},v_{0}$ satisfying ( 1.7 ) with some $q>n$ ,
+there exists an exactly one pair $(u,v,w)$ of
+nonnegative functions $\displaystyle u,\;v\in C(\overline{\Omega}\times[0,\infty))\cap C^{2,1}(\overline{\Omega}\times(0,\infty)),$ $\displaystyle w\in C(\overline{\Omega}\times[0,\infty))\cap C^{2,1}(\overline{\Omega}\times(0,\infty))\cap L^{\infty}_{\rm loc}([0,\infty);W^{1,q}(\Omega)),$ which satisfy ( 1.1 ).
+Moreover, the solutions $u,v,w$ are
+uniformly bounded,
+i.e., there exists a constant $C>0$ such that $\displaystyle\|{u(\cdot,t)}\|_{L^{\infty}(\Omega)}+\|{v(\cdot,t)}\|_{L^{\infty}(\Omega)}+\|{w(\cdot,t)}\|_{W^{1,q}(\Omega)}\leq C\quad\mbox{for all}\ t\geq 0,$ and the solutions $u,v,w$ are
+the Hölder continuous functions, i.e.,
+there exist $\theta\in(0,1)$ and $M>0$ such that $\displaystyle\|u\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|v\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|w\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}\leq M\quad\mbox{for all}\ t\geq 1.$ Remark 1.1 . This result give the existence of global classical
+bounded solutions in the case that $a_{1},a_{2}\geq 1$ .
+Moreover,
+the condition ( 1.6 ) relaxes
+( 1.4 ) which assumed for
+global existence of solutions in [ 5 ] .
+Indeed, if $\chi_{1},\chi_{2}$ and $\mu_{1},\mu_{2}$ satisfy the condition ( 1.4 ),
+then $\chi_{1},\chi_{2}$ and $\mu_{1},\mu_{2}$ satisfy the condition ( 1.6 ).
+However, the condition ( 1.6 )
+does not always relax
+those assumed in [ 32 ] and [ 34 ] ; in the case that $a_{1},a_{2}\in(0,1)$ the condition
+( 1.6 )
+relaxes ( 1.3 )
+under the condition $\displaystyle\chi_{1}<\frac{2na_{1}(\chi_{1}+\chi_{2})(1+a_{1})}{(n-2)(1-a_{1}a_{2})}\quad\mbox{and}\quad\chi_{2}<\frac{2na_{2}(\chi_{1}+\chi_{2})(1+a_{2})}{(n-2)(1-a_{1}a_{2})},$ and in the case that $a_{1}>1>a_{2}$ the condition ( 1.6 ) relaxes
+the condition $\displaystyle\frac{\alpha\chi_{1}}{\mu_{1}}+\frac{\chi_{2}}{\mu_{2}}<1,$ which was used to obtain global existence
+in [ 32 ] ,
+when $\frac{\alpha(n-2)}{n}<\min\{1,a_{1}\alpha,a_{2}\}$ hold. The main theorem tells us the following result
+in the 2-dimensional case. Corollary 1.2 . Let $d_{1},d_{2},d_{3}>0$ , $\mu_{1},\mu_{2}>0$ , $a_{1},a_{2}>0$ , $\chi_{1},\chi_{2}>0$ , $\alpha,\beta,\gamma>0$ and
+let $\Omega\subset\mathbb{R}^{2}$ be a bounded domain
+with smooth boundary.
+Then for any $u_{0},v_{0}$ satisfying ( 1.7 )
+with some $q>n$ , ( 1.1 ) possesses a unique
+global bounded classical solution. In the case $a_{1},a_{2}\in(0,1)$ asymptotic behavior of solutions to ( 1.1 )
+will be discussed under the following additional
+conditions:
+there exists $\delta_{1}>0$ such that $\displaystyle 4\delta_{1}-a_{1}a_{2}(1+\delta_{1})^{2}>0$ (1.8) and $\displaystyle\mu_{1}>\frac{\chi_{1}^{2}(1+\delta_{1})(1-a_{1})(\alpha^{2}a_{1}\delta_{1}+\beta^{2}a_{2}-\alpha\beta a_{1}a_{2}(1+\delta_{1}))}{4a_{1}d_{1}d_{3}\gamma(1-a_{1}a_{2})(4\delta_{1}-a_{1}a_{2}(1+\delta_{1})^{2})},$ (1.9) $\displaystyle\mu_{2}>\frac{\chi_{2}^{2}(1+\delta_{1})(1-a_{2})(\alpha^{2}a_{1}\delta_{1}+\beta^{2}a_{2}-\alpha\beta a_{1}a_{2}(1+\delta_{1}))}{4a_{2}d_{2}d_{3}\gamma(1-a_{1}a_{2})(4\delta_{1}-a_{1}a_{2}(1+\delta_{1})^{2})}.$ (1.10) The second theorem gives asymptotic behavior
+in ( 1.1 )
+in the case $a_{1},a_{2}\in(0,1)$ . Theorem 1.3 . Let $d_{1},d_{2},d_{3}>0$ , $\mu_{1},\mu_{2}>0$ , $a_{1},a_{2}\in(0,1)$ , $\chi_{1},\chi_{2}>0$ , $\alpha,\beta,\gamma>0$ and
+let $\Omega\subset\mathbb{R}^{n}$ $(n\geq 2)$ be a bounded domain
+with smooth boundary.
+Assume that there exists a unique global
+classical solution $(u,v,w)$ of ( 1.1 )
+satisfying $\displaystyle\|u\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|v\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|w\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}\leq M\quad\mbox{for all}\ t>0$ with some $M>0$ .
+Then
+under the conditions
+( 1.8 ) – ( 1.10 ), $(u,v,w)$ satisfies that there exist $C>0$ and $\ell>0$ such that $\displaystyle\|u(\cdot,t)-u^{\ast}\|_{L^{\infty}(\Omega)}+\|v(\cdot,t)-v^{\ast}\|_{L^{\infty}(\Omega)}+\|w(\cdot,t)-w^{\ast}\|_{L^{\infty}(\Omega)}\leq Ce^{-\ell t}\quad\mbox{for all}\ t>0,$ where $u^{\ast}:=\frac{1-a_{1}}{1-a_{1}a_{2}},\quad v^{\ast}:=\frac{1-a_{2}}{1-a_{1}a_{2}}\quad w^{\ast}:=\frac{\alpha u^{\ast}+\beta v^{\ast}}{\gamma}.$ Remark 1.2 . If the assumption of Theorem 1.1 and
+( 1.8 )–( 1.10 )
+are satisfied, then
+Theorem 1.3 gives
+the convergence rates for solutions
+of ( 1.1 ) in the case that $a_{1},a_{2}\in(0,1)$ .
+Moreover, the conditions
+( 1.8 )–( 1.10 )
+are the same conditions as that assumed in [ 27 ] in the case that $a_{1},a_{2}\in(0,1)$ and $h(u,v,w)=\alpha u+\beta v-\gamma w$ . In the case $a_{1}\geq 1>a_{2}$ asymptotic behavior of solutions to ( 1.1 )
+will be discussed under the following additional
+conditions:
+there exist $\delta_{1}>0$ and $a^{\prime}_{1}\in[1,a_{1}]$ such that $\displaystyle 4\delta_{1}-a^{\prime}_{1}a_{2}(1+\delta_{1})^{2}>0,$ (1.11) $\displaystyle{\mu_{2}}>\frac{\chi_{2}^{2}\delta_{1}(\alpha^{2}a^{\prime}_{1}\delta_{1}+\beta^{2}a_{2}-\alpha\beta a^{\prime}_{1}a_{2}(1+\delta_{1}))}{4a_{2}d_{2}d_{3}\gamma(4\delta_{1}-a^{\prime}_{1}a_{2}(1+\delta_{1})^{2})}.$ (1.12) The third one gives asymptotic behavior
+in ( 1.1 )
+in the case $a_{1}\geq 1>a_{2}$ . Theorem 1.4 . Let $d_{1},d_{2},d_{3}>0$ , $\mu_{1},\mu_{2}>0$ , $a_{1}\geq 1$ , $a_{2}\in(0,1)$ , $\chi_{1},\chi_{2}>0$ , $\alpha,\beta,\gamma>0$ and
+let $\Omega\subset\mathbb{R}^{n}$ $(n\geq 2)$ be a bounded domain
+with smooth boundary.
+Assume that there exists a unique global
+classical solution $(u,v,w)$ of ( 1.1 )
+such that $\displaystyle\|u\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|v\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|w\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}\leq M\quad\mbox{for all}\ t>0$ with some $M>0$ .
+Then under the conditions
+( 1.11 ) – ( 1.12 ), $(u,v,w)$ has the following properties : (i) If $a_{1}>1$ and take $a^{\prime}_{1}\in(1,a_{1}]$ in ( 1.11 )–( 1.12 ),
+then there exist $C>0$ and $\ell>0$ satisfying $\displaystyle\|u(t)\|_{L^{\infty}(\Omega)}+\|v(t)-1\|_{L^{\infty}(\Omega)}+\left\|w(t)-\frac{\beta}{\gamma}\right\|_{L^{\infty}(\Omega)}\leq Ce^{-\ell t}\quad\mbox{for all}\ t>0.$ (ii) If $a_{1}=1$ ,
+then there exist $C>0$ and $\ell>0$ satisfying $\displaystyle\|u(t)\|_{L^{\infty}(\Omega)}+\|v(t)-1\|_{L^{\infty}(\Omega)}+\left\|w(t)-\frac{\beta}{\gamma}\right\|_{L^{\infty}(\Omega)}\leq C(t+1)^{-\ell}\quad\mbox{for all}\ t>0.$ Remark 1.3 . If the assumption of Theorem 1.1 and
+( 1.11 )–( 1.12 )
+are satisfied, then
+Theorem 1.4 gives
+the convergence rates for
+solutions in the cases that $a_{1}>1>a_{2}$ and $a_{1}=1>a_{2}$ .
+Moreover, the conditions
+( 1.11 )–( 1.12 )
+are the same conditions as that assumed in [ 27 ] in the case that $a_{1}\geq 1>a_{2}$ and $h(u,v,w)=\alpha u+\beta v-\gamma w$ . Remark 1.4 . Stabilization in the case that $a_{1},a_{2}\geq 1$ is a still open question.
+In the case that $a_{1},a_{2}>1$ a Lotka–Volterra competition model
+with diffusion term was studied;
+however, its analysis is difficult
+and it is known that
+solutions have complicated structures
+(see cf. [ 9 , 16 , 17 , 18 , 20 , 23 , 24 ] ). The strategy of the proof of Theorem 1.1 is to extend a method in [ 33 ] to a two-species case.
+We first aim to establish the $L^{p}$ -estimate
+for $u$ with some $p>\frac{n}{2}$ from the following derivative of $\int_{\Omega}u^{p}$ : $\displaystyle\frac{1}{p}\frac{d}{dt}\int_{\Omega}u^{p}\leq(p-1)\chi_{1}\int_{\Omega}u^{p-1}\nabla u\cdot\nabla v+\mu_{1}\int_{\Omega}u^{p}(1-u-a_{1}v).$ (1.13) Since the third equation in ( 1.1 ) derives that $\displaystyle(p-1)\chi_{1}\int_{\Omega}u^{p-1}\nabla u\cdot\nabla v$ $\displaystyle=\frac{(p-1)\chi_{1}}{d_{3}p}\int_{\Omega}u^{p}(\alpha u+\beta v-\gamma w),$ (1.14) we shall show that a combination of
+( 1.13 ) and ( 1.14 ),
+along with the condition ( 1.6 )
+implies $\displaystyle\frac{d}{dt}\int_{\Omega}u^{p}\leq-c_{1}\left(\int_{\Omega}u^{p}\right)^{\frac{p+1}{p}}+c_{2}\int_{\Omega}u^{p},$ which leads to $L^{p}$ -estimate for $u$ .
+Then aided by standard semigroup estimates,
+we can obtain the $L^{\infty}$ -estimate
+for $u$ .
+On the other hand, one of the keys for
+the proof of Theorems 1.3 and 1.4 is to derive the following energy estimate: $\displaystyle\frac{d}{dt}E(t)\leq-\varepsilon\int_{\Omega}\left[(u(\cdot,t)-\overline{u})^{2}+(v(\cdot,t)-\overline{v})^{2}+(w(\cdot,t)-\overline{w})^{2}\right]$ (1.15) for all $t>0$ with some positive function $E$ and
+some constant $\varepsilon>0$ ,
+where $(\overline{u},\overline{v},\overline{w})\in\mathbb{R}^{3}$ is
+a solution of ( 1.1 ).
+Thanks to ( 1.15 ), we can obtain that
+there exists $C>0$ such that $\displaystyle\int_{0}^{\infty}\int_{\Omega}(u-\overline{u})^{2}+\int_{0}^{\infty}\int_{\Omega}(v-\overline{v})^{2}+\int_{0}^{\infty}\int_{\Omega}(w-\overline{w})^{2}\leq C,$ which together with the regularity of the solution
+leads to Theorems 1.3 and 1.4 . This paper is organized as follows.
+In Section 2 we prove
+global existence
+and boundedness (Theorem 1.1 )
+through a series of lemmas.
+Section 3 is devoted to the proof of
+asymptotic stability
+(Theorems 1.3 and 1.4 );
+we first provide some lemmas which will be used later,
+and we next devide the section into Sections 3.1 and 3.2
+according to the proof of Theorem 1.3 and
+that of Theorem 1.4 , respectivly. 2 Global existence and boundedness In this section
+we shall show global existence and
+boundedness in ( 1.1 ).
+First we will recall the known result
+about local existence of solutions to ( 1.1 )
+( [ 5 , Lemma 2.1] , [ 32 , Lemma 2.1] ). Lemma 2.1 . Let $d_{1},d_{2},d_{3}>0$ , $\mu_{1},\mu_{2}>0$ , $a_{1},a_{2}>0$ , $\chi_{1},\chi_{2}>0$ , $\alpha,\beta,\gamma>0$ and
+let $\Omega\subset\mathbb{R}^{n}$ $(n\in\mathbb{N})$ be a bounded domain
+with smooth boundary.
+Then for any $u_{0},v_{0}$ satisfying ( 1.7 )
+for some $q>n$ ,
+there exist $T_{\rm max}\in$ $(0,\infty]$ and an
+exactly one pair $(u,v,w)$ of nonnegative functions $\displaystyle u,\;v,\;w\in C(\overline{\Omega}\times[0,T_{\rm max}))\cap C^{2,1}(\overline{\Omega}\times(0,T_{\rm max}))$ which satisfy ( 1.1 ).
+Moreover, $\displaystyle either\ T_{\rm max}=\infty\quad or\quad\lim_{t\to T_{\rm max}}(\|{u(\cdot,t)}\|_{L^{\infty}(\Omega)}+\|{v(\cdot,t)}\|_{L^{\infty}(\Omega)})=\infty.$ We next give the $L^{p}$ -estimate for $u$ with some $p>\frac{n}{2}$ which plays an important role in deriving $L^{\infty}$ -estimate for $u$ .
+The proof is based on the proof of [ 33 , Lemma 2.2] . Lemma 2.2 . Assume that
+( 1.6 ) – ( 1.7 )
+are satisfied.
+Then for all $p\in I_{1}$ ,
+there exists $C(p)>0$ such that $\displaystyle\|{u(\cdot,t)}\|_{L^{p}(\Omega)}\leq C(p)$ for all $t>0$ , where $I_{1}:=\left(\frac{n}{2},\min\left\{\frac{\alpha\chi_{1}}{(\alpha\chi_{1}-d_{3}\mu_{1})_{+}},\frac{\beta\chi_{1}}{(\beta\chi_{1}-a_{1}d_{3}\mu_{1})_{+}}\right\}\right).$ Proof. We fix $p\in I_{1}$ .
+Here we note from
+the condition ( 1.6 ) that $I_{1}\neq\emptyset$ .
+Multiplying the first equation in ( 1.1 ) by $u^{p-1}$ and integrating it over $\Omega$ ,
+we obtain that $\displaystyle\frac{1}{p}\frac{d}{dt}\int_{\Omega}u^{p}+d_{1}(p-1)\int_{\Omega}u^{p-2}|\nabla u|^{2}$ $\displaystyle=(p-1)\chi_{1}\int_{\Omega}u^{p-1}\nabla u\cdot\nabla v+\mu_{1}\int_{\Omega}u^{p}(1-u-a_{1}v).$ (2.1) Then integration by parts and
+the third equation in ( 1.1 ) imply that $\displaystyle(p-1)\chi_{1}\int_{\Omega}u^{p-1}\nabla u\cdot\nabla v$ $\displaystyle=-\frac{(p-1)\chi_{1}}{p}\int_{\Omega}u^{p}\Delta v$ $\displaystyle=\frac{(p-1)\chi_{1}}{d_{3}p}\int_{\Omega}u^{p}(\alpha u+\beta v-\gamma w).$ (2.2) Therefore a combination of ( 2.1 )
+with ( 2.2 ) yields that $\displaystyle\frac{1}{p}\frac{d}{dt}\int_{\Omega}u^{p}\leq\mu_{1}\int_{\Omega}u^{p}-\left(\mu_{1}-\frac{\alpha(p-1)\chi_{1}}{d_{3}p}\right)\int_{\Omega}u^{p+1}-\left(a_{1}\mu_{1}-\frac{\beta(p-1)\chi_{1}}{d_{3}p}\right)\int_{\Omega}u^{p}v.$ Recalling $p\in I_{1}=\left(\frac{n}{2},\min\left\{\frac{\alpha\chi_{1}}{(\alpha\chi_{1}-d_{3}\mu_{1})_{+}},\frac{\beta\chi_{1}}{(\beta\chi_{1}-a_{1}d_{3}\mu_{1})_{+}}\right\}\right)$ that $\displaystyle\mu_{1}-\frac{\alpha(p-1)\chi_{1}}{d_{3}p}>0\quad\mbox{and}\quad a_{1}\mu_{1}-\frac{\beta(p-1)\chi_{1}}{d_{3}p}>0,$ we establish from the Hölder inequality $\int_{\Omega}u^{p}\leq|\Omega|^{\frac{p}{p+1}}\left(\int_{\Omega}u^{p+1}\right)^{\frac{p}{p+1}}$ that there exists $\varepsilon>0$ satisfying $\displaystyle\frac{1}{p}\frac{d}{dt}\int_{\Omega}u^{p}\leq-\varepsilon\left(\int_{\Omega}u^{p}\right)^{\frac{p+1}{p}}+\mu_{1}\int_{\Omega}u^{p},$ which implies that $\displaystyle\|{u(\cdot,t)}\|_{L^{p}(\Omega)}\leq\min\left\{\|{u_{0}}\|_{L^{p}(\Omega)},\frac{\mu_{1}}{\varepsilon}\right\}\quad\mbox{for all}\ t\in(0,T_{\rm max}).$ Thus we can attain the conclusion of this lemma.
+∎ Similarly, we can confirm the
+following $L^{p}$ -estimate for $v$ with some $p>\frac{n}{2}$ . Lemma 2.3 . Assume that
+( 1.6 ) – ( 1.7 )
+are satisfied.
+Then for all $p\in I_{2}$ ,
+there exists $C(p)>0$ such that $\displaystyle\|{v(\cdot,t)}\|_{L^{p}(\Omega)}\leq C(p)\quad\mbox{for all}\ t>0,$ where $I_{2}:=\left(\frac{n}{2},\min\left\{\frac{\beta\chi_{2}}{(\beta\chi_{2}-d_{3}\mu_{2})_{+}},\frac{\alpha\chi_{2}}{(\alpha\chi_{2}-a_{2}d_{3}\mu_{2})_{+}}\right\}\right)$ . Proof. A similar argument as in the proof of
+Lemma 2.3 derives this lemma.
+∎ Now we could construct all estimates which
+will enable us to obtain the estimate
+for the solution; Lemmas 2.2 and 2.3 lead to the following lemma.
+The proof is based on a known argument
+involving semigroup estimates which
+derive the $L^{\infty}$ -estimate for $u$ from $L^{p}$ -estimate
+with $p>\frac{n}{2}$ (see e.g., [ 2 ] ). Lemma 2.4 . Assume that
+( 1.6 ) – ( 1.7 )
+are satisfied.
+Then there exists $C>0$ such that $\displaystyle\|{u(\cdot,t)}\|_{L^{\infty}(\Omega)}+\|{v(\cdot,t)}\|_{L^{\infty}(\Omega)}+\|w(\cdot,t)\|_{W^{1,q}(\Omega)}\leq C\quad\mbox{for all}\ t>0.$ (2.3) Moreover, there exist $M>0$ and $\theta\in(0,1)$ such that $\displaystyle\|u\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|v\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|w\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}\leq M\quad\mbox{for all}\ t\geq 1.$ Proof. We fix $p\in I_{1}\cap I_{2}\cap(0,n)$ , where $I_{1}$ and $I_{2}$ are the intervals defined in
+Lemmas 2.2 and 2.3 .
+Then thanks to Lemmas 2.2 and 2.3 ,
+we can find $C_{1}>0$ such that $\displaystyle\|{u(\cdot,t)}\|_{L^{p}(\Omega)}+\|{v(\cdot,t)}\|_{L^{p}(\Omega)}\leq C_{1}\quad\mbox{for all}\ t\in(0,T_{\rm max}).$ (2.4) We first verify the $L^{\frac{np}{n-p}}$ -estimate
+for $\nabla v$ .
+Here for all $q\in(1,\infty)$ ,
+the standard elliptic regularity argument
+(see e.g., [ 11 , Theorem 19.1] )
+leads to the existence of a constant $C_{E}(q)>0$ satisfying $\displaystyle\|{w(\cdot,t)}\|_{W^{2,q}(\Omega)}\leq C_{E}(q)(\|{u(\cdot,t)}\|_{L^{q}(\Omega)}+\|{v(\cdot,t)}\|_{L^{q}(\Omega)})\quad\mbox{for all}\ t\in(0,T_{\rm max}).$ (2.5) Therefore a combination of
+( 2.5 ) with ( 2.4 ) yields
+from the Sobolev embedding theorem that
+there exists $C_{2}>0$ such that $\displaystyle\|{\nabla v(\cdot,t)}\|_{L^{\frac{np}{n-p}}(\Omega)}\leq C_{2}\quad\mbox{for all}\ t\in(0,T_{\rm max})$ since $p<n$ .
+We next establish the $L^{\infty}$ -estimate for $u$ .
+Since $p>\frac{n}{2}$ , we can take $r\in(n,q)$ such that $\displaystyle p>\frac{nr}{n+r}.$ We take $\vartheta>1$ satisfying $\displaystyle\frac{1}{\vartheta}<\min\left\{1-\frac{r(n-p)}{np},\frac{q-r}{q}\right\}.$ Then $\vartheta^{\prime}:=\frac{\vartheta}{\vartheta-1}$ satisfies $\displaystyle r\vartheta^{\prime}<\frac{np}{n-p}.$ Now for all $T\in(0,T_{\rm max})$ we note that $\displaystyle A(T):=\sup_{t\in(0,t)}\|{u(\cdot,t)}\|_{L^{\infty}(\Omega)}$ is finite.
+To obtain the estimate for $A(T)$ we put $t_{0}:=(t-1)_{+}$ and
+represent $u$ according to $\displaystyle u(\cdot,t)$ $\displaystyle=e^{(t-t_{0})d_{1}\Delta}u(t_{0})-\chi_{1}\int_{t_{0}}^{t}e^{(t-s)d_{1}\Delta}\nabla\cdot(u(\cdot,s)\nabla v(\cdot,s))\,ds$ $\displaystyle\quad\,+\mu_{1}\int_{t_{0}}^{t}e^{(t-s)d_{1}\Delta}u(\cdot,s)(1-u(\cdot,s)-a_{1}v(\cdot,s))\,ds$ $\displaystyle=:u_{1}(\cdot,t)+u_{2}(\cdot,t)+u_{3}(\cdot,t)$ (2.6) for $t\in(0,T_{\rm max})$ .
+In the case that $t\leq 1$ , i.e., $t_{0}=0$ ,
+from the order preserving property of the
+Neumann heat semigroup we see that $\displaystyle\|{u_{1}(\cdot,t)}\|_{L^{\infty}(\Omega)}\leq\|{u_{0}}\|_{L^{\infty}(\Omega)}\quad\mbox{for all}\ t\in(0,1]\cap(0,T).$ (2.7) In the case that $t>1$ using the $L^{p}$ - $L^{q}$ estimate for $(e^{\tau\Delta})_{\tau\geq 0}$ (see [ 35 , Lemma 1.3] )
+yields that there is $C_{3}>0$ such that $\displaystyle\|{u_{1}(\cdot,t)}\|_{L^{\infty}(\Omega)}\leq C_{3}\|{u(\cdot,t_{0})}\|_{L^{p}(\Omega)}\leq C_{1}C_{3}\quad\mbox{for all}\ t\in(1,T).$ (2.8) Next due to a known smoothing property of $(e^{\tau\Delta})_{\tau\geq 0}$ (see [ 12 , Lemma 3.3] ),
+we can find $C_{4}>0$ such that $\displaystyle\|{u_{2}(\cdot,t)}\|_{L^{\infty}(\Omega)}\leq C_{4}\sup_{t\in(0,T)}\|{u(\cdot,t)\nabla v(\cdot,t)}\|_{L^{r}(\Omega)}\int_{0}^{1}\sigma^{-\frac{1}{2}-\frac{n}{2r}}\,d\sigma.$ Noting from $r\vartheta^{\prime}<\frac{np}{n-p}$ and ( 2.4 ) that $\displaystyle\|{u(\cdot,t)\nabla v(\cdot,t)}\|_{L^{r}(\Omega)}$ $\displaystyle\leq\|{u(\cdot,t)}\|_{L^{r\vartheta}(\Omega)}\|{\nabla v(\cdot,t)}\|_{L^{r\vartheta^{\prime}}(\Omega)}$ $\displaystyle\leq C_{5}\|{u(\cdot,t)}\|_{L^{\infty}(\Omega)}^{1-\frac{p}{r\vartheta}}\|{u(\cdot,t)}\|_{L^{p}(\Omega)}^{\frac{p}{r\vartheta}}\|{\nabla v(\cdot,t)}\|_{L^{\frac{np}{n-p}}(\Omega)}$ $\displaystyle\leq C_{1}^{\frac{p}{r\vartheta}}C_{2}C_{5}A(T)^{1-\frac{p}{r\vartheta}}\quad\mbox{for all}\ t\in(0,T)$ with some $C_{5}>0$ ,
+we establish that there exists $C_{6}>0$ such that $\displaystyle\|{u_{2}(\cdot,t)}\|_{L^{\infty}(\Omega)}\leq C_{6}\quad\mbox{for all}\ t\in(0,T).$ (2.9) Finally, the maximum principle together with the
+elementary inequality $\mu_{1}u(1-u-a_{1}v)\leq-\mu_{1}\left(u-\frac{1+\mu_{1}}{2\mu_{1}}\right)^{2}+\frac{(1+\mu_{1})^{2}}{4\mu_{1}}\leq\frac{(1+\mu_{1})^{2}}{4\mu_{1}}$ implies that there exists $C_{7}>0$ such that $\displaystyle u_{3}(\cdot,t)\leq C_{7}\quad\mbox{for all}\ t\in(0,T).$ (2.10) Therefore a combination of ( 2.6 ),
+the nonnegativity of $u$ with
+( 2.7 ), ( 2.8 ), ( 2.9 ), ( 2.10 )
+tells us that there exist $C_{8},C_{9}>0$ such that $\displaystyle A(T)\leq C_{8}+C_{9}A(T)^{1-\frac{p}{r\vartheta}},$ which implies from $p<r\vartheta$ that $\displaystyle A(T)\leq C_{10}\quad\mbox{for all}\ T\in(0,T_{\rm max})$ with some $C_{10}>0$ .
+Thus we obtain the $L^{\infty}$ -estimate for $u$ .
+Similarly, we can verify the $L^{\infty}$ -estimate for $v$ .
+Then invoking ( 2.5 ),
+we see that there exists $C_{11}>0$ such that $\displaystyle\|{w(\cdot,t)}\|_{W^{1,q}(\Omega)}\leq C_{11}\quad\mbox{for all}\ t\in(0,T_{\rm max}),$ which implies ( 2.3 ).
+Moreover, known regularity arguments (see [ 6 , Proposition 2.3] )
+enable us to find $C_{12}>0$ and $\theta\in(0,1)$ satisfying $\displaystyle\|u\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|v\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|w\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}\leq C_{12}\quad\mbox{for all}\ t\geq 1,$ which implies the end of the proof.
+∎ Proof of Theorem 1.1 . Lemma 2.4 directly shows Theorem 1.1 .
+∎ 3 Stabilization In this section we will establish stabilization of
+solutions to ( 1.1 ).
+Here we assume that
+there exists a unique global
+classical solution $(u,v,w)$ of ( 1.1 )
+satisfying $\displaystyle\|u\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|v\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}+\|w\|_{C^{\theta,\frac{\theta}{2}}(\overline{\Omega}\times[t,t+1])}\leq M\quad\mbox{for all}\ t\geq 1$ with some $M>0$ .
+we first recall a important lemma
+for the proof of Theorems 1.3 and 1.4 (see [ 14 , Lemma 4.6] ). Lemma 3.1 . Let $n\in C^{0}(\overline{\Omega}\times[0,\infty))$ satisfy that
+there exist constants $C^{*}>0$ and $\theta^{*}>0$ such that $\displaystyle\|n\|_{C^{\theta^{*},\frac{\theta^{*}}{2}}(\overline{\Omega}\times[t,t+1])}\leq C^{*}\quad\mbox{for all}\ t\geq 1.$ Assume that $\displaystyle\int_{0}^{\infty}\int_{\Omega}(n(x,t)-N^{\ast})^{2}\,dxdt<\infty$ with some constant $N^{\ast}>0$ .
+Then $\displaystyle n(\cdot,t)\to N^{\ast}\quad\mbox{in}\ C^{0}(\overline{\Omega})\quad\mbox{as}\ t\to\infty.$ We next provide the following lemma which will
+be used to confirm that
+the assumption of Lemma 3.1 is satisfied. Lemma 3.2 . Let $a,b,c,d,e,f\in\mathbb{R}$ .
+Suppose that $\displaystyle a>0,\quad d-\frac{b^{2}}{4a}>0,\quad f-\frac{c^{2}}{4a}-\frac{(2ae-bc)^{2}}{4a(4ad-b^{2})}>0.$ Then $\displaystyle ax^{2}+bxy+cxz+dy^{2}+eyz+fz^{2}\geq 0$ holds for all $x,y,z\in\mathbb{R}$ . Proof. Straightforward calculations lead to
+the conclusion
+of this lemma
+(for more details, see [ 27 , Lemma 3.2] ).
+∎ Finally, we give the following lemma which enables us to
+upgrade the $L^{2}$ -convergence rate
+to $L^{\infty}$ -convergence rate. Lemma 3.3 . Let $(\overline{u},\overline{v},\overline{w})\in\mathbb{R}^{3}$ be
+a solution to ( 1.1 ).
+Assume that there exists a decreasing function $h:[0,\infty)\to\mathbb{R}$ satisfying $\displaystyle\|{u(\cdot,t)-\overline{u}}\|_{L^{2}(\Omega)}+\|{v(\cdot,t)-\overline{v}}\|_{L^{2}(\Omega)}\leq h(t)\quad\mbox{for all}\ t>0.$ Then there exists $C>0$ such that $\displaystyle\|{u(\cdot,t)-\overline{u}}\|_{L^{\infty}(\Omega)}+\|{v(\cdot,t)-\overline{v}}\|_{L^{\infty}(\Omega)}+\|{w(\cdot,t)-\overline{w}}\|_{L^{\infty}(\Omega)}\leq Ch(t-1)^{\frac{1}{n+1}}$ for all $t>1$ . Proof. For all $p>2$ we first obtain from the Hölder inequality
+that $\displaystyle\|{f}\|_{L^{p}(\Omega)}\leq\|{f}\|_{L^{\infty}(\Omega)}^{1-\frac{2}{p}}\|{f}\|_{L^{2}(\Omega)}^{\frac{2}{p}}$ holds for all $f\in L^{\infty}(\Omega)$ , which means
+from the boundedness of $u,v$ that $\displaystyle\|{u(\cdot,t)-\overline{u}}\|_{L^{p}(\Omega)}+\|{v(\cdot,t)-\overline{v}}\|_{L^{p}(\Omega)}\leq C_{1}(p)h(t)^{\frac{2}{p}}\quad\mbox{for all}\ t>0$ with some $C_{1}(p)>0$ .
+Here ( 2.5 ) enables us to see that $\displaystyle\|w(\cdot,t)-\overline{w}\|_{W^{2,2n+2}(\Omega)}\leq C_{E}(2n+2)C_{1}(2n+2)h(t)^{\frac{1}{n+1}}\quad\mbox{for all}\ t>0.$ Thus we have that there is $C_{2}>0$ such that $\displaystyle\|{\nabla w(\cdot,t)}\|_{L^{2n+2}(\Omega)}\leq C_{2}h(t)^{\frac{1}{n+1}}\quad\mbox{for all}\ t>0.$ Then by using a similar argument
+as in the proof of [ 1 , Lemma 3.6] we infer that there exists $C_{3}>0$ such that $\displaystyle\|{u(\cdot,t)-\overline{u}}\|_{L^{\infty}(\Omega)}+\|{v(\cdot,t)-\overline{v}}\|_{L^{\infty}(\Omega)}\leq C_{3}h(t-1)^{\frac{1}{n+1}}\quad\mbox{for all}\ t>1.$ Finally, since $(\overline{u},\overline{v},\overline{w})$ satisfies $\alpha\overline{u}+\beta\overline{v}-\gamma\overline{w}=0,$ we can apply the maximum principle to $-\Delta(w-\overline{w})+\gamma(w-\overline{w})=\alpha(u-\overline{u})+\beta(v-\overline{v}),$ and hence obtain
+the existence of a constant $C_{4}>0$ such that $\displaystyle\|{w(\cdot,t)-\overline{w}}\|_{L^{\infty}(\Omega)}$ $\displaystyle\leq C_{4}(\|{u(\cdot,t)-\overline{u}}\|_{L^{\infty}(\Omega)}+\|{v(\cdot,t)-\overline{v}}\|_{L^{\infty}(\Omega)})$ $\displaystyle\leq C_{3}C_{4}h(t-1)^{\frac{1}{n+1}}\quad\mbox{for all}\ t>1,$ which concludes the proof of this lemma.
+∎ 3.1 Convergence. Case 1: $a_{1},a_{2}\in(0,1)$ In this subsection we establish stabilization
+in the case that $a_{1},a_{2}\in(0,1)$ .
+We first confirm that the assumption of Lemma 3.1 are satisfied. Lemma 3.4 . Assume that
+( 1.8 ) – ( 1.10 )
+are satisfied.
+Then there exist a nonnegative function $E_{1}:(0,\infty)\to\mathbb{R}$ and
+a constant $\varepsilon>0$ such that $\displaystyle\frac{d}{dt}E_{1}(t)\leq-\varepsilon\int_{\Omega}\left[(u(\cdot,t)-u^{\ast})^{2}+(v(\cdot,t)-v^{\ast})^{2}+(w(\cdot,t)-w^{\ast})^{2}\right]$ (3.1) holds for all $t>0$ .
+Moreover, there exists $C>0$ satisfying $\displaystyle\int_{0}^{\infty}\int_{\Omega}(u-u^{\ast})^{2}+\int_{0}^{\infty}\int_{\Omega}(v-v^{\ast})^{2}+\int_{0}^{\infty}\int_{\Omega}(w-w^{\ast})^{2}\leq C.$ Proof. Let $\delta_{1}>0$ be a constant defined in
+( 1.8 )–( 1.10 ).
+First we shall show that the function $E_{1}:(0,\infty)\to\mathbb{R}$ defined as $\displaystyle E_{1}:=\int_{\Omega}\left(u-u^{\ast}-u^{\ast}\log\frac{u}{u^{\ast}}\right)+\frac{a_{1}\mu_{1}\delta_{1}}{a_{2}\mu_{2}}\int_{\Omega}\left(v-v^{\ast}-v^{\ast}\log\frac{v}{v^{\ast}}\right)$ (3.2) satisfies that ( 3.1 ) holds
+for all $t>0$ with some $\varepsilon>0$ .
+From straightforward calculations
+we infer that $\displaystyle\frac{d}{dt}E_{1}(t)$ $\displaystyle=-\mu_{1}\int_{\Omega}(u(\cdot,t)-u^{\ast})^{2}-(1+\delta_{1})a_{1}\mu_{1}\int_{\Omega}(u(\cdot,t)-u^{\ast})(v(\cdot,t)-v^{\ast})$ $\displaystyle\quad\,-\frac{a_{1}\mu_{1}\delta_{1}}{\mu_{2}}\int_{\Omega}(v(\cdot,t)-v^{\ast})^{2}-d_{1}u^{\ast}\int_{\Omega}\frac{|\nabla u(\cdot,t)|^{2}}{u^{2}}$ $\displaystyle\quad\,+u^{\ast}\chi_{1}\int_{\Omega}\frac{\nabla u(\cdot,t)\cdot\nabla w(\cdot,t)}{u}-\frac{d_{2}a_{1}\mu_{1}v^{\ast}\delta_{1}}{a_{2}\mu_{2}}\int_{\Omega}\frac{|\nabla v(\cdot,t)|^{2}}{v^{2}}$ $\displaystyle\quad\,+\frac{a_{1}\mu_{1}v^{\ast}\chi_{2}\delta_{1}}{a_{2}\mu_{2}}\int_{\Omega}\frac{\nabla v(\cdot,t)\cdot\nabla w(\cdot,t)}{v}\quad\mbox{for all}\ t>0.$ (3.3) Here in light of ( 1.8 )–( 1.10 )
+we can take $\delta_{2}>0$ satisfying $\displaystyle\frac{u^{\ast}\chi_{1}^{2}}{4d_{1}}<\delta_{2}<\frac{d_{3}a_{1}\mu_{1}\gamma(4\delta_{1}-(1+\delta_{1})^{2}a_{1}a_{2})}{(1+\delta_{1})(a_{1}\alpha^{2}\delta_{1}+a_{2}\beta^{2}-(1+\delta_{1})a_{1}a_{2}\alpha\beta)}$ and $\displaystyle\frac{a_{1}\mu_{1}v^{\ast}\chi_{2}^{2}}{4d_{2}a_{2}\mu_{2}}<\delta_{2}<\frac{d_{3}a_{1}\mu_{1}\gamma(4\delta_{1}-(1+\delta_{1})^{2}a_{1}a_{2})}{(1+\delta_{1})(a_{1}\alpha^{2}\delta_{1}+a_{2}\beta^{2}-(1+\delta_{1})a_{1}a_{2}\alpha\beta)}.$ Invoking the Young inequality, we obtain that $\displaystyle u^{\ast}\chi_{1}\int_{\Omega}\frac{\nabla u\cdot\nabla w}{u}\leq\frac{{u^{\ast}}^{2}\chi_{1}^{2}}{4\delta_{2}}\int_{\Omega}\frac{|\nabla u|^{2}}{u^{2}}+\delta_{2}\int_{\Omega}|\nabla w|^{2}$ (3.4) and $\displaystyle\frac{a_{1}\mu_{1}v^{\ast}\chi_{2}\delta_{1}}{a_{2}\mu_{2}}\int_{\Omega}\frac{\nabla v\cdot\nabla w}{v}\leq\frac{a_{1}^{2}\mu_{1}^{2}{v^{\ast}}^{2}\chi_{2}^{2}\delta_{1}}{4\delta_{2}}\int_{\Omega}\frac{|\nabla v|^{2}}{v^{2}}+\delta_{1}\delta_{2}\int_{\Omega}|\nabla w|^{2}.$ (3.5) Therefore since the definition of $\delta_{2}$ yields $\displaystyle d_{1}-\frac{u^{\ast}\chi_{1}^{2}}{4\delta_{2}}>0\quad\mbox{and}\quad d_{2}-\frac{a_{1}\mu_{1}v^{\ast}\chi_{2}^{2}}{4a_{2}\mu_{2}\delta_{2}}>0,$ a combination of ( 3.3 ) with
+( 3.4 )
+and ( 3.5 ) implies $\displaystyle\frac{d}{dt}E_{1}(t)$ $\displaystyle\leq-\mu_{1}\int_{\Omega}(u(\cdot,t)-u^{\ast})^{2}-(1+\delta_{1})a_{1}\mu_{1}\int_{\Omega}(u(\cdot,t)-u^{\ast})(v(\cdot,t)-v^{\ast})$ $\displaystyle\quad\,-\frac{a_{1}\mu_{1}\delta_{1}}{\mu_{2}}\int_{\Omega}(v(\cdot,t)-v^{\ast})^{2}+(1+\delta_{1})\delta_{2}\int_{\Omega}|\nabla w(\cdot,t)|^{2}\quad\mbox{for all}\ t>0.$ Noting from the third equation in ( 1.1 ) that $\displaystyle\int_{\Omega}|\nabla w|^{2}=\frac{\alpha}{d_{3}}\int_{\Omega}(u-u^{\ast})(w-w^{\ast})+\frac{\beta}{d_{3}}\int_{\Omega}(v-v^{\ast})(w-w^{\ast})-\frac{\gamma}{d_{3}}\int_{\Omega}(w-w^{\ast})^{2},$ we establish that $\displaystyle\frac{d}{dt}E_{1}(t)\leq F_{1}(t)\quad\mbox{for all}\ t>0,$ where $\displaystyle F_{1}(t)$ $\displaystyle:=-\mu_{1}\int_{\Omega}(u(\cdot,t)-u^{\ast})^{2}-(1+\delta_{1})a_{1}\mu_{1}\int_{\Omega}(u(\cdot,t)-u^{\ast})(v(\cdot,t)-v^{\ast})$ $\displaystyle\quad\,-\frac{a_{1}\mu_{1}\delta_{1}}{\mu_{2}}\int_{\Omega}(v(\cdot,t)-v^{\ast})^{2}+\frac{\alpha(1+\delta_{1})\delta_{2}}{d_{3}}\int_{\Omega}(u(\cdot,t)-u^{\ast})(w(\cdot,t)-w^{\ast})$ $\displaystyle\quad\,+\frac{\beta(1+\delta_{1})\delta_{2}}{d_{3}}\int_{\Omega}(v(\cdot,t)-v^{\ast})(w(\cdot,t)-w^{\ast})-\frac{\gamma(1+\delta_{1})\delta_{2}}{d_{3}}\int_{\Omega}(w(\cdot,t)-w^{\ast})^{2}$ for all $t>0$ .
+In order to see ( 3.1 )
+we will show that $\displaystyle F_{1}(t)\leq-\varepsilon\int_{\Omega}\left[(u(\cdot,t)-u^{\ast})^{2}+(v(\cdot,t)-v^{\ast})^{2}+(w(\cdot,t)-w^{\ast})^{2}\right]$ with some $\varepsilon>0$ by using Lemma 3.2 .
+To confirm that the assumption of
+Lemma 3.2 is satisfied
+we put $\displaystyle g_{1}(\varepsilon)$ $\displaystyle:=\mu_{1}-\varepsilon,\qquad g_{2}(\varepsilon):=\frac{a_{1}\mu_{1}\delta_{1}}{a_{2}}-\varepsilon-\frac{(1+\delta_{1})^{2}a_{1}^{2}\mu_{1}^{2}}{4(\mu_{1}-\varepsilon)},$ $\displaystyle g_{3}(\varepsilon)$ $\displaystyle:=\frac{\gamma(1+\delta_{1})\delta_{2}}{d_{3}}-\varepsilon-\frac{\alpha^{2}(1+\delta_{1})^{2}\delta_{2}^{2}}{4d_{3}^{2}(\mu_{1}-\varepsilon)}$ $\displaystyle\quad\ -\frac{\left(2(\mu_{1}-\varepsilon)\beta(1+\delta_{1})\delta_{2}-(1+\delta_{1})^{2}a_{1}\mu_{1}\alpha\delta_{1}\right)^{2}}{4d_{3}^{2}(\mu_{1}-\varepsilon)\left(4(\mu_{1}-\varepsilon)(\frac{a_{1}\mu_{1}\delta_{1}}{a_{2}}-\varepsilon)-(1+\delta_{1})^{2}a_{1}\mu_{1}\right)}$ for $\varepsilon>0$ , and shall see that there exists $\varepsilon_{1}>0$ such that $g_{i}(\varepsilon_{1})>0$ for $i=1,2,3$ .
+Here $g_{1}(0)=\mu_{1}>0$ obviously holds,
+and the condition ( 1.8 ) implies that $\displaystyle g_{2}(0)=\frac{a_{1}\mu_{1}(4\delta_{1}-(1+\delta_{1})^{2}a_{1}a_{2})}{4a_{2}}>0.$ Moreover, aided by the definition of $\delta_{2}$ ,
+we can obtain that $\displaystyle g_{3}(0)$ $\displaystyle=\frac{\gamma(1+\delta_{1})\delta_{2}}{d_{3}}-\frac{\alpha^{2}(1+\delta_{1})^{2}\delta_{2}^{2}}{4d_{3}^{2}\mu_{1}}-\frac{\left(2\mu_{1}\beta(1+\delta_{1})\delta_{2}-(1+\delta_{1})^{2}a_{1}\mu_{1}\alpha\delta_{1}\right)^{2}}{4d_{3}^{2}\mu_{1}\left(4\mu_{1}\frac{a_{1}\mu_{1}\delta_{1}}{a_{2}}-(1+\delta_{1})^{2}a_{1}\mu_{1}\right)}$ $\displaystyle=(1+\delta_{1})\delta_{2}\left(\frac{\gamma}{d_{3}}-\frac{(1+\delta_{1})(\alpha^{2}a_{1}\delta_{1}+a_{2}\beta^{2}-(1+\delta_{1})a_{1}a_{2}\alpha\beta)}{d_{3}^{2}a_{1}\mu_{1}(4\delta_{1}-(1+\delta_{1})^{2}a_{1}a_{2})}\delta_{2}\right)>0.$ Therefore a combination of the above inequalities
+and the continuity argument implies
+that there exists $\varepsilon_{1}>0$ such that $g_{i}(\varepsilon_{1})>0$ hold for $i=1,2,3$ .
+Thus Lemma 3.2 derives that $\displaystyle F_{1}(t)\leq-\varepsilon_{1}\int_{\Omega}\left[(u(\cdot,t)-u^{\ast})^{2}+(v(\cdot,t)-v^{\ast})^{2}+(w(\cdot,t)-w^{\ast})^{2}\right]\quad\mbox{for all}\ t>0,$ which yields that ( 3.1 ) holds
+for all $t>0$ . Then since from the Taylor formula $E_{1}$ is a nonnegative function for $t>0$ (more details, see [ 1 , Lemma 3.2] ),
+integrating ( 3.1 ) over $(0,\infty)$ concludes the proof of this lemma.
+∎ Lemma 3.5 . Assume that
+( 1.8 ) – ( 1.10 )
+are satisfied. Then $\displaystyle\|{u(\cdot,t)-u^{\ast}}\|_{L^{\infty}(\Omega)}+\|{v(\cdot,t)-v^{\ast}}\|_{L^{\infty}(\Omega)}+\|{w(\cdot,t)-w^{\ast}}\|_{L^{\infty}(\Omega)}\to 0\quad\mbox{as}\ t\to\infty.$ Proof. A combination of
+Lemmas 3.1 and 3.4 implies this lemma.
+∎ Next we desire to establish convergence rates
+for the solution of ( 1.1 ). We note that
+in view of Lemma 3.3 it is sufficient to
+confirm the $L^{2}$ -convergence rates for the solution. Lemma 3.6 . Assume that
+( 1.8 ) – ( 1.10 )
+are satisfied.
+Then there exist $C>0$ and $\ell>0$ such that $\displaystyle\|{u(\cdot,t)-u^{\ast}}\|_{L^{2}(\Omega)}+\|{v(\cdot,t)-v^{\ast}}\|_{L^{2}(\Omega)}\leq Ce^{-\ell t}\quad\mbox{for all}\ t>0.$ Proof. Aided by Lemma 3.5 and
+the L’Hôpital theorem, a similar argument
+as in the proof of [ 1 , Lemma 3.7] (or [ 27 , Proof of Theorem 1.2] )
+derives that there exist $C_{1},C_{2}>0$ and $t_{0}>0$ such that for all $t>t_{0}$ , $\displaystyle C_{1}\left(\int_{\Omega}(u-u^{\ast})^{2}+\int_{\Omega}(v-v^{\ast})^{2}\right)\leq E_{1}\leq C_{2}\left(\int_{\Omega}(u-u^{\ast})^{2}+\int_{\Omega}(v-v^{\ast})^{2}\right),$ (3.6) where $E_{1}$ is the function defined as ( 3.2 ).
+Therefore we obtain from ( 3.1 ) that $\displaystyle\frac{d}{dt}E_{1}(t)\leq-C_{3}E_{1}(t)\quad\mbox{for all}\ t>t_{0}$ with some $C_{3}>0$ , which implies that
+there exists $C_{4}>0$ such that $\displaystyle E_{1}(t)\leq C_{4}e^{-C_{3}t}\quad\mbox{for all}\ t>0.$ (3.7) Thus a combination of
+( 3.6 ) and ( 3.7 )
+yields that $\displaystyle\int_{\Omega}(u-u^{\ast})^{2}+\int_{\Omega}(v-v^{\ast})^{2}\leq\frac{C_{4}}{C_{1}}e^{-C_{3}t},$ which concludes the proof of this lemma.
+∎ 3.2 Convergence. Case 2: $a_{1}\geq 1>a_{2}$ In this subsection we will obtain stabilization
+in the case that $a_{1}\geq 1>a_{2}$ .
+In this case we also have to confirm that the assumption
+of Lemma 3.1 is satisfied. Lemma 3.7 . Assume that
+( 1.11 ) – ( 1.12 )
+are satisfied.
+Then there exist a nonnegative function $E_{2}:(0,\infty)\to\mathbb{R}$ and
+constants $\varepsilon_{1}\geq 0$ and $\varepsilon_{2}>0$ such that $\displaystyle\frac{d}{dt}E_{2}(t)\leq-\varepsilon_{1}\int_{\Omega}u(\cdot,t)-\varepsilon_{2}\int_{\Omega}\left[u(\cdot,t)^{2}+(v(\cdot,t)-1)^{2}+\left(w(\cdot,t)-\frac{\beta}{\gamma}\right)^{2}\right]$ (3.8) holds for all $t>0$ .
+Moreover, there exists $C>0$ satisfying $\displaystyle\int_{0}^{\infty}\int_{\Omega}u^{2}+\int_{0}^{\infty}\int_{\Omega}(v-1)^{2}+\int_{0}^{\infty}\int_{\Omega}\left(w-\frac{\beta}{\gamma}\right)^{2}\leq C.$ Proof. Let $\delta_{1}>0$ and $a_{1}^{\prime}\in[1,a_{1}]$ be a constant defined in
+( 1.11 )–( 1.12 ).
+We first show that the function $E_{2}:(0,\infty)\to\mathbb{R}$ defined as $\displaystyle E_{2}:=\int_{\Omega}u+\frac{a_{1}^{\prime}\mu_{1}\delta_{1}}{a_{2}\mu_{2}}\int_{\Omega}\left(v-1-\log{v}\right)$ (3.9) fulfils ( 3.8 )
+for all $t>0$ with $\varepsilon_{1}:=a_{1}^{\prime}-1$ and some $\varepsilon_{2}>0$ .
+Noting from the relation $a_{1}^{\prime}\leq a_{1}$ that $\displaystyle u(1-u-a_{1}v)$ $\displaystyle\leq u(1-u-a_{1}^{\prime}v)$ $\displaystyle=-\mu_{1}u^{2}-a_{1}^{\prime}\mu_{1}u(v-1)-(a_{1}^{\prime}-1)\mu_{1}u,$ from straightforward calculations
+we derive that $\displaystyle\frac{d}{dt}E_{2}(t)$ $\displaystyle=-\mu_{1}\int_{\Omega}u(\cdot,t)^{2}-(1+\delta_{1})a_{1}^{\prime}\mu_{1}\int_{\Omega}u(\cdot,t)(v(\cdot,t)-1)$ $\displaystyle\quad\,-\frac{a_{1}^{\prime}\mu_{1}\delta_{1}}{\mu_{2}}\int_{\Omega}(v(\cdot,t)-1)^{2}-(a_{1}^{\prime}-1)\int_{\Omega}u(\cdot,t)$ $\displaystyle\quad\,-\frac{d_{2}a_{1}^{\prime}\mu_{1}\delta_{1}}{a_{2}\mu_{2}}\int_{\Omega}\frac{|\nabla v(\cdot,t)|^{2}}{v^{2}}+\frac{a_{1}^{\prime}\mu_{1}\chi_{2}\delta_{1}}{a_{2}\mu_{2}}\int_{\Omega}\frac{\nabla v(\cdot,t)\cdot\nabla w(\cdot,t)}{v}$ (3.10) for all $t>0$ .
+Here thanks to
+( 1.11 )–( 1.12 ),
+we can take $\delta_{2}>0$ such that $\displaystyle\frac{a_{1}^{\prime}\mu_{1}\chi_{2}^{2}\delta_{1}}{4d_{2}a_{2}\mu_{2}}<\delta_{2}<\frac{d_{3}a_{1}^{\prime}\mu_{1}\gamma(4\delta_{1}-(1+\delta_{1})^{2}a_{1}^{\prime}a_{2})}{a_{1}^{\prime}\alpha^{2}\delta_{1}+a_{2}\beta^{2}-(1+\delta_{1})a_{1}^{\prime}a_{2}\alpha\beta}.$ Invoking the Young inequality, we obtain that $\displaystyle\frac{a_{1}^{\prime}\mu_{1}\chi_{2}\delta_{1}}{a_{2}\mu_{2}}\int_{\Omega}\frac{\nabla v\cdot\nabla w}{v}\leq\frac{a_{1}^{\prime 2}\mu_{1}^{2}\chi_{2}^{2}\delta_{1}^{2}}{4\delta_{2}}\int_{\Omega}\frac{|\nabla v|^{2}}{v^{2}}+\delta_{2}\int_{\Omega}|\nabla w|^{2}.$ Therefore since the definition of $\delta_{2}$ yields $\displaystyle d_{2}-\frac{a_{1}^{\prime}\mu_{1}\chi_{2}^{2}\delta_{1}}{4a_{2}\mu_{2}\delta_{2}}>0,$ the equation ( 3.10 ) implies that $\displaystyle\frac{d}{dt}E_{2}(t)$ $\displaystyle\leq-\varepsilon_{1}\int_{\Omega}u-\mu_{1}\int_{\Omega}u(\cdot,t)^{2}-(1+\delta_{1})a_{1}^{\prime}\mu_{1}\int_{\Omega}u(\cdot,t)(v(\cdot,t)-1)$ $\displaystyle\quad\,-\frac{a_{1}^{\prime}\mu_{1}\delta_{1}}{\mu_{2}}\int_{\Omega}(v(\cdot,t)-1)^{2}+\delta_{2}\int_{\Omega}|\nabla w(\cdot,t)|^{2}$ for all $t>0$ , where $\varepsilon_{1}=a_{1}^{\prime}-1$ .
+Noting from the third equation in ( 1.1 ) that $\displaystyle\int_{\Omega}|\nabla w|^{2}=\frac{\alpha}{d_{3}}\int_{\Omega}u\left(w-\frac{\beta}{\gamma}\right)+\frac{\beta}{d_{3}}\int_{\Omega}(v-1)\left(w-\frac{\beta}{\gamma}\right)-\frac{\gamma}{d_{3}}\int_{\Omega}\left(w-\frac{\beta}{\gamma}\right)^{2},$ we establish that for all $t>0$ , $\displaystyle\frac{d}{dt}E_{2}(t)\leq-\varepsilon_{1}\int_{\Omega}u+F_{2}(t)\quad\mbox{for all}\ t>0,$ where $\displaystyle F_{2}(t)$ $\displaystyle:=-\mu_{1}\int_{\Omega}u(\cdot,t)^{2}-(1+\delta_{1})a_{1}\mu_{1}\int_{\Omega}u(\cdot,t)(v(\cdot,t)-1)$ $\displaystyle\quad\,-\frac{a_{1}\mu_{1}\delta_{1}}{\mu_{2}}\int_{\Omega}(v(\cdot,t)-1)^{2}+\frac{\alpha(1+\delta_{1})\delta_{2}}{d_{3}}\int_{\Omega}u(\cdot,t)\left(w(\cdot,t)-\frac{\beta}{\gamma}\right)$ $\displaystyle\quad\,+\frac{\beta(1+\delta_{1})\delta_{2}}{d_{3}}\int_{\Omega}(v(\cdot,t)-1)\left(w(\cdot,t)-\frac{\beta}{\gamma}\right)-\frac{\gamma(1+\delta_{1})\delta_{2}}{d_{3}}\int_{\Omega}\left(w(\cdot,t)-\frac{\beta}{\gamma}\right)^{2}.$ Then by using the same argument as in the proof of
+Lemma 3.4 we can see that $\displaystyle F_{2}(t)\leq-\varepsilon_{2}\int_{\Omega}\left[u(\cdot,t)^{2}+(v(\cdot,t)-1)^{2}+\left(w(\cdot,t)-\frac{\beta}{\gamma}\right)^{2}\right]\quad\mbox{for all}\ t>0$ with some $\varepsilon_{2}>0$ ,
+which means that ( 3.8 ) holds
+with $\varepsilon_{1}=a_{1}^{\prime}-1\geq 0$ and $\varepsilon_{2}>0$ .
+∎ Then we will establish the convergence result for
+the solution to ( 1.1 )
+in the case that $a_{1}\geq 1>a_{2}$ . Lemma 3.8 . Assume that
+( 1.11 ) – ( 1.12 )
+are satisfied.
+Then we have $\displaystyle\|{u(\cdot,t)}\|_{L^{\infty}(\Omega)}+\|{v(\cdot,t)-1}\|_{L^{\infty}(\Omega)}+\left\|w(\cdot,t)-\frac{\beta}{\gamma}\right\|_{L^{\infty}(\Omega)}\to 0\quad\mbox{as}\ t\to\infty.$ Proof. A combination of
+Lemmas 3.1 and 3.7 implies this lemma.
+∎ Finally, we shall show two lemmas which
+give asymptotic behavior
+in the case that $a_{1}>1>a_{2}$ . Lemma 3.9 . Let $a_{1}>1$ and $a_{2}\in(0,1)$ .
+Assume that
+( 1.11 ) – ( 1.12 )
+are satisfied with $\delta_{1}>0$ and $a_{1}^{\prime}>0$ .
+Then there exist $C>0$ and $\ell>0$ satisfying $\displaystyle\|u(t)\|_{L^{2}(\Omega)}+\|v(t)-1\|_{L^{2}(\Omega)}\leq Ce^{-\ell t}\quad\mbox{for all}\ t>0.$ Proof. In the case that $a_{1}\geq 1$ and $a_{2}\in(0,1)$ a similar argument as in the proof of [ 27 , Lemmas 4.3] enables us to see that there exist $C_{1},C_{2}>0$ and $t_{0}>0$ such that $\displaystyle C_{1}h_{1}(t)\leq E_{2}(t)\leq C_{2}h_{1}(t)\quad\mbox{for all}\ t>t_{0},$ where $E_{2}$ is the function defined as ( 3.9 )
+and $\displaystyle h_{1}(t):=\int_{\Omega}u(\cdot,t)^{2}+\int_{\Omega}(v(\cdot,t)-1)^{2}+(a_{1}^{\prime}-1)\int_{\Omega}u(\cdot,t).$ Thus a combination of the above inequality and
+( 3.8 ) means that $\displaystyle\frac{d}{dt}E_{2}(t)\leq-C_{3}E_{2}(t)$ holds for all $t>t_{0}$ , which
+together with the same argument as
+in the proof of Lemma 3.6 leads to
+the conclusion of this lemma
+in the case that $a_{1}>1$ and $a_{2}\in(0,1)$ .
+∎ Lemma 3.10 . Let $a_{1}=1$ and $a_{2}\in(0,1)$ .
+Assume that
+( 1.11 ) – ( 1.12 )
+are satisfied.
+Then there exist $C>0$ and $\ell>0$ satisfying $\displaystyle\|u(t)\|_{L^{2}(\Omega)}+\|v(t)-1\|_{L^{2}(\Omega)}\leq\frac{C}{\sqrt{t+2}}\quad\mbox{for all}\ t>0.$ Proof. First we can verify from the same argument as
+in the proof of [ 27 , Lemma 3.7] that
+there exist $C_{4},C_{5}>0$ and $t_{1}>0$ such that $\displaystyle C_{4}\int_{\Omega}(v(\cdot,t)-1)^{2}\leq\int_{\Omega}(v(\cdot,t)-1-\log v(\cdot,t))\leq C_{5}\int_{\Omega}(v(\cdot,t)-1)^{2}$ (3.11) for all $t>t_{1}$ .
+Hence it follows from the Cauchy–Schwarz inequality
+and the boundedness of $v$ that $\displaystyle E_{2}(t)$ $\displaystyle\leq\int_{\Omega}u(\cdot,t)+\frac{a_{1}^{\prime}\mu_{1}\delta_{1}}{a_{2}\mu_{2}}\int_{\Omega}(v(\cdot,t)-1)^{2}$ $\displaystyle\leq C_{6}\left(\int_{\Omega}u(\cdot,t)^{2}\right)^{\frac{1}{2}}+C_{6}\left(\int_{\Omega}(v(\cdot,t)-1)^{2}\right)^{\frac{1}{2}}$ $\displaystyle\leq\sqrt{2}C_{6}\left(\int_{\Omega}u(\cdot,t)^{2}+\int_{\Omega}(v(\cdot,t)-1)^{2}\right)^{\frac{1}{2}}\quad\mbox{for all}\ t>t_{1},$ which implies from ( 3.8 ) that $\displaystyle E_{2}(t)\leq-C_{7}E_{2}(t)^{2}\quad\mbox{for all}\ t>t_{1}.$ Therefore we can find $C_{8}>0$ such that $\displaystyle E_{2}(t)\leq\frac{C_{8}}{t+2}\quad\mbox{for all}\ t>t_{1}.$ Therefore thanks to the boundedness of $u$ and
+( 3.11 ),
+we obtain that $\displaystyle\int_{\Omega}u(\cdot,t)^{2}+\int_{\Omega}(v(\cdot,t)-1)^{2}\leq C_{9}E_{2}(t)\leq\frac{C_{8}C_{9}}{t+2}\quad\mbox{for all}\ t>t_{1},$ which proves this lemma.
+∎ Proof of Theorems 1.3 and 1.4 . A combination of Lemmas 3.6 , 3.9 , 3.10 and 3.3 immediately leads to
+the conclusions of these theorems.
+∎ References [1] X. Bai and M. Winkler. Equilibration in a fully parabolic two-species chemotaxis system with
+competitive kinetics. Indiana Univ. Math. J. , 65:553–583, 2016. [2] N. Bellomo, A. Bellouquid, Y. Tao, and M. Winkler. Toward a mathematical theory of Keller–Segel models of pattern
+formation in biological tissues. Math. Models Methods Appl. Sci. , 25:1663–1763, 2015. [3] P. Biler, E. E. Espejo, and I. Guerra. Blowup in higher dimensional two species chemotactic systems. Commun. Pure Appl. Anal. , 12:89–98, 2013. [4] P. Biler and I. Guerra. Blowup and self-similar solutions for two-component drift-diffusion
+systems. Nonlinear Anal. , 75:5186–5193, 2012. [5] T. Black, J. Lankeit, and M. Mizukami. On the weakly competitive case in a two-species chemotaxis model. IMA J. Appl. Math. , 81:860–876, 2016. [6] J. Cao, W. Wang, and H. Yu. Asymptotic behavior of solutions to two-dimensional chemotaxis system
+with logistic source and singular sensitivity. J. Math. Anal. Appl. , 436:382–392, 2016. [7] C. Conca and E. E. Espejo Arenas. Threshold condition for global existence and blow-up to a radially
+symmetric drift-diffusion system. Appl. Math. Lett. , 25:352–356, 2012. [8] C. Conca, E. E. Espejo Arenas, and K. Vilches. Remarks on the blowup and global existence for a two species
+chemotactic Keller–Segel system in $\mathbb{R}^{2}$ . European J. Appl. Math , 22:553–580, 2011. [9] S.-I. Ei and E. Yanagida. Dynamics of interfaces in competition-diffusion systems. SIAM J. Appl. Math. , 54:1355–1373, 1994. [10] E. E. Espejo Arenas, A. Stevens, and J. J. L. Velázquez. Simultaneous finite time blow-up in a two-species model for
+chemotaxis. Analysis ( Munich ), 29:317–338, 2009. [11] A. Friedman. Partial Differential Equations . Holt, Rinehart and Winston, Inc., New York-Montreal, Que.-London,
+1969. [12] K. Fujie, A. Ito, M. Winkler, and T. Yokota. Stabilization in a chemotaxis model for tumor invasion. Discrete Contin. Dyn. Syst. , 36:151–169, 2016. [13] T. Hillen and K. J. Painter. A user’s guide to PDE models for chemotaxis. J. Math. Biol. , 58:183–217, 2009. [14] M. Hirata, S. Kurima, M. Mizukami, and T. Yokota. Boundedness and stabilization in a two-dimensional two-species
+chemotaxis-Navier–Stokes system with competitive kinetics. J. Differential Equations , to appear.
+doi: 10.1016/j.jde.2017.02.045. [15] D. Horstmann. From 1970 until present: the Keller–Segel model in chemotaxis
+and its consequences. Jahresber. Deutsch. Math. -Verein. , 106:51–69, 2004. [16] M. Iida, T. Muramatsu, H. Ninomiya, and E. Yanagida. Diffusion-induced extinction of a superior species in a competition
+system. Japan J. Indust. Appl. Math. , 15:233–252, 1998. [17] Y. Kan-on. Parameter dependence of propagation speed of travelling waves for
+competition-diffusion equations. SIAM J. Math. Anal. , 26:340–363, 1995. [18] Y. Kan-on and E. Yanagida. Existence of nonconstant stable equilibria in competition-diffusion
+equations. Hiroshima Math. J. , 23:193–221, 1993. [19] E. F. Keller and L. A. Segel. Initiation of slime mold aggregation viewed as an instability. J. Theor. Biol. , 26:399–415, 1970. [20] K. Kishimoto and H. F. Weinberger. The spatial homogeneity of stable equilibria of some
+reaction-diffusion systems on convex domains. J. Differential Equations , 58:15–21, 1985. [21] Y. Li and Y. Li. Finite-time blow-up in higher dimensional fully-parabolic chemotaxis
+system for two species. Nonlinear Anal. , 109:72–84, 2014. [22] K. Lin, C. Mu, and L. Wang. Boundedness in a two-species chemotaxis system. Math. Methods Appl. Sci , 38:5085–5096, 2015. [23] H. Matano and M. Mimura. Pattern formation in competition-diffusion systems in nonconvex
+domains. Publ. Res. Inst. Math. Sci. , 19:1049–1079, 1983. [24] M. Mimura, S.-I. Ei, and Q. Fang. Effect of domain-shape on coexistence problems in a
+competition-diffusion system. J. Math. Biol. , 29:219–237, 1991. [25] M. Mimura and T. Tsujikawa. Aggregating pattern dynamics in a chemotaxis model including growth. Physica A: Statistical Mechanics and its Applications ,
+230:499–543, 1996. [26] M. Mizukami. Remarks on smallness of chemotactic effect for asymptotic stability
+in a two-species chemotaxis system. AIMS Mathematics , 1:156–164, 2016. [27] M. Mizukami. Boundedness and asymptotic stability in a two-species
+chemotaxis-competition model with signal-dependent sensitivity. Discrete Contin. Dyn. Syst. Ser. B , to appear.
+doi: 10.3934/dcdsb.2017097. [28] M. Mizukami and T. Yokota. Global existence and asymptotic stability of solutions to a
+two-species chemotaxis system with any chemical diffusion. J. Differential Equations , 261:2650–2669, 2016. [29] M. Negreanu and J. I. Tello. On a two species chemotaxis model with slow chemical diffusion. SIAM J. Math. Anal. , 46:3761–3781, 2014. [30] M. Negreanu and J. I. Tello. Asymptotic stability of a two species chemotaxis system with
+non-diffusive chemoattractant. J. Differential Equations , 258:1592–1617, 2015. [31] K. Osaki, T. Tsujikawa, A. Yagi, and M. Mimura. Exponential attractor for a chemotaxis-growth system of equations. Nonlinear Anal. , 51:119–144, 2002. [32] C. Stinner, J. I. Tello, and M. Winkler. Competitive exclusion in a two-species chemotaxis model. J. Math. Biol. , 68:1607–1626, 2014. [33] J. I. Tello and M. Winkler. A chemotaxis system with logistic source. Comm. Partial Differential Equations , 32:849–877, 2007. [34] J. I. Tello and M. Winkler. Stabilization in a two-species chemotaxis system with a logistic
+source. Nonlinearity , 25:1413–1425, 2012. [35] M. Winkler. Aggregation vs. global diffusive behavior in the higher-dimensional
+Keller–Segel model. J. Differential Equations , 248:2889–2905, 2010. [36] G. Wolansky. Multi-components chemotactic system in the absence of conflicts. European J. Appl. Math. , 13:641–661, 2002. [37] Q. Zhang and X. Li. Global existence and asymptotic properties of the solution to a
+two-species chemotaxis system. J. Math. Anal. Appl. , 418:47–63, 2014. [38] Q. Zhang and Y. Li. Global boundedness of solutions to a two-species chemotaxis system. Z. Angew. Math. Phys. , 66:83–93, 2015. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

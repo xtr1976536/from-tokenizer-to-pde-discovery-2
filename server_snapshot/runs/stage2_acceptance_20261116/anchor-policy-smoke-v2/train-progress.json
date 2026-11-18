@@ -1,0 +1,83 @@
+{
+  "attempts": 512,
+  "generated": 512,
+  "accepted": 0,
+  "rejections": {
+    "Fit quality gate: each batch-mean equation R2 must be strictly > 0.3": 192,
+    "Invalid or unterminated sample": 291,
+    "Term evaluation failed: Nonfinite or complex term on valid points": 18,
+    "Candidate parse/compile failed: Identity equation has no learnable structure": 1,
+    "Repeated residual equations cannot define an independent system": 2,
+    "Numerical subset supports spatial order <=4 and time order <=2": 4,
+    "Rank-deficient coefficient regression": 2,
+    "Zero fitted basis column": 2
+  },
+  "rows": [],
+  "fit_reject_examples": [
+    {
+      "text": "p\\cdot u+\\partial_{t}(u)+\\nabla\\cdot(\\nabla(v)\\cdot u)+\\Delta(u)=0\\\\u+v+\\Delta(u)=0\\\\u=0",
+      "last_window_r2": [
+        0.0015137030471019663,
+        0.019342364702262582,
+        -9.50590378289179
+      ]
+    },
+    {
+      "text": "\\partial_{t}(u)+\\Delta(u)+p\\cdot u+\\nabla\\cdot(u\\cdot \\nabla(p))+\\Delta(u)+\\partial_{t}(u)=0\\\\v+u=0\\\\\\Delta(p)=0",
+      "last_window_r2": [
+        0.0014396478312302952,
+        -9.183148283823588,
+        -0.0004686906310371608
+      ]
+    },
+    {
+      "text": "1+\\partial_{t}(u)+u^{2}+1+u^{3}+p+\\Delta(v)+\\partial_{t}(u)+u+p+u+u^{2}+\\Delta(v)+\\Delta(p)=0\\\\(p\\cdot \\sin(u^{2})+\\Delta(u))+\\partial_{y}(u)+p\\cdot \\partial_{y}(p)\\cdot \\Delta(v)=0\\\\(p)\\cdot p+\\Delta(u)=0",
+      "last_window_r2": [
+        0.002817544904462177,
+        0.01294370444919335,
+        0.0028881126077328068
+      ]
+    },
+    {
+      "text": "v+\\Delta(u)+v+u^{2}+u+p+\\Delta(v)=0\\\\v+\\partial_{t}(v)+u\\cdot v=0  \\\\\\partial_{t}(u)=0",
+      "last_window_r2": [
+        0.05289161098805628,
+        -0.0044036860027438784,
+        -6.352932465425454e-06
+      ]
+    },
+    {
+      "text": "u\\cdot p+\\partial_{t}(u)+p\\cdot u=0\\\\pp\\cdot \\sin(\\partial_{y}(v))^{2}=0 \\\\\\partial_{t}(v)+\\partial_{x}(u)+u^{3}\\cdot p\\cdot u=0",
+      "last_window_r2": [
+        0.0012265016473704815,
+        -0.1445777260698331,
+        0.04060353032498776
+      ]
+    },
+    {
+      "text": "\\Delta(u)+\\nabla\\cdot(u\\cdot \\nabla(v))+\\nabla\\cdot(\\nabla(u)\\cdot u^{2})+u=0\\\\u+v+\\Delta(v)=0\\\\u\\cdot v+p=0",
+      "last_window_r2": [
+        0.3654572544611052,
+        0.1523084292768938,
+        -0.022713377119890188
+      ]
+    },
+    {
+      "text": "\\partial_{t}(u)+\\Delta(u)+\\Delta(v^{2})+u^{2}+u+\\partial_{t}(u)+\\nabla\\cdot(\\nabla(p)\\cdot u)+u+(\\partial_{y}(u))^{2}+v+\\Delta(v)+(v)=0\\\\\\tanh(v^{2})+\\Delta(\\partial_{t}(v))+u^{2}+\\partial_{t}(v)=0\\\\\\partial_{y}(\\Delta(v))+\\partial_{t}(u)+\\partial_{y}(u)+\\partial_{y}(p^{2})+\\partial_{y}(p^{2})=0",
+      "last_window_r2": [
+        0.00982123588996997,
+        0.20410725863630796,
+        0.034320511467383685
+      ]
+    },
+    {
+      "text": "v^{2}\\cdot u+\\Delta(u)+u^{2}\\cdot p+\\partial_{t}(u)=0\\\\\\partial_{t}(v)+v+\\partial_{t}(v)p+v=0\\\\v=0",
+      "last_window_r2": [
+        0.001658300193334572,
+        0.6733029153225223,
+        -0.04059630991112262
+      ]
+    }
+  ],
+  "seconds": 694.1727543938905
+}

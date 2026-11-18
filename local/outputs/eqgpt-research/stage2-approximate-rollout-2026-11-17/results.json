@@ -1,0 +1,5247 @@
+[
+  {
+    "candidate": 2,
+    "window": {
+      "trajectory": "4500.h5",
+      "start": 270
+    },
+    "text": "\\partial_{y}(\\partial_{y}(u))+\\partial_{t}(v)+\\partial_{y}(\\partial_{y}(u))+\\partial_{x}(v)+\\partial_{x}(u)+\\partial_{x}(v)+\\partial_{y}(p)(u\\cdot v)=0\\\\\\partial_{x}(u)+\\partial_{x}(v)+\\partial_{y}(v)+\\partial_{x}(u)(p)=0\\\\\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{y}(u)+\\partial_{x}(u)+\\partial_{x}(x^{2}\\cdot \\partial_{x}(v)+\\partial_{x}(v)+(\\partial_{x}(u))^{2}\\cdot v+\\Delta(u))^{2}+u\\cdot \\partial_{y}(u)\\partial_{y}(p)+u^{2}\\cdot \\partial_{y}(u)-1+\\partial_{t}(p)=0",
+    "fit_r2": [
+      0.8084247942205062,
+      0.9504928932458887,
+      0.8257744999180812
+    ],
+    "mode": "APPROXIMATE_DIAGNOSTIC_NO_RESIDUAL_REJECTION",
+    "rollout": "APPROXIMATE_COMPLETED",
+    "diagnostics": {
+      "method": "generic implicit residual / sparse least squares",
+      "boundary": "non-active context and required outer/interface collar frozen at last visible values",
+      "boundary_collar_cells": 2,
+      "temporal": "backward first difference / second difference",
+      "residual_calls": 1422,
+      "jacobian_calls": 1071,
+      "jacobian": "analytic_sparse",
+      "seconds": 464.5350968539715,
+      "steps": [
+        {
+          "time": 1.5,
+          "normalized_residual": 0.0015342797183684948,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 0.7051029749371753,
+              "linear_relative_residual": 1.6082002209547583e-15,
+              "damping": 1.0
+            },
+            {
+              "method": "damped_newton",
+              "iteration": 1,
+              "residual": 0.3321241957756553,
+              "linear_relative_residual": 2.358339562749077e-15,
+              "damping": 0.5
+            },
+            {
+              "method": "damped_newton",
+              "iteration": 2,
+              "residual": 0.2357075799065224,
+              "linear_relative_residual": 2.135295637349988e-14,
+              "damping": 0.015625
+            },
+            {
+              "method": "damped_newton",
+              "iteration": 3,
+              "residual": 0.2342133667935311,
+              "linear_relative_residual": 1.484328068568763e-14,
+              "damping": 0.0625
+            },
+            {
+              "method": "damped_newton",
+              "iteration": 4,
+              "residual": 0.234081800614697,
+              "linear_relative_residual": 4.347621404767707e-15,
+              "damping": 0.25
+            },
+            {
+              "method": "damped_newton",
+              "iteration": 5,
+              "residual": 0.20566805201503038,
+              "linear_relative_residual": 6.983346331665671e-15,
+              "damping": 0.25
+            },
+            {
+              "method": "damped_newton",
+              "iteration": 6,
+              "residual": 0.20214707536913035,
+              "linear_relative_residual": 4.35750330757436e-15,
+              "damping": 0.5
+            },
+            {
+              "method": "damped_newton",
+              "iteration": 7,
+              "residual": 0.19565028193279327,
+              "linear_relative_residual": 4.297456743561279e-15,
+              "damping": 0.5
+            },
+            {
+              "method": "damped_newton",
+              "iteration": 8,
+              "residual": 0.1753058924650338,
+              "linear_relative_residual": 6.6550916905873254e-15,
+              "damping": 0.25
+            },
+            {
+              "method": "damped_newton",
+              "iteration": 9,
+              "residual": 0.1744582644082759,
+              "linear_relative_residual": 7.208947929812038e-15,
+              "damping": 0.125
+            },
+            {
+              "method": "trf",
+              "residual": 0.16376234264925218
+            },
+            {
+              "method": "trf",
+              "residual": 0.08885126300187184
+            },
+            {
+              "method": "trf",
+              "residual": 0.03581670986947798
+            },
+            {
+              "method": "trf",
+              "residual": 0.004961755994755755
+            },
+            {
+              "method": "trf",
+              "residual": 0.02839852159080238
+            },
+            {
+              "method": "trf",
+              "residual": 0.003624802896206589
+            },
+            {
+              "method": "trf",
+              "residual": 0.0021852660839612255
+            },
+            {
+              "method": "trf",
+              "residual": 0.002376641298339115
+            },
+            {
+              "method": "trf",
+              "residual": 0.0021521984396354267
+            },
+            {
+              "method": "trf",
+              "residual": 0.002112578932624422
+            },
+            {
+              "method": "trf",
+              "residual": 0.0020639268242761207
+            },
+            {
+              "method": "trf",
+              "residual": 0.002016488522482515
+            },
+            {
+              "method": "trf",
+              "residual": 0.0019929321645947963
+            },
+            {
+              "method": "trf",
+              "residual": 0.0018945796639048384
+            },
+            {
+              "method": "trf",
+              "residual": 0.002089137402789152
+            },
+            {
+              "method": "trf",
+              "residual": 0.0018556538424182552
+            },
+            {
+              "method": "trf",
+              "residual": 0.0018272952988127597
+            },
+            {
+              "method": "trf",
+              "residual": 0.0017894258900984354
+            },
+            {
+              "method": "trf",
+              "residual": 0.0017504282306491196
+            },
+            {
+              "method": "trf",
+              "residual": 0.0017168228440965021
+            },
+            {
+              "method": "trf",
+              "residual": 0.001686003618047492
+            },
+            {
+              "method": "trf",
+              "residual": 0.0016564189235644376
+            },
+            {
+              "method": "trf",
+              "residual": 0.0016309095010065594
+            },
+            {
+              "method": "trf",
+              "residual": 0.001600274915556687
+            },
+            {
+              "method": "trf",
+              "residual": 0.001577091020320908
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015643257379369072
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015642240899122176
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015568912859780632
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015553053100681217
+            },
+            {
+              "method": "trf",
+              "residual": 0.001552696304432553
+            },
+            {
+              "method": "trf",
+              "residual": 0.001549406831762061
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015449344013579197
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015434363223526797
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015418665419126858
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015433513611718848
+            },
+            {
+              "method": "trf",
+              "residual": 0.001541078608806191
+            },
+            {
+              "method": "trf",
+              "residual": 0.001539771282271427
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015393505530601644
+            },
+            {
+              "method": "trf",
+              "residual": 0.001537625075564347
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015387071438515425
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015372012021134286
+            },
+            {
+              "method": "trf",
+              "residual": 0.001536772868984033
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015363709390098378
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015360962404363328
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015358086458570788
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015356025827226766
+            },
+            {
+              "method": "trf",
+              "residual": 0.001535381576210662
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015352286972579185
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015350548148661642
+            },
+            {
+              "method": "trf",
+              "residual": 0.001534936649349154
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015347749244796164
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015347019307634343
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015345463428136702
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015345204000097555
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015343473292794153
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015343233248707993
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015343132559233054
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015342990404095113
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015342847573752512
+            },
+            {
+              "method": "trf",
+              "residual": 0.0015342797183684948
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.5050000000000001,
+          "normalized_residual": 0.00851277928653236,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 0.8543617069799025,
+              "linear_relative_residual": 1.3439040770460183e-13,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 0.8543617069799025
+            },
+            {
+              "method": "trf",
+              "residual": 0.18393952147091236
+            },
+            {
+              "method": "trf",
+              "residual": 0.16933172822153497
+            },
+            {
+              "method": "trf",
+              "residual": 0.041467363634919846
+            },
+            {
+              "method": "trf",
+              "residual": 0.046276896129342916
+            },
+            {
+              "method": "trf",
+              "residual": 0.03518917719626105
+            },
+            {
+              "method": "trf",
+              "residual": 0.032132716810193335
+            },
+            {
+              "method": "trf",
+              "residual": 0.030660204533247516
+            },
+            {
+              "method": "trf",
+              "residual": 0.028737423667250704
+            },
+            {
+              "method": "trf",
+              "residual": 0.027146789085734875
+            },
+            {
+              "method": "trf",
+              "residual": 0.02598418769677387
+            },
+            {
+              "method": "trf",
+              "residual": 0.02499510399094072
+            },
+            {
+              "method": "trf",
+              "residual": 0.02404259273907839
+            },
+            {
+              "method": "trf",
+              "residual": 0.023090957031983286
+            },
+            {
+              "method": "trf",
+              "residual": 0.022137381293641394
+            },
+            {
+              "method": "trf",
+              "residual": 0.021191490279346758
+            },
+            {
+              "method": "trf",
+              "residual": 0.020275140099980295
+            },
+            {
+              "method": "trf",
+              "residual": 0.019430918322649513
+            },
+            {
+              "method": "trf",
+              "residual": 0.018636310108468456
+            },
+            {
+              "method": "trf",
+              "residual": 0.017876422087844276
+            },
+            {
+              "method": "trf",
+              "residual": 0.017160681230193185
+            },
+            {
+              "method": "trf",
+              "residual": 0.016484298311622785
+            },
+            {
+              "method": "trf",
+              "residual": 0.01584216839825336
+            },
+            {
+              "method": "trf",
+              "residual": 0.015230338681638513
+            },
+            {
+              "method": "trf",
+              "residual": 0.014644102887798547
+            },
+            {
+              "method": "trf",
+              "residual": 0.014079094512056523
+            },
+            {
+              "method": "trf",
+              "residual": 0.013520720161833475
+            },
+            {
+              "method": "trf",
+              "residual": 0.012904289074094404
+            },
+            {
+              "method": "trf",
+              "residual": 0.013069775331912194
+            },
+            {
+              "method": "trf",
+              "residual": 0.01254298210087243
+            },
+            {
+              "method": "trf",
+              "residual": 0.012346914537169374
+            },
+            {
+              "method": "trf",
+              "residual": 0.013495526910776708
+            },
+            {
+              "method": "trf",
+              "residual": 0.012080905097102676
+            },
+            {
+              "method": "trf",
+              "residual": 0.012001802698503847
+            },
+            {
+              "method": "trf",
+              "residual": 0.011972122175385545
+            },
+            {
+              "method": "trf",
+              "residual": 0.011503757956266333
+            },
+            {
+              "method": "trf",
+              "residual": 0.011459142198261978
+            },
+            {
+              "method": "trf",
+              "residual": 0.011375758554838387
+            },
+            {
+              "method": "trf",
+              "residual": 0.011267681718554957
+            },
+            {
+              "method": "trf",
+              "residual": 0.01111759274867375
+            },
+            {
+              "method": "trf",
+              "residual": 0.010951705481431671
+            },
+            {
+              "method": "trf",
+              "residual": 0.010903563391876193
+            },
+            {
+              "method": "trf",
+              "residual": 0.010629541339554864
+            },
+            {
+              "method": "trf",
+              "residual": 0.010571219833435933
+            },
+            {
+              "method": "trf",
+              "residual": 0.010461773355838871
+            },
+            {
+              "method": "trf",
+              "residual": 0.010284812470495534
+            },
+            {
+              "method": "trf",
+              "residual": 0.010259850531119347
+            },
+            {
+              "method": "trf",
+              "residual": 0.009826553199836668
+            },
+            {
+              "method": "trf",
+              "residual": 0.009738629565403932
+            },
+            {
+              "method": "trf",
+              "residual": 0.009587294648463595
+            },
+            {
+              "method": "trf",
+              "residual": 0.009548238372575428
+            },
+            {
+              "method": "trf",
+              "residual": 0.00922499789480427
+            },
+            {
+              "method": "trf",
+              "residual": 0.009152053051894989
+            },
+            {
+              "method": "trf",
+              "residual": 0.009027759453590353
+            },
+            {
+              "method": "trf",
+              "residual": 0.009014825089643907
+            },
+            {
+              "method": "trf",
+              "residual": 0.008733938079013164
+            },
+            {
+              "method": "trf",
+              "residual": 0.008674237659561186
+            },
+            {
+              "method": "trf",
+              "residual": 0.008573978016581966
+            },
+            {
+              "method": "trf",
+              "residual": 0.0085800078138726
+            },
+            {
+              "method": "trf",
+              "residual": 0.00851277928653236
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.51,
+          "normalized_residual": 0.16356055681877726,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 3.4044390404319507,
+              "linear_relative_residual": 1.8022947056484114e-14,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 3.4044390404319507
+            },
+            {
+              "method": "trf",
+              "residual": 0.8353144538600804
+            },
+            {
+              "method": "trf",
+              "residual": 0.41482208100178114
+            },
+            {
+              "method": "trf",
+              "residual": 0.9928813852414904
+            },
+            {
+              "method": "trf",
+              "residual": 0.30214155642068125
+            },
+            {
+              "method": "trf",
+              "residual": 0.39774785955858355
+            },
+            {
+              "method": "trf",
+              "residual": 0.26374304982537095
+            },
+            {
+              "method": "trf",
+              "residual": 0.327411172324234
+            },
+            {
+              "method": "trf",
+              "residual": 0.24967406796307473
+            },
+            {
+              "method": "trf",
+              "residual": 0.23687989459645883
+            },
+            {
+              "method": "trf",
+              "residual": 0.23206457700878794
+            },
+            {
+              "method": "trf",
+              "residual": 0.23213569810247806
+            },
+            {
+              "method": "trf",
+              "residual": 0.23027123386598836
+            },
+            {
+              "method": "trf",
+              "residual": 0.22883893612078984
+            },
+            {
+              "method": "trf",
+              "residual": 0.23032802905206237
+            },
+            {
+              "method": "trf",
+              "residual": 0.22797349365212963
+            },
+            {
+              "method": "trf",
+              "residual": 0.22686215819990105
+            },
+            {
+              "method": "trf",
+              "residual": 0.22546701697272062
+            },
+            {
+              "method": "trf",
+              "residual": 0.2239537843931021
+            },
+            {
+              "method": "trf",
+              "residual": 0.222694849790589
+            },
+            {
+              "method": "trf",
+              "residual": 0.22124180720911518
+            },
+            {
+              "method": "trf",
+              "residual": 0.22211978561139803
+            },
+            {
+              "method": "trf",
+              "residual": 0.22050576846227515
+            },
+            {
+              "method": "trf",
+              "residual": 0.21954100785935315
+            },
+            {
+              "method": "trf",
+              "residual": 0.21825968509041616
+            },
+            {
+              "method": "trf",
+              "residual": 0.218403574684088
+            },
+            {
+              "method": "trf",
+              "residual": 0.21752008843857795
+            },
+            {
+              "method": "trf",
+              "residual": 0.21658270398503568
+            },
+            {
+              "method": "trf",
+              "residual": 0.2152891170184796
+            },
+            {
+              "method": "trf",
+              "residual": 0.214777363486261
+            },
+            {
+              "method": "trf",
+              "residual": 0.2119041666776314
+            },
+            {
+              "method": "trf",
+              "residual": 0.21103467977831128
+            },
+            {
+              "method": "trf",
+              "residual": 0.209739631119822
+            },
+            {
+              "method": "trf",
+              "residual": 0.20799135711206787
+            },
+            {
+              "method": "trf",
+              "residual": 0.20643203752302622
+            },
+            {
+              "method": "trf",
+              "residual": 0.2023652206340564
+            },
+            {
+              "method": "trf",
+              "residual": 0.20606584498925556
+            },
+            {
+              "method": "trf",
+              "residual": 0.19888291502920674
+            },
+            {
+              "method": "trf",
+              "residual": 0.20071850259757357
+            },
+            {
+              "method": "trf",
+              "residual": 0.1980073217132385
+            },
+            {
+              "method": "trf",
+              "residual": 0.19868153905552863
+            },
+            {
+              "method": "trf",
+              "residual": 0.19749601870964334
+            },
+            {
+              "method": "trf",
+              "residual": 0.1969670962459686
+            },
+            {
+              "method": "trf",
+              "residual": 0.19537875122749088
+            },
+            {
+              "method": "trf",
+              "residual": 0.1941829132784708
+            },
+            {
+              "method": "trf",
+              "residual": 0.19198281636108394
+            },
+            {
+              "method": "trf",
+              "residual": 0.1913430802823182
+            },
+            {
+              "method": "trf",
+              "residual": 0.1878804855467127
+            },
+            {
+              "method": "trf",
+              "residual": 0.18871726338130004
+            },
+            {
+              "method": "trf",
+              "residual": 0.18679688358097493
+            },
+            {
+              "method": "trf",
+              "residual": 0.1854465872145447
+            },
+            {
+              "method": "trf",
+              "residual": 0.18357373889070538
+            },
+            {
+              "method": "trf",
+              "residual": 0.1823361508864014
+            },
+            {
+              "method": "trf",
+              "residual": 0.17904648503681186
+            },
+            {
+              "method": "trf",
+              "residual": 0.17551616914172113
+            },
+            {
+              "method": "trf",
+              "residual": 0.1722829846563868
+            },
+            {
+              "method": "trf",
+              "residual": 0.16922933101687437
+            },
+            {
+              "method": "trf",
+              "residual": 0.1684920521718264
+            },
+            {
+              "method": "trf",
+              "residual": 0.164454353795795
+            },
+            {
+              "method": "trf",
+              "residual": 0.16356055681877726
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.5150000000000001,
+          "normalized_residual": 0.2041212797107184,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 7.052075001258137,
+              "linear_relative_residual": 4.583460561436152e-14,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 7.052075001258137
+            },
+            {
+              "method": "trf",
+              "residual": 1.7440120007424609
+            },
+            {
+              "method": "trf",
+              "residual": 0.8741503131124995
+            },
+            {
+              "method": "trf",
+              "residual": 1.5441926879744472
+            },
+            {
+              "method": "trf",
+              "residual": 0.6037703591948513
+            },
+            {
+              "method": "trf",
+              "residual": 0.3904225528840869
+            },
+            {
+              "method": "trf",
+              "residual": 0.5021309227925109
+            },
+            {
+              "method": "trf",
+              "residual": 0.3561141709957863
+            },
+            {
+              "method": "trf",
+              "residual": 0.34827706358528465
+            },
+            {
+              "method": "trf",
+              "residual": 0.35125738566009546
+            },
+            {
+              "method": "trf",
+              "residual": 0.33760054164343717
+            },
+            {
+              "method": "trf",
+              "residual": 0.3373925206074296
+            },
+            {
+              "method": "trf",
+              "residual": 0.3247508019934237
+            },
+            {
+              "method": "trf",
+              "residual": 0.32335778057433323
+            },
+            {
+              "method": "trf",
+              "residual": 0.32099930369791924
+            },
+            {
+              "method": "trf",
+              "residual": 0.31692309951737635
+            },
+            {
+              "method": "trf",
+              "residual": 0.31416375885067266
+            },
+            {
+              "method": "trf",
+              "residual": 0.30697228784464115
+            },
+            {
+              "method": "trf",
+              "residual": 0.3099836939583493
+            },
+            {
+              "method": "trf",
+              "residual": 0.30189658754965903
+            },
+            {
+              "method": "trf",
+              "residual": 0.3086628259357965
+            },
+            {
+              "method": "trf",
+              "residual": 0.29914284998197327
+            },
+            {
+              "method": "trf",
+              "residual": 0.30142449060306226
+            },
+            {
+              "method": "trf",
+              "residual": 0.29741550583598936
+            },
+            {
+              "method": "trf",
+              "residual": 0.29546605146065974
+            },
+            {
+              "method": "trf",
+              "residual": 0.2918559663509096
+            },
+            {
+              "method": "trf",
+              "residual": 0.28997794164597995
+            },
+            {
+              "method": "trf",
+              "residual": 0.286491618592679
+            },
+            {
+              "method": "trf",
+              "residual": 0.28309892892542865
+            },
+            {
+              "method": "trf",
+              "residual": 0.2803629594437527
+            },
+            {
+              "method": "trf",
+              "residual": 0.27383886760543497
+            },
+            {
+              "method": "trf",
+              "residual": 0.3794959613425749
+            },
+            {
+              "method": "trf",
+              "residual": 0.27076306381072424
+            },
+            {
+              "method": "trf",
+              "residual": 0.2609820180984335
+            },
+            {
+              "method": "trf",
+              "residual": 0.25853119012759873
+            },
+            {
+              "method": "trf",
+              "residual": 0.25749742092508704
+            },
+            {
+              "method": "trf",
+              "residual": 0.2503828274545806
+            },
+            {
+              "method": "trf",
+              "residual": 0.2476108325242398
+            },
+            {
+              "method": "trf",
+              "residual": 0.24600718079424364
+            },
+            {
+              "method": "trf",
+              "residual": 0.24128508769359872
+            },
+            {
+              "method": "trf",
+              "residual": 0.23791041192979098
+            },
+            {
+              "method": "trf",
+              "residual": 0.35332153465039234
+            },
+            {
+              "method": "trf",
+              "residual": 0.23576069512928097
+            },
+            {
+              "method": "trf",
+              "residual": 0.2309615283784361
+            },
+            {
+              "method": "trf",
+              "residual": 0.22921481225769044
+            },
+            {
+              "method": "trf",
+              "residual": 0.23164376442367873
+            },
+            {
+              "method": "trf",
+              "residual": 0.22808395084501673
+            },
+            {
+              "method": "trf",
+              "residual": 0.22661557563136459
+            },
+            {
+              "method": "trf",
+              "residual": 0.2246093793804308
+            },
+            {
+              "method": "trf",
+              "residual": 0.22254032899488504
+            },
+            {
+              "method": "trf",
+              "residual": 0.22199482458465883
+            },
+            {
+              "method": "trf",
+              "residual": 0.2165835654532318
+            },
+            {
+              "method": "trf",
+              "residual": 0.21540258976835433
+            },
+            {
+              "method": "trf",
+              "residual": 0.2135177858697132
+            },
+            {
+              "method": "trf",
+              "residual": 0.21342528363452584
+            },
+            {
+              "method": "trf",
+              "residual": 0.20875173364947489
+            },
+            {
+              "method": "trf",
+              "residual": 0.207813087123689
+            },
+            {
+              "method": "trf",
+              "residual": 0.20614046073985146
+            },
+            {
+              "method": "trf",
+              "residual": 0.20524424735368554
+            },
+            {
+              "method": "trf",
+              "residual": 0.2041212797107184
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.52,
+          "normalized_residual": 0.2237991963881621,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 13.48142843661858,
+              "linear_relative_residual": 5.4183979193890524e-14,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 13.48142843661858
+            },
+            {
+              "method": "trf",
+              "residual": 3.035823946679703
+            },
+            {
+              "method": "trf",
+              "residual": 1.6946516506332447
+            },
+            {
+              "method": "trf",
+              "residual": 2.520790540761286
+            },
+            {
+              "method": "trf",
+              "residual": 1.074260922540823
+            },
+            {
+              "method": "trf",
+              "residual": 0.6644319072934548
+            },
+            {
+              "method": "trf",
+              "residual": 0.7601866762221061
+            },
+            {
+              "method": "trf",
+              "residual": 0.58250022043439
+            },
+            {
+              "method": "trf",
+              "residual": 0.6224959467492505
+            },
+            {
+              "method": "trf",
+              "residual": 0.568970355197994
+            },
+            {
+              "method": "trf",
+              "residual": 0.5547615869950507
+            },
+            {
+              "method": "trf",
+              "residual": 0.9330505809870776
+            },
+            {
+              "method": "trf",
+              "residual": 0.5508265528527418
+            },
+            {
+              "method": "trf",
+              "residual": 0.5388214901689894
+            },
+            {
+              "method": "trf",
+              "residual": 0.5262866532457624
+            },
+            {
+              "method": "trf",
+              "residual": 0.5127510088731024
+            },
+            {
+              "method": "trf",
+              "residual": 0.5081042391776928
+            },
+            {
+              "method": "trf",
+              "residual": 0.47467249649957294
+            },
+            {
+              "method": "trf",
+              "residual": 0.46919211653992887
+            },
+            {
+              "method": "trf",
+              "residual": 0.45943845950546786
+            },
+            {
+              "method": "trf",
+              "residual": 0.4477141115084964
+            },
+            {
+              "method": "trf",
+              "residual": 0.43090938832261577
+            },
+            {
+              "method": "trf",
+              "residual": 0.41492317834490205
+            },
+            {
+              "method": "trf",
+              "residual": 0.42994855471342225
+            },
+            {
+              "method": "trf",
+              "residual": 0.4058065740273827
+            },
+            {
+              "method": "trf",
+              "residual": 0.39486038011586566
+            },
+            {
+              "method": "trf",
+              "residual": 0.38289876318932686
+            },
+            {
+              "method": "trf",
+              "residual": 0.37102964812351286
+            },
+            {
+              "method": "trf",
+              "residual": 0.3675423942417004
+            },
+            {
+              "method": "trf",
+              "residual": 0.34479755379638605
+            },
+            {
+              "method": "trf",
+              "residual": 0.3417095741146734
+            },
+            {
+              "method": "trf",
+              "residual": 0.336129341082455
+            },
+            {
+              "method": "trf",
+              "residual": 0.3298101890009287
+            },
+            {
+              "method": "trf",
+              "residual": 0.324355001683414
+            },
+            {
+              "method": "trf",
+              "residual": 0.3099793356529653
+            },
+            {
+              "method": "trf",
+              "residual": 0.30131438819546347
+            },
+            {
+              "method": "trf",
+              "residual": 0.33155116058335204
+            },
+            {
+              "method": "trf",
+              "residual": 0.2950464332473985
+            },
+            {
+              "method": "trf",
+              "residual": 0.29479874369612064
+            },
+            {
+              "method": "trf",
+              "residual": 0.28401238030509424
+            },
+            {
+              "method": "trf",
+              "residual": 0.2825725940860918
+            },
+            {
+              "method": "trf",
+              "residual": 0.28027048047264014
+            },
+            {
+              "method": "trf",
+              "residual": 0.27862867402262564
+            },
+            {
+              "method": "trf",
+              "residual": 0.2730213093392044
+            },
+            {
+              "method": "trf",
+              "residual": 0.27007797399244216
+            },
+            {
+              "method": "trf",
+              "residual": 0.26482845105871766
+            },
+            {
+              "method": "trf",
+              "residual": 0.259588291617972
+            },
+            {
+              "method": "trf",
+              "residual": 0.25845224774505327
+            },
+            {
+              "method": "trf",
+              "residual": 0.2484189729023549
+            },
+            {
+              "method": "trf",
+              "residual": 0.2466298875164514
+            },
+            {
+              "method": "trf",
+              "residual": 0.2437262553255644
+            },
+            {
+              "method": "trf",
+              "residual": 0.24621968876719247
+            },
+            {
+              "method": "trf",
+              "residual": 0.2417721836034936
+            },
+            {
+              "method": "trf",
+              "residual": 0.23927562483404177
+            },
+            {
+              "method": "trf",
+              "residual": 0.23617140716861998
+            },
+            {
+              "method": "trf",
+              "residual": 0.2331170217140334
+            },
+            {
+              "method": "trf",
+              "residual": 0.2297533915848129
+            },
+            {
+              "method": "trf",
+              "residual": 0.2257153786669609
+            },
+            {
+              "method": "trf",
+              "residual": 0.2724843678382973
+            },
+            {
+              "method": "trf",
+              "residual": 0.2237991963881621
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.5250000000000001,
+          "normalized_residual": 0.30337403345818414,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 23.851889071160084,
+              "linear_relative_residual": 1.5603345952338875e-14,
+              "damping": 0.015625
+            },
+            {
+              "method": "damped_newton",
+              "iteration": 1,
+              "residual": 23.571585761531264,
+              "linear_relative_residual": 2.495262768383723e-14,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 23.571585761531264
+            },
+            {
+              "method": "trf",
+              "residual": 7.101760297195488
+            },
+            {
+              "method": "trf",
+              "residual": 5.227033216493349
+            },
+            {
+              "method": "trf",
+              "residual": 5.490033813842954
+            },
+            {
+              "method": "trf",
+              "residual": 2.774916699364084
+            },
+            {
+              "method": "trf",
+              "residual": 2.8767954073250626
+            },
+            {
+              "method": "trf",
+              "residual": 1.9573438486932258
+            },
+            {
+              "method": "trf",
+              "residual": 2.548748310930472
+            },
+            {
+              "method": "trf",
+              "residual": 1.642936842568025
+            },
+            {
+              "method": "trf",
+              "residual": 1.4366529558065595
+            },
+            {
+              "method": "trf",
+              "residual": 1.8069168491747885
+            },
+            {
+              "method": "trf",
+              "residual": 1.2954260416815782
+            },
+            {
+              "method": "trf",
+              "residual": 1.236941861224863
+            },
+            {
+              "method": "trf",
+              "residual": 1.1797347784543242
+            },
+            {
+              "method": "trf",
+              "residual": 1.107063668579563
+            },
+            {
+              "method": "trf",
+              "residual": 1.0358298941355188
+            },
+            {
+              "method": "trf",
+              "residual": 0.9657658668403892
+            },
+            {
+              "method": "trf",
+              "residual": 0.888671450693729
+            },
+            {
+              "method": "trf",
+              "residual": 0.8476540417318023
+            },
+            {
+              "method": "trf",
+              "residual": 0.8978045726244605
+            },
+            {
+              "method": "trf",
+              "residual": 0.7333406889476418
+            },
+            {
+              "method": "trf",
+              "residual": 0.6698995523115654
+            },
+            {
+              "method": "trf",
+              "residual": 0.6373311599512091
+            },
+            {
+              "method": "trf",
+              "residual": 0.7117502715658497
+            },
+            {
+              "method": "trf",
+              "residual": 0.6149007277629068
+            },
+            {
+              "method": "trf",
+              "residual": 0.5925162653967101
+            },
+            {
+              "method": "trf",
+              "residual": 0.5632315359289642
+            },
+            {
+              "method": "trf",
+              "residual": 0.5276520810739808
+            },
+            {
+              "method": "trf",
+              "residual": 0.515972467890451
+            },
+            {
+              "method": "trf",
+              "residual": 0.5888745179549082
+            },
+            {
+              "method": "trf",
+              "residual": 0.496813328533527
+            },
+            {
+              "method": "trf",
+              "residual": 0.4999215459645504
+            },
+            {
+              "method": "trf",
+              "residual": 0.4887454383265915
+            },
+            {
+              "method": "trf",
+              "residual": 0.4747875587820737
+            },
+            {
+              "method": "trf",
+              "residual": 0.4636957942078275
+            },
+            {
+              "method": "trf",
+              "residual": 0.45168127191652835
+            },
+            {
+              "method": "trf",
+              "residual": 0.43868418754443733
+            },
+            {
+              "method": "trf",
+              "residual": 0.44938432882653195
+            },
+            {
+              "method": "trf",
+              "residual": 0.42495870113029915
+            },
+            {
+              "method": "trf",
+              "residual": 0.4148795548926728
+            },
+            {
+              "method": "trf",
+              "residual": 0.4388467676999042
+            },
+            {
+              "method": "trf",
+              "residual": 0.40560550678878476
+            },
+            {
+              "method": "trf",
+              "residual": 0.3994160724970175
+            },
+            {
+              "method": "trf",
+              "residual": 0.39099206212734516
+            },
+            {
+              "method": "trf",
+              "residual": 0.38804726450308813
+            },
+            {
+              "method": "trf",
+              "residual": 0.3685611512213601
+            },
+            {
+              "method": "trf",
+              "residual": 0.36450093125523353
+            },
+            {
+              "method": "trf",
+              "residual": 0.3579920785392041
+            },
+            {
+              "method": "trf",
+              "residual": 0.39889260843738134
+            },
+            {
+              "method": "trf",
+              "residual": 0.3543116687695183
+            },
+            {
+              "method": "trf",
+              "residual": 0.347826501571377
+            },
+            {
+              "method": "trf",
+              "residual": 0.3467275532189328
+            },
+            {
+              "method": "trf",
+              "residual": 0.33403718926600484
+            },
+            {
+              "method": "trf",
+              "residual": 0.32724444689916793
+            },
+            {
+              "method": "trf",
+              "residual": 0.3211953104469933
+            },
+            {
+              "method": "trf",
+              "residual": 0.3893626688688416
+            },
+            {
+              "method": "trf",
+              "residual": 0.31801453179218053
+            },
+            {
+              "method": "trf",
+              "residual": 0.3155373444776465
+            },
+            {
+              "method": "trf",
+              "residual": 0.31516068905214295
+            },
+            {
+              "method": "trf",
+              "residual": 0.30337403345818414
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.53,
+          "normalized_residual": 0.43773231804732626,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 30.352141606646832,
+              "linear_relative_residual": 6.603146404253164e-14,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 30.352141606646832
+            },
+            {
+              "method": "trf",
+              "residual": 9.124631119639897
+            },
+            {
+              "method": "trf",
+              "residual": 4.887434675147334
+            },
+            {
+              "method": "trf",
+              "residual": 5.4935134270245864
+            },
+            {
+              "method": "trf",
+              "residual": 2.7319020344139706
+            },
+            {
+              "method": "trf",
+              "residual": 1.2286677689848493
+            },
+            {
+              "method": "trf",
+              "residual": 1.69803405479042
+            },
+            {
+              "method": "trf",
+              "residual": 1.1335068881424901
+            },
+            {
+              "method": "trf",
+              "residual": 1.0572593057247444
+            },
+            {
+              "method": "trf",
+              "residual": 0.9665821694974583
+            },
+            {
+              "method": "trf",
+              "residual": 0.9093566436788723
+            },
+            {
+              "method": "trf",
+              "residual": 0.8568809990875937
+            },
+            {
+              "method": "trf",
+              "residual": 0.8146136356920309
+            },
+            {
+              "method": "trf",
+              "residual": 0.7674627914652876
+            },
+            {
+              "method": "trf",
+              "residual": 0.7417870871948229
+            },
+            {
+              "method": "trf",
+              "residual": 0.795200545614485
+            },
+            {
+              "method": "trf",
+              "residual": 0.7117444676067738
+            },
+            {
+              "method": "trf",
+              "residual": 0.6736128110629589
+            },
+            {
+              "method": "trf",
+              "residual": 0.674343413164022
+            },
+            {
+              "method": "trf",
+              "residual": 0.6593072791053911
+            },
+            {
+              "method": "trf",
+              "residual": 0.6378080917328016
+            },
+            {
+              "method": "trf",
+              "residual": 0.6229540438264629
+            },
+            {
+              "method": "trf",
+              "residual": 0.7210019653069465
+            },
+            {
+              "method": "trf",
+              "residual": 0.6060717127024409
+            },
+            {
+              "method": "trf",
+              "residual": 0.5896561662066191
+            },
+            {
+              "method": "trf",
+              "residual": 0.587428899196324
+            },
+            {
+              "method": "trf",
+              "residual": 0.5597933998744269
+            },
+            {
+              "method": "trf",
+              "residual": 0.5536519205045013
+            },
+            {
+              "method": "trf",
+              "residual": 0.5440586204586239
+            },
+            {
+              "method": "trf",
+              "residual": 0.5696648946832218
+            },
+            {
+              "method": "trf",
+              "residual": 0.540269976325062
+            },
+            {
+              "method": "trf",
+              "residual": 0.5327711115116224
+            },
+            {
+              "method": "trf",
+              "residual": 0.5204342387808379
+            },
+            {
+              "method": "trf",
+              "residual": 0.5431261792079507
+            },
+            {
+              "method": "trf",
+              "residual": 0.5141787059218672
+            },
+            {
+              "method": "trf",
+              "residual": 0.5098107343539255
+            },
+            {
+              "method": "trf",
+              "residual": 0.644453492502997
+            },
+            {
+              "method": "trf",
+              "residual": 0.5057228279656842
+            },
+            {
+              "method": "trf",
+              "residual": 0.49848658041461547
+            },
+            {
+              "method": "trf",
+              "residual": 0.49235640206288145
+            },
+            {
+              "method": "trf",
+              "residual": 0.4846191361562129
+            },
+            {
+              "method": "trf",
+              "residual": 0.8150905488806972
+            },
+            {
+              "method": "trf",
+              "residual": 0.4857481267509771
+            },
+            {
+              "method": "trf",
+              "residual": 0.48312872937970164
+            },
+            {
+              "method": "trf",
+              "residual": 0.47964436887254797
+            },
+            {
+              "method": "trf",
+              "residual": 0.47671084398144786
+            },
+            {
+              "method": "trf",
+              "residual": 0.4715623206520103
+            },
+            {
+              "method": "trf",
+              "residual": 0.4656928707746788
+            },
+            {
+              "method": "trf",
+              "residual": 0.48729641413089825
+            },
+            {
+              "method": "trf",
+              "residual": 0.46196096512703666
+            },
+            {
+              "method": "trf",
+              "residual": 0.4562099728425474
+            },
+            {
+              "method": "trf",
+              "residual": 0.4712872017166905
+            },
+            {
+              "method": "trf",
+              "residual": 0.45345371598169604
+            },
+            {
+              "method": "trf",
+              "residual": 0.4489022231151008
+            },
+            {
+              "method": "trf",
+              "residual": 0.5078683227944211
+            },
+            {
+              "method": "trf",
+              "residual": 0.44715838906768934
+            },
+            {
+              "method": "trf",
+              "residual": 0.44448130072537656
+            },
+            {
+              "method": "trf",
+              "residual": 0.43977995405203185
+            },
+            {
+              "method": "trf",
+              "residual": 0.44572585765260386
+            },
+            {
+              "method": "trf",
+              "residual": 0.43773231804732626
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.5350000000000001,
+          "normalized_residual": 0.4843357302832992,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 34.16325503988575,
+              "linear_relative_residual": 1.1129740063061454e-13,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 34.16325503988575
+            },
+            {
+              "method": "trf",
+              "residual": 10.207738660543605
+            },
+            {
+              "method": "trf",
+              "residual": 6.374836110340323
+            },
+            {
+              "method": "trf",
+              "residual": 6.245980752834103
+            },
+            {
+              "method": "trf",
+              "residual": 1.9184870080510514
+            },
+            {
+              "method": "trf",
+              "residual": 1.4249623990712024
+            },
+            {
+              "method": "trf",
+              "residual": 1.18169092406461
+            },
+            {
+              "method": "trf",
+              "residual": 1.097351160875401
+            },
+            {
+              "method": "trf",
+              "residual": 1.069768721408271
+            },
+            {
+              "method": "trf",
+              "residual": 0.9389783346673573
+            },
+            {
+              "method": "trf",
+              "residual": 0.924734406217542
+            },
+            {
+              "method": "trf",
+              "residual": 0.9005634572243998
+            },
+            {
+              "method": "trf",
+              "residual": 0.8680058004423225
+            },
+            {
+              "method": "trf",
+              "residual": 0.9691961240316217
+            },
+            {
+              "method": "trf",
+              "residual": 0.8493799344025494
+            },
+            {
+              "method": "trf",
+              "residual": 0.8249814727374517
+            },
+            {
+              "method": "trf",
+              "residual": 0.8007589513565431
+            },
+            {
+              "method": "trf",
+              "residual": 0.7883100381956759
+            },
+            {
+              "method": "trf",
+              "residual": 0.7400136674512945
+            },
+            {
+              "method": "trf",
+              "residual": 0.7322371653840904
+            },
+            {
+              "method": "trf",
+              "residual": 0.7193184512519454
+            },
+            {
+              "method": "trf",
+              "residual": 0.7156240975394025
+            },
+            {
+              "method": "trf",
+              "residual": 0.6836355534808739
+            },
+            {
+              "method": "trf",
+              "residual": 0.6767752411310226
+            },
+            {
+              "method": "trf",
+              "residual": 0.6665509727530198
+            },
+            {
+              "method": "trf",
+              "residual": 0.6544072444183826
+            },
+            {
+              "method": "trf",
+              "residual": 0.6403743348158452
+            },
+            {
+              "method": "trf",
+              "residual": 0.62478428673593
+            },
+            {
+              "method": "trf",
+              "residual": 1.5107899113935594
+            },
+            {
+              "method": "trf",
+              "residual": 0.6092955224230697
+            },
+            {
+              "method": "trf",
+              "residual": 0.5858247592466912
+            },
+            {
+              "method": "trf",
+              "residual": 0.581665247653605
+            },
+            {
+              "method": "trf",
+              "residual": 0.57381709686446
+            },
+            {
+              "method": "trf",
+              "residual": 0.5853447892251841
+            },
+            {
+              "method": "trf",
+              "residual": 0.5697542973922538
+            },
+            {
+              "method": "trf",
+              "residual": 0.5621685793304146
+            },
+            {
+              "method": "trf",
+              "residual": 0.5930229849566309
+            },
+            {
+              "method": "trf",
+              "residual": 0.5582318943385064
+            },
+            {
+              "method": "trf",
+              "residual": 0.5508805121358048
+            },
+            {
+              "method": "trf",
+              "residual": 0.5925046790629579
+            },
+            {
+              "method": "trf",
+              "residual": 0.5472003175318328
+            },
+            {
+              "method": "trf",
+              "residual": 0.540137437917554
+            },
+            {
+              "method": "trf",
+              "residual": 0.5733701066225524
+            },
+            {
+              "method": "trf",
+              "residual": 0.5364854621556402
+            },
+            {
+              "method": "trf",
+              "residual": 0.5295340359653422
+            },
+            {
+              "method": "trf",
+              "residual": 0.5441930818705326
+            },
+            {
+              "method": "trf",
+              "residual": 0.525679064017903
+            },
+            {
+              "method": "trf",
+              "residual": 0.518770121264405
+            },
+            {
+              "method": "trf",
+              "residual": 0.5210615021484247
+            },
+            {
+              "method": "trf",
+              "residual": 0.5147673830491439
+            },
+            {
+              "method": "trf",
+              "residual": 0.5080602945848924
+            },
+            {
+              "method": "trf",
+              "residual": 0.50947908103528
+            },
+            {
+              "method": "trf",
+              "residual": 0.5042470104511473
+            },
+            {
+              "method": "trf",
+              "residual": 0.49814056764452247
+            },
+            {
+              "method": "trf",
+              "residual": 0.552195141174839
+            },
+            {
+              "method": "trf",
+              "residual": 0.4948893680635742
+            },
+            {
+              "method": "trf",
+              "residual": 0.49732618472078993
+            },
+            {
+              "method": "trf",
+              "residual": 0.49322303021152186
+            },
+            {
+              "method": "trf",
+              "residual": 0.4899996213466678
+            },
+            {
+              "method": "trf",
+              "residual": 0.4843357302832992
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.54,
+          "normalized_residual": 0.6253688054922927,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 44.4790627851294,
+              "linear_relative_residual": 5.4461143262388414e-14,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 44.4790627851294
+            },
+            {
+              "method": "trf",
+              "residual": 11.950126736114044
+            },
+            {
+              "method": "trf",
+              "residual": 8.622304657716128
+            },
+            {
+              "method": "trf",
+              "residual": 6.6259775669016685
+            },
+            {
+              "method": "trf",
+              "residual": 9.00184153008799
+            },
+            {
+              "method": "trf",
+              "residual": 3.5421882536343023
+            },
+            {
+              "method": "trf",
+              "residual": 1.6317056930656713
+            },
+            {
+              "method": "trf",
+              "residual": 2.6102782751066598
+            },
+            {
+              "method": "trf",
+              "residual": 1.4386946651720933
+            },
+            {
+              "method": "trf",
+              "residual": 1.3353479094284912
+            },
+            {
+              "method": "trf",
+              "residual": 1.3629338817763752
+            },
+            {
+              "method": "trf",
+              "residual": 1.2982671153592162
+            },
+            {
+              "method": "trf",
+              "residual": 1.2644271900233048
+            },
+            {
+              "method": "trf",
+              "residual": 1.197696578826564
+            },
+            {
+              "method": "trf",
+              "residual": 1.2165004841174287
+            },
+            {
+              "method": "trf",
+              "residual": 1.1701958655419877
+            },
+            {
+              "method": "trf",
+              "residual": 1.1228082087200124
+            },
+            {
+              "method": "trf",
+              "residual": 1.0878226121687171
+            },
+            {
+              "method": "trf",
+              "residual": 1.0377388387039588
+            },
+            {
+              "method": "trf",
+              "residual": 0.9885241977833872
+            },
+            {
+              "method": "trf",
+              "residual": 1.0957939071978482
+            },
+            {
+              "method": "trf",
+              "residual": 0.9274999754424021
+            },
+            {
+              "method": "trf",
+              "residual": 0.8944716629315691
+            },
+            {
+              "method": "trf",
+              "residual": 0.9759126490690573
+            },
+            {
+              "method": "trf",
+              "residual": 0.8810674117790557
+            },
+            {
+              "method": "trf",
+              "residual": 0.8605841197308165
+            },
+            {
+              "method": "trf",
+              "residual": 0.8934044709649045
+            },
+            {
+              "method": "trf",
+              "residual": 0.8473585458544334
+            },
+            {
+              "method": "trf",
+              "residual": 0.8288109652548165
+            },
+            {
+              "method": "trf",
+              "residual": 0.9819652876507382
+            },
+            {
+              "method": "trf",
+              "residual": 0.8173646305596666
+            },
+            {
+              "method": "trf",
+              "residual": 0.8034396972648538
+            },
+            {
+              "method": "trf",
+              "residual": 0.8103476409571343
+            },
+            {
+              "method": "trf",
+              "residual": 0.7942351034305716
+            },
+            {
+              "method": "trf",
+              "residual": 0.7844165400914065
+            },
+            {
+              "method": "trf",
+              "residual": 0.7719697162499102
+            },
+            {
+              "method": "trf",
+              "residual": 0.7642084352360167
+            },
+            {
+              "method": "trf",
+              "residual": 1.2152942695626316
+            },
+            {
+              "method": "trf",
+              "residual": 0.7586653791288401
+            },
+            {
+              "method": "trf",
+              "residual": 0.7416084684706628
+            },
+            {
+              "method": "trf",
+              "residual": 0.7321313751182799
+            },
+            {
+              "method": "trf",
+              "residual": 0.7191224591054838
+            },
+            {
+              "method": "trf",
+              "residual": 1.51391385387981
+            },
+            {
+              "method": "trf",
+              "residual": 0.7151758807973544
+            },
+            {
+              "method": "trf",
+              "residual": 0.7065010147923457
+            },
+            {
+              "method": "trf",
+              "residual": 0.6973415981777906
+            },
+            {
+              "method": "trf",
+              "residual": 0.6896436439545773
+            },
+            {
+              "method": "trf",
+              "residual": 0.6829550303082348
+            },
+            {
+              "method": "trf",
+              "residual": 0.6766571592456087
+            },
+            {
+              "method": "trf",
+              "residual": 0.6717625492808447
+            },
+            {
+              "method": "trf",
+              "residual": 0.6685067248677589
+            },
+            {
+              "method": "trf",
+              "residual": 0.6581726905512867
+            },
+            {
+              "method": "trf",
+              "residual": 0.6542227785475382
+            },
+            {
+              "method": "trf",
+              "residual": 0.6469911904383209
+            },
+            {
+              "method": "trf",
+              "residual": 0.6392458631407668
+            },
+            {
+              "method": "trf",
+              "residual": 0.6445220185002768
+            },
+            {
+              "method": "trf",
+              "residual": 0.6324996223203687
+            },
+            {
+              "method": "trf",
+              "residual": 0.6260205014104621
+            },
+            {
+              "method": "trf",
+              "residual": 0.8768127375966036
+            },
+            {
+              "method": "trf",
+              "residual": 0.6253688054922927
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.5450000000000002,
+          "normalized_residual": 0.7253927935876349,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 50.76219066194951,
+              "linear_relative_residual": 1.0330112055068367e-12,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 50.76219066194951
+            },
+            {
+              "method": "trf",
+              "residual": 15.95877711865646
+            },
+            {
+              "method": "trf",
+              "residual": 10.983968792900095
+            },
+            {
+              "method": "trf",
+              "residual": 8.31649588750535
+            },
+            {
+              "method": "trf",
+              "residual": 5.615171578975554
+            },
+            {
+              "method": "trf",
+              "residual": 3.374009840807779
+            },
+            {
+              "method": "trf",
+              "residual": 2.6507249918774494
+            },
+            {
+              "method": "trf",
+              "residual": 2.3817375661506963
+            },
+            {
+              "method": "trf",
+              "residual": 1.3208429482073345
+            },
+            {
+              "method": "trf",
+              "residual": 1.2274757148846738
+            },
+            {
+              "method": "trf",
+              "residual": 1.2007485865218397
+            },
+            {
+              "method": "trf",
+              "residual": 1.1994927676066258
+            },
+            {
+              "method": "trf",
+              "residual": 1.1156880324673828
+            },
+            {
+              "method": "trf",
+              "residual": 1.1074116619537822
+            },
+            {
+              "method": "trf",
+              "residual": 1.100399261304789
+            },
+            {
+              "method": "trf",
+              "residual": 1.086885230887888
+            },
+            {
+              "method": "trf",
+              "residual": 1.064596854767261
+            },
+            {
+              "method": "trf",
+              "residual": 1.076923924003202
+            },
+            {
+              "method": "trf",
+              "residual": 1.049163138891471
+            },
+            {
+              "method": "trf",
+              "residual": 1.027457115372101
+            },
+            {
+              "method": "trf",
+              "residual": 1.0268965600816713
+            },
+            {
+              "method": "trf",
+              "residual": 0.9595923512528349
+            },
+            {
+              "method": "trf",
+              "residual": 0.9487290206759261
+            },
+            {
+              "method": "trf",
+              "residual": 0.9320095796461355
+            },
+            {
+              "method": "trf",
+              "residual": 0.9681534597248461
+            },
+            {
+              "method": "trf",
+              "residual": 0.9225920488326481
+            },
+            {
+              "method": "trf",
+              "residual": 0.9082935110169769
+            },
+            {
+              "method": "trf",
+              "residual": 0.935460198144891
+            },
+            {
+              "method": "trf",
+              "residual": 0.8972699404423551
+            },
+            {
+              "method": "trf",
+              "residual": 0.8871650265893319
+            },
+            {
+              "method": "trf",
+              "residual": 0.945079726729234
+            },
+            {
+              "method": "trf",
+              "residual": 0.8801166421596517
+            },
+            {
+              "method": "trf",
+              "residual": 0.8750477885419354
+            },
+            {
+              "method": "trf",
+              "residual": 0.8694559812949678
+            },
+            {
+              "method": "trf",
+              "residual": 0.8597345612057259
+            },
+            {
+              "method": "trf",
+              "residual": 0.8730804383660256
+            },
+            {
+              "method": "trf",
+              "residual": 0.854986595296038
+            },
+            {
+              "method": "trf",
+              "residual": 0.8529565981864026
+            },
+            {
+              "method": "trf",
+              "residual": 0.8423014919370719
+            },
+            {
+              "method": "trf",
+              "residual": 0.8398670604796804
+            },
+            {
+              "method": "trf",
+              "residual": 0.8352959720093267
+            },
+            {
+              "method": "trf",
+              "residual": 0.8272431001319432
+            },
+            {
+              "method": "trf",
+              "residual": 0.8234069258239142
+            },
+            {
+              "method": "trf",
+              "residual": 0.8040068362918938
+            },
+            {
+              "method": "trf",
+              "residual": 0.7957376709066888
+            },
+            {
+              "method": "trf",
+              "residual": 0.7853020611717634
+            },
+            {
+              "method": "trf",
+              "residual": 0.9247769218646307
+            },
+            {
+              "method": "trf",
+              "residual": 0.7805747247688226
+            },
+            {
+              "method": "trf",
+              "residual": 0.7756433695360107
+            },
+            {
+              "method": "trf",
+              "residual": 0.7711994874651501
+            },
+            {
+              "method": "trf",
+              "residual": 0.7630111117814674
+            },
+            {
+              "method": "trf",
+              "residual": 0.7590218374012567
+            },
+            {
+              "method": "trf",
+              "residual": 0.7928376294914344
+            },
+            {
+              "method": "trf",
+              "residual": 0.7561964853546023
+            },
+            {
+              "method": "trf",
+              "residual": 0.7523029069835597
+            },
+            {
+              "method": "trf",
+              "residual": 0.7489990658970733
+            },
+            {
+              "method": "trf",
+              "residual": 0.7443607798205868
+            },
+            {
+              "method": "trf",
+              "residual": 0.7360874465701003
+            },
+            {
+              "method": "trf",
+              "residual": 0.7253927935876349
+            },
+            {
+              "method": "trf",
+              "residual": 0.8141247445449916
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.55,
+          "normalized_residual": 1.004289604497285,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 58.24022511924312,
+              "linear_relative_residual": 3.911171180064178e-12,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 58.24022511924312
+            },
+            {
+              "method": "trf",
+              "residual": 18.54027813844672
+            },
+            {
+              "method": "trf",
+              "residual": 25.523170809769873
+            },
+            {
+              "method": "trf",
+              "residual": 12.373538938992413
+            },
+            {
+              "method": "trf",
+              "residual": 22.322815012159328
+            },
+            {
+              "method": "trf",
+              "residual": 9.56492175012739
+            },
+            {
+              "method": "trf",
+              "residual": 4.577615938206943
+            },
+            {
+              "method": "trf",
+              "residual": 4.839521435017619
+            },
+            {
+              "method": "trf",
+              "residual": 4.278118880901109
+            },
+            {
+              "method": "trf",
+              "residual": 3.8671744949518807
+            },
+            {
+              "method": "trf",
+              "residual": 3.2898201168335643
+            },
+            {
+              "method": "trf",
+              "residual": 3.121048811473044
+            },
+            {
+              "method": "trf",
+              "residual": 2.1697501643127457
+            },
+            {
+              "method": "trf",
+              "residual": 1.996804531155292
+            },
+            {
+              "method": "trf",
+              "residual": 2.03272224960471
+            },
+            {
+              "method": "trf",
+              "residual": 1.933789883671756
+            },
+            {
+              "method": "trf",
+              "residual": 1.8330091240460462
+            },
+            {
+              "method": "trf",
+              "residual": 1.7621850043507543
+            },
+            {
+              "method": "trf",
+              "residual": 1.7004124010733406
+            },
+            {
+              "method": "trf",
+              "residual": 2.319482871280984
+            },
+            {
+              "method": "trf",
+              "residual": 1.5222985081361824
+            },
+            {
+              "method": "trf",
+              "residual": 1.4413482164794114
+            },
+            {
+              "method": "trf",
+              "residual": 1.4595858353359477
+            },
+            {
+              "method": "trf",
+              "residual": 1.4037813116649285
+            },
+            {
+              "method": "trf",
+              "residual": 1.3549986633682576
+            },
+            {
+              "method": "trf",
+              "residual": 1.4629216931590872
+            },
+            {
+              "method": "trf",
+              "residual": 1.3250772690985764
+            },
+            {
+              "method": "trf",
+              "residual": 1.3006880466835344
+            },
+            {
+              "method": "trf",
+              "residual": 1.2804861892535064
+            },
+            {
+              "method": "trf",
+              "residual": 1.305156215465733
+            },
+            {
+              "method": "trf",
+              "residual": 1.2613789756318108
+            },
+            {
+              "method": "trf",
+              "residual": 1.2297839570503282
+            },
+            {
+              "method": "trf",
+              "residual": 1.2562802706955554
+            },
+            {
+              "method": "trf",
+              "residual": 1.2155953931856238
+            },
+            {
+              "method": "trf",
+              "residual": 1.1944288889737522
+            },
+            {
+              "method": "trf",
+              "residual": 1.2195736732568245
+            },
+            {
+              "method": "trf",
+              "residual": 1.18180621299295
+            },
+            {
+              "method": "trf",
+              "residual": 1.1637006936899161
+            },
+            {
+              "method": "trf",
+              "residual": 1.1324719002013715
+            },
+            {
+              "method": "trf",
+              "residual": 1.1774753694354125
+            },
+            {
+              "method": "trf",
+              "residual": 1.1152709398551974
+            },
+            {
+              "method": "trf",
+              "residual": 1.195012863237087
+            },
+            {
+              "method": "trf",
+              "residual": 1.1081278063565891
+            },
+            {
+              "method": "trf",
+              "residual": 1.097289564458577
+            },
+            {
+              "method": "trf",
+              "residual": 1.1021962158360095
+            },
+            {
+              "method": "trf",
+              "residual": 1.0931439035364885
+            },
+            {
+              "method": "trf",
+              "residual": 1.0861329044380543
+            },
+            {
+              "method": "trf",
+              "residual": 1.0739535715728936
+            },
+            {
+              "method": "trf",
+              "residual": 1.239497082581579
+            },
+            {
+              "method": "trf",
+              "residual": 1.0689583167312682
+            },
+            {
+              "method": "trf",
+              "residual": 1.061294113697443
+            },
+            {
+              "method": "trf",
+              "residual": 1.0572131396521094
+            },
+            {
+              "method": "trf",
+              "residual": 1.039382836389202
+            },
+            {
+              "method": "trf",
+              "residual": 1.0362900835837274
+            },
+            {
+              "method": "trf",
+              "residual": 1.0302164265834468
+            },
+            {
+              "method": "trf",
+              "residual": 1.0199900846024241
+            },
+            {
+              "method": "trf",
+              "residual": 1.0238124851445822
+            },
+            {
+              "method": "trf",
+              "residual": 1.0133591778428135
+            },
+            {
+              "method": "trf",
+              "residual": 1.004289604497285
+            },
+            {
+              "method": "trf",
+              "residual": 1.7077036206886027
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.5550000000000002,
+          "normalized_residual": 1.44062677374684,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 59.323702755189544,
+              "linear_relative_residual": 2.6157215085213214e-13,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 59.323702755189544
+            },
+            {
+              "method": "trf",
+              "residual": 19.870948759066547
+            },
+            {
+              "method": "trf",
+              "residual": 19.962540432993414
+            },
+            {
+              "method": "trf",
+              "residual": 13.259493940219215
+            },
+            {
+              "method": "trf",
+              "residual": 6.382068203277612
+            },
+            {
+              "method": "trf",
+              "residual": 8.5263600757937
+            },
+            {
+              "method": "trf",
+              "residual": 5.026592668010443
+            },
+            {
+              "method": "trf",
+              "residual": 3.9444365868229565
+            },
+            {
+              "method": "trf",
+              "residual": 3.6228879947981665
+            },
+            {
+              "method": "trf",
+              "residual": 4.551895054405084
+            },
+            {
+              "method": "trf",
+              "residual": 3.2033453325570007
+            },
+            {
+              "method": "trf",
+              "residual": 2.92399155545346
+            },
+            {
+              "method": "trf",
+              "residual": 3.241957079808114
+            },
+            {
+              "method": "trf",
+              "residual": 2.7550733185332836
+            },
+            {
+              "method": "trf",
+              "residual": 2.671991793297711
+            },
+            {
+              "method": "trf",
+              "residual": 2.565433596626307
+            },
+            {
+              "method": "trf",
+              "residual": 2.598724871426308
+            },
+            {
+              "method": "trf",
+              "residual": 2.5314135268780884
+            },
+            {
+              "method": "trf",
+              "residual": 2.4784256452849225
+            },
+            {
+              "method": "trf",
+              "residual": 2.429750149533454
+            },
+            {
+              "method": "trf",
+              "residual": 2.3704212771240774
+            },
+            {
+              "method": "trf",
+              "residual": 2.3408841524723103
+            },
+            {
+              "method": "trf",
+              "residual": 2.2879010254225456
+            },
+            {
+              "method": "trf",
+              "residual": 8.752427518616853
+            },
+            {
+              "method": "trf",
+              "residual": 2.269196195550497
+            },
+            {
+              "method": "trf",
+              "residual": 2.1360764119841806
+            },
+            {
+              "method": "trf",
+              "residual": 2.127801806924782
+            },
+            {
+              "method": "trf",
+              "residual": 2.1150279423869067
+            },
+            {
+              "method": "trf",
+              "residual": 2.091564502465791
+            },
+            {
+              "method": "trf",
+              "residual": 2.053287241611997
+            },
+            {
+              "method": "trf",
+              "residual": 2.0387064237947126
+            },
+            {
+              "method": "trf",
+              "residual": 1.918637813739881
+            },
+            {
+              "method": "trf",
+              "residual": 1.8763200343794857
+            },
+            {
+              "method": "trf",
+              "residual": 2.094026391355064
+            },
+            {
+              "method": "trf",
+              "residual": 1.8487097284613319
+            },
+            {
+              "method": "trf",
+              "residual": 1.8351600166663302
+            },
+            {
+              "method": "trf",
+              "residual": 1.780665389616716
+            },
+            {
+              "method": "trf",
+              "residual": 1.7610018665562142
+            },
+            {
+              "method": "trf",
+              "residual": 1.7335388725789664
+            },
+            {
+              "method": "trf",
+              "residual": 1.6892011233279505
+            },
+            {
+              "method": "trf",
+              "residual": 1.8011373413256444
+            },
+            {
+              "method": "trf",
+              "residual": 1.6666662739040294
+            },
+            {
+              "method": "trf",
+              "residual": 1.6524581122680015
+            },
+            {
+              "method": "trf",
+              "residual": 1.6671609822731326
+            },
+            {
+              "method": "trf",
+              "residual": 1.6337770873088202
+            },
+            {
+              "method": "trf",
+              "residual": 1.6090212683180114
+            },
+            {
+              "method": "trf",
+              "residual": 1.5758465870511895
+            },
+            {
+              "method": "trf",
+              "residual": 1.9862673559892061
+            },
+            {
+              "method": "trf",
+              "residual": 1.5605693934160332
+            },
+            {
+              "method": "trf",
+              "residual": 1.5480077170867992
+            },
+            {
+              "method": "trf",
+              "residual": 1.53062295325889
+            },
+            {
+              "method": "trf",
+              "residual": 1.510231517634033
+            },
+            {
+              "method": "trf",
+              "residual": 1.5449044862501393
+            },
+            {
+              "method": "trf",
+              "residual": 1.4991087744781777
+            },
+            {
+              "method": "trf",
+              "residual": 1.4854928675958066
+            },
+            {
+              "method": "trf",
+              "residual": 1.4681447313108411
+            },
+            {
+              "method": "trf",
+              "residual": 1.5610855292697372
+            },
+            {
+              "method": "trf",
+              "residual": 1.4611977588106349
+            },
+            {
+              "method": "trf",
+              "residual": 1.4536166685181484
+            },
+            {
+              "method": "trf",
+              "residual": 1.44062677374684
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.56,
+          "normalized_residual": 1.5702713981893888,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 68.65537823003218,
+              "linear_relative_residual": 3.5544232525141664e-14,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 68.65537823003218
+            },
+            {
+              "method": "trf",
+              "residual": 24.017708200706018
+            },
+            {
+              "method": "trf",
+              "residual": 20.760543021313826
+            },
+            {
+              "method": "trf",
+              "residual": 14.279621971179548
+            },
+            {
+              "method": "trf",
+              "residual": 11.098623965200444
+            },
+            {
+              "method": "trf",
+              "residual": 9.337416360818631
+            },
+            {
+              "method": "trf",
+              "residual": 7.95298990587604
+            },
+            {
+              "method": "trf",
+              "residual": 8.209027248143098
+            },
+            {
+              "method": "trf",
+              "residual": 5.071959028207104
+            },
+            {
+              "method": "trf",
+              "residual": 4.904997868980805
+            },
+            {
+              "method": "trf",
+              "residual": 2.9609060907522715
+            },
+            {
+              "method": "trf",
+              "residual": 2.7997267395368115
+            },
+            {
+              "method": "trf",
+              "residual": 2.6909344807222055
+            },
+            {
+              "method": "trf",
+              "residual": 2.559034748638645
+            },
+            {
+              "method": "trf",
+              "residual": 2.5257011212848397
+            },
+            {
+              "method": "trf",
+              "residual": 2.3385432561555226
+            },
+            {
+              "method": "trf",
+              "residual": 2.3085132216509017
+            },
+            {
+              "method": "trf",
+              "residual": 2.254931221804484
+            },
+            {
+              "method": "trf",
+              "residual": 2.2017569583292502
+            },
+            {
+              "method": "trf",
+              "residual": 2.083770269832464
+            },
+            {
+              "method": "trf",
+              "residual": 2.2196274322550837
+            },
+            {
+              "method": "trf",
+              "residual": 2.026128019954559
+            },
+            {
+              "method": "trf",
+              "residual": 1.9867696498730056
+            },
+            {
+              "method": "trf",
+              "residual": 2.703834978779192
+            },
+            {
+              "method": "trf",
+              "residual": 1.966809075085044
+            },
+            {
+              "method": "trf",
+              "residual": 1.9374412617242391
+            },
+            {
+              "method": "trf",
+              "residual": 1.9040968455258929
+            },
+            {
+              "method": "trf",
+              "residual": 1.9242860529416794
+            },
+            {
+              "method": "trf",
+              "residual": 1.893754982167075
+            },
+            {
+              "method": "trf",
+              "residual": 1.8730373745810385
+            },
+            {
+              "method": "trf",
+              "residual": 1.842855183388577
+            },
+            {
+              "method": "trf",
+              "residual": 1.8359363118431087
+            },
+            {
+              "method": "trf",
+              "residual": 1.8053227110478187
+            },
+            {
+              "method": "trf",
+              "residual": 1.7967792444873283
+            },
+            {
+              "method": "trf",
+              "residual": 1.7906973744234627
+            },
+            {
+              "method": "trf",
+              "residual": 1.7595712476512964
+            },
+            {
+              "method": "trf",
+              "residual": 1.7508093605408581
+            },
+            {
+              "method": "trf",
+              "residual": 1.7334569337591497
+            },
+            {
+              "method": "trf",
+              "residual": 1.7324206229490278
+            },
+            {
+              "method": "trf",
+              "residual": 1.6844464797377616
+            },
+            {
+              "method": "trf",
+              "residual": 1.6829446093924396
+            },
+            {
+              "method": "trf",
+              "residual": 1.67864721689474
+            },
+            {
+              "method": "trf",
+              "residual": 1.6697206936767595
+            },
+            {
+              "method": "trf",
+              "residual": 1.6546667781820141
+            },
+            {
+              "method": "trf",
+              "residual": 1.6552265070298797
+            },
+            {
+              "method": "trf",
+              "residual": 1.648285820076687
+            },
+            {
+              "method": "trf",
+              "residual": 1.6389286778557197
+            },
+            {
+              "method": "trf",
+              "residual": 1.645305040935809
+            },
+            {
+              "method": "trf",
+              "residual": 1.6349282370025104
+            },
+            {
+              "method": "trf",
+              "residual": 1.6287153587882135
+            },
+            {
+              "method": "trf",
+              "residual": 1.619043692690733
+            },
+            {
+              "method": "trf",
+              "residual": 1.638443955547572
+            },
+            {
+              "method": "trf",
+              "residual": 1.6156343534538833
+            },
+            {
+              "method": "trf",
+              "residual": 1.6121897833420868
+            },
+            {
+              "method": "trf",
+              "residual": 1.6053108409831498
+            },
+            {
+              "method": "trf",
+              "residual": 1.5925464829241156
+            },
+            {
+              "method": "trf",
+              "residual": 1.573242751968453
+            },
+            {
+              "method": "trf",
+              "residual": 11.312826669546697
+            },
+            {
+              "method": "trf",
+              "residual": 1.7236631553456605
+            },
+            {
+              "method": "trf",
+              "residual": 1.5702713981893888
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.5650000000000002,
+          "normalized_residual": 1.6730540889409158,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 74.58624198511001,
+              "linear_relative_residual": 4.824363740690597e-13,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 74.58624198511001
+            },
+            {
+              "method": "trf",
+              "residual": 47.93617399636486
+            },
+            {
+              "method": "trf",
+              "residual": 19.16191332663664
+            },
+            {
+              "method": "trf",
+              "residual": 14.67688972407129
+            },
+            {
+              "method": "trf",
+              "residual": 10.682676352001527
+            },
+            {
+              "method": "trf",
+              "residual": 8.7695268966019
+            },
+            {
+              "method": "trf",
+              "residual": 6.099732726828613
+            },
+            {
+              "method": "trf",
+              "residual": 6.173290475420786
+            },
+            {
+              "method": "trf",
+              "residual": 4.918791927231931
+            },
+            {
+              "method": "trf",
+              "residual": 3.8670347163790684
+            },
+            {
+              "method": "trf",
+              "residual": 4.982995103449229
+            },
+            {
+              "method": "trf",
+              "residual": 3.5161333437477884
+            },
+            {
+              "method": "trf",
+              "residual": 3.29542534479648
+            },
+            {
+              "method": "trf",
+              "residual": 3.0132211848720427
+            },
+            {
+              "method": "trf",
+              "residual": 3.5094692203221656
+            },
+            {
+              "method": "trf",
+              "residual": 2.9559357613701436
+            },
+            {
+              "method": "trf",
+              "residual": 2.8944648592997266
+            },
+            {
+              "method": "trf",
+              "residual": 2.83561645056907
+            },
+            {
+              "method": "trf",
+              "residual": 2.736072994738782
+            },
+            {
+              "method": "trf",
+              "residual": 2.842594870656848
+            },
+            {
+              "method": "trf",
+              "residual": 2.684533984025633
+            },
+            {
+              "method": "trf",
+              "residual": 2.594786979201445
+            },
+            {
+              "method": "trf",
+              "residual": 2.497667065870484
+            },
+            {
+              "method": "trf",
+              "residual": 2.4543904372763494
+            },
+            {
+              "method": "trf",
+              "residual": 2.301822951573724
+            },
+            {
+              "method": "trf",
+              "residual": 2.260542624689299
+            },
+            {
+              "method": "trf",
+              "residual": 2.215694042757365
+            },
+            {
+              "method": "trf",
+              "residual": 2.166372694181086
+            },
+            {
+              "method": "trf",
+              "residual": 2.2940999509748567
+            },
+            {
+              "method": "trf",
+              "residual": 2.093364148898911
+            },
+            {
+              "method": "trf",
+              "residual": 2.035543723297485
+            },
+            {
+              "method": "trf",
+              "residual": 2.0120766196046134
+            },
+            {
+              "method": "trf",
+              "residual": 1.9631594412959146
+            },
+            {
+              "method": "trf",
+              "residual": 1.955845499626511
+            },
+            {
+              "method": "trf",
+              "residual": 1.8853647663040751
+            },
+            {
+              "method": "trf",
+              "residual": 1.8682143014921868
+            },
+            {
+              "method": "trf",
+              "residual": 1.8434339764355907
+            },
+            {
+              "method": "trf",
+              "residual": 1.838220386372907
+            },
+            {
+              "method": "trf",
+              "residual": 1.8120915288666564
+            },
+            {
+              "method": "trf",
+              "residual": 1.7917864123458807
+            },
+            {
+              "method": "trf",
+              "residual": 1.8071458787419918
+            },
+            {
+              "method": "trf",
+              "residual": 1.7831670758880582
+            },
+            {
+              "method": "trf",
+              "residual": 1.7667889957550997
+            },
+            {
+              "method": "trf",
+              "residual": 1.7686915188276062
+            },
+            {
+              "method": "trf",
+              "residual": 1.7593084886695027
+            },
+            {
+              "method": "trf",
+              "residual": 1.745819356389638
+            },
+            {
+              "method": "trf",
+              "residual": 1.789254147986385
+            },
+            {
+              "method": "trf",
+              "residual": 1.7395548486348216
+            },
+            {
+              "method": "trf",
+              "residual": 1.7272334147093065
+            },
+            {
+              "method": "trf",
+              "residual": 1.8594746870522805
+            },
+            {
+              "method": "trf",
+              "residual": 1.7224788324794182
+            },
+            {
+              "method": "trf",
+              "residual": 1.7161039934256193
+            },
+            {
+              "method": "trf",
+              "residual": 1.7043883197426284
+            },
+            {
+              "method": "trf",
+              "residual": 2.026731547007079
+            },
+            {
+              "method": "trf",
+              "residual": 1.7010364237484525
+            },
+            {
+              "method": "trf",
+              "residual": 1.6947985949623818
+            },
+            {
+              "method": "trf",
+              "residual": 1.683019592929369
+            },
+            {
+              "method": "trf",
+              "residual": 1.9869228187110213
+            },
+            {
+              "method": "trf",
+              "residual": 1.6796399498366064
+            },
+            {
+              "method": "trf",
+              "residual": 1.6730540889409158
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.57,
+          "normalized_residual": 2.477207881333313,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 86.63503756106581,
+              "linear_relative_residual": 1.1867960211215152e-12,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 86.63503756106581
+            },
+            {
+              "method": "trf",
+              "residual": 65.00255959847088
+            },
+            {
+              "method": "trf",
+              "residual": 28.556637599134557
+            },
+            {
+              "method": "trf",
+              "residual": 20.745126809032993
+            },
+            {
+              "method": "trf",
+              "residual": 15.676001496483304
+            },
+            {
+              "method": "trf",
+              "residual": 19.25668204024236
+            },
+            {
+              "method": "trf",
+              "residual": 11.825264238786405
+            },
+            {
+              "method": "trf",
+              "residual": 8.662302813400185
+            },
+            {
+              "method": "trf",
+              "residual": 8.762471346453555
+            },
+            {
+              "method": "trf",
+              "residual": 6.442391356179218
+            },
+            {
+              "method": "trf",
+              "residual": 5.090349489558383
+            },
+            {
+              "method": "trf",
+              "residual": 4.937476338829896
+            },
+            {
+              "method": "trf",
+              "residual": 4.7067391846185
+            },
+            {
+              "method": "trf",
+              "residual": 4.389470867952886
+            },
+            {
+              "method": "trf",
+              "residual": 4.363127653968473
+            },
+            {
+              "method": "trf",
+              "residual": 4.146513490358218
+            },
+            {
+              "method": "trf",
+              "residual": 4.057430792253586
+            },
+            {
+              "method": "trf",
+              "residual": 3.705326894000816
+            },
+            {
+              "method": "trf",
+              "residual": 3.6822752351989827
+            },
+            {
+              "method": "trf",
+              "residual": 3.6516714574682902
+            },
+            {
+              "method": "trf",
+              "residual": 3.598579871105081
+            },
+            {
+              "method": "trf",
+              "residual": 3.503159461997447
+            },
+            {
+              "method": "trf",
+              "residual": 3.949320932352017
+            },
+            {
+              "method": "trf",
+              "residual": 3.454804912439123
+            },
+            {
+              "method": "trf",
+              "residual": 3.3741870239641933
+            },
+            {
+              "method": "trf",
+              "residual": 3.307676900617626
+            },
+            {
+              "method": "trf",
+              "residual": 3.206603626436602
+            },
+            {
+              "method": "trf",
+              "residual": 3.1269317132319756
+            },
+            {
+              "method": "trf",
+              "residual": 3.0582753319550684
+            },
+            {
+              "method": "trf",
+              "residual": 3.0648074150214786
+            },
+            {
+              "method": "trf",
+              "residual": 3.0238133617145744
+            },
+            {
+              "method": "trf",
+              "residual": 2.975550193401914
+            },
+            {
+              "method": "trf",
+              "residual": 2.937332671726125
+            },
+            {
+              "method": "trf",
+              "residual": 2.989314707474198
+            },
+            {
+              "method": "trf",
+              "residual": 2.9083317292925757
+            },
+            {
+              "method": "trf",
+              "residual": 2.8766965995454923
+            },
+            {
+              "method": "trf",
+              "residual": 2.8423311001297322
+            },
+            {
+              "method": "trf",
+              "residual": 2.855377127433628
+            },
+            {
+              "method": "trf",
+              "residual": 2.8249593706916674
+            },
+            {
+              "method": "trf",
+              "residual": 2.7935821993000283
+            },
+            {
+              "method": "trf",
+              "residual": 2.7633783556660965
+            },
+            {
+              "method": "trf",
+              "residual": 2.9598728501249174
+            },
+            {
+              "method": "trf",
+              "residual": 2.7403704145232997
+            },
+            {
+              "method": "trf",
+              "residual": 2.7239228465757455
+            },
+            {
+              "method": "trf",
+              "residual": 2.694420852580516
+            },
+            {
+              "method": "trf",
+              "residual": 2.6982295937097223
+            },
+            {
+              "method": "trf",
+              "residual": 2.6804512651964285
+            },
+            {
+              "method": "trf",
+              "residual": 2.656742016769862
+            },
+            {
+              "method": "trf",
+              "residual": 2.802975934441356
+            },
+            {
+              "method": "trf",
+              "residual": 2.6444430478740943
+            },
+            {
+              "method": "trf",
+              "residual": 2.6296597716350525
+            },
+            {
+              "method": "trf",
+              "residual": 2.6036874798114034
+            },
+            {
+              "method": "trf",
+              "residual": 2.6294975521120807
+            },
+            {
+              "method": "trf",
+              "residual": 2.5896076362184575
+            },
+            {
+              "method": "trf",
+              "residual": 2.5694281139067052
+            },
+            {
+              "method": "trf",
+              "residual": 2.5564288370525907
+            },
+            {
+              "method": "trf",
+              "residual": 2.545753887546863
+            },
+            {
+              "method": "trf",
+              "residual": 2.519540040409875
+            },
+            {
+              "method": "trf",
+              "residual": 2.503488507534069
+            },
+            {
+              "method": "trf",
+              "residual": 2.477207881333313
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.5750000000000002,
+          "normalized_residual": 25.889618215682642,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 89.30552904653823,
+              "linear_relative_residual": 1.0752351488692933e-13,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 89.30552904653823
+            },
+            {
+              "method": "trf",
+              "residual": 69.09341796318505
+            },
+            {
+              "method": "trf",
+              "residual": 66.03633922695421
+            },
+            {
+              "method": "trf",
+              "residual": 64.0751109334089
+            },
+            {
+              "method": "trf",
+              "residual": 62.50540848773902
+            },
+            {
+              "method": "trf",
+              "residual": 61.12246523655135
+            },
+            {
+              "method": "trf",
+              "residual": 59.87822219897579
+            },
+            {
+              "method": "trf",
+              "residual": 58.73883871117462
+            },
+            {
+              "method": "trf",
+              "residual": 57.68504256198927
+            },
+            {
+              "method": "trf",
+              "residual": 56.70416254619216
+            },
+            {
+              "method": "trf",
+              "residual": 55.785792307832054
+            },
+            {
+              "method": "trf",
+              "residual": 54.92387781391131
+            },
+            {
+              "method": "trf",
+              "residual": 54.111474864358954
+            },
+            {
+              "method": "trf",
+              "residual": 53.344945595486436
+            },
+            {
+              "method": "trf",
+              "residual": 52.61905509039637
+            },
+            {
+              "method": "trf",
+              "residual": 51.93130470585439
+            },
+            {
+              "method": "trf",
+              "residual": 51.27751791187218
+            },
+            {
+              "method": "trf",
+              "residual": 50.65586649800492
+            },
+            {
+              "method": "trf",
+              "residual": 50.06293375761387
+            },
+            {
+              "method": "trf",
+              "residual": 49.49735478174035
+            },
+            {
+              "method": "trf",
+              "residual": 48.60452212386421
+            },
+            {
+              "method": "trf",
+              "residual": 48.0757641342916
+            },
+            {
+              "method": "trf",
+              "residual": 47.56975450978522
+            },
+            {
+              "method": "trf",
+              "residual": 47.08424440194395
+            },
+            {
+              "method": "trf",
+              "residual": 46.618481593733584
+            },
+            {
+              "method": "trf",
+              "residual": 46.170515416119706
+            },
+            {
+              "method": "trf",
+              "residual": 45.73977387657167
+            },
+            {
+              "method": "trf",
+              "residual": 45.32458211971377
+            },
+            {
+              "method": "trf",
+              "residual": 44.92451137626259
+            },
+            {
+              "method": "trf",
+              "residual": 44.535962704795985
+            },
+            {
+              "method": "trf",
+              "residual": 44.153337609360534
+            },
+            {
+              "method": "trf",
+              "residual": 43.783874374266496
+            },
+            {
+              "method": "trf",
+              "residual": 43.426364828303285
+            },
+            {
+              "method": "trf",
+              "residual": 42.77173321782574
+            },
+            {
+              "method": "trf",
+              "residual": 42.35676141141295
+            },
+            {
+              "method": "trf",
+              "residual": 41.99868611436231
+            },
+            {
+              "method": "trf",
+              "residual": 41.665053725336755
+            },
+            {
+              "method": "trf",
+              "residual": 41.3416298266869
+            },
+            {
+              "method": "trf",
+              "residual": 41.02132716572967
+            },
+            {
+              "method": "trf",
+              "residual": 40.71046032066525
+            },
+            {
+              "method": "trf",
+              "residual": 40.40865945949581
+            },
+            {
+              "method": "trf",
+              "residual": 40.104935079299764
+            },
+            {
+              "method": "trf",
+              "residual": 39.814336510343104
+            },
+            {
+              "method": "trf",
+              "residual": 39.53182619121527
+            },
+            {
+              "method": "trf",
+              "residual": 39.25730914676076
+            },
+            {
+              "method": "trf",
+              "residual": 38.99010318540162
+            },
+            {
+              "method": "trf",
+              "residual": 38.730135223201614
+            },
+            {
+              "method": "trf",
+              "residual": 38.468936096246324
+            },
+            {
+              "method": "trf",
+              "residual": 38.217377781650505
+            },
+            {
+              "method": "trf",
+              "residual": 37.97234467589038
+            },
+            {
+              "method": "trf",
+              "residual": 37.733309963646285
+            },
+            {
+              "method": "trf",
+              "residual": 37.50024293216708
+            },
+            {
+              "method": "trf",
+              "residual": 37.2263706509699
+            },
+            {
+              "method": "trf",
+              "residual": 35.925766687845034
+            },
+            {
+              "method": "trf",
+              "residual": 35.072632724160144
+            },
+            {
+              "method": "trf",
+              "residual": 34.310931831683874
+            },
+            {
+              "method": "trf",
+              "residual": 33.66766033324901
+            },
+            {
+              "method": "trf",
+              "residual": 33.07809776801733
+            },
+            {
+              "method": "trf",
+              "residual": 32.55396964404778
+            },
+            {
+              "method": "trf",
+              "residual": 25.889618215682642
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.58,
+          "normalized_residual": 24.72826937691864,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 43.5589124090959,
+              "linear_relative_residual": 1.7752670377499257e-13,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 43.5589124090959
+            },
+            {
+              "method": "trf",
+              "residual": 42.06993679956618
+            },
+            {
+              "method": "trf",
+              "residual": 40.99935135668897
+            },
+            {
+              "method": "trf",
+              "residual": 40.09733722940144
+            },
+            {
+              "method": "trf",
+              "residual": 39.32851164051816
+            },
+            {
+              "method": "trf",
+              "residual": 38.64541119130451
+            },
+            {
+              "method": "trf",
+              "residual": 38.03313517740088
+            },
+            {
+              "method": "trf",
+              "residual": 37.47123118863911
+            },
+            {
+              "method": "trf",
+              "residual": 36.953278213615796
+            },
+            {
+              "method": "trf",
+              "residual": 36.46767018485946
+            },
+            {
+              "method": "trf",
+              "residual": 36.012271928616045
+            },
+            {
+              "method": "trf",
+              "residual": 35.579388582097394
+            },
+            {
+              "method": "trf",
+              "residual": 35.169028720842206
+            },
+            {
+              "method": "trf",
+              "residual": 34.77537291215408
+            },
+            {
+              "method": "trf",
+              "residual": 34.399517736221775
+            },
+            {
+              "method": "trf",
+              "residual": 34.0368067406391
+            },
+            {
+              "method": "trf",
+              "residual": 33.68883757513199
+            },
+            {
+              "method": "trf",
+              "residual": 33.35163654163469
+            },
+            {
+              "method": "trf",
+              "residual": 32.893140498361014
+            },
+            {
+              "method": "trf",
+              "residual": 32.5734663983027
+            },
+            {
+              "method": "trf",
+              "residual": 32.262961120072276
+            },
+            {
+              "method": "trf",
+              "residual": 31.96335814485072
+            },
+            {
+              "method": "trf",
+              "residual": 31.671708510803537
+            },
+            {
+              "method": "trf",
+              "residual": 31.389739887429588
+            },
+            {
+              "method": "trf",
+              "residual": 31.114835718469354
+            },
+            {
+              "method": "trf",
+              "residual": 30.848648273756798
+            },
+            {
+              "method": "trf",
+              "residual": 30.58881440691686
+            },
+            {
+              "method": "trf",
+              "residual": 30.336902485797495
+            },
+            {
+              "method": "trf",
+              "residual": 30.090789995066206
+            },
+            {
+              "method": "trf",
+              "residual": 29.85192608676311
+            },
+            {
+              "method": "trf",
+              "residual": 29.618383953747497
+            },
+            {
+              "method": "trf",
+              "residual": 29.391515269024595
+            },
+            {
+              "method": "trf",
+              "residual": 29.169585978636647
+            },
+            {
+              "method": "trf",
+              "residual": 28.9538262799539
+            },
+            {
+              "method": "trf",
+              "residual": 28.742660466338805
+            },
+            {
+              "method": "trf",
+              "residual": 28.537224963840718
+            },
+            {
+              "method": "trf",
+              "residual": 28.336102674459845
+            },
+            {
+              "method": "trf",
+              "residual": 28.134853224734822
+            },
+            {
+              "method": "trf",
+              "residual": 27.940683685578254
+            },
+            {
+              "method": "trf",
+              "residual": 27.750548219250906
+            },
+            {
+              "method": "trf",
+              "residual": 27.565364742041787
+            },
+            {
+              "method": "trf",
+              "residual": 27.3840048845149
+            },
+            {
+              "method": "trf",
+              "residual": 27.207278669039955
+            },
+            {
+              "method": "trf",
+              "residual": 27.034170409068636
+            },
+            {
+              "method": "trf",
+              "residual": 26.865411836820773
+            },
+            {
+              "method": "trf",
+              "residual": 26.70010708601934
+            },
+            {
+              "method": "trf",
+              "residual": 26.538887444045685
+            },
+            {
+              "method": "trf",
+              "residual": 26.380962705217318
+            },
+            {
+              "method": "trf",
+              "residual": 26.226887128907872
+            },
+            {
+              "method": "trf",
+              "residual": 26.0759860070285
+            },
+            {
+              "method": "trf",
+              "residual": 25.928711139526644
+            },
+            {
+              "method": "trf",
+              "residual": 25.784493400664932
+            },
+            {
+              "method": "trf",
+              "residual": 25.643702647676193
+            },
+            {
+              "method": "trf",
+              "residual": 25.505889872577484
+            },
+            {
+              "method": "trf",
+              "residual": 25.367449791210785
+            },
+            {
+              "method": "trf",
+              "residual": 25.23375858268831
+            },
+            {
+              "method": "trf",
+              "residual": 25.10295600259641
+            },
+            {
+              "method": "trf",
+              "residual": 24.975201321938282
+            },
+            {
+              "method": "trf",
+              "residual": 24.850294429859588
+            },
+            {
+              "method": "trf",
+              "residual": 24.72826937691864
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.5850000000000002,
+          "normalized_residual": 3.9126073735831937,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 34.60107105498741,
+              "linear_relative_residual": 1.993797675337758e-13,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 34.60107105498741
+            },
+            {
+              "method": "trf",
+              "residual": 33.33010108258489
+            },
+            {
+              "method": "trf",
+              "residual": 24.06382739621196
+            },
+            {
+              "method": "trf",
+              "residual": 21.220833109890005
+            },
+            {
+              "method": "trf",
+              "residual": 20.431993795602416
+            },
+            {
+              "method": "trf",
+              "residual": 19.73688055535279
+            },
+            {
+              "method": "trf",
+              "residual": 16.187623349196713
+            },
+            {
+              "method": "trf",
+              "residual": 13.916140234988022
+            },
+            {
+              "method": "trf",
+              "residual": 9.53466786478613
+            },
+            {
+              "method": "trf",
+              "residual": 9.279131548626243
+            },
+            {
+              "method": "trf",
+              "residual": 9.047878086378356
+            },
+            {
+              "method": "trf",
+              "residual": 7.557792595182749
+            },
+            {
+              "method": "trf",
+              "residual": 11.750039831761153
+            },
+            {
+              "method": "trf",
+              "residual": 6.7021481056487175
+            },
+            {
+              "method": "trf",
+              "residual": 5.633887439586426
+            },
+            {
+              "method": "trf",
+              "residual": 5.319947948537029
+            },
+            {
+              "method": "trf",
+              "residual": 5.179726209956328
+            },
+            {
+              "method": "trf",
+              "residual": 5.130048561989393
+            },
+            {
+              "method": "trf",
+              "residual": 5.102546583821197
+            },
+            {
+              "method": "trf",
+              "residual": 5.083436011536803
+            },
+            {
+              "method": "trf",
+              "residual": 5.067923831903425
+            },
+            {
+              "method": "trf",
+              "residual": 5.055088917543929
+            },
+            {
+              "method": "trf",
+              "residual": 5.044137578925236
+            },
+            {
+              "method": "trf",
+              "residual": 5.034675929763093
+            },
+            {
+              "method": "trf",
+              "residual": 5.026320336391232
+            },
+            {
+              "method": "trf",
+              "residual": 5.018869281156464
+            },
+            {
+              "method": "trf",
+              "residual": 5.012125111567799
+            },
+            {
+              "method": "trf",
+              "residual": 5.005976116087559
+            },
+            {
+              "method": "trf",
+              "residual": 5.0003154052061465
+            },
+            {
+              "method": "trf",
+              "residual": 4.995075588688194
+            },
+            {
+              "method": "trf",
+              "residual": 4.990195015114405
+            },
+            {
+              "method": "trf",
+              "residual": 4.985643666798395
+            },
+            {
+              "method": "trf",
+              "residual": 4.98111940864689
+            },
+            {
+              "method": "trf",
+              "residual": 4.976869512955389
+            },
+            {
+              "method": "trf",
+              "residual": 4.97286383610979
+            },
+            {
+              "method": "trf",
+              "residual": 4.969077217287148
+            },
+            {
+              "method": "trf",
+              "residual": 4.965487627273355
+            },
+            {
+              "method": "trf",
+              "residual": 4.96207748274164
+            },
+            {
+              "method": "trf",
+              "residual": 4.9581640174971815
+            },
+            {
+              "method": "trf",
+              "residual": 4.954142090549263
+            },
+            {
+              "method": "trf",
+              "residual": 4.950593457023941
+            },
+            {
+              "method": "trf",
+              "residual": 4.885729143228452
+            },
+            {
+              "method": "trf",
+              "residual": 4.851092314570249
+            },
+            {
+              "method": "trf",
+              "residual": 4.9026572179212335
+            },
+            {
+              "method": "trf",
+              "residual": 4.756431140021239
+            },
+            {
+              "method": "trf",
+              "residual": 4.610562360745578
+            },
+            {
+              "method": "trf",
+              "residual": 4.525683139609155
+            },
+            {
+              "method": "trf",
+              "residual": 5.165057969096084
+            },
+            {
+              "method": "trf",
+              "residual": 4.430013010743793
+            },
+            {
+              "method": "trf",
+              "residual": 4.321231798809346
+            },
+            {
+              "method": "trf",
+              "residual": 4.222306619281807
+            },
+            {
+              "method": "trf",
+              "residual": 4.681806804700651
+            },
+            {
+              "method": "trf",
+              "residual": 4.179848748023562
+            },
+            {
+              "method": "trf",
+              "residual": 4.131938807442426
+            },
+            {
+              "method": "trf",
+              "residual": 4.057428767215093
+            },
+            {
+              "method": "trf",
+              "residual": 4.142385190996638
+            },
+            {
+              "method": "trf",
+              "residual": 4.0184138154574915
+            },
+            {
+              "method": "trf",
+              "residual": 3.954604627779719
+            },
+            {
+              "method": "trf",
+              "residual": 4.258080101232327
+            },
+            {
+              "method": "trf",
+              "residual": 3.9126073735831937
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.59,
+          "normalized_residual": 37.29485085645985,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 93.14751324758987,
+              "linear_relative_residual": 1.060204956856628e-13,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 93.14751324758987
+            },
+            {
+              "method": "trf",
+              "residual": 69.53482339771952
+            },
+            {
+              "method": "trf",
+              "residual": 66.69549836144353
+            },
+            {
+              "method": "trf",
+              "residual": 64.73015124906294
+            },
+            {
+              "method": "trf",
+              "residual": 63.096274826992676
+            },
+            {
+              "method": "trf",
+              "residual": 61.683482584185704
+            },
+            {
+              "method": "trf",
+              "residual": 60.41617012918298
+            },
+            {
+              "method": "trf",
+              "residual": 59.26188087967321
+            },
+            {
+              "method": "trf",
+              "residual": 58.19731058763586
+            },
+            {
+              "method": "trf",
+              "residual": 57.207157971486836
+            },
+            {
+              "method": "trf",
+              "residual": 56.28220581847268
+            },
+            {
+              "method": "trf",
+              "residual": 55.412934380604256
+            },
+            {
+              "method": "trf",
+              "residual": 54.59492368637969
+            },
+            {
+              "method": "trf",
+              "residual": 53.82124279141045
+            },
+            {
+              "method": "trf",
+              "residual": 53.08945753373074
+            },
+            {
+              "method": "trf",
+              "residual": 52.39415611512259
+            },
+            {
+              "method": "trf",
+              "residual": 51.73387312190238
+            },
+            {
+              "method": "trf",
+              "residual": 51.104132533826395
+            },
+            {
+              "method": "trf",
+              "residual": 50.50403356919603
+            },
+            {
+              "method": "trf",
+              "residual": 49.929836083612734
+            },
+            {
+              "method": "trf",
+              "residual": 49.38099917317072
+            },
+            {
+              "method": "trf",
+              "residual": 48.854357242268584
+            },
+            {
+              "method": "trf",
+              "residual": 48.349610217579084
+            },
+            {
+              "method": "trf",
+              "residual": 47.8640553479012
+            },
+            {
+              "method": "trf",
+              "residual": 47.397557860376594
+            },
+            {
+              "method": "trf",
+              "residual": 46.94778964897364
+            },
+            {
+              "method": "trf",
+              "residual": 46.51472889339292
+            },
+            {
+              "method": "trf",
+              "residual": 46.09635771157438
+            },
+            {
+              "method": "trf",
+              "residual": 45.692732950387004
+            },
+            {
+              "method": "trf",
+              "residual": 45.3020939325437
+            },
+            {
+              "method": "trf",
+              "residual": 44.92455150967674
+            },
+            {
+              "method": "trf",
+              "residual": 44.55856284716409
+            },
+            {
+              "method": "trf",
+              "residual": 44.204275390959076
+            },
+            {
+              "method": "trf",
+              "residual": 43.86032508817744
+            },
+            {
+              "method": "trf",
+              "residual": 43.526881466112755
+            },
+            {
+              "method": "trf",
+              "residual": 43.202734482088744
+            },
+            {
+              "method": "trf",
+              "residual": 42.8880675250824
+            },
+            {
+              "method": "trf",
+              "residual": 42.58180250971013
+            },
+            {
+              "method": "trf",
+              "residual": 42.28413003517441
+            },
+            {
+              "method": "trf",
+              "residual": 41.99408531422004
+            },
+            {
+              "method": "trf",
+              "residual": 41.711861476625444
+            },
+            {
+              "method": "trf",
+              "residual": 41.436591808575265
+            },
+            {
+              "method": "trf",
+              "residual": 41.16846883544055
+            },
+            {
+              "method": "trf",
+              "residual": 40.906710753207115
+            },
+            {
+              "method": "trf",
+              "residual": 40.65150699417544
+            },
+            {
+              "method": "trf",
+              "residual": 40.40214994740644
+            },
+            {
+              "method": "trf",
+              "residual": 40.054283230341746
+            },
+            {
+              "method": "trf",
+              "residual": 39.812997421843704
+            },
+            {
+              "method": "trf",
+              "residual": 39.577045651595135
+            },
+            {
+              "method": "trf",
+              "residual": 39.3466111291278
+            },
+            {
+              "method": "trf",
+              "residual": 39.121119521085674
+            },
+            {
+              "method": "trf",
+              "residual": 38.900739050687186
+            },
+            {
+              "method": "trf",
+              "residual": 38.684943568882936
+            },
+            {
+              "method": "trf",
+              "residual": 38.47389464884509
+            },
+            {
+              "method": "trf",
+              "residual": 38.267109836133464
+            },
+            {
+              "method": "trf",
+              "residual": 38.06474417915421
+            },
+            {
+              "method": "trf",
+              "residual": 37.866354490709696
+            },
+            {
+              "method": "trf",
+              "residual": 37.672089476412104
+            },
+            {
+              "method": "trf",
+              "residual": 37.48154088216252
+            },
+            {
+              "method": "trf",
+              "residual": 37.29485085645985
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        },
+        {
+          "time": 1.595,
+          "normalized_residual": 33.33537428216962,
+          "nfev": 60,
+          "trace": [
+            {
+              "method": "damped_newton",
+              "iteration": 0,
+              "residual": 46.343726392769014,
+              "linear_relative_residual": 5.619503740557698e-13,
+              "reason": "line_search_stagnation"
+            },
+            {
+              "method": "trf",
+              "residual": 46.343726392769014
+            },
+            {
+              "method": "trf",
+              "residual": 45.948619489618935
+            },
+            {
+              "method": "trf",
+              "residual": 45.57424236982253
+            },
+            {
+              "method": "trf",
+              "residual": 45.21336013133531
+            },
+            {
+              "method": "trf",
+              "residual": 44.865596622833166
+            },
+            {
+              "method": "trf",
+              "residual": 44.52751384756057
+            },
+            {
+              "method": "trf",
+              "residual": 44.199681474451296
+            },
+            {
+              "method": "trf",
+              "residual": 43.87970571643506
+            },
+            {
+              "method": "trf",
+              "residual": 43.56841930626747
+            },
+            {
+              "method": "trf",
+              "residual": 43.263871848391766
+            },
+            {
+              "method": "trf",
+              "residual": 42.966983700326324
+            },
+            {
+              "method": "trf",
+              "residual": 42.676052513702544
+            },
+            {
+              "method": "trf",
+              "residual": 42.392021980587614
+            },
+            {
+              "method": "trf",
+              "residual": 42.1133565785305
+            },
+            {
+              "method": "trf",
+              "residual": 41.84099548812834
+            },
+            {
+              "method": "trf",
+              "residual": 41.57352892656607
+            },
+            {
+              "method": "trf",
+              "residual": 41.31187833945269
+            },
+            {
+              "method": "trf",
+              "residual": 41.0547356428369
+            },
+            {
+              "method": "trf",
+              "residual": 40.802997647272115
+            },
+            {
+              "method": "trf",
+              "residual": 40.55544213452774
+            },
+            {
+              "method": "trf",
+              "residual": 40.31293764813498
+            },
+            {
+              "method": "trf",
+              "residual": 40.07433669365777
+            },
+            {
+              "method": "trf",
+              "residual": 39.84047780560912
+            },
+            {
+              "method": "trf",
+              "residual": 39.610279901208195
+            },
+            {
+              "method": "trf",
+              "residual": 39.38455054321299
+            },
+            {
+              "method": "trf",
+              "residual": 39.16226875461071
+            },
+            {
+              "method": "trf",
+              "residual": 38.94421113503346
+            },
+            {
+              "method": "trf",
+              "residual": 38.72941113357207
+            },
+            {
+              "method": "trf",
+              "residual": 38.51861458591964
+            },
+            {
+              "method": "trf",
+              "residual": 38.31090528095467
+            },
+            {
+              "method": "trf",
+              "residual": 38.106998919279576
+            },
+            {
+              "method": "trf",
+              "residual": 37.90602599504168
+            },
+            {
+              "method": "trf",
+              "residual": 37.70867258890397
+            },
+            {
+              "method": "trf",
+              "residual": 37.514112714120685
+            },
+            {
+              "method": "trf",
+              "residual": 37.323003677621806
+            },
+            {
+              "method": "trf",
+              "residual": 37.13456026986549
+            },
+            {
+              "method": "trf",
+              "residual": 36.9494126488926
+            },
+            {
+              "method": "trf",
+              "residual": 36.76681387893782
+            },
+            {
+              "method": "trf",
+              "residual": 36.587366099424
+            },
+            {
+              "method": "trf",
+              "residual": 36.41035849611584
+            },
+            {
+              "method": "trf",
+              "residual": 36.236366970988364
+            },
+            {
+              "method": "trf",
+              "residual": 36.064714727205946
+            },
+            {
+              "method": "trf",
+              "residual": 35.89595230374005
+            },
+            {
+              "method": "trf",
+              "residual": 35.729435174278365
+            },
+            {
+              "method": "trf",
+              "residual": 35.56568940058545
+            },
+            {
+              "method": "trf",
+              "residual": 35.40410099399682
+            },
+            {
+              "method": "trf",
+              "residual": 35.24517253440508
+            },
+            {
+              "method": "trf",
+              "residual": 35.08831904814005
+            },
+            {
+              "method": "trf",
+              "residual": 34.93402042909063
+            },
+            {
+              "method": "trf",
+              "residual": 34.78171909027681
+            },
+            {
+              "method": "trf",
+              "residual": 34.63187361346211
+            },
+            {
+              "method": "trf",
+              "residual": 34.45606871431135
+            },
+            {
+              "method": "trf",
+              "residual": 34.30869541710671
+            },
+            {
+              "method": "trf",
+              "residual": 34.16368153002107
+            },
+            {
+              "method": "trf",
+              "residual": 34.020523063086124
+            },
+            {
+              "method": "trf",
+              "residual": 33.87963666712704
+            },
+            {
+              "method": "trf",
+              "residual": 33.740540668912736
+            },
+            {
+              "method": "trf",
+              "residual": 33.60363163406717
+            },
+            {
+              "method": "trf",
+              "residual": 33.46845012251412
+            },
+            {
+              "method": "trf",
+              "residual": 33.33537428216962
+            }
+          ],
+          "optimizer_success": false,
+          "meets_original_tolerance": false
+        }
+      ],
+      "jacobian_check": {
+        "method": "not_enforced_in_approximate_diagnostic",
+        "unique_solution_verified": false
+      },
+      "imposed_physical_template": false,
+      "future_fields_read": false,
+      "approximate_diagnostic": true,
+      "all_steps_meet_tolerance": false,
+      "isolation": {
+        "worker_pid": 3946418,
+        "seconds": 464.5473381038755,
+        "worker_peak_rss_mb": 459.78125,
+        "memory_cap_mb": 4096,
+        "kernel_address_space_limit_mb": 4096.0
+      }
+    },
+    "prediction_nrmse": 45.497600719180994,
+    "prediction_rmse_channels": [
+      0.2538578382795269,
+      0.3417114946608124,
+      22.36715863232885
+    ],
+    "persistence_nrmse": 0.19447574815968174,
+    "persistence_rmse_channels": [
+      0.01395050622522831,
+      0.022296922281384468,
+      0.06517495214939117
+    ],
+    "seconds": 465.5499735176563
+  }
+]

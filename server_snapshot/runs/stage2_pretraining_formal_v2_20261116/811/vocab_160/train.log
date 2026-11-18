@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/data1/users/liugang/src/eq-bpe/project/stage2_main_v1/preparation_20261116_v2/stage2_main_v1/pretrain.py", line 30, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/stage2_main_v1/preparation_20261116_v2/stage2_main_v1/pretrain.py", line 27, in main
+    generator.pretrain(train,validation,args.output,cfg,args.resume)
+  File "/data1/users/liugang/src/eq-bpe/project/stage2_main_v1/preparation_20261116_v2/stage2_main_v1/generator.py", line 94, in pretrain
+    elif progress.exists() or (out/'best.pt').exists():raise FileExistsError('Existing pretrain output; choose resume or new directory')
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: Existing pretrain output; choose resume or new directory

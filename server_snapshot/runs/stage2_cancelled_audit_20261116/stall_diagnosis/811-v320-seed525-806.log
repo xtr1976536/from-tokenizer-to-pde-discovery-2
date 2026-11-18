@@ -1,0 +1,89 @@
+TEXT u^{3}+\partial_{y}(\frac{(\partial_{y}(u)\cdot \sin(u))}{\sqrt{x}\cdot \partial_{x}(u)})=0\\\partial_{x}(u)\cdot p+\partial_{y}(\partial_{y}(u)\cdot u)=0\\(u)+\partial_{x}(u)\cdot (\partial_{x}(u))^{2}+(\partial_{y}(u))^{2}+(\partial_{x}(u))^{2}+\sqrt{3\partial_{xx}(u)+\partial_{yy}\partial_{x}(u\cdot v)+\partial_{y}(\frac{(1)}{1+u^{2}\cdot (\partial_{x}(u))^{2}+(\partial_{y}(v)\cdot (\partial_{x}(v))^{2}+\partial_{t}(u)+\partial_{t}(p)+\partial_{x}(u){\partial_{y}(p)\cdot p+v}\cdot u)+p^{3}+u+\partial_{t}(p)+(\partial_{y}(v))^{2}+(\partial_{x}(u))^{2}}+\partial_{t}(u)+\Delta(v))^{3}\cdot \ln(u)+\partial_{t}(p)+1}{1+u}=0
+STAGE compile_term ('d', ('div', ('mul', ('d', ('v', 'u'), 'y'), ('fn', 'sin', ('v', 'u'))), ('mul', ('d', ('v', 'u'), 'x'), ('fn', 'sqrt', ('v', 'x')))), 'y')
+STAGE compile_term ('pow', ('v', 'u'), ('n', 3))
+STAGE compile_term ('d', ('mul', ('d', ('v', 'u'), 'y'), ('v', 'u')), 'y')
+STAGE compile_term ('mul', ('d', ('v', 'u'), 'x'), ('v', 'p'))
+STAGE compile_term ('fn', 'sqrt', ('add', ('d', ('d', ('mul', ('v', 'u'), ('v', 'v')), 'x'), 'yy'), ('d', ('v', 'p'), 't'), ('mul', ('d', ('v', 'u'), 'xx'), ('n', 3)), ('mul', ('fn', 'ln', ('v', 'u')), ('pow', ('d', ('add', ('d', ('v', 'u'), 't'), ('div', ('n', 1), ('add', ('d', ('v', 'p'), 't'), ('d', ('v', 'p'), 't'
+Timeout (0:00:05)!
+Thread 0x000078a647ba0080 (most recent call first):
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 941 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3643 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3712 in expand
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/cache.py", line 72 in wrapper
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/function.py", line 2845 in expand
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/code/stage2_main_v1/implicit_backend.py", line 61 in compile_term
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 18 in compile_term
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/code/stage2_main_v1/implicit_backend.py", line 167 in <genexpr>
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/code/stage2_main_v1/implicit_backend.py", line 167 in parse
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 24 in child
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 53 in <module>
+Timeout (0:00:05)!
+Thread 0x000078a647ba0080 (most recent call first):
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635 in _expand_hint
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3715 in expand
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/cache.py", line 72 in wrapper
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/function.py", line 2845 in expand
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/code/stage2_main_v1/implicit_backend.py", line 61 in compile_term
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 18 in compile_term
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/code/stage2_main_v1/implicit_backend.py", line 167 in <genexpr>
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/code/stage2_main_v1/implicit_backend.py", line 167 in parse
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 24 in child
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 53 in <module>
+REJECT TimeoutError diagnostic parser timeout
+Traceback (most recent call last):
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 53, in <module>
+    if len(sys.argv)>1 and sys.argv[1]=='child':child(sys.argv[2])
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 24, in child
+    system=ImplicitBackend().parse(rec['text']);print('PASS '+str(system.term_counts),flush=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/code/stage2_main_v1/implicit_backend.py", line 167, in parse
+    rows.append(tuple(compile_term(term) for term in terms))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/code/stage2_main_v1/implicit_backend.py", line 167, in <genexpr>
+    rows.append(tuple(compile_term(term) for term in terms))
+                      ^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 18, in compile_term
+    return original_compile(ast)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/code/stage2_main_v1/implicit_backend.py", line 61, in compile_term
+    expression=sp.expand(symbolic(expand_laplacian(ast,('x','y')),FUNCTIONS).doit())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/function.py", line 2845, in expand
+    return sympify(e).expand(deep=deep, modulus=modulus, **hints)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3715, in expand
+    expr, _ = Expr._expand_hint(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635, in _expand_hint
+    arg, arghit = Expr._expand_hint(arg, hint, **hints)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635, in _expand_hint
+    arg, arghit = Expr._expand_hint(arg, hint, **hints)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3635, in _expand_hint
+    arg, arghit = Expr._expand_hint(arg, hint, **hints)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 6 more times]
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py", line 3619, in _expand_hint
+    @staticmethod
+
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 11, in <lambda>
+    signal.signal(signal.SIGALRM,lambda *_:(_ for _ in ()).throw(TimeoutError('diagnostic parser timeout')))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py", line 11, in <genexpr>
+    signal.signal(signal.SIGALRM,lambda *_:(_ for _ in ()).throw(TimeoutError('diagnostic parser timeout')))
+TimeoutError: diagnostic parser timeout

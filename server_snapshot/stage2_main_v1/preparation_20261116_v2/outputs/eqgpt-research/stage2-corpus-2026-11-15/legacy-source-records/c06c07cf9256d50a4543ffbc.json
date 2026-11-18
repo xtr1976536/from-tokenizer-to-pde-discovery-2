@@ -1,0 +1,95 @@
+{
+  "broad_family": "forced_Poisson",
+  "context_checked": true,
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "1",
+      "1",
+      "1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "sqrt(x)*y**2 + Derivative(u(x, y, z, t), (x, 2)) + Derivative(u(x, y, z, t), (y, 2))",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      9,
+      2,
+      23,
+      2,
+      36,
+      3,
+      49,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "uxx",
+      "+",
+      "uyy",
+      "+",
+      "y^2",
+      "*",
+      "sqrt(x)",
+      "E"
+    ],
+    "normalized_latex": "(u_{xx})+(u_{yy})+({y}^{2})\\cdot (\\sqrt{x})=0",
+    "reconstructed_support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Mul(Pow(Symbol('x'), Rational(1, 2)), Pow(Symbol('y'), Integer(2)))"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Mul(Pow(Symbol('x'), Rational(1, 2)), Pow(Symbol('y'), Integer(2)))"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "family": "forced_Poisson",
+  "gre_ids": [
+    5,
+    9,
+    2,
+    23,
+    2,
+    36,
+    3,
+    49,
+    1
+  ],
+  "latex_origin": "declared_function_representative_not_literal_published_instance",
+  "normalized_latex": "(u_{xx})+(u_{yy})+({y}^{2})\\cdot (\\sqrt{x})=0",
+  "original_latex": "u_{xx}+u_{yy}+(\\sqrt(x)\\cdot y^2)=0",
+  "parameters": {
+    "Phi(x,y)": "\\sqrt(x)\\cdot y^2"
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [
+    "x>0,y>0,u>0 where roots or inverse powers appear",
+    "All displayed scalar constants fixed nonzero1 unless specified; no source terms removed"
+  ],
+  "source_file": "data/formulas/diverse_pde_v4/research/eqworld_more/lpde302.pdf",
+  "source_group": "eqworld:lpde302",
+  "source_id": "balanced636:c06c07cf9256d50a4543ffbc",
+  "source_kind": "source_class_review_candidate",
+  "source_location": "first governing equation; function choices explicitly declared",
+  "source_sha256": "59c0f68070036a36f77e81f3b44424f69205cd3453f50ef92bcab76208c5dd26",
+  "source_template_latex": "u_{xx}+u_{yy}+\\Phi(x,y)=0",
+  "source_transformations": [
+    "source field w -> u",
+    "small named function choice from source-defined class, not independent physical family",
+    "exact derivative expansion independently checked before coefficient stripping"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/lpde/lpde302.pdf"
+}

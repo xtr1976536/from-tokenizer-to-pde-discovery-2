@@ -1,0 +1,30 @@
+{
+  "status": "CANDIDATE_FOR_VOCAB128_NOT_FINAL_FOR_96_160",
+  "seed": 525,
+  "scale_settings": {
+    "212": {
+      "lr": 0.0001,
+      "l2_matrix": 0.001
+    },
+    "636": {
+      "lr": 5e-05,
+      "l2_matrix": 0
+    }
+  },
+  "common": {
+    "cosine_epochs": 20,
+    "minimum_epochs": 30,
+    "patience": 15,
+    "min_delta": 0.0001,
+    "maximum_epochs": 80,
+    "eta_min_nominal": 1e-06
+  },
+  "observed_plateau_lr": {
+    "212": 1.609427140540686e-06,
+    "636": 1.3016356554191274e-06
+  },
+  "notes": [
+    "Fix scheduler endpoint and early stopping boundary only with explicit revalidation",
+    "No new runs launched; test untouched"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "attempts": 34,
+  "generated": 40,
+  "accepted": 2,
+  "rejections": {
+    "Invalid or unterminated sample": 25,
+    "Term evaluation failed: Nonfinite or complex term on valid points": 2,
+    "Fit quality gate: each batch-mean equation R2 must be strictly > -0.0035": 4,
+    "Analytic gradient node budget exceeded": 1
+  },
+  "rows": [
+    {
+      "text": "\\partial_{t}(u)+v+\\partial_{y}(u)\\cdot 1+u^{2}\\cdot v=0\\\\v+\\Delta(v)+v^{2}+\\Delta(v)+\\Delta(v)=0\\\\1+\\partial_{t}(p)+p^{2}+p\\cdot v+\\partial_{t}(v)=0",
+      "structure_key": "expanded-v1:8147ee5d85dd2ff0e55e9d15c6b74fd3a7e9bf095ac1798416ce69987579ed8b",
+      "anchor_indices": [
+        0,
+        0,
+        1
+      ],
+      "reward": 0.06821638172320706,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.08699252121057832,
+      "r2_per_equation": [
+        0.0409866699540546,
+        0.16682886575628408,
+        0.053162027921396265
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        4,
+        3,
+        5
+      ],
+      "penalty": 0.7841637507904751
+    },
+    {
+      "text": "\\nabla\\cdot(u\\cdot \\nabla(p))+u+\\partial_{t}(u)=0\\\\\\partial_{t}(v)+\\Delta(v)+\\Delta(v)+\\partial_{t}(u)+p+u+p=0\\\\p^{2}+p\\cdot u^{2}+u^{3}+1+\\partial_{t}(v)+u^{2}=0",
+      "structure_key": "expanded-v1:97a6ad9b7f738f132d939baa78e16859c6d3a55eb8866e5e817faccb47e001ad",
+      "anchor_indices": [
+        0,
+        0,
+        0
+      ],
+      "reward": 0.034180340560168436,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.04434545422967079,
+      "r2_per_equation": [
+        0.0012893787394365128,
+        0.07895257759948247,
+        0.05279440635009339
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        3,
+        5,
+        6
+      ],
+      "penalty": 0.7707743928643525
+    }
+  ],
+  "fit_reject_examples": [
+    {
+      "text": "\\Delta(u)+\\nabla\\cdot(\\nabla(v)\\cdot u)+\\nabla\\cdot(\\nabla(p)\\cdot u)+\\nabla\\cdot(u\\cdot \\nabla(v))+\\partial_{t}(v)=0\\\\u+v\\cdot \\Delta(v)=0\\\\\\Delta(p)+u=0",
+      "last_window_r2": [
+        -0.013371232697789504,
+        -0.03561467793630202,
+        -0.00021085752056460016
+      ]
+    },
+    {
+      "text": "\\partial_{t}(u)+v\\cdot u+\\Delta(u)=0\\\\v=0\\\\v+p=0",
+      "last_window_r2": [
+        0.0008774550342173226,
+        -0.03332722676769606,
+        -0.014109993097707552
+      ]
+    },
+    {
+      "text": "\\Delta(u)+p\\cdot p\\cdot \\Delta(u)+p=0\\\\\\partial_{t}(v)+\\Delta(v)=0  \\\\pu\\cdot \\partial_{x}(v)+\\partial_{t}(u)=0",
+      "last_window_r2": [
+        0.5882276067440628,
+        -0.015036407642946337,
+        0.04654760441778727
+      ]
+    },
+    {
+      "text": "\\frac{(u\\cdot v)+\\Delta(u)+\\partial_{t}(v)}{v}+\\Delta(u)=0\\\\v=0\\\\\\Delta(p)+\\partial_{t}(v)+\\Delta(v)+\\partial_{t}(v)\\cdot \\Delta(p)+\\partial_{t}{2}p+u+\\Delta(v)+v+1=0",
+      "last_window_r2": [
+        0.034537598663675784,
+        -0.03332722676769606,
+        0.41524660112357326
+      ]
+    }
+  ],
+  "seconds": 42.984060699120164
+}

@@ -1,0 +1,557 @@
+The asymptotic behavior of globally smooth solutions of bipolar non-isentropic compressible Euler-Maxwell system for plasma Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme 1 Introduction and main results 2 Global solutions for equations ( ) 2.1 Preliminary 2.2 Weighted energy estimates. 3 Linearized homogeneous equations 3.1 Explicit solutions of ( )-( ) 3.2 $L^{p}-L^{q}$ decay
+property. 4 Decay rates for system ( ) 4.1 Decay rates for the energy functional. 4.2 Decay rate for high-order energy
+functional. 4.3 Decay rate in $L^{q}$ . References License: arXiv.org perpetual non-exclusive license arXiv:1202.0112v4 [math.AP] 28 Feb 2012 The asymptotic behavior of globally smooth solutions of bipolar non-isentropic compressible
+Euler-Maxwell system for plasma Shu Wang 1 , Yuehong Feng 1 and Xin Li 2 1 College of Applied Sciences, Beijing University of Technology, Beijing 100124, China 2 Department of Mathematics and computer Science, Xinyang
+Vocational and Technical College, Xinyang, 464000, China Email :wangshu@bjut.edu.cn, fengyuehong001@163.com, lixin91600@163.com Abstract. The bipolar non-isentropic compressible Euler-Maxwell system is
+investigated in $R^{3}$ in the present paper, and the $L^{q}$ time decay
+rate for the global smooth solution is established. It is shown that
+the total densities, total temperatures and magnetic field of two
+carriers converge to the equilibrium states at the same rate $(1+t)^{-\frac{3}{2}+\frac{3}{2q}}$ in $L^{q}$ norm. But, both the
+difference of densities and the difference of temperatures of two
+carriers decay at the rate $(1+t)^{-2-\frac{1}{q}}$ , and the
+velocity and electric field decay at the rate $(1+t)^{-\frac{3}{2}+\frac{1}{2q}}$ . This phenomenon on the charge
+transport shows the essential difference between the non-isentropic
+unipolar Euler-Maxwell and the bipolar isentropic Euler-Maxwell
+system. Keywords: Bipolar non-isentropic Euler-Maxwell
+equations, Plasma, Globally smooth solution, Asymptotic behavior AMS Subject Classification (2000) : 35A01, 35L45,
+35L60, 35Q35 1. Introduction and main results The Euler-Maxwell system is used to model and simulate the transport
+of charged particles in
+plasma [ 1 , 3 , 8 , 9 , 20 ] . Usually, it takes the
+form of compressible non-isentropic Euler equations forced by the
+electromagnetic field, which is governed by the self-consistent
+Maxwell equation. In present paper, we consider the Cauchy problem
+for the bipolar non-isentropic Euler-Maxwell system (1.1) $\left\{\begin{aligned} &\partial_{t}{n_{e}}+\nabla\cdot(n_{e}u_{e})=0,\\
+&\partial_{t}(n_{e}u_{e})+\nabla\cdot(n_{e}u_{e}\otimes u_{e})+\nabla p_{e}=-n_{e}(E+u_{e}\times B)-n_{e}u_{e},\\
+&\partial_{t}(n_{e}\mathcal{E}_{e})+\nabla\cdot(n_{e}u_{e}\mathcal{E}_{e}+u_{e}p_{e})=-n_{e}u_{e}E-n_{e}|u_{e}|^{2}-n_{e}(\theta_{e}-1),\\
+&\partial_{t}{n_{i}}+\nabla\cdot(n_{i}u_{i})=0,\\
+&\partial_{t}(n_{i}u_{i})+\nabla\cdot(n_{i}u_{i}\otimes u_{i})+\nabla p_{i}=n_{i}(E+u_{i}\times B)-n_{i}u_{i},\\
+&\partial_{t}(n_{i}\mathcal{E}_{i})+\nabla\cdot(n_{i}u_{i}\mathcal{E}_{i}+u_{i}p_{i})=n_{i}u_{i}E-n_{i}|u_{i}|^{2}-n_{i}(\theta_{i}-1),\\
+&\partial_{t}E-\nabla\times B=n_{e}u_{e}-n_{i}u_{i},\\
+&\partial_{t}B+\nabla\times E=0,\\
+&\nabla\cdot E=n_{i}-n_{e},\quad\nabla\cdot B=0,\quad(t,x)\in(0,\infty)\times\mathbb{R}^{3},\end{aligned}\right.$ where the unknowns are the density $n_{\mu}>0$ , the velocity $u_{\mu}=(u_{\mu}^{1},u_{\mu}^{2},u_{\mu}^{3})$ , the absolute temperature $\theta_{\mu}>0$ , the total energy $\mathcal{E}_{\mu}=\displaystyle\frac{1}{2}|u_{\mu}|^{2}+C_{\nu}\theta_{\mu}$ , the
+pressure function $p_{\mu}=R_{\mu}n_{\mu}\theta_{\mu}$ for $\mu=e,i$ , the
+electronic field $E$ and magnetic field $B$ . Furthermore, the
+constants $C_{\nu}>0$ , $R_{\nu}>0$ are the heat capacity at constant
+volume and the coefficient of heat conductivity respectively.
+Throughout this paper, we set $C_{\nu}=R_{\nu}=1$ without loss of
+generality. Then, the system ( 1.1 ) is equivalent to (1.2) $\left\{\begin{aligned} &\partial_{t}{n_{e}}+\nabla\cdot(n_{e}u_{e})=0,\\
+&\partial_{t}u_{e}+(u_{e}\cdot\nabla)u_{e}+\frac{\theta_{e}}{n_{e}}\nabla n_{e}+\nabla\theta_{e}=-(E+u_{e}\times B)-u_{e},\\
+&\partial_{t}{\theta_{e}}+\nabla\cdot(\theta_{e}u_{e})+(\theta_{e}-1)=0,\\
+&\partial_{t}{n_{i}}+\nabla\cdot(n_{i}u_{i})=0,\\
+&\partial_{t}u_{i}+(u_{i}\cdot\nabla)u_{i}+\frac{\theta_{i}}{n_{i}}\nabla n_{i}+\nabla\theta_{i}=(E+u_{i}\times B)-u_{i},\\
+&\partial_{t}{\theta_{i}}+\nabla\cdot(\theta_{i}u_{i})+(\theta_{i}-1)=0,\\
+&\partial_{t}E-\nabla\times B=n_{e}u_{e}-n_{i}u_{i},\\
+&\partial_{t}B+\nabla\times E=0,\\
+&\nabla\cdot E=n_{i}-n_{e},\quad\nabla\cdot B=0,\quad(t,x)\in(0,\infty)\times\mathbb{R}^{3}.\end{aligned}\right.$ Initial data is given as (1.3) $(n_{\mu},u_{\mu},\theta_{\mu},E,B)|_{t=0}=(n_{\mu 0},u_{\mu 0},\theta_{\mu 0},E_{0},B_{0}),\quad x\in\mathbb{R}^{3},$ with the compatible condition (1.4) $\nabla\cdot E_{0}=n_{i0}-n_{e0},\quad\nabla\cdot B_{0}=0,\quad x\in\;\mathbb{R}^{3}.$ The Euler-Maxwell system ( 1.2 ) is a symmetrizable hyperbolic
+system for $n_{\mu},\theta_{\mu}>0$ . Then the Cauchy problem
+( 1.2 )-( 1.3 ) has a local smooth solution when the initial
+data are smooth. In a simplified one dimensional isentropic
+Euler-Maxwell system, the global existence of entropy solutions has
+been given in [ 2 ] by the compensated compactness method.
+For the three dimensional isentropic Euler-Maxwell system, the
+existence of global smooth solutions with small amplitude to the
+Cauchy problem in the whole space and to the periodic problem in the
+torus is established by Peng et al in [ 16 ] and Ueda et al in [ 19 ] respectively, and the decay rate of the smooth solution
+when t goes to infinity is obtained by Duan in [ 4 ] and
+Ueda et al in [ 18 ] . For asymptotic limits with small
+parameters, see [ 14 , 15 ] and references therein. For the
+three dimensional bipolar isentropic Euler-Maxwell system, the
+global existence and the asymptotic behavior of the smooth solution
+is also obtained by Duan et al in [ 5 ] . Recently, Yang et
+al in [ 20 ] consider the diffusive relaxation limit of the
+three dimensional unipolar non-isentropic Euler-Maxwell system, and
+Wang et al asymptotics and global existence in [ 6 ] . However, there is no analysis on the asymptotics and global
+existence for the bipolar non-isentropic Euler-Maxwell system in
+three space dimensions yet. Therefore, the goal of the present paper
+is to establish the global existence of smooth solutions around a
+equilibrium solution of system ( 1.2 ) and the decay rate of the
+smooth solution as $t\rightarrow\infty$ . The main result of this paper can be stated as follows. Theorem 1.1 . Assume ( 1.4 ) hold. If $\left\|{[n_{\mu 0}-1,u_{\mu 0},\theta_{\mu 0}-1,E_{0},B_{0}]}\right\|_{s}\leq\delta_{0}$ for $s\geq 4$ . Then, there is a unique global solution $[n_{\mu}(t,x)$ , $u_{\mu}(t,x),$ $\theta_{\mu}(t,x),E(t,x),B(t,x)]$ to
+the initial value problem ( 1.2 )- ( 1.3 ) which satisfies $[n_{\mu}-1,u_{\mu},\theta_{\mu}-1,E,B]\in C^{1}\big([0,T);H^{s-1}(\mathbb{R}^{3})\big)\cap C\big([0,T);H^{s}(\mathbb{R}^{3})\big)$ and $\mathop{\sup}\limits_{t\geqslant 0}\left\|{[n_{\mu}(t)-1,u_{\mu}(t),\theta_{\mu}(t)-1,E(t),B(t)]}\right\|_{s}\leq C_{0}\left\|{[n_{\mu 0}-1,u_{\mu 0},\theta_{\mu 0}-1,E_{0},B_{0}]}\right\|_{s},$ where $\delta_{0},C_{0}>0$ are constants independent of time. Moreover, if $\left\|{[n_{\mu 0}-1,u_{\mu 0},\theta_{\mu 0}-1,E_{0},B_{0}]}\right\|_{L^{1}\cap H^{13}}\leq\delta_{1}$ ,
+then the solution $[n_{\mu}(t,x)$ , $u_{\mu}(t,x)$ , $\theta_{\mu}(t,x)$ , $E(t,x)$ , $B(t,x)]$ satisfies (1.5) $\left\|\left[{n_{e}(t)-n_{i}(t),\theta_{e}(t)-\theta_{i}(t)}\right]\right\|_{L^{q}}\leq C_{1}(1+t)^{-2-\frac{1}{q}},$ (1.6) $\left\|\left[{n_{e}(t)+n_{i}(t)-2,\theta_{e}(t)+\theta_{i}(t)-2}\right]\right\|_{L^{q}}\leq C_{1}(1+t)^{-\frac{3}{2}+\frac{3}{2q}},$ (1.7) $\left\|{u_{e}(t)\pm u_{i}(t),E(t)}\right\|_{L^{q}}\leq C_{1}(1+t)^{-\frac{3}{2}+\frac{1}{2q}},$ (1.8) $\left\|{B}(t)\right\|_{L^{q}}\leq C_{1}(1+t)^{-\frac{3}{2}+\frac{3}{2q}},$ for any $t\geq 0$ and $2\leq q\leq\infty$ .
+Where, constants $\delta_{1},C_{1}>0$ are also independent of time. Remark 1.1 . It should be emphasized that both the velocity and temperature relaxation term of the
+bipolar non-isentropic Euler-Maxwell system ( 1.2 ) plays a key
+role in the proof of Theorem 1.1 . Notations. In this paper, $f\sim g$ means $\gamma a\leq b\leq\frac{1}{\gamma}$ for a constant $0<\gamma<1$ . $H^{s}$ denotes the standard Sobolev space $W^{s,2}({{\mathbb{R}}^{3}})$ . We use $\dot{H}^{s}$ to denote the
+corresponding $s$ -order homogeneous Sobolev space. Set $L^{2}=H^{0}$ . The
+norm of $H^{s}$ is denoted by $\left\|{\cdot}\right\|_{s}$ with $\left\|{\cdot}\right\|=\left\|{\cdot}\right\|_{0}$ , and $\langle\cdot,\cdot\rangle$ denotes the inner product over $L^{2}({\mathbb{R}}^{3})$ . For the multi-index $\alpha=(\alpha_{1},\alpha_{2},\alpha_{3})$ , we denote $\partial^{\alpha}$ $=\partial_{x_{1}}^{\alpha_{1}}\partial_{x_{2}}^{\alpha_{2}}\partial_{x_{3}}^{\alpha_{3}}$ $=\partial_{1}^{\alpha_{1}}\partial_{2}^{\alpha_{2}}\partial_{3}^{\alpha_{3}}$ and $|\alpha|=\alpha_{1}+\alpha_{2}+\alpha_{3}$ . For an integrable function $f:{\mathbb{R}}^{3}\rightarrow{\mathbb{R}}$ , its Fourier transform is
+defined by $\hat{f}(k)=\int_{{\mathbb{R}}^{3}}e^{-ix\cdot k}f(x)dx,\ \ x\cdot k:=\sum\limits_{j=1}^{3}{x_{j}k_{j}},\ \ k\in{\mathbb{R}}^{3},$ where $i=\sqrt{-1}\in\mathbb{C}$ is the imaginary unit. The rest of the paper is arranged as follows. In Section 2, the
+transformation of the initial value problem and the proof of the
+global existence and uniqueness of solutions are presented. In
+Section 3, we study the linearized homogeneous equations to get the $L^{p}-L^{q}$ decay property and the explicit representation of
+solutions. In the last Section 4, we investigate the decay rates of
+solutions to the transformed nonlinear equations and complete the
+proof of Theorem 1.1 . 2. Global solutions for equations ( 1.2 ) 2.1. Preliminary Suppose $[n_{\mu}(t,x),u_{\mu}(t,x),\theta_{\mu}(t,x),E(t,x),B(t,x)]$ be a smooth solution of the initial value problem for the bipolar
+non-isentropic Euler-Maxwell equations ( 1.2 ) with initial data
+( 1.3 ) which satisfies ( 1.4 ). Set (2.1) $n_{\mu}(t,x)=1+\rho_{\mu}(t,x),\theta_{\mu}(t,x)=1+\Theta_{\mu}(t,x).$ Thus, we can rewrite the system ( 1.2 )-( 1.4 ) as (2.2) $\left\{\begin{aligned} &\partial_{t}{\rho_{e}}+\nabla\cdot((1+\rho_{e})u_{e})=0,\\
+&\partial_{t}u_{e}+(u_{e}\cdot\nabla)u_{e}+\frac{1+\Theta_{e}}{1+\rho_{e}}\nabla\rho_{e}+\nabla\Theta_{e}=-(E+u_{e}\times B)-u_{e},\\
+&\partial_{t}{\Theta_{e}}+\nabla\cdot((1+\Theta_{e})u_{e})+\Theta_{e}=0,\\
+&\partial_{t}{\rho_{i}}+\nabla\cdot((1+\rho_{i})u_{i})=0,\\
+&\partial_{t}u_{i}+(u_{i}\cdot\nabla)u_{i}+\frac{1+\Theta_{i}}{1+\rho_{i}}\nabla\rho_{i}+\nabla\Theta_{i}=(E+u_{i}\times B)-u_{i},\\
+&\partial_{t}{\Theta_{i}}+\nabla\cdot((1+\Theta_{i})u_{i})+\Theta_{i}=0,\\
+&\partial_{t}E-\nabla\times B-u_{e}+u_{i}=\rho_{e}u_{e}-\rho_{i}u_{i},\\
+&\partial_{t}B+\nabla\times E=0,\\
+&\nabla\cdot E=\rho_{i}-\rho_{e},\quad\nabla\cdot B=0,\quad(t,x)\in(0,\infty)\times\mathbb{R}^{3},\end{aligned}\right.$ with initial data (2.3) $U|_{t=0}=U_{0}:=[\rho_{\mu 0},u_{\mu 0},\Theta_{\mu 0},E_{0},B_{0}],\ x\in{\mathbb{R}}^{3},$ which satisfies the compatible condition (2.4) $\nabla\cdot E_{0}=\rho_{i0}-\rho_{e0},\quad\nabla\cdot B_{0}=0,\quad x\in\;\mathbb{R}^{3}.$ Here, $\rho_{\mu 0}=n_{\mu 0}-1.$ In the following, we usually assume $s\geq 4$ . Moreover, for $U=[\rho_{\mu}$ , $u_{\mu}$ , $\Theta_{\mu}$ , $E$ , $B]$ , we use $\mathcal{E}_{s}(U(t))$ , $\mathcal{E}_{s}^{h}(U(t))$ , $\mathcal{D}_{s}(U(t))$ and $\mathcal{D}_{s}^{h}(U(t))$ to define the energy
+functional, the high-order energy functional, the dissipation rate
+and the high-order dissipation rate as (2.5) $\mathcal{E}_{s}(U(t))\sim\left\|{[\rho_{\mu},u_{\mu},\Theta_{\mu},E,B]}\right\|_{s}^{2},$ (2.6) $\mathcal{E}_{s}^{h}(U(t))\sim\left\|{\nabla[\rho_{\mu},u_{\mu},\Theta_{\mu},E,B]}\right\|_{s-1}^{2},$ (2.7) $\begin{split}\mathcal{D}_{s}(U(t))\sim&\left\|{\nabla[\rho_{e},\rho_{i}]}\right\|_{s-1}^{2}+\left\|{[u_{e},u_{i},\Theta_{e},\Theta_{i}]}\right\|_{s}^{2}\\
+&+\left\|{E}\right\|_{s-1}^{2}+\left\|{\nabla B}\right\|_{s-2}^{2}+\left\|{\rho_{e}-\rho_{i}}\right\|^{2}\end{split}$ and (2.8) $\begin{split}\mathcal{D}^{h}_{s}(U(t))\sim&\left\|{\nabla^{2}[\rho_{e},\rho_{i}]}\right\|_{s-2}^{2}+\left\|{\nabla[u_{e},u_{i},\Theta_{e},\Theta_{i}]}\right\|_{s-1}^{2}\\
+&+\left\|{\nabla E}\right\|_{s-2}^{2}+\left\|{\nabla^{2}B}\right\|_{s-3}^{2}+\left\|{\nabla[\rho_{e}-\rho_{i}]}\right\|^{2},\end{split}$ respectively. Now, concerning the transformed initial value problem
+( 2.2 )-( 2.3 ), we have the global existence result as
+follows. Proposition 2.1 . Assume that $U_{0}=[\rho_{\mu 0},u_{\mu 0},\Theta_{\mu 0},E_{0},B_{0}]$ satisfies the compatible condition ( 2.4 ). If $\mathcal{E}_{s}(U_{0})$ is small enough, then, for any $t\geq 0$ , the initial
+value problem ( 2.2 )-( 2.3 ) has a unique global nonzero
+solution $U=[\rho_{\mu},u_{\mu},\Theta_{\mu},E,B]$ which satisfies (2.9) $U\in C^{1}\big([0,T);H^{s-1}(\mathbb{R}^{3})\big)\cap C\big([0,T);H^{s}(\mathbb{R}^{3})\big),$ and (2.10) $\mathcal{E}_{s}(U(t))+\lambda\int_{0}^{t}\mathcal{D}_{s}(U(s))ds\leq\mathcal{E}_{s}(U_{0}).$ Obviously, from the Proposition 2.1 , it is straightforward
+to get the existence result of Theorem 1.1 . Furthermore,
+solutions of Proposition 2.1 really decay under some extra
+conditions on $U_{0}=[\rho_{\mu 0},u_{\mu 0},\Theta_{\mu 0},E_{0},B_{0}]$ .
+For this purpose, we define $\omega_{s}(U_{0})$ as (2.11) $\omega_{s}(U_{0})=\left\|{U_{0}}\right\|_{s}+\left\|{[\rho_{\mu 0},u_{\mu 0},\Theta_{\mu 0},E_{0},B_{0}]}\right\|_{L^{1}}$ for $s\geq 4.$ Then, we obtain the following decay results. Proposition 2.2 . Assume that $U_{0}=[\rho_{\mu 0}$ , $u_{\mu 0}$ , $\Theta_{\mu 0}$ , $E_{0}$ , $B_{0}]$ satisfies ( 2.4 ). If $\omega_{s+2}(U_{0})$ is
+sufficiently small, then system ( 2.2 )-( 2.4 ) has a
+solution $U=[\rho_{\mu}$ , $u_{\mu}$ , $\Theta_{\mu}$ , $E$ , $B]$ satisfying (2.12) $\left\|{U(t)}\right\|_{s}\leq C\omega_{s+2}(U_{0})(1+t)^{-\frac{3}{4}}$ for any $t\geq 0$ . Moreover, if $\omega_{s+6}(U_{0})$ is sufficiently
+small, then, for any $t\geq 0$ , the solution also satisfies (2.13) $\left\|{\nabla U(t)}\right\|_{s-1}\leq C\omega_{s+6}(U_{0})(1+t)^{-\frac{5}{4}}.$ Thus, one can obtain the decay rates ( 1.5 )-( 1.8 )
+through the method of bootstrap and the Proposition stated above. 2.2. Weighted energy estimates. In this subsection, we shall give the
+proof of Proposition 2.1 for the global existence and
+uniqueness of solutions to the initial value problem
+( 2.2 )-( 2.3 ). Since hyperbolic equations ( 2.2 ) is
+quasi-linear symmetrizable, thus one has the local existence of
+smooth solutions to ( 2.2 ) as follows. Lemma 2.1 . (Local existence of smooth solutions, see [ 10 , 12 ] )
+Let $s>\frac{5}{2}$ and $(\rho_{\mu 0}$ , $u_{\mu 0}$ , $\Theta_{\mu 0}$ , $E_{0}$ , $B_{0})$ $\in H^{s}(\mathbb{R}^{3})$ . Then there exist $T>0$ and a unique smooth solution $(n_{\mu}$ , $u_{\mu}$ , $\theta_{\mu}$ , $E$ , $B)$ to the Cauchy problem
+( 1.2 )-( 1.3 ) satisfying $(\rho_{\mu}$ , $u_{\mu}$ , $\Theta_{\mu}$ , $E$ , $B)\in C^{1}\big([0,T);H^{s-1}(\mathbb{R}^{3})\big)\cap C\big([0,T);H^{s}(\mathbb{R}^{3})\big)$ . Then, with the help of the continuity argument, the global existence
+of solutions satisfying ( 2.9 ) and ( 2.10 ) follows by
+combing Lemma 2.1 and a priori estimate as follows. Theorem 2.1 . Assume that $U$ $=[\rho_{\mu}$ , $u_{\mu}$ , $\Theta_{\mu}$ , $E$ , $B]$ $\in C^{1}\big([0,T);H^{s-1}(\mathbb{R}^{3})\big)\cap C\big([0,T);H^{s}(\mathbb{R}^{3})\big)$ is smooth for $T>0$ with (2.14) $\mathop{\sup}\limits_{0\leq t\leq T}\left\|{U(t)}\right\|_{s}\leq\delta$ for $\delta\leq\delta_{0}$ with $\delta_{0}$ sufficiently small and
+suppose $U$ to be the solution of the equations ( 2.2 ) for $t\in(0,T)$ . Then, for a constant $0<\gamma<1$ and any $0\leq t\leq T$ , it holds that (2.15) $\frac{d}{dt}\mathcal{E}_{s}(U(t))+\gamma\mathcal{D}_{s}(U(t))\leq C[\mathcal{E}_{s}(U(t))^{\frac{1}{2}}+\mathcal{E}_{s}(U(t))]\mathcal{D}_{s}(U(t)).$ Proof. We will use five steps to finish the proof
+as follows. In step 1, we establish the estimate of Euler part and
+Maxwell part of the system ( 2.2 ) by using weighted energy
+estimate method. In the following steps $2-4$ , we utilize the
+skew-symmetric structure of the system ( 2.2 ) to get the
+dissipative estimates for $\rho_{\mu}$ , $E$ and $B$ . Step 1. It holds that (2.16) $\frac{d}{{dt}}\left\|U\right\|_{s}^{2}+\left\|{\left[{{u_{e}},{u_{i}},{\Theta_{e}},{\Theta_{i}}}\right]}\right\|_{s}^{2}\leqslant C{\left\|U\right\|_{s}}\left({\left\|{\left[{{u_{e}},{u_{i}},{\Theta_{e}},{\Theta_{i}}}\right]}\right\|_{s}^{2}+\left\|{\nabla\left[{{\rho_{e}},{\rho_{i}}}\right]}\right\|_{s-1}^{2}}\right).$ In fact, from the first six equations of ( 2.2 ), weighted
+energy estimate on $\partial^{\alpha}\rho_{\mu}$ , $\partial^{\alpha}u_{\mu}$ and $\partial^{\alpha}\Theta_{\mu}$ with $|\alpha|\leq s$ imply (2.17) $\begin{split}\frac{1}{2}&\frac{d}{{dt}}\sum\limits_{\mu=e,i}{\left({\left\langle{\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}},{{\left|{{\partial^{\alpha}}{\rho_{\mu}}}\right|}^{2}}}\right\rangle+\left\langle{1+{\rho_{\mu}},{{\left|{{\partial^{\alpha}}{u_{\mu}}}\right|}^{2}}}\right\rangle+\left\langle{\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}},{{\left|{{\partial^{\alpha}}{\Theta_{\mu}}}\right|}^{2}}}\right\rangle}\right)}\\
+&+\sum\limits_{\mu=e,i}{\left({\left\langle{1+{\rho_{\mu}},{{\left|{{\partial^{\alpha}}{u_{\mu}}}\right|}^{2}}}\right\rangle+\left\langle{\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}},{{\left|{{\partial^{\alpha}}{\Theta_{\mu}}}\right|}^{2}}}\right\rangle}\right)}+\left\langle{\left({1+{\rho_{e}}}\right){\partial^{\alpha}}E,{\partial^{\alpha}}{u_{e}}}\right\rangle\\
+&-\left\langle{\left({1+{\rho_{i}}}\right){\partial^{\alpha}}E,{\partial^{\alpha}}{u_{i}}}\right\rangle=-\sum\limits_{\beta<\alpha}{C_{\beta}^{\alpha}{I_{\alpha,\beta}}(t)+{I_{1}}(t).}\end{split}$ Where, ${I_{\alpha,\beta}}(t)={I^{e}_{\alpha,\beta}}(t)+{I^{i}_{\alpha,\beta}}(t)$ , $I_{1}(t)=I_{1}^{e}(t)+I_{1}^{i}(t)$ with $\begin{split}I_{\alpha,\beta}^{e}(t)=&\left\langle{\frac{{1+{\Theta_{e}}}}{{1+{\rho_{e}}}}{\partial^{\alpha-\beta}}{\rho_{e}}\nabla{\partial^{\beta}}{u_{e}},{\partial^{\alpha}}{\rho_{e}}}\right\rangle+\left\langle{\frac{{1+{\Theta_{e}}}}{{1+{\rho_{e}}}}{\partial^{\alpha-\beta}}{u_{e}}\nabla{\partial^{\beta}}{\rho_{e}},{\partial^{\alpha}}{\rho_{e}}}\right\rangle\\
+&+\left\langle{\frac{{1+{\rho_{e}}}}{{1+{\Theta_{e}}}}{\partial^{\alpha-\beta}}{u_{e}}\nabla{\partial^{\beta}}{\Theta_{e}},{\partial^{\alpha}}{\Theta_{e}}}\right\rangle+\left\langle{\frac{{1+{\rho_{e}}}}{{1+{\Theta_{e}}}}{\partial^{\alpha-\beta}}{\Theta_{e}}\nabla{\partial^{\beta}}{u_{e}},{\partial^{\alpha}}{\Theta_{e}}}\right\rangle\\
+&+\left\langle{\left({1+{\rho_{e}}}\right){\partial^{\alpha-\beta}}{u_{e}}\nabla{\partial^{\beta}}{u_{e}},{\partial^{\alpha}}{u_{e}}}\right\rangle+\left\langle{\left({1+{\rho_{e}}}\right){\partial^{\alpha-\beta}}\left({\frac{{1+{\Theta_{e}}}}{{1+{\rho_{e}}}}}\right)\nabla{\partial^{\beta}}{\rho_{e}},{\partial^{\alpha}}{u_{e}}}\right\rangle\\
+&+\left\langle{\left({1+{\rho_{e}}}\right){\partial^{\alpha-\beta}}{u_{e}}\times{\partial^{\beta}}B,{\partial^{\alpha}}{u_{e}}}\right\rangle,\end{split}$ $\begin{split}I_{\alpha,\beta}^{i}(t)=&\left\langle{\frac{{1+{\Theta_{i}}}}{{1+{\rho_{i}}}}{\partial^{\alpha-\beta}}{\rho_{i}}\nabla{\partial^{\beta}}{u_{i}},{\partial^{\alpha}}{\rho_{i}}}\right\rangle+\left\langle{\frac{{1+{\Theta_{i}}}}{{1+{\rho_{i}}}}{\partial^{\alpha-\beta}}{u_{i}}\nabla{\partial^{\beta}}{\rho_{i}},{\partial^{\alpha}}{\rho_{i}}}\right\rangle\\
+&+\left\langle{\frac{{1+{\rho_{i}}}}{{1+{\Theta_{i}}}}{\partial^{\alpha-\beta}}{u_{i}}\nabla{\partial^{\beta}}{\Theta_{i}},{\partial^{\alpha}}{\Theta_{i}}}\right\rangle+\left\langle{\frac{{1+{\rho_{i}}}}{{1+{\Theta_{i}}}}{\partial^{\alpha-\beta}}{\Theta_{i}}\nabla{\partial^{\beta}}{u_{i}},{\partial^{\alpha}}{\Theta_{i}}}\right\rangle\\
+&+\left\langle{\left({1+{\rho_{i}}}\right){\partial^{\alpha-\beta}}{u_{i}}\nabla{\partial^{\beta}}{u_{i}},{\partial^{\alpha}}{u_{i}}}\right\rangle+\left\langle{\left({1+{\rho_{i}}}\right){\partial^{\alpha-\beta}}\left({\frac{{1+{\Theta_{i}}}}{{1+{\rho_{i}}}}}\right)\nabla{\partial^{\beta}}{\rho_{i}},{\partial^{\alpha}}{u_{i}}}\right\rangle\\
+&-\left\langle{\left({1+{\rho_{i}}}\right){\partial^{\alpha-\beta}}{u_{i}}\times{\partial^{\beta}}B,{\partial^{\alpha}}{u_{i}}}\right\rangle,\end{split}$ and $\begin{split}I_{1}^{e}(t)=&~~\frac{1}{2}\left\langle{{\partial_{t}}\left({\frac{{1+{\Theta_{e}}}}{{1+{\rho_{e}}}}}\right),{{\left|{{\partial^{\alpha}}{\rho_{e}}}\right|}^{2}}}\right\rangle+\left\langle{\nabla{\Theta_{e}}{\partial^{\alpha}}{u_{e}},{\partial^{\alpha}}{\rho_{e}}}\right\rangle+\left\langle{\nabla{\rho_{e}}{\partial^{\alpha}}{u_{e}},{\partial^{\alpha}}{\Theta_{e}}}\right\rangle\\
+&+\frac{1}{2}\left\langle{\nabla\cdot\left({\frac{{1+{\Theta_{e}}}}{{1+{\rho_{e}}}}{u_{e}}}\right),{{\left|{{\partial^{\alpha}}{\rho_{e}}}\right|}^{2}}}\right\rangle+\frac{1}{2}\left\langle{{\partial_{t}}\left({\frac{{1+{\rho_{e}}}}{{1+{\Theta_{e}}}}}\right),{{\left|{{\partial^{\alpha}}{\Theta_{e}}}\right|}^{2}}}\right\rangle\\
+&+\frac{1}{2}\left\langle{\nabla\cdot\left({\frac{{1+{\rho_{e}}}}{{1+{\Theta_{e}}}}{u_{e}}}\right),{{\left|{{\partial^{\alpha}}{\Theta_{e}}}\right|}^{2}}}\right\rangle-\left\langle{\left({1+{\rho_{e}}}\right){u_{e}}\times{\partial^{\alpha}}B,{\partial^{\alpha}}{u_{e}}}\right\rangle,\end{split}$ $\begin{split}I_{1}^{i}(t)=&~~\frac{1}{2}\left\langle{{\partial_{t}}\left({\frac{{1+{\Theta_{i}}}}{{1+{\rho_{i}}}}}\right),{{\left|{{\partial^{\alpha}}{\rho_{i}}}\right|}^{2}}}\right\rangle+\left\langle{\nabla{\Theta_{i}}{\partial^{\alpha}}{u_{i}},{\partial^{\alpha}}{\rho_{i}}}\right\rangle+\left\langle{\nabla{\rho_{i}}{\partial^{\alpha}}{u_{i}},{\partial^{\alpha}}{\Theta_{i}}}\right\rangle\\
+&+\frac{1}{2}\left\langle{\nabla\cdot\left({\frac{{1+{\Theta_{i}}}}{{1+{\rho_{i}}}}{u_{i}}}\right),{{\left|{{\partial^{\alpha}}{\rho_{i}}}\right|}^{2}}}\right\rangle+\frac{1}{2}\left\langle{{\partial_{t}}\left({\frac{{1+{\rho_{i}}}}{{1+{\Theta_{i}}}}}\right),{{\left|{{\partial^{\alpha}}{\Theta_{i}}}\right|}^{2}}}\right\rangle\\
+&+\frac{1}{2}\left\langle{\nabla\cdot\left({\frac{{1+{\rho_{i}}}}{{1+{\Theta_{i}}}}{u_{i}}}\right),{{\left|{{\partial^{\alpha}}{\Theta_{i}}}\right|}^{2}}}\right\rangle+\left\langle{\left({1+{\rho_{i}}}\right){u_{i}}\times{\partial^{\alpha}}B,{\partial^{\alpha}}{u_{i}}}\right\rangle,\end{split}$ where we have used integration by parts. When $|\alpha|=0$ , one has $\begin{split}{I_{1}}(t)=&I_{1}^{e}(t)+I_{1}^{i}(t)\\
+=&\sum\limits_{\mu=e,i}{\left({\frac{1}{2}\left\langle{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}}\right){\partial_{t}}{\Theta_{\mu}}+{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}}\right){\partial_{t}}{\rho_{\mu}},{{\left|{{\rho_{\mu}}}\right|}^{2}}}\right\rangle+\left\langle{\nabla{\Theta_{\mu}}{u_{\mu}},{\rho_{\mu}}}\right\rangle}\right.}\\
+&+\frac{1}{2}\left\langle{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}{u_{\mu}}}\right)\nabla{\Theta_{\mu}}+{\partial_{{u_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}{u_{\mu}}}\right)\nabla\cdot{u_{\mu}}+{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}{u_{\mu}}}\right)\nabla{\rho_{\mu}},{{\left|{{\rho_{\mu}}}\right|}^{2}}}\right\rangle\\
+&+\frac{1}{2}\left\langle{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}}\right){\partial_{t}}{\Theta_{\mu}}+{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}}\right){\partial_{t}}{\rho_{\mu}},{{\left|{{\Theta_{\mu}}}\right|}^{2}}}\right\rangle+\left\langle{\nabla{\rho_{\mu}}{}{u_{\mu}},{}{\Theta_{\mu}}}\right\rangle\\
+&\left.{+\frac{1}{2}\left\langle{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}{u_{\mu}}}\right)\nabla{\Theta_{\mu}}+{\partial_{{u_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}{u_{\mu}}}\right)\nabla\cdot{u_{\mu}}+{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}{u_{\mu}}}\right)\nabla{\rho_{\mu}},{{\left|{{\Theta_{\mu}}}\right|}^{2}}}\right\rangle}\right)\\
+&-\left\langle{\left({1+{\rho_{e}}}\right){u_{e}}\times B,{u_{e}}}\right\rangle+\left\langle{\left({1+{\rho_{i}}}\right){u_{i}}\times B,{u_{i}}}\right\rangle\end{split}$ $\begin{split}=&\sum\limits_{\mu=e,i}{\left({-\frac{1}{2}\left\langle{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}}\right)\nabla\cdot\left({{u_{\mu}}\left({1+{\Theta_{\mu}}}\right)}\right)+{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}}\right)\nabla\cdot\left({{u_{\mu}}\left({1+{\rho_{\mu}}}\right)}\right),{{\left|{{\rho_{\mu}}}\right|}^{2}}}\right\rangle}\right.}\\
+&+\frac{1}{2}\left\langle{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}{u_{\mu}}}\right)\nabla{\Theta_{\mu}}+{\partial_{{u_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}{u_{\mu}}}\right)\nabla\cdot{u_{\mu}}+{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}{u_{\mu}}}\right)\nabla{\rho_{\mu}},{{\left|{{\rho_{\mu}}}\right|}^{2}}}\right\rangle\\
+&-\frac{1}{2}\left\langle{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}}\right)\nabla\cdot\left({{u_{\mu}}\left({1+{\Theta_{\mu}}}\right)}\right)+{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}}\right)\nabla\cdot\left({{u_{\mu}}\left({1+{\rho_{\mu}}}\right)}\right),{{\left|{{\Theta_{\mu}}}\right|}^{2}}}\right\rangle\\
+&+\frac{1}{2}\left\langle{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}{u_{\mu}}}\right)\nabla{\Theta_{\mu}}+{\partial_{{u_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}{u_{\mu}}}\right)\nabla\cdot{u_{\mu}}+{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}{u_{\mu}}}\right)\nabla{\rho_{\mu}},{{\left|{{\Theta_{\mu}}}\right|}^{2}}}\right\rangle\\
+&\left.{+\left\langle{\nabla{\rho_{\mu}}{}{u_{\mu}},{}{\Theta_{\mu}}}\right\rangle+\left\langle{\nabla{\Theta_{\mu}}{u_{\mu}},{\rho_{\mu}}}\right\rangle}\right)-\left\langle{\left({1+{\rho_{e}}}\right){u_{e}}\times B,{u_{e}}}\right\rangle+\left\langle{\left({1+{\rho_{i}}}\right){u_{i}}\times B,{u_{i}}}\right\rangle\end{split}$ $\begin{split}\leqslant&C\left\|{{\rho_{\mu}}}\right\|{\left\|{{\rho_{\mu}}}\right\|_{{L^{\infty}}}}\left\{{{{\left\|{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}}\right)}\right\|}_{{L^{\infty}}}}\left({{{\left\|{1+{\Theta_{\mu}}}\right\|}_{{L^{\infty}}}}\left\|{\nabla\cdot{u_{\mu}}}\right\|+{{\left\|{\nabla{\Theta_{\mu}}}\right\|}_{{L^{\infty}}}}\left\|{{u_{\mu}}}\right\|}\right)}\right.\\
+&+{\left\|{{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}}\right)}\right\|_{{L^{\infty}}}}\left({{{\left\|{1+{\rho_{\mu}}}\right\|}_{{L^{\infty}}}}\left\|{\nabla\cdot{u_{\mu}}}\right\|+{{\left\|{\nabla{\rho_{\mu}}}\right\|}_{{L^{\infty}}}}\left\|{{u_{\mu}}}\right\|}\right)+{\left\|{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}{u_{\mu}}}\right)}\right\|_{{L^{\infty}}}}\\
+&\left.{\left\|{\nabla{\Theta_{\mu}}}\right\|+{{\left\|{{\partial_{{u_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}{u_{\mu}}}\right)}\right\|}_{{L^{\infty}}}}\left\|{\nabla\cdot{u_{\mu}}}\right\|+{{\left\|{{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\Theta_{\mu}}}}{{1+{\rho_{\mu}}}}{u_{\mu}}}\right)}\right\|}_{{L^{\infty}}}}\left\|{\nabla{\rho_{\mu}}}\right\|}\right\}\\
+&+C\left\|{{\Theta_{\mu}}}\right\|{\left\|{{\Theta_{\mu}}}\right\|_{{L^{\infty}}}}\left\{{{{\left\|{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}}\right)}\right\|}_{{L^{\infty}}}}\left({{{\left\|{1+{\Theta_{\mu}}}\right\|}_{{L^{\infty}}}}\left\|{\nabla\cdot{u_{\mu}}}\right\|+{{\left\|{\nabla{\Theta_{\mu}}}\right\|}_{{L^{\infty}}}}\left\|{{u_{\mu}}}\right\|}\right)}\right.\\
+&+{\left\|{{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}}\right)}\right\|_{{L^{\infty}}}}\left({{{\left\|{1+{\rho_{\mu}}}\right\|}_{{L^{\infty}}}}\left\|{\nabla\cdot{u_{\mu}}}\right\|+{{\left\|{\nabla{\rho_{\mu}}}\right\|}_{{L^{\infty}}}}\left\|{{u_{\mu}}}\right\|}\right)+{\left\|{{\partial_{{\Theta_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}{u_{\mu}}}\right)}\right\|_{{L^{\infty}}}}\\
+&\left.{\left\|{\nabla{\Theta_{\mu}}}\right\|+{{\left\|{{\partial_{{u_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}{u_{\mu}}}\right)}\right\|}_{{L^{\infty}}}}\left\|{\nabla\cdot{u_{\mu}}}\right\|+{{\left\|{{\partial_{{\rho_{\mu}}}}\left({\frac{{1+{\rho_{\mu}}}}{{1+{\Theta_{\mu}}}}{u_{\mu}}}\right)}\right\|}_{{L^{\infty}}}}\left\|{\nabla{\rho_{\mu}}}\right\|}\right\}\\
+&+C\left\|{\nabla{\rho_{\mu}}}\right\|\left\|{{u_{\mu}}}\right\|{\left\|{{\Theta_{\mu}}}\right\|_{{L^{\infty}}}}+C\left\|{\nabla{\Theta_{\mu}}}\right\|\left\|{{u_{\mu}}}\right\|{\left\|{{\rho_{\mu}}}\right\|_{{L^{\infty}}}}+C{\left\|{1+{\rho_{\mu}}}\right\|_{{L^{\infty}}}}\left\|{{u_{\mu}}}\right\|\left\|B\right\|{\left\|{{u_{\mu}}}\right\|_{{L^{\infty}}}}\end{split}$ $\begin{split}\leqslant&C\left({\left\|{\nabla{u_{\mu}}}\right\|+\left\|{{u_{\mu}}}\right\|+\left\|{\nabla{\Theta_{\mu}}}\right\|+\left\|{\nabla{\rho_{\mu}}}\right\|}\right)\left({\left\|{{\rho_{\mu}}}\right\|{{\left\|{\nabla{\rho_{\mu}}}\right\|}_{1}}+\left\|{{\Theta_{\mu}}}\right\|{{\left\|{\nabla{\Theta_{\mu}}}\right\|}_{1}}}\right)\\
+&+C\left\|{\nabla{\rho_{\mu}}}\right\|\left\|{{u_{\mu}}}\right\|\left\|{\nabla{\Theta_{\mu}}}\right\|+\left\|{\nabla{\Theta_{\mu}}}\right\|\left\|{{u_{\mu}}}\right\|{\left\|{\nabla{\rho_{\mu}}}\right\|_{1}}+C\left\|{{u_{\mu}}}\right\|\left\|B\right\|{\left\|{\nabla{u_{\mu}}}\right\|_{1}}\\
+\leqslant&C\left\|{\left[{{\rho_{\mu}},{u_{\mu}},{\Theta_{\mu}},B}\right]}\right\|\left({\left\|{\nabla{\rho_{\mu}}}\right\|_{1}^{2}+\left\|{{u_{\mu}}}\right\|_{2}^{2}+\left\|{\nabla{\Theta_{\mu}}}\right\|_{1}^{2}}\right),\end{split}$ which will further be bounded by the right hand side term of
+( 2.16 ), and where we have used ( 2.14 ). When $|\alpha|\geq 1$ , similarly as before, one has ${I_{\alpha,\beta}}(t)+{I_{1}}(t)\leqslant C{\left\|{\left[{{\rho_{\mu}},{u_{\mu}},{\Theta_{\mu}},B}\right]}\right\|_{N}}\left({\left\|{\nabla{\rho_{\mu}}}\right\|_{N-1}^{2}+\left\|{\left[{{u_{\mu}},{\Theta_{\mu}}}\right]}\right\|_{N}^{2}}\right),$ which will also be bounded by the right hand side term of
+( 2.16 ). Besides, for $|\alpha|\leq s$ , standard energy estimates on $\partial^{\alpha}E$ and $\partial^{\alpha}B$ from ( 2.2 ) yield (2.18) $\begin{split}&\frac{1}{2}\frac{d}{{dt}}\left({{{\left\|{{\partial^{\alpha}}E}\right\|}^{2}}+{{\left\|{{\partial^{\alpha}}B}\right\|}^{2}}}\right)-\left\langle{\left({1+{\rho_{e}}}\right){\partial^{\alpha}}{u_{e}}-\left({1+{\rho_{i}}}\right){\partial^{\alpha}}{u_{i}},{\partial^{\alpha}}E}\right\rangle\\
+&=\left\langle{{\partial^{\alpha-\beta}}{\rho_{e}}{\partial^{\alpha}}{u_{e}}-{\partial^{\alpha-\beta}}{\rho_{i}}{\partial^{\alpha}}{u_{i}},{\partial^{\alpha}}E}\right\rangle\\
+&\leqslant C{\left\|E\right\|_{s}}\left({\left\|{{u_{\mu}}}\right\|_{s}^{2}+\left\|{\nabla{\rho_{\mu}}}\right\|_{s-1}^{2}}\right),\end{split}$ which will be bounded by the right hand side term of ( 2.16 ).
+Then, with the help of ( 2.14 ), the summation ( 2.17 ) and
+( 2.18 ) over $|\alpha|\leq s$ , one has ( 2.16 ). Step 2. It holds that (2.19) $\begin{split}\frac{d}{{dt}}&\sum\limits_{\left|\alpha\right|\leqslant s-1}{\sum\limits_{\mu=e,i}{\left\langle{{\partial^{\alpha}}{u_{\mu}},\nabla{\partial^{\alpha}}{\rho_{\mu}}}\right\rangle}}+\gamma\left({\left\|{\nabla\left[{{\rho_{e}},{\rho_{i}}}\right]}\right\|_{s-1}^{2}+{{\left\|{{\rho_{e}}-{\rho_{i}}}\right\|}^{2}}}\right)\\
+&\leqslant C{\left({\left\|{{u_{\mu}}}\right\|_{s}^{2}+\left\|{\left[{{\rho_{\mu}},{u_{\mu}},{\Theta_{\mu}},B}\right]}\right\|_{s}^{2}\left({\left\|{\nabla{\rho_{\mu}}}\right\|_{s-1}^{2}+\left\|{\left[{{u_{\mu}},{\Theta_{\mu}}}\right]}\right\|_{s}^{2}}\right)}\right)}.\end{split}$ In fact, we can rewrite the equations ( 2.2 ) as (2.20) $\left\{\begin{aligned} &\partial_{t}{\rho_{e}}+\nabla\cdot u_{e}=g_{1e},\\
+&\partial_{t}u_{e}+\nabla\rho_{e}+\nabla\Theta_{e}+u_{e}+E=g_{2e},\\
+&\partial_{t}{\Theta_{e}}+\nabla\cdot u_{e}+\Theta_{e}=g_{3e},\\
+&\partial_{t}{\rho_{i}}+\nabla\cdot u_{i}=g_{1i},\\
+&\partial_{t}u_{i}+\nabla\rho_{i}+\nabla\Theta_{i}+u_{i}-E=g_{2i},\\
+&\partial_{t}{\Theta_{i}}+\nabla\cdot u_{i}+\Theta_{i}=g_{3i},\\
+&\partial_{t}E-\nabla\times B-u_{e}+u_{i}=g_{4e}-g_{4i},\\
+&\partial_{t}B+\nabla\times E=0,\\
+&\nabla\cdot E=\rho_{i}-\rho_{e},\quad\nabla\cdot B=0,\quad(t,x)\in(0,\infty)\times\mathbb{R}^{3},\end{aligned}\right.$ where (2.21) $\left\{\begin{aligned} &g_{1e}=-\rho_{e}\nabla\cdot u_{e}-u_{e}\nabla\rho_{e},\\
+&g_{2e}=-(u_{e}\cdot\nabla)u_{e}-(\frac{\Theta_{e}+1}{1+\rho_{e}}-1)\nabla\rho_{e}-u_{e}\times B,\\
+&g_{3e}=-\Theta_{e}\nabla\cdot u_{e}-u_{e}\nabla\Theta_{e},\\
+&g_{4e}=\rho_{e}u_{e},\\
+&g_{1i}=-\rho_{i}\nabla\cdot u_{i}-u_{i}\nabla\rho_{i},\\
+&g_{2i}=-(u_{i}\cdot\nabla)u_{i}-(\frac{\Theta_{i}+1}{1+\rho_{i}}-1)\nabla\rho_{i}+u_{i}\times B,\\
+&g_{3i}=-\Theta_{i}\nabla\cdot u_{i}-u_{i}\nabla\Theta_{i},\\
+&g_{4i}=\rho_{i}u_{i}.\end{aligned}\right.$ Let $\left|\alpha\right|\leqslant s-1$ . Utilizing $\partial^{\alpha}$ to the second equation of ( 2.20 ),
+multiplying it by $\nabla\partial^{\alpha}\rho_{e}$ , integrating over $\mathbb{R}^{3}$ and using the last equation in ( 2.2 ), replacing $\partial_{t}{\rho_{e}}$ from the first equation of ( 2.20 )
+implies $\begin{gathered}\frac{d}{{dt}}\left\langle{{\partial^{\alpha}}{u_{e}},\nabla{\partial^{\alpha}}{\rho_{e}}}\right\rangle+{\left\|{\nabla{\partial^{\alpha}}{\rho_{e}}}\right\|^{2}}+{\left\|{{\partial^{\alpha}}{\rho_{e}}}\right\|^{2}}-\left\langle{{\partial^{\alpha}}{\rho_{i}},{\partial^{\alpha}}{\rho_{e}}}\right\rangle+\left\langle{\nabla{\partial^{\alpha}}{\Theta_{e}},\nabla{\partial^{\alpha}}{\rho_{e}}}\right\rangle\hfill\\
+={\left\|{{\partial^{\alpha}}\nabla\cdot{u_{e}}}\right\|^{2}}+\left\langle{{\partial^{\alpha}}\nabla{\rho_{e}},{\partial^{\alpha}}{g_{2e}}}\right\rangle-\left\langle{{\partial^{\alpha}}{u_{e}},\nabla{\partial^{\alpha}}{\rho_{e}}}\right\rangle-\left\langle{{\partial^{\alpha}}\nabla\cdot{u_{e}},{\partial^{\alpha}}{g_{1e}}}\right\rangle.\hfill\\
+\end{gathered}$ Similarly as before, from the fourth and fifth equations of
+( 2.20 ), we have $\begin{gathered}\frac{d}{{dt}}\left\langle{{\partial^{\alpha}}{u_{i}},\nabla{\partial^{\alpha}}{\rho_{i}}}\right\rangle+{\left\|{\nabla{\partial^{\alpha}}{\rho_{i}}}\right\|^{2}}+{\left\|{{\partial^{\alpha}}{\rho_{i}}}\right\|^{2}}-\left\langle{{\partial^{\alpha}}{\rho_{i}},{\partial^{\alpha}}{\rho_{e}}}\right\rangle+\left\langle{\nabla{\partial^{\alpha}}{\Theta_{i}},\nabla{\partial^{\alpha}}{\rho_{i}}}\right\rangle\hfill\\
+={\left\|{{\partial^{\alpha}}\nabla\cdot{u_{i}}}\right\|^{2}}+\left\langle{{\partial^{\alpha}}\nabla{\rho_{i}},{\partial^{\alpha}}{g_{2i}}}\right\rangle-\left\langle{{\partial^{\alpha}}{u_{i}},\nabla{\partial^{\alpha}}{\rho_{i}}}\right\rangle-\left\langle{{\partial^{\alpha}}\nabla\cdot{u_{i}},{\partial^{\alpha}}{g_{1i}}}\right\rangle.\hfill\\
+\end{gathered}$ Furthermore, the summation of the two equations above gives $\begin{split}\frac{d}{{dt}}&\left({\left\langle{{\partial^{\alpha}}{u_{e}},\nabla{\partial^{\alpha}}{\rho_{e}}}\right\rangle+\left\langle{{\partial^{\alpha}}{u_{i}},\nabla{\partial^{\alpha}}{\rho_{i}}}\right\rangle}\right)+{\left\|{\nabla{\partial^{\alpha}}{\rho_{e}}}\right\|^{2}}+{\left\|{\nabla{\partial^{\alpha}}{\rho_{i}}}\right\|^{2}}+{\left\|{{\partial^{\alpha}}\left({{\rho_{e}}-{\rho_{i}}}\right)}\right\|^{2}}\\
+&={\left\|{{\partial^{\alpha}}\nabla\cdot{u_{e}}}\right\|^{2}}+{\left\|{{\partial^{\alpha}}\nabla\cdot{u_{i}}}\right\|^{2}}-\left\langle{\nabla{\partial^{\alpha}}{\Theta_{i}},\nabla{\partial^{\alpha}}{\rho_{i}}}\right\rangle-\left\langle{\nabla{\partial^{\alpha}}{\Theta_{e}},\nabla{\partial^{\alpha}}{\rho_{e}}}\right\rangle\\
+&\quad+\left\langle{{\partial^{\alpha}}\nabla{\rho_{e}},{\partial^{\alpha}}{g_{2e}}}\right\rangle-\left\langle{{\partial^{\alpha}}{u_{e}},\nabla{\partial^{\alpha}}{\rho_{e}}}\right\rangle-\left\langle{{\partial^{\alpha}}\nabla\cdot{u_{e}},{\partial^{\alpha}}{g_{1e}}}\right\rangle\\
+&\quad+\left\langle{{\partial^{\alpha}}\nabla{\rho_{i}},{\partial^{\alpha}}{g_{2i}}}\right\rangle-\left\langle{{\partial^{\alpha}}{u_{i}},\nabla{\partial^{\alpha}}{\rho_{i}}}\right\rangle-\left\langle{{\partial^{\alpha}}\nabla\cdot{u_{i}},{\partial^{\alpha}}{g_{1i}}}\right\rangle.\end{split}$ Therefore, after using Cauchy-Schwarz inequality, one has (2.22) $\begin{split}\frac{d}{{dt}}&\left({\left\langle{{\partial^{\alpha}}{u_{e}},\nabla{\partial^{\alpha}}{\rho_{e}}}\right\rangle+\left\langle{{\partial^{\alpha}}{u_{i}},\nabla{\partial^{\alpha}}{\rho_{i}}}\right\rangle}\right)+\lambda\left({{{\left\|{\nabla{\partial^{\alpha}}{\rho_{e}}}\right\|}^{2}}+{{\left\|{\nabla{\partial^{\alpha}}{\rho_{i}}}\right\|}^{2}}+{{\left\|{{\partial^{\alpha}}\left({{\rho_{e}}-{\rho_{i}}}\right)}\right\|}^{2}}}\right)\\
+&\leqslant C{\left({{{\left\|{{\partial^{\alpha}}\nabla\cdot{u_{\mu}}}\right\|}^{2}}+{{\left\|{{\partial^{\alpha}}{u_{\mu}}}\right\|}^{2}}+{{\left\|{{\partial^{\alpha}}\nabla{\Theta_{\mu}}}\right\|}^{2}}+{{\left\|{{\partial^{\alpha}}{g_{1\mu}}}\right\|}^{2}}+{{\left\|{{\partial^{\alpha}}{g_{2\mu}}}\right\|}^{2}}}\right)}.\end{split}$ From the definition of $g_{j\mu}$ , $(j=1,2)$ , one can check that ${\left\|{{\partial^{\alpha}}{g_{1\mu}}}\right\|^{2}}+{\left\|{{\partial^{\alpha}}{g_{2\mu}}}\right\|^{2}}\leqslant C\left\|{\left[{{\rho_{\mu}},{u_{\mu}},{\Theta_{\mu}},B}\right]}\right\|_{s}^{2}\left({\left\|{\nabla{\rho_{\mu}}}\right\|_{s-1}^{2}+\left\|{{u_{\mu}}}\right\|_{s}^{2}+\left\|{{\Theta_{\mu}}}\right\|_{s}^{2}}\right),$ Putting this into ( 2.22 ), then, ( 2.19 ) follows by taking
+summation over $\left|\alpha\right|\leqslant s-1$ . Step 3. It holds that (2.23) $\begin{split}\frac{d}{{dt}}\sum\limits_{\left|\alpha\right|\leqslant s-1}{\left\langle{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right),{\partial^{\alpha}}E}\right\rangle}+\gamma\left\|E\right\|_{s-1}^{2}\leqslant&C\left\|{\left[{{u_{\mu}},{\Theta_{\mu}}}\right]}\right\|_{s}^{2}+C\|\nabla\rho_{\mu}\|_{s-1}^{2}+C\left\|{{u_{\mu}}}\right\|_{s}\\
+\cdot{{\left\|{\nabla B}\right\|}_{s-2}}&+C\left\|U\right\|_{s}^{2}\left({\left\|{\nabla{\rho_{\mu}}}\right\|_{s-1}^{2}+\left\|{\left[{{u_{\mu}},{\Theta_{\mu}}}\right]}\right\|_{s}^{2}}\right).\end{split}$ In fact, for $|\alpha|\leq s-1$ , from the second and fifth equation
+of ( 2.20 ), one has (2.24) $\begin{split}{\partial_{t}}\left({{u_{e}}-{u_{i}}}\right)+\nabla\left({{\rho_{e}}-{\rho_{i}}}\right)+\nabla\left({{\Theta_{e}}-{\Theta_{i}}}\right)+2E={g_{2e}}-{g_{2i}}-\left({{u_{e}}-{u_{i}}}\right).\end{split}$ Utilizing $\partial^{\alpha}$ to ( 2.24 ), multiplying it by $\partial^{\alpha}E$ , integrating over $\mathbb{R}^{3}$ and replacing $\partial_{t}E$ from the seventh equation of ( 2.2 ) implies $\begin{split}\frac{d}{{dt}}&\left\langle{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right),{\partial^{\alpha}}E}\right\rangle+{\left\|{{\partial^{\alpha}}\left({{\rho_{e}}-{\rho_{i}}}\right)}\right\|^{2}}+2{\left\|{{\partial^{\alpha}}E}\right\|^{2}}\\
+&=-\left\langle{{\partial^{\alpha}}\left({{\Theta_{e}}-{\Theta_{i}}}\right),{\partial^{\alpha}}\left({{\rho_{e}}-{\rho_{i}}}\right)}\right\rangle+\left\langle{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right),{\partial^{\alpha}}E}\right\rangle+\left\langle{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right),\nabla\times{\partial^{\alpha}}B}\right\rangle\\
+&\quad+{\left\|{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right)}\right\|^{2}}+\left\langle{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right),{\partial^{\alpha}}\left({{\rho_{e}}{u_{e}}-{\rho_{i}}{u_{i}}}\right)}\right\rangle+\left\langle{{\partial^{\alpha}}\left({{g_{2e}}-{g_{2i}}}\right),{\partial^{\alpha}}E}\right\rangle,\end{split}$ Therefore, after using Cauchy-Schwarz inequality, one has $\begin{split}\frac{d}{{dt}}&\left\langle{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right),{\partial^{\alpha}}E}\right\rangle+\gamma{\left\|{{\partial^{\alpha}}E}\right\|^{2}}\\
+\leq&C\left({{{\left\|{{\partial^{\alpha}}{{u_{\mu}}}}\right\|}^{2}}+{{\left\|{{\partial^{\alpha}}{{\Theta_{\mu}}}}\right\|}^{2}}}+{{\left\|{{\partial^{\alpha}}{{\nabla\rho_{\mu}}}}\right\|}^{2}}\right)+C{\left\|{\left[{{u_{e}},{u_{i}}}\right]}\right\|_{s}}{\left\|{\nabla B}\right\|_{s-2}}\\
+&+C\left\|{\left[{{\rho_{\mu}},{u_{\mu}},{\Theta_{\mu}},B}\right]}\right\|_{s}^{2}\left({\left\|{\nabla{\rho_{\mu}}}\right\|_{s-1}^{2}+\left\|{\left[{{u_{\mu}},{\Theta_{\mu}}}\right]}\right\|_{s}^{2}}\right).\end{split}$ Thus, with help of the summation of the previous estimate over $|\alpha|\leq s-1$ , one can obtain ( 2.23 ). Step 4. It holds that (2.25) $\begin{split}\frac{d}{{dt}}\sum\limits_{\left|\alpha\right|\leqslant s-2}{\left\langle{{\partial^{\alpha}}E,-\nabla\times{\partial^{\alpha}}B}\right\rangle+\gamma\left\|{\nabla B}\right\|_{s-2}^{2}}\leqslant C{(\left\|{\left[{{u_{\mu}},E}\right]}\right\|_{s-1}^{2}+}\left\|{\nabla{\rho_{\mu}}}\right\|_{s-1}^{2}\left\|{{u_{\mu}}}\right\|_{s}^{2}).\end{split}$ In fact, for $|\alpha|\leq s-2$ , applying $\partial^{\alpha}$ to the
+seventh equation of ( 2.2 ), multiplying it by $-\partial^{\alpha}\nabla\times B$ , integrating over $\mathbb{R}^{3}$ and then utilizing the eighth equation of ( 2.2 ) gives $\begin{split}\frac{d}{{dt}}&\sum\limits_{\left|\alpha\right|\leqslant s-2}{\left\langle{{\partial^{\alpha}}E,-\nabla\times{\partial^{\alpha}}B}\right\rangle+{{\left\|{\nabla\times{\partial^{\alpha}}B}\right\|}^{2}}}\\
+&={\left\|{\nabla\times{\partial^{\alpha}}E}\right\|^{2}}-\left\langle{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right),\nabla\times{\partial^{\alpha}}B}\right\rangle+\left\langle{{\partial^{\alpha}}\left({{\rho_{e}}{u_{e}}-{\rho_{i}}{u_{i}}}\right),-\nabla\times{\partial^{\alpha}}B}\right\rangle\end{split}$ Furthermore, with the help of Cauchy-Schwarz inequality and the
+summation over $|\alpha|\leq s-2$ , we yield ( 2.25 ). Where
+we have used $\left\|{\partial^{\alpha}\partial_{i}B}\right\|=\left\|{\partial_{i}\triangle^{-1}\nabla\times(\nabla\times\partial^{\alpha}B)}\right\|\leq C\left\|{\nabla\times\partial^{\alpha}B}\right\|$ for $1\leq i\leq 3$ , due to $\nabla\cdot B=0$ and the fact that $\partial_{i}\triangle^{-1}\nabla$ is bounded from $L^{p}$ to $L^{p}$ with $1<p<\infty$ , see [ 17 ] . Step 5. Now, based on the four previous steps, we will search
+( 2.15 ). We define the energy functional as $\begin{split}\mathcal{E}_{s}(U(t))=&\left\|U\right\|_{s}^{2}+\mathcal{K}_{1}\sum\limits_{\left|\alpha\right|\leqslant s-1}{\sum\limits_{\mu=e,i}{\left\langle{{\partial^{\alpha}}{u_{\mu}},\nabla{\partial^{\alpha}}{\rho_{\mu}}}\right\rangle}}\\
+&+\mathcal{K}_{2}\sum\limits_{\left|\alpha\right|\leqslant s-1}{\left\langle{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right),{\partial^{\alpha}}E}\right\rangle}+\mathcal{K}_{3}\sum\limits_{\left|\alpha\right|\leqslant s-2}{\left\langle{{\partial^{\alpha}}E,-\nabla\times{\partial^{\alpha}}B}\right\rangle},\end{split}$ for constants $0<\mathcal{K}_{3}\ll\mathcal{K}_{2}\ll\mathcal{K}_{1}\ll 1$ to be chosen later. Notice that as soon as $0<\mathcal{K}_{j}\ll 1$ (1≤j≤3) is sufficiently small, then $\mathcal{E}_{s}(U(t))\sim||U||^{2}_{s}$ holds true. Furthermore, the summation of
+( 2.16 ), ( 2.19 ) $\times\mathcal{K}_{1}$ ,
+( 2.23 ) $\times\mathcal{K}_{2}$ and ( 2.25 ) $\times\mathcal{K}_{3}$ implies that there is $0<\gamma<1$ such that $\begin{split}\frac{d}{dt}&\mathcal{E}_{s}(U(t))+\|[u_{e},u_{i},\Theta_{e},\Theta_{i}]\|_{s}^{2}+\gamma\mathcal{K}_{1}(\|\nabla[\rho_{e},\rho_{i}]\|_{s-1}^{2}+\|\rho_{e}-\rho_{i}\|^{2})\\
+&\quad+\gamma\mathcal{K}_{2}\|E\|_{s-1}^{2}+\gamma\mathcal{K}_{3}\left\|{\nabla B}\right\|_{s-2}^{2}\\
+&\leq C[\mathcal{E}_{s}(U(t))^{\frac{1}{2}}+\mathcal{E}_{s}(U(t))]\mathcal{D}_{s}(U(t))+C\mathcal{K}_{1}\|u_{\mu}\|_{s}^{2}+C\mathcal{K}_{2}\left(\|[u_{\mu},\Theta_{\mu}]\|_{s}^{2}+\|\nabla\rho_{\mu}\|_{s-1}^{2}\right)\\
+&\quad+C\mathcal{K}_{2}\|u_{\mu}\|_{s}\|\nabla B\|_{s-2}+C\mathcal{K}_{3}\left\|{[u_{\mu},E]}\right\|_{s-1}^{2}\\
+&\leq C[\mathcal{E}_{s}(U(t))^{\frac{1}{2}}+\mathcal{E}_{s}(U(t))]\mathcal{D}_{s}(U(t))+C\mathcal{K}_{1}\|u_{\mu}\|_{s}^{2}+C\mathcal{K}_{2}\left(\|[u_{\mu},\Theta_{\mu}]\|_{s}^{2}+\|\nabla\rho_{\mu}\|_{s-1}^{2}\right)\\
+&\quad+\frac{1}{2}C\left(\mathcal{K}_{2}^{\frac{1}{2}}\left\|{u_{\mu}}\right\|_{s}^{2}+\mathcal{K}_{2}^{\frac{3}{2}}\left\|{\nabla B}\right\|_{s-2}^{2}\right)+C\mathcal{K}_{3}\left\|{[u_{\mu},E]}\right\|_{s-1}^{2}.\end{split}$ By letting $0<\mathcal{K}_{3}\ll\mathcal{K}_{2}\ll\mathcal{K}_{1}\ll 1$ be
+sufficiently small with $\mathcal{K}_{2}^{\frac{3}{2}}\ll\mathcal{K}_{3}$ , we obtain ( 2.15 ). Now, we complete the proof of the
+Theorem 2.1 . $\Box$ 3. Linearized homogeneous equations In this section, for searching the time-decay property of solutions
+to the nonlinear equations ( 2.2 ) in the last section, we have
+to consider the decay properties of the linearized equations
+( 2.20 ). Let us introduce the transformation (3.1) $\rho_{1}=\frac{\rho_{e}-\rho_{i}}{2},~u_{1}=\frac{u_{e}-u_{i}}{2},~\Theta_{1}=\frac{\Theta_{e}-\Theta_{i}}{2}.$ Then, from system ( 2.2 ), $U_{1}=[\rho_{1},~u_{1},~\Theta_{1},~E,~B]$ satisfies (3.2) $\left\{\begin{split}&{\partial_{t}}{\rho_{1}}+\nabla\cdot{u_{1}}=\frac{1}{2}\left({{g_{1e}}-{g_{1i}}}\right),\\
+&{\partial_{t}}{u_{1}}+\nabla{\rho_{1}}+\nabla{\Theta_{1}}+E+{u_{1}}=\frac{1}{2}\left({{g_{2e}}-{g_{2i}}}\right),\\
+&{\partial_{t}}{\Theta_{1}}+\nabla\cdot{u_{1}}+{\Theta_{1}}=\frac{1}{2}\left({{g_{3e}}-{g_{3i}}}\right),\\
+&{\partial_{t}}E-\nabla\times B-2{u_{1}}={g_{4e}}-{g_{4i}},\\
+&{\partial_{t}}B+\nabla\times E=0,\\
+&\frac{1}{2}\nabla\cdot E=-{\rho_{1}},\nabla\cdot B=0,\quad(t,x)\in(0,\infty)\times\mathbb{R}^{3},\end{split}\right.$ with initial value ${U_{1}}{|_{t=0}}={U_{1,0}}:=\left[{{\rho_{1,0}},{u_{1,0}},{\Theta_{1,0}},{E_{0}},{B_{0}}}\right],x\in{\mathbb{R}^{3}}$ which satisfies the compatibility conditions $\displaystyle\frac{1}{2}\nabla\cdot E_{0}=-{\rho_{1,0}},\nabla\cdot B_{0}=0.$ Where, $\left[{{\rho_{1,0}},{u_{1,0}},{\Theta_{1,0}}}\right]$ is given from $\left[{{\rho_{\mu 0}},{u_{\mu 0}},{\Theta_{\mu 0}}}\right]$ from the
+transformation ( 3.1 ).
+Moreover, we introduce another transformation (3.3) $\rho_{2}=\frac{\rho_{e}+\rho_{i}}{2},~u_{2}=\frac{u_{e}+u_{i}}{2},~\Theta_{2}=\frac{\Theta_{e}+\Theta_{i}}{2}.$ Then $U_{2}=[\rho_{2},~u_{2},~\Theta_{2}]$ satisfies (3.4) $\left\{\begin{split}&{\partial_{t}}{\rho_{2}}+\nabla\cdot{u_{2}}=\frac{1}{2}\left({{g_{1e}}+{g_{1i}}}\right),\\
+&{\partial_{t}}{u_{2}}+\nabla{\rho_{2}}+\nabla{\Theta_{2}}+{u_{2}}=\frac{1}{2}\left({{g_{2e}}+{g_{2i}}}\right),\\
+&{\partial_{t}}{\Theta_{2}}+\nabla\cdot{u_{2}}+{\Theta_{2}}=\frac{1}{2}\left({{g_{3e}}+{g_{3i}}}\right),\quad(t,x)\in(0,\infty)\times\mathbb{R}^{3},\end{split}\right.$ with initial value ${U_{2}}{|_{t=0}}={U_{2,0}}:=\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right],x\in{\mathbb{R}^{3}}$ ,
+where $\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]$ is
+from the transformation ( 3.3 ).
+Therefore, one can define the solution $U_{1}=[\rho_{1},~u_{1},~\Theta_{1},~E,~B]$ and $U_{2}=[\rho_{2},~u_{2},~\Theta_{2}]$ , respectively, as follows (3.5) ${U_{1}}(t)={e^{tL_{1}}}{U_{1,0}}+\frac{1}{2}\int_{0}^{t}{{e^{\left({t-y}\right)L_{1}}}\left[{{g_{1e}}-{g_{1i}},{g_{2e}}-{g_{2i}},{g_{3e}}-{g_{3i}},2\left({{g_{4e}}-{g_{4i}}}\right)}\right](y)}dy,$ and (3.6) ${U_{2}}(t)={e^{tL_{2}}}{U_{2,0}}+\frac{1}{2}\int_{0}^{t}{{e^{\left({t-y}\right)L_{2}}}\left[{{g_{1e}}+{g_{1i}},{g_{2e}}+{g_{2i}},{g_{3e}}+{g_{3i}}}\right](y)}dy,$ where $e^{tL_{1}}U_{1,0}$ and $e^{tL_{2}}U_{2,0}$ , respectively, denote
+the solution of the following hohomogeneous initial value problems
+( 3.7 )-( 3.8 ) and ( 3.10 )-( 3.11 ), which will be
+given as follows: The linearized homogeneous equations corresponding to ( 3.2 ) is (3.7) $\left\{\begin{split}&{\partial_{t}}{\rho_{1}}+\nabla\cdot{u_{1}}=0,\\
+&{\partial_{t}}{u_{1}}+\nabla{\rho_{1}}+\nabla{\Theta_{1}}+E+{u_{1}}=0,\\
+&{\partial_{t}}{\Theta_{1}}+\nabla\cdot{u_{1}}+{\Theta_{1}}=0,\\
+&{\partial_{t}}E-\nabla\times B-2{u_{1}}=0,\\
+&{\partial_{t}}B+\nabla\times E=0,\\
+&\frac{1}{2}\nabla\cdot E=-{\rho_{1}},\nabla\cdot B=0,\quad(t,x)\in(0,\infty)\times\mathbb{R}^{3},\end{split}\right.$ with initial value (3.8) ${U_{1}}{|_{t=0}}={U_{1,0}}:=\left[{{\rho_{1,0}},{u_{1,0}},{\Theta_{1,0}},{E_{0}},{B_{0}}}\right],x\in{\mathbb{R}^{3}}$ which satisfies the compatible
+conditions (3.9) $\displaystyle\frac{1}{2}\nabla\cdot E_{0}=-{\rho_{1,0}},\nabla\cdot B_{0}=0.$ And the linearized homogeneous equations corresponding to
+( 3.7 ) is (3.10) $\left\{\begin{split}&{\partial_{t}}{\rho_{2}}+\nabla\cdot{u_{2}}=0,\\
+&{\partial_{t}}{u_{2}}+\nabla{\rho_{2}}+\nabla{\Theta_{2}}+{u_{2}}=0,\\
+&{\partial_{t}}{\Theta_{2}}+\nabla\cdot{u_{2}}+{\Theta_{2}}=0,\quad(t,x)\in(0,\infty)\times\mathbb{R}^{3},\end{split}\right.$ with initial value (3.11) ${U_{2}}{|_{t=0}}={U_{2,0}}:=\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right],x\in{\mathbb{R}^{3}}.$ Here $\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]$ is
+from the transform ( 3.6 ).
+In the sequel, we usually denote $U_{1}$ $=[\rho_{1}$ , $u_{1}$ , $\Theta_{1}$ , $E$ , $B]$ as the solution of the linearized homogeneous
+equations ( 3.7 ), and $U_{2}$ $=[\rho_{2}$ , $u_{2}$ , $\Theta_{2}]$ as
+the one of ( 3.10 ). Firstly, for the linearized homogeneous system
+( 3.7 )-( 3.8 ), similarly as [ 6 ] , we obtain the $L^{p}-L^{q}$ decay property as follows Proposition 3.1 . Assume $U_{1}(t)=e^{tL_{1}}U_{1,0}$ is the solution to the initial value
+problem ( 3.7 )-( 3.8 ) with ${U_{1,0}}$ $=[{\rho_{1,0}}$ , ${u_{1,0}}$ , ${\Theta_{1,0}}$ , ${E_{0}}$ , ${B_{0}}]$ which
+satisfies ( 3.8 ). Then, for any $t\geq 0$ , $U_{1}$ $=[\rho_{1}$ , $u_{1}$ , $\Theta_{1}$ , $E$ , $B]$ satisfies (3.12) $\left\{\begin{split}&\left\|[{\rho_{1}(t),~\Theta_{1}\left(t\right)}]\right\|\leqslant C{e^{-\frac{t}{2}}}\left\|{\left[{{\rho_{1,0}},{u_{1,0}},{\Theta_{1,0}}}\right]}\right\|,\\
+&\left\|{u_{1}\left(t\right)}\right\|\leqslant C{e^{-\frac{t}{2}}}\left\|{\left[{{\rho_{1,0}},{\Theta_{1,0}}}\right]}\right\|+C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{1,0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{2}}}},\\
+&\left\|{E\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{1,0}},{\Theta_{1,0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{3}}}},\\
+&\left\|{B\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{3}{4}}}{\left\|{\left[{{u_{1,0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{2}}}},\end{split}\right.$ (3.13) $\left\{\begin{split}&{\left\|[{\rho_{1}(t),~\Theta_{1}\left(t\right)}]\right\|_{{L^{\infty}}}}\leqslant C{e^{-\frac{t}{2}}}{\left\|{\left[{{\rho_{1,0}},{u_{1,0}},{\Theta_{1,0}}}\right]}\right\|_{{L^{2}}\cap{{\dot{H}}^{2}}}},\\
+&{\left\|{u_{1}\left(t\right)}\right\|_{{L^{\infty}}}}\leqslant C{e^{-\frac{t}{2}}}{\left\|{\left[{{\rho_{1,0}},{\Theta_{1,0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{2}}}}+C{\left({1+t}\right)^{-2}}{\left\|{\left[{{u_{1,0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{5}}}},\\
+&{\left\|{E\left(t\right)}\right\|_{{L^{\infty}}}}\leqslant C{\left({1+t}\right)^{-2}}{\left\|{\left[{{u_{1,0}},{\Theta_{1,0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{6}}}},\\
+&{\left\|{B\left(t\right)}\right\|_{{L^{\infty}}}}\leqslant C{\left({1+t}\right)^{-\frac{3}{2}}}{\left\|{\left[{{u_{1,0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{5}}}},\end{split}\right.$ and (3.14) $\left\{\begin{split}&\left\|{\nabla B\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{1,0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{4}}}},\\
+&\left\|{{\nabla^{s}}\left[{E\left(t\right),B\left(t\right)}\right]}\right\|\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{1,0}},\Theta_{1,0},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{2}}\cap{{\dot{H}}^{s+3}}}}.\end{split}\right.$ 3.1. Explicit solutions of ( 3.10 )-( 3.11 ) Firstly, let us search the explicit Fourier transform solution $U_{2}=[\rho_{2},~u_{2},~\Theta_{2}]$ of the initial value problem
+( 3.10 )-( 3.11 ). From the three equations of ( 3.10 ), one has (3.15) ${\partial_{ttt}}{\rho_{2}}+2{\partial_{tt}}{\rho_{2}}-2\Delta{\partial_{t}}{\rho_{2}}+{\partial_{t}}{\rho_{2}}-\Delta{\rho_{2}}=0,$ with initial value (3.16) $\left\{\begin{split}&{\rho_{2}}\left|{{}_{t=0}}\right.=\rho_{2,0},\\
+&{\partial_{t}}{\rho_{2}}\left|{{}_{t=0}}\right.=-\nabla\cdot{u_{2,0}},\\
+&{\partial_{tt}}{\rho_{2}}\left|{{}_{t=0}}\right.=\Delta{\rho_{2,0}}+\nabla\cdot{u_{2,0}}+\Delta{\Theta_{2,0}}.\end{split}\right.$ After taking the Fourier transform on ( 3.15 ) and ( 3.16 ),
+it follows that (3.17) ${\partial_{ttt}}{\hat{\rho}_{2}}+2{\partial_{tt}}{\hat{\rho}_{2}}+(1+2|k|^{2}){\partial_{t}}{\hat{\rho}_{2}}+|k|^{2}{\hat{\rho}_{2}}=0,$ with initial value (3.18) $\left\{\begin{split}&{\hat{\rho}_{2}}\left|{{}_{t=0}}\right.=\hat{\rho}_{2,0},\\
+&{\partial_{t}}{\hat{\rho}_{2}}\left|{{}_{t=0}}\right.=-i|k|\tilde{k}\cdot{\hat{u}_{2,0}},\\
+&{\partial_{tt}}{\hat{\rho}_{2}}\left|{{}_{t=0}}\right.=-|k|^{2}{\hat{\rho}_{2,0}}+i|k|\tilde{k}\cdot{\hat{u}_{2,0}}-|k|^{2}{\hat{\Theta}_{2,0}},\end{split}\right.$ in this paper, we set $\tilde{k}=\frac{k}{|k|}.$ The characteristic
+equation of ( 3.17 ) is $F(\mathcal{X}):=\mathcal{X}^{3}+2\mathcal{X}^{2}+\left(1+2|k|^{2}\right)\mathcal{X}+|k|^{2}=0.$ For the roots of the previous characteristic equation and their
+properties, we obtain Lemma 3.1 . Assume $|k|\neq 0.$ Then, $F(\mathcal{X})=0,$ $\mathcal{X}\in\mathbb{C}$ has a real root $\sigma=\sigma(|k|)\in(-\frac{1}{2},0)$ and two conjugate complex
+roots $\mathcal{X}_{\pm}=\beta\pm i\omega$ with $\beta=\beta(|k|)\in(-1,-\frac{3}{4})$ and $\omega=\omega(|k|)\in(0,+\infty)$ which satisfy the following
+properties: (3.19) $\beta=-1-\frac{\sigma}{2},~\omega=\frac{1}{2}\sqrt{3\sigma^{2}+4\sigma+8|k|^{2}}.$ $\sigma,\beta,\omega$ are smooth in $|k|>0$ , and $\sigma(|k|)$ is
+strictly decreasing over $|k|>0$ , with $\lim_{|k|\longrightarrow 0}\sigma(|k|)=0,~\lim_{|k|\longrightarrow\infty}\sigma(|k|)=-\frac{1}{2}.$ Furthermore, the asymptotic behavior as follows hold true: $\sigma(|k|)=-O(1)|k|^{2},~\beta(|k|)=-1+O(1)|k|^{2},~\omega(|k|)=O(1)|k|$ whenever $|k|\leq 1$ is sufficiently small, and $\sigma(|k|)=-\frac{1}{2}+O(1)|k|^{-2},~\beta(|k|)=-\frac{3}{4}-O(1)|k|^{-2},~\omega(|k|)=O(1)|k|$ whenever $|k|\geq 1$ is sufficiently large. Here and in the sequel $O(1)$ means strictly positive constant. Proof. Assume $|k|\neq 0.$ First of all, we look for
+the possibly existing real root for $F(\mathcal{X})=0$ over $\mathcal{X}\in\mathbb{R}$ . Since $F^{\prime}(\mathcal{X})=3\mathcal{X}^{2}+4\mathcal{X}+1+2|k|^{2}>0,$ and $F(-\frac{1}{2})=-\frac{1}{8}<0,~F(0)=|k|^{2}>0,$ then equation $F(\mathcal{X})=0$ really has one and only one real
+root defined as $\sigma=\sigma(|k|)$ which satisfies $-\frac{1}{2}<\sigma<0.$ After taking derivative of $F(\sigma(|k|))=0$ in $|k|$ , one has $\sigma^{\prime}(|k|)=\frac{-|k|\left(2+4\sigma\right)}{3\sigma^{2}+4\sigma+1+2|k|^{2}}<0,$ so that $\sigma(\cdot)$ is strictly decreasing in $|k|>0.$ Since $F(\sigma)=0$ can be re-written as $\sigma\left[\frac{\sigma(\sigma+2)}{1+2|k|^{2}}+1\right]=-\frac{|k|^{2}}{1+2|k|^{2}},$ then $\sigma$ has limits $0$ and $-\frac{1}{2}$ as $|k|\rightarrow 0$ and $|k|\rightarrow\infty$ , respectively. $F(\sigma(|k|))=0$ is also equivalent with $\sigma+\frac{1}{2}=\frac{\frac{1}{2}(\sigma+1)^{2}}{(\sigma+1)^{2}+2|k|^{2}}$ Therefore, it follows that $\sigma(|k|)=-O(1)|k|^{2}$ whenever $|k|<1$ is small enough and $\sigma(|k|)=-\frac{1}{2}+O(1)|k|^{-2}$ whenever $|k|\geq 1$ is large enough. Next, let us search roots of $F(\mathcal{X})=0$ on $\mathcal{X}\in\mathbb{C}$ . Since $F(\sigma)=0$ with $\sigma\in\mathbb{R}$ , $F(\mathcal{X})=0$ can
+be split up into $F(\mathcal{X})=(\mathcal{X}-\sigma)\left[\left(\mathcal{X}+1+\frac{\sigma}{2}\right)^{2}+\frac{3}{4}\sigma^{2}+\sigma+2|k|^{2}\right]=0.$ Therefore, there are two conjugate
+complex roots $\mathcal{X}_{\pm}=\beta\pm i\omega$ which satisfy $\left(\mathcal{X}+1+\frac{\sigma}{2}\right)^{2}+\frac{3}{4}\sigma^{2}+\sigma+2|k|^{2}=0.$ After solving the above equation, one can get that $\beta=\beta(|k|),~\omega=\omega(|k|)$ take the form of
+( 3.19 ). From the asymptotic behavior of $\sigma(|k|)$ at $|k|=0$ and $\infty$ , one can directly acquire that of $\beta(|k|),~\omega(|k|)$ . Now, we complete the proof of Lemma 3.1 . $\Box$ Based on Lemma 3.1 , one can define the solution of
+( 3.17 ) as (3.20) $\hat{\rho}_{2}(t,k)=c_{1}(k)e^{\sigma t}+e^{\beta t}\left(c_{2}(k)\cos\omega t+c_{3}(k)\sin\omega t\right),$ where $c_{i}(k),~1\leq i\leq 3,$ is to be ascertained by ( 3.18 )
+later.
+In fact,
+( 3.18 ) implies (3.21) $\left[{\begin{array}[]{*{20}{c}}{\hat{\rho}_{2}{|_{t=0}}}\\
+{{\partial_{t}}\hat{\rho}_{2}{|_{t=0}}}\\
+{{\partial_{tt}}\hat{\rho}_{2}{|_{t=0}}}\\
+\end{array}}\right]=A\left[{\begin{array}[]{*{20}{c}}{{c_{1}}}\\
+{{c_{2}}}\\
+{{c_{3}}}\\
+\end{array}}\right],\quad A=\left[{\begin{array}[]{*{20}{c}}1&1&0\\
+\sigma&\beta&\omega\\
+{{\sigma^{2}}}&{{\beta^{2}}-{\omega^{2}}}&{2\beta\omega}\\
+\end{array}}\right].$ It is directly to check that $\det A=\omega\left[{{\omega^{2}}+{{\left({\sigma-\beta}\right)}^{2}}}\right]=\omega\left({3{\sigma^{2}}+4\sigma+1+2{{\left|k\right|}^{2}}}\right)>0$ and ${A^{-1}}=\frac{1}{{\det A}}\left[{\begin{array}[]{*{20}{c}}{\left({{\beta^{2}}+{\omega^{2}}}\right)\omega}&{-2\beta\omega}&\omega\\
+{\sigma\left({\sigma-2\beta}\right)\omega}&{2\beta\omega}&{-\omega}\\
+{\sigma\left({{\beta^{2}}-{\omega^{2}}-\sigma\beta}\right)}&{{\omega^{2}}+{\sigma^{2}}-{\beta^{2}}}&{\beta-\sigma}\\
+\end{array}}\right].$ Notice that ( 3.21 ) together with ( 3.18 ) gives $\begin{split}[{c_{1}},~&{c_{2}},~{c_{3}}]^{T}=\frac{1}{{3{\sigma^{2}}+4\sigma+1+2{{\left|k\right|}^{2}}}}\\
+&\left[{\begin{array}[]{*{20}{c}}{{\beta^{2}}+{\omega^{2}}-{{{\left|k\right|}^{2}}}}&{i\left|k\right|\left({2\beta+1}\right)}&{-{{\left|k\right|}^{2}}}\\
+{{\sigma^{2}}-2\sigma\beta+{{{\left|k\right|}^{2}}}}&{-i\left|k\right|\left({2\beta+1}\right)}&{{{\left|k\right|}^{2}}}\\
+{\frac{{\sigma\left({{\beta^{2}}-{\omega^{2}}-\sigma\beta}\right)-\left({\beta-\sigma}\right){{{\left|k\right|}^{2}}}}}{\omega}}&{\frac{{i\left|k\right|}}{\omega}\left({{\beta^{2}}-{\sigma^{2}}-{\omega^{2}}+\beta-\sigma}\right)}&{\frac{{\sigma-\beta}}{\omega}{{\left|k\right|}^{2}}}\\
+\end{array}}\right]\left[{\begin{array}[]{*{20}{c}}{{{\hat{\rho}}_{2,0}}}\\
+{\tilde{k}\cdot{{\hat{u}}_{2,0}}}\\
+{{{\hat{\Theta}}_{2,0}}}\\
+\end{array}}\right].\end{split}$ Here, we utilize $[\cdot]^{T}$ to denote the transpose of any vector.
+Substituting the form of $\beta$ and $\omega$ , and making further
+simplifications, we obtain (3.22) $\begin{split}[&{c_{1}},~{c_{2}},~{c_{3}}]^{T}=\frac{1}{{3{\sigma^{2}}+4\sigma+1+2{{\left|k\right|}^{2}}}}\\
+&\left[{\begin{array}[]{*{20}{c}}{{{\left({\sigma+1}\right)}^{2}}+{{\left|k\right|}^{2}}}&{-i\left|k\right|\left({\sigma+1}\right)}&{-{{\left|k\right|}^{2}}}\\
+{2(\sigma+1)+{{\left|k\right|}^{2}}}&{i\left|k\right|\left({\sigma+1}\right)}&{{{\left|k\right|}^{2}}}\\
+{\frac{{{\sigma(\sigma+1)}+(1-\frac{1}{2}\sigma){{\left|k\right|}^{2}}}}{\omega}}&{\frac{{i\left|k\right|}}{\omega}\left({\frac{3}{2}{\sigma^{2}}+\frac{3}{2}\sigma+2{{\left|k\right|}^{2}}}\right)}&{\frac{{1+\frac{3}{2}\sigma}}{\omega}{{\left|k\right|}^{2}}}\\
+\end{array}}\right]\left[{\begin{array}[]{*{20}{c}}{{{\hat{\rho}}_{2,0}}}\\
+{\tilde{k}\cdot{{\hat{u}}_{2,0}}}\\
+{{{\hat{\Theta}}_{2,0}}}\\
+\end{array}}\right].\end{split}$ Similarly, from the three equations of ( 3.10 ), one has (3.23) $\partial_{ttt}\hat{\Theta}_{2}+2\partial_{tt}\hat{\Theta}_{2}+\left(1+2|k|^{2}\right)\partial_{t}\hat{\Theta}_{2}+|k|^{2}\hat{\Theta}_{2}=0,$ with initial value (3.24) $\left\{\begin{split}&\hat{\Theta}_{2}|_{t=0}=\hat{\Theta}_{2,0},\\
+&\partial_{t}\hat{\Theta}_{2}|_{t=0}=-i|k|\tilde{k}\cdot\hat{u}_{2,0}-\hat{\Theta}_{2,0},\\
+&\partial_{tt}\hat{\Theta}_{2}|_{t=0}=-|k|^{2}\hat{\rho}_{2,0}+2i|k|\tilde{k}\cdot\hat{u}_{2,0}+\left(1-|k|^{2}\right)\hat{\Theta}_{2,0}.\end{split}\right.$ Based on Lemma 3.1 , one can also set
+the solution of ( 3.23 ) as (3.25) $\hat{\Theta}_{2}(t,k)=c_{4}(k)e^{\sigma t}+e^{\beta t}\left(c_{5}(k)\cos\omega t+c_{6}(k)\sin\omega t\right),$ where $c_{i}(k),~4\leq i\leq 6,$ is to be ascertained by ( 3.24 )
+later. In fact, after tenuous computation, ( 3.24 ) implies (3.26) $\begin{split}[&{c_{4}},~{c_{5}},~{c_{6}}]^{T}=\frac{1}{{3{\sigma^{2}}+4\sigma+1+2{{\left|k\right|}^{2}}}}\\
+&\left[{\begin{array}[]{*{20}{c}}{-{{\left|k\right|}^{2}}}&{-i\left|k\right|\left({1+\sigma}\right)}&{(1+\sigma)\sigma+{{\left|k\right|}^{2}}}\\
+{{{\left|k\right|}^{2}}}&{i\left|k\right|\left({1+\sigma}\right)}&{(1+2\sigma)(1+\sigma)+{{\left|k\right|}^{2}}}\\
+{\frac{\frac{3}{2}\sigma+1}{\omega}|k|^{2}}&{\frac{-i|k|}{\omega}(\frac{3}{2}\sigma(\sigma+2)+1+2|k|^{2})}&{-\frac{|k|^{2}+\frac{1}{2}\sigma(|k|^{2}+1+\sigma)}{\omega}}\\
+\end{array}}\right]\left[{\begin{array}[]{*{20}{c}}{{{\hat{\rho}}_{2,0}}}\\
+{\tilde{k}\cdot{{\hat{u}}_{2,0}}}\\
+{{{\hat{\Theta}}_{2,0}}}\\
+\end{array}}\right].\end{split}$ Similarly, again from the three equations of ( 3.10 ), we also
+have (3.27) ${\partial_{ttt}}({\tilde{k}\cdot\hat{u}_{2}})+2{\partial_{tt}}(\tilde{k}\cdot\hat{u}_{2})+(1+2|k|^{2})\partial_{t}({\tilde{k}\cdot\hat{u}_{2}})+|k|^{2}({\tilde{k}\cdot\hat{u}_{2}})=0,$ with initial value (3.28) $\left\{\begin{split}&{\tilde{k}\cdot\hat{u}_{2}}|_{t=0}={\tilde{k}\cdot\hat{u}}_{2,0},\\
+&\partial_{t}{(\tilde{k}\cdot\hat{u}_{2})}|_{t=0}=-i|k|{\hat{\rho}_{2,0}}-\tilde{k}\cdot{\hat{u}_{2,0}}-i\left|k\right|{\hat{\Theta}_{2,0}},\\
+&\partial_{tt}{(\tilde{k}\cdot\hat{u}_{2})}|_{t=0}=i|k|{\hat{\rho}_{2,0}}+(1-2{\left|k\right|^{2}})\tilde{k}\cdot{\hat{u}_{2,0}}+2i\left|k\right|{\hat{\Theta}_{2,0}}.\end{split}\right.$ From Lemma 3.1 , one can also check that the
+solution of ( 3.27 ) has the form (3.29) $\tilde{k}\cdot\hat{u}_{2}(t,k)=c_{7}(k)e^{\sigma t}+e^{\beta t}\left(c_{8}(k)\cos\omega t+c_{9}(k)\sin\omega t\right),$ with (3.30) $\begin{split}[&{c_{7}},~{c_{8}},~{c_{9}}]^{T}=\frac{1}{{3{\sigma^{2}}+4\sigma+1+2{{\left|k\right|}^{2}}}}\\
+&\left[{\begin{array}[]{*{20}{c}}{-i\left|k\right|\left({1+\sigma}\right)}&{\sigma\left({1+\sigma}\right)}&{-i\left|k\right|\sigma}\\
+{i\left|k\right|\left({1+\sigma}\right)}&{\left({1+\sigma}\right)\left({1+2\sigma}\right)+2|k|^{2}}&{i\left|k\right|\sigma}\\
+{\frac{-i|k|}{\omega}(\frac{3}{2}\sigma(\sigma+1)-2|k|^{2})}&{\frac{-\sigma\left({1+\sigma}-2|k|^{2}\right)}{2\omega}}&{\frac{i|k|}{\omega}(-\frac{3}{2}\sigma(\sigma+2)+2|k|^{2}-1)}\\
+\end{array}}\right]\left[{\begin{array}[]{*{20}{c}}{{{\hat{\rho}}_{2,0}}}\\
+{\tilde{k}\cdot{{\hat{u}}_{2,0}}}\\
+{{{\hat{\Theta}}_{2,0}}}\\
+\end{array}}\right].\end{split}$ Furthermore, after taking the curl for the second equation of
+( 3.10 ) and making the Fourier transform in $x$ , we have (3.31) $\partial_{t}\left(\tilde{k}\times(\tilde{k}\times\hat{u}_{2})\right)+\tilde{k}\times(\tilde{k}\times\hat{u}_{2})=0,$ with initial value (3.32) $\tilde{k}\times(\tilde{k}\times\hat{u}_{2})\left|{}_{t=0}\right.=\tilde{k}\times(\tilde{k}\times\hat{u}_{2,0}).$ After solving ( 3.31 )-( 3.32 ), we have (3.33) $\tilde{k}\times(\tilde{k}\times\hat{u}_{2})=e^{-t}\left(\tilde{k}\times(\tilde{k}\times\hat{u}_{2,0})\right).$ Now, we can obtain the explicit Fourier transform solution $U_{2}=[\rho_{2},~u_{2},~\Theta_{2}]$ as follows
+from the above computations. Theorem 3.1 . Assume $U_{2}=[\rho_{2},~u_{2},~\Theta_{2}]$ be the solution of the initial
+value problem ( 3.10 )-( 3.11 ) on the linearized
+homogeneous equations. For $(t,k)\in(0,\infty)\times\mathbb{R}^{3}$ with $|k|\neq 0$ , we obtain (3.34) $\left[{\begin{array}[]{*{20}c}{\hat{\rho}_{2}(t,k)}\\
+{\hat{u}_{2}(t,k)}\\
+{\hat{\Theta}_{2}(t,k)}\\
+\end{array}}\right]=\left[{\begin{array}[]{*{20}c}{\hat{\rho}_{2}(t,k)}\\
+{\hat{u}_{2||}(t,k)}\\
+{\hat{\Theta}_{2}(t,k)}\\
+\end{array}}\right]+\left[{\begin{array}[]{*{20}c}0\\
+{\hat{u}_{2\bot}(t,k)}\\
+0\\
+\end{array}}\right].$ Here $\hat{u}_{2||},\hat{u}_{2\bot}$ are defined by $\hat{u}_{2||}=\tilde{k}\tilde{k}\cdot\hat{u}_{2},\ ~\hat{u}_{2\bot}=-\tilde{k}\times(\tilde{k}\times\hat{u}_{2})=(I_{3}-\tilde{k}\otimes\tilde{k})\hat{u}_{2}.$ Then, there exit matrices $G^{I}_{5\times 5}(t,k)$ and $G^{II}_{3\times 3}(t,k)$ such that (3.35) $\left[{\begin{array}[]{*{20}c}{\hat{\rho_{2}}(t,k)}\\
+{\hat{u}_{2||}(t,k)}\\
+{\hat{\Theta}_{2}(t,k)}\\
+\end{array}}\right]=G_{5\times 5}^{I}(t,k)\left[{\begin{array}[]{*{20}c}{\hat{\rho}_{2,0}(k)}\\
+{\hat{u}_{2||,0}(k)}\\
+{\hat{\Theta}_{2,0}(k)}\\
+\end{array}}\right]$ and (3.36) ${\begin{array}[]{*{20}c}{\hat{u}_{2\bot}(t,k)}\\
+\end{array}}=G_{3\times 3}^{II}(t,k){\begin{array}[]{*{20}c}{\hat{u}_{2\bot,0}(k)}\\
+\end{array}},$ where $G_{5\times 5}^{I}$ is explicitly ascertained by
+representations ( 3.20 ), ( 3.29 ), ( 3.25 ) for $\hat{\rho}_{2}(t,k)$ , $\hat{u}_{2||}(t,k)$ , $\hat{\Theta}_{2}(t,k)$ with $c_{i}(k)$ , $(1\leq i\leq 9)$ are defined as ( 3.22 ),
+( 3.30 ), ( 3.26 ) in terms of $\hat{\rho}_{2,0}(k)$ , $\hat{u}_{2||,0}(k)$ , $\hat{\Theta}_{2,0}(k)$ ; and $G_{3\times 3}^{II}$ is chosen by the representations ( 3.33 ) for $\hat{u}_{2\bot}(t,k)$ in terms of $\hat{u}_{2\bot,0}(k)$ . 3.2. $L^{p}-L^{q}$ decay
+property. In this subsection, we use Theorem 3.1 to obtain $L^{p}-L^{q}$ decay property for every component of the solution $U_{2}$ $=[\rho_{2}$ , $u_{2}$ , $\Theta_{2}]$ . For this aim, we first search the
+rigorous time-frequency estimates on $\hat{U}_{2}$ $=[\hat{\rho}_{2}$ , $\hat{u}_{2}$ , $\hat{\Theta}_{2}]$ as follws Lemma 3.2 . Assume $U_{2}=[\rho_{2},~u_{2},~\Theta_{2}]$ be the solution to the initial
+value problem ( 3.10 )-( 3.11 ) on the linearized
+homogeneous equations. Then, there are constants $\gamma>0,C>0$ such
+that for all $(t,k)\in(0,\infty)\times\mathbb{R}^{3}$ , (3.37) $\begin{split}\left|\hat{\rho}_{2}(t,k)\right|\leqslant C\left|{\left[{{{\hat{\rho}}_{2,0}}(t,k),{{\hat{u}}_{2,0}}(t,k),{{\hat{\Theta}}_{2,0}}(t,k)}\right]}\right|\cdot\left\{{\begin{array}[]{*{20}{c}}{{e^{-\gamma t}}+{e^{-\gamma{{\left|k\right|}^{2}}t}}}&{if~\left|k\right|\leqslant 1,}\\
+{{e^{-\gamma t}}+{e^{\frac{{-\gamma}}{{{{\left|k\right|}^{2}}}}t}}}&{if~\left|k\right|>1,}\\
+\end{array}}\right.\end{split}$ (3.38) $\begin{split}\left|{\hat{u}_{2}(t,k)}\right|\leqslant C\left|{\left[{{{\hat{\rho}}_{2,0}}(k),{{\hat{u}}_{2,0}}(k),{{\hat{\Theta}}_{2,0}}(k)}\right]}\right|\cdot\left\{{\begin{array}[]{*{20}{c}}{{e^{-\gamma t}}+\left|k\right|{e^{-\gamma{{\left|k\right|}^{2}}t}}}&{if~\left|k\right|\leqslant 1,}\\
+{{|k|^{-1}e^{-\gamma t}}+{e^{\frac{{-\gamma}}{{{{\left|k\right|}^{2}}}}t}}}&{if~\left|k\right|>1,}\\
+\end{array}}\right.\end{split}$ and (3.39) $\begin{split}\left|\hat{\Theta}_{2}(t,k)\right|\leqslant C\left|{\left[{{{\hat{\rho}}_{2,0}}(t,k),{{\hat{u}}_{2,0}}(t,k),{{\hat{\Theta}}_{2,0}}(t,k)}\right]}\right|\cdot\left\{{\begin{array}[]{*{20}{c}}{{e^{-\gamma t}}+{e^{-\gamma{{\left|k\right|}^{2}}t}}}&{if~\left|k\right|\leqslant 1,}\\
+{{e^{-\gamma t}}+{e^{\frac{{-\gamma}}{{{{\left|k\right|}^{2}}}}t}}}&{if~\left|k\right|>1,}\\
+\end{array}}\right.\end{split}$ Proof. Firstly, let us look for the upper bound
+of $\hat{\rho}_{2}$ defined as ( 3.37 ).
+In fact, from Lemma 3.1 , it is directly to check
+( 3.22 ) to get $\left[{\begin{array}[]{*{20}{c}}{{c_{1}}}\\
+{{c_{2}}}\\
+{{c_{3}}}\\
+\end{array}}\right]=\left[{\begin{array}[]{*{20}{c}}{O(1){}}&{-O(1){{\left|k\right|}}i}&{-O(1){{\left|k\right|}^{2}}}\\
+{O(1)}&{O(1){{\left|k\right|}}i}&{O(1){{\left|k\right|}^{2}}}\\
+{O(1)\left|k\right|}&{-O(1)\left|k\right|^{2}i}&{O(1){{\left|k\right|}}}\\
+\end{array}}\right]\left[{\begin{array}[]{*{20}{c}}{{{\hat{\rho}}_{2,0}}}\\
+{\tilde{k}\cdot{{\hat{u}}_{2,0}}}\\
+{{{\hat{\Theta}}_{2,0}}}\\
+\end{array}}\right]$ as $|k|\rightarrow 0$ , and $\left[{\begin{array}[]{*{20}{c}}{{c_{1}}}\\
+{{c_{2}}}\\
+{{c_{3}}}\\
+\end{array}}\right]=\left[{\begin{array}[]{*{20}{c}}{O(1)}&{-O(1){{\left|k\right|}^{-1}}i}&{-O(1)}\\
+{O(1)}&{O(1){{\left|k\right|}^{-1}}i}&{O(1)}\\
+{O(1){{\left|k\right|}^{-1}}}&{-O(1)i}&{O(1){{\left|k\right|}^{-1}}}\\
+\end{array}}\right]\left[{\begin{array}[]{*{20}{c}}{{{\hat{\rho}}_{2,0}}}\\
+{\tilde{k}\cdot{{\hat{u}}_{2,0}}}\\
+{{{\hat{\Theta}}_{2,0}}}\\
+\end{array}}\right]$ as $|k|\rightarrow\infty$ . Therefore, after putting the previous computations into
+( 3.20 ), it holds that $\begin{split}\hat{\rho}_{2}(t,k)=&\left({O(1){{}}{{\hat{\rho}}_{2,0}}-O(1){{\left|k\right|}}i\tilde{k}\cdot{{\hat{u}}_{2,0}}-O(1){{\left|k\right|}^{2}}{{\hat{\Theta}}_{2,0}}}\right){e^{\sigma t}}\\
+&+\left({O(1){{\hat{\rho}}_{2,0}}+O(1){{\left|k\right|}}i\tilde{k}\cdot{{\hat{u}}_{2,0}}+O(1){{\left|k\right|}^{2}}{{\hat{\Theta}}_{2,0}}}\right){e^{\beta t}}\cos\omega t\\
+&+\left({O(1)|k|{{\hat{\rho}}_{2,0}}-O(1)\left|k\right|^{2}i\tilde{k}\cdot{{\hat{u}}_{2,0}}+O(1){{\left|k\right|}}{{\hat{\Theta}}_{2,0}}}\right){e^{\beta t}}\sin\omega t,\\
+\end{split}$ as $|k|\rightarrow 0$ , and $\begin{split}\hat{\rho}_{2}(t,k)=&\left({O(1){{\hat{\rho}}_{2,0}}-O(1){{\left|k\right|}^{-1}}i\tilde{k}\cdot{{\hat{u}}_{2,0}}-O(1){{\hat{\Theta}}_{2,0}}}\right){e^{\sigma t}}\\
+&+\left({O(1){{\hat{\rho}}_{2,0}}+O(1){{\left|k\right|}^{-1}}i\tilde{k}\cdot{{\hat{u}}_{2,0}}+O(1){{\hat{\Theta}}_{2,0}}}\right){e^{\beta t}}\cos\omega t\\
+&+\left({O(1){{\left|k\right|}^{-1}}{{\hat{\rho}}_{2,0}}-O(1)i\tilde{k}\cdot{{\hat{u}}_{2,0}}+O(1){{\left|k\right|}^{-1}}{{\hat{\Theta}}_{2,0}}}\right){e^{\beta t}}\sin\omega t,\\
+\end{split}$ as $|k|\rightarrow\infty$ . Based on Lemma 3.1 , we find that there is $\gamma>0$ such
+that $\left\{\begin{split}&{\sigma(k)\leqslant-\gamma{{\left|k\right|}^{2}},}\quad{\beta(k)=-1-\frac{\sigma}{2}\leqslant-\gamma}\quad{{over}\left|k\right|\leqslant 1,}\\
+&{\sigma(k)\leqslant-\gamma,}\quad{\beta(k)=-1-\frac{\sigma}{2}\leqslant-\frac{\gamma}{{{{\left|k\right|}^{2}}}}}\quad{{over}\left|k\right|\geqslant 1.}\end{split}\right.$ Thus, one can obtain, for $|k|\leq 1$ $\left|{{{\hat{\rho}}_{2}}\left({t,k}\right)}\right|\leqslant C\left({{e^{-\gamma t}}+{e^{-\gamma{{\left|k\right|}^{2}}t}}}\right)\left|{\left[{{{\hat{\rho}}_{2,0}},\tilde{k}\cdot{{\hat{u}}_{2,0}},{{\hat{\Theta}}_{2,0}}}\right]}\right|,$ and for $|k|\geq 1$ $\left|{{{\hat{\rho}}_{2}}\left({t,k}\right)}\right|\leqslant C\left({{e^{-\gamma t}}+{e^{-\frac{\gamma}{{\left|k\right|}^{2}}{}t}}}\right)\left|{\left[{{{\hat{\rho}}_{2,0}},\tilde{k}\cdot{{\hat{u}}_{2,0}},{{\hat{\Theta}}_{2,0}}}\right]}\right|.$ Furthermore, one has $\left|{{{\hat{\rho}}_{2}}\left({t,k}\right)}\right|\leqslant C\left|{\left[{{{\hat{\rho}}_{2,0}},{{\hat{u}}_{2,0}},{{\hat{\Theta}}_{2,0}}}\right]}\right|\cdot\left\{\begin{split}\left({{e^{-\gamma t}}+{e^{-\gamma{{\left|k\right|}^{2}}t}}}\right)&\quad{if}\quad|k|\leq 1,\\
+\left({{e^{-\gamma t}}+{e^{-\frac{\gamma}{{\left|k\right|}^{2}}{}t}}}\right)&\quad{if}\quad|k|\geq 1.\end{split}\right.$ Similarly, we obtain ( 3.38 ) and ( 3.39 ). Now, we complete
+the proof of Lemma 3.2 . $\Box$ From Lemma 3.2 , it is straightforward to acquire the decay
+property for every component of the solution $U_{2}$ $=[\rho_{2}$ , $u_{2}$ , $\Theta_{2}]$ . So that we omitted the details of proof for
+briefness. See for instance [ 6 ] . Theorem 3.2 . Assume $1\leq p,r\leq 2\leq q\leq\infty,l\geq 0$ and an integer $m\geq 0$ . Suppose $U_{2}(t)$ $=e^{tL_{2}}U_{2,0}$ be the solution of the initial value
+problem ( 3.10 )-( 3.11 ). Then, for any $t\geq 0$ , $U_{2}$ $=[\rho_{2}$ , $u_{2}$ , $\Theta_{2}]$ satisfies decay property as follows (3.40) $\begin{split}{\left\|{{\nabla^{m}}{\rho_{2}}\left(t\right)}\right\|_{L^{q}}}\leqslant&C{\left({1+t}\right)^{-\frac{3}{2}\left({\frac{1}{p}-\frac{1}{q}}\right)-\frac{m}{2}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{p}}}}\\
+&+C{\left({1+t}\right)^{-\frac{l}{2}}}{\left\|{{\nabla^{m+{{\left[{l+3\left({\frac{1}{r}-\frac{1}{q}}\right)}\right]}_{+}}}}\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{r}}}},\end{split}$ (3.41) $\begin{split}{\left\|{{\nabla^{m}}u_{2}\left(t\right)}\right\|_{{L^{q}}}}\leqslant&C{\left({1+t}\right)^{-\frac{3}{2}\left({\frac{1}{p}-\frac{1}{q}}\right)-\frac{{m+1}}{2}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{p}}}}\\
+&+C{\left({1+t}\right)^{-\frac{{l}}{2}}}{\left\|{{\nabla^{m+{{\left[{l+3\left({\frac{1}{r}-\frac{1}{q}}\right)}\right]}_{+}}}}\left[{\rho_{2,0},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{r}}}},\\
+\end{split}$ and (3.42) $\begin{split}{\left\|{{\nabla^{m}}{\Theta_{2}}\left(t\right)}\right\|_{L^{q}}}\leqslant&C{\left({1+t}\right)^{-\frac{3}{2}\left({\frac{1}{p}-\frac{1}{q}}\right)-\frac{m}{2}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{p}}}}\\
+&+C{\left({1+t}\right)^{-\frac{l}{2}}}{\left\|{{\nabla^{m+{{\left[{l+3\left({\frac{1}{r}-\frac{1}{q}}\right)}\right]}_{+}}}}\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{r}}}},\end{split}$ where ${[l+3(\frac{1}{r}-\frac{1}{q})]_{+}}=\left\{{\begin{array}[]{*{20}{c}}l&{\mbox{if}~~r=q=2\ \mbox{ and }{\rm{}}l{\mbox{ is an integer,}}}\\
+{{{[l+3(\frac{1}{r}-\frac{1}{q})]}_{-}}+1}&\mbox{otherwise,}\\
+\end{array}}\right.$ where, we use $[\cdot]_{-}$ to denote the integer part of the
+argument. From Theorem 3.2 , let us list some particular cases as
+follows for later use. Corollary 3.1 . Let $U_{2}(t)=e^{tL_{2}}U_{2,0}$ be the solution of the initial value
+problem ( 3.10 )-( 3.11 ). Then, for any $t\geq 0$ , $U_{2}$ $=[\rho_{2}$ , $u_{2}$ , $\Theta_{2}]$ satisfies (3.43) $\left\{\begin{split}&\left\|{{\rho_{2}}\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{3}{4}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{2}}}},\\
+&\left\|{{u_{2}}\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{3}}}},\\
+&\left\|{{\Theta_{2}}\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{3}{4}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{2}}}},\end{split}\right.$ (3.44) $\left\{\begin{split}&\left\|{\nabla{\rho_{2}}\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{4}}}},\\
+&\left\|{\nabla{u_{2}}\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{7}{4}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{5}}}},\\
+&\left\|{\nabla{\Theta_{2}}\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{4}}}}\end{split}\right.$ and (3.45) $\left\{\begin{split}&\left\|{{\rho_{2}}\left(t\right)}\right\|_{L^{\infty}}\leqslant C{\left({1+t}\right)^{-\frac{3}{2}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{5}}}},\\
+&\left\|{{u_{2}}\left(t\right)}\right\|_{L^{\infty}}\leqslant C{\left({1+t}\right)^{-2}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{6}}}},\\
+&\left\|{{\Theta_{2}}\left(t\right)}\right\|_{L^{\infty}}\leqslant C{\left({1+t}\right)^{-\frac{3}{2}}}{\left\|{\left[{{\rho_{2,0}},{u_{2,0}},{\Theta_{2,0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{5}}}}.\end{split}\right.$ 4. Decay rates for system ( 2.2 ) 4.1. Decay rates for the energy functional. In
+this subsection, we will prove the decay rate ( 2.12 ) in
+Proposition 2.2 for the energy $\left\|{U(t)}\right\|^{2}_{s}$ . We begin with the Lemma as follows
+which can be seen directly from the proof of Theorem 2.1 . Lemma 4.1 . Assume that $U=[\rho_{\mu},~u_{\mu},~\Theta_{\mu},~E,~B]$ is the solution of the
+initial value
+problem ( 2.2 )-( 2.3 ) with $U_{0}$ $=[\rho_{\mu 0}$ , $u_{\mu 0}$ , $\Theta_{\mu 0}$ , $E_{0},~B_{0}]$ which satisfies ( 2.4 ). If $\mathcal{E}_{s}(U_{0})$ is small enough, then, for any $t\geq 0$ (4.1) $\frac{d}{dt}\mathcal{E}_{s}(U(t))+\lambda\mathcal{D}_{s}(U(t))\leq 0.$ From Lemma 4.1 , we can check that $\begin{split}(1+t)^{l}\mathcal{E}_{s}(U(t))+&\gamma\int_{0}^{t}(1+y)^{l}\mathcal{D}_{s}(U(y))dy\\
+&\leq\mathcal{E}_{s}(U_{0})+l\int_{0}^{t}(1+y)^{l-1}\mathcal{E}_{s}(U(y))dy\\
+&\leq\mathcal{E}_{s}(U_{0})+Cl\int_{0}^{t}(1+y)^{l-1}\left(\left\|{B(y)}\right\|^{2}+\left\|{(\rho_{e}+\rho_{i})(y)}\right\|^{2}+\mathcal{D}_{s+1}(U(y))\right)dy,\end{split}$ where we have used $\mathcal{E}_{s}(U(t))\leq\left\|{B(t)}\right\|^{2}+\left\|{(\rho_{e}+\rho_{i})(t)}\right\|^{2}+\mathcal{D}_{s+1}(U(t))$ . Using ( 4.1 ) again, we have $\mathcal{E}_{s+2}(U(t))+\gamma\int_{0}^{t}\mathcal{D}_{s+2}(U(y))dy\leq\mathcal{E}_{s+2}(U_{0})$ and $\begin{split}(1+t)^{l-1}\mathcal{E}_{s+1}(U(t))+&\gamma\int_{0}^{t}(1+y)^{l-1}\mathcal{D}_{s+1}(U(y))dy\\
+\leq\mathcal{E}_{s+1}(U_{0})&+C(l-1)\int_{0}^{t}(1+y)^{l-2}\left(\left\|{B(y)}\right\|^{2}+\left\|{(\rho_{e}+\rho_{i})(y)}\right\|^{2}+\mathcal{D}_{s+2}(U(y))\right)dy.\end{split}$ Then, by iterating the previous estimates, we obtain (4.2) $\begin{split}(1+t)^{l}\mathcal{E}_{s}(U(t))+&\gamma\int_{0}^{t}(1+y)^{l}\mathcal{D}_{s}(U(y))dy\\
+&\leq C\mathcal{E}_{s+2}(U_{0})+C\int_{0}^{t}(1+y)^{l-1}\left(\left\|{B(y)}\right\|^{2}+\left\|{(\rho_{e}+\rho_{i})(y)}\right\|^{2}\right)dy\end{split}$ for $1<l<2.$ Now, let us establish the estimate on the integral term on the right
+hand side of ( 4.2 ). Applying the estimate on $B$ in
+( 3.12 ) and the estimate on $\rho_{2}$ in ( 3.43 ) to
+( 3.5 ) and ( 3.6 ), respectively,
+we have (4.3) $\begin{split}\left\|{B\left(t\right)}\right\|\leqslant&C{\left({1+t}\right)^{-\frac{3}{4}}}{\left\|{\left[{{u_{1,0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{2}}}}\\
+&+C\int_{0}^{t}{{{\left({1+t-y}\right)}^{-\frac{3}{4}}}{{\left\|{\left[{{g_{2e}}(y)-{g_{2i}}(y)},~{{g_{4e}}(y)-{g_{4i}}(y)}\right]}\right\|}_{{L^{1}}\cap{{\dot{H}}^{2}}}}}dy,\end{split}$ (4.4) $\begin{split}\left\|{\left({{\rho_{e}}+{\rho_{i}}}\right)\left(t\right)}\right\|\leqslant&C\left\|{{\rho_{2}}\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{3}{4}}}{\left\|{\left[{{\rho_{\mu 0}},{u_{\mu 0}},{\Theta_{\mu 0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{2}}}}\\
+&\quad+C\int_{0}^{t}{{{\left({1+t-y}\right)}^{-\frac{3}{4}}}{{\left\|{\left[{{g_{1e}}+{g_{1i}},{g_{2e}}+{g_{2i}},{g_{3e}}+{g_{3i}}}\right](y)}\right\|}_{{L^{1}}\cap{{\dot{H}}^{2}}}}dy.}\end{split}$ It is directly to check that for any $0\leq y\leq t$ , ${\left\|{\left[{{g_{2e}}(y)-{g_{2i}}(y)},~{{g_{4e}}(y)-{g_{4i}}(y)}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{2}}}}\leqslant C{\mathcal{E}_{s}}\left({U(y)}\right)\leqslant C{\left({1+y}\right)^{-\frac{3}{2}}}{\mathcal{E}_{s,\infty}}\left({U(t)}\right),$ ${\left\|{\left[{{g_{1e}}+{g_{1i}},{g_{2e}}+{g_{2i}},{g_{3e}}+{g_{3i}}}\right](y)}\right\|_{{L^{1}}\cap{{\dot{H}}^{2}}}}\leqslant C{\mathcal{E}_{s}}\left({U(y)}\right)\leqslant C{\left({1+y}\right)^{-\frac{3}{2}}}{\mathcal{E}_{s,\infty}}\left({U(t)}\right),$ where ${\mathcal{E}_{s,\infty}}\left({U(t)}\right):=\mathop{\sup}\limits_{0\leqslant y\leqslant t}{\left({1+y}\right)^{\frac{3}{2}}}{\mathcal{E}_{s}}\left({U(y)}\right).$ Plugging the two previous inequalities into ( 4.3 )
+and ( 4.4 ) respectively implies (4.5) $\left\|{B\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{3}{4}}}\left({{{\left\|{\left[{{u_{\mu 0}},{E_{0}},{B_{0}}}\right]}\right\|}_{{L^{1}}\cap{{\dot{H}}^{2}}}}+{\mathcal{E}_{s,\infty}}\left({U(t)}\right)}\right)$ and (4.6) $\left\|{\left({{\rho_{e}}+{\rho_{i}}}\right)\left(t\right)}\right\|\leqslant C{\left({1+t}\right)^{-\frac{3}{4}}}\left({{{\left\|{\left[{{\rho_{\mu 0}},{u_{\mu 0}},{\Theta_{\mu 0}}}\right]}\right\|}_{{L^{1}}\cap{{\dot{H}}^{2}}}}+{\mathcal{E}_{s,\infty}}\left({U(t)}\right)}\right).$ Next, we search the uniform bound of ${\mathcal{E}_{s,\infty}}\left({U(t)}\right)$ which will imply
+the decay rates of ${\mathcal{E}_{s}}\left({U(t)}\right)$ or
+equivalent to $\|U(t)\|_{s}^{2}$ . In fact, after choosing $l=\frac{3}{2}+\varepsilon$ in ( 4.2 ) with $\varepsilon>0$ sufficiently small and utilizing ( 4.5 ) and ( 4.6 ), one
+obtain $\begin{split}{\left({1+t}\right)^{\frac{3}{2}+\varepsilon}}{\mathcal{E}_{s}}&\left({U(t)}\right)+\gamma{\int_{0}^{t}{\left({1+y}\right)}^{\frac{3}{2}+\varepsilon}}{\mathcal{D}_{s}}\left({U(y)}\right)dy\\
+&\leqslant C{\mathcal{E}_{s+2}}\left({{U_{0}}}\right)+C{\left({1+t}\right)^{\varepsilon}}\left({\left\|{\left[{{\rho_{\mu 0}},{u_{\mu 0}},{\Theta_{\mu 0}},{E_{0}},{B_{0}}}\right]}\right\|_{{}_{{L^{1}}\cap{{\dot{H}}^{2}}}}^{2}+{{\left[{{\mathcal{E}_{s,\infty}}\left({U(t)}\right)}\right]}^{2}}}\right),\end{split}$ which implies ${\left({1+t}\right)^{\frac{3}{2}}}{\mathcal{E}_{s}}\left({U(t)}\right)\leqslant C\left({{\mathcal{E}_{s+2}}\left({{U_{0}}}\right)+\left\|{\left[{{\rho_{\mu 0}},{u_{\mu 0}},{\Theta_{\mu 0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}}^{2}+{{\left[{{\mathcal{E}_{s,\infty}}\left({U(t)}\right)}\right]}^{2}}}\right),$ and therefore, ${\mathcal{E}_{s,\infty}}\left({U(t)}\right)\leqslant C\left({{\omega_{s+2}}{{\left({{U_{0}}}\right)}^{2}}+{{\left[{{\mathcal{E}_{s,\infty}}\left({U(t)}\right)}\right]}^{2}}}\right),$ since $\omega_{s+2}\left({{U_{0}}}\right)>0$ is small enough, it
+holds that ${\mathcal{E}_{s,\infty}}\left({U(t)}\right)\leqslant C{\omega_{s+2}}{\left({{U_{0}}}\right)^{2}}$ for any $t\geq 0,$ which implies ${\left\|{U(t)}\right\|_{s}}\leqslant C{\mathcal{E}_{s}}{\left({U(t)}\right)^{\frac{1}{2}}}\leqslant C{\omega_{s+2}}\left({{U_{0}}}\right){\left({1+t}\right)^{-\frac{3}{4}}}$ , that is ( 2.12 ). 4.2. Decay rate for high-order energy
+functional. In this subsection, we will look for the decay estimate
+of the high-order energy $\|\nabla U(t)\|^{2}_{s-1}$ , that is
+( 2.13 ) of Proposition 2.2 . We begin with the
+following Lemma. Lemma 4.2 . Assume $U=[\rho_{\mu},~u_{\mu},~\Theta_{\mu},~E,~B]$ is the solution of
+the initial value problem ( 2.2 )-( 2.3 ) with $U_{0}$ $=[\rho_{\mu 0}$ , $u_{\mu 0}$ , $\Theta_{\mu 0}$ , $E_{0}$ , $B_{0}]$ which
+satisfies ( 2.4 ) in the sense of Proposition 2.1 . If $\mathcal{E}_{s}(U_{0})$ is small enough, then, there exist the
+high-order energy function $\mathcal{E}_{s}^{h}(\cdot)$ and the
+high-order dissipative rate $\mathcal{D}_{s}^{h}(\cdot)$ such that (4.7) $\frac{d}{dt}\mathcal{E}_{s}^{h}(U(t))+\gamma\mathcal{D}_{s}^{h}(U(t))\leq 0,$ holds for any $t\geq 0.$ Proof. The proof is very similar to the proof of
+Theorem 2.1 . In fact, by letting $|\alpha|\geq 1$ , then
+corresponding to ( 2.16 ), ( 2.19 ), ( 2.23 ) and
+( 2.25 ), it can also be checked that $\frac{d}{{dt}}\left\|\nabla U\right\|_{s-1}^{2}+\left\|{\nabla\left[{{u_{e}},{u_{i}},{\Theta_{e}},{\Theta_{i}}}\right]}\right\|_{s-1}^{2}\leqslant C{\left\|U\right\|_{s}}{\left\|{\nabla\left[{{\rho_{e}},{\rho_{i}},{u_{e}},{u_{i}},{\Theta_{e}},{\Theta_{i}}}\right]}\right\|_{s-1}^{2}},$ $\begin{split}\frac{d}{{dt}}\sum\limits_{1\leq\left|\alpha\right|\leqslant s-1}{\sum\limits_{\mu=e,i}{\left\langle{{\partial^{\alpha}}{u_{\mu}},\nabla{\partial^{\alpha}}{\rho_{\mu}}}\right\rangle}}&+\gamma\left({\left\|{\nabla^{2}\left[{{\rho_{e}},{\rho_{i}}}\right]}\right\|_{s-2}^{2}+{{\left\|\nabla[{{\rho_{e}}-{\rho_{i}}}]\right\|}^{2}}}\right)\\
+&\leqslant C{\left({\left\|{\nabla{u_{\mu}}}\right\|_{s-1}^{2}+\left\|{U}\right\|_{s}^{2}{\left\|{\nabla[{\rho_{\mu}},{u_{\mu}},{\Theta_{\mu}}]}\right\|_{s-1}^{2}}}\right)},\end{split}$ $\begin{split}\frac{d}{{dt}}&\sum\limits_{1\leq\left|\alpha\right|\leqslant s-1}{\left\langle{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right),{\partial^{\alpha}}E}\right\rangle}+\gamma\left\|\nabla E\right\|_{s-2}^{2}\\
+&\leqslant C\left({\left\|{\nabla\left[{{u_{\mu}},{\Theta_{\mu}}}\right]}\right\|_{s-1}^{2}+\left\|\nabla^{2}\rho_{\mu}\right\|_{s-2}^{2}+\left\|{\nabla{u_{\mu}}}\right\|_{s-1}{{\left\|{\nabla^{2}B}\right\|}_{s-3}}}+\left\|U\right\|_{s}^{2}{\left\|\nabla[{\rho_{\mu}},{u_{\mu}},{\Theta_{\mu}}]\right\|_{s-1}^{2}}\right),\end{split}$ and $\begin{split}\frac{d}{{dt}}\sum\limits_{1\leq\left|\alpha\right|\leqslant s-2}&{\left\langle{{\partial^{\alpha}}E,-\nabla\times{\partial^{\alpha}}B}\right\rangle+\gamma\left\|{\nabla^{2}B}\right\|_{s-3}^{2}}\\
+&\leqslant C{(\left\|{{\nabla E}}\right\|_{s-2}^{2}+\left\|{\nabla{{u_{\mu}}}}\right\|_{s-1}^{2}}+\left\|{\nabla[{\rho_{\mu}},{u_{\mu}}]}\right\|_{s-1}^{2}\left\|{{U}}\right\|_{s}^{2}).\end{split}$ Now, similarly done as that in Step 5 of Theorem 2.1 . Let us define the high-order
+energy functional as (4.8) $\begin{split}\mathcal{E}_{s}(U(t))=&\left\|\nabla U\right\|_{s-1}^{2}+\mathcal{K}_{1}\sum\limits_{1\leq\left|\alpha\right|\leqslant s-1}{\sum\limits_{\mu=e,i}{\left\langle{{\partial^{\alpha}}{u_{\mu}},\nabla{\partial^{\alpha}}{\rho_{\mu}}}\right\rangle}}\\
+&+\mathcal{K}_{2}\sum\limits_{1\leq\left|\alpha\right|\leqslant s-1}{\left\langle{{\partial^{\alpha}}\left({{u_{e}}-{u_{i}}}\right),{\partial^{\alpha}}E}\right\rangle}+\mathcal{K}_{3}\sum\limits_{1\leq\left|\alpha\right|\leqslant s-2}{\left\langle{{\partial^{\alpha}}E,-\nabla\times{\partial^{\alpha}}B}\right\rangle},\end{split}$ Similarly, one can take $0<\mathcal{K}_{3}\ll\mathcal{K}_{2}\ll\mathcal{K}_{1}\ll 1$ be sufficiently small with $\mathcal{K}_{2}^{\frac{3}{2}}\ll\mathcal{K}_{3}$ , such that $\mathcal{E}_{s}^{h}(U(t))\sim\|\nabla U(t)\|_{s-1}^{2}$ , that is $\mathcal{E}_{s}^{h}(\cdot)$ is really a high-order energy functional
+which satisfies ( 2.6 ), and moreover, the sum of the four
+previously estimates with coefficients corresponding to ( 4.8 )
+gives ( 4.7 ). Now, we complete the proof of Lemma 4.2 . $\Box$ Based on Lemma 4.2 , one can check that $\frac{d}{dt}\mathcal{E}_{s}^{h}(U(t))+\gamma\mathcal{E}_{s}^{h}(U(t))\leq C\left(\|\nabla B\|^{2}+\|\nabla^{s}[E,B]\|^{2}+\|\nabla(\rho_{e}+\rho_{i})\|^{2}\right),$ which implies (4.9) $\begin{split}\mathcal{E}_{s}^{h}(U(t))\leq&e^{-\gamma t}\mathcal{E}_{s}^{h}(U_{0})\\
+&+C\int_{0}^{t}{e^{-\gamma(t-y)}\left(\|\nabla B(y)\|^{2}+\|\nabla^{s}[E,~B](y)\|^{2}+\|\nabla(\rho_{e}+\rho_{i})(y)\|^{2}\right)}dy.\end{split}$ Now, let us estimate the time integral term on the right hand side of the
+previous inequality. Noting that the equations of $E$ and $B$ in
+bipolar non-isentropic Euler-Maxwell system are the same as that in
+bipolar isentropic Euler-Maxwell system, similarly as that in [ 5 ] , we obtain Lemma 4.3 . Assume $U=[\rho_{\mu},~u_{\mu},~\Theta_{\mu},~E,~B]$ is the solution of
+the initial value problem ( 2.2 )-( 2.3 ) with $U_{0}$ $=[\rho_{\mu 0}$ , $u_{\mu 0}$ , $\Theta_{\mu 0}$ , $E_{0}$ , $B_{0}]$ which
+satisfies ( 2.4 ) in the sense of Proposition 2.1 . If $\omega_{s+6}(U_{0})$ is small enough, then, for any $t\geq 0$ (4.10) ${\left\|{\nabla B(t)}\right\|^{2}}+{\left\|{{\nabla^{s}}\left[{E(t),B(t)}\right]}\right\|^{2}}+\|\nabla(\rho_{e}+\rho_{i})(t)\|^{2}\leqslant C{\omega_{s+6}}{({U_{0}})^{2}}{(1+t)^{-\frac{5}{2}}}.$ Proof. Utilize the estimate ( 3.14 ) to
+( 3.5 ) of the solution $U_{1}(t)$ so that $\begin{split}\left\|{\nabla B\left(t\right)}\right\|&\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{\mu 0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{4}}}}\\
+&\quad+C\int_{0}^{t}{\left({1+t-y}\right)^{-\frac{5}{4}}}{\left\|{\left[{{g_{2e}(y)-g_{2i}(y)},{g_{4e}(y)-g_{4i}(y)}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{4}}}}dy\\
+&\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{\mu 0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{4}}}}+C\int_{0}^{t}{\left({1+t-y}\right)^{-\frac{5}{4}}}{\left\|{U(y)}\right\|^{2}_{\max\{5,s\}}}dy\\
+&\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{\mu 0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{4}}}}+C\int_{0}^{t}{\left({1+t-y}\right)^{-\frac{5}{4}}}\omega_{s+6}(U_{0})^{2}\left({1+y}\right)^{-\frac{3}{2}}dy\\
+&\leqslant C\omega_{s+6}(U_{0})\left({1+t}\right)^{-\frac{5}{4}}\end{split}$ and $\begin{split}&\left\|{{\nabla^{s}}\left[{E\left(t\right),B\left(t\right)}\right]}\right\|\\
+&\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{\mu 0}},\Theta_{\mu 0},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{2}}\cap{{\dot{H}}^{s+3}}}}\\
+&\quad+C\int_{0}^{t}{\left({1+t-y}\right)^{-\frac{5}{4}}}{\left\|{\left[{{g_{2e}(y)-g_{2i}(y)},g_{3e}(y)-g_{3i}(y),{g_{4e}(y)-g_{4i}(y)}}\right]}\right\|_{{L^{2}}\cap{{\dot{H}}^{s+3}}}}dy\\
+&\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{\mu 0}},\Theta_{\mu 0},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{2}}\cap{{\dot{H}}^{s+3}}}}+C\int_{0}^{t}{\left({1+t-y}\right)^{-\frac{5}{4}}}{\left\|{{U(y)}}\right\|^{2}_{{{s+4}}}}dy\\
+&\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{\mu 0}},\Theta_{\mu 0},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{2}}\cap{{\dot{H}}^{s+3}}}}+C\int_{0}^{t}{\left({1+t-y}\right)^{-\frac{5}{4}}}\omega_{s+6}(U_{0})^{2}\left({1+y}\right)^{-\frac{3}{2}}dy\\
+&\leqslant C\omega_{s+6}(U_{0})\left({1+t}\right)^{-\frac{5}{4}}.\end{split}$ Similarly, utilizing the estimate on $\rho_{2}$ in
+( 3.44 ) to ( 3.6 ) of the solution $U_{2}(t)$ , we obtain $\begin{split}&\left\|{{\nabla}\left({\rho_{e}+\rho_{i}}\right)\left(t\right)}\right\|\\
+&\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{\rho_{\mu 0},{u_{\mu 0}},\Theta_{\mu 0}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{4}}}}\\
+&\quad+C\int_{0}^{t}{\left({1+t-y}\right)^{-\frac{5}{4}}}{\left\|{\left[{g_{1e}(y)+g_{1i}(y)},{{g_{2e}(y)+g_{2i}(y)},g_{3e}(y)+g_{3i}(y)}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{4}}}}dy\\
+&\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{\rho_{\mu 0},{u_{\mu 0}},\Theta_{\mu 0}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{4}}}}+C\int_{0}^{t}{\left({1+t-y}\right)^{-\frac{5}{4}}}{\left\|{{U(y)}}\right\|^{2}_{\max\{5,s\}}}dy\\
+&\leqslant C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{\rho_{\mu 0},{u_{\mu 0}},\Theta_{\mu 0}}\right]}\right\|_{{L^{2}}\cap{{\dot{H}}^{s+3}}}}+C\int_{0}^{t}{\left({1+t-y}\right)^{-\frac{5}{4}}}\omega_{s+6}(U_{0})^{2}\left({1+y}\right)^{-\frac{3}{2}}dy\\
+&\leqslant C\omega_{s+6}(U_{0})\left({1+t}\right)^{-\frac{5}{4}}.\end{split}$ Where we have used ( 2.12 ) and the smallness of $\omega_{s+6}(U_{0})$ . Now, we complete the proof of Lemma 4.3 . $\Box$ Then, after plugging ( 4.10 ) into ( 4.9 ),
+we have $\mathcal{E}_{s}^{h}(U(t))\leq e^{-\gamma t}\mathcal{E}_{s}^{h}(U_{0})+C\omega_{s+6}(U_{0})^{2}(1+t)^{-\frac{5}{2}}.$ Since $\mathcal{E}^{h}_{s}(U(t))\sim\|\nabla U(t)\|^{2}_{s-1}$ holds
+true for any $t\geq 0$ , ( 2.13 ) follows. Now, we finish the
+proof of Proposition 2.2 . 4.3. Decay rate in $L^{q}$ . In this subsection, we are to look for the
+decay rates of solutions $U$ $=[\rho_{\mu}$ , $u_{\mu}$ , $\Theta_{\mu}$ , $E,~B]$ in $L^{q}$ (2≤q≤+∞) of the initial value
+problem ( 2.2 )-( 2.3 ) by proving the second part of
+Theorem 1.1 . Throughout this subsection, we usually suppose
+that $\omega_{13}(U_{0})$ is small enough. Firstly, for $s\geq 4$ ,
+Proposition 2.2 shows that if $\omega_{s+2}(U_{0})$ is small
+enough, (4.11) $\|U(t)\|_{s}\leq C\omega_{s+2}(U_{0})(1+t)^{-\frac{3}{4}},$ and if $\omega_{s+6}(U_{0})$ is small enough, (4.12) $\|\nabla U(t)\|_{s-1}\leq C\omega_{s+6}(U_{0})(1+t)^{-\frac{5}{4}}.$ Now, let us establish the estimates on $B$ , $[u_{e}-u_{i},~E]$ , $u_{e}+u_{i}$ , $[\rho_{e}-\rho_{i},~\Theta_{e}-\Theta_{i}]$ and $[\rho_{e}+\rho_{i},~\Theta_{e}+\Theta_{i}]$ as follows. Estimate on $\|B\|_{L^{q}}$ . For $L^{2}$ rate, it is
+directly from ( 4.11 ) to get $\|B(t)\|\leq C\omega_{6}(U_{0})(1+t)^{-\frac{3}{4}}.$ For $L^{\infty}$ rate, by applying $L^{\infty}$ estimate on $B$ of ( 3.13 ) to ( 3.5 ), we obtain $\begin{split}{\left\|{B(t)}\right\|_{{L^{\infty}}}}\leqslant&C{(1+t)^{-\frac{3}{2}}}{\left\|{[{u_{\mu 0}},{E_{0}},{B_{0}}]}\right\|_{{L^{1}}\cap{{\dot{H}}^{5}}}}\\
+&+C\int_{0}^{t}{{{(1+t-y)}^{-\frac{3}{2}}}}{\left\|{[{g_{2e}}-{g_{2i}},{g_{4e}}-{g_{4i}}](y)}\right\|_{{L^{1}}\cap{{\dot{H}}^{5}}}}dy.\end{split}$ Because of ( 4.11 ), $\begin{split}{\left\|{[{g_{2e}}-{g_{2i}},{g_{4e}}-{g_{4i}}](t)}\right\|_{{L^{1}}\cap{{\dot{H}}^{5}}}}\leqslant C\left\|{U(t)}\right\|_{6}^{2}\leqslant C{\omega_{8}}{({U_{0}})^{2}}{(1+t)^{-\frac{3}{2}}},\end{split}$ we have ${\left\|{B(t)}\right\|_{{L^{\infty}}}}\leqslant C\omega_{8}({U_{0}}){(1+t)^{-\frac{3}{2}}}.$ Therefore, by $L^{2}-L^{\infty}$ interpolation (4.13) $\|B(t)\|_{L^{q}}\leq C\omega_{8}({U_{0}}){(1+t)^{-\frac{3}{2}+\frac{3}{2q}}},$ for $2\leq q\leq\infty.$ Estimate on $\|[u_{e}-u_{i},E]\|_{L^{q}}$ . For $L^{2}$ rate,
+applying the $L^{2}$ estimate on $u_{e}-u_{i}$ and $E$ in ( 3.12 ) to
+( 3.5 ), one has $\begin{split}\left\|{(u_{e}-u_{i})\left(t\right)}\right\|\leqslant&C{\left({1+t}\right)^{-\frac{5}{4}}}\left({\left\|{\left[{{\rho_{\mu 0}},{\Theta_{\mu 0}}}\right]}\right\|+{{\left\|{\left[{{u_{\mu 0}},{E_{0}},{B_{0}}}\right]}\right\|}_{{L^{1}}\cap{{\dot{H}}^{2}}}}}\right)\\
+&+C\int_{0}^{t}{{\left({1+t-y}\right)}^{-\frac{5}{4}}}\left\|{\left[{{g_{1e}-g_{1i}},{g_{3e}-g_{3i}}}\right](y)}\right\|dy\\
+&+C\int_{0}^{t}{{\left({1+t-y}\right)}^{-\frac{5}{4}}}{{\left\|{\left[{{g_{2e}-g_{2i}},{g_{4e}-g_{4i}}}\right](y)}\right\|}_{{L^{1}}\cap{{\dot{H}}^{2}}}}dy\end{split}$ and $\begin{split}\left\|{E\left(t\right)}\right\|\leqslant&C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{u_{\mu 0}},\Theta_{\mu 0},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{3}}}}\\
+&+C\int_{0}^{t}{{{\left({1+t-y}\right)}^{-\frac{5}{4}}}{{\left\|{\left[{{g_{2e}-g_{2i}},{g_{3e}-g_{3i}},{g_{4e}-g_{4i}}}\right](y)}\right\|}_{{L^{1}}\cap{{\dot{H}}^{3}}}}dy.}\end{split}$ Since by ( 4.11 ), $\begin{split}\left\|{\left[{{g_{1e}-g_{1i}},{g_{3e}-g_{3i}}}\right](t)}\right\|+{\left\|{\left[{{g_{2e}-g_{2i}},{g_{3e}-g_{3i}},{g_{4e}-g_{4i}}}\right](t)}\right\|_{{L^{1}}\cap{{\dot{H}}^{3}}}}\\
+\leqslant C\left\|{U(t)}\right\|_{4}^{2}\leqslant C{\omega_{6}}{({U_{0}})^{2}}{(1+t)^{-\frac{3}{2}}},\end{split}$ which implies that (4.14) $\left\|[u_{e}-u_{i},~E](t)\right\|\leqslant C{\omega_{6}}({U_{0}}){\left({1+t}\right)^{-\frac{5}{4}}}.$ For $L^{\infty}$ rate, utilize the $L^{\infty}$ estimates on $u_{e}-u_{i}$ and $E$ in ( 3.13 ) to ( 3.5 ),
+we have $\begin{split}{\left\|{(u_{e}-u_{i})\left(t\right)}\right\|_{{L^{\infty}}}}\leqslant&C{\left({1+t}\right)^{-2}}\left({{{\left\|{\left[{{\rho_{\mu 0}},{\Theta_{\mu 0}}}\right]}\right\|}_{{L^{1}}\cap{{\dot{H}}^{2}}}}+{{\left\|{\left[{{u_{\mu 0}},{E_{0}},{B_{0}}}\right]}\right\|}_{{L^{1}}\cap{{\dot{H}}^{5}}}}}\right)\\
+&+C\int_{0}^{t}{{\left({1+t-y}\right)}^{-2}}\left\|{\left[{{g_{1e}-g_{1i}},{g_{3e}-g_{3i}}}\right](y)}\right\|_{{L^{1}}\cap{{\dot{H}}^{2}}}dy\\
+&+C\int_{0}^{t}{{\left({1+t-y}\right)}^{-2}}{{\left\|{\left[{{g_{2e}-g_{2i}},{g_{4e}-g_{4i}}}\right](y)}\right\|}_{{L^{1}}\cap{{\dot{H}}^{5}}}}dy\end{split}$ and $\begin{split}{\left\|{E\left(t\right)}\right\|_{{L^{\infty}}}}\leqslant&C{\left({1+t}\right)^{-2}}{\left\|{\left[{{u_{\mu 0}},{\Theta_{\mu 0}},{E_{0}},{B_{0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{6}}}}\\
+&+C\int_{0}^{t}{{{\left({1+t-y}\right)}^{-2}}{{\left\|{\left[{{g_{2e}-g_{2i}},{g_{3e}-g_{3i}},{g_{4e}-g_{4i}}}\right](y)}\right\|}_{{L^{1}}\cap{{\dot{H}}^{6}}}}dy}.\end{split}$ Since $\begin{split}\|[{g_{1e}-g_{1i}},{g_{2e}-g_{2i}},&{g_{3e}-g_{3i}},{g_{4e}-g_{4i}}](t)\|_{L^{1}}\\
+&\leq C\|U(t)\|(\|(u_{e}-u_{i})(t)\|+\|\ U(t)\|+\|\nabla U(t)\|)\\
+&\leq\omega_{10}(U_{0})^{2}(1+t)^{-\frac{3}{2}},\end{split}$ and $\begin{split}\|[{g_{1e}-g_{1i}},{g_{2e}-g_{2i}},&{g_{3e}-g_{3i}},{g_{4e}-g_{4i}}](t)\|_{{{\dot{H}}^{5}}\cap{{\dot{H}}^{6}}}\leqslant C\left\|{\nabla U(t)}\right\|_{6}^{2}\leqslant{\omega_{13}}{({U_{0}})^{2}}{(1+t)^{-\frac{5}{2}}},\end{split}$ then, one has $\|[u_{e}(t)-u_{i}(t),~E(t)]\|_{L^{\infty}}\leq C\omega_{13}(U_{0})^{2}(1+t)^{-\frac{3}{2}}.$ Therefore, by $L^{2}-L^{\infty}$ interpolation (4.15) $\|[u_{e}(t)-u_{i}(t),~E(t)]\|_{L^{q}}\leq C\omega_{13}({U_{0}}){(1+t)^{-\frac{3}{2}+\frac{1}{2q}}},$ for $2\leq q\leq\infty.$ Estimate on $\|u_{e}+u_{i}\|_{L^{q}}$ . For $L^{2}$ rate,
+utilizing the $L^{2}$ estimates on $u_{e}+u_{i}$ in ( 3.43 ) to
+( 3.6 ), we have $\begin{split}\left\|{(u_{e}+u_{i})\left(t\right)}\right\|\leqslant&C{\left({1+t}\right)^{-\frac{5}{4}}}{\left\|{\left[{{\rho_{\mu 0}},{u_{\mu 0}},{\Theta_{\mu 0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{3}}}}\\
+&+C\int_{0}^{t}{{\left({1+t-y}\right)}^{-\frac{5}{4}}}\left\|{\left[{{g_{1e}+g_{1i}},g_{2e}+g_{2i},{g_{3e}+g_{3i}}}\right](y)}\right\|_{{L^{1}}\cap{{\dot{H}}^{3}}}dy.\end{split}$ Since by ( 4.11 ), $\begin{split}\left\|{\left[{{g_{1e}+g_{1i}},g_{2e}+g_{2i},{g_{3e}+g_{3i}}}\right](t)}\right\|_{{L^{1}}\cap{{\dot{H}}^{3}}}\leq C\|U(t)\|^{2}_{4}\leq\omega_{6}(U_{0})^{2}(1+t)^{-\frac{3}{2}},\end{split}$ it follows that $\left\|(u_{e}+u_{i})(t)\right\|\leqslant C{\omega_{6}}({U_{0}}){\left({1+t}\right)^{-\frac{5}{4}}}.$ For $L^{\infty}$ rate, utiliz the $L^{\infty}$ estimates on $u_{e}+u_{i}$ in
+( 3.45 ) to ( 3.6 ), we have $\begin{split}{\left\|{(u_{e}+u_{i})\left(t\right)}\right\|_{{L^{\infty}}}}\leqslant&C{\left({1+t}\right)^{-2}}{\left\|{\left[{{\rho_{\mu 0}},{u_{\mu 0}},{\Theta_{\mu 0}}}\right]}\right\|_{{L^{1}}\cap{{\dot{H}}^{6}}}}\\
+&+C\int_{0}^{t}{{\left({1+t-y}\right)}^{-2}}\left\|{\left[{{g_{1e}+g_{1i}},g_{2e}+g_{2i},{g_{3e}+g_{3i}}}\right](y)}\right\|_{{L^{1}}\cap{{\dot{H}}^{6}}}dy\end{split}$ Since by ( 4.11 ), $\begin{split}\|[{g_{1e}+g_{1i}},{g_{2e}+g_{2i}},&{g_{3e}+g_{3i}}](t)\|_{{L^{1}}\cap{{\dot{H}}^{6}}}\leq C\|U(t)\|^{2}_{7}\leq\omega_{9}(U_{0})^{2}(1+t)^{-\frac{3}{2}},\end{split}$ it follows that $\|u_{e}(t)+u_{i}(t)\|_{L^{\infty}}\leq C\omega_{9}(U_{0})(1+t)^{-\frac{3}{2}}.$ Therefore, by $L^{2}-L^{\infty}$ interpolation (4.16) $\|u_{e}(t)+u_{i}(t)\|_{L^{q}}\leq C\omega_{9}({U_{0}}){(1+t)^{-\frac{3}{2}+\frac{1}{2q}}},$ for $2\leq q\leq\infty.$ Then from ( 4.15 ) and ( 4.16 ) we have (4.17) $\|u_{\mu}(t)\|_{L^{q}}\leq C\omega_{13}({U_{0}}){(1+t)^{-\frac{3}{2}+\frac{1}{2q}}},$ for $2\leq q\leq\infty.$ Estimate on $\|[\rho_{e}-\rho_{i},\Theta_{e}-\Theta_{i}]\|_{L^{q}}$ and $\|[\rho_{e}+\rho_{i},\Theta_{e}+\Theta_{i}]\|_{L^{q}}$ . For $L^{2}$ rate,
+utilizing the $L^{2}$ estimates on $\rho_{e}-\rho_{i}$ and $\Theta_{e}-\Theta_{i}$ in ( 3.12 ) to ( 3.5 ), we have (4.18) $\begin{split}&\left\|{\left[{\rho_{e}-\rho_{i}},{\Theta_{e}-\Theta_{i}}\right]\left(t\right)}\right\|\\
+&\quad\leqslant C{e^{-\frac{t}{2}}}{\left\|{\left[{\rho_{\mu 0},{u_{\mu 0}},\Theta_{\mu 0}}\right]}\right\|}+C\int_{0}^{t}{e^{-\frac{{t-y}}{2}}}{\left\|{\left[{g_{1e}-g_{1i}},{{g_{2e}-g_{2i}},g_{3e}-g_{3i}}\right](y)}\right\|}dy.\end{split}$ Because of $\begin{split}&\|{\left[{g_{1e}-g_{1i}},{{g_{2e}-g_{2i}},g_{3e}-g_{3i}}\right](t)}\|\\
+&\leqslant C\left(\left\|{\nabla U(t)}\right\|_{1}^{2}+\left\|{(u_{e}+u_{i})(t)}\right\|{\left\|{{B(t)}}\right\|_{{L^{\infty}}}}\right)\leqslant C{\omega_{10}}{({U_{0}})^{2}}{\left({1+t}\right)^{-\frac{5}{2}}},\end{split}$ where ( 4.12 ), ( 4.13 ) and ( 4.16 ) were used. Then
+( 4.18 ) yields the decay estimate (4.19) $\begin{split}\left\|{\left[{\rho_{e}-\rho_{i}},{\Theta_{e}-\Theta_{i}}\right]\left(t\right)}\right\|\leqslant C{\omega_{10}}{({U_{0}})}{\left({1+t}\right)^{-\frac{5}{2}}}.\end{split}$ Similarly for $\|[\rho_{e}-\rho_{i},\Theta_{e}-\Theta_{i}]\|$ , by utilizing
+the ${L^{2}}$ estimate on $[\rho_{e}+\rho_{i},\Theta_{e}+\Theta_{i}]$ in
+( 3.43 ) to ( 3.6 ), we obtain the decay estimate (4.20) $\begin{split}\left\|{\left[{\rho_{e}+\rho_{i}},{\Theta_{e}+\Theta_{i}}\right]\left(t\right)}\right\|\leqslant C{\omega_{6}}{({U_{0}})}{\left({1+t}\right)^{-\frac{3}{4}}}.\end{split}$ Combining ( 4.19 ) and ( 4.20 ), we obtain (4.21) $\begin{split}\left\|{\left[{\rho_{\mu}},{\Theta_{\mu}}\right]\left(t\right)}\right\|\leqslant C{\omega_{10}}{({U_{0}})}{\left({1+t}\right)^{-\frac{3}{4}}}.\end{split}$ For $L^{\infty}$ rate, by utilizing the $L^{\infty}$ estimate on $[\rho_{e}-\rho_{i},\Theta_{e}-\Theta_{i}]$ in ( 3.13 ) to ( 3.5 ),
+we have the decay estimate (4.22) $\begin{split}\left\|{\left[{\rho_{e}-\rho_{i}},{\Theta_{e}-\Theta_{i}}\right]\left(t\right)}\right\|_{L^{\infty}}\leqslant&C{e^{-\frac{t}{2}}}{\left\|{\left[{\rho_{\mu 0},{u_{\mu 0}},\Theta_{\mu 0}}\right]}\right\|_{L^{2}\cap\dot{H}^{2}}}\\
+&+C\int_{0}^{t}{e^{-\frac{{t-y}}{2}}}{\left\|{\left[{g_{1e}-g_{1i}},{{g_{2e}-g_{2i}},g_{3e}-g_{3i}}\right](y)}\right\|_{L^{2}\cap\dot{H}^{2}}}dy.\end{split}$ Notice that one can check (4.23) $\begin{split}&{{\left\|{\left[{g_{1e}-g_{1i}},{{g_{2e}-g_{2i}},g_{3e}-g_{3i}}\right](t)}\right\|}_{{L^{2}}\cap{{\dot{H}}^{2}}}}\\
+&\quad\quad\leqslant C{\left\|{\nabla U(t)}\right\|_{4}}\left({\left\|{\left[{\rho_{\mu}(t),\Theta_{\mu}(t)}\right]}\right\|}+\left\|{{u_{\mu}(t)}}\right\|+{{{\left\|{\left[{u_{\mu}(t),B(t)}\right]}\right\|}_{{L^{\infty}}}}}\right)\\
+&\quad\quad\leq C{\omega_{13}}{({U_{0}})^{2}}{(1+t)^{-2}},\end{split}$ where we have used ( 4.12 ), ( 4.13 ), ( 4.17 ) and
+( 4.21 ). Which implies from ( 4.22 ) that $\left\|{\left[{\rho_{e}-\rho_{i}},{\Theta_{e}-\Theta_{i}}\right]\left(t\right)}\right\|_{L^{\infty}}\leqslant C{\omega_{13}}{({U_{0}})}(1+t)^{-2}.$ Therefore, by $L^{2}-L^{\infty}$ interpolation (4.24) $\|\left[{\rho_{e}-\rho_{i}},{\Theta_{e}-\Theta_{i}}\right]\|_{L^{q}}\leq C\omega_{13}({U_{0}}){(1+t)^{-2-\frac{1}{q}}},$ for $2\leq q\leq\infty.$ For $\|\left[{\rho_{e}+\rho_{i}},{\Theta_{e}+\Theta_{i}}\right]\|_{L^{\infty}}$ , by utilizing the $L^{\infty}$ estimate on $\left[{\rho_{e}+\rho_{i}},{\Theta_{e}+\Theta_{i}}\right]$ in ( 3.45 ) to ( 3.6 ), we have
+the decay estimate (4.25) $\begin{split}\left\|{\left[{\rho_{e}+\rho_{i}},{\Theta_{e}+\Theta_{i}}\right]\left(t\right)}\right\|_{L^{\infty}}\leqslant C{\omega_{8}}{({U_{0}})}{\left({1+t}\right)^{-\frac{3}{2}}}.\end{split}$ Then from ( 4.20 ) and ( 4.25 ) we have (4.26) $\begin{split}\left\|{\left[{\rho_{e}+\rho_{i}},{\Theta_{e}+\Theta_{i}}\right]\left(t\right)}\right\|_{L^{q}}\leqslant C{\omega_{8}}{({U_{0}})}{\left({1+t}\right)^{-\frac{3}{2}+\frac{3}{2q}}}.\end{split}$ Thus, ( 4.24 ), ( 4.26 ), ( 4.15 )-( 4.16 ) and
+( 4.13 ) give ( 1.5 ), ( 1.6 ), ( 1.7 ) and ( 1.8 ), respectively.
+Now, we complete the proof of Theorem 1.1 . $\Box$ Acknowledgments This work is supported by the NSFC (Grant no. 11071009), BSF (Grant
+no. 1082001), the fund of Beijing education committee of China, and the Foundation
+Project of Doctor Graduate Student Innovation of Beijing University
+of Technology of China. References [1] F. Chen, Introduction to Plasma Physics and Controlled Fusion. Vol.
+1, Plenum Press, New York, 1984. [2] G. Q. Chen, J. W. Jerome, D. H. Wang.
+Compressible Euler-Maxwell equations, Transport Theory and
+Statistical Physics, 29 (2000) 311-331. [3] Andreas Dinklage, et al. Plasma Physics, in: Lect. Notes Phys. Vol.
+670, Springer, Berlin, Heidelberg, 2005. [4] R. J. Duan. Global smooth flows for the compressible Euler-Maxwell system: Relaxation
+case, Journal of Hyperbolic Differential Equations. 8 (2011)
+375-413. [5] R. J. Duan, Q. Liu, C. J. Zhu. The Cauchy problem on the compressible two-fluids
+Euler-Maxwell equations. preprint 2011. [6] Y. H. Feng, S. Wang, S. Kawashima. Global existence and asymptotic
+decay of solutions to the non-isentropic Euler-Maxwell system.
+preprint 2011. [7] D. Hoff and K. Zumbrun. Multi-dimensional diffusion waves for the
+Navier-Stokes equations of compressible flow, Indiana Univ. Math.
+J, 44 (1995) 603-676. [8] J. W. Jerome. The Cauchy problem for compressible
+hydrodynamic-Maxwell systems: a local theory for smooth solutions,
+Differential and Integral Equations 16 (2003) 1345-1368. [9] J. W. Jerome. Functional Analytic Methods for Evolution Systems, in:
+Contemporary Mathematics. Vol. 371, American Mathematical Society,
+Providence, 2005, pp. 193-204. [10] T. Kato.
+The Cauchy problem for quasi-linear symmetric hyperbolic systems,
+Arch. Ration. Mech. Anal. 58 (1975) 181-205. [11] S. Kawashima. Systems of a hyperbolic-parabolic composite type,
+with applications to the equations of magnetohydrodynamics,
+Doctoral Thesis, Kyoto University, 1984. [12] A. Majda.
+Compressible Fluid Flow and Systems of Conservation Laws in Several
+Space Variables, Springer-Verlag, New York, 1984. [13] T. Nishida.
+Nonlinear hyperbolic equations and related topics in fluids
+dynamics, Publications Mathématiques d’Orsay, Université
+Paris-Sud, Orsay, No. 78-02, 1978. [14] Y. J. Peng, S. Wang.
+Convergence of compressible Euler-Maxwell equations to
+incompressible Euler equations, Comm. Part. Diff. Equations, 33
+(2008) 349-376. [15] Y. J. Peng, S. Wang.
+Rigorous derivation of incompressible e-MHD equations from
+compressible Euler-Maxwell equations, SIAM J. Math. Anal. 40
+(2008) 540-565. [16] Y. J. Peng, S. Wang, Q. L. Gu.
+Relaxation limit and global existence of smooth solutions of
+compressible Euler-Maxwell equations, SIAM J. Math. Anal. 43
+(2011) 944-970. [17] E. M. Stein. Singular Integrals and Differentiability Properties of
+Functions, Princeton Mathematical Series, No. 30 Princeton
+University Press, Princeton, N.J. 1970 xiv+290 pp. [18] Y. Ueda, S. Kawashima.Decay property of regularity-loss type for the
+Euler-Maxwell system, to appear in
+Methods and Applications of Analysis, 2011. [19] Y. Ueda, S. Wang, S. Kawashima. Large Global existence and
+asymptotic decay of solutions to the Euler-Maxwell system, preprint
+2010. [20] J. W. Yang, S. Wang. The diffusive relaxation limit of
+non-isentropic Euler-Maxwell equations for plasmas, J. Math. Anal.
+Appl. 380 (2011) 343-353. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

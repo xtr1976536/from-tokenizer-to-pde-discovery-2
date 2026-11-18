@@ -1,0 +1,105 @@
+{
+  "status": "PREPARATION_STEPS_1_2_3_COMPLETE_V1_PENDING_TEACHER_PARAMETER_REVIEW",
+  "minimum_unique_parent_systems": 212,
+  "count_unit": "unaugmented unique source-supported complete structures; genuine structural variants allowed within families; coefficient-only and augmentation variants excluded",
+  "fields": [
+    "u",
+    "v",
+    "p",
+    "w"
+  ],
+  "coordinates": [
+    "x",
+    "y",
+    "t"
+  ],
+  "source_spatial_requirement": "native/source-supported 2D; explicit general-n source admitting n=2 allowed; no 1D padding",
+  "target_generation": {
+    "fields": [
+      "u",
+      "v",
+      "p"
+    ],
+    "equations": 3,
+    "spatial_dimensions": 2,
+    "no_target_physics_form_imposed": true
+  },
+  "exclusion": "direct Cylinder governing system and structurally near variants; source/AST review rather than whole-family ban",
+  "coefficient_policy": "stage1-compatible unsigned fitted outer-term structure; original signed/coefficient formula kept as evidence; preserve internal nonlinear structure, powers, derivative orders",
+  "augmentation_variants_per_training_parent": 32,
+  "vocab_sizes_step": 50,
+  "vocab_minimum": "ceil((required training alphabet+3)/50)*50",
+  "upstream_split": "source/structural-group disjoint80/10/10 before any augmentation",
+  "vocab_learned_from": "unaugmented training only",
+  "top3_selection": "validation only; integrity/coverage hard gates, compression/use tradeoffs; freeze before test",
+  "family_target_count": [
+    12,
+    15
+  ],
+  "family_labels_not_enough": "audit coarse mechanisms to prevent cosmetic diversity",
+  "formal_downstream_training_authorized": false,
+  "stage2_benchmark_split_must_remain": "seen75/12.5/12.5",
+  "no_existing_baseline_or_legacy_reference_modification": true,
+  "augmentation_kind": "commutative term/factor permutations, up to32 distinct variants; do not pad duplicates",
+  "dimension_evidence": {
+    "accepted_kinds": [
+      "native_2d",
+      "general_n_includes_2"
+    ],
+    "required": [
+      "source_file_sha256",
+      "verbatim_dimension_statement",
+      "equation_locator",
+      "source_spatial_dimension_symbol",
+      "admissible_dimensions",
+      "scalar_component_count"
+    ],
+    "no_automatic_admission_from": [
+      "title",
+      "abstract_only",
+      "bibliography",
+      "unrelated_theorem",
+      "presence_of_Delta_alone"
+    ],
+    "n2_specialization_requires": "original model and dimensional assumption explicitly linked; expand vector/complex fields before counting scalar fields; no theorem-validity extrapolation"
+  },
+  "target_unique_structures": 1000,
+  "within_family_structural_variants_allowed": true,
+  "power_specialization": {
+    "allowed": true,
+    "maximum_instances_per_original_model": 2,
+    "cap_applies_to": "all exponent combinations jointly, not two values per exponent",
+    "source_range_must_explicitly_allow_values": true,
+    "same_split_group_for_all_instances": true,
+    "counts_reported_separately": [
+      "original_source_models",
+      "unique_source_supported_structures",
+      "power_specializations"
+    ],
+    "coefficient_only_variants_count": false,
+    "no_unsupported_invention": true
+  },
+  "three_field_count_target": [
+    80,
+    null
+  ],
+  "four_field_count_locked": null,
+  "four_field_additions_authorized": true,
+  "three_field_fraction_target": null,
+  "family_balance_requirement": "No fixed category cap; additional distinct structures within existing families are allowed",
+  "legacy_reuse_authorized": true,
+  "legacy_reuse_rule": "Reuse Stage1/old-Stage2 existing formula choices after source/dimension/normalization/target-leakage checks; preserve origin type; never manufacture a y dependence for a 1D model",
+  "fluid_scope": "Other systems describing fluid-related scenes are allowed when materially different from the Cylinder incompressible NS target; only direct target and close structural variants excluded",
+  "axis_role_review": {
+    "no_inference_from_symbol_names": true,
+    "accepted_evidence": [
+      "explicit source time/space definition",
+      "explicit stationary/elliptic physical model",
+      "source-supported multidimensional model permitting n=2"
+    ],
+    "generic_xy_without_physical_or_stationary_context": "HOLD; source tracing required before admission",
+    "source_defines_one_axis_as_time": "exclude from native-2D pool unless original independently defines a two-space-dimensional model"
+  },
+  "four_field_original_structures_preserved": 10,
+  "current_scope": "Complete collection >=212 structures, >=80 three-field, full math review, source-grouped upstream vocabulary selection; no generator formal pretraining or main experiment in this scope"
+}

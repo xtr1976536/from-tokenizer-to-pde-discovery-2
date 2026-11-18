@@ -1,0 +1,84 @@
+{
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "1",
+      "1",
+      "-1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "-u(x, y, z, t)**2 + Derivative(u(x, y, z, t), (x, 2)) + Derivative(u(x, y, z, t), (y, 2))",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      9,
+      2,
+      23,
+      2,
+      19,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "uxx",
+      "+",
+      "uyy",
+      "+",
+      "u^2",
+      "E"
+    ],
+    "normalized_latex": "(u_{xx})+(u_{yy})+({u}^{2})=0",
+    "reconstructed_support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(2))"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(2))"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "family": "semilinear_elliptic_arbitrary_reaction",
+  "gre_ids": [
+    5,
+    9,
+    2,
+    23,
+    2,
+    19,
+    1
+  ],
+  "latex_origin": "declared_family_instance",
+  "normalized_latex": "(u_{xx})+(u_{yy})+({u}^{2})=0",
+  "original_latex": "u_{xx}+u_{yy}=(u^2)",
+  "parameters": {
+    "f": "u^2"
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [],
+  "source_file": "data/formulas/diverse_pde_v4/sources/npde3107.pdf",
+  "source_group": "eqworld:npde3107",
+  "source_id": "eqworld:7fa41392ea4b0aff718d1a72",
+  "source_kind": "external_review_candidate",
+  "source_location": "first displayed governing equation; choices declared separately",
+  "source_sha256": "184b6e60315f809640b5e8c4c8151ec310a8770ca52d01ed4ebb88c41d43a5d7",
+  "source_template_latex": "u_{xx}+u_{yy}=f(u)",
+  "source_transformations": [
+    "source dependent variable w -> u",
+    "scalar coefficients fixed nonzero when present; no term removal",
+    "arbitrary functions/powers explicitly instantiated as recorded; not a new physical family"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/npde/npde3107.pdf"
+}

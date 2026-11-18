@@ -1,0 +1,228 @@
+Analytical and numerical solution of coupled KdV-MKdV system Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 Lax pair spectral equations and the elementary DTs 3 Solution of two coupled KdV-MKdV equations and KdV equation via the
+first elementary  DT 4 Solution of three coupled KdV-MKdV equations via the compound
+elementary DTs 5 The numerical method 5.1 The difference scheme 5.2 Stability analysis of the scheme 5.3 Convergence proof for the scheme 5.4 Numerical calculations and test 6 Conclusion References 7 Appendix A Stability analysis of the scheme 8 Appendix B The scheme convergence License: Assumed arXiv.org perpetual non-exclusive license arXiv:math-ph/0211018v1 [math-ph] 12 Nov 2002 Analytical and numerical solution of coupled KdV-MKdV system A.A. Halim Affiliation: Technical University of Gdanskul. G. Narutowicza 11/12, 80-952 Gdansk, Poland. S.B. Leble Affiliation: leble@mif.pg.gda.pl Affiliation: Kaliningrad state University, Kaliningrad, Russia Abstract The matrix 2x2 spectral differential equation of the
+second order is considered on x in ( $-\infty,+\infty$ ). We
+establish elementary Darboux transformations covariance of the
+problem and analyze its combinations. We select a second
+covariant equation to form Lax pair of a coupled KdV-MKdV system.
+The sequence of the elementary Darboux transformations of the
+zero-potential seed produce two-parameter solution for the coupled
+KdV-MKdV system with reductions. We show effects of parameters on
+the resulting solutions (reality, singularity). A numerical method
+for general coupled KdV-MKdV system is introduced. The method is
+based on a difference scheme for Cauchy problems for arbitrary
+number of equations with constants coefficients. We analyze
+stability and prove the convergence of the scheme which is also
+tested by numerical simulation of the explicit solutions. 1 Introduction There are two complementary approaches to integrable systems:
+analytical and numerical ones to be developed. Even most profound
+analytical IST method cannot give explicit solution of general
+Cauchy problem while numeric can, but is rather compulsory in use:
+calculations could need powerful computers. May be most
+transparent of analytical methods are based on algebraic
+structures associated with a problem. To such structures belongs
+Darboux transformations covariance of Lax representation of
+nonlinear equations that yields a powerful tool for explicit
+solutions production. We investigate applications of special kind
+of such discrete symmetry - to be called elementary ones [ 10 ] . Its elementarity simply means that a product of
+such transformations generate the standard one [ 10 , 13 ] . Here we study combinations of such transforms
+that do not coincide with binary ones [ 12 ] and hence
+are not so known. The main ideas of numerical integration of such integrable systems
+go up to the famous properties of the equations as the Lax pair
+and infinite series of conservation laws existence [ 7 ] .
+From a point of view of general theory of such systems some hopes
+are concerned with a development of the finite-difference or other
+approximations of the systems. Namely if one could prove a
+convergence and stability theorems for such difference systems
+(existence of solutions is implied), a way to existence and
+uniqueness of solutions is opened [ 6 ] . The coupled KdV-MKdV system arises in many problems of
+mathematical physics. Some integrable systems are associated with
+a polynomial spectral problem and have Virasoro symmetry algebras
+are considered [ 17 ] . A dispersive system describing a vector
+multiplet interacting with the KdV field is a member of a
+bi-Hamiltonian integrable hierarchy [ 8 ] . Recently a
+multisymplectic numerical twelve points scheme was produced. This
+scheme is equivalent to the multisymplectic Preissmann scheme and
+is applied to solitary waves over long time interval [ 14 ] .
+The coupled KdV-MKdV system is also connected to other physical
+applications [ 11 ] . The general system we consider in this work have the following
+form $\theta_{t}^{n}+\underset{m,k}{\sum}\left(g_{m,k}^{n,1}\theta^{m}\theta_{x}^{k}+g_{m,k}^{n,2}(\theta^{m})^{2}\theta_{x}^{k}+g_{m,k}^{n,3}\theta_{x}^{m}\theta_{x}^{k}+g_{m,k}^{n,4}\theta^{m}\theta_{xx}^{k}+g_{m,k}^{n,5}\theta^{m}(\theta^{k})_{x}^{2}\right)+d_{n}\theta_{xxx}^{n}=0,$ (1) where n, m, k =1,2,…N are the dependent variables numbers.
+Nonlinear coefficients are $g_{m,k}^{n,l},\,l$ =1,2,..5 and $d_{n}$ are dispersion coefficients. In particular, for the system under consideration ( $N=3$ ) the
+variables $\theta^{1},\theta^{2},\theta^{3}$ are denoted by f,
+u, v to have the integrable system [ 10 ] $\displaystyle f_{t}+\frac{1}{2}f_{xxx}+\frac{3}{2}(uf)_{x}-\frac{3}{4}f_{x}f^{2}=0$ $\displaystyle u_{t}-\frac{1}{4}u_{xxx}-\frac{3}{2}u_{x}u+3vv_{x}+\frac{3}{4}u_{x}f^{2}-\frac{3}{2}(f_{x}v)_{x}=0$ $\displaystyle v_{t}+\frac{1}{2}v_{xxx}+\frac{3}{2}v_{x}u-\frac{3}{4}(vf^{2})_{x}+\frac{3}{4}u_{xx}f+\frac{3}{2}u_{x}f_{x}=0$ (2) The Lax pair is given in [ 10 ] . The system exhibits two
+integrable reductions having explicit solutions, Hirota-Satsuma [ 4 , 1 ] and a two components KdV-MKdV system [ 10 , 12 ] . Krishnan [ 5 ] showed that a
+generalized KdV-MKdV system have solitary wave solutions and
+investigate the effects of increasing the nonlinearity of one
+variable on the existence of solitary waves. Some form of KdV-MKdV
+system have explicit solutions in terms of Jacobi elliptic
+functions [ 2 ] . In this work we present explicit solutions for a system of three
+equations ( 2 ) that have not been specified in [ 10 , 12 ] . We study this two-parameter explicit
+solutions and show effects of choosing these parameters on the
+solutions. We demonstrate the use of two arbitrary elementary DTs [ 10 ] and its special choice that holds a hereditary of
+the reduction to built explicit solutions to the KdV-MKdV system
+( 2 ). Also we modify a numerical method [ 7 , 3 ] for solution of
+system ( 1 ). It is a difference scheme for Cauchy
+problems for arbitrary number of equations with constants
+coefficients. The scheme preserves two conservation laws for the
+KdV type equations and the order of error of the difference
+formulas is improved [ 7 , 15 ] . The convergence is proved and
+stability is analyzed giving the conditions taken in account in
+choosing time and space step sizes [ 16 , 9 ] . The present work is organized as follows. Section 2 introduces the
+matrix spectral equation of the second order with 2 x 2 matrix
+coefficients and two elementary DTs. We select the second equation
+of the Lax pair and derive the compatibility conditions. The
+product of these two transformations yields the standard DT [ 10 , 13 ] . Section 3 illustrates how the, first,
+elementary DT is used to produce solution to the KdV equation as
+well as the general evolution equation generated by the
+compatibility conditions of the Lax pair. Explicit solutions are
+introduced for the case of zero initial potentials of the matrix
+problem. In section 4 we consider a reduction constraints on the
+potential of the matrix spectral equation. This reduction gives an
+automorphism that relates two pairs of solution of the spectral
+equation for two spectral parameters. We use this results in the
+compound elementary DTs to produce an explicit solution to a
+coupled KdV-MKdV system that results from the compatibility
+conditions of Lax pair under this reduction. The effects of these
+parameters on the solution (reality, singularity) is analyzed.
+Section 5 introduces a numerical method for solving coupled
+KdV-MKdV system ( 1 ). We produce a difference scheme for
+a Cauchy problem with initial condition rapidly decreasing at both
+infinities. The main steps of the scheme convergence and stability
+analysis is shown while the details are explained in appendix A
+and B. The scheme is tested by applying it to integrable coupled
+KdV-MKdV system and the numerical results are compared with
+explicit formulas obtained in section 4. 2 Lax pair spectral equations and the elementary DTs Consider a matrix spectral equation of the second order with
+spectral parameter $\lambda$ and $2\times 2$ matrix coefficients. $\Psi_{xx}+F\Psi_{x}+U\Psi=\lambda\sigma_{3}\Psi$ (3) where the vector $\Psi=\left(\Psi_{1},\Psi_{2}\right)^{T}$ and
+the matrix
+potentials are $U=\{u_{ij}\},F=\{f_{ij},f_{ii}=0\},i=1,2$ while $\sigma_{3}=diag(1,-1)$ is the Pauli matrix. For equation ( 3 ) we perform two elementary Darboux transforms [ 10 ] . The first one is $\displaystyle\overset{\sim}{\Psi}_{1}=\Psi_{1x}+\epsilon_{11}\Psi_{1}+\epsilon_{12}\Psi_{2}\,,\,\ \ \ \epsilon_{11}=-\left(\varphi_{1x}+\frac{1}{2}f_{12}\varphi_{2}\right)/\varphi_{1}\,,\,\ \epsilon_{12}=f_{12}/2,$ $\displaystyle\overset{\sim}{\Psi}_{2}=\Psi_{2}+\ \epsilon_{21}\,\Psi_{1}\,,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \epsilon_{21}=-\ \varphi_{2}/\varphi_{1},$ $\displaystyle\overset{\sim}{\varphi}_{1}=\left(\partial_{x}+\epsilon_{11}\right)\varphi_{3}+\epsilon_{12}\,\varphi_{4}\,\,,\,\ \overset{\sim}{\varphi}_{2}=\varphi_{4}+\epsilon_{21}\,\varphi_{3}.$ (4) where $\left(\varphi_{1},\,\varphi_{2}\right)^{T}\,\ $ and $\left(\varphi_{3},\,\varphi_{4}\right)^{T}\,\ $ are two solutions of ( 3 ) corresponding to different spectral parameters. Substituting the above expressions for $\overset{\sim}{\Psi}_{1},\,\overset{\sim}{\Psi}_{2}\,$ into ( 3 ) and collecting the coefficients of $\Psi_{1}$ , $\Psi_{2}\,\ $ and their derivatives we
+obtain the expressions for new potentials as $\displaystyle\overset{\sim}{f}_{12}=u_{12}+f_{12}\,\,\epsilon_{11},$ $\displaystyle\overset{\sim}{f}_{21}=-2\,\epsilon_{21}\vskip 3.0pt plus 1.0pt minus 1.0pt,$ $\displaystyle\overset{\sim}{u}_{11}=u_{11}-2\epsilon_{11x}-\overset{\sim}{f}_{12}\,\epsilon_{21}-f_{21}\,\epsilon_{12}\vskip 3.0pt plus 1.0pt minus 1.0pt,\vskip 3.0pt plus 1.0pt minus 1.0pt$ $\displaystyle\overset{\sim}{u}_{12}=u_{12x}-\epsilon_{12xx}+\epsilon_{11}u_{12}-\epsilon_{12}\left(\overset{\sim}{u}_{11}+u_{22}\right)\vskip 3.0pt plus 1.0pt minus 1.0pt,$ $\displaystyle\overset{\sim}{u}_{21}=f_{21}-2\epsilon_{21x}-\overset{\sim}{f}_{21}\epsilon_{11}\vskip 3.0pt plus 1.0pt minus 1.0pt,$ $\displaystyle\overset{\sim}{u}_{22}=u_{22}-\epsilon_{21}u_{12}-\overset{\sim}{u}_{21}\epsilon_{12}-\overset{\sim}{f}_{21}\epsilon_{12x}.$ (5) The second elementary DT is performed after the first one and can
+be obtained by reversing the indices 1 $\rightarrow 2\,$ and
+2 $\rightarrow 1\,\ $ to get, for example , the following
+potentials $\displaystyle\overset{\approx}{f}_{21}\,=\overset{\sim}{u}_{21}+\overset{\sim}{f}_{21}\overset{\sim}{\epsilon}_{22},{\hskip 5.69054pt}\overset{\sim}{\epsilon}_{22}=-\left(\overset{\sim}{\varphi}_{2x}+\frac{1}{2}\overset{\sim}{f}_{21}\overset{\sim}{\varphi}_{1}\right)\,/\overset{\sim}{\varphi}_{2},$ $\displaystyle\overset{\approx}{u}_{22}=\overset{\sim}{u}_{22}-2\overset{\sim}{\epsilon}_{22x}-\overset{\approx}{f}_{21}\overset{\sim}{\epsilon}_{12}-\overset{\sim}{f}_{12}\overset{\sim}{\epsilon}_{21},\,\vskip 3.0pt plus 1.0pt minus 1.0pt{\hskip 8.53581pt}\overset{\sim}{\epsilon}_{12}=-\ \overset{\sim}{\varphi}_{1}/\overset{\sim}{\varphi}_{2},{\hskip 8.53581pt}\overset{\sim}{\epsilon}_{21}=\overset{\sim}{f}_{21}/\,2.\ $ (6) The spectral equation ( 3 ) is considered as the first
+equation of the Lax pair, take the second as $\Psi_{t}=\Psi_{xxx}+B\Psi_{x}+C\Psi$ (7) where $B=\frac{3}{2}diagU+\frac{3}{2}F_{x}+\frac{3}{4}F^{2}$ and $C=\frac{3}{2}U_{x}-\frac{3}{4}diagU_{x}-\frac{3}{4}(f_{12}u_{21}+f_{21}u_{12})I+\frac{3}{8}(f_{12,x}f_{21}-f_{12}f_{21,x})\sigma_{3}+\frac{3}{4}(u_{11}-u_{22})\sigma_{3}F.$ Equation ( 7 ) is also covariant under transformations
+( 4 ), ( 5 ). The compatibility conditions have the
+following form $\displaystyle F_{t}-F_{3x}+B_{2x}-3U_{2x}+2C_{x}+FB_{x}-\sigma_{3}B\sigma_{3}F_{x}+UB$ $\displaystyle-\sigma_{3}B\sigma_{3}U+FC-\sigma_{3}C\sigma_{3}F=0,$ $\displaystyle U_{t}-U_{3x}+C_{2x}+UC-\sigma_{3}C\sigma_{3}U+FC_{x}-\sigma_{3}B\sigma_{3}U_{x}=0.$ (8) and the transformations ( 4 ), ( 5 ) determine a
+discrete symmetry of ( 8 ) 3 Solution of two coupled KdV-MKdV equations and KdV equation via the
+first elementary  DT For a spectral parameter $\lambda$ and a seed potential F, U we
+obtain the solutions $\varphi_{1},\varphi_{2}$ to the pair
+( 3 ), ( 7 ). Then performing the first elementary
+DT to obtain
+the new potentials $\overset{\sim}{F},\overset{\sim}{U}$ which are solutions to the system ( 8 ). For the case of zero seed potential the solutions, $\varphi_{1}$ and $\varphi_{2}$ of the system $(\ref{LP 1}),(\ref{LP 2})$ have the form $\displaystyle\varphi_{1}=c_{1}e^{ax+a^{3}t}+c_{2}e^{-(ax+a^{3}t)},$ $\displaystyle\varphi_{2}=d_{1}e^{iax+(ia)^{3}t}+d_{2}e^{-(iax+(ia)^{3}t)}.$ (9) where $c_{1},\,c_{2},\,d_{1},\,\,d_{2}\,\ $ are arbitrary
+constants, $a=\sqrt{\lambda}$ and i is the imaginary unit.
+System ( 8 ) reduced (for the only nonzero elements ) to
+the following $\displaystyle f_{21t}+\frac{1}{2}f_{21xxx}+\frac{3}{4}f_{21}u_{11x}=-\frac{3}{2}u_{11}u_{21},$ $\displaystyle u_{11t}-\frac{1}{4}u_{11xxx}-\frac{3}{2}u_{11}u_{11x}=0,$ $\displaystyle u_{21t}+\frac{1}{2}u_{21xxx}+\frac{3}{4}u_{21}u_{11x}+\frac{3}{2}u_{21x}u_{11}=\frac{3}{4}\ u_{11}f_{21xx}+\frac{3}{4}u_{11}^{2}f_{21}.$ (10) where $f_{12}=0,u_{12}=0,u_{22}=0$ and tildes are omitted for
+simplicity. This system with explicit solution obtained from
+( 4 ), ( 5 ) as $\displaystyle{f}_{21}=\left(2e^{\left(1-i\right)a\left(a^{2}t+x\right)}\left(d_{2}e^{2ia^{3}t}+d_{1}e^{2iax}\right)\right)/\left(c_{2}+c_{1}e^{2a\left(a^{2}t+x\right)}\right),$ $\displaystyle{u}_{11}=\left(8a^{2}c_{1}c_{2}e^{2a\left(a^{2}t+x\right)}\right)/\left(c_{2}+c_{1}e^{2a\left(a^{2}t+x\right)}\right)^{2},$ $\displaystyle{u}_{21}=\left(-2iae^{\left(1-i\right)a\left(a^{2}t+x\right)}\left(d_{2}e^{2ia^{3}t}-d_{1}e^{2iax}\right)\right)/\left(c_{2}+c_{1}e^{2a\left(a^{2}t+x\right)}\right).$ (11) where $c_{1},\,c_{2},\,d_{1},\,\,d_{2}\,\ $ are arbitrary
+constants and $a=\sqrt{\lambda}$ . The second equation in ( 10 ) is the KdV equation while
+the remaining are a two components coupled KdV-MKdV system that
+was solved by elementary DT. 4 Solution of three coupled KdV-MKdV equations via the compound
+elementary DTs Existence of different kinds of automorphism causes special
+constraints [ 10 ] . Multiplying ( 3 ) by $\sigma_{1}=\begin{pmatrix}0&1\\
+1&0\end{pmatrix}$ to have $\sigma_{1}\Psi_{xx}+\sigma_{1}F\Psi_{x}+\sigma_{1}U\Psi=\lambda\sigma_{1}\sigma_{3}\Psi$ (12) but $\sigma_{1}\sigma_{3}=-\sigma_{3}\sigma_{1}$ and consider
+the conditions $\sigma_{1}F=F\sigma_{1}$ and $\sigma_{1}U=U\sigma_{1}$ that means $f_{12}=f_{21}=f,\hskip 14.22636ptu_{11}=u_{22}=u,\hskip 14.22636ptu_{12}=u_{21}=v.$ (13) So ( 12 ) becomes $\displaystyle\left(\sigma_{1}\Psi\right)_{xx}+F\left(\sigma_{1}\Psi\right)_{x}+U\left(\sigma_{1}\Psi\right)=-\lambda\sigma_{3}\left(\sigma_{1}\Psi\right)$ The above automorphism $\Psi\left(\lambda\right)\leftarrow\sigma_{1}\Psi\left(-\lambda\right)$ relates two pair of solutions $(\varphi_{1},\varphi_{2})$ and $(\varphi_{3},\varphi_{4})$ of
+( 3 ) corresponding to different values of spectral
+parameter $\lambda,-\lambda$ as $\displaystyle\begin{pmatrix}\varphi_{3}(-\lambda)\\
+\varphi_{4}(-\lambda)\end{pmatrix}=\sigma_{1}\begin{pmatrix}\varphi_{1}(\lambda)\\
+\varphi_{2}(\lambda)\end{pmatrix}=\begin{pmatrix}\varphi_{2}(\lambda)\\
+\varphi_{1}(\lambda)\end{pmatrix}$ Using this result in the elementary DTs ( 4 ), ( 5 ) and ( 6 ) to obtain the expressions for the new potentials f, u, v.
+In the case of zero initial potentials these new potentials have
+the following forms $\displaystyle f=2\frac{\varphi_{1}(\varphi_{2})_{x}-\varphi_{2}(\varphi_{1})_{x}}{(\varphi_{1})^{2}-(\varphi_{2})^{2}},$ $\displaystyle\newline
+ u=\left(\frac{(\varphi_{1}^{2})_{x}-(\varphi_{2}^{2})_{x}}{(\varphi_{1})^{2}-(\varphi_{2})^{2}}\right)_{x}+2\left(\frac{\varphi_{1}(\varphi_{2})_{x}-\varphi_{2}(\varphi_{1})_{x}}{(\varphi_{1})^{2}-(\varphi_{2})^{2}}\right)^{2},$ $\displaystyle v=2\left(\frac{\varphi_{1}(\varphi_{2})_{x}-\varphi_{2}(\varphi_{1})_{x}}{(\varphi_{1})^{2}-(\varphi_{2})^{2}}\right)_{x}+\frac{\left(\varphi_{1}(\varphi_{2})_{x}-\varphi_{2}(\varphi_{1})_{x}\right)\left((\varphi_{1}^{2})_{x}-(\varphi_{2}^{2})_{x}\right)}{\left((\varphi_{1})^{2}-(\varphi_{2})^{2}\right)^{2}}.$ (14) where $\varphi_{1},\varphi_{2}$ are as in ( 9 ) with $c_{1},\,c_{2},\,d_{1},\,\,d_{2}\,\ $ are arbitrary constants and $a=\sqrt{\lambda}$ . The above expressions are solutions of system
+( 8 ) that reduced under the reduction conditions
+( 13 ) to system ( 2 ). The choice of the arbitrary constants
+( $c_{1},\,c_{2},\,d_{1},\,\,d_{2}$ ) affects on the behavior of
+the solution in formula ( 14 ). For example choosing equal
+constants $c_{1}=c_{2}=d_{1}=d_{2}=0.5$ (we choose the value to
+be $0.5$ to simplify the resulting formula but the idea valid for
+any value) the solutions have the form $\displaystyle f=2a(sin\eta_{1}cosh\eta_{2}-cos\eta_{1}sinh\eta_{2})/(cosh^{2}\eta_{2}-cos^{2}\eta_{1}),$ $\displaystyle u=2a^{2}(sin\eta_{1}cosh\eta_{2}+cos\eta_{1}sinh\eta_{2})^{2}/(cosh^{2}\eta_{2}-cos^{2}\eta_{1})^{2},$ $\displaystyle v=2a^{2}(cos3\eta_{1}cosh\eta_{2}-2sin\eta_{1}sinh\eta_{2}(cos2\eta_{1}+cosh2\eta_{2}+2)-cos\eta_{1}cosh3\eta_{2})$ $\displaystyle\hskip 14.22636pt/(cosh^{2}\eta_{2}-cos^{2}\eta_{1})^{2}.$ (15) where $\eta_{1}=a^{3}t-ax,\hskip 8.53581pt\eta_{2}=a^{3}t+ax,a=\sqrt{\lambda}$ is real. We see that the above expression ( 15 ) is singular at $\eta_{2}=0,\eta_{1}=n\pi,n=0,1,2,...$ . Hence we have singularity at $(x=\frac{n\pi}{2a},t=\frac{n\pi}{2a^{3}})$ . To obtain continuous solutions we can choose $c_{1}=c_{2},d_{1}=d_{2}=r.c_{1}$ , r is real constant. We again choose $c_{1}=0.5$ following the previous concept. So ( 14 ) have
+the form $\displaystyle f=2ar\left(\cosh\eta_{2}\sin\eta_{1}-\cos\eta_{1}\sinh\eta_{2}\right)/\left(\cosh^{2}\eta_{2}-r^{2}\cos^{2}\eta_{1}\right),$ $\displaystyle u=a^{2}\left(1-r^{4}-r^{4}\cos 2\eta_{1}+\cosh 2\eta_{2}+r^{2}\sin 2\eta_{1}\sinh 2\eta_{2}\right)/\left(\cosh^{2}\eta_{2}-r^{2}\cos^{2}\eta_{1}\right)^{2},$ $\displaystyle v=2a^{2}r(((-7+6r^{2}+2r^{2}\cos 2\eta_{1})\cos\eta_{1}\cosh\eta_{2}-\cos\eta_{1}\cosh 3\eta_{2})-2(1+r^{2}$ $\displaystyle+r^{2}\cos 2\eta_{1}+\cosh 2\eta_{2})\sin\eta_{1}\sinh\eta_{2}))/(-1+r^{2}+r^{2}\cos 2\eta_{1}-\cosh 2\eta_{2})^{2}.$ (16) where $a,\eta_{1},\eta_{2}$ as in ( 15 ) Choosing this parameter ( $r$ ) to be $r$ $<1$ gives real
+nonsingular solutions. The above formula ( 16 ) is
+built from elliptic and periodic functions so it does not preserve
+its symmetry but its localized as shown in figures (1.a,b) below. Fig.(1.a) Non-singular solutions, f, u and v (r=0.5) , a=2,
+t=0. Fig.(1.b) Propagation of solutions, f, u and v (r=0.5) , a=2,
+t=1. Fig.(1) The solutions in ( 16 ) does not preserve
+its symmetry but its localized. Choosing the parameter r to be $r$ $>1$ in formula ( 16 ) gives singular solutions as shown figure
+(2) below. Fig.(2) Singular solutions, f, u and v (r=2), a=2, t=0. Moreover the choice of these arbitrary constants ( $c_{1},\,c_{2},\,d_{1},\,\,d_{2}\,\ $ ) as well as the spectral parameter $\lambda$ affects
+the reality of the resulting solution. As example for $\lambda=-2im^{2}$ , m is real and choosing $c_{1}=c_{2}=d_{1}=d_{2}=0.5$ , we get real solution $f=m(cos2\zeta_{1}sinh\zeta_{2}-sinh\zeta_{2}-sin\zeta_{1}cosh2\zeta_{2}+sin\zeta_{1})/(0.25cosh2\zeta_{2}-0.25)(1-cos2\zeta_{1})$ where $\zeta_{1}=2mx+4m^{3}t,\hskip 5.69054pt\zeta_{2}=2mx-4m^{3}t$ , while choosing $c_{1}=c_{2}=1,d_{1}=d_{2}=2$ give the following complex solution $\displaystyle f=m*(-8(-5sinh\zeta_{2}cos2\zeta_{1}+5sinh\zeta_{2}+5sin\zeta_{1}cosh2\zeta_{2}-5sin\zeta_{1})-8i(6sinh\zeta_{2}$ $\displaystyle+3sin2\zeta_{1}cosh\zeta_{2}+3cos\zeta_{1}sinh2\zeta_{2}+6sin\zeta_{1}))/(17cosh2\zeta_{2}+10+36cos\zeta_{1}cosh\zeta_{2}$ $\displaystyle-8cos2\zeta_{1}cosh2\zeta_{2}+17cos2\zeta_{1})$ 5 The numerical method 5.1 The difference scheme For the coupled KdV-MKdV system ( 1 ) we introduce a
+numerical (finite difference) method of solution [ 7 , 15 ] .
+This scheme is valid for arbitrary number of equations with
+constants coefficients and of the form $\displaystyle\frac{\theta_{i}^{n,j+1}-\theta_{i}^{n,j}}{\tau}+\underset{m,k}{\sum}(g_{m,k}^{n,1}\theta_{i}^{m,j}\frac{\theta_{i+1}^{k,j}-\theta_{i-1}^{k,j}}{2h}+g_{m,k}^{n,2}(\theta_{i}^{m,j})^{2}\frac{\theta_{i+1}^{k,j}-\theta_{i-1}^{k,j}}{2h}$ $\displaystyle+g_{m,k}^{n,3}\frac{\theta_{i+1}^{m,j}-\theta_{i-1}^{m,j}}{2h}\frac{\theta_{i+1}^{k,j}-\theta_{i-1}^{k,j}}{2h}+g_{m,k}^{n,4}\theta_{i}^{m,j}\frac{\theta_{i+1}^{k,j}-2\theta_{i}^{k,j}+\theta_{i-1}^{k,j}}{2h}$ $\displaystyle+g_{m,k}^{n,5}\theta_{i}^{m,j}\theta_{i}^{k,j}\frac{\theta_{i+1}^{k,j}-\theta_{i-1}^{k,j}}{2h})+d_{n}\frac{\theta_{i+2}^{n,j}-2\theta_{i+1}^{n,j}+2\theta_{i-1}^{n,j}-\theta_{i-2}^{n,j}}{2h^{3}}=0$ (17) where i and j are the discrete space and time respectively. The
+time step is denoted by $\tau\,$ while h denotes spatial step. 5.2 Stability analysis of the scheme We prove stability with respect to small perturbations of initial
+conditions [ 16 , 9 ] . It is the boundness of the discrete
+solution with respect to small perturbation of the initial data.
+We give here the main steps while the details are presented in
+Appendix A. We can write $\displaystyle d\theta_{i}^{n,j+1}=T_{i,r}^{n,j+1}\,d\theta_{r}^{n,j}=T_{i,r}^{n,j+1}\,T_{i,r}^{n,j}\,d\theta_{r}^{n,j-1}=\underset{r}{\Pi}\,\left(T_{i,r}^{n}\right)^{r}\,d\theta_{r}^{n,o}$ where $d\theta_{i}^{n,j+1}$ is perturbations of the discrete solution, $d\theta_{r}^{n,o}$ small perturbation of the initial data and $T_{i,r}^{n,j+1}$ is a differentiable operator. Stability required
+the boundedness of $\underset{r}{\Pi}\,\left(T_{i,r}^{n}\right)^{r}\,\,$ i.e $\left\|T^{r}\right\|\,$ is bounded. We found that $\displaystyle\left\|T^{j+1}\right\|^{2}\leq e^{a(\tau,h)\tau},$ $\displaystyle a(\tau,h)=2\underset{l,n,m,k}{\max}\left|g_{m,k}^{n,l}\right|\,\ \underset{i,m,k}{\max}\left(\left|\theta_{x,i}^{m,j}\right|\,\left|\theta_{x,i}^{k,j}\right|\right)+\tau[\underset{l,n,m,k}{\max}\left|g_{m,k}^{n,l}\right|\,\ \underset{i,m,k}{\max}\left(\left|\theta_{x,i}^{m,j}\right|\,\left|\theta_{x,i}^{k,j}\right|\right)$ $\displaystyle+\frac{1}{h}\,\underset{l,n,m,k}{\max}\left|g_{m,k}^{n,l}\right|\,\ \underset{i,m,k}{\max}\left(\left|\theta_{i}^{m,j}\right|\,\left|\theta_{i}^{k,j}\right|\right)+\frac{3\,}{h^{3}}\underset{n}{\max}\left|d_{n}\right|]^{2}$ (18) The scheme is stable if $a(\tau,h)\leq const$ . We have here a
+conditional stability. That is we require that $\tau\rightarrow 0\,\ $ more faster than $h\rightarrow 0\,$ . Namely we need $\displaystyle\tau\leq\,\left(\text{constant}\right)\,.\,h^{6}$ 5.3 Convergence proof for the scheme We prove that the solution of ( 17 ) converges to the solution of ( 1 ) if the exact solution is continuously differentiable one [ 16 , 9 ] . We introduce here the main points for the scheme
+convergence and give the details in Appendix B. $\theta_{i}^{j}\,$ is the difference solution of ( 17 ), u ${}_{i}^{j}\,$ is the exact solution. Hence the error v ${}_{i}^{j}$ is given by $\ \ v_{i}^{j}=\theta_{i}^{j}-u_{i}^{j}\,\ $ .
+Introducing L ${}_{2}\ $ norm defined by $\left\|V^{j}\right\|=\left(\underset{i}{\sum}\underset{n}{\sum}\left(v_{i}^{n,j}\right)^{2}h\right)^{1/2}$ The scheme converges when the norm of that error $\left\|V^{j}\right\|\rightarrow 0$ as $\left(\tau,\text{ }h\text{
+}\rightarrow 0\right)$ We found that $\left\|V^{j+1}\right\|\leq\,P(M)\,\ O\left(\tau+h^{2}\right)$ , where $\,P(M)\,\ $ is a polynomial in the
+bounded constant $M=\tau\frac{e^{a\tau j}-1}{e^{a\tau}-1}$ and $a$ as in ( 18 ). Hence the convergence proved. 5.4 Numerical calculations and test The coupled KdV-MKdV system ( 2 ) is solved
+numerically using scheme ( 17 ) with initial condition
+from ( 16 ) at $t=0$ and the results are compared with the explicit formulas ( 16 ). The percentage errors are shown in the following plots. Fig.3 percentage errors of the numerical solutions relative to
+the explicit solutions. The results of the test confirms the validity of the numerical
+scheme we propose. It also illustrates the errors of evaluation
+that could be estimated by the resulting inequalities of the
+scheme convergence proof. 6 Conclusion Darboux transformations covariance of Lax representation of
+nonlinear equations is a powerful tool for explicit solutions
+production. Here we investigate applications of special kind of
+such discrete symmetry - to be called elementary ones. We use
+these elementary DT to produce explicit solutions for coupled
+KdV-MKdV system. The iteration of DT can be formulated in form of
+determinants representations [ 10 , 12 ] . A numerical
+method for general coupled KdV-MKdV system is introduced. It is a
+difference scheme for Cauchy problems for arbitrary number of
+equations with constants coefficients. We analyze stability and
+prove the convergence of the scheme. The scheme keeps two
+conservation laws chosen in analogy with KdV type equations.
+Analyzing stability and proving the convergence beside comparing
+the numerical results with explicit formulas allow us to use the
+numerical scheme to systems with arbitrary coefficients that is
+presumably non-integrable. Obviously the coupled KdV systems are
+successfully treated by our scheme [ 3 ] . Acknowledgment We thank S. B. Kshevetskii for useful discussions about numerical
+scheme for the problem under consideration. References [1] Dodd R and Fordy A, On the integrability of a system of coupled
+KdV equations, Phys. Lett. A89 (1982), 168–170. [2] Guha-Roy C, On explicit solutions of a coupled KdV-MKdV
+equation, International Journal of Modern physics B3(6) (1989),
+871–875. [3] Halim A A, Kshevetskii S P and Leble S B, On numerical integration
+of coupled Korteweg-de Vries System, Applied Mathematics Letters
+(to be published). [4] Hirota R and Satsuma J, Soliton solution of coupled KdV equations,
+Phys. Lett. A85 (1981), 407–409. [5] Krishnan EV, Remarkes on a system of coupled nonlinear wave
+equations, Journal of Mathematical physics 31(5) (1990),
+1155–1156. [6] Krzhivitski A and Ladyzhenskaya O A, A grid method for the
+Navier-Stokes equations, Dokl. Akad. Nauk SSSR 167 309-311
+(Russian); translated as Soviet Physics Dokl. 11 (1966), 212–213. [7] Kshevetskii S P, Analytical and numerical investigation of
+nonlinear internal gravity waves, Nonlinear Processes in
+Geophysics 8 (2001), 37–53. [8] Kupershmidt B A, A coupled Korteweg-de Vries equation with
+dispersion, J. Phys. A: Math. Gen. 18 (1985), 1571–1573. [9] Lankaster P, Theory of matrices, Academic Press, New York, 1969. [10] Leble S B and Ustinov N V, Darboux transforms, deep reduction and
+solitons, J. Phys. A: Math. Gen. (1993), 5007–5016. [11] Leble S B, Nonlinear waves in waveguides, Springer-Verlag
+Berlin, Germany (1991). [12] Leble S B and Ustinov N V, Korteweg-de Vries-modified Korteweg-de
+Vries systems and Darboux transforms in 1+1 and 2+1 dimensions, J.
+Math. Phys. 34(4) (1992), 1421–1428. [13] Matveev V B and Salle M A, Darboux transforms and solitons,
+Springer-Verlag, Berlin (1991). [14] Ping Fu Zhao and Meng Zhao Qin, Multisymplectic geometry and
+Multisymplectic Preissmann scheme for the KdV equation, J. Phys.
+A: Math. Gen., 33(18) (2000), 3613–3626. [15] Shaohong Zhu, A difference scheme for the coupled KdV equation,
+Communication in Nonlinear Science & Numerical Simulation, 4(1)
+(1999), 60–63. [16] Tannehill J C, Anderson D A and Pletcher R H, Computational fluid
+mechanics and heat transfer, Taylor & Francis, Washington,
+(1997). [17] Wen-Xiu Ma and Zi-Xiang Zhou, Coupled integrable systems
+associated with a polynomial spectral problem and their Virasoro
+symmetry algebras, Progress of Theoretical Physics 96(2) (1996),
+449–457. 7 Appendix A Stability analysis of the scheme We prove stability with respect to small perturbations (because we
+consider nonlinear equations) of initial conditions. Strictly
+speaking it is the boundness of the discrete solution in terms of
+small perturbation of the initial data. Consider the differential $T_{i,r}^{n,j+1}=\left\{\partial\theta_{i}^{n,j+1}/\partial\theta_{r}^{n,j}\right\}\,,\,d\theta_{r}^{n,j}=\left\{\theta_{i-2}^{n,j}\,\ \theta_{i-1}^{n,j}\,\ \theta_{i}^{n,j}\,\ \theta_{i+1}^{n,j}\,\ \theta_{i+2}^{n,j}\right\}^{t}$ and define the norm $\left\|d\theta^{j}\right\|=\left(\underset{r}{\sum}\underset{n}{\sum}\left(d\theta_{r}^{n,j}\right)^{2}\,\ h\right)^{1/2}$ We can write $d\theta_{i}^{n,j+1}=T_{i,r}^{n,j+1}\,d\theta_{r}^{n,j}=T_{i,r}^{n,j+1}\,T_{i,r}^{n,j}\,d\theta_{r}^{n,j-1}=\underset{r}{\Pi}\,\left(T_{i,r}^{n}\right)^{r}\,d\theta_{r}^{n,o}$ where $d\theta_{i}^{n,j+1}$ is perturbations of the discrete solution, $d\theta_{r}^{n,o}$ small perturbation of the initial data.
+Stability required the boundedness of $\underset{r}{\Pi}\,\left(T_{i,r}^{n}\right)^{r}\,\,$ i.e $\left\|T^{r}\right\|\,$ is bounded. We
+calculate $T\,\,\ $ from ( 17 ) as follow $\displaystyle T_{i,r}^{n,j+1}=\delta_{i,r}-\tau\underset{m,k}{\sum}(\frac{g_{m,k}^{n,1}}{2h}\left[\theta_{i}^{m,j}\left(\delta_{i+1,r}-\delta_{i-1,r}\right)+\delta_{i,r}\left(\theta_{i+1}^{k,j}-\theta_{i-1}^{k,j}\right)\right]$ $\displaystyle+\frac{g_{m,k}^{n,2}}{2h}\left[\left(\theta_{i}^{m,j}\right)^{2}\left(\delta_{i+1,r}-\delta_{i-1,r}\right)+2\theta_{i}^{m,j}\delta_{i,r}\left(\theta_{i+1}^{k,j}-\theta_{i-1}^{k,j}\right)\right]$ $\displaystyle+\frac{g_{m,k}^{n,3}}{2h}\left[\left(\theta_{i+1}^{m,j}-\theta_{i-1}^{m,j}\right)\left(\delta_{i+1,r}-\delta_{i-1,r}\right)+\left(\delta_{i+1,r}-\delta_{i-1,r}\right)\left(\theta_{i+1}^{k,j}-\theta_{i-1}^{k,j}\right)\right]$ $\displaystyle+\frac{g_{m,k}^{n,4}}{2h}\left[\theta_{i}^{m,j}\left(\delta_{i+1,r}-2\delta_{i,r}+\delta_{i-1,r}\right)+\delta_{i,r}\left(\theta_{i+1}^{k,j}-2\theta_{i}^{k,j}+\theta_{i-1}^{k,j}\right)\right]$ $\displaystyle+\frac{g_{m,k}^{n,5}}{2h}\left[\theta_{i}^{m,j}\theta_{i}^{k,j}\left(\delta_{i+1,r}-\delta_{i-1,r}\right)+\theta_{i}^{m,j}\left(\theta_{i+1}^{k,j}-\theta_{i-1}^{k,j}\right)\delta_{i,r}+\theta_{i}^{k,j}\left(\theta_{i+1}^{k,j}-\theta_{i-1}^{k,j}\right)\delta_{i,r}\right])$ $\displaystyle-\frac{\tau d_{n}}{2h^{3}}\left[\delta_{i+2,r}-2\delta_{i+1,r}+2\delta_{i-1,r}-2\delta_{i-2,r}\right]$ (19) Rewriting ( 19 ) in terms of identity (E), symmetric (S) and
+anti-symmetric (A) matrices $\left\|S^{j+1}\right\|\leq\tau\,\underset{l,n,m,k}{\max}\left|g_{m,k}^{n,l}\right|\,\ \underset{i,m,k}{\max}\left(\left|\theta_{x,i}^{m,j}\right|\,\left|\theta_{x,i}^{k,j}\right|\right),$ $\left\|A^{j+1}\right\|\leq\frac{\tau}{h}\,\underset{l,n,m,k}{\max}\left|g_{m,k}^{n,l}\right|\,\ \underset{i,m,k}{\max}\left(\left|\theta_{i}^{m,j}\right|\,\left|\theta_{i}^{k,j}\right|\right)+\frac{3\,}{h^{3}}\underset{n}{\max}\left|d_{n}\right|,$ where $\theta_{x,i}^{j}=\frac{\theta_{i+1}^{j}-\theta_{i-1}^{j}}{2h}\,\ ,\,\ n,m,k=1,2,..N,\,\ l=1,2,...5.$ $\left\|T^{j+1}\right\|^{2}=\left\|\left(T^{j+1}\right)^{\ast}\,\ T^{j+1}\right\|=\left\|\left(E-A^{j+1}+S^{j+1}\right)\left(E+A^{j+1}+S^{j+1}\right)\right\|$ $\leq 1+2\,\left\|S^{j+1}\right\|+\left(\left\|A^{j+1}\right\|+\left\|S^{j+1}\right\|\right)^{2}$ $\leq e^{a(\tau,h)\tau},$ $\displaystyle a(\tau,h)=2\underset{l,n,m,k}{\max}\left|g_{m,k}^{n,l}\right|\,\ \underset{i,m,k}{\max}\left(\left|\theta_{x,i}^{m,j}\right|\,\left|\theta_{x,i}^{k,j}\right|\right)+\tau[\underset{l,n,m,k}{\max}\left|g_{m,k}^{n,l}\right|\,\ \underset{i,m,k}{\max}\left(\left|\theta_{x,i}^{m,j}\right|\,\left|\theta_{x,i}^{k,j}\right|\right)$ $\displaystyle+\frac{1}{h}\,\underset{l,n,m,k}{\max}\left|g_{m,k}^{n,l}\right|\,\ \underset{i,m,k}{\max}\left(\left|\theta_{i}^{m,j}\right|\,\left|\theta_{i}^{k,j}\right|\right)+\frac{3\,}{h^{3}}\underset{n}{\max}\left|d_{n}\right|]^{2}$ We have here a conditional stability. That is we require that $\tau\rightarrow 0\,\ $ more faster than $h\rightarrow 0.\,$ Namely we need $\displaystyle\tau\leq\,\left(\text{cons}\tan\text{t}\right)\,.\,h^{6}$ 8 Appendix B The scheme convergence We prove the convergence by proving that the norm of the error
+(between the difference solution and the exact solution) vanishes
+as the mesh is refined. Let $\theta_{i}^{j}\,$ the difference
+solution of ( 17 ), u ${}_{i}^{j}\,$ the exact solution. The error v ${}_{i}^{j}$ is given by $v_{i}^{j}=\theta_{i}^{j}-u_{i}^{j}\,.\,$ The scheme converges when the norm $\left\|V^{j}\right\|\rightarrow 0$ as $\left(\tau,\text{ }h\text{ }\rightarrow 0\right)$ where the
+norm is defined as $\left\|V^{j}\right\|=\left(\underset{i}{\sum}\underset{n}{\sum}\left(v_{i}^{n,j}\right)^{2}h\right)^{1/2}$ substitute in ( 17 ) by $\theta_{i}^{j}=v_{i}^{j}+u_{i}^{j}\,\ $ keeping in mind that for $\theta_{i}^{j}\,$ equation ( 17 ) is $O\,\left(\tau+h^{2}\right)\,$ and using the operator T defined
+by $\displaystyle v_{i}^{n,j}-\tau[\underset{m,k}{\sum}(g_{m,k}^{n,1}(u_{i}^{m,j}\frac{v_{i+1}^{k,j}-v_{i-1}^{k,j}}{2h}+v_{i}^{m,j}\frac{u_{i+1}^{k,j}-u_{i-1}^{k,j}}{2h})+g_{m,k}^{n,2}((u_{i}^{m,j})^{2}\frac{v_{i+1}^{k,j}-v_{i-1}^{k,j}}{2h}$ $\displaystyle+(v_{i}^{m,j})^{2}\frac{u_{i+1}^{k,j}-u_{i-1}^{k,j}}{2h})+g_{m,k}^{n,3}(\frac{u_{i+1}^{m,j}-u_{i-1}^{m,j}}{2h}\frac{v_{i+1}^{k,j}-v_{i-1}^{k,j}}{2h}+\frac{v_{i+1}^{m,j}-v_{i-1}^{m,j}}{2h}\frac{u_{i+1}^{k,j}-u_{i-1}^{k,j}}{2h})$ $\displaystyle+g_{m,k}^{n,4}(u_{i}^{m,j}\frac{v_{i+1}^{k,j}-2v_{i}^{k,j}+v_{i-1}^{k,j}}{2h}+v_{i}^{m,j}\frac{u_{i+1}^{k,j}-2u_{i}^{k,j}+u_{i-1}^{k,j}}{2h})+2g_{m,k}^{n,5}(u_{i}^{m,j}v_{i}^{k,j}$ $\displaystyle\frac{v_{i+1}^{k,j}-v_{i-1}^{k,j}}{2h}+v_{i}^{m,j}u_{i}^{k,j}\frac{u_{i+1}^{k,j}-u_{i-1}^{k,j}}{2h}))+d_{n}\frac{v_{i+2}^{n,j}-2v_{i+1}^{n,j}+2v_{i-1}^{n,j}-v_{i-2}^{n,j}}{2h^{3}}]$ $\displaystyle=\underset{r}{\sum}T_{ir}^{j+1}v_{r}^{n,j}$ So we obtain $v_{i}^{n,j+1}=\underset{r}{\sum}T_{ir}^{j+1}v_{r}^{n,j}+\tau\,f_{m,k,i}^{n,j}$ (20) where $f_{m,k,i}^{n,j}=\underset{m,k}{\sum}g_{m,k}^{n,1}v_{i}^{m,j}\frac{v_{i+1}^{k,j}-v_{i-1}^{k,j}}{2h}+g_{m,k}^{n,2}(v_{i}^{m,j})^{2}\frac{v_{i+1}^{k,j}-v_{i-1}^{k,j}}{2h}+g_{m,k}^{n,3}\frac{v_{i+1}^{m,j}-v_{i-1}^{m,j}}{2h}\frac{v_{i+1}^{k,j}-v_{i-1}^{k,j}}{2h}\\
+\hskip 42.67912pt+g_{m,k}^{n,4}v_{i}^{m,j}\frac{v_{i+1}^{k,j}-2v_{i}^{k,j}+v_{i-1}^{k,j}}{2h}+2g_{m,k}^{n,5}v_{i}^{m,j}v_{i}^{k,j}\frac{v_{i+1}^{k,j}-v_{i-1}^{k,j}}{2h}+O\left(\tau+h^{2}\right)$ $\left\|f^{j}\right\|=\left(\underset{i}{\sum}\left(f_{m,k,i}^{n,j}\right)^{2}h\right)^{1/2}$ $\leq\frac{\left|g_{m,k}^{n,1}\right|_{\max}}{h^{3/2}}\left\|V^{j}\right\|^{2}+\frac{\left|g_{m,k}^{n,2}\right|_{\max}}{h^{2}}\left\|V^{j}\right\|^{3}+\frac{\left|g_{m,k}^{n,3}\right|_{\max}}{h^{5/2}}\left\|V^{j}\right\|^{2}+\frac{\left|g_{m,k}^{n,4}\right|_{\max}}{h^{5/2}}\left\|V^{j}\right\|^{2}$ $\hskip 39.83385pt+\frac{\left|g_{m,k}^{n,5}\right|_{\max}}{h^{2}}\left\|V^{j}\right\|^{3}+O\left(\tau+h^{2}\right)$ $\leq\frac{\left|g_{m,k}^{n,l}\right|_{\max}}{h^{2}}\left\|V^{j}\right\|^{3}+O\left(\tau+h^{2}\right),\hskip 28.45274pt\left|g_{m,k}^{n,l}\right|_{\max}=\underset{n,m,k,1}{\max}g_{m,k}^{n,l}$ Using Schwartz inequality so ( 20 ) becomes $\left\|V^{\ j+1}\right\|\leq\left\|T^{j+1}\right\|\left\|V^{j}\right\|+\tau\left\|f^{j}\right\|$ $\leq\left\|T^{j+1}\right\|\left\|T^{j}\right\|\left\|V^{j-1}\right\|+\tau\left(T^{j+1}\left\|f^{j-1}\right\|+\left\|f^{j}\right\|\right)$ $\leq e^{a\tau j}\left\|V^{o}\right\|+\tau\left(e^{a\tau\left(j-1\right)}\left\|f^{o}\right\|+e^{a\tau\left(j-2\right)}\left\|f^{1}\right\|+...+\left\|f^{j}\right\|\right)$ $\leq e^{a\tau j}\left\|V^{o}\right\|+M\,\ \ \left|g_{m,k}^{n,l}\right|_{\max}\left\|V^{j+1}\right\|^{3}+M\,\ O\left(\tau+h^{2}\right),M=\tau\frac{e^{a\tau j}-1}{e^{a\tau}-1}$ Using $\left\|V^{o}\right\|=0,$ the above inequality has the
+solution $\left\|V^{j+1}\right\|\leq P\left(M\right)\,\ \ O\,\left(\tau+h^{2}\right),\,\ P(M)$ is a polynomial in $M$ . Since $M$ is bounded then $\left\|V^{j+1}\right\|\rightarrow 0\,\ as\,\ \tau,\,h\,\rightarrow 0\,\ $ and the convergence proved. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

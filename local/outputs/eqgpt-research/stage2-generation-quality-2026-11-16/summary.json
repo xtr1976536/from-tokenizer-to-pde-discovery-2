@@ -1,0 +1,101 @@
+{
+  "status": "FIXED_BUDGET_GENERATION_COMPARISON_COMPLETE",
+  "attempts_per_arm": 192,
+  "arms": [
+    {
+      "split": "811",
+      "vocab": 128,
+      "random_mixture_valid": 1,
+      "model_only_valid": 6,
+      "fixed_valid": 11,
+      "fixed_numeric_parse": 11,
+      "unique_numeric_structures": 11,
+      "reasons": {
+        "no_legal_next_token": 18,
+        "valid_eos": 11,
+        "token_limit": 3
+      }
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "random_mixture_valid": 2,
+      "model_only_valid": 6,
+      "fixed_valid": 10,
+      "fixed_numeric_parse": 10,
+      "unique_numeric_structures": 10,
+      "reasons": {
+        "token_limit": 10,
+        "no_legal_next_token": 12,
+        "valid_eos": 10
+      }
+    },
+    {
+      "split": "811",
+      "vocab": 320,
+      "random_mixture_valid": 2,
+      "model_only_valid": 4,
+      "fixed_valid": 13,
+      "fixed_numeric_parse": 12,
+      "unique_numeric_structures": 12,
+      "reasons": {
+        "no_legal_next_token": 16,
+        "valid_eos": 13,
+        "token_limit": 3
+      }
+    },
+    {
+      "split": "622",
+      "vocab": 128,
+      "random_mixture_valid": 0,
+      "model_only_valid": 11,
+      "fixed_valid": 14,
+      "fixed_numeric_parse": 14,
+      "unique_numeric_structures": 14,
+      "reasons": {
+        "token_limit": 6,
+        "valid_eos": 14,
+        "no_legal_next_token": 12
+      }
+    },
+    {
+      "split": "622",
+      "vocab": 192,
+      "random_mixture_valid": 2,
+      "model_only_valid": 9,
+      "fixed_valid": 17,
+      "fixed_numeric_parse": 17,
+      "unique_numeric_structures": 17,
+      "reasons": {
+        "token_limit": 8,
+        "valid_eos": 17,
+        "no_legal_next_token": 7
+      }
+    },
+    {
+      "split": "622",
+      "vocab": 320,
+      "random_mixture_valid": 1,
+      "model_only_valid": 7,
+      "fixed_valid": 13,
+      "fixed_numeric_parse": 13,
+      "unique_numeric_structures": 13,
+      "reasons": {
+        "no_legal_next_token": 13,
+        "token_limit": 6,
+        "valid_eos": 13
+      }
+    }
+  ],
+  "uniform_random_mixture": 0.0,
+  "weights_changed": false,
+  "training_started": false,
+  "physical_prior_added": false,
+  "changes": [
+    "Model probability only",
+    "Zero RHS residual serialization",
+    "Checkpoint loading preserves execution sampling policy",
+    "Overdeep symbolic compile rejected; 5sec compile budget"
+  ],
+  "real_Cylinder_retest_pending": true
+}

@@ -1,0 +1,983 @@
+Bifurcations and Spectral Stability of Solitary Waves in Coupled Nonlinear Schrödinger Equations Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Introduction 2 Main Results 2.1 Bifurcations of the Fundamental Solitary Wave 2.2 Stability of the Fundamental and Bifurcated Solitary Waves 3 Bifurcations and Approximate Homoclinic Solutions 3.1 Melnikov Analysis 3.2 Proof of Theorem 4 Hamiltonian-Krein Index and Evans Function 4.1 Linearized Operator 4.2 Hamiltonian-Krein Index 4.3 Evans Functions 4.4 Parameter-Dependent Solitary Waves 5 Spectral Stability of the Fundamental Solitary Wave 6 Spectral Stability of the Bifurcated Solitary Waves 6.1 Proof of Theorem 6.2 Proof of Theorem 6.3 Proof of Theorem 6.4 Proof of Theorem 6.5 Proof of Theorem 6.6 Proof of Theorem 7 Example: Coupled Cubic Nonlinear Schrödinger Equations 7.1 Bifurcation Analysis 7.2 Stability Analysis A Proofs of Lemmas and A.1 Proof of Lemma A.2 Proof of Lemma B Further Computations of $\bar{b}_{2}$ C Proofs of Lemmas and C.1 Proof of Lemma C.2 Proof of Lemma References License: arXiv.org perpetual non-exclusive license arXiv:2005.10317v3 [math.AP] 16 Sep 2021 Bifurcations and Spectral Stability of Solitary Waves in Coupled Nonlinear Schrödinger Equations Thanks: This work was partially supported by JSPS KAKENHI Grant Number JP17H02859. Kazuyuki Yagasaki and Shotaro Yamazoe Address: Department of Applied Mathematics and Physics, Graduate School of Informatics,
+Kyoto University, Yoshida-Honmachi, Sakyo-ku, Kyoto 606-8501, JAPAN Email address: yagasaki@amp.i.kyoto-u.ac.jp (K. Yagasaki) Email address: yamazoe@amp.i.kyoto-u.ac.jp (S. Yamazoe) Date: August 24, 2026 Abstract. We study bifurcations and spectral stability of solitary waves in coupled nonlinear Schrödinger (CNLS) equations on the line.
+We assume that the coupled equations possess a solution of which one component is identically zero, and call it a fundamental solitary wave .
+By using a result of one of the authors and his collaborator, pitchfork bifurcations of the fundamental solitary wave are detected.
+We utilize the Hamiltonian-Krein index theory and Evans function technique to determine the spectral or orbital stability of the bifurcated solitary waves as well as that of the fundamental one under some nondegenerate conditions which are easy to verify, compared with those of the previous results.
+We apply our theory to CNLS equations with a cubic nonlinearity and give numerical evidences for the theoretical results. Key words and phrases: bifurcation, coupled nonlinear Schrödinger equations, solitary wave, spectral stability 2010 Mathematics Subject Classification 35B32, 35B35, 35Q55, 37K45, 37K50 1. Introduction We consider coupled nonlinear Schrödinger (CNLS) equations of the form $\displaystyle\begin{aligned} &\mathrm{i}\partial_{t}u+\partial_{x}^{2}u+\partial_{1}F(|u|^{2},|v|^{2};\mu)u=0,\\
+&\mathrm{i}\partial_{t}v+\partial_{x}^{2}v+\partial_{2}F(|u|^{2},|v|^{2};\mu)v=0,\end{aligned}$ (1.1) where $(u,v)=(u(t,x),v(t,x))$ are complex-valued unknown functions of $(t,x)\in\mathbb{R}\times\mathbb{R}$ , $\mu$ is a real parameter, $F:\mathbb{R}\times\mathbb{R}\times\mathbb{R}\to\mathbb{R}$ is a given function, and $\partial_{j}F$ represents the derivative of $F$ with respect to the $j$ -th argument for $j=1,2$ .
+Our special attention is paid to the cubic nonlinearity, $\displaystyle F(\zeta_{1},\zeta_{2};\beta_{1})=\frac{1}{2}\zeta_{1}^{2}+\beta_{1}\zeta_{1}\zeta_{2}+\frac{\beta_{2}}{2}\zeta_{2}^{2},$ (1.2) where $\beta_{1},\beta_{2}$ are real constants and $\beta_{1}$ is taken as the control parameter $\mu$ below.
+In applications, ( 1.1 ) arises when considering propagation of two interacted waves in nonlinear media.
+For example, in nonlinear optics, it describes nonlinear pulse propagation in birefringent fibers.
+See [ 2 , 27 , 34 , 39 ] and references therein.
+( 1.1 ) has a Hamiltonian structure with the Hamiltonian $\displaystyle\mathcal{H}(u,v;\mu)=\frac{1}{2}\int_{\mathbb{R}}\Bigl(|\partial_{x}u(x)|^{2}+|\partial_{x}v(x)|^{2}-F(|u|^{2},|v|^{2};\mu)\Bigr)\mathrm{d}x,$ and the Cauchy problem of ( 1.1 ) is well-posed in the Sobolev space $H^{1}(\mathbb{R},\mathbb{C}^{2})$ (see, e.g., Section 4 of [ 7 ] ). Here we are interested in solitary waves of the form $\displaystyle\begin{aligned} &u(t,x)=\mathrm{e}^{\mathrm{i}(\omega t+cx-c^{2}t+\theta)}U(x-2ct-x_{0}),\\
+&v(t,x)=\mathrm{e}^{\mathrm{i}(st+cx-c^{2}t+\phi)}V(x-2ct-x_{0}),\end{aligned}$ (1.3) such that the real-valued functions $(U,V)=(U(x),V(x))$ satisfy $U(x),V(x)\to 0$ as $x\to\pm\infty$ ,
+where $c$ , $x_{0}$ , $\theta$ , $\phi$ , and $\omega,s>0$ are real constants.
+Henceforth, without loss of generality, we take $c,x_{0},\theta,\phi=0$ by scaling the independent variables if necessary, since ( 1.1 ) is invariant under the Galilean transformations $\displaystyle(u(t,x),v(t,x))\mapsto\mathrm{e}^{\mathrm{i}(cx-c^{2}t)}(u(t,x-2ct),v(t,x-2ct)),\quad c\in\mathbb{R},$ the spatial translations $\displaystyle(u(t,x),v(t,x))\mapsto(u(t,x-x_{0}),v(t,x-x_{0})),\quad x_{0}\in\mathbb{R},$ (1.4) and the gauge transformations $\displaystyle(u(t,x),v(t,x))\mapsto(\mathrm{e}^{\mathrm{i}\theta}u(t,x),\mathrm{e}^{\mathrm{i}\phi}v(t,x)),\quad\theta,\phi\in\mathbb{R}.$ (1.5) So $(U,V)=(U(x),V(x))$ solves $\displaystyle\begin{aligned} &-U^{\prime\prime}+\omega U-\partial_{1}F(U^{2},V^{2};\mu)U=0,\\
+&-V^{\prime\prime}+sV-\partial_{2}F(U^{2},V^{2};\mu)V=0,\end{aligned}$ (1.6) where the prime represents the differentiation with respect to $x$ .
+Throughout this paper we assume that ( 1.6 ) possess a homoclinic solution of the form $(U,V)=(U_{0}(x),0)$ .
+This assumption holds with $U_{0}(x)=\sqrt{2\omega}\sech(\sqrt{\omega}x)$ for the particular nonlinearity ( 1.2 ).
+We refer to the solitary wave of the form $\displaystyle(u(t,x),v(t,x))=(\mathrm{e}^{\mathrm{i}\omega t}U_{0}(x),0),$ (1.7) as a fundamental solitary wave .
+Obviously, $(U,V)=(-U_{0}(x),0)$ is also a homoclinic solution to ( 1.6 ) but it gives the same solitary wave ( 1.3 ) as ( 1.7 ) if $\theta=\pi$ is taken.
+So we only treat ( 1.7 ). Blázquez-Sanz and Yagasaki [ 6 ] studied bifurcations of homoclinic orbits in a large class of ordinary differential equations using Gruendler’s version of Melnikov’s method [ 17 ] , and applied their theory to show that infinitely many pitchfork bifurcations of $(U,V)=(U_{0}(x),0)$ occur in ( 1.6 ) with ( 1.2 ) when $\beta_{1}$ is taken as a control parameter.
+Moreover, in a general situation, they proved that if bifurcations of homoclinic orbits occur, then the associated variational equations, i.e., linearized equations, around the homoclinic orbits are integrable in the meaning of differential Galois theory [ 32 ] .
+Homoclinic orbits born at the pitchfork bifurcations in ( 1.6 ) correspond to solitary waves of the form ( 1.3 ) with nonzero $U$ - and $V$ -components, which are often called vector solitons, bifurcated from the fundamental solitary waves ( 1.7 ) in ( 1.1 ). Once establishing their existence, the stability problem of these bifurcated solitary waves naturally arises.
+Ohta [ 28 ] proved the orbital stability of the fundamental solitary waves in ( 1.1 ) with ( 1.2 ) and $\beta_{2}=1$ .
+Subsequently, his result was extended to more general nonlinearity cases by several authors [ 5 , 8 , 25 , 26 , 27 ] .
+All of these results are based on variational characterizations of solitary waves.
+On the other hand, the spectral stability of vector solitons in ( 1.1 ) with ( 1.2 ) or the saturable nonlinearity was discussed by Pelinovsky and Yang [ 31 ] .
+They employed the Hamiltonian-Krein index theory, which was established by Pelinovsky [ 30 ] and Kapitula et al. [ 18 , 19 ] independently, and carried out some formal calculations to claim that any purely imaginary embedded eigenvalue with a positive (resp. negative) Krein signature disappears (resp. changes to a pair of eigenvalues with nonzero real parts) after bifurcations.
+This suggests that the bifurcated solitary waves of ( 1.1 ) with ( 1.2 ) are spectrally stable and unstable, respectively, when they have positive and sign-changing $V$ -components.
+A rigorous analysis was given by Cuccagna et al. [ 10 ] using a technique based on the analytic continuation of the resolvent.
+Moreover, some nondegenerate conditions which are generically satisfied but difficult to verify for concrete examples were assumed there. Li and Promislow [ 24 ] also studied the spectral stability of solitary waves in CNLS equations with a different special nonlinearity, using the Evans function technique.
+This technique was first proposed in Evans’ earlier works about the stability of pulse solutions in nerve axon equations [ 12 , 13 , 14 , 15 ] , and subsequently discussed in a topological framework by Alexander et al. [ 3 ] . In this paper, we study pitchfork bifurcations of the fundamental solitary waves detected by the Melnikov analysis of [ 6 ] in ( 1.1 ) and determine the spectral and/or orbital stability of the fundamental and bifurcated solitary waves under some nondegenerate conditions which are easy to verify, compared with those of [ 10 , 31 ] .
+Here the terminology “pitchfork bifurcation” is used with caution:
+a pair of homoclinic solutions to ( 1.6 ),
+which correspond to the same family of solitary waves of the form ( 1.3 )
+in ( 1.1 ), are born at the bifurcation point.
+Our main tool to determine their spectral stability
+is the Evans function technique as in [ 24 ] but more careful treatments are required.
+The Hamiltonian-Krein index theory is also used as in [ 31 ] .
+We apply our theory to the particular nonlinearity case of ( 1.2 ):
+pitchfork bifurcations of the fundamental solitary waves are detected
+and the spectral or orbital stability of the fundamental and bifurcated solitary waves
+are determined for almost all parameter values.
+In particular, the nondegenerate conditions for bifurcations and spectral stability are given explicitly.
+The theoretical results are also demonstrated with numerical computations
+obtained by the computer tool AUTO [ 11 ] . The outline of this paper is as follows:
+In Section 2, we state our assumptions and main results
+on pitchfork bifurcations of the fundamental solitary waves in ( 1.1 ).
+In Section 3, we use the Melnikov analysis of [ 6 ] for ( 1.6 )
+and prove the main result on pitchfork bifurcations.
+For the reader’s convenience, in our setting,
+the Melnikov analysis is briefly reviewed. In Section 4, we present the Hamiltonian-Krein index theory and Evans function technique
+in appropriate forms.
+Applying these approaches,
+we prove the main results on the stability of the fundamental and bifurcated solitary waves
+in Sections 5 and 6, respectively.
+Finally, we illustrate our theory for the particular nonlinearity ( 1.2 )
+along with some numerical computations in Section 7. 2. Main Results In this section, we give our assumptions and main results
+on bifurcations of the fundamental solitary wave ( 1.7 )
+and the stability of the fundamental and bifurcated solitary waves
+in the CNLS equations ( 1.1 ). 2.1. Bifurcations of the Fundamental Solitary Wave We first make the following assumptions. (A1) $F:\mathbb{R}\times\mathbb{R}\times\mathbb{R}\to\mathbb{R}$ is a $C^{3}$ function satisfying $\displaystyle F(0,0;\mu)=\partial_{1}F(0,0;\mu)=\partial_{2}F(0,0;\mu)=0,\quad\partial_{\mu}F(\zeta,0;\mu)=0,$ for any $\zeta,\mu\in\mathbb{R}$ .
+Henceforth we suppress the dependence of $\partial_{1}^{j}F(\zeta,0;\mu)$ on $\mu$ and write $\partial_{1}^{j}F(\zeta,0)$ for $j=0,1,2,3$ . (A2) When $V=0$ , the first equation of ( 1.6 ), $\displaystyle-U^{\prime\prime}+\omega U-\partial_{1}F(U^{2},0)U=0,$ has a homoclinic solution $U_{0}(x)\not\equiv 0$ such that $\lim_{x\to\pm\infty}U_{0}(x)=0$ and $U_{0}^{\prime}(0)=0$ . (A3) For some $\mu_{0}\in\mathbb{R}$ , the normal variational equation of ( 1.6 )
+around the homoclinic orbit $(U,V)=(U_{0}(x),0)$ , $\displaystyle-\delta V^{\prime\prime}+s\delta V-\partial_{2}F(U_{0}(x)^{2},0;\mu_{0})\delta V=0,$ (2.1) has a nonzero bounded solution $\delta V=V_{1}(x)$ such that $\lim_{x\to\pm\infty}V_{1}(x)=0$ .
+Henceforth we take $\mu_{0}=0$ by shifting the value of $\mu$ if necessary without loss of generality. Remark 2.1 . (i) (A2) holds if and only if $\displaystyle\zeta_{0}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\inf\{\zeta>0\mid F(\zeta^{2},0)=\omega\zeta^{2}\}>0$ exists and $\partial_{1}F(\zeta_{0}^{2},0)>\omega$ .
+In addition, $U_{0}(x)$ decays exponentially as $x\to\pm\infty$ and is unique up to translations.
+We can also take $U_{0}(x)$ such that it is a positive even function and satisfies $U_{0}(0)=\zeta_{0}$ and $U_{0}^{\prime}(x)<0$ for $x>0$ .
+See Section 6 of [ 4 ] .
+Henceforth, we always assume these properties for $U_{0}(x)$ . (ii) In (A3) , $V_{1}(x)$ is either even or odd.
+Actually, when (A3) holds, since the space of all solutions to ( 2.1 ) decaying as $x\to\pm\infty$ is of dimension one and $V_{1}(-x)$ is such a solution to ( 2.1 ),
+we have $V_{1}(x)=cV_{1}(-x)$ for some $c\in\mathbb{R}$ .
+Hence, if $V_{1}(0)\neq 0$ , then $c=1$ .
+Otherwise we have $c=-1$ since $V_{1}^{\prime}(x)=-cV_{1}^{\prime}(-x)$ and $V_{1}^{\prime}(0)\neq 0$ . Define the two integrals $\displaystyle\bar{a}_{2}=$ $\displaystyle-\int_{-\infty}^{\infty}\partial_{2}\partial_{\mu}F(U_{0}(x)^{2},0;0)V_{1}(x)^{2}\,\mathrm{d}x,$ (2.2) $\displaystyle\bar{b}_{2}=$ $\displaystyle-2\int_{-\infty}^{\infty}\partial_{1}\partial_{2}F(U_{0}(x)^{2},0;0)U_{0}(x)U_{2}(x)V_{1}(x)^{2}\,\mathrm{d}x$ $\displaystyle-\int_{-\infty}^{\infty}\partial_{2}^{2}F(U_{0}(x)^{2},0;0)V_{1}(x)^{4}\,\mathrm{d}x,$ (2.3) where $\displaystyle U_{2}(x)=$ $\displaystyle-\phi_{11}(x)\int_{x}^{\infty}\phi_{12}(y)\partial_{1}\partial_{2}F(U_{0}(y)^{2},0;0)U_{0}(y)V_{1}(y)^{2}\,\mathrm{d}y$ $\displaystyle-\phi_{12}(x)\int_{0}^{x}\phi_{11}(y)\partial_{1}\partial_{2}F(U_{0}(y)^{2},0;0)U_{0}(y)V_{1}(y)^{2}\,\mathrm{d}y.$ (2.4) Applying the Melnikov analysis of [ 6 ] reviewed in Section 3.1, we have the following bifurcation result. Theorem 2.2 . Suppose that (A1) - (A3) and $\bar{a}_{2},\bar{b}_{2}\neq 0$ hold.
+Then a pitchfork bifurcation of the fundamental solitary wave ( 1.7 ) occurs at $\mu=0$ .
+In addition, it is supercritical or subcritical, depending on whether $\bar{a}_{2}\bar{b}_{2}<0$ or $>0$ .
+Moreover, the bifurcated solitary waves are written as $\displaystyle(u(t,x),v(t,x))=(\mathrm{e}^{\mathrm{i}\omega t}U_{\varepsilon}(x),\mathrm{e}^{\mathrm{i}st}V_{\varepsilon}(x))$ (2.5) with $\displaystyle U_{\varepsilon}(x)=U_{0}(x)+\varepsilon^{2}U_{2}(x)+O(\varepsilon^{4}),\quad V_{\varepsilon}(x)=\pm(\varepsilon V_{1}(x)+O(\varepsilon^{3})),$ (2.6) where $\varepsilon>0$ is a small parameter such that $\displaystyle\mu=\bar{\mu}\,\varepsilon^{2},\qquad\bar{\mu}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=-{\bar{b}_{2}}/{\bar{a}_{2}}.$ (2.7) A proof of Theorem 2.2 is given in Section 3. 2.2. Stability of the Fundamental and Bifurcated Solitary Waves We turn to the stability of the fundamental and bifurcated solitary waves.
+We begin with the definition of orbital stability. Definition 2.3 . The solitary wave ( 2.8 ) is orbitally stable if for any $\varepsilon>0$ there exists a constant $\delta>0$ such that for all $(u_{0},v_{0})\in H^{1}(\mathbb{R},\mathbb{C}^{2})$ with $\displaystyle\inf_{x_{0},\theta,\phi\in\mathbb{R}}\bigl(\|u_{0}-\mathrm{e}^{\mathrm{i}\theta}U(\cdot-x_{0})\|_{H^{1}}+\|v_{0}-\mathrm{e}^{\mathrm{i}\phi}V(\cdot-x_{0})\|_{H^{1}}\bigr)<\delta,$ the solution $(u(t),v(t))\in C(\mathbb{R},H^{1}(\mathbb{R},\mathbb{C}^{2}))$ to ( 1.1 ) with $(u(0),v(0))=(u_{0},v_{0})$ satisfies $\displaystyle\sup_{t\in\mathbb{R}}\inf_{x_{0},\theta,\phi\in\mathbb{R}}\bigl(\|u(t)-\mathrm{e}^{\mathrm{i}\theta}U(\cdot-x_{0})\|_{H^{1}}+\|v(t)-\mathrm{e}^{\mathrm{i}\phi}V(\cdot-x_{0})\|_{H^{1}}\bigr)<\varepsilon.$ Otherwise, it is orbitally unstable . The linearized operator $\mathscr{L}:H^{2}(\mathbb{R},\mathbb{C}^{4})$ $\subset L^{2}(\mathbb{R},\mathbb{C}^{4})\to L^{2}(\mathbb{R},\mathbb{C}^{4})$ around the solitary wave $\displaystyle(u(t,x),v(t,x))=(\mathrm{e}^{\mathrm{i}\omega t}U(x),\mathrm{e}^{\mathrm{i}st}V(x))$ (2.8) is given by $\displaystyle\mathscr{L}=-\mathrm{i}\Sigma_{3}\left[-\partial_{x}^{2}I_{4}+\begin{pmatrix}\omega I_{2}&O_{2}\\
+O_{2}&sI_{2}\end{pmatrix}-\begin{pmatrix}B_{11}(x)&B_{12}(x)\\
+B_{21}(x)&B_{22}(x)\end{pmatrix}\right]$ (2.9) where $I_{n}$ and $O_{n}$ , respectively, represents the $n\times n$ identity and zero matrices,
+and $\displaystyle\sigma_{1}=\begin{pmatrix}0&1\\
+1&0\end{pmatrix},\quad\sigma_{3}=\begin{pmatrix}1&0\\
+0&-1\end{pmatrix},\quad\Sigma_{3}=\begin{pmatrix}\sigma_{3}&O_{2}\\
+O_{2}&\sigma_{3}\end{pmatrix},$ $\displaystyle B_{11}(x)=\partial_{1}^{2}F(U(x)^{2},V(x)^{2})U(x)^{2}(I_{2}+\sigma_{1})+\partial_{1}F(U(x)^{2},V(x)^{2})I_{2},$ $\displaystyle B_{12}(x)=B_{21}(x)=\partial_{1}\partial_{2}F(U(x)^{2},V(x)^{2})U(x)V(x)(I_{2}+\sigma_{1}),$ $\displaystyle B_{22}(x)=\partial_{2}^{2}F(U(x)^{2},V(x)^{2})V(x)^{2}(I_{2}+\sigma_{1})+\partial_{2}F(U(x)^{2},V(x)^{2})I_{2}.$ See Section 4.1 for the derivation of $\mathscr{L}$ .
+We easily show that the essential spectrum of $\mathscr{L}$ is given by $\displaystyle\sigma_{\mathrm{ess}}(\mathscr{L})=\mathrm{i}(-\infty,-\min\{\omega,s\}]\cup\mathrm{i}[\min\{\omega,s\},\infty).$ Moreover, $\sigma(\mathscr{L})$ is symmetric with respect to the real and imaginary axis: if $\lambda\in\sigma(\mathscr{L})$ , then $-\lambda,\pm\lambda^{*}\in\sigma(\mathscr{L})$ ,
+where the superscript ‘ $\ast$ ’ represents the complex conjugate. Definition 2.4 . The solitary wave ( 2.8 ) in ( 1.1 ) is spectrally stable if the spectrum $\sigma(\mathscr{L})$ of $\mathscr{L}$ is contained in the closed left half plane.
+Otherwise, it is spectrally unstable . For the fundamental and bifurcated solitary waves,
+we have the following theorems. Theorem 2.5 . For any $\mu\in\mathbb{R}$ , the fundamental solitary wave ( 1.7 ) is orbitally and spectrally stable if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}>0$ , and it is orbitally and spectrally unstable if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}<0$ . Theorem 2.6 . Let $\ell$ be the number of zeros of $V_{1}(x)$ .
+For $\varepsilon>0$ sufficiently small, the bifurcated solitary waves ( 2.5 ) are orbitally and spectrally stable if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}>0$ and $\ell=0$ , and it is orbitally and spectrally unstable if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}<0$ . Proofs of Theorem 2.5 and 2.6 are given in Sections 5 and 6.1, respectively.
+Note that Theorem 2.6 says nothing about the stability of the bifurcated solitary waves with $\ell>0$ when $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}>0$ .
+We assume that $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}>0$ and discuss the stability of bifurcated solitary waves in the rest of this section. Let $\mathscr{L}_{0}$ and $\mathscr{L}_{\varepsilon}$ , respectively,
+denote the linearized operator around the fundamental and bifurcated solitary waves.
+To determine the spectral stability of the bifurcated solitary waves,
+we need to discuss how purely imaginary eigenvalues of $\mathscr{L}_{0}$ change
+when $\varepsilon>0$ .
+Let $E(\lambda,\varepsilon)$ denote the Evans function for $\mathscr{L}_{\varepsilon}$ ,
+which allows us to describe the changes of these eigenvalues for $\varepsilon>0$ .
+See Section 4.3 for its definition.
+Especially, a zero of $E(\lambda,\varepsilon)$ is typically an eigenvalue
+of $\mathscr{L}_{\varepsilon}$ but is not necessarily so,
+and it is called a resonance pole if not (e.g., Chapter 9 of [ 20 ] ).
+We also see that the Evans function $E(\lambda,\varepsilon)$ may not be analytic at $\lambda\in\{\pm\mathrm{i}\omega,\pm\mathrm{i}s\}$ ,
+which is a branch point for a square root function
+in ( 2.14 ) or ( 2.17 ) below (see also Section 4.3)
+and at which the corresponding Jost solutions may lose their analyticity in $\lambda$ .
+Near $\lambda=\lambda_{\mathrm{br}}$ with $\lambda_{\mathrm{br}}\in\{\pm\mathrm{i}\omega,\pm\mathrm{i}s\}$ ,
+using the transformation $\gamma^{2}=\pm\mathrm{i}(\lambda-\lambda_{\mathrm{br}})$ , we have $\displaystyle\widetilde{E}(\gamma,\varepsilon)=E(\mp\mathrm{i}\gamma^{2}+\lambda_{\mathrm{br}},\varepsilon)$ with $\gamma\approx 0$ ,
+where the upper or lower sign is taken simultaneously,
+and refer to $\widetilde{E}(\gamma,\varepsilon)$ as the extended Evans function .
+See Sections 4.3 and 4.4 for more details. Here we compute the Evans function $E(\lambda,0)$ for $\mathscr{L}_{0}$ .
+The eigenvalue problem $\mathscr{L}_{0}\psi=\lambda\psi$ is separated into three parts:
+(A) the first and second components $\displaystyle\begin{aligned} &-p^{\prime\prime}+\omega p-\partial_{1}^{2}F(U_{0}(x)^{2},0)U_{0}(x)^{2}(p+q)-\partial_{1}F(U_{0}(x)^{2},0)p=\mathrm{i}\lambda p,\\
+&-q^{\prime\prime}+\omega q-\partial_{1}^{2}F(U_{0}(x)^{2},0)U_{0}(x)^{2}(p+q)-\partial_{1}F(U_{0}(x)^{2},0)q=-\mathrm{i}\lambda q;\end{aligned}$ (2.10) (B) the fourth component $\displaystyle-p^{\prime\prime}+sp-\partial_{2}F(U_{0}(x)^{2},0;\mu)p=-\mathrm{i}\lambda p;$ (2.11) and (C) the third component $\displaystyle-p^{\prime\prime}+sp-\partial_{2}F(U_{0}(x)^{2},0;\mu)p=\mathrm{i}\lambda p.$ (2.12) Let $(p_{j}(x,\lambda),q_{j}(x,\lambda))$ , $j=1,2,5,6$ , denote the Jost solutions
+to ( 2.10 ) such that $\begin{split}&\lim_{x\to-\infty}\left\lvert\mathrm{e}^{-\nu_{1}x}\!\begin{pmatrix}p_{1}(x,\lambda)\\
+q_{1}(x,\lambda)\\
+p_{1}^{\prime}(x,\lambda)\\
+q_{1}^{\prime}(x,\lambda)\end{pmatrix}-\begin{pmatrix}1\\
+0\\
+\nu_{1}\\
+0\end{pmatrix}\right\rvert=\lim_{x\to-\infty}\left\lvert\mathrm{e}^{-\nu_{2}x}\!\begin{pmatrix}p_{2}(x,\lambda)\\
+q_{2}(x,\lambda)\\
+p_{2}^{\prime}(x,\lambda)\\
+q_{2}^{\prime}(x,\lambda)\end{pmatrix}-\begin{pmatrix}0\\
+1\\
+0\\
+\nu_{2}\end{pmatrix}\right\rvert\\
+&=\lim_{x\to+\infty}\left\lvert\mathrm{e}^{\nu_{1}x}\!\begin{pmatrix}p_{5}(x,\lambda)\\
+q_{5}(x,\lambda)\\
+p_{5}^{\prime}(x,\lambda)\\
+q_{5}^{\prime}(x,\lambda)\end{pmatrix}-\begin{pmatrix}1\\
+0\\
+-\nu_{1}\\
+0\end{pmatrix}\right\rvert=\lim_{x\to+\infty}\left\lvert\mathrm{e}^{\nu_{2}x}\!\begin{pmatrix}p_{6}(x,\lambda)\\
+q_{6}(x,\lambda)\\
+p_{6}^{\prime}(x,\lambda)\\
+q_{6}^{\prime}(x,\lambda)\end{pmatrix}-\begin{pmatrix}0\\
+1\\
+0\\
+-\nu_{2}\end{pmatrix}\right\rvert=0,\end{split}$ (2.13) where $\displaystyle\nu_{1}(\lambda)=\sqrt{\omega-\mathrm{i}\lambda},\quad\nu_{2}(\lambda)=\sqrt{\omega+\mathrm{i}\lambda}.$ (2.14) Actually, by a fundamental result on linear differential equations
+(e.g., Section 3.8 of [ 9 ] ),
+these solutions exist since $(p,q)=(e^{\pm\nu_{1}x},0)$ and $(0,e^{\pm\nu_{2}x})$ are solutions to $-p^{\prime\prime}+\omega p=\mathrm{i}\lambda p,\quad-q^{\prime\prime}+\omega q=-\mathrm{i}\lambda q,$ to which ( 2.10 ) converges as $x\to\pm\infty$ .
+Moreover, one of $(p_{1},q_{1})$ and $(p_{2},q_{2})$ (resp. $(p_{5},q_{5})$ and $(p_{6},q_{6})$ )
+is uniquely determined but the other is not,
+depending on which has a bigger real part, $\nu_{1}$ or $\nu_{2}$ .
+On the other hand, let $p_{4}(x,\lambda)$ and $p_{8}(x,\lambda)$ (resp. $p_{3}(x,\lambda)$ and $p_{7}(x,\lambda)$ ) denote the Jost solutions
+to ( 2.11 ) (resp. to ( 2.12 )) such that $\displaystyle\lim_{x\to-\infty}\left\lvert\mathrm{e}^{-\nu_{4}x}\!\begin{pmatrix}p_{4}(x,\lambda)\\
+p_{4}^{\prime}(x,\lambda)\end{pmatrix}-\begin{pmatrix}1\\
+\nu_{4}\end{pmatrix}\right\rvert=\lim_{x\to+\infty}\left\lvert\mathrm{e}^{\nu_{4}x}\!\begin{pmatrix}p_{8}(x,\lambda)\\
+p_{8}^{\prime}(x,\lambda)\end{pmatrix}-\begin{pmatrix}1\\
+-\nu_{4}\end{pmatrix}\right\rvert=0$ (2.15) (resp. $\displaystyle\lim_{x\to-\infty}\left\lvert\mathrm{e}^{-\nu_{3}x}\!\begin{pmatrix}p_{3}(x,\lambda)\\
+p_{3}^{\prime}(x,\lambda)\end{pmatrix}-\begin{pmatrix}1\\
+\nu_{3}\end{pmatrix}\right\rvert=\lim_{x\to+\infty}\left\lvert\mathrm{e}^{\nu_{3}x}\!\begin{pmatrix}p_{7}(x,\lambda)\\
+p_{7}^{\prime}(x,\lambda)\end{pmatrix}-\begin{pmatrix}1\\
+-\nu_{3}\end{pmatrix}\right\rvert=0$ (2.16) ) and $\displaystyle p_{4}(x,\lambda)=p_{8}(-x,\lambda),\quad p_{3}(x,\lambda)=p_{4}(x,-\lambda),\quad p_{7}(x,\lambda)=p_{8}(x,-\lambda),$ where $\displaystyle\nu_{3}(\lambda)=\sqrt{s-\mathrm{i}\lambda},\quad\nu_{4}(\lambda)=\sqrt{s+\mathrm{i}\lambda}.$ (2.17) These solutions uniquely exist since $p=e^{\pm\nu_{4}x}$ (resp. $p=e^{\pm\nu_{3}x}$ )
+are solutions to $-p^{\prime\prime}+sp=\mathrm{i}\lambda p\quad(\mbox{resp.\ }-p^{\prime\prime}+sp=\mathrm{i}\lambda q),$ to which ( 2.11 ) (resp. ( 2.12 )) converges as $x\to\pm\infty$ .
+See Section 5 for more details on the Jost solutions.
+We choose the branch cut for $\nu_{j}(\lambda)$ , $j=1,\ldots,4$ , such that $-\pi<\arg(\lambda\pm\mathrm{i}\omega),\arg(\lambda\pm\mathrm{i}s)<\pi,$ i.e., $\displaystyle-\frac{3\pi}{4}<\arg\nu_{1}(\lambda),\arg\nu_{3}(\lambda)<\frac{\pi}{4},\quad-\frac{\pi}{4}<\arg\nu_{2}(\lambda),\arg\nu_{4}(\lambda)<\frac{3\pi}{4}.$ (2.18) We refer to $\lambda=\pm\mathrm{i}\omega$ and $\pm\mathrm{i}s$ as the branch points . We now obtain the Evans function for $\mathscr{L}_{0}$ as $\displaystyle E(\lambda,0)=E_{\mathrm{A}}(\lambda)E_{\mathrm{B}}(\lambda)E_{\mathrm{C}}(\lambda),$ (2.19) where $\displaystyle E_{\mathrm{A}}(\lambda)\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\det\!\begin{pmatrix}p_{1}&p_{2}&p_{5}&p_{6}\\
+q_{1}&q_{2}&q_{5}&q_{6}\\
+p_{1}^{\prime}&p_{2}^{\prime}&p_{5}^{\prime}&p_{6}^{\prime}\\
+q_{1}^{\prime}&q_{2}^{\prime}&q_{5}^{\prime}&q_{6}^{\prime}\end{pmatrix}\!(0,\lambda),$ (2.20) $\displaystyle E_{\mathrm{B}}(\lambda)\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\det\!\begin{pmatrix}p_{4}&p_{8}\\
+p_{4}^{\prime}&p_{8}^{\prime}\end{pmatrix}\!(0,\lambda),$ (2.21) and $\displaystyle E_{\mathrm{C}}(\lambda)\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\det\!\begin{pmatrix}p_{3}&p_{7}\\
+p_{3}^{\prime}&p_{7}^{\prime}\end{pmatrix}\!(0,\lambda).$ (2.22) Near the branch points $\lambda=\lambda_{\mathrm{br}}\in\{\pm\mathrm{i}\omega,\pm\mathrm{i}s\}$ ,
+by $\gamma^{2}=\pm\mathrm{i}(\lambda-\lambda_{\mathrm{br}})$ ,
+we also modify ( 2.19 ) to $\displaystyle\widetilde{E}(\gamma,0)=\widetilde{E}_{\mathrm{A}}(\gamma)\widetilde{E}_{\mathrm{B}}(\gamma)\widetilde{E}_{\mathrm{C}}(\gamma)$ with $\gamma\approx 0$ ,
+where $\widetilde{E}(\gamma,0)$ is the extended Evans function
+for $\mathscr{L}_{0}$ and $\widetilde{E}_{\mathrm{A,B,C}}(\gamma)=E_{\mathrm{A,B,C}}(\mp\mathrm{i}\gamma^{2}+\lambda_{\mathrm{br}}).$ Here the upper or lower sign has been taken simultaneously. Let $\lambda_{0}\in\mathrm{i}\mathbb{R}\setminus\{0\}$ be a zero of $E(\lambda,0)$ .
+Since $p_{3}(x,\lambda)=p_{4}(x,-\lambda)$ , $p_{7}(x,\lambda)=p_{8}(x,-\lambda)$ ,
+we have $E_{\mathrm{C}}(\lambda)=E_{\mathrm{B}}(-\lambda)$ .
+From the Sturm-Liouville theory (see, e.g., Section 2.3.2 of [ 20 ] )
+we see that ( 2.11 ) has only a finite number of eigenvalues,
+all of which are simple and belong to $\mathrm{i}(-\infty,s)$ .
+So we only have to consider zeros on $\mathrm{i}(-\infty,s)$ for $E_{\mathrm{B}}(\lambda)$ since eigenvalues of $\mathscr{L}_{\varepsilon}$ related to them
+remain near the segment for $\varepsilon>0$ sufficiently small.
+Under this observation, we see that the following six cases occur: (I) $\lambda_{0}\in\mathrm{i}(-\min\{\omega,s\},\min\{\omega,s\})$ ; (II) $\lambda_{0}=\pm\mathrm{i}\min\{\omega,s\}$ ; (III) $\lambda_{0}$ is a zero of $E_{\mathrm{B}}(\lambda)$ and belongs to $\mathrm{i}(\omega,s)$ when $\omega<s$ ; (IV) $\lambda_{0}$ is a zero of $E_{\mathrm{B}}(\lambda)$ and belongs to $\mathrm{i}(-\infty,-\min\{\omega,s\})$ ; (V) $\lambda_{0}=\mathrm{i}s$ is a zero of $E_{\mathrm{B}}(\lambda)$ when $\omega<s$ ; (VI) $\lambda_{0}=\pm\mathrm{i}\omega$ is a zero of $E_{\mathrm{A}}(\lambda)$ when $s<\omega$ . In cases (I) and (II) $\lambda_{0}$ is a zero of either $E_{\mathrm{A}}(\lambda)$ , $E_{\mathrm{B}}(\lambda)$ , or $E_{\mathrm{C}}(\lambda)$ .
+We can restate cases (III)-(V) with $E_{\mathrm{C}}(\lambda)$ as (III’) $\lambda_{0}$ is a zero of $E_{\mathrm{C}}(\lambda)$ and belongs to $\mathrm{i}(-s,-\omega)$ when $\omega<s$ ; (IV’) $\lambda_{0}$ is a zero of $E_{\mathrm{C}}(\lambda)$ and belongs to $\mathrm{i}(\min\{\omega,s\},\infty)$ ; (V’) $\lambda_{0}=-\mathrm{i}s$ is a zero of $E_{\mathrm{C}}(\lambda)$ when $\omega<s$ . Obviously, $\lambda_{0}$ is an isolated eigenvalue of $\mathscr{L}_{0}$ in case (I),
+while it is an endpoint of $\sigma_{\mathrm{ess}}(\mathscr{L}_{0})$ in case (II).
+For the other cases $\lambda_{0}$ is not an endpoint of $\sigma_{\mathrm{ess}}(\mathscr{L}_{0})$ and it is an embedded eigenvalue or a resonance pole of $\mathscr{L}_{0}$ .
+Actually, $\lambda_{0}$ is a resonance pole in cases (V) and (VI).
+In the following, we state our results in these six cases separately.
+Proofs of the results are provided in Section 6
+except for one of Proposition 2.7 .
+For simplicity,
+we essentially assume that $\lambda_{0}$ is a simple zero of $E(\lambda,0)$ in cases (I), (III), and (IV).
+In cases (II), (V), and (VI),
+we treat the extended Evans function $\widetilde{E}(\gamma,0)$ ,
+and assume that its zero $\gamma=0$ is simple.
+If these assumptions do not hold,
+then more complicated analyses are required
+to determine the fate of the eigenvalue $\lambda_{0}$ when $\varepsilon>0$ .
+Note that the zero $\lambda=0$ of $E(\lambda,0)$ is not simple
+by the symmetry ( 1.4 ) and ( 1.5 )
+but the dimension of the generalized kernel of $\mathscr{L}$ does not change
+after the pitchfork bifurcations, as stated at the end of Section 4.1 .
+Hence, the zero $\lambda=0$ does not cause the spectral instability
+of bifurcated solitary waves. We begin with case (I). Proposition 2.7 . Suppose that the hypotheses of Theorem 2.2 hold
+and $\lambda=\lambda_{0}\in\mathrm{i}(-\min\{\omega,s\},\min\{\omega,s\})$ is a simple zero of $E(\lambda,0)$ . Then there exists an eigenvalue of $\mathscr{L}_{\varepsilon}$ close to $\lambda=\lambda_{0}$ on the imaginary axis for $\varepsilon>0$ sufficiently small. Proof. The statement of this proposition
+immediately follows from the symmetry of $\sigma(\mathscr{L}_{\varepsilon})$ .
+∎ For case (II) we have the following (see Section 6.2 for its proof). Theorem 2.8 . Suppose that the hypotheses of Theorem 2.2 hold, $\lambda_{0}=\mathrm{i}\min\{\omega,s\}$ (resp. $\lambda_{0}=-\mathrm{i}\min\{\omega,s\}$ )
+is a zero of $E(\lambda,0)$ ,
+and $\gamma=0$ is a simple zero of $\widetilde{E}(\gamma,0)$ with $\lambda_{\mathrm{br}}=\lambda_{0}$ . Then for $\varepsilon>0$ sufficiently small, one of the following three cases occurs: ( i) $\mathscr{L}_{\varepsilon}$ has a unique simple eigenvalue
+in $\lambda_{0}+\mathrm{i}(-\infty,0)$ (resp. $\lambda_{0}+\mathrm{i}(0,\infty)$ )
+and no resonance pole near $\lambda=\lambda_{0}$ ; ( ii) $\mathscr{L}_{\varepsilon}$ has a unique resonance pole
+in $\lambda_{0}+\mathrm{i}(-\infty,0)$ (resp. $\lambda_{0}+\mathrm{i}(0,\infty)$ )
+and no eigenvalue near $\lambda=\lambda_{0}$ ; ( iii) $\lambda=\lambda_{0}$ remains as an eigenvalue or a resonance pole
+of $\mathscr{L}_{\varepsilon}$ . We turn to case (III) and assume that $\omega<s$ and $E_{\mathrm{B}}(\lambda_{0})=0$ for $\lambda_{0}\in\mathrm{i}(\omega,s)$ .
+Define $\displaystyle\Delta_{j}(\lambda)\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=p_{j}(0,\lambda)p_{j}^{\prime}(0,\lambda)+q_{j}(0,\lambda)q_{j}^{\prime}(0,\lambda),$ (2.23) $\displaystyle\mathcal{I}_{j}(\lambda)\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\int_{-\infty}^{\infty}\partial_{1}\partial_{2}F(U_{0}(x)^{2},0;0)U_{0}(x)V_{1}(x)\bigl(p_{j}(x,\lambda)+q_{j}(x,\lambda)\bigr)p_{4}(x,\lambda)\,\mathrm{d}x$ (2.24) for $j=1,2$ .
+We note that $(p_{1},q_{1})$ is uniquely determined when $\lambda_{0}\in\mathrm{i}(\omega,s)$ and that $(p_{2},q_{2})$ is also uniquely determined by Lemma 6.2 below
+if $\Delta_{1}(\lambda_{0})\neq 0$ .
+We have the following result (see Section 6.3 for its proof). Theorem 2.9 . Let $\omega<s$ .
+Suppose that the hypotheses of Theorem 2.2 hold, $\lambda_{0}\in\mathrm{i}(\omega,s)$ is a simple zero of $E_{\mathrm{B}}(\lambda)$ with $E_{\mathrm{A}}(\lambda_{0}),E_{\mathrm{C}}(\lambda_{0})\neq 0$ ,
+and $\Delta_{1}(\lambda_{0}),\mathcal{I}_{2}(\lambda_{0})\neq 0$ . Then for $\varepsilon>0$ sufficiently small, $\mathscr{L}_{\varepsilon}$ has no eigenvalue
+in a neighborhood of $\lambda=\lambda_{0}$ . Remark 2.10 . In Theorem 2.9 , the neighborhood of $\lambda=\lambda_{0}$ can be taken independently of $\varepsilon$ .
+This also holds in Theorems 2.13 and 2.14 below. We next consider case (IV) partially and assume that $E_{\mathrm{B}}(\lambda_{0})=0$ for $\lambda_{0}\in\mathrm{i}(-\infty,-\omega)$ .
+So the case of $s<\omega$ and $\lambda_{0}\in\mathrm{i}[-\omega,-s)$ is excluded.
+As in case (III), $(p_{2},q_{2})$ is uniquely determined
+when $\lambda_{0}\in\mathrm{i}(-\infty,-\min\{\omega,s\})$ and that $(p_{1},q_{1})$ is also uniquely determined by Lemma 6.2 below
+if $\Delta_{2}(\lambda_{0})\neq 0$ .
+We have the following result (see Section 6.4 for its proof). Theorem 2.11 . Suppose that the hypotheses of Theorem 2.2 holds
+and $\lambda_{0}\in\mathrm{i}(-\infty,-\omega)$ is a simple zero of $E_{\mathrm{B}}(\lambda)$ with $E_{\mathrm{A}}(\lambda_{0}),E_{\mathrm{C}}(\lambda_{0})\neq 0$ ,
+and $\Delta_{2}(\lambda_{0}),\mathcal{I}_{1}(\lambda_{0})\neq 0$ . Then for $\varepsilon>0$ sufficiently small, $\mathscr{L}_{\varepsilon}$ has an eigenvalue with a positive real part
+in an $O(\varepsilon^{2})$ -neighborhood of $\lambda=\lambda_{0}$ . Remark 2.12 . Assume that $s<\omega$ and $\lambda_{0}\in\mathrm{i}[-\omega,-s)$ .
+Then we have $\mathrm{Re}\,\lambda(\varepsilon)=O(\varepsilon^{3})$ ,
+as shown in Remark 6.8 below,
+where $\lambda(\varepsilon)$ is the eigenvalue of $\mathscr{L}_{\varepsilon}$ near $\lambda_{0}$ .
+Hence, more tremendous treatments
+than those in the proof of Theorem 2.11 are required
+to estimate an eigenvalue of $\mathscr{L}_{\varepsilon}$ near $\lambda=\lambda_{0}$ for $\varepsilon>0$ sufficiently small.
+This situation does not occur for the cubic nonlinearity ( 1.2 )
+even if $s<\omega$ as seen in Section 7. For case (V)
+we have the following (see Section 6.5 for its proof). Theorem 2.13 . Let $\omega<s$ .
+Suppose that the hypotheses of Theorem 2.2 hold, $E_{\mathrm{B}}(\mathrm{i}s)=0$ , $\gamma=0$ is a simple zero of $\widetilde{E}_{\mathrm{B}}(\gamma)$ with $\lambda_{\mathrm{br}}=\mathrm{i}s$ with $E_{\mathrm{A}}(\mathrm{i}s),E_{\mathrm{C}}(\mathrm{i}s)\neq 0$ and $\Delta_{1}(\mathrm{i}s),\mathcal{I}_{2}(\mathrm{i}s)\neq 0$ . Then for $\varepsilon>0$ sufficiently small, $\mathscr{L}_{\varepsilon}$ has no eigenvalue in a neighborhood of $\lambda=\mathrm{i}s$ and no resonance pole at $\lambda=\mathrm{i}s$ . Finally we consider case (VI) and assume that $s<\omega$ .
+We make the following assumption. (A4) There exists a bounded solution $(\hat{p}(x),\hat{q}(x))$ to ( 2.10 )
+with $\lambda=\mathrm{i}\omega$ such that $\displaystyle\lim_{x\to\pm\infty}\hat{p}(x)=0,\quad\lim_{x\to-\infty}\hat{q}(x)\neq 0,\quad\lim_{x\to+\infty}\hat{q}(x)\neq 0.$ An equivalent statement to (A4) is given in Remark 6.11 below.
+We have the following result (see Section 6.6 for its proof). Theorem 2.14 . Let $s<\omega$ .
+Suppose that the hypotheses of Theorem 2.2 hold, $E_{\mathrm{A}}(\mathrm{i}\omega)=0$ , $\gamma=0$ is a simple zero of $\widetilde{E}_{\mathrm{A}}(\gamma)$ with $\lambda_{\mathrm{br}}=i\omega$ and $E_{\mathrm{B}}(\mathrm{i}\omega),E_{\mathrm{C}}(\mathrm{i}\omega)\neq 0$ ,
+and $\Delta_{1}(\mathrm{i}\omega)\neq 0$ . Then, under assumption (A4) , $\mathscr{L}_{\varepsilon}$ has no eigenvalue in a neighborhood of $\lambda=\pm\mathrm{i}\omega$ and no resonance pole at $\lambda=\pm\mathrm{i}\omega$ for $\varepsilon>0$ sufficiently small. Remark 2.15 . Let $\lambda_{0}\in\mathrm{i}\mathbb{R}$ be a simple eigenvalue of $\mathscr{L}_{0}$ which is a zero of $E_{\mathrm{B}}(\lambda)$ .
+We see that $\lambda_{0}$ has a positive (resp. negative) Krein signature if it belongs to the upper (resp. lower) half plane (see Remark 5.2 below).
+See Section 7.1 of [ 20 ] or Section 4.2 for the definition of the Krein signature.
+Note that a similar statement is also found in Section 3.1 of [ 31 ] .
+It follows from Theorems 2.9 , 2.13 , and 2.14 that embedded eigenvalues of $\mathscr{L}_{0}$ with positive Krein signatures as well as resonance poles at the endpoint of $\sigma_{\mathrm{ess}}(\mathscr{L}_{0})$ disappear when $\varepsilon>0$ ,
+provided that $\Delta_{1}(\lambda_{0}),\mathcal{I}_{2}(\lambda_{0})\neq 0$ .
+On the other hand, Theorem 2.11 states that
+embedded eigenvalues of $\mathscr{L}_{0}$ with negative Krein signatures
+have nonzero real parts when $\varepsilon>0$ ,
+provided that $\Delta_{2}(\lambda_{0}),\mathcal{I}_{1}(\lambda_{0})\neq 0$ .
+These claims completely agree with the generic results obtained by Pelinovsky and Yang [ 31 ] and Cuccagna et al. [ 10 ] stated in Section 1. 3. Bifurcations and Approximate Homoclinic Solutions In this section, we review the Melnikov analysis of [ 6 ] in a sufficient setting for our purpose
+and prove Theorem 2.2 by applying it to ( 1.6 ). 3.1. Melnikov Analysis We begin with the Melnikov analysis of [ 6 ] on pitchfork bifurcations of homoclinic orbits
+in a class of two-degree-of-freedom Hamiltonian systems.
+Our setting is simpler but sufficient for the analysis of ( 1.6 ) in Section 3.2. Consider two-degree-of-freedom Hamiltonian systems of the form $\xi^{\prime}=J\mathrm{D}_{\xi}H(\xi,\eta;\mu)^{\mathrm{T}},\quad\eta^{\prime}=J\mathrm{D}_{\eta}H(\xi,\eta;\mu)^{\mathrm{T}},\quad(\xi,\eta)\in\mathbb{R}^{2}\times\mathbb{R}^{2},$ (3.1) where the Hamiltonian function $H:\mathbb{R}^{2}\times\mathbb{R}^{2}\times\mathbb{R}\to\mathbb{R}$ is $C^{r+1}$ ( $r\geq 4$ ),
+the superscript ‘ T ’ represents the transpose operator
+and $J$ is the $2\times 2$ symplectic matrix given by $J=\begin{pmatrix}0&1\\
+-1&0\end{pmatrix}.$ We make the following assumptions. (M1) $\mathrm{D}_{\xi}H(0,0;\mu)=\mathrm{D}_{\eta}H(0,0;\mu)=0$ for any $\mu\in\mathbb{R}$ . (M2) $\mathrm{D}_{\eta}H(\xi,0;0)=0$ for any $\xi\in\mathbb{R}^{2}$ . (M1) means that the origin $(\xi,\eta)=(0,0)\,(=O)$ is an equilibrium of ( 3.1 ) for any $\mu\in\mathbb{R}$ ,
+and (M2) means that the $\xi$ -plane, $\{(\xi,\eta)\mid\eta=0\}$ , is invariant
+under the flow of ( 3.1 ) at $\mu=0$ .
+In particular, the system of ( 3.1 ) restricted on the $\xi$ -plane at $\mu=0$ , $\xi^{\prime}=J\mathrm{D}_{\xi}H(\xi,0;0)^{\mathrm{T}},$ (3.2) has an equilibrium at $\xi=0$ .
+Moreover, $\mathrm{D}_{\xi}^{j}\mathrm{D}_{\eta}H(\xi,0;0)=0$ , $j=1,2,\ldots$ , for any $\xi\in\mathbb{R}^{2}$ . (M3) At $\mu=0$ the equilibrium $\xi=0$ in ( 3.2 ) is a hyperbolic saddle, i.e., $J\mathrm{D}_{\xi}^{2}H(0,0;0)$ has a pair of positive and negative real eigenvalues $\pm\lambda_{1}$ ( $\lambda_{1}>0$ ), and has a homoclinic orbit $\xi^{\mathrm{h}}(x)$ . (M4) $J\mathrm{D}_{\eta}^{2}H(0,0;0)$ has a pair of positive and negative real eigenvalues $\pm\lambda_{2}$ ( $\lambda_{2}>0$ ). (M3) and (M4) mean that the equilibrium $O$ is a hyperbolic saddle in ( 3.1 )
+and has a homoclinic orbit $(\xi,\eta)=(\xi^{\mathrm{h}}(x),0)$ .
+The hyperbolic saddle $O$ has two-dimensional stable and unstable manifolds
+which intersect along the homoclinic orbit $(\xi^{\mathrm{h}}(x),0)$ . The variational equation (VE) of ( 3.1 )
+around the homoclinic orbit $(\xi^{\mathrm{h}}(x),0)$ at $\mu=0$ is given by $\delta\xi^{\prime}=J\mathrm{D}_{\xi}^{2}H(\xi^{\mathrm{h}}(x),0;0)\delta\xi,\quad\delta\eta^{\prime}=J\mathrm{D}_{\eta}^{2}H(\xi^{\mathrm{h}}(x),0;0)\delta\eta.$ (3.3) The first equation of ( 3.3 ) has a nonzero bounded solution $\delta\xi=\xi^{\mathrm{h}\prime}(x)$ satisfying $\lim_{x\to\pm\infty}\delta\xi(x)=0$ , where $\xi^{\mathrm{h}\prime}(x)=\frac{\mathrm{d}}{\mathrm{d}x}\xi^{\mathrm{h}}(x)$ .
+We assume the following. (M5) The second equation of ( 3.3 ) also has a nonzero bounded solution $\delta\eta=\phi(x)$ such that $\lim_{x\to\pm\infty}\phi(x)=0$ . When ( 3.1 ) is analytic, it was shown in [ 6 ] that
+the VE ( 3.3 ) is integrable in the meaning of differential Galois theory [ 32 ] if (M5) holds. The adjoint equation for ( 3.3 ),
+which we call the adjoint variational equation (AVE), is given by $\delta\hat{\xi}^{\prime}=\mathrm{D}_{\xi}^{2}H(\xi^{\mathrm{h}}(x),0;0)J\delta\hat{\xi},\quad\delta\hat{\eta}^{\prime}=\mathrm{D}_{\eta}^{2}H(\xi^{\mathrm{h}}(x),0;0)J\delta\hat{\eta}$ (3.4) since $\mathrm{D}_{\xi}^{2}H(\xi^{\mathrm{h}}(x),0;0),\mathrm{D}_{\eta}^{2}H(\xi^{\mathrm{h}}(x),0;0)$ are symmetric matrices
+and $J^{\mathrm{T}}=-J$ .
+Hence, $\delta\hat{\xi}=-J\xi^{\mathrm{h}\prime}(x)=\mathrm{D}_{\xi}H(\xi^{\mathrm{h}}(x),0)$ and $\delta\hat{\eta}=-J\phi(x)$ are, respectively, nonzero bounded solutions of the first and second equations of ( 3.4 )
+since $J^{2}=-I_{2}$ and $J^{-1}=-J$ , where $I_{n}$ is the $n\times n$ identity matrix. We also assume that the Hamiltonian system ( 3.1 ) is $\mathbb{Z}_{2}$ -equivariant. (M6) There exist two $2\times 2$ matrices $S_{1},S_{2}$ , such that either $S_{1}\neq I_{2}$ or $S_{2}\neq I_{2}$ , $S_{j}^{2}=I_{2}$ , $j=1,2$ , and $\displaystyle S_{1}J\mathrm{D}_{\xi}H(\xi,\eta;\mu)^{\mathrm{T}}=J\mathrm{D}_{\xi}H(S_{1}\xi,S_{2}\eta;\mu)^{\mathrm{T}},$ $\displaystyle S_{2}J\mathrm{D}_{\eta}H(\xi,\eta;\mu)^{\mathrm{T}}=J\mathrm{D}_{\eta}H(S_{1}\xi,S_{2}\eta;\mu)^{\mathrm{T}}.$ It follows from (M6) that
+if $(\xi,\eta)=(\bar{\xi}(x),\bar{\eta}(x))$ is a solution to ( 3.1 ),
+then so is $(\xi,\eta)=(S_{1}\bar{\xi}(x),S_{2}\bar{\eta}(x))$ .
+See, e.g., Section 7.4 of [ 22 ] for more details on $\mathbb{Z}_{2}$ -equivariant systems.
+In particular, the space $\mathbb{R}^{4}$ can be decomposed into a direct sum as $\mathbb{R}^{4}=X^{+}\oplus X^{-},$ where $X^{\pm}=\{(\xi,\eta)\in\mathbb{R}^{4}\mid(S_{1}\xi,S_{2}\eta)=\pm(\xi,\eta)\}$ .
+Under (M6) , if $(\xi^{\mathrm{h}}(x),0)\in X^{+}$ for any $x\in\mathbb{R}$ ,
+then the VE ( 3.3 ) and AVE ( 3.4 ) are also $\mathbb{Z}_{2}$ -equivariant since $\displaystyle S_{1}J\mathrm{D}_{\xi}^{2}H(\xi,\eta;\mu)=J\mathrm{D}_{\xi}^{2}H(S_{1}\xi,S_{2}\eta;\mu)S_{1},$ $\displaystyle S_{2}J\mathrm{D}_{\eta}^{2}H(\xi,\eta;\mu)=J\mathrm{D}_{\eta}^{2}H(S_{1}\xi,S_{2}\eta;\mu)S_{2}$ for any $\xi,\eta\in\mathbb{R}^{2}$ .
+Finally, we assume the following. (M7) For any $x\in\mathbb{R}$ , $(\xi^{\mathrm{h}}(x),0),(J\xi^{\mathrm{h}\prime}(x),0)\in X^{+}$ and $(0,\phi(x)),(0,J\phi(x))\in X^{-}$ . Let $p(\xi,\eta)=J\mathrm{D}_{\xi}H(\xi,\eta;0)^{\mathrm{T}},\quad q(\xi,\eta)=J\mathrm{D}_{\eta}H(\xi,\eta;0)^{\mathrm{T}},$ and let $p_{j}(\xi,\eta)$ and $q_{j}(\xi,\eta)$ be, respectively, the $j$ -th order terms of the Taylor expansions
+of $p(\xi,\eta)$ and $q(\xi,\eta)$ around $\eta=0$ with respect to $\eta$ , i.e., $p_{j}(\xi,\eta),q_{j}(\xi,\eta)=O(|\eta|^{j})$ , $j=0,1,2,3$ , and $\displaystyle p(\xi,\eta)=$ $\displaystyle p_{0}(\xi,\eta)+p_{1}(\xi,\eta)+p_{2}(\xi,\eta)+p_{3}(\xi,\eta)+O(|\eta|^{4}),$ $\displaystyle q(\xi,\eta)=$ $\displaystyle q_{0}(\xi,\eta)+q_{1}(\xi,\eta)+q_{2}(\xi,\eta)+q_{3}(\xi,\eta)+O(|\eta|^{4}).$ Note that $q_{0}(\xi,\eta),p_{1}(\xi,\eta)=0$ by (M2) .
+Let $\xi=\tilde{\xi}^{\mu}(x)$ and $\tilde{\xi}^{\alpha}(x)$ , respectively, denote nonzero bounded solutions to $\xi^{\prime}=J\mathrm{D}_{\xi}^{2}H(\xi^{\mathrm{h}}(x),0;0)\xi+J\mathrm{D}_{\mu}\mathrm{D}_{\xi}H(\xi^{\mathrm{h}}(x),0;0)^{\mathrm{T}}$ (3.5) and $\xi^{\prime}=J\mathrm{D}_{\xi}^{2}H(\xi^{\mathrm{h}}(x),0;0)\xi+p_{2}(\xi^{\mathrm{h}}(x),\phi(x))$ (3.6) with $\langle\mathrm{D}_{\xi}H(\xi^{\mathrm{h}}(0),0;0)^{\mathrm{T}},\xi(0)\rangle=0$ ,
+where $\langle\xi,\eta\rangle$ represents the inner product of $\xi,\eta\in\mathbb{R}^{2}$ .
+Define the definite integrals $\begin{split}&\bar{a}_{2}=-\int_{-\infty}^{\infty}\langle J\phi(x),J\mathrm{D}_{\mu}\mathrm{D}_{\eta}^{2}H(\xi^{\mathrm{h}}(x),0;0)\phi(x)+\tilde{q}_{1}(x,\tilde{\xi}^{\mu}(x),\phi(x))\rangle\mathrm{d}x,\\
+&\bar{b}_{2}=-\int_{-\infty}^{\infty}\langle J\phi(x),q_{3}(\xi^{\mathrm{h}}(x),\phi(x))+\tilde{q}_{1}(x,\tilde{\xi}^{\alpha}(x),\phi(x))\rangle\mathrm{d}x,\end{split}$ (3.7) where $\tilde{q}_{1}(x,\xi,\eta)=\mathrm{D}_{\xi}q_{1}(\xi^{\mathrm{h}}(x),\eta(x))\xi.$ In the present situation, we state Theorem 2.16 of [ 6 ] as follows. Theorem 3.1 . Under (M1) - (M7) , suppose that $\bar{a}_{2},\bar{b}_{2}\neq 0$ .
+Then a pitchfork bifurcation of homoclinic orbits occurs at $\mu=0$ .
+Moreover, it is supercritical or subcritical, depending on whether $\bar{a}_{2}\bar{b}_{2}<0$ or $>0$ . See [ 6 ] for the proof of Theorem 3.1 .
+More general $n$ -dimensional systems ( $n\geq 4$ ) containing non-Hamiltonian systems
+and saddle-node bifurcations of homoclinic orbits were treated there.
+Similar results were recently obtained for reversible systems in [ 36 ] . Remark 3.2 . Homoclinic orbits created at the pitchfork bifurcation detected by Theorem 3.1 are written as $\displaystyle(\xi,\eta)=(\xi^{\mathrm{h}}(x),\alpha\phi(x))+O(\alpha^{2}),$ where $\alpha$ is a small parameter satisfying $\displaystyle\bar{a}_{2}\mu+\bar{b}_{2}\alpha^{2}=0$ (3.8) up to $O(\sqrt{\alpha^{8}+\mu^{4}})$ .
+See [ 6 ] for the details. 3.2. Proof of Theorem 2.2 Using Theorem 3.1 and Remark 3.2 for ( 1.6 ),
+we now prove Theorem 2.2 . Proof of Theorem 2.2 . Letting $\xi=(U,U^{\prime})^{\mathrm{T}}$ and $\eta=(V,V^{\prime})^{\mathrm{T}}$ ,
+we rewrite ( 1.6 ) in the form of ( 3.1 ) as $\displaystyle\begin{aligned} &\xi_{1}^{\prime}=\xi_{2},\quad\xi_{2}^{\prime}=\omega\xi_{1}-\partial_{1}F(\xi_{1}^{2},\eta_{1}^{2};\mu)\xi_{1},\\
+&\eta_{1}^{\prime}=\eta_{2},\quad\eta_{2}^{\prime}=s\eta_{1}-\partial_{2}F(\xi_{1}^{2},\eta_{1}^{2};\mu)\eta_{1},\end{aligned}$ (3.9) which is a two-degree-of-freedom Hamiltonian system with Hamiltonian $\displaystyle H(\xi,\eta;\mu)=\frac{1}{2}\bigl(-\omega\xi_{1}^{2}-s\eta_{1}^{2}+F(\xi_{1}^{2},\eta_{1}^{2};\mu)+\xi_{2}^{2}+\eta_{2}^{2}\bigr).$ Under (A1) and (A2) , we easily see that (M1) - (M4) and (M6) in Section 3.1 hold, where $\lambda_{1}=\sqrt{\omega}$ , $\lambda_{2}=\sqrt{s}$ , $S_{1}=I_{2}$ , $S_{2}=-I_{2}$ , and $\displaystyle\xi^{\mathrm{h}}(x)=(U_{0}(x),U_{0}^{\prime}(x))^{\mathrm{T}}.$ (3.10) Note that $X^{+}=\{(\xi,\eta)\in\mathbb{R}^{2}\times\mathbb{R}^{2}\mid\eta=0\}$ and $X^{-}=\{(\xi,\eta)\in\mathbb{R}^{2}\times\mathbb{R}^{2}\mid\xi=0\}$ .
+For ( 3.9 ) and ( 3.10 ) the variational equation ( 3.3 ) becomes $\displaystyle\begin{aligned} &\xi_{1}^{\prime}=\xi_{2},\quad\xi_{2}^{\prime}=\omega\xi_{1}-\bigl(2\partial_{1}^{2}F(U_{0}(x)^{2},0)U_{0}(x)+\partial_{1}F(U_{0}(x)^{2},0)\bigr)\xi_{1},\\
+&\eta_{1}^{\prime}=\eta_{2},\quad\eta_{2}^{\prime}=s\eta_{1}-\partial_{2}F(U_{0}(x)^{2},0;\mu)\eta_{1}.\end{aligned}$ (3.11) Letting $\eta_{1}=\delta V$ and $\eta_{2}=\delta V^{\prime}$ , the $\eta$ -component of ( 3.11 ) reduces to ( 2.1 ).
+When (A3) holds, so do (M5) and (M7) with $\phi(x)=(V_{1}(x),V_{1}^{\prime}(x))^{\mathrm{T}}$ and ( 2.1 ) has no bounded solution which is linearly independent of $V_{1}(x)$ .
+Using Theorem 3.1 and Remark 3.2 ,
+we obtain the desired result with $\bar{a}_{2}$ and $\bar{b}_{2}$ given in ( 3.7 ). It remains to obtain the expressions ( 2.2 ) and ( 2.3 )
+for $\bar{a}_{2}$ and $\bar{b}_{2}$ as well as
+the approximation ( 2.6 ) for the bifurcated homoclinic solutoions.
+Its direct substitution into ( 1.6 ) shows that the expression ( 2.6 ) is valid
+if $\delta U=U_{2}(x)$ is a bounded solution to the nonhomogeneous linear equation $\displaystyle-\delta U^{\prime\prime}+\omega\delta U-\bigl(2\partial_{1}^{2}F(U_{0}(x)^{2},0)$ $\displaystyle U_{0}(x)^{2}+\partial_{1}F(U_{0}(x)^{2},0)\bigr)\delta U$ $\displaystyle=$ $\displaystyle\partial_{1}\partial_{2}F(U_{0}(x)^{2},0;0)U_{0}(x)V_{1}(x)^{2},$ (3.12) such that $\lim_{x\to\pm\infty}U_{2}(x)=0$ .
+We easily see that it exists uniquely and is an even function.
+So we only have to show that $U_{2}(x)$ is expressed as ( 2.4 ) for the latter. On the other hand,
+noting that $\partial_{\mu}\mathrm{D}_{\xi}H(\xi,0;0)=0$ for ( 3.9 ) by (A1) ,
+we obtain $\tilde{\xi}^{\mu}(x)=0$ .
+Since ( 3.12 ) is equivalent to ( 3.6 ) for ( 3.9 ),
+we have $\tilde{\xi}^{\alpha}(x)=(U_{2}(x),U_{2}^{\prime}(x))^{\mathrm{T}}$ .
+Let $\Phi(x)=(\phi_{ij}(x))_{1\leq i,j\leq 2}$ be a fundamental matrix solution to the homogeneous part of ( 3.6 ) such that $\Phi(0)=I_{2}$ .
+Since $\delta U=U_{0}^{\prime}(x)$ is a solution to the homogeneous part of ( 3.12 ), we have $\displaystyle\phi_{12}(x)=U_{0}^{\prime}(x)/U_{0}^{\prime\prime}(0)$ (3.13) and $U_{0}^{\prime\prime}(0)=(\omega-\partial_{1}F(\zeta_{0}^{2},0))\zeta_{0}<0$ by Remark 2.1 (i).
+Moreover, applying the reduction of order to ( 3.12 )
+and letting $\delta U=U_{0}^{\prime}(x)\varphi$ , we have $\displaystyle U_{0}^{\prime}(x)\varphi^{\prime\prime}+2U_{0}^{\prime\prime}(x)\varphi^{\prime}=0,$ to which a general solution is given by $\displaystyle\varphi(x)=C_{1}\int_{x_{0}}^{x}\frac{\mathrm{d}y}{U_{0}^{\prime}(y)^{2}}+C_{2},$ where $x_{0}>0,C_{1},C_{2}$ are arbitrary constants and $x>0$ .
+This yields a general solution to the homogeneous part of ( 3.12 ) as $\displaystyle\delta U=U_{0}^{\prime}(x)\!\left(C_{1}\int_{x_{0}}^{x}\frac{\mathrm{d}y}{U_{0}^{\prime}(y)^{2}}+C_{2}\right).$ (3.14) Since by l’Hôpital’s rule $\displaystyle\lim_{x\to 0}U_{0}^{\prime}(x)\int_{x_{0}}^{x}\frac{\mathrm{d}y}{U_{0}^{\prime}(y)^{2}}=$ $\displaystyle\lim_{x\to 0}\frac{1}{1/U_{0}^{\prime}(x)}\int_{x_{0}}^{x}\frac{\mathrm{d}y}{U_{0}^{\prime}(y)^{2}}$ $\displaystyle=$ $\displaystyle-\lim_{x\to 0}\frac{1}{U_{0}^{\prime\prime}(x)/U_{0}^{\prime}(x)^{2}}\frac{1}{U_{0}^{\prime}(x)^{2}}=-\frac{1}{U_{0}^{\prime\prime}(0)}$ as well as $\phi_{11}(0)=1$ and $\phi_{11}^{\prime}(0)=\phi_{21}(0)=0$ , we set $\displaystyle C_{1}=-U_{0}^{\prime\prime}(0),\quad C_{2}=\frac{1}{U_{0}^{\prime}(x_{0})}+\int_{0}^{x_{0}}\frac{U_{0}^{\prime\prime}(y)-U_{0}^{\prime\prime}(0)}{U_{0}^{\prime}(y)^{2}}\,\mathrm{d}y$ in ( 3.14 ) to obtain $\displaystyle\phi_{11}(x)=U_{0}^{\prime}(x)\!\left(-U_{0}^{\prime\prime}(0)\int_{x_{0}}^{x}\frac{\mathrm{d}y}{U_{0}^{\prime}(y)^{2}}+\frac{1}{U_{0}^{\prime}(x_{0})}+\int_{0}^{x_{0}}\frac{U_{0}^{\prime\prime}(y)-U_{0}^{\prime\prime}(0)}{U_{0}^{\prime}(y)^{2}}\,\mathrm{d}y\right)$ (3.15) for $x>0$ and $\phi_{11}(x)=\phi_{11}(-x)$ for $x<0$ .
+In particular, $\lim_{x\to\pm\infty}\phi_{11}(x)=-\infty$ .
+Using the variation of constants formula,
+we have a bounded solution of ( 3.12 ) satisfying $\lim_{x\to\pm\infty}\tilde{\xi}_{j}(x)=0$ as ( 2.4 ).
+Since $\displaystyle J\partial_{\mu}\mathrm{D}_{\eta}^{2}H(\xi,0;0)=\begin{pmatrix}0&0\\
+-\partial_{2}\partial_{\mu}F(\xi_{1}^{2},0;0)&0\end{pmatrix},\quad q_{3}(\xi,\eta)=\begin{pmatrix}0\\
+-\partial_{2}^{2}F(\xi_{1}^{2},0;0)\eta_{1}^{3}\end{pmatrix}$ and $\displaystyle\tilde{q}_{1}(x,\xi,\eta)=\begin{pmatrix}0\\
+-2\partial_{1}\partial_{2}F(U_{0}(x)^{2},0;0)U_{0}(x)\xi_{1}\eta_{1}\end{pmatrix},$ we express ( 3.7 ) as ( 2.2 ) and ( 2.3 ) for ( 3.9 ).
+∎ 4. Hamiltonian-Krein Index and Evans Function In this section, we present the two main tools used in the next two sections,
+the Hamiltonian-Krein index theory and Evans function technique,
+for the stability problem of solitary waves of the form $\displaystyle(u,v)=(\mathrm{e}^{\mathrm{i}\omega t}U(x;\omega,s),\mathrm{e}^{\mathrm{i}st}V(x;\omega,s))$ (4.1) in the CNLS equations ( 1.1 ),
+to which ( 1.3 ) reduces when $c,x_{0},\theta,\phi=0$ as stated in Section 1.
+Here $(U,V)=(U(x;\omega,s),V(x;\omega,s))$ is a homoclinic solution to ( 1.6 ) such that $U(x;\omega,s),V(x;\omega,s)\to 0$ as $x\to\pm\infty$ , where its dependence on $\omega,s$ is explicitly provided although it will be frequently dropped below.
+We also fix the value of $\mu$ and suppress the dependence of $F$ and $(U,V)$ on $\mu$ .
+See [ 18 , 19 , 20 , 30 ] for more details on these methods.
+We easily see that there exist positive constants $\rho,C$ such that $\displaystyle|U(x)|+|V(x)|\leq C\mathrm{e}^{-\rho|x|},\quad x\in\mathbb{R}.$ (4.2) 4.1. Linearized Operator We first rewrite ( 1.1 ) by means of $(u,v)$ and their complex conjugates $(w,z)\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=(u^{*},v^{*})$ as $\displaystyle\begin{aligned} &\mathrm{i}\partial_{t}u+\partial_{x}^{2}u+\partial_{1}F(uw,vz)u=0,\quad\mathrm{i}\partial_{t}v+\partial_{x}^{2}v+\partial_{2}F(uw,vz)v=0,\\
+&\mathrm{i}\partial_{t}w-\partial_{x}^{2}w-\partial_{1}F(uw,vz)w=0,\quad\mathrm{i}\partial_{t}z-\partial_{x}^{2}z-\partial_{2}F(uw,vz)z=0,\end{aligned}$ (4.3) in which the solitary wave ( 4.1 ) in ( 1.1 ) corresponds to $\displaystyle(u,w,v,z)=(\mathrm{e}^{\mathrm{i}\omega t}U(x),\mathrm{e}^{-\mathrm{i}\omega t}U(x),\mathrm{e}^{\mathrm{i}st}V(x),\mathrm{e}^{-\mathrm{i}st}V(x)).$ (4.4) Letting $\displaystyle u=\mathrm{e}^{\mathrm{i}\omega t}(U(x)+\delta\xi_{1}),\quad w=\mathrm{e}^{-\mathrm{i}\omega t}(U(x)+\delta\xi_{2}),$ $\displaystyle v=\mathrm{e}^{\mathrm{i}st}(V(x)+\delta\xi_{3}),\quad z=\mathrm{e}^{-\mathrm{i}st}(V(x)+\delta\xi_{4}),$ we obtain the linearized problem for ( 4.3 ) around the solitary wave ( 4.4 ) as $\displaystyle\partial_{t}\delta\xi=\mathscr{L}\delta\xi,$ where $\delta\xi=(\delta\xi_{1},\ldots,\delta\xi_{4})^{\mathrm{T}}$ and the linearized operator $\mathscr{L}$ is given by ( 2.9 ).
+Substituting the separated variables ansatz $\delta\xi(t,x)=\mathrm{e}^{\lambda t}\psi(x)$ into the above linearized problem yields the eigenvalue problem in a standard form, $\displaystyle\mathscr{L}\psi=\lambda\psi,\quad\psi=(\psi_{1},\ldots,\psi_{4})^{\mathrm{T}}.$ (4.5) By the symmetries ( 1.4 ) and ( 1.5 ), $\Ker\mathscr{L}$ contains $\displaystyle\begin{aligned} &\varphi_{1}(x)=(\partial_{x}U(x;\omega,s),\partial_{x}U(x;\omega,s),\partial_{x}V(x;\omega,s),\partial_{x}V(x;\omega,s))^{\mathrm{T}},\\
+&\varphi_{2}(x)=(\mathrm{i}U(x;\omega,s),-\mathrm{i}U(x;\omega,s),0,0)^{\mathrm{T}},\\
+&\varphi_{3}(x)=(0,0,\mathrm{i}V(x;\omega,s),-\mathrm{i}V(x;\omega,s))^{\mathrm{T}}.\end{aligned}$ (4.6) Moreover, $\displaystyle\begin{aligned} &\chi_{1}(x)=(-\mathrm{i}xU(x;\omega,s)/2,\mathrm{i}xU(x;\omega,s)/2,-\mathrm{i}xV(x;\omega,s)/2,\mathrm{i}xV(x;\omega,s)/2)^{\mathrm{T}},\\
+&\chi_{2}(x)=(\partial_{\omega}U(x;\omega,s),\partial_{\omega}U(x;\omega,s),\partial_{\omega}V(x;\omega,s),\partial_{\omega}V(x;\omega,s))^{\mathrm{T}},\\
+&\chi_{3}(x)=(\partial_{s}U(x;\omega,s),\partial_{s}U(x;\omega,s),\partial_{s}V(x;\omega,s),\partial_{s}V(x;\omega,s))^{\mathrm{T}}\end{aligned}$ (4.7) satisfy $\mathscr{L}\chi_{j}=\varphi_{j}$ , $j=1,2,3$ , whenever they exist.
+For the fundamental solitary wave ( 1.7 ), $\varphi_{3}(x)$ and $\chi_{3}(x)$ vanish since $(U,V)=(U_{0}(x),0)$ .
+Moreover, by (A3) , $\psi=(0,0,V_{1}(x),0)^{\mathrm{T}}$ and $(0,0,0,V_{1}(x))^{\mathrm{T}}$ are contained in $\Ker\mathscr{L}$ at $\mu=0$ .
+Hence, $\dim\gKer\mathscr{L}$ for the bifurcated solitary waves
+does not change after the pitchfork bifurcations
+detected by Theorem 2.2 . 4.2. Hamiltonian-Krein Index We introduce the transformation $\displaystyle\psi\mapsto((\psi_{1}+\psi_{2})/2,(\psi_{3}+\psi_{4})/2,(\psi_{1}-\psi_{2})/2\mathrm{i},(\psi_{3}-\psi_{4})/2\mathrm{i})^{\mathrm{T}}.$ (4.8) Under this transformation, the eigenvalue problem ( 4.5 ) is rewritten as $\displaystyle\mathcal{J}\mathcal{L}\psi=\lambda\psi,\quad\psi=(\psi_{1},\ldots,\psi_{4})^{\mathrm{T}},$ (4.9) where $\displaystyle\mathcal{J}=\begin{pmatrix}O_{2}&I_{2}\\
+-I_{2}&O_{2}\end{pmatrix},\quad\mathcal{L}=\begin{pmatrix}\mathcal{L}_{+}&O_{2}\\
+O_{2}&\mathcal{L}_{-}\end{pmatrix}$ (4.10) with $\displaystyle\begin{aligned} &\mathcal{L}_{-}=\begin{pmatrix}-\partial_{x}^{2}+\omega-\partial_{1}F(U^{2},V^{2})&0\\
+0&-\partial_{x}^{2}+s-\partial_{2}F(U^{2},V^{2})\end{pmatrix},\\
+&\mathcal{L}_{+}=\mathcal{L}_{-}-\begin{pmatrix}2\partial_{1}^{2}F(U^{2},V^{2})U^{2}&2\partial_{1}\partial_{2}F(U^{2},V^{2})UV\\
+2\partial_{1}\partial_{2}F(U^{2},V^{2})UV&2\partial_{2}^{2}F(U^{2},V^{2})V^{2}\end{pmatrix}.\\
+\end{aligned}$ (4.11) We easily see that the spectrum does not change under this transformation.
+Moreover, ( 4.6 ) and ( 4.7 ) are transformed into $\displaystyle(U^{\prime}(x),V^{\prime}(x),0,0)^{\mathrm{T}},\quad(0,0,U(x),0)^{\mathrm{T}},\quad(0,0,0,V(x))^{\mathrm{T}}.$ and $\displaystyle(0,0,-xU(x)/2,-xV(x)/2)^{\mathrm{T}},\ \ (\partial_{\omega}U(x),\partial_{\omega}V(x),0,0)^{\mathrm{T}},\ \ (\partial_{s}U(x),\partial_{s}V(x),0,0)^{\mathrm{T}},$ respectively.
+Let $\mathcal{L}_{\pm ij}$ be the $(i,j)$ -components of $\mathcal{L}_{\pm}$ for $i,j=1,2$ .
+Note that (A3) holds if and only if $\mathcal{L}_{\pm 22}$ for the fundamental solitary wave ( 1.7 ) have a nontrivial kernel. Define a $3\times 3$ real matrix $D$ with entries $\displaystyle D_{ij}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\langle\chi_{i},\mathrm{i}\Sigma_{3}\varphi_{j}\rangle_{L^{2}}=\langle\chi_{i},\mathrm{i}\Sigma_{3}\mathscr{L}\chi_{j}\rangle_{L^{2}}$ for $i,j=1,2,3$ , i.e., $\displaystyle D=\begin{pmatrix}(\|U\|_{L^{2}}^{2}+\|V\|_{L^{2}}^{2})/2&0&0\\
+0&-\partial_{\omega}\|U\|_{L^{2}}^{2}&-\partial_{\omega}\|V\|_{L^{2}}^{2}\\
+0&-\partial_{s}\|U\|_{L^{2}}^{2}&-\partial_{s}\|V\|_{L^{2}}^{2}\end{pmatrix}.$ (4.12) Since $\mathrm{i}\Sigma_{3}\mathscr{L}$ is self-adjoint, we see that $D$ is symmetric, so that $\partial_{\omega}\|V\|_{L^{2}}^{2}=\partial_{s}\|U\|_{L^{2}}^{2}$ .
+Let $\mathrm{n}(\mathcal{A})$ denote the number of negative eigenvalues
+for a self-adjoint operator $\mathcal{A}$ . Definition 4.1 . Let $k_{\mathrm{r}}$ be the number of real positive eigenvalues of $\mathcal{J}\mathcal{L}$ , and let $k_{\mathrm{c}}$ be the number of its complex eigenvalues in the first open quadrant of $\mathbb{C}$ .
+Let $H^{\lambda}$ be the linear map induced by the bilinear form $\langle v,\mathcal{L}w\rangle_{L^{2}}$ restricted to the generalized eigenspace $\gKer(\mathcal{J}\mathcal{L}-\lambda)$ , and let $k_{\mathrm{i}}^{-}$ be the sum of $\mathrm{n}(H^{\lambda})$ when $\lambda$ runs through all purely imaginary eigenvalues of $\mathcal{J}\mathcal{L}$ with positive imaginary parts.
+Then the sum $K_{\mathrm{Ham}}=k_{\mathrm{r}}+2k_{\mathrm{c}}+2k_{\mathrm{i}}^{-}$ is called the Hamiltonian-Krein index .
+Moreover, a purely imaginary, nonzero eigenvalue $\lambda$ of $\mathcal{J}\mathcal{L}$ is said to have a positive $($ resp. negative $)$ Krein signature if $H^{\lambda}$ is positive $($ resp. negative $)$ definite on $\gKer(\mathcal{J}\mathcal{L}-\lambda)$ . We have the following theorem, which is frequently referred to as the index theorem. Theorem 4.2 (Kapitula et al. [ 18 , 19 ] , Pelinovsky [ 30 ] ) . If $D$ is nonsingular, then $K_{\mathrm{Ham}}=\mathrm{n}(\mathcal{L})-\mathrm{n}(D)$ . Using Theorem 4.2 and the Stability and Instability Theorems of [ 16 ] (see also [ 20 ] ), we obtain the following result. Theorem 4.3 . Suppose that $D$ is nonsingular.
+If $K_{\mathrm{Ham}}=0$ (resp. $K_{\mathrm{Ham}}$ is odd),
+then the solitary wave ( 4.1 ) is orbitally stable (resp. unstable). Remark 4.4 . For the fundamental solitary wave ( 1.7 ) we have $\varphi_{3}(x),\chi_{3}(x)\equiv 0$ .
+Replacing ( 4.12 ) with $\displaystyle D=\begin{pmatrix}\|U_{0}\|_{L^{2}}^{2}/2&0\\
+0&-\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}\end{pmatrix},$ (4.13) the statements of Theorems 4.2 and 4.3 also hold for ( 1.7 ). 4.3. Evans Functions We rewrite the eigenvalue problem ( 4.5 ) as a system of first-order ODEs, $\displaystyle Y^{\prime}=A(x,\lambda)Y,$ (4.14) where $Y=(\psi_{1},\ldots,\psi_{4},\psi_{1}^{\prime},\ldots,\psi_{4}^{\prime})^{\mathrm{T}}$ .
+Define $\displaystyle A_{\infty}(\lambda)\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\lim_{x\to\pm\infty}A(x,\lambda)=\left(\begin{array}[]{c|c}O_{4}&I_{4}\\
+\hline\cr\begin{matrix}\omega-\mathrm{i}\lambda&0&0&0\\
+0&\omega+\mathrm{i}\lambda&0&0\\
+0&0&s-\mathrm{i}\lambda&0\\
+0&0&0&s+\mathrm{i}\lambda\end{matrix}&O_{4}\end{array}\right).$ The matrix $A_{\infty}(\lambda)$ has eigenvalues
+given by ( 2.14 ), ( 2.17 ), and $\nu_{j+4}(\lambda)=-\nu_{j}(\lambda),\quad j=1,\ldots,4.$ Let $\displaystyle\Omega=\Omega_{1}\cap\Omega_{2}\cap\Omega_{3}\cap\Omega_{4},$ where $\begin{split}&\Omega_{1}=\{\lambda\in\mathbb{C}\mid\mathrm{Re}\,\lambda>0\ \text{or}\ \mathrm{Im}\,\lambda>-\omega\},\\
+&\Omega_{2}=\{\lambda\in\mathbb{C}\mid\mathrm{Re}\,\lambda>0\ \text{or}\ \mathrm{Im}\,\lambda<\omega\},\\
+&\Omega_{3}=\{\lambda\in\mathbb{C}\mid\mathrm{Re}\,\lambda>0\ \text{or}\ \mathrm{Im}\,\lambda>-s\},\\
+&\Omega_{4}=\{\lambda\in\mathbb{C}\mid\mathrm{Re}\,\lambda>0\ \text{or}\ \mathrm{Im}\,\lambda<s\},\end{split}$ (4.17) and let $\displaystyle\widehat{\Omega}=\mathbb{C}\setminus\{\lambda\in\mathbb{C}\mid\mathrm{Re}\,\lambda\leq 0\ \text{and}\ \mathrm{Im}\,\lambda\in\{\pm\omega,\pm s\}\}.$ Note that $\nu_{j}(\lambda)$ , $j=1,\ldots,4$ , are analytic in $\widehat{\Omega}$ ,
+by the definition of their branch cut ( 2.18 ).
+Moreover, $\nu_{j}(\lambda)$ (resp. $\nu_{j+4}(\lambda)$ ) has a positive (resp. negative) real part in $\Omega_{j}$ for $j=1,\ldots,4$ .
+Let $\displaystyle\Omega_{\mathrm{e}}=\left\{\lambda\in\widehat{\Omega}\;\middle|\;\min_{1\leq j\leq 4}\mathrm{Re}\,\nu_{j}(\lambda)>-\frac{\rho}{2}\right\},$ (4.18) which is an open neighborhood of $\Omega$ in $\widehat{\Omega}$ , where $\rho$ is given in ( 4.2 ).
+The regions $\Omega$ and $\Omega_{\mathrm{e}}$ are displayed as the shaded areas in Figs. 1 (a) and (b), respectively.
+We have the following lemma (see, e.g., Theorem 9.2.3 of [ 20 ] and Proposition 1.2 of [ 29 ] , for the proof). (a) $\Omega$ (b) $\Omega_{\mathrm{e}}$ Figure 1. Regions $\Omega$ and $\Omega_{\mathrm{e}}$ . Lemma 4.5 . One can take an eigenvector $v_{j}(\lambda)$ of $A_{\infty}(\lambda)$ for the eigenvalue $\nu_{j}(\lambda)$ such that it is analytic in $\Omega_{\mathrm{e}}$ and continuous at the branch points $\lambda=\pm\mathrm{i}\omega,\pm\mathrm{i}s$ for $j=1,\ldots,8$ .
+Moreover, for $j=1,\ldots,8$ , there exist two solutions $Y_{j}^{\pm}(x,\lambda)$ to ( 4.14 ) and a positive constant $C_{j}(\lambda)$ such that $\displaystyle\begin{aligned} &|\mathrm{e}^{-\nu_{j}(\lambda)x}Y_{j}^{-}(x,\lambda)-v_{j}(\lambda)|\leq C_{j}(\lambda)\mathrm{e}^{-\rho|x|/2}&\text{as $x\to-\infty$},\\
+&|\mathrm{e}^{-\nu_{j}(\lambda)x}Y_{j}^{+}(x,\lambda)-v_{j}(\lambda)|\leq C_{j}(\lambda)\mathrm{e}^{-\rho|x|/2}&\text{as $x\to+\infty$},\end{aligned}$ (4.19) and $Y_{j}^{\pm}(x,\lambda)$ are analytic with respect to $\lambda\in\Omega_{\mathrm{e}}$ and continuous at the branch points for any fixed $x\in\mathbb{R}$ , where $C_{j}(\lambda)$ is bounded on any compact subset of $\Omega_{\mathrm{e}}$ . We refer to $Y_{j}^{\pm}(x,\lambda)$ , $j=1,\ldots,8$ , as the Jost solutions for ( 4.14 ).
+Note that for ( 4.14 ), both of $Y_{j}^{-}(x,\lambda)$ , $j=1,\ldots,4$ , and $Y_{j}^{+}(x,\lambda)$ , $j=5,\ldots,8$ , give bases of the spaces of solutions which decay as $x\to-\infty$ and $x\to+\infty$ , respectively, when $\lambda\in\Omega$ .
+We define the Evans function $E(\lambda)$ for the eigenvalue problem ( 4.5 ) as $\displaystyle E(\lambda)=\det\bigl(Y_{1}^{-}\;\;Y_{2}^{-}\;\;Y_{3}^{-}\;\;Y_{4}^{-}\;\;Y_{5}^{+}\;\;Y_{6}^{+}\;\;Y_{7}^{+}\;\;Y_{8}^{+}\bigr)(x,\lambda),$ (4.20) when $\lambda\in\Omega_{\mathrm{e}}\cup\{\pm\mathrm{i}\omega,\pm\mathrm{i}s\}$ .
+Since $\trace A(x,\lambda)=0$ , the right hand side of ( 4.20 ) is independent of $x$ .
+Although the Jost solutions are not uniquely determined in general, we easily see that zeros of $E(\lambda)$ do not depend on a particular choice of them.
+We have the following fundamental properties of the Evans function (see, e.g., Theorem 10.2.2 of [ 20 ] , for the proof). Proposition 4.6 . The Evans function $E(\lambda)$ is analytic in $\Omega_{\mathrm{e}}$ and continuous at the branch points $\lambda=\pm\mathrm{i}\omega,\pm\mathrm{i}s$ .
+When $\lambda_{0}\in\Omega\cup\sigma_{\mathrm{ess}}(\mathscr{L})$ , it is sufficient for $E(\lambda_{0})=0$ that $\lambda_{0}$ is an eigenvalue of $\mathscr{L}$ .
+When $\lambda_{0}\in\Omega$ , the condition is also necessary.
+Moreover, the algebraic multiplicity of the eigenvalue equals the multiplicity $d$ of the zero for $E(\lambda)$ , for which $\displaystyle E(\lambda_{0})=\partial_{\lambda}E(\lambda_{0})=\cdots=\partial_{\lambda}^{d-1}E(\lambda_{0})=0,\quad\partial_{\lambda}^{d}E(\lambda_{0})\neq 0.$ Note that the Evans function $E(\lambda)$ may not be analytic at the branch points.
+Near the branch points, we modify the Evans function as follows.
+Let $\lambda_{\mathrm{br}}=\mathrm{i}\omega$ or $\mathrm{i}s$ .
+Substituting the relation $\lambda=\lambda_{\mathrm{br}}-\mathrm{i}\gamma^{2}$ into ( 4.14 ),
+we have $\displaystyle Y^{\prime}=A(x,\lambda_{\mathrm{br}}-\mathrm{i}\gamma^{2})Y.$ All eigenvalues of $A_{\infty}(\lambda_{\mathrm{br}}-\mathrm{i}\gamma^{2})$ are analytic near $\gamma=0$ .
+We use $\gamma$ instead of $\lambda$ and apply the above arguments to obtain the Jost solutions and Evans function.
+We write this Evans function as $\widetilde{E}(\gamma)$ near $\gamma=0$ and call it the extended Evans function . Especially, $\widetilde{E}(\gamma)$ is analytic on a Riemann surface
+that is a two-sheeted cover of $\mathbb{C}$ .
+For $\lambda_{\mathrm{br}}=-\mathrm{i}\omega$ or $-\mathrm{i}s$ , using the transformation $\gamma^{2}=-\mathrm{i}(\lambda-\lambda_{\mathrm{br}})$ , we define the extended Evans function similarly. So we immediately obtain the following proposition. Proposition 4.7 . The extended Evans function $\widetilde{E}(\gamma)$ is analytic
+near $\gamma=0$ .
+Let $\lambda_{\mathrm{br}}=\mathrm{i}\omega$ or $\mathrm{i}s$ .
+Suppose that $\lambda=\lambda_{\mathrm{br}}-\mathrm{i}\gamma^{2}\in\Omega_{\mathrm{e}}$ .
+Then it is necessary and sufficient for $E(\lambda)=0$ that $\widetilde{E}(\gamma)=0$ and $-\pi/4<\arg\gamma<3\pi/4$ .
+Moreover, if $\lambda=\lambda_{\mathrm{br}}-\mathrm{i}\gamma^{2}\in\Omega$ ,
+then the condition is also necessary and sufficient for $\lambda$ to be an eigenvalue of $\mathscr{L}$ .
+For $\lambda_{\mathrm{br}}=-\mathrm{i}\omega$ or $-\mathrm{i}s$ , similar statements also hold. We easily see that ( 4.5 ) has a bounded non-decaying solution only if $\lambda\in\sigma_{\mathrm{ess}}(\mathscr{L})$ is a resonance pole. 4.4. Parameter-Dependent Solitary Waves We now consider the case in which the homoclinic solution to ( 1.6 ) smoothly depends on a small parameter $\varepsilon$ and write the linearized operator $\mathscr{L}$ as $\mathscr{L}_{\varepsilon}$ .
+Let $E(\lambda,\varepsilon)$ and $\widetilde{E}(\gamma,\varepsilon)$ ,
+respectively, denote the original and extended Evans functions.
+From Propositions 4.6 and 4.7 we obtain the following. Proposition 4.8 . Suppose that the Evans function $E(\lambda,0)$ has a simple zero at $\lambda=\lambda_{0}\in\Omega_{\mathrm{e}}$ .
+Then there exists a unique smooth function $\lambda(\varepsilon)$ near $\varepsilon=0$ such that $E(\lambda(\varepsilon),\varepsilon)=0$ and $\lambda(0)=\lambda_{0}$ .
+Moreover, $\begin{split}&\partial_{\varepsilon}\lambda(0)=-\frac{\partial_{\varepsilon}E(\lambda_{0},0)}{\partial_{\lambda}E(\lambda_{0},0)},\\
+&\partial_{\varepsilon}^{2}\lambda(0)=-\frac{\partial_{\lambda}^{2}E(\lambda_{0},0)\partial_{\varepsilon}\lambda(0)^{2}+2\partial_{\lambda}\partial_{\varepsilon}E(\lambda_{0},0)\partial_{\varepsilon}\lambda(0)+\partial_{\varepsilon}^{2}E(\lambda_{0},0)}{\partial_{\lambda}E(\lambda_{0},0)}.\end{split}$ (4.21) If $\lambda(\varepsilon)\in\Omega$ , then it is an eigenvalue of $\mathscr{L}_{\varepsilon}$ . Proof. Applying the implicit function theorem to $E(\lambda,\varepsilon)=0$ ,
+we obtain the first and second parts.
+The last part immediately follows from Proposition 4.6 .
+∎ Proposition 4.9 . Let $\lambda_{\mathrm{br}}=\mathrm{i}\omega$ or $\mathrm{i}s$ (resp. $-\mathrm{i}\omega$ or $-\mathrm{i}s$ ).
+Suppose that $\widetilde{E}(\gamma,0)$ has a simple zero at $\gamma=0$ .
+Then there exists a unique smooth function $\gamma(\varepsilon)$ near $\varepsilon=0$ such that $\widetilde{E}(\gamma(\varepsilon),\varepsilon)=0$ and $\gamma(0)=0$ .
+Moreover, $\displaystyle\begin{aligned} &\partial_{\varepsilon}\gamma(0)=-\frac{\partial_{\varepsilon}\widetilde{E}(0,0)}{\partial_{\gamma}\widetilde{E}(0,0)},\\
+&\partial_{\varepsilon}^{2}\gamma(0)=-\frac{\partial_{\gamma}^{2}\widetilde{E}(0,0)\partial_{\varepsilon}\gamma(0)^{2}+2\partial_{\gamma}\partial_{\varepsilon}\widetilde{E}(0,0)\partial_{\varepsilon}\gamma(0)+\partial_{\varepsilon}^{2}\widetilde{E}(0,0)}{\partial_{\gamma}\widetilde{E}(0,0)}.\end{aligned}$ (4.22) If $\mathrm{Re}\,\gamma(\varepsilon)>0$ and $\mathrm{Im}\,\gamma(\varepsilon)\geq 0$ (resp. $\mathrm{Re}\,\gamma(\varepsilon)>0$ and $\mathrm{Im}\,\gamma(\varepsilon)\leq 0$ ), then $\lambda_{\mathrm{br}}-\mathrm{i}\gamma(\varepsilon)^{2}$ (resp. $\lambda_{\mathrm{br}}+\mathrm{i}\gamma(\varepsilon)^{2}$ ) is a zero of $E(\lambda,\varepsilon)$ .
+Especially, if $\mathrm{Re}\,\gamma(\varepsilon)>0$ and $\mathrm{Im}\,\gamma(\varepsilon)>0$ (resp. $\mathrm{Re}\,\gamma(\varepsilon)>0$ and $\mathrm{Im}\,\gamma(\varepsilon)<0$ ), then the zero is an eigenvalue of $\mathscr{L}_{\varepsilon}$ with a positive real part.
+If $\mathrm{Re}\,\gamma(\varepsilon)<0$ or $\mathrm{Im}\,\gamma(\varepsilon)<0$ (resp. $\mathrm{Re}\,\gamma(\varepsilon)<0$ or $\mathrm{Im}\,\gamma(\varepsilon)>0$ ), then $\mathscr{L}_{\varepsilon}$ has no eigenvalue near $\lambda=\lambda_{\mathrm{br}}$ . Proof. The first and second parts immediately follow from the implicit function theorem.
+Let $\lambda_{\mathrm{br}}=\mathrm{i}\omega$ or $\mathrm{i}s$ and let $\lambda(\varepsilon)=\lambda_{\mathrm{br}}-\mathrm{i}\gamma(\varepsilon)^{2}$ .
+We prove the remaining parts.
+Since $\mathrm{Re}\,\lambda(\varepsilon)=2\,\mathrm{Re}\,\gamma(\varepsilon)\,\mathrm{Im}\,\gamma(\varepsilon)$ and $\mathrm{Im}\,\lambda(\varepsilon)=\mathrm{Im}\,\lambda_{\mathrm{br}}-(\mathrm{Re}\,\gamma(\varepsilon))^{2}+(\mathrm{Im}\,\gamma(\varepsilon))^{2}$ , we see that if $\mathrm{Re}\,\gamma(\varepsilon)>0$ and $\mathrm{Im}\,\gamma(\varepsilon)\geq 0$ , then $\lambda(\varepsilon)$ is a zero of $E(\lambda,\varepsilon)$ by Proposition 4.7 .
+On the other hand, assume that $\mathrm{Re}\,\gamma(\varepsilon)<0$ or $\mathrm{Im}\,\gamma(\varepsilon)<0$ and that $\mathscr{L}_{\varepsilon}$ has an eigenvalue $\lambda_{1}(\varepsilon)$ near $\lambda=\lambda_{\mathrm{br}}$ .
+By the symmetry of $\sigma(\mathscr{L}_{\varepsilon})$ , we can assume $\mathrm{Re}\,\lambda_{1}(\varepsilon)\geq 0$ .
+Then $\lambda_{1}(\varepsilon)$ is a zero of $E(\lambda,\varepsilon)$ by Proposition 4.6 .
+However, $E(\lambda,\varepsilon)$ does not have such a zero by Proposition 4.7 .
+This yields a contradiction so that $\mathscr{L}_{\varepsilon}$ has no eigenvalue near $\lambda=\lambda_{\mathrm{br}}$ .
+Thus, we complete the proof.
+∎ 5. Spectral Stability of the Fundamental Solitary Wave In this section, we compute the location of eigenvalues of the linearized operator ( 2.9 )
+around the fundamental solitary wave ( 1.7 ) by using the techniques of Section 4,
+and give a proof of Theorem 2.5 . First we fix $\mu$ at some value which is not necessarily zero, and consider the fundamental solitary wave ( 1.7 ).
+The linearized operator ( 2.9 ) becomes $\displaystyle\mathscr{L}_{0}=$ $\displaystyle-\mathrm{i}\Sigma_{3}\left[-\partial_{x}^{2}I_{4}+\begin{pmatrix}\omega I_{2}&O_{2}\\
+O_{2}&sI_{2}\end{pmatrix}\right.$ $\displaystyle\left.-\begin{pmatrix}\partial_{1}^{2}F(U_{0}^{2},0)U_{0}^{2}(I_{2}+\sigma_{1})+\partial_{1}F(U_{0}^{2},0)I_{2}&O_{2}\\
+O_{2}&\partial_{2}F(U_{0}^{2},0;\mu)I_{2}\end{pmatrix}\right].$ (5.1) The coefficient matrix $A(x,\lambda)$ in ( 4.14 ) becomes $\displaystyle A_{0}(x,\lambda)=\left(\begin{array}[]{c|c}O_{4}&I_{4}\\
+\hline\cr\begin{matrix}A_{01}(x,\lambda)&O_{2}\\
+O_{2}&A_{02}(x,\lambda)\end{matrix}&O_{4}\end{array}\right)$ with $\displaystyle A_{01}(x,\lambda)=\omega I_{2}-\partial_{1}^{2}F(U_{0}^{2},0)U_{0}^{2}(I_{2}+\sigma_{1})-\partial_{1}F(U_{0}^{2},0)I_{2}-\mathrm{i}\lambda\sigma_{3},$ $\displaystyle A_{02}(x,\lambda)=sI_{2}-\partial_{2}F(U_{0}^{2},0;\mu)I_{2}-\mathrm{i}\lambda\sigma_{3}.$ As stated in Section 2,
+the eigenvalue problem ( 4.5 ) is separated into three parts: (A) the first and second components; (B) the fourth component; and (C) the third component.
+In the following we treat the three parts separately and obtain expressions of the Jost functions and Evans functions given by ( 4.20 ). (A) The first and second components of ( 4.5 ) become ( 2.10 ),
+which are the same as the well-understood eigenvalue problem for $u=\mathrm{e}^{\mathrm{i}\omega t}U_{0}(x)$ in the single nonlinear Schrödinger equation with the nonlinearity $\partial_{1}F(|u|^{2},0)u$ .
+We summarize fundamental spectral properties of ( 2.10 ) as follows
+(see, e.g., Section 5.3.1 of [ 39 ] for the proof). Proposition 5.1 . All eigenvalues of ( 2.10 ) are either real or purely imaginary.
+The zero eigenvalue is of geometric multiplicity two and of algebraic multiplicity $\geq 4$ ,
+where the equality holds if and only if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}\neq 0$ .
+Moreover, ( 2.10 ) has a pair of positive and negative eigenvalues with the same modulus if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}<0$ and has no nonzero real eigenvalues if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}>0$ . Let $(p_{j},q_{j})$ , $j=1,2,5,6$ , be the Jost solutions to ( 2.10 )
+satisfying ( 2.13 ), as in Section 2.2.
+So $(p_{j},q_{j},p_{j}^{\prime},q_{j}^{\prime})$ , $j=1,2,5,6$ , are the Jost solutions
+for the associated components of ( 4.14 ) satisfying ( 2.13 ).
+Note that $\displaystyle(1,0,\nu_{1},0)^{\mathrm{T}},\quad(0,1,0,\nu_{2})^{\mathrm{T}},\quad(1,0,-\nu_{1},0)^{\mathrm{T}},\quad(0,1,0,-\nu_{2})^{\mathrm{T}}$ are eigenvectors of $\displaystyle\begin{pmatrix}O_{2}&I_{2}\\
+{\displaystyle\lim_{x\to\pm\infty}A_{01}(x,\lambda)}&O_{2}\end{pmatrix}$ for the eigenvalues $\nu_{1},\nu_{2},-\nu_{1}$ , and $-\nu_{2}$ , respectively.
+In addition, the Jost solutions are not necessarily unique.
+We take a particular choice in Section 6.
+The contribution of this part to the Evans function is written as $E_{\mathrm{A}}(\lambda)$ given by ( 2.20 ).
+Note that $E_{\mathrm{A}}(\lambda)$ does not depend on $\mu$ . (B) The fourth component of ( 4.5 ) becomes ( 2.11 ).
+Let $p_{j}$ , $j=4,8$ , be the Jost solutions ( 2.11 )
+satisfying ( 2.15 ), as in Section 2.2.
+So $(p_{j},p_{j}^{\prime})$ , $j=4,8$ , are the Jost solutions
+for the associated components of ( 4.14 ) satisfying ( 2.15 ).
+For $\lambda\in\Omega_{4}$ (see ( 4.17 )) the Jost solutions are unique since $\mathrm{Re}\,\nu_{4}(\lambda)>0$ .
+The contribution of this part to the Evans function is represented
+as $E_{\mathrm{B}}(\lambda)$ defined in ( 2.21 ).
+By (A3) , the zero eigenvalue of ( 2.11 ) is simple at $\mu=0$ ,
+so that $\lambda=0$ is a simple zero of $E_{\mathrm{B}}(\lambda)$ . (C) The third component of ( 4.5 ) becomes ( 2.12 ),
+which has the same form as ( 2.11 ) by replacing $\lambda$ with $-\lambda$ .
+Hence, if $\lambda$ is an eigenvalue of ( 2.11 ), then $-\lambda$ is an eigenvalue of ( 2.12 ).
+Let $p_{j}$ , $j=3,7$ , be the Jost solutions ( 2.12 )
+satisfying ( 2.16 ), as in Section 2.2.
+So $(p_{j},p_{j}^{\prime})$ , $j=3,7$ , are the Jost solutions
+for the associated components of ( 4.14 ) satisfying ( 2.16 ).
+The contribution of this part to the Evans function is represented
+as $E_{\mathrm{C}}(\lambda)$ defined in ( 2.22 ). Thus, the Evans function $E(\lambda,0)$ for $\mathscr{L}_{0}$ is represented
+as ( 2.19 ),
+and the Jost solutions $Y_{0j}^{-}(x,\lambda)$ , $j=1,\ldots,4$ ,
+and $Y_{0j}^{+}(x,\lambda)$ , $j=5,\ldots,8$ , for $\mathscr{L}_{0}$ are given by $\displaystyle\begin{aligned} Y_{0j}^{-}(x,\lambda)&=(p_{j},q_{j},0,0,p_{j}^{\prime},q_{j}^{\prime},0,0)^{\mathrm{T}}(x,\lambda),\quad j=1,2,\\
+Y_{03}^{-}(x,\lambda)&=(0,0,p_{3},0,0,0,p_{3}^{\prime},0)^{\mathrm{T}}(x,\lambda),\\
+Y_{04}^{-}(x,\lambda)&=(0,0,0,p_{4},0,0,0,p_{4}^{\prime})^{\mathrm{T}}(x,\lambda),\\
+Y_{0j}^{+}(x,\lambda)&=(p_{j},q_{j},0,0,p_{j}^{\prime},q_{j}^{\prime},0,0)^{\mathrm{T}}(x,\lambda),\quad j=5,6,\\
+Y_{07}^{+}(x,\lambda)&=(0,0,p_{7},0,0,0,p_{7}^{\prime},0)^{\mathrm{T}}(x,\lambda),\\
+Y_{08}^{+}(x,\lambda)&=(0,0,0,p_{8},0,0,0,p_{8}^{\prime})^{\mathrm{T}}(x,\lambda).\end{aligned}$ (5.4) The other Jost solutions $Y_{0j}^{+}$ , $j=1,\ldots,4$ , and $Y_{0j}^{-}$ , $j=5,\ldots,8$ , are assumed to have the same forms as $Y_{0j}^{-}$ , $j=1,\ldots,4$ , and $Y_{0j}^{+}$ , $j=5,\ldots,8$ , respectively, in ( 5.4 ).
+So the Jost solutions $Y_{0j}^{\pm}(x,\lambda)$ , $j=1,\ldots,8$ , satisfy ( 4.19 )
+with the eigenvectors, $\displaystyle v_{1}=(1,0,0,0,\nu_{1},0,0,0)^{\mathrm{T}},\quad v_{2}=(0,1,0,0,0,\nu_{2},0,0)^{\mathrm{T}},$ $\displaystyle v_{3}=(0,0,1,0,0,0,\nu_{3},0)^{\mathrm{T}},\quad v_{4}=(0,0,0,1,0,0,0,\nu_{4})^{\mathrm{T}},$ $\displaystyle v_{5}=(1,0,0,0,-\nu_{1},0,0,0)^{\mathrm{T}},\quad v_{6}=(0,1,0,0,0,-\nu_{2},0,0)^{\mathrm{T}},$ $\displaystyle v_{7}=(0,0,1,0,0,0,-\nu_{3},0)^{\mathrm{T}},\quad v_{8}=(0,0,0,1,0,0,0,-\nu_{4})^{\mathrm{T}},$ of $A_{\infty}(\lambda)$ given by ( 4.3 ).
+We now prove Theorem 2.5 . Proof of Theorem 2.5 . From the above arguments in parts (A), (B), and (C)
+we see that all eigenvalues of $\mathscr{L}_{0}$ are either real or purely imaginary.
+Moreover, by Proposition 5.1 ,
+the number of positive eigenvalues of $\mathscr{L}_{0}$ is zero or one,
+so that the fundamental solitary wave ( 1.7 ) is spectrally stable or unstable,
+depending on whether $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}$ is positive or negative. It remains to prove the orbital stability and instability of ( 1.7 ).
+We define $\mathcal{L}_{\pm}$ and $D$ for ( 1.7 )
+as in ( 4.11 ) and ( 4.13 ), respectively, i.e., $\displaystyle\mathcal{L}_{-}=\begin{pmatrix}-\partial_{x}^{2}+\omega-\partial_{1}F(U_{0}^{2},0)&0\\
+0&-\partial_{x}^{2}+s-\partial_{2}F(U_{0}^{2},0;\mu)\end{pmatrix},$ $\displaystyle\mathcal{L}_{+}=\begin{pmatrix}-\partial_{x}^{2}+\omega-\partial_{1}F(U_{0}^{2},0)-2\partial_{1}^{2}F(U_{0}^{2},0)U_{0}^{2}&0\\
+0&-\partial_{x}^{2}+s-\partial_{2}F(U_{0}^{2},0;\mu)\end{pmatrix},$ $\displaystyle D=\begin{pmatrix}\|U_{0}\|_{L^{2}}^{2}/2&0\\
+0&-\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}\end{pmatrix}.$ Let $\mathrm{n}(A)$ be the number of negative eigenvalues for a self-adjoint operator $A$ .
+Since $\displaystyle\mathcal{L}_{-11}U_{0}=(-\partial_{x}^{2}+\omega-\partial_{1}F(U_{0}^{2},0))U_{0}=0,$ $\displaystyle\mathcal{L}_{+11}U_{0}^{\prime}=(-\partial_{x}^{2}+\omega-\partial_{1}F(U_{0}^{2},0)-2\partial_{1}^{2}F(U_{0}^{2},0)U_{0}^{2})U_{0}^{\prime}=0,$ the Sturm-Liouville theory (e.g., Section 2.3.2 of [ 20 ] ) says that $\displaystyle\begin{aligned} \mathrm{n}(\mathcal{L}_{-11})=0,\quad\mathrm{n}(\mathcal{L}_{+11})=1.\end{aligned}$ (5.5) Recall that $\mathcal{L}_{\pm ij}$ is the $(i,j)$ -components of $\mathcal{L}_{\pm}$ for $i,j=1,2$ .
+On the other hand, for $s>0$ sufficiently large, by Remark 2.1 (i) we see that $\displaystyle\inf_{\begin{subarray}{c}\psi\in H^{2}\\
+\|\psi\|_{L^{2}}=1\end{subarray}}\langle\mathcal{L}_{\pm 22}\psi,\psi\rangle_{L^{2}}\geq s-\sup_{0\leq\zeta\leq\zeta_{0}}|\partial_{2}F(\zeta^{2},0;\mu)|>0,$ which implies $\displaystyle\mathrm{n}(\mathcal{L}_{\pm 22})=0.$ (5.6) From ( 5.5 ) and ( 5.6 ) we obtain $K_{\mathrm{Ham}}=\mathrm{n}(\mathcal{L}_{-})+\mathrm{n}(\mathcal{L}_{+})-\mathrm{n}(D)=0$ if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}>0$ and $K_{\mathrm{Ham}}=1$ if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}<0$ .
+Using Theorems 4.2 and 4.3 along with Remark 4.4 ,
+we obtain the desired result.
+∎ Remark 5.2 . Let $\lambda_{0}\in\mathrm{i}\mathbb{R}$ be a simple eigenvalue of $\mathscr{L}_{0}$ which is a zero of $E_{\mathrm{B}}(\lambda)$ .
+We compute the Krein signature of $\lambda_{0}$ .
+Let $\Psi\in L^{2}(\mathbb{R})$ be the corresponding eigenfunction of ( 2.11 ) so that $(0,0,0,\Psi)^{\mathrm{T}}$ is an eigenfunction of $\mathscr{L}_{0}$ associated to $\lambda_{0}$ .
+Using the transformation ( 4.8 ) we see that $(0,\Psi/2,0,\mathrm{i}\Psi/2)^{\mathrm{T}}\in\Ker(J\mathcal{L}_{0}-\lambda_{0})$ , where $J\mathcal{L}_{0}$ is the linearized operator ( 4.10 ) around the fundamental solitary wave ( 1.7 ).
+Hence, it follows from $\displaystyle\left\langle\begin{pmatrix}0\\
+\Psi/2\\
+0\\
+\mathrm{i}\Psi/2\end{pmatrix},\mathcal{L}_{0}\begin{pmatrix}0\\
+\Psi/2\\
+0\\
+\mathrm{i}\Psi/2\end{pmatrix}\right\rangle=\left\langle\begin{pmatrix}0\\
+\Psi/2\\
+0\\
+\mathrm{i}\Psi/2\end{pmatrix},-J^{2}\mathcal{L}_{0}\begin{pmatrix}0\\
+\Psi/2\\
+0\\
+\mathrm{i}\Psi/2\end{pmatrix}\right\rangle$ $\displaystyle=\lambda_{0}\left\langle\begin{pmatrix}0\\
+\Psi/2\\
+0\\
+\mathrm{i}\Psi/2\end{pmatrix},J\begin{pmatrix}0\\
+\Psi/2\\
+0\\
+\mathrm{i}\Psi/2\end{pmatrix}\right\rangle=\frac{\mathrm{Im}\,\lambda_{0}}{2}\|\Psi\|_{L^{2}}^{2}$ that $\lambda_{0}$ has a positive (resp. negative) Krein signature if it belongs to the upper (resp. lower) half plane. 6. Spectral Stability of the Bifurcated Solitary Waves We next consider the bifurcated solitary waves ( 2.5 ) near $\mu=0$ and give the remaining proofs of the main results in Section 2 by using the techniques
+of Section 4. 6.1. Proof of Theorem 2.6 We begin with the following direct consequence
+of the Hamiltonian-Krein index theory described in Section 4. Proposition 6.1 . Let $\ell$ be the number of zeros of $V_{1}(x)$ .
+For $\varepsilon>0$ sufficiently small, the Hamiltonian-Krein index for the bifurcated solitary waves ( 2.5 ) are given by $K_{\mathrm{Ham}}=k_{\mathrm{r}}+2\ell$ , where $k_{\mathrm{r}}=0$ if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}>0$ and $k_{\mathrm{r}}=1$ if $\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}<0$ . Proof. Let $\mathcal{L}_{\pm}$ and $D$ be given by ( 4.11 ) and ( 4.12 ), respectively, for the bifurcated solitary wave ( 2.5 ).
+By the Sturm-Liouville theory and the standard perturbation argument, we have $\displaystyle\mathrm{n}(\mathcal{L}_{-})=\ell,\qquad\mathrm{n}(\mathcal{L}_{+})=\begin{cases}\ell+1&\text{if $\bar{b}_{2}>0$};\\
+\ell+2&\text{if $\bar{b}_{2}<0$}\end{cases}$ (see Section 3.1 of [ 31 ] and Section 6.1 of [ 20 ] for details).
+On the other hand, substituting ( 2.6 ) into ( 4.12 ) and using the symmetry of $D$ , we compute $\displaystyle D_{22}=-\partial_{\omega}\|U_{0}\|_{L^{2}}^{2}+\frac{4\langle U_{0},U_{2}\rangle_{L^{2}}^{2}}{\bar{b}_{2}}+O(\varepsilon^{2}),$ $\displaystyle D_{23}=D_{32}=\frac{2\langle U_{0},U_{2}\rangle_{L^{2}}\|V_{1}\|_{L^{2}}^{2}}{\bar{b}_{2}}+O(\varepsilon^{2}),\quad D_{33}=\frac{\|V_{1}\|_{L^{2}}^{4}}{\bar{b}_{2}}+O(\varepsilon^{2}).$ Thus, $\mathrm{n}(D)$ equals the number of negative elements in the set $\{-\partial_{\omega}\|U_{0}\|_{L^{2}}^{2},\bar{b}_{2}\}$ .
+Hence, $K_{\mathrm{Ham}}=\mathrm{n}(\mathcal{L}_{-})+\mathrm{n}(\mathcal{L}_{+})-\mathrm{n}(D)=k_{\mathrm{r}}+2\ell$ by Theorem 4.2 .
+This completes the proof.
+∎ Proof of Theorem 2.6 . Using Theorem 4.3 and Proposition 6.1 ,
+we immediately obtain the desired result.
+∎ The rest of this section is devoted to introduce some notation to prove Theorems 2.8 to 2.14 .
+Let $\mathscr{L}_{\varepsilon}$ denote the linearized operator $\mathscr{L}$ defined by ( 2.9 ) around the bifurcated solitary waves ( 2.5 ).
+We have $\mathscr{L}_{\varepsilon}=\mathscr{L}_{0}$ at $\varepsilon=0$ , where $\mathscr{L}_{0}$ is given by ( 5.1 ) and has only eigenvalues on the imaginary axis by Theorem 2.5 .
+The coefficient matrix $A(x,\lambda)$ in ( 4.14 ) is written as $\displaystyle A(x,\lambda,\varepsilon)=A_{0}(x,\lambda)+\varepsilon A_{1}(x)+\varepsilon^{2}A_{2}(x)+O(\varepsilon^{3}),$ (6.1) where $A_{0}(x,\lambda)$ is given by ( 5 ) and $\displaystyle A_{1}(x)=-a(x)\!\left(\begin{array}[]{c|c}O_{4}&O_{4}\\
+\hline\cr\begin{matrix}O_{2}&I_{2}+\sigma_{1}\\
+I_{2}+\sigma_{1}&O_{2}\end{matrix}&O_{4}\end{array}\right),$ $\displaystyle A_{2}(x)=-\left(\begin{array}[]{c|c}O_{4}&O_{4}\\
+\hline\cr\begin{matrix}A_{21}(x)&O_{2}\\
+O_{2}&A_{22}(x)\end{matrix}&O_{4}\end{array}\right)$ with $\displaystyle a(x)=\partial_{1}\partial_{2}F(U_{0}(x)^{2},0;0)U_{0}(x)V_{1}(x),$ (6.6) $\displaystyle A_{21}(x)=2\partial_{1}^{2}F(U_{0}(x)^{2},0)U_{0}(x)U_{2}(x)(2I_{2}+\sigma_{1})$ $\displaystyle\qquad\qquad+\partial_{1}\partial_{2}F(U_{0}(x)^{2},0;0)V_{1}(x)^{2}I_{2}$ $\displaystyle\qquad\qquad+2\partial_{1}^{3}F(U_{0}(x)^{2},0)U_{0}(x)^{3}U_{2}(x)(I_{2}+\sigma_{1})$ $\displaystyle\qquad\qquad+\partial_{1}^{2}\partial_{2}F(U_{0}(x)^{2},0;0)U_{0}(x)^{2}V_{1}(x)^{2}(I_{2}+\sigma_{1}),$ (6.7) $\displaystyle A_{22}(x)=\partial_{2}^{2}F(U_{0}(x)^{2},0;0)V_{1}(x)^{2}(2I_{2}+\sigma_{1})$ $\displaystyle\qquad\qquad+\bigl(2\partial_{1}\partial_{2}F(U_{0}(x)^{2},0;0)U_{0}(x)U_{2}(x)+\bar{\mu}\partial_{2}\partial_{\mu}F(U_{0}(x)^{2},0;0)\bigr)I_{2}.$ (6.8) Let $Y_{j}^{\pm}(x,\lambda,\varepsilon)$ , $j=1,\ldots,8$ , be the Jost solutions for $\mathscr{L}_{\varepsilon}$ which are given by Lemma 4.5 and coincide with ( 5.4 ) when $\varepsilon=0$ , i.e., $Y_{j}^{\pm}(x,\lambda,0)=Y_{0j}^{\pm}(x,\lambda)$ .
+We write the corresponding Evans function defined by ( 4.20 ) as $E(\lambda,\varepsilon)$ . 6.2. Proof of Theorem 2.8 We consider case (II) in Section 2.2. Proof of Theorem 2.8 . Let $\lambda_{\mathrm{br}}=\mathrm{i}\min\{\omega,s\}$ and let $\widetilde{E}(\gamma,\varepsilon)$ denote the extended Evans function near the branch point $\lambda_{\mathrm{br}}$ , where $\gamma^{2}=\mathrm{i}(\lambda-\lambda_{\mathrm{br}})$ , as in Section 4.4 .
+For any $\gamma,\varepsilon\in\mathbb{R}$ near $(\gamma,\varepsilon)=(0,0)$ ,
+we can choose the $\mathbb{R}$ -valued Jost solutions $Y_{j}^{\pm}(x,\lambda,\varepsilon)$ , $j=1,\ldots,8$ ,
+since $\nu_{j}(\lambda)=\nu_{j}(\lambda_{\mathrm{br}}-\mathrm{i}\gamma^{2})\in\mathbb{R}$ , $j=1,\ldots,8$ .
+For this choice we have $\widetilde{E}(\gamma,\varepsilon)\in\mathbb{R}$ .
+Assume that $\gamma=0$ is a simple zero of $\widetilde{E}(\gamma,0)$ .
+Using the implicit function theorem, we obtain a unique zero $\gamma(\varepsilon)\in\mathbb{R}$ of $\widetilde{E}(\gamma,\varepsilon)$ with $\gamma(0)=0$ .
+Using Proposition 4.9 , we see that one of the following three cases occurs. (i) If $\gamma(\varepsilon)>0$ , then there exists a unique simple eigenvalue of $\mathscr{L}_{\varepsilon}$ near $\lambda_{\mathrm{br}}$ and $\mathscr{L}_{\varepsilon}$ has no resonance pole near $\lambda_{\mathrm{br}}$ .
+The unique eigenvalue belongs to $\lambda_{\mathrm{br}}+\mathrm{i}(-\infty,0)$ . (ii) If $\gamma(\varepsilon)<0$ , then there exists a unique resonance pole of $\mathscr{L}_{\varepsilon}$ near $\lambda_{\mathrm{br}}$ and $\mathscr{L}_{\varepsilon}$ has no eigenvalue near $\lambda_{\mathrm{br}}$ .
+The unique resonance pole belongs to $\lambda_{\mathrm{br}}+\mathrm{i}(-\infty,0)$ . (iii) If $\gamma(\varepsilon)=0$ , then $\lambda_{\mathrm{br}}$ remains as an eigenvalue or a resonance pole of $\mathscr{L}_{\varepsilon}$ . This completes the proof.
+∎ 6.3. Proof of Theorem 2.9 We consider case (III) in Section 2.2 and assume that $\omega<s$ and $\lambda_{0}\in\mathrm{i}(\omega,s)$ is a simple zero of $E_{\mathrm{B}}(\lambda)$ with $E_{\mathrm{A}}(\lambda_{0}),E_{\mathrm{C}}(\lambda_{0})\neq 0$ .
+Especially, $\lambda_{0}$ is also a simple zero of $E(\lambda,0)$ . Proof of Theorem 2.9 . We have $\nu_{1}(\lambda_{0}),\nu_{4}(\lambda_{0})\in(0,\infty)$ and $\nu_{2}(\lambda_{0})\in\mathrm{i}(0,\infty)$ (see ( 2.14 ) and ( 2.17 )).
+In particular, $p_{1}(x,\lambda_{0})$ and $q_{1}(x,\lambda_{0})$ are uniquely determined due to ( 2.13 ), and $p_{4}(x,\lambda_{0})$ and $p_{8}(x,\lambda_{0})$ satisfy $\displaystyle p_{4}(x,\lambda_{0})=\tau p_{8}(x,\lambda_{0})$ (6.9) for some $\tau\in\mathbb{R}\setminus\{0\}$ since $E_{\mathrm{B}}(\lambda_{0})=0$ .
+As in Remark 2.1 (ii), we see that $\tau$ must be $1$ or $-1$ . Let $\bar{p}_{4}(x)$ be a solution to ( 2.11 ) with $(\lambda,\mu)=(\lambda_{0},0)$ such that it is linearly independent of $p_{8}(x,\lambda_{0})$ and $\displaystyle\det\!\begin{pmatrix}\bar{p}_{4}(x)&p_{8}(x,\lambda_{0})\\
+\bar{p}_{4}^{\prime}(x)&p_{8}^{\prime}(x,\lambda_{0})\end{pmatrix}=1.$ Let $\bar{Y}_{04}(x)=(0,0,0,\bar{p}_{4}(x),0,0,0,\bar{p}_{4}^{\prime}(x))^{\mathrm{T}}$ and $\displaystyle\mathscr{Y}_{0}(x)=\bigl(Y_{01}^{-}\;\;Y_{02}^{-}\;\;Y_{03}^{-}\;\;\bar{Y}_{04}\;\;Y_{05}^{+}\;\;Y_{06}^{+}\;\;Y_{07}^{+}\;\;Y_{08}^{+}\bigr)(x,\lambda_{0}).$ (6.10) Then $\mathscr{Y}_{0}$ is a fundamental matrix solution to $\displaystyle Y^{\prime}=A_{0}(x,\lambda)Y$ (6.11) at $\lambda=\lambda_{0}$ .
+We consider the adjoint equation $\displaystyle Z^{\prime}=-A_{0}(x,\lambda)^{\mathrm{H}}Z$ (6.12) for ( 6.11 ), where the superscript ‘ H ’ stands for the Hermitian conjugate.
+If $(\bm{p},\bm{p}^{\prime})$ with $\bm{p}:\mathbb{R}\to\mathbb{C}^{4}$ is a solution to ( 6.11 ), then $(-\bm{p}^{\prime},\bm{p})^{\mathrm{H}}$ is a solution to ( 6.12 ).
+Let $Z_{0j}^{\pm}(x,\lambda)$ and $\bar{Z}_{04}(x)$ be solutions to ( 6.12 ) which are obtained in this manner from $Y_{0j}^{\pm}(x,\lambda)$ and $\bar{Y}_{04}(x)$ , respectively, for $j=1,\ldots,8$ , where the lower or upper sign in the superscripts of $Z_{0j}^{\pm}$ and $Y_{0j}^{\pm}$ is taken depending on whether $j\leq 4$ or not.
+Recall that $Y_{03}^{-}$ , $Y_{04}^{-}$ , $Y_{07}^{+}$ , and $Y_{08}^{+}$ are uniquely determined.
+If $\Delta_{1}(\lambda_{0})\neq 0$ ,
+then the Jost solutions can be normalized as follows,
+where $\Delta_{1}(\lambda)$ was defined in ( 2.23 ) with $j=1$ . Lemma 6.2 . Let $\lambda\in\Omega_{\mathrm{e}}$ , where $\Omega_{\mathrm{e}}$ is defined in ( 4.18 ).
+The Jost solutions $Y_{0j}^{\pm}(x,\lambda)$ , $j=1,2,5,6$ , for ( 4.14 ) with ( 6.1 ) are uniquely determined by the relations $\displaystyle\begin{aligned} &Y_{0,j+4}^{\pm}(x,\lambda)=\begin{pmatrix}I_{4}&O_{4}\\
+O_{4}&-I_{4}\end{pmatrix}Y_{0j}^{\mp}(-x,\lambda),\quad j=1,2,\\
+&Y_{02}^{-}\cdot Z_{05}^{+}=Y_{06}^{-}\cdot Z_{05}^{+}=Y_{05}^{-}\cdot Z_{05}^{+}=Y_{05}^{-}\cdot Z_{06}^{+}=Y_{05}^{-}\cdot Z_{02}^{-}=0,\end{aligned}$ (6.13) where the dot stands for the standard inner product on $\mathbb{C}^{8}$ .
+Moreover, for these Jost solutions we have $\displaystyle\mathscr{Y}_{0}(x)^{-1}$ $\displaystyle=\left(\begin{array}[]{c|c|c|c}\begin{matrix}-p_{5}^{\prime}/C_{1}&-q_{5}^{\prime}/C_{1}\\
+-p_{6}^{\prime}/C_{2}&-q_{6}^{\prime}/C_{2}\end{matrix}&O_{2}&\begin{matrix}p_{5}/C_{1}&q_{5}/C_{1}\\
+p_{6}/C_{2}&q_{6}/C_{2}\end{matrix}&O_{2}\\
+\hline\cr O_{2}&\begin{matrix}p_{7}^{\prime}/E_{\mathrm{C}}&0\\
+0&p_{8}^{\prime}\end{matrix}&O_{2}&\begin{matrix}-p_{7}/E_{\mathrm{C}}&0\\
+0&-p_{8}\end{matrix}\\
+\hline\cr\begin{matrix}p_{1}^{\prime}/C_{1}&q_{1}^{\prime}/C_{1}\\
+p_{2}^{\prime}/C_{2}&q_{2}^{\prime}/C_{2}\end{matrix}&O_{2}&\begin{matrix}-p_{1}/C_{1}&-q_{1}/C_{1}\\
+-p_{2}/C_{2}&-q_{2}/C_{2}\end{matrix}&O_{2}\\
+\hline\cr O_{2}&\begin{matrix}-p_{3}^{\prime}/E_{\mathrm{C}}&0\\
+0&-\bar{p}_{4}^{\prime}\end{matrix}&O_{2}&\begin{matrix}p_{3}/E_{\mathrm{C}}&0\\
+0&\bar{p}_{4}\end{matrix}\end{array}\right)\!(x,\lambda_{0}),$ where $C_{1}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=(Y_{01}^{-}\cdot Z_{05}^{+})(\lambda_{0})$ and $C_{2}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=(Y_{02}^{-}\cdot Z_{06}^{+})(\lambda_{0})$ are nonzero constants. A proof of Lemma 6.2 is given in Appendix A.1 .
+Thus, $Y_{0j}^{\pm}(x,\lambda)$ are now uniquely determined except for $Y_{03}^{+}$ , $Y_{04}^{+}$ , $Y_{07}^{-}$ , and $Y_{08}^{-}$ .
+To estimate the zero $\lambda(\varepsilon)$ of $E(\lambda,\varepsilon)$ with $\lambda(0)=\lambda_{0}$ for $\varepsilon>0$ by Proposition 4.8 , we need some information on $Y_{j}^{\pm}(x,\lambda,\varepsilon)$ .
+Since $\partial_{\varepsilon}Y_{j}^{\pm}(x,\lambda_{0},0)$ satisfies $\displaystyle(\partial_{\varepsilon}Y_{j}^{\pm})^{\prime}=A_{0}(x,\lambda_{0})\partial_{\varepsilon}Y_{j}^{\pm}+A_{1}(x)Y_{0j}^{\pm},$ we have the following lemma. Lemma 6.3 . We have $\displaystyle\begin{aligned} \partial_{\varepsilon}Y_{j}^{-}(x,\lambda_{0},0)&=\mathscr{Y}_{0}(x)\int_{-\infty}^{x}\mathscr{Y}_{0}(y)^{-1}A_{1}(y)Y_{0j}^{-}(y,\lambda_{0})\,\mathrm{d}y,&j=1,2,3,4,\\
+\partial_{\varepsilon}Y_{j}^{+}(x,\lambda_{0},0)&=-\mathscr{Y}_{0}(x)\int_{x}^{\infty}\mathscr{Y}_{0}(y)^{-1}A_{1}(y)Y_{0j}^{+}(y,\lambda_{0})\,\mathrm{d}y,&j=5,6,7,8.\end{aligned}$ (6.18) Proof. We only prove the first equation of ( 6.18 ).
+The second equation of ( 6.18 ) can be shown by the same argument.
+By the variation of constants formula, we have $\displaystyle Y_{j}^{-}(x,\lambda_{0},\varepsilon)$ $\displaystyle=\mathscr{Y}_{0}(x)\mathscr{Y}_{0}(x_{0})^{-1}Y_{j}^{-}(x_{0},\lambda_{0},\varepsilon)$ $\displaystyle\quad+\varepsilon\mathscr{Y}_{0}(x)\int_{x_{0}}^{x}\mathscr{Y}_{0}(y)^{-1}A_{1}(y)Y_{j}^{-}(y,\lambda_{0},\varepsilon)\,\mathrm{d}y$ (6.19) for any $x_{0}\in\mathbb{R}$ .
+It follows from ( 2.13 ), ( 2.15 ), ( 2.16 ),
+and ( 6.2 )
+that the limit of $\mathscr{Y}_{0}(x_{0})^{-1}Y_{j}^{-}(x_{0},\lambda_{0},\varepsilon)$ as $x_{0}\to-\infty$ exists and is independent of $\varepsilon$ .
+Letting $w_{0}\in\mathbb{C}^{8}$ be the limit and taking $x_{0}\to-\infty$ in ( 6.19 ), we have $\displaystyle Y_{j}^{-}(x,\lambda_{0},\varepsilon)=\mathscr{Y}_{0}(x)w_{0}+\varepsilon\mathscr{Y}_{0}(x)\int_{-\infty}^{x}\mathscr{Y}_{0}(y)^{-1}A_{1}(y)Y_{j}^{-}(y,\lambda_{0},\varepsilon)\,\mathrm{d}y.$ Differentiating the above equation with respect to $\varepsilon$ and putting $\varepsilon=0$ yields the desired result.
+∎ Using ( 5.4 ), ( 6.1 ), and ( 6.2 ), we have the forms $\displaystyle\begin{aligned} &\partial_{\varepsilon}Y_{j}^{-}(x,\lambda_{0},0)=(0,0,*,*,0,0,*,*)^{\mathrm{T}},\quad j=1,2,\\
+&\partial_{\varepsilon}Y_{j}^{-}(x,\lambda_{0},0)=(*,*,0,0,*,*,0,0)^{\mathrm{T}},\quad j=3,4,\\
+&\partial_{\varepsilon}Y_{j}^{+}(x,\lambda_{0},0)=(0,0,*,*,0,0,*,*)^{\mathrm{T}},\quad j=5,6,\\
+&\partial_{\varepsilon}Y_{j}^{+}(x,\lambda_{0},0)=(*,*,0,0,*,*,0,0)^{\mathrm{T}},\quad j=7,8,\end{aligned}$ (6.20) for ( 6.18 ).
+Moreover, $\displaystyle\partial_{\varepsilon}(Y_{4}^{-}-\tau Y_{8}^{+})(x,\lambda_{0},0)$ $\displaystyle=\mathscr{Y}_{0}(x)\int_{-\infty}^{\infty}\mathscr{Y}_{0}(y)^{-1}A_{1}(y)Y_{04}^{-}(y,\lambda_{0})\,\mathrm{d}y$ $\displaystyle=\rho_{1}Y_{01}^{-}(x,\lambda_{0})+\rho_{2}Y_{02}^{-}(x,\lambda_{0})+\rho_{5}Y_{05}^{+}(x,\lambda_{0})+\rho_{6}Y_{06}^{+}(x,\lambda_{0}),$ (6.21) where $\rho_{j}$ is the $j$ -th component of $\displaystyle\int_{-\infty}^{\infty}\mathscr{Y}_{0}(y)^{-1}A_{1}(y)Y_{04}^{-}(y,\lambda_{0})\,\mathrm{d}y$ for $j=1,2,5,6$ .
+Differentiating ( 4.20 ) with respect to $\varepsilon$ at $(\lambda,\varepsilon)=(\lambda_{0},0)$ yields $\displaystyle\partial_{\varepsilon}E(\lambda_{0},0)=\det\bigl(Y_{1}^{-}\;\;Y_{2}^{-}\;\;Y_{3}^{-}\;\;\partial_{\varepsilon}(Y_{4}^{-}-\tau Y_{8}^{+})\;\;Y_{5}^{+}\;\;Y_{6}^{+}\;\;Y_{7}^{+}\;\;Y_{8}^{+}\bigr)(x,\lambda_{0},0).$ Substituting ( 6.21 ) into the above equation, we obtain $\displaystyle\partial_{\varepsilon}E(\lambda_{0},0)=0.$ (6.22) Note that $Y_{j}^{\pm}(x,\lambda,0)=Y_{0j}^{\pm}(x,\lambda)$ .
+So it follows from the first equation of ( 4.21 ) that $\partial_{\varepsilon}\lambda(0)=0$ .
+We use the second equation of ( 4.21 ) to estimate $\lambda(\varepsilon)$ .
+For $\partial_{\varepsilon}^{2}E(\lambda_{0},0)$ and $\partial_{\lambda}E(\lambda_{0},0)$ we have the following lemmas. Lemma 6.4 . We have $\displaystyle\partial_{\varepsilon}^{2}E(\lambda_{0},0)=2\tau E_{\mathrm{A}}(\lambda_{0})E_{\mathrm{C}}(\lambda_{0})\biggl(\frac{2J_{1}}{C_{1}}+\frac{2J_{2}}{C_{2}}+f_{3}\biggr)$ (6.23) with $\displaystyle J_{j}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\int_{-\infty}^{\infty}\int_{-\infty}^{x}$ $\displaystyle a(x)p_{8}(x,\lambda_{0})\bigl(p_{j+4}(x,\lambda_{0})+q_{j+4}(x,\lambda_{0})\bigr)$ $\displaystyle a(y)p_{8}(y,\lambda_{0})\bigl(p_{j}(y,\lambda_{0})+q_{j}(y,\lambda_{0})\bigr)\mathrm{d}y\,\mathrm{d}x$ (6.24) for $j=1,2$ and $\displaystyle f_{3}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\int_{-\infty}^{\infty}(A_{22}(x))_{22}\,p_{4}(x,\lambda_{0})^{2}\,\mathrm{d}x,$ (6.25) where $a(x)$ and $A_{22}(x)$ are given by ( 6.6 ) and ( 6.8 ), respectively. Lemma 6.5 . We have $\displaystyle\partial_{\lambda}E(\lambda_{0},0)=-\mathrm{i}\tau E_{\mathrm{A}}(\lambda_{0})E_{\mathrm{C}}(\lambda_{0})\|p_{4}(\cdot,\lambda_{0})\|_{L^{2}}^{2}.$ (6.26) A proof of Lemma 6.4 is given in Appendix A.2 .
+To prove Lemma 6.5 , we note that $\lambda=\lambda_{0}$ is a simple eigenvalue of ( 2.11 ) and apply Proposition 8.1.4 of [ 20 ] to $E_{\mathrm{B}}(\lambda)$ with $(p_{0},q_{0})=(p_{4},p_{4})$ .
+We now compute the second equation of ( 4.21 ) to obtain the following result. Lemma 6.6 . We have $\displaystyle\mathrm{Re}\,\lambda(\varepsilon)=-\frac{\displaystyle|\mathcal{I}_{2}(\lambda_{0})|^{2}-\mathrm{Re}\,\!\biggl(\frac{C_{3}}{C_{2}}\mathcal{I}_{2}(\lambda_{0})^{2}\biggr)}{2\,\|p_{4}(\cdot,\lambda_{0})\|_{L^{2}}^{2}\,\mathrm{Im}\,\nu_{2}(\lambda_{0})}\varepsilon^{2}+O(\varepsilon^{3}),$ (6.27) $\displaystyle\mathrm{Im}\,\lambda(\varepsilon)=\mathrm{Im}\,\lambda_{0}+O(\varepsilon^{2}),$ (6.28) where $C_{3}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=(Y_{02}^{-}\cdot Z_{02}^{+})(\lambda_{0})$ and $\mathcal{I}_{2}(\lambda)$ was defined in ( 2.24 ) with $j=2$ .
+Moreover, $\displaystyle\mathrm{Re}\,\lambda(\varepsilon)\leq-\frac{|\mathcal{I}_{2}(\lambda_{0})|^{2}}{2\,\|p_{4}(\cdot,\lambda_{0})\|_{L^{2}}^{2}\,\mathrm{Im}\,\nu_{2}(\lambda_{0})}\!\left(1-\sqrt{1-\frac{4(\mathrm{Im}\,\nu_{2}(\lambda_{0}))^{2}}{|C_{2}|^{2}}}\right)\!\varepsilon^{2}+O(\varepsilon^{3}).$ (6.29) Proof. Substituting ( 6.22 ), ( 6.23 ), and ( 6.26 ) into ( 4.21 ), we obtain $\displaystyle\lambda(\varepsilon)=\lambda_{0}+\!\left(-\mathrm{i}\biggl(\frac{2J_{1}}{C_{1}}+\frac{2J_{2}}{C_{2}}+f_{3}\biggr)\middle/\|p_{4}(\cdot,\lambda_{0})\|_{L^{2}}^{2}\right)\!\varepsilon^{2}+O(\varepsilon^{3}),$ (6.30) $\displaystyle\mathrm{Re}\,\lambda(\varepsilon)=\left(\mathrm{Im}\,\!\biggl(\frac{2J_{2}}{C_{2}}\biggr)\middle/\|p_{4}(\cdot,\lambda_{0})\|_{L^{2}}^{2}\right)\!\varepsilon^{2}+O(\varepsilon^{3}),$ and ( 6.28 ) since $p_{1}(x,\lambda_{0}),q_{1}(x,\lambda_{0}),p_{4}(x,\lambda_{0})\in\mathbb{R}$ by $\nu_{1}(\lambda_{0}),\nu_{4}(\lambda_{0})\in\mathbb{R}$ , and consequently $J_{1},C_{1},f_{3}\in\mathbb{R}$ .
+To obtain ( 6.27 ), we only have to prove $\displaystyle\mathrm{Im}\,\!\biggl(\frac{2J_{2}}{C_{2}}\biggr)$ $\displaystyle=-\frac{1}{2\,\mathrm{Im}\,\nu_{2}(\lambda_{0})}\biggl(|\mathcal{I}_{2}(\lambda_{0})|^{2}-\mathrm{Re}\,\!\biggl(\frac{C_{3}}{C_{2}}\mathcal{I}_{2}(\lambda_{0})^{2}\biggr)\biggr).$ (6.31) Since $(Y_{01}^{+}\ Y_{02}^{+}\ Y_{05}^{+}\ Y_{06}^{+})$ and $(Y_{01}^{-}\ Y_{02}^{-}\ Y_{05}^{-}\ Y_{06}^{-})$ are $8\times 4$ matrices whose nonzero elements construct fundamental matrix solutions to ( 2.10 ) (see ( 5.4 ) and a remark thereafter), we see that there exists $S\in\mathrm{GL}(4,\mathbb{C})$ such that $\displaystyle\begin{pmatrix}Y_{01}^{+}&Y_{02}^{+}&Y_{05}^{+}&Y_{06}^{+}\end{pmatrix}=\begin{pmatrix}Y_{01}^{-}&Y_{02}^{-}&Y_{05}^{-}&Y_{06}^{-}\end{pmatrix}S$ (6.32) at $\lambda=\lambda_{0}$ .
+From Lemma 6.2 we have $\displaystyle\begin{array}[]{llll}Y_{01}^{-}\cdot Z_{05}^{+}=C_{1},&Y_{01}^{-}\cdot Z_{06}^{+}=0,&Y_{01}^{-}\cdot Z_{01}^{-}=0,&Y_{01}^{-}\cdot Z_{02}^{-}=0,\\
+Y_{02}^{-}\cdot Z_{05}^{+}=0,&Y_{02}^{-}\cdot Z_{06}^{+}=C_{2},&Y_{02}^{-}\cdot Z_{01}^{-}=0,&Y_{02}^{-}\cdot Z_{02}^{-}=0,\\
+Y_{05}^{-}\cdot Z_{05}^{+}=0,&Y_{05}^{-}\cdot Z_{06}^{+}=0,&Y_{05}^{-}\cdot Z_{01}^{-}=-2\nu_{1},&Y_{05}^{-}\cdot Z_{02}^{-}=0,\\
+Y_{06}^{-}\cdot Z_{05}^{+}=0,&Y_{06}^{-}\cdot Z_{06}^{+}=0,&Y_{06}^{-}\cdot Z_{01}^{-}=0,&Y_{06}^{-}\cdot Z_{02}^{-}=-2\nu_{2}.\end{array}$ Hence, $\displaystyle S=\begin{pmatrix}\dfrac{2\nu_{1}}{C_{1}}&0&0&0\\
+0&\dfrac{2\nu_{2}}{C_{2}}\Bigl(1-\Bigl(\dfrac{C_{3}}{2\nu_{2}}\Bigr)^{2}\Bigr)&0&-\dfrac{C_{3}}{2\nu_{2}}\\
+0&0&\dfrac{C_{1}}{2\nu_{1}}&0\\
+0&\dfrac{C_{3}}{2\nu_{2}}&0&\dfrac{C_{2}}{2\nu_{2}}\end{pmatrix}\!(\lambda_{0}).$ (6.33) On the other hand, since $\nu_{2}(\lambda_{0})$ is purely imaginary, $Y_{02}^{-}(x,\lambda_{0})^{*}$ satisfies the same asymptotic condition as $Y_{06}^{-}(x,\lambda_{0})$ when $x\to-\infty$ .
+Since by Lemma 6.2 $Y_{06}^{-}$ is uniquely determined and $(Y_{02}^{-})^{*}\cdot Z_{05}^{+}=(Y_{02}^{-}\cdot(Z_{05}^{+})^{*})^{*}=(Y_{02}^{-}\cdot Z_{05}^{+})^{*}=0$ , we have $Y_{02}^{-}(x,\lambda_{0})^{*}=Y_{06}^{-}(x,\lambda_{0})$ .
+Hence, we use ( 5.4 ), ( 6.32 ), and ( 6.33 ) to obtain $\displaystyle p_{6}(x)=-\frac{C_{3}}{2\nu_{2}}p_{2}(x)+\frac{C_{2}}{2\nu_{2}}p_{2}(x)^{*},\quad q_{6}(x)=-\frac{C_{3}}{2\nu_{2}}q_{2}(x)+\frac{C_{2}}{2\nu_{2}}q_{2}(x)^{*}$ (6.34) at $\lambda=\lambda_{0}$ .
+Substituting ( 6.34 ) into ( 6.24 ) with $j=2$ yields ( 6.31 ). It remains to show ( 6.29 ).
+Putting $x=0$ at ( 6.34 ) and using $(p_{6}(x,\lambda),q_{6}(x,\lambda))=(p_{2}(-x,\lambda),q_{2}(-x,\lambda))$ , we have $\displaystyle(C_{3}+2\nu_{2}(\lambda_{0}))(p_{2}(0,\lambda_{0}),\,q_{2}(0,\lambda_{0}))=C_{2}(p_{2}^{*}(0,\lambda_{0}),\,q_{2}^{*}(0,\lambda_{0})),$ so that $C_{3}^{2}+4(\mathrm{Im}\,\nu_{2}(\lambda_{0}))^{2}=|C_{2}|^{2}$ since $C_{3}=2\mathrm{Re}\,\!(p_{2}{p_{2}^{\prime}}^{*}+q_{2}{q_{2}^{\prime}}^{*})(0,\lambda_{0})\in\mathbb{R}$ , $\nu_{2}(\lambda_{0})\in\mathrm{i}\mathbb{R}$ , and $C_{2}\neq 0$ .
+Hence, we compute $\displaystyle\displaystyle|\mathcal{I}_{2}(\lambda_{0})|^{2}-\mathrm{Re}\,\!\biggl(\frac{C_{3}}{C_{2}}\mathcal{I}_{2}(\lambda_{0})^{2}\biggr)$ $\displaystyle\geq|\mathcal{I}_{2}(\lambda_{0})|^{2}\!\left(1-\left|\frac{C_{3}}{C_{2}}\right|\right)$ $\displaystyle=|\mathcal{I}_{2}(\lambda_{0})|^{2}\!\left(1-\sqrt{1-\frac{4(\mathrm{Im}\,\nu_{2}(\lambda_{0}))^{2}}{|C_{2}|^{2}}}\right),$ which yields ( 6.29 ).
+∎ If $\mathcal{I}_{2}(\lambda_{0})\neq 0$ , then $\mathrm{Re}\,\lambda(\varepsilon)<0$ by Lemma 6.6 .
+Assume that $\mathscr{L}_{\varepsilon}$ has an eigenvalue $\lambda_{1}(\varepsilon)$ near $\lambda_{0}$ .
+By the symmetry of $\sigma(\mathscr{L}_{\varepsilon})$ , we can assume $\mathrm{Re}\,\lambda_{1}(\varepsilon)\geq 0$ .
+Using Proposition 4.6 , we see that $E(\lambda_{1}(\varepsilon),\varepsilon)=0$ .
+However, $E(\lambda,\varepsilon)$ does not have such a zero since $\lambda(\varepsilon)$ is a unique zero of $E(\lambda,\varepsilon)$ near $\lambda_{0}$ .
+This yields a contradiction, so that $\mathscr{L}_{\varepsilon}$ has no eigenvalue near $\lambda_{0}$ .
+This completes the proof.
+∎ 6.4. Proof of Theorem 2.11 We consider case (IV) in Section 2.2 and assume that $\lambda_{0}\in\mathrm{i}(-\infty,-\min\{\omega,s\})$ is a simple zero of $E_{\mathrm{B}}(\lambda)$ with $E_{\mathrm{A}}(\lambda_{0}),E_{\mathrm{C}}(\lambda_{0})\neq 0$ .
+Note that $\lambda_{0}\in\mathrm{i}(-\infty,-\omega)\setminus\{-\mathrm{i}s\}$ or $\lambda_{0}=-\mathrm{i}s$ (resp. $\lambda_{0}\in\mathrm{i}(-\infty,-\omega)$ or $\lambda_{0}\in\mathrm{i}[-\omega,-s)$ ) if $\omega\leq s$ (resp. $\omega>s$ ). Proof of Theorem 2.11 . We first treat the case of $\lambda_{0}\in\mathrm{i}(-\infty,-\omega)\setminus\{-\mathrm{i}s\}$ , whether $\omega\leq s$ or not.
+By the choice of branch cuts ( 2.18 ) we have $\nu_{1}(\lambda_{0})\in\mathrm{i}(-\infty,0)$ and $\nu_{2}(\lambda_{0}),\nu_{4}(\lambda_{0})\in(0,\infty)$ .
+In particular, the Jost solution $(p_{2}(x,\lambda),q_{2}(x,\lambda))$ to ( 2.10 ) with $\lambda=\lambda_{0}$ is uniquely determined by ( 2.13 ). By exchanging the roles of $\nu_{1}$ and $\nu_{2}$ , the same argument as in case (III) is valid.
+Note that $\nu_{1}(\lambda_{0})$ has a negative imaginary part while $\nu_{2}(\lambda_{0})$ has a positive one in case (III).
+In particular, the Jost solutions $Y_{j}^{\pm}$ , $j=1,\ldots,8$ , are uniquely determined
+if $\Delta_{2}(\lambda_{0})\neq 0$ ,
+where $\Delta_{2}(\lambda)$ was defined in ( 2.23 ) with $j=2$ ,
+as in Lemma 6.2 .
+As in Lemma 6.6 we can prove the following. Lemma 6.7 . We have $\displaystyle\mathrm{Re}\,\lambda(\varepsilon)=-\frac{\displaystyle|\mathcal{I}_{1}(\lambda_{0})|^{2}-\mathrm{Re}\,\!\biggl(\frac{C_{4}}{C_{1}}\mathcal{I}_{1}(\lambda_{0})^{2}\biggr)}{2\,\|p_{4}(\cdot,\lambda_{0})\|_{L^{2}}^{2}\,\mathrm{Im}\,\nu_{1}(\lambda_{0})}\varepsilon^{2}+O(\varepsilon^{3}),$ (6.35) $\displaystyle\mathrm{Im}\,\lambda(\varepsilon)=\mathrm{Im}\,\lambda_{0}+O(\varepsilon^{2}),$ where $C_{4}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=(Y_{01}^{-}\cdot Z_{01}^{+})(\lambda_{0})$ and $\mathcal{I}_{1}(\lambda)$ was defined in ( 2.24 ) with $j=1$ .
+Moreover, $\displaystyle\mathrm{Re}\,\lambda(\varepsilon)\geq-\frac{|\mathcal{I}_{1}(\lambda_{0})|^{2}}{2\,\|p_{4}(\cdot,\lambda_{0})\|_{L^{2}}^{2}\,\mathrm{Im}\,\nu_{1}(\lambda_{0})}\!\left(1-\sqrt{1-\frac{4(\mathrm{Im}\,\nu_{1}(\lambda_{0}))^{2}}{|C_{1}|^{2}}}\right)\!\varepsilon^{2}+O(\varepsilon^{3}).$ If $\mathcal{I}_{1}(\lambda_{0})\neq 0$ ,
+then by Lemma 6.7 $\mathrm{Re}\,\lambda(\varepsilon)>0$ ,
+so that $\lambda(\varepsilon)$ is an eigenvalue of $\mathscr{L}_{\varepsilon}$ by Proposition 4.8 . We next consider the case of $\lambda_{0}=-\mathrm{i}s$ and $\omega<s$ .
+Let $\widetilde{E}(\gamma,\varepsilon)$ denote the extended Evans function near the branch point $\lambda_{\mathrm{br}}=-\mathrm{i}s$ , where $\gamma^{2}=-\mathrm{i}(\lambda-\lambda_{\mathrm{br}})$ .
+As easily shown, $\partial_{\varepsilon}^{2}\widetilde{E}(0,0)=\partial_{\varepsilon}^{2}E(-\mathrm{i}s,0)$ is given by ( 6.23 ) with $\lambda_{0}=-\mathrm{i}s$ while $\partial_{\varepsilon}\widetilde{E}(0,0)=0$ .
+Since $\partial_{\gamma}=2\mathrm{i}\gamma\partial_{\lambda}$ , it follows from ( 6.26 ) that $\displaystyle\partial_{\gamma}\widetilde{E}(0,0)=0,\quad\partial_{\gamma}^{2}\widetilde{E}(0,0)=2\tau E_{\mathrm{A}}(-\mathrm{i}s)E_{\mathrm{C}}(-\mathrm{i}s)\|p_{4}(\cdot,-\mathrm{i}s)\|_{L^{2}}^{2}.$ Moreover, we differentiate ( 4.20 ) with respect to $\varepsilon$ and $\gamma$ to obtain $\displaystyle\partial_{\varepsilon}\partial_{\gamma}\widetilde{E}(0,0)$ $\displaystyle=\det\bigl(Y_{1}^{-}\;\;Y_{2}^{-}\;\;\partial_{\gamma}Y_{3}^{-}\;\;\partial_{\varepsilon}Y_{4}^{-}\;\;Y_{5}^{+}\;\;Y_{6}^{+}\;\;Y_{7}^{+}\;\;Y_{8}^{+}\bigr)(x,-\mathrm{i}s,0)$ $\displaystyle\quad+\det\bigl(Y_{1}^{-}\;\;Y_{2}^{-}\;\;Y_{3}^{-}\;\;\partial_{\varepsilon}Y_{4}^{-}\;\;Y_{5}^{+}\;\;Y_{6}^{+}\;\;\partial_{\gamma}Y_{7}^{+}\;\;Y_{8}^{+}\bigr)(x,-\mathrm{i}s,0)$ $\displaystyle\quad+\det\bigl(Y_{1}^{-}\;\;Y_{2}^{-}\;\;\partial_{\gamma}Y_{3}^{-}\;\;Y_{4}^{-}\;\;Y_{5}^{+}\;\;Y_{6}^{+}\;\;Y_{7}^{+}\;\;\partial_{\varepsilon}Y_{8}^{+}\bigr)(x,-\mathrm{i}s,0)$ $\displaystyle\quad+\det\bigl(Y_{1}^{-}\;\;Y_{2}^{-}\;\;Y_{3}^{-}\;\;Y_{4}^{-}\;\;Y_{5}^{+}\;\;Y_{6}^{+}\;\;\partial_{\gamma}Y_{7}^{+}\;\;\partial_{\varepsilon}Y_{8}^{+}\bigr)(x,-\mathrm{i}s,0)$ $\displaystyle=0.$ Here we have used ( 6.9 ) and $\partial_{\gamma}\partial_{\varepsilon}^{k}Y_{j}^{\pm}|_{\gamma=0}=2\mathrm{i}\gamma\partial_{\lambda}\partial_{\varepsilon}^{k}Y_{j}^{\pm}|_{\gamma=0}=0$ for $j\neq 3,7$ and $k=0,1$ in the first equality, and ( 5.4 ) and ( 6.20 ) in the second equality.
+Since $\widetilde{E}(\gamma,\varepsilon)=\frac{1}{2}\partial_{\gamma}^{2}\widetilde{E}(0,0)\gamma^{2}+\frac{1}{2}\partial_{\varepsilon}^{2}\widetilde{E}(0,0)\varepsilon^{2}+\cdots$ near $(\gamma,\varepsilon)=(0,0)$ , all zeros of $\widetilde{E}(\gamma,\varepsilon)$ near $(\gamma,\varepsilon)=(0,0)$ are parametrized as $\gamma=\pm\gamma(\varepsilon)$ with $\displaystyle\gamma(\varepsilon)=\frac{\sqrt{-(2J_{1}/C_{1}+2J_{2}/C_{2}+f_{3})}}{\|p_{4}(\cdot,-\mathrm{i}s)\|_{L^{2}}}\varepsilon+O(\varepsilon^{2}).$ As in the proof of Lemma 6.6 , we have $\displaystyle\mathrm{Im}\,\!\biggl(\frac{2J_{1}}{C_{1}}+\frac{2J_{2}}{C_{2}}+f_{3}\biggr)=-\frac{1}{2\,\mathrm{Im}\,\nu_{1}(-\mathrm{i}s)}\biggl(|\mathcal{I}_{1}(-\mathrm{i}s)|^{2}-\mathrm{Re}\,\!\biggl(\frac{C_{4}}{C_{1}}\mathcal{I}_{1}(-\mathrm{i}s)^{2}\biggr)\biggr)>0$ if $\Delta_{2}(-\mathrm{i}s),\mathcal{I}_{1}(-\mathrm{i}s)\neq 0$ .
+Hence, we obtain $\mathrm{Re}\,\gamma(\varepsilon)>0$ and $\mathrm{Im}\,\gamma(\varepsilon)<0$ , so that $\lambda(\varepsilon)=-\mathrm{i}s+\mathrm{i}\gamma(\varepsilon)^{2}$ is an eigenvalue of $\mathscr{L}_{\varepsilon}$ by Proposition 4.9 .
+This completes the proof.
+∎ Remark 6.8 . Let $s<\omega$ .
+Suppose that $\lambda_{0}\in\mathrm{i}[-\omega,-s)$ is a simple zero of $E_{\mathrm{B}}(\lambda)$ such that $E_{\mathrm{A}}(\lambda_{0}),E_{\mathrm{C}}(\lambda_{0})\neq 0$ .
+Then, as easily shown, a zero of $E(\lambda,\varepsilon)$ near $\lambda=\lambda_{0}$ satisfies ( 6.30 ).
+Since $\nu_{1}(\lambda_{0})\geq 0$ and $\nu_{2}(\lambda_{0}),\nu_{4}(\lambda_{0})>0$ by ( 2.14 ) and ( 2.17 ), we have $p_{j}(x,\lambda_{0}),q_{j}(x,\lambda_{0}),p_{4}(x,\lambda_{0})\in\mathbb{R}$ for $j=1,2,$ and $2J_{1}/C_{1},2J_{2}/C_{2},f_{3}\in\mathbb{R}$ in ( 6.30 ), so that $\mathrm{Re}\,\lambda(\varepsilon)=O(\varepsilon^{3})$ as stated in Remark 2.12 . 6.5. Proof of Theorem 2.13 We consider case (V) in Section 2.2 and assume that $\omega<s$ and $\lambda_{0}=\mathrm{i}s$ is a zero of $E_{\mathrm{B}}(\lambda)$ with $E_{\mathrm{A}}(\lambda_{0}),E_{\mathrm{C}}(\lambda_{0})\neq 0$ . Proof of Theorem 2.13 . Let $\widetilde{E}(\gamma,\varepsilon)$ denote the extended Evans functions near the branch point $\lambda_{\mathrm{br}}=\mathrm{i}s$ , where $\gamma^{2}=\mathrm{i}(\lambda-\lambda_{\mathrm{br}})$ .
+We define $\widetilde{E}_{\mathrm{B}}(\gamma)$ for $E_{\mathrm{B}}(\lambda)$ as $\widetilde{E}(\gamma,\varepsilon)$ and assume that $\gamma=0$ is a simple zero of $\widetilde{E}_{\mathrm{B}}(\gamma)$ .
+Since any eigenvalue of ( 6.9 ) is included in $\mathrm{i}(-\infty,s)$ , $\lambda_{0}=\mathrm{i}s$ is a resonance pole of $\mathscr{L}_{0}$ .
+Actually, since $\nu_{4}(\mathrm{i}s)=0$ , by ( 2.15 ) $p_{4}(x,\mathrm{i}s)\to 1$ ( $x\to-\infty$ ) and $p_{8}(x,\mathrm{i}s)\to 1$ ( $x\to+\infty$ ) while ( 6.9 ) still holds with $\tau=1$ or $-1$ .
+Like ( 6.22 ) and ( 6.23 ) in case (III), we obtain $\displaystyle\partial_{\varepsilon}\widetilde{E}(0,0)=0,\quad\partial_{\varepsilon}^{2}\widetilde{E}(0,0)=2\tau E_{\mathrm{A}}(\mathrm{i}s)E_{\mathrm{C}}(\mathrm{i}s)\biggl(\frac{2J_{1}}{C_{1}}+\frac{2J_{2}}{C_{2}}+f_{3}\biggr).$ As in Lemma 9.5.4 of [ 20 ] , we see that $\partial_{\gamma}\widetilde{E}_{\mathrm{B}}(0)=-(1+\tau^{2})\tau=-2\tau$ and $\partial_{\gamma}\widetilde{E}(0,0)=-2\tau E_{\mathrm{A}}(\mathrm{i}s)E_{\mathrm{C}}(\mathrm{i}s)$ .
+Hence, as in Lemma 6.6 ,
+there exists a unique zero $\gamma(\varepsilon)$ of $\widetilde{E}(\gamma,\varepsilon)$ with a positive imaginary part
+if $\Delta_{1}(\mathrm{i}s),\mathcal{I}_{2}(\mathrm{i}s)\neq 0$ .
+By Proposition 4.9 , $\mathscr{L}_{\varepsilon}$ has no eigenvalue near $\lambda=\mathrm{i}s$ .
+This completes the proof.
+∎ 6.6. Proof of Theorem 2.14 We consider case (VI) in Section 2.2 and assume that $s<\omega$ and $\lambda_{0}=\mathrm{i}\omega$ is a zero of $E_{\mathrm{A}}(\lambda)$ with $E_{\mathrm{B}}(\lambda_{0}),E_{\mathrm{C}}(\lambda_{0})\neq 0$ . Proof of Theorem 2.14 . Let $\widetilde{E}(\gamma,\varepsilon)$ denote the extended Evans functions near the branch point $\lambda_{\mathrm{br}}=\mathrm{i}\omega$ , where $\gamma^{2}=\mathrm{i}(\lambda-\lambda_{\mathrm{br}})$ .
+We define $\widetilde{E}_{\mathrm{A}}(\gamma)$ for $E_{\mathrm{A}}(\lambda)$ as $\widetilde{E}(\gamma,\varepsilon)$ and assume that $\gamma=0$ is a simple zero of $\widetilde{E}_{\mathrm{A}}(\gamma)$ .
+Note that $\nu_{1}(\mathrm{i}\omega),\nu_{3}(\mathrm{i}\omega)\in(0,\infty)$ , $\nu_{2}(\mathrm{i}\omega)=0$ , and $\nu_{4}(\mathrm{i}\omega)\in\mathrm{i}(0,\infty)$ .
+Under (A4) , $\lambda=\mathrm{i}\omega$ is a resonance pole of $\mathscr{L}_{0}$ .
+So we take the Jost solutions $(p_{j}(x,\mathrm{i}\omega),q_{j}(x,\mathrm{i}\omega))$ , $j=2,6$ , to ( 2.10 ) such that $\displaystyle\begin{aligned} &p_{2}(x,\mathrm{i}\omega)=\tau p_{6}(x,\mathrm{i}\omega),\quad q_{2}(x,\mathrm{i}\omega)=\tau q_{6}(x,\mathrm{i}\omega),\\
+&\lim_{x\to-\infty}p_{2}(x,\mathrm{i}\omega)=\lim_{x\to+\infty}p_{6}(x,\mathrm{i}\omega)=0,\\
+&\lim_{x\to-\infty}q_{2}(x,\mathrm{i}\omega)=\lim_{x\to+\infty}q_{6}(x,\mathrm{i}\omega)=1,\end{aligned}$ (6.36) where $\tau=1$ or $-1$ . We can compute the zero $\gamma=\gamma(\varepsilon)$ of $\widetilde{E}(\gamma,\varepsilon)$ in a similar fashion to case (III).
+So we briefly describe it below.
+Since $\nu_{1}(\mathrm{i}\omega),\nu_{3}(\mathrm{i}\omega)\in(0,\infty)$ , $\nu_{2}(\mathrm{i}\omega)=0$ , and $\nu_{4}(\mathrm{i}\omega)\in\mathrm{i}(0,\infty)$ , the other Jost solutions $(p_{j}(x,\lambda),q_{j}(x,\lambda))$ , $j=1,5$ , and $p_{j}(x,\lambda)$ , $j=3,4,7,8$ , are uniquely determined.
+Note that the Jost solutions are determined without Lemma 6.2 .
+Let $(\bar{p}_{2}(x),\bar{q}_{2}(x))$ be a solution to ( 2.10 ) with $\lambda=\mathrm{i}\omega$ such that it is linearly independent of $(p_{j}(x,\mathrm{i}\omega),q_{j}(x,\mathrm{i}\omega))$ , $j=1,5,6$ , and $\displaystyle\bar{p}_{2}p_{1}^{\prime}+\bar{q}_{2}q_{1}^{\prime}=0,\quad\bar{p}_{2}^{\prime}p_{1}+\bar{q}_{2}^{\prime}q_{1}=0,\quad\bar{p}_{2}p_{2}^{\prime}+\bar{q}_{2}q_{2}^{\prime}+\bar{p}_{2}^{\prime}p_{2}+\bar{q}_{2}^{\prime}q_{2}=1$ (6.37) at $(x,\lambda)=(0,\mathrm{i}\omega)$ .
+Such a solution can always be taken by adding any linear combination
+of $(p_{j}(x,\mathrm{i}\omega),q_{j}(x,\mathrm{i}\omega))$ , $j=1,5,6$ , to it if necessary.
+Define $\displaystyle\bar{Y}_{02}(x)=(\bar{p}_{2},\bar{q}_{2},0,0,\bar{p}_{2}^{\prime},\bar{q}_{2}^{\prime},0,0)^{\mathrm{T}}(x),$ $\displaystyle\widehat{\mathscr{Y}}_{0}(x)=\bigl(Y_{01}^{-}\;\;\bar{Y}_{02}\;\;Y_{03}^{-}\;\;Y_{04}^{-}\;\;Y_{05}^{+}\;\;Y_{06}^{+}\;\;Y_{07}^{+}\;\;Y_{08}^{+}\bigr)(x,\mathrm{i}\omega).$ Let $Z_{0j}^{\pm}(x,\lambda)$ , $j=1,\ldots,8$ , and $\bar{Z}_{02}(x)$ be the solutions obtained from $Y_{0j}^{\pm}(x,\lambda)$ , $j=1,\ldots,8$ , and $\bar{Y}_{02}(x)$ , respectively, to the adjoint equation ( 6.12 ) as in case (III).
+As in Lemma 6.2 , we have the following. Lemma 6.9 . We have $\displaystyle\widehat{\mathscr{Y}}_{0}(x)^{-1}$ $\displaystyle=\left(\begin{array}[]{c|c|c|c}\begin{matrix}-p_{5}^{\prime}/\widehat{C}_{1}&-q_{5}^{\prime}/\widehat{C}_{1}\\
+-p_{6}^{\prime}&-q_{6}^{\prime}\end{matrix}&O_{2}&\begin{matrix}p_{5}/\widehat{C}_{1}&q_{5}/\widehat{C}_{1}\\
+p_{6}&q_{6}\end{matrix}&O_{2}\\
+\hline\cr O_{2}&\begin{matrix}p_{7}^{\prime}/E_{\mathrm{C}}&0\\
+0&p_{8}^{\prime}/E_{\mathrm{B}}\end{matrix}&O_{2}&\begin{matrix}-p_{7}/E_{\mathrm{C}}&0\\
+0&-p_{8}/E_{\mathrm{B}}\end{matrix}\\
+\hline\cr\begin{matrix}p_{1}^{\prime}/\widehat{C}_{1}&q_{1}^{\prime}/\widehat{C}_{1}\\
+p_{2}^{\prime}&q_{2}^{\prime}\end{matrix}&O_{2}&\begin{matrix}-p_{1}/\widehat{C}_{1}&-q_{1}/\widehat{C}_{1}\\
+-p_{2}&-q_{2}\end{matrix}&O_{2}\\
+\hline\cr O_{2}&\begin{matrix}-p_{3}^{\prime}/E_{\mathrm{C}}&0\\
+0&-p_{4}^{\prime}/E_{\mathrm{B}}\end{matrix}&O_{2}&\begin{matrix}p_{3}/E_{\mathrm{C}}&0\\
+0&p_{4}/E_{\mathrm{B}}\end{matrix}\end{array}\right)\!(x,\mathrm{i}\omega),$ where $\widehat{C}_{1}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=(Y_{01}^{-}\cdot Z_{05}^{+})(\mathrm{i}\omega)$ is a nonzero constant. Proof. The proof is similar to that of the second part in Lemma 6.2 .
+Let $\displaystyle\widehat{\mathscr{Z}}_{0}(x)=\bigl(Z_{01}^{-}\;\;\bar{Z}_{02}\;\;Z_{03}^{-}\;\;Z_{04}^{-}\;\;Z_{05}^{+}\;\;Z_{06}^{+}\;\;Z_{07}^{+}\;\;Z_{08}^{+}\bigr)(x,\mathrm{i}\omega).$ Instead of ( A.1 ) we have $\displaystyle\widehat{\mathscr{Z}}_{0}(0)^{\mathrm{H}}\widehat{\mathscr{Y}}_{0}(0)=\left(\begin{array}[]{c|c|c|c}O_{2}&O_{2}&\begin{matrix}-\widehat{C}_{1}&0\\
+0&-1\end{matrix}&O_{2}\\
+\hline\cr O_{2}&*&O_{2}&*\\
+\hline\cr\begin{matrix}\widehat{C}_{1}&0\\
+0&1\end{matrix}&O_{2}&O_{2}&O_{2}\\
+\hline\cr O_{2}&*&O_{2}&*\end{array}\right)$ by ( 6.37 ).
+Taking the determinant in the above identity yields $\widehat{C}_{1}\neq 0$ .
+Using the formula $\widehat{\mathscr{Y}}_{0}(x)^{-1}=(\widehat{\mathscr{Z}}_{0}(0)^{\mathrm{H}}\widehat{\mathscr{Y}}_{0}(0))^{-1}\widehat{\mathscr{Z}}_{0}(x)^{\mathrm{H}}$ , we obtain the desired result.
+∎ Like ( 6.22 ) and ( 6.23 ) in case (III), we obtain $\displaystyle\partial_{\varepsilon}\widetilde{E}(0,0)=0$ (6.38) and $\displaystyle\partial_{\varepsilon}^{2}\widetilde{E}(0,0)=2E_{\mathrm{B}}(\mathrm{i}\omega)$ $\displaystyle E_{\mathrm{C}}(\mathrm{i}\omega)\biggl(\frac{J_{3}}{E_{\mathrm{C}}(\mathrm{i}\omega)}+\frac{J_{4}}{E_{\mathrm{B}}(\mathrm{i}\omega)}$ $\displaystyle-\int_{-\infty}^{\infty}(p_{6}(x,\mathrm{i}\omega),\,q_{6}(x,\mathrm{i}\omega))A_{21}(x)\!\begin{pmatrix}p_{2}(x,\mathrm{i}\omega)\\
+q_{2}(x,\mathrm{i}\omega)\end{pmatrix}\!\mathrm{d}x\biggr),$ (6.39) where $\displaystyle J_{j}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\int_{-\infty}^{\infty}\int_{-\infty}^{x}$ $\displaystyle a(x)\bigl(p_{6}(x,\lambda_{0})+q_{6}(x,\lambda_{0})\bigr)p_{j+4}(x,\lambda_{0})$ $\displaystyle a(y)\bigl(p_{6}(y,\lambda_{0})+q_{6}(y,\lambda_{0})\bigr)p_{j}(y,\lambda_{0})\,\mathrm{d}y\,\mathrm{d}x$ (6.40) for $j=3,4$ .
+Recall that $a(x)$ and $A_{21}(x)$ are given by ( 6.6 ) and ( 6.7 ), respectively.
+As in Lemma 9.5.4 of [ 20 ] , we see that $\displaystyle\partial_{\gamma}\widetilde{E}(0,0)=2E_{\mathrm{B}}(\mathrm{i}\omega)E_{\mathrm{C}}(\mathrm{i}\omega).$ (6.41) As in Lemma 6.6 we have the following lemma. Lemma 6.10 . We have $\displaystyle\mathrm{Re}\,\gamma(\varepsilon)=O(\varepsilon^{2}),$ (6.42) $\displaystyle\mathrm{Im}\,\gamma(\varepsilon)=-\frac{1}{2\,\mathrm{Im}\,\nu_{4}(\mathrm{i}\omega)}\biggl(|\mathcal{I}_{2}(\mathrm{i}\omega)|^{2}-\mathrm{Re}\,\!\biggl(\frac{C_{5}}{E_{\mathrm{B}}(\mathrm{i}\omega)}\mathcal{I}_{2}(\mathrm{i}\omega)^{2}\biggr)\biggr)\varepsilon^{2}+O(\varepsilon^{3}),$ (6.43) where $C_{5}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=(Y_{04}^{-}\cdot Z_{04}^{+})(\mathrm{i}\omega)$ .
+Moreover, $\displaystyle\mathrm{Im}\,\gamma(\varepsilon)\leq-\frac{|\mathcal{I}_{2}(\mathrm{i}\omega)|^{2}}{2\,\mathrm{Im}\,\nu_{4}(\mathrm{i}\omega)}\!\left(1-\sqrt{1-\frac{4(\mathrm{Im}\,\nu_{4}(\mathrm{i}\omega))^{2}}{|E_{\mathrm{B}}(\mathrm{i}\omega)|^{2}}}\right)\!\varepsilon^{2}+O(\varepsilon^{3}).$ (6.44) Proof. Substituting ( 6.38 ), ( 6.39 ), and ( 6.41 ) into ( 4.22 ), we obtain ( 6.42 ) and $\displaystyle\mathrm{Im}\,\gamma(\varepsilon)=-\mathrm{Im}\,\!\biggl(\frac{J_{4}}{E_{\mathrm{B}}(\mathrm{i}\omega)}\biggr)\varepsilon^{2}+O(\varepsilon^{3})$ since $p_{2}(x,\mathrm{i}\omega),q_{2}(x,\mathrm{i}\omega),p_{3}(x,\mathrm{i}\omega)\in\mathbb{R}$ by $\nu_{2}(\mathrm{i}\omega),\nu_{3}(\mathrm{i}\omega)\in\mathbb{R}$ , so that $J_{3},E_{\mathrm{C}}(\mathrm{i}\omega)\in\mathbb{R}$ .
+To obtain ( 6.43 ), we only have to prove $\displaystyle\mathrm{Im}\,\!\biggl(\frac{J_{4}}{E_{\mathrm{B}}(\mathrm{i}\omega)}\biggr)=\frac{1}{2\,\mathrm{Im}\,\nu_{4}(\mathrm{i}\omega)}\biggl(|\mathcal{I}_{2}(\mathrm{i}\omega)|^{2}-\mathrm{Re}\,\!\biggl(\frac{C_{5}}{E_{\mathrm{B}}(\mathrm{i}\omega)}\mathcal{I}_{2}(\mathrm{i}\omega)^{2}\biggr)\biggr).$ (6.45) Since $(Y_{04}^{+}\ Y_{08}^{+})$ and $(Y_{04}^{-}\ Y_{08}^{-})$ are $8\times 2$ matrices whose nonzero elements construct fundamental matrix solution to ( 2.11 ), we see that there exists $\widehat{S}\in GL(2,\mathbb{C})$ such that $\displaystyle\begin{pmatrix}Y_{04}^{+}&Y_{08}^{+}\end{pmatrix}=\begin{pmatrix}Y_{04}^{-}&Y_{08}^{-}\end{pmatrix}\widehat{S}$ (6.46) at $\lambda=\mathrm{i}\omega$ .
+Using ( 2.15 ), we have $\displaystyle\widehat{S}=\begin{pmatrix}-\dfrac{2\nu_{4}}{E_{\mathrm{B}}}\Bigl(1-\Bigl(\dfrac{C_{5}}{2\nu_{4}}\Bigr)^{2}\Bigr)&-\dfrac{C_{5}}{2\nu_{4}}\\
+\dfrac{C_{5}}{2\nu_{4}}&-\dfrac{E_{\mathrm{B}}}{2\nu_{4}}\end{pmatrix}\!(\mathrm{i}\omega)$ (6.47) as in ( 6.33 ).
+On the other hand, since $\nu_{4}(\mathrm{i}\omega)$ is purely imaginary, $Y_{04}^{-}(x,\mathrm{i}\omega)^{*}$ satisfies the same asymptotic condition as $Y_{08}^{-}(x,\mathrm{i}\omega)$ when $x\to-\infty$ .
+Since $Y_{08}^{-}$ is uniquely determined, we have $Y_{04}^{-}(x,\mathrm{i}\omega)^{*}=Y_{08}^{-}(x,\mathrm{i}\omega)$ .
+Hence, we use ( 5.4 ), ( 6.46 ), and ( 6.47 ) to obtain $\displaystyle p_{8}(x,\mathrm{i}\omega)=-\frac{1}{2\nu_{4}(\mathrm{i}\omega)}\bigl(C_{5}p_{4}(x,\mathrm{i}\omega)+E_{\mathrm{B}}(\mathrm{i}\omega)p_{4}(x,\mathrm{i}\omega)^{*}\bigr).$ (6.48) Substituting ( 6.48 ) into ( 6.40 ) with $j=4$ yields ( 6.45 ). It remains to show ( 6.44 ).
+Since $C_{5}=2\mathrm{Re}\,\!(p_{4}p_{4}^{\prime*})(0,\mathrm{i}\omega)\in\mathbb{R}$ and $\nu_{4}(\mathrm{i}\omega)\in\mathrm{i}\mathbb{R}$ , we obtain $|E_{\mathrm{B}}(\mathrm{i}\omega)|^{2}=C_{5}^{2}+4(\mathrm{Im}\,\nu_{4}(\mathrm{i}\omega))^{2}$ , from which ( 6.44 ) immediately follows.
+∎ From Proposition 4.9 and Lemma 6.10 we see that $\mathscr{L}_{\varepsilon}$ has no eigenvalue near $\lambda=\mathrm{i}\omega$ when $\varepsilon>0$ .
+This completes the proof.
+∎ Remark 6.11 . (A4) holds if and only if there exists a bounded solution $(\hat{p}(x),\hat{q}(x))\not\in L^{2}(\mathbb{R})\times L^{2}(\mathbb{R})$ to ( 2.10 ) with $\lambda=\mathrm{i}\omega$ .
+The necessity is obvious.
+Conversely, by Lemma 4.5 any bounded solution $(\hat{p}(x),\hat{q}(x))$ to ( 2.10 ) with $\lambda=\mathrm{i}\omega$ satisfies one of the following asymptotics: (i) $\displaystyle\lim_{x\to\pm\infty}\hat{p}(x)=0,\quad\lim_{x\to-\infty}\hat{q}(x)=0,\quad\lim_{x\to+\infty}\hat{q}(x)=0,$ (ii) $\displaystyle\lim_{x\to\pm\infty}\hat{p}(x)=0,\quad\lim_{x\to-\infty}\hat{q}(x)=0,\quad\lim_{x\to+\infty}\hat{q}(x)\neq 0,$ (iii) $\displaystyle\lim_{x\to\pm\infty}\hat{p}(x)=0,\quad\lim_{x\to-\infty}\hat{q}(x)\neq 0,\quad\lim_{x\to+\infty}\hat{q}(x)=0,$ (iv) $\displaystyle\lim_{x\to\pm\infty}\hat{p}(x)=0,\quad\lim_{x\to-\infty}\hat{q}(x)\neq 0,\quad\lim_{x\to+\infty}\hat{q}(x)\neq 0.$ If case (ii) or (iii) holds, then $(\hat{p}(-x),\hat{q}(-x))$ is also a solution to ( 2.10 ) with $\lambda=\mathrm{i}\omega$ which is linearly independent of $(\hat{p}(x),\hat{q}(x))$ .
+Since the zero $\gamma=0$ of $\widetilde{E}_{\mathrm{A}}(\gamma)$ is simple, we see that only case (i) or (iv) occurs.
+Hence, if $(\hat{p}(x),\hat{q}(x))\not\in L^{2}(\mathbb{R})\times L^{2}(\mathbb{R})$ then case (iv) must occur. 7. Example: Coupled Cubic Nonlinear Schrödinger Equations In this section we apply the theories of Section 2 to the CNLS equations ( 1.1 ) with the particular nonlinearity ( 1.2 ), i.e., $\displaystyle\mathrm{i}\partial_{t}u+\partial_{x}^{2}u+(|u|^{2}+\beta_{1}|v|^{2})u=0,\quad\mathrm{i}\partial_{t}v+\partial_{x}^{2}v+(\beta_{1}|u|^{2}+\beta_{2}|v|^{2})v=0,$ (7.1) and illustrate the theoretical results with some numerical computations.
+Here we take $\beta_{1}\in\mathbb{R}$ as the control parameter. Throughout this section, we set $\omega=1$ by replacing $\omega t$ and $s/\omega$ with $t$ and $s$ , respectively, if necessary
+without loss of generality. 7.1. Bifurcation Analysis For ( 7.1 ) we easily see that (A1) and (A2) hold
+with $U_{0}(x)=\sqrt{2}\,\sech x$ for any $\beta_{1},\beta_{2}\in\mathbb{R}$ .
+The NVE ( 2.1 ) becomes $\delta V^{\prime\prime}-(s-2\beta_{1}\sech^{2}x)\delta V=0.$ (7.2) We first discuss bifurcations of the fundamental solitary wave.
+As shown in Section 5 of [ 6 ] , when $\displaystyle\beta_{1}=\beta_{1}^{(\ell)}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\frac{(\sqrt{s}+\ell)(\sqrt{s}+\ell+1)}{2},\quad\ell\in\mathbb{Z}_{\geq 0}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\{n\in\mathbb{Z}\mid n\geq 0\},$ (7.3) (A3) holds and ( 7.2 ) has a bounded solution given by $\displaystyle V_{1}^{(\ell)}(x)$ $\displaystyle=2^{\sqrt{s}}\Gamma(\sqrt{s}+1)P_{\sqrt{s}+\ell}^{-\sqrt{s}}(\tanh x)$ $\displaystyle=\begin{cases}\sech^{\sqrt{s}}x\,{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{-\ell',\sqrt s+\ell'+\tfrac{1}{2}}{\sqrt s+1};\sech^{2}x\biggr)&\text{if $\ell=2\ell^{\prime}$};\\
+\sech^{\sqrt{s}}x\tanh x\,{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{-\ell',\sqrt s+\ell'+\tfrac{3}{2}}{\sqrt s+1};\sech^{2}x\biggr)&\text{if $\ell=2\ell^{\prime}+1$},\end{cases}$ (7.4) where $\ell^{\prime}\in\mathbb{Z}_{\geq 0}$ , $P^{\mu}_{\nu}(z)$ is the associated Legendre function of the first kind $\displaystyle P^{\mu}_{\nu}(z)=\frac{1}{\Gamma(1-\mu)}\biggl(\frac{1+z}{1-z}\biggr)^{\mu/2}{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{-\nu,\nu+1}{1-\mu};\frac{1-z}{2}\biggr)$ and ${}_{p}F_{q}$ is the (generalized) hypergeometric function $\displaystyle{}_{p}F_{q}\biggl(\genfrac{.}{.}{0.0pt}{}{a_1,\ldots,a_p}{b_1,\ldots,b_q};z\biggr)=\sum_{j=0}^{\infty}\frac{(a_{1})_{j}\cdots(a_{p})_{j}}{j!\,(b_{1})_{j}\cdots(b_{q})_{j}}z^{j}$ (7.5) with $(x)_{j}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\Gamma(x+j)/\Gamma(x)$ .
+See [ 1 , 35 ] for necessary information on the associated Legendre functions and hypergeometric functions.
+See also Appendix A of [ 37 ] .
+Small errors were contained in (52) and (53) of [ 6 ] , which correspond to ( 7.4 ).
+From ( 3.13 ) and ( 3.15 ) we have $\displaystyle\phi_{11}(x)=\frac{1}{2}\sech x\,(3-\cosh^{2}x-3x\tanh x),\quad\phi_{12}(x)=\sech x\tanh x.$ (7.6) Recall that $\phi_{jl}(x)$ represents the $(j,l)$ -element of the fundamental matrix solution $\Phi(x)$ to the homogeneous part of ( 3.12 ) with $\Phi(0)=I_{2}$ for $j,l=1,2$ .
+Using ( 2.4 ), we express ( 2.2 ) and ( 2.3 ) as $\displaystyle\bar{a}_{2}=-2\int_{-\infty}^{\infty}V_{1}^{(\ell)}(x)^{2}\sech^{2}x\,\mathrm{d}x,$ (7.7) $\displaystyle\bar{b}_{2}=8\bigl(\beta_{1}^{(\ell)}\bigr)^{2}\int_{-\infty}^{\infty}\phi_{11}(x)V_{1}^{(\ell)}(x)^{2}\sech x\biggl(\int_{x}^{\infty}\phi_{12}(y)V_{1}^{(\ell)}(y)^{2}\sech y\,\mathrm{d}y\biggr)\mathrm{d}x$ $\displaystyle\qquad-\beta_{2}\int_{-\infty}^{\infty}V_{1}^{(\ell)}(x)^{4}\,\mathrm{d}x.$ (7.8) Here we have used the fact that $\phi_{11}(x)$ and $V_{1}^{(\ell)}(x)^{2}$ are even functions
+and $\phi_{12}(x)$ and $\displaystyle\int_{0}^{x}\phi_{11}(y)V_{1}^{(\ell)}(y)^{2}\sech y\,\mathrm{d}y$ are odd functions.
+Especially, we easily see by ( 7.7 ) and ( 7.8 )
+that $\bar{a}_{2}$ is always negative
+and $\bar{b}_{2}$ is positive (resp. negative) if $\beta_{2}$ is negative (resp. positive)
+with sufficiently large magnitude.
+Applying Theorem 2.2 , we obtain the following for ( 7.1 ). Theorem 7.1 . For $\ell\in\mathbb{Z}_{\geq 0}$ ,
+a pitchfork bifurcation of the fundamental solitary wave ( 1.7 )
+with $U_{0}(x)=\sqrt{2}\sech x$ occurs at $\beta_{1}=\beta_{1}^{(\ell)}$ given by ( 7.3 )
+if $\bar{b}_{2}\neq 0$ .
+In addition, it is supercritical or subcritical, depending on whether $\bar{b}_{2}>0$ or $<0$ .
+Moreover, the bifurcated solitary waves are expressed
+as ( 2.5 ) with ( 2.6 ),
+where $\varepsilon>0$ is a small parameter such that $\beta_{1}=\beta_{1}^{(\ell)}+O(\varepsilon^{2})$ . In what follows, we obtain tractable expressions for $\bar{a}_{2}$ and $\bar{b}_{2}$ .
+We begin with two auxiliary results. Lemma 7.2 . We have $\displaystyle V_{1}^{(\ell)}(x)^{2}=\sech^{2\sqrt{s}}x\,{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{-\ell,2\sqrt s+\ell+1,\sqrt s+\frac{1}{2}}{2\sqrt s+1,\sqrt s+1};\sech^{2}x\biggr)$ (7.9) and $\displaystyle V_{1}^{(\ell)}(x)^{2}=\sech^{2\sqrt{s}}x\sum_{j=0}^{\ell}C_{j}^{(\ell)}\sech^{2j}x,$ (7.10) where $\displaystyle C_{j}^{(\ell)}=(-1)^{j}\begin{pmatrix}\ell\\
+j\end{pmatrix}\frac{(2\sqrt{s}+\ell+1)_{j}(\sqrt{s}+\frac{1}{2})_{j}}{(2\sqrt{s}+1)_{j}(\sqrt{s}+1)_{j}},$ and $\begin{pmatrix}\ell\\
+j\end{pmatrix}$ represents the binomial coefficient for $\ell,j\in\mathbb{Z}_{\geq 0}$ . Proof. When $\ell$ is even, ( 7.9 ) directly follows from Clausen’s theorem (see, e.g., (2.5.7) of [ 35 ] ) $\displaystyle{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{a,b}{a+b+\tfrac{1}{2}};z\biggr)^{2}={}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{2a,2b,a+b}{2a+2b,a+b+\tfrac{1}{2}};z\biggr)$ for $(a,b)=(-\ell/2,\sqrt{s}+\ell/2+1/2)$ .
+When $\ell=2k+1$ is odd, we first apply the formula $\displaystyle(1-z)^{a+b-c}{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{a,b}{c};z\biggr)={}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{c-a,c-b}{c};z\biggr)$ (see, e.g., 15.3.3 of [ 1 ] )
+and then use Clausen’s theorem to obtain ( 7.9 ).
+By noting $\displaystyle\frac{(-\ell)_{j}}{j!}=(-1)^{j}\begin{pmatrix}\ell\\
+j\end{pmatrix},$ ( 7.10 ) easily follows from ( 7.5 ) and ( 7.9 ).
+∎ Lemma 7.3 . Let $\displaystyle\mathcal{K}_{r}\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\int_{-\infty}^{\infty}\sech^{r}x\,\mathrm{d}x,\quad r>0.$ We have $\displaystyle\mathcal{K}_{r}=\frac{\sqrt{\pi}\,\Gamma(r/2)}{\Gamma((r+1)/2)},\quad\mathcal{K}_{r+2}=\frac{r}{r+1}\mathcal{K}_{r}.$ (7.11) Moreover, $\displaystyle\int_{-\infty}^{\infty}\phi_{11}(x)\sech^{r+1}x\,\mathrm{d}x=\frac{r-1}{r+2}\mathcal{K}_{r}=\frac{\sqrt{\pi}(r-1)\Gamma(r/2)}{(r+2)\Gamma((r+1)/2)}.$ (7.12) Proof. The first equality in ( 7.11 ) is well known (see, e.g., p. 71 of [ 29 ] ).
+The second equality immediately follows from the first one.
+Finally we compute $\displaystyle\int_{-\infty}^{\infty}\phi_{11}(x)\sech^{r+1}x\,\mathrm{d}x$ $\displaystyle=\frac{3}{2}\mathcal{K}_{r+2}-\frac{1}{2}\mathcal{K}_{r}-\frac{3}{2}\int_{-\infty}^{\infty}x\sech^{r+2}x\tanh x\,\mathrm{d}x$ $\displaystyle=\frac{3}{2}\mathcal{K}_{r+2}-\frac{1}{2}\mathcal{K}_{r}-\frac{3}{2(r+2)}\mathcal{K}_{r+2},$ which yields ( 7.12 ) along with ( 7.11 ).
+∎ Using Lemmas 7.2 and 7.3 , we obtain the following formulas of $\bar{a}_{2}$ and $\bar{b}_{2}$ . Proposition 7.4 . For $s>0$ and $\ell\in\mathbb{Z}_{\geq 0}$ , we have $\displaystyle\bar{a}_{2}=-\frac{\sqrt{\pi}\,\Gamma(\sqrt{s})}{\Gamma\bigl(\sqrt{s}+\frac{1}{2}\bigr)}\frac{2\,\ell!\sqrt{s}}{\bigl(\sqrt{s}+\ell+\frac{1}{2}\bigr)(2\sqrt{s}+1)_{\ell}},$ (7.13) $\displaystyle\bar{b}_{2}=\frac{\sqrt{\pi}\,\Gamma(2\sqrt{s})}{\Gamma\bigl(2\sqrt{s}+\frac{1}{2}\bigr)}\sum_{j_{1}=0}^{\ell}\sum_{j_{2}=0}^{\ell}C_{j_{1}}^{(\ell)}C_{j_{2}}^{(\ell)}\frac{(2\sqrt{s})_{j_{1}+j_{2}}}{\bigl(2\sqrt{s}+\frac{1}{2}\bigr)_{j_{1}+j_{2}}}$ $\displaystyle\qquad\qquad\qquad\times\biggl(\frac{(\sqrt{s}+\ell)^{2}(\sqrt{s}+\ell+1)^{2}(2\sqrt{s}+j_{1}+j_{2})}{(\sqrt{s}+j_{1}+1)(2\sqrt{s}+j_{1}+j_{2}+2)}-\beta_{2}\biggr).$ (7.14) Proof. Using ( 7.5 ) and the formula $\displaystyle\Gamma(x)\Gamma(y)=\Gamma(x+y)B(x,y)$ (7.15) (see, e.g., 6.2.2 of [ 1 ] ), where $B(x,y)$ is the beta function, we have $\displaystyle\begin{aligned} &{}_{p+1}F_{q+1}\biggl(\genfrac{.}{.}{0.0pt}{}{a_1,\ldots,a_p,c}{b_1,\ldots,b_q,d};z\biggr)\\
+&=\frac{\Gamma(d)}{\Gamma(c)\Gamma(d-c)}\int_{0}^{1}t^{c-1}(1-t)^{d-c-1}{}_{p}F_{q}\biggl(\genfrac{.}{.}{0.0pt}{}{a_1,\ldots,a_p}{b_1,\ldots,b_q};tz\biggr)\mathrm{d}t.\end{aligned}$ (7.16) Using ( 7.5 ), ( 7.9 ) and ( 7.16 ), we compute $\displaystyle\int_{-\infty}^{\infty}V_{1}^{(\ell)}(x)^{2}\sech^{2}x\,\mathrm{d}x$ $\displaystyle=\frac{\Gamma(\sqrt{s}+1)\Gamma\bigl(\frac{1}{2}\bigr)}{\Gamma\bigl(\sqrt{s}+\frac{3}{2}\bigr)}{}_{4}F_{3}\biggl(\genfrac{.}{.}{0.0pt}{}{-\ell,2\sqrt s+\ell+1,\sqrt s+\frac{1}{2},\sqrt s+1}{2\sqrt s+1,\sqrt s+1,\sqrt s+\frac{3}{2}};1\biggr)$ $\displaystyle=\frac{\Gamma(\sqrt{s}+1)\Gamma\bigl(\frac{1}{2}\bigr)}{\Gamma\bigl(\sqrt{s}+\frac{3}{2}\bigr)}{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{-\ell,2\sqrt s+\ell+1,\sqrt s+\frac{1}{2}}{2\sqrt s+1,\sqrt s+\frac{3}{2}};1\biggr)$ $\displaystyle=\frac{\Gamma(\sqrt{s}+1)\Gamma\bigl(\frac{1}{2}\bigr)}{\Gamma\bigl(\sqrt{s}+\frac{3}{2}\bigr)}\frac{(-\ell)_{\ell}\bigl(\sqrt{s}+\frac{1}{2}\bigr)_{\ell}}{(2\sqrt{s}+1)_{\ell}\bigl(-\ell-\sqrt{s}-\frac{1}{2}\bigr)_{\ell}}$ $\displaystyle=\frac{\Gamma(\sqrt{s})\Gamma\bigl(\frac{1}{2}\bigr)}{\Gamma\bigl(\sqrt{s}+\frac{1}{2}\bigr)}\frac{\ell!\sqrt{s}}{(2\sqrt{s}+1)_{\ell}\bigl(\sqrt{s}+\ell+\frac{1}{2}\bigr)},$ which yields ( 7.13 ) by ( 7.7 ).
+In the third equality we have used Saalschütz’s theorem stating that $\displaystyle{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{-n,b,c}{d,e};1\biggr)=\frac{(d-b)_{n}(d-c)_{n}}{(d)_{n}(d-b-c)_{n}}$ (7.17) if $n\in\mathbb{Z}_{\geq 0}$ and $-n+b+c+1=d+e$ (see, e.g., (2.3.1.4) of [ 35 ] ). We turn to ( 7.8 ).
+Using ( 7.6 ) and ( 7.10 ), we obtain $\displaystyle\int_{x}^{\infty}\phi_{12}(y)V_{1}^{(\ell)}(y)^{2}\sech y\,\mathrm{d}y=\sum_{j_{1}=0}^{\ell}\frac{C_{j_{1}}^{(\ell)}}{2(\sqrt{s}+j_{1}+1)}\sech^{2(\sqrt{s}+j_{1}+1)}x.$ Substituting this equality and using ( 7.11 ), we compute $\displaystyle\int_{-\infty}^{\infty}\phi_{11}(x)V_{1}^{(\ell)}(x)^{2}\sech x\biggl(\int_{x}^{\infty}\phi_{12}(y)V_{1}^{(\ell)}(y)^{2}\sech y\,\mathrm{d}y\biggr)\mathrm{d}x$ $\displaystyle=\sum_{j_{1}=0}^{\ell}\sum_{j_{2}=0}^{\ell}\frac{C_{j_{1}}^{(\ell)}C_{j_{2}}^{(\ell)}}{2(\sqrt{s}+j_{1}+1)}\frac{4\sqrt{s}+2j_{1}+2j_{2}+1}{4\sqrt{s}+2j_{1}+2j_{2}+4}\mathcal{K}_{4\sqrt{s}+2j_{1}+2j_{2}+2}$ $\displaystyle=\sum_{j_{1}=0}^{\ell}\sum_{j_{2}=0}^{\ell}\frac{C_{j_{1}}^{(\ell)}C_{j_{2}}^{(\ell)}}{2(\sqrt{s}+j_{1}+1)}\frac{2\sqrt{s}+j_{1}+j_{2}}{2\sqrt{s}+j_{1}+j_{2}+2}\mathcal{K}_{4\sqrt{s}+2j_{1}+2j_{2}}$ $\displaystyle=\sum_{j_{1}=0}^{\ell}\sum_{j_{2}=0}^{\ell}\frac{C_{j_{1}}^{(\ell)}C_{j_{2}}^{(\ell)}}{2(\sqrt{s}+j_{1}+1)}\frac{2\sqrt{s}+j_{1}+j_{2}}{2\sqrt{s}+j_{1}+j_{2}+2}\frac{\sqrt{\pi}\,(2\sqrt{s})_{j_{1}+j_{2}}\Gamma(2\sqrt{s})}{\bigl(2\sqrt{s}+\frac{1}{2}\bigr)_{j_{1}+j_{2}}\Gamma\bigl(2\sqrt{s}+\frac{1}{2}\bigr)}.$ On the other hand, using ( 7.10 ) and ( 7.11 ), we compute $\displaystyle\int_{-\infty}^{\infty}V_{1}^{(\ell)}(x)^{4}\mathrm{d}x=$ $\displaystyle\sum_{j_{1}=0}^{\ell}\sum_{j_{2}=0}^{\ell}C_{j_{1}}^{(\ell)}C_{j_{2}}^{(\ell)}\mathcal{K}_{4\sqrt{s}+2j_{1}+2j_{2}}$ $\displaystyle=$ $\displaystyle\sum_{j_{1}=0}^{\ell}\sum_{j_{2}=0}^{\ell}C_{j_{1}}^{(\ell)}C_{j_{2}}^{(\ell)}\frac{\sqrt{\pi}\,(2\sqrt{s})_{j_{1}+j_{2}}\Gamma(2\sqrt{s})}{\bigl(2\sqrt{s}+\frac{1}{2}\bigr)_{j_{1}+j_{2}}\Gamma\bigl(2\sqrt{s}+\frac{1}{2}\bigr)}.$ Thus, we obtain ( 7.14 ).
+∎ Further computation of $\bar{b}_{2}$ are carried out and its closed-form expressions for $\ell\leq 4$ are given in Appendix B. Figure 2. Bifurcations of solitary waves in ( 1.1 )
+for $(\omega,s,\beta_{2})=(1,4,2)$ :
+(a) Bifurcation diagram;
+(b) and (c): profiles of the corresponding homoclinic solutions
+to ( 1.6 ) on the first three branches at $\beta_{1}=12$ .
+In plate (a), the red, blue, green, light blue, and purple lines
+represent the branches born at the first, second, third, fourth and fifth
+bifurcations (at $\beta_{1}=3,6,10,15$ , and $21$ ), respectively,
+while the black line represents the branch of the fundamental solitary wave
+( 1.7 ).
+In plates (b) and (c), the homoclinic solutions along with $(U,V)=(U_{0}(x),0)$ are plotted as the same color lines as the corresponding branches in plate (a). Figure 2 (a) displays a numerically computed bifurcation diagram for homoclinic orbits in ( 3.9 ) for $(\omega,s,\beta_{2})=(1,4,2)$ .
+Profiles of the homoclinic orbits on the first three bifurcation points
+at $\beta_{1}=12$ are plotted in Figs. 2 (b) and (b).
+To obtain these results, we used a similar approach as in Section 5 of [ 6 ] and the computation tool AUTO [ 11 ] .
+We observe that pitchfork bifurcations occur at $\beta_{1}=3,6,10,15,21$ and they are supercritical except that the fifth one ( $\ell=4$ ) is subcritical,
+as predicted by the theory (see also Fig. B.1 (a)).
+Note that a pair of symmetric branches about $V=0$ are born at each bifurcation point.
+Moreover, we see that a saddle-node bifurcation of the solitary waves
+on the fifth branches occurs at $\beta_{1}\approx 19.4$ (more precisely, $19.41626\ldots$ ).
+The $V$ -component of the homoclinic orbit on the $(\ell+1)$ th branch
+have exactly $\ell$ zeros for $\ell=0,1,2$ .
+The details on the approach and further numerical results are given in [ 38 ] . 7.2. Stability Analysis We turn to the spectral stability of the fundamental and bifurcated solitary waves.
+For the fundamental solitary wave, noting that $\|U_{0}\|_{L^{2}}^{2}=4\sqrt{\omega}$ for $\omega>0$ and applying Theorem 2.5 , we immediately obtain the following result, which was also obtained in Remark 2.6 of [ 28 ] when $\beta_{2}=1$ . Theorem 7.5 . The fundamental solitary wave ( 1.7 ) with $U_{0}(x)=\sqrt{2}\sech x$ is orbitally and spectrally stable. We next consider the bifurcated solitary waves ( 2.5 ) near $\beta_{1}=\beta_{1}^{(\ell)}$ .
+We first give some explicit expressions of the Jost solutions and Evans function for $\mathscr{L}_{0}$ given in ( 5.1 ). The eigenvalue problem for $\mathscr{L}_{0}$ is separated into three parts as stated in Section 3.1. (A) ( 2.10 ) becomes $\displaystyle-p^{\prime\prime}+p-2\sech^{2}x\,(2p+q)=\mathrm{i}\lambda p,\quad-q^{\prime\prime}+q-2\sech^{2}x\,(p+2q)=-\mathrm{i}\lambda q.$ (7.18) The Jost solutions $(p_{j},q_{j})$ , $j=1,2,5,6$ , which satisfy our normalization conditions stated in Lemma 6.2 , for ( 7.18 ) are explicitly given by $\displaystyle\begin{aligned} &\begin{pmatrix}p_{1}(x,\lambda)\\
+q_{1}(x,\lambda)\end{pmatrix}=\frac{\mathrm{e}^{\nu_{1}x}}{(\nu_{1}+1)^{2}}\begin{pmatrix}(\nu_{1}-\tanh x)^{2}\\
+-\sech^{2}x\end{pmatrix},\quad\begin{pmatrix}p_{2}(x,\lambda)\\
+q_{2}(x,\lambda)\end{pmatrix}=\begin{pmatrix}q_{1}(x,-\lambda)\\
+p_{1}(x,-\lambda)\end{pmatrix},\\
+&\begin{pmatrix}p_{j+4}(x,\lambda)\\
+q_{j+4}(x,\lambda)\end{pmatrix}=\begin{pmatrix}p_{j}(-x,\lambda)\\
+q_{j}(-x,\lambda)\end{pmatrix},\quad j=1,2,\end{aligned}$ (7.19) where $\nu_{1}=\nu_{1}(\lambda)$ is given in ( 2.14 ) (see Section III of [ 21 ] and Section 10.4.1 of [ 20 ] ).
+We compute the Evans function ( 2.20 ) for ( 7.18 ) as $\displaystyle E_{\mathrm{A}}(\lambda)=\frac{4\nu_{1}(\lambda)\nu_{2}(\lambda)(\nu_{1}(\lambda)-1)^{2}(\nu_{2}(\lambda)-1)^{2}}{(\nu_{1}(\lambda)+1)^{2}(\nu_{2}(\lambda)+1)^{2}}$ This implies that ( 7.18 ) has only one eigenvalue $\lambda=0$ and it is of algebraic multiplicity four, and has resonance poles $\lambda=\pm\mathrm{i}$ . (B) ( 2.11 ) becomes $\displaystyle-p^{\prime\prime}+sp-2\beta_{1}\sech^{2}(x)p=-\mathrm{i}\lambda p.$ (7.20) The Jost solutions $p_{j}$ , $j=4,8$ , for ( 7.20 ) are given by $\displaystyle p_{4}(x,\lambda)$ $\displaystyle=\Gamma(\nu_{4}+1)P_{\kappa}^{-\nu_{4}}(-\tanh x)$ $\displaystyle=\biggl(\frac{\sech x}{2}\biggr)^{\nu_{4}}{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{\nu_4-\kappa,\nu_4+\kappa+1}{\nu_4+1};\frac{1+\tanh x}{2}\biggr),$ (7.21) $\displaystyle p_{8}(x,\lambda)$ $\displaystyle=p_{4}(-x,\lambda),$ where $\nu_{4}=\nu_{4}(\lambda)$ is given in ( 2.17 ) and $\kappa=(-1+\sqrt{1+8\beta_{1}})/2$ (see, e.g., Problem 5 in Section 23 of [ 23 ] ).
+Note that $\kappa=\sqrt{s}+\ell$ if $\beta_{1}=\beta_{1}^{(\ell)}$ .
+We compute the Evans function ( 2.21 ) for ( 7.20 ) as $\displaystyle E_{\mathrm{B}}(\lambda)=-\frac{2\,\Gamma(\nu_{4}(\lambda)+1)^{2}}{\Gamma(\nu_{4}(\lambda)-\kappa)\Gamma(\nu_{4}(\lambda)+\kappa+1)},$ (7.22) where we have used the formulas $\displaystyle{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{a,b}{\frac{a+b+1}{2}};\frac{1}{2}\biggr)=\frac{\sqrt{\pi}\,\Gamma\bigl(\frac{a+b+1}{2}\bigr)}{\Gamma\bigl(\frac{a+1}{2}\bigr)\Gamma\bigl(\frac{b+1}{2}\bigr)},\quad\Gamma\biggl(\frac{z}{2}\biggr)\Gamma\biggl(\frac{z+1}{2}\biggr)=2^{1-z}\sqrt{\pi}\,\Gamma(z)$ (see, e.g., Chapter 15 of [ 1 ] ).
+From ( 7.22 ) we observe the following.
+Let $\beta_{1}\geq 0$ .
+All eigenvalues of ( 7.20 ) are given by $\lambda=\mathrm{i}(s-(\kappa-k)^{2}),\quad k\in\{0,1,\ldots,\lfloor\kappa\rfloor\}\setminus\{\kappa\}$ (7.23) and they are simple,
+since $\lambda\in\mathrm{i}(-\infty,s)$ if $\lambda$ is an eigenvalue of ( 7.20 ),
+as stated in Section 2.
+Hence, if $\kappa$ is an integer, $\lambda=\mathrm{i}s$ is a resonance pole.
+On the other hand, for $\beta_{1}<0$ , ( 7.20 ) has no eigenvalue since $\mathrm{Re}\,\kappa\in(-1/2,0)$ and $\nu_{4}(\lambda)>0$ if $\lambda\in\mathrm{i}(-\infty,s)$ . (C) ( 2.12 ) becomes $\displaystyle-p^{\prime\prime}+sp-2\beta_{1}\sech^{2}(x)p=\mathrm{i}\lambda p.$ (7.24) As stated in Section 5 , if $\lambda$ is an eigenvalue of ( 7.20 ), then $-\lambda$ is an eigenvalue of ( 7.24 ), and $E_{\mathrm{C}}(\lambda)=E_{\mathrm{B}}(-\lambda)$ . Remark 7.6 . Using Proposition 4.6 and ( 2.19 )
+along with parts (A), (B), and (C) above,
+we see that $\mathscr{L}_{0}$ has the eigenvalues $\lambda=0$ and $\lambda=\pm\mathrm{i}(s-(\kappa-k)^{2}),\quad k\in\{0,1,\ldots,\lfloor\kappa\rfloor\}\setminus\{\kappa\}.$ (7.25) The zero eigenvalue is of geometric multiplicity two and of algebraic multiplicity four except at the pitchfork bifurcation points $\beta_{1}=\beta_{1}^{(\ell)}$ ,
+and the associated eigenfunctions and generalized eigenfunctions are given
+by $\varphi_{j}(x)$ and $\chi_{j}(x)$ , $j=1,2$ , with $(U,V)=(U_{0}(x),0)$ in ( 4.6 ) and ( 4.7 ).
+Especially, the Jost solutions ( 7.19 ) with $\lambda=0$ are expressed
+as linear combinations of $\varphi_{1}(x)$ and $\varphi_{2}(x)$ .
+At $\beta_{1}=\beta_{1}^{(\ell)}$ , the zero eigenvalue is of geometric multiplicity four and of algebraic multiplicity six since $(0,0,V_{1}^{(\ell)}(x),0)^{\mathrm{T}}$ and $(0,0,0,V_{1}^{(\ell)}(x))^{\mathrm{T}}$ are contained
+by $\Ker\mathscr{L}_{0}$ in addition to $\varphi_{1}(x)$ and $\varphi_{2}(x)$ .
+On the other hand, for the eigenvalue $\lambda=\mathrm{i}(s-(\kappa-k)^{2})$ ,
+it follows from ( 7.21 ) that
+the associated eigenfunction is given by $(0,0,0,\Psi(x))$ , where $\displaystyle\Psi(x)=\biggl(\frac{\sech x}{2}\biggr)^{\kappa-k}{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{-\frac{k}{2},\kappa+\frac{-k+1}{2}}{\kappa-k+1};\sech^{2}x\biggr)$ if $k$ is even, and $\displaystyle\Psi(x)=-\biggl(\frac{\sech x}{2}\biggr)^{\kappa-k}{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{-\frac{k-1}{2},\kappa+\frac{-k+2}{2}}{\kappa-k+1};\sech^{2}x\biggr)\tanh x$ if $k$ is odd.
+Similarly, the eigenfunction associated with the eigenvalue $\lambda=-\mathrm{i}(s-(\kappa-k)^{2})$ is given by $(0,0,\Psi(x),0)$ .
+Eigenfunctions and generalized eigenfunctions of $J\mathcal{L}$ are obtained
+from these ones by the transformation ( 4.8 ). We set $\beta_{1}=\beta_{1}^{(\ell)}-({\bar{b}_{2}}/{\bar{a}_{2}})\varepsilon^{2}$ as in ( 2.7 ) and consider the linearized operator $\mathscr{L}_{\varepsilon}$ with ( 1.2 ) around the bifurcated solitary waves ( 2.5 ) near $\beta_{1}=\beta_{1}^{(\ell)}$ .
+From ( 7.19 ) we easily see that $\displaystyle p_{j}(0,\lambda)p_{j}^{\prime}(0,\lambda)+q_{j}(0,\lambda)q_{j}^{\prime}(0,\lambda)=\frac{\nu_{j}(\lambda)(\nu_{j}(\lambda)-1)^{2}}{(\nu_{j}(\lambda)+1)^{2}},\quad j=1,2,$ so that $\Delta_{1}(\lambda)\neq 0$ for any $\lambda\in\mathrm{i}\mathbb{R}\setminus\{-\mathrm{i}\}$ and $\Delta_{2}(\lambda)\neq 0$ for any $\lambda\in\mathrm{i}\mathbb{R}\setminus\{\mathrm{i}\}$ .
+Moreover, (A4) holds with $\bar{p}(x)=p_{2}(x,\mathrm{i})$ and $\bar{q}(x)=q_{2}(x,\mathrm{i})$ .
+Letting $\displaystyle\begin{aligned} \mathcal{I}^{(\ell)}(\mu,\nu)\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\int_{-\infty}^{\infty}&\mathrm{e}^{\nu x}V_{1}^{(\ell)}(x)\bigl((\nu-\tanh x)^{2}-\sech^{2}x\bigr)\sech^{\mu+1}x\\
+&{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{\mu-\sqrt s-\ell,\mu+\sqrt s+\ell+1}{\mu+1};\frac{1+\tanh x}{2}\biggr)\mathrm{d}x,\end{aligned}$ (7.26) we express ( 2.24 ) as $\displaystyle\mathcal{I}_{1}(\lambda)=\frac{2^{-\nu_{4}(\lambda)+\frac{1}{2}}\beta_{1}^{(\ell)}}{(\nu_{1}(\lambda)+1)^{2}}\mathcal{I}^{(\ell)}(\nu_{4}(\lambda),\nu_{1}(\lambda)),$ $\displaystyle\mathcal{I}_{2}(\lambda)=\frac{2^{-\nu_{4}(\lambda)+\frac{1}{2}}\beta_{1}^{(\ell)}}{(\nu_{2}(\lambda)+1)^{2}}\mathcal{I}^{(\ell)}(\nu_{4}(\lambda),\nu_{2}(\lambda)).$ Thus, $\mathcal{I}_{j}(\lambda)\neq 0$ is equivalent
+to $\mathcal{I}^{(\ell)}(\nu_{4}(\lambda),\nu_{j}(\lambda))\neq 0$ for $j=1,2$ . Let $\lambda_{0}$ be a zero of $E_{\mathrm{B}}(\lambda)$ at $\beta_{1}=\beta_{1}^{(\ell)}$ .
+Noting that $\kappa=\sqrt{s}+\ell$ at $\beta_{1}=\beta_{1}^{(\ell)}$ and using ( 7.25 ), we can write $\lambda_{0}=-\mathrm{i}k(2\sqrt{s}+k)$ and $\nu_{4}(\lambda_{0})=\sqrt{s}+k$ with $k\in\{-\lfloor\sqrt{s}\rfloor,-\lfloor\sqrt{s}\rfloor+1,\ldots,\ell\}$ .
+Here $k=0,1,\ldots,\lfloor\sqrt{s}\rfloor+\ell$ have been replaced with $k=\ell,\ell-1,\ldots,-\lfloor\sqrt{s}\rfloor$ .
+Moreover, $\displaystyle p_{4}(x,\lambda_{0})=\biggl(\frac{\sech x}{2}\biggr)^{\sqrt{s}+k}{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{-\frac{\ell-k}{2},\sqrt s+\frac{\ell+k+1}{2}}{\sqrt s+k+1};\sech^{2}x\biggr)$ (7.27) if $\ell-k$ is even, and $\displaystyle p_{4}(x,\lambda_{0})=-\biggl(\frac{\sech x}{2}\biggr)^{\sqrt{s}+k}{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{-\frac{\ell-k-1}{2},\sqrt s+\frac{\ell+k+2}{2}}{\sqrt s+k+1};\sech^{2}x\biggr)\tanh x$ if $\ell-k$ is odd. $\lambda_{0}$ may not be a simple zero of $E(\lambda,0)$ although it is simple for $E_{\mathrm{B}}(\lambda)$ as stated above.
+The following lemma gives necessary and sufficient conditions for $\lambda_{0}\neq 0$ to be simple for $E(\lambda,0)$ .
+Note that if $\lambda=\lambda_{0}$ is a zero of $E_{\mathrm{B}}(\lambda)$ , then $\lambda=-\lambda_{0}$ is a zero of $E_{\mathrm{C}}(\lambda)$ and that $\lambda=\pm\mathrm{i}$ are zeros of $E_{\mathrm{A}}(\lambda)$ . Lemma 7.7 . Let $\ell\in\mathbb{Z}_{\geq 0}$ , $\beta_{1}=\beta_{1}^{(\ell)}$ , and $\lambda_{0}(k)=-\mathrm{i}k(2\sqrt{s}+k)$ for $k\in\{-\lfloor\sqrt{s}\rfloor,-\lfloor\sqrt{s}\rfloor+1,\ldots,\ell\}$ .
+The following statements hold. (i) When $k\in\{-\lfloor\sqrt{s}\rfloor,\ldots,-1\}$ , $\lambda_{0}(k)=-\lambda_{0}(k^{\prime})$ for some $k^{\prime}\in\{-\lfloor\sqrt{s}\rfloor,-\lfloor\sqrt{s}\rfloor+1,\ldots,\ell\}$ if and only if $\displaystyle\sqrt{s}=-\frac{k^{2}+(k^{\prime})^{2}}{2(k+k^{\prime})}\quad\text{and}\quad k^{\prime}\in\bigl\{-\lfloor(\sqrt{2}-1)k\rfloor,\ldots,\min\{-k-1,\ell\}\bigr\}.$ (ii) When $k\in\{1,\ldots,\ell\}$ , $\lambda_{0}(k)=-\lambda_{0}(k^{\prime})$ for some $k^{\prime}\in\{-\lfloor\sqrt{s}\rfloor,-\lfloor\sqrt{s}\rfloor+1,\ldots,\ell\}$ if and only if $\displaystyle\sqrt{s}=-\frac{k^{2}+(k^{\prime})^{2}}{2(k+k^{\prime})}\quad\text{and}\quad k^{\prime}\in\{-\lfloor(\sqrt{2}+1)k\rfloor,\ldots,-k-1\}.$ (iii) $\lambda_{0}(k)=\mathrm{i}$ if and only if $s=1$ and $k=-1$ . (iv) $\lambda_{0}(k)\neq-\mathrm{i}$ for any values of $\ell,s$ , and $k$ . The proof of Lemma 7.7 is given in Appendix C.1 .
+Applying Theorems 2.9 , 2.11 , and 2.13 and using Lemma 7.7 , we obtain the following proposition. Proposition 7.8 . Let $\omega=1$ , $s>0$ , and $\ell\in\mathbb{Z}_{\geq 0}$ .
+Let $\lambda_{0}$ be a zero of $E_{\mathrm{B}}(\lambda)$ at $\beta_{1}=\beta_{1}^{(\ell)}$ and suppose that $\bar{b}_{2}\neq 0$ .
+For $\varepsilon>0$ sufficiently small, the following statements hold. (i) Let $k\in\{-\lfloor\sqrt{s}\rfloor,\ldots,-1\}$ .
+Suppose that $\displaystyle\sqrt{s}\notin\left\{-\frac{k^{2}+(k^{\prime})^{2}}{2(k+k^{\prime})}\;\middle|\;k^{\prime}\in\bigl\{-\lfloor(\sqrt{2}-1)k\rfloor,\ldots,\min\{-k-1,\ell\}\bigr\}\right\}$ if $k\neq-\sqrt{s}$ , and $s\neq 1$ otherwise.
+If $\mathcal{I}^{(\ell)}(\nu_{4}(\lambda_{0}),\nu_{2}(\lambda_{0}))\neq 0$ , then $\mathscr{L}_{\varepsilon}$ has neither eigenvalues nor resonance poles near $\lambda_{0}=-\mathrm{i}k(2\sqrt{s}+k)$ . (ii) Let $k\in\{1,\ldots,\ell\}$ .
+Suppose that $\displaystyle\sqrt{s}\notin\left\{-\frac{k^{2}+(k^{\prime})^{2}}{2(k+k^{\prime})}\;\middle|\;k^{\prime}\in\{-\lfloor(\sqrt{2}+1)k\rfloor,\ldots,-k-1\}\right\}.$ If $\mathcal{I}^{(\ell)}(\nu_{4}(\lambda_{0}),\nu_{1}(\lambda_{0}))\neq 0$ , then there exists a simple eigenvalue $\lambda(\varepsilon)$ of $\mathscr{L}_{\varepsilon}$ with $\lambda(0)=\lambda_{0}=-\mathrm{i}k(2\sqrt{s}+k)$ such that $\displaystyle\mathrm{Re}\,\lambda(\varepsilon)=-\frac{|\mathcal{I}_{-}(\lambda_{0})|^{2}}{2\,\mathrm{Im}\,\nu_{1}(\lambda_{0})\|p_{4}(\cdot,\lambda_{0})\|_{L^{2}(\mathbb{R})}^{2}}\varepsilon^{2}+O(\varepsilon^{3}),$ (7.28) $\displaystyle\mathrm{Im}\,\lambda(\varepsilon)=-k(2\sqrt{s}+k)+O(\varepsilon^{2}).$ Proof. For part (i), using Lemma 7.7 (i), (iii), and (iv), we see that $\lambda=\lambda_{0}$ is a simple zero of $E(\lambda,0)$ .
+Hence, from Theorems 2.9 and 2.11 we immediately obtain the desired result.
+For part (ii), by Lemma 7.7 (ii), (iii), and (iv), we see that $\lambda_{0}$ is simple.
+Hence, by Theorem 2.11 , there exists a zero $\lambda(\varepsilon)$ of $\mathscr{L}_{\varepsilon}$ with a positive real part.
+( 7.28 ) follows from ( 6.35 ) since $C_{4}=0$ as easily checked by ( 7.19 ).
+∎ Remark 7.9 . At $\beta_{1}=\beta_{1}^{(\ell)}$ , the eigenvalues ( 7.25 ) becomes $\displaystyle\lambda=$ $\displaystyle\pm\mathrm{i}(s-(\sqrt{s}+\ell-k)^{2}),\quad k\in\{0,1,\ldots,\lfloor\sqrt{s}\rfloor+\ell\}\setminus\{\sqrt{s}+\ell\}.$ (7.29) From Proposition 7.8 and the relation $E_{\mathrm{C}}(\lambda)=E_{\mathrm{B}}(-\lambda)$ we see that these eigenvalues immediately disappear
+(resp. become a pair of eigenvalues with nonzero real parts)
+for $k>\ell$ (resp. $k<\ell$ ) when $\varepsilon>0$ .
+For $k=\ell$ the eigenvalue $\lambda=0$ remains the origin even when $\varepsilon>0$ since $\dim\Ker\mathscr{L}_{\varepsilon}=3$ for $\varepsilon>0$ .
+A basis of $\Ker\mathscr{L}_{\varepsilon}$ is given by ( 4.6 ). Let $\mathcal{K}_{r}(\alpha)$ be the Fourier tranform of $\sech^{r}x$ , i.e., $\displaystyle\mathcal{K}_{r}(\alpha)\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=\int_{\mathbb{R}}\mathrm{e}^{-\mathrm{i}\alpha x}\sech^{r}x\,\mathrm{d}x,$ where $r>0$ and $\alpha\in\mathbb{R}$ .
+The change of variables $x=\frac{1}{2}\log t$ yields $\displaystyle\mathcal{K}_{r}(\alpha)=2^{r-1}\int_{0}^{\infty}\frac{t^{\frac{1}{2}(r-\mathrm{i}\alpha)-1}}{(t+1)^{r}}\,\mathrm{d}t=2^{r-1}B\biggl(\frac{r-\mathrm{i}\alpha}{2},\frac{r+\mathrm{i}\alpha}{2}\biggr)=2^{r-1}\frac{\Gamma\bigl(\frac{r-\mathrm{i}\alpha}{2}\bigr)\Gamma\bigl(\frac{r+\mathrm{i}\alpha}{2}\bigr)}{\Gamma(r)}$ along with ( 7.15 ).
+Since $\Gamma(z^{*})=\Gamma(z)^{*}$ , we obtain $\displaystyle\mathcal{K}_{r}(\alpha)=\frac{2^{r-1}}{\Gamma(r)}\Bigl\lvert\Gamma\Bigl(\frac{r\pm\mathrm{i}\alpha}{2}\Bigr)\Bigr\rvert^{2}.$ (7.30) We have useful expressions of $\mathcal{I}^{(\ell)}(\nu_{4}(\lambda_{0}),\nu_{j}(\lambda_{0}))$ , $\ell\in\mathbb{Z}_{\geq 0}$ , $j=1,2$ , with $\mathcal{K}_{r}(\alpha)$ for some special values of $\lambda_{0}$ as follows. Lemma 7.10 . (i) Let $\lambda_{0}=-\mathrm{i}k(2\sqrt{s}+k)$ with $k\in\{-\lfloor\sqrt{s}\rfloor,\ldots,-1\}$ .
+We have $\displaystyle\mathcal{I}^{(0)}(\nu_{4}(\lambda_{0}),\nu_{2}(\lambda_{0}))$ $\displaystyle=\begin{cases}\displaystyle\frac{(-1)^{k/2}k(2\sqrt{s}+k)}{(\sqrt{s}+k+1)_{-k}}\biggl(\prod_{j=0}^{-k/2-1}\biggl(\biggl(j+\frac{1}{2}\biggr)^{2}+\frac{\nu^{2}}{4}\biggr)\biggr)\mathcal{K}_{2\sqrt{s}+k+1}(\nu)&\text{if $k$ is even};\\
+\displaystyle\frac{\mathrm{i}\nu}{2}\frac{(-1)^{(k-1)/2}k(2\sqrt{s}+k)}{(\sqrt{s}+k+1)_{-k}}\biggl(\prod_{j=1}^{-(k+1)/2}\biggl(j^{2}+\frac{\nu^{2}}{4}\biggr)\biggr)\mathcal{K}_{2\sqrt{s}+k+1}(\nu)&\text{if $k$ is odd},\end{cases}$ where $\nu=\sqrt{-k(2\sqrt{s}+k)-1}$ . (ii) Let $\ell\in\mathbb{N}$ and $\lambda_{0}=-\mathrm{i}\ell(2\sqrt{s}+\ell)$ .
+We have $\displaystyle\mathcal{I}^{(\ell)}(\nu_{4}(\lambda_{0}),\nu_{1}(\lambda_{0}))$ $\displaystyle=\begin{cases}\displaystyle\frac{(-1)^{\ell/2+1}\ell(2\sqrt{s}+\ell)}{(\sqrt{s}+1)_{\ell}}\biggl(\prod_{j=0}^{\ell/2-1}\biggl(\biggl(j+\frac{1}{2}\biggr)^{2}+\frac{\nu^{2}}{4}\biggr)\biggr)\mathcal{K}_{2\sqrt{s}+\ell+1}(\nu)&\text{if $\ell$ is even};\\
+\displaystyle\frac{\mathrm{i}\nu}{2}\frac{(-1)^{(\ell+1)/2}\ell(2\sqrt{s}+\ell)}{(\sqrt{s}+1)_{\ell}}\biggl(\prod_{j=1}^{(\ell-1)/2}\biggl(j^{2}+\frac{\nu^{2}}{4}\biggr)\biggr)\mathcal{K}_{2\sqrt{s}+\ell+1}(\nu)&\text{if $\ell$ is odd},\end{cases}$ where $\nu=\sqrt{\ell(2\sqrt{s}+\ell)-1}$ . (iii) Let $s\in(0,1)$ .
+We have $\displaystyle\mathcal{I}^{(0)}(\nu_{4}(\mathrm{i}),\nu_{2}(\mathrm{i}))=-\frac{\sqrt{\pi}\,\Gamma(1+\mathrm{i}\nu)\Gamma\bigl(\frac{\sqrt{s}+1+\mathrm{i}\nu}{2}\bigr)\Gamma\bigl(\frac{\sqrt{s}+1-\mathrm{i}\nu}{2}\bigr)}{\Gamma(\sqrt{s}+1)\Gamma\bigl(\frac{\sqrt{s}+2+\mathrm{i}\nu}{2}\bigr)\Gamma\bigl(\frac{-\sqrt{s}+1+\mathrm{i}\nu}{2}\bigr)},$ where $\nu=\sqrt{1-s}$ . The proof of Lemma 7.10 is given in Appendix C.2 .
+Using Proposition 7.8 and Lemma 7.10 , we obtain the following theorem. Theorem 7.11 . For each $\ell\in\mathbb{Z}_{\geq 0}$ , suppose that $\bar{b}_{2}\neq 0$ and consider the solitary wave ( 2.5 ) bifurcated at $\beta_{1}=\beta_{1}^{(\ell)}$ .
+Let $\mathscr{L}_{\varepsilon}$ be the linearized operator ( 2.9 ) with ( 1.2 ) around the bifurcated solitary waves. (i) Let $\ell=0$ .
+The bifurcated solitary waves are orbitally and spectrally stable.
+Moreover, for $\varepsilon>0$ sufficiently small, there exists $\delta>0$ such that $\mathscr{L}_{\varepsilon}$ has neither eigenvalues nor resonance poles except for $\{0\}\cup\mathrm{i}(-\min\{1,s\}-\delta,-\min\{1,s\}+\delta)\cup\mathrm{i}(\min\{1,s\}-\delta,\min\{1,s\}+\delta)$ . (ii) Let $\ell>0$ .
+If $\displaystyle\sqrt{s}\notin\left\{-\frac{\ell^{2}+k^{2}}{2(\ell+k)}\;\middle|\;k\in\{-\lfloor(\sqrt{2}+1)\ell\rfloor,\ldots,-\ell-1\}\right\},$ then for $\varepsilon>0$ sufficiently small, $\mathscr{L}_{\varepsilon}$ has a pair of eigenvalues with positive and negative real parts near $\lambda=\pm\mathrm{i}\ell(2\sqrt{s}+\ell)$ , i.e., the bifurcated solitary waves are spectrally unstable. Proof. The orbital and spectral stability of the bifurcated solitary waves with $\ell=0$ immediately follows from Theorem 2.6 .
+Using Proposition 7.8 (i) and Lemma 7.10 (i), we see that $\mathscr{L}_{\varepsilon}$ has neither eigenvalues nor resonance poles near zeros of $E_{\mathrm{B}}(\lambda)$ except for $\lambda=0,\pm\mathrm{i}\min\{1,s\}$ , since $\mathcal{K}_{2\sqrt{s}+k+1}(\nu)\neq 0$ with $\nu=\sqrt{-k(2\sqrt{s}+k)-1}$ , $k\in\{-\lfloor\sqrt{s}\rfloor,\ldots,-1\}$ , by ( 7.30 ).
+Using Theorem 2.14 and Lemma 7.10 (iii), we see that $\mathscr{L}_{\varepsilon}$ also has neither eigenvalues nor resonance poles near zeros of $E_{\mathrm{A}}(\lambda)$ except for $\lambda=0,\pm\mathrm{i}\min\{1,s\}$ .
+Moreover, the zeros $\lambda=\pm\mathrm{i}\min\{1,s\}$ of $E(\lambda,0)$ remains purely imaginary by Theorem 2.6 .
+Thus we obtain part (i).
+For part (ii), using Proposition 7.8 (ii) and Lemma 7.10 (ii), we see that $\mathscr{L}_{\varepsilon}$ has an eigenvalue with a positive real part near a zero of $E_{\mathrm{B}}(\lambda)$ with $k=\ell$ , since $\mathcal{K}_{2\sqrt{s}+\ell+1}(\nu)\neq 0$ with $\nu=\sqrt{\ell(2\sqrt{s}+\ell)-1}$ by ( 7.30 ).
+∎ Remark 7.12 . The nondegenerate condition $\mathcal{I}^{(\ell)}\neq 0$ in Proposition 7.8 is not always true.
+For example, a direct calculation shows $\displaystyle\mathcal{I}^{(2)}(\nu_{4}(\lambda_{0}),\nu_{2}(\lambda_{0}))=-\frac{4(\sqrt{s}-1)(\sqrt{s}-3)}{s(\sqrt{s}+2)(\sqrt{s}+3)(2\sqrt{s}-1)}\mathcal{K}_{2\sqrt{s}-1}\Bigl(\sqrt{4\sqrt{s}-5}\Bigr),$ where $\lambda_{0}=-\mathrm{i}k(2\sqrt{s}+k)$ and $k=-2$ .
+It vanishes at $\sqrt{s}=3$ .
+Hence, we could not generally determine whether eigenvalues of $\mathscr{L}_{\varepsilon}$ near $\lambda_{0}=-\mathrm{i}k(2\sqrt{s}+k)$ with $k\neq\ell$ have positive real parts, in Theorem 7.11 (ii). Finally, we give some numerical computation results for $(\omega,s,\beta_{2})=(1,4,2)$ .
+To obtain these results, we also used the computation tool AUTO [ 11 ] .
+See [ 38 ] for the details of our numerical approach and further numerical results.
+Figure 3 shows how the eigenvalues of $\mathscr{L}_{\varepsilon}$ for the bifurcated solitary wave on each branch change.
+We only display the eigenvalues with $\mathrm{Re}\,\lambda,\mathrm{Im}\,\lambda\geq 0$ since the spectra of $\mathscr{L}_{\varepsilon}$ are symmetric, as stated in Section 2.
+For the bifurcated solitary wave born at $\beta_{1}=\beta_{1}^{(\ell)}$ ,
+all eigenvalues of $\mathscr{L}_{\varepsilon}$ at $\beta_{1}=\beta_{1}^{(\ell)}$ are given by ( 7.29 ) and they immediately disappear for $k\geq\ell$ when $\beta_{1}$ changes from $\beta_{1}^{(\ell)}$ (see Remark 7.9 ).
+The loci of the eigenvalues of $\mathscr{L}_{\varepsilon}$ leaving the imaginary axis from ( 7.29 )
+when $\beta_{1}$ changes from $\beta_{1}^{(\ell)}$ are plotted for $k=0$ and $\ell=1$ in Fig. 3 (a);
+for $k=0,1$ and $\ell=2$ in Fig. 3 (b);
+for $k=0,1,2$ and $\ell=3$ in Fig. 3 (c);
+and $k=0,1,2,3$ and $\ell=4$ in Figs. 3 (d) and (e).
+Each curve was computed from $\beta_{1}=\beta_{1}^{(\ell)}$ to $100$ .
+These results indicate that
+the real parts of the eigenvalues become positive
+and the bifurcated solitary waves are unstable
+when $\beta_{1}\neq\beta_{1}^{(\ell)}$ , as stated in Theorem 7.11 . In Figs. 3 (d) and (e)
+four eigenvalues for the bifurcated solitary wave on the fifth branch ( $\ell=4$ )
+are displayed and their values at $\beta_{1}=\beta_{1}^{\mathrm{SN}}\approx 19.41626$ ,
+at which a saddle-node bifurcation occurs (see Fig. 2 (a)),
+are plotted as the circle ‘ $\circ$ ’.
+Especially, the solitary wave seems not to change its stability type
+at the saddle-node bifurcation point
+since all the eigenvalues are far from the imaginary axis.
+On the other hand,
+the computed eigenvalues at $\beta_{1}=50$ and $\beta_{1}=100$ were almost the same.
+So the eigenvalues are thought to converge to certain values as $\beta_{1}\to\infty$ .
+See, e.g., the blue line ( $k=1$ ) in Fig. 3 (b),
+the blue and green lines ( $k=1$ and $2$ ) in Fig. 3 (c),
+and the green and purple lines ( $k=2$ and $3$ ) in Fig. 3 (d). Figure 3. Eigenvalues of the linearized operator $\mathscr{L}_{\varepsilon}$ around the bifurcated solitary waves born at $\beta_{1}=\beta_{1}^{(\ell)}$ for $(\omega,s,\beta_{2})=(1,4,2)$ :
+(a) $\ell=1$ ; (b) $\ell=2$ ; (c) $\ell=3$ ; (d) and (e) $\ell=4$ .
+Plate (e) is an enlargement of plate (d).
+The red, blue, green, and purple lines represent the eigenvalues of $\mathscr{L}_{\varepsilon}$ with $k=0,1,2$ , and $3$ , respectively,
+The bullet ‘ $\bullet$ ’ represents the loci of the eigenvalues
+at $\beta_{1}=\beta_{1}^{(\ell)}$ .
+In plates (d) and (e), the circle ‘ $\circ$ ’ represents the loci of the eigenvalues
+at the saddle-node bifurcation point $\beta_{1}\approx 19.41626$ . Appendix A Proofs of Lemmas 6.2 and 6.4 A.1. Proof of Lemma 6.2 Because of the analiticity of the Jost solutions, without loss of generality we assume that $\lambda$ is sufficiently close to $\lambda_{0}$ .
+We now determine $Y_{0j}^{\pm}$ using ( 6.13 ) for $j=1,2,5,6$ . For any solution $Y(x)$ of ( 6.11 ) and $Z(x)$ of ( 6.12 ), we have $\displaystyle(Y\cdot Z)^{\prime}=Y^{\prime}\cdot Z+Y\cdot Z^{\prime}=AY\cdot Z-Y\cdot A^{\mathrm{H}}Z=AY\cdot Z-AY\cdot Z=0.$ Hence $\mathscr{Z}_{0}(x)^{\mathrm{H}}\mathscr{Y}_{0}(x)$ is independent of $x$ so that $\displaystyle\mathscr{Y}_{0}(x)^{-1}=(\mathscr{Z}_{0}(0)^{\mathrm{H}}\mathscr{Y}_{0}(0))^{-1}\mathscr{Z}_{0}(x)^{\mathrm{H}},$ (A.1) where $\displaystyle\mathscr{Z}_{0}(x)$ $\displaystyle=\bigl(Z_{01}^{-}\;\;Z_{02}^{-}\;\;Z_{03}^{-}\;\;\bar{Z}_{04}\;\;Z_{05}^{+}\;\;Z_{06}^{+}\;\;Z_{07}^{+}\;\;Z_{08}^{+}\bigr)(x,\lambda_{0})$ (A.2) $\displaystyle=\left(\begin{array}[]{c|c|c|c}\begin{matrix}-p_{1}^{\prime}&-q_{2}^{\prime}\\
+-q_{1}^{\prime}&-q_{2}^{\prime}\end{matrix}&O_{2}&\begin{matrix}-p_{5}^{\prime}&-q_{6}^{\prime}\\
+-q_{5}^{\prime}&-q_{6}^{\prime}\end{matrix}&O_{2}\\
+\hline\cr O_{2}&\begin{matrix}-p_{3}^{\prime}&0\\
+0&-\bar{p}_{4}^{\prime}\end{matrix}&O_{2}&\begin{matrix}-p_{7}^{\prime}&0\\
+0&-p_{8}^{\prime}\end{matrix}\\
+\hline\cr\begin{matrix}p_{1}&q_{2}\\
+q_{1}&q_{2}\end{matrix}&O_{2}&\begin{matrix}p_{5}&q_{6}\\
+q_{5}&q_{6}\end{matrix}&O_{2}\\
+\hline\cr O_{2}&\begin{matrix}p_{3}&0\\
+0&\bar{p}_{4}\end{matrix}&O_{2}&\begin{matrix}p_{7}&0\\
+0&p_{8}\end{matrix}\end{array}\right)^{*}\!\!\!(x,\lambda_{0}).$ Here we have used ( 5.4 ) and ( 6.10 ).
+Since $\mathrm{Re}\,\nu_{1}>\mathrm{Re}\,\nu_{2}=0$ , we easily see that • $Y_{01}^{-}$ is unique; • $Y_{02}^{-}$ and $Y_{06}^{-}$ are unique up to adding elements of $\lspan_{\mathbb{C}}\{Y_{01}^{-}\}$ ; • $Y_{05}^{-}$ is unique up to adding elements of $\lspan_{\mathbb{C}}\{Y_{01}^{-},Y_{02}^{-},Y_{06}^{-}\}$ . By ( 5.4 ), ( 6.13 ), and $\textbf{(A4-1)}_{\lambda_{0}}$ , $C_{1}=(Y_{01}^{-}\cdot Z_{05}^{+})(\lambda_{0})=2(p_{1}p_{1}^{\prime}+q_{1}q_{1}^{\prime})(0,\lambda_{0})\neq 0$ .
+Thus, we uniquely determine $Y_{02}^{-}$ and $Y_{06}^{-}$ under the conditions $Y_{02}^{-}\cdot Z_{05}^{+}=0$ and $Y_{06}^{-}\cdot Z_{05}^{+}=0$ .
+Using ( 2.13 ) and ( 6.13 ), we have $\displaystyle\mathscr{Z}_{0}(0)^{\mathrm{H}}\mathscr{Y}_{0}(0)=\left(\begin{array}[]{c|c|c|c}O_{2}&O_{2}&\begin{matrix}-C_{1}&0\\
+0&-C_{2}\end{matrix}&O_{2}\\
+\hline\cr O_{2}&\ast_{11}&O_{2}&\ast_{12}\\
+\hline\cr\begin{matrix}C_{1}&0\\
+0&C_{2}\end{matrix}&O_{2}&O_{2}&O_{2}\\
+\hline\cr O_{2}&\ast_{21}&O_{2}&\ast_{22}\end{array}\right),$ where $\ast_{ij}$ , $i,j=1,2$ , are some $2\times 2$ matrices.
+Here we have used ( 5.4 ) and ( 6.10 ) again.
+Since any fundamental matrix solutions are nonsingular, we obtain $\displaystyle 0\neq\det\mathscr{Z}_{0}(0)^{\mathrm{H}}\mathscr{Y}_{0}(0)=C_{1}^{2}C_{2}^{2}\det\!\begin{pmatrix}\ast_{11}&\ast_{12}\\
+\ast_{21}&\ast_{22}\end{pmatrix}$ so that $C_{2}\neq 0$ .
+Noting that $C_{1},C_{2}\neq 0$ and $Y_{06}^{-}\cdot Z_{02}^{-}=-2\nu_{2}\neq 0$ , we uniquely determine $Y_{05}^{-}$ under the conditions $Y_{05}^{-}\cdot Z_{05}^{+}=0$ , $Y_{05}^{-}\cdot Z_{06}^{+}=0$ , and $Y_{05}^{-}\cdot Z_{02}^{-}=0$ . Moreover, we compute the inverse of ( A.1 ) as $\displaystyle(\mathscr{Z}_{0}(0)^{\mathrm{H}}\mathscr{Y}_{0}(0))^{-1}=\left(\begin{array}[]{c|c|c|c}O_{2}&O_{2}&\begin{matrix}1/C_{1}&0\\
+0&1/C_{2}\end{matrix}&O_{2}\\
+\hline\cr O_{2}&\ast_{11}&O_{2}&\ast_{12}\\
+\hline\cr\begin{matrix}-1/C_{1}&0\\
+0&-1/C_{2}\end{matrix}&O_{2}&O_{2}&O_{2}\\
+\hline\cr O_{2}&\ast_{21}&O_{2}&\ast_{22}\end{array}\right),$ where $\ast_{ij}$ is different from that of ( A.1 ) for $i,j=1,2$ .
+Substituting ( A.1 ) and ( A.1 ) into ( A.1 ), we obtain the $(i,j)$ -components of ( 6.2 ), $i,j=1,2,5,6$ .
+The other components of ( 6.2 ) are obtained directly from ( 6.10 ) with ( 5.4 ).
+∎ A.2. Proof of Lemma 6.4 Differentiating ( 4.20 ) twice with respect to $\varepsilon$ and using ( 6.9 ) and ( 6.20 ), we have $\partial_{\varepsilon}^{2}E(\lambda_{0},0)=f(x)+2g(x)$ where $\displaystyle f(x)$ $\displaystyle=\det\bigl(Y_{1}^{-}\;\;Y_{2}^{-}\;\;Y_{3}^{-}\;\;\partial_{\varepsilon}^{2}(Y_{4}^{-}-\tau Y_{8}^{+})\;\;Y_{5}^{+}\;\;Y_{6}^{+}\;\;Y_{7}^{+}\;\;Y_{8}^{+}\bigr)(x,\lambda_{0},0),$ (A.15) $\displaystyle g(x)$ $\displaystyle=\det\bigl(\partial_{\varepsilon}Y_{1}^{-}\;\;Y_{2}^{-}\;\;Y_{3}^{-}\;\;\partial_{\varepsilon}(Y_{4}^{-}-\tau Y_{8}^{+})\;\;Y_{5}^{+}\;\;Y_{6}^{+}\;\;Y_{7}^{+}\;\;Y_{8}^{+}\bigr)(x,\lambda_{0},0)$ $\displaystyle\quad+\det\bigl(Y_{1}^{-}\;\;\partial_{\varepsilon}Y_{2}^{-}\;\;Y_{3}^{-}\;\;\partial_{\varepsilon}(Y_{4}^{-}-\tau Y_{8}^{+})\;\;Y_{5}^{+}\;\;Y_{6}^{+}\;\;Y_{7}^{+}\;\;Y_{8}^{+}\bigr)(x,\lambda_{0},0)$ $\displaystyle\quad+\det\bigl(Y_{1}^{-}\;\;Y_{2}^{-}\;\;Y_{3}^{-}\;\;\partial_{\varepsilon}(Y_{4}^{-}-\tau Y_{8}^{+})\;\;\partial_{\varepsilon}Y_{5}^{+}\;\;Y_{6}^{+}\;\;Y_{7}^{+}\;\;Y_{8}^{+}\bigr)(x,\lambda_{0},0)$ $\displaystyle\quad+\det\bigl(Y_{1}^{-}\;\;Y_{2}^{-}\;\;Y_{3}^{-}\;\;\partial_{\varepsilon}(Y_{4}^{-}-\tau Y_{8}^{+})\;\;Y_{5}^{+}\;\;\partial_{\varepsilon}Y_{6}^{+}\;\;Y_{7}^{+}\;\;Y_{8}^{+}\bigr)(x,\lambda_{0},0).$ (A.16) Note that $f(x)+2g(x)$ does not depend on $x$ . We first compute $g(x)$ .
+Substituting ( 6.21 ) into ( A.16 ) and using ( 5.4 ), we have $\displaystyle g(x)$ $\displaystyle=-\det\bigl(Y_{1}^{-}\;\;Y_{2}^{-}\;\;Y_{3}^{-}\;\;\sum_{j=1}^{2}(\rho_{j}\partial_{\varepsilon}Y_{j}^{-}+\rho_{j+4}\partial_{\varepsilon}Y_{j+4}^{+})\;\;Y_{5}^{+}\;\;Y_{6}^{+}\;\;Y_{7}^{+}\;\;Y_{8}^{+}\bigr)(x,\lambda_{0},0)$ $\displaystyle=-E_{\mathrm{A}}(\lambda_{0})E_{\mathrm{B}}(\lambda_{0})\det\!\begin{pmatrix}\sum_{j=1}^{2}(\rho_{j}\partial_{\varepsilon}Y_{j}^{-}+\rho_{j+4}\partial_{\varepsilon}Y_{j+4}^{+})_{4}&p_{8}\\
+\sum_{j=1}^{2}(\rho_{j}\partial_{\varepsilon}Y_{j}^{-}+\rho_{j+4}\partial_{\varepsilon}Y_{j+4}^{+})_{8}&p_{8}^{\prime}\\
+\end{pmatrix}\!(x,\lambda_{0},0)$ (A.17) with $\displaystyle\rho_{j}=\tau\left(\int_{-\infty}^{\infty}\mathscr{Y}_{0}(y)^{-1}A_{1}(y)Y_{08}^{+}(y,\lambda_{0})\,\mathrm{d}y\right)_{j},\quad j=1,2,5,6,$ where $(\cdot)_{j}$ represents the $j$ -th component of the related vector in $\mathbb{C}^{8}$ .
+On the other hand, substitution of ( 6.1 ) and ( 6.2 ) into ( 6.18 ) yields $\displaystyle(\partial_{\varepsilon}Y_{j}^{-})_{4}(x,\lambda_{0},0)=$ $\displaystyle\left(\int_{-\infty}^{x}a(y)p_{8}(y,\lambda_{0})(p_{j}+q_{j})(y,\lambda_{0})\,\mathrm{d}y\right)\bar{p}_{4}(x)$ $\displaystyle-\left(\int_{-\infty}^{x}a(y)\bar{p}_{4}(y)(p_{j}+q_{j})(y,\lambda_{0})\,\mathrm{d}y\right)p_{8}(x,\lambda_{0}),\quad j=1,2,$ $\displaystyle(\partial_{\varepsilon}Y_{j}^{-})_{8}(x,\lambda_{0},0)=$ $\displaystyle\left(\int_{-\infty}^{x}a(y)p_{8}(y,\lambda_{0})(p_{j}+q_{j})(y,\lambda_{0})\,\mathrm{d}y\right)\bar{p}_{4}^{\prime}(x)$ $\displaystyle-\left(\int_{-\infty}^{x}a(y)\bar{p}_{4}(y)(p_{j}+q_{j})(y,\lambda_{0})\,\mathrm{d}y\right)p_{8}^{\prime}(x,\lambda_{0}),\quad j=1,2,$ $\displaystyle(\partial_{\varepsilon}Y_{j}^{+})_{4}(x,\lambda_{0},0)=$ $\displaystyle-\left(\int_{x}^{\infty}a(y)p_{8}(y,\lambda_{0})(p_{j}+q_{j})(y,\lambda_{0})\,\mathrm{d}y\right)\bar{p}_{4}(x)$ $\displaystyle+\left(\int_{x}^{\infty}a(y)\bar{p}_{4}(y)(p_{j}+q_{j})(y,\lambda_{0})\,\mathrm{d}y\right)p_{8}(x,\lambda_{0}),\quad j=5,6,$ $\displaystyle(\partial_{\varepsilon}Y_{j}^{+})_{8}(x,\lambda_{0},0)=$ $\displaystyle-\left(\int_{x}^{\infty}a(y)p_{8}(y,\lambda_{0})(p_{j}+q_{j})(y,\lambda_{0})\,\mathrm{d}y\right)\bar{p}_{4}^{\prime}(x)$ $\displaystyle+\left(\int_{x}^{\infty}a(y)\bar{p}_{4}(y)(p_{j}+q_{j})(y,\lambda_{0})\,\mathrm{d}y\right)p_{8}^{\prime}(x,\lambda_{0}),\quad j=5,6.$ Substituting the above equations into ( A.17 ), we obtain $\displaystyle g(x)=E_{\mathrm{A}}(\lambda_{0})E_{\mathrm{B}}(\lambda_{0})\sum_{j=1}^{2}\biggl($ $\displaystyle-\rho_{j}\int_{-\infty}^{x}a(y)p_{8}(y)\bigl(p_{j}(y)+q_{j}(y)\bigr)\mathrm{d}y$ $\displaystyle+\rho_{j+4}\int_{x}^{\infty}a(y)p_{8}(y)\bigl(p_{j+4}(y)+q_{j+4}(y)\bigr)\mathrm{d}y\biggr)$ at $\lambda=\lambda_{0}$ . We next compute $f(x)$ .
+Since $\partial_{\varepsilon}^{2}Y_{j}^{\pm}(x,\lambda_{0},0)$ satisfies $\displaystyle(\partial_{\varepsilon}^{2}Y_{j}^{\pm})^{\prime}=A_{0}(x,\lambda_{0})\partial_{\varepsilon}^{2}Y_{j}^{\pm}+2A_{1}(x)\partial_{\varepsilon}Y_{j}^{\pm}+2A_{2}(x)Y_{0j}^{\pm},$ we have $\displaystyle\partial_{\varepsilon}^{2}(Y_{4}^{-}-\tau Y_{8}^{+})(x,\lambda_{0},0)$ $\displaystyle=2\mathscr{Y}_{0}(x)\biggl(\int_{-\infty}^{x}\mathscr{Y}_{0}(y)^{-1}A_{1}(y)\partial_{\varepsilon}Y_{4}^{-}(y,\lambda_{0},0)\,\mathrm{d}y$ $\displaystyle\qquad\qquad+\int_{x}^{\infty}\mathscr{Y}_{0}(y)^{-1}A_{1}(y)\partial_{\varepsilon}Y_{8}^{+}(y,\lambda_{0},0)\,\mathrm{d}y$ $\displaystyle\qquad\qquad+\int_{-\infty}^{\infty}\mathscr{Y}_{0}(y)^{-1}A_{2}(y)Y_{04}^{-}(y,\lambda_{0})\,\mathrm{d}y\biggr).$ Substituting the above expression into ( A.15 ), we obtain $\displaystyle f(x)=2\tau E_{\mathrm{A}}(\lambda_{0})E_{\mathrm{B}}(\lambda_{0})(f_{1}(x)+f_{2}(x)+f_{3})$ after some lengthy manipulation, where $\displaystyle f_{1}(x)=\int_{-\infty}^{x}\int_{-\infty}^{y}a(y)p_{8}(y)a(y^{\prime})p_{8}(y^{\prime})$ $\displaystyle\qquad\qquad\qquad\sum_{j=1}^{2}\frac{1}{C_{j}}\Bigl(\bigl(p_{j+4}(y)+q_{j+4}(y)\bigr)\bigl(p_{j}(y^{\prime})+q_{j}(y^{\prime})\bigr)$ $\displaystyle\qquad\qquad\qquad\qquad\quad-\bigl(p_{j}(y)+q_{j}(y)\bigr)\bigl(p_{j+4}(y^{\prime})+q_{j+4}(y^{\prime})\bigr)\Bigr)\mathrm{d}y^{\prime}\mathrm{d}y,$ $\displaystyle f_{2}(x)=\int_{x}^{\infty}\int_{y}^{\infty}a(y)p_{8}(y)a(y^{\prime})p_{8}(y^{\prime})$ $\displaystyle\qquad\qquad\qquad\sum_{j=1}^{2}\frac{1}{C_{j}}\Bigl(\bigl(p_{j}(y)+q_{j}(y)\bigr)\bigl(p_{j+4}(y^{\prime})+q_{j+4}(y^{\prime})\bigr)$ $\displaystyle\qquad\qquad\qquad\qquad\quad-\bigl(p_{j+4}(y)+q_{j+4}(y)\bigr)\bigl(p_{j}(y^{\prime})+q_{j}(y^{\prime})\bigr)\Bigr)\mathrm{d}y^{\prime}\mathrm{d}y,$ at $\lambda=\lambda_{0}$ .
+Here $C_{1}$ and $C_{2}$ are given in Lemma 6.2 and $f_{3}$ is given by ( 6.25 ).
+Finally, we take the limit $x\to\infty$ in $\partial_{\varepsilon}^{2}E(\lambda_{0},0)=f(x)+2g(x)$ and evaluate $\displaystyle f_{1}(x)-\sum_{j=1}^{2}\rho_{j}\int_{-\infty}^{x}a(y)p_{8}(y)\bigl(p_{j}(y)+q_{j}(y)\bigr)\mathrm{d}y\to\frac{2J_{1}}{C_{1}}+\frac{2J_{2}}{C_{2}},$ $\displaystyle f_{2}(x)+\sum_{j=1}^{2}\rho_{j+4}\int_{x}^{\infty}a(y)p_{8}(y)\bigl(p_{j+4}(y)+q_{j+4}(y)\bigr)\mathrm{d}y\to 0$ as $x\to\infty$ , which yields ( 6.23 ).∎ Appendix B Further Computations of $\bar{b}_{2}$ Case of $\ell=0$ We take $\ell=0$ in ( 7.4 ) and ( 7.14 ) to obtain $V_{1}^{(0)}(x)=\sech^{\sqrt{s}}x$ (B.1) and $\displaystyle\bar{b}_{2}=\frac{\sqrt{\pi}\,\Gamma(2\sqrt{s})}{\Gamma\bigl(2\sqrt{s}+\frac{1}{2}\bigr)}(s^{\frac{3}{2}}-\beta_{2}),$ respectively.
+It follows from Theorem 2.2 that a supercritical (resp. subcritical) bifurcation of homoclinic orbits occurs at $\beta_{1}=\beta_{1}^{(0)}$ if $\beta_{2}<$ (resp. $>$ ) $s^{\frac{3}{2}}$ .
+Since $V_{1}^{(0)}(x)$ has no zero, so does the $V$ -component of the bifurcating homoclinic solution ( 2.6 )
+near $\beta_{1}=\beta_{1}^{(0)}$ . Case of $\ell=1$ We take $\ell=1$ in ( 7.4 ) and ( 7.14 ) to obtain $V_{1}^{(1)}(x)=\sech^{\sqrt{s}}x\,\tanh x$ and $\displaystyle\bar{b}_{2}=\frac{\sqrt{\pi}\,\Gamma(2\sqrt{s})}{\Gamma\bigl(2\sqrt{s}+\frac{1}{2}\bigr)}\frac{\sqrt{s}(7s-4)-3\beta_{2}}{(4\sqrt{s}+1)(4\sqrt{s}+3)},$ respectively.
+By Theorem 2.2 ,
+a supercritical (resp. subcritical) bifurcation of homoclinic orbits occurs at $\beta_{1}=\beta_{1}^{(1)}$ if $\beta_{2}<$ (resp. $>$ ) $\sqrt{s}(7s-4)/3$ .
+Since $V_{1}^{(1)}(x)$ has only one zero,
+so does the $V$ -component of the bifurcating homoclinic solution ( 2.6 )
+near $\beta_{1}=\beta_{1}^{(1)}$ . General case of $\ell$ From Proposition 7.4 we see that $\bar{b}_{2}$ has the form $\displaystyle\bar{b}_{2}=\frac{\sqrt{\pi}\,\Gamma(2\sqrt{s})}{\Gamma\bigl(2\sqrt{s}+\frac{1}{2}\bigr)}\frac{Q_{1}^{(\ell)}(\sqrt{s})-Q_{2}^{(\ell)}(\sqrt{s})\beta_{2}}{Q_{3}^{(\ell)}(\sqrt{s})},$ where $Q_{j}^{(\ell)}(x)$ , $j=1,2$ , are some polynomials of $x$ with integer coefficients and $\displaystyle Q_{3}^{(\ell)}(x)=\prod_{j=1}^{\lfloor\ell/2\rfloor}(x+j)^{3}\prod_{k=1}^{2\ell}(4x+2k-1).$ By Theorem 2.2 , a supercritical (resp. subcritical) bifurcation of homoclinic orbits occurs at $\beta_{1}=\beta_{1}^{(\ell)}$ if $\beta_{2}<$ (resp. $>$ ) $Q_{1}^{(\ell)}(\sqrt{s})/Q_{2}^{(\ell)}(\sqrt{s})$ .
+Expressions of $Q_{1}^{(\ell)}(x)$ and $Q_{2}^{(\ell)}(x)$ for $\ell=2,3,4$ are given as follows: $\displaystyle Q_{1}^{(2)}(x)=x(145x^{5}+571x^{4}+487x^{3}-663x^{2}-1260x-540),$ $\displaystyle Q_{2}^{(2)}(x)=41x^{3}+167x^{2}+227x+105,$ $\displaystyle Q_{1}^{(3)}(x)=27x(229x^{5}+1343x^{4}+1655x^{3}-3271x^{2}-8336x-4560),$ $\displaystyle Q_{2}^{(3)}(x)=27(49x^{3}+303x^{2}+603x+385),$ $\displaystyle Q_{1}^{(4)}(x)=27x(16627x^{8}+245867x^{7}+1380611x^{6}+3183693x^{5}-660138x^{4}$ $\displaystyle\qquad\qquad-19430100x^{3}-41883400x^{2}-38216000x-13040000),$ $\displaystyle Q_{2}^{(4)}(x)=81(961x^{6}+14721x^{5}+92393x^{4}+303879x^{3}+551546x^{2}$ $\displaystyle\qquad\qquad+522180x+200200).$ Graphs of $\beta_{2}=Q_{1}^{(\ell)}(\sqrt{s})/Q_{2}^{(\ell)}(\sqrt{s})$ for $\ell\leq 4$ are plotted in Fig. B.1 .
+Especially, we observe that the bifurcations detected by Theorem 7.1 are supercritical for $\ell\leq 4$ if $s>0$ is sufficiently large for $\beta_{2}$ fixed. Figure B.1. Graphs of $\beta_{2}=Q_{1}^{(\ell)}(\sqrt{s})/Q_{2}^{(\ell)}(\sqrt{s})$ for $\ell=0$ (red), $1$ (blue), $2$ (green), $3$ (light blue), and $4$ (purple):
+(a) $0<\sqrt{s}<3$ ; (b) $0<\sqrt{s}<10$ .
+For each $\ell\leq 4$ , a supercritical (resp. subcritical) bifurcation occurs
+at $\beta_{1}=\beta_{1}^{(\ell)}$ if $(\sqrt{s},\beta_{2})$ is located below (resp. above) the curve. Appendix C Proofs of Lemmas 7.7 and 7.10 C.1. Proof of Lemma 7.7 We first prove part (ii).
+Let $k\in\{1,2,\ldots,\ell\}$ .
+The condition $\lambda_{0}(k)=-\lambda_{0}(k^{\prime})$ is written as $\displaystyle-\mathrm{i}k(2\sqrt{s}+k)=\mathrm{i}k^{\prime}(2\sqrt{s}+k^{\prime})$ (C.1) for $k^{\prime}\in\{-\lfloor\sqrt{s}\rfloor,-\lfloor\sqrt{s}\rfloor+1,\ldots,\ell\}$ .
+Let $\displaystyle G(k,k^{\prime})\mathrel{\hbox to0.0pt{\raisebox{1.29167pt}{$\cdot$}\hss}\raisebox{-1.29167pt}{$\cdot$}}=-\frac{k^{2}+(k^{\prime})^{2}}{2(k+k^{\prime})}.$ As easily shown, there exists $k^{\prime}\in\{-\lfloor\sqrt{s}\rfloor,-\lfloor\sqrt{s}\rfloor+1,\ldots,\ell\}$ satisfying ( C.1 ) if and only if $-\lfloor G(k,k^{\prime})\rfloor\leq k^{\prime}\leq\ell$ , $k+k^{\prime}<0$ , and $\sqrt{s}=G(k,k^{\prime})$ .
+Using the fact that $-\lfloor G(k,k^{\prime})\rfloor\leq k^{\prime}\iff k^{\prime}\geq-\lfloor(\sqrt{2}+1)k\rfloor$ ,
+we see that $\lfloor(\sqrt{2}+1)k\rfloor\leq k^{\prime}<-k$ .
+This implies part (ii).
+Part (i) is also similarly proved. We turn to parts (iii) and (iv).
+For part (iii), ( C.1 ) is replaced with $-\mathrm{i}k(2\sqrt{s}+k)=\mathrm{i}$ for $k\in\{-\lfloor\sqrt{s}\rfloor,\ldots,\ell\}$ and $\sqrt{s}>0$ .
+This condition holds if and only if $(k^{2}+1)/(2k)\leq k<0$ and $\sqrt{s}=-(k^{2}+1)/(2k)$ , which is equivalent to $s=1$ and $k=-1$ .
+For part (iv), we notice that $\lambda_{0}(k)=-\mathrm{i}k(2\sqrt{s}+k)=-\mathrm{i}$ for $k\in\{-\lfloor\sqrt{s}\rfloor,\ldots,\ell\}$ if and only if $(k^{2}-1)/(2k)\leq k\leq\ell$ , $-(k^{2}-1)/(2k)>0$ , and $\sqrt{s}=-(k^{2}-1)/(2k)$ .
+One of the conditions does not occur at least.∎ C.2. Proof of Lemma 7.10 We begin with part (i) and write $\lambda_{0}=-\mathrm{i}kh$ and $\nu_{2}(\lambda_{0})=\mathrm{i}\nu$ , where $h=2\sqrt{s}+k$ and $\nu=\sqrt{-kh-1}\geq 0$ . We first assume that $k<0$ is even.
+Using ( 7.27 ) and ( B.1 ), we compute ( 7.26 ) as $\displaystyle\mathcal{I}^{(0)}(\nu_{4}(\lambda_{0}),\nu_{2}(\lambda_{0}))$ $\displaystyle=\int_{-\infty}^{\infty}\mathrm{e}^{\mathrm{i}\nu x}\bigl((\mathrm{i}\nu-\tanh x)^{2}-\sech^{2}x\bigr)\sech^{h+1}x\,{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{\frac{k}{2},\frac{h+1}{2}}{\frac{h+k}{2}+1};\sech^{2}x\biggr)\mathrm{d}x$ $\displaystyle=\sum_{j=0}^{-k/2}\frac{\bigl(\frac{k}{2}\bigr)_{j}\bigl(\frac{h+1}{2}\bigr)_{j}}{j!\,\bigl(\frac{h+k}{2}+1\bigr)_{j}}\int_{-\infty}^{\infty}\mathrm{e}^{-\mathrm{i}\nu x}\bigl((\mathrm{i}\nu+\tanh x)^{2}-\sech^{2}x\bigr)\sech^{h+2j+1}x\,\mathrm{d}x.$ (C.2) Using integration by parts along with ( 7.30 ), we have $\displaystyle\mathcal{K}_{r+2}(\alpha)=2^{r+1}\frac{\Gamma(\frac{r+2+\mathrm{i}\alpha}{2})\Gamma(\frac{r+2-\mathrm{i}\alpha}{2})}{\Gamma(r+2)}$ $\displaystyle=2^{r-1}\frac{(r^{2}+\alpha^{2})\Gamma(\frac{r+\mathrm{i}\alpha}{2})\Gamma(\frac{r-\mathrm{i}\alpha}{2})}{r(r+1)\Gamma(r)}=\frac{r^{2}+\alpha^{2}}{r(r+1)}\mathcal{K}_{r}(\alpha)$ (C.3) and $\displaystyle\int_{-\infty}^{\infty}\mathrm{e}^{-\mathrm{i}\alpha x}\sech^{r}x\tanh x\,\mathrm{d}x=-\frac{\mathrm{i}\alpha}{r}\mathcal{K}_{r}(\alpha).$ So the integral in ( C.2 ) is evaluated as $\displaystyle(1-\nu^{2})K_{h+2j+1}(\nu)-2K_{h+2j+3}(\nu)+\frac{2\nu^{2}}{h+2j+1}\mathcal{K}_{h+2j+1}(\nu)$ $\displaystyle=\biggl((1-\nu^{2})-2\frac{(h+2j+1)^{2}+\nu^{2}}{(h+2j+1)(h+2j+2)}+\frac{2\nu^{2}}{h+2j+1}\biggr)\mathcal{K}_{h+2j+1}(\nu)$ $\displaystyle=kh\biggl(1-\frac{2}{h+2j+2}\biggr)\mathcal{K}_{h+2j+1}(\nu).$ Using ( C.3 ) in the above relation repeatedly, we obtain $\displaystyle\mathcal{I}^{(0)}(\nu_{4}(\lambda_{0}),\nu_{2}(\lambda_{0}))$ $\displaystyle=kh\sum_{j=0}^{-k/2}\frac{\bigl(\frac{k}{2}\bigr)_{j}\bigl(\frac{h+1}{2}\bigr)_{j}}{j!\,\bigl(\frac{h+k}{2}+1\bigr)_{j}}\biggl(1-\frac{2}{h+2j+2}\biggr)$ $\displaystyle\qquad\quad\times\biggl(\prod_{m=0}^{j-1}\frac{(h+2m+1)^{2}+\nu^{2}}{(h+2m+1)(h+2m+2)}\biggr)\mathcal{K}_{h+1}(\nu)$ $\displaystyle=kh\biggl(\sum_{j=0}^{-k/2}a_{j}-2\sum_{j=0}^{-k/2}b_{j}\biggr)\mathcal{K}_{h+1}(\nu),$ (C.4) where $\displaystyle a_{j}=\frac{\bigl(\frac{k}{2}\bigr)_{j}\bigl(\frac{h+1}{2}\bigr)_{j}}{j!\,\bigl(\frac{h+k}{2}+1\bigr)_{j}}\prod_{m=0}^{j-1}\frac{(h+2m+1)^{2}+\nu^{2}}{(h+2m+1)(h+2m+2)},\quad b_{j}=\frac{a_{j}}{h+2j+2}.$ Since $\displaystyle\frac{a_{j+1}}{a_{j}}=\frac{\bigl(\frac{k}{2}+j\bigr)\bigl(\frac{h+1+\mathrm{i}\nu}{2}+j\bigr)\bigl(\frac{h+1-\mathrm{i}\nu}{2}+j\bigr)}{(j+1)\bigl(\frac{h+k}{2}+1+j\bigr)\bigl(\frac{h}{2}+1+j\bigr)},$ $\displaystyle\frac{b_{j+1}}{b_{j}}=\frac{\bigl(\frac{k}{2}+j\bigr)\bigl(\frac{h+1+\mathrm{i}\nu}{2}+j\bigr)\bigl(\frac{h+1-\mathrm{i}\nu}{2}+j\bigr)}{(j+1)\bigl(\frac{h+k}{2}+1+j\bigr)\bigl(\frac{h}{2}+2+j\bigr)},$ $a_{0}=1$ , and $b_{0}=1/(h+2)$ , we have $\displaystyle\sum_{j=0}^{-k/2}a_{j}={}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{\frac{k}{2},\frac{h+1+\i\nu}{2},\frac{h+1-\i\nu}{2}}{\frac{h+k}{2}+1,\frac{h}{2}+1};1\biggr),\ \sum_{j=0}^{-k/2}b_{j}=\frac{1}{h+2}{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{\frac{k}{2},\frac{h+1+\i\nu}{2},\frac{h+1-\i\nu}{2}}{\frac{h+k}{2}+1,\frac{h}{2}+2};1\biggr)$ by ( 7.5 ).
+From a contiguous relation of ${}_{3}F_{2}$ , $\displaystyle d\,{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{a,b,c}{d,e};z\biggr)-a\,{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{a+1,b,c}{d+1,e};z\biggr)+(a-d){}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{a,b,c}{d+1,e};z\biggr)=0$ (see (15) of [ 33 ] ), we have $\displaystyle{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{-n,b,c}{d+1,e};z\biggr)=\frac{1}{d+n}\biggl(d\,{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{-n,b,c}{d,e};z\biggr)+n\,{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{-n+1,b,c}{d+1,e};z\biggr)\biggr).$ Applying ( 7.17 ) to the right hand side, we obtain $\displaystyle{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{-n,b,c}{d+1,e};1\biggr)=\frac{(d-b)_{n}(d-c)_{n}}{(d+1)_{n}(d-b-c)_{n}}\biggl(1+\frac{n(d-b-c)}{(d-b)(d-c)}\biggr)$ (C.5) for $n\in\mathbb{Z}_{\geq 0}$ and $-n+b+c+1=d+e$ , so that $\sum_{j=0}^{-k/2}b_{j}=0$ .
+Using ( 7.17 ) and ( C.4 ), we obtain $\displaystyle\mathcal{I}^{(0)}(\nu_{4}(\lambda_{0}),\nu_{2}(\lambda_{0}))$ $\displaystyle=kh\frac{\bigl(\frac{1+\mathrm{i}\nu}{2}\bigr)_{-k/2}\bigl(\frac{1-\mathrm{i}\nu}{2}\bigr)_{-k/2}}{\bigl(\frac{h}{2}+1\bigr)_{-k/2}\bigl(-\frac{h}{2}\bigr)_{-k/2}}\mathcal{K}_{h+1}(\nu)$ $\displaystyle=\frac{(-1)^{k/2}kh}{\bigl(\frac{h+k}{2}+1\bigr)_{-k}}\biggl(\prod_{j=0}^{-k/2-1}\biggl(j+\frac{1+\mathrm{i}\nu}{2}\biggr)\biggl(j+\frac{1-\mathrm{i}\nu}{2}\biggr)\biggr)\mathcal{K}_{h+1}(\nu),$ which yields part (i) when $k$ is even. We next assume that $k<0$ is odd.
+Using arguments similar to the above, we obtain $\displaystyle\mathcal{I}^{(0)}(\nu_{4}(\lambda_{0}),\nu_{2}(\lambda_{0}))$ $\displaystyle=\mathrm{i}\nu\sum_{j=0}^{-(k+1)/2}\frac{\bigl(\frac{k+1}{2}\bigr)_{j}\bigl(\frac{h}{2}+1\bigl)_{j}}{j!\,\bigl(\frac{h+k}{2}+1\bigr)_{j}}$ $\displaystyle\qquad\qquad\biggl(\frac{-kh+2}{h+2j+1}-\frac{-2kh+6}{(h+2j+1)(h+2j+3)}\biggr)\mathcal{K}_{h+2j+1}(\nu)$ $\displaystyle=\mathrm{i}\nu\biggl(\frac{-kh+2}{h+1}{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{\frac{k+1}{2},\frac{h+1+\i\nu}{2},\frac{h+1-\i\nu}{2}}{\frac{h+k}{2}+1,\frac{h+3}{2}};1\biggr)\biggr.$ $\displaystyle\qquad\quad\biggl.-\frac{-2kh+6}{(h+1)(h+3)}{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{\frac{k+1}{2},\frac{h+1+\i\nu}{2},\frac{h+1-\i\nu}{2}}{\frac{h+k}{2}+1,\frac{h+5}{2}};1\biggr)\biggr)\mathcal{K}_{h+1}(\nu).$ (C.6) Using ( 7.17 ) and ( C.5 ) again, we compute $\displaystyle{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{\frac{k+1}{2},\frac{h+1+\i\nu}{2},\frac{h+1-\i\nu}{2}}{\frac{h+k}{2}+1,\frac{h+3}{2}};1\biggr)=\frac{\bigl(1+\frac{\mathrm{i}\nu}{2}\bigr)_{-(k+1)/2}\bigl(1-\frac{\mathrm{i}\nu}{2}\bigr)_{-(k+1)/2}}{\bigl(\frac{h+3}{2}\bigr)_{-(k+1)/2}\bigl(\frac{-h+1}{2}\bigr)_{-(k+1)/2}},$ $\displaystyle{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{\frac{k+1}{2},\frac{h+1+\i\nu}{2},\frac{h+1-\i\nu}{2}}{\frac{h+k}{2}+1,\frac{h+5}{2}};1\biggr)=\frac{\bigl(1+\frac{\mathrm{i}\nu}{2}\bigr)_{-(k+1)/2}\bigl(1-\frac{\mathrm{i}\nu}{2}\bigr)_{-(k+1)/2}}{\bigl(\frac{h+5}{2}\bigr)_{-(k+1)/2}\bigl(\frac{-h+1}{2}\bigr)_{-(k+1)/2}}\biggl(1-\frac{\bigl(\frac{k+1}{2}\bigr)\bigl(\frac{-h+1}{2}\bigr)}{\bigl(1+\frac{\mathrm{i}\nu}{2}\bigr)\bigl(1-\frac{\mathrm{i}\nu}{2}\bigr)}\biggr).$ Substituting these expressions into ( C.6 ), we obtain part (i) when $k$ is odd.
+Part (ii) is proved in the same way as in part (i). We finally prove part (iii).
+Let $\lambda_{0}=\mathrm{i}$ and $\nu=\sqrt{1-s}>0$ .
+So $\nu_{2}(\mathrm{i})=0$ and $\nu_{4}(\mathrm{i})=\mathrm{i}\nu$ .
+( 7.26 ) is written as $\displaystyle\mathcal{I}^{(0)}(\nu_{4}(\mathrm{i}),\nu_{2}(\mathrm{i}))=\int_{-\infty}^{\infty}$ $\displaystyle\sech^{\sqrt{s}+1+\mathrm{i}\nu}x\,(1-2\sech^{2}x)$ $\displaystyle{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{-\sqrt s+\i\nu,\sqrt s+1+\i\nu}{1+\i\nu};\frac{1+\tanh x}{2}\biggr)\mathrm{d}x.$ Changing the variable as $t=(1+\tanh x)/2$ and using ( 7.16 ), we have $\displaystyle\mathcal{I}^{(0)}(\nu_{4}(\mathrm{i}),\nu_{2}(\mathrm{i}))=$ $\displaystyle\frac{2^{\sqrt{s}+\mathrm{i}\nu}\Gamma(\frac{\sqrt{s}+1+\mathrm{i}\nu}{2})^{2}}{\Gamma(\sqrt{s}+1+\mathrm{i}\nu)}\biggl({}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{-\sqrt s+\i\nu,\frac{\sqrt s+1+\i\nu}{2}}{1+\i\nu};1\biggr)\biggr.$ $\displaystyle\biggl.-2\frac{\sqrt{s}+1+\mathrm{i}\nu}{\sqrt{s}+2+\mathrm{i}\nu}{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{-\sqrt s+\i\nu,\sqrt s+1+\i\nu,\frac{\sqrt s+3+\i\nu}{2}}{1+\i\nu,\sqrt s+3+\i\nu};1\biggr)\biggr).$ (C.7) By Gauss’ summation theorem and Watson’s summation theorem (see, e.g., (1.7.6) and (2.3.3.13) of [ 35 ] ), the first and second terms are computed as $\displaystyle{}_{2}F_{1}\biggl(\genfrac{.}{.}{0.0pt}{}{-\sqrt s+\i\nu,\frac{\sqrt s+1+\i\nu}{2}}{1+\i\nu};1\biggr)=\frac{\Gamma(1+\mathrm{i}\nu)\Gamma\bigl(\frac{\sqrt{s}+1-\mathrm{i}\nu}{2}\bigr)}{\Gamma(\sqrt{s}+1)\Gamma\bigl(\frac{-\sqrt{s}+1+\mathrm{i}\nu}{2}\bigr)}$ (C.8) and $\displaystyle{}_{3}F_{2}\biggl(\genfrac{.}{.}{0.0pt}{}{-\sqrt s+\i\nu,\sqrt s+1+\i\nu,\frac{\sqrt s+3+\i\nu}{2}}{1+\i\nu,\sqrt s+3+\i\nu};1\biggr)=\frac{(\sqrt{s}+2+\mathrm{i}\nu)\Gamma(1+\mathrm{i}\nu)\Gamma\bigl(\frac{\sqrt{s}+3-\mathrm{i}\nu}{2}\bigr)}{\Gamma(\sqrt{s}+2)\Gamma\bigl(\frac{-\sqrt{s}+1+\mathrm{i}\nu}{2}\bigr)},$ (C.9) respectively.
+Substituting ( C.8 ) and ( C.9 ) into ( C.7 ), we obtain the desired result.∎ References [1] M. Abramowitz and I. Stegun, Handbook of Mathematical Functions with Formulas, Graphs and Mathematical Tables ,
+Dover Publications, Inc., New York, 1965. [2] G. Agrawal, Nonlinear Fiber Optics ,
+Academic Press, New York, 6th edition, 2019. [3] J. Alexander, R. Gardner, and C. Jones,
+A topological invariant arising in the stability analysis of travelling waves, J. reine angew. Math. , 410 (1990) 167–212. [4] H. Berestycki and P.-L. Lions,
+Nonlinear scalar field equations, I: Existence of a ground state, Arch. Rational Mech. Anal. , 82 (1983) 313–345. [5] S. Bhattarai,
+Stability of solitary-wave solutions of coupled NLS equations with power-type nonlinearites, Adv. Nonlinear Anal. , 4 (2015) 73–90. [6] D. Blázquez-Sanz and K. Yagasaki,
+Analytic and algebraic conditions for bifurcations of homoclinic orbits I: Saddle equilibria, J. Differential Equations , 253 (2012) 2916–2950. [7] T. Cazenave, An introduction to nonlinear Schrödinger equations ,
+Universidade Federal do Rio de Janeiro, Centro de Ciências Matemáticas e da Natureza, Instituto de Matemática, Rio de Janeiro, 3rd edition, 1996. [8] R. Cipolatti and W. Zumpichiatti,
+Orbitally stable standing waves for a system of coupled nonlinear Schrödinger equations, Nonlinear Anal. , 42 (2000) 445–461. [9] E. Coddington and N. Levinson, Theory of Ordinary Differential Equations ,
+McGraw-Hill, New York, 1955. [10] S. Cuccagna, D. Pelinovsky, and V. Vougalter,
+Spectra of positive and negative energies in the linearized NLS problem, Comm. Pure Appl. Math. , 58 (2009) 1–29. [11] E. Doedel and B. Oldeman,
+AUTO-07P: Continuation and Bifurcation Software for Ordinary Differential Equations,
+2012, available online from http://indy.cs.concordia.ca/auto . [12] J. Evans,
+Nerve axon equations, I: Linear approximations, Indiana U. Math. J. , 21 (1972) 877–955. [13] J. Evans,
+Nerve axon equations, II: Stability at rest, Indiana U. Math. J. , 22 (1972) 75–90. [14] J. Evans,
+Nerve axon equations, III: Stability of the nerve impulse, Indiana U. Math. J. , 22 (1972) 577–594. [15] J. Evans,
+Nerve axon equations, IV: The stable and unstable impulse, Indiana U. Math. J. , 24 (1975) 1169–1190. [16] M. Grillakis and J. Shatah and W. Strauss,
+Stability theory of solitary waves in the presence of symmetry. II, J. Funct. Anal. , 94 (1990) 308–348. [17] J. Gruendler,
+Homoclinic solutions for autonomous dynamical systems in arbitrary dimension, SIAM J. Math. Anal. , 23 (1992) 702–721. [18] T. Kapitula and P. Kevrekidis and B. Sandstede,
+Counting eigenvalues via the Krein signature in infinite-dimensional Hamiltonian systems, Phys. D , 195 (2004) 263–282. [19] T. Kapitula and P. Kevrekidis and B. Sandstede,
+Addendum: Counting eigenvalues via the Krein signature in infinite-dimensional Hamiltonian systems, Phys. D , 201 (2005) 199–201. [20] T. Kapitula and K. Promislow, Spectral and Dynamical Stability of Nonlinear Waves ,
+Springer, New York, 2013. [21] D. Kaup,
+Perturbation theory for solitons in optical fibers, Phys. Rev. A , 42 (1990) 5689–5694. [22] Y. Kuznetsov, Elements of Applied Bifurcation Theory ,
+Springer, New York, 3rd edition, 2004. [23] L. Landau and E. Lifshitz, Quantum Mechhanics: Non-relativistic Theory ,
+Pergamon Press, Oxford, 1977. [24] Y. Li and K. Promislow,
+The mechanism of the polarizational mode instability in birefringent fiber optics, SIAM J. Math. Anal. , 31 (2000) 1351–1373. [25] N. Nguyen,
+On the orbital stability of solitary waves for the 2-coupled nonlinear Schrödinger system, Commun. Math. Sci. , 9 (2011) 997–1012. [26] N. Nguyen and Z.-Q. Wang,
+Orbital stability of solitary waves for a nonlinear Schrödinger system, Adv. Differential Equations , 16 (2011) 977–1000. [27] N. Nguyen and Z.-Q. Wang,
+Existence and stability of a two-parameter family of solitary waves for a 2-coupled nonlinear Schrödinger system, Discrete Contin. Dyn. Syst. , 36 (2016) 1005–1021. [28] M. Ohta,
+Stability of solitary waves for coupled nonlinear Schrödinger equations, Nonlinear Anal. , 26 (1996) 933–939. [29] R. Pego and M. Weinstein,
+Eigenvalues, and instabilities of solitary waves, Phil. Trans. R. Soc. Lond. A , 340 (1992) 47–94. [30] D. Pelinovsky,
+Inertia law for spectral stability of solitary waves in coupled nonlinear Schrödinger equations, Proc. R. Soc. A , 461 (2005) 783–812. [31] D. Pelinovsky and J. Yang,
+Instabilities of multihump vector solitons in coupled nonlinear Schrödinger equations, Stud. Appl. Math. , 115 (2005) 109–137. [32] M. van der Put and M. Singer, Galois Theory of Linear Differential Equations ,
+Springer, New York, 2003. [33] E. Rainville,
+The contiguous function relations for ${}_{p}F_{q}$ with applications to Bateman’s $J_{n}^{u,v}$ and Rice’s $H_{n}(\zeta,p,v)$ , Bull. Amer. Math. Soc. , 51 (1945) 714–723. [34] G. Roskes,
+Some nonlinear multiphase interactions, Stud. Appl. Math. , 55 (1976) 231–238. [35] L. Slater, Generalized Hypergeomtetric Functions ,
+Cambridge University Press, Cambridge, 1966. [36] K. Yagasaki,
+Analytic and algebraic conditions for bifurcations of homoclinic orbits II: Reversible systems,
+submitted for publication. [37] K. Yagasaki and T. Stachowiak,
+Bifurcations of radially symmetric solutions in a coupled elliptic system with critical growth in $\mathbb{R}^{d}$ for $d=3,4$ , J. Math. Anal. Appl. , 484 (2020) 123726. [38] K. Yagasaki and S. Yamazoe,
+Numerical computations for bifurcations and spectral stability of solitary waves in coupled nonlinear Schrödinger equations,
+submitted for publication. [39] J. Yang, Nonlinear Waves in Integrable and Nonintegrable Systems ,
+SIAM, Philadelphia, PA, 2010. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

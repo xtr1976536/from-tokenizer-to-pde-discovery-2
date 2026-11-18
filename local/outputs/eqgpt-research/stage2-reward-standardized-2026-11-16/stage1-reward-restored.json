@@ -1,0 +1,90 @@
+{
+  "status": "STAGE1_REWARD_RESTORED",
+  "formula": "(1-0.2*log10(total_terms))*mean_window_mean_equation_R2",
+  "search_prediction_term": false,
+  "retired_weights": [
+    0.5,
+    0.2,
+    0.0
+  ],
+  "compatibility_weight": 1.0,
+  "channel_zscore_preserved_for_future_field_evaluation": true,
+  "fit_solver_physical_units_preserved": true,
+  "fit_anchor_rule_unchanged": true,
+  "data_split_unchanged": true,
+  "training_started": false,
+  "formal_search_started": false,
+  "component_tests_passed": 26,
+  "existing7candidate_score_recalculation": [
+    {
+      "text": "\\Delta(u)+\\partial_{t}(u)=0\\\\v+u\\cdot v+\\nabla\\cdot(\\nabla(p)\\cdot u)+\\Delta(v\\cdot p)+\\partial_{t}(v)+v\\cdot p=0\\\\p+\\partial_{t}(p)=0",
+      "r_fit": 0.031540363932223626,
+      "term_counts": [
+        2,
+        6,
+        2
+      ],
+      "reward": 0.025232291145778903
+    },
+    {
+      "text": "\\partial_{t}(u)+u^{2}+\\Delta(u)+v^{2}\\nabla\\cdot(\\nabla(v)\\cdot u)=0\\\\\\partial_{t}(v)+\\Delta(v)+p+u\\cdot v=0\\\\\\Delta(v)+v+\\Delta(p)+u+p^{2}+\\partial_{t}(p)=0",
+      "r_fit": 0.00799750450054589,
+      "term_counts": [
+        4,
+        4,
+        6
+      ],
+      "reward": 0.006164271675838185
+    },
+    {
+      "text": "\\partial_{t}(u)+\\nabla\\cdot(\\nabla(v)\\cdot u)+u^{2}+u=0\\\\\\partial_{t}(v)+\\Delta(v)+u\\cdot v=0\\\\\\partial_{t}(p)+v+u\\cdot (v^{2}+u+\\Delta(u)\\Delta(p))+u=0",
+      "r_fit": 0.013201407036405488,
+      "term_counts": [
+        4,
+        3,
+        6
+      ],
+      "reward": 0.01026028311454537
+    },
+    {
+      "text": "\\partial_{t}(u)+\\Delta(u)+u=0\\\\\\partial_{t}(u)+v+\\Delta(v)+v+\\Delta(p)+p+\\Delta(v)+\\partial_{t}(v)=0\\\\p^{2}+p=0",
+      "r_fit": 0.06154233472321972,
+      "term_counts": [
+        3,
+        6,
+        2
+      ],
+      "reward": 0.04872438728155571
+    },
+    {
+      "text": "u=0\\\\\\partial_{t}(p)+u+\\Delta(u)+u+\\partial_{yy}(u)+p\\cdot u^{2}+v\\cdot u^{2}+u\\cdot v=0\\\\p^{2}\\cdot p+\\partial_{t}(v)+\\Delta(u)+\\partial_{t}(v)+\\Delta(u)=0",
+      "r_fit": -2.877369250723959,
+      "term_counts": [
+        1,
+        7,
+        3
+      ],
+      "reward": -2.2780749926833326
+    },
+    {
+      "text": "\\partial_{t}(u)+\\Delta(u)+u+v+u\\cdot p\\cdot u=0\\\\p\\cdot p+\\partial_{t}(v)+p+\\Delta(p)+p+p+v=0\\\\\\partial_{t}(p)+\\Delta(p)+\\partial_{t}(p)=0",
+      "r_fit": 0.0028323245879906533,
+      "term_counts": [
+        5,
+        5,
+        2
+      ],
+      "reward": 0.0022210062723748377
+    },
+    {
+      "text": "v+u+\\Delta(u)+\\partial_{t}(u)=0\\\\\\Delta(v)+\\partial_{t}(v)+v\\cdot u+\\partial_{t}(v)=0\\\\\\partial_{t}(p)+u\\cdot v+\\partial_{t}(p)+p\\cdot u+\\Delta(p)+u=0",
+      "r_fit": 0.04552459106087403,
+      "term_counts": [
+        4,
+        3,
+        5
+      ],
+      "reward": 0.035698734079497516
+    }
+  ]
+}

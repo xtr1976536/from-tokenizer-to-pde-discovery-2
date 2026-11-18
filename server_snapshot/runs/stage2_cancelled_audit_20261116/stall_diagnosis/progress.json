@@ -1,0 +1,156 @@
+[
+  {
+    "job": "811-v320-seed525",
+    "attempt": 801,
+    "seed": 1326,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "811-v320-seed525",
+    "attempt": 802,
+    "seed": 1327,
+    "text": "v=0\\\\p+v+v^{3}+\\Delta(v)+\\partial_{t}(v)=0\\\\u+\\partial_{t}(p)=0",
+    "parser_exit": 0,
+    "parse_seconds": 0.6652838196605444,
+    "log_tail": "TEXT v=0\\\\p+v+v^{3}+\\Delta(v)+\\partial_{t}(v)=0\\\\u+\\partial_{t}(p)=0\nSTAGE compile_term ('v', 'v')\nSTAGE compile_term ('d', ('v', 'v'), 't')\nSTAGE compile_term ('lap', ('v', 'v'), 1)\nSTAGE compile_term ('pow', ('v', 'v'), ('n', 3))\nSTAGE compile_term ('v', 'p')\nSTAGE compile_term ('v', 'v')\nSTAGE compile_term ('d', ('v', 'p'), 't')\nSTAGE compile_term ('v', 'u')\nSTAGE equivalence_key\nPASS (1, 5, 2)\n"
+  },
+  {
+    "job": "811-v320-seed525",
+    "attempt": 803,
+    "seed": 1328,
+    "text": "\\Delta(u)\\cdot v^{2}+u^{3}+\\partial_{t}(u)+\\partial_{x}(u)+\\partial_{t}(v)=0\\\\\\Delta(p)+u+\\partial_{x}(u)+u^{3}+\\partial_{t}(p)=0 \\\\\\partial_{xx}(x)+\\partial_{xx}(v^{2})+\\partial_{xx}p^{2}+\\partial_{t}(p)+p+\\Delta(p)+u=0",
+    "parser_exit": 0,
+    "parse_seconds": 0.6647567190229893,
+    "log_tail": "TEXT \\Delta(u)\\cdot v^{2}+u^{3}+\\partial_{t}(u)+\\partial_{x}(u)+\\partial_{t}(v)=0\\\\\\Delta(p)+u+\\partial_{x}(u)+u^{3}+\\partial_{t}(p)=0 \\\\\\partial_{xx}(x)+\\partial_{xx}(v^{2})+\\partial_{xx}p^{2}+\\partial_{t}(p)+p+\\Delta(p)+u=0\nSTAGE compile_term ('d', ('v', 'u'), 't')\nSTAGE compile_term ('d', ('v', 'u'), 'x')\nSTAGE compile_term ('d', ('v', 'v'), 't')\nSTAGE compile_term ('mul', ('lap', ('v', 'u'), 1), ('pow', ('v', 'v'), ('n', 2)))\nSTAGE compile_term ('pow', ('v', 'u'), ('n', 3))\nSTAGE compile_term ('d', ('v', 'p'), 't')\nSTAGE compile_term ('d', ('v', 'u'), 'x')\nSTAGE compile_term ('lap', ('v', 'p'), 1)\nSTAGE compile_term ('pow', ('v', 'u'), ('n', 3))\nSTAGE compile_term ('v', 'u')\nSTAGE compile_term ('d', ('pow', ('v', 'p'), ('n', 2)), 'xx')\nSTAGE compile_term ('d', ('pow', ('v', 'v'), ('n', 2)), 'xx')\nSTAGE compile_term ('d', ('v', 'p'), 't')\nSTAGE compile_term ('d', ('v', 'x'), 'xx')\nSTAGE compile_term ('lap', ('v', 'p'), 1)\nSTAGE compile_term ('v', 'p')\nSTAGE compile_term ('v', 'u')\nSTAGE equivalence_key\nPASS (5, 5, 7)\n"
+  },
+  {
+    "job": "811-v320-seed525",
+    "attempt": 804,
+    "seed": 1329,
+    "text": "\\exp(-v^{3}+\\partial_{t}(u)+\\partial_{t}(u)+\\nabla\\cdot(\\nabla(v)\\cdot u)+\\Delta(u)+\\partial_{y}(\\Delta(u))+\\partial_{y}(u)\\cdot u+\\partial_{x}(v\\cdot \\partial_{y}(u)))^{2}\\cdot \\partial_{x}(p)+\\partial_{x}(v^{2})+\\partial_{x}(u^{2}\\cdot \\partial_{y}(p)\\cdot u+\\partial_{t}(u))=0\\\\\\partial_{x}(\\partial_{x}(u)\\cdot p\\cdot u+\\partial_{t}(u)\\cdot \\partial_{y}(u)+p)=0\\\\u^{2}\\cdot \\partial_{x}(u)=0",
+    "parser_exit": 0,
+    "parse_seconds": 0.7649282924830914,
+    "log_tail": "TEXT \\exp(-v^{3}+\\partial_{t}(u)+\\partial_{t}(u)+\\nabla\\cdot(\\nabla(v)\\cdot u)+\\Delta(u)+\\partial_{y}(\\Delta(u))+\\partial_{y}(u)\\cdot u+\\partial_{x}(v\\cdot \\partial_{y}(u)))^{2}\\cdot \\partial_{x}(p)+\\partial_{x}(v^{2})+\\partial_{x}(u^{2}\\cdot \\partial_{y}(p)\\cdot u+\\partial_{t}(u))=0\\\\\\partial_{x}(\\partial_{x}(u)\\cdot p\\cdot u+\\partial_{t}(u)\\cdot \\partial_{y}(u)+p)=0\\\\u^{2}\\cdot \\partial_{x}(u)=0\nSTAGE compile_term ('d', ('d', ('v', 'u'), 't'), 'x')\nSTAGE compile_term ('d', ('mul', ('d', ('v', 'p'), 'y'), ('pow', ('v', 'u'), ('n', 3))), 'x')\nSTAGE compile_term ('d', ('pow', ('v', 'v'), ('n', 2)), 'x')\nSTAGE compile_term ('mul', ('d', ('v', 'p'), 'x'), ('pow', ('fn', 'exp', ('add', ('d', ('lap', ('v', 'u'), 1), 'y'), ('d', ('mul', ('d', ('v', 'u'), 'y'), ('v', 'v')), 'x'), ('d', ('v', 'u'), 't'), ('d', ('v', 'u'), 't'), ('divergence', ('mul', ('grad', ('v', 'v')), ('v', 'u'))), ('lap', ('v', 'u'), 1), ('mul', ('d', \nSTAGE compile_term ('d', ('mul', ('d', ('v', 'u'), 't'), ('d', ('v', 'u'), 'y')), 'x')\nSTAGE compile_term ('d', ('mul', ('d', ('v', 'u'), 'x'), ('v', 'p'), ('v', 'u')), 'x')\nSTAGE compile_term ('d', ('v', 'p'), 'x')\nSTAGE compile_term ('mul', ('d', ('v', 'u'), 'x'), ('pow', ('v', 'u'), ('n', 2)))\nSTAGE equivalence_key\nPASS (4, 3, 1)\n"
+  },
+  {
+    "job": "811-v320-seed525",
+    "attempt": 805,
+    "seed": 1330,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "811-v320-seed525",
+    "attempt": 806,
+    "seed": 1331,
+    "text": "u^{3}+\\partial_{y}(\\frac{(\\partial_{y}(u)\\cdot \\sin(u))}{\\sqrt{x}\\cdot \\partial_{x}(u)})=0\\\\\\partial_{x}(u)\\cdot p+\\partial_{y}(\\partial_{y}(u)\\cdot u)=0\\\\(u)+\\partial_{x}(u)\\cdot (\\partial_{x}(u))^{2}+(\\partial_{y}(u))^{2}+(\\partial_{x}(u))^{2}+\\sqrt{3\\partial_{xx}(u)+\\partial_{yy}\\partial_{x}(u\\cdot v)+\\partial_{y}(\\frac{(1)}{1+u^{2}\\cdot (\\partial_{x}(u))^{2}+(\\partial_{y}(v)\\cdot (\\partial_{x}(v))^{2}+\\partial_{t}(u)+\\partial_{t}(p)+\\partial_{x}(u){\\partial_{y}(p)\\cdot p+v}\\cdot u)+p^{3}+u+\\partial_{t}(p)+(\\partial_{y}(v))^{2}+(\\partial_{x}(u))^{2}}+\\partial_{t}(u)+\\Delta(v))^{3}\\cdot \\ln(u)+\\partial_{t}(p)+1}{1+u}=0",
+    "parser_exit": 1,
+    "parse_seconds": 14.185054916888475,
+    "log_tail": "/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/code/stage2_main_v1/implicit_backend.py\", line 61, in compile_term\n    expression=sp.expand(symbolic(expand_laplacian(ast,('x','y')),FUNCTIONS).doit())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/function.py\", line 2845, in expand\n    return sympify(e).expand(deep=deep, modulus=modulus, **hints)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/cache.py\", line 72, in wrapper\n    retval = cfunc(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py\", line 3715, in expand\n    expr, _ = Expr._expand_hint(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py\", line 3635, in _expand_hint\n    arg, arghit = Expr._expand_hint(arg, hint, **hints)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py\", line 3635, in _expand_hint\n    arg, arghit = Expr._expand_hint(arg, hint, **hints)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py\", line 3635, in _expand_hint\n    arg, arghit = Expr._expand_hint(arg, hint, **hints)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  [Previous line repeated 6 more times]\n  File \"/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/expr.py\", line 3619, in _expand_hint\n    @staticmethod\n\n  File \"/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py\", line 11, in <lambda>\n    signal.signal(signal.SIGALRM,lambda *_:(_ for _ in ()).throw(TimeoutError('diagnostic parser timeout')))\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data1/users/liugang/src/eq-bpe/project/runs/stage2_main_full_v1_20261116/diagnose_stall_remote.py\", line 11, in <genexpr>\n    signal.signal(signal.SIGALRM,lambda *_:(_ for _ in ()).throw(TimeoutError('diagnostic parser timeout')))\nTimeoutError: diagnostic parser timeout\n"
+  },
+  {
+    "job": "811-v320-seed525",
+    "attempt": 807,
+    "seed": 1332,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "811-v320-seed525",
+    "attempt": 808,
+    "seed": 1333,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "811-v320-seed525",
+    "attempt": 809,
+    "seed": 1334,
+    "text": "v\\cdot p+u+\\Delta(u)+\\partial_{t}(v)=0\\\\\\Delta\\Delta(u)+u+\\partial_{t}(u)=0\\\\\\partial_{t}(p)+\\nabla\\cdot(\\nabla(v)\\cdot u)+\\partial_{t}(v)=0",
+    "parser_exit": 0,
+    "parse_seconds": 0.6647389605641365,
+    "log_tail": "TEXT v\\cdot p+u+\\Delta(u)+\\partial_{t}(v)=0\\\\\\Delta\\Delta(u)+u+\\partial_{t}(u)=0\\\\\\partial_{t}(p)+\\nabla\\cdot(\\nabla(v)\\cdot u)+\\partial_{t}(v)=0\nSTAGE compile_term ('d', ('v', 'v'), 't')\nSTAGE compile_term ('lap', ('v', 'u'), 1)\nSTAGE compile_term ('mul', ('v', 'p'), ('v', 'v'))\nSTAGE compile_term ('v', 'u')\nSTAGE compile_term ('d', ('v', 'u'), 't')\nSTAGE compile_term ('lap', ('lap', ('v', 'u'), 1), 1)\nSTAGE compile_term ('v', 'u')\nSTAGE compile_term ('d', ('v', 'p'), 't')\nSTAGE compile_term ('d', ('v', 'v'), 't')\nSTAGE compile_term ('divergence', ('mul', ('grad', ('v', 'v')), ('v', 'u')))\nSTAGE equivalence_key\nPASS (4, 3, 3)\n"
+  },
+  {
+    "job": "811-v320-seed525",
+    "attempt": 810,
+    "seed": 1335,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "622-v320-seed525",
+    "attempt": 1611,
+    "seed": 2136,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "622-v320-seed525",
+    "attempt": 1612,
+    "seed": 2137,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "622-v320-seed525",
+    "attempt": 1613,
+    "seed": 2138,
+    "text": "u^{3}+1+\\partial_{t}(u)+u\\cdot \\partial_{y}(u)\\cdot u=0\\\\\\partial_{x}(u)+\\partial_{xx}\\partial_{y}(u)=0\\\\{x}\\cdot \\cos(\\partial_{y}(p))^{2}\\cdot v+\\Delta(v)+v\\cdot (\\partial_{x}(u))^{2}+\\Delta(v)+p\\cdot v+p\\cdot (\\partial_{y}(u))^{2}+\\partial_{t}(p)+v+u\\cdot (\\partial_{y}(p))^{2}+(\\partial_{x}(p))^{2}=0",
+    "parser_exit": 0,
+    "parse_seconds": 0.6646769568324089,
+    "log_tail": "TEXT u^{3}+1+\\partial_{t}(u)+u\\cdot \\partial_{y}(u)\\cdot u=0\\\\\\partial_{x}(u)+\\partial_{xx}\\partial_{y}(u)=0\\\\{x}\\cdot \\cos(\\partial_{y}(p))^{2}\\cdot v+\\Delta(v)+v\\cdot (\\partial_{x}(u))^{2}+\\Delta(v)+p\\cdot v+p\\cdot (\\partial_{y}(u))^{2}+\\partial_{t}(p)+v+u\\cdot (\\partial_{y}(p))^{2}+(\\partial_{x}(p))^{2}=0\nSTAGE compile_term ('d', ('v', 'u'), 't')\nSTAGE compile_term ('mul', ('d', ('v', 'u'), 'y'), ('pow', ('v', 'u'), ('n', 2)))\nSTAGE compile_term ('n', 1)\nSTAGE compile_term ('pow', ('v', 'u'), ('n', 3))\nSTAGE compile_term ('d', ('d', ('v', 'u'), 'y'), 'xx')\nSTAGE compile_term ('d', ('v', 'u'), 'x')\nSTAGE compile_term ('d', ('v', 'p'), 't')\nSTAGE compile_term ('lap', ('v', 'v'), 1)\nSTAGE compile_term ('mul', ('pow', ('d', ('v', 'p'), 'y'), ('n', 2)), ('v', 'u'))\nSTAGE compile_term ('mul', ('pow', ('d', ('v', 'u'), 'x'), ('n', 2)), ('v', 'v'))\nSTAGE compile_term ('mul', ('pow', ('d', ('v', 'u'), 'y'), ('n', 2)), ('v', 'p'))\nSTAGE compile_term ('mul', ('pow', ('fn', 'cos', ('d', ('v', 'p'), 'y')), ('n', 2)), ('v', 'v'), ('v', 'x'))\nSTAGE compile_term ('mul', ('v', 'p'), ('v', 'v'))\nSTAGE compile_term ('pow', ('d', ('v', 'p'), 'x'), ('n', 2))\nSTAGE compile_term ('v', 'v')\nSTAGE equivalence_key\nPASS (4, 2, 9)\n"
+  },
+  {
+    "job": "622-v320-seed525",
+    "attempt": 1614,
+    "seed": 2139,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "622-v320-seed525",
+    "attempt": 1615,
+    "seed": 2140,
+    "text": "\\partial_{y}(u\\cdot \\partial_{x}(u))+\\partial_{y}(\\partial_{y}(u)\\cdot v^{2}+\\Delta(u)\\partial_{x}(\\partial_{x}(u)\\cdot u)+\\partial_{y}(\\partial_{y}(u)\\cdot u)+\\partial_{t}(u)+u\\cdot \\partial_{x}(u)+\\partial_{x}(v^{2}+v\\cdot (v^{2})+\\partial_{xx}(u^{2})+\\Delta(u)+v^{3}+\\partial_{t}(v)+u\\cdot \\partial_{y}(u)+\\partial_{y}(\\partial_{y}(u)\\cdot u^{2})^{2}+y\\cdot (\\partial_{y}(p))^{2}+u^{2}\\cdot v+v^{3}+(\\partial_{y}(u))^{2}+(\\partial_{x}(u))^{2}\\cdot v+(v^{2})+\\partial_{x}(v))^{2}\\cdot v+v\\cdot 1)^{2}+(\\partial_{x}(v))^{2}\\cdot p+\\partial_{t}(p)+u^{2}=0\\\\p=0\\\\(u^{2})=0",
+    "parser_exit": -11,
+    "parse_seconds": 6.172836169600487,
+    "log_tail": "TEXT \\partial_{y}(u\\cdot \\partial_{x}(u))+\\partial_{y}(\\partial_{y}(u)\\cdot v^{2}+\\Delta(u)\\partial_{x}(\\partial_{x}(u)\\cdot u)+\\partial_{y}(\\partial_{y}(u)\\cdot u)+\\partial_{t}(u)+u\\cdot \\partial_{x}(u)+\\partial_{x}(v^{2}+v\\cdot (v^{2})+\\partial_{xx}(u^{2})+\\Delta(u)+v^{3}+\\partial_{t}(v)+u\\cdot \\partial_{y}(u)+\\partial_{y}(\\partial_{y}(u)\\cdot u^{2})^{2}+y\\cdot (\\partial_{y}(p))^{2}+u^{2}\\cdot v+v^{3}+(\\partial_{y}(u))^{2}+(\\partial_{x}(u))^{2}\\cdot v+(v^{2})+\\partial_{x}(v))^{2}\\cdot v+v\\cdot 1)^{2}+(\\partial_{x}(v))^{2}\\cdot p+\\partial_{t}(p)+u^{2}=0\\\\p=0\\\\(u^{2})=0\nSTAGE compile_term ('d', ('mul', ('d', ('v', 'u'), 'x'), ('v', 'u')), 'y')\nSTAGE compile_term ('d', ('v', 'p'), 't')\nSTAGE compile_term ('mul', ('pow', ('d', ('v', 'v'), 'x'), ('n', 2)), ('v', 'p'))\nSTAGE compile_term ('pow', ('d', ('add', ('d', ('mul', ('d', ('v', 'u'), 'y'), ('v', 'u')), 'y'), ('d', ('v', 'u'), 't'), ('mul', ('d', ('mul', ('d', ('v', 'u'), 'x'), ('v', 'u')), 'x'), ('lap', ('v', 'u'), 1)), ('mul', ('d', ('v', 'u'), 'x'), ('v', 'u')), ('mul', ('d', ('v', 'u'), 'y'), ('pow', ('v', 'v'), ('n', 2)))\nTimeout (0:00:05)!\nThread 0x0000735e466fa080 (most recent call first):\n  File \"/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/basic.py\", line 0 in args\n  File "
+  },
+  {
+    "job": "622-v320-seed525",
+    "attempt": 1616,
+    "seed": 2141,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "622-v320-seed525",
+    "attempt": 1617,
+    "seed": 2142,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "622-v320-seed525",
+    "attempt": 1618,
+    "seed": 2143,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "622-v320-seed525",
+    "attempt": 1619,
+    "seed": 2144,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  },
+  {
+    "job": "622-v320-seed525",
+    "attempt": 1620,
+    "seed": 2145,
+    "text": null,
+    "parser_exit": "NO_VALID_TEXT"
+  }
+]

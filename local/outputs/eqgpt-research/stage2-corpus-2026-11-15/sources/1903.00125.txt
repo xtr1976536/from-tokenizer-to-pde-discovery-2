@@ -1,0 +1,512 @@
+1Introduction Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme 1 Introduction 2 Local existence and a parabolic problem
+satisfied by the mass accumulation 3 Construction of subsolutions for ( ) 3.1 Constructing a family of
+candidates. 3.2 Subsolution properties: Outer region. 3.3 Subsolution properties: Inner region. 3.4 Subsolution properties: Very inner region. 3.5 Subsolution properties: Intermediate region. 4 Blow-up. Proof of Theorem 1.1 References License: arXiv.org perpetual non-exclusive license arXiv:1903.00125v1 [math.AP] 01 Mar 2019 0 0 0 2010 Mathematics Subject Classification .
+Primary: 35B44; Secondary: 35K65, 92C17. 0 0 0 Key words and phrases :
+degenerate chemotaxis system; flux limitation; finite-time blow-up. Finite-time blow-up in a quasilinear
+degenerate chemotaxis system with flux limitation Yuka Chiyoda,
+Masaaki Mizukami * * * Corresponding author † † † Partially supported by JSPS Research
+Fellowships for Young Scientists, No. 17J00101 ,
+Tomomi Yokota ‡ ‡ ‡ Partially supported by Grant-in-Aid for
+Scientific Research (C), No. 16K05182. 0 0 0 E-mail: g11914oboe@gmail.com , masaaki.mizukami.math@gmail.com , 0 0 0 yokota@rs.kagu.tus.ac.jp Department of Mathematics,
+Tokyo University of Science 1-3, Kagurazaka, Shinjuku-ku,
+Tokyo 162-8601, Japan August 24, 2026 Abstract. This paper deals with the quasilinear degenerate chemotaxis system
+with flux limitation $\displaystyle\begin{cases}u_{t}=\nabla\cdot\left(\dfrac{u^{p}\nabla u}{\sqrt{u^{2}+|\nabla u|^{2}}}\right)-\chi\nabla\cdot\left(\dfrac{u^{q}\nabla v}{\sqrt{1+|\nabla v|^{2}}}\right),&x\in\Omega,\ t>0,\\
+0=\Delta v-\mu+u,&x\in\Omega,\ t>0,\end{cases}$ where $\Omega:=B_{R}(0)\subset\mathbb{R}^{n}$ ( $n\in\mathbb{N}$ )
+is a ball with some $R>0$ , and $\chi>0$ , $p,q\geq 1$ , $\mu:=\frac{1}{|\Omega|}\int_{\Omega}u_{0}$ and $u_{0}$ is an initial data of an unknown function $u$ .
+Bellomo–Winkler (Trans.  Amer.  Math.  Soc.  Ser.  B;2017;4;31–67)
+established existence of an initial data such that the
+corresponding solution
+blows up in finite time when $p=q=1$ . This paper gives
+existence of blow-up
+solutions under some condition for $\chi$ and $u_{0}$ when $1\leq p\leq q$ . 1 Introduction In this paper we consider the quasilinear
+degenerate chemotaxis system with flux limitation: (1.1) $\displaystyle\begin{cases}u_{t}=\nabla\cdot\left(\dfrac{u^{p}\nabla u}{\sqrt{u^{2}+|\nabla u|^{2}}}\right)-\chi\nabla\cdot\left(\dfrac{u^{q}\nabla v}{\sqrt{1+|\nabla v|^{2}}}\right),&x\in\Omega,\ t>0,\\[5.69054pt]
+0=\Delta v-\mu+u,&x\in\Omega,\ t>0,\\[5.69054pt]
+\left(\dfrac{u^{p}\nabla u}{\sqrt{u^{2}+|\nabla u|^{2}}}-\chi\dfrac{u^{q}\nabla v}{\sqrt{1+|\nabla v|^{2}}}\right)\cdot\nu=0,&x\in\partial\Omega,\ t>0,\\[14.22636pt]
+u(x,0)=u_{0}(x),&x\in\Omega,\end{cases}$ where $\Omega=B_{R}(0)\subset\mathbb{R}^{n}(n\in\mathbb{N})$ is a ball
+with some $R>0$ , $\chi>0$ , $p,q\geq 1$ and the
+initial data $u_{0}$ is a function fulfilling that (1.2) $\displaystyle u_{0}\in C^{3}(\overline{\Omega})\ \mbox{is radially
+symmetric and positive in}\ \overline{\Omega}\ \mbox{with}\ \frac{\partial u_{0}}{\partial\nu}=0\ \mbox{on}\ \partial\Omega$ and where (1.3) $\displaystyle\mu:=\frac{1}{|\Omega|}\int_{\Omega}{u_{0}(x)\,dx}.$ The system ( 1.1 )
+represents the situation such that
+a cellular slime moves towards higher concentrations of the
+chemical substance, and the unknown function $u=u(x,t)$ describes the density of cell and the unknown function $v=v(x,t)$ denotes the concentration of chemoattractant at $x\in\Omega$ and $t\geq 0$ .
+This model is development of the chemotaxis system (1.4) $\displaystyle u_{t}=\Delta u-\nabla\cdot(u\nabla v),\quad v_{t}=\Delta v-v+u;$ thanks to effect of the flux limitation, the system ( 1.1 )
+describes the case that cell diffusivity is suppressed;
+therefore the system ( 1.1 ) is innovative and important
+because it
+is considered a sensitive dynamics in aggregation phenomena. Before we introduce previous works about the system
+( 1.1 ),
+we will recall known results about the chemotaxis system ( 1.4 ): The system ( 1.4 ) is proposed by Keller–Segel [ 10 ] and is called a Keller–Segel system. About the Keller–Segel system
+it was known that the size of the initial data in some Lebesgue norm
+determines behaviour of solutions;
+in the case that $n=1$ , Osaki–Yagi [ 16 ] obtained global existence
+and boundedness of classical solutions of ( 1.4 );
+in the case that $n=2$ , it is shown that there is a critical value $C>0$ ( $C=8\pi$ in the radial setting and $C=4\pi$ in the other setting)
+such that,
+if $\|u_{0}\|_{L^{1}(\Omega)}<C$ then global solutions exist ( [ 15 ] ), and
+if $m>C$ then there is an initial data satisfying that $\|u_{0}\|_{L^{1}(\Omega)}=m$ and
+the corresponding solution blows up in finite time ( [ 6 , 13 ] );
+in the case that $n\geq 3$ , Horstmann–Winkler [ 7 ] asserted possibility of existence of unbounded solutions;
+Winkler [ 17 ] showed that for all $m>0$ there exists an initial data
+such that $\|u_{0}\|_{L^{1}(\Omega)}=m$ and the corresponding solution blows up in finite time;
+also in the case that $n=3$ ,
+Cao [ 3 ] established global existence and boundedness
+under the condition that $\|u_{0}\|_{L^{\frac{n}{2}}(\Omega)}$ and $\|\nabla v_{0}\|_{L^{n}(\Omega)}$ are sufficiently small. The Keller–Segel system ( 1.4 ) is now studied by
+many mathematicians intensively.
+Moreover, many variations of generalizations of
+the Keller–Segel system ( 1.4 ) are
+also sprightly studied.
+Here one of the important generalized problems is
+the degenerate chemotaxis system $u_{t}=\Delta u^{p}-\nabla\cdot(u^{q-1}\nabla v),\quad v_{t}=\Delta v-v+u,$ where $p\geq 1$ , $q\geq 2$ . This problem is one of the model which
+has a nonlinear diffusion suggested by Hillen–Painter [ 5 ] ,
+and it is shown that the relation between $p$ and $q$ determines behaviour of solutions;
+in the case $q<p+\frac{2}{n}$ , global solutions are
+obtained when $\Omega$ is a bounded
+domain (see [ 8 ] ). In the case $q=p+\frac{2}{n}$ , the result is divided
+by the size of the initial data with some critical mass $m_{c}=m_{c}(n)$ .
+When $\|u_{0}\|_{L^{1}(\Omega)}=m<m_{c}$ and $q=2$ , under the
+Dirichlet–Neumann boundary condition,
+Mimura [ 12 ] showed that there are global
+solutions when $\Omega$ is a bounded domain.
+On the other hand, if $m>m_{c}$ ,
+then Laurençot–Mizoguchi [ 11 ] established that
+existence of an initial data such that $\|u_{0}\|_{L^{1}(\Omega)}=m$ and the corresponding
+solution blows
+up in finite time when $q=2$ , $\Omega=\mathbb{R}^{n}$ and $n=3,4$ .
+In the case $q>p+\frac{2}{n}$ , it is known that there exists an initial
+data such that
+the corresponding solution blows up in finite time
+(see [ 4 ] ).
+Thus, it is clear that the relation between $p,q$ and $n$ strongly affects behaviour of solutions. On the other hand,
+the system which describes the situation such that
+the movement of the species is suppressed, that is,
+the chemotaxis system with flux limitation (1.5) $\displaystyle\begin{cases}u_{t}=\nabla\cdot\left(D_{u}(u,v)\dfrac{u\nabla u}{\sqrt{u^{2}+|\nabla u|^{2}}}\right)-\nabla\cdot\left(S(u,v)\dfrac{u\nabla v}{\sqrt{1+|\nabla v|^{2}}}\right)+H_{1}(u,v),&\\[14.22636pt]
+v_{t}=D_{v}\Delta v+H_{2}(u,v),\qquad x\in\Omega,\ t>0&\end{cases}$ is proposed by Bellemo–Winkler [ 1 ] ,
+where $D_{u}$ and $D_{v}$ show
+properties of
+diffusion of the species and the chemoatractant, respectively,
+and $S$ represents the chemotactic interaction,
+and $H_{1}$ and $H_{2}$ are mechanisms of propagation,
+degeneration, and interaction.
+Since it has not been known whether there exist valid
+functions
+like an energy function and a Lyapunov function yet,
+the system ( 1.5 ) seems to be difficult.
+Therefore, Bellomo–Winkler [ 1 , 2 ] have considered the following
+simplified system (1.6) $\displaystyle u_{t}=\nabla\cdot\left(\dfrac{u\nabla u}{\sqrt{u^{2}+|\nabla u|^{2}}}\right)-\chi\nabla\cdot\left(\dfrac{u\nabla v}{\sqrt{1+|\nabla v|^{2}}}\right),\quad 0=\Delta v-\mu+u.$ In this system, Bellomo–Winkler [ 1 ] overcame the
+difficulty, and they showed
+global existence when $\chi<1$ .
+On the other hand, if $\chi>1$ and (1.7) $\displaystyle\begin{cases}m>\dfrac{1}{\sqrt{\chi^{2}-1}}&\mbox{if}\ n=1,\\[14.22636pt]
+m>0\ \mbox{is arbitrary}&\mbox{if}\ n\geq 2,\end{cases}$ Bellomo–Winkler [ 2 ] found an initial data such that
+the corresponding solution of ( 1.6 ) blows up in finite time.
+However, the problem ( 1.5 ) has not been
+studied yet when $D_{u}$ and $S$ are general;
+in view of the study of the Keller–Segel system,
+the case that $D_{u}(u,v)=u^{p-1}$ and $S(u,v)=u^{q-1}$ in
+( 1.5 ), i.e., the system ( 1.1 ) seems to
+be
+one of important problems.
+Recently global existence of solutions to system ( 1.1 )
+was shown
+when $p>q+1-\frac{1}{n}$ (see [ 14 ] ).
+From the results in the degenerate chemotaxis system
+we can expect that some largeness condition for $q$ derives existence of blow-up solutions. The purpose of this paper is to determine
+the condition for $p$ and $q$ such that the corresponding
+solution blows up in finite time.
+Here we need to establish
+different methods because
+we cannot
+adopt the same argument as
+in [ 2 ] when $p<q$ holds. Now main
+results read as follows. Theorem 1.1 . Let $\Omega:=B_{R}(0)\subset\mathbb{R}^{n}$ $(n\in\mathbb{N})$ with $R>0$ and suppose that $1\leq p\leq q$ . (i) If $n=1$ , then for all $\chi>1$ $(\chi>0$ when $q>p)$ ,
+there exists $m_{c}=m_{c}(\chi,p,q,R)>0$ with the
+following property : If (1.8) $\displaystyle m>m_{c},$ then there exists a nondecreasing function $M_{m}\in C^{0}([0,R])$ satisfying $\sup_{r\in(0,R)}\frac{M_{m}(r)}{|B_{r}(0)|}<\infty$ , $M_{m}(R)\leq m$ , and that for all $u_{0}\in C^{3}(\overline{\Omega})$ with $\int_{\Omega}{u_{0}(x)\,dx}=m$ and (1.9) $\displaystyle\int_{B_{r}(0)}{u_{0}(x)\,dx}\geq M_{m}(r)$ for all $r\in[0,R]$ , there exists $T^{\ast}\in(0,\infty)$ such that a corresponding solution $(u,v)$ of ( 1.1 ) blows up in
+finite time $T^{\ast}$ in the sense that (1.10) $\displaystyle\limsup_{t\nearrow T^{\ast}}\|u(\cdot,t)\|_{L^{\infty}(\Omega)}=\infty.$ (ii) If $n\geq 2$ and $m>0$ , then
+for all $\chi>0$ satisfying (1.11) $\displaystyle\chi>\left(\frac{mn}{\omega_{n}R^{n}}\right)^{p-q},$ where $\omega_{n}$ defines the $(n-1)$ -dimensional
+measure of the unit sphere in $\mathbb{R}^{n}$ , there exists a nondecreasing
+function $M_{m}\in C^{0}([0,R])$ satisfying $\sup_{r\in(0,R)}\frac{M_{m}(r)}{|B_{r}(0)|}<\infty$ ,
+and $M_{m}(R)\leq m$ , such that for all $u_{0}\in C^{3}(\overline{\Omega})$ with $\int_{\Omega}{u_{0}(x)\,dx}=m$ and
+( 1.9 )
+for all $r\in[0,R]$ , there exists $T^{\ast}\in(0,\infty)$ such that
+the
+corresponding solution $(u,v)$ of ( 1.1 ) blows up in
+finite time $T^{\ast}$ in the sense of ( 1.10 ). Remark 1.1 . This theorem shows existence of blow-up solutions to ( 1.1 )
+when $q\geq p$ .
+On the other hand,
+in [ 14 ] global existence of solutions is shown
+when $p>q+1-\frac{1}{n}$ .
+However, except for the case $n=1$ ,
+behaviour of solutions in the case $q<p\leq q+1-\frac{1}{n}$ is still an open problem (see Figure 1 ). O q p blow-up global 1 1 - 1 n 1 Figure 1: Classification of behaviour Remark 1.2 . If $p=q=1$ , then the
+condition for $m$ connects with that in [ 2 ] ;
+indeed, the constant $m_{c}(\chi,p,q,R)$ in ( 1.8 ) is given by $m_{c}=\inf\left\{m\ \Bigg|\ \exists\,\lambda\in\left(\frac{5-\sqrt{17}}{2},1\right];\,\frac{\left\{1-\frac{(1-\lambda)^{2}}{3\lambda-1}\right\}m\chi}{\sqrt{\frac{1}{\lambda^{2}}+\frac{(1-\lambda)^{2}}{\lambda^{2}(3\lambda-1)}+m^{2}}}=\left(\frac{m}{\omega_{n}}\cdot\frac{(1-\lambda)^{2}}{\lambda(\lambda+1)R}\right)^{p-q}\right\}$ (see ( 3.1 ) and ( 3.53 )).
+Thus, in
+the case $p=q$ , since $\displaystyle m_{c}(\chi,p,p,R)$ $\displaystyle=\inf\left\{m\ \Bigg|\ \exists\,\lambda\in\left(\frac{5-\sqrt{17}}{2},1\right];\,\frac{\left\{1-\frac{(1-\lambda)^{2}}{3\lambda-1}\right\}m\chi}{\sqrt{\frac{1}{\lambda^{2}}+\frac{(1-\lambda)^{2}}{\lambda^{2}(3\lambda-1)}+m^{2}}}=1\right\}$ $\displaystyle=\inf\left\{m\ \Bigg|\ \frac{m\chi}{\sqrt{1+m^{2}}}=1\right\}=\frac{1}{\sqrt{\chi^{2}-1}}$ and moreover $\left(\frac{mn}{\omega_{n}R^{n}}\right)^{p-p}=1,$ the conditions ( 1.8 )
+and ( 1.11 ) are reduced to ( 1.7 ).
+Thus Theorem 1.1 is a
+generalization of the previous work [ 2 ] . In view of Remark 1.2 we have the following corollary. Corollary 1.2 . Let $\Omega:=B_{R}(0)\subset\mathbb{R}^{n}$ $(n\in\mathbb{N})$ with $R>0$ and let $p=q\geq 1$ , and suppose that $\chi>1$ and ( 1.7 ).
+Then there exists a nondecreasing function $M_{m}\in C^{0}([0,R])$ fulfilling $\sup_{r\in(0,R)}\frac{M_{m}(R)}{|B_{r}(0)|}<\infty$ and $M_{m}(R)\leq m$ ,
+which is such that whenever $u_{0}$ satisfies ( 1.2 ),
+as well as ( 1.9 ) for all $r\in[0,R]$ ,
+the solution $(u,v)$ of ( 1.1 ) blows up in finite time
+in the sense of ( 1.10 ). Theorem 1.1 gives the following byproduct;
+since arguments similar to those in the proof of [ 2 , Proposition 1.2] enable us to see this proposition, we only write the statement. Proposition 1.3 . Let $n\in\mathbb{N}$ , $R>0$ , $\Omega:=B_{R}(0)\subset\mathbb{R}^{n}$ and $\chi>1$ . (i) Let $m>0$ satisfy ( 1.8 ).
+Then there exists a radially symmetric positive $u_{m}\in C^{\infty}(\overline{\Omega})$ which is such that $\frac{\partial u_{m}}{\partial\nu}=0\ \mbox{on}\ \partial\Omega\quad\mbox{and}\ \int_{\Omega}{u_{m}}=m,$ and for which it is possible to choose $\varepsilon>0$ with the property that whenever $u_{0}$ satisfies ( 1.2 )
+as well as $\|u_{0}-u_{m}\|_{L^{\infty}(\Omega)}\leq\varepsilon,$ the corresponding solution of ( 1.1 )
+blows up in finite time. (ii) Given any $u_{0}$ fulfilling ( 1.2 ),
+one can find functions $u_{0k}$ , $k\in\mathbb{N}$ , which
+satisfy ( 1.2 ) and $u_{0k}\to u_{0}\quad\mbox{in}\ L^{p}(\Omega)\quad\mbox{as}\ k\to\infty$ for all $p\in(0,1)$ ,
+and which are such that for all $k\in\mathbb{N}$ the solution of ( 1.1 ) emanating from $u_{0k}$ blows up in finite time. The proof of the main result
+is based on that of [ 2 , Theorem1.1] .
+Thus in the same way, we introduce $s:=r^{n}$ for $r\in[0,R]$ and the mass accumulation function $w=w(s,t)$ defined as $w(s,t):=\int_{0}^{s^{\frac{1}{n}}}{r^{n-1}u(r,t)\,dr},$ and
+then, a combination of the fact $u(r_{\ast},t)\geq\frac{w(s_{\ast},t)}{s_{\ast}}$ given by using $u\geq w_{s}$ and the mean value theorem and
+that $w$ is the solution of a scalar parabolic equation yields
+that the core of the proof is to find a suitable
+subsolution $\underline{w}$ such that for some $T>0$ and some $s_{\ast}\in(0,R^{n})$ , $\displaystyle\frac{\underline{w}(s_{\ast},t)}{s_{\ast}}\to\infty\ \mbox{as}\ t\nearrow T.$ In the previous study [ 2 ] , the interval $(0,R^{n})$ is divided three parts,
+and in very inner region thanks to construction of the subsolution $\underline{w}$ using the structure of a quadratic function,
+we obtain a
+suitable estimate. However, in this paper
+we cannot
+establish it from
+the same argument when $p<q$ .
+Therefore,
+adopting a new subsolution $\underline{w}$ consisted by
+an exponential function, we can prove
+existence of an initial data such that the corresponding
+solution blows up in finite time.
+In this proof, the key idea is to employ a new
+viewpoint in the proof of some suitable estimate; by
+establishing a new estimate
+where the effect of the aggregation come from
+chemotactic interaction
+works adequately
+(see Lemma 3.5 ),
+we can attain a useful estimate. This paper is organized as follows. In Section 2
+we recall local existence in ( 1.1 ) and we
+consider the mass accumulation function and
+a scalar parabolic equation.
+In order to use the comparison argument as in [ 2 , Lemma 5.1] we construct subsolutions
+and confirm properties in Section 3. Finally, we prove
+existence of blow-up solutions in Section 4. 2 Local existence and a parabolic problem
+satisfied by the mass accumulation In this section we provide a local existence result and
+a mass accumulation satisfies some parabolic problem.
+First, we recall a local existence result;
+the following result was shown in [ 14 , Theorem 1.1] . Lemma 2.1 . Suppose that $u_{0}$ complies with ( 1.2 ).
+Then there exist $T_{\rm max}\in(0,\infty]$ and
+a pair $(u,v)$ of positive radially symmetric
+functions $u\in C^{2,1}(\overline{\Omega}\times[0,T_{\rm max}))$ and $v\in C^{2,0}(\overline{\Omega}\times[0,T_{\rm max}))$ which solve
+( 1.1 ) classically in $\Omega\times(0,T_{\rm max})$ , and which are
+such that (2.1) $\displaystyle\mbox{if}\quad T_{\rm max}<\infty,\quad\mbox{then}\quad\limsup_{t\nearrow T_{\rm max}}\|u(\cdot,t)\|_{L^{\infty}(\Omega)}=\infty.$ In the following let $\Omega:=B_{R}(0)\subset\mathbb{R}^{n}$ ( $n\in\mathbb{N}$ ) with some $R>0$ and let $u_{0}$ satisfy ( 1.2 ), and denote by $(u,v)=(u(r,t),v(r,t))$ the radially symmetric local solution of
+( 1.1 ) and by $T_{\rm max}$ its maximal existence time
+obtained in Lemma 2.1 .
+Moreover, we introduce the mass accumulation function $w$ and the parabolic operator $\mathcal{P}$ such that (2.2) $\displaystyle w(s,t):=\int_{0}^{s^{\frac{1}{n}}}{r^{n-1}u(r,t)\,dr}$ for $s\in[0,R^{n}]$ and $t\in[0,T)$ , and (2.3) $\displaystyle(\mathcal{P}\widetilde{w})(s,t):=\widetilde{w}_{t}-n^{p+1}\cdot\frac{s^{2-\frac{2}{n}}\widetilde{w}_{s}^{p}\widetilde{w}_{ss}}{\sqrt{\widetilde{w}_{s}^{2}+n^{2}s^{2-\frac{2}{n}}\widetilde{w}_{ss}^{2}}}-n^{q}\chi\cdot\frac{(\widetilde{w}-\frac{\mu}{n}s)\widetilde{w}_{s}^{q}}{\sqrt{1+s^{\frac{2}{n}-2}(\widetilde{w}-\frac{\mu}{n}s)^{2}}}.$ If $\widetilde{w}\in C^{1}((0,R^{n})\times(0,T))$ is such that $\widetilde{w}_{s}>0$ and $\widetilde{w}(\cdot,t)\in W^{2,\infty}(0,R^{n})$ for all $t\in(0,T)$ , then the expression $\mathcal{P}\widetilde{w}$ is well-defined. Now we show that the function $w$ defined as
+( 2.2 ) fulfills these corresponding condition.
+Thus, the following lemma yields that the function $w$ satisfies some parabolic problem (see [ 2 , Lemma 2.1] ). Lemma 2.2 . Let $n\in\mathbb{N}$ , $\chi>0$ . Then
+for $T>0$ and some nonnegative
+radially symmetric $u_{0}\in C^{0}(\overline{\Omega})$ , whenever $(u,v)$ is a positive radially symmetric classical
+solution of ( 1.1 ) in $\Omega\times[0,T)$ , the function $w$ defined as ( 2.2 ) satisfies (2.4) $\displaystyle\begin{cases}(\mathcal{P}w)(s,t)=0,&s\in(0,R^{n}),\ t\in(0,T),\\
+w(0,t)=0,\quad w(R^{n},t)=\dfrac{m}{\omega_{n}},&t\in(0,T),\\
+w(s,0)=\int_{0}^{s^{\frac{1}{n}}}{r^{n-1}u_{0}(r)\,dr},&s\in[0,R^{n}],\end{cases}$ where $m:=\int_{\Omega}{u_{0}(x)\,dx}$ and
+where $\omega_{n}$ denotes the $(n-1)$ -dimensional
+measure of the unit sphere in $\mathbb{R}^{n}$ . Proof. An argument
+similar to that in
+the proof of [ 2 , Lemma 2.1] implies the conclusion of this lemma.
+∎ 3 Construction of subsolutions for ( 2.4 ) In this section we construct a subsolution $\underline{w}$ of ( 2.4 ).
+Then, using a suitable comparison
+principle (see [ 2 , Lemma 5.1] ) to obtain $w\geq\underline{w}$ in $[0,R^{n}]\times[0,T)$ , we derive that $u(r,t)$ blows up in
+finite time $T>0$ (fixed later). In Section 3.1 we prepare
+a family of functions, and define $\underline{w}$ . In Sections 3.2 , 3.3 , 3.4 and 3.5 we divide $[0,R^{n}]$ into three parts
+and show properties of a subsolution $\underline{w}$ in respective regions. 3.1 Constructing a family of
+candidates. In order to construct subsolutions $\underline{w}$ for ( 2.4 )
+we first provide some parameter and some function;
+for $\lambda\in[\frac{1}{3},1]$ we put (3.1) $\displaystyle a_{\lambda}:=\frac{(1-\lambda)^{2}}{2\lambda}\geq 0\quad\mbox{and}\quad b_{\lambda}:=\frac{3\lambda-1}{2\lambda}\geq 0$ and define (3.2) $\displaystyle\varphi(\xi):=\begin{cases}\dfrac{2\lambda}{de^{d}}(e^{d\xi}-1)&\mbox{if}\ \xi\in[0,1),\\[11.38109pt]
+1-\dfrac{a_{\lambda}}{\xi-b_{\lambda}}&\mbox{if}\ \xi\geq 1,\end{cases}$ where $1<d<2$ is such that (3.3) $\displaystyle(2-d)e^{d}-2=0.$ Here we note that
+there is a solution $d\in(1,2)$ of ( 3.3 );
+indeed, since $((2-d)e^{d}-2)|_{d=1}=e-2>0\quad\mbox{and}\quad((2-d)e^{d}-2)|_{d=2}=-2<0$ hold, the intermediate value theorem enables us to
+find $d\in(1,2)$ satisfying ( 3.3 ).
+Then we can show that $\varphi\in C^{1}([0,\infty))\cap W^{2,\infty}(0,\infty)\cap C^{2}([0,\infty)\setminus\{1\})$ with (3.4) $\displaystyle\varphi^{\prime}(\xi)=\begin{cases}2\lambda e^{d(\xi-1)}&\mbox{if}\ \xi\in[0,1),\\[11.38109pt]
+\dfrac{a_{\lambda}}{(\xi-b_{\lambda})^{2}}&\mbox{if}\ \xi\geq 1\end{cases}$ and (3.5) $\displaystyle\varphi^{\prime\prime}(\xi)=\begin{cases}2d\lambda e^{d(\xi-1)}&\mbox{if}\ \xi\in[0,1),\\[11.38109pt]
+-\dfrac{2a_{\lambda}}{(\xi-b_{\lambda})^{3}}&\mbox{if}\ \xi\geq 1.\end{cases}$ In particular, $\varphi^{\prime}(\xi)>0$ for all $\xi\geq 0$ .
+Then we have to choose $\lambda\in(\frac{5-\sqrt{17}}{2},1]$ suitably in the case that $n=1$ (see Lemma 3.12 ), and we
+must fix $\lambda=\frac{1}{3}$ in the case $n\geq 2$ (see Lemma 3.13 ).
+The following lemma has already been proved
+in the proof of [ 2 , Lemma 3.1] . Thus we
+recall only
+the statement of the lemma. Lemma 3.1 . Let $n\in\mathbb{N}$ , $m>0$ , $\lambda\in[\frac{1}{3},1]$ , $K>0$ , $T>0$ , and suppose that $B\in C^{1}([0,T))$ satisfies that $B(t)\in(0,1)$ , $K\sqrt{B(t)}<R^{n}$ for all $t\in[0,T)$ and (3.6) $\displaystyle B(t)\leq\frac{K^{2}}{4(a_{\lambda}+b_{\lambda})^{2}}$ for all $t\in[0,T)$ , where $a_{\lambda}$ and $b_{\lambda}$ are given by
+( 3.1 ). Then the following
+functions are well-defined : (3.7) $\displaystyle A(t):=\frac{m}{\omega_{n}}\cdot\frac{K^{2}-2b_{\lambda}K\sqrt{B(t)}+b^{2}_{\lambda}B(t)}{N(t)}\quad\mbox{for}\ t\in[0,T)$ and (3.8) $\displaystyle D(t):=\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{N(t)}\quad\mbox{for}\ t\in[0,T)$ as well as (3.9) $\displaystyle E(t):=\frac{m}{\omega_{n}}-R^{n}D(t)=\frac{m}{\omega_{n}}\cdot\frac{K^{2}-(a_{\lambda}+b_{\lambda})(2K\sqrt{B(t)}-b_{\lambda}B(t))}{N(t)}\quad\mbox{for}\ t\in[0,T)$ with (3.10) $\displaystyle N(t):=K^{2}+a_{\lambda}R^{n}-(a_{\lambda}+b_{\lambda})(2K\sqrt{B(t)}-b_{\lambda}B(t))\quad\mbox{for}\ t\in[0,T).$ Furthermore, we have $A^{\prime}(t)=\frac{m}{\omega_{n}}\cdot\frac{\Bigl(\frac{K}{\sqrt{B(t)}}-b_{\lambda}\Bigr)\cdot(a_{\lambda}K^{2}-a_{\lambda}b_{\lambda}R^{n})\cdot B^{\prime}(t)}{N^{2}(t)}$ as well as (3.11) $\displaystyle D^{\prime}(t)=\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}(a_{\lambda}+b_{\lambda})\cdot\Bigl(\frac{K}{\sqrt{B(t)}}-b_{\lambda}\Bigr)\cdot B^{\prime}(t)}{N^{2}(t)}$ for all $t\in(0,T)$ . Using these definitions,
+we can express clearly our comparison function $\underline{w}$ .
+Letting $K>0$ be a constant fixed later
+and letting $B$ be a function chosen suitably later,
+we will give a composite structure of $\underline{w}$ by separating $[0,R^{n}]$ into two parts
+(an inner region and an outer region). Lemma 3.2 . Let $n\in\mathbb{N}$ , $m>0$ , $\lambda\in[\frac{1}{3},1]$ , $K>0$ and $T>0$ , and let $B\in C^{1}([0,T))$ satisfy
+that $B(t)\in(0,1)$ , $K\sqrt{B(t)}<R^{n}$ and ( 3.6 ) hold
+for all $t\in[0,T)$ . Suppose that $\underline{w}(s,t):=\begin{cases}w_{\rm in}(s,t)&\mbox{if}\ t\in[0,T)\ \mbox{and}\ s\in\big[0,K\sqrt{B(t)}\big],\\[2.84526pt]
+w_{\rm out}(s,t)&\mbox{if}\ t\in[0,T)\ \mbox{and}\ s\in\big(K\sqrt{B(t)},R^{n}\big],\end{cases}$ where (3.12) $\displaystyle w_{\rm in}(s,t):=A(t)\varphi(\xi),\quad\xi=\xi(s,t):=\frac{s}{B(t)}$ for $t\in[0,T)$ , $s\in[0,K\sqrt{B(t)}]$ with $\varphi$ and $A$ introduced
+as ( 3.2 ) and ( 3.7 ), respectively, and where (3.13) $\displaystyle w_{\rm out}(s,t):=D(t)s+E(t)$ for $t\in[0,T)$ and $s\in[K\sqrt{B(t)},R^{n}]$ with $D$ and $E$ as in ( 3.8 )
+and ( 3.9 ), respectively.
+Then $\underline{w}$ is
+well-defined and satisfies $\underline{w}\in C^{1}([0,R^{n}]\times[0,T))$ and $\underline{w}(\cdot,t)\in W^{2,\infty}(0,R^{n})\cap C^{2}([0,R^{n}]\setminus\{B(t),K\sqrt{B(t)}\})$ for all $t\in[0,T)$ as well as $\underline{w}(0,t)=0\quad\mbox{and}\quad\underline{w}(R^{n},t)=\frac{m}{\omega_{n}}$ for all $t\in(0,T)$ . Proof. An argument similar to that in the proof of [ 2 , Lemma 3.2] implies the conclusion of this lemma.
+∎ 3.2 Subsolution properties: Outer region. First, we will consider in the outer region. In the following
+lemma, we show that if the function $B$ constructing $\underline{w}$ is suitably small and fulfilling a differential inequality,
+then $\underline{w}$ is a subsolution of
+( 2.4 ) in the region. Lemma 3.3 . Let $n\in\mathbb{N}$ , $\chi>0$ , $m>0$ , $\lambda\in[\frac{1}{3},1]$ , $K>0$ , $T>0$ and $B_{0}\in(0,1)$ fulfill $K\sqrt{B_{0}}<R^{n}$ and $B_{0}\leq\frac{K^{2}}{16(a_{\lambda}+b_{\lambda})^{2}}$ with $a_{\lambda}$ and $b_{\lambda}$ taken from
+( 3.1 ). Then if $B\in C^{1}([0,T))$ is positive and nonincreasing and satisfies that (3.14) $\displaystyle\begin{cases}B^{\prime}(t)\geq-\dfrac{a_{\lambda}^{q-1}(nm)^{q}\chi K}{2(a_{\lambda}+b_{\lambda})(K^{2}+a_{\lambda}R^{n})^{q-1}\omega_{n}^{q}R^{n}\sqrt{1+K^{\frac{2}{n}-2}\cdot\frac{m^{2}}{\omega_{n}^{2}}}}\cdot B^{1-\frac{1}{2n}}(t),\\[11.38109pt]
+B(0)\leq B_{0}\end{cases}$ for all $t\in(0,T)$ ,
+then
+the function $w_{\rm out}$ given by ( 3.13 ) fulfills that (3.15) $\displaystyle(\mathcal{P}w_{\rm out})(s,t)\leq 0$ for all t $\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ with $\mathcal{P}$ defined in ( 2.3 ). Proof. The proof is based on that of [ 2 , Lemma 3.3] .
+Recalling that $E(t)=\frac{m}{\omega_{n}}-R^{n}D(t)$ for all $t\in(0,T)$ by ( 3.9 ), we have (3.16) $\displaystyle w_{\rm out}(s,t)=D(t)s+E(t)=\frac{m}{\omega_{n}}-D(t)\cdot(R^{n}-s)$ for all $t\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ .
+Straightforward calculations together with ( 3.11 ) yield that (3.17) $\displaystyle(w_{\rm out})_{t}(s,t)$ $\displaystyle=-D^{\prime}(t)\cdot(R^{n}-s)$ $\displaystyle=-\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}(a_{\lambda}+b_{\lambda})\Bigl(\frac{K}{\sqrt{B(t)}}-b_{\lambda}\Bigr)}{N^{2}(t)}\cdot B^{\prime}(t)\cdot(R^{n}-s)$ for all $t\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ with $N$ as in ( 3.10 ).
+In order to obtain an estimate for $\mathcal{P}w_{\rm out}$ ,
+noting from ( 3.17 ) and the fact $(w_{\rm out})_{ss}\equiv 0$ that (3.18) $\displaystyle(\mathcal{P}w_{\rm out})(s,t)$ $\displaystyle=(w_{\rm out})_{t}(s,t)-n^{p+1}\cdot\frac{s^{2-\frac{2}{n}}\{(w_{\rm out})_{s}\}^{p}(w_{\rm out})_{ss}}{\sqrt{{(w_{\rm out})_{s}}^{2}+n^{2}s^{2-\frac{2}{n}}{(w_{\rm out})_{ss}}^{2}}}+I(s,t)$ $\displaystyle=-\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}(a_{\lambda}+b_{\lambda})\Bigl(\frac{K}{\sqrt{B(t)}}-b_{\lambda}\Bigr)}{N^{2}(t)}\cdot B^{\prime}(t)\cdot(R^{n}-s)+I(s,t),$ where (3.19) $\displaystyle I(s,t):=-n^{q}\chi\cdot\frac{(w_{\rm out}-\frac{\mu}{n}s)\cdot\{(w_{\rm out})_{s}\}^{q}}{\sqrt{1+s^{\frac{2}{n}-2}(w_{\rm out}-\frac{\mu}{n}s)^{2}}}$ for $t\in(0,T)$ and $s\in(K\sqrt{B(t)},R^{n})$ , we shall derive an estimate for $I(s,t)$ .
+Since ( 3.16 ) holds, we first obtain from the identity $\frac{\mu}{n}=\frac{m}{\omega_{n}R^{n}}$ that (3.20) $\displaystyle w_{\rm out}-\frac{\mu}{n}s$ $\displaystyle=\frac{m}{\omega_{n}}-D(t)\cdot(R^{n}-s)-\frac{m}{\omega_{n}R^{n}}\cdot s$ $\displaystyle=\left(\frac{m}{\omega_{n}R^{n}}-D(t)\right)\cdot(R^{n}-s)$ for all $t\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ .
+Noticing from
+arguments similar to those in the proof of [ 2 , Lemma 3.3] that $\sqrt{1+s^{\frac{2}{n}-2}\left(w_{\rm out}(s,t)-\frac{\mu}{n}s\right)^{2}}\leq\sqrt{1+K^{\frac{2}{n}-2}\cdot\frac{m^{2}}{\omega_{n}^{2}}}\cdot B^{\frac{1}{2n}-\frac{1}{2}}(t)$ for all $t\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ ,
+we infer from ( 3.19 ) and ( 3.20 ) that (3.21) $\displaystyle-I(s,t)\geq n^{q}\chi\frac{(\frac{m}{\omega_{n}R^{n}}-D(t))\cdot D^{q}(t)}{\sqrt{1+K^{\frac{2}{n}-2}\cdot\frac{m^{2}}{\omega_{n}^{2}}}}\cdot B^{\frac{1}{2}-\frac{1}{2n}}(t)\cdot(R^{n}-s)$ holds for all $t\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ .
+Here in light of the definitions of $D$ and $N$ (see ( 3.8 ) and ( 3.10 ), respectively), we can see that (3.22) $\displaystyle\left(\frac{m}{\omega_{n}R^{n}}-D(t)\right)\cdot D^{q}(t)$ $\displaystyle=\left(\frac{m}{\omega_{n}R^{n}}-\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{N(t)}\right)\left(\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{N(t)}\right)^{q}$ $\displaystyle=\frac{m^{q+1}a_{\lambda}^{q}}{\omega_{n}^{q+1}N^{q}(t)}\cdot\frac{N(t)-a_{\lambda}R^{n}}{R^{n}N(t)}$ $\displaystyle=\frac{m^{q+1}a_{\lambda}^{q}}{\omega_{n}^{q+1}N^{2}(t)}\cdot\frac{K^{2}-2(a_{\lambda}+b_{\lambda})K\sqrt{B(t)}+(a_{\lambda}+b_{\lambda})b_{\lambda}B(t)}{R^{n}{N(t)}^{q-1}}$ for all $t\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ .
+Moreover, the fact $B_{0}<\frac{4K^{2}}{b_{\lambda}^{2}}$ by ( 3.3 ) leads to that (3.23) $\displaystyle N(t)=K^{2}+a_{\lambda}R^{n}-(a_{\lambda}+b_{\lambda})(2K\sqrt{B(t)}-b_{\lambda}B(t))\leq K^{2}+a_{\lambda}R^{n}$ for all $t\in(0,T)$ ,
+a combination of the relation $K^{2}-2(a_{\lambda}+b_{\lambda})K\sqrt{B(t)}\geq\frac{1}{2}K^{2}$ (by ( 3.6 )),
+( 3.22 ), ( 3.23 ) and the fact $(a_{\lambda}+b_{\lambda})b_{\lambda}B(t)\geq 0$ yields that $\displaystyle\left(\frac{m}{\omega_{n}R^{n}}-D(t)\right)\cdot D^{q}(t)$ $\displaystyle\geq\frac{m^{q+1}a_{\lambda}^{q}}{\omega_{n}^{q+1}N^{2}(t)}\cdot\frac{K^{2}-2(a_{\lambda}+b_{\lambda})K\sqrt{B(t)}}{R^{n}(K^{2}+a_{\lambda}R^{n})^{q-1}}$ $\displaystyle\geq\frac{m^{q+1}a_{\lambda}^{q}}{\omega_{n}^{q+1}N^{2}(t)}\cdot\frac{K^{2}}{2R^{n}(K^{2}+a_{\lambda}R^{n})^{q-1}}$ $\displaystyle=\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{N^{2}(t)}\cdot\frac{m^{q}a_{\lambda}^{q-1}}{\omega_{n}^{q}}\cdot\frac{K^{2}}{2R^{n}(K^{2}+a_{\lambda}R^{n})^{q-1}}$ for all $t\in(0,T)$ .
+Therefore we verify from ( 3.21 ) that (3.24) $\displaystyle-I(s,t)\geq n^{q}\chi\cdot\frac{\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{N^{2}(t)}\cdot\frac{m^{q}a_{\lambda}^{q-1}}{\omega_{n}^{q}}\cdot\frac{K^{2}}{2R^{n}(K^{2}+a_{\lambda}R^{n})^{q-1}}}{\sqrt{1+K^{\frac{2}{n}-2}\cdot\frac{m^{2}}{\omega_{n}^{2}}}}\cdot B^{\frac{1}{2}-\frac{1}{2n}}(t)\cdot(R^{n}-s)$ for all $t\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ .
+Here putting $c_{1}:=\frac{a_{\lambda}^{q-1}(nm)^{q}\chi}{2(K^{2}+a_{\lambda}R^{n})^{q-1}\omega_{n}^{q}R^{n}\sqrt{1+K^{\frac{2}{n}-2}\cdot\frac{m^{2}}{\omega_{n}^{2}}}}$ and using the fact $(a_{\lambda}+b_{\lambda})b_{\lambda}B^{\prime}(t)\leq 0$ for all $t\in(0,T)$ ,
+from ( 3.18 ) and ( 3.24 ) we can confirm that (3.25) $\displaystyle(\mathcal{P}w_{\rm out})(s,t)$ $\displaystyle\leq\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{N^{2}(t)}\cdot(R^{n}-s)\cdot\Biggl\{\left(-\frac{(a_{\lambda}+b_{\lambda})K}{\sqrt{B(t)}}+(a_{\lambda}+b_{\lambda})b_{\lambda}\right)\cdot B^{\prime}(t)$ $\displaystyle\quad\,-n^{q}\chi\cdot\frac{\frac{m^{q}a_{\lambda}^{q-1}}{\omega_{n}^{q}}\cdot\frac{K^{2}}{2R^{n}(K^{2}+a_{\lambda}R^{n})^{q-1}}}{\sqrt{1+K^{\frac{2}{n}-2}\cdot\frac{m^{2}}{\omega_{n}^{2}}}}\cdot B^{\frac{1}{2}-\frac{1}{2n}}(t)\Biggr\}$ $\displaystyle\leq\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{N^{2}(t)}\cdot(R^{n}-s)\cdot\Biggl\{-\frac{(a_{\lambda}+b_{\lambda})K}{\sqrt{B(t)}}\cdot B^{\prime}(t)$ $\displaystyle\quad\,-\frac{a_{\lambda}^{q-1}(nm)^{q}\chi K^{2}}{2(K^{2}+a_{\lambda}R^{n})^{q-1}\omega_{n}^{q}R^{n}\sqrt{1+K^{\frac{2}{n}-2}\cdot\frac{m^{2}}{\omega_{n}^{2}}}}\cdot B^{\frac{1}{2}-\frac{1}{2n}}(t)\Biggr\}$ $\displaystyle=\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{N^{2}(t)}\cdot(R^{n}-s)\cdot\Biggl\{-\frac{(a_{\lambda}+b_{\lambda})K}{\sqrt{B(t)}}\cdot B^{\prime}(t)-c_{1}K^{2}B^{\frac{1}{2}-\frac{1}{2n}}(t)\Biggr\}$ for all $t\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ .
+Thanks to ( 3.14 ),
+we finally derive that $\displaystyle-\frac{(a_{\lambda}+b_{\lambda})K}{\sqrt{B(t)}}\cdot B^{\prime}(t)-c_{1}K^{2}B^{\frac{1}{2}-\frac{1}{2n}}(t)$ $\displaystyle=\frac{(a_{\lambda}+b_{\lambda})K}{\sqrt{B(t)}}\cdot\left\{-B^{\prime}(t)-\frac{c_{1}K}{(a_{\lambda}+b_{\lambda})}B^{1-\frac{1}{2n}}(t)\right\}$ $\displaystyle\leq 0$ for all $t\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ ,
+which together with
+( 3.25 ) implies ( 3.15 ) holds.
+∎ 3.3 Subsolution properties: Inner region. In this subsection
+we will consider in the inner region. In the following
+lemma
+we provide calculations of $\mathcal{P}w_{\rm in}$ and properties of the function $A$ defined as ( 3.7 ) constructing $\underline{w}$ in the corresponding region. Lemma 3.4 . Let $n\in\mathbb{N}$ , $m>0$ , $\lambda\in[\frac{1}{3},1]$ , $K>0$ be such that $K\geq\sqrt{b_{\lambda}R^{n}}$ , and $T>0$ , and
+let $B\in C^{1}([0,T))$ be positive
+and fulfill ( 3.6 ) and $K\sqrt{B(t)}<R^{n}$ for all $t\in[0,T)$ .
+Then the function $w_{\rm in}$ defined as
+( 3.12 ) satisfies that (3.26) $\displaystyle(\mathcal{P}w_{\rm in})(s,t)=A^{\prime}(t)\varphi(\xi)+\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\cdot\{-\xi B^{\prime}(t)+J_{1}(s,t)+J_{2}(s,t)\}$ for all $t\in(0,T)$ and all $s\in(0,K\sqrt{B(t)})\setminus\{B(t)\}$ ,
+where $\xi=\xi(s,t)=\frac{s}{B(t)}$ , $\mathcal{P}$ is given by ( 2.3 ), and (3.27) $\displaystyle J_{1}(s,t):=-n^{p+1}\cdot\frac{\xi^{2-\frac{2}{n}}\varphi^{\prime\prime}(\xi)}{\sqrt{B^{\frac{4}{n}-2}(t)\varphi^{\prime}(\xi)+n^{2}B^{\frac{2}{n}-2}(t)\xi^{2-\frac{2}{n}}\varphi^{\prime\prime 2}(\xi)}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}$ as well as (3.28) $\displaystyle J_{2}(s,t):=-n^{q}\chi\cdot\frac{A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi}{\sqrt{1+B^{\frac{2}{n}-2}(t)\xi^{\frac{2}{n}-2}(A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi)^{2}}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ for $t\in(0,T)$ and $s\in(0,K\sqrt{B(t)})\setminus\{B(t)\}$ .
+Moreover, the function $A$ defined as ( 3.7 ) fulfills (3.29) $\displaystyle A^{\prime}(t)\leq 0$ for all $t\in(0,T)$ ; in particular, (3.30) $\displaystyle A(t)\geq A_{T}:=\frac{m}{\omega_{n}}\cdot\frac{1}{1+\frac{a_{\lambda}R^{n}}{K^{2}}}$ holds for all $t\in(0,T)$ . Proof. Aided by arguments similar to those in the proofs of [ 2 , Lemmas 3.4 and 3.5] ,
+from straightforward calculations we can attain
+the conclusion of this lemma.
+∎ 3.4 Subsolution properties: Very inner region. In this subsection we will consider the case that $\xi=\frac{s}{B(t)}\in(0,1)$ which means $0<s<B(t)$ .
+In order to show $\mathcal{P}w_{\rm in}\leq 0$ we have to see that for some $C>0$ and some $\beta\geq 0$ , (3.31) $\displaystyle J_{1}(s,t)+J_{2}(s,t)\leq-CB^{\beta}(t)$ holds for all $t\in(0,T)$ and all $s\in(0,B(t))$ with $J_{1}$ and $J_{2}$ as in ( 3.27 )
+and ( 3.28 ), respectively. Thanks to the convexity of $\varphi$ for $\xi\in(0,1)$ , we obtain the term $J_{1}$ is negative
+in this region. However, it seems to be difficult to show ( 3.31 )
+in the case that $p<q$ . Indeed, when $\varphi(\xi)=\lambda\xi^{2}$ which is used in [ 2 ] ,
+if $B(t)$ is close to $0$ , then we obtain from an arguments that $J_{1}(s,t)+J_{2}(s,t)\geq-C_{1}B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}+C_{2}B(t)\xi\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}\geq 0$ with some $C_{1},C_{2}>0$ . Thus, we modify a function $\varphi$ on $(0,1)$ from [ 2 ] to infer that even though $B(t)$ is suitably small, the term $A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi$ is positive which means $J_{2}<0$ for $t\in(0,T)$ and $\xi\in(0,B(t))$ .
+Furthermore, we divide the estimate for $\mathcal{P}w_{\rm in}$ into the case $n=1$ and the case $n\geq 2$ to achieve our purpose. Lemma 3.5 . Let $n\in\mathbb{N}$ , $m>0$ , $\lambda\in[\frac{1}{3},1]$ , and $K>0$ be such that $K\geq\sqrt{b_{\lambda}R^{n}}$ ,
+and let $B_{0}\in(0,1)$ be such that $K\sqrt{B_{0}}<R^{n}$ and (3.32) $\displaystyle B_{0}\leq\frac{K^{2}}{4(a_{\lambda}+b_{\lambda})^{2}}$ as well as (3.33) $\displaystyle B_{0}<\frac{2\lambda nA_{T}}{e^{d}\mu}$ with $\mu$ , $d$ and $A_{T}$ given by ( 1.3 ),
+( 3.3 ) and ( 3.30 ), respectively.
+Then, under the condition that for some $T>0$ , $B\in C^{1}([0,T))$ is a positive and nonincreasing function satisfying $B(0)\leq B_{0}$ , the inequality (3.34) $\displaystyle A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi>0$ holds for all $t\in(0,T)$ and all $s\in(0,B(t))$ with $\varphi$ and $A$ as in ( 3.2 ) and ( 3.7 ),
+respectively. Proof. We write $\xi=\frac{s}{B(t)}$ for $t\in(0,T)$ and $s\in(0,B(t))$ .
+According to ( 3.30 ) and $B(t)\leq B(0)\leq B_{0}$ , we obtain from ( 3.2 )
+that (3.35) $\displaystyle A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi$ $\displaystyle\geq A_{T}\cdot\varphi(\xi)-\frac{\mu}{n}B_{0}\cdot\xi$ $\displaystyle=\frac{\mu}{n}\xi\left\{\frac{nA_{T}}{\mu}\cdot\frac{\varphi(\xi)}{\xi}-B_{0}\right\}$ $\displaystyle=\frac{\mu}{n}\xi\left\{\frac{2\lambda nA_{T}}{e^{d}\mu}\cdot\frac{e^{d\xi}-1}{d\xi}-B_{0}\right\}$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ .
+Thanks to that (3.36) $\displaystyle\dfrac{e^{d\xi}-1}{d\xi}\geq 1$ for all $\xi\in(0,1)$ , we infer from ( 3.33 ) and
+( 3.35 ) that $\displaystyle A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi$ $\displaystyle\geq\frac{\mu}{n}\xi\left\{\frac{2\lambda nA_{T}}{e^{d}\mu}\cdot\frac{e^{d\xi}-1}{d\xi}-B_{0}\right\}$ $\displaystyle\geq\frac{\mu}{n}\xi\left\{\frac{2\lambda nA_{T}}{e^{d}\mu}-B_{0}\right\}>0$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ .
+∎ Invoking Lemma 3.5 , under the assumption
+that the function $B$ is small and satisfies a suitable inequality,
+we derive that $\underline{w}$ becomes
+a
+subsolution of ( 2.4 ).
+First,
+we will note when $n=1$ . In this case, thanks to definition of $\varphi$ on $(0,1)$ , for some $C>0$ we can estimate that $J_{1}\leq-C$ and show the purpose of this subsection. Lemma 3.6 . Let $n=1$ , $m>0$ , $\lambda\in[\frac{1}{3},1]$ and $K>0$ be such that $K\geq\sqrt{b_{\lambda}R^{n}}$ ,
+and let $B_{0}\in(0,1)$ be such that $K\sqrt{B_{0}}\leq R^{n}$ ,
+( 3.32 ) and ( 3.33 ) hold.
+For some $T>0$ , if $B\in C^{1}([0,T))$ satisfies that (3.37) $\displaystyle\begin{cases}B^{\prime}(t)\geq-\dfrac{d}{\sqrt{d^{2}+1}}\cdot\left(\dfrac{2\lambda A_{T}}{e^{d}}\right)^{p-1},\\[11.38109pt]
+B(0)\leq B_{0}\end{cases}$ for all $t\in(0,T)$ with $d$ and $A_{T}$ as in ( 3.3 ) and ( 3.30 ),
+respectively, then the function $w_{\rm in}$ defined as ( 3.12 ) has the property that $(\mathcal{P}w_{\rm in})(s,t)\leq 0$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ . Proof. Writing $\xi=\frac{s}{B(t)}$ for $t\in(0,T)$ and $s\in(0,B(t))$ ,
+we establish that $\displaystyle\frac{B^{2}(t)\varphi^{\prime 2}(\xi)}{\varphi^{\prime\prime 2}(\xi)}=B^{2}(t)\cdot\frac{(2\lambda e^{d(\xi-1)})^{2}}{(2d\lambda e^{d(\xi-1)})^{2}}=B^{2}(t)\cdot\frac{1}{d^{2}}\leq\frac{1}{d^{2}}$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ . The inequality leads to that (3.38) $\displaystyle-J_{1}(s,t)$ $\displaystyle=\frac{\varphi^{\prime\prime}(\xi)}{\sqrt{B^{2}(t)\varphi^{\prime 2}(\xi)+\varphi^{\prime\prime 2}(\xi)}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}$ $\displaystyle\geq\frac{\varphi^{\prime\prime}(\xi)}{\sqrt{\left(\frac{1}{d^{2}}+1\right)\varphi^{\prime\prime 2}(\xi)}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}$ $\displaystyle=\frac{d}{\sqrt{d^{2}+1}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ . Thanks to ( 3.30 )
+and $\varphi^{\prime}(\xi)\geq\varphi^{\prime}(0)=\frac{2\lambda}{e^{d}}$ ,
+we infer from $B(t)<1$ that (3.39) $\displaystyle\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}\geq\left(\frac{A_{T}\cdot\frac{2\lambda}{e^{d}}}{1}\right)^{p-1}=\left(\frac{2\lambda A_{T}}{e^{d}}\right)^{p-1}$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ . On the other hand,
+using ( 3.34 ), we have (3.40) $\displaystyle J_{2}<0$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ .
+Thus, plugging ( 3.38 ) and ( 3.40 ) into ( 3.26 ),
+we derive from
+( 3.37 ), ( 3.39 )
+and the inequality $\xi\leq 1$ that $\displaystyle\frac{B(t)}{A(t)\varphi^{\prime}(\xi)}(\mathcal{P}w_{\rm in})(s,t)$ $\displaystyle\leq-\xi B^{\prime}(t)+J_{1}(s,t)+J_{2}(s,t)$ $\displaystyle\leq-\xi B^{\prime}(t)-\frac{d}{\sqrt{d^{2}+1}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}$ $\displaystyle\leq-\xi B^{\prime}(t)-\frac{d}{\sqrt{d^{2}+1}}\cdot\left(\frac{2\lambda A_{T}}{e^{d}}\right)^{p-1}$ $\displaystyle\leq\xi\left\{-B^{\prime}(t)-\frac{d}{\sqrt{d^{2}+1}}\cdot\left(\frac{2\lambda A_{T}}{e^{d}}\right)^{p-1}\right\}$ $\displaystyle\leq 0$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ , and it concludes the proof.
+∎ In the case $n\geq 2$ ,
+if the function $B$ is suitably small, for some $C>0$ we obtain that $J_{2}\leq-C$ and it leads to achievement of the purpose. Lemma 3.7 . Let $n\geq 2$ , $m>0$ , $\lambda\in[\frac{1}{3},1]$ ,
+and $K>0$ be such that $K\geq\sqrt{b_{\lambda}R^{n}}$ , and let $B_{0}\in(0,1)$ be such that $K\sqrt{B_{0}}\leq R^{n}$ , ( 3.32 ), ( 3.33 ) and (3.41) $\displaystyle B_{0}^{2-\frac{2}{n}}\leq\left(\frac{2\lambda A_{T}}{e^{d}}-\frac{\mu}{n}B_{0}\right)^{2}$ hold. For some $T>0$ , if $B\in C^{1}([0,T))$ satisfies that (3.42) $\displaystyle\begin{cases}B^{\prime}(t)\geq-\dfrac{n^{q}\chi}{\sqrt{2}}\cdot\left(\dfrac{2\lambda A_{T}}{e^{d}}\right)^{q-1}B^{1-\frac{1}{n}}(t),\\[11.38109pt]
+B(0)\leq B_{0}\end{cases}$ for all $t\in(0,T)$ with $d$ and $A_{T}$ as in ( 3.3 ) and
+( 3.30 ), respectively, then the function $w_{\rm in}$ defined as ( 3.12 ) has the property that $(\mathcal{P}w_{\rm in})(s,t)\leq 0$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ . Proof. We write $\xi=\frac{s}{B(t)}$ for $t\in(0,T)$ and $s\in(0,B(t))$ . Thanks to ( 3.41 ) and $B(t)\leq B(0)\leq B_{0},$ we obtain that $\displaystyle B^{2-\frac{2}{n}}(t)\leq B_{0}^{2-\frac{2}{n}}$ $\displaystyle\leq\left(\frac{2\lambda A_{T}}{e^{d}}-\frac{\mu}{n}B_{0}\right)^{2}$ $\displaystyle\leq\left(\frac{2\lambda A_{T}}{e^{d}}-\frac{\mu}{n}B(t)\right)^{2}$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ . Moreover,
+since ( 3.30 ) and ( 3.36 ) hold,
+we can see from ( 3.2 ), ( 3.36 ) and the inequality $\xi<1$ that $\displaystyle B^{2-\frac{2}{n}}(t)$ $\displaystyle\leq\left(\frac{2\lambda A_{T}}{e^{d}}\cdot 1-\frac{\mu}{n}B(t)\right)^{2}$ $\displaystyle\leq\left(A(t)\cdot\frac{2\lambda}{e^{d}}\cdot\frac{e^{d}\xi-1}{d\xi}-\frac{\mu}{n}B(t)\right)^{2}$ $\displaystyle=\xi^{-2}\left(A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi\right)^{2}$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ .
+Therefore, we derive that (3.43) $\displaystyle 1\leq B^{\frac{2}{n}-2}\xi^{-2}\left(A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi\right)^{2}$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ . Thanks to ( 3.43 ),
+we infer from $\xi<1$ that (3.44) $\displaystyle-J_{2}(s,t)$ $\displaystyle=n^{q}\chi\cdot\frac{A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi}{\sqrt{1+B^{\frac{2}{n}-2}(t)\xi^{\frac{2}{n}-2}(A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi)^{2}}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ $\displaystyle\geq n^{q}\chi\cdot\frac{A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi}{\sqrt{(1+\xi^{\frac{2}{n}})B^{\frac{2}{n}-2}(t)\xi^{-2}(A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi)^{2}}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ $\displaystyle\geq n^{q}\chi\cdot\frac{1}{\sqrt{(1+1^{\frac{2}{n}})B^{\frac{2}{n}-2}(t)\xi^{-2}}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ $\displaystyle=\frac{n^{q}\chi}{\sqrt{2}}B^{1-\frac{1}{n}}(t)\xi\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ .
+Moreover, using ( 3.30 ) and $\varphi^{\prime}(\xi)\geq\varphi^{\prime}(0)=\frac{2\lambda}{e^{d}}$ , we obtain from $B(t)<1$ that (3.45) $\displaystyle\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}\geq\left(\frac{A_{T}\cdot\frac{2\lambda}{e^{d}}}{1}\right)^{q-1}=\left(\frac{2\lambda A_{T}}{e^{d}}\right)^{q-1}.$ On the other hand, from the fact $\varphi^{\prime},\varphi^{\prime\prime}>0$ (given by ( 3.4 )
+and ( 3.5 ), respectively), we verify that (3.46) $\displaystyle J_{1}<0$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ .
+Recalling ( 3.26 ) and ( 3.29 )
+(see Lemma 3.4 ), we can show that a combination of
+( 3.44 ) and ( 3.46 ) yields that by
+( 3.42 ) and ( 3.45 ), $\displaystyle\frac{B(t)}{A(t)\varphi^{\prime}(\xi)}(\mathcal{P}w_{\rm in})(s,t)$ $\displaystyle\leq-\xi B^{\prime}(t)-\frac{n^{q}\chi}{\sqrt{2}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}B^{1-\frac{1}{n}}(t)\xi$ $\displaystyle\leq\xi\left\{-B^{\prime}(t)-\frac{n^{q}\chi}{\sqrt{2}}\cdot\left(\frac{2\lambda A_{T}}{e^{d}}\right)^{q-1}B^{1-\frac{1}{n}}(t)\right\}$ $\displaystyle\leq 0$ for all $t\in(0,T)$ and all $s\in(0,B(t))$ ,
+which means the end of the proof.
+∎ 3.5 Subsolution properties: Intermediate region. In this subsection we will consider the
+case that $s\in(B(t),K\sqrt{B(t)})$ . Here the term $J_{1}$ is positive due to the definition of $\varphi$ in the region.
+Therefore, an estimate for $J_{2}$ is important in this part.
+The following arguments are based on these of [ 2 ] . Lemma 3.8 . Let $n\in\mathbb{N}$ , $m>0$ , $K>0$ and $T>0$ ,
+and let $B\in C^{1}([0,T))$ be positive
+and satisfy that ( 3.6 ) and $K\sqrt{B(t)}<R^{n}$ for all $t\in[0,T)$ .
+Then the function $J_{1}$ defined as ( 3.27 ) satisfies (3.47) $\displaystyle J_{1}(s,t)\leq n^{p}B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ with $\xi=\frac{s}{B(t)}$ . Proof. An argument similar to that in the proof of [ 2 , Lemma 3.7] implies the conclusion this lemma.
+∎ The following two lemmas have already been proved in
+proofs of [ 2 , Lemmas 3.8 and 3.10] .
+Thus we only recall statements of lemmas. Lemma 3.9 . Let $n\in\mathbb{N}$ , $m>0$ , $\lambda\in[\frac{1}{3},1]$ , $K>0$ be such that $K\geq\sqrt{b_{\lambda}R^{n}}$ ,
+and let $B_{0}\in(0,1)$ satisfy $K\sqrt{B_{0}}<R^{n}$ and ( 3.32 ),
+as well as for some $T>0$ let $B\in C^{1}([0,T))$ be positive and nonincreasing and be such that $B(0)\leq B_{0}$ . Then the inequality (3.48) $\displaystyle\frac{1}{A^{2}(t)B^{\frac{2}{n}-2}(t)\xi^{\frac{2}{n}-2}\varphi^{2}(\xi)}\leq\frac{\omega_{n}^{2}}{\lambda^{2}m^{2}}\cdot\left(1+\frac{a_{\lambda}R^{n}}{K^{2}}\right)\cdot K^{2-\frac{2}{n}}B_{0}^{3-\frac{3}{n}}$ holds for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ with $\xi=\frac{s}{B(t)}$ . Lemma 3.10 . Let $n\in\mathbb{N}$ , $m>0$ , $\lambda\in[\frac{1}{3},1]$ , $K>0$ , $\delta\in(0,1)$ , and let $B_{0}\in(0,1)$ fulfill $K\sqrt{B_{0}}<R^{n}$ , ( 3.32 )
+and $\frac{\mu}{nA_{T}}\cdot{\rm max}\left\{\frac{B_{0}}{\lambda},\,2K\sqrt{B_{0}}\right\}\leq\delta$ with $\mu$ and $A_{T}$ introduced in ( 1.3 )
+and ( 3.30 ), respectively, and suppose that $T>0$ and $B\in C^{1}([0,T))$ is positive
+and such that $B(t)\leq B_{0}$ for all $t\in(0,T)$ . Then the inequality (3.49) $\displaystyle A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi\geq(1-\delta)A(t)\varphi(\xi)$ holds for all $t\in(0,T)$ and all $s\in((B(t),K\sqrt{B(t)})$ with $\xi=\frac{s}{B(t)}$ for $s\in(B(t),K\sqrt{B(t)})$ and $t\in(0,T)$ . In order to have the estimate for $\mathcal{P}w_{\rm in}$ in the intermediate region when $p<q$ , we will provide
+the following lemma. Lemma 3.11 . Let $n\in\mathbb{N}$ , $m>0$ , $\lambda\in[\frac{1}{3},1]$ , $K>0$ ,
+and let $B\in C^{1}([0,T))$ be such that $K\sqrt{B(t)}<R^{n}$ and be a positive and nonincreasing function and put (3.50) $\displaystyle\sigma:=\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{K^{2}+a_{\lambda}R^{n}}.$ Then the inequality (3.51) $\displaystyle\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{-k}\leq\sigma^{-k}$ holds for all $k\geq 0$ and all $s\in(B(t),K\sqrt{B(t)})$ , $t\in(0,T)$ with $\xi=\frac{s}{B(t)}$ ,
+where $A$ and $\varphi^{\prime}$ are
+as in ( 3.7 ) and ( 3.4 ), respectively. Proof. We write $\xi=\frac{s}{B(t)}$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ . Using that $\varphi^{\prime}(\xi)=\frac{a_{\lambda}}{(\xi-b_{\lambda})^{2}}$ for $1<\xi<\frac{K}{\sqrt{B(t)}}$ ,
+we infer from $B(t)<1$ and $0\leq b_{\lambda}\leq 1$ for $\lambda\in[\frac{1}{3},1]$ that (3.52) $\displaystyle\varphi^{\prime}(\xi)$ $\displaystyle=\frac{a_{\lambda}}{(\xi-b_{\lambda})^{2}}=\frac{a_{\lambda}}{\xi^{2}-2\xi b_{\lambda}+b_{\lambda}^{2}}$ $\displaystyle\geq\frac{a_{\lambda}}{\bigl(\frac{K}{\sqrt{B(t)}}\bigr)^{2}-2\cdot 1\cdot b_{\lambda}+b_{\lambda}^{2}}$ $\displaystyle=\frac{a_{\lambda}B(t)}{K^{2}+(b_{\lambda}^{2}-2b_{\lambda})B(t)}\geq\frac{a_{\lambda}}{K^{2}}B(t).$ A combination of ( 3.30 ) and
+( 3.52 ) yields that $\displaystyle\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)$ $\displaystyle\geq\frac{m}{\omega_{n}}\cdot\frac{1}{1+\frac{a_{\lambda}R^{n}}{K^{2}}}\cdot\frac{a_{\lambda}}{K^{2}}$ $\displaystyle=\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{K^{2}+a_{\lambda}R^{n}}=\sigma$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ ,
+which means the end of proof.
+∎ Thanks to above lemmas, we can see that if a function $B$ is suitably small and nonincreasing and fulfills some differential
+inequality, then $\underline{w}$ becomes
+a subsolution of
+( 2.4 ) in the
+intermediate region $(B(t),K\sqrt{B(t)})$ . First, we will consider the case $n=1$ . The largeness
+condition for $m$ (see ( 1.8 )) will lead
+to
+the following lemma. Lemma 3.12 . Let $p\leq q$ , $n=1$ , $\chi>0$ and $\lambda\in(\frac{5-\sqrt{17}}{2},1]$ , and put $\delta_{\lambda}:=\frac{a_{\lambda}}{b_{\lambda}}$ with $a_{\lambda}$ and $b_{\lambda}$ as in ( 3.1 ), and let $m_{c}(p,q,\chi,\lambda,R)$ be such that (3.53) $\displaystyle m_{c}:=\inf\left\{m\ \Bigg|\ \exists\,\lambda\in\left(\frac{5-\sqrt{17}}{2},1\right];\,\frac{(1-\delta_{\lambda})m\chi}{\sqrt{\frac{1+\delta_{\lambda}}{\lambda^{2}}+m^{2}}}-\left(\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{(a_{\lambda}+b_{\lambda})R}\right)^{p-q}=0\right\}.$ Then for all $m>m_{c}$ there exist $K>0$ , $\kappa_{1}>0$ ,
+and $B_{01}$ such that $K\sqrt{B_{01}}<R^{n}$ ,
+and for some $T>0$ , if $B\in C^{1}([0,T))$ is a positive and nonincreasing function fulfilling ( 3.6 )
+as well as (3.54) $\displaystyle\begin{cases}B^{\prime}(t)\geq-\kappa_{1}\sqrt{B(t)},\\[2.84526pt]
+B(0)\leq B_{01}\end{cases}$ for all $t\in(0,T)$ ,
+then $w_{\rm in}$ as in ( 3.12 ) satisfies $(\mathcal{P}w_{\rm in})(s,t)\leq 0$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ . Proof. The proof is based on that of [ 2 , Lemma 3.11] .
+Since $\delta_{\lambda}=\frac{a_{\lambda}}{b_{\lambda}}$ holds,
+we obtain $b_{\lambda}R=\frac{a_{\lambda}R}{\delta_{\lambda}}$ with $a_{\lambda}$ and $b_{\lambda}$ as in ( 3.1 ),
+which enables us to pick $K>0$ such that (3.55) $\displaystyle K\geq\sqrt{b_{\lambda}R}$ and (3.56) $\displaystyle\frac{a_{\lambda}R}{K^{2}}\leq\delta_{\lambda}$ as well as (3.57) $\displaystyle c_{1}$ $\displaystyle:=\frac{(1-\delta_{\lambda})m\chi}{\sqrt{\frac{1+\delta_{\lambda}}{\lambda^{2}}+m^{2}}}-\left(\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{K^{2}+a_{\lambda}R}\right)^{p-q}$ $\displaystyle\,=\frac{(1-\delta_{\lambda})m\chi}{\sqrt{\frac{1+\delta_{\lambda}}{\lambda^{2}}+m^{2}}}-\sigma^{p-q}$ is positive (by ( 3.53 ) and $m>m_{c}$ ) with $\sigma$ as in ( 3.50 ).
+Furthermore, it is possible to fix $B_{01}\in(0,1)$ fulfilling $K\sqrt{B_{01}}<R$ and (3.58) $\displaystyle B_{01}\leq\frac{K^{2}}{4(a_{\lambda}+b_{\lambda})^{2}}$ as well as (3.59) $\displaystyle\frac{\mu}{nA_{T}}\cdot{\rm max}\left\{\frac{B_{01}}{\lambda},\,2K\sqrt{B_{01}}\right\}\leq\delta_{\lambda}$ with $A_{T}$ as in ( 3.30 ), and put (3.60) $\displaystyle\kappa_{1}:=\frac{\sigma^{q-1}c_{1}}{K},$ and let $T>0$ and $B\in C^{1}([0,T))$ be positive and nonincreasing and such that
+( 3.54 ) holds.
+Then, recalling $A^{\prime}\leq 0$ on $(0,T)$ (see Lemma 3.4 ),
+we infer from
+( 3.26 ) that (3.61) $\displaystyle\frac{B(t)}{A(t)\varphi^{\prime}(\xi)}\cdot(\mathcal{P}w_{\rm in})(s,t)\leq-\xi B^{\prime}(t)+J_{1}(s,t)+J_{2}(s,t)$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ with $\xi=\frac{s}{B(t)}$ and $J_{1}$ and $J_{2}$ as in ( 3.27 ) and ( 3.28 ).
+Here, according to Lemma 3.8 ,
+we obtain from ( 3.47 ) that (3.62) $\displaystyle J_{1}(s,t)\leq\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ . Since ( 3.55 ),
+( 3.56 ), ( 3.58 ) and ( 3.59 ) hold,
+a combination of Lemmas 3.9 and 3.10 with an argument
+similar to that in
+the proof of [ 2 , Lemma 3.11] leads to that $\sqrt{1+\left(A(t)\varphi(\xi)-\mu B(t)\xi\right)^{2}}\leq\sqrt{\frac{1+\delta_{\lambda}}{\lambda^{2}m^{2}}+1}\cdot A(t)\varphi(\xi)$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ .
+Therefore, we can see from ( 3.49 )
+that (3.63) $\displaystyle-J_{2}(s,t)$ $\displaystyle=\chi\cdot\frac{A(t)\varphi(\xi)-\mu B(t)\xi}{\sqrt{1+(A(t)\varphi(\xi)-\mu B(t)\xi)^{2}}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ $\displaystyle\geq\chi\cdot\frac{(1-\delta_{\lambda})A(t)\varphi(\xi)}{\sqrt{\frac{1+\delta_{\lambda}}{\lambda^{2}m^{2}}+1}\cdot A(t)\varphi(\xi)}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ $\displaystyle=\frac{(1-\delta_{\lambda})m\chi}{\sqrt{\frac{1+\delta_{\lambda}}{\lambda^{2}}+m^{2}}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ .
+From the relation $p\leq q$ , a combination of ( 3.51 ) and ( 3.60 )–( 3.63 ),
+along with
+the definition of $c_{1}$ (see ( 3.57 ))
+implies that (3.64) $\displaystyle\frac{B(t)}{A(t)\varphi^{\prime}(\xi)}\cdot(\mathcal{P}w_{\rm in})(s,t)$ $\displaystyle\leq-\xi B^{\prime}(t)+\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}-\frac{(1-\delta_{\lambda})m\chi}{\sqrt{\frac{1+\delta_{\lambda}}{\lambda^{2}}+m^{2}}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ $\displaystyle=\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}\Biggl\{-\xi B^{\prime}(t)\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{1-q}+\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-q}-\frac{(1-\delta_{\lambda})m\chi}{\sqrt{\frac{1+\delta_{\lambda}}{\lambda^{2}}+m^{2}}}\Biggr\}$ $\displaystyle\leq\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}\Biggl\{-\xi B^{\prime}(t)\sigma^{1-q}+\sigma^{p-q}-\frac{(1-\delta_{\lambda})m\chi}{\sqrt{\frac{1+\delta_{\lambda}}{\lambda^{2}}+m^{2}}}\Biggr\}$ $\displaystyle=\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}\sigma^{1-q}\left(-\xi B^{\prime}(t)-\sigma^{q-1}c_{1}\right)$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ .
+Recalling that $\xi\leq\frac{K}{\sqrt{B(t)}}$ holds in the region,
+we infer from the definition of $\kappa_{1}$ (see ( 3.60 )) that (3.65) $\displaystyle-\xi B^{\prime}(t)-\sigma^{q-1}c_{1}$ $\displaystyle=\xi\cdot\left(-B^{\prime}(t)-\frac{\sigma^{q-1}c_{1}}{\xi}\right)$ $\displaystyle\leq\xi\cdot\left(-B^{\prime}(t)-\frac{\sigma^{q-1}c_{1}\sqrt{B(t)}}{K}\right)$ $\displaystyle=\xi\cdot\left(-B^{\prime}(t)-\kappa_{1}\sqrt{B(t)}\right)$ $\displaystyle\leq 0$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ .
+A combination of ( 3.64 ) and ( 3.65 ) leads to
+that we can attain the conclusion of the proof.
+∎ Second, we will consider the case $n\geq 2$ .
+Due to choosing
+suitably $\chi$ as in ( 1.11 ), we will infer from
+the condition for a function $B$ that $\underline{w}$ becomes
+a subsolution of ( 2.4 ). Lemma 3.13 . Let $p\leq q$ , $n\geq 2$ , $m>0$ , $\chi>0$ and $\lambda=\frac{1}{3}$ .
+Then for all $\chi>(\frac{mn}{\omega_{n}R^{n}})^{p-q}$ there exist $K>0$ , $\kappa_{n}>0$ , and $B_{0n}$ such that $K\sqrt{B_{0n}}<R^{n}$ , and such that if $T>0$ and $B\in C^{1}([0,T))$ is a positive and
+nonincreasing such that (3.66) $\displaystyle\begin{cases}B^{\prime}(t)\geq-\kappa_{n}B^{1-\frac{1}{2n}}(t),\\[2.84526pt]
+B(0)\leq B_{0n}\end{cases}$ for all $t\in(0,T)$ ,
+then the function $w_{\rm in}$ defined in ( 3.12 )
+satisfies $(\mathcal{P}w_{\rm in})(s,t)\leq 0$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ . Proof. The proof is based on that of [ 2 , Lemma 3.12] .
+Thanks to $\lambda=\frac{1}{3}$ and $\chi>(\frac{mn}{\omega_{n}R^{n}})^{p-q}$ ,
+we have that $b_{\lambda}=0$ and $\chi>\left(n\cdot\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{a_{\lambda}R^{n}}\right)^{p-q}$ with $a_{\lambda}$ as in ( 3.1 ).
+Then there exists some $K>0$ fulfilling (3.67) $\displaystyle\chi$ $\displaystyle>\left(n\cdot\frac{m}{\omega_{n}}\cdot\frac{a_{\lambda}}{K^{2}+a_{\lambda}R^{n}}\right)^{p-q}$ $\displaystyle=(n\sigma)^{p-q}$ with $\sigma$ given by ( 3.50 ).
+Using ( 3.67 ), we can choose $\delta\in(0,1)$ suitably small such that (3.68) $\displaystyle c_{1}:=n^{q}\cdot\left\{\frac{(1-\delta)\chi}{\sqrt{1+\delta}}-(n\sigma)^{p-q}\right\}$ is positive. Finally, we take $B_{0n}\in(0,1)$ such that $K\sqrt{B_{0n}}<R^{n}$ and (3.69) $\displaystyle B_{0n}\leq\frac{K^{2}}{4(a_{\lambda}+b_{\lambda})^{2}}$ as well as (3.70) $\displaystyle\frac{\mu}{nA_{T}}\cdot{\rm max}\left\{\frac{B_{0n}}{\lambda},\,2K\sqrt{B_{0n}}\right\}\leq\delta$ with $A_{T}$ as in ( 3.30 ) and (3.71) $\displaystyle\frac{\omega_{n}^{2}}{\lambda^{2}m^{2}}\cdot\left(1+\frac{a_{\lambda}R^{n}}{K^{2}}\right)\cdot K^{2-\frac{2}{n}}B_{0n}^{3-\frac{3}{n}}\leq\delta,$ and we put (3.72) $\displaystyle\kappa_{n}:=\sigma^{q-1}c_{1}K^{-\frac{1}{n}},$ and suppose $T>0$ and $B\in C^{1}([0,T))$ is positive and nonincreasing and such that ( 3.66 ) holds.
+Then, from
+( 3.69 ),
+Lemma 3.4 implies
+that $A^{\prime}\leq 0$ on $(0,T)$ . Recalling ( 3.26 ),
+we derive that (3.73) $\displaystyle\frac{B(t)}{A(t)\varphi^{\prime}(\xi)}\cdot(\mathcal{P}w_{\rm in})(s,t)\leq-\xi B^{\prime}(t)+J_{1}(s,t)+J_{2}(s,t)$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ with $\xi=\frac{s}{B(t)}$ , and $J_{1}$ and $J_{2}$ given by ( 3.27 ) and ( 3.28 ),
+respectively. From ( 3.69 )
+and ( 3.70 ), using Lemma 3.10 ,
+we obtain that (3.74) $\displaystyle A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi\geq(1-\delta)A(t)\varphi(\xi)$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ .
+Noticing ( 3.69 ), we can use
+Lemma 3.9 to show from
+( 3.71 ) that (3.75) $\displaystyle\frac{1}{A^{2}(t)B^{\frac{2}{n}-2}(t)\xi^{\frac{2}{n}-2}\varphi^{2}(\xi)}$ $\displaystyle\leq\frac{\omega_{n}^{2}}{\lambda^{2}m^{2}}\cdot\left(1+\frac{a_{\lambda}R^{n}}{K^{2}}\right)\cdot K^{2-\frac{2}{n}}B_{0n}^{3-\frac{3}{n}}$ $\displaystyle\leq\delta$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ .
+Employing ( 3.74 ), ( 3.75 )
+and the fact that $\delta<1$ , we can estimate that (3.76) $\displaystyle-J_{2}(s,t)$ $\displaystyle=n^{q}\chi\cdot\frac{A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi}{\sqrt{1+B^{\frac{2}{n}-2}(t)\xi^{\frac{2}{n}-2}(A(t)\varphi(\xi)-\frac{\mu}{n}B(t)\xi)^{2}}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ $\displaystyle\geq n^{q}\chi\cdot\frac{(1-\delta)A(t)\varphi(\xi)}{\sqrt{1+B^{\frac{2}{n}-2}(t)\xi^{\frac{2}{n}-2}A^{2}(t)\varphi^{2}(\xi)}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ $\displaystyle\geq n^{q}\chi\cdot\frac{(1-\delta)A(t)\varphi(\xi)}{\sqrt{(\delta+1)B^{\frac{2}{n}-2}(t)\xi^{\frac{2}{n}-2}A^{2}(t)\varphi^{2}(\xi)}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ $\displaystyle=\frac{(1-\delta)n^{q}\chi}{\sqrt{\delta+1}}\cdot B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\cdot\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ .
+On the other hand, we use Lemma 3.8 to
+show that (3.77) $\displaystyle J_{1}(s,t)\leq n^{p}B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ . Thanks to ( 3.73 ), ( 3.76 ) and ( 3.77 ), we derive that (3.78) $\displaystyle\frac{B(t)}{A(t)\varphi^{\prime}(\xi)}\cdot(\mathcal{P}w_{\rm in})(s,t)$ $\displaystyle\leq-\xi B^{\prime}(t)+n^{p}B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}$ $\displaystyle\quad\,-\frac{(1-\delta)n^{q}\chi}{\sqrt{\delta+1}}\cdot B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}.$ Since $\displaystyle-\xi B^{\prime}(t)+n^{p}B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-1}-\frac{(1-\delta)n^{q}\chi}{\sqrt{\delta+1}}\cdot B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}$ $\displaystyle=\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}\Biggl\{-\xi B^{\prime}(t)\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{1-q}$ $\displaystyle\quad\,+\left(n^{p}\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{p-q}-\frac{(1-\delta)n^{q}\chi}{\sqrt{\delta+1}}\right)B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\Biggr\}$ holds, a combination of ( 3.68 ), ( 3.78 ) and
+Lemma 3.11 , along with the relation $p\leq q$ yields that (3.79) $\displaystyle\frac{B(t)}{A(t)\varphi^{\prime}(\xi)}\cdot(\mathcal{P}w_{\rm in})(s,t)$ $\displaystyle\leq\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}\Biggl\{-\xi B^{\prime}(t)\sigma^{1-q}+\left(n^{p}\sigma^{p-q}-\frac{(1-\delta)n^{q}\chi}{\sqrt{\delta+1}}\right)B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\Biggr\}$ $\displaystyle=\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}\sigma^{1-q}\Biggl\{-\xi B^{\prime}(t)-n^{q}\sigma^{q-1}\Biggl(\frac{(1-\delta)\chi}{\sqrt{\delta+1}}-(n\sigma)^{p-q}\Biggr)B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\Biggr\}$ $\displaystyle=\left(\frac{A(t)\varphi^{\prime}(\xi)}{B(t)}\right)^{q-1}\sigma^{1-q}\left(-\xi B^{\prime}(t)-\sigma^{q-1}c_{1}B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}\right)$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ .
+Finally, according to that $\xi<\frac{K}{\sqrt{B(t)}}$ which means that $s<K\sqrt{B(t)}$ ,
+we infer from ( 3.66 ) and ( 3.72 ) that (3.80) $\displaystyle-\xi B^{\prime}(t)-\sigma^{q-1}c_{1}B^{1-\frac{1}{n}}(t)\xi^{1-\frac{1}{n}}$ $\displaystyle=\xi\cdot\left(-B^{\prime}(t)-\sigma^{q-1}c_{1}B^{1-\frac{1}{n}}(t)\xi^{-\frac{1}{n}}\right)$ $\displaystyle\leq\xi\cdot\left(-B^{\prime}(t)-\sigma^{q-1}c_{1}B^{1-\frac{1}{n}}(t)\cdot K^{-\frac{1}{n}}B^{\frac{1}{2n}}(t)\right)$ $\displaystyle=\xi\cdot\left(-B^{\prime}(t)-\kappa_{n}B^{1-\frac{1}{2n}}(t)\right)$ $\displaystyle\leq 0$ for all $t\in(0,T)$ and all $s\in(B(t),K\sqrt{B(t)})$ . Thus
+( 3.79 ) and ( 3.80 )
+lead to the end of the proof.
+∎ 4 Blow-up. Proof of Theorem 1.1 In this section, by virtue of a combination of
+Lemmas 3.3 , 3.6 , 3.7 , 3.12 and 3.13 , we can show our main
+purpose such that there is an initial data satisfying
+that the corresponding solution blows up by
+using
+the comparison argument from [ 2 , Lemma 5.1] . Proof of Theorem 1.1 . If $n=1$ ,
+thanks to ( 1.8 ), for all $\chi>1$ ( $\chi>0$ when $q>p$ ) and some $\lambda\in(\frac{5-\sqrt{17}}{2},1)$ , Lemma 3.12 entails that there exist $K>0$ , $\kappa_{1}>0$ and $B_{01}\in(0,1)$ with properties listed there.
+On the other hand, if $n\geq 2$ , $m>0$ and $\lambda=\frac{1}{3}$ ,
+then from the condition
+( 1.11 ) we can use
+Lemma 3.13 to see that for all $\chi>0$ there exist $K>1,\kappa_{n}>0$ and $B_{0n}\in(0,1)$ with properties noted there.
+Moreover, we
+introduce $\kappa\in(0,\kappa_{n}]$ given by (4.1) $\displaystyle\kappa\leq\frac{a_{\lambda}^{q-1}(nm)^{q}\chi K}{2(a_{\lambda}+b_{\lambda})(K^{2}+a_{\lambda}R^{n})^{q-1}\omega_{n}^{q}R^{n}\sqrt{1+K^{\frac{2}{n}-2}\cdot\frac{m^{2}}{\omega_{n}^{2}}}}$ and (4.2) $\displaystyle\kappa\leq\frac{d}{\sqrt{d^{2}+1}}\cdot\left(\dfrac{2\lambda A_{T}}{e^{d}}\right)^{p-1}$ as well as (4.3) $\displaystyle\kappa\leq\frac{n^{q}\chi}{\sqrt{2}}\cdot\left(\dfrac{2\lambda A_{T}}{e^{d}}\right)^{q-1}$ with $d$ and $A_{T}$ as in ( 3.3 ) and ( 3.30 ),
+respectively, and we take $B_{0}\in(0,B_{0n}]$ satisfying
+( 3.3 ), ( 3.33 ) and ( 3.41 ).
+Here we define $B(t):=\left(B_{0}^{\frac{1}{2n}}-\frac{\kappa}{2n}t\right)^{2n}$ for $t\in(0,T)$ with $T:=\frac{2n}{\kappa}\cdot B_{0}^{\frac{1}{2n}}.$ Then, $B\in C^{1}([0,T))$ is the solution of the following
+differential equation: (4.4) $\displaystyle\begin{cases}B^{\prime}(t)=-\kappa B^{1-\frac{1}{2n}}(t),\\[2.84526pt]
+B(0)=B_{0}\end{cases}$ for all $t\in(0,T).$ According to Lemma 3.2 , putting $\underline{w}(s,t):=\begin{cases}w_{\rm in}(s,t)&\mbox{if}\ t\in[0,T)\ \mbox{and}\ s\in[0,K\sqrt{B(t)}],\\[2.84526pt]
+w_{\rm out}(s,t)&\mbox{if}\ t\in[0,T)\ \mbox{and}\ s\in(K\sqrt{B(t)},R^{n}]\end{cases}$ with functions $w_{\rm in}$ and $w_{\rm out}$ as in
+( 3.12 ) and ( 3.13 ), respectively,
+we see that the function $\underline{w}$ is well-defined and satisfies $\underline{w}\in C^{1}([0,R^{n}]\times[0,T))$ and $\underline{w}(\cdot,t)\in C^{2}([0,R^{n}]\setminus\{B(t),K\sqrt{B(t)}\})$ for all $t\in[0,T)$ . Moreover, thanks to ( 4.1 ), ( 4.2 ),
+( 4.3 ), ( 4.4 ) and the fact that $B(t)\leq B_{0}<1$ ,
+we can use Lemmas 3.3 , 3.6 , 3.7 , 3.12 and 3.13 to lead to functions $w_{\rm out}$ and $w_{\rm in}$ fulfilling (4.5) $\displaystyle(\mathcal{P}w_{\rm out})(s,t)\leq 0$ for all $t\in(0,T)$ and all $s\in(K\sqrt{B(t)},R^{n})$ as well as (4.6) $\displaystyle(\mathcal{P}w_{\rm in})(s,t)\leq 0$ for all $t\in(0,T)$ and all $s\in(0,B(t))\cup(B(t),K\sqrt{B(t)})$ .
+Therefore, we obtain that $(\mathcal{P}\underline{w})(s,t)\leq 0$ for all $t\in(0,T)$ and all $s\in(0,R^{n})\setminus\{B(t),K\sqrt{B(t)}\}$ since ( 4.5 ) and ( 4.6 ) hold. Here
+we assume that $u_{0}$ satisfies ( 1.2 ) and also $\int_{B_{r}(0)}{u_{0}(x)\,dx}\geq M_{m}(r):=\omega_{n}\underline{w}(r^{n},0)$ for all $r\in[0,R]$ . Then, we can see that $w(s,0)\geq\underline{w}(s,0)$ for all $s\in(0,R^{n})$ with the solution $w$ of ( 2.4 )
+defined by ( 2.2 ). Moreover, putting $\widetilde{T}:=\mbox{min}\{T_{\rm max},T\}$ , we derive that $w(0,t)=\underline{w}(0,t)=0\quad\mbox{and}\quad w(R^{n},t)=\underline{w}(R^{n},t)=\frac{m}{\omega_{n}}$ for all $t\in(0,\widetilde{T})$ .
+In order to use the
+comparison principle stated in [ 2 , Lemma 5.1] we write $\alpha:=2-\frac{2}{n}\geq 0$ and let $\phi(s,t,y_{0},y_{1},y_{2}):=n^{p+1}\cdot\frac{s^{\alpha}{y_{1}}^{p}y_{2}}{\sqrt{y_{1}^{2}+n^{2}s^{\alpha}y_{2}^{2}}}+n^{q}\chi\cdot\frac{(y_{0}-\frac{\mu}{n}s){y_{1}}^{q}}{\sqrt{1+s^{-\alpha}(y_{0}-\frac{\mu}{n}s)^{2}}}$ for $(s,t,y_{0},y_{1},y_{2})\in G:=(0,R^{n})\times(0,\infty)\times\mathbb{R}\times(0,\infty)\times\mathbb{R}$ . Then $\phi\in C^{1}(G)$ with (4.7) $\displaystyle\frac{\partial\phi}{\partial y_{2}}(s,t,y_{0},y_{1},y_{2})=\frac{n^{p+1}s^{\alpha}y_{1}^{p+2}}{{\sqrt{y_{1}^{2}+n^{2}s^{\alpha}y_{2}^{2}}}^{3}}\geq 0$ and $\displaystyle\frac{\partial\phi}{\partial y_{1}}(s,t,y_{0},y_{1},y_{2})$ $\displaystyle=n^{p+1}\cdot\frac{ps^{\alpha}y_{1}^{p-1}y_{2}(y_{1}^{2}+n^{2}s^{\alpha}y_{2}^{2})-s^{\alpha}y_{1}^{p+1}y_{2}}{{\sqrt{y_{1}^{2}+n^{2}s^{\alpha}y_{2}^{2}}}^{3}}$ $\displaystyle\quad\,+n^{q}\chi\cdot\frac{q(y_{0}-\frac{\mu}{n}s)y_{1}^{q-1}}{\sqrt{1+s^{-\alpha}(y_{0}-\frac{\mu}{n}s)^{2}}}$ as well as $\displaystyle\frac{\partial\phi}{\partial y_{0}}(s,t,y_{0},y_{1},y_{2})=n^{q}\chi\frac{y_{1}^{q}}{{\sqrt{1+s^{-\alpha}(y_{0}-\frac{\mu}{n}s)^{2}}}^{3}}$ for all $(s,t,y_{0},y_{1},y_{2})\in G$ .
+Here if $S\subset(0,R^{n})\times\mathbb{R}\times(0,\infty)\times\mathbb{R}$ is compact, then there exist $a_{1},a_{2}\in(0,\infty)$ and $\ b_{1},b_{2}\in\mathbb{R}$ satisfying that $S\subset(0,R^{n})\times\mathbb{R}\times(a_{1},a_{2})\times(b_{1},b_{2}).$ Therefore, putting $b:=\mbox{max}\{|b_{1}|,|b_{2}|\}$ and $a:=\mbox{max}\{a_{1}^{p-2},a_{2}^{p-2}\}$ ,
+we establish that for any $t\in(0,\widetilde{T})$ , (4.8) $\displaystyle\left|\frac{\partial\phi}{\partial y_{1}}(s,t,y_{0},y_{1},y_{2})\right|$ $\displaystyle\leq\left|n^{p+1}\cdot\frac{ps^{\alpha}y_{1}^{p-1}y_{2}(y_{1}^{2}+n^{2}s^{\alpha}y_{2}^{2})-s^{\alpha}y_{1}^{p+1}y_{2}}{{\sqrt{y_{1}^{2}+n^{2}s^{\alpha}y_{2}^{2}}}^{3}}\right|$ $\displaystyle\quad\,+\left|n^{q}\chi\cdot\frac{q(y_{0}-\frac{\mu}{n}s)y_{1}^{q-1}}{\sqrt{1+s^{-\alpha}(y_{0}-\frac{\mu}{n}s)^{2}}}\right|$ $\displaystyle\leq\left|n^{p+1}\cdot\frac{(p-1)s^{\alpha}y_{1}^{p+1}y_{2}}{{\sqrt{y_{1}^{2}}}^{3}}\right|+\left|n^{p+3}\cdot\frac{ps^{2\alpha}y_{1}^{p-1}y_{2}^{3}}{{\sqrt{n^{2}s^{\alpha}y_{2}^{2}}}^{3}}\right|$ $\displaystyle\quad\,+\left|n^{q}\chi qs^{\frac{\alpha}{2}}y_{1}^{q-1}\cdot\frac{\sqrt{s^{-\alpha}(y_{0}-\frac{\mu}{n}s)^{2}}}{\sqrt{1+s^{-\alpha}(y_{0}-\frac{\mu}{n}s)^{2}}}\right|$ $\displaystyle\leq\left|n^{p+1}(p-1)s^{\alpha}y_{1}^{p-2}y_{2}\right|+\left|n^{p}ps^{\alpha}y_{1}^{p-1}\right|+\left|n^{q}\chi qs^{\frac{\alpha}{2}}y_{1}^{q-1}\right|$ $\displaystyle\leq\left|n^{p+1}(p-1)R^{n\alpha}a^{p-2}b\right|+\left|n^{p}pR^{n\alpha}a_{2}^{p-1}\right|+\left|n^{q}\chi qR^{\frac{n\alpha}{2}}a_{2}^{q-1}\right|$ for all $(s,y_{0},y_{1},y_{2})\in S$ , and thus $|\frac{\partial\phi}{\partial y_{1}}(\cdot,t,\cdot,\cdot,\cdot)|\in L_{\rm loc}^{\infty}((0,R^{n})\times\mathbb{R}\times(0,\infty)\times\mathbb{R})$ ,
+and for all $T_{0}\in(0,\widetilde{T})$ and all $\Lambda>0$ we derive that (4.9) $\displaystyle\left|\frac{\partial\phi}{\partial y_{0}}(s,t,y_{0},y_{1},y_{2})\right|\leq n^{q}\chi y_{1}^{q}\leq n^{q}\chi\Lambda^{q}$ for all $(s,t,y_{0},y_{1},y_{2})\in G$ with $t\in(0,T_{0})$ and $y_{1}\in(0,\Lambda)$ .
+Thanks to ( 4.7 ), ( 4.8 ) and ( 4.9 ),
+we can use [ 2 , Lemma 5.1] to yield that $w(s,t)\geq\underline{w}(s,t)$ for all $s\in[0,R^{n}]$ and all $t\in[0,\widetilde{T})$ . Since $w(0,t)=\underline{w}(0,t)=0$ for all $t\in[0,\widetilde{T})$ ,
+the mean value theorem
+implies
+that for each $t\in[0,\widetilde{T})$ there is some $\theta(t)\in(0,R^{n})$ with
+the property that $w_{s}(\theta(t),t)=\frac{w(B(t),t)}{B(t)}\geq\frac{\underline{w}(B(t),t)}{B(t)}=\frac{A(t)\varphi(1)}{B(t)}=\lambda\cdot\frac{A(t)}{B(t)}$ for all $t\in[0,\widetilde{T})$ . Noting
+that $u(r,t)=nw_{s}(r^{n},t)$ for all $r\in(0,R)$ and all $t\in(0,\widetilde{T})$ , we can show that $\sup_{r\in(0,R)}{u(r,t)}\geq w_{s}(\theta(t),t)=\lambda\cdot\frac{A(t)}{B(t)}$ for all $t\in(0,\widetilde{T})$ . Thanks to the facts that $B(t)\searrow 0\quad\mbox{and}\quad A(t)\to\frac{m}{\omega_{n}}\cdot\frac{K^{2}}{K^{2}+a_{\lambda}R^{n}}$ as $t\nearrow T$ by ( 3.7 ), using a consequence
+of the extensibility
+criterion ( 2.1 ), we can see
+that ( 1.10 ) holds with $T^{\ast}=T_{\rm max}\leq T<\infty$ ,
+which enables us to attain
+Theorem 1.1 .
+∎ References [1] N. Bellomo, M. Winkler, A degenerate chemotaxis system with flux limitation:
+maximally extended solutions and absence of gradient blow-up ,
+Comm.  Partial Differential Equations 42 (2017), 436–473. [2] N. Bellomo, M. Winkler, Finite-time blow-up in a degenerate chemotaxis system
+with flux limitation ,
+Trans.  Amer.  Math.  Soc.  Ser.  B 4 (2017), 31–67. [3] X. Cao, Global bounded solutions of the higher-dimensional
+Keller–Segel system under smallness conditions in optimal spaces ,
+Discrete Contin. Dyn. Syst. 35 (2015), 1891–1904. [4] T. Hashira, S. Ishida, T. Yokota, Finite-time blow-up for
+quasilinear degenerate Keller–Segel systems of
+parabolic–parabolic type , J. Differential Equations 264 (2018), 6459–6485. [5] T. Hillen, K. Painter, A user’s guide to PDE models for chemotaxis ,
+J. Math. Biol. 58 (2009), 183–217. [6] D. Horstmann, G. Wang, Blow-up in a chemotaxis model
+without symmetry
+assumptions , Eur. J. Appl. Math. 12 (2001), 159–177. [7] D. Horstmann, M. Winkler, Boundedness vs. blow-up in a chemotaxis system , J. Differential Equations 215 (2005), 52–107. [8] S. Ishida, T. Yokota, Global existence of weak solutions to
+quasilinear degenerate Keller–Segel systems of
+parabolic–parabolic type with small data ,
+J. Differential Equations 252 (2012), 2469–2491. [9] W. Jäger, S. Luckhaus, On explosions of solutions to a system of
+partial differential equations modelling chemotaxis ,
+Trans.  Amer.  Math.  Soc. 329 (1992), 819–824. [10] E. F. Keller, L. A. Segel, Traveling bands of
+chemotactic bacteria: A theoretical
+analysis , J. Theor. Biol. 30 (1971), 235–248. [11] P. Laurençot, N. Mizoguchi, Finite time blowup for the parabolic–parabolic
+Keller–Segel system with critical diffusion ,
+Ann. Inst. H. Poincaré Anal. Non Linéaire 34 (2017), 197–220. [12] Y. Mimura, The variational formulation of the fully parabolic
+Keller–Segel system with degenerate diffusion ,
+J. Differential Equations 263 (2017), 1477–1521. [13] N. Mizoguchi, M. Winkler, Blow-up in the
+two-dimensional
+parabolic Keller–Segel
+system , preprint. [14] M. Mizukami, T. Ono, T. Yokota, Extensibility criterion ruling out
+gradient blow-up in a quasilinear degenerate chemotaxis system ,
+preprint. [15] T. Nagai, T. Senba, K. Yoshida, Application of the Trudinger–Moser inequality
+to a parabolic system of chemotaxis ,
+Funkcial. Ekvac. 40 (1997), 411–433. [16] K. Osaki, A. Yagi, Finite dimensional attractor for
+one-dimensional Keller–Segel equations ,
+Funkcial. Ekvac. 44 (2001), 441–469. [17] M. Winkler, Finite-time blow-up in the higher-dimensional
+parabolic–parabolic Keller–Segel system J. Math. Pures Appl. 100 (2013), 748–767. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

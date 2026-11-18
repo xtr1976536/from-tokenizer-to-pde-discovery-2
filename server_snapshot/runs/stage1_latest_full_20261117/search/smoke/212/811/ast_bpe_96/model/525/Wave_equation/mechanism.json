@@ -1,0 +1,314 @@
+{
+  "case": "Wave_equation",
+  "top1_correct": false,
+  "top10_correct": false,
+  "attempted": 11,
+  "evaluated": 4,
+  "raw_correct_occurrences": 0,
+  "raw_correct_complete": 0,
+  "ever_raw_complete_correct": false,
+  "ever_effective_correct_scored": false,
+  "generated_scored_correct_but_final_miss": false,
+  "first_cycle_raw_complete_correct": 0,
+  "invalid_status_counts": {
+    "variable_or_numeric_unavailable": 5,
+    "syntax_error": 1,
+    "unsupported_expression": 1
+  },
+  "final_top1_classification": "incorrect",
+  "search_seconds": 2.3805198054760695,
+  "effective_correct_scored_occurrences": 0,
+  "first_cycle_raw_correct": 0,
+  "first_cycle_effective_correct_scored": 0,
+  "first_raw_correct": null,
+  "ever_selected_correct": false,
+  "ever_retained_correct": false,
+  "conditional_retention_occurrences": null,
+  "interpretation": "First cycle isolates pretrained generation; later cycles also depend on selection/continuation. Never-generated means not observed within budget, not impossible.",
+  "structural_equivalence": "commutative term/factor permutations plus existing Laplacian expansion; not arbitrary symbolic equivalence",
+  "structure_timelines": {
+    "3c965beb8c1cf365f033372ab628ed873f7ea375b6d36f356baba74064668633": [
+      {
+        "candidate_id": "1:0",
+        "cycle": 1,
+        "attempt": 0,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "variable_or_numeric_unavailable",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          9,
+          2,
+          23,
+          2,
+          8,
+          3,
+          22,
+          1
+        ],
+        "reward": null,
+        "selection_reward_float32": null,
+        "raw_score_rank_competition": null,
+        "selected_this_cycle": false,
+        "in_cumulative_top10": false,
+        "selection_reason": "variable_or_numeric_unavailable"
+      }
+    ],
+    "9c7965f66fdba8b626b00e9f0cbd9e9603469c8f25c3c95e3d7eda82e16edda3": [
+      {
+        "candidate_id": "1:1",
+        "cycle": 1,
+        "attempt": 1,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "evaluated",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          15,
+          2,
+          54,
+          1
+        ],
+        "reward": 0.0,
+        "selection_reward_float32": 0.0,
+        "raw_score_rank_competition": 2,
+        "selected_this_cycle": true,
+        "in_cumulative_top10": true,
+        "selection_reason": "retained_for_continuation"
+      }
+    ],
+    "d38226a3e0b56532cd0d7527e30541b19cf5bd6a516f89ba545acf2d93c43c1a": [
+      {
+        "candidate_id": "1:3",
+        "cycle": 1,
+        "attempt": 3,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "evaluated",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          46,
+          2,
+          12,
+          2,
+          16,
+          2,
+          6,
+          1
+        ],
+        "reward": -5.3687466285495855,
+        "selection_reward_float32": -5.368746757507324,
+        "raw_score_rank_competition": 4,
+        "selected_this_cycle": true,
+        "in_cumulative_top10": true,
+        "selection_reason": "retained_for_continuation"
+      }
+    ],
+    "7136c63845c03ed27462bab0a8fdee12cf6de3ef015c1a83883cc79aee614a72": [
+      {
+        "candidate_id": "1:4",
+        "cycle": 1,
+        "attempt": 4,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "evaluated",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          7,
+          2,
+          22,
+          3,
+          8,
+          2,
+          7,
+          3,
+          8,
+          2,
+          6,
+          1
+        ],
+        "reward": 0.010781817842189258,
+        "selection_reward_float32": 0.010781818069517612,
+        "raw_score_rank_competition": 1,
+        "selected_this_cycle": true,
+        "in_cumulative_top10": true,
+        "selection_reason": "retained_for_continuation"
+      }
+    ],
+    "33a4301c3284ee7c2a925261c1681f1dec48f0f3ee6a66b5ab7b1120e6a17a64": [
+      {
+        "candidate_id": "1:6",
+        "cycle": 1,
+        "attempt": 6,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "variable_or_numeric_unavailable",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          21,
+          2,
+          23,
+          2,
+          7,
+          2,
+          9,
+          1
+        ],
+        "reward": null,
+        "selection_reward_float32": null,
+        "raw_score_rank_competition": null,
+        "selected_this_cycle": false,
+        "in_cumulative_top10": false,
+        "selection_reason": "variable_or_numeric_unavailable"
+      }
+    ],
+    "b6804b84db98e2348da523f085e171f5faf3d90573da551692b99b7f6016277e": [
+      {
+        "candidate_id": "1:7",
+        "cycle": 1,
+        "attempt": 7,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "variable_or_numeric_unavailable",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          23,
+          2,
+          15,
+          2,
+          9,
+          1
+        ],
+        "reward": null,
+        "selection_reward_float32": null,
+        "raw_score_rank_competition": null,
+        "selected_this_cycle": false,
+        "in_cumulative_top10": false,
+        "selection_reason": "variable_or_numeric_unavailable"
+      }
+    ],
+    "2a0081ec4137fef960200c456502f38456a849700960e7ea42b4b524fd94743b": [
+      {
+        "candidate_id": "1:8",
+        "cycle": 1,
+        "attempt": 8,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "variable_or_numeric_unavailable",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          23,
+          2,
+          7,
+          2,
+          9,
+          1
+        ],
+        "reward": null,
+        "selection_reward_float32": null,
+        "raw_score_rank_competition": null,
+        "selected_this_cycle": false,
+        "in_cumulative_top10": false,
+        "selection_reason": "variable_or_numeric_unavailable"
+      }
+    ],
+    "e1c8aa3f3dbbeb61a20e5a08e1887027b08386967b1f9ee3a1b1075b5d45790b": [
+      {
+        "candidate_id": "1:9",
+        "cycle": 1,
+        "attempt": 9,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "variable_or_numeric_unavailable",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          23,
+          4,
+          22,
+          2,
+          51,
+          2,
+          9,
+          2,
+          7,
+          1
+        ],
+        "reward": null,
+        "selection_reward_float32": null,
+        "raw_score_rank_competition": null,
+        "selected_this_cycle": false,
+        "in_cumulative_top10": false,
+        "selection_reason": "variable_or_numeric_unavailable"
+      }
+    ],
+    "800db80af4b21f8cddc77f57b3db9bb48c19a11453cb5a74606c7deba8102714": [
+      {
+        "candidate_id": "1:10",
+        "cycle": 1,
+        "attempt": 10,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "evaluated",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          8,
+          3,
+          7,
+          2,
+          6,
+          1
+        ],
+        "reward": -4.6181087764229603e-05,
+        "selection_reward_float32": -4.6181088691810146e-05,
+        "raw_score_rank_competition": 3,
+        "selected_this_cycle": true,
+        "in_cumulative_top10": true,
+        "selection_reason": "retained_for_continuation"
+      }
+    ]
+  },
+  "top10_by_cycle": [
+    {
+      "cycle": 1,
+      "candidates": [
+        {
+          "candidate_id": "1:4",
+          "rank": 1,
+          "reward": 0.010781818069517612,
+          "structure_id": "7136c63845c03ed27462bab0a8fdee12cf6de3ef015c1a83883cc79aee614a72",
+          "classification": "incorrect"
+        },
+        {
+          "candidate_id": "1:1",
+          "rank": 2,
+          "reward": 0.0,
+          "structure_id": "9c7965f66fdba8b626b00e9f0cbd9e9603469c8f25c3c95e3d7eda82e16edda3",
+          "classification": "incorrect"
+        },
+        {
+          "candidate_id": "1:10",
+          "rank": 3,
+          "reward": -4.6181088691810146e-05,
+          "structure_id": "800db80af4b21f8cddc77f57b3db9bb48c19a11453cb5a74606c7deba8102714",
+          "classification": "incorrect"
+        },
+        {
+          "candidate_id": "1:3",
+          "rank": 4,
+          "reward": -5.368746757507324,
+          "structure_id": "d38226a3e0b56532cd0d7527e30541b19cf5bd6a516f89ba545acf2d93c43c1a",
+          "classification": "incorrect"
+        }
+      ]
+    }
+  ]
+}

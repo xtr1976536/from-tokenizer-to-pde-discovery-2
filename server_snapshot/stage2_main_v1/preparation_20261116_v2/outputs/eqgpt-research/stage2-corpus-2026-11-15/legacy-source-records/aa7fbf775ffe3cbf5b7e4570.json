@@ -1,0 +1,105 @@
+{
+  "broad_family": "forced_Helmholtz",
+  "context_checked": true,
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "y*sin(x) + u(x, y, z, t) + Derivative(u(x, y, z, t), (x, 2)) + Derivative(u(x, y, z, t), (y, 2))",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      9,
+      2,
+      23,
+      2,
+      7,
+      2,
+      34,
+      3,
+      46,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "uxx",
+      "+",
+      "uyy",
+      "+",
+      "u",
+      "+",
+      "y",
+      "*",
+      "sinx",
+      "E"
+    ],
+    "normalized_latex": "(u_{xx})+(u_{yy})+(u)+(y)\\cdot (\\sin{x})=0",
+    "reconstructed_support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t'))",
+      "Mul(Symbol('y'), sin(Symbol('x')))"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t'))",
+      "Mul(Symbol('y'), sin(Symbol('x')))"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "family": "forced_Helmholtz",
+  "gre_ids": [
+    5,
+    9,
+    2,
+    23,
+    2,
+    7,
+    2,
+    34,
+    3,
+    46,
+    1
+  ],
+  "latex_origin": "declared_function_representative_not_literal_published_instance",
+  "normalized_latex": "(u_{xx})+(u_{yy})+(u)+(y)\\cdot (\\sin{x})=0",
+  "original_latex": "u_{xx}+u_{yy}+u=-(\\sin(x)\\cdot y)",
+  "parameters": {
+    "Phi(x,y)": "\\sin(x)\\cdot y",
+    "lambda": 1
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [
+    "x>0,y>0,u>0 where roots or inverse powers appear",
+    "All displayed scalar constants fixed nonzero1 unless specified; no source terms removed"
+  ],
+  "source_file": "data/formulas/diverse_pde_v4/research/eqworld_more/lpde303.pdf",
+  "source_group": "eqworld:lpde303",
+  "source_id": "balanced636:aa7fbf775ffe3cbf5b7e4570",
+  "source_kind": "source_class_review_candidate",
+  "source_location": "first governing equation; function choices explicitly declared",
+  "source_sha256": "7adb01007fa22007fae9d3782dee7d2e74f1c9f4648c34b018cb7ce2ed4dbd6d",
+  "source_template_latex": "u_{xx}+u_{yy}+\\lambda u=-\\Phi(x,y)",
+  "source_transformations": [
+    "source field w -> u",
+    "small named function choice from source-defined class, not independent physical family",
+    "exact derivative expansion independently checked before coefficient stripping"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/lpde/lpde303.pdf"
+}

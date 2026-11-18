@@ -1,0 +1,452 @@
+Long-Time Asymptotic Behavior of Dissipative Boussinesq System Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 introduction 2 Notations and Preparations 2.1 Some notations 2.2 Linear algebra 3 Decay rate of linear systems 3.1 Low frequency analysis 3.2 High frequency analysis 3.2.1 The complete dissipation case ( $\nu=1$ ). 3.2.2 The partial dissipation case ( $\nu=0$ ). 3.3 Middle range frequency analysis 3.4 Decay for linear systems 4 Nonlinear Theory 4.1 A general result 4.2 Applications to weakly dispersive systems with complete dissipation
+or partial dissipation 4.3 Application to KdV-Burgers systems with complete dissipation. 4.4 Other cases 5 The $L^{\infty}_{x}$ –decay rate 6 Numerical Result References License: Assumed arXiv.org perpetual non-exclusive license arXiv:math/0607708v1 [math.AP] 27 Jul 2006 Long-Time Asymptotic Behavior of Dissipative
+Boussinesq System M. Chen 1 and O. Goubet 2 1 Department of
+Mathematics, Purdue University, West Lafayette, IN 47907, USA. 2 LAMFA CNRS UMR 6140 Université de Picardie Jules Verne, 33, rue Saint-Leu, 80039 Amiens, France. Abstract. In this paper, we study various dissipative mechanics
+associated with the Boussinesq systems which model two-dimensional small
+amplitude
+long wavelength water waves.
+We will show that the decay rate for the damped one-directional model
+equations, such as the KdV and BBM equations, holds for some of the damped
+Boussinesq systems which model two-directional waves. Key words and phrases: water
+waves, two-way propagation, Boussinesq systems, dissipation, long-time
+asymptotics 1. introduction Considered here are waves on the surface of an inviscid fluid in a flat channel.
+When one is interested in the propagation of one-directional
+irrotational
+small amplitude long waves, it is classical to model the waves by the well-known
+KdV (Korteweg-de Vries) equation (see [ 23 ] ) $u_{t}+u_{x}+u_{xxx}+uu_{x}=0,$ or its regularized version, the so-called regularized
+long wave equation or BBM (Benjamin-Bona-Mahony) equation, $u_{t}+u_{x}-u_{txx}+uu_{x}=0.$ When one is dealing with two-directional waves, and the effects of wave interactions and/or
+wave reflections are not excluded from the study, a restricted
+four-parameter family of systems (see [ 5 ] ), (1.1) $\begin{split}&\eta_{t}+u_{x}+(u\eta)_{x}+au_{xxx}-b\eta_{xxt}=0,\\
+&u_{t}+\eta_{x}+uu_{x}+c\eta_{xxx}-du_{xxt}=0,\end{split}$ may be used.
+The
+dimensionless variables $\eta(x,t)$ , $u(x,t)$ , $x$ , and $t$ are
+scaled by the length scale $h_{0}$ and time scale $(h_{0}/g)^{1\over 2}$ where $h_{0}$ denotes
+the still water depth and $g$ denotes the acceleration of gravity.
+The variable $\eta(x,t)$ is the non-dimensional
+deviation of the water surface from its undisturbed position and $u(x,t)$ is the non-dimensional horizontal velocity at a height
+above the bottom of the channel corresponding to $\theta h_{0}$ with $0\leq\theta\leq 1$ . The constants $a,b,c,d$ are called dispersive constants
+which satisfy the physical relevant
+constraints $(C0)\qquad a+b+c+d=\frac{1}{3}\quad\text{and}\quad c+d=\frac{1}{2}(1-\theta^{2})\geq 0.$ This class of systems contains some of the well-known systems, such as
+the classical Boussinesq system $(a=b=c=0,\ d=1/3)$ (see for example [ 9 , 18 , 22 , 1 , 20 ] )
+and
+the Bona-Smith system $(a=0,\ b=d>0,\ c<0)$ [ 8 ] . It is
+shown in [ 6 ] that
+a physically relevant system in ( 1.1 ) is linearly well posed in certain natural
+Sobolev spaces if
+the constants $a,b,c,d$ satisfy $(C1)\qquad b\geq 0,\ d\geq 0,\ a\leq 0,\ c\leq 0,$ or $(C2)\qquad b\geq 0,\ d\geq 0,\ a=c>0.$ It is also shown in [ 4 , 7 ] that above systems have the capacity of
+capture the main characteristics of the flow in an idea fluid. But when the damping
+effect is comparable with the effects of nonlinearity and/or
+dispersion, as occurs in the real laboratory-scale experiments
+and in the fields (see [ 7 , 16 , 12 , 17 ] ), it should be considered
+in order for the model and its numerical results to correspond in
+detail with the experiments.
+The full system
+would be the Navier-Stokes equations with a free boundary,
+which is very difficult to handle both theoretically and
+numerically
+(cf. [ 21 , 3 ] ).
+Therefore, it is useful to construct
+simpler model systems which are capable of capturing the main
+properties of water waves under various special circumstances. For example, many researchers have studied the
+dissipative one-way propagation
+model equations, such as the dissipative KdV and dissipative
+regularized long-wave equations and their generalizations. As a
+model to our study, we recall the results from [ 2 ] for
+the dissipative BBM equation, $\begin{split}u_{t}-u_{xxt}-\nu u_{xx}+uu_{x}=0,\\
+u(x,0)=u_{0}(x)\end{split}$ where $\nu$ is a positive constant. Theorem 1.1 . Assume $u_{0}$ is
+in $L^{1}(\mathbb{R})\cap L^{2}(\mathbb{R})$ , then there exists a constant $C$ such
+that (1.2) $\|u(t)\|_{L^{2}}\leq C(1+t)^{-1/4}.$ Here $L^{1}(\mathbb{R})$ and $L^{2}(\mathbb{R})$ are the classical Banach
+spaces. A similar result holds for the corresponding dissipative KdV equation.
+See also [ 7 ] , [ 15 ] and the references
+therein. In this article, we aim to analyze the effect of dissipation on
+systems ( 1.1 ) and study the decay rates of solutions $(\eta,u)$ toward zero.
+We will restrict our study to the cases where constants $a,b,c,d$ satisfy (C0)-(C1) or (C0)-(C2).
+The goal of this research is to find the appropriate
+dissipative
+term (or terms) which will provide the
+right amount of energy dissipation for all wave numbers
+while
+keeping the mass conserved. In this article, two kinds of
+dissipations will be considered: Complete dissipation : replacing the $\begin{pmatrix}0\\
+0\end{pmatrix}$ in the right-hand side of
+( 1.1 ) by the vector $\begin{pmatrix}\eta_{xx}\\
+u_{xx}\end{pmatrix}$ , and Partial dissipation : replace the $\begin{pmatrix}0\\
+0\end{pmatrix}$ in the right-hand side of ( 1.1 ) by the vector $\begin{pmatrix}0\\
+u_{xx}\end{pmatrix}$ . We shall first study the decay rates of solutions to
+the linearized systems supplemented with either
+complete or partial dissipations. These equations read (1.3) $\begin{split}&\eta_{t}+u_{x}+au_{xxx}-b\eta_{xxt}=\nu\eta_{xx},\\
+&u_{t}+\eta_{x}+c\eta_{xxx}-du_{xxt}=u_{xx},\end{split}$ with $\nu=0$ or $\nu=1$ . Systems
+which satisfy the dichotomy property in the Fourier space: • decay as $t^{-1/4}$ for low frequencies (small $\xi$ ); • decay as $\exp(-\beta t)$ or $\exp(-\beta\xi^{2}t)$ for high frequencies (large $\xi$ ); will be identified and studied.
+It is shown in Section 3 that the dichotomy property
+will lead to the decay rate $t^{-\frac{1}{4}}$ for $\|(\eta,u)\|_{L^{2}\times H^{h}}$ ( $h$ will be specified later). For later use, we shall emphasize (and it is easy to check)
+that the dichotomy property
+holds true for two fundamentally different equations: the
+linearized BBM-Burgers equation $u_{t}-u_{xxt}+u_{x}-u_{xx}=0$ and the
+linearized KdV-Burgers equation $u_{t}+u_{xxx}+u_{x}-u_{xx}=0$ . If
+the high frequency part of the solution to a system is damped as exp $(-\beta t)$ , we say that the system belongs to the BBM-Burgers class since
+solutions to linearized BBM-Burgers equation feature this property. If the high
+frequency part of the solution is damped as exp $(-\beta\xi^{2}t)$ ,
+which is the case for linearized KdV-Burgers equation,
+then we say that the system belongs to
+the KdV-Burgers class. The low frequency parts of the solutions to
+the linearized BBM-Burgers and KdV-Burgers equations behave
+in a similar fashion. The main result in Section 3 is to classify the linearized systems according to this
+property and to prove that for systems which satisfy the dichotomy property,
+a decay rate comparing to ( 1.2 ) is valid. We shall also
+present some systems where the decay rates can be
+arbitrarily small, behaving as the solution of $u_{t}-u_{xxt}+u=0,\quad u(x,0)=u_{0}(x),$ where by Fourier transform, $\widehat{u}(t,\xi)=e^{-\frac{t}{1+\xi^{2}}}\widehat{u}_{0}(\xi),$ and therefore $\|u(.,t)\|_{L^{2}}$ could decay arbitrarily slow. In Section 4 , we extend the linear theory
+to nonlinear systems and show that
+the decay rate
+as ( 1.2 ) is valid for weakly dispersive systems, i.e.
+systems with $b>0$ and $d>0$ , and for some systems in the KdV-Burgers
+class with total dissipation, which include the
+KdV-KdV system ( $a=c=\frac{1}{6},b=d=0$ ), with small initial data.
+In Section 5 , the decay rate with respect
+to $L^{\infty}$ -norm is presented and in
+Section 6 , spectral method is used on several systems to demonstrate that
+the rates obtained in Section 4 and Section 5 are sharp and the
+constants involved in the bounds are reasonably sized. It is worth to note that there are other methods,
+such as the energy methods (like the
+so-called Schonbek’s splitting method
+applied
+to
+the classical Boussinesq system [ 19 ] in large dimensions),
+can be used
+in proving decay rate for solutions of these systems. This line of
+study will be carried elsewhere.
+We believe that those methods will be helpful especially in the cases when $b=d$ so
+some Hamiltonian is conserved (see [ 6 ] ). On the other hand, to remove the smallness assumption on the
+initial data, the authors in [ 2 ] used a kind of
+Cole–Hopf transformation (that is valid for Burgers equation)
+and were able to control the extra-terms. We do not know
+if this tour de force (feat of skill) is possible for the
+systems in ( 1.1 ) with dissipation. We complete this introduction by introducing some notations. Throughout the paper, the
+standard notation on Sobolev spaces will be used. The $L^{p}(\mathbb{R})$ norm will be denoted as $\|\cdot\|_{L^{p}}$ for $1\leq p\leq\infty$ and the $H^{s}$ norm will be denoted as $\|\cdot\|_{H^{s}}$ .
+When several variables are involved, we may also set $L^{p}_{x}$ for $L^{p}(\mathbb{R})$ to specify that we compute the norm with respect to the $x$ -variable. The product space $X\times X$ will be abbreviated
+by $X$ and a function ${\bf f}=(f_{1},f_{2})$ in $X$ carries the norm $\|{\bf f}\|_{X}=\left(\|f_{1}\|_{X}^{2}+\|f_{2}\|_{X}^{2}\right)^{{1\over 2}}.$ The Euclidean norm of a vector is denoted by $|\cdot|$ . We will use $C$ and $\beta$ as
+generic positive constants whose values may change with each appearance.
+Fourier transform of a function $f$ is denoted by either $\widehat{f}$ or $\mathcal{F}(f)$ . 2. Notations and Preparations 2.1. Some notations Consider $\nu\in\{0,1\}$ .
+As stated before, we plan to first estimate the decay rates of solutions to
+the linear systems (2.1) $\begin{split}&\eta_{t}+u_{x}+au_{xxx}-b\eta_{xxt}=\nu\eta_{xx},\\
+&u_{t}+\eta_{x}+c\eta_{xxx}-du_{xxt}=u_{xx},\end{split}$ when $t$ goes to $+\infty$ . Following [ 6 ] , we introduce the Fourier multipliers $\omega_{1}={1-a\xi^{2}\over 1+b\xi^{2}}\quad\text{ and
+}\quad\omega_{2}={1-c\xi^{2}\over 1+d\xi^{2}}.$ Since $a,b,c,d$ satisfy (C1) or (C2), $\omega_{1}\omega_{2}$ is
+nonnegative and we denote $\widehat{H}=\left({\omega_{1}\over\omega_{2}}\right)^{1/2}\text{ and }\quad\sigma=(\omega_{1}\omega_{2})^{1/2},$ with the conventional notation ${0\over 0}=1$ . We also denote $\alpha={\xi^{2}\over 1+b\xi^{2}}\quad\text{and}\quad\varepsilon=\displaystyle{\xi^{2}\over 1+d\xi^{2}}.$ Remark 2.1 . When a system satisfying (C2) assumption is the subject of the study, $\omega_{1}$ and $\omega_{2}$ do change signs, but $\omega_{1}\omega_{2}\geq 0$ . Definition 2.2 . Consider a nonnegative function $\xi\to\hat{\kappa}(\xi)$ .
+The order of $\widehat{\kappa}$ (when it exists) is defined as
+the number $m$ such that $\widehat{\kappa}(\xi)\sim C|\xi|^{m}$ when $|\xi|\to+\infty$ .
+The (pseudo–differential) operator $\kappa$ with order $m$ is defined by setting $\kappa u=v\quad\text{ iff }\quad\widehat{\kappa}\widehat{u}=\widehat{v}.$ Therefore $\kappa$ maps $L^{2}_{x}$ into $H_{x}^{-\text{order}(\kappa)}$ (or $H^{n}_{x}$ into $H_{x}^{n-\text{order}(\kappa)}$ ). Since ( 2.1 ) is a linear system, it is convenient to use the Fourier
+transform.
+Let $(\widehat{\eta},\widehat{u})$ denote the Fourier transform of $(\eta,u)$ and set ${\widehat{Y}}=(\widehat{\eta},\widehat{w})$ with $\widehat{w}=\widehat{H}\widehat{u}$ , then ( 2.1 ) reads (2.2) ${\widehat{Y}}_{t}+A{\widehat{Y}}=0,$ where $A(\xi)=\begin{pmatrix}\nu\alpha&i\,{\rm sgn}(\omega_{1})\xi\sigma\\
+i\,{\rm sgn}(\omega_{2})\xi\sigma&\varepsilon\end{pmatrix}$ is the symbol of the linear (unbounded) operator in
+( 2.1 ). Since we are dealing with a system, $A(\xi)$ is a matrix. By multiplying ${\widehat{Y}}^{*}$ on ( 2.2 ) and taking
+the real part, (2.3) $\begin{split}&{1\over 2}{d\over dt}\int(|\widehat{\eta}(t,\xi)|^{2}+|\widehat{w}(t,\xi)|^{2})d\xi\\
+&+\nu\int\alpha(\xi)|\widehat{\eta}(t,\xi)|^{2}d\xi+\int\varepsilon(\xi)|\widehat{w}(t,\xi)|^{2}d\xi=0.\end{split}$ Since $\alpha(\xi)$ and $\varepsilon(\xi)$ are positive, (2.4) $E(t):=\int_{\mathbb{R}}|{\widehat{Y}}(t,\xi)|^{2}d\xi$ decays towards $0$ as $t\rightarrow\infty$ , where $|{\widehat{Y}}|=(|\widehat{\eta}|^{2}+|\widehat{w}|^{2})^{1/2}$ is the Euclidean norm on $\mathbb{C}^{2}$ . 2.2. Linear algebra We recall some facts from linear algebra and then
+apply them to the dissipative systems ( 2.1 ). Definition 2.3 . Let $M$ be a $2\times 2$ matrix in the complex space, the norm of $M$ is defined by $\|M\|=\sup_{Y\in\mathbb{C}^{2}\backslash\{0\}}\ {|MY|\over|Y|}.$ Lemma 2.4 . Let $\rho{(M)}$ denote the spectral radius of a matrix $M$ and $\rm tr(M)$ denote the trace of $M$ , then $\|M\|=\rho{(M^{*}M)^{1/2}}\leq\rm tr{(M^{*}M)}^{1/2}.$ We are now going to bound $E(t)$ (see ( 2.2 ) and ( 2.4 )) by using the pointwise estimate (2.5) $|{\widehat{Y}}(t,\xi)|\leq\|e^{-tA}\|\ |{\widehat{Y}}_{0}(\xi)|.$ Noticing that the matrix $A$ can be written as $A=D+U$ , where $D=\begin{pmatrix}\nu\alpha&0\\
+0&\varepsilon\end{pmatrix}$ represents the dissipation
+terms and $U=\begin{pmatrix}0&i{\rm sgn}(\omega_{1})\xi\sigma\\
+i{\rm sgn}(\omega_{2})\xi\sigma&0\end{pmatrix}$ is skew-symmetric.
+When $D$ and $U$ commute, the behavior of $\|e^{-tA}\|$ with respect
+to $\xi$ is characterized
+by the behaviors of $\varepsilon$ and $\alpha$ via (2.6) $\|e^{-tA}\|\leq e^{-t\min\{\nu\alpha(\xi),{\varepsilon}(\xi)\}}.$ But
+when $D$ and $U$ do not commute, more accurate estimate than
+( 2.6 ) can be obtained by studying $e^{-tA}$ in detail. We now recall the following lemma (Theorem 9.28 from [ 13 ] ). Lemma 2.5 . There exists a unitary matrix $Q$ (i.e. $QQ^{*}=Q^{*}Q=I$ )
+such that $A=Q^{*}\begin{pmatrix}\lambda_{1}&z\\
+0&\lambda_{2}\end{pmatrix}Q,$ where $\lambda_{1}$ and $\lambda_{2}$ are the eigenvalues of $A$ ,
+ordered by $\text{Re}(\lambda_{1})\leq\text{Re}(\lambda_{2})$ . As a consequence, one can prove (which is given at the end of this subsection) Lemma 2.6 . There exists $C>0$ such that (2.7) $\|\exp(-tA)\|\leq C\left(1+|z|\min\left(t,\frac{1}{|\lambda_{2}-\lambda_{1}|}\right)\right)\exp(-t\text{Re}(\lambda_{1})).$ It is easy to see that $\lambda_{1}$ and $\lambda_{2}$ are the roots of
+the characteristic
+equation (2.8) $\lambda^{2}-\rm tr(A)\lambda+\det(A)=0$ where (2.9) $\rm tr(A)=\lambda_{1}+\lambda_{2}=\nu\alpha+\varepsilon\geq 0$ and (2.10) $\det(A)=\lambda_{1}\lambda_{2}=\nu\alpha\varepsilon+\xi^{2}\sigma^{2}\geq 0.$ We now estimate $\|\exp(-tA)\|$ by separating the cases $\Delta\leq 0$ and $\Delta>0$ where $\Delta$ is the determinant of ( 2.8 ), namely (2.11) $\Delta=\rm tr(A)^{2}-4\det(A)=(\varepsilon-\nu\alpha)^{2}-4\xi^{2}\sigma^{2}.$ Lemma 2.7 . For any $t>0$ and for any $\xi\in\mathbb{R}$ , $\bullet$ when $\Delta\leq 0$ (perturbation range), (2.12) $\|\exp(-tA)\|\leq C(1+\rm tr(A)t)\exp\left(-{\rm tr(A)\over 2}\ t\right)\leq C\exp\left(-{\rm tr(A)\over 4}\ t\right);$ $\bullet$ when $\Delta>0$ (non-perturbation range), (2.13) $\|\exp(-tA)\|\leq C\left(1+2|\xi|\sigma\min\left(t,\frac{1}{\sqrt{\Delta}}\right)\right)\exp(-t\lambda_{1}),$ where $\lambda_{1}$ satisfies (2.14) ${\det(A)\over\rm tr(A)}\leq\lambda_{1}\leq\min\left(\rm tr(A),{2\det(A)\over\rm tr(A)}\right).$ Proof. It is worth to note from Lemma 2.5 that (2.15) $\rm tr(A^{*}A)=|\lambda_{1}|^{2}+|\lambda_{2}|^{2}+|z|^{2}=\nu^{2}\alpha^{2}+\varepsilon^{2}+2\xi^{2}\sigma^{2}.$ When $\Delta\leq 0$ (perturbation range): matrix $A$ has two conjugate complex eigenvalues $\lambda_{1}$ and $\lambda_{2}$ with $|\lambda_{1}|=|\lambda_{2}|,\quad\text{Re}(\lambda_{1})=\text{Re}(\lambda_{2})=\frac{\rm tr(A)}{2},\quad|\lambda_{1}|^{2}=|\lambda_{2}|^{2}=\det(A).$ Using ( 2.15 ) and then ( 2.10 )-( 2.9 ) leads to $\begin{split}|z|^{2}&=\nu^{2}\alpha^{2}+\varepsilon^{2}+2\xi^{2}\sigma^{2}-2|\lambda_{1}|^{2}\\
+&=\nu^{2}\alpha^{2}+\varepsilon^{2}+2\xi^{2}\sigma^{2}-2\det(A)=(\nu\alpha-\varepsilon)^{2}\leq\rm tr(A)^{2}.\end{split}$ Hence ( 2.12 ) follows from Lemma 2.6 . When $\Delta>0$ (non-perturbation range) : $\rm tr(A)\geq 0$ and $\det(A)\geq 0$ imply that the matrix $A$ features two real eigenvalues $0\leq\lambda_{1}<\lambda_{2}$ .
+Then ( 2.15 ) leads to $|z|^{2}=\nu^{2}\alpha^{2}+\varepsilon^{2}+2\xi^{2}\sigma^{2}-\rm tr(A)^{2}+2\det(A)=4\xi^{2}\sigma^{2}$ and ( 2.13 ) is proved by using
+Lemma 2.6 .
+Since $\lambda_{2}\leq\rm tr(A)\leq 2\lambda_{2}$ ,
+one sees immediately that ${\det(A)\over\rm tr(A)}\leq\lambda_{1}=\frac{\det(A)}{\lambda_{2}}\leq{2\det(A)\over\rm tr(A)}$ and ( 2.14 ) follows. $\square$ It is noted that when $\Delta\leq 0$ , the dissipation can be
+considered as a perturbation term with respect to the skew
+symmetric operator. More precisely, the decay is the same as
+pretending $U$ and $D$ commute, up to a linear correction. When $\Delta>0$ , this is no longer valid. In the first case, matrix $A$ has conjugate complex eigenvalues.
+In the latter case, $A$ has real positive eigenvalues
+and the smallest one monitors the decay estimate. $\Delta=0$ is the
+bifurcation point. For the sake of
+completeness, we now give the proof of Lemma 2.6 . Proof of Lemma 2.6 . Straightforward computations lead to $e^{-tA}=Q^{*}\begin{pmatrix}e^{-t\lambda_{1}}&z{e^{-t\lambda_{1}}-e^{-t\lambda_{2}}\over\lambda_{1}-\lambda_{2}}\\
+0&e^{-t\lambda_{2}}\end{pmatrix}Q,$ where ${e^{-t\lambda_{1}}-e^{-t\lambda_{2}}\over\lambda_{1}-\lambda_{2}}=-te^{-t\lambda_{2}},\quad\text{if}\quad\lambda_{1}=\lambda_{2}.$ Lemma 2.4 then yields (2.16) $\begin{split}\|e^{-tA}\|^{2}&\leq\rm tr(e^{-tA^{*}}e^{-tA})\\
+&=e^{-2tRe(\lambda_{1})}+e^{-2tRe(\lambda_{2})}+|z|^{2}\bigg|{e^{-t\lambda_{1}}-e^{-t\lambda_{2}}\over\lambda_{1}-\lambda_{2}}\bigg|^{2}.\end{split}$ Therefore, if $|\lambda_{1}-\lambda_{2}|>0$ $\|e^{-tA}\|^{2}\leq(2+\frac{|z|^{2}}{|\lambda_{1}-\lambda_{2}|^{2}})e^{-2tRe(\lambda_{1})}$ which proves part of the lemma. Now, for $|\lambda_{1}-\lambda_{2}|\geq\Lambda$ , where $\Lambda>0$ will be chosen later, (2.17) ${|e^{-t\lambda_{1}}-e^{-t\lambda_{2}}|\over|\lambda_{1}-\lambda_{2}|}\leq{2\over\Lambda}e^{-tRe(\lambda_{1})};$ and for $|\lambda_{1}-\lambda_{2}|\leq\Lambda$ ,
+using $|e^{\zeta}-1|\leq|\zeta|\exp(|\zeta|)$ for any complex number $\zeta$ , (2.18) $\begin{split}|e^{-t\lambda_{1}}-e^{-t\lambda_{2}}|&=e^{-t\text{Re}(\lambda_{1})}|e^{-t(\lambda_{2}-\lambda_{1})}-1|\\
+&\leq e^{-t\text{Re}(\lambda_{1})}t|\lambda_{2}-\lambda_{1}|e^{t\Lambda}.\end{split}$ Therefore, choosing $\Lambda=\displaystyle{1\over t}$ in
+( 2.17 ) and ( 2.18 ), ${|e^{-t\lambda_{1}}-e^{-t\lambda_{2}}|\over|\lambda_{1}-\lambda_{2}|}\leq Cte^{-tRe(\lambda_{1})}.$ Substituting above into ( 2.16 ) completes the proof. $\square$ 3. Decay rate of linear systems In subsections 3.1 , 3.2 and 3.3 , low-frequency
+( $|\xi|$ close to $0$ ), high-frequency (large $|\xi|$ ) and
+middle range frequency analysis for the linear systems are
+performed respectively.
+We will identify systems for which
+there exist positive constants $\beta$ and $\delta_{m}$ such that
+for any $t>0$ and (3.1) $\begin{split}\bullet&\text{ for }|\xi|\leq\delta_{m},\ \|\exp(-tA)\|\leq C\exp(-\beta t\xi^{2}),\\
+\bullet&\text{ for }|\xi|>\delta_{m},\ \|\exp(-tA)\|\leq C\exp(-\beta t).\end{split}$ Here $\|\exp(-tA)\|$ is the norm of the linear operator $\exp(-tA(\xi))$ acting on $\mathbb{C}^{2}$ .
+The generic constants $C$ and $\beta$ are independent of $t$ and $\xi$ .
+If $\delta_{m}=+\infty$ is feasible in ( 3.1 ), the system
+is in the KdV–Burgers class . Otherwise the system is in the BBM–Burgers class .
+A summary of decay rates for the linear
+systems is given in subsection 3.4 . Remark 3.1 . It is worth to note that ( 3.1 ) is sufficient but
+not necessary for proving the desired decay rate. An example is
+given in Section 3.3 where ( 3.1 ) is not valid but the linear system
+has the desired decay rate. 3.1. Low frequency analysis We now prove that for $|\xi|\to 0$ , all systems are equivalent. This is to say Proposition 3.2 . There exists positive constants $\delta_{m},\beta$ and $C$ depending on the data $a,b,c,d$ and $\nu$ ,
+such that for $|\xi|\leq\delta_{m}$ and for any $t>0$ , (3.2) $\|\exp(-tA)\|\leq C\exp(-\beta\xi^{2}t).$ Consequently, for any initial data $Y_{0}$ with $\text{supp}(\widehat{Y}_{0})\subset[-\delta_{m},\delta_{m}]$ , $E(t)\leq C\ t^{-1/2}\|Y_{0}\|^{2}_{L^{1}_{x}}.$ Proof. By referring to the definitions of $\Delta$ , $\alpha$ and $\varepsilon$ , one sees that
+as $|\xi|\rightarrow 0$ , $\Delta\sim-4\xi^{2}\quad\text{and}\quad\rm tr(A)=\nu\alpha+\varepsilon\sim(\nu+1)\xi^{2}.$ Therefore, there exists $\delta_{m}>0$ such that for $\xi$ in $[-\delta_{m},\delta_{m}]$ , $\Delta\leq 0$ and ${1\over 2}\leq\frac{\rm tr(A)}{(\nu+1)\xi^{2}}\leq 2.$ ( 3.2 ) then
+follows promptly from ( 2.12 ). Now, for any initial data $Y_{0}$ with $\text{supp}(\widehat{Y}_{0})\subset[-\delta_{m},\delta_{m}]$ , $\begin{split}E(t)&=\int_{|\xi|\leq\delta_{m}}|\widehat{Y}(t,\xi)|^{2}d\xi\leq C\int\exp(-2\beta t\xi^{2})d\xi(\sup_{\xi}(|\widehat{Y_{0}}(\xi)|^{2}))\\
+&\leq Ct^{-1/2}\|Y_{0}\|^{2}_{L_{x}^{1}},\end{split}$ by using the change of variable $\tau=\sqrt{2\beta t}\xi$ . $\square$ 3.2. High frequency analysis The complete dissipation and
+the partial dissipation cases have to be studied separately. In the latter case, we will give one
+example where the decay rate can be arbitrarily small. Introducing the number $\{r\}=\begin{cases}1,&\quad\text{if }r\not=0,\\
+0,&\quad\text{if }r=0,\end{cases}$ for $r\in\mathbb{R}$ . Then $\text{order}(\sigma)=\{a\}+\{c\}-\{b\}-\{d\}$ and $\text{order}(\varepsilon)=2-2\{d\}$ . 3.2.1. The complete dissipation case ( $\nu=1$ ). It is observed in the
+following that order $(\sigma)$ dictates if the system is in the
+KdV-Burgers class or in the BBM-Burgers class. Proposition 3.3 . Assume $\nu=1$ . For any $\delta>0$ , there exists $\beta>0$ , such that if $\text{supp}(\widehat{Y}_{0})\subset\mathbb{R}\backslash[-\delta,\delta]$ , (3.3) $E(t)\leq\exp(-2\beta t)\|Y_{0}\|^{2}_{L^{2}_{x}},$ for any $t>0$ .
+In addition, • if $\text{order}(\sigma)\leq 0$ , the system is in the BBM–Burgers class. Namely, there exist positive constants $\delta_{M},\beta$ and $C$ , such that for $|\xi|>\delta_{M}$ and $t>0$ , $\|\exp(-tA)\|\leq Ce^{-\beta t};$ • if $\text{order}(\sigma)\geq 1$ , the system is in the KdV–Burgers class. Namely, there exist positive constants $\delta_{M},\beta$ and $C$ , such that for $|\xi|>\delta_{M}$ and $t>0$ , $\|\exp(-tA)\|\leq Ce^{-\beta\xi^{2}t}.$ Proof. ¿From ( 2.3 ), one finds that for $\xi$ almost everywhere, ${1\over 2}{d\over dt}|\widehat{Y}(t,\xi)|^{2}+\alpha(\xi)|\widehat{\eta}(t,\xi)|^{2}+\varepsilon(\xi)|\widehat{w}(t,\xi)|^{2}=0.$ This gives directly, by setting $\beta=\min\{\alpha(\delta),\varepsilon(\delta)\}$ which is positive, that ( 3.3 ) is valid. Furthermore, $\|\exp(-tA)\|\leq Ce^{-\beta t}$ for $|\xi|>\delta$ .
+To figure out if the system is in
+the BBM-Burgers or in the KdV-Burgers class, we separate the cases
+as follows. • Assume first $\text{order}(\sigma)\geq 1$ . Then either $d=0$ or $b=0$ .
+Without loss of generality, let us assume $d=0$ . – If $\Delta=(\alpha-\varepsilon)^{2}-4\xi^{2}\sigma^{2}>0$ for $|\xi|$ large enough, then $\text{order}(\sigma)=1$ . In that case,
+there exist $\beta>0$ and $\delta_{M}>0$ $\lambda_{1}\geq\frac{\det(A)}{\rm tr(A)}=\frac{\alpha+\sigma^{2}}{\frac{\alpha}{\xi^{2}}+1}\geq 2\beta\xi^{2}$ for $|\xi|>\delta_{M}$ .
+By using ( 2.13 ) $\|\exp(-tA)\|\leq C(1+t\xi^{2})e^{-2\beta t\xi^{2}}\leq Ce^{-{\beta}t\xi^{2}}$ for $|\xi|>\delta_{M}$ and the system is in the KdV-Burgers class. – If $\Delta\leq 0$ for $|\xi|$ large enough, then there exists $\delta_{M}>0$ such that for $|\xi|>\delta_{M}$ , ${1\over 2}\xi^{2}\leq\rm tr(A)\leq 2\xi^{2}$ , and
+( 2.12 ) implies that the system is in the KdV-Burgers class. • Assume now that $\text{order}(\sigma)\leq 0$ . – If $b\neq 0$ and $d\neq 0$ (weakly dispersive systems) then
+for $|\xi|$ large enough, ${\rm Re}(\lambda_{1})\leq\rm tr(A)\sim\frac{1}{b}+\frac{1}{d}$ as $|\xi|\rightarrow\infty$ . This shows that a damping like $e^{-\beta t\xi^{2}}$ is unlikely for high frequencies. Therefore the
+weakly dispersive systems are in the BBM-Burgers class. – if
+( $b\neq 0$ and $d=0$ ) or ( $b=0$ and $d\neq 0$ ). Without loss of
+generality, let us consider the case $b\neq 0$ and $d=0$ . Since $\Delta\sim\xi^{4}$ as $|\xi|\to\infty$ , we
+have $\lambda_{1}\leq\frac{2\det(A)}{\rm tr(A)}=\frac{2(\alpha+\sigma^{2})}{\frac{\alpha}{\xi^{2}}+1}\sim C=O(1)$ as $|\xi|\to\infty$ . This shows that a damping like $e^{-\beta t\xi^{2}}$ is again unlikely
+for high frequencies. Therefore the system is in the BBM-Burgers class. $\square$ 3.2.2. The partial dissipation case ( $\nu=0$ ). We first note that when a system satisfies (C2) hypothesis, $\sigma=0$ and therefore $\lambda_{1}=0$ at $\xi=a^{-{1\over 2}}$ . But one can always chose ${\delta_{M}}$ large enough so for $|\xi|>{\delta_{M}}$ , $\sigma$ is positive,
+bounded from below and away from zero. Therefore the point where $\sigma$ vanishes will be
+considered in the next subsection. We
+now prove that in the partial
+dissipation case, the decay rate is related to $\text{order}(\sigma)$ and the
+strength of the dissipation which is characterized by $\text{order}(\varepsilon)$ . Proposition 3.4 . With $\nu=0$ , • if order $(\sigma)\geq 2-\frac{1}{2}$ order $(\varepsilon)$ , then the
+system is in the KdV-Burgers class; • if $|$ order $(\sigma)|<2-\frac{1}{2}$ order $(\varepsilon)$ , then the system is in the BBM-Burgers
+class. In above two cases,
+when $\widehat{Y}_{0}$ is supported in $\mathbb{R}\backslash[-{\delta_{M}},{\delta_{M}}]$ , then
+for any $t>0$ , $E(t)\leq C\exp(-2\beta t)\|Y_{0}\|^{2}_{L^{2}_{x}};$ • if order $(\sigma)\leq-2+\frac{1}{2}$ order $(\varepsilon)$ ,
+arbitrarily slow decay can occur. Proof. To begin, one observes that $\Delta=\varepsilon^{2}-4\xi^{2}\sigma^{2}$ . When $\Delta>0$ , $\lambda_{1}$ satisfies (3.4) $2\lambda_{1}=\varepsilon\left(1-\left(1-{4\xi^{2}\sigma^{2}\over\varepsilon^{2}}\right)^{1/2}\right)$ which is a direct consequence of ( 2.8 ). • When order $(\varepsilon)$ =0, i.e $d\neq 0$ (and $\text{order}(\sigma)\leq 1$ ): – if $\text{order}(\sigma)\geq-1$ , and if $\Delta=\varepsilon^{2}-4\xi^{2}\sigma^{2}>0$ for $|\xi|$ large enough, which is
+possible only for $\text{order}(\sigma)=-1$ , we have $\lambda_{1}\geq\frac{\det(A)}{\rm tr(A)}\geq C\xi^{2}\sigma^{2}=O(1)$ as $|\xi|\to\infty$ .
+Then by ( 2.13 ) we have $\|e^{-tA}\|\leq C(1+t|\xi|\sigma)e^{-t\lambda_{1}}\leq Ce^{-\beta t}$ for $|\xi|$ large enough and the system is in the BBM-Burgers class. On the other hand, if $\Delta\leq 0$ for high frequencies, since $\rm tr(A)\sim\frac{1}{d}$ as $|\xi|\rightarrow\infty$ , then ( 2.12 ) implies that the system is in the
+BBM-Burgers class; – if $\text{order}(\sigma)=-2$ , $\Delta\sim\frac{1}{d^{2}}>0$ as $|\xi|\rightarrow\infty$ and by ( 3.4 ), $\lambda_{1}\sim C|\xi|^{-2}$ ,
+therefore arbitrarily slow decay could occur. An
+example of such case will be given below. • When $\text{order}(\varepsilon)=2$ i.e $d=0$ (and $\text{order}(\sigma)\geq-1$ ): $\Delta=\xi^{2}(\xi^{2}-4\sigma^{2})$ has a limit $\Delta_{0}$ in $[-\infty,+\infty]$ when $|\xi|$ approaches $+\infty$ . – If $\Delta_{0}$ is in $(-\infty,0]$ , then since $\rm tr(A)=\xi^{2}$ , ( 2.12 ) implies
+that the system is in the KdV-Burgers class. This occurs when $\text{order}(\sigma)=2$ and may occur when $\text{order}(\sigma)=1$ . – If $\Delta_{0}$ is in $(0,+\infty]$ , then
+since $\frac{2\det(A)}{\rm tr(A)}\geq\lambda_{1}\geq\frac{\det(A)}{\rm tr(A)}=\sigma^{2},$ ( 2.13 ) implies for any $\xi$ (3.5) $\|\exp(-tA)\|\leq C\left(1+|\xi|\sigma\min\left(t,\frac{1}{\sqrt{\Delta}}\right)\right)\exp(-t\sigma^{2}).$ * If $\text{order}(\sigma)=1$ , then ( 3.5 ) implies the system is in the KdV-Burgers class. * If $\text{order}(\sigma)=0$ , $\frac{|\xi\sigma|}{\sqrt{\Delta}}=0(1)$ as $|\xi|\rightarrow\infty$ , the system is
+in the BBM-Burgers class. And similarly, * if $\text{order}(\sigma)=-1$ , any arbitrarily
+slow decay could occur. $\square$ Example of slow decay: Consider the linearized BBM-BBM system with
+partial dissipation, $\begin{split}&\eta_{t}+u_{x}-b\eta_{xxt}=0,\\
+&u_{t}+\eta_{x}-du_{xxt}=u_{xx},\end{split}$ which has $\text{order}(\varepsilon)=0$ and $\text{order}(\sigma)=-2$ .
+Since as $|\xi|\to+\infty$ , $\begin{split}\Delta&\sim{1\over d}>0,\quad|z|=\displaystyle{2|\xi|\sigma\sim{2\over\sqrt{bd}}\ {1\over|\xi|}},\\
+2\lambda_{1}&=\rm tr(A)\left(1-\left(1-{4\det(A)\over(\rm tr(A))^{2}}\right)^{1/2}\right)\sim\ 2\ {\det(A)\over\rm tr(A)}\sim{2\over d\xi^{2}}.\end{split}$ Therefore $\displaystyle\|e^{-tA}\|\leq C\exp\left(-{\beta t\over\xi^{2}}\right)$ which shows that any arbitrary
+slow decay could occur. 3.3. Middle range frequency analysis We first note from Lemma 2.7 that to get the optimal decay estimate for
+the cases where $\det(A)$ (and therefore $\lambda_{1}$ )
+has a zero for $|\xi|>0$ , these cases need to be discussed separately.
+Therefore, we have the following two propositions. Proposition 3.5 . Assume that $\nu=1$ , or that $\nu=0$ and the dispersive coefficients $a,b,c,d$ satisfy (C1). Then for any $\delta_{m}$ and $\delta_{M}$ , $0<\delta_{m}\leq\delta_{M}$ ,
+there exists $\beta>0$ such that for $|\xi|\in[\delta_{m},\delta_{M}]$ and for any $t>0$ , (3.6) $\|\exp(-tA)\|\leq C\exp(-\beta t).$ Moreover for any $\widehat{Y_{0}}$ with support included in $[\delta_{m},\delta_{M}]\cup[-\delta_{M},-\delta_{m}]$ , $E(t)\leq C\exp(-2\beta t)||Y_{0}||^{2}_{L_{x}^{2}}.$ Proof. Since $\rm tr{(A)}$ and $\det(A)$ cannot vanish for $|\xi|\in[\delta_{m},\delta_{M}]$ under the assumptions,
+( 3.6 ) is the direct consequence of
+( 2.12 ) and ( 2.13 ). In addition $E(t)\leq\sup_{\xi}||e^{-tA}||^{2}\,||\widehat{Y_{0}}||^{2}_{L^{2}_{\xi}}\leq C\exp(-2\beta t)||Y_{0}||^{2}_{L_{x}^{2}},$ which completes the proof of the proposition. $\square$ Remark 3.6 . By noticing that ( 3.6 ) can be replaced by $\|\exp(-tA)\|\leq C\exp(-\beta^{*}t\xi^{2}).$ with $\beta^{*}=\beta/\delta_{M}^{2}$ ,
+the middle range frequency analysis and the high frequency analysis
+can be combined to simplify
+certain calculations for these systems regardless if they are in BBM-Burgers class or KdV-Burgers class. Proposition 3.7 . Assume that $\nu=0$ and the dispersive coefficients satisfy (C2).
+Then for any $0<\delta_{m}<\delta_{M}$ with $r=a^{-{1\over 2}}\in[\delta_{m},\delta_{M}]$ , there
+exists $\beta>0$ and $C>0$ such that for any $|\xi|\in[\delta_{m},\delta_{M}]$ and for any $t>0$ , (3.7) $\|\exp(-tA)\|\leq C{\rm exp}\{-\beta t(|\xi|-r)^{2})\}.$ Moreover for any $\widehat{Y_{0}}$ with support included in $[\delta_{m},\delta_{M}]\cup[-\delta_{M},-\delta_{m}]$ and for any $t>0$ , $E(t)\leq Ct^{-1/2}||Y_{0}||^{2}_{L_{x}^{1}}.$ Remark 3.8 . Proposition 3.7 shows that even when the dichotomy is not valid,
+the energy could decay as O $(t^{-1/4})$ when $t$ goes to $+\infty$ . Proof. Since $\det(A)$ vanishes at $r=(\sqrt{a})^{-1}$ and, when $|\xi|\to r$ , $\Delta\sim\frac{a}{a+d}>0$ , $\lambda_{1}\sim\beta{\rm det}(A)\sim\beta\sigma^{2}\sim\beta(|\xi|-r)^{2}$ .
+Therefore, from ( 2.13 ), $\|\exp(-tA)\|\leq C(1+\min(t,1)\sigma){\rm exp}(-\beta\sigma^{2}t)$ as $|\xi|$ in the neighborhood of $r$ .
+Using the fact that for $t>0$ , $\min(t,1)\leq\sqrt{t}$ , so
+there exists $C>0$ such that $\|\exp(-tA)\|\leq C(1+\sqrt{t}\sigma){\rm exp}(-\beta\sigma^{2}t)\leq C{\rm exp}(-\frac{\beta}{2}\sigma^{2}t),$ we obtain the estimate ( 3.7 ) for $|\xi|$ close to $r$ . For other $|\xi|$ in $[\delta_{m},\delta_{M}]$ , the same argument in the proof
+of Proposition 3.5 and Remark 3.6 applies. For the decay rate of $E(t)$ , same argument as in the proof of Propositions 3.2 can be used. In fact, $|\xi|-r$ plays the same role as $|\xi|$ in that
+case. $\square$ 3.4. Decay for linear systems Since linear system ( 1.3 ) defines a semi-group $e^{-tA}$ for $t\geq 0$ , that is contracting on $L^{2}\times L^{2}$ in
+the variable $(\eta,w)$ ,
+the initial value problem is therefore well-posed and
+the $L^{2}$ norm decays. Combining the low, middle and high
+frequency analysis, the decay rate for the linear system ( 1.3 )
+can be stated as Theorem 3.9 . For systems ( 1.3 ) with the dispersive
+constants $a,b,c,d$ satisfy the constraints
+(C0)-(C1) or (C0)-(C2), assuming either $\{\nu=1\}$ or, $\{\nu=0$ and $\text{order}(\sigma)>-2+\frac{1}{2}\text{order}(\varepsilon)\}$ , then for any $(\eta_{0},Hu_{0})=(\eta_{0},w_{0})\in(L^{1}(\mathbb{R})\cap L^{2}(\mathbb{R}))^{2}$ where $\widehat{H}\widehat{u}_{0}=(\frac{(1-a\xi^{2})(1+d\xi^{2})}{(1-c\xi^{2})(1+b\xi^{2})})^{1\over 2}\widehat{u}_{0}$ ,
+there exists a constant $C$ , such that for any $t>0$ $\|(\eta,Hu)\|_{L_{x}^{2}}=\|(\eta,w)\|_{L_{x}^{2}}\leq Ct^{-1/4}.$ Remark 3.10 . This is equivalent to say ,
+with respect to physical variables $(\eta,u)$ , that for any $(\eta_{0},u_{0})\in(L_{x}^{2}\cap L^{1}_{x})\times(H_{x}^{h}\cap W_{x}^{h,1})$ , $\|(\eta,u)\|_{L_{x}^{2}\times H_{x}^{h}}\leq Ct^{-1/4}$ for any $t>0$ , where $h=\text{order}(\widehat{H})=\{a\}+\{d\}-\{c\}-\{b\}$ . Proof. Combining the low, middle and high frequency analysis, we have $E(t)=E_{low}(t)+E_{middle}(t)+E_{high}(t)\leq C(\eta_{0},u_{0})(t^{-{1\over 2}}+e^{-2\beta t})$ for $t>0$ where $C(\eta_{0},u_{0})$ is a function of the dispersive
+coefficients and the norms of $\eta_{0}$ and $u_{0}$ . $\square$ We complete this section by the following Corollary 3.11 . For any dissipation, the classical Boussinesq
+system, the Bona–Smith system, the
+coupled KdV–BBM ( $b=c=0$ ) system,
+the BBM–KdV systems ( $a=d=0$ ) and the
+weakly dispersive systems ( $b>0$ and $d>0$ ) with $a<0$ or $c<0$ belong to the BBM–Burgers
+class. Corollary 3.12 . With complete dissipation,
+the KdV–KdV system ( $b=d=0$ , $a=c>0$ ) belongs to the KdV–Burgers class; the weakly dispersive systems ( $b>0$ and $d>0$ ) belong to the BBM–Burgers class. Remark 3.13 . When the consideration is restricted to the linear systems,
+a result similar to Theorem 3.9 (substituting $\alpha$ for $\varepsilon$ in the
+statement) holds
+when one replaces $(\nu\eta_{xx},u_{xx})$ by $(\eta_{xx},\nu u_{xx})$ in the right-hand side of ( 2.1 ) since $\eta$ and $u$ play the same role. 4. Nonlinear Theory For convenience, we will only consider in this section (i) the
+complete dissipation and (ii) the partial dissipation with $a,b,c,d$ satisfy the (C1) assumption. The partial dissipation with $a,b,c,d$ satisfy (C2) will be considered elsewhere. 4.1. A general result Consider an evolution equation that reads (4.1) $v_{t}+Lv+\partial_{x}(F(v))=0,\quad v(t=0)=v_{0}$ where $L$ is a linear unbounded operator with symbol $A$ and $F$ is a nonlinear
+quadratic operator. Assuming that $L$ generates a semi–group $S(t)$ on $L^{2}_{x}$ that
+satisfies the dichotomy assumption ( 3.1 ), namely
+there exist $\beta>0$ and $\delta>0$ ( $\delta$ can be $+\infty$ ) such that
+for any $t>0$ and (4.2) $\begin{split}\bullet&\text{ for }|\xi|\leq\delta,\ \|S(t)\|\leq C\exp(-\beta t\xi^{2}),\\
+\bullet&\text{ for }|\xi|>\delta,\ \|S(t)\|\leq C\exp(-\beta t).\end{split}$ In addition, (4.3) $\sup_{t\geq 0}(t^{1/4}\|S(t)v_{0}\|_{L^{2}_{x}})\leq C_{1}\|v_{0}\|_{L_{x}^{1}\cap L_{x}^{2}}=\overline{C}.$ Assuming also the nonlinear term $F(v)$ satisfies (4.4) $\sup_{|\xi|\leq\delta}|\widehat{F}|+\left(\int_{|\xi|\geq\delta}|\xi|^{2}|\widehat{F}|^{2}d\xi\right)^{1/2}\leq C\|v\|^{2}_{L^{2}_{x}}$ for any $t>0$ , where $\widehat{F}=\mathcal{F}(F(v))$ . Let us recall that a mild
+solution to
+( 4.1 ) is a solution to the integral equation (4.5) $v(t)=S(t)v_{0}-\int_{0}^{t}S(t-s)\partial_{x}F(v(s))ds.$ Under the above assumptions, we may construct a solution to
+( 4.5 )
+by performing a fixed point argument (see [ 10 ] , [ 14 ] , [ 6 ] , [ 11 ] ) on
+the space $E=\left\{u:\ \sup_{t>0}\{t^{1/4}\|u(t)\|_{L^{\texttwosuperior}_{x}}\}<\infty\right\},$ which is a Banach space of functions that are continuous
+in time with value in $L^{2}$ that are $O(t^{-1/4})$ when $t$ goes to $+\infty$ .
+If $\overline{C}$ is small enough,
+a fixed point argument to the Duhamel’s form
+of the equation in the ball in $E$ centered at origin would
+provide the solution. Theorem 4.1 . For system ( 4.1 ) with assumptions
+( 4.2 )-( 4.3 )-( 4.4 ),
+there exists a numerical constant $C$ such that
+for
+any mild solution to ( 4.1 ) starting from $v_{0}$ with $\|v_{0}\|_{L_{x}^{1}\cap L^{2}_{x}}\leq C,$ then (4.6) $\|v(t)\|_{L^{2}_{x}}\leq O(t^{-1/4})\quad\text{as}\quad t\rightarrow\infty.$ Proof. To begin, we first control the low frequency part of the nonlinear term.
+Let $\begin{split}\widehat{N}&:={\mathcal{F}}\left(\int_{0}^{t}S(t-s)\partial_{x}F(v(s))ds\right)\\
+&=i\int_{0}^{t}e^{-(t-s)A}\xi\widehat{F}(v(s))ds.\end{split}$ Using the first inequality in ( 4.2 ) in combination with
+( 4.4 ), one obtains (4.7) $\begin{split}&\left(\int_{|\xi|\leq\delta}|\widehat{N}|^{2}d\xi\right)^{1/2}\leq C\int_{0}^{t}\left[\int_{|\xi|\leq\delta}\|e^{-(t-s)A}\|^{2}\xi^{2}|\widehat{F}|^{2}d\xi\right]^{1/2}ds\\
+&\hskip 14.22636pt\leq C\int_{0}^{t}\left[\int_{\mathbb{R}}\xi^{2}e^{-2\beta(t-s)\xi^{2}}d\xi\right]^{1/2}\left(\sup_{|\xi|\leq\delta}|\widehat{F}|\right)ds\\
+&\hskip 14.22636pt\leq C\int_{0}^{t}{\|v(s)\|^{2}_{L^{2}_{x}}\over(t-s)^{3/4}}\ ds.\end{split}$ We now control the high frequency part of the nonlinear term,
+using the second inequality in ( 4.2 ) in combination with
+( 4.4 ) (4.8) $\begin{split}\left(\int_{|\xi|\geq\delta}|\widehat{N}|^{2}d\xi\right)^{1/2}&\leq C\int_{0}^{t}e^{-\beta(t-s)}\left(\int_{|\xi|>\delta}\xi^{2}|\widehat{F}|^{2}d\xi\right)^{1/2}ds\\
+&\leq C\int_{0}^{t}e^{-\beta(t-s)}\|v(s)\|^{2}_{L^{2}_{x}}ds.\end{split}$ Introducing the norm (4.9) $M(t)=\sup_{s\in[0,t]}(s^{1/4}\|v(s)\|_{L^{2}_{x}}),$ and if $v$ solves ( 4.5 ), then due to ( 4.7 )–( 4.8 ), $\begin{split}&t^{1/4}\|v(t)\|_{L^{2}_{x}}\leq t^{1/4}\|S(t)v_{0}\|_{L^{2}_{x}}+t^{1/4}\|\hat{N}(t)\|_{L_{\xi}^{2}}\\
+&\leq t^{1/4}\|S(t)v_{0}\|_{L^{2}_{x}}+CM(t)^{2}\int_{0}^{t}\left[{t^{1/4}\over s^{1/2}(t-s)^{3/4}}+{t^{1/4}\over s^{1/2}}\exp(-\beta(t-s))\right]ds.\end{split}$ By applying the change of variable $s=\tau t$ in the integration, one
+finds $\begin{split}&\int_{0}^{t}\left[{t^{1/4}\over s^{1/2}(t-s)^{3/4}}+{t^{1/4}\over s^{1/2}}\exp(-\beta(t-s))\right]ds\\
+\leq&C+\int_{0}^{1}\frac{t^{3/4}}{\tau^{1\over 2}}\exp(-\beta t(1-\tau))d\tau\leq C.\end{split}$ Therefore, using the
+property ( 4.3 ),
+the positive, nondecreasing function $M(t)$ satisfies $M(0)=0$ and for any $t\geq 0$ , (4.10) $C_{0}M(t)^{2}-M(t)+\overline{C}\geq 0,$ where $C_{0}$ is a positive constant. Choosing $\overline{C}$ such that $C_{0}x^{2}-x+\overline{C}=0$ has two real roots $0<r_{1}<r_{2}$ , namely choosing $\overline{C}<\frac{1}{4C_{0}}$ ,
+then ( 4.10 ) holds only if $M(t)$ is trapped in the interval $[0,r_{1}]$ .
+Therefore when $\|v_{0}\|_{L_{x}^{1}\cap L_{x}^{2}}\leq\frac{\overline{C}}{C_{1}}<\frac{1}{4C_{0}C_{1}}$ $M(t)$ is bounded and ( 4.6 ) is valid. $\square$ 4.2. Applications to weakly dispersive systems with complete dissipation
+or partial dissipation Since $b>0$ and $d>0$ , $\text{order}(\sigma)\leq 0$ and the corresponding
+linearized system is in the BBM-Burgers class.
+From
+Proposition 3.3 and Proposition • ‣ 3.4 , this corresponds to consider complete
+dissipation ,
+or partial dissipation together with $\text{order}(\sigma)\geq-1$ . Theorem 4.2 . Consider a weakly dispersive two–way wave model $(b>0\text{ and }d>0)$ with either the complete dissipation or the partial dissipation
+together with $a<0$ or $c<0$ . Then, for small initial data, • if $H$ is of order 0, (4.11) $\|\eta(t)\|^{2}_{L^{2}_{x}}+\|u(t)\|^{2}_{L^{2}_{x}}\leq O(t^{-1/2});$ • if $H$ is of order 1, (4.12) $\|\eta(t)\|^{2}_{L^{2}_{x}}+\|u(t)\|^{2}_{H^{1}_{x}}\leq O(t^{-1/2});$ • if $H$ is of order $-1$ , (4.13) $\|\eta(t)\|^{2}_{H^{1}_{x}}+\|u(t)\|^{2}_{L^{2}_{x}}\leq O(t^{-1/2});$ as $t\to\infty$ . Proof. Note that the theorem is proved after ( 4.4 ) is validated and we will do that
+by
+discussing the cases according to the order of $H$ . • If $H$ is of order 0 or 1.
+Introducing the change of variable $v=\mathcal{F}^{-1}(\widehat{\eta},\widehat{H}\widehat{u})=\mathcal{F}^{-1}(\widehat{\eta},\widehat{w}),$ the full nonlinear system (4.14) $\begin{split}&\eta_{t}+u_{x}+au_{xxx}-b\eta_{xxt}+(\eta u)_{x}=\nu\eta_{xx},\\
+&u_{t}+\eta_{x}+c\eta_{xxx}-du_{xxt}+uu_{x}=u_{xx},\end{split}$ transforms to $v_{t}+Lv=-\partial_{x}F(v),$ where $L$ has symbol $A=\begin{pmatrix}\nu\alpha&i{\rm sgn}(\omega_{1})\xi\sigma\\
+i{\rm sgn}(\omega_{2})\xi\sigma&\varepsilon\end{pmatrix}$ and $F$ reads $F(v)=\begin{pmatrix}(1-b\partial^{2}_{x})^{-1}\eta H^{-1}w\\
+\frac{1}{2}H(1-d\partial^{2}_{x})^{-1}(H^{-1}w)^{2}\end{pmatrix}.$ To check ( 4.4 ), it is natural to separate the estimate into two parts. – Low frequency ( $|\xi|\leq\delta$ ) estimate :
+Since $H^{-1}$ , which has order $0$ or $-1$ , is bounded on $L^{2}_{x}$ , straightforward computations lead to $\begin{split}\|\widehat{\eta H^{-1}w}\|_{L^{\infty}_{\xi}}&+\|\widehat{(H^{-1}w)^{2}}\|_{L^{\infty}_{\xi}}\leq C(\|\eta\|^{2}_{L^{2}_{x}}+\|H^{-1}w\|^{2}_{L^{2}_{x}})\\
+&\leq C(\|\eta\|^{2}_{L^{2}_{x}}+\|w\|^{2}_{L^{2}_{x}}).\end{split}$ Because $(1-b\partial_{x}^{2})^{-1}$ and $H(1-d\partial_{x}^{2})^{-1}$ are bounded operators, $\sup_{|\xi|\leq\delta}|\widehat{F}|\leq C\|v\|^{2}_{L_{x}^{2}}.$ – High frequency ( $|\xi|>\delta$ ) estimate : Since $\partial_{x}(1-b\partial^{2}_{x})^{-1}$ is a smoothing operator
+(it is of order $-1$ ) and $H^{-1}$ is a bounded operator on $L^{2}_{x}$ , $\begin{split}&\|\partial_{x}(1-b\partial^{2}_{x})^{-1}(\eta H^{-1}w)\|_{L^{2}_{x}}\leq C\|\eta H^{-1}w\|_{H^{-1}_{x}}\\
+&\hskip 14.22636pt\leq C\|\eta\|_{L^{2}_{x}}\|H^{-1}w\|_{L^{2}_{x}}\leq C(\|\eta\|^{2}_{L^{2}_{x}}+\|w\|^{2}_{L^{2}_{x}}),\end{split}$ where Lemma 2.2(ii) in [ 6 ] , $\|fg\|_{H^{-1}}\leq C\|f\|_{L^{2}}\|g\|_{L^{2}}$ is used.
+Now, consider the term $\partial_{x}(H(1-d\partial^{2}_{x})^{-1})((H^{-1}w)^{2})$ in $F$ . If $H$ is of order $0$ , it can be
+bounded in the same way.
+If $H$ is of order $1$ , then $\begin{split}&\|\partial_{x}H(1-d\partial_{x}^{2})^{-1}(H^{-1}w)^{2}\|_{L^{2}_{x}}\leq C\|(H^{-1}w)^{2}\|_{L^{2}_{x}}\\
+&\hskip 14.22636pt\leq C\|H^{-1}w\|^{2}_{H^{1}_{x}}\leq C\|w\|^{2}_{L^{2}_{x}},\end{split}$ where Lemma 2.2(iv) in [ 6 ] $\|fg\|_{L^{0}}\leq C\|f\|_{H^{1}}\|g\|_{H^{1}}$ is used. Combining the lower frequency and higher frequency analysis, one sees ( 4.4 ) is valid and Theorem 4.1 yields the desired result. • If $H$ is of order $-1$ , introducing the change of variable (4.15) $v=\mathcal{F}^{-1}((H^{-1}\widehat{\eta},\widehat{u})).$ and setting $\widehat{\tau}=H^{-1}\widehat{\eta}$ , the full nonlinear
+system ( 4.14 ) reads $v_{t}+Lv=-\partial_{x}F(v)$ where $L$ has symbol $A=\begin{pmatrix}\nu\alpha&i{\rm sgn}(\omega_{1})\xi\sigma\\
+i{\rm sgn}(\omega_{2})\xi\sigma&\varepsilon\end{pmatrix}$ and $F(v)=\begin{pmatrix}H^{-1}(1-b\partial^{2}x)^{-1}(uH\tau)\\
+\frac{1}{2}(1-d\partial^{2}_{x})^{-1}(u^{2})\end{pmatrix}.$ The proof is then very similar to the previous case and therefore
+omitted. $\square$ Corollary 4.3 . For the following two special cases, we have • solutions to Bona–Smith system
+( $a=0,b>0,c<0$ and $d>0$ ) with complete or partial dissipation satisfy ( 4.13 ); • solutions to BBM–BBM system with complete dissipation
+( $a=c=0,\nu=1)$ satisfy ( 4.11 ). 4.3. Application to KdV-Burgers systems with complete dissipation. Using Proposition 3.3 ,
+this implies that order $(\sigma)\geq 1$ , and then that $b=0$ and/or $d=0$ . First case:
+Consider the case where $b=d=0$ .
+The analysis in [ 6 ] implies that $a=c=1/6$ , so
+the system satisfies (C2) assumptions.
+Since the dichotomy assumption ( 4.2 ) was proved
+in Section 3 and the linearized system is in the KdV-Burgers class , Theorem 4.1 applies when
+( 4.4 ) with $\delta=+\infty$ is verified. Let us observe that $H=1$ and that the full nonlinear system reads $v_{t}+Lv=-\partial_{x}F(v)$ where $v=(\eta,u)$ , $L$ has symbol $A=\begin{pmatrix}\xi^{2}&i{\rm sgn}(\omega_{1})\xi\sigma\\
+i{\rm sgn}(\omega_{2})\xi\sigma&\xi^{2}\end{pmatrix}$ and $F(v)=\begin{pmatrix}\eta u\\
+{u^{2}\over 2}\end{pmatrix}.$ Since $\|F(v)\|_{L^{1}_{x}}\leq C(\|\eta\|^{2}_{L^{2}_{x}}+\|u\|^{2}_{L^{2}_{x}}),$ ( 4.4 ) with $\delta=\infty$ is a direct consequence. Second case: Consider the case where $b>0$ and $d=0$ . Due to (C0), $c\geq 0$ . Since $\text{order}(\sigma)\geq 1$ , the system must have $a=c>0$ .
+Therefore order $(H)=-1$ . Introducing the change of variable
+( 4.15 ) the system reads as ( 4.3 )
+with the following nonlinearity $F(v)=\begin{pmatrix}H^{-1}(1-b\partial^{2}x)^{-1}(uH\tau)\\
+\frac{u^{2}}{2}\end{pmatrix}.$ ( 4.4 ) with $\delta=\infty$ is valid and the proof is straightforward and then omitted. Third case: Consider the case where $b=0$ and $d>0$ . Since order $(\sigma)=1$ , then $a$ and $c$ can not vanish and order $(H)=1$ .
+In this case, with the change of variable
+( • ‣ 4.2 ), the system reads as ( 4.3 )
+with $F$ being $F(v)=\begin{pmatrix}\eta H^{-1}w\\
+\frac{1}{2}H(1-d\partial^{2}_{x})^{-1}(H^{-1}w)^{2}\end{pmatrix}.$ ( 4.4 ) with $\delta=\infty$ is again valid and the proof is straightforward and then omitted. Therefore we can state Theorem 4.4 . Consider a
+KdV-Burgers system with complete dissipation.
+Then for small initial data, • if $H$ is of order 0, (4.16) $\|\eta(t)\|^{2}_{L^{2}_{x}}+\|u(t)\|^{2}_{L^{2}_{x}}\leq O(t^{-1/2});$ • if $H$ is of order 1, (4.17) $\|\eta(t)\|^{2}_{L^{2}_{x}}+\|u(t)\|^{2}_{H^{1}_{x}}\leq O(t^{-1/2});$ • if $H$ is of order $-1$ , (4.18) $\|\eta(t)\|^{2}_{H^{1}_{x}}+\|u(t)\|^{2}_{L^{2}_{x}}\leq O(t^{-1/2});$ as $t\to\infty$ . Remark 4.5 . This is not surprising for KdV-KdV system ( $b=d=0$ )
+since if we introduce the new
+variables $\eta=w^{1}+w^{2}$ and $u=w^{1}-w^{2}$ , then
+( 4.14 )
+reads as a system of two linear KdV–Burgers systems (weakly) coupled
+through
+nonlinear terms.
+See Section 2.3 in [ 6 ] . 4.4. Other cases In some other cases, the method presented here does not work
+straightforwardly. As pointed out in the Introduction, other methods exist
+which might enable the analysis to go further.
+These methods could also be helpful to extend
+our local results to global ones. 5. The $L^{\infty}_{x}$ –decay rate First, we observe that for the cases of weakly dispersive wave equations and
+KdV-KdV system, the nonlinear terms satisfy (5.1) $\sup_{|\xi|\leq\delta}|\xi\widehat{F}|+\left(\int_{|\xi|>\delta}|\xi|^{4}|\widehat{F}|^{2}d\xi\right)^{1/2}\leq C\|v\|_{L^{2}_{x}}\|v_{x}\|_{L^{2}_{x}}.$ We now estimate the decay rate of $\partial_{x}v(t)$ in $L^{2}_{x}$ when $v$ solves ( 4.5 ). To begin,
+we differentiate ( 4.5 ) with respect to $x$ and treat
+the nonlinear term of the resulting equation with a procedure similar
+to the one in the proof of
+Theorem 4.1 , but using ( 5.1 ) instead of ( 4.4 ). We first note that for low frequencies, $\left(\int_{|\xi|\leq\delta}\xi^{2}|\widehat{N}|^{2}d\xi\right)^{1/2}\leq C\int_{0}^{t}{\|v(s)\|_{L^{2}_{x}}\|v_{x}(s)\|_{L^{2}_{x}}\over(t-s)^{3/4}}ds$ and for high frequencies $\left(\int_{|\xi|\geq\delta}\xi^{2}|\widehat{N}|^{2}d\xi\right)^{1/2}\leq C\int_{0}^{t}e^{-\beta(t-s)}\|v\|_{L^{2}_{x}}\|v_{x}\|_{L^{2}_{x}}ds.$ We now consider the linear part.
+For $v_{0}$ in $H^{1}(\mathbb{R})\cap L^{2}(\mathbb{R})$ , the linear term can be estimated by splitting
+the region of integration into low
+frequencies and high frequencies. Using ( 4.2 ), we have $\begin{split}\|\partial_{x}S(t)v_{0}\|^{2}_{L^{2}_{x}}&\leq C\bigg[\left(\int\xi^{2}e^{-\beta\xi^{2}t}d\xi\right)\|v_{0}\|^{2}_{L^{2}_{x}}+e^{-2\beta t}\|\partial_{x}v_{0}\|^{2}_{L^{2}_{x}}\bigg]\\
+&\leq{C\over t^{3/2}}\|v_{0}\|^{2}_{L^{2}}+Ce^{-2\beta t}\|v_{0}\|^{2}_{H^{1}}.\end{split}$ Therefore, the linear part behaves like $O(t^{-3/4})$ as $t\to\infty$ .
+Since $\|v\|_{L^{2}}$ is $O(t^{-1/4})$ as $t\to\infty$ , we have $\begin{split}\|\partial_{x}v(t)\|_{L^{2}_{x}}&\leq C(v_{0})t^{-3/4}+C\sup_{s\in[0,t]}\left(s^{1/4}\|v(s)\|_{L^{2}}\right)\\
+&\times\int_{0}^{t}{\|v_{x}(s)\|_{L^{2}_{x}}\over(t-s)^{3/4}}\ {1\over s^{1/4}}+{e^{-\beta(t-s)}\over s^{1/4}}\|v_{x}(s)\|_{L^{2}_{x}}ds.\end{split}$ Simple calculations show $\int_{0}^{t}\ {ds\over s^{1/4}(t-s)^{3/4}}+\int_{0}^{t}{e^{-\beta(t-s)}\over s^{1/4}}\ ds\leq C.$ Therefore (5.2) $\begin{split}\|\partial_{x}v(t)\|_{L^{2}_{x}}&\leq C(v_{0})t^{-3/4}+C\sup_{s\in[0,t]}\|\partial_{x}v(s)\|_{L^{2}_{x}}\sup_{s\in[0,t]}(s^{1/4}\|v(s)\|_{L^{2}})\\
+&\leq C(v_{0})t^{-3/4}+C_{2}M(t)\sup_{s\in[0,t]}\|\partial_{x}v(s)\|_{L^{2}_{x}}.\end{split}$ Since $M(t)$ , that is defined
+in ( 4.9 ), is bounded by the first root $r_{1}$ of $C_{0}x^{2}-x+\overline{C}=0,$ and $r_{1}\sim\overline{C}$ as $\overline{C}\to 0$ (since ${1\over C_{0}}(1-(1-4C_{0}\overline{C})^{1/2})\sim 2\overline{C}$ as $\overline{C}\to 0$ ).
+Therefore, when $\overline{C}$ small enough, $M(t)\leq 2\overline{C}$ . Hence by choosing $\overline{C}$ such that (5.3) $2C_{2}\overline{C}\leq{1\over 2},$ ( 5.2 ) leads to (5.4) $\|\partial_{x}v(t)\|_{L^{2}_{x}}\leq 2C(v_{0})t^{-3/4}$ and we obtain the following theorem. Theorem 5.1 . For system ( 4.1 ) with assumptions
+( 4.2 )-( 4.3 )-( 4.4 ),
+assume $v_{0}$ is in $H^{1}(\mathbb{R})\cap L^{1}(\mathbb{R})$ and $\|v_{0}\|_{L^{1}\cap L^{2}}$ is small enough.
+Then $\|v\|_{L^{\infty}_{x}}\leq O(t^{-1/2})$ as $t\to\infty$ . Proof. Using ( 5.4 ) and ( 4.6 ) together with $\|v\|_{L^{\infty}_{x}}\leq\|v\|^{1/2}_{L^{2}_{x}}\|\partial_{x}v\|_{L^{2}_{x}}^{1/2}$ yields the desired result. $\square$ 6. Numerical Result Numerical simulations are performed on several systems and results on
+BBM-BBM and Bona-Smith systems with
+complete or partial dissipations are reported here. The results show not only that the
+theoretical results on the decay rates are sharp, but also the constants
+involved are reasonably sized. In these numerical computations, the initial data are taken to be $\begin{split}\eta_{0}&=sech^{2}(\frac{\sqrt{2}}{2}(x-x_{0})),\\
+u_{0}&=\eta_{0}-\eta_{0}^{2}/4,\end{split}$ where $x_{0}$ is in the spatial domain $[0,L]$ , where $L$ is
+taken to be large enough so the solution near the boundary is smaller
+than the machine roundoff error during the whole computation.
+The spectral method is used on the spatial domain $[0,L]$ and the leap-frog
+algorithm is used on the time advancing.
+The decay rate $r$ and the constant $C$ in $\|v\|\sim Ct^{-r},\text{ as }t\rightarrow\infty$ is calculated by first
+computing $r(t_{n}):=-\frac{\log\frac{\|v\|(t_{n})}{\|v\|(t_{n-1})}}{\log\frac{t_{n}}{t_{n-1}}}.$ The computation is stopped when $r(t_{n})$ is approaching to a constant
+and
+the value $r$ is obtained
+by averaging the last 5 data. The constant $C$ is then
+computed by averaging the last five $\|v\|(t_{n})t_{n}^{r}$ . In the computations reported below, $L=320$ , $dx=0.1$ and $dt=0.05$ , where $dx$ and $dt$ are the meshsize in space and time
+respectively. BBM-BBM system ( $a=c=0,b=d=1/6$ ) with complete dissipation. It is shown in Theorem 4.2 and 5.1 that for small data , $\|v\|_{L^{2}}\leq C_{1}t^{-1/4}\quad\text{and}\quad\|v\|_{L^{\infty}}\leq C_{2}t^{-1/2}.$ The numerical computation is performed for time
+interval $[0,50]$ , and the result shows $\|v\|_{L^{2}}\sim 1.4232t^{-0.2470}\quad\text{and}\quad\|v\|_{L^{\infty}}\sim 1.4989t^{-0.4963}.$ Therefore, it is clear that the theoretical result is sharp and the constants
+involved are not large. Moreover, it seems that the small data
+requirement might be removed if, for example, other methods were
+employed. Bona-Smith system ( $a=0,b=-c=d=1/3$ ) with complete and partial dissipation. This case is again covered by Theorem 4.2 and 5.1 .
+By direct computation, we obtain for complete dissipation, $\|v\|_{L^{2}}\sim 1.4015t^{-0.2477},\quad\|v\|_{L^{\infty}}\sim 1.4466t^{-0.4998},$ and for partial dissipation $\|v\|_{L^{2}}\sim 0.6676t^{-0.2519},\quad\|v\|_{L^{\infty}}\sim 0.6595t^{-0.5105}.$ Acknowledgment Part of this work was performed when
+the second author was enjoying the hospitality of the mathematics
+department in Purdue University. References [1] C. J. Amick , Regularity and uniqueness of solutions to the
+Boussinesq system of equations , J. Diff. Eq., 54 (1984), pp. 231–247. [2] C. J. Amick, J. L. Bona, and M. E. Schonbek , Decay of solutions of
+some nonlinear wave equations , J. Differential Equations, 81 (1989),
+pp. 1–49. [3] J. T. Beale, T. Y. Hou, and J. Lowengrub , Convergence of boundary
+integral methods for water waves , SIAM J. Numer. Anal, 33 (1996),
+pp. 1797–1843. [4] J. L. Bona and M. Chen , A Boussinesq system for two-way
+propagation of nonlinear dispersive waves , Physica D, 116 (1998),
+pp. 191–224. [5] J. L. Bona, M. Chen, and J.-C. Saut , Boussinesq equations and other
+systems for small-amplitude long waves in nonlinear dispersive media I:
+Derivation and the linear theory , J. Nonlinear Sci., 12 (2002),
+pp. 283–318. [6] , Boussinesq equations
+and other systems for small-amplitude long waves in nonlinear dispersive
+media II: Nonlinear theory , Nonlinearity, 17 (2004), pp. 925 – 952. [7] J. L. Bona, W. G. Pritchard, and L. R. Scott , An evaluation of a
+model equation for water waves , Philos. Trans. Royal Soc. London, Ser. A,
+302 (1981), pp. 457–510. [8] J. L. Bona and R. Smith , A model for the two-way propagation of
+water waves in a channel , Math. Proc. Cambridge Philos. Soc., 79 (1976),
+pp. 167–182. [9] J. V. Boussinesq , Théorie de l’intumescence liquide appelée onde
+solitaire ou de translation se propageant dans un canal rectangulaire , C. R.
+Acad. Sci. Paris, 72 (1871), pp. 755–759. [10] T. Cazenave and A. Haraux , An introduction to semilinear evolution
+equations , vol. 13 of Oxford Lecture Series in Mathematics and its
+Applications, The Clarendon Press Oxford University Press, New York, 1998. Translated from the 1990 French original by Yvan Martel and revised
+by the authors. [11] T. Cazenave and F. B. Weissler , Scattering theory and self-similar
+solutions for the nonlinear Schrdinger equation , SIAM J. Math. Anal., 31
+(2000), pp. 625–650. [12] C.C.Mei and L.F.Liu , The damping of surface gravity waves in a
+bounded liquid , J. Fluid Mech., 59 (1973), pp. 239–256. [13] D. T. Finkbeiner, II , Introduction to matrices and linear
+transformations , Second edition, W. H. Freeman and Co., San Francisco,
+Calif., 1966. [14] G. Karch , Large-time behaviour of solutions to non-linear wave
+equations: higher-order asymptotics , Math. Methods Appl. Sci., 22 (1999),
+pp. 1671–1697. [15] G. Karch , Long-time asymptotics of solutions to some nonlinear wave
+equations , in Evolution equations: existence, regularity and singularities
+(Warsaw, 1998), vol. 52 of Banach Center Publ., Polish Acad. Sci., Warsaw,
+2000, pp. 133–146. [16] J. J. Mahony and W. G. Pritchard , Wave reflexion from beaches , J.
+Fluid Mech., 101 (1980), pp. 809–832. [17] J. W. Miles , Surface-wave damping in a closed basin , Proc. Royal
+Soc. London A, 297 (1967), pp. 459–475. [18] D. H. Peregrine , Equations for water waves and the approximation
+behind them , in Waves on beaches and resulting sediment transport;
+proceedings of an advanced seminar conducted by the Mathematics Research
+Center, Univ. Wisconsin, Academic Press: New York, 1972, pp. 95–121. [19] S. Rajopadhye, M. Schonbek, and M. Wiegner , Asymptotic decay for a
+generalized boussinesq system , J. Dynam. Differential Equations, 11 (1999),
+pp. 595–623. [20] M. E. Schonbek , Existence of solutions for the Boussinesq system
+of equations , J. Diff. Eq., 42 (1981), pp. 325–352. [21] C. J. Tang, V. C. Patel, and L. Landweber , Viscous effects on
+propagation and reflection of solitary waves in shallow channels , J. Comput.
+Phys., 88 (1990), pp. 86–113. [22] M. H. Teng and T. Y. Wu , A bidirectional long-wave model , Methods
+Appl. Anal., 1 (1994), pp. 108–117. [23] G. B. Whitham , Linear and nonlinear waves , John Wiley & Sons Inc.,
+New York, 1999. Reprint of the 1974 original, A Wiley-Interscience Publication. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

@@ -1,0 +1,389 @@
+{
+  "windows": [
+    {
+      "trajectory": "2250.h5",
+      "start": 1770
+    },
+    {
+      "trajectory": "8718.h5",
+      "start": 1020
+    },
+    {
+      "trajectory": "5625.h5",
+      "start": 1140
+    },
+    {
+      "trajectory": "2343.h5",
+      "start": 3020
+    },
+    {
+      "trajectory": "4031.h5",
+      "start": 3770
+    },
+    {
+      "trajectory": "8625.h5",
+      "start": 3890
+    },
+    {
+      "trajectory": "4593.h5",
+      "start": 2600
+    },
+    {
+      "trajectory": "10406.h5",
+      "start": 3520
+    },
+    {
+      "trajectory": "10875.h5",
+      "start": 3770
+    },
+    {
+      "trajectory": "7406.h5",
+      "start": 1810
+    },
+    {
+      "trajectory": "8062.h5",
+      "start": 640
+    },
+    {
+      "trajectory": "4687.h5",
+      "start": 1180
+    },
+    {
+      "trajectory": "10218.h5",
+      "start": 3390
+    },
+    {
+      "trajectory": "9187.h5",
+      "start": 100
+    },
+    {
+      "trajectory": "2062.h5",
+      "start": 890
+    },
+    {
+      "trajectory": "9375.h5",
+      "start": 3680
+    },
+    {
+      "trajectory": "4875.h5",
+      "start": 2600
+    },
+    {
+      "trajectory": "4218.h5",
+      "start": 850
+    },
+    {
+      "trajectory": "7875.h5",
+      "start": 2100
+    },
+    {
+      "trajectory": "9656.h5",
+      "start": 390
+    },
+    {
+      "trajectory": "5718.h5",
+      "start": 2430
+    },
+    {
+      "trajectory": "10687.h5",
+      "start": 1270
+    },
+    {
+      "trajectory": "2531.h5",
+      "start": 100
+    },
+    {
+      "trajectory": "10031.h5",
+      "start": 3100
+    },
+    {
+      "trajectory": "3468.h5",
+      "start": 3020
+    },
+    {
+      "trajectory": "1875.h5",
+      "start": 3890
+    },
+    {
+      "trajectory": "3187.h5",
+      "start": 2930
+    },
+    {
+      "trajectory": "8531.h5",
+      "start": 600
+    },
+    {
+      "trajectory": "11437.h5",
+      "start": 3850
+    },
+    {
+      "trajectory": "9937.h5",
+      "start": 310
+    },
+    {
+      "trajectory": "6093.h5",
+      "start": 1680
+    },
+    {
+      "trajectory": "3375.h5",
+      "start": 3180
+    }
+  ],
+  "statistics": {
+    "attempts": 875,
+    "successful": 400,
+    "invalid": 475,
+    "unique_structures": 400,
+    "parsed": 455,
+    "integration_pass_rate_among_parsed": 0.8791208791208791,
+    "rejections": {
+      "invalid_or_unterminated_text": 398,
+      "Analytic gradient node budget exceeded": 8,
+      "Fit quality gate: each batch-mean equation R2 must be strictly > -0.0035": 41,
+      "Term evaluation failed: Nonfinite or complex term on valid points": 12,
+      "Repeated residual equations cannot define an independent system": 3,
+      "Numerical subset supports spatial order <=4 and time order <=2": 3,
+      "Candidate parse/compile failed: Identity equation has no learnable structure": 1,
+      "Candidate parse/compile failed: Unsupported by <class 'sympy.printing.numpy.NumPyPrinter'>: <class 'sympy.core.function.Derivative'>\nPrinter has no method: _print_Derivative_Symbol\nSet the printer option 'strict' to False in order to generate partially printed code.": 1,
+      "Zero fitted basis column": 1,
+      "Isolated parse failed: parse wall deadline; cap=15s/4096MiB": 3,
+      "Compiled expression node budget exceeded": 3,
+      "Rank-deficient coefficient regression": 1
+    }
+  },
+  "top10": [
+    {
+      "reward": 0.6880730420853753,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.8996985659174687,
+      "r2_per_equation": [
+        0.9465437128568879,
+        0.9052797725630287,
+        0.8472722123324892
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        3,
+        4,
+        8
+      ],
+      "penalty": 0.7647817481888637,
+      "text": "\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{y}(v)+\\partial_{x}(u)=0\\\\\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{t}(v)\\cdot u+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(u)=0\\\\\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)\\cdot \\partial_{y}(v)\\partial_{x}(v)+\\partial_{x}(v)\\cdot u+\\partial_{t}(v)+\\partial_{x}(u)v^{2}\\cdot \\partial_{x}(v)+\\partial_{y}(v)+\\partial_{t}(v)+\\partial_{t}(v)\\cdot p\\cdot p+\\partial_{x}(u)=0",
+      "structure_key": "expanded-v1:ef3d82df40d13c7f840456a353b95c7fd495e02670af1d7db6e65a928d7bcf4a"
+    },
+    {
+      "reward": 0.6765511689227496,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.8704854692794598,
+      "r2_per_equation": [
+        0.8689545692602931,
+        0.9467819097879672,
+        0.7957199287901189
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        5,
+        4,
+        4
+      ],
+      "penalty": 0.7772113295386327,
+      "text": "\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{y}(p)+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(u)\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)\\cdot u=0\\\\\\partial_{x}(v)+\\partial_{x}(u)+\\partial_{x}(v)\\partial_{x}(v)\\partial_{x}(v)+\\partial_{y}(v)=0\\\\\\partial_{t}(p)+\\partial_{x}(u)+\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(u)=0",
+      "structure_key": "expanded-v1:12253cd5d85bca6a2511df182e9d3ba89b03901f324151c481e047cd9124baaa"
+    },
+    {
+      "reward": 0.6715376876574928,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.8299282510435749,
+      "r2_per_equation": [
+        0.9035785362277343,
+        0.7775192078587223,
+        0.808687009044268
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        3,
+        3,
+        3
+      ],
+      "penalty": 0.809151498112135,
+      "text": "\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{t}(v)\\cdot u=0\\\\\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{y}(p)=0\\\\\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)\\cdot u=0",
+      "structure_key": "expanded-v1:c630f1f6c7970e3263a2d75a1c29e91e403f00665d162db1416dcb7c77b9722c"
+    },
+    {
+      "reward": 0.658506983187144,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.8673969938173812,
+      "r2_per_equation": [
+        0.9464014642573031,
+        0.8080744482452986,
+        0.8477150689495423
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        3,
+        4,
+        9
+      ],
+      "penalty": 0.7591760034688151,
+      "text": "\\partial_{y}(v)+\\partial_{x}(v)\\partial_{x}(v)+\\partial_{x}(u)=0\\\\\\partial_{x}(v)+\\partial_{t}(u)p^{2}\\cdot u+\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)\\partial_{x}(p)\\cdot u=0\\\\\\partial_{x}(v)+v\\cdot p\\cdot v+\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(u)\\partial_{x}(v)\\cdot v+\\partial_{t}(v)+\\partial_{x}(u)\\partial_{y}(u)+\\partial_{y}(v)p^{2}+\\partial_{t}(v)+\\partial_{x}(u)\\partial_{y}(u)(p)+u\\cdot \\partial_{x}(v)+\\partial_{t}(u)\\partial_{x}(u)\\partial_{x}(u)=0",
+      "structure_key": "expanded-v1:caaedca5aac2fa1010bbd06b08189d66d963695164b40db5cb0d65a709cef030"
+    },
+    {
+      "reward": 0.6521604571709949,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.8527406135350698,
+      "r2_per_equation": [
+        0.9377244755432523,
+        0.8348013171736401,
+        0.785696047888317
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        5,
+        4,
+        6
+      ],
+      "penalty": 0.7647817481888637,
+      "text": "\\partial_{x}(v)\\cdot u+\\partial_{t}(v)+\\partial_{x}(v)+\\Delta(u)+\\partial_{t}(v)\\cdot u=0\\\\\\partial_{x}(v)+p\\partial_{t}(v)+\\partial_{t}(v)+\\partial_{x}(v)\\cdot v=0\\\\\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(u)v^{2}+\\partial_{x}(v)+\\partial_{y}(u\\cdot v\\cdot u+\\partial_{y}(u)\\partial_{x}(u)\\partial_{y}(v)+\\partial_{y}(u)\\partial_{x}(u))=0",
+      "structure_key": "expanded-v1:c071440127be29f4755f5afde444e5187e553c7c3a6db6eaa0a2bf16d7d06d62"
+    },
+    {
+      "reward": 0.650080254143778,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.8290108456154287,
+      "r2_per_equation": [
+        0.7882301739102047,
+        0.9069867715007439,
+        0.7918155914353376
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        3,
+        4,
+        5
+      ],
+      "penalty": 0.7841637507904751,
+      "text": "\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(u)=0\\\\\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)\\partial_{x}(u)\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{t}(v)\\cdot u+\\partial_{x}(v)=0\\\\\\partial_{y}(v)+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{t}(v)+\\partial_{x}(v)\\cdot u\\cdot \\partial_{x}(v)+\\partial_{x}(v)+\\partial_{t}(u)\\partial_{y}(v)\\partial_{y}(p)=0",
+      "structure_key": "expanded-v1:f1d98bb154c11c95242a0a63f23ac0fccba4b646e8c6116df9abab56e91611ec"
+    },
+    {
+      "reward": 0.6489606038318092,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.8349860316846441,
+      "r2_per_equation": [
+        0.8200223534291667,
+        0.7780803248485872,
+        0.9068554167761785
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        4,
+        3,
+        6
+      ],
+      "penalty": 0.7772113295386327,
+      "text": "\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)\\cdot u+\\partial_{x}(v)+\\partial_{x}(u)\\cdot u=0\\\\\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{t}(v)+\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(p)=0\\\\\\partial_{y}(v)\\partial_{y}(u)\\cdot v\\cdot u+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{y}(v)\\cdot u+u\\cdot \\partial_{t}(v)+\\partial_{t}(v)+\\partial_{x}(u)\\partial_{x}(u)=0",
+      "structure_key": "expanded-v1:561898a264380df7e6b856d8ff82d87daf1fca7fa1c10c9b9382fdc16bf51e15"
+    },
+    {
+      "reward": 0.6411802151207374,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.8383832598504917,
+      "r2_per_equation": [
+        0.808687009044268,
+        0.7882301739102047,
+        0.9182325965970021
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        3,
+        3,
+        9
+      ],
+      "penalty": 0.7647817481888637,
+      "text": "\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)\\cdot u=0\\\\\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(u)=0\\\\\\partial_{t}(v)+\\partial_{x}(u)+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(u)\\partial_{y}(v)\\cdot u+u\\partial_{x}(v)+\\partial_{y}(p)+\\partial_{t}(v)+\\partial_{x}(u)\\cdot v\\cdot \\partial_{x}(v)+\\partial_{x}(u)\\Delta(u)u^{2}+\\partial_{x}(u)\\cdot v=0",
+      "structure_key": "expanded-v1:bc9feb04d767dc655c7092a1a24ea7c0a8d787e406d05670e49f0088b27778db"
+    },
+    {
+      "reward": 0.6408118750296947,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.8010148437871184,
+      "r2_per_equation": [
+        0.7750534126631546,
+        0.777693391968969,
+        0.8502977267292318
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        2,
+        4,
+        4
+      ],
+      "penalty": 0.8,
+      "text": "\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(v)=0\\\\\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)+v\\cdot u+\\partial_{x}(v)+\\partial_{y}(u)\\Delta(u)=0\\\\\\partial_{y}(p)+\\partial_{x}(v)(u)+\\partial_{x}(v)\\cdot u+\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)\\cdot u=0",
+      "structure_key": "expanded-v1:e05fdac8d05bf63585cc4836b6f3625dff9f688b834414335ce65435dc58e12c"
+    },
+    {
+      "reward": 0.6347136961229101,
+      "reward_version": "stage1_fit_sparse_v1",
+      "r_fit": 0.862903129615758,
+      "r2_per_equation": [
+        0.7910187811557907,
+        0.9304996182460934,
+        0.8671909894453899
+      ],
+      "fit_windows": 32,
+      "term_counts": [
+        5,
+        8,
+        8
+      ],
+      "penalty": 0.7355561410532161,
+      "text": "\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)\\partial_{x}(v)+\\partial_{x}(u)\\cdot up^{2}\\partial_{t}(v)+\\partial_{x}(u)=0\\\\\\partial_{t}(v)+\\partial_{x}(v)+\\partial_{x}(v)+\\partial_{x}(v)\\partial_{x}(v)\\cdot v+\\partial_{x}(u)\\partial_{y}(v)+\\partial_{t}(v)\\cdot u\\cdot v+\\partial_{t}(v)\\cdot u+\\partial_{x}(u)\\cdot u+\\partial_{x}(v)+\\partial_{y}(p)\\cdot u=0\\\\\\partial_{t}(p)+\\partial_{x}(v)\\cdot u+u^{2}\\cdot \\partial_{x}(u)\\partial_{x}(v)+\\partial_{x}(u)\\partial_{y}(u)\\cdot u^{2}+\\partial_{t}(v)+\\partial_{x}(u)\\Delta(u)\\cdot v+\\partial_{t}(v)+\\partial_{t}(v)^{3}+\\partial_{y}(p)=0",
+      "structure_key": "expanded-v1:7533015987c8f849ef4e0918ed6cdbcc7cfd029db29cda88d3b0d2fdd585b221"
+    }
+  ],
+  "sft": {
+    "epochs": 5,
+    "early_stopping": false,
+    "settings": {
+      "epochs": 5,
+      "scheduler": "cosine",
+      "learning_rate": 1e-05,
+      "minimum_learning_rate": 1e-07,
+      "early_stopping": false,
+      "restore_previous_best": false,
+      "weight_decay": 0.0,
+      "batch_size": 128,
+      "token_budget": 8192,
+      "gradient_clip": 1.0
+    },
+    "history": [
+      {
+        "token_cross_entropy": 1.2489715846238938,
+        "nats_per_byte": 0.16906299600203642,
+        "tokens": 565
+      },
+      {
+        "token_cross_entropy": 1.2247551031872235,
+        "nats_per_byte": 0.1657850103739294,
+        "tokens": 565
+      },
+      {
+        "token_cross_entropy": 1.2069793971238938,
+        "nats_per_byte": 0.16337885945735506,
+        "tokens": 565
+      },
+      {
+        "token_cross_entropy": 1.1952408782148782,
+        "nats_per_byte": 0.16178991283934027,
+        "tokens": 565
+      },
+      {
+        "token_cross_entropy": 1.1890750311117257,
+        "nats_per_byte": 0.1609552929032403,
+        "tokens": 565
+      }
+    ]
+  }
+}

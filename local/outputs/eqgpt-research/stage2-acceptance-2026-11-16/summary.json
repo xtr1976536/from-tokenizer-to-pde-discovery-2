@@ -1,0 +1,84 @@
+{
+  "status": "STEPS_1_2_AND_REDUCED_REAL_DATA_CHAIN_COMPLETED",
+  "step1": "SIX_BEST_MODELS_FROZEN",
+  "step2": "SIX_HELDOUT_TESTS_AND_GENERATION_CHECKS_COMPLETE",
+  "step3": "REDUCED_ONE_BATCH_REAL_GRID_REPLAY_CHAIN_PASS",
+  "models": [
+    {
+      "split": "811",
+      "vocab": 128,
+      "attempts": 32,
+      "task_valid": 11,
+      "numeric_parse": 11,
+      "fit_pass": 11,
+      "forecast_pass": 1
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "attempts": 32,
+      "task_valid": 10,
+      "numeric_parse": 10,
+      "fit_pass": 9,
+      "forecast_pass": 0
+    },
+    {
+      "split": "811",
+      "vocab": 320,
+      "attempts": 32,
+      "task_valid": 13,
+      "numeric_parse": 12,
+      "fit_pass": 10,
+      "forecast_pass": 1
+    },
+    {
+      "split": "622",
+      "vocab": 128,
+      "attempts": 32,
+      "task_valid": 14,
+      "numeric_parse": 14,
+      "fit_pass": 11,
+      "forecast_pass": 2
+    },
+    {
+      "split": "622",
+      "vocab": 192,
+      "attempts": 32,
+      "task_valid": 17,
+      "numeric_parse": 17,
+      "fit_pass": 15,
+      "forecast_pass": 1
+    },
+    {
+      "split": "622",
+      "vocab": 320,
+      "attempts": 32,
+      "task_valid": 13,
+      "numeric_parse": 13,
+      "fit_pass": 12,
+      "forecast_pass": 2
+    }
+  ],
+  "total_attempts": 192,
+  "task_valid": 78,
+  "numeric_parse": 77,
+  "fit_pass": 68,
+  "forecast_pass": 7,
+  "sft_epochs": 5,
+  "checkpoint_restore_equal": true,
+  "cylinder_test_read": false,
+  "model_uniform_random_fraction": 0.0,
+  "full400_candidate_search_run": false,
+  "post_sft_fresh_candidate_search_run": false,
+  "multiple_epoch_early_stop_real_validation": false,
+  "baseline_started": false,
+  "formal_search_started": false,
+  "live_processes": 0,
+  "awaiting_user_decision_for_expansion": true,
+  "limitations": [
+    "Sampling diagnostics use32 attempts/model and one window/role on one seen trajectory",
+    "Replay candidates, not full fresh400-candidate online search",
+    "Poor fit R2 and short-horizon persistence nearly matches reward",
+    "No claim of correct PDE discovery"
+  ]
+}

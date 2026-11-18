@@ -1,0 +1,3390 @@
+Exact solutions of multicomponent nonlinear Schrödinger equations under general plane-wave boundary conditions Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 General formulation of
+Bäcklund–Darboux transformations 2.1 Multicomponent NLS systems 2.2 Lax-pair representation
+and
+Miura maps 2.3 Elementary Bäcklund–Darboux transformations 2.4 Binary Bäcklund–Darboux transformation 2.5 Coalescence
+limit of the
+binary Bäcklund–Darboux transformation 2.6 Seed solution 3 Dark-soliton solutions 3.1 Vector dark soliton without internal degrees of freedom 3.1.1 Scalar NLS equation 3.1.2 Vector
+NLS equation 3.2 Matrix dark soliton 4 Vector dark soliton with
+internal degrees of freedom 5 Bright-soliton solutions on a plane-wave background 5.1 Matrix bright soliton 5.2 Vector bright soliton 6 Concluding remarks Acknowledgments References License: arXiv.org perpetual non-exclusive license arXiv:1308.6623v2 [nlin.SI] 03 Sep 2013 Exact
+solutions of
+multicomponent
+nonlinear Schrödinger
+equations
+under general
+plane-wave
+boundary conditions Takayuki Tsuchida Abstract We
+construct
+exact
+soliton
+solutions
+of
+integrable
+multicomponent
+nonlinear Schrödinger
+(NLS)
+equations
+under general nonvanishing boundary conditions.
+Different
+components
+of
+the vector
+(or matrix)
+dependent variable
+can
+approach
+plane waves
+with
+different
+wavenumbers
+and
+frequencies
+at spatial infinity.
+We apply Bäcklund–Darboux transformations
+to
+the
+cubic
+NLS
+equations
+with a
+self-focusing nonlinearity,
+a self-defocusing nonlinearity
+or
+a mixed focusing-defocusing nonlinearity.
+Both
+bright-soliton solutions
+and
+dark-soliton
+solutions are obtained,
+depending on the signs of the nonlinear terms
+and the
+type of Bäcklund–Darboux transformation.
+The
+multicomponent solitons
+generally
+possess
+internal degrees of freedom
+and
+provide
+highly
+nontrivial generalizations of the
+scalar NLS solitons.
+The main step in
+the construction of the multicomponent solitons
+is
+to compute the matrix exponential
+of
+a constant
+non-diagonal matrix arising from the Lax pair.
+With a suitable re-parametrization of the non-diagonal matrix,
+the
+matrix exponential can be computed explicitly
+in closed form
+for the most interesting cases such as
+the two-component vector NLS equation.
+In particular, we do not resort to
+Cardano’s
+formula
+in diagonalizing a $3\times 3$ matrix,
+so our expressions for the
+multicomponent solitons
+are in
+some
+sense
+more explicit and
+useful than
+those obtained in
+[Q-H. Park and H. J. Shin,
+Phys. Rev. E 61 (2000) 3093]. Keywords: vector/matrix NLS,
+Lax pair,
+bright solitons,
+dark solitons,
+multicomponent
+solitons,
+Bäcklund–Darboux transformations Contents 1 Introduction 2 General formulation of
+Bäcklund–Darboux transformations 2.1 Multicomponent NLS systems 2.2 Lax-pair representation
+and
+Miura maps 2.3 Elementary Bäcklund–Darboux transformations 2.4 Binary Bäcklund–Darboux transformation 2.5 Coalescence
+limit of the
+binary Bäcklund–Darboux transformation 2.6 Seed solution 3 Dark-soliton solutions 3.1 Vector dark soliton without internal degrees of freedom 3.1.1 Scalar NLS equation 3.1.2 Vector
+NLS equation 3.2 Matrix dark soliton 4 Vector dark soliton with
+internal degrees of freedom 5 Bright-soliton solutions on a plane-wave background 5.1 Matrix bright soliton 5.2 Vector bright soliton 6 Concluding remarks Acknowledgments References 1 Introduction The cubic
+nonlinear Schrödinger (NLS) equation
+in $1+1$ dimensions
+was first solved
+by the inverse scattering method 1 1 1 The inverse scattering
+method was originally
+devised to solve
+the KdV equation [ 4 ] . under
+vanishing boundary conditions at spatial infinity [ 1 , 2 , 3 ] .
+The method
+was
+soon
+generalized
+to
+integrate the NLS equation
+under
+nonvanishing (or plane-wave 2 2 2 The Galilean invariance of
+the NLS equation [ 12 ] allows us to
+set
+the wavenumber of the background plane wave
+as
+zero without
+loss of generality.
+However,
+the
+complex
+phase
+of the dependent variable
+can
+take different values
+for $x\to-\infty$ and $x\to+\infty$ [ 5 , 7 ] . )
+boundary conditions at
+infinity
+and
+various interesting
+solutions
+were
+obtained [ 5 , 6 , 7 , 8 ] (also see [ 9 , 10 , 11 ] ).
+In particular,
+dark-soliton solutions for
+the
+NLS equation with a self-defocusing nonlinearity [ 5 , 13 , 14 , 15 ] and bright-soliton solutions on a plane-wave background
+for the
+NLS equation with a self-focusing nonlinearity [ 6 , 7 , 8 ] are
+the
+most
+relevant and fundamental. The integrability of the NLS equation is based on
+its Lax-pair 3 3 3 The term
+“Lax pair”
+is named after
+the work of Peter Lax
+on
+the KdV hierarchy [ 16 ] . (or zero-curvature) representation [ 1 , 5 , 2 , 3 ] ,
+which
+provides a starting point for applying the inverse scattering method.
+By generalizing the
+Lax pair,
+we
+can straightforwardly
+obtain
+a vector/matrix
+analog of the
+NLS equation [ 17 , 18 ] (also see [ 19 ] ),
+which
+can be solved by
+the inverse scattering method
+under the
+vanishing boundary conditions.
+Thus,
+it is natural to
+expect
+that the inverse scattering method
+is also applicable to
+the vector/matrix NLS equation
+under general nonvanishing
+boundary conditions.
+However,
+in fact this is not the case.
+The main difficulty
+is that
+the background plane waves
+can
+have different
+wavenumbers and frequencies
+in
+different components of
+the
+vector/matrix
+dependent variable [ 20 , 21 , 22 , 23 ] .
+Such a
+general case is not
+amenable to
+the usual formulation of
+the inverse scattering method [ 22 ] ,
+so
+only
+a degenerate case in which
+all the components
+approach
+the same
+plane wave at spatial infinity,
+up to (possibly zero)
+proportionality factors,
+has been considered [ 24 , 25 , 26 , 27 ] (also see [ 28 ] ).
+Although some
+soliton solutions
+in
+the degenerate
+case
+are certainly
+nontrivial and
+interesting [ 24 , 29 , 30 , 31 ] ,
+they
+form
+a
+rather
+restricted
+subclass of the general soliton solutions
+satisfying
+the
+plane-wave
+boundary conditions. The main objective of this paper is to construct
+new
+soliton solutions of the vector/matrix NLS equation, which
+have not been
+presented explicitly
+in the
+literature.
+To
+deal with
+the
+non-degenerate case
+of
+the
+nonvanishing
+boundary conditions
+involving more than one background plane wave,
+we use Bäcklund–Darboux transformations [ 32 , 33 ] instead of the inverse scattering method.
+The main advantage of the Bäcklund–Darboux transformations
+is that
+a new solution of the nonlinear equation considered can be
+constructed
+from a known solution
+using only linear operations.
+More specifically, we need to
+find
+a
+linear
+eigenfunction
+of
+the
+Lax-pair representation
+for
+a given seed solution of the nonlinear equation.
+In essence, this task is
+equivalent to solving
+a linear system of ordinary differential equations
+in the spatial
+variable.
+For the vector/matrix
+NLS equation
+under the general
+plane-wave
+boundary conditions,
+the construction of soliton solutions
+reduces to the computation of
+the
+exponential of a
+constant non-diagonal
+matrix
+arising from the Lax pair [ 34 , 35 ] ;
+this
+also
+applies
+for the higher
+flows
+of the vector/matrix NLS hierarchy
+(cf. [ 36 ] ).
+A straightforward way to compute
+the
+matrix exponential
+is to diagonalize the non-diagonal matrix
+by solving its
+characteristic equation. 4 4 4 In this paper,
+we do not separately discuss
+the non-generic case wherein this
+non-diagonal matrix
+cannot be diagonalized,
+i.e.,
+it has
+a non-diagonal Jordan normal form
+(cf. [ 37 ] ). However,
+even in the simplest nontrivial case
+of the two-component vector NLS equation,
+it requires to
+solve a cubic equation with
+generally
+complex
+coefficients
+using Cardano’s formula 5 5 5 The
+formula
+for
+finding
+the
+roots of
+a cubic equation has a rather
+complicated history
+(see, e.g. , http://en.wikipedia.org/wiki/Cubic_function ). [ 34 , 38 ] (also see [ 22 ] ).
+Unfortunately,
+the obtained expression for the matrix exponential
+is too cumbersome
+and
+not suitable
+for investigating
+the
+asymptotic
+behaviors
+of the
+solutions.
+Moreover, such an expression intrinsically
+has
+an
+ambiguity,
+because Cardano’s formula generally
+involves the square and cubic roots
+of a complex number,
+which are
+not uniquely determined.
+To fix this shortcoming,
+we
+re-parametrize the non-diagonal matrix so that
+the matrix exponential can be computed
+in a more easy-to-read
+form without any ambiguity.
+Consequently,
+for
+the two-component vector NLS equation,
+we can express the general
+one-soliton solution
+explicitly
+by
+using the solutions of
+a quadratic equation with real
+coefficients. The nature and the solution space
+of the integrable
+NLS equation
+depend critically on the sign of the cubic term.
+In
+the scalar case,
+there exist only
+two choices
+corresponding
+to
+the self-focusing NLS
+and
+the
+self-defocusing NLS,
+respectively; these
+names
+can be justified by
+considering
+the
+physical
+meaning
+of the potential
+energy
+term in the canonical Hamiltonian formalism [ 39 ] .
+In the multicomponent case, e.g. ,
+when
+the dependent variable is
+vector- or matrix-valued [ 17 , 18 ] ,
+we
+have
+the third possibility: a mixed focusing-defocusing nonlinearity
+that contains both terms
+with a plus
+sign
+and
+terms with a minus sign [ 40 , 41 , 42 , 20 , 29 , 21 , 43 ] . In the scalar case,
+the self-defocusing NLS equation admits
+dark-soliton solutions.
+A
+dark soliton is a dip
+of the
+density
+in
+the background plane wave, which
+can be
+obtained by applying an elementary Bäcklund–Darboux
+transformation [ 44 , 45 ] to the plane-wave solution.
+Each dark soliton
+is associated with a square-integrable eigenfunction
+(i.e., a bound state) of the Lax pair
+with
+a real eigenvalue,
+because the spatial Lax operator for the self-defocusing NLS equation
+is self-adjoint [ 5 , 2 , 3 ] .
+In contrast,
+the self-focusing NLS equation admits
+bright-soliton solutions. A
+bright soliton is
+generally
+a hump of the density,
+which can be obtained
+by applying
+a binary Bäcklund–Darboux transformation [ 32 , 33 ] (also see [ 47 , 46 , 48 ] )
+that
+is
+equivalent to a suitable
+composition of two
+elementary Bäcklund–Darboux transformations [ 44 , 45 ] .
+Each bright soliton is associated with
+two
+bound states
+of the Lax pair,
+wherein the spatial Lax operator is not self-adjoint
+and the bound-state
+eigenvalues form
+a complex conjugate pair [ 1 , 3 ] . In
+a similar way,
+we can
+obtain multicomponent dark-soliton solutions in
+the self-defocusing case and multicomponent
+bright-soliton solutions
+in the self-focusing case
+using an elementary Bäcklund–Darboux transformation
+and a binary Bäcklund–Darboux transformation, respectively.
+Indeed,
+the general
+formulation
+of the Bäcklund–Darboux transformations
+is
+valid irrespective of the
+matrix
+size
+of the Lax-pair representation [ 49 , 34 , 50 , 35 ] ,
+which is related to
+the number of
+components of the vector/matrix
+dependent variable.
+A vector
+dark soliton [ 22 ] in the self-defocusing case
+does not
+admit
+any essential
+parameter
+representing
+the
+internal degrees of freedom,
+although it provides a nontrivial generalization
+of the scalar dark soliton.
+Contrastingly,
+a matrix dark soliton
+in the self-defocusing case
+and
+a vector/matrix
+bright soliton in the self-focusing case
+contain
+free parameters
+representing
+the internal degrees of freedom.
+The
+case of
+a mixed focusing-defocusing nonlinearity
+is
+more complicated, because
+it admits both a dark soliton [ 20 , 21 , 22 ] and
+a bright soliton [ 22 ] ;
+they can be obtained by
+applying an elementary Bäcklund–Darboux transformation
+and
+a binary Bäcklund–Darboux transformation, respectively.
+Moreover,
+in this case,
+we can also consider
+a
+limiting case
+of the
+binary Bäcklund–Darboux transformation
+in such a way that the associated
+two
+bound-state eigenvalues coalesce into a
+real eigenvalue
+(cf. §2.4 in [ 33 ] and [ 35 ] );
+as a result of its application,
+a
+vector dark soliton with internal degrees of freedom
+can
+be constructed.
+In particular,
+the three-component vector NLS equation with
+one focusing and two defocusing components
+admits a
+non-stationary
+dark soliton
+that exhibits a soliton mutation phenomenon;
+that is,
+the shape and
+velocity
+of the dark soliton
+can change spontaneously
+in the time evolution. In the multicomponent case,
+it is
+generally impossible
+to distinguish
+between
+a dark soliton and a bright soliton
+in a rigorous manner
+just
+by
+looking
+at
+their wave profiles.
+Indeed,
+each soliton
+may exhibit a rather complicated behavior
+in
+individual
+components [ 30 , 34 , 50 , 31 ] ,
+which cannot be identified as a simple dip or
+hump.
+In addition, there exists
+a group of
+linear
+transformations, called the symmetry group, which
+mixes the components of the vector/matrix
+dependent variable
+but leaves the equation of motion
+invariant [ 29 , 21 , 51 ] ;
+for example,
+the self-focusing/defocusing vector NLS equation is
+invariant under the group of (special)
+unitary transformations.
+Such
+linear
+transformations
+can
+drastically
+change
+both the boundary conditions and
+the wave profile of
+a soliton
+observed
+in
+individual components.
+Thus,
+instead of
+distinguishing between a dark soliton and a bright soliton
+intuitively, in this paper
+we
+use
+these terms
+in correspondence with
+the type of
+Bäcklund–Darboux transformation
+generating
+each
+soliton
+solution.
+That is, in analogy with the case of
+the scalar NLS equation,
+a dark soliton is associated with a
+square-integrable eigenfunction
+of the Lax pair
+with a real eigenvalue,
+while a bright soliton entails
+a pair of
+bound states with
+eigenvalues
+that are complex
+conjugates of each other.
+Note that this definition is more stringent than
+that commonly
+used
+in the
+literature. In particular, the spatial Lax operator
+for the vector/matrix NLS equation with a self-defocusing nonlinearity
+is self-adjoint [ 26 , 27 ] ,
+so
+it does not admit any
+bright-soliton solution.
+This is in contrast to the work of Park and Shin [ 34 , 50 ] ,
+wherein they applied
+a binary Bäcklund–Darboux transformation
+to the
+two-component
+vector
+NLS equation
+with a self-defocusing nonlinearity
+and constructed
+“dark-bright” and “dark-dark” soliton solutions
+(cf. “double solitons” in [ 22 ] ).
+Their solutions
+are not associated with
+square-integrable eigenfunctions
+of the Lax pair,
+so we call
+them
+“soliton-like”
+solutions,
+which
+are not genuine
+soliton solutions in our definition. The remainder of this paper is organized as follows.
+In section 2, we introduce step by step
+three types of
+Bäcklund–Darboux transformations for the vector/matrix NLS system.
+First, we introduce
+two
+elementary Bäcklund–Darboux transformations
+on the basis of the
+Lax-pair representation
+and
+its
+adjoint problem.
+Second, we
+combine the
+two
+elementary Bäcklund–Darboux transformations
+to define
+a binary Bäcklund–Darboux transformation.
+Third, we consider
+a
+limiting case
+of the binary Bäcklund–Darboux transformation
+in such a way that
+the associated
+two
+eigenvalues
+merge into
+a single
+eigenvalue.
+In section 3,
+by applying an
+elementary Bäcklund–Darboux transformation
+to a
+general plane-wave solution,
+we
+obtain
+dark-soliton solutions
+of the multicomponent NLS equations
+with a self-defocusing or mixed focusing-defocusing nonlinearity.
+In section 4, we apply
+the limiting case
+of the binary Bäcklund–Darboux transformation
+to the
+vector NLS equation
+with a
+mixed focusing-defocusing nonlinearity.
+Thus, we
+obtain a
+dark-soliton solution with
+internal degrees of
+freedom, which
+is
+more general
+than
+the
+vector dark-soliton
+solution
+obtained
+in section 3.
+In section 5,
+using the binary Bäcklund–Darboux transformation,
+we
+construct bright-soliton solutions
+on a general plane-wave background
+for the multicomponent NLS equations
+with a self-focusing or mixed focusing-defocusing nonlinearity;
+a “soliton-like”
+solution
+in the self-defocusing case
+given
+in [ 34 ] (also see [ 50 ] )
+can also be obtained
+in
+a more explicit
+form.
+The last section, section 6, is devoted to concluding remarks. 2 General formulation of
+Bäcklund–Darboux transformations In this section, we formulate three types of
+Bäcklund–Darboux transformations for the vector/matrix
+NLS system
+using
+the
+Lax-pair representation and
+its adjoint
+problem. 2.1 Multicomponent NLS systems The
+matrix generalization [ 18 ] of the
+nonreduced
+NLS system [ 2 , 3 ] is given by $\displaystyle{}\mathrm{i}Q_{t}+Q_{xx}-2QRQ=O,$ (2.1a) $\displaystyle\mathrm{i}R_{t}-R_{xx}+2RQR=O.$ (2.1b) Here, $Q$ and $R$ are $l\times m$ and $m\times l$ matrices, respectively, and
+the subscripts $t$ and $x$ denote the partial
+differentiation;
+we use
+the symbol $O$ instead of $0$ to stress
+that the dependent variables
+can take
+their
+values in
+matrices.
+A
+list of references on the
+matrix NLS system
+( 2.1b ) and related equations
+can be found in [ 52 ] . Note that ( 2.1b ) allows
+a
+Hermitian conjugation
+reduction [ 21 ] (also see [ 40 , 41 , 42 , 29 , 43 ] ): $R=\Sigma\hskip 1.0ptQ^{\dagger}\hskip 1.0pt\Omega.$ (2.2) Here, $\Sigma$ and $\Omega$ are $m\times m$ and $l\times l$ constant Hermitian matrices, respectively,
+and the dagger denotes the Hermitian
+conjugation.
+The reduction ( 2.2 ) simplifies
+the nonreduced matrix NLS system
+( 2.1b )
+to the matrix NLS equation: $\mathrm{i}Q_{t}+Q_{xx}-2Q\Sigma\hskip 1.0ptQ^{\dagger}\hskip 1.0pt\Omega Q=O.$ (2.3) Considering
+a
+linear transformation $Q\to U_{1}QU_{2}$ with
+nonsingular
+constant
+matrices $U_{1}$ and $U_{2}$ ,
+we can recast $\Sigma$ and $\Omega$ in their canonical forms,
+i.e., diagonal matrices whose diagonal
+entries
+are $+1$ , $-1$ or $0$ .
+Because we are
+more
+interested in
+truly coupled systems
+than
+in triangular systems,
+we require
+that
+the diagonal entries
+of
+(the canonical forms of) $\Sigma$ and $\Omega$ are $+1$ or $-1$ .
+In particular,
+in the subsequent sections,
+we
+mainly consider
+the following two
+cases. • The
+case $l=1$ :
+vector NLS equation [ 40 , 41 , 42 , 29 , 21 , 43 ] , $\mathrm{i}\mbox{\boldmath$q$}_{t}+\mbox{\boldmath$q$}_{xx}-2\langle\mbox{\boldmath$q$}\Sigma,\mbox{\boldmath$q$}^{\ast}\rangle\mbox{\boldmath$q$}=\mbox{\boldmath$0$},$ (2.4) which generalizes the Manakov model [ 17 ] .
+Here, $\mbox{\boldmath$q$}:=(q_{1},q_{2},\ldots,q_{m})$ is an $m$ -component row vector
+and $\Sigma:=\mathrm{diag}(\sigma_{1},\sigma_{2},\ldots,\sigma_{m})$ is a diagonal
+matrix with
+entries $\sigma_{j}=+1$ or $-1$ .
+Thus, after a suitable re-numbering of the components,
+the scalar product can be written explicitly
+as $\langle\mbox{\boldmath$q$}\Sigma,\mbox{\boldmath$q$}^{\ast}\rangle:=\sum_{j=1}^{n}|q_{j}|^{2}-\sum_{k=n+1}^{m}|q_{k}|^{2},$ where $n\;(0\leq n\leq m)$ is the number of defocusing components and $m-n$ is the number of focusing components. • The case $l=m$ : square matrix NLS equation [ 18 ] , $\mathrm{i}Q_{t}+Q_{xx}-2\sigma QQ^{\dagger}Q=O,\hskip 14.22636pt\sigma=+1\;\,\mbox{or}\;\,\mbox{$-1$}.$ (2.5) Here, the choice of $\sigma=+1$ and the choice of $\sigma=-1$ correspond to the self-defocusing case
+and the self-focusing case, respectively. 2.2 Lax-pair representation
+and
+Miura maps The
+Lax-pair representation [ 16 ] for the nonreduced matrix NLS system ( 2.1b ) is
+given by [ 54 , 53 ] $\displaystyle\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]_{x}=\left[\begin{array}[]{cc}-\mathrm{i}\zeta I_{l}&Q\\
+R&\mathrm{i}\zeta I_{m}\\
+\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right],$ $\displaystyle\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]_{t}=\left[\begin{array}[]{cc}-2\mathrm{i}\zeta^{2}I_{l}-\mathrm{i}QR&2\zeta Q+\mathrm{i}Q_{x}\\
+2\zeta R-\mathrm{i}R_{x}&2\mathrm{i}\zeta^{2}I_{m}+\mathrm{i}RQ\\
+\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right].$ Here, $\zeta$ is the spectral parameter, which is
+an arbitrary constant,
+and $I_{l}$ and $I_{m}$ are the $l\times l$ and $m\times m$ identity matrices, respectively.
+The compatibility condition for
+the overdetermined linear system ( 2.6 )
+indeed
+implies
+( 2.1b ).
+Note that ( 2.6 ) can be rewritten
+explicitly
+as
+an eigenvalue problem [ 1 , 5 ] : $\left[\begin{array}[]{cc}\mathrm{i}\partial_{x}&-\mathrm{i}Q\\
+\mathrm{i}R&-\mathrm{i}\partial_{x}\\
+\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]=\zeta\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right].$ In the self-defocusing case $R=Q^{\dagger}$ ,
+this eigenvalue problem is self-adjoint,
+so the eigenvalue $\zeta$ is restricted to be real-valued
+for any square-integrable
+(i.e., bound-state) eigenfunction; note that $\int_{-\infty}^{\infty}\left[\begin{array}[]{cc}\!\Psi_{1}^{\dagger}&\!\Psi_{2}^{\dagger}\end{array}\right]\left[\begin{array}[]{cc}\mathrm{i}\partial_{x}&-\mathrm{i}Q\\
+\mathrm{i}Q^{\dagger}&-\mathrm{i}\partial_{x}\\
+\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]\mathrm{d}x=\zeta\int_{-\infty}^{\infty}\left[\begin{array}[]{cc}\!\Psi_{1}^{\dagger}&\!\Psi_{2}^{\dagger}\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]\mathrm{d}x.$ We also
+consider
+the
+adjoint Lax-pair
+representation: 6 6 6 If
+we have
+a square-matrix solution $\Psi$ of
+the linear system $\Psi_{x}=U\Psi,\;\Psi_{t}=V\Psi$ ,
+then its
+inverse $\Phi:=\Psi^{-1}$ solves
+the adjoint system $\Phi_{x}=-\Phi U,\;\Phi_{t}=-\Phi V$ [ 42 , 55 ] . $\displaystyle\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]_{x}=-\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]\left[\begin{array}[]{cc}-\mathrm{i}\zeta I_{l}&Q\\
+R&\mathrm{i}\zeta I_{m}\\
+\end{array}\right],$ $\displaystyle\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]_{t}=-\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]\left[\begin{array}[]{cc}-2\mathrm{i}\zeta^{2}I_{l}-\mathrm{i}QR&2\zeta Q+\mathrm{i}Q_{x}\\
+2\zeta R-\mathrm{i}R_{x}&2\mathrm{i}\zeta^{2}I_{m}+\mathrm{i}RQ\\
+\end{array}\right].$ Indeed,
+a Lagrange-like
+identity, $\displaystyle\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]\left\{\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]_{x}-\left[\begin{array}[]{cc}-\mathrm{i}\zeta I_{l}&Q\\
+R&\mathrm{i}\zeta I_{m}\\
+\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]\right\}$ $\displaystyle\mbox{}+\left\{\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]_{x}+\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]\left[\begin{array}[]{cc}-\mathrm{i}\zeta I_{l}&Q\\
+R&\mathrm{i}\zeta I_{m}\\
+\end{array}\right]\right\}\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]$ $\displaystyle=\left\{\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]\right\}_{x},$ and a similar relation
+for
+the $t$ -differentiation
+imply
+that
+( 2.7 )
+is
+the adjoint problem of ( 2.6 ).
+In particular,
+the product of
+solutions
+of
+( 2.7 ) and
+( 2.6 )
+is $(x,t)$ -independent: $\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]=\mathrm{const.}$ (2.24) We consider an $(l+m)\times l$ matrix-valued
+linear eigenfunction of the Lax-pair representation
+( 2.6 )
+such that $\Psi_{1}$ is an $l\times l$ nonsingular
+matrix
+and define
+an $m\times l$ matrix $\widetilde{R}$ as $\widetilde{R}:=\Psi_{2}\Psi_{1}^{-1}$ .
+Then,
+( 2.6 )
+implies the
+relations
+(cf. [ 47 , 56 , 48 ] ): $\displaystyle R=\widetilde{R}_{x}-2\mathrm{i}\zeta\widetilde{R}+\widetilde{R}Q\widetilde{R},$ (2.25a) $\displaystyle\widetilde{R}_{t}=2\zeta R-\mathrm{i}R_{x}+4\mathrm{i}\zeta^{2}\widetilde{R}+\mathrm{i}RQ\widetilde{R}+\mathrm{i}\widetilde{R}QR-2\zeta\widetilde{R}Q\widetilde{R}-\mathrm{i}\widetilde{R}Q_{x}\widetilde{R}.$ (2.25b) Relation ( 2.25a )
+enables us
+to
+express $R$ in ( 2.1a ) and ( 2.25b ) in terms of $Q$ and $\widetilde{R}$ [ 57 ] .
+Thus,
+we obtain
+a closed two-component
+system for $Q$ and $\widetilde{R}$ : $\displaystyle{}\mathrm{i}Q_{t}+Q_{xx}+4\mathrm{i}\zeta Q\widetilde{R}Q-2Q\widetilde{R}_{x}Q-2Q\widetilde{R}Q\widetilde{R}Q=O,$ (2.26a) $\displaystyle\mathrm{i}\widetilde{R}_{t}-\widetilde{R}_{xx}-4\mathrm{i}\zeta\widetilde{R}Q\widetilde{R}-2\widetilde{R}Q_{x}\widetilde{R}+2\widetilde{R}Q\widetilde{R}Q\widetilde{R}=O.$ (2.26b) This is
+a matrix generalization [ 58 , 59 , 60 , 61 , 62 , 63 ] of
+the derivative NLS system
+studied by Ablowitz, Ramani and Segur [ 64 ] (and
+later by
+Gerdjikov and Ivanov [ 65 ] without
+citing the paper [ 64 ] );
+the cubic terms involving
+the parameter $\zeta$ can be
+removed
+by a simple point
+transformation (cf. [ 66 , 67 , 68 ] ).
+Note that ( 2.25a ) defines a Miura map
+from
+( 2.26b ) to ( 2.1b ): $(Q,\widetilde{R})\mapsto(Q,R)$ . Similarly,
+using a linear eigenfunction
+of the adjoint Lax-pair representation ( 2.7 ),
+we define
+an $l\times m$ matrix $\widehat{Q}$ as $\widehat{Q}:=\Phi_{1}^{-1}\Phi_{2}$ .
+Then, we obtain
+the relations: $\displaystyle Q=-\widehat{Q}_{x}-2\mathrm{i}\zeta\widehat{Q}+\widehat{Q}R\widehat{Q},$ (2.27a) $\displaystyle\widehat{Q}_{t}=-2\zeta Q-\mathrm{i}Q_{x}-4\mathrm{i}\zeta^{2}\widehat{Q}-\mathrm{i}QR\widehat{Q}-\mathrm{i}\widehat{Q}RQ+2\zeta\widehat{Q}R\widehat{Q}-\mathrm{i}\widehat{Q}R_{x}\widehat{Q}.$ (2.27b) Relation ( 2.27a )
+allows us
+to
+express $Q$ in ( 2.27b ) and ( 2.1b )
+in terms of $\widehat{Q}$ and $R$ .
+Thus,
+a closed
+system for $\widehat{Q}$ and $R$ is obtained: $\displaystyle{}\mathrm{i}\widehat{Q}_{t}+\widehat{Q}_{xx}+4\mathrm{i}\zeta\widehat{Q}R\widehat{Q}-2\widehat{Q}R_{x}\widehat{Q}-2\widehat{Q}R\widehat{Q}R\widehat{Q}=O,$ (2.28a) $\displaystyle\mathrm{i}R_{t}-R_{xx}-4\mathrm{i}\zeta R\widehat{Q}R-2R\widehat{Q}_{x}R+2R\widehat{Q}R\widehat{Q}R=O.$ (2.28b) Note
+that
+( 2.26b ) and
+( 2.28b )
+are identical, so
+we
+have
+another Miura map
+( 2.27a )
+from
+( 2.28b ) to
+( 2.1b ): $(\widehat{Q},R)\mapsto(Q,R)$ . 2.3 Elementary Bäcklund–Darboux transformations We have
+obtained
+two distinct
+Miura maps from
+the
+matrix
+derivative NLS system
+to the
+matrix
+NLS system [ 68 , 59 ] ;
+the inverse of each Miura map can be expressed in terms
+of a linear eigenfunction of the (adjoint) Lax-pair representation
+for the
+matrix
+NLS system.
+Thus, combining the inverse of one Miura map
+with
+the other Miura map, we can construct
+an elementary Bäcklund–Darboux transformation
+for the matrix NLS system.
+Moreover, we can also identify
+the
+gauge transformation
+of the linear eigenfunction
+of the Lax-pair representation,
+which generates
+each elementary
+Bäcklund–Darboux transformation [ 69 , 70 , 71 ] .
+In the following,
+we often fix
+the arbitrary
+parameter $\zeta$ in the Bäcklund–Darboux transformation
+at some
+specific
+value, say $\zeta=\mu$ ,
+to distinguish it from the original
+spectral parameter $\zeta$ in the Lax-pair representation. Proposition 2.1 . The spatial
+part of
+an elementary auto-Bäcklund transformation
+for
+the matrix NLS system ( 2.1b ), which connects
+two solutions $(Q,R)$ and $(\widetilde{Q},\widetilde{R})$ ,
+is given by
+(see [ 44 , 45 ] for the scalar case
+and [ 59 , 71 ] for the matrix case) $\displaystyle\widetilde{Q}=-Q_{x}-2\mathrm{i}\mu Q+Q\widetilde{R}Q,$ $\displaystyle R=\widetilde{R}_{x}-2\mathrm{i}\mu\widetilde{R}+\widetilde{R}Q\widetilde{R}.$ The
+transformation $(Q,R)\mapsto(\widetilde{Q},\widetilde{R})$ can be expressed
+explicitly
+in terms of a linear eigenfunction
+of the Lax-pair representation ( 2.6 ) at $\zeta=\mu$ as [ 44 , 45 ] $\widetilde{R}=\left.\Psi_{2}\Psi_{1}^{-1}\right|_{\zeta=\mu},\hskip 14.22636pt\widetilde{Q}=-Q_{x}-2\mathrm{i}\mu Q+Q\widetilde{R}Q.$ (2.29) The corresponding gauge transformation [ 69 , 70 , 71 ] , $\displaystyle\left[\begin{array}[]{c}\widetilde{\Psi}_{1}\\
+\widetilde{\Psi}_{2}\\
+\end{array}\right]:=G(Q,\widetilde{R};\mu)\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right],\hskip 14.22636ptG(Q,\widetilde{R};\mu):=g(\zeta,\mu)\left[\begin{array}[]{cc}2\mathrm{i}(\zeta-\mu)I_{l}+Q\widetilde{R}&-Q\\
+-\widetilde{R}&I_{m}\\
+\end{array}\right],$ where $g$ is an arbitrary (but
+not identically zero)
+scalar function
+of $\zeta$ and $\mu$ ,
+changes the original Lax-pair representation
+( 2.6 ) with $R=\widetilde{R}_{x}-2\mathrm{i}\mu\widetilde{R}+\widetilde{R}Q\widetilde{R}$ into
+a new Lax-pair representation of the same form.
+That is, $\displaystyle\left[\begin{array}[]{c}\widetilde{\Psi}_{1}\\
+\widetilde{\Psi}_{2}\\
+\end{array}\right]_{x}=\left[\begin{array}[]{cc}-\mathrm{i}\zeta I_{l}&\widetilde{Q}\\
+\widetilde{R}&\mathrm{i}\zeta I_{m}\\
+\end{array}\right]\left[\begin{array}[]{c}\widetilde{\Psi}_{1}\\
+\widetilde{\Psi}_{2}\\
+\end{array}\right],\hskip 14.22636pt\widetilde{Q}=-Q_{x}-2\mathrm{i}\mu Q+Q\widetilde{R}Q,$ and
+similar
+for the $t$ -differentiation.
+In the same manner,
+the gauge transformation
+preserving the form of
+the adjoint Lax-pair representation
+( 2.7 )
+is given by $\left[\begin{array}[]{cc}\!\widetilde{\Phi}_{1}&\!\widetilde{\Phi}_{2}\end{array}\right]:=\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]H(Q,\widetilde{R};\mu),\hskip 14.22636ptH(Q,\widetilde{R};\mu):=h(\zeta,\mu)\left[\begin{array}[]{cc}I_{l}&Q\\
+\widetilde{R}&2\mathrm{i}(\zeta-\mu)I_{m}+\widetilde{R}Q\\
+\end{array}\right],$ where $h$ is
+an arbitrary (but
+not identically zero)
+scalar function of $\zeta$ and $\mu$ .
+Note that $G(Q,\widetilde{R};\mu)H(Q,\widetilde{R};\mu)=2\mathrm{i}(\zeta-\mu)g(\zeta,\mu)h(\zeta,\mu)I_{l+m}$ . The elementary Bäcklund–Darboux transformation $(Q,R)\mapsto(\widetilde{Q},\widetilde{R})$ defined by ( 2.29 )
+is not
+a map determining $(\widetilde{Q},\widetilde{R})$ uniquely; indeed,
+it
+involves
+additional
+free parameters,
+because
+each column
+of the linear eigenfunction
+used in ( 2.29 )
+is
+an arbitrary
+linear combination of a fundamental set
+of
+solutions.
+The transformation
+admits the following
+conservation law: $\displaystyle\widetilde{Q}\widetilde{R}-QR$ $\displaystyle=-\left(Q\widetilde{R}\right)_{x}$ $\displaystyle=-\left(Q\left.\Psi_{2}\Psi_{1}^{-1}\right|_{\zeta=\mu}\right)_{x}$ $\displaystyle=-\left(\left.\Psi_{1,x}\Psi_{1}^{-1}\right|_{\zeta=\mu}\right)_{x}.$ Thus, if we can choose the linear eigenfunction
+such that $\lim_{x\to-\infty}\Psi_{1,x}\Psi_{1}^{-1}$ and $\lim_{x\to+\infty}\Psi_{1,x}\Psi_{1}^{-1}$ exist
+and $\Psi_{1,x}\Psi_{1}^{-1}$ does not oscillate extraordinarily
+rapidly as $x\to\pm\infty$ ,
+then $\widetilde{Q}\widetilde{R}$ and $QR$ exhibit
+the same asymptotic behavior
+at spatial infinity.
+In addition, there exists another conservation law: $\displaystyle\widetilde{R}\widetilde{Q}-RQ$ $\displaystyle=-\left(\widetilde{R}Q\right)_{x}$ $\displaystyle=-\left(\left.\Psi_{2}\Psi_{1}^{-1}\right|_{\zeta=\mu}Q\right)_{x}.$ These conservation laws
+give
+a useful hint
+on
+how to realize
+a
+Hermitian conjugation reduction between $\widetilde{Q}$ and $\widetilde{R}$ . Combining the inverse of one
+Miura map
+with the other Miura map
+in the other way,
+we
+obtain
+another
+elementary
+Bäcklund–Darboux transformation;
+by construction,
+it provides the inverse
+of the
+elementary
+Bäcklund–Darboux transformation
+defined in Proposition 2.1 if appropriate boundary conditions are
+imposed (cf. [ 44 ] ). Proposition 2.2 . The spatial
+part of
+an elementary auto-Bäcklund transformation
+for
+the matrix NLS system ( 2.1b ), which connects
+two solutions $(Q,R)$ and $(\widehat{Q},\widehat{R})$ ,
+is given by
+(see [ 44 , 45 ] for the scalar case
+and [ 59 , 71 ] for the matrix case) $\displaystyle Q=-\widehat{Q}_{x}-2\mathrm{i}\nu\widehat{Q}+\widehat{Q}R\widehat{Q},$ $\displaystyle\widehat{R}=R_{x}-2\mathrm{i}\nu R+R\widehat{Q}R.$ The
+transformation $(Q,R)\mapsto(\widehat{Q},\widehat{R})$ can be expressed
+explicitly
+in terms of a linear eigenfunction
+of the adjoint Lax-pair representation ( 2.7 ) at $\zeta=\nu$ as $\widehat{Q}=\left.\Phi_{1}^{-1}\Phi_{2}\right|_{\zeta=\nu},\hskip 14.22636pt\widehat{R}=R_{x}-2\mathrm{i}\nu R+R\widehat{Q}R.$ The corresponding gauge transformation [ 70 , 71 , 69 ] , $\displaystyle\left[\begin{array}[]{c}\widehat{\Psi}_{1}\\
+\widehat{\Psi}_{2}\\
+\end{array}\right]:=H(\widehat{Q},R;\nu)\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right],\hskip 14.22636ptH(\widehat{Q},R;\nu)=h(\zeta,\nu)\left[\begin{array}[]{cc}I_{l}&\widehat{Q}\\
+R&2\mathrm{i}(\zeta-\nu)I_{m}+R\widehat{Q}\\
+\end{array}\right],$ changes the original Lax-pair representation
+( 2.6 ) with $Q=-\widehat{Q}_{x}-2\mathrm{i}\nu\widehat{Q}+\widehat{Q}R\widehat{Q}$ into
+a new Lax-pair representation of the same form.
+That is, $\displaystyle\left[\begin{array}[]{c}\widehat{\Psi}_{1}\\
+\widehat{\Psi}_{2}\\
+\end{array}\right]_{x}=\left[\begin{array}[]{cc}-\mathrm{i}\zeta I_{l}&\widehat{Q}\\
+\widehat{R}&\mathrm{i}\zeta I_{m}\\
+\end{array}\right]\left[\begin{array}[]{c}\widehat{\Psi}_{1}\\
+\widehat{\Psi}_{2}\\
+\end{array}\right],\hskip 14.22636pt\widehat{R}=R_{x}-2\mathrm{i}\nu R+R\widehat{Q}R,$ and similar
+for the $t$ -differentiation.
+The gauge transformation
+preserving the form of
+the adjoint Lax-pair representation
+( 2.7 )
+is given by $\left[\begin{array}[]{cc}\!\widehat{\Phi}_{1}&\!\widehat{\Phi}_{2}\end{array}\right]:=\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]G(\widehat{Q},R;\nu),\hskip 14.22636ptG(\widehat{Q},R;\nu)=g(\zeta,\nu)\left[\begin{array}[]{cc}2\mathrm{i}(\zeta-\nu)I_{l}+\widehat{Q}R&-\widehat{Q}\\
+-R&I_{m}\\
+\end{array}\right].$ aa The elementary Bäcklund–Darboux transformation $(Q,R)\mapsto(\widehat{Q},\widehat{R})$ admits the following
+conservation laws: $\displaystyle\widehat{Q}\widehat{R}-QR$ $\displaystyle=\left(\widehat{Q}R\right)_{x}$ $\displaystyle=-\left(\left.\Phi_{1}^{-1}\Phi_{1,x}\right|_{\zeta=\nu}\right)_{x},$ $\displaystyle\widehat{R}\widehat{Q}-RQ$ $\displaystyle=\left(R\widehat{Q}\right)_{x}$ $\displaystyle=\left(R\left.\Phi_{1}^{-1}\Phi_{2}\right|_{\zeta=\nu}\right)_{x}.$ 2.4 Binary Bäcklund–Darboux transformation We can
+further combine
+the
+two
+elementary Bäcklund–Darboux transformations
+defined in Propositions 2.1 and 2.2 involving the Bäcklund parameters $\mu$ and $\nu$ , respectively.
+In the following, we consider
+the composition
+in the order $(Q,R)\mapsto(\widetilde{Q},\widetilde{R})\mapsto({\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{},{\widehat{\widetilde{R}\mkern 3.0mu}\mkern-3.0mu}{})$ (2.54) because
+the composition
+in
+the opposite order $(Q,R)\mapsto(\widehat{Q},\widehat{R})\mapsto({\widetilde{\widehat{Q}\mkern 3.0mu}\mkern-3.0mu}{},{\widetilde{\widehat{R}\mkern 3.0mu}\mkern-3.0mu}{})$ provides the same final result;
+that is,
+the
+two
+elementary Bäcklund–Darboux transformations
+commute with each other [ 44 , 51 , 72 ] . Thus,
+by applying Propositions 2.1 and 2.2 in the order
+( 2.54 ), we obtain $\displaystyle{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{}$ $\displaystyle=\left[\Phi_{1}(\nu)+\Phi_{2}(\nu)\widetilde{R}\right]^{-1}\left[\Phi_{1}(\nu)Q+2\mathrm{i}(\nu-\mu)\Phi_{2}(\nu)+\Phi_{2}(\nu)\widetilde{R}Q\right]$ $\displaystyle=Q+2\mathrm{i}(\nu-\mu)\left[\Phi_{1}(\nu)+\Phi_{2}(\nu)\Psi_{2}(\mu)\Psi_{1}(\mu)^{-1}\right]^{-1}\Phi_{2}(\nu)$ $\displaystyle=Q+2\mathrm{i}(\nu-\mu)\Psi_{1}(\mu)\left[\Phi_{1}(\nu)\Psi_{1}(\mu)+\Phi_{2}(\nu)\Psi_{2}(\mu)\right]^{-1}\Phi_{2}(\nu),$ (2.55a) and $\displaystyle{\widehat{\widetilde{R}\mkern 3.0mu}\mkern-3.0mu}{}$ $\displaystyle=\widetilde{R}_{x}-2\mathrm{i}\nu\widetilde{R}+\widetilde{R}{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{}\widetilde{R}$ $\displaystyle=R-2\mathrm{i}(\nu-\mu)\widetilde{R}+\widetilde{R}\Bigl({\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{}-Q\Bigr)\widetilde{R}$ $\displaystyle=R-2\mathrm{i}(\nu-\mu)\Psi_{2}(\mu)\Psi_{1}(\mu)^{-1}$ $\displaystyle\hphantom{=}\;\,+2\mathrm{i}(\nu-\mu)\Psi_{2}(\mu)\left[\Phi_{1}(\nu)\Psi_{1}(\mu)+\Phi_{2}(\nu)\Psi_{2}(\mu)\right]^{-1}\Phi_{2}(\nu)\Psi_{2}(\mu)\Psi_{1}(\mu)^{-1}$ $\displaystyle=R-2\mathrm{i}(\nu-\mu)\Psi_{2}(\mu)\left[\Phi_{1}(\nu)\Psi_{1}(\mu)+\Phi_{2}(\nu)\Psi_{2}(\mu)\right]^{-1}\Phi_{1}(\nu).$ (2.55b) The corresponding gauge transformation
+of the linear eigenfunction
+can be written
+as $\displaystyle\left[\begin{array}[]{c}\widehat{\widetilde{\Psi}}_{1}\\
+\widehat{\widetilde{\Psi}}_{2}\\
+\end{array}\right]:=$ $\displaystyle\hskip 3.0ptH({\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{},\widetilde{R};\nu)G(Q,\widetilde{R};\mu)\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]$ $\displaystyle=$ $\displaystyle\hskip 3.0pth(\zeta,\nu)g(\zeta,\mu)\left[\begin{array}[]{cc}I_{l}&{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}\\
+\widetilde{R}&2\mathrm{i}(\zeta-\nu)I_{m}+\widetilde{R}{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}\\
+\end{array}\right]\left[\begin{array}[]{cc}2\mathrm{i}(\zeta-\mu)I_{l}+Q\widetilde{R}&-Q\\
+-\widetilde{R}&I_{m}\\
+\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]$ $\displaystyle=$ $\displaystyle\hskip 3.0pth(\zeta,\nu)g(\zeta,\mu)\left[\begin{array}[]{cc}2\mathrm{i}(\zeta-\mu)I_{l}+\Bigl(Q-{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{}\Bigr)\widetilde{R}&{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{}-Q\\
+2\mathrm{i}(\nu-\mu)\widetilde{R}+\widetilde{R}\Bigl(Q-{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{}\Bigr)\widetilde{R}&2\mathrm{i}(\zeta-\nu)I_{m}+\widetilde{R}\Bigl({\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{}-Q\Bigr)\\
+\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]$ $\displaystyle\propto$ $\displaystyle\hskip 1.0pt\left\{I_{l+m}+\frac{\nu-\mu}{\zeta-\nu}\left[\begin{array}[]{c}\Psi_{1}(\mu)\\
+\Psi_{2}(\mu)\\
+\end{array}\right]\left[\Phi_{1}(\nu)\Psi_{1}(\mu)+\Phi_{2}(\nu)\Psi_{2}(\mu)\right]^{-1}\left[\begin{array}[]{cc}\!\Phi_{1}(\nu)&\!\Phi_{2}(\nu)\end{array}\right]\right\}\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right].$ Here, we
+omit the unessential
+proportionality factor
+in the last line.
+In
+a similar way,
+the gauge transformation
+of the adjoint linear eigenfunction can be written as $\displaystyle\hskip 1.0pt\left[\begin{array}[]{cc}\!\widehat{\widetilde{\Phi}}_{1}&\!\widehat{\widetilde{\Phi}}_{2}\end{array}\right]$ $\displaystyle\propto$ $\displaystyle\hskip 1.0pt\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]\left\{I_{l+m}+\frac{\mu-\nu}{\zeta-\mu}\left[\begin{array}[]{c}\Psi_{1}(\mu)\\
+\Psi_{2}(\mu)\\
+\end{array}\right]\left[\Phi_{1}(\nu)\Psi_{1}(\mu)+\Phi_{2}(\nu)\Psi_{2}(\mu)\right]^{-1}\left[\begin{array}[]{cc}\!\Phi_{1}(\nu)&\!\Phi_{2}(\nu)\end{array}\right]\right\}.$ Note that
+the commutativity
+of the two
+elementary Bäcklund
+transformations can be expressed
+in the matrix product form (cf. [ 73 , 74 , 75 ] ): $\displaystyle\left[\begin{array}[]{cc}I_{l}&{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}\\
+\widetilde{R}&2\mathrm{i}(\zeta-\nu)I_{m}+\widetilde{R}{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}\\
+\end{array}\right]\left[\begin{array}[]{cc}2\mathrm{i}(\zeta-\mu)I_{l}+Q\widetilde{R}&-Q\\
+-\widetilde{R}&I_{m}\\
+\end{array}\right]$ $\displaystyle=\left[\begin{array}[]{cc}2\mathrm{i}(\zeta-\mu)I_{l}+\widehat{Q}{\widetilde{\widehat{R}\mkern 3.0mu}\mkern-3.0mu}&-\widehat{Q}\\
+-{\widetilde{\widehat{R}\mkern 3.0mu}\mkern-3.0mu}&I_{m}\\
+\end{array}\right]\left[\begin{array}[]{cc}I_{l}&\widehat{Q}\\
+R&2\mathrm{i}(\zeta-\nu)I_{m}+R\widehat{Q}\\
+\end{array}\right],$ which provides
+the nonlinear superposition principle
+for the solutions
+of
+the matrix NLS hierarchy.
+It
+can be described by
+the
+pair of
+relations [ 44 , 45 , 71 ] : $\displaystyle{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{}=Q+2\mathrm{i}(\nu-\mu)\widehat{Q}\left(I_{m}+\widetilde{R}\widehat{Q}\right)^{-1},$ $\displaystyle{\widetilde{\widehat{R}\mkern 3.0mu}\mkern-3.0mu}{}=R+2\mathrm{i}(\mu-\nu)\widetilde{R}\left(I_{l}+\widehat{Q}\widetilde{R}\right)^{-1}.$ These relations
+can be reinterpreted
+as a fully discrete integrable system defined
+on the two-dimensional
+lattice [ 69 , 76 , 74 , 75 ] . The composition of the
+two
+elementary Bäcklund–Darboux transformations
+defines a binary Bäcklund–Darboux transformation [ 32 , 33 ] that can be
+formulated as follows. Proposition 2.3 . For
+a
+linear eigenfunction
+satisfying
+( 2.6 ) at $\zeta=\mu$ and
+an adjoint linear eigenfunction
+satisfying
+( 2.7 ) at $\zeta=\nu$ ,
+we
+define a
+projection matrix $P(\mu,\nu)$ in the $2\times 2$ block-matrix
+form: $\displaystyle P(\mu,\nu)$ $\displaystyle:=\left[\begin{array}[]{c}\Psi_{1}(\mu)\\
+\Psi_{2}(\mu)\\
+\end{array}\right]\left[\Phi_{1}(\nu)\Psi_{1}(\mu)+\Phi_{2}(\nu)\Psi_{2}(\mu)\right]^{-1}\left[\begin{array}[]{cc}\!\Phi_{1}(\nu)&\!\Phi_{2}(\nu)\end{array}\right].$ Indeed, $P^{2}=P$ .
+Then,
+the binary Bäcklund–Darboux transformation $(Q,R)\mapsto({\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{},{\widehat{\widetilde{R}\mkern 3.0mu}\mkern-3.0mu}{})$ for
+the matrix NLS system ( 2.1b )
+can be expressed as
+(see [ 47 , 48 ] for the scalar case and [ 49 , 34 , 50 , 77 , 38 ] for the vector case) $\displaystyle{\widehat{\widetilde{Q}\mkern 3.0mu}\mkern-3.0mu}{}$ $\displaystyle=Q+2\mathrm{i}(\nu-\mu)P_{12}(\mu,\nu),$ $\displaystyle{\widehat{\widetilde{R}\mkern 3.0mu}\mkern-3.0mu}{}$ $\displaystyle=R-2\mathrm{i}(\nu-\mu)P_{21}(\mu,\nu).$ Here, $P_{12}$ and $P_{21}$ denote
+the upper-right and lower-left block
+of
+the
+matrix $P$ ,
+respectively.
+The
+corresponding
+gauge transformation
+of the linear eigenfunction
+is given
+as $\displaystyle\left[\begin{array}[]{c}\widehat{\widetilde{\Psi}}_{1}\\
+\widehat{\widetilde{\Psi}}_{2}\\
+\end{array}\right]\propto$ $\displaystyle\left\{I_{l+m}-\frac{\mu-\nu}{\zeta-\nu}P(\mu,\nu)\right\}\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right],$ up to an overall constant,
+which
+coincides with the form
+suggested by the Zakharov–Shabat dressing
+method [ 78 ] .
+The gauge transformation
+of the adjoint linear eigenfunction
+is given using the inverse of the
+above
+dressing operator
+as $\displaystyle\left[\begin{array}[]{cc}\!\widehat{\widetilde{\Phi}}_{1}&\!\widehat{\widetilde{\Phi}}_{2}\end{array}\right]\propto\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]\left\{I_{l+m}-\frac{\nu-\mu}{\zeta-\mu}P(\mu,\nu)\right\}.$ In the limit $\nu\to\mu$ ,
+the binary Bäcklund–Darboux transformation
+reduces to
+the identity transformation
+as long as $\Phi_{1}(\mu)\Psi_{1}(\mu)+\Phi_{2}(\mu)\Psi_{2}(\mu)$ is
+an invertible matrix (cf. ( 2.24 )). Thus, under
+a suitable
+choice of the (adjoint) linear eigenfunctions
+used in
+the
+transformations,
+the two
+elementary Bäcklund–Darboux
+transformations
+defined in Propositions 2.1 and 2.2 are the inverse of each other
+at $\mu=\nu$ .
+However, we can
+consider
+a more interesting
+choice of the (adjoint) linear eigenfunctions
+such that the binary Bäcklund–Darboux transformation
+reduces to a nontrivial transformation
+in the limit $\nu\to\mu$ . 2.5 Coalescence
+limit of the
+binary Bäcklund–Darboux transformation From
+the Lax-pair representation ( 2.6 )
+and
+its adjoint
+( 2.7 ),
+we
+can show that the product of an adjoint linear eigenfunction
+and a linear eigenfunction satisfies
+(cf. [ 1 , 3 ] ) $\displaystyle\left\{\frac{1}{\mathrm{i}(\nu-\mu)}\left[\Phi_{1}(\nu)\Psi_{1}(\mu)+\Phi_{2}(\nu)\Psi_{2}(\mu)\right]\right\}_{x}=\Phi_{1}(\nu)\Psi_{1}(\mu)-\Phi_{2}(\nu)\Psi_{2}(\mu)$ and $\displaystyle\left\{\frac{1}{\mathrm{i}(\nu-\mu)}\left[\Phi_{1}(\nu)\Psi_{1}(\mu)+\Phi_{2}(\nu)\Psi_{2}(\mu)\right]\right\}_{t}$ $\displaystyle=$ $\displaystyle\hskip 3.0pt2(\mu+\nu)\left[\Phi_{1}(\nu)\Psi_{1}(\mu)-\Phi_{2}(\nu)\Psi_{2}(\mu)\right]+2\mathrm{i}\left[\Phi_{1}(\nu)Q\Psi_{2}(\mu)+\Phi_{2}(\nu)R\Psi_{1}(\mu)\right].$ By construction, these two relations are compatible, i.e. $\displaystyle\left\{\Phi_{1}(\nu)\Psi_{1}(\mu)-\Phi_{2}(\nu)\Psi_{2}(\mu)\right\}_{t}$ $\displaystyle=$ $\displaystyle\hskip 3.0pt\left\{2(\mu+\nu)\left[\Phi_{1}(\nu)\Psi_{1}(\mu)-\Phi_{2}(\nu)\Psi_{2}(\mu)\right]+2\mathrm{i}\left[\Phi_{1}(\nu)Q\Psi_{2}(\mu)+\Phi_{2}(\nu)R\Psi_{1}(\mu)\right]\right\}_{x}.$ Thus, if we introduce
+an $l\times l$ matrix $F$ as $F(\mu):=\lim_{\nu\to\mu}\frac{1}{\mathrm{i}(\nu-\mu)}\left[\Phi_{1}(\nu)\Psi_{1}(\mu)+\Phi_{2}(\nu)\Psi_{2}(\mu)\right],$ (2.97) it satisfies the
+pair of relations: $\displaystyle F_{x}=\Phi_{1}(\mu)\Psi_{1}(\mu)-\Phi_{2}(\mu)\Psi_{2}(\mu),$ (2.98a) $\displaystyle F_{t}=4\mu F_{x}+2\mathrm{i}\left[\Phi_{1}(\mu)Q\Psi_{2}(\mu)+\Phi_{2}(\mu)R\Psi_{1}(\mu)\right].$ (2.98b) Moreover, $F^{-1}$ should satisfy $F^{-1}\left[\Phi_{1}(\mu)\Psi_{1}(\mu)+\Phi_{2}(\mu)\Psi_{2}(\mu)\right]=\left[\Phi_{1}(\mu)\Psi_{1}(\mu)+\Phi_{2}(\mu)\Psi_{2}(\mu)\right]F^{-1}=O.$ In this paper,
+we
+consider the simplest case
+where $\Phi_{1}(\mu)\Psi_{1}(\mu)+\Phi_{2}(\mu)\Psi_{2}(\mu)$ vanishes
+(cf. ( 2.24 )).
+Thus,
+considering the $\nu\to\mu$ limit of
+Proposition 2.3 ,
+we
+arrive at a nontrivial
+limiting case of
+the binary Bäcklund--Darboux transformation. 7 7 7 Such a
+limiting procedure is
+already well-known
+for the linear Schrödinger equation
+associated with the KdV equation
+(see
+§2.4
+of [ 33 ] );
+the resulting transformation
+is sometimes
+referred to as
+the Abraham–Moses transformation [ 79 ] (see [ 80 ] for
+details). Relavant results were obtained independently
+by Degasperis and Lombardo [ 35 ] using a different approach. Proposition 2.4 . We choose
+a
+linear eigenfunction
+and
+an adjoint linear eigenfunction
+satisfying
+( 2.6 )
+and
+( 2.7 ), respectively,
+at $\zeta=\mu$ in such a way that
+their $(x,t)$ -independent
+product is
+equal to
+zero: $\Phi_{1}(\mu)\Psi_{1}(\mu)+\Phi_{2}(\mu)\Psi_{2}(\mu)=O.$ We
+can
+introduce $F(\mu)$ that
+satisfies
+both
+( 2.98a ) and ( 2.98b ),
+because they are
+compatible.
+Thus, $F(\mu)$ is defined up to the addition of
+an integration constant,
+which is an arbitrary $l\times l$ matrix.
+Then, the limiting case of
+the binary Bäcklund–Darboux transformation, $(Q,R)\mapsto(\breve{Q},\breve{R})$ ,
+for
+the matrix NLS system ( 2.1b )
+can be expressed as $\displaystyle\breve{Q}$ $\displaystyle=Q+2{\cal P}_{12}(\mu),$ (2.99a) $\displaystyle\breve{R}$ $\displaystyle=R-2{\cal P}_{21}(\mu).$ (2.99b) Here, ${\cal P}_{12}$ and ${\cal P}_{21}$ are
+the upper-right and lower-left block, respectively,
+of
+the nilpotent
+matrix ${\cal P}(\mu)$ defined as $\displaystyle{\cal P}(\mu)$ $\displaystyle:=\left[\begin{array}[]{c}\Psi_{1}(\mu)\\
+\Psi_{2}(\mu)\\
+\end{array}\right]F(\mu)^{-1}\left[\begin{array}[]{cc}\!\Phi_{1}(\mu)&\!\Phi_{2}(\mu)\end{array}\right].$ Note that ${\cal P}^{2}=O$ .
+The
+corresponding
+gauge transformation
+that preserves the form of the Lax-pair representation ( 2.6 )
+is given
+as $\displaystyle\left[\begin{array}[]{c}\breve{\Psi}_{1}\\
+\breve{\Psi}_{2}\\
+\end{array}\right]\propto$ $\displaystyle\left\{I_{l+m}-\frac{\mathrm{i}}{\zeta-\mu}{\cal P}(\mu)\right\}\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right],$ up to
+an overall
+constant.
+The gauge transformation
+that preserves the form of the adjoint Lax-pair representation ( 2.7 )
+is given using the inverse of the
+above
+operator
+as $\displaystyle\left[\begin{array}[]{cc}\!\breve{\Phi}_{1}&\!\breve{\Phi}_{2}\end{array}\right]\propto\left[\begin{array}[]{cc}\!\Phi_{1}&\!\Phi_{2}\end{array}\right]\left\{I_{l+m}+\frac{\mathrm{i}}{\zeta-\mu}{\cal P}(\mu)\right\}.$ At The validity of Proposition 2.4 can be
+checked
+by a direct calculation.
+Note that $F(\mu)$ satisfying ( 2.98 )
+can be informally written as $\displaystyle F(\mu)$ $\displaystyle=2C+\int\left[\Phi_{1}(\mu)\Psi_{1}(\mu)-\Phi_{2}(\mu)\Psi_{2}(\mu)\right]\mathrm{d}x$ $\displaystyle=2\left[C+\int\Phi_{1}(\mu)\Psi_{1}(\mu)\hskip 1.0pt\mathrm{d}x\right],$ where $C$ is
+an
+arbitrary $l\times l$ constant matrix.
+More precisely, the time independence of $C$ should be
+checked by using ( 2.98b );
+however, this process can be skipped by choosing
+the linear eigenfunction and the
+adjoint linear eigenfunction
+so that
+the
+right-hand sides of
+( 2.98a ) and ( 2.98b )
+decay rapidly
+as $x\to-\infty$ (or $+\infty$ ).
+This expression involves one integration,
+but it
+is generally
+much
+easier to compute
+than
+taking the limit
+following
+the original definition ( 2.97 )
+(cf. [ 34 , 81 ] ). 2.6 Seed solution A general plane-wave solution of the nonreduced
+matrix NLS system ( 2.1b )
+is given by $\displaystyle Q=P_{1}\mathrm{e}^{-2\mathrm{i}tAB}A\mathrm{e}^{\mathrm{i}x\Gamma-\mathrm{i}t\Gamma^{2}}P_{2},\hskip 14.22636ptR=P_{2}^{-1}\mathrm{e}^{-\mathrm{i}x\Gamma+\mathrm{i}t\Gamma^{2}}B\mathrm{e}^{2\mathrm{i}tAB}P_{1}^{-1},$ (2.109) where $\Gamma$ , $A$ , $B$ , $P_{1}$ and $P_{2}$ are constant matrices; $P_{1}$ is an $l\times l$ matrix, $\Gamma$ and $P_{2}$ are $m\times m$ matrices, $A$ is an $l\times m$ matrix
+and $B$ is an $m\times l$ matrix.
+Actually, $P_{1}$ and $P_{2}$ can be
+removed
+by redefining $\Gamma$ , $A$ and $B$ ;
+note, however, that
+they
+can be used to
+cast $\Gamma$ and $AB$ in Jordan
+normal form.
+A general plane-wave solution
+of the matrix NLS equation ( 2.3 )
+can be
+obtained by
+imposing the reduction conditions $P_{1}^{\dagger}\Omega P_{1}=\Omega,\hskip 14.22636ptP_{2}\Sigma P_{2}^{\dagger}=\Sigma,\hskip 14.22636pt\Sigma\Gamma^{\dagger}\Sigma^{-1}=\Gamma,\hskip 14.22636ptB=\Sigma A^{\dagger}\Omega$ on ( 2.109 ) so that
+the Hermitian conjugation reduction ( 2.2 ) is realized.
+The third condition is satisfied
+for
+a diagonal matrix $\Sigma$ by setting $\Gamma=\mathrm{diag}(\gamma_{1},\gamma_{2},\ldots,\gamma_{m}),$ where $\gamma_{j}$ are real constants.
+In
+sections 4 and 5 ,
+we
+apply a binary Bäcklund–Darboux transformation
+and its limiting version
+to
+the
+reduced plane-wave solution,
+which can maintain
+the
+Hermitian conjugation reduction. To obtain the linear eigenfunction of
+the Lax-pair representation
+( 2.6 )
+with $Q$ and $R$ given by
+the general plane-wave solution ( 2.109 ),
+we consider a gauge transformation, $\displaystyle\Psi_{1}=P_{1}\mathrm{e}^{-2\mathrm{i}tAB}\boldsymbol{\mathit{\Psi}}_{1},\hskip 14.22636pt\Psi_{2}=\mathrm{i}P_{2}^{-1}\mathrm{e}^{-\mathrm{i}x\Gamma+\mathrm{i}t\Gamma^{2}}\boldsymbol{\mathit{\Psi}}_{2}.$ (2.110) Then,
+the Lax-pair representation
+at $\zeta=\mu$ reduces to
+the
+form: $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{\Psi}}_{1}\\
+\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]_{x}=\mathrm{i}\left[\begin{array}[]{cc}-\mu I_{l}&A\\
+-B&\mu I_{m}+\Gamma\\
+\end{array}\right]\left[\begin{array}[]{c}\boldsymbol{\mathit{\Psi}}_{1}\\
+\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right],$ $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{\Psi}}_{1}\\
+\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]_{t}=\mathrm{i}\left[\begin{array}[]{cc}-2\mu^{2}I_{l}+AB&2\mu A-A\Gamma\\
+-2\mu B+\Gamma B&2\mu^{2}I_{m}+BA-\Gamma^{2}\\
+\end{array}\right]\left[\begin{array}[]{c}\boldsymbol{\mathit{\Psi}}_{1}\\
+\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right].$ The general solution of this linear system
+can be
+expressed
+using the matrix exponential
+of an $(l+m)\times(l+m)$ matrix
+as $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{\Psi}}_{1}\\
+\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]=\mathrm{e}^{\mathrm{i}x(\boldsymbol{Z}+\mu I)+\mathrm{i}t(-\boldsymbol{Z}^{2}+2\mu^{2}I)}\left[\begin{array}[]{c}{\mathscr{C}}_{1}\\
+{\mathscr{C}}_{2}\\
+\end{array}\right],\hskip 14.22636pt\boldsymbol{Z}(\mu):=\left[\begin{array}[]{cc}-2\mu I_{l}&A\\
+-B&\Gamma\\
+\end{array}\right].$ Here, $I$ denotes the
+identity matrix $I_{l+m}$ and ${\mathscr{C}}_{1}$ and ${\mathscr{C}}_{2}$ are $l\times l$ and $m\times l$ constant matrices, respectively.
+Assume that
+the constant matrix $\boldsymbol{Z}(\mu)$ can be diagonalized
+as $\boldsymbol{Z}X=X\Lambda,\hskip 14.22636pt\Lambda:=\mathrm{diag}(\lambda_{1},\lambda_{2},\ldots,\lambda_{l+m}),$ using a nonsingular matrix $X$ whose $j$ th column
+is
+an eigenvector of $\boldsymbol{Z}(\mu)$ with an
+eigenvalue $\lambda_{j}$ .
+Then, by setting $\left[\begin{array}[]{c}{\mathscr{C}}_{1}\\
+{\mathscr{C}}_{2}\\
+\end{array}\right]=X\left[\begin{array}[]{c}{\mathscr{U}}_{1}\\
+{\mathscr{U}}_{2}\\
+\end{array}\right],$ we can compute
+the matrix exponential in ( 2.6 )
+explicitly.
+Thus, in view of ( 2.110 ), we obtain $\displaystyle\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]=\left[\begin{array}[]{cc}P_{1}\mathrm{e}^{-2\mathrm{i}tAB}&O\\
+O&\mathrm{i}P_{2}^{-1}\mathrm{e}^{-\mathrm{i}x\Gamma+\mathrm{i}t\Gamma^{2}}\\
+\end{array}\right]X\mathrm{e}^{\mathrm{i}x(\Lambda+\mu I)+\mathrm{i}t(-\Lambda^{2}+2\mu^{2}I)}\left[\begin{array}[]{c}{\mathscr{U}}_{1}\\
+{\mathscr{U}}_{2}\\
+\end{array}\right].$ In a similar
+way,
+we can also
+obtain
+the linear eigenfunction of
+the adjoint Lax-pair representation
+( 2.7 )
+with the potentials given by
+( 2.109 ).
+The constant matrices $P_{1}$ and $P_{2}$ play no essential role
+in the
+Bäcklund–Darboux transformations,
+i.e.,
+the order of applying a Bäcklund–Darboux transformation
+and
+a
+constant
+linear transformation using $P_{1}$ and $P_{2}$ is irrelevant.
+Thus,
+in
+the following, we usually
+drop $P_{1}$ and $P_{2}$ ,
+keeping in mind
+the invariance
+of the
+matrix NLS system
+under the action of the symmetry group. To express the matrix exponential explicitly, we need to diagonalize
+the constant matrix $\boldsymbol{Z}(\mu)$ ;
+throughout this paper,
+we do not separately
+discuss the non-generic case where $\boldsymbol{Z}(\mu)$ is
+non-diagonalizable (see, e.g. , [ 37 ] ).
+For a
+general choice
+of $\mu$ , $\Gamma$ , $A$ and $B$ ,
+this requires
+to solve the characteristic equation for $\boldsymbol{Z}(\mu)$ of degree $l+m$ .
+Thus, even for the
+simple case of the two-component vector
+NLS equation, we generally need to resort to
+Cardano’s formula [ 34 , 38 ] ,
+which is
+too complicated for practical purposes.
+However, as we will see below,
+with a suitable re-parametrization of $\mu$ , $\Gamma$ , $A$ and $B$ ,
+it is possible to
+compute
+the
+matrix exponential
+explicitly
+without using Cardano’s formula. 3 Dark-soliton solutions In this section, we
+apply the
+elementary Bäcklund–Darboux transformation
+defined in Proposition 2.1 to the
+matrix NLS
+system
+( 2.1b ),
+which
+includes
+the vector NLS system as a special case.
+Taking a
+plane-wave solution as the seed solution, we
+obtain
+dark-soliton solutions
+of the multicomponent NLS equations
+with a self-defocusing or mixed focusing-defocusing nonlinearity.
+The Hermitian conjugation reduction between the
+transformed potentials $\widetilde{Q}$ and $\widetilde{R}$ can be
+realized
+through a suitable choice
+of the parameters
+in the solution.
+In particular,
+the Bäcklund parameter $\mu$ ,
+which
+has its origin in
+the spectral parameter $\zeta$ in the Lax-pair representation,
+is
+restricted to be real. 3.1 Vector dark soliton without internal degrees of freedom We first
+consider
+the nonreduced
+vector
+NLS system,
+which can be obtained from ( 2.1b )
+by setting $l=1$ , $Q=\mbox{\boldmath$q$}$ and $R=\mbox{\boldmath$r$}^{T}$ ,
+i.e. $\displaystyle{}\mathrm{i}\mbox{\boldmath$q$}_{t}+\mbox{\boldmath$q$}_{xx}-2\langle\mbox{\boldmath$q$},\mbox{\boldmath$r$}\rangle\mbox{\boldmath$q$}=\mbox{\boldmath$0$},$ (3.1a) $\displaystyle\mathrm{i}\mbox{\boldmath$r$}_{t}-\mbox{\boldmath$r$}_{xx}+2\langle\mbox{\boldmath$r$},\mbox{\boldmath$q$}\rangle\mbox{\boldmath$r$}=\mbox{\boldmath$0$}.$ (3.1b) Here, $\mbox{\boldmath$q$}:=(q_{1},\ldots,q_{m})$ and $\mbox{\boldmath$r$}:=(r_{1},\ldots,r_{m})$ are $m$ -component row vectors.
+Note that
+the simplest case of $m=1$ corresponds to
+the scalar NLS system: $\displaystyle{}\mathrm{i}q_{t}+q_{xx}-2q^{2}r=0,$ (3.2a) $\displaystyle\mathrm{i}r_{t}-r_{xx}+2r^{2}q=0.$ (3.2b) A general plane-wave solution [ 21 ] of
+the vector NLS system
+( 3.1b )
+is
+(cf. ( 2.109 )) $q_{j}(x,t)=a_{j}\mathrm{e}^{\mathrm{i}\gamma_{j}x-\mathrm{i}\left(\gamma_{j}^{2}+2\sum_{k=1}^{m}a_{k}b_{k}\right)t},\hskip 14.22636ptr_{j}(x,t)=b_{j}\mathrm{e}^{-\mathrm{i}\gamma_{j}x+\mathrm{i}\left(\gamma_{j}^{2}+2\sum_{k=1}^{m}a_{k}b_{k}\right)t},$ (3.3) where $j=1,2,\ldots,m$ .
+We
+consider the generic case where
+all $\gamma_{j}$ are pairwise distinct.
+The
+matrix $\boldsymbol{Z}(\mu)$ (cf. ( 2.6 ))
+in this case
+is given by $\displaystyle\boldsymbol{Z}(\mu)=\left[\begin{array}[]{ccccc}-2\mu&a_{1}&\cdots&a_{m}\\
+-b_{1}&\gamma_{1}&&\kern-6.0pt\raisebox{-6.0pt}{\mbox{{\Large$O$}}}\\
+\vdots&&\ddots&\\
+-b_{m}&\mbox{{\Large$O$}}&&\gamma_{m}\\
+\end{array}\right].$ The
+characteristic equation (up to an overall sign)
+reads $\displaystyle\det\left(\lambda I-\boldsymbol{Z}\right)=(\lambda+2\mu)\prod_{j=1}^{m}(\lambda-\gamma_{j})+\sum_{k=1}^{m}a_{k}b_{k}\prod_{\stackrel{{\scriptstyle\scriptstyle j=1}}{{j\neq k}}}^{m}(\lambda-\gamma_{j})=0,$ (3.8) which can be rewritten as
+(cf. [ 22 ] ) $\displaystyle\lambda+\sum_{k=1}^{m}\frac{a_{k}b_{k}}{\lambda-\gamma_{k}}=-2\mu.$ (3.9) For each eigenvalue $\lambda$ that solves
+( 3.9 ),
+the corresponding eigenvector is given
+up to
+an overall constant
+as $\displaystyle\boldsymbol{Z}(\mu)\left[\begin{array}[]{c}1\\
+-\frac{b_{1}}{\lambda-\gamma_{1}}\\
+\vdots\\
+-\frac{b_{m}}{\lambda-\gamma_{m}}\\
+\end{array}\right]=\lambda\left[\begin{array}[]{c}1\\
+-\frac{b_{1}}{\lambda-\gamma_{1}}\\
+\vdots\\
+-\frac{b_{m}}{\lambda-\gamma_{m}}\\
+\end{array}\right].$ To obtain
+dark-soliton
+solutions
+satisfying
+a
+complex conjugation reduction between $q$ and $r$ ,
+we assume that
+the parameters $\gamma_{k}$ , $a_{k}b_{k}$ and $\mu$ are all real.
+Then,
+considering the behavior of the left-hand side of ( 3.9 )
+as a
+function of $\lambda$ , we can identify
+conditions
+for the algebraic equation ( 3.9 )
+in $\lambda$ to have a pair of complex conjugate roots.
+In particular,
+at least one of the $a_{k}b_{k}$ must be positive.
+Then,
+among the $m+1$ solutions of ( 3.9 ),
+we
+express
+the pair of complex conjugate
+roots
+as $\lambda=\xi\pm\mathrm{i}\eta$ with $\eta>0$ to obtain $\displaystyle\xi\pm\mathrm{i}\eta+\sum_{k=1}^{m}\frac{a_{k}b_{k}}{\xi\pm\mathrm{i}\eta-\gamma_{k}}=-2\mu.$ (3.18) This can be rewritten as $\xi+\sum_{k=1}^{m}\frac{(\xi-\gamma_{k})a_{k}b_{k}}{(\xi-\gamma_{k})^{2}+\eta^{2}}=-2\mu,\hskip 14.22636pt\sum_{k=1}^{m}\frac{a_{k}b_{k}}{(\xi-\gamma_{k})^{2}+\eta^{2}}=1.$ (3.19) Using the second equation,
+it is in principle possible
+to determine $\eta\,(>0)$ from $\xi$ , $\gamma_{k}$ and $a_{k}b_{k}$ by solving an algebraic equation
+of degree $m$ for $\eta^{2}$ .
+Subsequently, the first equation can be
+used to determine $\mu$ from $\xi$ , $\gamma_{k}$ and $a_{k}b_{k}$ .
+However, in practice,
+this procedure is
+not effective
+for $m\geq 3$ ,
+because we
+need to use
+Cardano’s
+formula
+even for $m=3$ . 3.1.1 Scalar NLS equation It would be
+instructive to
+study
+the scalar NLS
+system
+by setting $m=1$ ,
+before considering
+the multicomponent case.
+From ( 3.19 ), we obtain $2\xi-\gamma_{1}=-2\mu,\hskip 14.22636pta_{1}b_{1}=(\xi-\gamma_{1})^{2}+\eta^{2}.$ (3.20) Thus, we have $\eta=\sqrt{a_{1}b_{1}-(\xi-\gamma_{1})^{2}}$ with the condition $a_{1}b_{1}>(\xi-\gamma_{1})^{2}$ and $\boldsymbol{Z}=\left[\begin{array}[]{cc}2\xi-\gamma_{1}&a_{1}\\
+-b_{1}&\gamma_{1}\\
+\end{array}\right].$ We choose
+the
+eigenvectors corresponding to the
+eigenvalues $\xi\pm\mathrm{i}\eta$ as $\boldsymbol{Z}\left[\begin{array}[]{c}a_{1}\\
+-\xi\pm\mathrm{i}\eta+\gamma_{1}\\
+\end{array}\right]=(\xi\pm\mathrm{i}\eta)\left[\begin{array}[]{c}a_{1}\\
+-\xi\pm\mathrm{i}\eta+\gamma_{1}\\
+\end{array}\right].$ The general
+solution ( 2.6 ) of the
+linear problem
+( 2.111 )
+in the scalar NLS case
+can be written explicitly
+as $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{\Psi}}_{1}\\
+\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]$ $\displaystyle=c_{1}\mathrm{e}^{\mathrm{i}x\left(\frac{\gamma}{2}+\mathrm{i}\eta\right)+\mathrm{i}t\left(\xi^{2}-2\mathrm{i}\xi\eta+\eta^{2}-2\xi\gamma_{1}+\frac{\gamma_{1}^{2}}{2}\right)}\left[\begin{array}[]{c}a_{1}\\
+-\xi+\mathrm{i}\eta+\gamma_{1}\\
+\end{array}\right]$ $\displaystyle\hphantom{=}\;\mbox{}+c_{2}\mathrm{e}^{\mathrm{i}x\left(\frac{\gamma}{2}-\mathrm{i}\eta\right)+\mathrm{i}t\left(\xi^{2}+2\mathrm{i}\xi\eta+\eta^{2}-2\xi\gamma_{1}+\frac{\gamma_{1}^{2}}{2}\right)}\left[\begin{array}[]{c}a_{1}\\
+-\xi-\mathrm{i}\eta+\gamma_{1}\\
+\end{array}\right],$ where $c_{1}$ and $c_{2}$ are arbitrary
+constants; they
+should be nonzero
+so that a
+nontrivial solution
+can be
+generated by
+applying
+the elementary
+Bäcklund–Darboux transformation.
+In view of ( 2.110 ) and ( 3.20 ), we obtain $\displaystyle\frac{\Psi_{2}}{\Psi_{1}}$ $\displaystyle=\mathrm{i}\hskip 1.0pt\mathrm{e}^{-\mathrm{i}\gamma_{1}x+\mathrm{i}(\gamma_{1}^{2}+2a_{1}b_{1})t}\frac{\boldsymbol{\mathit{\Psi}}_{2}}{\boldsymbol{\mathit{\Psi}}_{1}}$ $\displaystyle=\mathrm{i}\hskip 1.0pt\mathrm{e}^{-\mathrm{i}\gamma_{1}x+\mathrm{i}\left[\gamma_{1}^{2}+2(\xi-\gamma_{1})^{2}+2\eta^{2}\right]t}\frac{c_{1}(-\xi+\mathrm{i}\eta+\gamma_{1})\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}(-\xi-\mathrm{i}\eta+\gamma_{1})\mathrm{e}^{\eta x-2\xi\eta t}}{a_{1}\left(c_{1}\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}\mathrm{e}^{\eta x-2\xi\eta t}\right)}.$ Then,
+formulas ( 2.29 )
+provides
+the
+solution of the
+scalar NLS system ( 3.2b )
+as $\displaystyle r$ $\displaystyle=\frac{\mathrm{i}}{a_{1}}\mathrm{e}^{-\mathrm{i}\gamma_{1}x+\mathrm{i}\left[\gamma_{1}^{2}+2(\xi-\gamma_{1})^{2}+2\eta^{2}\right]t}\frac{c_{1}(-\xi+\mathrm{i}\eta+\gamma_{1})\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}(-\xi-\mathrm{i}\eta+\gamma_{1})\mathrm{e}^{\eta x-2\xi\eta t}}{c_{1}\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}\mathrm{e}^{\eta x-2\xi\eta t}},$ $\displaystyle q$ $\displaystyle=\mathrm{i}a_{1}\mathrm{e}^{\mathrm{i}\gamma_{1}x-\mathrm{i}\left[\gamma_{1}^{2}+2(\xi-\gamma_{1})^{2}+2\eta^{2}\right]t}\frac{c_{1}(\xi+\mathrm{i}\eta-\gamma_{1})\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}(\xi-\mathrm{i}\eta-\gamma_{1})\mathrm{e}^{\eta x-2\xi\eta t}}{c_{1}\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}\mathrm{e}^{\eta x-2\xi\eta t}},$ where we omit the tilde
+to denote
+the application of the Bäcklund–Darboux transformation.
+Thus, if
+we re-parametrize some
+parameters as $\mathrm{i}a_{1}=:\mathrm{e}^{\mathrm{i}\theta},\hskip 14.22636pt\frac{c_{2}}{c_{1}}=:\mathrm{e}^{2\delta}$ with
+real $\theta$ and $\delta$ ,
+we can realize the complex conjugation reduction $r=q^{\ast}$ and
+obtain the one-dark soliton solution
+of the self-defocusing
+NLS equation $\mathrm{i}q_{t}+q_{xx}-2|q|^{2}q=0$ in the form [ 5 , 13 , 14 , 15 ] : $\displaystyle q(x,t)$ $\displaystyle=\mathrm{e}^{\mathrm{i}\gamma_{1}x-\mathrm{i}\left[\gamma_{1}^{2}+2(\xi-\gamma_{1})^{2}+2\eta^{2}\right]t+\mathrm{i}\theta}\frac{(\xi+\mathrm{i}\eta-\gamma_{1})\mathrm{e}^{-\eta(x-2\xi t)-\delta}+(\xi-\mathrm{i}\eta-\gamma_{1})\mathrm{e}^{\eta(x-2\xi t)+\delta}}{\mathrm{e}^{-\eta(x-2\xi t)-\delta}+\mathrm{e}^{\eta(x-2\xi t)+\delta}}$ $\displaystyle=\mathrm{e}^{\mathrm{i}\gamma_{1}x-\mathrm{i}\left[\gamma_{1}^{2}+2(\xi-\gamma_{1})^{2}+2\eta^{2}\right]t+\mathrm{i}\theta}\left\{(\xi-\gamma_{1})-\mathrm{i}\eta\tanh\left[\eta(x-2\xi t)+\delta\right]\right\}.$ This solution represents a simple dip in the background plane wave
+and the asymptotic value at
+infinity
+is
+given as $\lim_{x\to\pm\infty}|q(x,t)|=\sqrt{(\xi-\gamma_{1})^{2}+\eta^{2}}$ .
+The elementary Bäcklund–Darboux transformation
+defined in Proposition 2.1 does not
+retain the
+complex
+conjugation reduction
+in general;
+however,
+if it is applied to a plane-wave solution in combination
+with a simple
+rescaling of the
+dependent variables,
+we can
+realize the complex conjugation reduction
+in both the old and new pair of variables. Using Proposition 2.1 , we can confirm
+that
+the one-dark soliton solution
+is associated with
+a
+bound state
+of the
+Lax-pair representation
+( 2.6 )
+at $\zeta=\mu$ , i.e., when
+the spectral parameter
+coincides with
+the parameter of the applied Bäcklund–Darboux
+transformation.
+Indeed,
+the gauge transformation ( 2.1 )
+provides
+a generic linear eigenfunction
+at $\zeta=\mu$ for
+the transformed potentials
+as $\displaystyle\left[\begin{array}[]{c}\widetilde{\Psi}_{1}\\
+\widetilde{\Psi}_{2}\\
+\end{array}\right]\propto\frac{\left|\begin{array}[]{cc}\Psi_{1}^{(1)}&\Psi_{1}\\
+\Psi_{2}^{(1)}&\Psi_{2}\\
+\end{array}\right|}{\Psi_{1}^{(1)}}\left[\begin{array}[]{c}-q\\
+1\\
+\end{array}\right],$ up to an overall constant.
+Here, the superscript (1) means
+the linear eigenfunction used to define the elementary Bäcklund–Darboux transformation
+( 2.29 ).
+In the above expression,
+the determinant in the numerator is
+the Wronskian of two
+linearly independent
+eigenfunctions,
+which
+is a nonzero constant; $q(x,t)$ in the seed solution is a plane wave and $1/\Psi_{1}^{(1)}$ is
+nonsingular everywhere
+and
+decays exponentially fast as $x\to\pm\infty$ .
+Thus,
+the
+application of the
+elementary
+Bäcklund–Darboux
+transformation
+indeed
+generates
+a
+bound state
+of
+the associated linear
+problem.
+More generally,
+the elementary Bäcklund–Darboux
+transformation
+increases the number of bound states by one,
+by adding a new bound state
+with a real eigenvalue $\mu$ ,
+when it is applied to
+a
+seed solution
+that does not
+have a bound state at $\zeta=\mu$ .
+Thus, one can intuitively
+think of the elementary Bäcklund–Darboux
+transformation as a classical analog of the creation operator. 3.1.2 Vector
+NLS equation Let us derive
+a one-dark soliton solution
+of the vector NLS equation ( 2.4 )
+in the general $m$ -component case.
+Actually,
+using
+the elementary Bäcklund–Darboux transformation,
+we can
+construct
+more general
+solutions
+of
+the nonreduced vector NLS system ( 3.1b ),
+which
+are not compatible with
+the complex conjugation reduction;
+however,
+such solutions apparently
+have no physical significance,
+so
+we do not discuss
+them
+in this paper.
+Thus,
+among the general solution ( 2.6 ) of
+the
+linear problem ( 2.111 ) in the vector NLS case,
+we consider
+a particular
+solution, $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{\Psi}}_{1}\\
+\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]$ $\displaystyle=c_{1}\mathrm{e}^{\mathrm{i}x\left(\xi+\mathrm{i}\eta+\mu\right)+\mathrm{i}t\left[-(\xi+\mathrm{i}\eta)^{2}+2\mu^{2}\right]}\left[\begin{array}[]{c}1\\
+-\frac{b_{1}}{\xi+\mathrm{i}\eta-\gamma_{1}}\\
+\vdots\\
+-\frac{b_{m}}{\xi+\mathrm{i}\eta-\gamma_{m}}\\
+\end{array}\right]$ $\displaystyle\hphantom{=}\;\mbox{}+c_{2}\mathrm{e}^{\mathrm{i}x\left(\xi-\mathrm{i}\eta+\mu\right)+\mathrm{i}t\left[-(\xi-\mathrm{i}\eta)^{2}+2\mu^{2}\right]}\left[\begin{array}[]{c}1\\
+-\frac{b_{1}}{\xi-\mathrm{i}\eta-\gamma_{1}}\\
+\vdots\\
+-\frac{b_{m}}{\xi-\mathrm{i}\eta-\gamma_{m}}\\
+\end{array}\right].$ Here, $c_{1}$ and $c_{2}$ are arbitrary
+constants,
+which
+should be nonzero
+so that the above solution can
+provide
+a nontrivial solution
+of the vector NLS system.
+Recall that the seed solution of the
+vector NLS system ( 3.1b )
+is the
+general
+plane-wave solution
+( 3.3 ) and
+the parameters satisfy the relations
+( 3.19 ). Then,
+by applying
+the elementary Bäcklund–Darboux
+transformation
+( 2.29 ),
+we obtain
+a new solution of the vector NLS system ( 3.1b ) as $\displaystyle\widetilde{\mbox{\boldmath$r$}}^{T}$ $\displaystyle=\mathrm{i}\hskip 1.0pt\mathrm{e}^{-\mathrm{i}x\Gamma+\mathrm{i}t\Gamma^{2}}\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}\mathrm{e}^{2\mathrm{i}t\sum_{k=1}^{m}a_{k}b_{k}}$ $\displaystyle=-\mathrm{i}\frac{\mathrm{e}^{2\mathrm{i}t\sum_{k=1}^{m}a_{k}b_{k}}}{c_{1}\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}\mathrm{e}^{\eta x-2\xi\eta t}}\left[\begin{array}[]{c}\mathrm{e}^{-\mathrm{i}\gamma_{1}x+\mathrm{i}\gamma_{1}^{2}t}\left(c_{1}\frac{b_{1}}{\xi+\mathrm{i}\eta-\gamma_{1}}\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}\frac{b_{1}}{\xi-\mathrm{i}\eta-\gamma_{1}}\mathrm{e}^{\eta x-2\xi\eta t}\right)\\
+\vdots\\
+\mathrm{e}^{-\mathrm{i}\gamma_{m}x+\mathrm{i}\gamma_{m}^{2}t}\left(c_{1}\frac{b_{m}}{\xi+\mathrm{i}\eta-\gamma_{m}}\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}\frac{b_{m}}{\xi-\mathrm{i}\eta-\gamma_{m}}\mathrm{e}^{\eta x-2\xi\eta t}\right)\\
+\end{array}\right],$ where $\Gamma=\mathrm{diag}(\gamma_{1},\gamma_{2},\ldots,\gamma_{m})$ ,
+and $\displaystyle\widetilde{\mbox{\boldmath$q$}}$ $\displaystyle=-\mbox{\boldmath$q$}_{x}-2\mathrm{i}\mu\mbox{\boldmath$q$}+\langle\mbox{\boldmath$q$},\widetilde{\mbox{\boldmath$r$}}\rangle\mbox{\boldmath$q$}$ $\displaystyle=\left(\widetilde{q}_{1},\widetilde{q}_{2},\ldots,\widetilde{q}_{m}\right),$ with $\displaystyle\widetilde{q}_{j}$ $\displaystyle=\mathrm{i}a_{j}\mathrm{e}^{\mathrm{i}\gamma_{j}x-\mathrm{i}\left(\gamma_{j}^{2}+2\sum_{k=1}^{m}a_{k}b_{k}\right)t}\frac{c_{1}(\xi+\mathrm{i}\eta-\gamma_{j})\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}(\xi-\mathrm{i}\eta-\gamma_{j})\mathrm{e}^{\eta x-2\xi\eta t}}{c_{1}\mathrm{e}^{-\eta x+2\xi\eta t}+c_{2}\mathrm{e}^{\eta x-2\xi\eta t}},\hskip 14.22636ptj=1,2,\ldots,m.$ Here,
+the Bäcklund parameter $\mu$ has been
+eliminated
+with the aid of
+( 3.18 ).
+The complex conjugation reduction $\widetilde{r}_{j}=\sigma_{j}\widetilde{q}_{j}^{\hskip 2.0pt\ast}$ can be realized by setting $\displaystyle b_{j}=\sigma_{j}\left[(\xi-\gamma_{j})^{2}+\eta^{2}\right]a_{j}^{\ast},$ $\displaystyle\frac{c_{2}}{c_{1}}=\mathrm{e}^{2\delta},\;\;\delta\in{\mathbb{R}},$ where $\sigma_{j}=+1$ or $-1$ .
+Thus, omitting the tilde,
+we obtain
+a one-dark soliton solution of the
+vector NLS equation ( 2.4 )
+as $\displaystyle q_{j}(x,t)$ $\displaystyle=a_{j}\mathrm{e}^{\mathrm{i}\gamma_{j}x-\mathrm{i}\left\{\gamma_{j}^{2}+2\sum_{k=1}^{m}\sigma_{k}|a_{k}|^{2}\left[(\xi-\gamma_{j})^{2}+\eta^{2}\right]\right\}t}\left\{\mathrm{i}(\xi-\gamma_{j})+\eta\tanh\left[\eta(x-2\xi t)+\delta\right]\right\},$ $\displaystyle\hskip 213.39566ptj=1,2,\ldots,m.$ (3.46) Note that
+the second relation
+in ( 3.19 ) reduces to the
+normalization condition: $\sum_{j=1}^{m}\sigma_{j}|a_{j}|^{2}=1.$ This implies that
+at least one of the $\sigma_{j}$ must be positive, i.e.,
+there must
+exist one or more defocusing components
+in the vector
+variable $\mbox{\boldmath$q$}(x,t)$ .
+This is consistent with the previous observation
+that at least one of the $a_{k}b_{k}$ must be positive
+for ( 3.9 )
+to have a pair of complex conjugate roots. The vector
+dark soliton ( 3.46 )
+has an essentially time-independent shape
+and
+contains no free parameters
+corresponding to
+the internal degrees of freedom;
+in the two-component case ( $m=2$ ),
+this solution
+has
+been extensively studied in the literature [ 20 , 21 , 22 , 82 , 83 ] .
+In section 4 ,
+we will derive
+a
+more general
+vector
+dark-soliton
+solution
+that
+can exist for $m\geq 3$ and
+admits the
+internal degrees of freedom. 3.2 Matrix dark soliton In this subsection,
+we construct new nontrivial
+dark-soliton solutions of
+the defocusing matrix NLS equation
+( 2.5 )
+with $\sigma=+1$ .
+Before
+focusing on
+the square matrix case $l=m$ ,
+we
+consider the more
+general case of $l\leq m$ and
+identify the
+conditions
+under which
+the new potentials generated by
+the
+elementary Bäcklund–Darboux transformation
+admit
+the Hermitian conjugation reduction. By applying the elementary Bäcklund–Darboux transformation
+defined in Proposition 2.1 to the plane-wave solution ( 2.109 )
+with $P_{1}$ and $P_{2}$ dropped,
+we obtain the transformed potentials in the form: $\displaystyle\widetilde{R}$ $\displaystyle=\Psi_{2}\Psi_{1}^{-1}$ $\displaystyle=\mathrm{i}\mathrm{e}^{-\mathrm{i}x\Gamma+\mathrm{i}t\Gamma^{2}}\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}\mathrm{e}^{2\mathrm{i}tAB},$ (3.47a) $\displaystyle\widetilde{Q}$ $\displaystyle=-Q_{x}-2\mathrm{i}\mu Q+Q\widetilde{R}Q$ $\displaystyle=\mathrm{i}\mathrm{e}^{-2\mathrm{i}tAB}A\left(\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}A-\Gamma-2\mu I_{m}\right)\mathrm{e}^{\mathrm{i}x\Gamma-\mathrm{i}t\Gamma^{2}}.$ (3.47b) Here,
+the $l\times l$ matrix $\boldsymbol{\mathit{\Psi}}_{1}$ and
+the $m\times l$ matrix $\boldsymbol{\mathit{\Psi}}_{2}$ satisfy the linear
+problem ( 2.111 ).
+From
+( 2.111 ), we
+obtain
+the matrix Riccati equation
+for $\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}$ : $\displaystyle-\mathrm{i}\left(\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}\right)_{x}=-B+2\mu\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}+\Gamma\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}-\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}A\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}.$ (3.48) To realize
+the Hermitian conjugation reduction $\widetilde{R}=\widetilde{Q}^{\hskip 1.0pt\dagger}$ in
+( 3.47 ),
+we require
+that $\Gamma^{\dagger}=\Gamma,\hskip 14.22636pt\left(AB\right)^{\dagger}=AB,$ and $\displaystyle\left(\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}\right)^{\dagger}=-A\left(\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}A-\Gamma-2\mu I\right).$ (3.49) A direct
+calculation
+shows
+that the matrix Riccati equation
+( 3.48 )
+is consistent with
+the reduction ( 3.49 )
+if $\displaystyle AA^{\dagger}A=A,\hskip 14.22636ptB=\Gamma\left(I_{m}-A^{\dagger}A\right)\Gamma A^{\dagger}+2\mu\Gamma A^{\dagger}+A^{\dagger}AKA^{\dagger},\hskip 14.22636pt\boldsymbol{\mathit{\Psi}}_{2}\boldsymbol{\mathit{\Psi}}_{1}^{-1}=\Gamma A^{\dagger}+A^{\dagger}\boldsymbol{\mathit{\Phi}},$ (3.50) where $K$ is an $m\times m$ constant Hermitian matrix, $K^{\dagger}=K$ , $\boldsymbol{\mathit{\Phi}}$ is an $l\times l$ $(x,t)$ -dependent matrix,
+and the Bäcklund
+parameter $\mu$ is
+real.
+Note that for $B$ given
+above,
+the relation $\left(AB\right)^{\dagger}=AB$ is
+automatically
+satisfied.
+With the aid of the singular value decomposition,
+the first relation in ( 3.50 ) implies that
+the singular values of $A$ are either $0$ or $1$ .
+To satisfy the last relation in ( 3.50 ),
+we set $\boldsymbol{\mathit{\Psi}}_{2}=\Gamma A^{\dagger}\boldsymbol{\mathit{\Phi}}_{1}+A^{\dagger}\boldsymbol{\mathit{\Phi}}_{2},\hskip 14.22636pt\boldsymbol{\mathit{\Psi}}_{1}=\boldsymbol{\mathit{\Phi}}_{1},$ where $\boldsymbol{\mathit{\Phi}}=\boldsymbol{\mathit{\Phi}}_{2}\boldsymbol{\mathit{\Phi}}_{1}^{-1}$ .
+Then, the linear
+problem
+( 2.111 )
+for $\boldsymbol{\mathit{\Psi}}_{1}$ and $\boldsymbol{\mathit{\Psi}}_{2}$ is satisfied if the $l\times l$ matrices $\boldsymbol{\mathit{\Phi}}_{1}$ and $\boldsymbol{\mathit{\Phi}}_{2}$ satisfy $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{\Phi}}_{1}\\
+\boldsymbol{\mathit{\Phi}}_{2}\\
+\end{array}\right]_{x}=\mathrm{i}\left[\begin{array}[]{cc}-\mu I_{l}+A\Gamma A^{\dagger}&AA^{\dagger}\\
+-AKA^{\dagger}&\mu I_{l}\\
+\end{array}\right]\left[\begin{array}[]{c}\boldsymbol{\mathit{\Phi}}_{1}\\
+\boldsymbol{\mathit{\Phi}}_{2}\\
+\end{array}\right],$ $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{\Phi}}_{1}\\
+\boldsymbol{\mathit{\Phi}}_{2}\\
+\end{array}\right]_{t}=\mathrm{i}\left(\partial_{x}^{2}-2\mathrm{i}\mu\partial_{x}+\mu^{2}\right)\left[\begin{array}[]{c}\boldsymbol{\mathit{\Phi}}_{1}\\
+\boldsymbol{\mathit{\Phi}}_{2}\\
+\end{array}\right].$ Thus, the problem of computing the
+exponential of
+an $(l+m)\times(l+m)$ matrix is
+reduced
+to that of a $2l\times 2l$ matrix,
+which is
+a meaningful simplification
+for $l<m$ .
+In particular,
+in the case of $l=1$ corresponding to the vector NLS equation
+considered
+in the previous
+subsection, we
+need only
+diagonalize a $2\times 2$ matrix
+to construct a
+one-dark soliton solution. Now, we consider the
+case of $l=m$ corresponding to the square matrix NLS equation
+and assume that $A$ is a
+unitary matrix,
+i.e., $AA^{\dagger}=A^{\dagger}A=I_{l}$ .
+Thus,
+the first relation
+in ( 3.50 ) is automatically satisfied and $B=\left(2\mu\Gamma+K\right)A^{\dagger}$ ,
+where $2\mu\Gamma+K$ is a constant Hermitian matrix.
+Actually,
+we can reduce
+the seed plane-wave solution ( 2.109 )
+in this case
+to the simpler case of $A=I_{l}$ by
+redefining $P_{1}$ .
+Thus, in the following,
+we simply set $A=I_{l}$ and $B=B^{\dagger}$ .
+Then, it can be checked directly that
+( 3.48 ) is indeed
+consistent with the reduction ( 3.49 ).
+Because $l=m$ ,
+it is not so meaningful
+to consider
+the linear problem
+( 3.51 )
+for $\boldsymbol{\mathit{\Phi}}_{1}$ and $\boldsymbol{\mathit{\Phi}}_{2}$ .
+Thus,
+we
+consider the original linear
+problem ( 2.111 )
+for $\boldsymbol{\mathit{\Psi}}_{1}$ and $\boldsymbol{\mathit{\Psi}}_{2}$ in the form: $\displaystyle\left[\begin{array}[]{c}\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{1}\\
+\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]_{x}=\mathrm{i}\left[\begin{array}[]{cc}-2\mu I_{l}&I_{l}\\
+-B&\Gamma\\
+\end{array}\right]\left[\begin{array}[]{c}\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{1}\\
+\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right],$ $\displaystyle\left[\begin{array}[]{c}\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{1}\\
+\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]_{t}=\mathrm{i}\partial_{x}^{2}\left[\begin{array}[]{c}\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{1}\\
+\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right],$ where $\Gamma$ is a real diagonal matrix: $\Gamma=\mathrm{diag}(\gamma_{1},\gamma_{2},\ldots,\gamma_{l})$ .
+Here, $\displaystyle\widetilde{R}$ $\displaystyle=\mathrm{i}\mathrm{e}^{-\mathrm{i}x\Gamma+\mathrm{i}t\Gamma^{2}}\left(\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{2}\right)\left(\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{1}\right)^{-1}\mathrm{e}^{2\mathrm{i}tB},$ (3.53a) $\displaystyle\widetilde{Q}$ $\displaystyle=\mathrm{i}\mathrm{e}^{-2\mathrm{i}tB}\left[\left(\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{2}\right)\left(\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{1}\right)^{-1}-\Gamma-2\mu I_{l}\right]\mathrm{e}^{\mathrm{i}x\Gamma-\mathrm{i}t\Gamma^{2}}.$ (3.53b) The characteristic polynomial of
+the
+square matrix in ( 3.52 )
+can be written (up to an overall constant)
+as $\displaystyle\det\left[\begin{array}[]{cc}(\lambda+2\mu)I_{l}&-I_{l}\\
+B&\lambda I_{l}-\Gamma\\
+\end{array}\right]$ $\displaystyle=\det\left[(\lambda+2\mu)\left(\lambda I_{l}-\Gamma\right)+B\right].$ Indeed, the $2l\times 2l$ eigenvalue problem, $\left[\begin{array}[]{cc}-2\mu I_{l}&I_{l}\\
+-B&\Gamma\\
+\end{array}\right]\left[\begin{array}[]{c}\mbox{\boldmath$f$}\\
+\mbox{\boldmath$g$}\\
+\end{array}\right]=\lambda\left[\begin{array}[]{c}\mbox{\boldmath$f$}\\
+\mbox{\boldmath$g$}\\
+\end{array}\right],$ (3.56) can be rewritten as an $l\times l$ nonstandard eigenvalue problem: $\left[(\lambda+2\mu)\left(\lambda I_{l}-\Gamma\right)+B\right]\mbox{\boldmath$f$}=\mbox{\boldmath$0$},$ (3.57) where $\mbox{\boldmath$g$}=(\lambda+2\mu)\mbox{\boldmath$f$}$ . Because of the complexity of the computation
+in the general case,
+we first
+consider
+the
+simpler special
+case
+where $B$ is a diagonal matrix.
+We set $B=\mathrm{diag}(b_{1},b_{2},\ldots,b_{l}),\hskip 14.22636ptb_{j}>0,$ and assume that each diagonal element
+of the matrix
+on the right-hand side of ( 3.2 )
+can be factored as $(\lambda+2\mu)(\lambda-\gamma_{j})+b_{j}=\left[\lambda-(\xi_{j}+\mathrm{i}\eta_{j})\right]\left[\lambda-(\xi_{j}-\mathrm{i}\eta_{j})\right],$ which is equivalent to $\displaystyle\xi_{j}\pm\mathrm{i}\eta_{j}+\frac{b_{j}}{\xi_{j}\pm\mathrm{i}\eta_{j}-\gamma_{j}}=-2\mu.$ Thus,
+we obtain $2\xi_{j}-\gamma_{j}=-2\mu,\hskip 14.22636ptb_{j}=(\xi_{j}-\gamma_{j})^{2}+\eta_{j}^{2}.$ We consider that $\gamma_{j}$ , $\eta_{j}(>0)$ and $\mu$ are free real parameters, which determine $\xi_{j}$ and $b_{j}$ as $\xi_{j}=\frac{\gamma_{j}}{2}-\mu,\hskip 14.22636ptb_{j}=\left(\frac{\gamma_{j}}{2}+\mu\right)^{2}+\eta_{j}^{2}.$ Thus, the solution of the linear
+problem ( 3.52 )
+can be
+written as $\displaystyle\left(\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{1}\right)_{jk}=c_{jk}\mathrm{e}^{\mathrm{i}(\xi_{j}+\mathrm{i}\eta_{j})x-\mathrm{i}(\xi_{j}+\mathrm{i}\eta_{j})^{2}t}+d_{jk}\mathrm{e}^{\mathrm{i}(\xi_{j}-\mathrm{i}\eta_{j})x-\mathrm{i}(\xi_{j}-\mathrm{i}\eta_{j})^{2}t}$ $\displaystyle=\mathrm{e}^{\mathrm{i}\left(\frac{\gamma_{j}}{2}-\mu\right)x-\mathrm{i}\left[\left(\frac{\gamma_{j}}{2}-\mu\right)^{2}-\eta_{j}^{2}\right]t}\left\{c_{jk}\mathrm{e}^{-\eta_{j}\left[x-\left(\gamma_{j}-2\mu\right)t\right]}+d_{jk}\mathrm{e}^{\eta_{j}\left[x-\left(\gamma_{j}-2\mu\right)t\right]}\right\},$ $\displaystyle\left(\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{2}\right)_{jk}=(\xi_{j}+\mathrm{i}\eta_{j}+2\mu)c_{jk}\mathrm{e}^{\mathrm{i}(\xi_{j}+\mathrm{i}\eta_{j})x-\mathrm{i}(\xi_{j}+\mathrm{i}\eta_{j})^{2}t}+(\xi_{j}-\mathrm{i}\eta_{j}+2\mu)d_{jk}\mathrm{e}^{\mathrm{i}(\xi_{j}-\mathrm{i}\eta_{j})x-\mathrm{i}(\xi_{j}-\mathrm{i}\eta_{j})^{2}t}$ $\displaystyle=\mathrm{e}^{\mathrm{i}\left(\frac{\gamma_{j}}{2}-\mu\right)x-\mathrm{i}\left[\left(\frac{\gamma_{j}}{2}-\mu\right)^{2}-\eta_{j}^{2}\right]t}\left\{\left(\frac{\gamma_{j}}{2}+\mu+\mathrm{i}\eta_{j}\right)c_{jk}\mathrm{e}^{-\eta_{j}\left[x-\left(\gamma_{j}-2\mu\right)t\right]}+\left(\frac{\gamma_{j}}{2}+\mu-\mathrm{i}\eta_{j}\right)d_{jk}\mathrm{e}^{\eta_{j}\left[x-\left(\gamma_{j}-2\mu\right)t\right]}\right\},$ where $c_{jk}$ and $d_{jk}$ are arbitrary
+constants, $1\leq j,k\leq l$ .
+Using ( 3.53 ) and omitting
+the tilde,
+we
+arrive at
+a one-dark soliton solution of the nonreduced
+matrix NLS system ( 2.1b )
+in the form: $\displaystyle Q$ $\displaystyle=-\mathrm{i}\hskip 1.0pt\mathrm{e}^{\mathrm{i}\frac{1}{2}x\Gamma-\mathrm{i}t\left(\frac{3}{4}\Gamma^{2}+\mu\Gamma+\mathcal{H}^{2}+\mu^{2}I_{l}\right)}\left\{\frac{1}{2}\Gamma+\mu I_{l}-\mathrm{i}\mathcal{H}\left[\mathrm{e}^{-x\mathcal{H}+t\mathcal{H}\left(\Gamma-2\mu I_{l}\right)}\mathcal{C}-\mathrm{e}^{x\mathcal{H}-t\mathcal{H}\left(\Gamma-2\mu I_{l}\right)}\mathcal{D}\right]\right.$ $\displaystyle\hphantom{=}\;\times\left.\left[\mathrm{e}^{-x\mathcal{H}+t\mathcal{H}\left(\Gamma-2\mu I_{l}\right)}\mathcal{C}+\mathrm{e}^{x\mathcal{H}-t\mathcal{H}\left(\Gamma-2\mu I_{l}\right)}\mathcal{D}\right]^{-1}\right\}\mathrm{e}^{\mathrm{i}\frac{1}{2}x\Gamma-\mathrm{i}t\left(\frac{3}{4}\Gamma^{2}+\mu\Gamma+\mathcal{H}^{2}+\mu^{2}I_{l}\right)},$ (3.58) $\displaystyle R$ $\displaystyle=\mathrm{i}\hskip 1.0pt\mathrm{e}^{-\mathrm{i}\frac{1}{2}x\Gamma+\mathrm{i}t\left(\frac{3}{4}\Gamma^{2}+\mu\Gamma+\mathcal{H}^{2}+\mu^{2}I_{l}\right)}\left\{\frac{1}{2}\Gamma+\mu I_{l}+\mathrm{i}\mathcal{H}\left[\mathrm{e}^{-x\mathcal{H}+t\mathcal{H}\left(\Gamma-2\mu I_{l}\right)}\mathcal{C}-\mathrm{e}^{x\mathcal{H}-t\mathcal{H}\left(\Gamma-2\mu I_{l}\right)}\mathcal{D}\right]\right.$ $\displaystyle\hphantom{=}\;\times\left.\left[\mathrm{e}^{-x\mathcal{H}+t\mathcal{H}\left(\Gamma-2\mu I_{l}\right)}\mathcal{C}+\mathrm{e}^{x\mathcal{H}-t\mathcal{H}\left(\Gamma-2\mu I_{l}\right)}\mathcal{D}\right]^{-1}\right\}\mathrm{e}^{-\mathrm{i}\frac{1}{2}x\Gamma+\mathrm{i}t\left(\frac{3}{4}\Gamma^{2}+\mu\Gamma+\mathcal{H}^{2}+\mu^{2}I_{l}\right)}.$ Here, $\mathcal{H}:=\mathrm{diag}(\eta_{1},\eta_{2},\ldots,\eta_{l})$ , $\mathcal{C}:=\left(c_{jk}\right)_{1\leq j,k\leq l}$ and $\mathcal{D}:=\left(d_{jk}\right)_{1\leq j,k\leq l}$ .
+The Hermitian conjugation reduction $R=Q^{\dagger}$ can be realized by
+imposing
+the
+condition
+that the matrix $\mathcal{C}^{\dagger}\mathcal{H}\mathcal{D}$ is
+Hermitian: $\displaystyle\left(\mathcal{C}^{\dagger}\mathcal{H}\mathcal{D}\right)^{\dagger}=\mathcal{C}^{\dagger}\mathcal{H}\mathcal{D}.$ Because the above soliton solution is invariant under the
+change $\mathcal{C}\to\mathcal{C}U$ , $\mathcal{D}\to\mathcal{D}U$ for any nonsingular $l\times l$ matrix $U$ ,
+we
+assume without loss of generality that $\mathcal{C}^{\dagger}\mathcal{H}\mathcal{D}$ is a real diagonal matrix.
+A simple way to satisfy this constraint
+is to
+set
+the two matrices $\mathcal{C}$ and $\mathcal{D}$ as $\mathcal{C}=V\left[\begin{array}[]{cccc}\alpha_{1}&&\\
+&\alpha_{2}&\\
+&&\ddots&\\
+&&&\alpha_{l}\\
+\end{array}\right],\hskip 14.22636pt\mathcal{D}=\mathcal{H}^{-1}\left(V^{-1}\right)^{\dagger}\left[\begin{array}[]{cccc}\beta_{1}&&\\
+&\beta_{2}&\\
+&&\ddots\\
+&&&\beta_{l}\\
+\end{array}\right],$ where $V$ is an $l\times l$ nonsingular matrix
+and $\alpha_{j},\hskip 1.0pt\beta_{j}\in\mathbb{R}\;\,(j=1,2,\ldots,l)$ . To summarize, ( 3.58 ) provides a
+special
+one-dark soliton solution
+of the matrix NLS equation ( 2.5 )
+in the self-defocusing case $\sigma=+1$ ; $\Gamma$ and $\mathcal{H}$ are real diagonal matrices, $\mu$ is a real parameter
+and $\mathcal{C}^{\dagger}\mathcal{H}\mathcal{D}$ is a real diagonal matrix.
+In the more
+special case
+where $\Gamma$ is a scalar
+matrix, i.e. $\Gamma=\gamma I_{l}$ , ( 3.58 )
+describes a
+conventional
+dark
+soliton
+moving with
+the velocity $\gamma-2\mu$ ;
+even this special one-soliton solution is
+more general than
+the
+already known one-soliton
+solution derived
+using the inverse scattering method [ 27 , 31 ] . Remark. Another matrix NLS equation, $\mathrm{i}Q_{t}+Q_{xx}-2QQ^{\ast}Q=O,$ can be obtained
+by imposing the complex conjugation reduction $R=Q^{\ast}$ on the matrix NLS system ( 2.1b ).
+A
+one-dark soliton solution
+of this equation is given by ( 3.58 ),
+where $\mathcal{C}$ and $\mathcal{D}$ are real matrices
+without any constraint on $\mathcal{C}^{T}\mathcal{H}\mathcal{D}$ . In the
+more
+general case
+where
+the matrix $B$ in the linear problem
+( 3.52 )
+is a
+non-diagonal Hermitian matrix,
+we rewrite ( 3.52 ) as $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{S}}_{1}\\
+\boldsymbol{\mathit{S}}_{2}\\
+\end{array}\right]_{x}=\mathrm{i}\left[\begin{array}[]{cc}-\mu I_{l}+\frac{1}{2}\Gamma&I_{l}\\
+-B+\left(\mu I_{l}+\frac{1}{2}\Gamma\right)^{2}&-\mu I_{l}+\frac{1}{2}\Gamma\\
+\end{array}\right]\left[\begin{array}[]{c}\boldsymbol{\mathit{S}}_{1}\\
+\boldsymbol{\mathit{S}}_{2}\\
+\end{array}\right],$ $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{S}}_{1}\\
+\boldsymbol{\mathit{S}}_{2}\\
+\end{array}\right]_{t}=\mathrm{i}\partial_{x}^{2}\left[\begin{array}[]{c}\boldsymbol{\mathit{S}}_{1}\\
+\boldsymbol{\mathit{S}}_{2}\\
+\end{array}\right].$ Here, $\boldsymbol{\mathit{S}}_{1}$ and $\boldsymbol{\mathit{S}}_{2}$ are $l\times l$ matrices
+defined as $\boldsymbol{\mathit{S}}_{1}:=\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\boldsymbol{\mathit{\Psi}}_{1},\hskip 14.22636pt\boldsymbol{\mathit{S}}_{2}:=\mathrm{e}^{-\mathrm{i}\mu x-2\mathrm{i}\mu^{2}t}\left(\boldsymbol{\mathit{\Psi}}_{2}-\mu\boldsymbol{\mathit{\Psi}}_{1}-\frac{1}{2}\Gamma\boldsymbol{\mathit{\Psi}}_{1}\right).$ In terms of these $\boldsymbol{\mathit{S}}_{1}$ and $\boldsymbol{\mathit{S}}_{2}$ ,
+formula
+( 3.53 ) can be
+rewritten
+in the symmetric form: $\displaystyle\widetilde{R}$ $\displaystyle=\mathrm{i}\mathrm{e}^{-\mathrm{i}x\Gamma+\mathrm{i}t\Gamma^{2}}\left(\mu I_{l}+\frac{1}{2}\Gamma+\boldsymbol{\mathit{S}}_{2}\boldsymbol{\mathit{S}}_{1}^{-1}\right)\mathrm{e}^{2\mathrm{i}tB},$ $\displaystyle\widetilde{Q}$ $\displaystyle=\mathrm{i}\mathrm{e}^{-2\mathrm{i}tB}\left(-\mu I_{l}-\frac{1}{2}\Gamma+\boldsymbol{\mathit{S}}_{2}\boldsymbol{\mathit{S}}_{1}^{-1}\right)\mathrm{e}^{\mathrm{i}x\Gamma-\mathrm{i}t\Gamma^{2}}.$ Note that
+this solution is invariant under the change $\boldsymbol{\mathit{S}}_{j}\to\boldsymbol{\mathit{S}}_{j}U\;(j=1,2)$ for any nonsingular $l\times l$ constant matrix $U$ .
+To realize
+the Hermitian conjugation reduction $\widetilde{R}=\widetilde{Q}^{\hskip 1.0pt\dagger}$ ,
+we need only choose the solution of the linear problem
+( 3.59 ) as $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{S}}_{1}\\
+\boldsymbol{\mathit{S}}_{2}\\
+\end{array}\right]$ $\displaystyle=\mathrm{exp}\left\{\mathrm{i}x\left[\begin{array}[]{cc}-\mu I_{l}+\frac{1}{2}\Gamma&I_{l}\\
+-B+\left(\mu I_{l}+\frac{1}{2}\Gamma\right)^{2}&-\mu I_{l}+\frac{1}{2}\Gamma\\
+\end{array}\right]\right.$ $\displaystyle\hskip 34.1433pt\left.-\mathrm{i}t\left[\begin{array}[]{cc}-\mu I_{l}+\frac{1}{2}\Gamma&I_{l}\\
+-B+\left(\mu I_{l}+\frac{1}{2}\Gamma\right)^{2}&-\mu I_{l}+\frac{1}{2}\Gamma\\
+\end{array}\right]^{2}\right\}\left[\begin{array}[]{c}I_{l}\\
+\mathrm{i}J\\
+\end{array}\right],$ where $J$ is an $l\times l$ constant Hermitian matrix.
+Indeed, because $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{S}}_{2}\\
+\boldsymbol{\mathit{S}}_{1}\\
+\end{array}\right]$ $\displaystyle=\left[\begin{array}[]{cc}O&I_{l}\\
+I_{l}&O\\
+\end{array}\right]\left[\begin{array}[]{c}\boldsymbol{\mathit{S}}_{1}\\
+\boldsymbol{\mathit{S}}_{2}\\
+\end{array}\right]$ $\displaystyle=\mathrm{exp}\left\{\mathrm{i}x\left[\begin{array}[]{cc}-\mu I_{l}+\frac{1}{2}\Gamma&-B+\left(\mu I_{l}+\frac{1}{2}\Gamma\right)^{2}\\
+I_{l}&-\mu I_{l}+\frac{1}{2}\Gamma\\
+\end{array}\right]\right.$ $\displaystyle\hskip 34.1433pt\left.-\mathrm{i}t\left[\begin{array}[]{cc}-\mu I_{l}+\frac{1}{2}\Gamma&-B+\left(\mu I_{l}+\frac{1}{2}\Gamma\right)^{2}\\
+I_{l}&-\mu I_{l}+\frac{1}{2}\Gamma\\
+\end{array}\right]^{2}\right\}\left[\begin{array}[]{cc}O&I_{l}\\
+I_{l}&O\\
+\end{array}\right]\left[\begin{array}[]{c}I_{l}\\
+\mathrm{i}J\\
+\end{array}\right],$ we obtain
+the relation: $\left[\begin{array}[]{cc}\!\boldsymbol{\mathit{S}}_{2}^{\dagger}&\!\boldsymbol{\mathit{S}}_{1}^{\dagger}\\
+\end{array}\right]\left[\begin{array}[]{c}\boldsymbol{\mathit{S}}_{1}\\
+\boldsymbol{\mathit{S}}_{2}\\
+\end{array}\right]=\left[\begin{array}[]{cc}\!-\mathrm{i}J&\!I_{l}\\
+\end{array}\right]\left[\begin{array}[]{c}I_{l}\\
+\mathrm{i}J\\
+\end{array}\right]=O.$ This implies that $\left(\boldsymbol{\mathit{S}}_{2}\boldsymbol{\mathit{S}}_{1}^{-1}\right)^{\dagger}=-\boldsymbol{\mathit{S}}_{2}\boldsymbol{\mathit{S}}_{1}^{-1}$ ,
+which indeed guarantees
+the
+relation $\widetilde{R}=\widetilde{Q}^{\hskip 1.0pt\dagger}$ . To summarize, a general
+one-dark soliton solution of
+the matrix NLS equation
+( 2.5 ) in the self-defocusing case $\sigma=+1$ can be expressed, up to unitary transformations,
+as $\displaystyle Q$ $\displaystyle=\mathrm{e}^{-2\mathrm{i}tB}\left(\mu I_{l}+\frac{1}{2}\Gamma-\boldsymbol{\mathit{S}}_{2}\boldsymbol{\mathit{S}}_{1}^{-1}\right)\mathrm{e}^{\mathrm{i}x\Gamma-\mathrm{i}t\Gamma^{2}}.$ (3.82) Here, $\boldsymbol{\mathit{S}}_{1}$ and $\boldsymbol{\mathit{S}}_{2}$ are given
+using
+the matrix exponential
+as ( 3.2 ); $B$ and $J$ are Hermitian matrices, $\Gamma$ is a real diagonal matrix
+and $\mu$ is a real parameter. To express the above
+solution
+more
+explicitly
+without using the matrix exponential as
+in ( 3.2 ),
+we need to
+re-parametrize the matrix $B$ .
+We briefly consider
+the simplest nontrivial
+case of
+a $2\times 2$ Hermitian
+matrix $B$ , $\displaystyle B=\left[\begin{array}[]{cc}b_{11}&b_{12}\\
+b_{12}^{\ast}&b_{22}\\
+\end{array}\right],$ where $b_{11},\hskip 1.0ptb_{22}\in\mathbb{R}$ and $b_{12}\in\mathbb{C}\setminus\{0\}$ .
+Note that
+the eigenvalue problem ( 3.56 ) can be rewritten as $\left[\begin{array}[]{cc}-\mu I_{l}+\frac{1}{2}\Gamma&I_{l}\\
+-B+\left(\mu I_{l}+\frac{1}{2}\Gamma\right)^{2}&-\mu I_{l}+\frac{1}{2}\Gamma\\
+\end{array}\right]\left[\begin{array}[]{c}\mbox{\boldmath$f$}\\
+\mbox{\boldmath$g$}-\mu\mbox{\boldmath$f$}-\frac{1}{2}\Gamma\mbox{\boldmath$f$}\\
+\end{array}\right]=\lambda\left[\begin{array}[]{c}\mbox{\boldmath$f$}\\
+\mbox{\boldmath$g$}-\mu\mbox{\boldmath$f$}-\frac{1}{2}\Gamma\mbox{\boldmath$f$}\\
+\end{array}\right].$ Thus, this
+also
+implies the relation $\mbox{\boldmath$g$}=(\lambda+2\mu)\mbox{\boldmath$f$}$ and the nonstandard eigenvalue problem ( 3.57 ).
+We
+assume
+that
+the relevant characteristic polynomial
+( 3.2 )
+can be factored
+as $\displaystyle\det\left[\begin{array}[]{cc}(\lambda+2\mu)(\lambda-\gamma_{1})+b_{11}&b_{12}\\
+b_{12}^{\ast}&(\lambda+2\mu)(\lambda-\gamma_{2})+b_{22}\\
+\end{array}\right]$ $\displaystyle=\left[\lambda^{2}+(2\mu-\gamma_{1})\lambda+b_{11}-2\mu\gamma_{1}\right]\left[\lambda^{2}+(2\mu-\gamma_{2})\lambda+b_{22}-2\mu\gamma_{2}\right]-\left|b_{12}\right|^{2}$ $\displaystyle=\left[\lambda-(\xi_{1}+\mathrm{i}\eta_{1})\right]\left[\lambda-(\xi_{1}-\mathrm{i}\eta_{1})\right]\left[\lambda-(\xi_{2}+\mathrm{i}\eta_{2})\right]\left[\lambda-(\xi_{2}-\mathrm{i}\eta_{2})\right].$ (3.87) We consider the
+generic
+case
+of $\gamma_{1}\neq\gamma_{2}$ ,
+because the degenerate
+case $\gamma_{1}=\gamma_{2}$ does not
+lead to
+an essentially
+new solution
+(cf. ( 3.58 )).
+Noting that ( 3.87 )
+is an identity in $\lambda$ ,
+we obtain $\displaystyle 4\mu-\gamma_{1}-\gamma_{2}=-2\xi_{1}-2\xi_{2},$ (3.88a) $\displaystyle(2\mu-\gamma_{1})(2\mu-\gamma_{2})+b_{11}-2\mu\gamma_{1}+b_{22}-2\mu\gamma_{2}=\xi_{1}^{2}+\eta_{1}^{2}+\xi_{2}^{2}+\eta_{2}^{2}+4\xi_{1}\xi_{2},$ (3.88b) $\displaystyle(2\mu-\gamma_{2})(b_{11}-2\mu\gamma_{1})+(2\mu-\gamma_{1})(b_{22}-2\mu\gamma_{2})=-2\xi_{1}\left(\xi_{2}^{2}+\eta_{2}^{2}\right)-2\xi_{2}\left(\xi_{1}^{2}+\eta_{1}^{2}\right),$ (3.88c) $\displaystyle(b_{11}-2\mu\gamma_{1})(b_{22}-2\mu\gamma_{2})-\left|b_{12}\right|^{2}=\left(\xi_{1}^{2}+\eta_{1}^{2}\right)\left(\xi_{2}^{2}+\eta_{2}^{2}\right).$ (3.88d) From ( 3.88a ),
+we can express $2\mu$ as $2\mu=\frac{1}{2}(\gamma_{1}+\gamma_{2})-\xi_{1}-\xi_{2}.$ (3.89) Then, ( 3.88b )
+can be rewritten as $\displaystyle(b_{11}-2\mu\gamma_{1})+(b_{22}-2\mu\gamma_{2})=\eta_{1}^{2}+\eta_{2}^{2}+2\xi_{1}\xi_{2}+\frac{1}{4}(\gamma_{1}-\gamma_{2})^{2}.$ (3.90) Thus,
+combining
+( 3.88c ) and ( 3.90 )
+and then using ( 3.88d ),
+we obtain $\displaystyle b_{11}-2\mu\gamma_{1}$ $\displaystyle=\frac{\left(\xi_{1}-\xi_{2}\right)\left(\eta_{1}^{2}-\eta_{2}^{2}\right)}{\gamma_{1}-\gamma_{2}}+\frac{1}{2}\left(\eta_{1}^{2}+\eta_{2}^{2}+2\xi_{1}\xi_{2}\right)+\frac{1}{4}(\gamma_{1}-\gamma_{2})(\xi_{1}+\xi_{2})+\frac{1}{8}(\gamma_{1}-\gamma_{2})^{2},$ $\displaystyle b_{22}-2\mu\gamma_{2}$ $\displaystyle=-\frac{\left(\xi_{1}-\xi_{2}\right)\left(\eta_{1}^{2}-\eta_{2}^{2}\right)}{\gamma_{1}-\gamma_{2}}+\frac{1}{2}\left(\eta_{1}^{2}+\eta_{2}^{2}+2\xi_{1}\xi_{2}\right)-\frac{1}{4}(\gamma_{1}-\gamma_{2})(\xi_{1}+\xi_{2})+\frac{1}{8}(\gamma_{1}-\gamma_{2})^{2},$ $\displaystyle\left|b_{12}\right|^{2}=\left[\frac{1}{2}\left(\eta_{1}^{2}+\eta_{2}^{2}+2\xi_{1}\xi_{2}\right)+\frac{1}{8}(\gamma_{1}-\gamma_{2})^{2}\right]^{2}-\left[\frac{\left(\xi_{1}-\xi_{2}\right)\left(\eta_{1}^{2}-\eta_{2}^{2}\right)}{\gamma_{1}-\gamma_{2}}+\frac{1}{4}(\gamma_{1}-\gamma_{2})(\xi_{1}+\xi_{2})\right]^{2}$ $\displaystyle\hphantom{\left| b_{12} \right|^2 =}\;-\left(\xi_{1}^{2}+\eta_{1}^{2}\right)\left(\xi_{2}^{2}+\eta_{2}^{2}\right).$ (3.91) Further using
+( 3.89 ),
+the
+matrix $B$ in
+( 3.2 )
+can be
+determined from $\xi_{j}$ , $\eta_{j}$ and $\gamma_{j}$ $(j=1,2)$ through the relations $\displaystyle b_{11}$ $\displaystyle=\frac{\left(\xi_{1}-\xi_{2}\right)\left(\eta_{1}^{2}-\eta_{2}^{2}\right)}{\gamma_{1}-\gamma_{2}}+\frac{1}{2}\left(\eta_{1}^{2}+\eta_{2}^{2}+2\xi_{1}\xi_{2}\right)-\frac{1}{4}(3\gamma_{1}+\gamma_{2})(\xi_{1}+\xi_{2})$ $\displaystyle\hphantom{=}\;+\frac{1}{8}\left(5\gamma_{1}^{2}+2\gamma_{1}\gamma_{2}+\gamma_{2}^{2}\right),$ (3.92) $\displaystyle b_{22}$ $\displaystyle=-\frac{\left(\xi_{1}-\xi_{2}\right)\left(\eta_{1}^{2}-\eta_{2}^{2}\right)}{\gamma_{1}-\gamma_{2}}+\frac{1}{2}\left(\eta_{1}^{2}+\eta_{2}^{2}+2\xi_{1}\xi_{2}\right)-\frac{1}{4}(\gamma_{1}+3\gamma_{2})(\xi_{1}+\xi_{2})$ $\displaystyle\hphantom{=}\;+\frac{1}{8}\left(\gamma_{1}^{2}+2\gamma_{1}\gamma_{2}+5\gamma_{2}^{2}\right),$ (3.93) and ( 3.91 ).
+Note that the right-hand side of ( 3.91 ) must be positive
+and we can freely choose $\mathrm{arg}\,b_{12}$ . From the above results,
+the
+solution ( 3.2 )
+of the linear
+problem ( 3.59 )
+can be written
+explicitly as $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{S}}_{1}\\
+\boldsymbol{\mathit{S}}_{2}\\
+\end{array}\right]$ $\displaystyle=W\left[\begin{array}[]{cccc}\!\mathrm{e}^{\mathrm{i}(\xi_{1}+\mathrm{i}\eta_{1})x-\mathrm{i}(\xi_{1}+\mathrm{i}\eta_{1})^{2}t}\\
+&\!\mathrm{e}^{\mathrm{i}(\xi_{1}-\mathrm{i}\eta_{1})x-\mathrm{i}(\xi_{1}-\mathrm{i}\eta_{1})^{2}t}\\
+&&\!\mathrm{e}^{\mathrm{i}(\xi_{2}+\mathrm{i}\eta_{2})x-\mathrm{i}(\xi_{2}+\mathrm{i}\eta_{2})^{2}t}\\
+&&&\!\mathrm{e}^{\mathrm{i}(\xi_{2}-\mathrm{i}\eta_{2})x-\mathrm{i}(\xi_{2}-\mathrm{i}\eta_{2})^{2}t}\\
+\end{array}\right]$ $\displaystyle\hphantom{=}\;\mbox{}\times W^{-1}\left[\begin{array}[]{c}I_{l}\\
+\mathrm{i}J\\
+\end{array}\right].$ Here, the $4\times 4$ constant matrix $W$ is defined as $\displaystyle W:=\left[\begin{array}[]{cccc}\mbox{\boldmath$v$}(\xi_{1}+\mathrm{i}\eta_{1})&\mbox{\boldmath$v$}(\xi_{1}-\mathrm{i}\eta_{1})&\mbox{\boldmath$v$}(\xi_{2}+\mathrm{i}\eta_{2})&\mbox{\boldmath$v$}(\xi_{2}-\mathrm{i}\eta_{2})\end{array}\right],$ using
+the four-component column vector $\mbox{\boldmath$v$}(\lambda)$ given as $\displaystyle\mbox{\boldmath$v$}(\lambda)$ $\displaystyle:=\left[\begin{array}[]{c}-b_{12}\\
+(\lambda+2\mu)(\lambda-\gamma_{1})+b_{11}\\
+-\left(\lambda+\mu-\frac{1}{2}\gamma_{1}\right)b_{12}\\
+\left(\lambda+\mu-\frac{1}{2}\gamma_{2}\right)\left[(\lambda+2\mu)(\lambda-\gamma_{1})+b_{11}\right]\\
+\end{array}\right].$ Incidentally,
+we can
+also
+compute
+the matrix exponential $\mathrm{e}^{-2\mathrm{i}tB}$ in ( 3.82 )
+explicitly,
+because $B$ is
+a $2\times 2$ Hermitian matrix. Thus,
+in contrast to the one-bright soliton solution of the self-focusing
+matrix NLS equation,
+the
+general one-dark soliton solution ( 3.82 )
+in the self-defocusing case
+is hightly nontrivial
+and interesting.
+That is, it is far from the straightforward matrix generalization
+of the scalar dark-soliton solution as given by $\displaystyle Q(x,t)=U_{1}\left[\begin{array}[]{cccc}f_{1}(x,t)\\
+&f_{2}(x,t)\\
+&&\ddots\\
+&&&f_{l}(x,t)\\
+\end{array}\right]U_{2},$ where $U_{1}$ and $U_{2}$ are
+constant unitary matrices and $f_{j}(x,t)$ are either a plane-wave solution or a scalar
+dark-soliton solution
+of the
+self-defocusing
+NLS equation. 4 Vector dark soliton with
+internal degrees of freedom In this section, we apply the limiting case
+of
+the binary Bäcklund–Darboux transformation
+defined in Proposition 2.4 and
+construct a vector dark-soliton solution with
+internal degrees of freedom. We
+consider
+the
+plane-wave solution ( 3.3 ) of
+the vector NLS system ( 3.1b )
+in
+the generic case where the
+wavenumbers $\gamma_{j}$ are pairwise distinct.
+Let us denote
+the roots
+of the characteristic equation ( 3.8 ) of the matrix $\boldsymbol{Z}(\mu)$ as $\{\lambda_{1},\lambda_{2},\ldots,\lambda_{m+1}\}$ ;
+thus, it
+can be factored as $\displaystyle\det\left(\lambda I-\boldsymbol{Z}\right)$ $\displaystyle=(\lambda+2\mu)\prod_{j=1}^{m}(\lambda-\gamma_{j})+\sum_{k=1}^{m}a_{k}b_{k}\prod_{\stackrel{{\scriptstyle\scriptstyle j=1}}{{j\neq k}}}^{m}(\lambda-\gamma_{j})$ $\displaystyle=\prod_{j=1}^{m+1}(\lambda-\lambda_{j}).$ Noting that
+this is an identity in $\lambda$ ,
+we obtain $m+1$ relations: $\displaystyle 2\mu=\sum_{j=1}^{m}\gamma_{j}-\sum_{j=1}^{m+1}\lambda_{j},\hskip 14.22636pta_{k}b_{k}=\frac{\displaystyle\prod_{j=1}^{m+1}(\lambda_{j}-\gamma_{k})}{\displaystyle\prod_{\stackrel{{\scriptstyle\scriptstyle j=1}}{{j\neq k}}}^{m}(\gamma_{j}-\gamma_{k})}\hskip 1.0pt,\hskip 14.22636ptk=1,2,\ldots,m.$ (4.1) For simplicity,
+we
+consider
+the
+three-component case
+( $m=3$ )
+and
+assume that $\gamma_{1}<\gamma_{2}<\gamma_{3}\;\;\,\mathrm{or}\;\;\,\gamma_{1}>\gamma_{2}>\gamma_{3}$ (4.2a) and $a_{1}b_{1}>0,\hskip 14.22636pta_{2}b_{2}<0,\hskip 14.22636pta_{3}b_{3}>0.$ (4.2b) The
+more general
+case
+of $m\,(\geq 4)$ components
+will be touched upon later.
+Then,
+equation
+( 3.9 ),
+which is equivalent to
+the characteristic equation ( 3.8 ),
+can have two pairs of complex conjugate
+roots
+for
+an appropriate
+choice of the parameters.
+Thus, we
+parametrize
+the eigenvalues of the matrix $\boldsymbol{Z}(\mu)$ as $\displaystyle\lambda_{1}=\xi_{1}+\mathrm{i}\eta_{1},\hskip 14.22636pt\lambda_{2}=\xi_{1}-\mathrm{i}\eta_{1},\hskip 14.22636pt\lambda_{3}=\xi_{2}+\mathrm{i}\eta_{2},\hskip 14.22636pt\lambda_{4}=\xi_{2}-\mathrm{i}\eta_{2},$ where $\xi_{j}\in\mathbb{R}$ and $\eta_{j}>0$ .
+From ( 4.1 )
+with $m=3$ ,
+we have $\displaystyle 2\mu=\gamma_{1}+\gamma_{2}+\gamma_{3}-2\xi_{1}-2\xi_{2},$ (4.3) $\displaystyle a_{k}b_{k}=\frac{\left[(\xi_{1}-\gamma_{k})^{2}+\eta_{1}^{2}\right]\left[(\xi_{2}-\gamma_{k})^{2}+\eta_{2}^{2}\right]}{\displaystyle\prod_{\stackrel{{\scriptstyle\scriptstyle j=1}}{{j\neq k}}}^{3}(\gamma_{j}-\gamma_{k})}\hskip 1.0pt,\hskip 14.22636ptk=1,2,3.$ (4.4) Note that ( 4.4 )
+is indeed consistent with ( 4.2 ). By setting $m=3$ and $b_{1}=a_{1}^{\ast},\hskip 14.22636ptb_{2}=-a_{2}^{\ast},\hskip 14.22636ptb_{3}=a_{3}^{\ast},$ (4.5) the
+plane-wave solution ( 3.3 )
+of the vector NLS system ( 3.1b )
+reduces to the plane-wave solution of the vector NLS equation ( 2.4 )
+with $\Sigma=\mathrm{diag}(1,-1,1)$ ;
+note that
+( 4.2b ) is satisfied.
+Thus,
+the
+vector NLS equation with one focusing and two defocusing components, $\mathrm{i}q_{j,t}+q_{j,xx}-2\left(|q_{1}|^{2}-|q_{2}|^{2}+|q_{3}|^{2}\right)q_{j}=0,\hskip 14.22636ptj=1,2,3,$ (4.6) has the plane-wave solution [ 21 ] : $q_{j}(x,t)=a_{j}\mathrm{e}^{\mathrm{i}\gamma_{j}x-\mathrm{i}\left[\gamma_{j}^{2}+2\left(|a_{1}|^{2}-|a_{2}|^{2}+|a_{3}|^{2}\right)\right]t},\hskip 14.22636ptj=1,2,3.$ (4.7) We employ
+this plane-wave solution as the seed solution
+and apply
+a
+reduced version
+of Proposition 2.4 ;
+this
+defines a Bäcklund–Darboux transformation
+maintaining
+the
+Hermitian
+conjugation reduction
+between
+the
+row and column
+vector
+variables
+in the Lax pair. Proposition 4.1 . Consider
+the $(m+1)\times(m+1)$ Lax-pair representation for the $m$ -component vector NLS equation ( 2.4 )
+as given by $\displaystyle\left[\begin{array}[]{c}\phi\\
+\mbox{\boldmath$\psi$}\\
+\end{array}\right]_{x}=\left[\begin{array}[]{cc}-\mathrm{i}\mu&\mbox{\boldmath$q$}\\
+\Sigma\hskip 1.0pt\mbox{\boldmath$q$}^{\dagger}&\mathrm{i}\mu I_{m}\\
+\end{array}\right]\left[\begin{array}[]{c}\phi\\
+\mbox{\boldmath$\psi$}\\
+\end{array}\right],$ $\displaystyle\left[\begin{array}[]{c}\phi\\
+\mbox{\boldmath$\psi$}\\
+\end{array}\right]_{t}=\left[\begin{array}[]{cc}-2\mathrm{i}\mu^{2}-\mathrm{i}\mbox{\boldmath$q$}\Sigma\hskip 1.0pt\mbox{\boldmath$q$}^{\dagger}&2\mu\mbox{\boldmath$q$}+\mathrm{i}\mbox{\boldmath$q$}_{x}\\
+2\mu\Sigma\hskip 1.0pt\mbox{\boldmath$q$}^{\dagger}-\mathrm{i}\Sigma\hskip 1.0pt\mbox{\boldmath$q$}^{\dagger}_{x}&2\mathrm{i}\mu^{2}I_{m}+\mathrm{i}\Sigma\hskip 1.0pt\mbox{\boldmath$q$}^{\dagger}\mbox{\boldmath$q$}\\
+\end{array}\right]\left[\begin{array}[]{c}\phi\\
+\mbox{\boldmath$\psi$}\\
+\end{array}\right].$ Here,
+the spectral parameter
+is set at a real value $\mu$ , $\phi$ is a scalar
+function, $\psi$ is an $m$ -component column-vector
+function
+and $\Sigma:=\mathrm{diag}(\sigma_{1},\ldots,\sigma_{m})$ is a diagonal
+matrix with
+entries $\sigma_{j}=+1$ or $-1$ .
+The quadratic form $\left|\phi\right|^{2}-\mbox{\boldmath$\psi$}^{\dagger}\Sigma\mbox{\boldmath$\psi$}$ is
+independent of $x$ and $t$ .
+Thus,
+if
+we consider
+a
+linear eigenfunction
+decaying
+rapidly as $x\to-\infty$ : $\lim_{x\to-\infty}\left[\begin{array}[]{c}\phi(x)\\
+\mbox{\boldmath$\psi$}(x)\\
+\end{array}\right]=\mbox{\boldmath$0$},$ this
+quantity vanishes identically, i.e. $\left|\phi\right|^{2}=\mbox{\boldmath$\psi$}^{\dagger}\Sigma\mbox{\boldmath$\psi$}.$ Then,
+the new potential $\mbox{\boldmath$q$}^{\prime}$ defined
+by the formula $\displaystyle\mbox{\boldmath$q$}^{\prime}$ $\displaystyle:=\mbox{\boldmath$q$}-\frac{\phi}{\displaystyle c_{0}+\int^{x}_{-\infty}\left|\phi(y)\right|^{2}\mathrm{d}y}\hskip 1.0pt\mbox{\boldmath$\psi$}^{\dagger}\Sigma,$ where $c_{0}$ is a real constant,
+provides
+a new solution
+of the
+vector NLS equation ( 2.4 ).
+A
+linear eigenfunction
+associated with
+the new potential $\mbox{\boldmath$q$}^{\prime}$ at the spectral parameter equal to $\mu$ is given by $\displaystyle\frac{1}{\displaystyle c_{0}+\int^{x}_{-\infty}\left|\phi(y)\right|^{2}\mathrm{d}y}\left[\begin{array}[]{c}\phi\\
+\mbox{\boldmath$\psi$}\\
+\end{array}\right],$ which
+defines
+a
+bound state for $c_{0}>0$ and
+a proper choice of $\phi$ and $\psi$ .
+Note that if $c_{0}>0$ ,
+we can set $c_{0}=1$ by rescaling $\phi$ and $\psi$ in the above formulas. In the three-component case
+( $m=3$ ),
+we
+choose
+a
+linear eigenfunction
+of the Lax-pair representation
+( 4.8 ) with $q$ given by
+( 4.7 )
+as (cf. subsections 2.6 and 3.1 ) $\displaystyle\left[\begin{array}[]{c}\phi\\
+\mbox{\boldmath$\psi$}\\
+\end{array}\right]=\left[\begin{array}[]{cccc}\mathrm{e}^{-2\mathrm{i}\left(|a_{1}|^{2}-|a_{2}|^{2}+|a_{3}|^{2}\right)t}\\
+&\mathrm{i}\mathrm{e}^{-\mathrm{i}\gamma_{1}x+\mathrm{i}\gamma_{1}^{2}t}\\
+&&\mathrm{i}\mathrm{e}^{-\mathrm{i}\gamma_{2}x+\mathrm{i}\gamma_{2}^{2}t}\\
+&&&\mathrm{i}\mathrm{e}^{-\mathrm{i}\gamma_{3}x+\mathrm{i}\gamma_{3}^{2}t}\\
+\end{array}\right]$ $\displaystyle\times\mathrm{e}^{\mathrm{i}\mu x+2\mathrm{i}\mu^{2}t}\left\{c_{1}\mathrm{e}^{\mathrm{i}\left(\xi_{1}-\mathrm{i}\eta_{1}\right)x-\mathrm{i}\left(\xi_{1}-\mathrm{i}\eta_{1}\right)^{2}t}\left[\begin{array}[]{c}1\\
+-\frac{a_{1}^{\ast}}{\xi_{1}-\mathrm{i}\eta_{1}-\gamma_{1}}\\[2.84526pt]
+\frac{a_{2}^{\ast}}{\xi_{1}-\mathrm{i}\eta_{1}-\gamma_{2}}\\[2.84526pt]
+-\frac{a_{3}^{\ast}}{\xi_{1}-\mathrm{i}\eta_{1}-\gamma_{3}}\\
+\end{array}\right]+c_{2}\mathrm{e}^{\mathrm{i}\left(\xi_{2}-\mathrm{i}\eta_{2}\right)x-\mathrm{i}\left(\xi_{2}-\mathrm{i}\eta_{2}\right)^{2}t}\left[\begin{array}[]{c}1\\
+-\frac{a_{2}^{\ast}}{\xi_{2}-\mathrm{i}\eta_{2}-\gamma_{1}}\\[2.84526pt]
+\frac{a_{2}^{\ast}}{\xi_{2}-\mathrm{i}\eta_{2}-\gamma_{2}}\\[2.84526pt]
+-\frac{a_{3}^{\ast}}{\xi_{2}-\mathrm{i}\eta_{2}-\gamma_{3}}\\
+\end{array}\right]\right\}.$ Here, the parameters
+satisfy
+the
+relations ( 4.3 )–( 4.5 ); $c_{1}$ and $c_{2}$ are
+complex constants.
+Because $\eta_{j}>0$ ,
+this linear eigenfunction
+decays exponentially
+as $x\to-\infty$ and the
+quadratic form $\left|\phi\right|^{2}-\mbox{\boldmath$\psi$}^{\dagger}\Sigma\mbox{\boldmath$\psi$}$ is identically equal to zero.
+Then, we introduce a real function $f$ as $\displaystyle f:=\;$ $\displaystyle c_{0}+\int^{x}_{-\infty}\left|\phi(y)\right|^{2}\mathrm{d}y$ $\displaystyle=\;$ $\displaystyle c_{0}+\int^{x}_{-\infty}\left|c_{1}\mathrm{e}^{\mathrm{i}\left(\xi_{1}-\mathrm{i}\eta_{1}\right)y-\mathrm{i}\left(\xi_{1}-\mathrm{i}\eta_{1}\right)^{2}t}+c_{2}\mathrm{e}^{\mathrm{i}\left(\xi_{2}-\mathrm{i}\eta_{2}\right)y-\mathrm{i}\left(\xi_{2}-\mathrm{i}\eta_{2}\right)^{2}t}\right|^{2}\mathrm{d}y$ $\displaystyle=\;$ $\displaystyle c_{0}+\frac{|c_{1}|^{2}}{2\eta_{1}}\mathrm{e}^{2\eta_{1}(x-2\xi_{1}t)}+\frac{|c_{2}|^{2}}{2\eta_{2}}\mathrm{e}^{2\eta_{2}(x-2\xi_{2}t)}$ $\displaystyle\hphantom{c_0}\mbox{}+\mathrm{e}^{\eta_{1}(x-2\xi_{1}t)+\eta_{2}(x-2\xi_{2}t)}\left[\frac{c_{1}c_{2}^{\ast}}{\eta_{1}+\eta_{2}+\mathrm{i}(\xi_{1}-\xi_{2})}\mathrm{e}^{\mathrm{i}(\xi_{1}-\xi_{2})x-\mathrm{i}(\xi_{1}^{2}-\xi_{2}^{2}-\eta_{1}^{2}+\eta_{2}^{2})t}\right.$ $\displaystyle\hskip 122.34685pt\left.\mbox{}+\frac{c_{1}^{\ast}c_{2}}{\eta_{1}+\eta_{2}-\mathrm{i}(\xi_{1}-\xi_{2})}\mathrm{e}^{-\mathrm{i}(\xi_{1}-\xi_{2})x+\mathrm{i}(\xi_{1}^{2}-\xi_{2}^{2}-\eta_{1}^{2}+\eta_{2}^{2})t}\right].$ (4.25) By assuming $c_{0}>0$ , $f$ becomes positive definite.
+We also introduce
+complex functions $g_{j}\,(j=1,2,3)$ as $\displaystyle g_{j}$ $\displaystyle:=\left\{c_{1}\mathrm{e}^{\eta_{1}(x-2\xi_{1}t)+\mathrm{i}\xi_{1}x-\mathrm{i}(\xi_{1}^{2}-\eta_{1}^{2})t}+c_{2}\mathrm{e}^{\eta_{2}(x-2\xi_{2}t)+\mathrm{i}\xi_{2}x-\mathrm{i}(\xi_{2}^{2}-\eta_{2}^{2})t}\right\}$ $\displaystyle\hphantom{:=}\;\mbox{}\times\left\{\frac{c_{1}^{\ast}}{\xi_{1}+\mathrm{i}\eta_{1}-\gamma_{j}}\mathrm{e}^{\eta_{1}(x-2\xi_{1}t)-\mathrm{i}\xi_{1}x+\mathrm{i}(\xi_{1}^{2}-\eta_{1}^{2})t}+\frac{c_{2}^{\ast}}{\xi_{2}+\mathrm{i}\eta_{2}-\gamma_{j}}\mathrm{e}^{\eta_{2}(x-2\xi_{2}t)-\mathrm{i}\xi_{2}x+\mathrm{i}(\xi_{2}^{2}-\eta_{2}^{2})t}\right\}$ $\displaystyle\hphantom{:}=\frac{|c_{1}|^{2}}{\xi_{1}+\mathrm{i}\eta_{1}-\gamma_{j}}\mathrm{e}^{2\eta_{1}(x-2\xi_{1}t)}+\frac{|c_{2}|^{2}}{\xi_{2}+\mathrm{i}\eta_{2}-\gamma_{j}}\mathrm{e}^{2\eta_{2}(x-2\xi_{2}t)}$ $\displaystyle\hphantom{:=}\;\,\mbox{}+\mathrm{e}^{\eta_{1}(x-2\xi_{1}t)+\eta_{2}(x-2\xi_{2}t)}\left[\frac{c_{1}c_{2}^{\ast}}{\xi_{2}+\mathrm{i}\eta_{2}-\gamma_{j}}\mathrm{e}^{\mathrm{i}(\xi_{1}-\xi_{2})x-\mathrm{i}(\xi_{1}^{2}-\xi_{2}^{2}-\eta_{1}^{2}+\eta_{2}^{2})t}\right.$ $\displaystyle\hphantom{:}\hskip 128.0374pt\left.\mbox{}+\frac{c_{1}^{\ast}c_{2}}{\xi_{1}+\mathrm{i}\eta_{1}-\gamma_{j}}\mathrm{e}^{-\mathrm{i}(\xi_{1}-\xi_{2})x+\mathrm{i}(\xi_{1}^{2}-\xi_{2}^{2}-\eta_{1}^{2}+\eta_{2}^{2})t}\right].$ (4.26) Thus,
+with the aid of
+Proposition 4.1 ,
+we
+obtain
+a one-dark soliton solution
+of the three-component
+NLS equation ( 4.6 )
+in the form: $\displaystyle q_{j}(x,t)$ $\displaystyle=a_{j}\mathrm{e}^{\mathrm{i}\gamma_{j}x-\mathrm{i}\left[\gamma_{j}^{2}+2\left(|a_{1}|^{2}-|a_{2}|^{2}+|a_{3}|^{2}\right)\right]t}\left\{1-\mathrm{i}\frac{g_{j}}{f}\right\},\hskip 14.22636ptj=1,2,3.$ (4.27) Here, the positive function $f$ and the
+complex functions $g_{j}$ are given
+by ( 4.25 ) and ( 4.26 ), respectively;
+the amplitudes of the background plane waves are
+determined as (cf. ( 4.4 ) and ( 4.5 )) $\displaystyle|a_{1}|^{2}=\frac{\left[(\xi_{1}-\gamma_{1})^{2}+\eta_{1}^{2}\right]\left[(\xi_{2}-\gamma_{1})^{2}+\eta_{2}^{2}\right]}{(\gamma_{2}-\gamma_{1})(\gamma_{3}-\gamma_{1})},$ $\displaystyle|a_{2}|^{2}=\frac{\left[(\xi_{1}-\gamma_{2})^{2}+\eta_{1}^{2}\right]\left[(\xi_{2}-\gamma_{2})^{2}+\eta_{2}^{2}\right]}{(\gamma_{2}-\gamma_{1})(\gamma_{3}-\gamma_{2})},$ $\displaystyle|a_{3}|^{2}=\frac{\left[(\xi_{1}-\gamma_{3})^{2}+\eta_{1}^{2}\right]\left[(\xi_{2}-\gamma_{3})^{2}+\eta_{2}^{2}\right]}{(\gamma_{3}-\gamma_{1})(\gamma_{3}-\gamma_{2})}.$ When $c_{1}=0$ or $c_{2}=0$ ,
+we have
+a conventional
+dark
+soliton, which has essentially
+a time-independent shape
+and velocity
+(cf. ( 3.46 )).
+For nonzero values of $c_{1}$ and $c_{2}$ ,
+the vector dark soliton ( 4.27 )
+entails
+the
+internal degrees of freedom
+and
+exhibits
+complicated behavior;
+in fact,
+the
+soliton’s shape
+and velocity
+can change in time,
+so
+the final state
+is generally
+different from
+the
+initial state.
+This phenomenon
+can
+be called
+a
+spontaneous soliton mutation. In a similar manner,
+we can
+obtain
+a
+one-dark soliton solution
+of the general $m$ -component NLS equation ( 2.4 )
+in the same form as ( 4.27 ): $\displaystyle q_{j}(x,t)$ $\displaystyle=a_{j}\mathrm{e}^{\mathrm{i}\gamma_{j}x-\mathrm{i}\left(\gamma_{j}^{2}+2\sum_{k=1}^{m}\sigma_{k}|a_{k}|^{2}\right)t}\left\{1-\mathrm{i}\frac{g_{j}}{f}\right\},\hskip 14.22636ptj=1,2,\ldots,m.$ (4.28) In
+the general $m$ -component
+case, $f$ and $g_{j}$ are given
+as $\displaystyle f:=\;$ $\displaystyle c_{0}+\int^{x}_{-\infty}\left|\sum_{\alpha=1}^{m_{1}}c_{\alpha}\mathrm{e}^{\mathrm{i}\left(\xi_{\alpha}-\mathrm{i}\eta_{\alpha}\right)y-\mathrm{i}\left(\xi_{\alpha}-\mathrm{i}\eta_{\alpha}\right)^{2}t}\right|^{2}\mathrm{d}y$ $\displaystyle=\;$ $\displaystyle c_{0}+\sum_{\alpha=1}^{m_{1}}\frac{|c_{\alpha}|^{2}}{2\eta_{\alpha}}\mathrm{e}^{2\eta_{\alpha}(x-2\xi_{\alpha}t)}$ $\displaystyle\mbox{}+\sum_{1\leq\alpha<\beta\leq m_{1}}\mathrm{e}^{\eta_{\alpha}(x-2\xi_{\alpha}t)+\eta_{\beta}(x-2\xi_{\beta}t)}\left[\frac{c_{\alpha}c_{\beta}^{\ast}}{\eta_{\alpha}+\eta_{\beta}+\mathrm{i}(\xi_{\alpha}-\xi_{\beta})}\mathrm{e}^{\mathrm{i}(\xi_{\alpha}-\xi_{\beta})x-\mathrm{i}(\xi_{\alpha}^{2}-\xi_{\beta}^{2}-\eta_{\alpha}^{2}+\eta_{\beta}^{2})t}\right.$ $\displaystyle\hskip 122.34685pt\left.\mbox{}+\frac{c_{\alpha}^{\ast}c_{\beta}}{\eta_{\alpha}+\eta_{\beta}-\mathrm{i}(\xi_{\alpha}-\xi_{\beta})}\mathrm{e}^{-\mathrm{i}(\xi_{\alpha}-\xi_{\beta})x+\mathrm{i}(\xi_{\alpha}^{2}-\xi_{\beta}^{2}-\eta_{\alpha}^{2}+\eta_{\beta}^{2})t}\right],$ $\displaystyle g_{j}$ $\displaystyle:=\left[\sum_{\alpha=1}^{m_{1}}c_{\alpha}\mathrm{e}^{\eta_{\alpha}(x-2\xi_{\alpha}t)+\mathrm{i}\xi_{\alpha}x-\mathrm{i}(\xi_{\alpha}^{2}-\eta_{\alpha}^{2})t}\right]\left[\sum_{\beta=1}^{m_{1}}\frac{c_{\beta}^{\ast}}{\xi_{\beta}+\mathrm{i}\eta_{\beta}-\gamma_{j}}\mathrm{e}^{\eta_{\beta}(x-2\xi_{\beta}t)-\mathrm{i}\xi_{\beta}x+\mathrm{i}(\xi_{\beta}^{2}-\eta_{\beta}^{2})t}\right]$ $\displaystyle\hphantom{:}=\sum_{\alpha=1}^{m_{1}}\frac{|c_{\alpha}|^{2}}{\xi_{\alpha}+\mathrm{i}\eta_{\alpha}-\gamma_{j}}\mathrm{e}^{2\eta_{\alpha}(x-2\xi_{\alpha}t)}$ $\displaystyle\hphantom{:=}\;\,\mbox{}+\sum_{1\leq\alpha<\beta\leq m_{1}}\mathrm{e}^{\eta_{\alpha}(x-2\xi_{\alpha}t)+\eta_{\beta}(x-2\xi_{\beta}t)}\left[\frac{c_{\alpha}c_{\beta}^{\ast}}{\xi_{\beta}+\mathrm{i}\eta_{\beta}-\gamma_{j}}\mathrm{e}^{\mathrm{i}(\xi_{\alpha}-\xi_{\beta})x-\mathrm{i}(\xi_{\alpha}^{2}-\xi_{\beta}^{2}-\eta_{\alpha}^{2}+\eta_{\beta}^{2})t}\right.$ $\displaystyle\hphantom{:}\hskip 128.0374pt\left.\mbox{}+\frac{c_{\alpha}^{\ast}c_{\beta}}{\xi_{\alpha}+\mathrm{i}\eta_{\alpha}-\gamma_{j}}\mathrm{e}^{-\mathrm{i}(\xi_{\alpha}-\xi_{\beta})x+\mathrm{i}(\xi_{\alpha}^{2}-\xi_{\beta}^{2}-\eta_{\alpha}^{2}+\eta_{\beta}^{2})t}\right].$ The sign $\sigma_{k}$ in
+each nonlinear
+term in ( 2.4 )
+and
+the amplitude $|a_{k}|$ of each background plane wave
+are determined
+through the relations: $\displaystyle\sigma_{k}|a_{k}|^{2}=\frac{\displaystyle\prod_{i=1}^{m_{1}}\left[(\xi_{i}-\gamma_{k})^{2}+\eta_{i}^{2}\right]\times\prod_{j=1}^{m_{2}}(\nu_{j}-\gamma_{k})}{\displaystyle\prod_{\stackrel{{\scriptstyle\scriptstyle j=1}}{{j\neq k}}}^{m}(\gamma_{j}-\gamma_{k})}\hskip 1.0pt,\hskip 14.22636ptk=1,2,\ldots,m.$ Here,
+we assume that
+the
+roots $\{\lambda_{1},\lambda_{2},\ldots,\lambda_{m+1}\}$ of
+equation ( 3.8 )
+with $b_{k}=\sigma_{k}a_{k}^{\ast}$ comprise $m_{1}$ pairs of complex conjugate
+roots $\{\xi_{1}\pm\mathrm{i}\eta_{1},\ldots,\xi_{m_{1}}\pm\mathrm{i}\eta_{m_{1}}\}$ ( $\eta_{j}>0$ )
+and $m_{2}$ real roots $\{\nu_{1},\ldots,\nu_{m_{2}}\}$ ,
+where $m=2m_{1}+m_{2}-1$ . 5 Bright-soliton solutions on a plane-wave background In this section, we apply
+the
+binary Bäcklund–Darboux transformation
+to
+the
+multicomponent NLS
+equations
+and obtain their
+bright-soliton
+solutions
+on a general
+plane-wave background.
+To simplify the derivation,
+we
+use
+a
+reduced version of
+Proposition 2.3 , which
+defines the
+binary
+Bäcklund–Darboux transformation
+maintaining
+the
+Hermitian conjugation reduction
+between the two
+matrix
+dependent variables.
+In contrast to
+the
+construction of the
+dark-soliton solutions,
+the Bäcklund parameter $\mu$ for generating bright-soliton solutions
+is
+complex-valued, i.e.,
+it has a nonzero imaginary part. Proposition 5.1 . Consider
+the $(l+m)\times(l+m)$ Lax-pair representation
+for the $l\times m$ matrix NLS equation ( 2.3 )
+as given by (cf. ( 2.6 ) with ( 2.2 )) $\displaystyle\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]_{x}=\left[\begin{array}[]{cc}-\mathrm{i}\mu I_{l}&Q\\
+\Sigma\hskip 1.0ptQ^{\dagger}\hskip 1.0pt\Omega&\mathrm{i}\mu I_{m}\\
+\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right],$ $\displaystyle\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]_{t}=\left[\begin{array}[]{cc}-2\mathrm{i}\mu^{2}I_{l}-\mathrm{i}Q\hskip 1.0pt\Sigma\hskip 1.0ptQ^{\dagger}\hskip 1.0pt\Omega&2\mu Q+\mathrm{i}Q_{x}\\
+2\mu\Sigma\hskip 1.0ptQ^{\dagger}\hskip 1.0pt\Omega-\mathrm{i}\Sigma\hskip 1.0ptQ^{\dagger}_{x}\hskip 1.0pt\Omega&2\mathrm{i}\mu^{2}I_{m}+\mathrm{i}\Sigma\hskip 1.0ptQ^{\dagger}\hskip 1.0pt\Omega\hskip 1.0ptQ\\
+\end{array}\right]\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right].$ Here, the
+spectral parameter $\zeta$ is
+fixed
+at a
+complex
+value $\mu$ , $\Psi_{1}$ is an $l\times l$ matrix and $\Psi_{2}$ is an $m\times l$ matrix; $\Sigma$ and $\Omega$ are $m\times m$ and $l\times l$ diagonal matrices
+with
+diagonal
+entries
+equal to $+1$ or $-1$ .
+Then,
+the new potential defined by the formula
+(see [ 47 , 48 ] for the scalar case and [ 49 , 34 , 50 , 38 , 77 ] for the vector case), $\displaystyle Q^{\prime}$ $\displaystyle:=Q+2\mathrm{i}(\mu-\mu^{\ast})\Psi_{1}\left(\Psi_{1}^{\dagger}\hskip 1.0pt\Omega\hskip 1.0pt\Psi_{1}-\Psi_{2}^{\dagger}\hskip 1.0pt\Sigma\hskip 1.0pt\Psi_{2}\right)^{-1}\Psi_{2}^{\dagger}\hskip 1.0pt\Sigma,$ provides a new solution of the matrix NLS equation ( 2.3 ).
+A linear eigenfunction
+associated with
+the new
+potential $Q^{\prime}$ at the spectral parameter $\zeta$ set
+equal to $\mu^{\ast}$ is given by $\displaystyle\left[\begin{array}[]{c}\Psi_{1}\\
+\Psi_{2}\\
+\end{array}\right]\left(\Psi_{1}^{\dagger}\hskip 1.0pt\Omega\hskip 1.0pt\Psi_{1}-\Psi_{2}^{\dagger}\hskip 1.0pt\Sigma\hskip 1.0pt\Psi_{2}\right)^{-1},$ which
+defines a bound state
+for a proper choice of $\Psi_{1}(\mu)$ and $\Psi_{2}(\mu)$ . 8 8 8 In
+some cases,
+we need to consider a
+suitable
+linear combination
+of the columns
+in ( 5.1 ).
+Note
+that
+the spatial part of the Lax-pair representation $\Psi_{x}=U\Psi$ admits the gauge transformation $\Psi\to\mathrm{e}^{\mathrm{i}kx}\Psi,\;U\to U+\mathrm{i}kI$ ,
+where $k$ is
+an arbitrary
+complex constant;
+this transformation is sometimes
+necessary
+to
+obtain
+a
+square-integrable
+eigenfunction. An adjoint linear eigenfunction, $\displaystyle\left(\Psi_{1}^{\dagger}\hskip 1.0pt\Omega\hskip 1.0pt\Psi_{1}-\Psi_{2}^{\dagger}\hskip 1.0pt\Sigma\hskip 1.0pt\Psi_{2}\right)^{-1}\left[\begin{array}[]{cc}\!\Psi_{1}^{\dagger}\Omega&\!-\Psi_{2}^{\dagger}\Sigma\end{array}\right],$ can provide
+another
+bound state at the spectral parameter $\zeta$ equal to $\mu$ . 9 9 9 Thus,
+a multicomponent bright soliton is associated with
+a pair of bound states: a
+linear eigenfunction at $\zeta=\mu^{\ast}$ and
+an
+adjoint linear eigenfunction at $\zeta=\mu$ .
+For
+the scalar NLS equation,
+the adjoint linear eigenfunction
+can
+be
+immediately
+rewritten
+as the
+usual
+(i.e., column-vector)
+linear eigenfunction at $\zeta=\mu$ . This proposition
+enables us to obtain
+a formal expression for the
+bright
+one-soliton
+solution on a plane-wave background
+using the matrix exponential
+of a constant
+non-diagonal matrix. 5.1 Matrix bright soliton We first consider
+the matrix NLS equation ( 2.5 )
+for
+an $l\times m$ matrix $Q$ ,
+which admits the
+general plane-wave solution
+(cf. ( 2.109 )): $\displaystyle Q=\mathrm{e}^{-2\mathrm{i}t\sigma AA^{\dagger}}A\mathrm{e}^{\mathrm{i}x\Gamma-\mathrm{i}t\Gamma^{2}}.$ Here, $\sigma=+1$ and $\sigma=-1$ correspond
+to the self-defocusing case
+and
+self-focusing case, respectively; $\Gamma$ is an $m\times m$ real diagonal matrix and $A$ is an $l\times m$ matrix
+such that $AA^{\dagger}$ is a real diagonal matrix.
+We employ this plane-wave
+solution as the seed solution and
+apply the binary
+Bäcklund–Darboux transformation defined in Proposition 5.1 .
+Following the procedure
+described in subsection 2.6 ,
+we obtain a new solution of the matrix NLS equation ( 2.5 )
+in the form: $\displaystyle Q$ $\displaystyle=\mathrm{e}^{-2\mathrm{i}t\sigma AA^{\dagger}}A\mathrm{e}^{\mathrm{i}x\Gamma-\mathrm{i}t\Gamma^{2}}+2\mathrm{i}(\mu-\mu^{\ast})\Psi_{1}\left(\sigma\Psi_{1}^{\dagger}\Psi_{1}-\Psi_{2}^{\dagger}\Psi_{2}\right)^{-1}\Psi_{2}^{\dagger}$ $\displaystyle=\mathrm{e}^{-2\mathrm{i}t\sigma AA^{\dagger}}\left[A+2(\mu-\mu^{\ast})\boldsymbol{\mathit{\Psi}}_{1}\left(\sigma\boldsymbol{\mathit{\Psi}}_{1}^{\dagger}\boldsymbol{\mathit{\Psi}}_{1}-\boldsymbol{\mathit{\Psi}}_{2}^{\dagger}\boldsymbol{\mathit{\Psi}}_{2}\right)^{-1}\boldsymbol{\mathit{\Psi}}_{2}^{\dagger}\right]\mathrm{e}^{\mathrm{i}x\Gamma-\mathrm{i}t\Gamma^{2}}.$ (5.16) Here, we omit the prime to distinguish the new solution from the
+old
+one.
+In the self-focusing case $\sigma=-1$ ,
+the new solution is
+regular for
+all $x$ and $t$ .
+The
+gauge-transformed linear eigenfunction
+used in ( 5.16 )
+is given as
+(cf. ( 2.6 )), $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{\Psi}}_{1}\\
+\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]=\mathrm{e}^{\mathrm{i}\mu x+2\mathrm{i}\mu^{2}t}\mathrm{e}^{\mathrm{i}x\boldsymbol{Z}-\mathrm{i}t\boldsymbol{Z}^{2}}\left[\begin{array}[]{c}{\mathscr{C}}_{1}\\
+{\mathscr{C}}_{2}\\
+\end{array}\right],\hskip 14.22636pt\boldsymbol{Z}:=\left[\begin{array}[]{cc}-2\mu I_{l}&A\\
+-\sigma A^{\dagger}&\Gamma\\
+\end{array}\right],$ where ${\mathscr{C}}_{1}$ and ${\mathscr{C}}_{2}$ are $l\times l$ and $m\times l$ constant matrices, respectively.
+Note that the
+prefactor $\mathrm{e}^{\mathrm{i}\mu x+2\mathrm{i}\mu^{2}t}$ plays no role
+in formula ( 5.16 ).
+This expression is rather formal and
+appears to be not so
+useful in the present form
+for
+practical applications.
+Thus,
+we
+next
+consider the
+simpler
+case of
+the
+vector NLS equation
+( $l=1$ ),
+particularly targeting
+on
+the
+two-component case ( $m=2$ ),
+and
+obtain a more explicit expression
+for
+the
+solution. 5.2 Vector bright soliton A general plane-wave solution of the vector
+NLS equation ( 2.4 )
+is given by setting $b_{j}=\sigma_{j}a_{j}^{\ast}$ in ( 3.3 ), i.e. $\displaystyle q_{j}(x,t)$ $\displaystyle=a_{j}\mathrm{e}^{\mathrm{i}\gamma_{j}x-\mathrm{i}\left(\gamma_{j}^{2}+2\sum_{k=1}^{m}\sigma_{k}|a_{k}|^{2}\right)t},\hskip 14.22636ptj=1,2,\ldots,m.$ (5.23) Here, we assume that $\gamma_{j}\;(j=1,2,\ldots,m)$ are
+pairwise distinct real constants.
+We recall the
+relations
+( 4.1 ): $\displaystyle 2\mu=\sum_{j=1}^{m}\gamma_{j}-\sum_{j=1}^{m+1}\lambda_{j}$ and $\displaystyle\sigma_{k}|a_{k}|^{2}=\frac{\displaystyle\prod_{j=1}^{m+1}(\lambda_{j}-\gamma_{k})}{\displaystyle\prod_{\stackrel{{\scriptstyle\scriptstyle j=1}}{{j\neq k}}}^{m}(\gamma_{j}-\gamma_{k})}\hskip 1.0pt,\hskip 14.22636ptk=1,2,\ldots,m,$ (5.24) where $\mu$ is a complex parameter.
+Thus,
+the eigenvalues $\{\lambda_{1},\lambda_{2},\ldots,\lambda_{m+1}\}$ of the matrix $\boldsymbol{Z}(\mu)$ must satisfy the condition that $\prod_{j=1}^{m+1}(\lambda_{j}-\gamma_{k})$ is
+real-valued
+for
+all $k$ .
+That is, if we set $\lambda_{j}=\xi_{j}+\mathrm{i}\eta_{j},\hskip 14.22636ptj=1,2,\ldots,m+1$ with real $\xi_{j}$ and $\eta_{j}$ , then we have $\prod_{j=1}^{m+1}\left[(\xi_{j}-\gamma_{k})+\mathrm{i}\eta_{j}\right]\in\mathbb{R},\hskip 14.22636ptk=1,2,\ldots,m.$ This means that
+if the
+eigenvalues $\lambda_{j}=\xi_{j}+\mathrm{i}\eta_{j}\;(j=1,2,\ldots,m+1)$ are given,
+the
+wavenumbers $\gamma_{k}\;(k=1,2,\ldots,m)$ are determined as the
+solutions of an
+algebraic equation
+for $\gamma$ , $\mathrm{Im}\left\{\prod_{j=1}^{m+1}\left[(\xi_{j}-\gamma)+\mathrm{i}\eta_{j}\right]\right\}=0.$ (5.25) This
+is
+a real-coefficient equation of degree $m$ ,
+which is much easier to solve
+than the characteristic equation for determining
+the eigenvalues $\lambda_{j}=\xi_{j}+\mathrm{i}\eta_{j}$ $(j=1,2,\ldots,m+1)$ (cf. ( 3.8 )).
+Indeed, the latter is a complex-coefficient equation
+of degree $m+1$ .
+This is why we consider
+that
+the eigenvalues $\{\lambda_{1},\lambda_{2},\ldots,\lambda_{m+1}\}$ are free complex parameters,
+from which the wavenumbers $\{\gamma_{1},\gamma_{2},\ldots,\gamma_{m}\}$ of the background plane waves are determined. Then,
+by expressing
+the right-hand side of ( 5.24 )
+only in terms of $\xi_{j}$ and $\eta_{j}\;(j=1,2,\ldots,m+1)$ ,
+we can determine
+the sign $\sigma_{k}$ in each cubic term in the vector NLS equation ( 2.4 )
+and
+the amplitude $|a_{k}|$ of each
+background
+plane wave.
+It is very useful to consider geometrically
+how the argument of
+the complex function $\prod_{j=1}^{m+1}(\lambda_{j}-\gamma)$ changes
+as $\gamma$ moves on the real axis
+from $-\infty$ to $+\infty$ .
+For example,
+when all the eigenvalues $\{\lambda_{1},\lambda_{2},\ldots,\lambda_{m+1}\}$ lie
+in the upper-half (or lower-half) complex plane,
+we have $\sigma_{k}=-1$ for all $k$ , which corresponds to
+the self-focusing case. In the scalar
+NLS
+case ( $m=1$ ), ( 5.25 )
+is
+a linear equation
+for
+determining $\gamma_{1}$ .
+If $\eta_{1}+\eta_{2}\neq 0$ ,
+we have $\gamma_{1}=\frac{\xi_{1}\eta_{2}+\xi_{2}\eta_{1}}{\eta_{1}+\eta_{2}},$ (5.26) which gives $\displaystyle\sigma_{1}|a_{1}|^{2}$ $\displaystyle=(\lambda_{1}-\gamma_{1})(\lambda_{2}-\gamma_{1})$ $\displaystyle=-\eta_{1}\eta_{2}\left[1+\left(\frac{\xi_{1}-\xi_{2}}{\eta_{1}+\eta_{2}}\right)^{2}\right].$ Thus, $\sigma_{1}=-\mathrm{sgn}\left(\eta_{1}\eta_{2}\right)$ .
+To obtain a
+regular
+solution of the NLS equation,
+we assume $\eta_{1}\eta_{2}>0$ and
+consider
+the self-focusing case ( $\sigma_{1}=-1$ ).
+Then,
+the matrix $\boldsymbol{Z}(\mu)$ takes the
+form
+(cf. ( 3.1 )): $\boldsymbol{Z}=\left[\begin{array}[]{cc}\lambda_{1}+\lambda_{2}-\gamma_{1}&a_{1}\\
+a_{1}^{\ast}&\gamma_{1}\\
+\end{array}\right].$ We choose
+the
+eigenvectors corresponding to the
+eigenvalues $\lambda_{j}=\xi_{j}+\mathrm{i}\eta_{j}$ as $\displaystyle\boldsymbol{Z}\left[\begin{array}[]{c}a_{1}\\
+\eta_{2}\left(\frac{\xi_{1}-\xi_{2}}{\eta_{1}+\eta_{2}}-\mathrm{i}\right)\\
+\end{array}\right]$ $\displaystyle=\lambda_{1}\left[\begin{array}[]{c}a_{1}\\
+\eta_{2}\left(\frac{\xi_{1}-\xi_{2}}{\eta_{1}+\eta_{2}}-\mathrm{i}\right)\\
+\end{array}\right],$ $\displaystyle\boldsymbol{Z}\left[\begin{array}[]{c}a_{1}\\
+-\eta_{1}\left(\frac{\xi_{1}-\xi_{2}}{\eta_{1}+\eta_{2}}+\mathrm{i}\right)\\
+\end{array}\right]$ $\displaystyle=\lambda_{2}\left[\begin{array}[]{c}a_{1}\\
+-\eta_{1}\left(\frac{\xi_{1}-\xi_{2}}{\eta_{1}+\eta_{2}}+\mathrm{i}\right)\\
+\end{array}\right].$ Then, the matrix exponential in ( 2.6 )
+can be computed explicitly to provide
+the gauge-transformed
+linear eigenfunction as $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{\Psi}}_{1}\\
+\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]$ $\displaystyle=c_{1}\mathrm{e}^{\mathrm{i}x\frac{1}{2}(\gamma_{1}+\lambda_{1}-\lambda_{2})+\mathrm{i}t\frac{1}{2}\left[\gamma_{1}^{2}-2\gamma_{1}(\lambda_{1}+\lambda_{2})-\lambda_{1}^{2}+\lambda_{2}^{2}+2\lambda_{1}\lambda_{2}\right]}\left[\begin{array}[]{c}a_{1}\\
+\eta_{2}\left(\frac{\xi_{1}-\xi_{2}}{\eta_{1}+\eta_{2}}-\mathrm{i}\right)\\
+\end{array}\right]$ $\displaystyle\hphantom{=}\;\mbox{}+c_{2}\mathrm{e}^{\mathrm{i}x\frac{1}{2}(\gamma_{1}-\lambda_{1}+\lambda_{2})+\mathrm{i}t\frac{1}{2}\left[\gamma_{1}^{2}-2\gamma_{1}(\lambda_{1}+\lambda_{2})+\lambda_{1}^{2}-\lambda_{2}^{2}+2\lambda_{1}\lambda_{2}\right]}\left[\begin{array}[]{c}a_{1}\\
+-\eta_{1}\left(\frac{\xi_{1}-\xi_{2}}{\eta_{1}+\eta_{2}}+\mathrm{i}\right)\\
+\end{array}\right],$ where $c_{1}$ and $c_{2}$ are arbitrary complex
+constants.
+Thus,
+by adapting formula ( 5.16 )
+to
+the scalar
+NLS equation $\mathrm{i}q_{t}+q_{xx}+2|q|^{2}q=0$ ,
+we obtain
+the bright one-soliton solution on the plane-wave background
+as (cf. [ 6 , 7 , 8 , 11 ] ) $\displaystyle q(x,t)$ $\displaystyle=a_{1}\mathrm{e}^{\mathrm{i}\gamma_{1}x-\mathrm{i}\left(\gamma_{1}^{2}-2|a_{1}|^{2}\right)t}\frac{g}{f}\hskip 1.0pt.$ (5.41) Here, the positive
+function $f(x,t)$ and the complex function $g(x,t)$ are $\displaystyle f$ $\displaystyle:=|c_{1}|^{2}\eta_{2}\left[(\xi_{1}-\xi_{2})^{2}+(\eta_{1}+\eta_{2})^{2}\right]\mathrm{e}^{-(\eta_{1}-\eta_{2})x+2(\xi_{1}\eta_{1}-\xi_{2}\eta_{2})t}$ $\displaystyle\hphantom{:=}\;+|c_{2}|^{2}\eta_{1}\left[(\xi_{1}-\xi_{2})^{2}+(\eta_{1}+\eta_{2})^{2}\right]\mathrm{e}^{(\eta_{1}-\eta_{2})x-2(\xi_{1}\eta_{1}-\xi_{2}\eta_{2})t}$ $\displaystyle\hphantom{:=}\;-2\mathrm{i}c_{1}^{\ast}c_{2}\eta_{1}\eta_{2}\left[(\xi_{1}-\xi_{2})+\mathrm{i}(\eta_{1}+\eta_{2})\right]\mathrm{e}^{-\mathrm{i}(\xi_{1}-\xi_{2})x+\mathrm{i}\left(\xi_{1}^{2}-\xi_{2}^{2}-\eta_{1}^{2}+\eta_{2}^{2}\right)t}$ $\displaystyle\hphantom{:=}\;+2\mathrm{i}c_{1}c_{2}^{\ast}\eta_{1}\eta_{2}\left[(\xi_{1}-\xi_{2})-\mathrm{i}(\eta_{1}+\eta_{2})\right]\mathrm{e}^{\mathrm{i}(\xi_{1}-\xi_{2})x-\mathrm{i}\left(\xi_{1}^{2}-\xi_{2}^{2}-\eta_{1}^{2}+\eta_{2}^{2}\right)t}$ and $\displaystyle g$ $\displaystyle:=|c_{1}|^{2}\eta_{2}\left[(\xi_{1}-\xi_{2})+\mathrm{i}(\eta_{1}+\eta_{2})\right]^{2}\mathrm{e}^{-(\eta_{1}-\eta_{2})x+2(\xi_{1}\eta_{1}-\xi_{2}\eta_{2})t}$ $\displaystyle\hphantom{:=}\;+|c_{2}|^{2}\eta_{1}\left[(\xi_{1}-\xi_{2})-\mathrm{i}(\eta_{1}+\eta_{2})\right]^{2}\mathrm{e}^{(\eta_{1}-\eta_{2})x-2(\xi_{1}\eta_{1}-\xi_{2}\eta_{2})t}$ $\displaystyle\hphantom{:=}\;+2\mathrm{i}c_{1}^{\ast}c_{2}\eta_{2}^{2}\left[(\xi_{1}-\xi_{2})+\mathrm{i}(\eta_{1}+\eta_{2})\right]\mathrm{e}^{-\mathrm{i}(\xi_{1}-\xi_{2})x+\mathrm{i}\left(\xi_{1}^{2}-\xi_{2}^{2}-\eta_{1}^{2}+\eta_{2}^{2}\right)t}$ $\displaystyle\hphantom{:=}\;-2\mathrm{i}c_{1}c_{2}^{\ast}\eta_{1}^{2}\left[(\xi_{1}-\xi_{2})-\mathrm{i}(\eta_{1}+\eta_{2})\right]\mathrm{e}^{\mathrm{i}(\xi_{1}-\xi_{2})x-\mathrm{i}\left(\xi_{1}^{2}-\xi_{2}^{2}-\eta_{1}^{2}+\eta_{2}^{2}\right)t},$ respectively.
+The amplitude and the wavenumber
+of the background plane wave are
+determined
+by $\displaystyle|a_{1}|^{2}$ $\displaystyle=\eta_{1}\eta_{2}\left[1+\left(\frac{\xi_{1}-\xi_{2}}{\eta_{1}+\eta_{2}}\right)^{2}\right]$ and ( 5.26 )
+respectively,
+while the
+complex phase
+of $a_{1}$ is arbitrary, which reflects
+the $U(1)$ symmetry of the scalar NLS equation.
+Note that $f$ and $g$ can be
+simplified
+by setting $c_{2}/c_{1}=:\mathrm{e}^{\delta+\mathrm{i}\theta}$ and using real $\delta$ and $\theta$ as new
+parameters.
+Thinking
+more intuitively,
+we can set $c_{1}=c_{2}=1$ by
+constant shifts of $x$ and $t$ .
+The additional
+condition $\eta_{1}\neq\eta_{2}$ is necessary for
+( 5.41 )
+to
+provide
+a genuine
+soliton
+solution
+associated with a pair of
+bound states of the Lax pair.
+In fact,
+in the special case of $\eta_{1}=\eta_{2}$ and $\xi_{1}\neq\xi_{2}$ ,
+( 5.41 ) describes an
+oscillating
+solution
+on the plane-wave background,
+which is localized in time $t$ (cf. [ 10 , 11 ] ). Next,
+we
+consider
+the
+two-component
+case
+( $m=2$ ).
+Then,
+( 5.25 )
+becomes
+a quadratic equation for $\gamma$ , $(\xi_{1}-\gamma)(\xi_{2}-\gamma)\eta_{3}+(\xi_{2}-\gamma)(\xi_{3}-\gamma)\eta_{1}+(\xi_{3}-\gamma)(\xi_{1}-\gamma)\eta_{2}-\eta_{1}\eta_{2}\eta_{3}=0,$ which
+has
+two real
+solutions $\gamma_{1}$ and $\gamma_{2}$ ( $\gamma_{1}\neq\gamma_{2}$ ).
+We consider only the generic case of $\eta_{1}+\eta_{2}+\eta_{3}\neq 0$ when the above equation is indeed quadratic.
+Thus, the discriminant denoted by $\Delta$ must
+be positive: $\displaystyle\Delta:=\,$ $\displaystyle\left[(\xi_{1}+\xi_{2})\eta_{3}+(\xi_{2}+\xi_{3})\eta_{1}+(\xi_{3}+\xi_{1})\eta_{2}\right]^{2}$ $\displaystyle-4(\eta_{1}+\eta_{2}+\eta_{3})(\xi_{1}\xi_{2}\eta_{3}+\xi_{2}\xi_{3}\eta_{1}+\xi_{3}\xi_{1}\eta_{2}-\eta_{1}\eta_{2}\eta_{3})>0,$ and the wavenumbers $\gamma_{1}$ and $\gamma_{2}$ are given by $\displaystyle\gamma_{1}=\frac{(\xi_{1}+\xi_{2})\eta_{3}+(\xi_{2}+\xi_{3})\eta_{1}+(\xi_{3}+\xi_{1})\eta_{2}-\sqrt{\Delta}}{2(\eta_{1}+\eta_{2}+\eta_{3})},$ (5.42a) $\displaystyle\gamma_{2}=\frac{(\xi_{1}+\xi_{2})\eta_{3}+(\xi_{2}+\xi_{3})\eta_{1}+(\xi_{3}+\xi_{1})\eta_{2}+\sqrt{\Delta}}{2(\eta_{1}+\eta_{2}+\eta_{3})}.$ (5.42b) From ( 5.24 ), we have the relations: $\displaystyle\sigma_{1}|a_{1}|^{2}=\frac{(\xi_{1}-\gamma_{1})(\xi_{2}-\gamma_{1})(\xi_{3}-\gamma_{1})-\eta_{1}\eta_{2}(\xi_{3}-\gamma_{1})-\eta_{2}\eta_{3}(\xi_{1}-\gamma_{1})-\eta_{1}\eta_{3}(\xi_{2}-\gamma_{1})}{\gamma_{2}-\gamma_{1}},$ (5.43a) $\displaystyle\sigma_{2}|a_{2}|^{2}=\frac{(\xi_{1}-\gamma_{2})(\xi_{2}-\gamma_{2})(\xi_{3}-\gamma_{2})-\eta_{1}\eta_{2}(\xi_{3}-\gamma_{2})-\eta_{2}\eta_{3}(\xi_{1}-\gamma_{2})-\eta_{1}\eta_{3}(\xi_{2}-\gamma_{2})}{\gamma_{1}-\gamma_{2}}.$ (5.43b) As mentioned above,
+considering
+the range of
+the complex
+argument of $\prod_{j=1}^{3}(\lambda_{j}-\gamma)$ as a function of
+real $\gamma$ ,
+we can
+establish a correspondence between
+the configuration of $\{\lambda_{1},\lambda_{2},\lambda_{3}\}$ and
+the combination of the signs $\{\sigma_{1},\sigma_{2}\}$ .
+That is,
+(i)
+when $\eta_{j}>0\;(j=1,2,3)$ ,
+i.e.,
+all
+the eigenvalues $\{\lambda_{1},\lambda_{2},\lambda_{3}\}$ lie
+in the upper-half
+plane,
+we have a
+self-focusing nonlinearity $\sigma_{1}=\sigma_{2}=-1$ ;
+(ii) when $\eta_{1},\eta_{2}>0$ , $-(\eta_{1}+\eta_{2})<\eta_{3}<0$ and $\Delta>0$ , we have a
+mixed focusing-defocusing
+nonlinearity $\{\sigma_{1},\sigma_{2}\}=\{+1,-1\}$ ;
+(iii) when $\eta_{1},\eta_{2}>0$ and $\eta_{3}<-(\eta_{1}+\eta_{2})$ ,
+we have a
+self-defocusing nonlinearity $\sigma_{1}=\sigma_{2}=+1$ ;
+and
+so on. When
+at least one of $\{\sigma_{1},\sigma_{2}\}$ is $-1$ ,
+i.e., there exist
+focusing component(s) in the vector dependent variable,
+the associated
+eigenvalue
+problem
+is not self-adjoint
+(cf. subsection 2.2 ); thus,
+the bound-state eigenvalues
+can
+take complex values.
+In the self-defocusing case $\sigma_{1}=\sigma_{2}=+1$ ,
+the eigenvalue
+problem is self-adjoint,
+so
+the bound-state eigenvalues
+are restricted to be real;
+thus,
+we cannot construct
+a genuine bright-soliton
+solution
+by applying the binary Bäcklund–Darboux transformation
+used in this section.
+However, we can
+obtain a “soliton-like”
+solution
+in the self-defocusing case
+using a complex-valued
+Bäcklund
+parameter $\mu$ ,
+not associated with
+a bound state. The matrix $\boldsymbol{Z}(\mu)$ with $2\mu=\gamma_{1}+\gamma_{2}-(\lambda_{1}+\lambda_{2}+\lambda_{3})$ takes the
+form (cf. ( 3.1 )): $\boldsymbol{Z}=\left[\begin{array}[]{ccc}\lambda_{1}+\lambda_{2}+\lambda_{3}-\gamma_{1}-\gamma_{2}&a_{1}&a_{2}\\
+-\sigma_{1}a_{1}^{\ast}&\gamma_{1}&0\\
+-\sigma_{2}a_{2}^{\ast}&0&\gamma_{2}\\
+\end{array}\right].$ We choose
+the
+eigenvectors corresponding to the
+eigenvalues $\lambda_{j}=\xi_{j}+\mathrm{i}\eta_{j}$ as $\displaystyle\boldsymbol{Z}\left[\begin{array}[]{c}1\\
+-\frac{\sigma_{1}a_{1}^{\ast}}{\lambda_{j}-\gamma_{1}}\\[2.84526pt]
+-\frac{\sigma_{2}a_{2}^{\ast}}{\lambda_{j}-\gamma_{2}}\\
+\end{array}\right]$ $\displaystyle=\lambda_{j}\left[\begin{array}[]{c}1\\
+-\frac{\sigma_{1}a_{1}^{\ast}}{\lambda_{j}-\gamma_{1}}\\[2.84526pt]
+-\frac{\sigma_{2}a_{2}^{\ast}}{\lambda_{j}-\gamma_{2}}\\
+\end{array}\right],\hskip 14.22636ptj=1,2,3.$ Then, the matrix exponential
+in ( 2.6 )
+can be computed explicitly to provide
+the gauge-transformed
+linear eigenfunction as $\displaystyle\left[\begin{array}[]{c}\boldsymbol{\mathit{\Psi}}_{1}\\
+\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]$ $\displaystyle=\mathrm{e}^{\mathrm{i}\mu x+2\mathrm{i}\mu^{2}t}\sum_{j=1}^{3}c_{j}\mathrm{e}^{\mathrm{i}\lambda_{j}x-\mathrm{i}\lambda_{j}^{2}t}\left[\begin{array}[]{c}1\\
+-\frac{\sigma_{1}a_{1}^{\ast}}{\lambda_{j}-\gamma_{1}}\\[2.84526pt]
+-\frac{\sigma_{2}a_{2}^{\ast}}{\lambda_{j}-\gamma_{2}}\\
+\end{array}\right],$ where $\boldsymbol{\mathit{\Psi}}_{1}$ is a scalar
+and $\boldsymbol{\mathit{\Psi}}_{2}$ is a two-component column vector; $c_{j}$ are arbitrary complex
+constants.
+Substituting
+this expression
+into
+a slightly
+modified version of
+formula
+( 5.16 ),
+we obtain a
+desired
+solution of
+the
+two-component
+vector
+NLS equation [( 2.4 ) with $m=2$ ]
+as $\displaystyle q_{j}=a_{j}\mathrm{e}^{\mathrm{i}\gamma_{j}x-\mathrm{i}\left(\gamma_{j}^{2}+2\sum_{k=1}^{2}\sigma_{k}|a_{k}|^{2}\right)t}\left\{1+2\mathrm{i}\left(\eta_{1}+\eta_{2}+\eta_{3}\right)\frac{g_{j}}{f}\right\},\hskip 14.22636ptj=1,2.$ (5.55) Here, the real function $f(x,t)$ and the complex functions $g_{j}(x,t)$ are $\displaystyle f$ $\displaystyle:=\sum_{\alpha=1}^{3}\left|c_{\alpha}\right|^{2}\mathrm{e}^{-2\eta_{\alpha}(x-2\xi_{\alpha}t)}\left[1-\frac{\sigma_{1}|a_{1}|^{2}}{\left|\lambda_{\alpha}-\gamma_{1}\right|^{2}}-\frac{\sigma_{2}|a_{2}|^{2}}{\left|\lambda_{\alpha}-\gamma_{2}\right|^{2}}\right]$ $\displaystyle\hphantom{:=}\;+\sum_{1\leq\alpha<\beta\leq 3}\mathrm{e}^{-\eta_{\alpha}(x-2\xi_{\alpha}t)-\eta_{\beta}(x-2\xi_{\beta}t)}$ $\displaystyle\hphantom{:= \sum}\times\left\{c_{\alpha}c_{\beta}^{\ast}\hskip 1.0pt\mathrm{e}^{\mathrm{i}(\xi_{\alpha}-\xi_{\beta})x-\mathrm{i}(\xi_{\alpha}^{2}-\xi_{\beta}^{2}-\eta_{\alpha}^{2}+\eta_{\beta}^{2})t}\left[1-\frac{\sigma_{1}|a_{1}|^{2}}{\left(\lambda_{\alpha}-\gamma_{1}\right)\left(\lambda_{\beta}^{\ast}-\gamma_{1}\right)}-\frac{\sigma_{2}|a_{2}|^{2}}{\left(\lambda_{\alpha}-\gamma_{2}\right)\left(\lambda_{\beta}^{\ast}-\gamma_{2}\right)}\right]\right.$ $\displaystyle\hphantom{:= \; \sum+}+\left.c_{\alpha}^{\ast}c_{\beta}\hskip 1.0pt\mathrm{e}^{-\mathrm{i}(\xi_{\alpha}-\xi_{\beta})x+\mathrm{i}(\xi_{\alpha}^{2}-\xi_{\beta}^{2}-\eta_{\alpha}^{2}+\eta_{\beta}^{2})t}\left[1-\frac{\sigma_{1}|a_{1}|^{2}}{\left(\lambda_{\alpha}^{\ast}-\gamma_{1}\right)\left(\lambda_{\beta}-\gamma_{1}\right)}-\frac{\sigma_{2}|a_{2}|^{2}}{\left(\lambda_{\alpha}^{\ast}-\gamma_{2}\right)\left(\lambda_{\beta}-\gamma_{2}\right)}\right]\right\}$ and $\displaystyle g_{j}$ $\displaystyle:=\sum_{\alpha=1}^{3}\left|c_{\alpha}\right|^{2}\mathrm{e}^{-2\eta_{\alpha}(x-2\xi_{\alpha}t)}\frac{1}{\lambda_{\alpha}^{\ast}-\gamma_{j}}+\sum_{1\leq\alpha<\beta\leq 3}\mathrm{e}^{-\eta_{\alpha}(x-2\xi_{\alpha}t)-\eta_{\beta}(x-2\xi_{\beta}t)}$ $\displaystyle\hphantom{:= }\times\left[c_{\alpha}c_{\beta}^{\ast}\hskip 1.0pt\mathrm{e}^{\mathrm{i}(\xi_{\alpha}-\xi_{\beta})x-\mathrm{i}(\xi_{\alpha}^{2}-\xi_{\beta}^{2}-\eta_{\alpha}^{2}+\eta_{\beta}^{2})t}\frac{1}{\lambda_{\beta}^{\ast}-\gamma_{j}}+c_{\alpha}^{\ast}c_{\beta}\hskip 1.0pt\mathrm{e}^{-\mathrm{i}(\xi_{\alpha}-\xi_{\beta})x+\mathrm{i}(\xi_{\alpha}^{2}-\xi_{\beta}^{2}-\eta_{\alpha}^{2}+\eta_{\beta}^{2})t}\frac{1}{\lambda_{\alpha}^{\ast}-\gamma_{j}}\right],$ respectively.
+The
+wavenumbers $\gamma_{j}$ and the
+amplitudes $|a_{j}|$ of
+the
+background
+plane
+waves
+as well as the signs $\sigma_{j}$ are determined
+through
+( 5.42 ) and ( 5.43 ).
+Concerning $\sigma_{j}$ ,
+we briefly
+comment on
+the
+three cases (i)–(iii) mentioned above (cf. [ 22 ] ). (i) $\eta_{j}>0\;(j=1,2,3)$ :
+the self-focusing
+case $\sigma_{1}=\sigma_{2}=-1$ .
+The function $f(x,t)$ is
+positive and the solution ( 5.55 )
+is regular for all $x$ and $t$ .
+For this
+solution
+to be
+a genuine
+soliton solution,
+the
+special
+case $\eta_{1}=\eta_{2}=\eta_{3}$ should be excluded.
+If
+the additional condition $\eta_{1}>\eta_{2}+\eta_{3}$ is satisfied
+up to a re-numbering of $\{\lambda_{1},\lambda_{2},\lambda_{3}\}$ ,
+the linear eigenfunction
+given by (cf. Proposition 5.1 and ( 2.110 )) $\displaystyle\left[\begin{array}[]{c}\mathrm{e}^{-2\mathrm{i}t\sum_{k=1}^{2}\sigma_{k}|a_{k}|^{2}}\boldsymbol{\mathit{\Psi}}_{1}\\
+\mathrm{i}\hskip 1.0pt\mathrm{e}^{-\mathrm{i}x\Gamma+\mathrm{i}t\Gamma^{2}}\boldsymbol{\mathit{\Psi}}_{2}\\
+\end{array}\right]\left(\boldsymbol{\mathit{\Psi}}_{1}^{\ast}\boldsymbol{\mathit{\Psi}}_{1}+\boldsymbol{\mathit{\Psi}}_{2}^{\dagger}\boldsymbol{\mathit{\Psi}}_{2}\right)^{-1}$ decays rapidly
+as $x\to\pm\infty$ and
+provides
+a bound state; otherwise, we need to multiply it by $\mathrm{e}^{\mathrm{i}kx}$ with a
+suitable
+complex
+parameter $k\in\mathbb{C}$ . (ii) $\eta_{1},\eta_{2}>0$ , $-(\eta_{1}+\eta_{2})<\eta_{3}<0$ and $\Delta>0$ :
+the
+mixed
+focusing-defocusing case $\{\sigma_{1},\sigma_{2}\}=\{+1,-1\}$ .
+We need to choose
+the parameters appropriately so that $f(x,t)>0$ or $<0$ for all $x$ and $t$ . (iii) $\eta_{1},\eta_{2}>0$ and $\eta_{3}<-(\eta_{1}+\eta_{2})$ :
+the self-defocusing case $\sigma_{1}=\sigma_{2}=+1$ .
+We
+set $c_{3}=0$ in the definitions of $f(x,t)$ and $g_{j}(x,t)$ so that
+( 5.55 )
+can be
+a regular solution without singularities.
+Indeed,
+for an appropriate
+choice of the parameters,
+it
+corresponds to the
+“soliton-like”
+solution
+obtained
+by
+Park and Shin
+in a more implicit form
+using Cardano’s formula [ 34 ] (also see [ 50 ] ). For (ii) and (iii),
+the existence of the conserved
+densities $|q_{j}|^{2}-\mathrm{const.}$ $(j=1,\hskip 1.0pt2)$ [ 20 , 21 , 29 ] implies that the regularity
+of the solution is generally preserved under the time evolution. 6 Concluding remarks In this paper, we
+have
+applied
+three
+types
+of Bäcklund–Darboux transformations
+to the
+multicomponent
+NLS equations
+with a
+self-focusing,
+self-defocusing
+or
+mixed focusing-defocusing nonlinearity.
+Using
+a general plane-wave solution
+as the seed solution,
+we
+constructed
+various
+interesting
+solutions
+such as the vector/matrix
+dark-soliton solutions
+and
+bright-soliton solutions
+on the
+plane-wave background.
+These
+solutions
+generally admit the internal degrees of freedom
+and
+provide
+highly
+nontrivial
+generalizations
+of the corresponding scalar NLS
+solitons.
+The main
+new feature
+of
+our approach
+is
+an appropriate
+re-parametrization of the
+parameters
+that appear in the application of
+the
+Bäcklund–Darboux transformations;
+this
+allows us
+to express
+the soliton solutions
+in more
+explicit and
+tractable forms
+than those reported
+in the literature (cf. [ 22 , 34 ] ).
+The price to pay is that
+unlike
+the usual naïve
+parametrization,
+not all of
+the amplitudes
+and the wavenumbers
+of the background plane waves
+remain
+independent
+free parameters;
+rather,
+they can depend on
+other
+parameters
+characterizing
+the soliton
+such as
+soliton’s
+width and
+velocity.
+More precisely,
+a multicomponent soliton
+generally
+has a
+time-dependent
+and
+nonrecurrent
+shape
+due
+in part
+to the
+beating
+effect with the background plane waves;
+thus,
+it is
+not always
+meaningful
+to
+consider
+soliton’s width and velocity. There exist
+two major methods of
+obtaining exact solutions of integrable
+partial differential
+equations: the inverse scattering method [ 84 ] and
+the Hirota bilinear method [ 85 ] .
+However,
+these two
+methods
+are
+not
+effective
+for constructing general
+multicomponent
+solitons
+under the
+plane-wave boundary conditions.
+Indeed,
+explicit expressions for
+the vector/matrix NLS
+solitons
+with
+internal degrees of freedom
+are
+accompanied
+by a set of
+complicated constraints
+on the parameters,
+which is quite
+difficult to
+obtain and resolve
+using these methods.
+The method based on
+Bäcklund–Darboux transformations
+is more
+appropriate for this purpose.
+Interestingly,
+in contrast to
+the
+common belief,
+even the most fundamental
+Bäcklund–Darboux transformation,
+called an elementary
+Bäcklund–Darboux transformation,
+can
+generate
+nontrivial
+dark-soliton solutions such as ( 3.58 )
+and ( 3.82 ).
+A more elaborate transformation,
+the limiting case of the binary Bäcklund–Darboux transformation,
+is indispensable
+for obtaining
+vector
+dark-soliton solutions
+with internal degrees of freedom,
+such as ( 4.27 ) and ( 4.28 ).
+It
+would be interesting
+to
+consider
+a
+matrix
+generalization
+of the Hirota bilinear method,
+which
+allows
+us to obtain
+formal
+expressions
+of
+solutions
+involving
+the exponential
+of a
+non-diagonal matrix,
+such as
+( 3.82 ) and ( 5.16 ). In this paper, we
+focused on
+the construction of
+one-soliton solutions
+of the
+multicomponent
+NLS equations
+by applying a
+“one-step”
+Bäcklund–Darboux transformation.
+It is
+in principle
+possible
+to apply
+it
+iteratively
+at (generally) different values of the Bäcklund parameter;
+this
+defines
+a multifold
+Bäcklund–Darboux transformation,
+which
+can be used to obtain
+multicomponent
+multisoliton
+solutions
+under
+the plane-wave boundary conditions.
+However,
+to
+write
+them
+out
+explicitly,
+we need to
+consider and
+resolve
+a rather
+complicated system
+of algebraic
+equations
+satisfied by the
+parameters
+in the solutions.
+In practice,
+such explicit expresssions
+become
+too
+cumbersome
+even for the two-soliton solutions,
+so they
+are not
+useful compared with
+formal expressions
+involving
+a matrix exponential function. Before closing
+this paper,
+we
+would like to
+remark
+that
+soliton solutions of
+the
+multicomponent
+NLS equations under
+simpler
+boundary conditions
+have
+been
+reported
+in the
+literature.
+The list of references
+on the multicomponent NLS solitons
+is too long
+(see, e.g. , [ 52 ] ),
+so we only mention
+the original and
+most
+relevant
+ones.
+The bright $N$ -soliton solution
+of the
+vector NLS equation
+under the
+vanishing
+boundary conditions
+was
+derived
+in [ 22 ] (also see [ 49 , 86 ] )
+and the corresponding Hirota
+bilinear form
+and tau functions were
+presented
+in [ 87 ] .
+The two-component vector NLS equation
+was solved
+under
+special
+nonvanishing boundary conditions
+such that
+the
+two
+background
+plane waves
+have the same wavenumber and frequency
+(note the
+Galilean
+invariance) [ 24 , 26 ] or
+one of
+them
+disappears [ 22 , 34 ] ;
+thus, the
+degenerate dark-soliton solutions (cf. [ 83 ] )
+and
+so-called
+dark-bright soliton
+solutions
+were obtained.
+In addition,
+these
+two classes of
+solutions
+can be
+related
+through
+the symmetry group
+of the two-component
+NLS equation,
+such as $SU(2)$ or $SU(1,1)$ [ 34 , 29 ] .
+Surprisingly,
+most of the
+recent papers
+on
+the
+solutions of
+the vector NLS equation
+under nonvanishing boundary conditions
+did not
+refer to
+the pioneering work
+of
+Makhankov et al. in the 1980s
+(see [ 22 ] and references therein)
+or the
+subsequent
+contribution
+by
+Park and
+Shin [ 34 , 50 ] .
+As far as we could check,
+such
+papers
+generally
+present
+no
+new
+solutions
+of the vector NLS equation. Acknowledgments The author is indebted to
+Professor
+Ken-ichi
+Maruno
+for his
+kind help.
+He also thanks Professor Takeshi Iizuka
+for
+sending him
+a copy
+of [ 88 ] . References [1] V. E. Zakharov and A. B. Shabat: Exact theory of two-dimensional
+self-focusing and one-dimensional self-modulation of waves in
+nonlinear media , Sov. Phys.–JETP 34 (1972) 62–69. [2] M. J. Ablowitz, D. J. Kaup, A. C. Newell and H. Segur: Nonlinear-evolution equations of physical significance ,
+Phys. Rev. Lett. 31 (1973) 125–127. [3] M. J. Ablowitz, D. J. Kaup, A. C. Newell and H. Segur: The inverse scattering transform—Fourier analysis
+for nonlinear problems ,
+Stud. Appl. Math. 53 (1974) 249–315. [4] C. S. Gardner, J. M. Greene, M. D. Kruskal and R. M. Miura: Method for solving the Korteweg–de Vries equation ,
+Phys. Rev. Lett. 19 (1967) 1095–1097. [5] V. E. Zakharov and A. B. Shabat: Interaction between solitons in a stable medium ,
+Sov. Phys.–JETP 37 (1973) 823–828. [6] E. A. Kuznetsov: Solitons in a parametrically unstable plasma ,
+Sov. Phys. Dokl. 22 (1977) 507–508. [7] T. Kawata and H. Inoue: Inverse scattering method for the nonlinear evolution equations
+under nonvanishing conditions ,
+J. Phys. Soc. Jpn. 44 (1978) 1722–1729. [8] Y.-C. Ma: The perturbed plane-wave solutions of the cubic Schrödinger equation ,
+Stud. Appl. Math. 60 (1979) 43–58. [9] D. H. Peregrine: Water waves, nonlinear Schrödinger equations and
+their solutions ,
+J. Austral. Math. Soc. Ser. B 25 (1983) 16–43. [10] N. N. Akhmedieva, V. M. Eleonskiĭ
+and N. E. Kulagin: Generation of periodic trains of picosecond pulses in an optical fiber: exact solutions , Sov. Phys.–JETP 62 (1985) 894–899. [11] H. Steudel and R. Meinel: Periodic solutions generated by Bäcklund transformations ,
+Physica D 21 (1986) 155–162. [12] J. Satsuma and N. Yajima: Initial value problems of one-dimensional self-modulation of
+nonlinear waves in dispersive media ,
+Prog. Theor. Phys. Suppl. 55 (1974) 284–306. [13] T. Tsuzuki: Nonlinear waves in the Pitaevskii–Gross equation ,
+J. Low Temp. Phys. 4 (1971) 441–457. [14] A. Hasegawa and F. Tappert: Transmission of stationary nonlinear optical pulses in dispersive dielectric
+fibers. II. Normal dispersion ,
+Appl. Phys. Lett. 23 (1973) 171–172. [15] R. Hirota: Direct method of finding exact solutions of nonlinear
+evolution equations ,
+Bäcklund Transformations, the Inverse Scattering Method, Solitons,
+and Their Applications
+(Lect. Notes in Math. 515 , Springer,
+1976)
+40–68. [16] P. D. Lax: Integrals of nonlinear equations of evolution and
+solitary waves , Commun. Pure Appl. Math. 21 (1968) 467–490. [17] S. V. Manakov: On the theory of two-dimensional stationary
+self-focusing of electromagnetic waves ,
+Sov. Phys.–JETP 38 (1974) 248–253. [18] V. E. Zakharov and A. B. Shabat: A scheme for integrating the nonlinear equations of
+mathematical physics by the method of the inverse scattering problem. I ,
+Funct. Anal. Appl. 8 (1974) 226–235. [19] P. P. Kulish and E. K. Sklyanin: $\mathrm{O}(N)$ -invariant
+nonlinear Schrödinger equation—A new completely integrable system ,
+Phys. Lett. A 84 (1981) 349–352. [20] V. G. Makhankov: Quasi-classical solitons
+in the Lindner–Fedyanin model—“hole”-like excitations ,
+Phys. Lett. A 81 (1981) 156–160. [21] V. G. Makhan’kov and O. K. Pashaev: Nonlinear Schrödinger
+equation with noncompact isogroup ,
+Theor. Math. Phys. 53 (1982) 979–987. [22] B. A. Dubrovin, T. M. Malanyuk, I. M. Krichever
+and V. G. Makhan’kov: Exact solutions of the time-dependent Schrödinger equation
+with self-consistent potentials , Sov. J. Part. Nucl. 19 (1988) 252–269. [23] V. G. Makhankov and S. I. Slavov: Breather type solutions of the vector nonlinear Schrödinger
+equation with quasi-constant boundary conditions ,
+Preprint
+JINR
+E5-89-806 (1989). [24] V. K. Fedyanin, V. G. Makhankov, O. K. Pashaev
+and S. A. Sergeenkov: On interaction between solitons in the model of organic charge transfer
+salts , Preprint JINR E17-83-755
+(1983). [25] V. G. Makhankov, O. K. Pashaev and S. A. Sergeenkov: “Coloured” solitons in a stable medium ,
+Phys. Lett. A 98 (1983) 227–232. [26] V. G. Makhankov, O. K. Pashaev and S. A. Sergeenkov: Hole-like excitations in many component systems ,
+Phys. Scr. 29 (1984) 521–525. [27] J. Ieda, M. Uchiyama and M. Wadati: Inverse scattering method for square matrix nonlinear
+Schrödinger equation under nonvanishing boundary conditions ,
+J. Math. Phys. 48 (2007) 013507. [28] V. S. Gerdzhikov and P. P. Kulish: Multicomponent nonlinear Schrödinger equation in the case
+of nonzero boundary conditions ,
+J. Sov. Math. (J. Math. Sci.) 30 (1985) 2261–2269. [29] V. G. Makhankov, N. V. Makhaldiani and O. K. Pashaev: On the integrability and isotopic structure of the one-dimensional
+Hubbard model in the long wave approximation ,
+Phys. Lett. A 81 (1981) 161–164. [30] T. Kurosaki and M. Wadati: Matter-wave bright solitons with a finite background in spinor
+Bose–Einstein condensates ,
+J. Phys. Soc. Jpn. 76 (2007) 084002. [31] M. Uchiyama, J. Ieda and M. Wadati: Dark solitons in $F=1$ spinor Bose–Einstein condensate ,
+J. Phys. Soc. Jpn. 75 (2006) 064002. [32] M. A. Sall’: Darboux transformations for non-Abelian and
+nonlocal equations of the Toda chain type ,
+Theor. Math. Phys. 53 (1982) 1092–1099. [33] V. B. Matveev and M. A. Salle: Darboux Transformations and Solitons (Springer, Berlin, 1991). [34] Q-Han Park and H. J. Shin: Systematic construction of multicomponent optical solitons ,
+Phys. Rev. E 61 (2000) 3093–3106. [35] A. Degasperis and S. Lombardo: Multicomponent integrable wave equations: II. Soliton solutions ,
+J. Phys. A: Math. Theor. 42 (2009) 385206. [36] Q-Han Park and H. J. Shin: Higher order nonlinear optical effects on polarized dark solitons ,
+Optics Communications 178 (2000) 233–244. [37] A. Degasperis and S. Lombardo: Rational solitons of wave resonant interaction models ,
+e-print
+arXiv: 1305.6636 (2013). [38] O. C. Wright and M. G. Forest: On the Bäcklund-gauge transformation and
+homoclinic orbits of a coupled nonlinear Schrödinger system ,
+Physica D 141 (2000) 104–116. [39] V. E. Zakharov and S. V. Manakov: On the complete integrability of a nonlinear Schrödinger equation ,
+Theor. Math. Phys. 19 (1974) 551–559. [40] N. Yajima and M. Oikawa: A class of exactly solvable nonlinear evolution equations ,
+Prog. Theor. Phys. 54 (1975) 1576–1577. [41] M. J. Ablowitz: Lectures on the inverse scattering transform ,
+Stud. Appl. Math. 58 (1978) 17–94. [42] A. C. Newell: The general structure of integrable evolution equations ,
+Proc. R. Soc. Lond. A 365 (1979) 283–311. [43] V. E. Zakharov and E. I. Schulman: To the integrability of the system of two coupled nonlinear Schrödinger equations ,
+Physica D 4 (1982) 270–274. [44] B. G. Konopelchenko: Elementary Bäcklund transformations, nonlinear superposition
+principle and solutions of the integrable equations ,
+Phys. Lett. A 87 (1982) 445–448. [45] F. Calogero and A. Degasperis: Elementary Bäcklund transformations, nonlinear superposition formulae
+and algebraic construction of solutions for the nonlinear evolution
+equations solvable by the Zakharov–Shabat spectral transform ,
+Physica D 14 (1984) 103–116. [46] G. L. Lamb, Jr.: Bäcklund transformations for certain nonlinear evolution equations ,
+J. Math. Phys. 15 (1974) 2157–2165. [47] H.-H. Chen: General derivation of Bäcklund transformations from
+inverse scattering problems ,
+Phys. Rev. Lett. 33 (1974) 925–928. [48] K. Konno and M. Wadati: Simple derivation of Bäcklund transformation from Riccati
+form of inverse method , Prog. Theor. Phys. 53 (1975) 1652–1656. [49] H. Steudel: $N$ -soliton solutions to degenerate self-induced transparency ,
+J. Mod. Opt. 35 (1988) 693–702. [50] Q-Han Park and H. J. Shin: Systematic construction of vector solitons ,
+IEEE J. Sel. Top. Quantum Electron. 8 (2002) 432–439. [51] B. G. Konopelchenko: Transformation properties of the integrable evolution equations ,
+Phys. Lett. B 100 (1981) 254–260. [52] A. Dimakis and F. Müller-Hoissen: Solutions of matrix NLS systems and their discretizations: a unified treatment , Inverse Probl. 26 (2010) 095007. [53] B. G. Konopelchenko: On the structure of integrable evolution equations ,
+Phys. Lett. A 79 (1980) 39–43. [54] V. E. Zakharov: The inverse scattering method ,
+“Solitons” edited by R. K. Bullough and P. J. Caudrey
+(Topics in Current Physics 17,
+Springer, Berlin, 1980) pp. 243–285. [55] A. A. Agračev and R. V. Gamkrelidze: The exponential representation of flows and the chronological calculus ,
+Math. USSR Sb. 35 (1979) 727–785. [56] M. Wadati, H. Sanuki and K. Konno: Relationships among inverse method, Bäcklund transformation
+and an infinite number of conservation laws ,
+Prog. Theor. Phys. 53 (1975) 419–436. [57] T. Tsuchida: Systematic method of generating new integrable systems
+via inverse Miura maps , J. Math. Phys. 52 (2011) 053503. [58] J. van der Linden, H. W. Capel and F. W. Nijhoff: Linear integral equations and multicomponent nonlinear integrable
+systems II , Physica A 160 (1989) 235–273. [59] S. I. Svinolupov and R. I. Yamilov: The multi-field Schrödinger lattices ,
+Phys. Lett. A 160 (1991) 548–552. [60] P. J. Olver and V. V. Sokolov: Non-abelian integrable systems of the derivative nonlinear
+Schrödinger type ,
+Inverse Probl. 14 (1998) L5–8. [61] T. Tsuchida and M. Wadati: Complete integrability of derivative nonlinear
+Schrödinger-type equations ,
+Inverse Probl. 15 (1999) 1363–1373. [62] V. E. Adler: On the relation between multifield and multidimensional integrable
+equations , e-print
+nlin.SI/0011039 (2000). [63] A. Dimakis and F. Müller-Hoissen: From AKNS to derivative NLS hierarchies via deformations
+of associative products ,
+J. Phys. A: Math. Gen. 39 (2006) 14015–14033. [64] M. J. Ablowitz, A. Ramani and H. Segur: A connection between nonlinear evolution equations and ordinary
+differential equations of P-type. II ,
+J. Math. Phys. 21 (1980) 1006–1015. [65] V. S. Gerdjikov and M. I. Ivanov: The quadratic bundle of general form and the nonlinear
+evolution equations. II. Hierarchies of Hamiltonian structures ,
+Bulg. J. Phys. 10 (1983) 130–143 [in Russian]. [66] Y. H. Ichikawa, K. Konno, M. Wadati and H. Sanuki: Spiky soliton in circular polarized Alfvén wave ,
+J. Phys. Soc. Jpn. 48 (1980) 279–286. [67] T. Kawata, J. Sakai and N. Kobayashi: Inverse method for the mixed nonlinear Schrödinger
+equation and soliton solutions ,
+J. Phys. Soc. Jpn. 48 (1980) 1371–1379. [68] P. A. Clarkson and C. M. Cosgrove: Painlevé analysis of the non-linear Schrödinger family of equations ,
+J. Phys. A: Math. Gen. 20 (1987) 2003–2024. [69] E. Date, M. Jimbo
+and T. Miwa: Method for generating discrete soliton equations. IV ,
+J. Phys. Soc. Jpn. 52 (1983) 761–765. [70] Y. Li, X. Gu and M. Zou: Three kinds of Darboux transformation for the evolution equations
+which connect with A.K.N.S. eigenvalue problem , Acta Math. Sinica 3 (1987) 143–151. [71] V. E. Adler: Nonlinear superposition principle for the Jordan NLS equation ,
+Phys. Lett. A 190 (1994) 53–58. [72] B. G. Konopelchenko: The group structure of Bäcklund transformations ,
+Phys. Lett. A 74 (1979) 189–192. [73] M. Boiti, F. Pempinelli and G. Z. Tu: A general method for obtaining the double Bäcklund transformations ,
+Phys. Lett. A 93 (1983) 107–110. [74] G. R. W. Quispel, F. W. Nijhoff, H. W. Capel and J. van der Linden: Linear integral equations and nonlinear difference-difference equations ,
+Physica A 125 (1984) 344–380. [75] F. W. Nijhoff, H. W. Capel, G. L. Wiersma
+and G. R. W. Quispel: Linearizing integral transform and partial difference equations ,
+Phys. Lett. A 103 (1984) 293–297. [76] F. W. Nijhoff, G. R. W. Quispel and H. W. Capel: Direct linearization of nonlinear difference-difference equations ,
+Phys. Lett. A 97 (1983) 125–128. [77] M. G. Forest, S. P. Sheu and O. C. Wright: On the construction of orbits homoclinic to plane waves in
+integrable coupled nonlinear Schrödinger systems ,
+Phys. Lett. A 266 (2000) 24–33. [78] V. E. Zakharov and A. B. Shabat: Integration of nonlinear equations of mathematical physics
+by the method of inverse scattering. II ,
+Funct. Anal. Appl. 13 (1979) 166–174. [79] P. B. Abraham and H. E. Moses: Changes in potentials due to changes in the point spectrum: anharmonic oscillators with exact solutions ,
+Phys. Rev. A 22 (1980) 1333–1340. [80] S. Odake and R. Sasaki: Non-polynomial extensions of solvable potentials à la Abraham-Moses ,
+e-print
+arXiv: 1307.0910 (2013). [81] Y. Shao and Y. Zeng: The solutions of the NLS equations with self-consistent sources ,
+J. Phys. A: Math. Gen. 38 (2005) 2441–2467. [82] A. P. Sheppard and Y. S. Kivshar: Polarized dark solitons in isotropic Kerr media ,
+Phys. Rev. E 55 (1997) 4773–4782. [83] Y. Ohta, D.-S. Wang and J. Yang: General $N$ -dark–dark solitons in the coupled nonlinear
+Schrödinger equations ,
+Stud. Appl. Math. 127 (2011) 345–371. [84] M. J. Ablowitz and H. Segur: Solitons and the
+Inverse Scattering Transform (SIAM, Philadelphia, 1981). [85] R. Hirota: The Direct Method in Soliton Theory (Cambridge Univ. Press, Cambridge, 2004)
+edited and translated by A. Nagai, J. Nimmo and C. Gilson. [86] E. Date: On scattering theory of a first order ordinary differential operator ,
+Osaka J. Math. 12 (1975) 777–793. [87] Y.-J. Zhang and Y. Cheng: Solutions for the vector $k$ -constrained KP hierarchy ,
+J. Math. Phys. 35 (1994) 5869–5884. [88] T. Iizuka, M. Wadati and T. Yajima:
+The unstable nonlinear Schrödinger equation and dark solitons,
+J. Phys. Soc. Jpn. 60 (1991) 2862–2875. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

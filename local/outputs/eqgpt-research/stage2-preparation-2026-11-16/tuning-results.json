@@ -1,0 +1,114 @@
+{
+  "status": "COMPLETE",
+  "split": "811",
+  "vocab": 192,
+  "seed": 525,
+  "runs": [
+    {
+      "name": "lr1e4_wd1e3",
+      "settings": {
+        "maximum_epochs": 80,
+        "cosine_epochs": 25,
+        "learning_rate": 0.0001,
+        "minimum_learning_rate": 1e-06,
+        "patience": 15,
+        "min_delta": 0.0001,
+        "minimum_epochs": 25,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "token_budget": 8192,
+        "gradient_clip": 1.0
+      },
+      "epochs": 25,
+      "best_epoch": 4,
+      "best_val_ce": 2.958696800054506,
+      "first_val_ce": 3.4164127793422967,
+      "epoch10_val_ce": 3.121070471475291,
+      "epoch25_val_ce": 3.3550099927325583,
+      "final_val_ce": 3.3550099927325583,
+      "final_train_ce": 0.7249302024015853,
+      "best_to_final_val_delta": 0.3963131926780523,
+      "best_to_final_train_val_gap": 2.630079790330973,
+      "train_ce_at_best": 1.3512263871961476
+    },
+    {
+      "name": "lr5e5_wd1e3",
+      "settings": {
+        "maximum_epochs": 80,
+        "cosine_epochs": 25,
+        "learning_rate": 5e-05,
+        "minimum_learning_rate": 1e-06,
+        "patience": 15,
+        "min_delta": 0.0001,
+        "minimum_epochs": 25,
+        "weight_decay": 0.001,
+        "batch_size": 128,
+        "token_budget": 8192,
+        "gradient_clip": 1.0
+      },
+      "epochs": 25,
+      "best_epoch": 8,
+      "best_val_ce": 2.9590692564498546,
+      "first_val_ce": 3.6512874159702036,
+      "epoch10_val_ce": 3.0096639943677324,
+      "epoch25_val_ce": 3.1235550281613373,
+      "final_val_ce": 3.1235550281613373,
+      "final_train_ce": 0.9202413811642152,
+      "best_to_final_val_delta": 0.1644857717114827,
+      "best_to_final_train_val_gap": 2.203313646997122,
+      "train_ce_at_best": 1.2324733777902577
+    },
+    {
+      "name": "lr1e4_wd1e2",
+      "settings": {
+        "maximum_epochs": 80,
+        "cosine_epochs": 25,
+        "learning_rate": 0.0001,
+        "minimum_learning_rate": 1e-06,
+        "patience": 15,
+        "min_delta": 0.0001,
+        "minimum_epochs": 25,
+        "weight_decay": 0.01,
+        "batch_size": 128,
+        "token_budget": 8192,
+        "gradient_clip": 1.0
+      },
+      "epochs": 30,
+      "best_epoch": 15,
+      "best_val_ce": 3.189075274800145,
+      "first_val_ce": 3.6533782249273257,
+      "epoch10_val_ce": 3.2553574672965118,
+      "epoch25_val_ce": 3.202307412790698,
+      "final_val_ce": 3.2021348110465118,
+      "final_train_ce": 1.6109464962308897,
+      "best_to_final_val_delta": 0.013059536246366577,
+      "best_to_final_train_val_gap": 1.591188314815622,
+      "train_ce_at_best": 1.7063418014468683
+    }
+  ],
+  "analysis": {
+    "trained_to_minimum": true,
+    "all_runs_at_least_25_epochs": true,
+    "best_validation_epoch_range": [
+      4,
+      15
+    ],
+    "validation_minimum_vs_last": "Compare best and final CE; later train CE improvement alone does not count as trained-to-generalize.",
+    "overfitting_evidence": "For wd1e-3 variants validation CE rises after its best while train CE falls. wd1e-2 variant validation remains near its best between epochs25-30 and train-validation gap is lower; this is the most stable of the three, though its best CE is higher.",
+    "validation_limit": "Only21 grouped held-out formulas; several mechanisms are absent from training, so this is a combined regularization and domain-shift diagnostic, not a definitive full-corpus optimum."
+  },
+  "recommended_next_pretraining_config": {
+    "maximum_epochs": 80,
+    "cosine_epochs": 30,
+    "learning_rate": 0.0001,
+    "minimum_learning_rate": 1e-06,
+    "minimum_epochs": 25,
+    "patience": 15,
+    "min_delta": 0.0001,
+    "weight_decay": 0.01,
+    "weight_decay_scope": "matrix parameters only; no bias/normalization decay",
+    "reason": "Best observed stability of validation curve and smallest train-validation gap among tested configurations; retain best-validation checkpoint."
+  },
+  "formal_runs_started": false,
+  "aborted_runs_used_as_final": false
+}

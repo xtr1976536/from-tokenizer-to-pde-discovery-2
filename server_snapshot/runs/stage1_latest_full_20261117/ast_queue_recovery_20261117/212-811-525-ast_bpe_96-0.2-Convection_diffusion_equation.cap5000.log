@@ -1,0 +1,24 @@
+/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/eqgpt_original/code/continue_train_GPT.py:scoring_fixes:209: RuntimeWarning: divide by zero encountered in divide
+/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/eqgpt_original/code/continue_train_GPT.py:scoring_fixes:215: RuntimeWarning: divide by zero encountered in divide
+/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/eqgpt_original/code/continue_train_GPT.py:scoring_fixes:215: RuntimeWarning: divide by zero encountered in divide
+/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/eqgpt_original/code/continue_train_GPT.py:scoring_fixes:215: RuntimeWarning: divide by zero encountered in divide
+/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/eqgpt_original/code/continue_train_GPT.py:scoring_fixes:215: RuntimeWarning: divide by zero encountered in divide
+/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/eqgpt_original/code/continue_train_GPT.py:scoring_fixes:215: RuntimeWarning: divide by zero encountered in divide
+/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/eqgpt_original/code/continue_train_GPT.py:scoring_fixes:215: RuntimeWarning: divide by zero encountered in divide
+Traceback (most recent call last):
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/search_case.py", line 90, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--split',choices=['811','622'],required=True);p.add_argument('--scale',type=int,choices=[212,318,424,530,636],required=True);p.add_argument('--arm',choices=['eqgpt_reference','ast_bpe_96','ast_bpe_128','ast_bpe_160'],required=True);p.add_argument('--seed',type=int,choices=[525,526,527],required=True);p.add_argument('--random-fraction',type=float,choices=[0.,.2],default=.2);p.add_argument('--case',required=True);p.add_argument('--smoke',action='store_true');run(p.parse_args())
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/search_case.py", line 69, in run
+    report=study3_search.search(model if a.arm=='eqgpt_reference' else model.core,adapter,net,db,a.case,work,'cuda',reference=a.arm=='eqgpt_reference',pretrained_path=selected,settings=settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/src/math_tokenizer/eqgpt/stage1_search_20261113.py", line 243, in search
+    evaluated=sample_and_evaluate(model,adapter,evaluator,settings['attempts'],search_limit,settings['seed']+cycle*settings['attempts'],reference)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/search_case.py", line 35, in sample_and_evaluate
+    return sampler.sample_and_evaluate(*args,**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/users/liugang/src/eq-bpe/project/runs/stage1_latest_full_20261117/sampler.py", line 14, in sample_and_evaluate
+    if attempt>=max_attempts:raise RuntimeError(f'Candidate cap reached: {target=} {max_attempts=}')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Candidate cap reached: target=400 max_attempts=5000

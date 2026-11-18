@@ -1,0 +1,502 @@
+{
+  "grid": [
+    62,
+    126
+  ],
+  "valid_points": 7660,
+  "generated_candidates": 10,
+  "fit_pass": 9,
+  "forecast_pass": 0,
+  "records": [
+    {
+      "split": "811",
+      "vocab": 192,
+      "index": 5,
+      "text": "\\Delta(u)+u^{2}+u+\\partial_{t}(u)=0\\\\\\partial_{t}(u)+p+\\partial_{t}(v)+\\Delta(p+1+v^{3}\\cdot p+p\\cdot u\\cdot \\partial_{x}(v)+p\\cdot \\partial_{y}(p)+u)=0\\\\\\tan(p)+v\\cdot \\partial_{x}(u)+1\\cdot \\partial_{y}(u)+\\partial_{t}(p)+p=0",
+      "status": "REJECTED",
+      "fit_pass": true,
+      "r2": [
+        0.00189528968189423,
+        0.09278908517490114,
+        0.1364186577488783
+      ],
+      "coefficients": {
+        "rows": [
+          [
+            1.0,
+            3.8265689878131845e-08,
+            1.1039343787006224,
+            -0.06622242690681357
+          ],
+          [
+            1.0,
+            0.11227207385631648,
+            1.2291179525414168e-08,
+            -2.115523331281659e-06,
+            -0.003245620415281128,
+            -8.29620189747727e-07,
+            4.259741898576988e-07,
+            -0.0025290956580521938
+          ],
+          [
+            1.0,
+            0.018936524789624744,
+            -0.6878090276102945,
+            -1.817572482292303,
+            1.107172281453449
+          ]
+        ],
+        "residual_scales": [
+          0.02291483867819197,
+          0.02291483867819197,
+          0.29292267145487544
+        ],
+        "fit_points": 19280,
+        "source": "visible history only",
+        "anchor_indices": [
+          0,
+          0,
+          0
+        ],
+        "anchor_coefficients": 1.0
+      },
+      "error": "Implicit step failed: status=3, normalized residual=0.000301",
+      "seconds": 11.122803427278996
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "index": 7,
+      "text": "\\partial_{t}(u)+\\Delta(u)=0\\\\p^{2}=0\\\\\\partial_{t}(p)+\\Delta(p)+u\\cdot v=0",
+      "status": "REJECTED",
+      "fit_pass": true,
+      "r2": [
+        4.3118450852253076e-05,
+        -0.3071443090909669,
+        -0.015318321808496682
+      ],
+      "coefficients": {
+        "rows": [
+          [
+            1.0,
+            6.935563262272422e-07
+          ],
+          [
+            1.0
+          ],
+          [
+            1.0,
+            2.565874884954147e-06,
+            -10.865514749105651
+          ]
+        ],
+        "residual_scales": [
+          0.022416364465509847,
+          0.18284828563194228,
+          0.2928578042301453
+        ],
+        "fit_points": 17509,
+        "source": "visible history only",
+        "anchor_indices": [
+          0,
+          0,
+          0
+        ],
+        "anchor_coefficients": 1.0
+      },
+      "error": "Implicit step failed: status=2, normalized residual=0.581",
+      "seconds": 0.5235660579055548
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "index": 8,
+      "text": "\\partial_{t}(u)+\\partial_{y}(v)\\cdot u\\cdot \\partial_{x}(v\\cdot u^{2}+\\partial_{t}(u))+u\\cdot p\\cdot \\partial_{t}(u)+\\partial_{x}(p)+\\partial_{y}(u)\\cdot u\\cdot \\partial_{y}8\\partial_{x}(v)=0\\\\\\partial_{y}(\\Delta(u))+\\partial_{x}(x)+\\Delta(u^{2})=0\\\\\\partial_{y}(p^{2})+\\partial_{t}(p)=0",
+      "status": "REJECTED",
+      "fit_pass": true,
+      "r2": [
+        0.06574794542536233,
+        0.004678500216688697,
+        0.03855138954250881
+      ],
+      "coefficients": {
+        "rows": [
+          [
+            1.0,
+            -46.862035658744446,
+            3.91065185198431,
+            1120.348873970431,
+            4255.509931321878
+          ],
+          [
+            1.0,
+            316.0111278513348,
+            175.68537030767857
+          ],
+          [
+            1.0,
+            7.413078723471705
+          ]
+        ],
+        "residual_scales": [
+          9.60097085415099,
+          101313.1789861771,
+          11.043653996576056
+        ],
+        "fit_points": 19280,
+        "source": "visible history only",
+        "anchor_indices": [
+          0,
+          0,
+          0
+        ],
+        "anchor_coefficients": 1.0
+      },
+      "error": "Implicit rollout budget exceeded",
+      "seconds": 19.216775780543685
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "index": 12,
+      "text": "\\partial_{t}(v)+u+p\\cdot v=0\\\\\\partial_{t}(v)+u\\cdot \\Delta(v)+p\\cdot u+\\Delta(v)=0\\\\p\\cdot v=0",
+      "status": "REJECTED",
+      "fit_pass": true,
+      "r2": [
+        0.004227083388266606,
+        0.02920174147529564,
+        -0.020588646807399913
+      ],
+      "coefficients": {
+        "rows": [
+          [
+            1.0,
+            0.38565043009387046,
+            -0.07769590849604241
+          ],
+          [
+            1.0,
+            1.721169355435061e-05,
+            -0.00041730035908959276,
+            0.5011801020330225
+          ],
+          [
+            1.0
+          ]
+        ],
+        "residual_scales": [
+          0.04291919011362934,
+          0.04291919011362934,
+          0.008051183257578205
+        ],
+        "fit_points": 17509,
+        "source": "visible history only",
+        "anchor_indices": [
+          0,
+          0,
+          0
+        ],
+        "anchor_coefficients": 1.0
+      },
+      "error": "Implicit step failed: status=0, normalized residual=0.00479",
+      "seconds": 5.609593028202653
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "index": 13,
+      "text": "\\partial_{t}(u)+\\partial_{y}8\\partial_{y}(p)+\\partial_{t}(u)+\\partial_{x}(u\\cdot v)+\\partial_{y}(v)=0   \\\\(p\\cdot \\partial_{x}(v))+\\partial_{x}(u)+\\partial_{x}(u^{2})+\\partial_{x}(u)=0\\\\\\partial_{y}(u\\cdot \\partial_{y}(u)+\\partial_{y}(\\Delta(u))+\\partial_{x}(p^{2})+\\partial_{y}(u))+\\partial_{y}(p^{2})=0",
+      "status": "REJECTED",
+      "fit_pass": true,
+      "r2": [
+        0.014528503858906028,
+        0.7898282057686814,
+        0.5895982618178848
+      ],
+      "coefficients": {
+        "rows": [
+          [
+            1.0,
+            -0.5370440477783439,
+            -0.012313230860536477
+          ],
+          [
+            1.0,
+            -0.09118084105730749,
+            -0.003306151570920101
+          ],
+          [
+            1.0,
+            -9545.599131925948,
+            118363.11160626533,
+            245736.61402431823,
+            -380055.4429239402
+          ]
+        ],
+        "residual_scales": [
+          0.07157854989885691,
+          0.0791477809552655,
+          49879236.9884756
+        ],
+        "fit_points": 19280,
+        "source": "visible history only",
+        "anchor_indices": [
+          0,
+          0,
+          0
+        ],
+        "anchor_coefficients": 1.0
+      },
+      "error": "Implicit rollout budget exceeded",
+      "seconds": 16.643849663436413
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "index": 17,
+      "text": "u^{3}+\\Delta(u)+\\Delta(v)+v^{2}=0\\\\\\partial_{t}(v)+\\Delta(v)+u\\cdot vxp=0\\\\\\partial_{t}(v)+v+\\Delta(v)+u=0",
+      "status": "REJECTED",
+      "fit_pass": true,
+      "r2": [
+        0.052861143322354365,
+        0.010589912618409691,
+        0.004064549169075504
+      ],
+      "coefficients": {
+        "rows": [
+          [
+            1.0,
+            0.14005282619050632,
+            246737.96245338177,
+            -13635.845869158175
+          ],
+          [
+            1.0,
+            -5.552133564323957e-06,
+            67.15191358268024
+          ],
+          [
+            1.0,
+            -2.3947368248205355e-06,
+            -0.07395891373357472,
+            -0.1419290828730105
+          ]
+        ],
+        "residual_scales": [
+          349.0726912539048,
+          0.04291919011362934,
+          0.04291919011362934
+        ],
+        "fit_points": 17509,
+        "source": "visible history only",
+        "anchor_indices": [
+          0,
+          0,
+          0
+        ],
+        "anchor_coefficients": 1.0
+      },
+      "error": "Implicit rollout budget exceeded",
+      "seconds": 16.267246009781957
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "index": 21,
+      "text": "\\Delta(u)+v\\partial_{xx}(u)+\\partial_{yy}(u)=0\\\\(u\\cdot v)+\\partial_{t}(u)+p^{2}=0\\\\u+\\partial_{t}(v)=0",
+      "status": "REJECTED",
+      "fit_pass": true,
+      "r2": [
+        0.9331706694735745,
+        0.006747581154607607,
+        -0.0010257381032299229
+      ],
+      "coefficients": {
+        "rows": [
+          [
+            1.0,
+            -0.8226906952957791,
+            1.217631401777497
+          ],
+          [
+            1.0,
+            1.3526672503662622,
+            -0.00571229883686945
+          ],
+          [
+            1.0,
+            -0.08311619459401641
+          ]
+        ],
+        "residual_scales": [
+          297.1054081134275,
+          0.022416364465509847,
+          0.04291919011362934
+        ],
+        "fit_points": 17509,
+        "source": "visible history only",
+        "anchor_indices": [
+          0,
+          0,
+          0
+        ],
+        "anchor_coefficients": 1.0
+      },
+      "error": "Implicit step failed: status=4, normalized residual=0.146",
+      "seconds": 0.5025386773049831
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "index": 24,
+      "text": "\\partial_{t}(u)+\\Delta(u)+u+\\frac{v}{v}+1+u^{2}=0\\\\\\partial_{t}(v)+v\\cdot u+\\Delta(u^{2})+u+\\partial_{t}(v)=0   \\\\\\cos(\\ln(u){\\Delta(v)}+\\Delta(p))=0",
+      "status": "REJECTED",
+      "error": "Rank-deficient coefficient regression",
+      "seconds": 0.03668682463467121
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "index": 27,
+      "text": "\\partial_{t}(u)+\\partial_{y}(p)+\\partial_{y}(\\Delta(u))+\\partial_{y}(\\partial_{y}(u)\\cdot u^{2})=0\\\\u^{2}\\cdot u=0\\\\\\partial_{t}(u)+\\Delta(\\partial_{t}(v))+\\partial_{x}(u)\\cdot u=0",
+      "status": "REJECTED",
+      "fit_pass": true,
+      "r2": [
+        0.025385488713110527,
+        -2.0287802783637274,
+        0.5242832259145316
+      ],
+      "coefficients": {
+        "rows": [
+          [
+            1.0,
+            8197.256133858864,
+            -95.12262429888216,
+            561662.4190682869
+          ],
+          [
+            1.0
+          ],
+          [
+            1.0,
+            -2.0670981951918784e-06,
+            0.40558635098107265
+          ]
+        ],
+        "residual_scales": [
+          101313.1789861771,
+          0.0003030039011062397,
+          0.02291483867819197
+        ],
+        "fit_points": 19280,
+        "source": "visible history only",
+        "anchor_indices": [
+          0,
+          0,
+          0
+        ],
+        "anchor_coefficients": 1.0
+      },
+      "error": "Implicit rollout budget exceeded",
+      "seconds": 15.538330063223839
+    },
+    {
+      "split": "811",
+      "vocab": 192,
+      "index": 31,
+      "text": "\\partial_{t}(u)+\\Delta(u)+\\nabla\\cdot(\\nabla(p)\\cdot u)=0\\\\\\Delta(v)+u+v=0\\\\u\\cdot v+\\partial_{t}(v)=0",
+      "status": "REJECTED",
+      "fit_pass": true,
+      "r2": [
+        0.0034700552398682083,
+        0.16523700566072363,
+        -0.009448884344623876
+      ],
+      "coefficients": {
+        "rows": [
+          [
+            1.0,
+            1.4315807741395672e-05,
+            1.582305262190036e-06
+          ],
+          [
+            1.0,
+            -279.7852403357258,
+            4333.110592726506
+          ],
+          [
+            1.0,
+            -2.509975603669177
+          ]
+        ],
+        "residual_scales": [
+          0.022416364465509847,
+          242.40391747405818,
+          0.04291919011362934
+        ],
+        "fit_points": 17509,
+        "source": "visible history only",
+        "anchor_indices": [
+          0,
+          0,
+          0
+        ],
+        "anchor_coefficients": 1.0
+      },
+      "error": "Implicit step failed: status=4, normalized residual=0.526",
+      "seconds": 0.5704026035964489
+    }
+  ],
+  "access": [
+    {
+      "role": "train_fit",
+      "part": "visible",
+      "trajectory": "1781.h5",
+      "start": 20
+    },
+    {
+      "role": "reward_holdout",
+      "part": "visible",
+      "trajectory": "1781.h5",
+      "start": 2270
+    },
+    {
+      "role": "reward_holdout",
+      "part": "visible",
+      "trajectory": "1781.h5",
+      "start": 2270
+    },
+    {
+      "role": "reward_holdout",
+      "part": "visible",
+      "trajectory": "1781.h5",
+      "start": 2270
+    },
+    {
+      "role": "reward_holdout",
+      "part": "visible",
+      "trajectory": "1781.h5",
+      "start": 2270
+    },
+    {
+      "role": "reward_holdout",
+      "part": "visible",
+      "trajectory": "1781.h5",
+      "start": 2270
+    },
+    {
+      "role": "reward_holdout",
+      "part": "visible",
+      "trajectory": "1781.h5",
+      "start": 2270
+    },
+    {
+      "role": "reward_holdout",
+      "part": "visible",
+      "trajectory": "1781.h5",
+      "start": 2270
+    }
+  ],
+  "test_fields_read": false,
+  "formal_search_started": false
+}

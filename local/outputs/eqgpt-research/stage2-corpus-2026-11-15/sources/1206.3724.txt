@@ -1,0 +1,314 @@
+Global existence of solutions for a chemotaxis-type system arising in crime modeling Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme 1 Introduction 1.1 Model and main results 1.2 Explicit global existence conditions and discussion 1.3 Related results and comments 2 Preliminaries 2.1 Local existence and uniqueness 2.2 Basic estimates, energy identities and functional inequalities 3 Global existence and boundedness: Proof of Theorem 4 The case of a square domain: Proof of Theorem 5 The case $\chi\leq 1$ : Proof of Theorem 6 Conclusion References License: arXiv.org perpetual non-exclusive license arXiv:1206.3724v1 [math.AP] 17 Jun 2012 Global existence of solutions for a chemotaxis-type system arising in crime modeling Thanks: All three authors were partially supported by ECOS-CONICYT Grant $\#$ C08E04.
+Also, RM was partially supported by Basal-CMM-Conicyt, Milenio grant-P05-004F, and Anillo grant ACT-87, and
+QHP was partially supported by Basal-CMM-Conicyt Raul MANASEVICH Centro de
+Modelamiento Matemático and Departamento de Ingeniería
+Matemática, Universidad de Chile, Casilla 170, Correo 3, Santiago, Chile Quoc Hung PHAN Université Paris 13, Sorbonne Paris Cité, Laboratoire Analyse, Géométrie et Applications, CNRS, UMR 7539, 93430 Villetaneuse, France Philippe SOUPLET Université Paris 13, Sorbonne Paris Cité, Laboratoire Analyse, Géométrie et Applications, CNRS, UMR 7539, 93430 Villetaneuse, France We consider a nonlinear, strongly coupled, parabolic system arising in the modeling of burglary in residential areas.
+The system is of chemotaxis-type and involves a logarithmic sensivity function and specific interaction and relaxation terms.
+Under suitable assumptions on the data of the problem, we give a rigorous proof of the existence of a global and bounded, classical solution,
+thereby solving a problem left open in previous work on this model.
+Our proofs are based on the construction of approximate entropies and on the use of various functional inequalities.
+We also provide explicit numerical conditions for global existence when the domain in a square,
+including concrete cases involving values of the parameters
+which are expected to be physically relevant. 1. Introduction 1.1. Model and main results In a series of recent papers, models based on partial differential equations have been derived to study crime, see [ 3 ] , [ 8 , 18 , 19 , 21 , 22 ] .
+Some of these papers are most related to modeling burglary of houses.
+A basic issue here is to obtain patterns that describe
+the location of hotspots, and study phenomena such as appearance and disappearance of them,
+their stability and movement. A very successful model was obtained recently by Short et al. in [ 22 ] . They first derived
+an agent-based statistical model to study the dynamics of hotspots, taking two sociological effects into account:
+the ‘broken window effect’ and the ‘repeat near-repeat effect’.
+The first effect refers to the observation that crime in an area leads to more crime,
+and the second one to the observation that houses burglarized at some moment have an increased
+probability of being burglarized again for some period of time after that moment. The agent-based model considered relies
+on the assumption that criminal agents are walking randomly on a two-dimensional lattice and are committing
+burglaries when encountering an attractive opportunity.
+An attractiveness value is assigned to every house, which measures
+how easily the house can be burgled
+without consequences for the criminal agent.
+In addition to be walking randomly, the criminal agents move toward
+areas of high attractiveness values. In turn, when a burglary occurs,
+it increases the attractiveness of the house that was burglarized and of those nearby.
+If no additional burglaries occur, then the local attractiveness
+decays toward a constant value. In a second step, by taking a suitable limit of the equations for the discrete model,
+the authors in [ 22 ] obtained the following system of parabolic differential equations
+(in adimensionalized form): $\left\{\begin{array}[]{ll}\displaystyle\frac{\partial A}{\partial t}=\eta\triangle A+NA+A^{0}-A,\\
+\\
+\displaystyle\frac{\partial N}{\partial t}=\nabla\cdot\Bigr[\nabla N-N\nabla\vartheta(A)\Bigl]-NA+\overline{A}-A^{0}.\end{array}\right.$ (1) Here and thoughout this article, we denote $\vartheta(A)=\chi\log A,\quad\hbox{with $\chi>0$ constant.}$ (2) The model described in [ 22 ] involves the specific value $\chi=2$ (we note that the parameter $\chi$ cannot be scaled out by a linear change of
+dependent or independent variables).
+The functions $A(x;t)$ and $N(x,t)$ respectively represent
+the attractiveness value and the criminal density at position $x$ and time $t$ .
+The first equation describes the evolution of the attractiveness
+of individual houses to burglary, and the second describes the burglar movement.
+Here $\Omega$ is a bounded domain in ${\mathbb{R}}^{2}$ , $\eta>0$ is the diffusion rate of attractiveness, $A^{0}$ is the intrinsic attractiveness, $\overline{A}$ is a contant that in the equilibrium case represents the average attractiveness. A first effort to study the dynamics of the model represented by problem ( 1 ) was done in [ 19 ] , where
+a corresponding initial-boundary value problem with no flux boundary conditions is considered.
+To deal with this problem, the authors in [ 19 ] assume, for
+simplicity, that $\Omega$ is a square and under some symmetry conditions are able to map this problem into
+one with periodic problem boundary conditions. Their main result is local existence of a solution,
+but global existence is left open.
+In addition, and as a simplification of the model in [ 22 ] , they considered a generalized version
+of a Keller-Segel chemotaxis model with the goal of
+understanding possible conditions for global existence vs blow-up of solutions in finite time for the original model. In [ 22 ] , an important hypothesis is that burglars are generated in the model at a constant rate
+and leave the lattice immediately after they have committed a burglary. In [ 18 ] , a modified agent-based
+model for burglary was obtained,
+a new condition is introduced to modify these effects. This new condition, that is refer as
+burglar fatigue, models the effect that if burglars are sufficiently deterred, they will
+eventually get tired and will stop looking for houses
+to burglar. This consideration introduces changes to the original equations of Short et al.
+Some additional changes to the original equations
+come in by considering in the model that, if too many burglaries occur at some location,
+then burglars are likely to assume that most of the high-value
+is gone or that the owners of the place have implemented more strict security measures. As in the original model, by taking the continuous limit to this new agent-based model,
+a new system of parabolic equations is obtained in [ 18 ] . This system, complemented
+with initial data and no-flux boundary conditions,
+leads us to study the following initial-boundary value problem
+(again in adimensionalized form): $\left\{\begin{array}[]{ll}\displaystyle\frac{\partial A}{\partial t}=\eta\Delta A+\psi NA(1-A)+\tilde{A}-A,&\quad x\in\Omega,\ t>0,\\
+\\
+\displaystyle\frac{\partial N}{\partial t}=\nabla\cdot\Bigr[\nabla N-N\nabla\vartheta(A)\Bigl]+\omega-\omega N,&\quad x\in\Omega,\ t>0,\\
+\\
+\displaystyle\frac{\partial A}{\partial\nu}=\frac{\partial N}{\partial\nu}=0,&\quad x\in\partial\Omega,\ t>0,\\
+\\
+A(x,0)=A_{0}(x),\quad N(x,0)=N_{0}(x),&\quad x\in\Omega.\end{array}\right.$ (3) Here again the function $\vartheta$ is defined by ( 2 ) with $\chi=2$ in [ 18 ] . Moreover,
+it is assumed – as we will do throughout this paper – that $\Omega$ is a sufficiently smooth bounded domain of ${\mathbb{R}}^{2}$ , or a square, (4) $\eta,\psi,\omega,\tilde{A}>0$ are constants (5) and that the initial data satisfy $(A_{0},N_{0})\in H^{1+\beta}(\Omega)\times L^{2}(\Omega)$ for some $\beta>0$ , with $A_{0}>0$ in $\overline{\Omega}$ and $N_{0}\geq 0$ a.e. in $\Omega$ . (6) The outward normal vector on $\partial\Omega$ is denoted by $\nu$ .
+(We point out that all the functional analytic properties needed for the proofs
+remain true in a square, although the latter is not smooth at the corner points.)
+Problem ( 3 ) is locally well posed, the positivity of $A$ being of course understood as part
+of the definition of solution (see Section 2 for details). In [ 18 ] , some results about linearized stability/instability of the homogeneous steady-states
+and some numerical simulations suggesting the existence of hotspots were given for system ( 3 ).
+However, the (local and) global existence of solutions was left open. In this paper, our main goal is to give a rigorous proof of the global existence and boundedness of solutions of system ( 3 )
+under suitable assumptions. In what follows, we denote $\varepsilon_{0}=\varepsilon_{0}(\Omega)=\mu^{-2}K^{-1/2},$ where $\mu$ is the best constant in the Poincaré-Sobolev inequality ( 28 )
+and $K$ is the best constant in the interpolation estimate ( 30 ).
+Also, recalling that $A_{0}\in C(\overline{\Omega})$ by Sobolev imbedding, we set $A_{\max}=\max\{1,\tilde{A},\displaystyle\max_{\overline{\Omega}}A_{0}\}\geq A_{\min}=\min\{1,\tilde{A},\displaystyle\min_{\overline{\Omega}}A_{0}\}>0.$ Our main result is the following: Theorem 1.1 . Assume ( 2 ), ( 4 )-( 6 ) and $\Bigl(\frac{A_{\max}}{A_{\min}}\Bigr)^{2}(A_{\max}-A_{\min})\max\{\|N_{0}\|_{1},|\Omega|\}<\varepsilon_{0}{\hskip 1.0pt}\eta{\hskip 1.0pt}\psi^{-1}\chi^{-2}.$ (7) Then the solution of problem ( 3 ) is global and satisfies the uniform bounds $\sup_{t\geq 0}\|A(t)\|_{\infty}<\infty$ (8) and $\sup_{t\geq\tau}\|N(t)\|_{\infty}<\infty,\quad\hbox{ for all }\tau>0.$ (9) On the other hand, when $\chi\leq 1$ , by using an argument from [ 5 ] , we can show that the
+conclusion of Theorem 1.1 remains
+true under a simple assumption on $A_{0}$ and $\tilde{A}$ and without any
+size restriction on $N_{0}$ .
+However, this does not apply to the criminological model in [ 18 ] where $\chi=2$ . Theorem 1.2 . Assume ( 2 ), ( 4 )-( 6 ), with $0<\chi\leq 1$ , $\tilde{A}\leq 1$ and $\displaystyle\max_{\overline{\Omega}}A_{0}\leq 1$ .
+Then the solution of problem ( 3 ) is global and satisfies the uniform bounds
+( 8 )-( 9 ). 1.2. Explicit global existence conditions and discussion Interestingly, in view of practical applications, the constant appearing in
+Theorem 1.1 can be estimated explicitly in the case of a square. Theorem 1.3 . Let $\Omega=(0,L)^{2}$ , with $L>0$ . Then the result of Theorem 1.1 is true with $\varepsilon_{0}=\frac{1}{3\sqrt{3}}\approx 0.19.$ With Theorem 1.3 at hand, we shall now explicitly compute our sufficient condition
+for global existence and boundedness in concrete cases involving values of the parameters
+which are expected to be physically relevant (cf. [ 22 , 18 ] ).
+The parameters of system ( 3 ) are expressed in [ 18 ] in terms of parameters of the dimensional form of the model.
+To avoid confusion, dimensional parameters are marked with a hat in what follows. The domain is taken to be a square lattice where exactly one house is located at each lattice site.
+Distances are thus measured in units of house separations and the adimensional side length of the
+domain is thus essentially equal to $\sqrt{p}$ , where $p\gg 1$ is the total number of houses.
+After a suitable renormalization (involving the diffusion and mean lifetime parameters of the burglars
+– see table 1 and formula (3.3) in [ 18 , p.406] ),
+the measure of the adimensionalized spatial domain $\Omega$ is given by $|\Omega|=p/3500$ .
+We chose $p=3500$ , hence $|\Omega|=1$ .
+Next, the parameter $\omega$ is given by $\omega=\hat{\omega}_{2}/\hat{\omega}_{1}$ , where $\hat{\omega}_{1}$ and $\hat{\omega}_{2}$ are the mean lifetimes of the attractiveness and of the active burglars, respectively.
+The values chosen in [ 18 ] are $\hat{\omega}_{1}=(1/14)\,{\rm day}^{-1}$ and $\hat{\omega}_{2}=6\,{\rm day}^{-1}$ , hence $\omega=84$ .
+The parameter $\psi$ is given by $\psi=\hat{\theta}\hat{\Gamma}/\hat{\omega}_{1}\hat{\omega}_{2}$ , where $\hat{\Gamma}$ , describing the source term, stands for the number of burglars becoming active
+per time and surface unit and $\hat{\theta}$ is the factor that boosts attractiveness due to a burglary.
+We take $\hat{\Gamma}=0.002\ {\rm burglars}\cdot{\rm day}^{-1}\cdot{\rm house\ separation}^{-2}$ ,
+which is the value taken in [ 22 ] for the analogous parameter (the value $\hat{\Gamma}=0.5$ used in [ 18 ] seems too high,
+apparently due to a lack of spatial normalization).
+For the domain that we consider, this means a total source term of $7\ {\rm burglars}\cdot{\rm day}^{-1}$ .
+Concerning $\hat{\theta}$ , following [ 18 ] , we take $\hat{\theta}=1\ {\rm burglars}^{-1}\cdot{\rm day}^{-1}$ , which leads to $\psi=(14/3)\times 10^{-3}\approx 0.0047$ .
+As for the attractiveness diffusion parameter $\eta$ , which models neighboring effects, smaller values mean that
+repeat victimization is more and more likely than near-repeat victimization.
+The values taken in [ 22 ] range from $0.01$ to $0.2$ , whereas [ 18 ] takes $\eta=0.001$ . Last, let us consider the initial data.
+Concerning the (adimensional) attractiveness $A$ , recall
+that the constant $\tilde{A}$ is assumed to represent its static component,
+while $A-\tilde{A}$ represents the dynamic component associated with the boost hypothesis.
+However it is not made completely clear in [ 22 , 18 ] how $A$ should be evaluated or measured.
+Here we shall assume that $\tilde{A}\leq A_{0}(x)\leq 1,$ (10) which implies that $A_{\min}=\tilde{A}$ and $A_{\max}=1$ .
+Consequently (cf. Lemma 2.1 below), the attractiveness remains for all times larger or equal
+to $\tilde{A}$ , and at most one.
+Note that in the numerical simulations from [ 18 ] , the initial data
+are assumed to be close to the homogeneous steady-state: $(A^{*},N^{*})=\biggl(\frac{\psi-1+\sqrt{(\psi-1)^{2}+4\psi\tilde{A}}}{2\psi},1\biggr),$ which in particular satisfies ( 10 ).
+As for the initial burglar density $N_{0}$ , we assume for simplicity that its average value $\overline{N_{0}}$ satisfies $\overline{N_{0}}:=|\Omega|^{-1}\|N_{0}\|_{1}\leq 1=N^{*}.$ In dimensional units (cf. [ 18 ] ), in view of the above choice of $\hat{\omega}_{2}$ and $\hat{\Gamma}$ ,
+this corresponds to an initial total population less than $\approx 1.2$ burglars
+(although this may seem small, recall that we have at the same time a total source term of $7\ {\rm burglars}\cdot{\rm day}^{-1}$ ). Now, for the above-chosen numerical values of the parameters, the
+global existence and boundedness condition ( 7 ) in Theorems 1.1 and 1.3 becomes $\tilde{A}^{-2}(1-\tilde{A})<\gamma\,\eta,\quad\hbox{ where }\gamma=\frac{1}{12\sqrt{3}}{\hskip 1.0pt}(|\Omega|\psi)^{-1}=\frac{125\sqrt{3}}{21}\approx 10.31.$ (11) This is equivalent to $\tilde{A}>\tilde{A}_{-}:=\frac{2}{1+\sqrt{1+4\gamma\,\eta}}.$ The values of $\tilde{A}_{-}$ as a function of $\eta$ are given in the following table: $\eta$ $\tilde{A}_{-}$ 0.01 0.91 0.05 0.73 0.1 0.61 0.2 0.49 Therefore, our global existence conditions are compatible with magnitudes of attractivity which
+are up to about twice those of their static component in the range of $\eta$ used by [ 22 ] .
+We note that it is suggested in [ 18 ] that a ratio
+of order $10$ (instead of $2$ ) might be desirable, even for smaller values of $\eta$ that the ones we consider here. However, this is still beyond
+the range in which we can rigorously prove global existence
+(and actually, global existence for such systems need not be taken for granted – see next subsection). 1.3. Related results and comments As noted in [ 22 ] , problems ( 1 ) and ( 3 ) belong to the family of chemotaxis-type systems.
+A more general class of such systems takes the form $\displaystyle\begin{cases}\displaystyle\frac{\partial A}{\partial t}=\eta\Delta A-A+f(A,N),\\
+\\
+\displaystyle\frac{\partial N}{\partial t}=\Delta N-\nabla(N\nabla h(A))-\omega N+g(A,N).\end{cases}$ (12) The typical feature of chemotaxis-type systems is the presence of the antidiffusion term, here $-\nabla(N\nabla h(A))$ ,
+by which the population, of density $N$ , tends to move towards higher concentrations of $A$ .
+The best-known among this class of problems is the Keller-Segel model [ 14 ] , corresponding to $f=N$ , $h=A$ and $g=0$ .
+There is a very large literature on such systems (see [ 11 , 12 ] , for recent surveys). System ( 12 ) with a logarithmic sensivity function $h=\chi\log(A)$ was considered in [ 4 , 23 ] for $f=N$ and $g=\omega=0$ .
+Without any size restriction on the initial data, existence of a global classical solution
+was proved in [ 4 ] under the restriction $\chi\leq 1$ ,
+whereas existence of a (possibly singular) global weak solution was proved in [ 23 ] for any $\chi>0$ .
+System ( 12 ) with a logarithmic sensivity function was also considered in [ 2 ] (see also [ 17 ] ),
+in conjunction with a quadratic absorption term, namely $g=-cN^{2}$ , and $f=N$ .
+In this case, global classical existence was proved for any $\chi>0$ without size restriction on the initial data,
+but the proof made crucial use of the quadratic absorption term. Here, with only a linear absorption $-\omega N$ and the specific $f$ under consideration,
+a size condition on the initial data is required to prove existence of global classical solution,
+but we do not need absolute restrictions on the parameter $\chi$ . Although we do not know
+what happens for larger initial data, let us recall that in the case of the Keller-Segel model
+in two space dimensions, global existence is true only for small initial mass and that blow-up may
+occur for large mass. However proving blow-up for $2$ -dimensional parabolic chemotaxis models is a very challenging task.
+The only known blow-up result for the $2d$ Keller-Segel system is that of Herrero and Velázquez [ 10 ] ,
+and its proof, based on matched asymptotics, is highly technical.
+In simplified parabolic-elliptic chemotaxis models, where the term $\partial A/\partial t$ in ( 12 ) is replaced by $0$ ,
+blow-up proofs are easier and there are more results available. In particular,
+when $h=\chi\log A$ , $f=N$ , $g=\omega=0$ and the space dimension $n$ is at least $3$ ,
+finite time blow-up is known [ 15 ] to occur for $\chi>2n/(n-2)$ . For blow-up results concerning the
+parabolic-elliptic Keller-Segel system, see e.g. the survey [ 6 ] . Our global existence proofs, as is customary in chemotaxis-type problems, rely on a priori estimates obtained by energy
+and entropy arguments.
+However, in the case of Theorem 1.1 , some care is needed to properly
+take into account the size condition on the initial data.
+In the case of the Keller-Segel system, an exact entropy functional was found and used to prove global existence
+for suitably small mass in [ 16 , 9 , 4 ] .
+Although system ( 3 ) is not known to possess an exact entropy functional, assuming condition ( 7 ) on the data of the problem, we can nevertheless construct an approximate entropy functional (with the typical $N\log N$ growth – cf. Lemma 3.1 ),
+which is the key to our a priori estimates.
+We also stress that, in spite of uniform lower and upper bounds for $A$ which easily follow from the maximum principle, the proof of the estimates of $N$ is far from being immediate.
+As for Theorem 1.2 , under the assumptions $\chi\leq 1$ , $\tilde{A}\leq 1$ and $\displaystyle\max_{\overline{\Omega}}A_{0}\leq 1$ , we can use a modified entropy functional from [ 5 ] . Remark 1.1 . By straightforward modifications of the method (see Remark 4.1 for more details), one can show that
+a result similar to Theorem 1.1 remains true for the initial-boundary value problem associated with the more general
+system ( 12 )
+where $f,g,h$ are (sufficiently smooth) functions satisfying the following conditions • $({\mathcal{H}}_{1})$ $g(A,0)\geq 0,\quad\forall A\geq 0.$ • $({\mathcal{H}}_{2})$ There exist two positive constants $A_{\min}<A_{\max}$ such that $\displaystyle-A_{\min}+f(A_{\min},N)\geq 0,\quad\forall N\geq 0,$ $\displaystyle-A_{\max}+f(A_{\max},N)\leq 0,\quad\forall N\geq 0.$ • $({\mathcal{H}}_{3})$ $|g(A,N)|\leq g_{1}(A)N^{1-\delta}+g_{2}(A),$ where $\delta\in(0,1)$ and $g_{1},g_{2}$ are bounded in $[A_{\min},A_{\max}]$ . • $({\mathcal{H}}_{4})$ $|f(A,N)|\leq f_{1}(A)N+f_{2}(A),$ where $f_{1},f_{2}$ are bounded in $[A_{\min},A_{\max}]$ . • $({\mathcal{H}}_{5})$ $\sup_{[A_{\min},A_{\max}]}\bigg|\frac{d^{i}h(A)}{dA^{i}}\bigg|<\infty,\quad i=1,2.$ The outline of the rest of the article is as follows.
+Subsection 2.1 is devoted to local existence and uniqueness,
+whereas Subsection 2.2 contrains basic estimates, energy identities and functional inequalities
+which will needed for proving global existence.
+Sections 3–5 are then devoted to the proofs of Theorems 1.1, 1.3 and 1.2, respectively.
+Finally, our main conclusions are summarized in Section 6. 2. Preliminaries 2.1. Local existence and uniqueness We have the following local existence and uniqueness result. Proposition 2.1 . Assume ( 2 ), ( 4 )-( 6 ) and
+fix any $\beta\in(0,\frac{1}{2})$ .
+Then problem ( 3 ) admits a unique, classical,
+maximal in time solution $(A,N)$ with $A>0$ .
+Moreover, if its maximal existence time $T^{*}$ is finite,
+then $\lim_{t\to T^{*}}\|A(t)\|_{H^{1+\beta}}+\|N(t)\|_{L^{2}}=\infty$ . Note that the solution given by Proposition 2.1 is of course independent of the choice of $\beta\in(0,\frac{1}{2})$ (due to local uniqueness and the fact that $H^{1+\beta}(\Omega)\subset H^{1+\gamma}(\Omega)$ for $\beta>\gamma$ ).
+The procedure for proving Proposition 2.1 is rather standard (see, e.g., [ 17 , 2 , 13 ] for more details on similar problems).
+Although the function $\vartheta$ is singular at $A=0$ , this
+actually causes no difficulty, because a positive lower bound for $A$ can be deduced from the maximum principle
+(first working with a smooth replacement of $\vartheta$ ).
+We sketch the proof for completeness. We first recall some properties of theory of abstract evolution equation.
+Let $\mathcal{H},\mathcal{V}$ be two separable Hilbert spaces with dense and
+compact embedding $\mathcal{V}\subset\mathcal{H}$ . Identifying $\mathcal{H}$ with its dual $\mathcal{H}^{\prime}$ and denoting the dual space of $\mathcal{V}$ by $\mathcal{V}^{\prime}$ . Consider the initial value problem $\displaystyle\begin{cases}\displaystyle\frac{dU}{dt}+\mathcal{A}U=F(U),\quad 0<t<\infty,\\
+U(0)=U_{0}.\end{cases}$ (13) Here, $\mathcal{A}$ is bounded linear operator from $\mathcal{V}$ to $\mathcal{V}^{\prime}$ which is defined by a symmetric bilinear form $a(.,.)$ on $\mathcal{V}$ satisfying $\displaystyle|a(U,V)|\leq M\|U\|_{\mathcal{V}}\|V\|_{\mathcal{V}},\quad U,V\in\mathcal{V},$ $\displaystyle a(U,U)\geq c\|U\|^{2}_{\mathcal{V}},\quad U\in\mathcal{V},$ (14) with some positive constants $c,M$ . $F:\mathcal{V}\to\mathcal{V}^{\prime}$ is a continuous mapping such that,
+for each $\theta>0$ , there exist nondecreasing functions $\phi_{\theta},\psi_{\theta}$ such that $\displaystyle\|F(U)\|_{\mathcal{V}^{\prime}}\leq\theta\|U\|_{\mathcal{V}}+\phi_{\theta}(\|U\|_{\mathcal{H}}),$ (15) $\displaystyle\|F(U)-F(V)\|_{\mathcal{V}^{\prime}}\leq\theta\|U-V\|_{\mathcal{V}}+(\|U\|_{\mathcal{V}}+\|V\|_{\mathcal{V}}+1)\psi_{\theta}(\|U\|_{\mathcal{H}}+\|V\|_{\mathcal{H}})\|U-V\|_{\mathcal{H}},$ (16) for $U,V\in\mathcal{V}$ .
+Then by standard argument (see [ 20 ] ), the following holds: Proposition 2.2 . Assume ( 14 )-( 16 ) and let $M>0$ and $U_{0}\in\mathcal{H}$ with $\|U_{0}\|_{\mathcal{H}}\leq M$ .
+Then there exists $T=T(M)>0$ and a unique local-in-time solution $U$ to ( 13 ) such that $\displaystyle U\in C([0,T];\mathcal{H})\;\cap\;H^{1}([0,T];\mathcal{V}^{\prime})\;\cap\;L^{2}([0,T];\mathcal{V}).$ (17) To deduce Proposition 2.1 from Proposition 2.2 ,
+we fix $\beta$ in $(0,\frac{1}{2})$ and we set $\displaystyle\mathcal{V}:=H^{2+\beta}_{N}(\Omega)\times H^{1}(\Omega),\quad\mathcal{H}:=H^{1+\beta}(\Omega)\times L^{2}(\Omega).$ Then $\displaystyle{\mathcal{V}^{\prime}}=H^{\beta}(\Omega)\mathcal{\times}(H^{1}(\Omega))^{\prime}.$ The linear operator $\mathcal{A}$ is defined by $\displaystyle\mathcal{A}=\begin{pmatrix}T_{1}&0\\
+0&T_{2}\end{pmatrix},$ where $T_{1}=-\Delta+1$ is regarded as an operator from $H^{2+\beta}_{N}(\Omega)$ to $H^{\beta}(\Omega)$ and $T_{2}=-\Delta+\omega$ is
+the Laplace operator equipped with the Neumann boundary condition in $H^{1}(\Omega)^{\prime}$ .
+Then the bilinear form $a(.,.)$ is defined by $\displaystyle a(U,V)=\left(T_{1}^{(1+\beta)/2}A_{1},T_{1}^{(1+\beta)/2}A_{2}\right)_{L^{2}}+\int_{\Omega}(\nabla N_{1}\nabla N_{2}+\omega N_{1}N_{2})dx,$ where $U=(A_{1},N_{1})$ and $V=(A_{2},N_{2})$ . For any fixed $\alpha\in(0,A_{\min})$ , we pick a function $\vartheta_{\alpha}\in C^{\infty}({\mathbb{R}})$ such that $\vartheta_{\alpha}(s)=\chi\log s$ for $s\geq A_{\min}$ .
+Define $F_{\alpha}(U)$ by $\displaystyle F_{\alpha}(U)=\begin{pmatrix}\psi NA(1-A)+\tilde{A}\\
+-\nabla(N\nabla\vartheta_{\alpha}(A))+\omega\end{pmatrix},\qquad U=(A,N).$ and denote by $(P_{\alpha})$ the modified problem ( 3 ). As a consequence of Proposition 2.2 , problem $(P_{\alpha})$ admits a unique,
+maximal in time solution $(\hat{A},\hat{N})$ , defined in an interval $[0,T^{*})$ .
+Moreover, if $T^{*}<\infty$ then $\lim_{t\to T^{*}}\|\hat{A}(t)\|_{H^{1+\beta}}+\|\hat{N}(t)\|_{L^{2}}=\infty$ .
+Furthermore, it is classical for $t>0$ .
+This follows from a standard bootstrap argument based on parabolic regularity and imbedding theorems. Observing that $A_{\min}$ is a subsolution of the equation for $\hat{A}$ ,
+we deduce that $\hat{A}\geq A_{\min}$ in $(0,T^{*})$ , so that $(\hat{A},\hat{N})$ actually solves the original problem ( 3 ). As for local uniqueness for ( 3 ), the notion of solution to ( 3 ) implies that $A$ is uniformly positive
+on $\overline{\Omega}\times[0,T]$ for any $0<T<T^{*}$ (since $A\in C([0,T^{*});H^{1+\beta}(\Omega))$ .
+Since $\alpha$ can be arbitrary close to $0$ in problem $(P_{\alpha})$ ,
+the uniqueness for the original problem follows from the uniqueness for $(P_{\alpha})$ . 2.2. Basic estimates, energy identities and functional inequalities Our first lemma provides the primary $L^{1}$ control of $N$ and uniform lower and upper bounds for $A$ .
+The latter can be easily obtained from the maximum principle,
+owing to the special form of the nonlinear term in the equation for $A$ . Lemma 2.1 (A priori estimates for $A$ and $N$ ) . For all $t\in(0,T^{*})$ , we have $\displaystyle A(x,t)\geq\min\{1,\tilde{A},\inf A_{0}(x)\}:=A_{\min},$ (18) $\displaystyle A(x,t)\leq\max\{1,\tilde{A},\sup A_{0}(x)\}:=A_{\max},$ (19) $\displaystyle N(x,t)\geq 1-e^{-\omega t}>0,$ (20) $\displaystyle\|N(t)\|_{1}=e^{-\omega t}\|N_{0}\|_{1}+|\Omega|(1-e^{-\omega t}),$ (21) hence in particular $\|N(t)\|_{1}\leq\max\{\|N_{0}\|_{1},|\Omega|\}:=N_{1,\max}.$ (22) Proof. To check ( 18 ) and ( 19 ),
+it suffices to observe that $A_{\min},A_{\max}$ are, respectively, sub-/supersolution of the equation for $A$ ,
+with Neumann boundary conditions, and to apply the maximum principle.
+The proof of ( 20 ) is similar, in view of the regularity of the solution.
+As for ( 21 ), it follows by integrating the equation for $N$ in space.
+∎ We next state the basic energy identities. Lemma 2.2 (Energy identities) . For all $t\in(0,T^{*})$ , we have $\displaystyle\frac{1}{2}\frac{d}{dt}\|A(t)\|_{2}^{2}+\|A(t)\|_{2}^{2}+\eta\|\nabla A(t)\|^{2}_{2}=\psi\int_{\Omega}NA^{2}(1-A)dx+\int_{\Omega}\tilde{A}A\,dx,$ (23) $\displaystyle\frac{1}{2}\frac{d}{dt}\|\nabla A(t)\|_{2}^{2}+\|\nabla A(t)\|_{2}^{2}+\eta\|\Delta A(t)\|^{2}_{2}=-\psi\int_{\Omega}NA(1-A)\Delta A\,dx,$ (24) $\displaystyle\frac{d}{dt}\int_{\Omega}(N\log N-N+1)dx+\omega\int_{\Omega}(N\log N-N+1)dx+\int_{\Omega}\frac{|\nabla N|^{2}}{N}dx-\int_{\Omega}\nabla N.\nabla\vartheta(A)dx$ $\displaystyle\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad=\omega\int_{\Omega}(\log N-N+1)dx\leq 0,$ (25) $\displaystyle\frac{1}{2}\frac{d}{dt}\|N(t)\|_{2}^{2}+\omega\|N(t)\|_{2}^{2}+\|\nabla N(t)\|_{2}^{2}=\int_{\Omega}N\nabla N.\nabla\vartheta(A)dx+\omega\int_{\Omega}Ndx.$ (26) Proof. Formulae ( 23 )-( 26 ) follow by integration by parts after multipying,
+respectively, the first equation in ( 3 ) by $A$ and $-\Delta A$ ,
+and the second equation in ( 3 ) by $\log N-1$ and $N$ . Note that these manipulations are licit
+in view of ( 20 ), of the classical regularity of $N$ and of the
+higher parabolic regularity applied to the equation for $A$ .
+∎ Lemma 2.3 (Poincaré’s inequality) . For any uniformly positive function $u\in H^{1}(\Omega)$ , there holds $\displaystyle\|u\|_{2}^{2}\leq\mu^{2}\|u\|_{1}\int_{\Omega}\frac{|\nabla u|^{2}}{u}dx+|\Omega|^{-1}\|u\|_{1}^{2},$ (27) where $\mu$ is the best constant of the following Poincaré-Sobolev inequality: $\|u-|\Omega|^{-1}\int_{\Omega}u\,dx\|_{2}\leq\mu\|\nabla u\|_{1},\quad u\in W^{1,1}(\Omega).$ (28) Proof. Denote $\overline{u}=|\Omega|^{-1}\int_{\Omega}u\,dx$ .
+Using the orthogonality of $u-\overline{u}$ and $\overline{u}$ in $L^{2}$ and ( 28 ), we have $\displaystyle\|u\|_{2}^{2}$ $\displaystyle=\|u-\overline{u}\|_{2}^{2}+|\Omega|\overline{u}^{2}$ $\displaystyle\leq\mu^{2}\|\nabla u\|_{1}^{2}+|\Omega|\overline{u}^{2}.$ (29) Since $\|\nabla u\|_{1}^{2}\leq\|u\|_{1}\int_{\Omega}\frac{|\nabla u|^{2}}{u}dx$ by the Cauchy-Schwarz inequality, we deduce
+( 27 ).
+∎ A key ingredient in the proof of our main result is the following interpolation estimate.
+We recall that $H^{2}(\Omega)\subset C(\overline{\Omega})$ , since we are in two space dimensions;
+however Lemma 2.4 remains true in any dimension if we assume $u\in H^{2}(\Omega)\cap C(\overline{\Omega})$ . Lemma 2.4 . Assume that $u\in H^{2}(\Omega)$ satisfies $\partial u/\partial\nu=0$ on $\partial\Omega$ (in the sense of traces).
+Then $\int_{\Omega}|\nabla u|^{4}dx\leq K\,{\rm osc}^{2}(u)\int_{\Omega}|\Delta u|^{2}dx,$ (30) where $K=K(\Omega)>0$ . Proof. Step 1. We first give a homogeneous version of the standard elliptic $L^{2}$ -estimate, namely: $\displaystyle\|D^{2}u\|_{2}:=\Bigl(\sum_{ij}\|u_{x_{i}x_{j}}\|_{2}^{2}\Bigr)^{1/2}\leq C(\Omega)\|\Delta u\|_{2},$ (31) for any $u\in H^{2}(\Omega)$ with Neumann boundary condition. To verify ( 31 ), we start from $\|D^{2}u\|_{2}\leq C(\Omega)\|-\Delta u+u\|_{2}$ ,
+which is well known (see e.g. [ 7 , Chapter 9] ), hence $\displaystyle\|D^{2}u\|_{2}\leq C(\Omega)(\|\Delta u\|_{2}+\|u\|_{2}).$ (32) Let $(e_{k})_{k\geq 0}$ be a Hilbert basis of $L^{2}$ made of eigenfunctions of $-\Delta$ with
+domain $H^{2}$ equipped with Neumann conditions.
+Denote the eigenvalues by $\lambda_{0}=0<\lambda_{1}\leq\lambda_{2}\leq...$ and observe that $e_{0}=C=Const.$ Set $f=-\Delta u$ , decompose $f=\sum_{k\geq 0}c_{k}e_{k}$ , and note that $c_{0}=(f,e_{0})=C\int_{\Omega}f\,dx=-C\int_{\partial\Omega}\partial_{\nu}u\,d\sigma=0.$ Let $v:=\sum_{k\geq 1}\lambda_{k}^{-1}c_{k}e_{k}$ . Then $-\Delta v=f$ with $\partial_{\nu}v=0$ and $v$ satisfies $\displaystyle\|v\|_{2}^{2}=\sum_{k\geq 1}\lambda_{k}^{-2}|c_{k}|^{2}\leq\lambda_{1}^{-2}\|\Delta u\|_{2}^{2}.$ (33) Since the difference $z=v-u$ satisfies $\Delta z=0$ , $\partial_{\nu}z=0$ ,
+it follows that $\int_{\Omega}|\nabla z|^{2}\,dx=0$ , so that $u=v+Const.$ Combining this with ( 32 ) and ( 33 ), we obtain $\|D^{2}u\|_{2}=\|D^{2}v\|_{2}\leq C(\Omega)(\|\Delta v\|_{2}+\|v\|_{2}),$ and $\|D^{2}u\|_{2}\leq C(\Omega)(1+\lambda_{1}^{-1})\|\Delta u\|_{2}.$ Hence ( 31 ). Step 2. By density, it suffices to prove the Lemma for $u\in C^{2}(\overline{\Omega})$ .
+We may assume without loss of generality that $\min_{\Omega}u=0$ and ${\rm osc}(u)=\|u\|_{\infty}$ .
+For a matrix $M=(m_{ij})$ , we denote $|M|_{1}=\max_{i}\bigl\{\sum_{j}|m_{ij}|\bigr\}$ .
+Observing that $\nabla\cdot(|\nabla u|^{2}\nabla u)=|\nabla u|^{2}\Delta u+2\,{}^{t}\nabla u(D^{2}u)\nabla u={}^{t}\nabla u\bigl(2D^{2}u+(\Delta u)I\bigr)\nabla u,$ where $I$ is the identity matrix,
+we have $\bigl|\nabla\cdot(|\nabla u|^{2}\nabla u)\bigr|\leq\bigl|2D^{2}u+(\Delta u)I\bigr|_{1}|\nabla u|^{2}.$ Using the divergence theorem, it follows that $\displaystyle\int_{\Omega}|\nabla u|^{4}dx$ $\displaystyle=\int_{\Omega}\nabla u\cdot|\nabla u|^{2}\nabla u\,dx=-\int_{\Omega}u\nabla(|\nabla u|^{2}\nabla u)dx$ $\displaystyle\leq\int_{\Omega}u\bigl|2D^{2}u+(\Delta u)I\bigr|_{1}|\nabla u|^{2}dx\leq\frac{1}{2}\int_{\Omega}|\nabla u|^{4}dx+\frac{1}{2}\int_{\Omega}u^{2}\bigl|2D^{2}u+(\Delta u)I\bigr|_{1}^{2}dx.$ Consequently, $\int_{\Omega}|\nabla u|^{4}dx\leq\|u\|_{\infty}^{2}\int_{\Omega}\bigl|2D^{2}u+(\Delta u)I\bigr|_{1}^{2}dx.$ (34) Since $\int_{\Omega}\bigl|2D^{2}u+(\Delta u)I\bigr|_{1}^{2}dx\leq C\|D^{2}u\|_{2}^{2}$ , it follows from ( 31 ) that $\int_{\Omega}\bigl|2D^{2}u+(\Delta u)I\bigr|_{1}^{2}dx\leq K(\Omega)\|\Delta u\|_{2}^{2}$ (35) which, along with ( 34 ), implies the conclusion.
+∎ We shall also need the following classical smoothing properties of the Neumann heat semigroup.
+For $d,\lambda>0$ , we define the operator ${\mathcal{A}}={\mathcal{A}}_{d,\lambda}=-d\Delta+\lambda$ on $L^{2}(\Omega)$ , with domain $D({\mathcal{A}})=\{v\in H^{2}(\Omega);\ \partial A/\partial\nu=0\hbox{ on $\partial\Omega$
+(in the sense of traces)}\}$ .
+We denote by $T(t)=T_{d,\lambda}(t)$ the semigroup generated by ${\mathcal{A}}$ . It is well known that,
+for any $0\leq m\leq 2$ , $1\leq p\leq q\leq\infty$ and any $\phi\in L^{2}(\Omega)\cap L^{p}(\Omega)$ , we have $\|T(t)\phi\|_{W^{m,q}(\Omega)}\leq Ce^{-\lambda t}\bigl(1+t^{-\frac{m}{2}-\frac{1}{p}+\frac{1}{q}}\bigr)\|\phi\|_{L^{p}(\Omega)},\qquad t\geq 0,$ (36) with $C=C(\Omega,m,p,q,\eta)>0$ . 3. Global existence and boundedness: Proof of Theorem 1.1 The following lemma is the key to the proof of our main result. It provides an approximate entropy functional $\phi$ ,
+which is available whenever condition ( 7 ) is satisfied.
+This function enables us to get an $H^{1}$ -bound for $A$ and a time-averaged $H^{2}$ -bound. Lemma 3.1 (Approximate entropy functional) . Assume ( 7 ) and let $c_{1}:=\frac{\eta}{2}\Bigl(1-K\chi^{4}\eta^{-2}\mu^{4}\psi^{2}N_{1,\max}^{2}A^{-4}_{\min}A^{4}_{\max}(A_{\max}-A_{\min})^{2}\Bigr)>0.$ (37) (i) Then the function $\phi(t):=\sigma\int_{\Omega}(N\log N-N+1)dx+\frac{1}{2}\|\nabla A(t)\|_{2}^{2},\qquad\mbox{ with }\sigma=\frac{2\psi^{2}}{\eta}A^{4}_{\max}\mu^{2}N_{1,\max},$ satisfies the differential inequality $\phi^{\prime}+\tilde{\omega}\phi+c_{1}\|\Delta A\|_{2}^{2}\leq c_{2},\quad 0<t<T^{*},$ (38) where $\tilde{\omega}=\min(\omega,2)$ and $c_{2}=c_{2}(K,\chi,A_{\min},A_{\max},\psi,N_{1,\max},\eta,|\Omega|,\mu)>0$ . (ii) We have $\sup_{t\in(0,T^{*})}\|\nabla A(t)\|_{2}^{2}\leq c_{3},$ (39) with $c_{3}:=2\max(\phi(0),c_{2}\tilde{\omega}^{-1})$ , and $\int_{s}^{t}\|\Delta A(\tau)\|_{2}^{2}\,d\tau\leq c_{4}(1+t-s),\quad 0<s<t<T^{*},$ (40) with $c_{4}=c_{1}^{-1}\max(c_{2},c_{3}/2)$ . Proof. Set $\phi_{1}(t):=\|\nabla A(t)\|_{2}^{2},\qquad\phi_{2}(t):=\int_{\Omega}(N\log N-N+1)dx\geq 0$ (41) (due to $s\log s-s+1\geq 0$ , $s>0$ ).
+In this proof, $C$ will denote a generic positive constant depending only on $K,\chi,A_{\min},A_{\max},\psi$ , $N_{1,\max},\eta,|\Omega|,\mu$ and on $\varepsilon_{1},\varepsilon_{2},\varepsilon_{3}$ below. On the one hand, it follows from ( 24 ) that, for any $\varepsilon_{1}>0$ , $\displaystyle\frac{1}{2}\phi_{1}^{\prime}+\phi_{1}+\eta\|\Delta A\|_{2}^{2}\leq\varepsilon_{1}\|\Delta A\|_{2}^{2}+\frac{\psi^{2}}{4\varepsilon_{1}}\int_{\Omega}N^{2}A^{2}(1-A)^{2}dx.$ (42) Since $\|N\|_{2}^{2}\leq\mu^{2}N_{1,\max}\int_{\Omega}\frac{|\nabla N|^{2}}{N}dx+C$ (43) due to Lemma 2.3 , we deduce from ( 42 ) that $\displaystyle\frac{1}{2}\phi_{1}^{\prime}+\phi_{1}\leq a_{1}\int_{\Omega}\frac{|\nabla N|^{2}}{N}dx+a_{2}\|\Delta A\|_{2}^{2}+C$ (44) where $a_{1}=\frac{\psi^{2}}{4\varepsilon_{1}}A^{4}_{\max}\mu^{2}N_{1,\max}>0,\qquad a_{2}=\varepsilon_{1}-\eta.$ (45) On the other hand, it follows from ( 25 ) that, for any $\varepsilon_{2},\varepsilon_{3}>0$ , $\displaystyle\phi_{2}^{\prime}+\omega\phi_{2}+\int_{\Omega}\frac{|\nabla N|^{2}}{N}dx$ $\displaystyle\leq\int_{\Omega}\nabla N\nabla\vartheta(A)dx\leq\varepsilon_{2}\int_{\Omega}\frac{|\nabla N|^{2}}{N}dx+\frac{1}{4\varepsilon_{2}}\int_{\Omega}N|\nabla\vartheta(A)|^{2}dx$ $\displaystyle\leq\varepsilon_{2}\int_{\Omega}\frac{|\nabla N|^{2}}{N}dx+\frac{1}{4\varepsilon_{2}}\Bigl(\varepsilon_{3}\|N\|_{2}^{2}+\frac{1}{4\varepsilon_{3}}\int_{\Omega}|\nabla\vartheta(A)|^{4}dx\Bigr).$ Using $\int_{\Omega}|\nabla\vartheta(A)|^{4}dx\leq K\chi^{4}A_{\min}^{-4}(A_{\max}-A_{\min})^{2}\|\Delta A\|_{2}^{2}$ due to Lemma 2.4 , and ( 43 ), we deduce that $\phi_{2}^{\prime}+\omega\phi_{2}\leq a_{3}\int_{\Omega}\frac{|\nabla N|^{2}}{N}dx+a_{4}\|\Delta A\|_{2}^{2}+C,$ (46) where $a_{3}=\varepsilon_{2}+\frac{\varepsilon_{3}\mu^{2}N_{1,\max}}{4\varepsilon_{2}}-1,\qquad a_{4}=\frac{K\chi^{4}}{16\varepsilon_{2}\varepsilon_{3}}\,A_{\min}^{-4}(A_{\max}-A_{\min})^{2}>0.$ (47) Now setting $\tilde{\omega}=\min(\omega,2)$ and combining ( 44 ) and ( 46 ), we
+see that $\phi=\frac{1}{2}\phi_{1}+\sigma\phi_{2}$ satisfies $\phi^{\prime}+\tilde{\omega}\phi\leq(a_{1}+\sigma a_{3})\int_{\Omega}\frac{|\nabla N|^{2}}{N}dx\\
++\bigl(a_{2}+\sigma a_{4}\bigr)\|\Delta A\|_{2}^{2}+C.$ (48) Assume $a_{3}<0$ and choose $\sigma=-a_{1}/a_{3}>0$ . Then we have $a_{2}+\sigma a_{4}<0$ provided $a_{1}a_{4}<a_{2}a_{3}$ , that is $K\chi^{4}A_{\min}^{-4}A^{4}_{\max}(A_{\max}-A_{\min})^{2}\psi^{2}\mu^{2}N_{1,\max}<16\varepsilon_{1}(\eta-\varepsilon_{1})\bigl(4(1-\varepsilon_{2})\varepsilon_{2}-\varepsilon_{3}\mu^{2}N_{1,\max}\bigr)\varepsilon_{3}.$ (49) The best condition, maximizing the RHS in ( 49 ), is obtained by choosing $\varepsilon_{1}=\eta/2$ , $\varepsilon_{2}=1/2$ and then $\varepsilon_{3}=(2\mu^{2}N_{1,\max})^{-1}$ , which in turn implies $a_{3}=-1/4<0$ .
+Inequality ( 49 ) is then equivalent to $K\chi^{4}A_{\min}^{-4}A^{4}_{\max}(A_{\max}-A_{\min})^{2}\psi^{2}\mu^{2}N_{1,\max}<4\eta^{2}(1-\varepsilon_{3}\mu^{2}N_{1,\max})\varepsilon_{3}=\eta^{2}(\mu^{2}N_{1,\max})^{-1},$ which is true, due to ( 37 ). Then we have $a_{2}=-\eta/2$ , $a_{1}=\frac{\psi^{2}}{2\eta}A^{4}_{\max}\mu^{2}N_{1,\max},\quad a_{4}=\frac{K\chi^{4}}{4}\mu^{2}N_{1,\max}\,A_{\min}^{-4}(A_{\max}-A_{\min})^{2},\quad\sigma=\frac{2\psi^{2}}{\eta}A^{4}_{\max}\mu^{2}N_{1,\max}.$ We conclude from ( 48 ) that ( 38 ) holds with $c_{1}=-a_{2}-\sigma a_{4}$ , which yields the value given in ( 37 ). (ii) Multiplying ( 38 ) with $e^{\tilde{\omega}t}$ and integrating between $0$ and $t$ , we obtain $\phi(t)\leq\max(\phi(0),c_{2}\tilde{\omega}^{-1}),\quad 0<t<T^{*}.$ (50) This guarantees ( 39 ), in view of ( 41 ).
+Inequality ( 40 ) then follows after integrating ( 38 ) over $(s,t)$ , taking ( 50 )
+into account.
+∎ Building on estimate ( 40 ) from the previous lemma,
+we shall now derive uniform estimates for $\|N(t)\|_{2}$ and $\|A(t)\|_{H^{m}(\Omega)}$ ,
+which in turn will guarantee the global existence of the solution. Lemma 3.2 . Assume that ( 40 ) is satisfied for some $c_{4}>0$ . Then we have $\sup_{t\in(0,T^{*})}\|N(t)\|_{2}<\infty$ (51) and, for each $m\in(0,2)$ and $\tau\in(0,T^{*})$ , $\sup_{t\in(\tau,T^{*})}\|A(t)\|_{H^{m}(\Omega)}<\infty.$ (52) Proof. Let us first establish ( 51 ).
+It follows from ( 26 ) that $\displaystyle\frac{d}{dt}\|N(t)\|_{2}^{2}+2\omega\|N\|_{2}^{2}+2\|\nabla N(t)\|_{2}^{2}$ $\displaystyle\leq 2\,\omega N_{1;\max}+2\int_{\Omega}N\nabla N.\nabla\vartheta(A)dxdt$ $\displaystyle\leq 2\,\omega N_{1;\max}+\int_{\Omega}\nabla N^{2}.\nabla\vartheta(A)dx$ $\displaystyle\leq 2\,\omega N_{1;\max}-\int_{\Omega}N^{2}.\Delta\vartheta(A)dx$ $\displaystyle\leq 2\,\omega N_{1;\max}+\|N\|_{4}^{2}\|\Delta\vartheta(A)\|_{2}.$ By the Sobolev embedding of $W^{1,1}(\Omega)$ into $L^{2}(\Omega)$ with constant $C_{S}$ , we have,
+for any $\varepsilon_{1}>0$ , $\displaystyle\|N\|_{4}^{2}$ $\displaystyle=\|N^{2}\|_{2}\leq C_{S}(\|\nabla N^{2}\|_{1}+\|N^{2}\|_{1})=C_{S}(2\|N\nabla N\|_{1}+\|N\|_{2}^{2})$ $\displaystyle\leq C_{S}(2\|N\|_{2}\|\nabla N\|_{2}+\|N\|_{2}^{2})\leq\varepsilon_{1}\|\nabla N\|_{2}^{2}+(C_{S}+C_{S}^{2}/\varepsilon_{1})\|N\|_{2}^{2}.$ Choosing $\varepsilon_{1}=\|\Delta\vartheta(A)\|_{2}^{-1}$ , we get $\displaystyle\frac{d}{dt}\|N(t)\|_{2}^{2}+2\omega\|N\|_{2}^{2}+\|\nabla N(t)\|_{2}^{2}\leq 2\,\omega N_{1;\max}+\big(C_{S}\|\Delta\vartheta(A)\|_{2}+C^{2}_{S}\|\Delta\vartheta(A)\|^{2}_{2}\big)\|N\|_{2}^{2}.$ (53) Pick now $\varepsilon>0$ , and denote by $C(\varepsilon)$ a generic positive constant depending on the solution and on $\varepsilon$ ,
+but independent of $t\in(0,T^{*})$ .
+By the Gagliardo-Nirenberg inequality $\|N\|_{2}\leq C_{G}(\|\nabla N\|_{2}^{1/2}\|N\|_{1}^{1/2}+\|N\|_{1}),$ we have $\|N\|^{2}_{2}\leq 2C_{G}^{2}(\|\nabla N\|_{2}\|N\|_{1}+\|N\|_{1}^{2})\leq\varepsilon\|\nabla N\|_{2}^{2}+C(\varepsilon)N_{1;\max}^{2}.$ Therefore, using ( 22 ), we have $\|\nabla N\|_{2}^{2}\geq\frac{1}{\varepsilon}\|N\|^{2}_{2}-C(\varepsilon).$ Combining this with ( 53 ), we obtain $\displaystyle\frac{d}{dt}\|N(t)\|_{2}^{2}+\frac{1}{\varepsilon}\|N\|_{2}^{2}$ $\displaystyle\leq C(\varepsilon)+\big(1+2C^{2}_{S}\|\Delta\vartheta(A)\|^{2}_{2}\big)\|N\|_{2}^{2}.$ Now setting $\varphi(t)=\|N(t)\|_{2}^{2},\qquad\rho(t)=\int_{0}^{t}\Bigl(\frac{1}{\varepsilon}-1-2C^{2}_{S}\|\Delta\vartheta(A)\|^{2}_{2}\Bigr)ds,$ we are thus left with the differential inequality $\varphi^{\prime}(t)+\rho^{\prime}(t)\varphi(t)\leq C(\varepsilon).$ On the other hand, we have $\Delta\vartheta(A)=\chi(A^{-1}\Delta A-A^{-2}|\nabla A|^{2})$ ,
+hence $\|\Delta\vartheta(A)\|^{2}_{2}\leq 2\chi^{2}\bigl(A^{-2}\|\Delta A\|^{2}_{2}+A^{-4}\|\nabla A\|_{4}^{4}\bigr).$ It then follows from ( 40 ), ( 18 ) and Lemma 2.4 that $\int_{s}^{t}\|\Delta\vartheta(A)\|^{2}_{2}\leq c_{5}(1+t-s),\quad 0<s<t<T^{*}.$ By choosing $\varepsilon=(2+2C^{2}_{S}c_{5})^{-1}$ and letting $c_{6}=2C^{2}_{S}c_{5}$ , we have $\rho(t)-\rho(s)\geq t-s-c_{6},\quad 0<s<t<T^{*}.$ By integration, we get $\varphi(t)\leq\varphi(0)e^{-\rho(t)}+C\int_{0}^{t}e^{\rho(s)-\rho(t)}ds\leq\varphi(0)e^{c_{6}-t}+C\int_{0}^{t}e^{c_{6}+s-t}ds\leq e^{c_{6}}(\varphi(0)+C)$ and ( 51 ) follows. To prove ( 52 ), we rewrite the first equation via the variation-of-constants formula $\displaystyle A(t)=T_{\eta,1}(t)A_{0}+\int_{0}^{t}T_{\eta,1}(t-s)(\psi NA(1-A)+\tilde{A})(s)ds$ (where $T_{\eta,1}$ is defined at the end of Section 2).
+By ( 51 ), we have $M:=\sup_{t\in(0,T^{*})}\|\bigl(\psi NA(1-A)+\tilde{A}\bigr)(t)\|_{2}<\infty.$ Fix $m\in(0,2)$ . It follows from ( 36 ) that, for any $0<\tau\leq t<T^{*}$ , $\displaystyle\|A(t)\|_{H^{m}(\Omega)}$ $\displaystyle\leq Ce^{-t}(1+t^{-m/2})\|A_{0}\|_{2}+C\int_{0}^{t}e^{-(t-s)}(1+(t-s)^{-m/2})\|\bigl(\psi NA(1-A)+\tilde{A}\bigr)(s)\|_{2}ds$ $\displaystyle\leq C(1+\tau^{-m/2})\|A_{0}\|_{2}+CM\int_{0}^{\infty}e^{-s}(1+s^{-m/2})ds=:C(\tau),$ which proves ( 52 ).
+∎ Proof of Theorem 1.1 . Step 1. Global existence. In view of the local theory stated in Section 2, this is a direct consequence of estimates ( 51 )
+and ( 52 ) in Lemma 3.2 . Step 2. Boundedness. Estimate ( 8 ) was already obtained in Lemma 3.2 .
+Starting from the global estimates obtained in Lemma 3.2 ,
+we shall use a standard boostrap argument (see e.g., [ 16 ] ) to prove ( 9 ). As a consequence of ( 52 ) and Sobolev imbeddings,
+we have, for each $\tau>0$ , $\sup_{t\in(\tau,\infty)}\|\nabla A(t)\|_{p}<\infty,\quad 1\leq p<\infty.$ (54) Using ( 18 ) and ( 51 ), it follows that $M_{q}:=\sup_{t\in(\tau,\infty)}\|(NA^{-1}\nabla A)(t)\|_{q}<\infty,\quad 1\leq q<2.$ (55) Set $T(t)=T_{1,\omega}(t)$ . From the second equation, using $T(t)1=e^{-\omega t}$ , we have $\displaystyle N(t)$ $\displaystyle=T(t)N_{0}+\int_{0}^{t}T(t-s)\big(-\nabla(N\nabla\vartheta(A))\big)ds+\int_{0}^{t}T(t-s)\omega ds$ $\displaystyle=T(t)N_{0}+1-e^{-\omega t}+\int_{0}^{t}\nabla T(t-s)\cdot NA^{-1}\nabla Ads.$ After a time-shift,
+combining this with ( 36 ), ( 51 ) and ( 55 ),
+we obtain, for any $q\in[1,2)$ , $m\in[0,1)$ and $t\geq\tau/2$ , $\displaystyle\|N(\textstyle\frac{\tau}{2}+t)\|_{W^{m,q}(\Omega)}$ $\displaystyle\leq Ce^{-t}(1+t^{-m/2})\|N(\textstyle\frac{\tau}{2})\|_{q}+C$ $\displaystyle\qquad+C\int_{0}^{t}e^{-(t-s)}\bigl(1+(t-s)^{-\frac{m+1}{2}}\bigr)\|\bigl(NA^{-1}\nabla A\bigr)(\textstyle\frac{\tau}{2}+s)\|_{q}ds$ (56) $\displaystyle\leq C(1+\tau^{-m/2})+CM_{q}\int_{0}^{\infty}e^{-s}\bigl(1+s^{-(m+1)/2}\bigr)ds=:\tilde{C}(\tau).$ Using Sobolev’s imbedding again, taking $q$ close to $2^{-}$ and $m$ close to $1^{-}$ , we deduce $\sup_{t\in(\tau,\infty)}\|N(t)\|_{p}<\infty,\quad 1\leq p<\infty.$ Due to ( 54 ), this implies that ( 55 ) is true for any $q\in[1,\infty)$ .
+The argument in ( 56 ) then yields $\sup_{t\in(\tau,\infty)}\|N(t)\|_{W^{m,q}(\Omega)}<\infty,\quad 0<m<1,\ 1\leq q<\infty$ and ( 9 ) follows by a further application of Sobolev imbeddings. $\Box$ 4. The case of a square domain: Proof of Theorem 1.3 Let us consider the square $\Omega=(0,L)^{2}$ .
+Theorem 1.3 is a consequence of Theorem 1.1 and of the following two lemmas,
+where we estimate the constants $K$ and $\mu$ in inequalities ( 30 ) and ( 28 ) Lemma 4.1 . For $\Omega=(0,L)^{2}$ , the constant $K$ in estimate ( 30 ) satisfies $K\leq 12$ . Proof. Recall that the constant $K=K(\Omega)$ is determined from inequality ( 35 ) in the proof of Lemma 2.4 .
+Repeatedly using the Cauchy-Schwarz inequality, we first compute $\displaystyle\bigl|2D^{2}u+(\Delta u)I\bigr|_{1}$ $\displaystyle=\max\bigl\{|3u_{xx}+u_{yy}|+2|u_{xy}|,|u_{xx}+3u_{yy}|+2|u_{xy}|\bigr\}$ $\displaystyle=2|u_{xy}|+\max\bigl\{|3u_{xx}+u_{yy}|,|u_{xx}+3u_{yy}||\bigr\}$ $\displaystyle\leq 2|u_{xy}|+\bigl(10(u_{xx}^{2}+u_{yy}^{2})\bigr)^{1/2}$ and then $\bigl|2D^{2}u+(\Delta u)I\bigr|_{1}^{2}\leq 12\bigl(u_{xx}^{2}+u_{yy}^{2}+2u_{xy}^{2}\bigr).$ Consequently, $\int_{\Omega}\bigl|2D^{2}u+(\Delta u)I\bigr|_{1}^{2}dx\leq 12\bigl(\|u_{xx}\|_{2}^{2}+\|u_{yy}\|_{2}^{2}+2\|u_{xy}\|_{2}^{2}\bigr).$ (57) We next claim that $\|u_{xx}\|_{2}^{2}+\|u_{yy}\|_{2}^{2}+2\|u_{xy}\|_{2}^{2}=\|\Delta u\|^{2}_{2}.$ (58) Indeed, using the Fourier expansion $u=\sum_{j,k\geq 0}a_{jk}\cos\frac{j\pi x}{L}\cos\frac{k\pi y}{L}$ , we have $\displaystyle\|u_{xx}\|_{2}^{2}+\|u_{yy}\|_{2}^{2}$ $\displaystyle=\frac{\pi^{4}}{2L^{2}}\sum_{j\geq 1}j^{4}a_{j0}^{2}+\frac{\pi^{4}}{2L^{2}}\sum_{k\geq 1}k^{4}a_{0k}^{2}+\frac{\pi^{4}}{4L^{2}}\sum_{j,k\geq 1}(j^{4}+k^{4})a_{jk}^{2},$ $\displaystyle\|u_{xy}\|_{2}^{2}$ $\displaystyle=\frac{\pi^{4}}{4L^{2}}\sum_{j,k\geq 1}j^{2}k^{2}a_{jk}^{2},$ $\displaystyle\|u_{xx}+u_{yy}\|_{2}^{2}$ $\displaystyle=\frac{\pi^{4}}{2L^{2}}\sum_{j\geq 1}j^{4}a_{j0}^{2}+\frac{\pi^{4}}{2L^{2}}\sum_{k\geq 1}k^{4}a_{0k}^{2}+\frac{\pi^{4}}{4L^{2}}\sum_{j,k\geq 1}(j^{2}+k^{2})^{2}a_{jk}^{2},$ which implies ( 58 ). The conclusion follows by combining ( 35 ), ( 57 ) and ( 58 ).
+∎ Lemma 4.2 . For $\Omega=(0,L)^{2}$ , the constant $\mu$ in estimate ( 28 ) satisfies $\mu\leq\sqrt{\frac{3}{2}}$ . Proof. Let $u$ be a smooth function with zero average. There exist mean values $\zeta(x),\xi(y)$ in $[0,L]$ such that $\frac{1}{L}\int_{0}^{L}u(s,y)ds=u(\xi(y),y),\quad\frac{1}{L}\int_{0}^{L}u(x,t)dt=u(x,\zeta(x)).$ It follows that $\displaystyle u(x,y)$ $\displaystyle=\frac{1}{L}\int_{0}^{L}u(s,y)ds+\int_{\xi(y)}^{x}u_{x}(s,y)ds$ $\displaystyle=\frac{1}{L}\int_{0}^{L}u(x,t)dt+\int_{\zeta(x)}^{y}u_{y}(x,t)dt.$ Consequently, $\displaystyle\int_{\Omega}u^{2}(x,y)dxdy=$ $\displaystyle\frac{1}{L^{2}}\bigg(\int_{\Omega}u(x,y)dxdy\bigg)^{2}$ $\displaystyle+\int_{\Omega}\bigg(\frac{1}{L}\int_{0}^{L}u(s,y)ds\int_{\zeta(x)}^{y}u_{y}(x,t)dt\bigg)dxdy$ $\displaystyle+\int_{\Omega}\bigg(\frac{1}{L}\int_{0}^{L}u(x,t)dt\int_{\xi(y)}^{x}u_{x}(s,y)ds\bigg)dxdy$ $\displaystyle+\int_{\Omega}\bigg(\int_{\xi(y)}^{x}u_{x}(s,y)ds\int_{\zeta(x)}^{y}u_{y}(x,t)dt\bigg)dxdy.$ Since $u$ has zero average, it follows that $\|u\|_{2}^{2}\leq\frac{1}{L}\|u\|_{1}(\|u_{x}\|_{1}+\|u_{y}\|_{1})+\|u_{x}\|_{1}\|u_{y}\|_{1}.$ Moreover, by [ 1 , Theorem 3.2] , we have $\|u\|_{1}\leq(L/\sqrt{2})\|\nabla u\|_{1}$ , hence $\|u\|_{2}^{2}\leq\frac{1}{\sqrt{2}}\|\nabla u\|_{1}(\|u_{x}\|_{1}+\|u_{y}\|_{1})+\frac{1}{4}(\|u_{x}\|_{1}+\|u_{y}\|_{1})^{2}.$ Using the elementary inequality $\|u_{x}\|_{1}+\|u_{y}\|_{1}\leq\sqrt{2}\|\nabla u\|_{1}$ , we deduce that $\displaystyle\|u\|_{2}\leq\sqrt{\frac{3}{2}}\|\nabla u\|_{1}.$ Since $C^{1}(\bar{\Omega})$ is dense in $W^{1,1}(\Omega)$ , Lemma 4.2 follows by
+letting $u=N-|\Omega|^{-1}\int_{\Omega}N(x,y)dxdy$ .
+∎ Remark 4.1 . Let us briefly justify the generalization in Remark 1.2.
+Conditions $({\mathcal{H}}_{1}),({\mathcal{H}}_{2}),({\mathcal{H}}_{5})$ are natural.
+By condition $({\mathcal{H}}_{3})$ and $N^{1-\delta}\leq\varepsilon N+C(\varepsilon)$ , one can show that $\|N(t)\|_{1}$ is uniformly bounded. And then, one has following estimates $|g(A,N)\log N|\leq C_{1}(A)N+C_{2}(A)$ ( a ) $|g(A,N)|N\leq\varepsilon N^{2}+C_{3}(\varepsilon,A)$ ( b ) Inequality $(a)$ and boundedness of $\|N(t)\|_{1}$ imply ( 46 ). Inequality $(b)$ implies ( 53 ).
+By condition $({\mathcal{H}}_{4})$ , one has $|f(A,N)|^{2}\leq C_{4}(A)N^{2}+C_{5}(A)$ which implies inequality ( 44 ) 5. The case $\chi\leq 1$ : Proof of Theorem 1.2 For $\chi\leq 1$ , a basic entropy estimate is given by the following. Lemma 5.1 . Assume $0<\chi\leq 1$ and $A_{\rm max}=1$ . Then $\sup_{0<t<T^{*}}\int_{\Omega}N|\log N|\,dx<\infty.$ (59) Proof. Following [ 5 , Section 4] , we define $Y(t)=\int_{\Omega}N(\log N-c\log A)\,dx.$ Letting $F=\psi NA(1-A)+\tilde{A}-A$ and $G=\omega(1-N)$ , we have $\displaystyle Y^{\prime}(t)$ $\displaystyle=\int_{\Omega}N_{t}(\log N-c\log A)\,dx+\int_{\Omega}(N_{t}-cNA^{-1}A_{t})\,dx$ $\displaystyle=Q+\int_{\Omega}(\log N-c\log A)G\,dx+\int_{\Omega}G\,dx-c\int_{\Omega}NA^{-1}F\,dx,$ (60) where $\displaystyle Q$ $\displaystyle=\int_{\Omega}\Bigl[\Delta N-\nabla\cdot(N\nabla\vartheta(A))\Bigr](\log N-c\log A)\,dx-c\eta\int_{\Omega}NA^{-1}\Delta A\,dx$ $\displaystyle=-\int_{\Omega}N^{-1}|\nabla N|^{2}\,dx+(\chi+c(1+\eta))\int_{\Omega}A^{-1}\nabla N\cdot\nabla A-c(\chi+\eta)\int_{\Omega}NA^{-2}|\nabla A|^{2}\,dx$ $\displaystyle=-\int_{\Omega}N^{-1}A^{-2}\Bigl[A^{2}|\nabla N|^{2}+c(\chi+\eta)N^{2}|\nabla A|^{2}-(\chi+c(1+\eta))NA\nabla N\cdot\nabla A\Bigr]\,dx.$ We see that $Q\leq 0$ provided the discriminant $\delta:=(\chi+c(1+\eta))^{2}-4c(\chi+\eta)$ is nonpositive,
+that is $\displaystyle(1+\eta)^{2}c^{2}-2c(\chi+2\eta-\chi\eta)+\chi^{2}\leq 0.$ (61) There exists a constant $c$ satisfying ( 61 ) if and only if $|\chi+2\eta-\chi\eta|\geq(1+\eta)\chi,$ which is equivalent to $\chi\leq 1$ . On the other hand, we have $G\leq\omega$ and, since $A\leq 1$ due to ( 19 ), $F\geq-A$ .
+Using ( 18 ), ( 22 ) and the inequality $\log s\leq s$ ( $s>0$ ),
+we deduce from ( 60 ) that $Y^{\prime}(t)\leq-\omega Y+\omega\int_{\Omega}(\log N-c\log A)\,dx+\omega|\Omega|+c\int_{\Omega}N\,dx\leq-\omega Y+C.$ We infer that $\sup_{0<t<T^{*}}Y(t)<\infty$ , so that ( 59 ) follows from ( 19 ), ( 22 ).
+∎ With the bound ( 5.1 ) at hand, we can now use the following better Sobolev type inequality
+in place of Lemma 2.3 . Lemma 5.2 . For any $\varepsilon>0$ , there holds $\displaystyle\|u\|_{2}^{2}\leq\varepsilon\int_{\Omega}u|\log u|\,dx\ \int_{\Omega}\frac{|\nabla u|^{2}}{u}dx+C(\Omega,\|u\|_{1},\varepsilon)$ (62) for any uniformly positive function $u\in H^{1}(\Omega)$ . Proof. Fix $k>1$ . Since $\nabla[u-k]_{+}=\chi_{\{u>k\}}\nabla u$ , we deduce from ( 29 ) that $\int_{\Omega}[u-k]_{+}^{2}dx\leq\mu^{2}\left(\int_{u>k}|\nabla u|dx\right)^{2}+|\Omega|^{-1}\left(\int_{\Omega}[u-k]_{+}dx\right)^{2}.$ On the other hand, we have $u^{2}\leq[u-k]_{+}^{2}+2ku$ (just consider separately the cases $u\leq$ or $>k$ ).
+Therefore, by integration, we obtain $\begin{array}[]{rcl}{\displaystyle{\int_{\Omega}u^{2}dx}}&{\leq}&\displaystyle{\mu^{2}\left(\int_{u>k}|\nabla u|dx\right)^{2}+|\Omega|^{-1}\|u\|_{1}^{2}+2k\|u\|_{1}}\\
+&\leq&\displaystyle{\mu^{2}\int_{u>k}\frac{|\nabla u|^{2}}{u}dx\cdot\int_{u>k}udx+|\Omega|^{-1}\|u\|_{1}^{2}+2k\|u\|_{1}}\\
+&\leq&\displaystyle{\mu^{2}\int_{\Omega}\frac{|\nabla u|^{2}}{u}dx\cdot\frac{\displaystyle{\int_{\Omega}u|\log u|dx}}{\log k}+|\Omega|^{-1}\|u\|_{1}^{2}+2k\|u\|_{1}}\end{array}$ (63) and the Lemma follows by taking $k=\exp(\mu^{2}/\varepsilon)$ .
+∎ Proof of Theorem 1.2 . We claim that $\sup_{t\in(0,T^{*})}\|\nabla A(t)\|_{2}^{2}<\infty$ (64) and $\int_{s}^{t}\|\Delta A(\tau)\|_{2}^{2}\,d\tau\leq C(1+t-s),\quad 0<s<t<T^{*}.$ (65) Fix $\varepsilon>0$ . By Lemmas 5.1 and 5.2 , we have $\|N\|_{2}^{2}\leq\varepsilon\int_{\Omega}\frac{|\nabla N|^{2}}{N}dx+C(\varepsilon),\quad 0<t<T^{*}.$ (66) Using estimate ( 66 ) instead of ( 27 ) in the proof of Lemma 3.1 (i),
+we obtain the differential inequality ( 48 )
+where the constants $a_{i}$ are defined by formulae ( 45 ) and ( 47 )
+with $\mu^{2}N_{1,\max}$ replaced by $\varepsilon$ .
+Like before, we assume $a_{2},a_{3}<0$ and choose $\sigma=-a_{1}/a_{3}>0$ . Then we have $a_{2}+\sigma a_{4}<0$ provided $a_{1}a_{4}<a_{2}a_{3}$ , which is now equivalent to $K\chi^{4}A_{\min}^{-4}A^{4}_{\max}(A_{\max}-A_{\min})^{2}\psi^{2}\varepsilon<16\varepsilon_{1}(\eta-\varepsilon_{1})\bigl(4(1-\varepsilon_{2})\varepsilon_{2}-\varepsilon_{3}\varepsilon\bigr)\varepsilon_{3}.$ Choosing $\varepsilon_{1}=\eta/2$ , $\varepsilon_{2}=1/2$ , $\varepsilon_{3}=1/(2\varepsilon)$ , the condition becomes $K\chi^{4}A_{\min}^{-4}A^{4}_{\max}(A_{\max}-A_{\min})^{2}\psi^{2}\varepsilon<\eta^{2}\varepsilon^{-1}$ which is verified for $\varepsilon$ suitably small. Estimates ( 64 )-( 65 ) then follow
+as in the proof of Lemma 3.1 (ii). The rest of the proof of the theorem then relies on Lemma 3.2 similarly as in the proof of Theorem 1.1 . $\Box$ 6. Conclusion In this article, we have considered a nonlinear, strongly coupled, parabolic system arising in the modeling of burglary in residential areas.
+The system involves two spatio-temporal unknowns: the attractivity value of the property and the criminal density.
+The system is of chemotaxis-type and involves a logarithmic sensivity function and specific interaction and relaxation terms.
+This model has appeared in [ 18 ] , as a modification of the model of Short et al. [ 22 ] . In [ 18 ] some results about linearized stability/instability of the homogeneous steady-states
+and some numerical simulations suggesting the existence of hotspots were given.
+However, the (local and) global existence of solutions was left open. In this article, under suitable assumptions on the data of the problem, we have given a rigorous proof of the existence of a global
+and bounded, classical solution,
+thereby solving the problem left open in [ 18 ] .
+In the range of anti-diffusion parameter $\chi$ relevant for the criminological model, our sufficient condition for global existence roughly says that,
+at the initial time, the product of the oscillation of the attractivity value and of the total criminal population should not be two large.
+Our proofs are based on the construction of approximate entropies and on the use of various functional inequalities. We have also provided explicit numerical conditions for global existence when the domain is a square,
+including concrete cases involving values of the parameters
+which are expected to be physically relevant.
+In such cases, in the range of diffusion parameter $\eta$ used by [ 22 ] , our global existence conditions are compatible with magnitudes of attractivity which are up to about twice those of their static component. It is suggested in [ 18 ] that a ratio of order 10 (instead of 2) might be desirable, even for smaller values of $\eta$ that the ones we consider here. However, this is still beyond the range in which we can rigorously prove global existence (and actually, global existence for such systems need not be taken for granted, as shown by the existing chemotaxis literature). References [1] G. Acosta, R.G. Durán. An optimal Poincaré inequality in $L^{1}$ for convex domains. Proc. Amer. Math. Soc. 132 (2004), 195-202. [2] M. Aidaa, K. Osaki, T. Tsujikawa, A. Yagi, M. Mimura.
+Chemotaxis and growth system with singular sensitivity function. Nonlinear Anal, Real World Appl. 6 (2005), 323-336. [3] H. Berestycki, J.-P. Nadal. Self-organised critical hot spots of criminal activity. European J. Appl. Math. , 21 (2010), 371-399. [4] P. Biler.
+Local and global solvability of some parabolic systems modeling chemotaxis, Adv. Math. Sci. Appl. 8 (1998), 715-743. [5] P. Biler.
+Global solutions to some parabolic-elliptic systems of chemotaxis. Adv. Math. Sci. Appl. 9 (1999), 347-359. [6] A. Blanchet.
+On the parabolic-elliptic Patlak-Keller-Segel system in dimension 2 and higher,
+Preprint ArXiV 1109.1543 [7] H. Brezis. Analyse fonctionnelle . Collection Mathématiques Appliquées pour la Maîtrise.
+[Collection of Applied Mathematics for the Master’s Degree]. Masson, Paris, 1983. Théorie et applications. [Theory and applications]. [8] S. Cantrell, C. Cosner, R. Manasevich. Global bifurcation of solutions for crime modeling equations. SIAM J. Math. Anal. (to appear). [9] H. Gajewski, K. Zacharias.
+Global behaviour of a reaction-diffusion system modelling chemotaxis, Math. Nachr. 195 (1998), 77-114. [10] M.A. Herrero, J.J.L. Velázquez.
+A blow-up mechanism for a chemotaxis model, Ann. Scuola Norm. Super. Pisa Cl. Sci. 24 (1997), 633-683. [11] T. Hillen, K.J. Painter.
+A user�s guide to PDE models for chemotaxis, J. Math. Biol. 58 (2009), 83-217. [12] D. Hortsmann. From 1970 until present: the Keller-Segel model in chemotaxis and its consequences, Jahresberichte der DMV 105 (2003), 103-165. [13] D. Horstmann, M. Winkler.
+Boundedness vs. blow-up in a chemotaxis system, J. Differential Equations 215 (2005) 52-107. [14] E.F. Keller, L.A. Segel.
+Initiation of slime mold aggregation viewed as an instability, J. Theoret. Biol. 26 (1970) 399-415. [15] T. Nagai, T. Senba,
+Behavior of radially symmetric solutions of a system related to chemotaxis, Nonlinear Anal. 30 (1997) 3837-3842. [16] T. Nagai, T. Senba, K. Yoshida. Application of the Trudinger-Moser inequality to a parabolic
+system of chemotaxis. Funkcial. Ekvac. , 40 (1997), 411-433. [17] K. Osaki, T. Tsujikawa, A. Yagi, M. Mimura.
+Exponential attractor for a chemotaxis-growth system of equations. Nonlinear Anal. TMA 51 (2002), 119-144. [18] A.B. Pitcher. Adding police to a mathematical model of burglary. European J. Appl. Math. , 21 (2010), 401-419. [19] N. Rodriguez A.L,. Bertozzi. Local existence and uniqueness of solutions to a PDE model for
+criminal behavior. Math. Models Methods Appl. Sci. , 20 (2010), 1425-1457.. [20] S.-U. Ryu, A. Yagi. Optimal control of Keller-Segel equations. J. Math. Anal. Appl. , 256 (2001), 45-66. [21] M.B. Short, A.L. Bertozzi, P.J. Brantingham. Nonlinear patterns in urban crime: hotspots, bifurcations, and
+suppression. SIAM J. Appl. Dyn. Syst. 9 (2010), 462-483. [22] M.B. Short, M.R. D’Orsogna, V.B. Pasour, G.E. Tita, P.J. Brantingham,
+A.L. Bertozzi, L.B. Chayes. A statistical model of criminal behavior. Math. Models Methods Appl. Sci. 18 (2008), 1249-1267. [23] C. Stinner, M. Winkler.
+Global weak solutions in a chemotaxis system with large singular sensitivity Nonlinear Anal., Real World Appl. 12 (2011), 3727-3740. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

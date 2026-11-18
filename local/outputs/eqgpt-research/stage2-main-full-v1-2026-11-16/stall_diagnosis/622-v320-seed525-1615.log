@@ -1,0 +1,9 @@
+TEXT \partial_{y}(u\cdot \partial_{x}(u))+\partial_{y}(\partial_{y}(u)\cdot v^{2}+\Delta(u)\partial_{x}(\partial_{x}(u)\cdot u)+\partial_{y}(\partial_{y}(u)\cdot u)+\partial_{t}(u)+u\cdot \partial_{x}(u)+\partial_{x}(v^{2}+v\cdot (v^{2})+\partial_{xx}(u^{2})+\Delta(u)+v^{3}+\partial_{t}(v)+u\cdot \partial_{y}(u)+\partial_{y}(\partial_{y}(u)\cdot u^{2})^{2}+y\cdot (\partial_{y}(p))^{2}+u^{2}\cdot v+v^{3}+(\partial_{y}(u))^{2}+(\partial_{x}(u))^{2}\cdot v+(v^{2})+\partial_{x}(v))^{2}\cdot v+v\cdot 1)^{2}+(\partial_{x}(v))^{2}\cdot p+\partial_{t}(p)+u^{2}=0\\p=0\\(u^{2})=0
+STAGE compile_term ('d', ('mul', ('d', ('v', 'u'), 'x'), ('v', 'u')), 'y')
+STAGE compile_term ('d', ('v', 'p'), 't')
+STAGE compile_term ('mul', ('pow', ('d', ('v', 'v'), 'x'), ('n', 2)), ('v', 'p'))
+STAGE compile_term ('pow', ('d', ('add', ('d', ('mul', ('d', ('v', 'u'), 'y'), ('v', 'u')), 'y'), ('d', ('v', 'u'), 't'), ('mul', ('d', ('mul', ('d', ('v', 'u'), 'x'), ('v', 'u')), 'x'), ('lap', ('v', 'u'), 1)), ('mul', ('d', ('v', 'u'), 'x'), ('v', 'u')), ('mul', ('d', ('v', 'u'), 'y'), ('pow', ('v', 'v'), ('n', 2)))
+Timeout (0:00:05)!
+Thread 0x0000735e466fa080 (most recent call first):
+  File "/data1/users/liugang/src/eq-bpe/project/.venv/lib/python3.12/site-packages/sympy/core/basic.py", line 0 in args
+  File 

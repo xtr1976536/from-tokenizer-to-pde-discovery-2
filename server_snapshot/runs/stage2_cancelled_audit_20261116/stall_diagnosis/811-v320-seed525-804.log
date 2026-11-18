@@ -1,0 +1,11 @@
+TEXT \exp(-v^{3}+\partial_{t}(u)+\partial_{t}(u)+\nabla\cdot(\nabla(v)\cdot u)+\Delta(u)+\partial_{y}(\Delta(u))+\partial_{y}(u)\cdot u+\partial_{x}(v\cdot \partial_{y}(u)))^{2}\cdot \partial_{x}(p)+\partial_{x}(v^{2})+\partial_{x}(u^{2}\cdot \partial_{y}(p)\cdot u+\partial_{t}(u))=0\\\partial_{x}(\partial_{x}(u)\cdot p\cdot u+\partial_{t}(u)\cdot \partial_{y}(u)+p)=0\\u^{2}\cdot \partial_{x}(u)=0
+STAGE compile_term ('d', ('d', ('v', 'u'), 't'), 'x')
+STAGE compile_term ('d', ('mul', ('d', ('v', 'p'), 'y'), ('pow', ('v', 'u'), ('n', 3))), 'x')
+STAGE compile_term ('d', ('pow', ('v', 'v'), ('n', 2)), 'x')
+STAGE compile_term ('mul', ('d', ('v', 'p'), 'x'), ('pow', ('fn', 'exp', ('add', ('d', ('lap', ('v', 'u'), 1), 'y'), ('d', ('mul', ('d', ('v', 'u'), 'y'), ('v', 'v')), 'x'), ('d', ('v', 'u'), 't'), ('d', ('v', 'u'), 't'), ('divergence', ('mul', ('grad', ('v', 'v')), ('v', 'u'))), ('lap', ('v', 'u'), 1), ('mul', ('d', 
+STAGE compile_term ('d', ('mul', ('d', ('v', 'u'), 't'), ('d', ('v', 'u'), 'y')), 'x')
+STAGE compile_term ('d', ('mul', ('d', ('v', 'u'), 'x'), ('v', 'p'), ('v', 'u')), 'x')
+STAGE compile_term ('d', ('v', 'p'), 'x')
+STAGE compile_term ('mul', ('d', ('v', 'u'), 'x'), ('pow', ('v', 'u'), ('n', 2)))
+STAGE equivalence_key
+PASS (4, 3, 1)

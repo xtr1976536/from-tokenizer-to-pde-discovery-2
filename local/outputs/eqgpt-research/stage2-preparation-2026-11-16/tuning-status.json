@@ -1,0 +1,35 @@
+{
+  "status": "TUNING_RUNNING",
+  "server_output": "/data1/users/liugang/src/eq-bpe/project/runs/stage2_pretraining_tuning_20261116",
+  "fixed": "811 split, vocab192, seed525, minimum25 epochs, patience15, cosine25, maximum80",
+  "variants": [
+    {
+      "name": "lr1e4_wd1e3",
+      "learning_rate": 0.0001,
+      "L2": 0.001
+    },
+    {
+      "name": "lr5e5_wd1e3",
+      "learning_rate": 5e-05,
+      "L2": 0.001
+    },
+    {
+      "name": "lr1e4_wd1e2",
+      "learning_rate": 0.0001,
+      "L2": 0.01
+    }
+  ],
+  "formal_10_runs_restarted": false,
+  "completed_variants": [
+    {
+      "name": "lr1e4_wd1e3",
+      "epochs": 25,
+      "best_epoch": 4,
+      "best_validation_ce": 2.958696800054506,
+      "final_validation_ce": 3.3550099927325583,
+      "final_train_ce": 0.7249302024015853
+    }
+  ],
+  "active_variant": "lr5e5_wd1e3",
+  "active_epoch_observed": 8
+}

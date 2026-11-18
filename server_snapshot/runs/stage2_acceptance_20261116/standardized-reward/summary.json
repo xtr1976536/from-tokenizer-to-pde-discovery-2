@@ -1,0 +1,64 @@
+{
+  "status": "STANDARDIZATION_IMPLEMENTED_AND_REPLAY_VERIFIED",
+  "prediction_score_version": "train_fit_zscore_energy_v2",
+  "mean": [
+    0.22464685767409892,
+    -1.8300814816805758e-06,
+    -0.05325762481567411
+  ],
+  "std": [
+    0.1272155154649305,
+    0.10090604038531958,
+    0.2841859501978362
+  ],
+  "normalized_energy_shares": [
+    0.6914690170075701,
+    0.022309342949445754,
+    0.286221640042984
+  ],
+  "persistence_score": 0.9967952268283123,
+  "candidates": 7,
+  "reward_ranking": {
+    "0.5": [
+      "622/128/9",
+      "811/320/2",
+      "622/192/16",
+      "811/128/24",
+      "622/128/27",
+      "622/320/3",
+      "622/320/29"
+    ],
+    "0.2": [
+      "622/128/9",
+      "811/320/2",
+      "811/128/24",
+      "622/192/16",
+      "622/128/27",
+      "622/320/3",
+      "622/320/29"
+    ],
+    "0.0": [
+      "622/128/9",
+      "811/128/24",
+      "811/320/2",
+      "622/192/16",
+      "622/128/27",
+      "622/320/29",
+      "622/320/3"
+    ]
+  },
+  "conclusion": "Removes dependence on per-channel units/offsets; near-persistence scores remain saturated, so sparsity can dominate near-tied prediction scores.",
+  "fit_score_unchanged": true,
+  "physical_solver_unchanged": true,
+  "sparsity_and_lambdas_unchanged": true,
+  "tests_passed": 26,
+  "no_training": true,
+  "no_new_sampling": true,
+  "no_test_access": true,
+  "limited_to_one_train_and_reward_window": true,
+  "source_sha256": {
+    "stage2_main_v1/scoring.py": "477aab2ed66dcba348e46a931f6a16dce83af27536251b94127963cff810567f",
+    "stage2_main_v1/prepared_data.py": "5ef5320e1dcb1522af7fce9e73b3b6c4ab588020892503f8a4bb5e30ff53587b",
+    "stage2_main_v1/data.py": "6c02981ec8fd2f609e25a6036019ab26c025848306d30e99a3a836dfa259b4ac"
+  }
+}

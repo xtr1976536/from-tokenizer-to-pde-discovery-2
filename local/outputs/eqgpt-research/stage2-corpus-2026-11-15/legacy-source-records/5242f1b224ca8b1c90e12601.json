@@ -1,0 +1,106 @@
+{
+  "broad_family": "forced_Helmholtz_2D",
+  "context_checked": true,
+  "context_review_note": "",
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "u(x, y, z, t) + exp(x) + Derivative(u(x, y, z, t), (x, 2)) + Derivative(u(x, y, z, t), (y, 2)) + exp(-y)",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      9,
+      2,
+      23,
+      2,
+      7,
+      2,
+      50,
+      2,
+      43,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "uxx",
+      "+",
+      "uyy",
+      "+",
+      "u",
+      "+",
+      "exp(-y)",
+      "+",
+      "exp(x)",
+      "E"
+    ],
+    "normalized_latex": "(u_{xx})+(u_{yy})+(u)+(\\exp{-{y}})+(\\exp{x})=0",
+    "reconstructed_support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t'))",
+      "exp(Mul(Integer(-1), Symbol('y')))",
+      "exp(Symbol('x'))"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t'))",
+      "exp(Mul(Integer(-1), Symbol('y')))",
+      "exp(Symbol('x'))"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "domain_conditions": "Use domains where declared square roots and denominators are defined; x>0,y>0,u>0 suffice for applicable profiles",
+  "family": "lpde303_forced_Helmholtz_2D",
+  "gre_ids": [
+    5,
+    9,
+    2,
+    23,
+    2,
+    7,
+    2,
+    50,
+    2,
+    43,
+    1
+  ],
+  "latex_origin": "declared_function_family_instance",
+  "normalized_latex": "(u_{xx})+(u_{yy})+(u)+(\\exp{-{y}})+(\\exp{x})=0",
+  "original_latex": "u_{xx}+u_{yy}+u=-((\\exp(x))+(\\exp(-y)))",
+  "parameters": {
+    "Phi(x,y)": "(\\exp(x))+(\\exp(-y))",
+    "constant_policy": "all displayed scalar constants1 except specified integer exponents"
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [],
+  "source_file": "data/formulas/diverse_pde_v4/research/eqworld_more/lpde303.pdf",
+  "source_group": "eqworld:lpde303",
+  "source_id": "eqworld:5242f1b224ca8b1c90e12601",
+  "source_kind": "eqworld_context_review_candidate",
+  "source_location": "first governing equation, source function choices below",
+  "source_sha256": "7adb01007fa22007fae9d3782dee7d2e74f1c9f4648c34b018cb7ce2ed4dbd6d",
+  "source_template_latex": "u_{xx}+u_{yy}+\\lambda u=-\\Phi(x,y)",
+  "source_transformations": [
+    "source dependent variable w -> u",
+    "explicit function choices below; nonzero constants set to1; no coefficient ablations"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/lpde/lpde303.pdf"
+}

@@ -1,0 +1,110 @@
+                              EqWorld                                                         http://eqworld.ipmnet.ru
+
+Exact Solutions > Linear Partial Differential Equations >
+Second-Order Elliptic Partial Differential Equations > Poisson Equation
+
+
+3.2. Poisson Equation ∆w + Φ(x) = 0
+The two-dimensional Poisson equation has the following form:
+                         ∂2w ∂2w
+                              +      + Φ(x, y) = 0                       in the Cartesian coordinate system,
+                         ∂x2    ∂y 2
+                   µ     ¶
+              1 ∂     ∂w     1 ∂2w
+                    r      + 2       + Φ(r, ϕ) = 0                       in the polar coordinate system.
+              r ∂r    ∂r     r ∂ϕ2
+
+3.2-1. Domain: –∞ < x < ∞, –∞ < y < ∞.
+Solution:                                  Z ∞Z ∞
+                               1                                                    1
+                    w(x, y) =                          Φ(ξ, η) ln p                              dξ dη.
+                              2π            −∞    −∞                       (x − ξ)2 + (y − η)2
+
+3.2-2. Domain: –∞ < x < ∞, 0 ≤ y < ∞. First boundary value problem.
+A half-plane is considered. A boundary condition is prescribed:
+                                                  w = f (x)         at     y = 0.
+    Solution:
+                        Z ∞                              Z ∞Z ∞                         p
+                 1            yf (ξ) dξ       1                                          (x − ξ)2 + (y + η)2
+       w(x, y) =                           +                              Φ(ξ, η) ln p                         dξ dη.
+                 π       −∞ (x − ξ) 2 + y2   2π             0       −∞                   (x − ξ)2 + (y − η)2
+
+3.2-3. Domain: 0 ≤ x < ∞, 0 ≤ y < ∞. First boundary value problem for the Poisson equation.
+A quadrant of the plane is considered. Boundary conditions are prescribed:
+                               w = f1 (y)    at     x = 0,               w = f2 (x) at      y = 0.
+    Solution:
+                    Z ∞                                       Z ∞
+                4                 f1(η)η dη               4                    f2(ξ)ξ dξ
+      w(x, y) = xy        2 + (y − η)2][x2 + (y + η)2]
+                                                       + xy
+                π    0  [x                                π         [(x  − ξ)2 + y 2][(x + ξ)2 + y 2]
+                   Z ∞Z ∞             p                     p 0
+                 1                       (x − ξ)2 + (y + η)2 (x + ξ)2 + (y − η)2
+              +           Φ(ξ, η) ln p                      p                     dξ dη.
+                2π 0 0                   (x − ξ)2 + (y − η)2 (x + ξ)2 + (y + η)2
+
+3.2-4. Domain: 0 ≤ x ≤ a, 0 ≤ y ≤ b. First boundary value problem for the Poisson equation.
+A rectangle is considered. Boundary conditions are prescribed:
+                              w = f1 (y) at        x = 0,                w = f2 (y) at       x = a,
+                              w = f3 (x) at        y = 0,                w = f4 (x) at       y = b.
+    Solution:
+                        Z aZ b
+            w(x, y) =              Φ(ξ, η)G(x, y, ξ, η) dη dξ
+                         0     0
+                        Z b            ·           ¸          Z b       ·                   ¸
+                                  ∂                                        ∂
+                   +          f1 (η) G(x, y, ξ, η)       dη −     f2 (η)      G(x, y, ξ, η)       dη
+                      0           ∂ξ                ξ=0        0           ∂ξ                 ξ=a
+                     Z a        ·                  ¸          Z a        ·                  ¸
+                                   ∂                                        ∂
+                   +     f3 (ξ)      G(x, y, ξ, η)       dξ −     f4 (ξ)      G(x, y, ξ, η)       dξ.
+                      0           ∂η                 η=0       0           ∂η                 η=b
+
+
+                                                                1
+2                                                 POISSON EQUATION
+
+    Two forms of representation of the Green’s function:
+                             ∞                                           ∞
+                       2 X sin(pn x) sin(pn ξ)             2 X sin(qm y) sin(qm η)
+       G(x, y, ξ, η) =                         Hn (y, η) =                         Qm (x, ξ),
+                       a      pn sinh(pn b)                b      qm sinh(qm a)
+                            n=1                                         m=1
+
+where                                       ½
+                   πn                      sinh(pn η) sinh[pn (b − y)]            for b ≥ y > η ≥ 0,
+              pn =    ,       Hn (y, η) =
+                    a                      sinh(pn y) sinh[pn (b − η)]            for b ≥ η > y ≥ 0,
+                                          ½
+                   πm                       sinh(qm ξ) sinh[qm (a − x)]           for a ≥ x > ξ ≥ 0,
+              qm =      ,     Qm (x, ξ) =
+                    b                       sinh(qm x) sinh[qm (a − ξ)]           for a ≥ ξ > x ≥ 0.
+
+3.2-5. Domain: 0 ≤ r ≤ R. First boundary value problem for the Poisson equation.
+A circle is considered. A boundary condition is prescribed:
+                                              w = f (ϕ) at       r = R.
+    Solution in the polar coordinates:
+                   Z 2π                                   Z 2πZ R
+                1                    R2 − r 2
+    w(r, ϕ) =           f (η) 2                      dη +         Φ(ξ, η)G(r, ϕ, ξ, η)ξ dξ dη,
+               2π 0          r − 2Rr cos(ϕ − η) + R2       0   0
+
+where
+                                               1   r2 ξ 2 − 2R2 rξ cos(ϕ − η) + R4
+                            G(r, ϕ, ξ, η) =      ln 2 2                            .
+                                              4π    R [r − 2rξ cos(ϕ − η) + ξ 2 ]
+
+                                                    References
+Babich, V. M., Kapilevich, M. B., Mikhlin, S. G., et al., Linear Equations of Mathematical Physics [in Russian], Nauka,
+    Moscow, 1964.
+Butkovskiy, A. G., Green’s Functions and Transfer Functions Handbook, Halstead Press–John Wiley & Sons, New York,
+    1982.
+Polyanin, A. D., Handbook of Linear Partial Differential Equations for Engineers and Scientists , Chapman & Hall/CRC,
+    2002.
+
+
+Poisson Equation
+
+         ° 2004 Andrei D. Polyanin
+Copyright c                                                       http://eqworld.ipmnet.ru/en/solutions/lpde/lpde302.pdf
+

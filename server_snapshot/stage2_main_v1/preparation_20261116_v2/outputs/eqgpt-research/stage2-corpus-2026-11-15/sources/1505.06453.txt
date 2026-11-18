@@ -1,0 +1,842 @@
+Shock formation in the dispersionless Kadomtsev-Petviashvili equation Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 Solution by characteristic transformation 3 Overturning of the profile 3.1 Local analysis 3.2 Multivalued region 4 Dissipative dKP equation and shock solutions 4.1 Shock position 4.2 Shock structure 4.2.1 Burgers equation. 4.2.2 Pearcey integral and dissipative dKP equation. 5 Numerical solution 5.1 Shock formation for symmetric initial data 5.2 Nonsymmetric initial data 6 Conclusions References License: arXiv.org perpetual non-exclusive license arXiv:1505.06453v2 [math-ph] 17 Jun 2016 Shock formation in the
+dispersionless Kadomtsev-Petviashvili equation T. Grava Affiliation: School of Mathematics,
+University of Bristol, University Walk,
+Bristol BS8 1TW, United Kingdom Affiliation: SISSA, Via Bonomea 265, I-34136 Trieste, Italy C. Klein Affiliation: Institut de Mathématiques de Bourgogne, Université de Bourgogne,
+9 avenue Alain Savary, 21078 Dijon Cedex, France J. Eggers Affiliation: School of Mathematics,
+University of Bristol, University Walk,
+Bristol BS8 1TW, United Kingdom Abstract The dispersionless Kadomtsev-Petviashvili (dKP) equation $(u_{t}+uu_{x})_{x}=u_{yy}$ is one of the simplest nonlinear wave equations
+describing two-dimensional shocks. To solve the dKP equation we use a
+coordinate transformation
+inspired by the method of characteristics for the one-dimensional Hopf
+equation $u_{t}+uu_{x}=0$ . We show numerically that the
+solutions to the transformed equation develops singularities at later times with respect to the solution of the dKP equation.
+This permits us to extend the dKP solution as the graph of a
+multivalued function beyond the critical time when the gradients blow up.
+This overturned solution is multivalued in a lip shape region in the $(x,y)$ plane, where the solution of the dKP equation exists in a weak sense only,
+and a shock front develops. A local expansion reveals the universal
+scaling structure of the shock, which after a suitable change of coordinates
+corresponds to a generic cusp catastrophe.
+We provide a heuristic derivation of the shock front position near the
+critical point for the solution of the dKP equation, and study the
+solution of the dKP equation when a small amount of dissipation is added.
+Using multiple-scale analysis, we show that in the limit of small
+dissipation and near the critical point of the dKP solution, the
+solution of the dissipative dKP equation converges to a Pearcey integral.
+We test and illustrate our results by detailed comparisons with
+numerical simulations of both the regularized equation, the dKP
+equation, and the asymptotic description given in terms of the Pearcey
+integral. 1 Introduction Perhaps the best known example of a singularity in an
+evolution equation is the formation of jump discontinuities of
+the density and of the velocity field in the Euler equations of
+compressible gas dynamics. As these discontinuities propagate,
+they are known as shock waves. In the case of a planar shock front,
+the problem can be reduced to a one-dimensional equation for the
+velocity alone [ 30 ] (a so-called simple wave). The resulting
+wave profile overturns to form an s-shaped curve, the
+point where the gradient first becomes infinite (known as the
+gradient catastrophe) corresponds to the formation of a shock.
+From the overturned solution the physical solution can be
+reconstructed by inserting a jump discontinuity (the shock). The shock
+solution is a weak solution of the equation, which satisfies
+additional conditions motivated by physical considerations [ 31 ] .
+This shock solution is also found by taking the limit of vanishing
+viscosity in the dissipative form of the equations, yielding a weak
+solution (see [ 6 ] for conservation laws in one space
+dimension and [ 29 , 19 ] for hyperbolic
+equations in several space dimensions). The existence of such gradient catastrophe points has been proved in [ 2 , 33 ] for hyperbolic equations in many
+space dimensions. However, to the best of our knowledge, if the initial
+condition depends on two or three spatial variables, little is known about
+the two or three-dimensional spatial structure of the shock near the
+blow-up points of the gradients. In particular, it would be interesting
+to know the
+self-similar structure of the solution both before and after shock
+formation [ 14 ] . A rare instance of where we have a more
+or less complete understanding of a higher dimensional singularity
+is the spatial structure of caustics of wave fronts in the
+approximation of geometrical optics [ 4 , 41 ] . Two-dimensional
+wave breaking has also been studied in [ 43 ] , using a simple
+kinematic equation, for which an exact implicit solution is
+available. In this paper, we study the formation of two-dimensional shocks
+in a simple nonlinear wave equation known variously as
+the dispersionless Kadomtsev-Petviashvili (dKP) equation [ 22 ] ,
+or the Zabolotskaya-Khokhlov (ZK) equation [ 49 ] . The equation
+has the advantage that its one-dimensional form, the Hopf equation,
+has only one family of characteristics. The dKP equation can be
+seen as a long wavelength version of the original Kadomtsev-Petviashvili
+(KP) equation [ 22 ] : $(u_{t}+uu_{x}+u_{xxx})_{x}=\pm u_{yy},$ (1.1) but with the highest order dispersive term $u_{xxx}$ dropped,
+namely $(u_{t}+uu_{x})_{x}=\pm u_{yy}.$ The subscript denotes the derivative with respect to the variable.
+With a $+$ sign on the right hand side, ( 1.1 ) is
+known as the KPI equation, or as the KPII equation in the opposite
+case. However, in the case of the dKP equation the two signs are equivalent
+under the transformation $u\rightarrow-u$ and $x\rightarrow-x$ , and for
+the remainder of this manuscript we will consider only the positive sign.
+Depending on context, the KP equation describes wave profiles for
+layers of inviscid fluid of finite depth, waves in plasmas, or
+the propagation of sound beams in nonlinear media. While the Cauchy problem for the KP equation is
+globally well-posed in a suitable space [ 40 ] , by dropping the
+dispersive term, the dKP equation becomes a nonlocal scalar conservation
+law in two space variables. Even for smooth initial data, the solution
+remains smooth only for finite time. In [ 46 ] it is shown that
+the solution of the dKP equation is locally well posed in the Sobolev space $H^{s}$ , $s>2$ , so that for $s\geq 4$ one has classical solutions.
+Particular solutions of the dKP equations have been obtained with several
+techniques [ 16 , 17 , 27 , 13 , 45 ] . The
+Cauchy problem for the dKP equation and shock formation have been
+studied recently in [ 34 , 35 , 38 , 37 ] , using the inverse scattering
+transformation, which relies on the integrability of the dKP inherited
+from the KP equation [ 47 , 50 ] . To sketch a derivation of the dKP equation, we follow the original derivation
+of the KP equation [ 22 ] . We start from the Hopf equation $u_{t}+uu_{x}=0$ (1.2) for a wave field $u$ , with only a convective non-linearity. This is
+the simplest model equation describing wave steepening and shock
+formation. In a frame of reference moving at the sound speed $c$ ,
+a simple wave can be shown to be described by ( 1.2 ) [ 30 ] .
+Assuming a weak $y$ -dependence, we add a small correction $\psi$ on the right hand side of ( 1.2 ); $u_{t}+uu_{x}=\psi.$ (1.3) For a wave of small amplitude, the second term in the above equation
+can be neglected. Assuming a dispersion relation $\omega=kc=\sqrt{k_{x}^{2}+k_{y}^{2}}c$ , one obtains
+in a frame of reference moving along the $x$ -axis with velocity $c$ that $\omega=kc-k_{x}c\approx ck_{y}^{2}/(2k_{x})$ . For ( 1.3 ) to match
+this dispersion relation, we must have $\psi_{x}\approx cu_{yy}/2$ .
+Taking the $x$ -derivative on both sides of ( 1.3 ) we obtain $(u_{t}+uu_{x})_{x}=-\frac{c}{2}u_{yy}.$ Rescaling $x\to-x$ $u\to-u$ and $y\to\sqrt{2/c}y$ , one arrives at
+the equation $(u_{t}+uu_{x})_{x}=u_{yy}.$ (1.4) Note that in spite of its name, the dKP equation ( 1.4 )
+contains dispersion, and only the highest order dispersive term has
+been dropped relative to ( 1.1 ). Other contexts in which
+( 1.4 ) is used are described in [ 8 ] . The Hopf equation ( 1.2 ) is solved by observing that
+the velocity is constant along characteristic curves $x(\xi,t)$ ,
+given by [ 9 ] : $x(\xi,t)=u_{0}(\xi)t+\xi.$ (1.5) Thus for any initial condition $u(x,0)=u_{0}(x)$ , one finds an exact
+solution $u(x,t)=u_{0}(\xi)$ in implicit form. Wave breaking occurs
+when two characteristics cross, which always occurs when the initial
+condition has negative slope. A shock first forms along the characteristic
+originating from the point $\xi_{c}$ of greatest negative slope by absolute
+value, where the solution $u(x,t)$ has a point of blow up of the gradient. Thus if one expands the initial condition about $\xi_{c}$ ,
+one finds that the profile assumes a characteristic
+s-shape [ 14 ] : $\Delta x-\Delta u\Delta t+t_{c}^{4}u^{\prime\prime\prime}(\xi_{c})\Delta u^{3}/6=0,$ (1.6) where $\Delta u=u-u_{c}$ , and $\Delta x=x-x_{c}-u_{c}(t-t_{c})$ .
+For $\Delta t=t-t_{c}>0$ (after shock formation),
+the profile has become multivalued. Balancing the three terms in
+( 1.6 ), one sees directly that $\Delta u$ must be of order $\Delta t^{1/2}$ , and so $\Delta x$ of oder $\Delta t^{3/2}$ [ 43 , 14 ] . If one solves ( 1.4 ) with an initial condition which depends
+on $y$ , the equation can no longer be solved with the method of characteristics.
+The idea underlying this paper is that the dependence on the $y$ -coordinate is weak, so the structure of the solution is essentially
+the same as before, but the different stages of overturning are “unfolded”
+in the $y$ -direction [ 39 ] . This means that effectively the singularity
+time becomes a function of $y$ . If we choose the origin such that a
+singularity occurs at $y=0$ first, and expand $t_{c}$ in a Taylor
+series near $y=0$ , we obtain $t_{c}(y)=t_{c}(0)+ay^{2}+O(y^{3})$ , with $a>0$ a constant and $t_{c}(0)\equiv t_{c}$ . This means
+that $\Delta t=t-t_{c}-ay^{2}\equiv\bar{t}-ay^{2}$ , and
+the two-dimensional wave breaking is governed by the scalings $\Delta u\sim\bar{t}^{1/2},\quad\Delta x\sim\bar{t}^{3/2},\quad\Delta y\sim\bar{t}^{1/2}.$ (1.7) In this paper we will show that the scalings ( 1.7 ) indeed
+describe the similarity structure of wave breaking in the dKP equation. The estimates ( 1.7 ) imply that $\Delta y\gg\Delta x$ near the
+shock, consistent with our assumption of a slow variation in the $y$ -direction. The central idea of our paper is to use this insight
+to generalize the characteristic transformation ( 1.5 ) to
+allow for a slow $y$ -dependence: $\left\{\begin{array}[]{rl}&u(x,y,t)=F(\xi,y,t)\\
+&x=tF(\xi,y,t)+\xi\end{array}\right.$ (1.8) Applying transformation ( 1.8 ) to ( 1.4 ) results in a
+PDE for $F(\xi,y,t)$ which we will study in the next section (see equation ( 2.8 ));
+the initial condition for $F$ is given by $F(x,y,0)=u_{0}(x,y).$ (1.9) Note that if the initial data $u_{0}(x,y)$ has no $y$ -dependence,
+( 1.8 ) yields the exact characteristic solution with $F(x,y,t)=u_{0}(x)$ as described before; in particular, $F$ is $y$ and
+time-independent. As in the method of characteristics, the solution $u(x,y,t)$ of the dKP equation encounters a gradient catastrophe when
+the transformation $x=tF(\xi,y,t)+\xi$ defining $\xi=\xi(x,y,t)$ is
+not invertible, namely when $tF_{\xi}(\xi,y,t)+1=0$ . Our numerical results
+show that as a result of the unfolding ( 1.8 ), the function $F(\xi,y,t)$ remains regular at the time $t_{c}$ of shock formation of the
+solution $u(x,y,t)$ of the dKP equation. Moreover, our numerics indicate
+the derivatives of $F$ remain bounded for times substantially beyond $t_{c}$ .
+However, since $F$ satisfies a nonlinear equation (see ( 2.8 ) below), we
+believe that $F$ will typically develop a singularity for some time $t>t_{c}$ ;
+we give an example of such a singularity in a particular case. Manakov and Santini [ 35 , 38 ] have proposed a transformation
+for analysing
+the gradient catastrophe of dKP equation which is superficially similar
+to ours, which is motivated by the inverse scattering transform.
+Their transformation differs from ours by a factor of $2$ in front of
+the unfolding term: $\left\{\begin{array}[]{ll}&u(x,y,t)={\tilde{F}}(\zeta,y,t)\\
+&x=2t{\tilde{F}}(\zeta,y,t)+\zeta\\
+&{\tilde{F}}(\zeta,y,0)=u_{0}(\zeta,y)\end{array}\right.$ (1.10) as a result, the
+transformation does not unfold the overturned profile if there is no $y$ -dependence. In fact, transformation of the Hopf equation leads to
+the same equation ${\tilde{F}}_{t}-{\tilde{F}}\tilde{F}_{\zeta}=0$ as before,
+but with propagation in the opposite direction, and with the same initial
+data $\tilde{F}(\zeta,0)=u_{0}(\zeta)$ . This means that for $y$ -independent
+initial data localized in the $x$ -direction, $\tilde{F}(\zeta,t)$ will experience a gradient catastrophe before $u(x,t)$ does, if
+the initial profile is steeper on the left than on the right. The same
+remains true for solutions of the full dKP equation with localized
+initial data: we checked numerically that for the initial data
+considered in this manuscript, i.e. the $x$ -derivative of a Schwartz
+function, the function $\tilde{F}(\zeta,y,t)$ suffers a gradient catastrophe before a gradient catastrophe occurs in the original profile $u(x,y,t)$ . To further illustrate the difference between the two parameterizations,
+note that combining ( 1.8 ) and ( 1.10 ) one finds $F$ in terms of ${\tilde{F}}$ : $\left\{\begin{array}[]{ll}&F(\xi,y,t)={\tilde{F}}(\zeta,y,t)\\
+&\xi=t{\tilde{F}}(\zeta,y,t)+\zeta,\end{array}\right.$ (1.11) or ${\tilde{F}}$ in terms of $F$ : $\left\{\begin{array}[]{ll}&{\tilde{F}}(\zeta,y,t)=F(\xi,y,t)\\
+&\zeta=-tF(\xi,y,t)+\xi.\end{array}\right.$ (1.12) If we assume that $\tilde{F}(\zeta,y,t)$ has no singularities and that $2t{\tilde{F}}_{\zeta}(\zeta,y,t)+1>0$ in some time interval $[0,t^{\prime}]$ , then
+it follows from ( 1.10 ) that the solution $u(x,y,t)$ of the dKP
+equation is regular in the same time interval. But since we also have $t{\tilde{F}}_{\zeta}(\zeta,y,t)+1>0$ , it follows from ( 1.11 ) that $F(\xi,y,t)$ is regular in $[0,t^{\prime}]$ as well. On the other hand, assuming that $F(\xi,y,t)$ is regular and $tF_{\xi}(\xi,y,t)+1>0$ in some time interval $[0,t^{\prime}]$ , it follows
+from ( 1.8 ) that once again $u(x,y,t)$ is regular in $[0,t^{\prime}]$ .
+However, this does not imply that ${\tilde{F}}(\zeta,y,t)$ is regular,
+since it may happen that $-tF_{\xi}(\xi,y,t)+1=0$ for some $t\in(0,t^{\prime}]$ ,
+even though $tF_{\xi}(\xi,y,t)+1>0$ for all $t\in[0,t^{\prime}]$ . This argument shows that $\tilde{F}(\zeta,y,t)$ ,
+as defined by ( 1.10 ), might encounter singularities even before $u(x,y,t)$ does. Our formulation allows us to find spectrally accurate solutions to $F=F(\xi,y,t)$ ,
+from which $u(x,y,t)$ can easily be reconstructed. The alternative would be
+to use numerical methods for hyperbolic equations which remain
+stable even after the formation of shocks [ 32 ] . However,
+these methods introduce numerical dissipation near the shock, which
+renders the solution inaccurate. These sources of inaccuracy can be
+avoided using our transformation.
+The main results of this paper are the following: • in section 2 we describe the solution of the dKP equation by using
+a transformation inspired by the method of characteristics and by [ 35 ] .
+This transformation reduces the Cauchy problem for the dKP equation to
+the Cauchy problem for the function $F(\xi,y,t)$ introduced in
+( 1.8 ), which is regular beyond $t_{c}$ . • in section 3 we study the singularity formation in the solution
+to the dKP equation as done in [ 35 ] , [ 38 ] . We then show that the local structure of the dKP solution near
+the point of gradient catastrophe, in a suitable system of coordinates, is equivalent to the unfolding of an $A_{2}$ singularity.
+We derive the self-similar structure of the lip-shaped
+domain where the solution of the dKP equation becomes multivalued. • In section 4 we give a heuristic derivation of the shock front
+position near the critical point of the solution of the dKP equation,
+and study the solution of the dKP equation when dissipation is added
+(called the dissipative dKP equation). Using multiple-scale analysis,
+we show that in the limit of small dissipation and near the critical
+point of the dKP solution, the solution of the dissipative dKP equation
+converges to a Pearcey integral. • In section 5 we compare our analysis with detailed numerical
+simulations. Solutions for initial data with and without symmetry with
+respect to $y\mapsto-y$ are studied. It is shown that our
+numerical approach allows to continue dKP solutions to a second
+gradient catastrophe, well after the first catastrophe has occurred.
+We find no indication for blow-up of the solution to the transformed dKP
+equation. 2 Solution by characteristic transformation We consider the Cauchy problem for the dKPI equation $\left\{\begin{array}[]{ll}(u_{t}+uu_{x})_{x}&=u_{yy},\\
+u(x,y,t=0)&=u_{0}(x,y),\quad x,y\in\mathbb{R},\;t\in\mathbb{R}^{+}.\end{array}\right.$ (2.1) Since we are interested mainly in local properties of the
+solution, we will assume that $u_{0}(x,y)$ is in the Schwartz class, namely it is smooth and decreases rapidly
+at infinity. Equation ( 2.1 ) can also be written in the evolutionary form $u_{t}+uu_{x}=\partial_{x}^{-1}u_{yy},$ (2.2) where $\partial_{x}^{-1}f(x)\equiv\int_{-\infty}^{x}f(x^{\prime})dx^{\prime}$ . This has the form
+of a nonlocal conservation law $u_{t}+\nabla{\bf f}=0,\quad{\bf f}=\frac{u^{2}}{2}{\bf e}_{x}-\partial_{x}^{-1}u_{y}{\bf e}_{y},$ (2.3) with ${\bf e}_{x}$ and ${\bf e}_{y}$ unit vectors in the $x$ and $y$ directions.
+As a result, $\int_{\mathbb{R}^{2}}u(x,y,t)dxdy=\int_{\mathbb{R}^{2}}u_{0}(x,y)dxdy.$ (2.4) Similarly, $(u^{2})_{t}+\left[2u^{3}/3-\left(\partial_{x}^{-1}u_{y}\right)^{2}\right]_{x}+\left(2u\partial_{x}^{-1}u_{y}\right)_{y}=0,$ (2.5) and hence the $L^{2}$ norm is also a conserved quantity: $M(t)\equiv\int_{\mathbb{R}^{2}}u^{2}(x,y,t)dxdy=\int_{\mathbb{R}^{2}}u_{0}^{2}(x,y)dxdy.$ (2.6) Since the left hand side of ( 2.1 ) is a total derivative, solutions
+have to satisfy the constraint $\int_{\mathbb{R}}u_{yy}(x,y,t)dx=0,\quad t>0.$ If the initial data does not satisfy such constraint, a low decays at infinity occurs for $t>0$ even for initial data in the Schwartz class.
+This is a manifestation of the infinite speed of propagation
+in the dKP equation. For this reason we choose initial data such that $\int_{\mathbb{R}}u_{0}(x,y)dx=0$ (2.7) for all $y$ , so that the dynamical constraint is satisfied also at $t=0$ .
+After these preliminaries we transform the dKP equation using
+( 1.8 ), to find an equation for $F(\xi,y,t)$ . Proposition 2.1 The equations ( 1.8 ) give a solution to the dKP equation
+with smooth initial data $u_{0}(x,y)$ in implicit form, if the function $F(\xi,y,t)$ satisfies the equation $\left(\frac{F_{t}+tF_{y}^{2}}{1+tF_{\xi}}\right)_{\xi}=F_{yy},$ (2.8) with initial data $F(x,y,0)=u_{0}(x,y).$ (2.9) Proof Differentiating the second equation in ( 1.8 ) with
+respect to $x$ , $t$ and $y$ we find $\xi_{x}=\dfrac{1}{\Delta},\quad\xi_{t}=-\dfrac{F+tF_{t}}{\Delta},\quad\xi_{y}=\dfrac{tF_{y}}{\Delta}$ (2.10) where we have defined $\Delta=1+tF_{\xi}$ . Thus the derivatives of $u$ with respect to the variables are $u_{t}=F_{\xi}\xi_{t}+F_{t}=\frac{F_{t}-FF_{\xi}}{\Delta},$ (2.11) and $u_{x}=\dfrac{F_{\xi}}{\Delta},\quad u_{y}=\dfrac{F_{y}}{\Delta}.$ (2.12) Now the Hopf equation becomes $0=u_{t}+uu_{x}=\dfrac{F_{t}}{\Delta},$ (2.13) which confirms that $F$ is time-independent in this case. Differentiating
+( 2.12 ) a second time, we find $u_{yy}=\left(\frac{F_{y}}{\Delta}\right)_{y}-\left(\frac{F_{y}}{\Delta}\right)_{\xi}\frac{tF_{y}}{\Delta}=\frac{1}{\Delta}\left[F_{yy}-\left(\frac{tF_{y}^{2}}{\Delta}\right)_{\xi}\right],$ after some manipulations. But this means that if $u(x,y,t)$ satisfies
+the dKP equation ( 2.1 ), $F(\xi,y,t)$ satisfies ( 2.8 )
+with initial condition ( 2.9 ). $\square$ We rewrite the equation ( 2.8 ) in the evolutionary form $F_{t}=\partial_{\xi}^{-1}F_{yy}+t(\partial_{\xi}^{-1}F_{yy}F_{\xi}-F_{y}^{2})$ where $\partial_{\xi}^{-1}$ is the inverse of a derivation. We observe from the above equation that the nonlinear terms
+are multiplied by the time $t$ and this show that for small times the nonlinear effects are damped.
+This observation qualitatively explains the fact that the function $F(\xi,y,t)$ develops a singularity after $u(x,y,t)$ becomes singular. For the remainder of this paper
+we will focus on solutions to the transformed equation ( 2.8 ).
+We observe that ( 2.8 ) also conserves the integrals over $F$ and $F^{2}$ , which we will use to check our numerics. Namely
+for $n$ integer one has $\int_{\mathbb{R}^{2}}u^{n}dxdy=\int_{\mathbb{R}^{2}}F^{n}\Delta d\xi dy=\int_{\mathbb{R}^{2}}F^{n}d\xi dy+\frac{t}{n+1}\int_{\mathbb{R}^{2}}(F^{n+1})_{\xi}d\xi dy=\int_{\mathbb{R}^{2}}F^{n}d\xi dy.$ In particular, conservation of the $L^{2}$ norm ( 2.6 ) gives the
+constraint $\int_{\mathbb{R}^{2}}F^{2}(\xi,y,t)d\xi dy=\int_{\mathbb{R}^{2}}u_{0}^{2}(x,y,0)dxdy.$ (2.14) The transformation ( 1.8 ) has been constructed so as to
+unfold the overturned profile onto the initial condition in the case
+of a $y$ -independent initial condition. It is thus intuitive
+that if the overturning is modulated in the $y$ -direction, it is
+unfolded onto a function $F(\xi,y,t)$ which shows no overturning,
+and having a weak dependence on $y$ and $t$ only. 3 Overturning of the profile Figure 1: A typical sequence of wave breaking, as described by
+( 3.1 ), showing the lip-shaped domain inside which the wave overturns.
+The singularity first appears at the origin, then spreads
+rapidly in the direction ( 3.3 ). The scale of the
+lip is $\bar{t}^{3/2}$ in the $x$ -direction, and $\bar{t}^{1/2}$ in the $y$ -direction. Full lines are solutions of $\Delta=0$ at $\bar{t}=0.01,0.1$ , and $0.4$ , while the dashed line
+is the shock front, which has to be inserted in accordance with the
+shock condition ( 4.5 ), to be discussed in
+Section 4 below. For generic initial data the solution of the dKP equation
+encounters a gradient catastrophe at points where the transformation
+( 1.8 ) is not invertible [ 35 ] $\Delta(\xi,y,t)\equiv 1+tF_{\xi}(\xi,y,t)=0,$ (3.1) and consequently the gradients $u_{x}$ and $u_{y}$ go to infinity, cf.
+( 2.12 ). This is illustrated in Fig. 1 for
+generic initial data, based on the local description to be developed below.
+The singular time $t_{c}$ where the gradient catastrophe occurs first is
+the smallest $t$ such that ( 3.1 ) holds. Since for $t<t_{c}$ the
+quantity $\Delta(\xi,y,t)$ has a definite sign in the $\xi$ and $y$ plane, $\Delta(\xi,y,t_{c})$ must be a zero as well as an extremum: $\Delta=\Delta_{\xi}=\Delta_{y}=0$ . Thus the two-dimensional
+gradient catastrophe is characterized by the equations: $\begin{split}&1+tF_{\xi}(\xi,y,t)=0\\
+&F_{\xi\xi}=0\\
+&F_{\xi y}=0\\
+&u(x,y,t)=F(\xi,y,t)\\
+&x=tF(\xi,y,t)+\xi.\end{split}$ (3.2) The first three equations of ( 3.2 ) determine the coordinates $\xi_{c},y_{c}$ , and $t_{c}$ of the singularity in transformed variables,
+taken as the origin in Fig. 1 .
+The $x$ and $u$ coordinates are recovered by substitution into
+the last two equations. One finds that $(tF_{y}\partial_{x}+\partial_{y})u(x,y,t)=F_{y}<\infty$ , hence there is
+no gradient catastrophe in the transversal direction characterized
+by the vector field $tF_{y}{\bf e}_{x}+{\bf e}_{y},$ (3.3) see Fig. 1 .
+For generic initial conditions, the second derivatives of $\Delta$ will be nonzero at the gradient catastrophe: $F_{\xi\xi\xi}(\xi_{c},y_{c},t_{c})\neq 0,\quad F_{\xi\xi y}(\xi_{c},y_{c},t_{c})\neq 0\quad F_{\xi yy}(\xi_{c},y_{c},t_{c})\neq 0.$ (3.4) The conditions ( 3.2 ),( 3.4 ) correspond to a cusp
+singularity in the notation of [ 1 ] , and will be found to
+describe the generic singularity for the dKP solution.
+The condition that $F$ remains smooth, and thus the right hand side $F_{yy}$ of ( 2.8 ) is finite, results in the additional constraints $F_{t}^{c}+t_{c}(F_{y}^{c})^{2}=0,\quad F_{\xi t}^{c}=0,\quad F_{ty}^{c}+2t_{c}F^{c}_{yy}F_{y}^{c}=0,$ (3.5) where with a super-script we indicate the derivatives evaluated
+at the critical point. We now give a local description of the two-dimensional wave
+front $u(x,y,t)$ , based on expanding $F(\xi,y,t)$ near the
+gradient catastrophe described by ( 3.2 ). Our numerical
+simulations confirm that $F(\xi,y,t)$ remains smooth in the $(\xi,y)$ plane not only near the
+first singularity, but well beyond. The region where the
+wave is multivalued has the typical lip shape also seen in
+the caustic surface of light waves near the cusp catastrophe [ 41 ] . We will show them to be self-similar with
+width $\bar{t}^{3/2}$ in the horizontal direction and $\bar{t}^{1/2}$ in
+the transversal direction where $\bar{t}=t-t_{c}$ , as done in [ 35 ] .
+The same scalings have been observed in [ 43 ] in the context of
+the 2-dimensional kinematic wave equation. In order to illustrate the way in which ( 1.8 ) unfolds
+the singularity, it is instructive to consider a family of exact
+solutions to ( 2.1 ) obtained in [ 36 ] : $u(x,y,t)=\dfrac{1}{\sqrt{t}}B\left(x-\dfrac{y^{2}}{4t}-2ut\right),$ (3.6) where $B$ is an arbitrary function of one variable. The validity of
+( 3.6 ) can be checked explicitly by substitution. Clearly
+( 3.6 ) can be re-parameterized in the form $u(x,y,t)=\dfrac{1}{\sqrt{t}}B\left(\zeta-\dfrac{y^{2}}{4t}\right),\quad x=2\sqrt{t}B(\zeta-\dfrac{y^{2}}{4t})+\zeta,$ (3.7) which shows that $\tilde{F}$ , as defined by ( 1.10 ), is $\tilde{F}(\zeta,y,t)=\dfrac{1}{\sqrt{t}}B(\zeta-\dfrac{y^{2}}{4t}).$ A singularity in the dKP solution occurs when the second
+equation in ( 3.7 ) is no longer invertible; the first
+time this occurs is the critical time $t_{c}>0$ , determined by $\sqrt{t_{c}}=\min_{\zeta\in\mathbb{R}}\left(-\dfrac{1}{2B_{\zeta}}\right).$ In order to write ( 3.6 ) in terms of our
+function $F(\xi,y,t)$ , we use the double re-parameterisation: $\displaystyle u(x,y,t)=F(\xi,y,t),\quad x=tF(\xi,y,t)+\xi,$ (3.8) $\displaystyle F(\xi,y,t)=\dfrac{1}{\sqrt{t}}B(\zeta-\dfrac{y^{2}}{4t}),\quad\xi=\sqrt{t}B(\zeta-\dfrac{y^{2}}{4t})+\zeta.$ (3.9) We observe that $F(\xi,y,t)$ has a singularity when the second
+transformation in ( 3.9 ) is no longer invertible, namely at
+a critical time for the transformed equation ( 2.8 ) $t_{c}^{(F)}=4t_{c}.$ It is also straightforward to check
+that at $t_{c}$ , $F(\xi,y,t)$ satisfies the constraints ( 3.5 ).
+Indeed one calculates directly from ( 3.9 ) that $F_{t}=-\dfrac{B}{2t^{\frac{3}{2}}}\dfrac{2\sqrt{t}B^{\prime}+1}{\sqrt{t}B^{\prime}+1}+\dfrac{y^{2}B^{\prime}}{4t^{\frac{5}{2}}}\dfrac{1}{\sqrt{t}B^{\prime}+1},\quad F_{y}=-\dfrac{yB^{\prime}}{2t^{\frac{3}{2}}(\sqrt{t}B^{\prime}+1)},$ so at the critical time one obtains the relations $F_{t}^{c}=-\dfrac{y_{c}^{2}}{4t^{3}_{c}},\quad F_{y}^{c}=\dfrac{y_{c}}{2t_{c}^{2}},$ which satisfy the first of the constraints in ( 3.5 ); the
+remaining constraints ( 3.5 ) are checked analogously. 3.1 Local analysis In order to study the solution near the gradient catastrophe we
+expand the generalized characteristic equation ( 1.8 ) in
+a Taylor series near $t_{c}$ , $x_{c},$ $y_{c},$ $u_{c}$ and $\xi_{c}$ . Part of the analysis below is already contained in [ 35 ] , [ 38 ] .
+Introducing variables relative to the singularity
+as $\bar{x}:=x-x_{c}\quad\bar{t}:=t-t_{c},\quad\bar{y}:=y-y_{c},\quad\bar{\xi}:\xi-\xi_{c},$ we have argued that $\bar{x}\sim\bar{t}^{3/2}$ and $\bar{y}\sim\bar{t}^{1/2}$ . Since $\Delta u\sim\bar{t}^{1/2}$ , it
+follows from the first equation of ( 1.8 ) that $\bar{\xi}\sim\bar{t}^{1/2}$ . Thus to be consistent, we include
+all terms up to $O(\bar{t}^{3/2})$ : $\begin{split}\bar{x}&=\bar{t}(F^{c}+t_{c}F_{t}^{c})+\bar{t}\bar{y}(F_{y}^{c}+t_{c}F^{c}_{yt})+t_{c}\left(F^{c}_{y}\bar{y}+\dfrac{1}{2}F^{c}_{yy}\bar{y}^{2}+\dfrac{1}{6}F_{yyy}^{c}\bar{y}^{3}\right)\\
+&+\dfrac{t_{c}}{6}F^{c}_{\xi\xi\xi}\bar{\xi}^{3}+\dfrac{t_{c}}{2}F^{c}_{\xi\xi y}\bar{y}\bar{\xi}^{2}+\left(\frac{t_{c}}{2}F_{\xi yy}^{c}\bar{y}^{2}+F_{\xi}^{c}\bar{t}\right)\bar{\xi}+o(\bar{t}^{2},\bar{y}^{4},\bar{\xi}^{4},\bar{t}(\bar{y}^{2}+\bar{\xi}^{2})).\end{split}$ (3.10) This suggests introducing the shifted variables
+(using $t_{c}=-1/F_{\xi}^{c}$ ): $\begin{split}&\zeta=F^{c}_{\xi}\left(\bar{\xi}+\dfrac{F^{c}_{\xi\xi y}}{F^{c}_{\xi\xi\xi}}\bar{y}\right)\\
+&X=\frac{1}{k}\left[\bar{x}-\bar{t}(F^{c}+t_{c}F_{t}^{c})-\bar{t}\bar{y}(F_{y}^{c}+t_{c}F^{c}_{yt})-t_{c}\left(F^{c}_{y}\bar{y}+\dfrac{1}{2}F^{c}_{yy}\bar{y}^{2}+\dfrac{1}{6}F_{yyy}^{c}\bar{y}^{3}\right)\right.\\
+&\left.-\frac{1}{3}t_{c}\dfrac{(F^{c}_{\xi\xi y})^{3}}{(F^{c}_{\xi\xi\xi})^{2}}\bar{y}^{3}+\frac{1}{2}t_{c}\dfrac{F^{c}_{\xi\xi y}F^{c}_{\xi yy}}{F^{c}_{\xi\xi\xi}}\bar{y}^{3}+F^{c}_{\xi}\dfrac{F^{c}_{\xi\xi y}}{F^{c}_{\xi\xi\xi}}\bar{y}\bar{t}\right]\\
+&T=\frac{1}{k}\left[\bar{t}+\frac{t^{2}_{c}}{2}\bar{y}^{2}\left(\dfrac{(F^{c}_{\xi\xi y})^{2}}{F^{c}_{\xi\xi\xi}}-F^{c}_{\xi yy}\right)\right],\\
+&k=\dfrac{t_{c}^{4}F^{c}_{\xi\xi\xi}}{6}\end{split}$ (3.11) so that in the variable $\zeta$ , ( 3.10 ) takes the form $-\zeta^{3}+T\zeta=X+o(\bar{t}^{2},\bar{y}^{4},\bar{\xi}^{4},\bar{t}(\bar{y}^{2}+\bar{\xi}^{2})).$ (3.12) Figure 2: The universal s-curve described by
+( 3.14 ); for $T>0$ the profile turns over to form a
+multivalued region. Using the estimates $\bar{\xi}\sim\bar{y}\sim\bar{t}^{1/2}$ and $\bar{x}\sim\bar{t}^{3/2}$ identified previously, the scaling $\begin{split}&X\to\lambda X\\
+&\bar{t}\to\lambda^{\frac{2}{3}}\bar{t}\\
+&\bar{y}\to\lambda^{\frac{1}{3}}\bar{y}\\
+&\zeta\to\lambda^{\frac{1}{3}}\zeta,\end{split}$ (3.13) in the limit $\lambda\to 0$ reduces ( 3.12 ) to the
+universal s-curve $-\zeta^{3}+T\zeta=X$ (3.14) shown in Fig. 2 . It is easy to confirm that
+the function $\zeta(X,T)$ defined by ( 3.14 ) solves $\zeta_{T}+\zeta\zeta_{X}=0$ (3.15) with initial condition $\zeta(X,T=0)=(-X)^{\frac{1}{3}}$ ,
+completing our task of reducing ( 2.1 ) locally to the Hopf
+equation. A gradient catastrophe is encountered for $X=0$ , $T=0$ , and $\zeta=0$ . Using the identities ( 3.5 ), we can now calculate the
+solution to the dKP equation ( 2.1 ), valid near the singularity.
+To leading order in the limit $\lambda\rightarrow 0$ , it is consistent
+to expand $u(x,y,t)$ to linear order in $\bar{\xi},\bar{y}$ : $u(x,y,t)-u_{c}=F(\xi,y,t)-F^{c}\simeq F_{\xi}^{c}\bar{\xi}+F_{y}^{c}\bar{y}=\zeta(X,T)+\bar{\beta}\bar{y},$ (3.16) with $\bar{\beta}=F_{y}^{c}-\frac{F_{\xi}^{c}F_{\xi\xi y}^{c}}{F_{\xi\xi\xi}^{c}}.$ (3.17) Thus putting $\bar{u}\equiv u(x,y,t)-u_{c}$ , from ( 3.14 )
+we find the local profile to be an s-curve, which has the
+universal similarity form: $-\left(\bar{u}-\bar{\beta}\bar{y}\right)^{3}+T\left(\bar{u}-\bar{\beta}\bar{y}\right)=X.$ (3.18) This is the central result of our theoretical analysis; the
+formula ( 3.18 ) is the unfolding of an $A_{2}$ singularity.
+It is a complete description of the self-similar behavior of the
+dKP solution near its singularity for generic initial data.
+In the $y$ -independent case, ( 3.18 ) coincides with the usual
+result ( 1.6 ). We now derive the form of this multivalued valued
+region in the $x,y$ -plane, shown previously in Fig. 1 . 3.2 Multivalued region As seen in Fig. 2 , the function $\zeta=\zeta(X,T)$ ,
+described by the cubic equation ( 3.14 ), becomes multivalued for $T>0$ .
+From ${\displaystyle\frac{\partial X}{\partial\zeta}=0}$ it follows
+that $T=3\zeta^{2},\quad\mbox{or}\quad\zeta=\pm\sqrt{T/3},$ (3.19) so that for $X$ in the interval $-\dfrac{2}{3\sqrt{3}}T^{3/2}\leq X\leq\dfrac{2}{3\sqrt{3}}T^{3/2},$ the function $\zeta(X,T)$ is multivalued. Reversing the coordinate
+transformations ( 3.11 ), we can write the first equation
+( 3.19 ) in the form $\bar{t}=\dfrac{1}{2}t_{c}\alpha\left(\bar{\xi}^{2}+2\beta\bar{y}\bar{\xi}+\gamma\bar{y}^{2}\right),$ (3.20) where we have introduced the constants $\alpha=t_{c}F^{c}_{\xi\xi\xi},\quad\beta=\dfrac{F^{c}_{\xi\xi y}}{F^{c}_{\xi\xi\xi}},\quad\gamma=\dfrac{F_{\xi yy}^{c}}{F^{c}_{\xi\xi\xi}}.$ (3.21) Alternatively, ( 3.20 ) could also have been derived from
+( 3.1 ), and expanding $F$ in a power series around the singular
+point. The $\bar{x}$ -coordinate of the boundary of overturning can be found from
+( 3.10 ), which using ( 3.20 ) can be simplified to yield $\displaystyle\bar{x}=-\alpha\left(\dfrac{1}{3}\bar{\xi}^{3}+\dfrac{\beta}{2}\bar{y}\bar{\xi}^{2}\right)+\bar{t}\left(F^{c}-t^{2}_{c}(F_{y}^{c})^{2}\right)+$ $\displaystyle\bar{t}\bar{y}\left(F_{y}^{c}-2t_{c}^{2}F^{c}_{yy}F_{y}^{c}\right)+t_{c}\left(F^{c}_{y}\bar{y}+\dfrac{1}{2}F^{c}_{yy}\bar{y}^{2}+\dfrac{1}{6}F_{yyy}^{c}\bar{y}^{3}\right).$ (3.22) Equations ( 3.20 ) and ( 3.22 ) describe a curve in the $(\bar{x},\bar{y})$ plane, parameterized by $\bar{\xi}$ .
+An example was shown previously in Fig. 1 for several
+values of $\bar{t}=t-t_{c}$ , showing its characteristic “lip” shape [ 3 ] . The overturned region starts from the singular point and then expands,
+as seen in Fig. 1 . To understand the scaling of this
+expansion, we introduce the independent variables $\left\{\begin{array}[]{ll}X_{1}&=\left[\bar{x}-\bar{t}(F^{c}-t^{2}_{c}(F_{y}^{c})^{2})-t_{c}(F^{c}_{y}\bar{y}+\dfrac{1}{2}F^{c}_{yy}\bar{y}^{2})\right]\bar{t}^{-3/2}\\
+Y_{1}&=\bar{y}\bar{t}^{-1/2}.\end{array}\right.$ (3.23) Then the lip described by equations ( 3.20 ) and ( 3.22 )
+is reduced to the time-independent similarity form: $\left\{\begin{array}[]{ll}&\dfrac{1}{2}t_{c}\alpha\left(s^{2}+2\beta Y_{1}s+\gamma Y_{1}^{2}\right)=1\\
+&X_{1}=-\alpha\left(\dfrac{1}{3}s^{3}+\dfrac{1}{2}\beta s^{2}Y_{1}\right)+\delta_{1}Y_{1}+\dfrac{\delta_{2}}{6}Y_{1}^{3},\end{array}\right.$ (3.24) with the additional constants $\delta_{1}=F_{y}^{c}-2t_{c}^{2}F^{c}_{yy}F_{y}^{c},\quad\delta_{2}=t_{c}F_{yyy}^{c}.$ (3.25) Figure 3: The symmetric lip according to ( 3.26 ), ending
+in a cusp. This demonstrates that the gradient catastrophe in the dKP equation
+has a universal spatial signature, parameterized by the constants $\alpha,\beta,\gamma,\delta_{1}$ , and $\delta_{2}$ , all of which can be
+computed in terms of the initial data and its derivatives at the
+point of gradient catastrophe $(x_{c},t_{c},y_{c})$ . The scalings introduced
+in ( 3.23 ) imply that the lip expands as $\bar{t}^{3/2}$ in
+the propagation direction, and as $\bar{t}^{1/2}$ in the
+transversal direction, as announced previously. A characteristic
+feature is the cusp at the corner of the lip. This is seen most
+easily for initial data which is even in $y$ , for which the description
+simplifies considerably. All odd derivatives in $y$ vanish, and
+we obtain $\left\{\begin{array}[]{lll}&&\dfrac{1}{2}t_{c}\alpha\left(s^{2}+\gamma Y_{1}^{2}\right)=1\\
+&&X_{1}=-\dfrac{\alpha}{3}s^{3},\end{array}\right.$ (3.26) shown in Fig. 3 . Analyzing the neighborhood
+of the point $s=0$ , one finds directly that $X_{1}=\pm\frac{\alpha}{3}(2\bar{Y}_{1})^{3/2}\left(\bar{Y}_{1}-Y_{1}\right)^{3/2},\quad\bar{Y}_{1}=\sqrt{\frac{2}{t_{c}\alpha}},$ (3.27) which is a generic 3/2 cusp [ 15 ] . 4 Dissipative dKP equation and shock solutions The solution ( 3.18 ) constructed in the previous subsection is
+unphysical for $\bar{t}>0$ , in that it does not assign a unique
+value of $u$ to every point $x,y$ in the plane. In principle,
+one can construct an infinity of single-valued solutions from it,
+by choosing different points at which to jump from one branch to the
+other. For conservation laws in many space dimensions,
+physically motivated constraints, known as generalized Rankine-Hugoniot
+jump conditions, have been introduced. As result, a weak solution of the
+equations (usually called the inviscid shock), is singled out
+uniquely [ 33 , 29 ] . Another way to select a unique solution after the singularity, is to consider
+a dissipative version of ( 2.1 ) with a viscous term added to
+it, which keeps the solution regular at all times. In the limit
+of vanishing viscosity $\epsilon$ these regular solutions are expected to
+converge to ( 3.18 ), with a particular jump condition being selected.
+In this case the shock is called the viscous shock. In the field of
+hyperbolic equations the problem of showing that the inviscid shock is
+equal to the viscous shock has generated a huge literature. We only mention
+some important references in one dimension [ 6 , 18 ] ,
+and many space dimensions [ 19 ] . Below we give an heuristic
+derivation of the equivalence of the inviscid and viscous shock for the
+dKP equation. We consider the dissipative form of the dKP equation $(u_{t}+uu_{x}-\epsilon(u_{xx}+cy_{yy}))_{x}=u_{yy},\quad u(x,y,t=0,\epsilon))=u_{0}(x,y),$ (4.1) with $c\geq 0$ ,
+which satisfies $\frac{1}{2}\frac{\partial}{\partial t}\int_{\mathbb{R}^{2}}u^{2}(x,y,t)dxdy=-\epsilon\left(u_{x}^{2}+cu_{y}^{2}\right)<0.$ (4.2) For given $\epsilon$ -independent initial data,
+the solution $u(x,y,t,\epsilon)$ of the dissipative equation ( 4.1 )
+is expected to be approximated as $\epsilon\to 0$ and $t<t_{c}$ by the
+solution $u(x,y,t)$ of the dKP equation ( 2.1 ). 4.1 Shock position On the other hand, ( 2.4 ) is still satisfied at finite $\epsilon$ ,
+so (smooth) solutions of ( 4.1 ) still conserve $u$ in the limit $\epsilon\to 0$ . From the condition that $u$ be satisfied across a shock,
+we can use the generalized Rankine-Hugoniot jump conditions as in [ 33 ] , which determines the shock position
+(see also [ 9 ] ).
+Namely, if $v_{n}$ is the normal velocity of the shock, one obtains $v_{n}(u_{1}-u_{2})=\left({\bf f}\cdot{\bf n}\right)_{1}-\left({\bf f}\cdot{\bf n}\right)_{2},$ (4.3) where ${\bf n}$ is the normal to the shock front, and indices 1 and 2
+denote values in front and in the back of the shock, respectively.
+Assuming that the shock position is given by the curve $x_{s}(\bar{y},\bar{t})$ ,
+and using the flux ${\bf f}$ from ( 2.3 ), this yields $\dot{x}_{s}(u_{1}-u_{2})=\frac{u_{1}^{2}-u_{2}^{2}}{2}+\frac{\partial x_{s}}{\partial y}\int_{x_{2}}^{x_{1}}u_{y}dx,$ (4.4) where $x_{1/2}$ are $x$ -values approaching the shock from the front
+and from behind, respectively. Now the singular contribution to $u$ across the shock can be written in the form $u=u_{2}+(u_{1}-u_{2})\theta(\bar{x}-x_{s}(\bar{y},\bar{t})),$ where $\theta(x)$ is the Heaviside function and $u_{1,2}$ become
+functions only of $y$ and $t$ on the shock front $\bar{x}=x_{s}(\bar{y},\bar{t})$ .
+Hence $u_{y}=(u_{2})_{y}+(u_{1}-u_{2})_{y}\theta(\bar{x}-x_{s}(\bar{y},\bar{t}))-(u_{1}-u_{2})\frac{\partial x_{s}}{\partial y}\delta(\bar{x}-x_{s}(\bar{y},\bar{t})),$ and from ( 4.4 ) the jump condition at the
+shock finally becomes $\dot{x}_{s}=\frac{u_{1}+u_{2}}{2}-\left(\frac{\partial x_{s}}{\partial y}\right)^{2}.$ (4.5) Note that the shock speed in the $x$ -direction is not only
+an average between $u$ -values in front and in the back of the
+shock as for the Hopf equation, but on account of the right hand
+side of ( 2.1 ) an additional term arises. Since we have mapped ( 2.1 ) locally to the Hopf equation ( 3.15 ),
+standard theory [ 9 ] tells us that the shock
+should be at $X=0$ , according to ( 3.11 ) the equation for the
+front becomes $\displaystyle x_{s}(\bar{y},\bar{t})=\bar{t}(F^{c}+t_{c}F_{t}^{c})+\bar{t}\bar{y}(F_{y}^{c}+t_{c}F^{c}_{yt})+t_{c}\left(F^{c}_{y}\bar{y}+\dfrac{1}{2}F^{c}_{yy}\bar{y}^{2}+\dfrac{1}{6}F_{yyy}^{c}\bar{y}^{3}\right)+$ $\displaystyle\frac{1}{3}t_{c}\dfrac{(F^{c}_{\xi\xi y})^{3}}{(F^{c}_{\xi\xi\xi})^{2}}\bar{y}^{3}-\frac{1}{2}t_{c}\dfrac{F^{c}_{\xi\xi y}F^{c}_{\xi yy}}{F^{c}_{\xi\xi\xi}}\bar{y}^{3}-F^{c}_{\xi}\dfrac{F^{c}_{\xi\xi y}}{F^{c}_{\xi\xi\xi}}\bar{y}\bar{t}.$ (4.6) This equation indeed satisfies ( 4.5 ) to leading order,
+since $\dot{x}_{s}(\bar{y},\bar{t})=F^{c}+t_{c}F_{t}^{c}+\bar{y}t_{c}F^{c}_{yt}+\bar{\beta}\bar{y}$ (4.7) and $\left(\frac{\partial x_{s}}{\partial y}\right)^{2}=\left[t_{c}\left(F^{c}_{y}+F^{c}_{yy}\bar{y}\right)+O(\bar{t})\right]^{2}=-t_{c}F_{t}^{c}-t_{c}F_{ty}^{c}\bar{y}+O(\bar{t}),$ (4.8) having used ( 3.5 ).
+On the other hand, $\zeta_{\pm}=\pm\sqrt{T}$ at $X=0$ , and so according to ( 3.16 ) $\frac{u_{1}+u_{2}}{2}=F^{c}+\bar{\beta}\bar{y}.$ Combining the last three equations one can see that
+the approximate shock front ( 4.6 )
+satisfies ( 4.5 ) to leading order. In
+Fig. 1 we have plotted ( 4.6 ) as the dashed line. 4.2 Shock structure Having found the shock position, we now investigate the inner structure
+of the shock, in case a small amount of viscosity is present. This is
+achieved by mapping ( 4.1 ) onto Burgers’ equation [ 48 ] ,
+which in addition to ( 3.15 ) contains a dissipative contribution.
+We are looking for a solution $u(x,y,t;\epsilon)$ of the dissipative dKP
+equation near the gradient catastrophe $(x_{c},y_{c},t_{c})$ of the
+(inviscid) dKP equation. To this end we use the ansatz $u(x,y,t;\epsilon)=u_{c}+h(X,T;\epsilon)+\bar{y}\bar{\beta},$ (4.9) with $X$ and $T$ defined in ( 3.11 ). Using the same scalings as
+before, and balancing $u_{t}\propto\epsilon u_{xx}$ , we are
+led to the multiscale expansion $h(X,T;\epsilon)=\lambda^{\frac{1}{3}}H({\cal X},{\cal T};\varepsilon)+O(\lambda^{\alpha}),\quad\alpha>\frac{1}{3},$ $X=\lambda{\cal X},\quad T=\lambda^{\frac{2}{3}}{\cal T},\quad\epsilon=\lambda^{\frac{4}{3}}\varepsilon,\quad\bar{y}=\lambda^{\frac{1}{3}}{\cal Y},$ (4.10) and find the following theorem: Theorem 4.1 Let $u(x,y,t;\epsilon)=u_{c}+h(X,T;\epsilon)+\bar{y}\bar{\beta}$ be a solution of the dissipative dKP equation ( 4.1 ) with $X$ and $T$ defined in ( 3.11 ).
+Suppose that for $|t-t_{c}|$ small the limit $H({\cal X},{\cal T};\varepsilon)=\lim_{\lambda\to 0}\lambda^{-\frac{1}{3}}h(\lambda{\cal X},\,\lambda^{2/3}{\cal T};\lambda^{\frac{4}{3}}\varepsilon)$ exists and the function $H({\cal X},{\cal T};\varepsilon)$ satisfies the asymptotic conditions $H({\cal X},{\cal T};\varepsilon)=\mp|{\cal X}|^{\frac{1}{3}}\mp\dfrac{{\cal T}}{3}|{\cal X}|^{-\frac{1}{3}}+O(|{\cal X}|^{-\frac{5}{3}}),\quad|{\cal X}|\to\infty$ (4.11) for each fixed ${\cal T}\in\mathbb{R}$ .
+Then the function $H({\cal X},{\cal T};\varepsilon)$ satisfies
+the Burgers equation $H_{\cal{T}}+HH_{\cal{X}}=\sigma H_{\cal{X}\cal{X}},\quad\sigma=\dfrac{\varepsilon}{k}\left(1+c(t_{c}F_{y}^{c})^{2}\right)$ (4.12) with $k$ defined in ( 3.11 ). Proof Inserting ( 4.9 ) into the dissipative dKP equation one obtains $(H_{\cal{T}}+HH_{\cal{X}}-\dfrac{\varepsilon}{k}\left(1+(t_{c}F_{y}^{c})^{2}\right)H_{\cal{X}\cal{X}})_{{\cal X}}+\lambda^{-\frac{1}{3}}H_{{\cal X}{\cal X}}\left(\dfrac{\partial X}{\partial t}-\left(\dfrac{\partial X}{\partial y}\right)^{2}+F_{c}+\bar{y}(F^{c}_{y}-F^{c}_{\xi}\dfrac{F^{c}_{\xi\xi y}}{F^{c}_{\xi\xi\xi}})\right)\\
+=H_{\cal{T}\cal{X}}\dfrac{\partial T}{\partial y}\dfrac{\partial X}{\partial y}+\lambda^{\frac{1}{3}}H_{\cal{T}\cal{T}}\left(\dfrac{\partial T}{\partial y}\right)^{2}+\lambda kH_{{\cal T}}\dfrac{\partial^{2}T}{\partial y^{2}}+\lambda^{2/3}kH_{\cal{X}}\dfrac{\partial^{2}X}{\partial y^{2}}-\varepsilon\left(H_{{\cal X}{\cal X}}\left(\left(\dfrac{\partial X}{\partial y}\right)^{2}-(t_{c}F_{y}^{c})^{2}\right)\right)\\
+-\frac{\varepsilon}{k}\left(\lambda^{1/3}H_{\cal{T}\cal{X}}\dfrac{\partial T}{\partial y}\dfrac{\partial X}{\partial y}+\lambda^{2/3}H_{\cal{T}\cal{T}}\left(\dfrac{\partial T}{\partial y}\right)^{2}+\lambda^{4/3}kH_{{\cal T}}\dfrac{\partial^{2}T}{\partial y^{2}}+\lambda kH_{\cal{X}}\dfrac{\partial^{2}X}{\partial y^{2}}\right)_{{\cal X}}.$ (4.13) Using ( 3.11 ), the constraints ( 3.5 ), and the substitution
+( 4.10 ) one arrives at the relation $(H_{\cal{T}}+HH_{\cal{X}}-\frac{\varepsilon}{k}\left(1+c(t_{c}F_{y}^{c})^{2}\right)H_{\cal{X}\cal{X}})_{{\cal X}}=O(\lambda^{\frac{1}{3}}),$ which in the limit $\lambda\to 0$ shows that the derivative of
+( 4.12 ) is equal to zero.
+In order to fix the integration constant we use the asymptotic condition ( 4.11 ). $\square$ We remark that the asymptotic condition ( 4.11 ) implies that the local solution near the point of singularity formation, matches the outer solution
+given by ( 3.14 ) and ( 3.16 ).
+We conclude that near the gradient catastrophe, up to the constant term $u_{c}$ as well as a term linear in $y$ , in a suitable co-ordinate system
+the solution to the dissipative dKP equation reduces to the solution of
+the one-dimensional Burgers equation. We will argue below that the
+particular solution to the Burgers equations relevant near the critical
+point, and described by the asymptotic form ( 4.11 ), also satisfies
+the equation ${\cal X}=H{\cal T}-H^{3}+6\sigma HH_{{\cal X}}-4\sigma^{2}H_{{\cal X}{\cal X}}.$ (4.14) 4.2.1 Burgers equation. To find the local solution near the shock, let us recall the solution
+to Burgers’ equation $v_{t}+vv_{x}=\nu v_{xx},$ (4.15) with initial data $v_{0}(x)$ , where $\nu$ is a positive constant.
+An exact solution is obtained via the Cole-Hopf transformation [ 20 ] , [ 48 ] to give the formula: $v(x,t,\nu)=-2\nu\partial_{x}\log\int_{-\infty}^{\infty}e^{-\frac{G(\eta,x,t)}{2\nu}}d\eta,$ (4.16) where $G(\eta,x,t)=\int_{0}^{\eta}v_{0}(s)ds+\dfrac{(x-\eta)^{2}}{2t}.$ (4.17) For $\nu\to 0$ the leading contributions to the integral come from
+the neighborhood of the critical points of $G$ , namely $\partial_{\eta}G(\eta,x,t)|_{\eta=\xi}=v_{0}(\xi)-\dfrac{x-\xi}{t}=0.$ (4.18) Let us assume first that there is only one such critical point,
+which means that using the method of the steepest descent [ 48 ] ,
+the integral can be approximated as $\int_{-\infty}^{\infty}e^{-\frac{G(\eta,x,t)}{2\nu}}d\eta\approx\sqrt{\frac{4\pi\nu}{\partial_{\xi}^{2}G(\xi,x,t)}}e^{-\frac{G(\xi,x,t)}{2\nu}},$ where $\xi=\xi(x,t)$ is a solution of ( 4.18 ). Direct
+evaluation of ( 4.16 ), using the characteristic
+condition ( 4.18 ), then yields the solution $v(x,t,\nu)=v_{0}(\xi)+\nu\dfrac{v_{0}^{\prime\prime}(\xi)t}{(v_{0}^{\prime}(\xi)t+1)^{2}}+O(\nu^{2}),$ (4.19) whose leading order contribution in the limit $\nu\rightarrow 0$ is the solution of the Hopf equation by characteristics. In addition,
+( 4.19 ), contains a linear correction coming from the
+viscosity. Alternatively, the term linear in $\nu$ can
+also be obtained using perturbation theory. The approximation ( 4.19 ) remains valid as long as the
+function $G(\eta,x,t)$ has an isolated generic critical point, before the
+appearance of a gradient catastrophe. However, after the critical
+triple point $(x_{c},t_{c})$ of the Hopf equation, where $v_{0}^{\prime}(\xi_{c})t_{c}+1=0$ and $v_{0}^{\prime\prime}(\xi_{c})=0$ , ( 4.18 ) has three solutions,
+as illustrated on the left of Fig. 5 below.
+Near this point $G(\eta,x,t)$ can be expanded in a Taylor series as $\Delta G:=G(\eta,x,t)-G(\xi_{c},c_{c},t_{c})\simeq v_{0}^{\prime\prime\prime}(\xi_{c})\frac{\bar{\eta}^{4}}{4!}-\bar{\eta}^{2}\frac{\bar{t}}{2t_{c}^{2}}-\bar{\eta}\dfrac{\bar{x}-v_{c}\bar{t}}{t_{c}}+v_{c}(\bar{x}-v_{c}\bar{t})+v_{c}^{2}\bar{t},$ where $\bar{x}=x-x_{c}$ , $\bar{t}=t-t_{c}$ , $\bar{\eta}=\eta-\xi_{c}$ , $v_{c}=v_{0}(\xi_{c})$ and $v_{0}^{\prime\prime\prime}(\xi_{c})>0$ .
+Thus near such critical point the solution of Burgers’ equation
+can in the limit $\nu\to 0$ be approximated by $v(x,t,\nu)\simeq v_{c}-2\nu\partial_{x}\log\int\limits_{-\infty}^{\infty}\exp\left[-\frac{1}{2\nu}\left(v_{0}^{\prime\prime\prime}(\xi_{c})\frac{\bar{\eta}^{4}}{4!}-\bar{t}\frac{\bar{\eta}^{2}}{2t_{c}^{2}}-\frac{\bar{\eta}}{t_{c}}(\bar{x}-v_{c}\bar{t})\right)\right]d\bar{\eta}.$ (4.20) Some rescaling leads to the following (see also [ 12 ] ) Theorem 4.2 [ 21 ] Near a gradient catastrophe $(x_{c},t_{c})$ for the solution of the Hopf
+equation $v_{t}+vv_{x}=0$ , the solution $v(x,t,\nu)$ of ( 4.15 ) admits the following expansion $v(x,t,\nu)=v_{c}+\left(\frac{\nu}{\kappa}\right)^{1/4}U\left(\frac{\bar{x}-v_{c}\bar{t}}{\left(\kappa\nu^{3}\right)^{1/4}},\frac{\bar{t}}{\left(\kappa\nu\right)^{1/2}}\right)+O(\nu^{1/2}),$ (4.21) where $v_{c}=v(x_{c},t_{c})$ , $\kappa=t_{c}^{4}v_{0}^{\prime\prime\prime}(\xi_{c})/6$ and the function
+U= $U(a,b)$ is defined by $U(a,b)=-2\partial_{a}\log\int_{-\infty}^{+\infty}e^{-\frac{1}{8}(z^{4}-2z^{2}b+4za)}dz.$ (4.22) Figure 4: The Pearcey function $U(a,b)$ , for three different values of $b$ . Remark 4.3 The function $U(a,b)$ satisfies both the Burgers equation $U_{b}+UU_{a}=U_{aa}$ and the non-linear ODE in the $a$ -variable, containing $b$ as a
+parameter [ 5 ] $a=Ub-U^{3}+6UU_{a}-4U_{aa}.$ (4.23) The behavior of $U(a,b)$ is illustrated in Fig. 4 for
+negative, positive, and vanishing values of reduced time $b$ ,
+performing the integral in ( 4.22 ) numerically.
+For large $|a|$ and fixed $b$ the integral ( 4.22 ) behaves as
+the root of the cubic equation ( 3.14 ) (see below) $U(a,b)=\mp|a|^{\frac{1}{3}}\mp\dfrac{b}{3}|a|^{-\frac{1}{3}}+O(|a|^{-\frac{5}{3}}),\quad|a|\to\infty$ The integral in ( 4.22 ) is related to the standard Pearcey function [ 11 ] , which describes the diffraction pattern near a cusp caustic [ 41 ] , by a complex rotation. The relation ( 4.23 )
+is convenient in deducing the asymptotic properties of $U(a,b)$ ; it
+follows from $\int_{-\infty}^{\infty}\frac{d}{dz}e^{-\frac{1}{8}(z^{4}-2z^{2}b+4za)}dz=0.$ Figure 5: The critical contributions to the integral ( 4.22 )
+near a cusp catastrophe, at constant reduced time $b$ .
+On the left, the critical points; there is
+a unique solution for $b<0$ , and three solutions for $\left|a\right|\leq 2(b/3)^{3/2}$ if $b>0$ . On the
+right, the argument $\Delta$ of the exponential; for $b<0$ there is a
+single contribution, for $b>0$ there are three contributions to a given
+value of $a$ . In catastrophe theory [ 44 ] the potential $\Delta(z)=z^{4}-2z^{2}b+4za$ (4.24) (the weight in the exponent of ( 4.22 ))
+is the standard unfolding of the cusp catastrophe, which is a co-dimension
+2 singularity. For $b<0$ (before the gradient catastrophe), there is
+only one critical point $0=\frac{d\Delta}{dz}=4z^{3}-4zb+4a,$ (4.25) which is the case we considered before (see Fig. 5 ).
+Evaluating $\Delta$ at the critical point ( 4.25 )
+yields $\Delta=-3z^{4}+2z^{2}b,\quad a=-z^{3}+zb.$ (4.26) For $b<0$ this gives the single-valued curve shown on the right of
+Fig. 5 , which leads to the solution ( 4.19 ). If on the other hand $b>0$ (after the gradient catastrophe), in the
+range $\left|a\right|\leq 2(b/3)^{3/2}$ there are
+three critical points. Thus the integral ( 4.22 ) has three
+contributions, with different values of $\Delta$ (cf. ( 4.26 )),
+which lie on a swallowtail figure, as shown on the right of
+Fig. 5 . The integral is dominated by the smallest value of $\Delta$ , as long as the solutions are well separated. This means
+we must have $b\gg 1$ (cf. Fig. 5 ), or $\bar{t}/\epsilon^{1/2}\gg 1$ . Closer to gradient catastrophe,
+a more sophisticated asymptotics is needed, or one has to evaluate
+the integral numerically, as we will do below. However, outside
+of the region $b\lesssim 1$ , the integral is dominated by either
+solution $z_{1}$ or $z_{3}$ . The changeover occurs for $a=0$ , where $\Delta(z_{1})=\Delta(z_{3})$ , namely on the line $\bar{x}-v_{c}\bar{t}=0.$ This is exactly the shock front near the
+gradient catastrophe $(x_{c},t_{c})$ . 4.2.2 Pearcey integral and dissipative dKP equation. Choosing $\lambda=\epsilon^{\frac{3}{4}}$ in Theorem 4.1 we obtain
+that the solution to the dissipative dKP equation satisfies in the
+rescaled variables ( 4.10 ) the Burgers equation ( 4.12 ) with $\varepsilon=1$ . Furthermore for $t<t_{c}$ such solution is asymptotic to
+the Hopf solution ( 3.14 ). Combining these observations with
+Theorem 4.2 and remark 4.3 , we come up the following conjecture. Conjecture 1 Let us consider the double scaling limit $\epsilon\to 0$ , $x\to x_{c}$ , $y\to y_{c}$ and $t\to t_{c}$ in such a way that the ratios $\frac{X}{\epsilon^{3/4}},\quad\frac{T}{\epsilon^{1/2}},$ remain bounded with $X$ and $T$ defined in ( 3.11 ).
+Then the solution $u(x,y,t;\epsilon)$ of the dissipative dKP equation
+near the first singularity for the solution of the dKP equation
+is described by the expansion $u(x,y,t;\epsilon)\simeq u_{c}+\sigma^{1/4}U\left(\frac{X}{\sigma^{3/4}},\frac{T}{\sigma^{1/2}}\right)+\bar{y}\bar{\beta}+O(\epsilon^{1/2}),$ (4.27) where $\sigma=\epsilon\dfrac{6\left(1+c\left(t_{c}F_{y}^{c}\right)^{2}\right)}{F^{c}_{\xi\xi\xi}t_{c}^{4}},$ and the
+function $U(a,b)$ is the Pearcey integral defined in ( 4.22 ). For $y$ -symmetric initial data the expression ( 4.27 ) reduces
+to the form $u(x,y,t;\epsilon)\simeq u_{c}+\sigma^{1/4}U\left(\frac{\bar{x}-u_{c}\bar{t}-t_{c}F^{c}_{yy}\bar{y}^{2}/2}{k\sigma^{3/4}},\frac{\bar{t}-t^{2}_{c}F^{c}_{\xi yy}\bar{y}^{2}/2}{k\sigma^{1/2}}\right)+O(\epsilon^{1/2}),$ (4.28) with $k$ defined in ( 3.11 ).
+The center of the (smooth) shock front is located at $X=0$ ,
+as found previously in the inviscid limit. 5 Numerical solution In this section we present numerical solutions of the transformed
+version ( 2.8 ) of the dKP equation, which remain smooth well
+beyond the gradient catastrophe of the original equation ( 2.1 ),
+as we will demonstrate below. In addition, we treat the dissipative
+dKP equation ( 4.1 ), whose solutions are also observed to remain
+smooth. We use a Fourier method for the spatial dependence, and an exponential time differencing (ETD) scheme for the time
+dependence, as previously for the dKP equation [ 25 ] . Both equations are written in evolutionary form $F_{t}=\partial_{\xi}^{-1}F_{yy}+t(F_{\xi}\partial_{\xi}^{-1}F_{yy}-F_{y}^{2}),$ (5.1) and $u_{t}+uu_{x}=\partial_{x}^{-1}u_{yy}+\epsilon\left(u_{xx}+cu_{yy}\right),$ (5.2) with a small dissipation parameter $\epsilon$ . In Fourier space,
+the antiderivatives $\partial_{\xi}^{-1}$ and $\partial_{x}^{-1}$ are
+represented as Fourier multipliers $-i/k_{\xi}$ and $-i/k_{x}$ , respectively.
+Here $k_{\xi}$ , $k_{x}$ , $k_{y}$ are the dual Fourier variables of $\xi$ , $x$ , $y$ respectively, and the Fourier transform of a variable will be
+denoted by a hat. Thus ( 5.1 ) and ( 5.2 ) can be written
+in the form $\hat{u}_{t}=\mathcal{L}\hat{u}+\mathcal{N}(\hat{u}),$ (5.3) where $\mathcal{L}$ is a linear, diagonal operator, which is $ik_{y}^{2}/k_{\xi}$ for ( 5.1 ), and $ik_{y}^{2}/k_{x}-\epsilon k_{x}^{2}$ for ( 5.2 ), and $\mathcal{N}(\hat{u})$ is a nonlinear term.
+The idea of the ETD scheme to be used here is to treat the
+linear part of ( 5.3 ) exactly. We use the fourth order EDT
+method by Cox and Matthews [ 10 ] , but other schemes offer
+a very similar performance [ 24 ] . To satisfy the constraint ( 2.7 ) on the initial condition,
+we choose initial data as the derivative of a function from the
+Schwarz space of rapidly decreasing smooth functions. This is well
+suited to a Fourier method, since a Schwarz function can be continued as a
+smooth periodic function to within our finite numerical precision.
+However, the nonlocality of ( 5.1 ) and ( 5.2 )
+implies that solutions will develop tails with an algebraic decrease towards
+infinity. This follows already from the Green function of the linearized
+equations [ 26 ] . It was shown in [ 26 , 24 ] that discontinuities
+at the boundaries of the computational domain can nevertheless be avoided
+by choosing a large enough domain, and one can achieve spectral accuracy (an exponential decrease of the numerical error
+with the number of Fourier modes) over the time scales considered. The antiderivative in both ( 5.1 ) and ( 5.2 ) leads
+to Fourier multipliers which are singular in the limit of small wave
+numbers.
+These terms are regularized in Fourier space by adding a term of the order
+of the machine precision ( $\sim 10^{-16}$ here). In [ 26 ] , the dKP
+equation ( 2.1 ) was solved for $\partial_{x}^{-1}u$ , which is possible
+since solutions maintain the property of being the derivative of a Schwarz
+function. Together with an exponential integrator treating the term $ik_{y}^{2}/k_{x}$ explicitly, this addressed all numerical
+problems stemming from this singular operator. However, an explicit treatment of all singular terms is not
+possible for ( 5.1 ), since $\mathcal{N}$ is singular as well,
+which leads to numerical problems for $k_{\xi}\to 0$ . This can
+be addressed by applying a Krasny filter [ 28 ] : all
+Fourier coefficients with modulus smaller than some threshold
+(typically $10^{-10}$ ) will be put equal to 0. In all cases considered,
+our numerical algorithm could now be continued well beyond the first
+gradient catastrophe. For longer times, the above mentioned
+algebraic tails will lead to a slower decrease of the Fourier
+coefficients and thus to numerical problems once the numerical errors
+are of the order of the Krasny filter. For long time computations,
+which are beyond the scope of the current paper, one would have to use
+considerably larger domains and higher resolutions, or alternatively
+a spectral approach as in [ 7 ] . The accuracy of the numerical solution to ( 2.8 ) was monitored via
+the decrease of the Fourier coefficients, and checking the conservation
+of the $L^{2}$ norm (cf. ( 2.6 ),( 2.14 )). To this end we compute $\delta(t)=1-\frac{M(t)}{M(0)},$ (5.4) whose time dependence will be a measure of the numerical error. As
+shown in [ 23 , 25 ] , the maximum error in $F$ may well be
+one to two orders of magnitude greater than $\delta$ , but within these
+limits $\delta$ is nevertheless a reliable indicator of
+the accuracy, if the Fourier coefficients decrease sufficiently rapidly. 5.1 Shock formation for symmetric initial data We begin with the simplest case of initial data symmetric with respect
+to $y\to-y$ . We choose the same initial condition as [ 25 ] , $u_{0}(x,y)=-6\partial_{x}\mbox{ sech}^{2}\sqrt{x^{2}+y^{2}},$ (5.5) who solved the dKP equation ( 2.1 ) in its original form.
+Near the gradient catastrophe, ( 2.1 ) develops a discontinuity,
+and the numerical scheme employed in [ 25 ] breaks down. By contrast,
+using the transformed equation ( 2.8 ), we are able to reach the gradient
+catastrophe with much lower resolution (using serial instead of
+parallel computers), but are also able to continue the computation beyond
+the first and even secondary wave-breaking events. Beyond the gradient
+catastrophe, we identify the lines $\Delta=0$ along which the gradient
+of the solution blows up (cf. Fig. 1 ), and show that the
+solution of ( 2.8 ) yields the expected weak solution of dKP inside
+the lip region. We also show that the solution of ( 2.8 ) stays
+regular on time scales of order unity. Breaking event Initial data $t_{c}$ $x_{c}$ $y_{c}$ $u_{c}$ $\xi_{c}$ First $-6\partial_{x}\mbox{ sech}^{2}\sqrt{x^{2}+y^{2}}$ 0.222 1.79 0 2.543 1.227 Second $-6\partial_{x}\mbox{ sech}^{2}\sqrt{x^{2}+y^{2}}$ 0.300 -2.033 0 -2.48 -1.289 Table 1: Critical parameters for the first two wave breaking events, with
+symmetric initial data ( 5.5 ). In [ 25 ] , the first wave breaking event was observed at the critical
+time $t_{c}=0.2216\dots$ , see Table 1 . Here we can
+identify $t_{c}$ directly from a solution of ( 2.8 ) by tracing the
+minimum of $\Delta$ over space. The first time this quantity vanishes or
+becomes just negative will be taken as the time $t_{c}$ . We use $N_{x}=N_{y}=2^{9}$ Fourier modes for $x,y\in[-5\pi,5\pi]^{2}$ and $N_{t}=1000$ time steps for $t\leq 0.23$ . The first negative value
+of $\Delta$ is recorded for $t=0.222\ldots$ , which is in agreement with [ 25 ] to within the accuracy
+of at least two digits. However, the present calculation
+requires much lower resolution to reach similar accuracy ( $N_{x}=N_{y}=2^{9}$ compared to $N_{x}=N_{y}=2^{15}$ in [ 25 ] ), and accuracy can
+easily be improved. For example, after determining the critical time to a
+certain accuracy, one uses the required resolution in time close to the
+previously determined $t_{c}$ . This allows to determine the critical
+time with the same precision as the solution to ( 2.8 ), i.e., with the
+accuracy of the Krasny filter chosen here to be equal to $10^{-10}$ .
+For our purposes an accuracy of the order of $10^{-3}$ will be sufficient. The location of the critical point was identified in [ 25 ] as $x_{c}=1.79\dots$ and $y_{c}=0$ . Here it is calculated for $t=t_{c}$ by
+first finding the minimum $\xi_{c}=1.227\ldots$ , $y_{c}=0$ of $\Delta$ , where $F(\xi_{c},y_{c},t_{c})=2.543\ldots$ . Then, using ( 3.2 ), we find $x_{c}=\xi_{c}+t_{c}F(\xi_{c},y_{c},t_{c})=1.792\ldots$ , again in
+excellent agreement with our previous result [ 25 ] , estimated
+to be correct to at least two digits. Figure 6: Measures of the smoothness of the solution to ( 2.8 )
+with initial data ( 5.5 ). On the left, the time dependence of
+the maximum norm of $F$ , as well as of $F_{\xi}$ and $F_{y}$ ;
+all decay for long times.
+On the right, the Fourier coefficients of the solution for $t=0.32$ . However, the solution $F$ of ( 2.8 ) stays perfectly regular
+well beyond the critical time $t_{c}$ of the dKP solution $u(x,y,t)$ ,
+as seen in Fig. 6 . On the left, we show that the
+maximum norms of the first derivatives of $F$ remain bounded and smooth
+at $t_{c}$ , and even decay for long times (of course, the derivatives of
+the original variable $u(x,y,t)$ diverge at a gradient catastrophe).
+On the right, for $t=0.32$ we demonstrate exponential decay of the Fourier
+coefficients to the level of the Krasny filter, as expected for a smooth
+function. The relative $L^{2}$ norm $\delta(t)$ (cf. ( 5.4 )) is
+conserved to the order of $10^{-14}$ . On account of the algebraic decay
+of the solution in Fourier space, the computation cannot be run for much
+longer than $t=0.35$ at the current resolution. To be able to do so
+using a Fourier method, larger domains and higher resolution would be
+needed. However, there is no indication that the solution of ( 2.8 )
+itself develops a singularity. Thus it is possible to continue the computation beyond the first wave
+breaking event, and to identify the second event, which occurs
+for negative $x$ . This is of course not possible in the case of direct
+integration of ( 2.1 ) as in [ 25 ] , where the numerical method
+fails at the first wave breaking. We use $N_{x}=2^{9}$ , $N_{y}=2^{11}$ Fourier
+modes and $N_{t}=5000$ time steps for $t\leq 0.32$ . Proceeding as for the
+first break-up in tracing the minimum of $\Delta(\xi,y,t)$ ,
+we find $\tilde{t}_{c}=0.300\ldots$ and $\tilde{x}_{c}=-2.033\ldots$ , see
+Table 1 . Figure 7: Profiles obtained from a solution of the transformed equation
+( 2.8 ) at $t=0.300$ , time of the second wave breaking event. On the
+left, the original solution $F(\xi,y,t)$ for initial data ( 5.5 );
+on the right, the profile $u(x,y,t)$ obtained using the transformation
+( 1.8 ). The slices along the plane $y=0$ (bottom) make it clear
+that the profile $u(x,y,t)$ has overturned near $x=2$ (first breaking),
+and is at the point of breaking near $x=-2$ (second breaking). The profile
+of $F(\xi,y,t)$ remains smooth
+and single valued. The corresponding profile $u(x,y,t)$ can be seen in Fig. 7 on the left. It is obtained by plotting $F(\xi,y,t)$ (shown on the right)
+as a function of $x=\xi+tF(\xi,y,t)$ , as required by ( 1.8 ).
+For $t>t_{c}$ in a neighborhood of the blow-up point, one has that $x=\xi+tF(\xi,y,t)$ is not invertible as a function of $\xi(x,y,t)$ .
+However we can still perform a parametric plot of $u(x,y,t)$ , which becomes
+a multivalued function in the region near the first critical point $(x_{c},0,t_{c})$ . This is even clearer from the cut along the $y=0$ -axis
+shown on the bottom (recall that the critical points are all on the $x$ -axis since the initial data are symmetric with respect to $y\to-y$ ,
+and since the dKP equation preserves this symmetry). Thus as for the
+solution to the Hopf equation via the characteristic method, a nonphysical
+solution which has overturned is obtained in the shock region. It is clear
+from the corresponding cut through $F(\xi,y,t)$ shown on the bottom left
+that $F$ remains smooth and single valued. Figure 8: On the left, the solution $u(x,y,t)$ (blue line) of
+the dKP equation and its approximation (green line) ( 3.18 ) for $t=0.24>t_{c}\approx 0.222$ . The regions of multivaluedness of the solutions are
+projected on the $(x,y)$ -plane. On the right top: a cut through $u(x,y,t)$ along $y=0$ . On the right bottom: the corresponding multivalued
+regions of $u(x,y)$ in the $(x,y)$ -plane (blue line: numerical solution;
+green line: local approximation.) We can now test to which extent the asymptotic description of the
+overturned region in Section 3 , which only becomes
+exact in the limit $t\sim t_{c}$ , can approximate our numerical results.
+Recall that the profile is described by ( 3.18 ), while the shape
+of the overturned region is given by ( 3.23 ),( 3.24 ).
+In Fig. 8 we show a comparison between a numerical
+solution of the dKP equation, obtained through the transformation
+( 1.8 ) (blue), with the local approximate solution ( 3.18 )
+shown in green. At $t=0.24$ , i.e. shortly after overturning at $t_{c}=0.222$ , there is good agreement in the description of the
+multivalued region. On the left, $u(x,yt)$ is shown in a perspective
+plot, on the top right an s-curve is produced by a cut along the $y=0$ plane. If corresponding cuts are considered for each value of $y$ ,
+a lip-shaped region is obtained inside which the profile has overturned
+(bottom right). Figure 9: Multivalued region of the solution of the dKP equation
+as found from $\Delta(\xi,y,t)=0$ for the initial data ( 5.5 ).
+Results are written in selfsimilar rescaled coordinates $X_{1}$ and $Y_{1}$ defined by ( 3.23 ) for several values of $\bar{t}$ (red lines). The corresponding asymptotic boundary ( 3.24 ),
+shown in blue, is time-independent by construction. To test for the self-similar properties of the multivalued region,
+in Fig. 9 we show the numerical result as function of
+the rescaled coordinates $X_{1}$ , $Y_{1}$ , which are defined by ( 3.23 )
+(red lines). Good agreement is seen with the asymptotic prediction
+( 3.24 ) (blue lines), in particular for small values of three time
+distance $\bar{t}$ from the gradient catastrophe, as expected. The fact
+that the numerical results stay time independent to a good approximation
+demonstrates that the typical scales of the solution agree with the
+prediction ( 3.23 ): the width of the region scales like $\bar{t}^{3/2}$ ,
+its height like $\bar{t}^{1/2}$ . Figure 10: Numerical solution to the dissipative dKP equation ( 5.2 )
+with $c=0$ and $\epsilon=0.01$ for initial data ( 5.5 ) at time $t=0.32$ on the left, and the corresponding Fourier coefficients on
+the right. We now turn to the numerical solution of the dissipative dKP equation
+( 4.1 ), and to the comparison with our asymptotic theory,
+which is given by ( 4.27 ) in the general case, and by
+( 4.28 ) for symmetric initial data. To resolve the strong
+gradients in the solutions to the dissipative dKP equation ( 5.2 )
+that occur for small $\epsilon$ , much higher resolution is needed than
+for the solution of ( 5.1 ) for the same initial data. For $\epsilon=0.01$ (with $c=0$ ) we use $N_{x}=2^{14}$ , $N_{y}=2^{10}$ and $N_{t}=5000$ to find the solution of ( 5.2 ) with initial data
+( 5.5 ) at $t=0.32$ , shown in Fig. 10 on the left.
+At this value of $\epsilon$ , the total loss of the $L^{2}$ norm
+(cf. ( 4.2 )) is of the order of $2\%$ .
+A comparison between the dKP solution and
+the Fourier coefficients, shown on the right, decay to below $10^{-10}$ ,
+as for the solutions to ( 5.1 ). To achieve higher resolutions,
+parallel computation would be needed. Figure 11: Top left: numerical solutions to the dKP equation (blue) and
+to the dissipative dKP equation ( 5.2 ) (green), for $c=0$ and $\epsilon=0.01$ , using symmetric initial data ( 5.5 ).
+Shown is a slice along the line $y=0$ at $t=0.32>t_{c}=0.222$ .
+Top right: the asymptotic approximations ( 3.16 ) and ( 4.27 )
+to the same solutions; the dashed line marks the shock position $X=0$ .
+Bottom: the dotted lines mark the multivalued
+regions for $t=0.32$ , according to the numerical solution to the
+dKP equation (blue), and according to the asymptotic theory
+( 3.26 ) (green). The green solid line is the asymptotic
+prediction for the shock front, as given by ( 4.6 ), and
+the blue solid line is a numerical estimate based on the inflection
+point of the dKP solution. In Fig. 11 (top left), we show a slice through the
+same dissipative solution at $y=0$ (green line), together with
+the corresponding dKP solution, which has become multivalued, as $\bar{t}\approx 0.1$ . The dissipative solution exhibits a sharp
+front close to where the shock discontinuity is expected to be.
+Both curves are to be compared to our asymptotic
+results, shown on the top right, with the s-curve ( 3.18 ) shown in
+blue, and the dissipative asymptotics ( 4.28 ) in green.
+The sharp front is seen to be localized around the theoretical shock
+position, shown as the vertical dashed line.
+Since $\bar{t}$ is only moderately small, there exists a 30% difference
+in the height of the s-curve, but otherwise the overturning of the dKP
+equation is well reproduced. Within these limitations, the shape and
+width of the shock front, as well as the front position within the
+s-curve, are very well reproduced. In the bottom graph of Fig. 11 , we report the multivalued
+regions, as well as the position of the shock front, as given by the
+numerical solution (blue curves, with the shock front as the solid line),
+and our asymptotic theory (green curves, shock front solid). Once more,
+there is fair agreement in the shape and size of the lip-shaped multivalued
+regions (dashed lines), described by the dKP equation. The numerical shock
+position is estimated from the inflection point of the dKP solution,
+the theoretical prediction is the curve $X=0$ . In Fig. 12 , we show the solution to the dissipative
+dKP equation ( 4.1 ) for $\epsilon=0.01$ and the asymptotic description
+( 4.27 ) for the symmetric initial data ( 5.5 ) at the
+critical time in the vicinity of the critical point. While the asymptotic
+formula provides the best local approximation being best near the
+critical point, it can be seen to also correctly reproduce the $y$ -dependence. Figure 12: On the left, in blue the solution to the dissipative dKP
+equation ( 4.1 ) for $\epsilon=0.01$ and
+the symmetric initial data ( 5.5 ) at the critical time $t_{c}=0.222$ and near the critical point, and in green the
+asymptotic solution ( 4.27 ) given by the Pearcey
+integral. On the right the same plot along the line $y=0$ . The dashed
+blue line is the solution of dKP equation and the green dashed line is the solution of the approximation ( 3.16 ) to the dKP solution. The approximation is also valid for small, nonzero values of $\bar{t}$ as can be seen in Fig. 13 where the
+same situation as in Fig. 12 is shown on the
+slice $y=0$ for several values of $\bar{t}$ . Figure 13: Solution to the dissipative dKP equation ( 4.1 ) for $\epsilon=0.01$ and
+the symmetric initial data ( 5.5 ) in blue, the
+Pearcey asymptotic solution ( 4.27 ) in green and the (weak) dKP
+solution dashed on the line $y=0$ for several values of $\bar{t}$ . 5.2 Nonsymmetric initial data In this section we consider two different initial profiles which
+are not symmetric with respect to $y\to-y$ . The first, $u(x,y,0)=6\partial_{x}\left\{(x+1)(y-1)e^{-x^{2}-y^{2}}\right\},$ (5.6) still retains a radial symmetry for $x^{2}+y^{2}\to\infty$ . As
+seen in Table 2 , we can follow the evolution through
+two successive gradient catastrophes. The second profile, $u(x,y,0)=6\partial_{x}e^{-x^{2}-5y^{2}-3xy},$ (5.7) does not possess radial symmetry for large $x^{2}+y^{2}$ , and we are
+able to compute the first gradient catastrophe only, whose critical
+parameters are also given in Table 2 . Breaking events Initial data $t_{c}$ $x_{c}$ $y_{c}$ $u_{c}$ $\xi_{c}$ First breaking $6\partial_{x}\left\{(x+1)(y-1)e^{-x^{2}-y^{2}}\right\}$ 0.0832 -1.210 -0.368 -4.958 -0.798 Second breaking $6\partial_{x}\left\{(x+1)(y-1)e^{-x^{2}-y^{2}}\right\}$ 0.1070 2.004 -0.368 4.4066 1.534 First Breaking $6\partial_{x}(e^{-x^{2}-5y^{2}-3xy})$ 0.086 0.088 -0.245 -1.477 0.215 Table 2: Critical parameters for the first two wave breaking events, with
+weakly asymmetric initial data ( 5.6 ). For the strongly asymmetric
+initial data ( 5.7 ) only the first breaking could be computed. Figure 14: Same as Fig. 6 , but with initial data ( 5.6 )
+(left). The Fourier coefficients on the right are shown for $t=0.15$ . To solve the Cauchy problem with initial data ( 5.6 ) for the
+dKP equation ( 2.8 ), we use $N_{x}=2^{9}$ and $N_{y}=2^{11}$ Fourier
+modes for $(x,y)\in[-5\pi,5\pi]^{2}$ and $N_{t}=5000$ time steps for $t\leq 0.15$ . The first critical time is reached at $t_{c}=0.08323\ldots$ ,
+the second critical time is $\tilde{t}_{c}=0.1070\ldots$ ; all other
+critical parameters are reported in Table 2 .
+The relative computed $L^{2}$ norm is conserved to the order
+of $10^{-14}$ , and the Fourier coefficients decrease to the order of
+the Krasny filter as can be seen in Fig. 14 (left).
+As seen in the same figure on the left, the $L^{\infty}$ norm of the solution $F$ and the norm of its gradient also appear to decrease for large $t$ ,
+so again there is no indication of a blow-up of the solution. However,
+to be able to run the code for longer times, larger computational domains
+would have to be used. Figure 15: Left: boundary of the multivalued region found from a numerical
+solution to the dKP equation for the initial data ( 5.6 ),
+for several values of $t>t_{c}=0.08323\ldots$ in the original (x,y) variables.
+Right: The red boundaries on the right are the same data represented
+in self-similar variables $X_{1}$ and $Y_{1}$ as defined in ( 3.23 ),
+predicted to be time-independent by our asymptotic theory.
+The corresponding self-similar boundary, given by ( 3.24 ),
+is plotted in blue. On the left of Fig. 15 , we trace the boundary of the multivalued
+regions of $u(x,y,t)$ at four times shortly after the first gradient
+catastrophe; the times $\bar{t}$ relative to the singularity are reported
+on the top of each graph. On the right of the same figure, the same
+multivalued regions are plotted as functions of the rescaled coordinates $X_{1}$ and $Y_{1}$ defined in ( 3.23 ). Once more, in the rescaled
+coordinates the shape of the multivalued region is almost constant,
+and agrees well with the theoretical prediction, shown in blue. Note
+the slight asymmetry of the lip shape with respect to the reflection
+symmetry $y\to-y$ . Figure 16: Left: numerical solution to the dKP equation ( 2.1 )
+for strongly asymmetric initial data ( 5.7 ) at $t=0.15>t_{c}=0.087$ .
+Right: The corresponding contour of the multivalued region $\Delta(\xi,y,t)=0$ (red), compared to the asymptotic theory
+( 3.24 ) (blue); the dashed line corresponds to $X=0$ as given
+by ( 4.6 ). Figure 17: Left: numerical solution to the dissipative dKP equation
+( 5.2 ) with $\epsilon=0.04$ , $c=1$ , for initial data ( 5.7 ), at $t=0.15$ . Center: the corresponding Fourier coefficients. Right:
+a slice of the left plot along the line $y=-0.4985$ (green), together
+with the corresponding solution of the dKP equation (blue). For the initial data ( 5.7 ), the code is run with $N_{x}=N_{y}=2^{11}$ Fourier modes on the same spatial domain as before, using $N_{t}=2000$ time
+steps for $t\leq 0.15$ . The first gradient catastrophe is found at $t_{c}=0.087\ldots$ , see Table 2 for the remaining critical
+parameters. The solution at the final time (cf. Fig. 16 , left)
+is strongly asymmetric. This also implies an asymmetry of the tails of
+the solution and thus a stronger effect of the algebraic decay of the
+solution towards spatial infinity. The asymmetry of the tails of the solution
+also affects the Fourier coefficients. Despite a higher resolution than
+that of Fig. 14 , there are small contributions to the high
+wave number Fourier coefficients along the $k_{y}$ axis above the Krasny filter,
+which eventually cause the numerical scheme to break down. As a result,
+we do not reach a second catastrophe in this example. At $t=0.15$ ,
+the relative computed $L^{2}$ norm is still conserved with an accuracy in
+the order of $10^{-13}$ . The $L^{\infty}$ norm of $F$ and of its gradient do
+not indicate blow-up, but they are also not decreasing. If the solution
+exists for large $t$ also, then the computation did not reach the
+asymptotic regime. The asymmetry of the solution can also clearly be seen
+from the contour delimiting the multivalued region, seen as the red line
+in Fig. 16 (right). This is compared to the asymptotic theory at $\bar{t}=0.063$ , shown as the blue line. Theory correctly describes the
+strong asymmetry and the orientation of the lip shape, but there are some
+quantitative differences. This indicates that the size of the critical region
+is smaller in the case of strong asymmetry. Figure 18: In blue the solution of the dissipative dKP equation and
+in green the Pearcey asymptotic solution ( 4.27 ) for $\epsilon=0.01$ and the strongly asymmetric initial data ( 5.7 )
+at the critical time $t_{c}$ and near the critical point of the dKP solution. For the dissipative dKP equation for the initial data ( 5.7 ), we
+consider $\epsilon=0.04$ to obtain the solution shown in
+Fig. 17 on the left. The Fourier coefficients in the middle of
+the same figure are also rather asymmetric, but decrease to the order
+of the Krasny filter. Due to the higher value of $\epsilon$ , the
+loss of the $L^{2}$ norm is of the order of $22.2\%$ . On the right of
+Fig. 17 , we compare the dissipative solution to the
+corresponding solution of the dKP equation. Although the width of the
+front is greater, owing to a higher value of $\epsilon$ , it is set
+inside the s-curve where the shock position is expected to be. In Fig. 18 we show the dissipative dKP
+equation ( 4.1 ) for $\epsilon=0.01$ for initial data ( 5.7 ).
+While in the symmetric case $F_{y}^{c}=0$ , here we have $F_{y}^{c}\approx-17.39$ , consistent with a strongly asymmetric shock.
+Even in this case, the full two-dimensional structure of the step is
+well described by the asymptotic theory. 6 Conclusions We have introduced a coordinate transformation, inspired by the method
+of characteristics, to investigate wave breaking in the dispersionless
+Kadomtsev-Petviashvili equation. As a result, the entire region where
+the profile is overturned is mapped onto a smooth and single valued function.
+The transformed equation remains smooth near the gradient catastrophe.
+Moreover, our numerics show that solutions remain smooth even beyond
+secondary wave breaking events. This permits
+us to compute solutions up to the first gradient catastrophe with much
+reduced numerical effort, and then to continue into the overturned region,
+where direct numerical simulations of the dKP equation fail. From the
+overturned profile, one can reconstruct the shock position, using the
+jump condition ( 4.5 ). Using the fact that the transformed profile remains smooth at the gradient
+catastrophe, we have calculated the local similarity form of the profile.
+This allows us to calculate the lip shape of the overturned region
+analytically, and to find the position of shock. Both the shape and the
+scaling properties of this region agree well with numerical simulations. We have also investigated the dissipative version of the dKP equation, which
+regularizes the gradient catastrophe. We performed direct numerical
+simulations of this equation for small dissipation, which we continued
+beyond the first gradient catastrophe. Results agree with expected shock
+solutions, except that the jump at the shock position is replaced by a
+smooth but rapidly varying profile. To investigate the shape of this
+profile, we use our characteristic transformation to map the dissipative
+KP equation locally to Burgers’ equation, which we can solve to obtain
+a local similarity description of the profile in two dimensions.
+Asymptotic analysis leads to a description of the profile in terms of
+Pearcey’s function, which is in good agreement with numerics. We believe that the methods developed in this paper are of interest to
+study shock formation in a wider class of hyperbolic equations, including
+the compressible Euler equation. Here a significant complication lies in the
+fact that there are two families of characteristics in the
+corresponding one-dimensional problem, and hence a transformation
+based on a single characteristic cannot be expected to lead to a solution
+which avoids overturning for all times. However, shocks are generically
+expected to form with respect to one of the two characteristics only [ 30 ] , so a transformation such as ( 1.8 ) will still
+be able to unfold the profile locally. However, the necessary
+transformation will depend on which of the characteristics is involved,
+and thus implicitly on initial conditions. Acknowledgments JE’s work was supported by a Leverhulme Trust Research Project Grant.
+TG was partially supported by Miur Research project Geometric and
+analytic theory of Hamiltonian systems in finite and infinite
+dimensions of Italian Ministry of Universities and Research. References [1] S. Alinhac, Blowup for nonlinear hyperbolic equations , Birkhäuser,
+1995. [2] , Hyperbolic partial differential equations , Springer,
+Dordrecht, 2009. [3] V. I. Arnold, Catastrophe theory , Springer, 1984. [4] , Singularities of caustics and wave fronts , Kluwer, 1990. [5] A. Arsie, P. Lorenzoni, and A. Moro, Integrable viscous conservation
+laws . Nonlinearity 28 (2015), no. 6, 1859–1895. [6] S. Bianchini and A. Bressan, Vanishing viscosity solutions of nonlinear
+hyperbolic systems , Ann. of Math. 161 (2005), 223–342. [7] M. Birem and C. Klein, Multidomain spectral method for Schrödinger
+equations , (2014). [8] E. Brézin, E. Marinari, and G. Parisi, A non-perturbative ambiguity
+free solution of a string model , Phys. Lett. B 242 (1990), 35. [9] A. Chorin and J. E. Marsden, A mathematical introduction to fluid
+mechanics , Springer, 2000. [10] S. Cox and P. Matthews, Exponential time differencing for stiff systems ,
+J. Comp. Phys. 176 (2002), 430–455. [11] NIST Digital Library of Mathematical Functions , http://dlmf.nist.gov/,
+Release 1.0.9 of 2014-08-29, Online companion to [ 42 ] . [12] B. Dubrovin and M. Elaeva, On the critical behavior in nonlinear
+evolutionary PDEs with small viscosity , Russ. J. Math. Phys. 19 (2012), 449–460. [13] M. Dunajski, L. Mason, and P. Tod, Einstein-Weyl geometry, the dKP
+equation and twistor theory. , J. Geom. Phys. 37 (2001), 63–93. [14] J. Eggers and M. A. Fontelos, The role of self-similarity in
+singularities of partial differential equations , Nonlinearity 22 (2009), R1. [15] , Cusps in interfacial problems , Panoramas et Synthèses 38 (2013), 69. [16] E.V. Ferapontov, A. Moro, and V.V. Sokolov, Hamiltonian systems of
+hydrodynamic type in 2+1 dimensions. , Comm. Math. Phys. 285 (2009),
+31–65. [17] J. Gibbons and Y. Kodama, A method for solving the dispersionless KP
+hierarchy and its exact solutions , Phys. Lett. A 135 (1989),
+167–180. [18] J. Goodman and Z. Xin, Viscous limits for piecewise smooth solutions to
+systems of conservation laws , Arch. Rational Mech. Anal. 121 (1992), 235–265. [19] O. Gués, G. Métivier, M. Williams, and K. Zumbrun, Nonclassical
+multidimensional viscous and inviscid shocks , Duke Math. J. 142 (2008), 1–110. [20] E. Hopf, The partial differential equation $u_{t}+uu_{x}=\mu u_{xx}$ , Comm.
+Pure Appl. Math. 3 (1950), 201–230. [21] A. M. Il’in, Matching of asymptotic expansions of solutions of boundary
+value problems , vol. 102, AMS, 1992. [22] B. B. Kadomtsev and V. I. Petviashvili, On the stability of solitary
+waves in weakly dispersive media , Sov. Phys. Dokl. 15 (1970), 539. [23] C. Klein, Fourth order time-stepping for low dispersion Korteweg-de
+Vries and nonlinear Schrödinger equation , ETNA 29 (2008),
+116–135. [24] C. Klein and K. Roidot, Fourth order time-stepping for
+kadomtsev-petviashvili and davey-stewartson equations , SIAM J. Sci. Comput. 33 (2011), 3333–3356. [25] , Numerical study of shock formation in the dispersionless
+kadomtsev-petviashvili equation and dispersive regularizations , Physica D 265 (2013), 1–25. [26] C. Klein, C. Sparber, and P. Markowich, Numerical study of oscillatory
+regimes in the kadomtsev-petviashvili equation , J. Nonl. Sci. 17 (2007), 429–470. [27] B. Konopelchenko, L. Martínez Alonso, and O. Ragnisco, The $\bar{\partial}$ -approach to the dispersionless KP hierarchy , J. Phys. A
+34 47 (2001), 10209–10217. [28] R. Krasny, A study of singularity formation in a vortex sheet by the
+point-vortex approximation , J. Fluid Mech. 167 (1986), 65–93. [29] S. Kruzhkov, First-order quasilinear equations with several space
+variables , Math. USSR Sbornik 10 (1970), 217–243. [30] L. D. Landau and E. M. Lifshitz, Fluid mechanics , Pergamon: Oxford,
+1984. [31] P.D. Lax, Hyperbolic systems of conservation laws ii , Comm. Pure Appl.
+Math. 10 (1957), 537–566. [32] R. J. LeVeque, Numerical methods for conservation laws , Springer, 1992. [33] A. Majda, Compressible fluid flow and systems of conservation laws in
+several space variables , Springer-Verlag, New York, 1984. [34] S. V. Manakov and P. M. Santini, The Cauchy problem on the plane for the dispersionless Kadomtsev-Petviashvili equation , JETP Letters, 83 , (2006), No 10, 462-466. [35] , On the solutions of the dKP
+equation: the nonlinear riemann hilbert problem, longtime behaviour, implicit
+solutions and wave breaking ,J. Phys. A: Math. Theor. 41 (2008) 055204, 23pg. [36] , On the dispersionless Kadomtsev-Petviashvili equation in
+n+1 dimensions: exact solutions, the Cauchy problem for small initial
+data and wave breaking , J. Phys. A: Math. Theor. 44 (2011), 405203. [37] , Solvable vector nonlinear Riemann problems, exact implicit solutions of dispersionless PDEs and wave breaking , J. Phys. A: Math. Theor. 44 , (2011) 345203 (19pp), doi:10.1088/1751-8113/44/34/345203. arXiv:1011.2619. [38] , Wave breaking in the solutions of the dispersionless
+Kadomtsev-Petviashvili equation at a finite time , Theoret. and Math.
+Phys. 172 (2012), 1117. [39] W. L. Marar and J. J. Nuño-Ballesteros, Slicing corank 1map germs
+from $\mathbb{C}^{2}$ to $\mathbb{C}^{3}$ , Q. J. Math. 650 (2014),
+1375. [40] L. Molinet, J.-C. Saut, and N. Tzvetkov, Well-posedness and ill-posedness
+results for the Kadomtsev-Petviashvili-I equation , Duke Math. J. 115 (2002), 353–384. [41] J. Nye, Natural focusing and fine structure of light: Caustics and wave
+dislocations , Institute of Physics Publishing, Bristol, 1999. [42] F. W. J. Olver, D. W. Lozier, R. F. Boisvert, and C. W. Clark (eds.), NIST Handbook of Mathematical Functions , Cambridge University Press,
+New York, NY, 2010, Print companion to [ 11 ] . [43] Y. Pomeau, M. Le Berre, P. Guyenne, and S. Grilli, Wave-breaking and
+generic singularities of nonlinear hyperbolic equations , Nonlinearity 21 (2008), T61–T79. [44] T. Poston and I. Stewart, Catastrophe theory and its applications , Dover
+Publications, Mineola, 1978. [45] A.Raimondo, Frobenius manifold for the dispersionless Kadomtsev-Petviashvili equation . Comm. Math. Phys. 311 (2012), no. 3, 557Ð594. [46] A.Rozanova, The Khokhlov-Zabolotskaya-Kuznetsov equation , C. R. Math. Acad. Sci. Paris 344 (2007), no. 5, 337 - 342. [47] K. Takasaki and T. Takebe, Integrable hierarchies and dispersionless
+limit. , Rev. Math. Phys. 5 (1995), 743–808. [48] G. B. Whitham, Linear and nonlinear waves , John Wiley & Sons, 1974. [49] E. A. Zabolotskaya and R. V. Khokhlov, Quasi-plane waves in the nonlinear
+acoustics of confined beams , Sov. Phys. Acoustics 15 (1969),
+35–40. [50] V.E. Zakharov and S.V. Manakov, Construction of multidimensional
+nonlinear integrable systems and their solutions , Funktsional. Anal. i
+Prilozhen 19 (1985), 11–25. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

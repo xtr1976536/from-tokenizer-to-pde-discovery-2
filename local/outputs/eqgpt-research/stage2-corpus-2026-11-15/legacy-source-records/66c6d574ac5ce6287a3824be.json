@@ -1,0 +1,93 @@
+{
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "1",
+      "1",
+      "-1",
+      "-1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "-u(x, y, z, t)**3 - u(x, y, z, t) + Derivative(u(x, y, z, t), (x, 2)) + Derivative(u(x, y, z, t), (y, 2))",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      9,
+      2,
+      23,
+      2,
+      7,
+      2,
+      21,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "uxx",
+      "+",
+      "uyy",
+      "+",
+      "u",
+      "+",
+      "u^3",
+      "E"
+    ],
+    "normalized_latex": "(u_{xx})+(u_{yy})+(u)+({u}^{3})=0",
+    "reconstructed_support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t'))",
+      "Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(3))"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t'))",
+      "Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(3))"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "family": "semilinear_elliptic_power",
+  "gre_ids": [
+    5,
+    9,
+    2,
+    23,
+    2,
+    7,
+    2,
+    21,
+    1
+  ],
+  "latex_origin": "declared_family_instance",
+  "normalized_latex": "(u_{xx})+(u_{yy})+(u)+({u}^{3})=0",
+  "original_latex": "u_{xx}+u_{yy}=u+u^{3}",
+  "parameters": {
+    "n": 3
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [],
+  "source_file": "data/formulas/diverse_pde_v4/sources/npde3101.pdf",
+  "source_group": "eqworld:npde3101",
+  "source_id": "eqworld:66c6d574ac5ce6287a3824be",
+  "source_kind": "external_review_candidate",
+  "source_location": "first displayed governing equation; choices declared separately",
+  "source_sha256": "d7ad019daed5d11374d87e6a958d7b6d2bf68578cd1e6c9c868a21bc555a57e1",
+  "source_template_latex": "u_{xx}+u_{yy}=a u+b u^n",
+  "source_transformations": [
+    "source dependent variable w -> u",
+    "scalar coefficients fixed nonzero when present; no term removal",
+    "arbitrary functions/powers explicitly instantiated as recorded; not a new physical family"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/npde/npde3101.pdf"
+}

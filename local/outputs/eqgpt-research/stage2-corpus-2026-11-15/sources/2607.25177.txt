@@ -1,0 +1,687 @@
+A Convex Splitting Spectral Method for the Phase Field Crystal Equation: Energy Stability, Computational Stability Maps, and Three-Dimensional GPU Simulations Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 1.1 Comparison with Hybridizable/Embedded
+Discontinuous Galerkin Methods 2 Mathematical Model 3 The Convex Splitting Scheme 4 Scheme Properties 5 Computational Stability Analysis 5.1 Single Run: Crystal Growth from Seed 5.2 GPU-Accelerated Parallel Simulations 5.3 Neutral Stability Curve 5.4 GPU-Accelerated Stability Map 6 Accuracy Analysis: Influence of the Splitting Parameter 7 Numerical Simulations: 2D 7.1 Lamellar Phase: Stripe Formation 7.2 Hexagonal Phase 7.3 Polycrystalline Growth and Grain Boundary Dynamics 7.4 Quantitative Grain Boundary Characterization 7.5 Atomistic Resolution: High-Resolution Crystal Growth 8 Three-Dimensional Simulations and GPU Scalability 8.1 GPU Scalability 8.2 3D GPU-Accelerated PFC Morphologies 8.2.1 Lamellar Phase ( $\bar{\phi}=0$ ) 8.2.2 Spherical Phase ( $\bar{\phi}=0.35$ ) 8.2.3 Hexagonal Cylindrical Phase ( $\bar{\phi}=0.25$ ) 8.3 Asymptotic Energy Behavior:
+Lamellar Phase at $T=10{,}000$ ( $10^{6}$ Time Steps) 9 Conclusions References License: arXiv.org perpetual non-exclusive license arXiv:2607.25177v2 [math.NA] 30 Jul 2026 A Convex Splitting Spectral Method for the Phase Field
+Crystal Equation: Energy Stability, Computational Stability
+Maps, and Three-Dimensional GPU Simulations Saulo Orizaga Email: saulo.orizaga@nmt.edu Address: Department of Mathematics, New Mexico Institute of
+Mining and Technology, 801 Leroy Place, Socorro, NM 87801, USA Peimeng Yin Email: pyin@utep.edu Address: Department of Mathematical Sciences,
+The University of Texas at El Paso,
+500 W University Ave,
+El Paso, TX 79968, USA Deep Choudhuri Email: deep.choudhuri@nmt.edu Address: Department of Materials and Metallurgical Engineering,
+New Mexico Institute of Mining and Technology,
+801 Leroy Place, Socorro, NM 87801, USA Abstract We present an efficient Fourier spectral method based on the
+convex splitting framework of Eyre [ 1 ] for the phase field crystal (PFC) equation. The proposed
+first-order scheme is unconditionally energy stable
+and conserves mass to machine precision. An energy stability theorem is established
+using a truncated potential argument, and a semi-analytical
+neutral stability curve is derived from a dominant-mode
+energy balance, providing a closed-form characterization
+of the practical stability boundary. The classical sufficient
+condition $a\geq 2$ is shown to be conservative: a
+computational stability map obtained from 40,000
+GPU-accelerated PFC simulations reveals that energy-stable
+solutions persist for values of $a$ significantly below
+this threshold. Crucially, accuracy analysis demonstrates that smaller
+values of $a$ within the stable region consistently yield lower $L^{2}$ errors. This high-fidelity regime is rigorously verified through an
+extended asymptotic stress test consisting of a long-time three-dimensional
+simulation on a $256^{3}$ grid up to $T_{f}=10,000$ , successfully executing $10^{6}$ continuous temporal increments deep within the relaxed stability regime,
+well below the classical convex splitting limit ( $a<2$ ), while preserving strict
+monotonic energy dissipation and machine-precision mass conservation. Finally,
+two-dimensional and three-dimensional simulations at resolutions up to $512^{3}$ are performed on a single consumer GPU, demonstrating the scalability
+of the proposed framework for resolving complex phase-field dynamics without
+requiring HPC infrastructure. The code is made publicly available on GitHub. 1 1 1 GitHub: https://github.com/sauloorizaga/CS-PFC . Keywords: Phase field crystal equation , convex splitting , energy stability , GPU computing , spectral methods 1 Introduction The phase field crystal (PFC) equation is a sixth-order
+nonlinear parabolic PDE that effectively captures
+microstructure evolution at atomic length and diffusive
+time scales [ 2 , 3 ] . This model bridges
+the gap between atomistic simulations and classical phase
+field models [ 4 ] , finding applications in grain growth,
+spinodal decomposition, liquid phase epitaxial growth,
+and crack propagation [ 2 , 3 , 5 , 6 ] .
+The PFC equation takes the form $\phi_{t}=\Delta\mu,\qquad\mu=(\Delta+1)^{2}\phi-r\phi+\phi^{3},$ where $\phi$ is the atomistic density field and $r>0$ is the undercooling parameter.
+The PFC equation belongs to a broader class of
+phase-field models capable of producing rich
+microphase morphologies, including lamellar,
+hexagonal, and spherical structures. Similar
+morphological diversity is observed in block
+copolymer (BCP) models [ 7 , 8 , 9 , 10 , 11 , 12 ] , where the competition
+between short-range and long-range interactions
+governs the emergent microstructure. Numerical methods for the PFC equation
+have been extensively studied. Early contributions
+include the spectral approach of Cheng and
+Warren [ 13 ] and the
+unconditionally stable finite difference
+framework of Wise, Wang and
+Lowengrub [ 6 ] .
+Finite element methods were proposed
+in [ 14 ] , while isogeometric
+analysis frameworks were developed
+in [ 5 , 15 ] .
+Splitting schemes and energy-stable time integrators
+for phase-field models have been studied extensively
+in the literature [ 16 , 17 , 18 ] . Higher-order temporal schemes
+including BDF2–CS were established by Glasner and
+Orizaga [ 19 ] , which demonstrated
+that convex splitting provides a robust and
+accurate framework for both the Cahn–Hilliard
+and PFC equations in two spatial dimensions.
+GPU-accelerated pseudo-spectral methods for phase-field equations were pioneered by Shen and collaborators [ 20 ] , whose framework directly inspired the GPU implementation of [ 21 ] for the Cahn–Hilliard equation and is extended here to three-dimensional PFC simulations on consumer hardware. More recently, significant advances in
+energy-stable discretizations for the PFC
+equation have been reported.
+Shin, Lee and Lee [ 22 ] developed
+high-order convex splitting Runge–Kutta methods
+using Fourier spectral discretization, establishing
+unconditional energy stability and unique solvability
+for second and third-order temporal schemes, with
+long-time simulations restricted to two spatial
+dimensions. Yang and Han [ 23 ] proposed
+linearly first- and second-order unconditionally
+energy stable schemes for the PFC model.
+Gomez and Nogueira [ 5 ] presented an unconditionally energy-stable
+second-order method using isogeometric analysis,
+with three-dimensional validation at $N=128^{3}$ resolution. Most recently, Saylor, Horváth and
+Sharma [ 24 ] proposed a
+first-order convex splitting hybridizable/embedded
+discontinuous Galerkin (HDG/EDG) finite element
+method for the PFC equation, establishing
+unconditional energy stability and existence and
+uniqueness of the discrete solution. While
+theoretically rigorous, that approach requires
+rewriting the sixth-order equation as a system
+of seven coupled first-order equations, four
+stabilization parameters, and large-scale finite
+element libraries such as MFEM, PETSc, and MUMPS.
+Notably, three-dimensional simulations could be expensive.
+More recently, the scalar auxiliary variable (SAV)
+approaches [ 25 , 26 ] have provided an alternative framework for
+unconditionally stable discretizations of
+gradient flow equations. While significant
+progress has been made in these directions,
+the present work returns to the classical
+convex splitting framework and addresses
+the long-standing question of the practical
+stability threshold for the splitting parameter $a$ , which will be specified in Section 3 . These observations directly motivate the present
+contribution. We present a simple and efficient
+Fourier spectral method based on the convex
+splitting framework of Eyre [ 1 ] .
+The proposed method
+is unconditionally energy stable and conserves
+mass to machine precision. A central contribution
+of this work is a computational stability analysis
+of the splitting parameter $a$ , performed via
+GPU-accelerated parameter sweeps involving 40,000
+independent PFC simulations. Our results reveal
+that the classical stability threshold $a\geq 2$ is sufficient but not sharp: a semi-analytical
+neutral stability curve derived from a dominant-mode
+energy balance provides a closed-form characterization
+of the practical stability boundary, and accuracy
+analysis demonstrates that smaller values of $a$ within the stable region consistently yield lower $L^{2}$ errors. The spectral framework scales naturally
+to three dimensions via GPU acceleration, with
+fully resolved simulations demonstrated on grids
+of $128^{3}$ , $256^{3}$ , and $512^{3}$ , the latter
+on a single consumer GPU, requiring no
+HPC infrastructure. Two-dimensional simulations
+on $256\times 256$ grids are also
+presented. To the best of our knowledge, spectral
+simulations of the PFC equation at $512^{3}$ resolution have not been previously reported
+in the literature. The remainder of this paper is organized as follows.
+Section 2 presents the mathematical model.
+Section 3 introduces the convex splitting scheme and its
+spectral discretization. Section 4 establishes unconditional
+energy stability, mass conservation, and uniqueness of the
+discrete solution. Section 5 presents the computational
+stability analysis, including the semi-analytical neutral
+stability curve and the GPU-accelerated stability map.
+Section 6 presents the accuracy analysis for multiple
+initial conditions. Section 7 presents two-dimensional
+simulations including crystal growth, morphological diversity,
+and grain boundary dynamics. Section 8 presents
+three-dimensional GPU-accelerated simulations at resolutions
+up to $512^{3}$ . Conclusions are drawn in Section 9. 1.1 Comparison with Hybridizable/Embedded
+Discontinuous Galerkin Methods The recent work of Saylor, Horváth and
+Sharma [ 24 ] and the present contribution
+share a common foundation: both employ a first-order convex
+splitting temporal discretization for the PFC equation with
+unconditional energy stability. Despite this shared framework,
+the two approaches differ substantially in complexity and
+scalability. Saylor et al. [ 24 ] treat the
+nonlinear term implicitly via Newton iterations and rewrite
+the sixth-order equation as a system of seven coupled equations,
+requiring large-scale libraries such as MFEM, PETSc, and
+MUMPS, with three-dimensional simulations not demonstrated.
+The present spectral scheme treats the nonlinear term explicitly, operates directly on the sixth-order equation, requires no external libraries, and scales naturally to three dimensions via GPU acceleration at resolutions up to $512^{3}$ on a single consumer GPU. The two approaches are therefore complementary: while the HDG/EDG framework of [ 24 ] offers rigorous theoretical foundations and flexibility for complex geometries and boundary conditions, the proposed spectral method prioritizes simplicity, GPU-nativity, and accessibility on consumer hardware without HPC infrastructure. 2 Mathematical Model The phase field crystal (PFC) equation derives from
+the gradient flow in $H^{-1}$ of the Swift–Hohenberg
+free energy functional $E[\phi]=\int_{\Omega}\left(\frac{1}{4}\phi^{4}+\frac{1-r}{2}\phi^{2}-|\nabla\phi|^{2}+\frac{1}{2}(\Delta\phi)^{2}\right)dx,$ (1) where $\phi$ is the atomistic density field and $r>0$ is the undercooling parameter. The
+governing equation reads $\phi_{t}=\Delta\mu,\qquad\mu=\phi^{3}+(1-r)\phi+2\Delta\phi+\Delta^{2}\phi.$ (2) Under suitable boundary conditions (e.g., homogeneous Dirichlet, homogeneous Neumann, or periodic boundary conditions), the PFC equation admits the following energy dissipation law: $\frac{dE}{dt}=-\|\nabla\mu\|^{2}\leq 0.$ 3 The Convex Splitting Scheme Following Eyre [ 1 ] and [ 19 ] , we decompose
+the free energy $E=E^{+}+E^{-}$ where $E^{+}(\phi)=\int_{\Omega}\frac{1-r+a}{2}\phi^{2}+\frac{1}{2}(\Delta\phi)^{2}\,dx,\qquad E^{-}(\phi)=\int_{\Omega}\frac{1}{4}\phi^{4}-\frac{a}{2}\phi^{2}-|\nabla\phi|^{2}\,dx,$ (3) where $a>0$ is the splitting parameter.
+The term $\frac{1}{4}\phi^{4}-\frac{a}{2}\phi^{2}$ is concave provided $a\geq 3\|\phi\|^{2}_{L^{\infty}}$ ,
+which holds in practice for $a\geq 2$ [ 19 ] . Treating $E^{+}$ implicitly and $E^{-}$ explicitly
+yields the first-order convex splitting scheme: $\frac{\phi^{n+1}-\phi^{n}}{\Delta t}=\Delta\mu^{n+1},$ (4) $\mu^{n+1}=(1-r+a)\phi^{n+1}+\Delta^{2}\phi^{n+1}+(\phi^{n})^{3}-a\phi^{n}-2\Delta\phi^{n}.$ (5) In the Fourier spectral discretization, the scheme
+admits the efficient closed-form update $\hat{\phi}^{n+1}(\mathbf{k})=\frac{\hat{\phi}^{n}+\Delta t\left(-|\mathbf{k}|^{2}\widehat{\left[(\phi^{n})^{3}-a\phi^{n}\right]}+2|\mathbf{k}|^{4}\hat{\phi}^{n}\right)}{1+\Delta t\left((1-r+a)|\mathbf{k}|^{2}+|\mathbf{k}|^{6}\right)},$ (6) where $\hat{\cdot}$ denotes the discrete Fourier transform. Standard pseudo-spectral methods are used for the spatial discretization [ 27 ] ,
+requiring no linear solvers or iterative methods. 4 Scheme Properties Theorem 1 (Mass Conservation) . The convex splitting scheme ( 4 ) conserves
+mass exactly for all $\Delta t>0$ : $\int_{\Omega}\phi^{n+1}\,dx=\int_{\Omega}\phi^{n}\,dx,\qquad\forall n\geq 0.$ Proof. Integrating ( 4 ) over $\Omega$ and applying
+the divergence theorem with periodic boundary
+conditions: $\frac{1}{\Delta t}\int_{\Omega}(\phi^{n+1}-\phi^{n})\,dx=\int_{\Omega}\Delta\mu^{n+1}\,dx=\oint_{\partial\Omega}\nabla\mu^{n+1}\cdot\mathbf{n}\,ds=0.$ ∎ Remark 1 (Spectral Verification) . In the Fourier spectral discretization,
+mass conservation holds to machine precision
+since the zero wavenumber mode $\hat{\phi}(\mathbf{0})$ is unchanged by the scheme, the right-hand side
+vanishes identically at $\mathbf{k}=\mathbf{0}$ .
+This is confirmed numerically in all simulations
+presented in Section 7 . Remark 2 (Existence and Uniqueness) . Existence and uniqueness of the discrete solution
+follow from the strictly convex structure of the
+implicit part of the scheme ( 4 ), as
+established in [ 19 ] for both the Cahn–Hilliard and PFC equations. To establish unconditional energy stability
+for the sixth-order system, we adopt a truncated
+potential argument following the mathematical
+framework of Shen et al. [ 28 ] .
+This approach ensures global concavity of the
+expansive energy components, yielding the
+following result: Theorem 2 (Unconditional Energy Stability) . Let $\Omega\subset\mathbb{R}^{d}$ be a periodic domain and let $\phi^{n}\in H^{2}_{\mathrm{per}}(\Omega)$ .
+Define a truncated potential $F_{M}\in C^{2}(\mathbb{R})$ satisfying $F_{M}(\phi)=\frac{1}{4}\phi^{4}\quad\text{for }|\phi|\leq M,$ and $|F_{M}^{\prime\prime}(\phi)|\leq L_{M},\qquad\forall\phi\in\mathbb{R}.$ Let $f_{M}=F_{M}^{\prime}$ and define the modified energy functional $E_{M}(\phi)=\int_{\Omega}\left[F_{M}(\phi)+\frac{1-r}{2}\phi^{2}-|\nabla\phi|^{2}+\frac{1}{2}(\Delta\phi)^{2}\right]dx.$ Decompose $E_{M}(\phi)=E_{M}^{+}(\phi)+E_{M}^{-}(\phi),$ where $E_{M}^{+}(\phi)=\int_{\Omega}\left[\frac{1-r+a}{2}\phi^{2}+\frac{1}{2}(\Delta\phi)^{2}\right]dx,$ and $E_{M}^{-}(\phi)=\int_{\Omega}\left[F_{M}(\phi)-\frac{a}{2}\phi^{2}-|\nabla\phi|^{2}\right]dx.$ Assume $a\geq L_{M},\qquad 1-r+a>0.$ Consider the convex splitting scheme $\frac{\phi^{n+1}-\phi^{n}}{\Delta t}=\Delta\mu^{n+1},$ (2.1) with chemical potential $\mu^{n+1}=(1-r+a)\phi^{n+1}+\Delta^{2}\phi^{n+1}+f_{M}(\phi^{n})-a\phi^{n}-2\Delta\phi^{n}.$ (2.2) Then the numerical solution satisfies the discrete energy law $E_{M}(\phi^{n+1})+\frac{1}{\Delta t}\|\phi^{n+1}-\phi^{n}\|_{H^{-1}}^{2}\leq E_{M}(\phi^{n}),\qquad\forall\Delta t>0.$ Proof. The second variation of $E_{M}^{+}$ is $\delta^{2}E_{M}^{+}(\phi)[v,v]=\int_{\Omega}\left[(1-r+a)v^{2}+(\Delta v)^{2}\right]dx.$ Since $1-r+a>0$ , $\delta^{2}E_{M}^{+}(\phi)[v,v]\geq 0,$ and therefore $E_{M}^{+}$ is strictly convex. Next, the second variation of $E_{M}^{-}$ is $\delta^{2}E_{M}^{-}(\phi)[v,v]=\int_{\Omega}\left[(F_{M}^{\prime\prime}(\phi)-a)v^{2}-2|\nabla v|^{2}\right]dx.$ Because $F_{M}^{\prime\prime}(\phi)\leq L_{M}\leq a,$ we obtain $(F_{M}^{\prime\prime}(\phi)-a)v^{2}\leq 0.$ Hence $\delta^{2}E_{M}^{-}(\phi)[v,v]\leq 0,$ which proves that $E_{M}^{-}$ is globally concave. Take the $H^{-1}$ inner product of (2.1) with $\phi^{n+1}-\phi^{n}$ : $\left\langle\frac{\phi^{n+1}-\phi^{n}}{\Delta t},\phi^{n+1}-\phi^{n}\right\rangle_{H^{-1}}=\langle\Delta\mu^{n+1},\phi^{n+1}-\phi^{n}\rangle_{H^{-1}}.$ Using periodicity and the identity $\langle\Delta v,w\rangle_{H^{-1}}=-\langle v,w\rangle_{L^{2}},$ we obtain $\frac{1}{\Delta t}\|\phi^{n+1}-\phi^{n}\|_{H^{-1}}^{2}=-\langle\mu^{n+1},\phi^{n+1}-\phi^{n}\rangle_{L^{2}}.$ (2.3) Since $E_{M}^{+}$ is convex, $E_{M}^{+}(\phi^{n+1})-E_{M}^{+}(\phi^{n})\leq\left\langle\delta E_{M}^{+}(\phi^{n+1}),\phi^{n+1}-\phi^{n}\right\rangle_{L^{2}}.$ (2.4) Since $E_{M}^{-}$ is concave, $E_{M}^{-}(\phi^{n+1})-E_{M}^{-}(\phi^{n})\leq\left\langle\delta E_{M}^{-}(\phi^{n}),\phi^{n+1}-\phi^{n}\right\rangle_{L^{2}}.$ (2.5) Adding (2.4) and (2.5) yields $E_{M}(\phi^{n+1})-E_{M}(\phi^{n})\leq\left\langle\delta E_{M}^{+}(\phi^{n+1})+\delta E_{M}^{-}(\phi^{n}),\phi^{n+1}-\phi^{n}\right\rangle_{L^{2}}.$ Using the definition of $\mu^{n+1}$ from (2.2), $E_{M}(\phi^{n+1})-E_{M}(\phi^{n})\leq\langle\mu^{n+1},\phi^{n+1}-\phi^{n}\rangle_{L^{2}}.$ Substituting identity (2.3), $E_{M}(\phi^{n+1})-E_{M}(\phi^{n})\leq-\frac{1}{\Delta t}\|\phi^{n+1}-\phi^{n}\|_{H^{-1}}^{2}.$ Therefore, $E_{M}(\phi^{n+1})+\frac{1}{\Delta t}\|\phi^{n+1}-\phi^{n}\|_{H^{-1}}^{2}\leq E_{M}(\phi^{n}).$ ∎ Remark 3 . In practical computations, one typically observes $|\phi|\leq M$ [ 19 , 21 , 22 ] , so that $F_{M}(\phi)=\frac{1}{4}\phi^{4}$ throughout the simulation. Thus the truncated formulation serves only as a technical device ensuring global concavity and rigorous unconditional energy stability. 5 Computational Stability Analysis 5.1 Single Run: Crystal Growth from Seed To illustrate the dynamics of the proposed scheme,
+we first present a single simulation of the PFC
+equation initialized with the standard seed
+configuration of Glasner–Orizaga [ 19 ] .
+The simulation is performed on a $256\times 256$ grid with $r=0.5$ , $\Delta t=0.01$ , and $a=0.30$ , a value notably below the classical threshold $a\geq 2$ , demonstrating that energy-stable
+and physically correct simulations are achievable
+well below this bound.
+Figure 1 shows snapshots of
+the atomistic density field at $t=0,10,20,40$ ,
+demonstrating the progressive growth of a hexagonal
+crystal lattice from the initial seed.
+Figure 2 shows the corresponding
+free energy as a function of time, confirming
+monotonic energy dissipation throughout the simulation. Figure 1: Crystal growth simulation for the PFC equation
+using the convex splitting spectral method with $a=0.30$ , $\Delta t=0.01$ , $r=0.5$ , on a $256\times 256$ grid.
+Snapshots of the atomistic density field $\phi$ are shown
+at $t=0$ (top left), $t=10$ (top right), $t=20$ (bottom left),
+and $t=40$ (bottom right). The initial seed configuration
+of Glasner–Orizaga [ 19 ] grows into a fully
+developed hexagonal crystal lattice, demonstrating the
+energy-stable and physically correct dynamics of the
+proposed scheme. Figure 2: Free energy $E(\phi^{n})$ as a function of time
+for the PFC convex splitting scheme with $a=0.30$ , $\Delta t=0.01$ , $r=0.5$ , on a $256\times 256$ grid
+up to $t=40$ . The energy decreases monotonically
+throughout the simulation, confirming unconditional
+energy stability. Red dots indicate the times $t=0,10,20,40$ at which solution snapshots
+are shown as insets, illustrating the progressive
+development of the hexagonal crystal structure
+from the initial seed configuration. 5.2 GPU-Accelerated Parallel Simulations To further demonstrate the efficiency of the proposed
+framework, we exploit GPU parallelism to execute
+twenty independent PFC simulations simultaneously,
+each with a different value of the splitting parameter $a\in[1.00,2.00]$ . This is motivated in part by
+recent advances in GPU-parallelized scientific
+computing, in particular, Chowdhury and
+Pérez-Ríos [ 29 ] demonstrated
+the effectiveness of GPU-parallelized MATLAB for
+large-scale parameter sweeps in atom-ion dynamics,
+achieving significant speedups over CPU-based
+implementations. The present work adopts a similar
+philosophy. As shown in Figure 3 ,
+all twenty simulations are energy-stable, confirming
+that values of $a$ significantly below the classical
+threshold $a\geq 2$ yield physically correct solutions.
+A GPU speedup of $18.42\times$ over the sequential
+CPU baseline is observed. Figure 3: Twenty parallel GPU-accelerated PFC simulations
+with splitting parameter $a\in[1.00,2.00]$ , $\Delta t=0.01$ , $r=0.5$ , $T=20$ , on a $256\times 256$ grid with random initial condition $\phi^{0}=0.01\,\eta$ , where $\eta\sim\mathcal{N}(0,1)$ .
+All twenty simulations are energy-stable with
+monotonically decreasing free energy, confirming
+that values of $a$ significantly below the classical
+threshold $a\geq 2$ yield physically correct
+and energy-stable solutions. The GPU-accelerated
+parallel implementation achieves a speedup of $18.42\times$ over the sequential CPU baseline,
+demonstrating the efficiency of the proposed
+computational framework. 5.3 Neutral Stability Curve While Theorem 2 establishes that $a\geq L_{M}$ is sufficient for unconditional energy
+stability, this condition is not sharp in practice.
+To characterize the practical stability boundary,
+we derive a semi-analytical neutral stability curve
+from a dominant-mode energy balance. From the discrete energy law established in
+Theorem 2 , the neutral stability
+transition occurs when $E_{M}(\phi^{n+1})=E_{M}(\phi^{n})$ ,
+that is, when the dissipative terms and the nonlinear
+remainder are in exact balance. To make this condition
+tractable, we invoke a dominant-mode reduction: we project
+the balance onto the dominant Fourier mode $|\mathbf{k}|^{2}=2$ , evaluate the nonlinearity
+at its bulk-phase value $f^{\prime\prime}=F_{M}^{\prime\prime}(\phi)|_{\phi=1}=2$ ,
+and collect terms in $a$ . This yields the quadratic
+condition $a\left(1+\Delta t\,|\mathbf{k}|^{6}+\Delta t\,a\,|\mathbf{k}|^{2}\right)=f^{\prime\prime}\,\Delta t\,|\mathbf{k}|^{2}.$ Solving for the positive root gives the
+analytical neutral curve: $a_{\mathrm{neutral}}(\Delta t)=\frac{-(1+\Delta t\,|\mathbf{k}|^{6})+\sqrt{(1+\Delta t\,|\mathbf{k}|^{6})^{2}+4\,\Delta t^{2}\,|\mathbf{k}|^{4}\,f^{\prime\prime}}}{2\,\Delta t\,|\mathbf{k}|^{2}},$ (7) which contains no free parameters under this
+closure. As $\Delta t\to 0$ , $a_{\mathrm{neutral}}\to 0$ , consistent
+with the explicit CFL-type behavior observed
+numerically. For large $\Delta t$ , $a_{\mathrm{neutral}}$ grows monotonically,
+reflecting increased stabilization requirements.
+The curve lies well below the classical bound $a\geq 2$ over the entire tested range $\Delta t\in[0.01,2]$ , confirming that the
+standard condition is not sharp in practice.
+Any choice satisfying $a\geq a_{\mathrm{neutral}}(\Delta t)$ is consistently observed to yield energy-stable
+simulations, providing a practical and conservative
+guideline for parameter selection. 5.4 GPU-Accelerated Stability Map To verify the neutral stability curve ( 7 )
+computationally, we perform a systematic parameter
+sweep over $(a,\Delta t)\in[0,0.4]\times[0.01,2]$ using 40,000 independent GPU-accelerated PFC simulations
+on an NVIDIA RTX 5090 GPU. Each simulation is initialized
+with the standard seed configuration in [ 19 ] on a $64\times 64$ grid with $r=0.5$ . To ensure a fair and rigorous
+comparison across all parameter pairs, each simulation
+is advanced for a fixed number of time steps given by $N_{\mathrm{steps}}=\left\lfloor\frac{T}{\Delta t_{\min}}\right\rfloor=\left\lfloor\frac{14}{0.01}\right\rfloor=1400,$ regardless of the value of $\Delta t$ . A simulation is
+classified as stable if the discrete free energy satisfies $E(\phi^{N_{\mathrm{steps}}})<E(\phi^{0})$ , a criterion
+verified to correspond to physically meaningful solutions
+in representative cases. Figure 5 shows the semi-analytical
+neutral stability curve ( 7 ) overlaid
+against the computational stability boundary extracted
+from the stability map of Figure 4 .
+The neutral curve lies above the computational boundary
+throughout the tested range, confirming its conservative
+but reliable character as a practical guideline for
+parameter selection. Notably, the neutral curve remains
+substantially below the classical sufficient condition $a\geq 2$ of Eyre [ 1 ] across the entire tested range $\Delta t\in[0.01,2]$ ,
+demonstrating that the classical bound is significantly
+more conservative than necessary in practice. This approach is broadly applicable to any
+phase-field or gradient flow model requiring
+systematic parameter exploration. The 40,000
+GPU-accelerated simulations presented here
+demonstrate that computational stability maps,
+previously impractical due to cost, are now
+accessible on consumer hardware, opening new
+avenues for parameter sensitivity analysis in
+materials science, crystal growth modeling,
+and beyond. Figure 4: Computational stability map for the convex
+splitting scheme applied to the PFC equation, obtained
+from 40,000 GPU-accelerated simulations on an NVIDIA
+RTX 5090 in 224.2 seconds. The parameter space $(a,\Delta t)\in[0,0.4]\times[0.01,2]$ is
+explored on a $200\times 200$ grid. Yellow regions
+indicate energy-stable simulations where $E(\phi^{n})$ decreases monotonically; purple regions indicate
+energy-unstable simulations. The stability boundary is well characterized by
+the semi-analytical neutral stability curve $a_{\mathrm{neutral}}(\Delta t)$ ( 7 ),
+lying well below the classical sufficient condition $a\geq 2$ of Eyre [ 1 ] .
+This demonstrates that the classical bound is
+sufficient but not sharp, and that energy-stable
+simulations are achievable for values of $a$ significantly below this threshold. Figure 5: Semi-analytical neutral stability curve $a_{\mathrm{neutral}}(\Delta t)$ ( 7 )
+(solid blue line) derived from a dominant-mode energy
+balance with $|\mathbf{k}|^{2}=2$ and $f^{\prime\prime}=2$ ,
+overlaid against the computational stability boundary
+(red dots) extracted from Figure 4 .
+The neutral curve lies above the computational boundary
+throughout the tested range $\Delta t\in[0.01,2]$ ,
+confirming its conservative but reliable character
+as a practical stability guideline. Remark 4 (Robustness of the Stability Map) . The computational stability map presented in
+Figure 4 was obtained using
+the seed configuration of [ 19 ] .
+Additional tests with random initial conditions $\phi^{0}=0.01\,\eta$ , $\eta\sim\mathcal{N}(0,1)$ ,
+yielded near-identical stability boundaries,
+suggesting that the stability boundary is an
+intrinsic property of the CS scheme rather than
+a consequence of the choice of initial condition. 6 Accuracy Analysis: Influence of the Splitting Parameter The computational stability map of
+Figure 4 demonstrates that
+energy-stable simulations are achievable for values
+of $a$ significantly below the classical threshold $a\geq 2$ . A natural question is whether reducing $a$ within the stable region affects the accuracy
+of the numerical solution. We investigate this
+systematically by computing $L^{2}$ errors relative
+to a reference solution obtained with $a=2$ and $\Delta t=10^{-5}$ on a $256\times 256$ grid
+up to $T=1$ , using the standard seed initial
+condition in [ 19 ] . Figure 6 shows the $L^{2}$ error
+as a function of $\Delta t$ for five values of $a\in\{0.1,0.5,1.0,1.5,2.0\}$ . All curves
+exhibit first-order $\mathcal{O}(\Delta t)$ convergence,
+consistent with the first-order temporal discretization.
+Crucially, smaller values of $a$ consistently yield
+lower $L^{2}$ errors for the same $\Delta t$ . This
+demonstrates that selecting $a$ close to $a_{\mathrm{neutral}}(\Delta t)$ , rather than
+the conservative choice $a=2$ , improves accuracy
+while maintaining energy stability, providing a
+practical guideline for parameter selection. Figure 6: $L^{2}$ error versus $\Delta t$ for the PFC
+convex splitting scheme with five values of the
+splitting parameter $a\in\{0.1,0.5,1.0,1.5,2.0\}$ ,
+on a $256\times 256$ grid with $r=0.5$ and $T=1$ ,
+using the standard seed initial condition of
+Glasner–Orizaga [ 19 ] . The reference
+solution is computed with $a=2$ and $\Delta t=10^{-5}$ .
+All curves exhibit first-order $\mathcal{O}(\Delta t)$ convergence. Smaller values of $a$ consistently yield
+lower $L^{2}$ errors for the same $\Delta t$ , demonstrating
+that selecting $a$ below the classical threshold $a\geq 2$ improves accuracy while maintaining energy stability. 7 Numerical Simulations: 2D 7.1 Lamellar Phase: Stripe Formation To further demonstrate the capabilities of the proposed
+scheme beyond the seed configuration, we present
+long-time simulations initialized with a random
+initial condition $\phi^{0}=0.01\,\eta$ , $\eta\sim\mathcal{N}(0,1)$ , on a $256\times 256$ grid with $r=0.5$ , $\Delta t=0.01$ , and $a=0.5$ .
+This configuration tests the ability of the method
+to naturally develop labyrinthine stripe patterns
+from an unstructured initial state, without any
+prescribed geometry. Figure 7 shows snapshots at $t=5$ , $t=40$ , and $t=1000$ ,
+illustrating the progressive formation and
+coarsening of the lamellar microstructure.
+Figure 8 shows the
+corresponding free energy, which decreases
+monotonically and reaches a well-defined plateau
+near $t=500$ , confirming that the solution has
+reached a near-equilibrium state. Figure 7: Labyrinthine stripe pattern formation for the
+PFC equation with random initial condition $\phi^{0}=0.01\,\eta$ , $\eta\sim\mathcal{N}(0,1)$ ,
+on a $256\times 256$ grid with $r=0.5$ , $\Delta t=0.01$ , $a=0.5$ . Snapshots at $t=5$ (left), $t=40$ (center), and $t=1000$ (right) demonstrate
+the progressive development of the labyrinthine
+microstructure from an unstructured initial state
+to a well-developed near-equilibrium configuration. Figure 8: Free energy $E(\phi^{n})$ as a function of time
+for the PFC simulation of Figure 7 ,
+with random initial condition on a $256\times 256$ grid
+up to $T=1000$ . The energy decreases monotonically
+and reaches a well-defined plateau near $t=500$ ,
+confirming near-equilibrium and unconditional
+energy stability of the proposed scheme. 7.2 Hexagonal Phase We next consider a mean-field initial condition $\phi^{0}=0.01\,\eta+0.27$ , $\eta\sim\mathcal{N}(0,1)$ , which favors the
+formation of hexagonal dot patterns.
+Figure 9 shows snapshots at $t=10$ , $t=50$ , and $t=1000$ , demonstrating
+the progressive development of the hexagonal
+microstructure. Figure 10 shows the corresponding free energy, which
+decreases monotonically throughout, consistent
+with Theorem 2 . Figure 9: Hexagonal phase formation for the PFC equation
+with initial condition $\phi^{0}=0.01\,\eta+0.27$ , $\eta\sim\mathcal{N}(0,1)$ , on a $256\times 256$ grid with $r=0.5$ , $\Delta t=0.01$ , $a=0.5$ .
+Snapshots at $t=10$ (left), $t=50$ (center),
+and $t=1000$ (right) demonstrate the progressive
+development of the hexagonal microstructure. Figure 10: Free energy $E(\phi^{n})$ as a function of time
+for the hexagonal phase simulation of
+Figure 9 , on a $256\times 256$ grid
+up to $T=1000$ . The energy decreases monotonically,
+confirming energy stability. 7.3 Polycrystalline Growth and Grain Boundary Dynamics To demonstrate the ability of the proposed scheme
+to capture polycrystalline growth and grain boundary
+dynamics, we initialize three seed crystals with
+different orientations within a $256\times 256$ computational domain with $r=0.25$ , $q=0.66$ , $\Delta t=0.01$ , and $a=0.5$ . Each seed is
+initialized using the standard crystal nucleus
+configuration [ 19 ] with a distinct rotation angle, inducing
+crystallographic misorientation between the
+growing grains. As the three crystals grow and
+impinge upon one another, well-defined grain
+boundaries and dislocation defects emerge at
+the interfaces, as shown in
+Figure 11 . The free energy
+decreases monotonically throughout, consistent
+with Theorem 2 . Figure 11: Polycrystalline growth and grain boundary
+dynamics for the PFC equation with three seed crystals
+of different orientations, on a $256\times 256$ grid
+with $r=0.25$ , $q=0.66$ , $\Delta t=0.01$ , $a=0.5$ .
+Snapshots at $t=0$ , $t=10$ , $t=50$ (top row) and $t=100$ , $t=200$ , $t=500$ (bottom row) demonstrate
+the growth of individual crystal grains and their shared
+formation of grain boundaries, as in [ 19 ] . 7.4 Quantitative Grain Boundary Characterization Figure 11 qualitatively demonstrates the
+emergence of grain boundaries between three misoriented crystal seeds. Next, we quantify the coarsening dynamics using four types of diagnostic approaches, which were
+computed directly from the simulation: the topological defect count $N_{d}(t)$ , the grain boundary length $L_{GB}(t)$ , the grain boundary
+excess free energy $E_{GB}(t)$ , and the crystallized area fraction $X(t)$ . Results from this anlaysis is presented in Figure 12 . Figure 12: Coarsening diagnostics for the three-grain simulation of
+Figure 11 : topological defect count $N_{d}(t)$ ,
+Eq. ( 8 ) (top left); grain boundary length proxy $L_{GB}(t)$ ,
+Eq. ( 9 ) (top right); grain boundary excess free energy $E_{GB}(t)$ , Eq. ( 10 ) (bottom left); and crystallized area
+fraction $X(t)$ , fit to the classical Avrami/JMAK form $X(t)=1-\exp(-kt^{n})$ via nonlinear least squares over the full time
+series ( $k=0.000149$ , $n=1.79$ , $R^{2}=0.9906$ ) (bottom right). All four
+quantities plateau at $t^{*}\approx 280$ , marking the onset of a
+pinned, quasi-steady polycrystalline configuration. Topological defect count: We locate the local extrema of $u(\mathbf{x},t)$ , corresponding to the
+atomic lattice sites, and construct a Delaunay triangulation over this
+point set. In a defect-free triangular lattice every interior site has
+coordination number six, so $N_{d}(t)\;=\;\sum_{i\,\in\,\Omega_{\mathrm{int}}}\mathbb{1}\!\left[\,z_{i}(t)\neq 6\,\right],$ (8) where $z_{i}(t)$ denotes the Delaunay coordination number of site $i$ , $\mathbb{1}[\cdot]$ is the indicator function that equals $1$ if the enclosed condition is satisfied and $0$ otherwise, and $\Omega_{\mathrm{int}}$ consists of all lattice sites located at least one lattice spacing away from the domain boundary. We emphasize that $N_{d}(t)$ aggregates all anomalous-coordination sites
+across the domain; meaning, ( 8 ) captures deviations from ideal coordination number equal to six. Comparing with Figure 11 , such deviations appear at the crystal/liquid interfaces (e.g., $t$ =100.0), and grain boundary regions (e.g., $t$ =500.0). The results from $N_{d}(t)$ v.s. $t$ analysis is presented in the top-left panel of Figure 12 . Broadly, this plot shows three distinct regions: An initial rise between $0\leq t\leq 200$ , monotonic decrease from $t\approx 200$ to $400$ , and a near steady-state till the end of simulation, i.e., $t=500$ . The initial rise to $t\approx 200$ corresponds to increasing fraction of anomalously coordinated atoms at crystal/liquid interface during growth (while largely surrounded by the liquid phase), and those at the grain boundaries formed by the impinging crystallites (e.g., see panel corresponding to $t=100$ in Figure 11 . Next, as the liquid is continually consumed by growing crystals, the anomalously coordinated atom population is increasingly dominated by those at the grain boundaries. For example, the $t=200$ snapshot indicated that the microstructure is dominated by grain boundaries in the second stage. Interestingly, it appears that such grain boundary atoms were in smaller quantity than those at the crystal/liquid interface. Furthermore, our analysis suggested that microstructure did not stop evolving even after complete crystallization, e.g. to $t=400$ . (Crystallization kinetics captured from our simulations will be discussed latter). However, beyond this point, the grain boundaries appear to be "locked in" an equilibrium state, which is reflected as a steady state in the plot. Interface length: We further characterized these interfaces by computing local orientation, $\theta(\mathbf{x},t)$ , as a function of time. This quantity was obtained from the
+dominant spectral peak of a sliding-window Fourier transform of $u(\mathbf{x},t)$ , taken modulo $60^{\circ}$ . Writing $\zeta(\mathbf{x},t)=\exp[i\,6\,\theta(\mathbf{x},t)]$ to avoid the
+wrap-around artifact of this periodicity, $L_{GB}(t)\;=\;\int_{\Omega}H\!\left(\,\tfrac{1}{6}\left|\nabla\zeta(\mathbf{x},t)\right|-\eta\,\right)\,d\mathbf{x},$ (9) with $\eta=5^{\circ}$ per grid step, is a coarse but reproducible
+proxy for the grain-boundary arclength. The top-right plot in Figure 12 shows the result of our analysis. We find that the interfacial length steadily increases till $t\approx 250$ , and, subsequently, acquires a steady-state value. A small peak was also noted within $200\leq t\leq 300$ . It was either caused by the transition to a grain boundary dominated microstructure or is an imprint of the numerical procedure employed in this analysis. Notwithstanding, the initial rise in $L_{GB}(t)$ contains contributions from the increasing circumference of the growing crystals and the proto grain boundaries, e.g. see snapshots corresponding to $t=50$ and $100$ in Figure 11 . On the other hand, the steady-state is primarily dominated by the grain boundaries after $t\approx 300$ . Interfacial excess free energy: With bulk reference $f_{\mathrm{bulk}}(t)=\mathrm{median}_{\mathbf{x}\in\Omega}\,f(u(\mathbf{x},t))$ , $E_{GB}(t)\;=\;\int_{\Omega}\Big[\,f\big(u(\mathbf{x},t)\big)-f_{\mathrm{bulk}}(t)\,\Big]^{+}\,d\mathbf{x}$ (10) computes the excess free energy of interfaces, and this approach was inspired by Cahn-Hilliard-based formulations [ 4 , 30 , 31 , 32 ] . Plot in the bottom-right panel of Figure 12 depicts the evolution of $f_{\mathrm{bulk}}(t)$ , and it trends comparable to $L_{GB}(t)$ (top-right panel): a monotonic rise followed by steady state. Therefore, the initial rise correspond to excess energies of crystal/liquid and grain boundary interfaces, while the steady-state reflects contributions from the interfaces formed by the misoriented crystals,i.e., grain boundaries. Crystallization kinetics: Lastly, we interrogated the crystallization kinetics by measuring the crystallized fraction ( $X(t)\in[0,1]$ ) as function of time - bottom-right panel in Figure 12 . We note that trend in $X(t)$ is comparable to $L_{GB}(t)$ (top-right panel) and $E_{GB}(t)$ (bottom-left panel), and that full crystallization ( $X(t)=1)$ ) was achieved around $t\approx 250$ . The latter corresponded to microstructure dominated by grain boundary interfaces. Next, we quantified crystallization kinetics by fitting the Johnson–Mehl–Avrami–Kolmogorov (JMAK) equation to the simulation data [ 33 , 34 ] : $X(t)=1-\exp(-kt^{n})$ (11) where, $k$ is a measure of the speed of liquid $\xrightarrow{}$ solid (crystal) transformation, and the exponent $n$ signifies the dimensionality of transformation. $n\approx 3$ corresponds to three dimensional volumetric transformation, while $n\approx 2$ points to a transformation mechanism that is dominated by interfaces [ 33 , 34 , 35 ] . The fitting results presented in the plot, and, importantly, we find that $n=1.79$ - close to a value of two. This further confirms that the microstructural evolution observed in Figure 11 is dominated by interfaces; first by the crystal/liquid, and, after complete crystallization, by crystal/crystal grain boundary interfaces. Having established the scheme’s ability to capture and quantify
+mesoscale polycrystalline dynamics, we next examine its performance
+at the atomistic length scales for which the PFC framework was
+originally intended. 7.5 Atomistic Resolution: High-Resolution Crystal Growth The PFC equation was originally derived to model
+microstructure evolution at atomic length
+scales [ 2 , 3 ] . As demonstrated
+in the comprehensive review of Gránásy et
+al. [ 36 ] , phase-field crystal
+models require sufficient spatial resolution to
+faithfully capture crystal nucleation, grain
+boundary dynamics, and microstructure evolution
+at the molecular scale, phenomena that are
+inaccessible at coarser resolutions. To demonstrate
+the ability of the proposed scheme to resolve such
+dynamics, we consider high-resolution simulations
+on grids up to $2048\times 2048$ , enabling thousands
+of individual crystalline sites to be resolved
+simultaneously and directly capturing the atomistic
+lattice structure characteristic of the model. To further assess the behavior of the scheme in a strongly
+under-resolved stability regime, we perform a simulation on a $2048\times 2048$ grid using $a=0.25$ , well below the classical
+convex-splitting threshold $a\geq 2$ . Despite this, the computation
+remains stable throughout and accurately captures the evolution of
+thousands of crystalline sites across the domain.
+Figure 13 shows the resulting dynamics, illustrating the
+formation and coarsening of a hexagonal crystal lattice from a
+single seed. These large-scale simulations highlight that the relaxed stability
+conditions identified in the computational analysis remain effective
+in practice for long-time, high-resolution atomistic dynamics.
+This sets the stage for extending the framework to fully three-dimensional
+simulations in the following section. Figure 13: Crystal growth simulation for the PFC equation
+on a $2048\times 2048$ grid with $a=0.25$ , $\Delta t=0.01$ , $r=0.5$ , well below the classical
+threshold $a\geq 2$ . Snapshots at $t=0$ (top left), $t=10$ (top right), $t=50$ (bottom left), and $t=100$ (bottom right) reveal the progressive growth of the
+hexagonal crystal lattice from a single seed, with
+atomistic-scale microstructure and interfacial wave
+patterns fully resolved at this resolution. 8 Three-Dimensional Simulations and GPU Scalability 8.1 GPU Scalability GPU acceleration for spectral phase-field models
+was previously benchmarked in [ 21 ] ,
+where an NVIDIA RTX 2060 GPU achieved a conservative $8\times$ speedup over an Intel Core i9 CPU baseline
+for the Cahn–Hilliard equation on large-scale problems
+involving $256^{3}$ grids. GPU-accelerated spectral methods
+for PDEs have also been explored in the context of
+tensor product operations [ 20 ] and
+thin-film equations [ 37 ] , demonstrating
+the broad applicability of GPU acceleration for
+spectral phase-field computations. In the present
+work, GPU parallelism is further exploited to perform
+large-scale parameter sweeps involving 40,000
+independent PFC simulations, motivated by recent
+advances in GPU-parallelized scientific
+computing [ 29 ] . To illustrate the three-dimensional capabilities
+of the proposed scheme, we present a benchmark
+simulation using the standard seed initial condition
+of [ 19 ] extended to three spatial
+dimensions. The benchmark is designed to reflect
+realistic computational conditions: a main script
+calls the solver, timing begins at initialization,
+and concludes only once the full three-dimensional
+solution is computed and available for visualization
+and exploration. All simulations use $r=0.5$ , $\Delta t=0.01$ , $a=0.5$ , and $T=100$ ,
+corresponding to 10,000 time steps at resolutions
+of $128^{3}$ and $256^{3}$ , representing approximately
+2 million and 16 million degrees of freedom per
+time step, respectively. Figure 14 shows the isosurface visualization and internal
+cross-sections at the center of the domain,
+revealing the three-dimensional crystal
+microstructure. Mass is conserved to machine
+precision throughout. Figure 14: Three-dimensional PFC simulation using the
+convex splitting spectral method with the seed
+initial condition of [ 19 ] extended
+to 3D, on a $128^{3}$ grid with $r=0.5$ , $\Delta t=0.01$ , $a=0.5$ , $T=100$ .
+Left: isosurface visualization. Right: internal
+cross-sections at the center of the domain. Building on this foundation, we benchmark three
+GPU configurations for the PFC equation using
+the same seed initial condition with $\Delta t=0.01$ and $T=100$ . Table 1 summarizes
+the wall-clock times and relative speedups for
+grid resolutions of $128^{3}$ and $256^{3}$ . GPU $128^{3}$ (min) $256^{3}$ (min) Speedup ( $128^{3}$ ) Speedup ( $256^{3}$ ) NVIDIA RTX 2060 7.29 56.24 1 $\times$ 1 $\times$ NVIDIA RTX 5090 (laptop) 1.42 11.82 5.13 $\times$ 4.75 $\times$ NVIDIA RTX 5090 (desktop) 0.85 6.41 8.58 $\times$ 8.77 $\times$ NVIDIA RTX PRO 6000 0.68 4.77 10.72 $\times$ 11.79 $\times$ Table 1: Wall-clock times (in minutes) and GPU speedups for 3D PFC
+simulations with the seed initial condition, $\Delta t=0.01$ , $T=100$ . Speedups are reported
+relative to the RTX 2060 baseline. The RTX 2060
+achieves an $8\times$ speedup over a CPU baseline,
+as established in [ 21 ] . The proposed CS scheme is benchmarked on modern
+NVIDIA Blackwell GPU architectures to demonstrate
+scalability for large-scale 3D PFC simulations.
+Table 1 reports wall-clock times for
+consumer and professional-grade GPUs. Given the $8\times$ speedup of the RTX 2060 over a CPU
+baseline [ 21 ] , the RTX 5090
+desktop achieves an effective speedup of
+approximately $70\times$ over CPU, approaching
+the $80\times$ reported for the professional
+NVIDIA A100 in [ 21 ] . The
+professional-grade RTX PRO 6000 reaches $94\times$ ,
+confirming that the gap between consumer and
+professional hardware is closing for phase-field
+workloads. These results demonstrate that
+large-scale 3D PFC simulations are now accessible
+on consumer hardware without HPC infrastructure. The RTX 5090 laptop achieves an effective speedup
+of approximately $40\times$ over CPU, comparable
+to the professional A6000 reported
+in [ 21 ] , demonstrating that
+high-resolution 3D PFC simulations are now
+feasible on portable consumer hardware. 8.2 3D GPU-Accelerated PFC Morphologies The proposed scheme naturally captures a rich
+variety of three-dimensional microstructures
+depending solely on the mean-field value of
+the initial condition, without requiring
+prescribed seed configurations. Specifically,
+we consider initial conditions of the form $\phi^{0}=0.01\,\eta+\bar{\phi},\qquad\eta\sim\mathcal{N}(0,1),$ where $\bar{\phi}$ denotes the mean density.
+By varying $\bar{\phi}$ , three qualitatively
+distinct phases emerge naturally from random
+initial conditions, demonstrating the
+morphological versatility of the convex
+splitting spectral framework. All simulations
+are performed on $256^{3}$ and $512^{3}$ grids with $r=0.5$ , $\Delta t=0.01$ , $a=1.0$ , and $T=1000$ using the consumer-grade RTX 5090 desktop GPU. 8.2.1 Lamellar Phase ( $\bar{\phi}=0$ ) Setting $\bar{\phi}=0$ , the system develops
+a three-dimensional labyrinthine stripe pattern
+distributed throughout the computational domain.
+The fine-scale structure reflects the atomistic
+length scale of the PFC equation, producing
+richly textured microstructure distinct from
+the coarser interfaces observed in classical
+phase-field models. Figure 15 shows the isosurface
+at $T=1000$ , and Figure 16 shows the corresponding free energy. Figure 15: Lamellar phase for the PFC equation with $\bar{\phi}=0$ , on a $256^{3}$ grid with $r=0.5$ , $\Delta t=0.01$ , $a=1.0$ , $T=1000$ . Figure 16: Free energy $E(\phi^{n})$ as a function of
+time for the lamellar phase simulation of
+Figure 15 , confirming monotonic
+energy dissipation consistent with
+Theorem 2 . 8.2.2 Spherical Phase ( $\bar{\phi}=0.35$ ) Setting $\bar{\phi}=0.35$ , the higher mean
+density favors the formation of isolated spherical
+microdomains distributed throughout the
+computational domain. Unlike the classical
+Cahn–Hilliard equation where spherical domains
+undergo Ostwald ripening, the PFC equation
+stabilizes the spherical phase through its
+atomistic structure, maintaining well-defined
+spherical microdomains throughout the simulation.
+Figure 17 shows the isosurface
+at $T=1000$ , and Figure 18 shows the corresponding free energy, which decreases
+monotonically consistent with Theorem 2 . Figure 17: Spherical phase for the PFC equation with $\bar{\phi}=0.35$ , on a $256^{3}$ grid with $r=0.5$ , $\Delta t=0.01$ , $a=1.0$ , $T=1000$ . Figure 18: Free energy $E(\phi^{n})$ as a function of
+time for the spherical phase simulation of
+Figure 17 , confirming monotonic
+energy dissipation consistent with
+Theorem 2 . 8.2.3 Hexagonal Cylindrical Phase ( $\bar{\phi}=0.25$ ) To demonstrate the scalability of the proposed
+framework, we consider an intermediate mean density $\bar{\phi}=0.25$ , which produces a hexagonal
+cylindrical phase characterized by interconnected
+tubular microstructures. To fully capture the
+atomistic activity at this scale, we scale up
+to a $512^{3}$ grid, corresponding to approximately
+134 million degrees of freedom. This resolution
+reveals the rich three-dimensional tubular network
+that emerges from the PFC dynamics, providing
+a stringent test of both the energy stability
+and the GPU scalability of the proposed scheme.
+Figure 19 shows the isosurface
+and Figure 20 shows the
+corresponding free energy. Figure 19: Hexagonal cylindrical phase for the PFC
+equation with $\bar{\phi}=0.25$ , on a $512^{3}$ grid
+with $r=0.5$ , $\Delta t=0.01$ , $a=1.0$ , $T=1000$ . Figure 20: Free energy $E(\phi^{n})$ as a function of
+time for the hexagonal cylindrical phase simulation
+of Figure 19 . Remark 5 (GPU Acceleration) . Each $256^{3}$ simulation presented above runs
+to $T=1000$ with $\Delta t=0.01$ , corresponding
+to 100,000 time steps on a grid of $256^{3}=16{,}777{,}216$ degrees of freedom, over
+16 million unknowns updated at every step.
+On a CPU baseline, such a computation would
+require approximately $94\times 70\approx 6{,}580$ minutes, or over 4.5 days, on a
+single core without HPC infrastructure.
+All of this was completed in under 94 minutes on a single consumer
+NVIDIA RTX 5090 desktop GPU. Remark 6 (GPU Acceleration at $512^{3}$ ) . The $512^{3}$ hexagonal cylindrical phase simulation
+runs to $T=1000$ with $\Delta t=0.01$ , corresponding
+to 100,000 time steps on a grid of $512^{3}=134{,}217{,}728$ degrees of freedom. On a CPU
+baseline, such a computation would require
+approximately 18 days on a single core without
+HPC infrastructure. On a single consumer GPU,
+this simulation completed in under 6 hours. Remark 7 . Every simulation in this work, including the 40,000 parametric sweeps and the three-dimensional computations, is executed strictly in native double-precision (FP64). As demonstrated in [ 21 ] , single-precision (FP32) introduces an unphysical mass leakage of $\mathcal{O}(10^{-4})$ over long temporal scales. Maintaining full FP64 precision across all GPU configurations guarantees mass conservation to machine precision ( $\mathcal{O}(10^{-14})$ ), ensuring that the reported speedups reflect genuine algorithmic efficiency under uncompromised physical rigor. 8.3 Asymptotic Energy Behavior:
+Lamellar Phase at $T=10{,}000$ ( $10^{6}$ Time Steps) To demonstrate the long-time robustness of the
+proposed scheme, we extend the lamellar phase
+simulation to $T=10{,}000$ with $\Delta t=0.01$ ,
+corresponding to $10^{6}$ time steps on a $256^{3}$ grid with $\bar{\phi}=0$ , $r=0.5$ , with $a=1.0$ , a value below the classical
+threshold $a\geq 2$ but satisfying the
+derived neutral stability curve ( 7 ).
+Figure 21 shows the
+isosurface of the lamellar phase at $T=10{,}000$ ,
+revealing well-developed three-dimensional lamellar
+stripes. Figure 22 shows the corresponding free energy on a log scale,
+demonstrating monotonic dissipation and convergence
+to a well-defined asymptotic plateau, demonstrating monotonic dissipation and convergence toward an asymptotically stable energy plateau. Mass is conserved to machine precision
+throughout all $10^{6}$ time steps. Figure 21: Lamellar phase isosurface at $T=10{,}000$ for the PFC equation with $\bar{\phi}=0$ , on a $256^{3}$ grid with $r=0.5$ , $\Delta t=0.01$ , $a=1.0$ . Figure 22: Free energy $E(\phi^{n})$ as a function of
+time on a log scale up to $T=10{,}000$ ( $10^{6}$ time steps), demonstrating monotonic dissipation and convergence toward an asymptotically stable energy plateau. 9 Conclusions We have presented an efficient Fourier spectral method
+based on the convex splitting framework for the phase
+field crystal equation. The proposed first-order scheme
+is unconditionally energy stable, conserves mass to
+machine precision, and admits a closed-form spectral
+update requiring a few lines of MATLAB code. A central contribution of this work is a computational
+stability analysis of the splitting parameter $a$ ,
+performed via GPU-accelerated parameter sweeps involving
+40,000 independent PFC simulations. Our results
+demonstrate that the classical sufficient condition $a\geq 2$ is not sharp: a semi-analytical neutral
+stability curve derived from a dominant-mode energy
+balance provides a closed-form characterization of
+the practical stability boundary, lying well below
+the classical bound. Moreover, accuracy analysis
+across multiple initial conditions consistently
+demonstrates that smaller values of $a$ within the
+stable region yield lower $L^{2}$ errors while
+preserving the energy decreasing property,
+providing a practical guideline for parameter selection. Two-dimensional simulations on $256\times 256$ and high resolution grids demonstrate the efficiency and morphological
+richness of the proposed framework, including
+crystal growth from a single seed, lamellar and
+hexagonal structures emerging from random initial
+conditions, and grain boundary dynamics from
+polycrystalline configurations. Three-dimensional
+GPU-accelerated simulations at resolutions of $128^{3}$ , $256^{3}$ , and $512^{3}$ on a single consumer
+GPU further demonstrate the scalability of the
+method. Three qualitatively distinct phases emerge
+naturally in three dimensions from random initial
+conditions by varying only the mean density $\bar{\phi}$ , suggesting that the proposed
+framework is robust for exploring the rich
+morphological landscape of the PFC equation
+in three spatial dimensions. Long-time three-dimensional simulations up to $T=10,000$ ( $10^{6}$ time steps) further demonstrate robustness in the relaxed stability regime predicted by the derived neutral stability curve. These large-scale FP64 computations maintain monotonic energy dissipation and mass conservation to machine precision throughout the entire evolution. Future work includes the extension of this framework
+to second-order temporal schemes via BDF2–CS and IMEX methods [ 19 , 5 , 38 ] , noting that
+the first-order temporal discretization adopted in the present
+work is a deliberate methodological choice rather than a
+limitation of the underlying convex splitting framework: as
+demonstrated in [ 19 ] , second-order accuracy via
+BDF2–CS is readily achievable. We note, however, that the
+practical stability threshold for $a$ identified here is specific
+to the first-order temporal discretization analyzed in this work;
+characterizing how this threshold shifts under BDF2–CS or other
+higher-order schemes is a natural and nontrivial direction for
+future investigation,
+adaptive time-stepping strategies guided by the
+neutral stability curve, and applications to
+related phase-field models including the block copolymer
+systems [ 7 , 9 , 10 ] .
+Extensions to thin-film equations with similar
+interfacial dynamics also represent a natural
+direction for future investigation [ 39 , 40 , 41 ] .
+Moreover, we plan to extend this framework to
+higher-order phase-field crystal models, including
+the eighth-order PFC equation [ 42 , 43 ] ,
+the Lifshitz–Petrich model for quasicrystalline
+structures [ 44 , 45 ] ,
+which captures additional crystallographic detail
+beyond the standard sixth-order formulation. The quantitative grain boundary characterization introduced in
+Section 7.4 is directly relevant to materials
+science applications, and we plan to pursue further work in this
+direction, including more detailed defect and grain-growth statistics. Our GPU-based implementation of PFC further paves way for coupling with atomistic simulations, e.g., using ab initio and classical molecular dynamics (MD). These MD-based techniques are capable of describing complex structures, e.g., multi-phase interfaces, organic-inorganic molecules, and the like, and their time-evolution through well-established mathematical formulations and interatomic potentials [ 46 , 47 , 48 , 32 , 35 ] . However, they are limited to probing mechanisms at short time scales, e.g., within pico-nanoseconds, only. On the other hand, PFC simulations can extend to microseconds, and, therefore, can probe physical phenomenon in materials that may be inaccessible to MD. A possible pathway for such multi-temporal coupling is using MD simulations to inform parameters in the energy functional, e.g. $r$ and $a$ in equations. 3 and 5, which is crucial for PFC simulations. Recent developments in Physics-informed neural networks (PINNs) may allow such information transfer, where PINNs can be trained on MD data while being constrained with a physics-based mathematical function [ 48 , 49 ] . The GPU-parallelized parameter sweep strategy
+adopted here, motivated by recent advances in
+atom-ion dynamics [ 29 ] ,
+is broadly applicable to phase-field and
+gradient-flow models requiring systematic
+stability or sensitivity analysis across
+large parameter spaces. Many modern numerical
+frameworks, including higher-order convex
+splitting, SAV, and IMEX-type schemes, introduce
+stabilization or splitting parameters whose
+practical stability regions invite further
+computational exploration. The present
+GPU-parallel stability-map methodology provides
+a scalable and reproducible framework for
+systematically exploring such parameter landscapes
+through large-scale PDE simulations on consumer
+hardware. Acknowledgments This research was supported by an Institutional
+Development Award (IDeA) from the National Institute
+of General Medical Sciences of the National Institutes
+of Health under grant number P20GM103451. S.O
+acknowledges the University of New Mexico (UNM) for
+providing MATLAB licensing and computational resources
+used in this work. S.O. thanks Maurice Fabien from
+MIT for the use of a professional GPU. P. Yin’s
+research was supported by the University of Texas at
+El Paso Startup Award. D. Choudhuri’s research was
+supported by the National Science Foundation under
+Award No. 2333630. Declaration of Competing Interests The authors declare that they have no known competing
+financial interests or personal relationships that
+could have appeared to influence the work reported
+in this paper. Data and Code Availability In the interest of full scientific
+reproducibility, all source scripts are hosted on a dedicated GitHub repository
+at https://github.com/sauloorizaga/CS-PFC and will be made publicly
+accessible upon the formal acceptance of this manuscript. References [1] D. J. Eyre. Unconditionally gradient stable time marching the Cahn–Hilliard equation. MRS Online Proc. Lib. , 529(1):39–46, 1998. [2] K. R. Elder, N. Provatas, J. Berry, P. Stefanovic, and M. Grant. Phase-field crystal modeling and classical density functional theory of freezing. Phys. Rev. B , 75(6):064107, 2007. [3] K. R. Elder and M. Grant. Modeling elastic and plastic deformations in nonequilibrium processing using phase field crystals. Phys. Rev. E , 70:051605, 2004. [4] J. W. Cahn and J. E. Hilliard. Free energy of a nonuniform system. I. interfacial free energy. J. Chem. Phys. , 28(2):258–267, 1958. [5] H. Gomez and X. Nogueira. An unconditionally energy-stable method for the phase field crystal equation. Comput. Methods Appl. Mech. Eng. , 249:52–61, 2012. [6] S. M. Wise, C. Wang, and J. S. Lowengrub. An energy-stable and convergent finite-difference scheme for the phase field crystal equation. SIAM J. Numer. Anal. , 47(3):2269–2288, 2009. [7] T. Ohta and K. Kawasaki. Equilibrium morphology of block copolymer melts. Macromolecules , 19(10):2621–2632, 1986. [8] F. S. Bates and G. H. Fredrickson. Block copolymer thermodynamics: theory and experiment. Annu. Rev. Phys. Chem. , 41:525–557, 1990. [9] S. Orizaga and K. Glasner. Instability and reorientation of block copolymer microstructure by imposed electric fields. Phys. Rev. E , 93(5):052504, 2016. [10] K. Glasner and S. Orizaga. Multidimensional equilibria and their stability in copolymer–solvent mixtures. Physica D , 373:1–12, 2018. [11] M. W. Matsen and M. Schick. Stable and unstable phases of a diblock copolymer melt. Phys. Rev. Lett. , 72(16):2660–2663, 1994. [12] R. Choksi. On the derivation of a density functional theory for microphase separation of diblock copolymers. J. Stat. Phys. , 113(1–2):151–176, 2003. [13] M. Cheng and J. A. Warren. An efficient algorithm for solving the phase field crystal model. J. Comput. Phys. , 227:6241–6248, 2008. [14] R. Backofen, A. Rätz, and A. Voigt. Nucleation and growth by a phase field crystal (PFC) model. Philos. Mag. Lett. , 87:813–820, 2007. [15] P. Vignal, L. Dalcin, D. L. Brown, N. Collier, and V. M. Calo. An energy-stable convex splitting for the phase-field crystal equation. Comput. Struct. , 158:355–368, 2015. [16] V. Calo, P. Minev, and V. Puzyrev. Splitting schemes for phase-field models. Appl. Numer. Math. , 2020. [17] P. Vignal, N. Collier, L. Dalcin, D.L. Brown, and V.M. Calo. An energy-stable time-integrator for phase-field models. Comput. Methods Appl. Mech. Engrg. , 316:1179–1214, 2017. [18] A.E. Diegel and N.S. Sharma. A $c^{0}$ interior penalty method for the phase field crystal equation. Numer. Methods Partial Differential Equations , 39(3):2510–2537, 2023. [19] K. Glasner and S. Orizaga. Improving the accuracy of convexity splitting methods for gradient flow equations. J. Comput. Phys. , 315:52–64, 2016. [20] X. Liu, J. Shen, and X. Zhang. A simple GPU implementation of spectral-element methods for solving 3D Poisson-type equations. Commun. Comput. Phys. , 36(5):1157–1185, 2024. [21] S. Orizaga, M. Fabien, and M. Millard. Efficient numerical approaches with accelerated GPU computations for Poisson problems and Cahn–Hilliard equations. AIMS Math. , 9(10):27471–27496, 2024. [22] J. Shin, H. G. Lee, and J.-Y. Lee. Long-time simulation of the phase-field crystal equation using high-order energy-stable CSRK methods. Comput. Methods Appl. Mech. Eng. , 363:112888, 2020. [23] X. Yang and D. Han. Linearly first- and second-order, unconditionally energy stable schemes for the phase field crystal model. J. Comput. Phys. , 330:1116–1134, 2017. [24] Giselle Saylor, Tamás L. Horváth, and Natasha S. Sharma. An unconditionally stable hybridizable-embedded discontinuous galerkin method for the phase field crystal equation. Applied Numerical Mathematics , 225:241–258, 2026. [25] J. Shen, J. Xu, and J. Yang. The scalar auxiliary variable (SAV) approach for gradient flows. J. Comput. Phys. , 353:407–416, 2018. [26] Jie Shen, Jie Xu, and Jiang Yang. A new class of efficient and robust energy stable schemes for gradient flows. SIAM Review , 61(3):474–506, 2019. [27] L. N. Trefethen. Spectral Methods in MATLAB . SIAM, Philadelphia, PA, 2000. [28] J. Shen and X. Yang. Numerical approximations of Allen–Cahn and Cahn–Hilliard equations. Discrete Contin. Dyn. Syst. , 28(4):1669–1691, 2010. [29] S. Chowdhury and J. Pérez-Ríos. GPU-parallelized MATLAB software for atom-ion dynamics. Comput. Phys. Commun. , page 110041, 2026. [30] László Gránásy and David W Oxtoby. Cahn–hilliard theory with triple-parabolic free energy. i. nucleation and growth of a stable crystalline phase. The Journal of Chemical Physics , 112(5):2399–2409, 2000. [31] Peter Galenko. The hodograph equation. In Phase Field Theory in Materials Physics: The Hodograph Equation , pages 51–77. Springer, 2024. [32] Md Mahmudul Hasan and Deep Choudhuri. Metastable states assisted homogeneous nucleation in supercooled liquid aluminum alloys: Insights from a phenomenologically coupled atomistic, phase-field, and machine learning investigation. The Journal of Chemical Physics , 162(8), 2025. [33] G Kostorz, RW Cahn, and P Haasen. Physical metallurgy. Edited by RW Calm and P. Haasen)(Elsevier, Amsterdam, 1983) , page 793, 1983. [34] Andrei Nikolaevich Kolmogorov. On the statistical theory of the crystallization of metals. Bull. Acad. Sci. USSR, Math. Ser , 1(3):355–359, 1937. [35] Md Mahmudul Hasan, Srivilliputhur G Srinivasan, and Deep Choudhuri. Transformation-and twinning-induced plasticity in phase-separated bcc nb-zr alloys: an atomistic study. Journal of Materials Science , 59(12):4728–4747, 2024. [36] László Gránásy, Gyula I. Tóth, James A. Warren, Frigyes Podmaniczky, György Tegze, László Rátkai, and Tamás Pusztai. Phase-field modeling of crystal nucleation in undercooled liquids – a review. Progress in Materials Science , 106:100569, 2019. [37] Michael-Angelo Y.-H. Lam, Linda J. Cummings, and Lou Kondic. Computing dynamics of thin films via large scale GPU-based simulations. Journal of Computational Physics: X , 2:100001, 2019. [38] H. Song. Energy SSP-IMEX Runge–Kutta methods for the Cahn–Hilliard equation. J. Comput. Appl. Math. , 292:576–590, 2016. [39] H. Ji and T. P. Witelski. Coarsening of thin films with weak condensation. SIAM J. Appl. Math. , 84(2):362–386, 2024. [40] K. B. Glasner and T. P. Witelski. Coarsening dynamics of dewetting films. Phys. Rev. E , 67:016302, Jan 2003. [41] S. Orizaga and T. Witelski. IMEX methods for thin-film equations and Cahn–Hilliard equations with variable mobility. Comput. Mater. Sci. , 243:113145, 2024. [42] A. Jaatinen, C.V. Achim, K.R. Elder, and T. Ala-Nissila. Thermodynamics of bcc metals in phase-field-crystal models. Phys. Rev. E , 80:031602, 2009. [43] A. Jaatinen and T. Ala-Nissila. Eighth-order phase-field-crystal model for two-dimensional crystallization. Phys. Rev. E , 82:061602, 2010. [44] Xiaochuan Hu, Qing Xia, Binhu Xia, and Yibao Li. A second-order accurate numerical method with unconditional energy stability for the lifshitz–petrich equation on curved surfaces. Applied Mathematics Letters , 163:109439, 2025. [45] Xiaochuan Hu, Junseok Kim, and Yibao Li. A second-order unconditionally energy stable scheme for the lifshitz-petrich model integrated with observational data. Applied Mathematics and Computation , 518:129914, 2026. [46] Deep Choudhuri and Audrey CampBell. Interface dominated deformation mechanisms in two-phase fcc/b2 nanostructures: Nishiyama-wasserman vs. kurdjumov-sachs interfaces. Computational Materials Science , 177:109577, 2020. [47] Deep Choudhuri, Bhaskar S Majumdar, and Hunter Wilkinson. Investigation of in-liquid ordering mediated transformations in al-sc via ab initio molecular dynamics and unsupervised learning. Physical Review Materials , 6(10):103406, 2022. [48] Deep Choudhuri and Rashedul Alam Chowdhury. Untangling linker dynamics in a metal–organic framework using ab initio molecular dynamics and physics-informed machine learning. Computational Materials Science , 261:114285, 2026. [49] Rashedul Alam Chowdhury, Biswajit Ghose, and Deep Choudhuri. Uncovering the role of critical bonds in the thermomechanical response of zn2 (1, 4-benzenedicarboxylate) 2 (1, 4-diazabicyclo [2, 2, 2] octane) using ab initio simulations and physics-constrained neural networks. Langmuir , 41(19):12348–12364, 2025. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

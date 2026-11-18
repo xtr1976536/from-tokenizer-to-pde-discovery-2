@@ -1,0 +1,1279 @@
+Bilinear formalism for Schwarzian KP and Harry Dym hierarchies Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 The KP hierarchy 3 Modified KP hierarchy 3.1 Modified KP from Toda lattice 3.2 From KP to modified KP and back 3.3 Baker-Akhiezer functions for the mKP hierarchy 3.4 Lax-Sato formalism for the mKP hierarchy 4 From mKP to SchKP (and HD) and back 4.1 BD transformations of the mKP hierarchy 4.2 From mKP to SchKP and back 4.3 From mKP and SchKP to HD 4.4 Wave functions and BD transformations 5 Embedding into multi-component KP hierarchy 6 Concluding remarks Acknowledgments References License: arXiv.org perpetual non-exclusive license arXiv:2605.00235v1 [nlin.SI] 30 Apr 2026 Bilinear formalism for
+Schwarzian KP and Harry Dym hierarchies V. Prokofev † † thanks: Skolkovo Institute of Science and Technology, 143026, Moscow, Russia
+and National Research University Higher School of Economics,
+20 Myasnitskaya Ulitsa,
+Moscow 101000, Russia,
+e-mail: vadprokofev@gmail.com A. Zabrodin † † thanks: National Research University Higher School of Economics,
+20 Myasnitskaya Ulitsa,
+Moscow 101000, Russia;
+e-mail: zabrodin@itep.ru April 2026 We consider the Schwarzian KP and
+Harry Dym hierarchies in the framework of the bilinear formalism
+which is well known for such integrable hierarchies as KP, modified KP,
+BKP, Toda lattice and other. We show that, similarly to the
+bilinear formulation of the modified KP hierarchy, the
+Schwarzian KP can be reformulated as an integral bilinear
+equation for a pair of KP tau-functions
+with the property that any linear combination
+of them is again a tau function of the KP hierarchy.
+The Harry Dym hierarchy is then obtained as the Lax-Sato
+formulation of the SchKP one. The close connection
+with Bäcklund-Darboux transformations for integrable hierarchies
+is also discussed. Besides, it is shown that the SchKP
+hierarchy has a natural embedding
+into the multi-component KP hierarchy. Contents 1 Introduction 2 The KP hierarchy 3 Modified KP hierarchy 3.1 Modified KP from Toda lattice 3.2 From KP to modified KP and back 3.3 Baker-Akhiezer functions for the mKP hierarchy 3.4 Lax-Sato formalism for the mKP hierarchy 4 From mKP to SchKP (and HD) and back 4.1 BD transformations of the mKP hierarchy 4.2 From mKP to SchKP and back 4.3 From mKP and SchKP to HD 4.4 Wave functions and BD transformations 5 Embedding into multi-component KP hierarchy 6 Concluding remarks Acknowledgments References 1 Introduction In this article, we revisit the Schwarzian KP (SchKP) and
+Harry Dym (HD) integrable hierarchies and
+suggest a formulation of them by means of the bilinear
+formalism. The main hero is the tau-function satisfying certain
+bilinear differential equations (or functional relations).
+In a nutshell, we deal with
+the three basic versions of the integrable KP hierarchy
+(KP, modified KP (mKP), SchKP) and trace the
+connections between them: $\mbox{KP}\longleftrightarrow\mbox{modified KP}\longleftrightarrow\mbox{Schwarzian KP (Harry Dym)}.$ (1.1) For the KP and mKP hierarchies both bilinear and Lax-Sato
+formulations, as well as their equivalence, are well known.
+The bilinear formulation of the SchKP hierarchy seems to be new.
+In this approach, the HD hierarchy arises as the Lax-Sato
+reformulation of the SchKP one. The Kadomtsev-Petviashvili (KP) equation was suggested in 1970 [ 2 , 3 ] . It has the form $3u_{yy}=\Bigl(4u_{t}-6uu_{x}-u_{xxx}\Bigr)_{x}.$ (1.2) This equation is the first member of an infinite
+hierarchy of integrable equations known as the KP hierarchy.
+The modern understanding of this hierarchy is based on the works
+of the Kyoto school [ 4 , 5 ] (see
+also books [ 6 , 7 ] ), where the bilinear approach
+was developed and its equivalence to the Lax-Sato formulation
+was proved. The universal dependent variable is the tau-function $\tau({\bf t})$ depending on an infinite number of independent variables (“times” ${\bf t}=\{t_{1},t_{2},t_{3},\ldots\}$ with $t_{1}=x$ , $t_{2}=y$ , $t_{3}=t$ )
+and satisfying an infinite
+number of bilinear differential equations. All of them
+are encoded in the
+following bilinear integral functional relation: $\oint_{C_{\infty}}e^{\xi({\bf t}-{\bf t^{\prime}},z)}\,{\tau}({\bf t}-[z^{-1}])\tau({\bf t^{\prime}}+[z^{-1}])dz=0,$ (1.3) which holds for all ${\bf t}$ , ${\bf t}^{\prime}$ .
+Here the standard notations are used: $\begin{array}[]{l}\displaystyle{\xi({\bf t},z)=\sum_{k\geq 1}t_{k}z^{k},}\\
+\\
+{\bf t}\pm[z^{-1}]=\Bigl\{t_{1}\pm z^{-1},\,\frac{1}{2}z^{-2},\,\frac{1}{3}z^{-3},\,\ldots\Bigr\}.\end{array}$ (1.4) The contour $C_{\infty}$ is a big circle of radius $R\to\infty$ .
+The function $u=u(x,y,t)$ in ( 1.2 ) is expressed through
+the tau-function as $u=2\partial_{x}^{2}\log\tau$ . Later some other appearances of the KP equation and the KP hierarchy
+were suggested. The most widely known one is
+the modified KP (mKP) hierarchy. Its first member
+has the form $v_{xxxx}-4v_{xt}+3v_{yy}+6v_{xx}v_{y}-6v_{x}^{2}v_{xx}=0.$ (1.5) In the literature
+there exist several different versions of the mKP hierarchy (see [ 8 , 9 , 10 , 11 , 13 , 14 ] ).
+We will mostly deal with the Kupershmidt and Kiso version [ 8 , 9 , 10 ] . Its bilinear formulation requires
+two tau-functions $\tau({\bf t})$ , $\hat{\tau}({\bf t})$ rather than one. Each of them is a KP tau-function
+(i.e., satisfies the integral bilinear equation ( 1.3 )),
+and, in addition, there is a set of bilinear
+equations which link them together. The dependent variable $v=v(x,y,t)$ in ( 1.5 ) is $v=\log(\hat{\tau}/\tau)$ .
+The transition from $\tau$ to $\hat{\tau}$ is an example of what is called
+(auto) Bäcklund-Darboux transformation for the KP hierarchy,
+i.e., a transformation that sends any solution to another
+solution. A more general point of view is based on the embedding
+of the mKP hierarchy into the more general 2D Toda lattice
+hierarchy [ 15 ] . In this approach, the tau-function $\tau(n,{\bf t})$ depends also on
+a discrete variable $n\in\mbox{\Bbb Z}$ , and one identifies $\tau({\bf t})=\tau(n,{\bf t})$ , $\hat{\tau}({\bf t})=\tau(n+1,{\bf t})$ for some fixed
+value of $n$ . The Schwarzian KP equation first appeared
+in [ 16 ] in the context of Painlevé analysis
+as the
+singularity manifold equation associated with the KP equation.
+It has the form $\left(4\frac{S_{t}}{S_{x}}-\{S,x\}\right)_{x}=3\left(\frac{S_{y}}{S_{x}}\right)_{y}+\frac{3}{2}\left(\frac{S_{y}^{2}}{S_{x}^{2}}\right)_{x}.$ (1.6) Here $\{S,x\}=\frac{S_{xxx}}{S_{x}}-\frac{3}{2}\left(\frac{S_{xx}}{S_{x}}\right)^{2}$ (1.7) is the Schwarzian derivative.
+Equation ( 1.6 ) is invariant
+under fractional-linear transformations of the variable $S=S(x,y,t)$ .
+The corresponding SchKP hierarchy was discussed in [ 17 , 18 , 19 , 20 ] . The original $(1+1)$ -dimensional version of the HD equation
+was suggested by Harry Dym in 1973–1974 in
+an unpublished paper.
+It is the following nonlinear
+partial differential equation for a function $U(s,t)$ of two variables $s,t$ : $4U_{t}=U^{3}U_{sss}.$ (1.8) In the literature, this equation
+first appeared in 1975 in Kruskal’s paper [ 21 ] ,
+and received the name of its discoverer. A slightly different version
+of the HD equation arises in the the
+Saffman–Taylor problem with surface tension [ 22 ] .
+Later, in 1984, Konopelchenko and Dubrovskii [ 23 ] suggested a (2+1)-dimensional generalization of this equation, $4U_{t}=U^{3}U_{sss}-\frac{3}{U}\left(U^{2}\partial_{s}^{-1}\left(\frac{1}{U}\right)_{y}\right)_{y},$ (1.9) where $\partial^{-1}_{s}$ is the formal anti-derivative with respect
+to $s$ . If $U$ does not depend on $y$ , the second term in the right-hand side
+vanishes and this equation converts into ( 1.8 ).
+One may say that the original HD equation ( 1.8 ) is related to its
+(2+1)-dimensional generalization ( 1.9 ) in the same way as the KdV equation
+is related to the KP equation.
+Like in the KP and mKP cases, the HD equation is the first member of an
+infinite hierarchy. It is known that the three hierarchies have commutation representations
+of the Lax-Sato type. This formulation uses the well known notion of
+pseudo-differential operators.
+Consider
+the following pseudo-differential operators: $\begin{array}[]{l}L^{\rm KP}=\partial+u_{1}\partial^{-1}+u_{2}\partial^{-2}+\ldots\\
+\\
+L^{\rm mKP}=\partial+v_{0}+v_{1}\partial^{-1}+v_{2}\partial^{-2}+\ldots\\
+\\
+L^{\rm HD}=U\partial+w_{0}+w_{1}\partial^{-1}+w_{2}\partial^{-2}+\ldots,\end{array}$ (1.10) where $\partial$ is derivative with respect to some space variable
+(which is $x$ for KP and mKP and $s$ in the HD case).
+The functions $u_{i},v_{i}$ in the first two lines are functions of $x$ while the functions $U$ and $w_{i}$ in the
+third line are functions of $s$ .
+The first and the second ones are the Lax operators for
+the KP and mKP hierarchies respectively. The third one
+is the Lax operator for the HD hierarchy.
+In all the three cases,
+the commuting flows of the hierarchy
+are defined by the following Lax equations: $\partial_{t_{n}}L=[(L^{n})_{\geq k},\,L],\quad n\geq 2,$ (1.11) where $k=0,\,1,\,2$ for the first, second and third cases respectively.
+(Hereafter we use the notation $(\sum\limits_{n}a_{n}\partial^{n})_{\geq k}=\sum\limits_{n\geq k}a_{n}\partial^{n}$ .) The Lax equations define
+a dynamics in the space of the pseudo-differential operators
+of the form ( 1.10 ) and the functions $u_{i},v_{i},w_{i}$ and $U$ become
+functions not only of the space variable ( $x$ or $s$ ) but
+also of all the hierarchical times $t_{n}$ . The three hierarchies are known to be closely related.
+For example, in [ 12 ] Bäcklund-Darboux (BD) transformations
+were constructed between the three hierarchies, in addition to
+some auto-BD transformations.
+However, despite the fact that the first two hierarchies have been well studied from various points of view (for example, in terms
+of tau-functions and free fermions,
+for the review see, e.g., [ 24 ] ),
+the same can not be said about the SchKP and HD hierarchies. The main goal of this work is to fill some gaps
+in the theory of the SchKP and HD hierarchies and, in particular, to
+give their formulation in terms of tau-functions
+and bilinear equations for them. More precisely,
+we provide a new formulation of the SchKP hierarchy through a
+pair of KP tau-functions $(\hat{\tau}({\bf t}),\bar{\tau}({\bf t}))$ (recall that where $t_{1}$ is
+identified with the space variable $x$ ) linked together by an
+additional bilinear equation. The main results can be summarized
+as the following theorem. Theorem 1.1 Let $\hat{\tau}({\bf t})$ and $\bar{\tau}({\bf t})$ be two KP
+tau-functions (i.e. solutions of equation ( 1.3 )) such that
+they satisfy the bilinear equation $\oint_{C_{\infty}}e^{\xi({\bf t}-{\bf t^{\prime}},z)}\,\Bigl(\hat{\tau}({\bf t}-[z^{-1}])\bar{\tau}({\bf t^{\prime}}+[z^{-1}])+\bar{\tau}({\bf t}-[z^{-1}])\hat{\tau}({\bf t^{\prime}}+[z^{-1}])\Bigr)dz=0$ (1.12) for all ${\bf t}$ , ${\bf t}^{\prime}$ . Then, for all $a_{1},a_{2},a_{3}\in\mbox{\Bbb C}$ ,
+the function $S({\bf t})=\frac{\bar{\tau}({\bf t})}{\hat{\tau}({\bf t})}$ (1.13) solves the functional equation $\frac{(S^{[a_{1}]}-S^{[a_{1}a_{2}]})(S^{[a_{2}]}-S^{[a_{2}a_{3}]})(S^{[a_{3}]}-S^{[a_{1}a_{3}]})}{(S^{[a_{3}]}-S^{[a_{2}a_{3}]})(S^{[a_{1}]}-S^{[a_{1}a_{3}]})(S^{[a_{2}]}-S^{[a_{1}a_{2}]})}=1,$ (1.14) where $S^{[a_{i}]}\equiv S({\bf t}-[a_{i}^{-1}])$ , $S^{[a_{i}a_{j}]}\equiv S({\bf t}-[a_{i}^{-1}]-[a_{j}^{-1}])$ .
+In particular, it satisfies
+the SchKP equation ( 1.6 ) which is obtained from
+( 1.14 ) in the limit $a_{1},a_{2},a_{3}\to\infty$ . Conversely, let $S({\bf t})$ be any solution to ( 1.14 ),
+then there exist two KP tau-functions $\hat{\tau}$ , $\bar{\tau}$ such that the bilinear equation ( 1.12 ) holds and the function $S$ is given by ( 1.13 ). Equation ( 1.14 ) is the generating functional equation
+of the SchKP hierarchy. Partial differential equations
+of the hierarchy are obtained by expanding its
+left-hand side in the Taylor series in inverse powers
+of $a_{1},a_{2},a_{3}$ and equating the coefficients to zero.
+In the leading non-vanishing order one obtains equation
+( 1.6 ). At the same time, equation
+( 1.6 ) can be interpreted as an integrable
+discretization of the SchKP equation. Namely, by setting $S(n_{1},n_{2},n_{3})=S({\bf t}-n_{1}[a_{1}^{-1}]-n_{2}[a_{2}^{-1}]-n_{3}[a_{3}^{-1}])$ for any fixed ${\bf t}$ ,
+( 1.6 ) converts into a discrete equation for $S(n_{1},n_{2},n_{3})$ . We also clarify the interrelation between the SchKP and HD
+hierarchies. The latter is nothing else than
+a reformulation of
+the former in terms of pseudo-differential operators (i.e.,
+an equivalent formulation of the Lax-Sato type).
+This reformulation requires
+a nontrivial change of variables: the new space variable is $s=S(x)$ , where is $S$ given by ( 1.13 ), so $\partial_{x}=S_{x}\partial_{s}$ ,
+and $U(s)$ from ( 1.9 ) and ( 1.10 ) is defined
+as $U=S_{x}$ .
+Besides, some previously known results
+about BD transformations are reformulated in terms of tau-functions.
+This allows them to be given a particularly simple and clear form. Having mentioned BD transformations 1 1 1 Sometimes they are
+called gauge transformations. of the integrable hierarchies,
+we should say that there is a huge literature devoted to this issue.
+(See, for example, [ 25 ] - [ 33 ] and references therein.)
+In turn, we could not but touch upon the issues related to this.
+In fact the language of BD transformations is
+especially convenient
+in analysis of the three hierarchies ( 1.1 ) and interrelations
+between them. The key notion in the theory of BD transformations
+is a wave function 2 2 2 Some authors
+prefer to call them “eigenfunctions” but such terminology seems to
+be rather misleading because in general wave functions are not eigenfunctions of Lax operators. The name “wave function” that we use
+in this paper is motivated by the fact that the linear differential
+equation of the form ( 2.33 ) below for the $t_{2}$ -flow
+formally coincides with the non-stationary Schredinger equation
+in imaginary time. for a given Lax operator (the one for KP, mKP or
+HD). For example, in the case of KP wave functions $\phi({\bf t})$ are defined as
+common solutions to the equations $\partial_{t_{n}}\phi({\bf t})=B_{n}\phi({\bf t}),\quad n\geq 2,$ where $B_{n}$ are differential operators $B_{n}=(L^{n})_{\geq 0}$ . Given a solution to the KP hierarchy
+with a tau-function $\tau({\bf t})$ , the function $\hat{\tau}({\bf t})=\phi({\bf t})\tau({\bf t})$ is then another
+solution. This defines an (auto)BD transformation of the KP
+hierarchy and, simultaneously, a solution to the mKP herarchy,
+which is just given by the pair $(\tau,\hat{\tau})$ of KP
+tau-functions. Moreover, any solution to the mKP hierarchy
+is defined in this way by a pair $(\tau,\phi)$ ,
+where $\tau$ is a KP tau-function and $\phi$ is a wave function associated
+with it (more precisely, with the Lax operator corresponding to
+this tau-function). This story can be further continued by
+considering wave functions for the mKP Lax operator $L^{\rm mKP}={\cal L}$ corresponding to the solution $(\tau,\hat{\tau})$ . Namely,
+let $S$ be such wave function, then $\bar{\tau}=S\hat{\tau}$ is again a KP tau-function, and the pair $(\hat{\tau},\bar{\tau})$ solves the bilinear equation ( 1.12 ). Then $S=\bar{\tau}/\hat{\tau}$ solves the SchKP equation ( 1.6 ).
+Moreover, any solution to the SchKP hierarchy
+is defined in this way by a pair $(\hat{\tau},S)$ ,
+where $\hat{\tau}$ is a KP tau-function
+and $S$ is a wave function for the mKP Lax operator associated
+with the solution $(\tau,\hat{\tau})$ . Equivalently, to
+construct a solution to the SchKP hierarchy, one may start
+from two solutions to the mKP hierarchy: $(\tau,\hat{\tau})$ (defined
+by fixing a wave function $\phi$ ) and $(\tau,\bar{\tau})$ (defined by fixing another wave function $\phi^{\prime}$ )
+For clarity, all said above can be represented as the following
+diagram: $\begin{array}[]{ccc}\bar{\tau}&\stackrel{{\scriptstyle\bar{\phi}}}{{\longrightarrow}}&\hat{\bar{\tau}}\\
+\uparrow\hbox to0.0pt{$\displaystyle{\scriptstyle\phi^{\prime}}$\hss}&&\uparrow\hbox to0.0pt{$\displaystyle{\scriptstyle\hat{\phi}}$\hss}\\
+\tau&\stackrel{{\scriptstyle\phi}}{{\longrightarrow}}&\hat{\tau}\end{array}$ (1.15) Note that the vertices correspond to solutions of KP,
+edges correspond to solutions to mKP, and the whole square
+(more precisely, the diagonal from $\bar{\tau}$ to $\hat{\tau}$ )
+can be associated to a solution to SchKP (more precisely,
+two solutions: $S=\bar{\tau}/\hat{\tau}$ and $S^{-1}=\hat{\tau}/\bar{\tau}$ ). Lastly, we establish a close connection
+with multi-component KP hierarchy [ 39 , 40 , 41 , 42 ] . Theorem 1.2 Let $\tau({\bf s},{\bf t})$ , where ${\bf s}=\{s_{1},s_{2},s_{3}\}$ , $s_{i}\in\mbox{\Bbb Z}$ with the condition $s_{1}+s_{2}+s_{3}=0$ , be the tau-function of the multi-component
+KP hierarchy restricted
+to the three-component sector, with all other discrete
+and continuous variables frozen.
+Then the pair of functions $(\tau(0,0,0),\tau(0,1,-1))$ solves equation ( 1.12 ) and thus
+provides a solution to the SchKP and HD hierarchies. The outline of the paper is as follows.
+Section 2 is devoted to the well known KP hierarchy.
+We consider it both within the framework
+of bilinear formalism and the Lax-Sato approach, and provide a proof
+of their equivalence. All this is a basic preliminary stuff for
+what follows. A similar treatment of the mKP hierarchy
+is the subject of Section 3. The main idea here (which is not new),
+and also a useful technical tool,
+is realization of the mKP hierarchy as a chain of Bäcklund-Darboux
+transformations of solutions to the KP one.
+Section 4 is devoted to the SchKP and HD hierarchies.
+First, the SchKP hierarchy is obtained from considering
+Bäcklund-Darboux transformations of the mKP hierarchy
+(Section 4.1). Second, the bilinear approach to SchKP via a pair
+of KP tau-functions is developed. Third, it is shown that the
+reformulation in the framework of the Lax-Sato approach
+provides the HD hierarchy. In Section 5 the embedding of
+the SchKP hierarchy into the multi-component hierarchy is
+discussed. Section 6 contains some concluding remarks. 2 The KP hierarchy The set of independent variables
+is ${\bf t}=\{t_{1},t_{2},t_{3},\ldots\}$ .
+The variable $t_{1}$ can be identified with the space variable $x$ ,
+so hereafter we put $t_{1}=x$ .
+All other variables are interpreted as times associated with
+an infinite number of commuting flows. In the bilinear formalism,
+the universal dependent variable is tau-function $\tau({\bf t})$ .
+The generating bilinear equation for the KP tau-function
+is of the form $\oint_{C_{\infty}}e^{\xi({\bf t}-{\bf t}^{\prime},z)}\tau({\bf t}-[z^{-1}])\tau({\bf t}^{\prime}+[z^{-1}])\,dz=0,$ (2.1) where we the standard notation ( 1.4 ) is used.
+The contour $C_{\infty}$ is a big circle of radius $R\to\infty$ around $\infty$ .
+Equation ( 2.1 ) is valid for all ${\bf t}$ and ${\bf t}^{\prime}$ .
+The simplest possible solution (the trivial one) is $\tau({\bf t})=1$ .
+Note also that if $\tau({\bf t})$ is a solution of ( 2.1 ), then $e^{\ell({\bf t})}\tau({\bf t})$ , where $\ell({\bf t})$ is
+an arbitrary linear function of the times, is a solution, too.
+Two tau-functions that differ by such a factor
+are said to be equivalent. Let us mention one of the most important corollaries of
+equation ( 2.1 ).
+Setting ${\bf t}-{\bf t^{\prime}}=[a_{1}^{-1}]+[a_{2}^{-1}]+[a_{3}^{-1}],$ where $a_{1},a_{2},a_{3}\in\mbox{\Bbb C}$ are three different points,
+we have $e^{\xi({\bf t}-{\bf t}^{\prime},z)}=\frac{a_{1}\,a_{2}\,a_{3}}{(a_{1}-z)(a_{2}-z)(a_{3}-z)},$ and the integral in ( 2.1 ) can be calculated by an elementary
+residue calculus. The result is: $\begin{array}[]{l}(a_{1}-a_{2})\tau({\bf t}-[a_{1}^{-1}]-[a_{2}^{-1}])\tau({\bf t}-[a_{3}^{-1}])\\
+\\
+\phantom{aaaaaaaaaaa}+\,(a_{2}-a_{3})\tau({\bf t}-[a_{2}^{-1}]-[a_{3}^{-1}])\tau({\bf t}-[a_{1}^{-1}])\\
+\\
+\phantom{aaaaaaaaaaaaaaaaaaaaaa}+\,(a_{3}-a_{1})\tau({\bf t}-[a_{1}^{-1}]-[a_{3}^{-1}])\tau({\bf t}-[a_{2}^{-1}])=0.\end{array}$ (2.2) This is the famous equation first obtained by Miwa [ 34 ] .
+As is proved in [ 35 ] ,
+it is in fact equivalent to the entire KP hierarchy defined
+by the integral equation ( 2.1 ) (see also [ 36 ] for the
+direct proof). To write down such equations in a compact form, it is convenient
+to introduce some short-hand notation. Set $\begin{array}[]{l}\tau({\bf t}-[a_{j}^{-1}])=\tau^{j},\qquad\tau({\bf t}-[a_{j}^{-1}]-[a_{k}^{-1}])=\tau^{jk},\quad\mbox{etc},\\
+\\
+\tau({\bf t}+[a_{j}^{-1}])=\tau_{j},\qquad\tau({\bf t}+[a_{j}^{-1}]+[a_{k}^{-1}])=\tau_{jk},\quad\mbox{etc}.\end{array}$ (2.3) Similar notation will be used for other functions of ${\bf t}$ introduced below (Baker-Akhiezer functions, wave functions, etc).
+This notation allows us to rewrite equation ( 2.2 ) in
+the following compact form: $a_{12}\tau^{12}\tau^{3}+a_{23}\tau^{23}\tau^{1}+a_{31}\tau^{13}\tau^{2}=0,$ (2.4) or, after an overall shift of ${\bf t}$ , $a_{12}\tau_{12}\tau_{3}+a_{23}\tau_{23}\tau_{1}+a_{31}\tau_{13}\tau_{2}=0$ (2.5) (here and below $a_{ij}\equiv a_{i}-a_{j}$ ). More generally, fix an integer $m\geq 2$ , $m+1$ distinct points $a_{i}\in\mbox{\Bbb C}$ , $m-1$ distinct points $b_{i}\in\mbox{\Bbb C}$ and make
+the substitution ${\bf t}-{\bf t}^{\prime}=\sum_{i=1}^{m+1}[a_{i}^{-1}]-\sum_{i=1}^{m-1}[b_{i}^{-1}].$ (2.6) Using residue calculus, we convert
+( 2.1 ) into the following equation: $\begin{array}[]{l}\displaystyle{\sum_{k=1}^{m+1}(-1)^{k-1}\Delta_{m}(a_{1},\ldots,\hat{a}_{k},\ldots,a_{m+1})\prod_{i=1}^{m-1}(b_{i}-a_{k})}\\
+\\
+\phantom{aaaaaaaaaaaaaaaaaa}\displaystyle{\times\,\tau\Bigl({\bf t}-\sum_{j=1,\neq k}^{m+1}[a_{j}^{-1}]\Bigr)\tau\Bigl({\bf t}-[a^{-1}_{k}]-\sum_{j=1}^{m-1}[b_{j}^{-1}]\Bigr)=0}\end{array}$ (2.7) (equation ( 2.2 ) is its particular case for $m=2$ , $b_{1}=\infty$ ).
+Here $\Delta_{m}(a_{1},\ldots,a_{m})=\det_{1\leq i,j\leq m}(a_{i}^{m-j})=\prod_{i<j}^{m}(a_{i}-a_{j})$ (2.8) is the Vandermonde determinant, and $\hat{a}_{k}$ means that $a_{k}$ is omitted. Equations ( 2.7 ) can be written in the form
+which resembles Plücker relations. To this end, introduce the
+notation $\tau\bigl[a_{1},\ldots,a_{m}\bigr]=\Delta_{m}(a_{1},\ldots,a_{m})\tau\Bigl({\bf t}-\sum_{j=1}^{m}[a_{j}^{-1}]\Bigr).$ (2.9) Clearly, $\tau\bigl[a_{1},\ldots,a_{m}\bigr]$ is antisymmetric with respect to
+any permutation $a_{i}\leftrightarrow a_{k}$ . In this notation,
+equation ( 2.7 ) acquires the form $\sum_{k=1}^{m+1}(-1)^{k-1}\tau\bigl[a_{1},\ldots,\hat{a}_{k},\ldots,a_{m+1}\bigr]\,\tau\bigl[a_{k},b_{1},\ldots,b_{m-1}\bigr]=0.$ (2.10) Other important objects are
+Baker-Akhiezer 3 3 3 This name is usually used
+in the context of algebraic-geometrical solutions to the KP hierarchy
+related to Riemann surfaces of finite genus.
+Here we extend this name to a broader class of solutions. (BA) function $\psi({\bf t},z)$ and its adjoint (dual) $\psi^{*}({\bf t},z)$ .
+For any fixed values of the times, they are functions of
+a complex variable $z$ which is called spectral parameter .
+For the sake of brevity, we will sometimes refer to both $\psi({\bf t},z)$ and $\psi^{*}({\bf t},z)$ as BA functions,
+or simply $\psi$ -functions.
+In general, these functions, as functions of $z$ ,
+are assumed to be holomorphic in a sufficiently small
+neighborhood ${\sf U}_{\infty}$ of $\infty$ (i.e., for $|z|>R$ with some sufficiently
+large $R$ ) except maybe the very point $z=\infty$ , where an essential
+singularity is allowed.
+In this neighborhood they can be
+expressed through the tau-function as follows: $\begin{array}[]{l}\displaystyle{\psi({\bf t},z)=e^{\xi({\bf t},z)}\,\frac{\tau({\bf t}-[z^{-1}])}{\tau({\bf t})},}\\
+\\
+\displaystyle{\psi^{*}({\bf t},z)=e^{-\xi({\bf t},z)}\,\frac{\tau({\bf t}+[z^{-1}])}{\tau({\bf t})}.}\end{array}$ (2.11) These remarkable formulas were obtained in [ 4 , 5 ] . The expansions of the BA functions as $z\to\infty$ are $\begin{array}[]{l}\displaystyle{\psi({\bf t},z)=e^{\xi({\bf t},z)}\,\Bigl(1+\xi_{1}({\bf t})z^{-1}+\xi_{2}({\bf t})z^{-2}+\ldots\,\Bigr),}\\
+\\
+\displaystyle{\psi^{*}({\bf t},z)=e^{-\xi({\bf t},z)}\,\Bigl(1+\xi^{*}_{1}({\bf t})z^{-1}+\xi^{*}_{2}({\bf t})z^{-2}+\ldots\,\Bigr).}\end{array}$ (2.12) The coefficients $\xi_{k}({\bf t})$ , $\xi^{*}_{k}({\bf t})$ can be
+expressed through logarithmic derivatives of the tau-function
+with respect to the $t_{k}$ ’s but we do not need these formulas here.
+Their dependence on the times is determined by
+a chosen solution of ( 2.1 ). It is explicitly specified
+in terms of partial differential equations given below.
+In terms of the BA functions, the bilinear equation ( 2.1 )
+acquires the form $\oint_{C_{\infty}}\psi({\bf t},z)\psi^{*}({\bf t^{\prime}},z)\,dz=0.$ (2.13) It holds for all ${\bf t}$ , ${\bf t^{\prime}}$ . Remark 2.1 The latter equation for the $\psi$ -functions
+can serve as a starting point of the theory.
+In particular, it implies
+existence of the tau-function, i.e., a function $\tau({\bf t})$ such that the $\psi$ -functions are expressed through it by means
+of formulas ( 2.11 ). The proof is given in [ 4 ] . It is worth noting that for some important classes
+of solutions the BA functions
+can be analytically continued outside ${\sf U}_{\infty}$ as analytic functions on $\mbox{\Bbb C}\setminus{\sf S}$ , where ${\sf S}\subset\mbox{\Bbb C}$ is a set of points of nonzero
+co-dimension (which is $2$ for a number of isolated points or $1$ for lines). (The well known examples are soliton
+and rational solutions.) To avoid unnecessary analytical
+complications in this work, we will have in mind
+the classes of solutions for which such analytic
+continuation is possible. Remark 2.2 For completeness,
+let us say some words about the general case, when
+the BA functions can not be analytically continued from ${\sf U}_{\infty}$ to bigger
+domains of the complex plane. In this case $\partial_{\bar{z}}\psi({\bf t},z)$ and $\partial_{\bar{z}}\psi^{*}({\bf t},z)$ may be nonzero in some compact 2D domain ${\sf D}\subset\mbox{\Bbb C}$ ,
+and the BA functions (which are functions of both $z$ and $\bar{z}$ for $z\in{\sf D})$ are characterized by certain integral
+or integro-diffrential equations which were suggested in [ 37 ] and are known in the literature as non-local $\bar{\partial}$ -problem. They are: $\begin{array}[]{l}\displaystyle{\partial_{\bar{z}}\psi({\bf t},z)=\int_{\mbox{\Bbbb C}}K(z,\zeta)\psi({\bf t},\zeta)\,d^{2}\zeta,}\\
+\\
+\displaystyle{\partial_{\bar{z}}\psi^{*}({\bf t},z)=-\int_{\mbox{\Bbbb C}}\psi^{*}({\bf t},\zeta)K(\zeta,z)\,d^{2}\zeta.}\end{array}$ (2.14) The kernel $K(z,\zeta)$ is assumed to have a compact support
+with respect to the both arguments, i.e., $K(z,\zeta)=0$ if $z$ or $\zeta$ belongs to ${\sf U}_{\infty}$ . This condition allows
+one to require the holomorphic in $z$ asymptotics as $z\to\infty$ of the form ( 2.12 ). Under certain conditions imposed on the
+kernel these integro-differential equations are known to have
+nontrivial solutions, and the linear space of solutions is in general
+one-dimensional. It is instructive to think of the BA function as the result
+of the action of a “dressing operator” $W$ to the
+simplest possible
+BA function $e^{\xi({\bf t},z)}$ corresponding to
+the trivial solution. The operator $W$ is a pseudo-differential
+operator of order 0 of the form $W=1+\xi_{1}\partial_{x}^{-1}+\xi_{2}\partial_{x}^{-2}+\ldots,$ (2.15) where $\partial_{x}=\partial/\partial x$ (recall that
+we identify $x=t_{1}$ ) and
+the coefficient functions $\xi_{k}=\xi_{k}({\bf t})$ are the same as in the first formula in ( 2.12 ).
+Clearly, we can write $\psi({\bf t},z)=We^{\xi({\bf t},z)},$ (2.16) where it is implied that $\partial_{x}^{-1}$ formally acts on $e^{xz}$ as $\partial_{x}^{-1}e^{xz}=z^{-1}e^{xz}$ . The dressing operator allows one to introduce the
+Lax operator $L$ of the KP hierarchy by “dressing” of the $\partial_{x}$ : $L=W\partial_{x}W^{-1}=\partial_{x}+u_{1}\partial_{x}^{-1}+u_{2}\partial_{x}^{-2}+\ldots\,.$ (2.17) It is a pseudo-differential operator of order 1.
+The coefficient functions $u_{i}$ can be
+expressed through logarithmic derivatives of the tau-function.
+Along with the Lax operator, we introduce the purely differential
+operators $B_{k}=(L^{k})_{\geq 0},\qquad k\geq 1,$ (2.18) where for any subset $\mbox{\Bbb S}\subset\mbox{\Bbb Z}$ the operation $(\ldots)_{\raise-1.0pt\hbox{$\mbox{\Bbbb S}$}}$ applied to any
+pseudo-differential operator $\displaystyle{P=\sum_{j\in\raise-1.0pt\hbox{$\mbox{\Bbbb Z}$}}p_{j}\partial_{x}^{j}}$ is defined as $(P)_{\raise-1.0pt\hbox{$\mbox{\Bbbb S}$}}=\Bigl(\sum_{j}p_{j}\partial_{x}^{j}\Bigr)_{\raise-1.0pt\hbox{$\mbox{\Bbbb S}$}}=\sum_{j\in\raise-1.0pt\hbox{$\mbox{\Bbbb S}$}}p_{j}\partial_{x}^{j}.$ For example, $B_{1}=\partial_{x}$ , $B_{2}=\partial_{x}^{2}+2u_{1}$ . Remarkably, the bilinear relation ( 2.13 ) for the $\psi$ -functions alone
+implicitly defines possible
+dynamics in the space of the coefficients $u_{i}$ of the Lax operator
+making them certain functions of the times: $u_{i}=u_{i}({\bf t})$ .
+This dynamics can be described by partial differential equations. Theorem 2.1 ( [ 4 ] ) 
+Let $\psi({\bf t},z)$ , $\psi^{*}({\bf t},z)$ be functions of the form ( 2.12 ). If the bilinear relation ( 2.13 ) is satisfied, then
+there exists a dressing
+operator $W$ of the form ( 2.15 ) such that $\psi({\bf t},z)=We^{\xi({\bf t},z)}$ satisfying the evolution
+equations $\partial_{t_{k}}W=-(L^{k})_{<0}W\;\;\mbox{for any $k\geq 1$}.$ (2.19) Proof. The proof given below is borrowed from [ 4 ] .
+The following technical lemma is
+useful 4 4 4 It is a simplified version of Lemma 1.1 from [ 4 ] . : Lemma 2.1 Let $P$ and $Q$ be monic pseudo-differential operators
+of the form $P=1+\sum_{j\geq 1}p_{j}(x)\partial_{x}^{-j},\quad Q=1+\sum_{j\geq 1}q_{j}(x)(-\partial_{x})^{-j}.$ Then imposing the condition $\oint_{C_{\infty}}(P_{x}e^{xz})\,(Q_{x^{\prime}}e^{-x^{\prime}z})\,dz=0$ (2.20) for all $x,x^{\prime}$ implies that $\Bigl(P\,Q^{{\dagger}}\Bigr)_{<0}=0.$ (2.21) (The notation $P_{x}$ , $Q_{x^{\prime}}$ in ( 2.20 ) means that the operators act on functions
+of $x,x^{\prime}$ , respectively.) In ( 2.21 ), $Q^{{\dagger}}$ is the conjugated
+operator. The conjugation $(\ldots)^{{\dagger}}$ of differential
+and pseudo-differential operators is
+defined as $(f(x)\circ\partial_{x})^{{\dagger}}=-\partial_{x}\circ f(x)$ , or, more generally,
+if $\displaystyle{P=\sum_{k}p_{k}\circ\partial_{x}^{k}}$ , then $\displaystyle{P^{{\dagger}}_{k}=\sum_{k}(-\partial_{x})^{k}\circ p_{k}.}$ For the proof of the lemma see [ 4 ] (Lemma 1.1). Set $\psi({\bf t},z)=We^{\xi({\bf t},z)},\quad\psi^{*}({\bf t},z)=Ve^{-\xi({\bf t},z)}$ where both $W$ and $V$ are of the form ( 2.15 ). Plugging this
+into ( 2.13 ) with $t_{k}=t^{\prime}_{k}$ for $k\geq 2$ , we have: $\oint_{C_{\infty}}(W_{x}e^{xz})\,(V_{x^{\prime}}e^{-x^{\prime}z})\,dz=0.$ Now we can apply Lemma 2.1 with $P=W$ , $Q=V$ and conclude that $(W\,V^{{\dagger}})_{<0}=0$ . Since the both operators are monic
+and contain non-positive powers of $\partial_{x}$ only, this means that $W\,V^{{\dagger}}=1$ , i.e., $V=(W^{{\dagger}})^{-1}.$ (2.22) Next, define the operators $L$ and $B_{k}$ as in ( 2.17 ) and
+( 2.18 ). Then ( 2.13 ) implies: $\oint_{C_{\infty}}(\partial_{t_{n}}-B_{n})\psi({\bf t},z)\psi^{*}({\bf t^{\prime}},z)\,dz=0.$ (2.23) We have, using ( 2.16 ) and ( 2.17 ): $(\partial_{t_{n}}-B_{n})\psi({\bf t},z)=(\partial_{t_{n}}W+W\partial_{x}^{n}-B_{n}W)e^{\xi({\bf t},z)}$ $=(\partial_{t_{n}}W+L^{n}W-B_{n}W)e^{\xi({\bf t},z)}=(\partial_{t_{n}}W+(L^{n})_{<0}W)e^{\xi({\bf t},z)}.$ Again, putting $t_{k}=t_{k}^{\prime}$ for $k\geq 2$ , we rewrite ( 2.23 ) as $\oint_{C_{\infty}}(Re^{xz})\,((W^{{\dagger}})^{-1}e^{-x^{\prime}z})\,dz=0,$ where $R$ is the operator $R=\partial_{t_{n}}W+(L^{n})_{<0}W$ .
+By Lemma 2.1 , we
+conclude that $(R\,W^{-1})_{<0}=0$ .
+Clearly, $R$ contains strictly negative powers of $\partial_{x}$ only
+and the same is true for the operator $R\,W^{-1}$ , i.e., $(R\,W^{-1})_{<0}=R\,W^{-1}=0$ .
+Since $W$ is a monic operator, it follows from this that $R=0$ ,
+which proves ( 2.19 ). Corollary 2.1 The function $\psi({\bf t},z)$ is an eigenfunction of the Lax operator $L$ ( 2.17 )
+with eigenvalue $z$ , $L\psi({\bf t},z)=z\psi({\bf t},z),$ (2.24) and for any $z\in\mbox{\Bbb C}$ it satisfies the differential equations $\partial_{t_{k}}\psi({\bf t},z)=B_{k}\psi({\bf t},z)\;\;\mbox{for any $k\geq 1$},$ (2.25) where the $k$ -th order differential operators $B_{k}$ of the form $\displaystyle{B_{k}=\partial_{x}^{k}+\sum_{j=0}^{k-2}b_{k}\partial_{x}^{j}}$ are given by equation ( 2.18 ). Proof. Again, we follow [ 4 ] .
+The eigenvalue equation ( 2.24 ) is a trivial consequence
+of ( 2.16 ), ( 2.17 ). Equation ( 2.25 ) easily
+follows from ( 2.19 ): $\begin{array}[]{lll}\partial_{t_{k}}\psi({\bf t},z)&=&\partial_{t_{k}}W\,e^{\xi({\bf t},z)}+Wz^{k}e^{\xi({\bf t},z)}\\
+&&\\
+&=&-(L^{k})_{<0}We^{\xi({\bf t},z)}+W\partial_{x}^{k}e^{\xi({\bf t},z)}\\
+&&\\
+&=&\Bigl(-(L^{k})_{<0}+L^{k}\Bigr)We^{\xi({\bf t},z)}=(L^{k})_{\geq 0}\psi({\bf t},z).\end{array}$ In what follows, by the BA function we mean a function of the form
+( 2.12 ) such that it satisfies equations ( 2.24 ) and
+( 2.25 ). Theorem 2.1 implies that
+this definition is equivalent to the first formula in ( 2.11 ),
+where the tau-function satisfies ( 2.1 ). There are similar statements for the
+adjoint BA function $\psi^{*}({\bf t},z)$ .
+From the proof of Theorem 2.1 we already know
+that $\psi^{*}({\bf t},z)=(W^{{\dagger}})^{-1}e^{-\xi({\bf t},z)}.$ (2.26) An easy calculation that uses equation ( 2.19 ) shows that
+the adjoint BA function satisfies linear equations which are
+conjugated to those for $\psi({\bf t},z)$ (see ( 2.24 ), ( 2.25 )). Corollary 2.2 The function $\psi^{*}({\bf t},z)$ is the adjoint
+BA function, i.e., it
+satisfies the equations $L^{{\dagger}}\psi^{*}({\bf t},z)=z\psi^{*}({\bf t},z),$ (2.27) $-\partial_{t_{k}}\psi^{*}({\bf t},z)=B^{{\dagger}}_{k}\psi^{*}({\bf t},z)\;\;\mbox{for any $k\geq 1$}.$ (2.28) Remark 2.3 Taking into account equations ( 2.11 ), we can represent
+the dressing operator $W$ as $W={\scriptstyle{{\bullet}\atop{\bullet}}}\frac{\tau({\bf t}-[\partial_{x}^{-1}])}{\tau({\bf t})}{\scriptstyle{{\bullet}\atop{\bullet}}},\qquad(W^{{\dagger}})^{-1}={\scriptstyle{{\bullet}\atop{\bullet}}}\frac{\tau({\bf t}+[\partial_{x}^{-1}])}{\tau({\bf t})}{\scriptstyle{{\bullet}\atop{\bullet}}},$ (2.29) where the normal ordering means that operator $\partial_{x}$ in each term of the expansion in negative powers of $\partial_{x}^{-1}$ is moved
+to the right. Note that the second equality is by no means
+an algebraic consequence of the first one.
+It holds only on condition that $\tau({\bf t})$ is a KP tau-function, i.e., satisfies the
+bilinear equation ( 2.1 ). The following well known proposition directly links the tau-function
+and the Lax operator. Proposition 2.1 Let $L$ be the Lax operator of the KP hierarchy.
+The coefficient at $\partial_{x}^{-1}$ of the pseudo-differential
+operator $L^{n}$ (sometimes called the operator
+residue of the pseudo-differential operator $L^{n}$ ) is expressed
+through the tau-function as follows: $(L^{n})_{-1}=\partial_{t_{n}}\partial_{x}\log\tau,\quad n\geq 1.$ (2.30) This relation can be proved by applying the differential operator $\partial_{t_{n}}$ to the bilinear relation ( 2.1 ) and putting ${\bf t^{\prime}}={\bf t}$ afterwords. Details of the proof can be
+found e.g. in [ 38 ] . As is well known, compatibility of equations ( 2.24 ),
+( 2.25 ) (or ( 2.27 ), ( 2.28 )) implies the
+Lax equations $\partial_{t_{k}}L=[B_{k},L],\quad k\geq 1,$ (2.31) and the Zakharov-Shabat equations $\partial_{t_{n}}B_{m}-\partial_{t_{m}}B_{n}+[B_{m},B_{n}]=0,\quad n,m\geq 1.$ (2.32) The latter are in fact compatibility conditions for the
+Lax equations ( 2.31 ). They
+determine dynamics in the space of dependent variables.
+Usually, these equations serve as a definition of the KP hierarchy. An important role in the theory is played by wave functions . Definition 2.1 Any solution $\phi({\bf t})$ to the system of linear
+differential equations ( 2.25 ), i.e., $\partial_{t_{k}}\phi({\bf t},z)=B_{k}\phi({\bf t},z)\;\;\mbox{for any $k\geq 1$},$ (2.33) is called a wave function (for the KP hierarchy).
+Any solution $\phi^{*}({\bf t})$ to the conjugated system of
+equations ( 2.28 ), i.e., $-\partial_{t_{k}}\phi^{*}({\bf t},z)=B^{{\dagger}}_{k}\phi^{*}({\bf t},z)\;\;\mbox{for any $k\geq 1$},$ (2.34) is called an adjoint wave function. For brevity, we will call both $\phi$ and $\phi^{*}$ wave functions, if this does not lead to
+a misunderstanding. Note that the BA functions (adjoint BA functions)
+are particular and very special
+solutions to the linear system ( 2.33 )
+(respectively, ( 2.34 )). Namely,
+they are simultaneously eigenfunctions
+of the Lax operator. However, the whole set of wave functions is
+much broader. Indeed, since the linear equations ( 2.25 )
+and ( 2.28 )
+do not contain the spectral parameter $z$ explicitly, any
+linear combination of BA functions $\psi({\bf t},z)$ for
+different values of $z$ is a wave function.
+So, wave functions $\phi({\bf t})$ , $\phi^{*}({\bf t})$ can be constructed by integrating
+the BA functions with respect to the
+spectral parameter $z$ with arbitrary functions (in general,
+distributions) $\rho(z)$ , $\rho^{*}(z)$ of $z,\bar{z}$ (we call them density functions): $\begin{array}[]{l}\displaystyle{\phi({\bf t})=\int_{\mbox{\Bbbb C}}\psi({\bf t};z)\rho(z)d^{2}z,}\\
+\\
+\displaystyle{\phi^{*}({\bf t})=\int_{\mbox{\Bbbb C}}\psi^{*}({\bf t};z)\rho^{*}(z)d^{2}z,}\end{array}$ (2.35) where $d^{2}z\equiv dxdy$ is the standard measure
+in the complex plane 5 5 5 We assume that the density
+functions $\rho(z)$ , $\rho^{*}(z)$ are such that the integrals converge; for example,
+we may require that they are bounded and have a compact support. .
+Below we will deal with equations ( 2.35 ) rewritten in terms
+of the tau-function: $\begin{array}[]{l}\displaystyle{\phi({\bf t})=\frac{1}{\tau({\bf t})}\int_{\mbox{\Bbbb C}}d^{2}z\,\rho(z)\,e^{\xi({\bf t},z)}\tau\Bigl({\bf t}-[z^{-1}]\Bigr),}\\
+\\
+\displaystyle{\phi^{*}({\bf t})=\frac{1}{\tau({\bf t})}\int_{\mbox{\Bbbb C}}d^{2}z\,\rho^{*}(z)\,e^{-\xi({\bf t},z)}\tau\Bigl({\bf t}+[z^{-1}]\Bigr).}\end{array}$ (2.36) The following proposition proved in [ 30 ] states that
+formulas ( 2.35 ) provide in fact general solution to the linear
+equations ( 2.33 ), ( 2.34 ). Proposition 2.2 [ 30 ] Any KP wave function, i.e., a common solution to the linear equations
+( 2.33 ) (or ( 2.34 ) for adjoint wave functions)
+have integral representation of the form ( 2.35 ) with
+some density functions (more generally, distributions) $\rho$ , $\rho^{*}$ . Moreover, in [ 30 ] some explicit formulas which
+allow one to restore density functions from known wave
+functions were given. We will not present them here since
+we do not need them in what follows. There are the following main possibilities
+for the density function: – The support of $\rho(z)$ is a compact domain ${\sf D}\in\mbox{\Bbb C}$ : $\rho(z)=\mu(z)\Theta_{\sf D}(z),$ where $\mu(z)$ is a bounded function of $z,\bar{z}$ and $\Theta_{\sf D}(z)$ is the characteristic function
+of the domain ${\sf D}$ : $\Theta_{\sf D}(z)=1$ if $z\in{\sf D}$ and $0$ otherwise.
+In this case we encounter the non-local $\bar{\partial}$ -problem, as explained
+in Remark 2.2 . We do not consider this case in this
+paper and hope to address it elsewhere. – The support of $\rho(z)$ is a contour $\Gamma\subset\mbox{\Bbb C}$ ,
+and $\rho(z)$ is a distribution represented
+in terms of the delta-function $\delta_{\Gamma}(z)$ with the support on $\Gamma$ as follows 6 6 6 The delta-function $\delta_{\Gamma}(z)$ is defined by the rule $\displaystyle{\int_{\mbox{\Bbbb C}}f(z)\delta_{\Gamma}(z)d^{2}z=\int_{\Gamma}f(z)|dz|}$ for any integrable function $f$ . : $\rho(z)=\nu(z)\delta_{\Gamma}(z),$ where $\nu(z)$ is some integrable function. – The support of $\rho(z)$ is a finite number of points $p_{i}\in\mbox{\Bbb C}$ ,
+and $\rho(z)$ is a distribution represented as a linear combination
+of 2D delta-functions: $\displaystyle{\rho(z)=\sum_{i}c_{i}\delta^{(2)}(z-p_{i})}.$ Various combinations of these types of density functions are
+also possible.
+The same is assumed for $\rho^{*}(z)$ . 3 Modified KP hierarchy 3.1 Modified KP from Toda lattice To introduce the modified KP (mKP) hierarchy,
+it is instructive to begin with
+the more general 2D Toda lattice (2DTL) hierarchy. The independent
+variables of the latter are two infinite sets of times ${\bf t}=\{t_{1},t_{2},t_{3},\ldots\},\quad\bar{\bf t}=\{\bar{t}_{1},\bar{t}_{2},\bar{t}_{3},\ldots\}$ (the bar here does not mean complex conjugation!) and a discrete
+variable $n\in\mbox{\Bbb Z}$ . The universal dependent variable is the
+2D Toda tau-function $\tau(n,{\bf t},\bar{\bf t})$ which
+satisfies the bilinear equation $\begin{array}[]{l}\displaystyle{\oint_{C_{\infty}}dz\,z^{n-n^{\prime}-1}e^{\xi({\bf t}-{\bf t}^{\prime},z)}\tau(n,{\bf t}-[z^{-1}],\,\bar{\bf t})\tau(n^{\prime}+1,{\bf t}^{\prime}+[z^{-1}],\,\bar{\bf t^{\prime}})}\\
+\\
+\hskip-11.38109pt=\,\displaystyle{\oint_{C_{\infty}}dz\,z^{n^{\prime}-n-1}e^{\xi(\bar{\bf t}-\bar{\bf t}^{\prime},z)}\tau(n+1,{\bf t},\,\bar{\bf t}-[z^{-1}])\tau(n^{\prime},{\bf t}^{\prime},\,\bar{\bf t^{\prime}}+[z^{-1}]).}\end{array}$ (3.1) It is valid for all ${\bf t},\,{\bf t^{\prime}}$ , $\bar{\bf t},\,\bar{\bf t^{\prime}}$ and $n,\,n^{\prime}\in\mbox{\Bbb Z}$ . For the choice $\bar{\bf t^{\prime}}=\bar{\bf t}$ , $n^{\prime}=n-1$ the right-hand
+side vanishes and equation ( 3.1 ) for $\tau(n,{\bf t},\bar{\bf t})$ , regarded as a function
+of ${\bf t}$ with fixed $\bar{\bf t}$ and $n$ ,
+reduces to the bilinear
+equation ( 2.1 ) for the KP hierarchy. For the choice $\bar{\bf t^{\prime}}=\bar{\bf t}$ , $n-n^{\prime}=k+1$ with $k\geq 1$ the right-hand
+side vanishes again and the equation becomes $\begin{array}[]{l}\displaystyle{\oint_{C_{\infty}}dz\,z^{k}e^{\xi({\bf t}-{\bf t}^{\prime},z)}\tau(n+k,{\bf t}-[z^{-1}])\tau(n,{\bf t}^{\prime}+[z^{-1}])=0,\quad k\geq 1,}\end{array}$ (3.2) where we omitted dependence on the bar-times which enter
+implicitly as parameters of solutions. The hierarchy defined by
+equation ( 3.2 ) is sometimes referred to as the $k$ -modified KP
+hierarchy ( $k$ -mKP). In what follows, we will deal with
+the most important case $k=1$ . This is just
+the mKP hierarchy in the Kupershmidt and Kiso sense.
+At $k=0$ the KP hierarchy
+is reproduced. Note that for the choice $\bar{\bf t^{\prime}}=\bar{\bf t}$ , $n-n^{\prime}=0$ in ( 3.1 )
+(corresponding to $k=-1$ )
+the right-hand side of ( 3.1 ) does not vanish but
+can be easily found explicitly as given by the residue at $\infty$ : $\begin{array}[]{l}\displaystyle{\frac{1}{2\pi i}\oint_{C_{\infty}}\frac{dz}{z}\,e^{\xi({\bf t}-{\bf t}^{\prime},z)}\tau(n,{\bf t}-[z^{-1}])\tau(n+1,{\bf t}^{\prime}+[z^{-1}])=\tau(n+1,{\bf t})\,\tau(n,{\bf t^{\prime}}).}\end{array}$ (3.3) This equation (or rather functional relation) as well as
+( 3.2 ) for $k=1$ , connects two neighboring tau-functions
+on the $n$ -lattice and is in fact
+equivalent to it defining the same mKP hierarchy 7 7 7 This
+can be proved using the method developed in [ 36 ] . . Since in what follows we will not be interested in dependence
+on $n$ , it is convenient to fix them and simplify the notation
+as follows: $\tau(n,{\bf t})=\tau({\bf t}),\qquad\tau(n+1,{\bf t})=\hat{\tau}({\bf t}).$ (3.4) From what was said above it is clear that
+both functions $\tau({\bf t})$ and $\hat{\tau}({\bf t})$ are
+KP tau-functions and, as such, satisfy equation ( 2.1 ).
+The mKP hierarchy contains the extra equation ( 3.3 ) that
+connects them: $\begin{array}[]{l}\displaystyle{\frac{1}{2\pi i}\oint_{C_{\infty}}\frac{dz}{z}\,e^{\xi({\bf t}-{\bf t}^{\prime},z)}\tau({\bf t}-[z^{-1}])\hat{\tau}({\bf t}^{\prime}+[z^{-1}])=\hat{\tau}({\bf t})\,\tau({\bf t^{\prime}}).}\end{array}$ (3.5) Let us mention some important corollaries of the general
+equation ( 3.5 ). Setting ${\bf t}-{\bf t^{\prime}}=[a_{1}^{-1}]+[a_{2}^{-1}],$ we have $e^{\xi({\bf t}-{\bf t}^{\prime},z)}=\frac{a_{1}\,a_{2}}{(a_{1}-z)(a_{2}-z)},$ and the integral in ( 3.5 ) can be calculated by an elementary
+residue calculus. The result is: $\begin{array}[]{l}a_{1}\tau({\bf t}-[a_{2}^{-1}])\hat{\tau}({\bf t}-[a_{1}^{-1}])-a_{2}\tau({\bf t}-[a_{1}^{-1}])\hat{\tau}({\bf t}-[a_{2}^{-1}])\\
+\\
+\phantom{aaaaaaaaaaaaaaaaaaaaaaaaa}=(a_{1}-a_{2})\tau({\bf t}-[a_{1}^{-1}]-[a_{2}^{-1}])\hat{\tau}({\bf t}).\end{array}$ (3.6) In the short-hand notation introduced in ( 2.3 ) this
+equation can be written in a much more compact form: $a_{1}\tau^{2}\hat{\tau}^{1}-a_{2}\tau^{1}\hat{\tau}^{2}=a_{12}\tau^{12}\hat{\tau},$ (3.7) or, after an overall shift of ${\bf t}$ , $a_{1}\tau_{1}\hat{\tau}_{2}-a_{2}\tau_{2}\hat{\tau}_{1}=a_{12}\tau\hat{\tau}_{12}.$ (3.8) As is proved in [ 36 ] , equation ( 3.7 ) (or ( 3.8 ))
+is in fact equivalent to the whole mKP hierarchy defined by the
+integral equation ( 3.5 ).
+There is a slightly more generally looking version of equation
+( 3.7 ) including three rather than two points, which
+is sometimes useful. It
+is obtained from ( 3.5 ) in the same manner after
+the substitution ${\bf t}-{\bf t^{\prime}}=[a_{1}^{-1}]+[a_{2}^{-1}]+[a_{3}^{-1}]$ : $(a_{1}^{-1}-a_{2}^{-1})\tau^{12}\hat{\tau}^{3}+(a_{2}^{-1}-a_{3}^{-1})\tau^{23}\hat{\tau}^{1}+(a_{3}^{-1}-a_{1}^{-1})\tau^{13}\hat{\tau}^{2}=0.$ (3.9) It is reduced to ( 3.7 ) in the limit $a_{3}\to\infty$ .
+(However, as it was already said, equations ( 3.7 ) and
+( 3.9 ) are in fact equivalent to each other and to the entire
+hierarchy.) Proposition 3.1 Let $\tau$ , $\hat{\tau}$ be two functions satisfying
+equation ( 3.7 ) (or ( 3.8 )). Then both of them
+are KP tau-functions, i.e., they satisfy equation ( 2.4 ). Proof. Let us write equation ( 3.7 ) in the form $a_{12}\frac{\tau^{12}\hat{\tau}}{\tau^{1}\tau^{2}}=a_{1}\frac{\hat{\tau}^{1}}{\tau^{1}}-a_{2}\frac{\hat{\tau}^{2}}{\tau^{2}}$ and sum the three such equations written for the three cyclic
+permutations of $(123)$ . Then the right-hand side vanishes,
+and we obtain ( 2.4 ). The argument for $\hat{\tau}$ is
+similar. Remark 3.1 Comparing equations ( 2.4 ) and ( 3.7 ), one can notice
+that the latter is formally obtained from the former in the “limit” $a_{3}\to 0$ . More precisely, the following formal identification
+works: $\tau(n,{\bf t}-[z^{-1}])\Bigr|_{z=0}\rightarrow\tau(n+1,{\bf t}),\quad\mbox{or}\quad\tau({\bf t}-[z^{-1}])\Bigr|_{z=0}\rightarrow\hat{\tau}({\bf t}).$ (3.10) It is assumed here that the function $\tau({\bf t}-[z^{-1}])$ , as a
+function of $z$ , admits an analytic continuation to the point $z=0$ from the neighborhood of $\infty$ , where it was originally
+defined. The rule ( 3.10 ) can be most easily understood
+in the language of free fermions (see, e.g., [ 24 ] )). 3.2 From KP to modified KP and back The transition $\tau({\bf t})\rightarrow\hat{\tau}({\bf t})$ is
+referred to as a Bäcklund-Darboux (BD) transformation of solutions to
+the KP hierarchy. So, the mKP hierarchy ( 3.3 ) describes
+chains of successive BD transformations. In what follows, the
+objects related to the solution with the tau-function $\hat{\tau}$ will be denoted by the same
+letters with hat ( $\hat{W}$ , $\hat{L}$ , $\hat{\psi}({\bf t},z)$ , $\hat{\phi}({\bf t})$ , etc), the latter
+is a wave function for the solution with the tau-function $\hat{\tau}$ . Theorem 3.1 below provides description of a general
+solution to the mKP hierarchy in the form ( 3.5 ).
+In plain words, all solutions to the mKP hierarchy can be
+constructed from a solution to the KP hierarchy and a wave
+function corresponding to it. Theorem 3.1 a)
+Let $\tau({\bf t})$ be a tau-function of the KP hierarchy
+(i.e., a solution to ( 2.1 )), and $\phi({\bf t})$ be a wave
+function corresponding to this solution. Then the function $\hat{\tau}({\bf t})=\phi({\bf t})\tau({\bf t})$ (3.11) is another KP tau-function (i.e., it solves ( 2.1 ), too) and
+the pair $(\tau,\hat{\tau})$ satisfies equation ( 3.5 ). b)
+Conversely, let a pair $(\tau,\hat{\tau})$ of KP tau-functions
+be a solution to the mKP bilinear equation ( 3.5 ), then
+their ratio $\phi({\bf t})=\frac{\hat{\tau}({\bf t})}{\tau({\bf t})}$ (3.12) is a KP wave function corresponding to the solution $\tau({\bf t})$ . Proof. The part a) is well known and is traced back to
+early works on BD transformations of integrable hierarchies
+(for a detailed proof see, e.g., the recent review [ 33 ] and references therein). Here we give a sketch of proof of part b). We need to prove that
+the function $\phi({\bf t})$ defined by ( 3.12 ) satisfies
+the linear equations ( 2.33 ) with the differential
+operators $B_{k}=(L^{k})_{\geq 0}$ , where the Lax operator $L$ corresponds to the solution with the tau-function $\tau({\bf t})$ . To this end, we employ
+the method
+first suggested in [ 35 ] and then used in [ 42 ] for the multi-component
+KP hierarchy. Introduce the differential operator $D(z)=\sum_{k\geq 1}\frac{z^{-k}}{k}\,\partial_{t_{k}},$ (3.13) then for any function $f({\bf t})$ we
+can write $f({\bf t}\pm[z^{-1}])=e^{\pm D(z)}f({\bf t})$ .
+We have to show that $D(a)\phi({\bf t})=\sum_{k\geq 1}\frac{a^{-k}}{k}\,B_{k}\phi({\bf t}),$ with $\phi({\bf t})$ given by
+( 3.12 ) and $B_{k}$ being the differential
+operator in $x$ of $k$ -th order
+given by ( 2.18 ). To this end, we note that the function $\phi({\bf t})$ defined as the ration of KP tau-functions ( 3.12 )
+satisfies the linear equation for the $\phi({\bf t})$ : $a_{1}\phi_{2}-a_{2}\phi_{1}=a_{12}\frac{\tau\tau_{12}}{\tau_{1}\tau_{2}}\,\phi_{12}.$ (3.14) This immediately follows from equation ( 3.8 ) after the
+substitution $\hat{\tau}=\tau\phi$ .
+Letting $a_{2}\to\infty$ (and renaming $a_{1}=a$ ),
+we convert it into the following linear differential-difference
+equation: $\Bigl(1-e^{-D(a)}\Bigr)\phi({\bf t})=a^{-1}\left(\partial_{x}-\partial_{x}\log\frac{\tau({\bf t}-[a^{-1}])}{\tau({\bf t})}\right)\phi({\bf t}),$ (3.15) or $a\Bigl(1-e^{-D(a)}\Bigr)\phi({\bf t})-\Bigl(\partial_{x}-V({\bf t},a)\Bigr)\phi({\bf t})=0,$ (3.16) where $V({\bf t},a)=\partial_{x}\log\frac{\tau({\bf t}-[a^{-1}])}{\tau({\bf t})}=\sum_{k\geq 1}V_{k}({\bf t})a^{-k}.$ (3.17) The functions $V_{k}({\bf t})$ are expressed through logarithmic
+derivatives of the tau-function $\tau$ . The next step is to find
+action of $D(a)$ on the BA function. This can be done in the
+following way. The starting point
+is the well known Hirota-Miwa three-term bilinear relation for the
+KP tau-function ( 2.5 ) (which is in fact equivalent to the whole
+hierarchy, see [ 36 ] for a direct proof).
+Putting $a_{3}=z$ and
+using formula ( 2.11 ) for the BA function, this relation can be represented in the form a linear
+equation for the BA function: $a_{1}\psi({\bf t}+[a_{2}^{-1}],z)-a_{2}\psi({\bf t}+[a_{1}^{-1}],z)=(a_{1}-a_{2})\frac{\tau({\bf t})\tau({\bf t}+[a_{1}^{-1}]+[a_{2}^{-1}])}{\tau({\bf t}+[a_{1}^{-1}])\tau({\bf t}+[a_{2}^{-1}])}\,\psi({\bf t}+[a_{1}^{-1}]+[a_{2}^{-1}])$ (3.18) (see [ 33 ] for details).
+Letting $a_{2}\to\infty$ (and renaming $a_{1}=a$ ),
+we convert it into the following linear differential-difference
+equation for the BA function: $a\Bigl(1-e^{-D(a)}\Bigr)\psi({\bf t},z)-\Bigl(\partial_{x}-V({\bf t},a)\Bigr)\psi({\bf t},z)=0,$ (3.19) which is the same as equation ( 3.16 ) for the $\phi({\bf t})$ . The operator $e^{-D(a)}-1$ can be expanded as $e^{-D(a)}-1=\sum_{k\geq 1}p_{k}(-[\partial_{x}^{-1}])a^{-k},$ (3.20) where $p_{k}({\bf t})$ are elementary Schur polynomials defined by $\exp\Bigl(\sum_{k\geq 1}t_{k}z^{k}\Bigr)=1+\sum_{k\geq 1}p_{k}({\bf t})z^{k}.$ Their general structure is $p_{k}({\bf t})=t_{k}+P_{k}(t_{k-1},\ldots,t_{1}),$ where $P_{k}$ is a polynomial of the variables $t_{l}$ with $l<k$ .
+For example, $\begin{array}[]{l}p_{1}({\bf t})=t_{1},\quad p_{2}({\bf t})=t_{2}+\frac{1}{2}t_{1}^{2},\quad p_{3}({\bf t})=t_{3}+t_{1}t_{2}+\frac{1}{6}t_{1}^{3},\end{array}$ so $\begin{array}[]{l}p_{1}(-[\partial_{x}^{-1}])=-\partial_{t_{1}},\\
+\\
+p_{2}(-[\partial_{x}^{-1}])=\frac{1}{2}(-\partial_{t_{2}}+\partial_{t_{1}}^{2}),\\
+\\
+p_{3}(-[\partial_{x}^{-1}])=\frac{1}{3}(-\partial_{t_{3}}+\frac{3}{2}\partial_{t_{2}}\partial_{t_{1}}-\frac{1}{2}\partial_{t_{1}}^{3}).\end{array}$ Then from equation ( 3.16 ) it follows that the function $\phi$ satisfies linear differential equations of the form $p_{k+1}(-\tilde{\partial})\phi-V_{k}\phi=0,\qquad k\geq 1.$ (3.21) To identify them with ( 2.33 ), we note that, as it follows from
+( 3.19 ),
+the KP BA function $\psi({\bf t},z)$ given by ( 2.11 )
+satisfies the same equations $p_{k+1}(-\tilde{\partial})\psi-V_{k}\psi=0,\qquad k\geq 1.$ (3.22) The structure of these equations allows one to
+express the derivative $\partial_{t_{k}}\psi$ through derivatives $\partial_{t_{l}}\psi$ with $l<k$ : $\partial_{t_{k}}\psi={\sf B}_{k}(\partial_{t_{k-1}},\ldots,\partial_{t_{1}})\psi,$ (3.23) where ${\sf B}_{k}$ in the right-hand side is some differential
+operator in the variables $t_{1},\ldots,t_{k-1}$ . Applying it
+successively for $k=2,3,\ldots$ , it is possible to represent
+the right-hand side of ( 3.23 )
+as a differential operator containing $\partial_{t_{1}}=\partial_{x}$ only: $\partial_{t_{k}}\psi=B_{k}(\partial_{x})\psi.$ However, we already know from Corollary 2.1 that
+for the BA function the operators $B_{k}(\partial_{x})$ coincide with the
+operators ${\cal B}_{k}$ defined in ( 2.18 ) (see ( 2.25 )).
+Since the function $\phi$ satisfies the same linear equations as
+the BA function $\psi$ , we conclude that from ( 3.16 )
+it follows that $\partial_{t_{k}}\phi=B_{k}\phi$ , i.e., $\phi$ defined
+in ( 3.12 ) is indeed a KP wave function. Equation ( 3.11 ) defines what is called forward BD transformation (of the KP hierarchy).
+A backward one is
+defined in a similar way with the help of any adjoint wave
+function $\phi^{*}({\bf t})$ : $\hat{\tau}^{*}({\bf t})=\phi^{*}({\bf t})\tau({\bf t}),$ (3.24) or, using ( 2.36 ), $\hat{\tau}^{*}({\bf t})=\int_{\mbox{\Bbbb C}}\rho^{*}(z)e^{-\xi({\bf t},z)}\tau({\bf t}+[z^{-1}])\,dz.$ (3.25) More details can be found, e.g., in [ 33 ] .
+Here we just mention that the Lax operator $L$ for the forward
+BD transformation $\tau\to\hat{\tau}=\phi\tau$ is transformed
+as follows: $L\longrightarrow\,\phi\partial_{x}\phi^{-1}L\phi\partial_{x}^{-1}\phi^{-1}$ (3.26) (see [ 12 ] for details). We conclude this section by presenting nonlinear equations
+satisfied by the functions $\phi$ and $\phi^{*}$ . Theorem 3.2 The KP wave functions $\phi$ and $\phi^{*}$ satisfy the
+equations $\frac{a_{1}\phi_{2}-a_{2}\phi_{1}}{\phi_{12}}+\frac{a_{2}\phi_{3}-a_{3}\phi_{2}}{\phi_{23}}+\frac{a_{3}\phi_{1}-a_{1}\phi_{3}}{\phi_{13}}=0,$ (3.27) $\frac{a_{2}\phi^{*}_{12}-a_{3}\phi^{*}_{13}}{\phi^{*}_{1}}+\frac{a_{3}\phi^{*}_{23}-a_{1}\phi^{*}_{12}}{\phi^{*}_{2}}+\frac{a_{1}\phi^{*}_{13}-a_{2}\phi^{*}_{23}}{\phi^{*}_{3}}=0,$ (3.28) which are the discrete mKP equations. Proof. To prove ( 3.27 ), we rewrite equation ( 3.14 )
+in the form $\frac{a_{1}\phi_{2}-a_{2}\phi_{1}}{\phi_{12}}=a_{12}\,\frac{\tau_{3}\tau_{12}\tau}{\tau_{1}\tau_{2}\tau_{3}}.$ Summing three such equations corresponding to cyclic
+permutations of $(123)$ and using ( 2.5 ), we obtain
+( 3.27 ). Equation ( 3.28 ) can be proved in a
+similar way. Remark 3.2 Note that $\phi^{-1}$ satisfies the same
+equation ( 3.28 ) as $\phi^{*}$ . Therefore,
+if $\phi({\bf t})$ is any wave function corresponding
+to the Lax operator $L$ of the KP hierarchy, then $\phi^{-1}({\bf t})$ is an adjoint wave function for the Lax operator $\hat{L}$ in the sense of Definition 2.1 . Let us present some other forms of equations
+( 3.27 ), ( 3.28 ). According to the remark above,
+it is enough to write the equations for $\phi$ .
+First of all, after overall shifts
+of the variables, equation ( 3.27 ) can be written as $\frac{a_{1}\phi^{31}-a_{2}\phi^{32}}{\phi^{3}}+\frac{a_{2}\phi^{12}-a_{3}\phi^{13}}{\phi^{1}}+\frac{a_{3}\phi^{23}-a_{1}\phi^{12}}{\phi^{2}}=0.$ (3.29) A direct calculation shows that this is the same as $\left|\begin{array}[]{ccc}1&a_{1}\phi^{1}&\phi^{23}\phi^{1}\\
+&&\\
+1&a_{2}\phi^{2}&\phi^{13}\phi^{2}\\
+&&\\
+1&a_{3}\phi^{3}&\phi^{12}\phi^{3}\end{array}\right|=0.$ (3.30) To write down another useful form of this equation, we denote $R(\alpha,\beta)=\frac{a_{\alpha}\phi^{\alpha}-a_{\beta}\phi^{\beta}}{\phi},\quad\alpha,\beta=1,2,3,$ (3.31) then ( 3.29 ) can be written as $R^{3}(1,2)+R^{1}(2,3)+R^{2}(3,1)=0.$ Moreover, a direct calculation shows that this is equivalent to $\frac{R^{\gamma}(\alpha,\beta)}{R(\alpha,\beta)}=\frac{R^{\alpha}(\beta,\gamma)}{R(\beta,\gamma)},\qquad(\alpha\beta\gamma)=(123),(231),(312).$ (3.32) In the explicit form, this reads: $\frac{\phi^{1}(a_{1}\phi^{13}-a_{2}\phi^{23})(a_{2}\phi^{2}-a_{3}\phi^{3})}{\phi^{3}(a_{2}\phi^{12}-a_{3}\phi^{13})(a_{1}\phi^{1}-a_{2}\phi^{2})}=1,$ (3.33) which is equivalent to the similar equations obtained from it
+by cyclic permutations of the indices $1,2,3$ . So far we were following the way from KP to mKP. The next theorem
+(inverse to Theorem 3.2 )
+shows that there is also a way back: starting from a
+solution to equation ( 3.27 ) (or ( 3.29 )) it is
+possible to restore the corresponding solutions $\tau$ , $\hat{\tau}$ to the KP hierarchy. Theorem 3.3 Let $\phi({\bf t})$ be any solution of the mKP equation
+( 3.29 ) (or ( 3.33 )).
+Then there exist functions $\tau({\bf t})$ and $\hat{\tau}({\bf t})$ such that both of them are KP tau-functions
+connected by equation ( 3.5 ). In the proof, the following technical lemma is used. Lemma 3.1 Let $h({\bf t},z)$ be a function of ${\bf t}$ , $z$ satisfying the functional
+relation $\frac{h({\bf t}-[a^{-1}],b)}{h({\bf t},b)}=\frac{h({\bf t}-[b^{-1}],a)}{h({\bf t},a)}$ for all $a,b\in\mbox{\Bbb C}$ . Then there exists a function $H({\bf t})$ such that $h({\bf t},a)=\frac{H({\bf t}-[a^{-1}])}{H({\bf t})}.$ A detailed proof of this lemma can be found in [ 4 ] . Proof of Theorem 3.3 . Put $R({\bf t},a,b)=\frac{a\phi({\bf t}-[a^{-1}])-b\phi({\bf t}-[b^{-1}])}{\phi({\bf t})},$ (3.34) then equation ( 3.33 ) states that $\frac{R({\bf t}-[a_{1}^{-1}],a_{2},a_{3})}{R({\bf t},a_{2},a_{3})}=\frac{R({\bf t}-[a_{2}^{-1}],a_{1},a_{3})}{R({\bf t},a_{1},a_{3})}.$ According to Lemma 3.1 , there exists a function $G({\bf t},z)$ such that $R({\bf t},a,b)=\frac{a\,G({\bf t}-[a^{-1}],b)}{G({\bf t},b)}$ (3.35) (the multiplier $a$ in the numerator is restored by comparing
+( 3.34 ) and ( 3.35 ) as $a\to\infty$ ). Moreover, the
+definition of $R({\bf t},a,b)$ implies that $R({\bf t},a,b)=-R({\bf t},b,a)$ , i.e., it holds $\frac{a\,G({\bf t}-[a^{-1}],b)}{G({\bf t},b)}=-\frac{b\,G({\bf t}-[b^{-1}],a)}{G({\bf t},a)}.$ In particular, we see from this that $\lim_{b\to\infty}\frac{a\,G({\bf t}-[a^{-1}],b)}{b\,G({\bf t},b)}=-1.$ (3.36) Modifying the function $G$ as $\tilde{G}({\bf t},z)=e^{-\xi({\bf t},z)}G({\bf t},z)$ , we have for the $\tilde{G}$ : $\frac{\tilde{G}({\bf t}-[a^{-1}],b)}{\tilde{G}({\bf t},b)}=\frac{\tilde{G}({\bf t}-[b^{-1}],a)}{\tilde{G}({\bf t},a)},$ and $\lim\limits_{a\to\infty}\tilde{G}({\bf t},a)=1$ (this follows from ( 3.36 )).
+Applying Lemma 3.1 again, we conclude that
+there exists a function $F({\bf t})$ such that $\tilde{G}({\bf t},z)=\frac{F({\bf t}-[z^{-1}])}{F({\bf t})}.$ Therefore, for $R({\bf t},a,b)$ we have: $R({\bf t},a,b)=(a-b)\frac{F({\bf t}-[a^{-1}]-[b^{-1}])F({\bf t})}{F({\bf t}-[a^{-1}])F({\bf t}-[b^{-1}])},$ (3.37) and equation ( 3.29 ) reads: $R^{1}(a_{2},a_{3})+R^{2}(a_{3},a_{1})+R^{3}(a_{1},a_{2})=a_{23}\frac{F^{123}F^{1}}{F^{12}F^{13}}+a_{31}\frac{F^{123}F^{2}}{F^{23}F^{21}}+a_{12}\frac{F^{123}F^{3}}{F^{13}F^{22}}=0.$ The latter equality can be rewritten as $a_{12}F^{12}F^{3}+a_{23}F^{23}F^{1}+a_{31}F^{31}F^{2}=0.$ Thus we can identify $F$ with a KP tau-function $\tau$ satisfying the bilinear relation ( 2.4 ) (and, therefore,
+equation ( 2.1 )).
+Introducing the function $\hat{F}=\phi F$ , we rewrite equation
+( 3.34 ) as $a_{1}\hat{F}^{1}F^{2}-a_{2}\hat{F}^{2}F^{1}=a_{12}\hat{F}F^{12},$ which shows that $\hat{F}$ can be identified with the KP tau-function $\hat{\tau}$ satisfying equation ( 3.7 )
+(and, therefore, ( 3.5 )). The following proposition will be used in Section 4.2 . Proposition 3.2 Let $\phi$ and $\phi^{\prime}$ be any two different
+solutions to the mKP hierarchy
+(i.e., solutions to ( 3.29 )). Then any linear combination $\phi^{\prime\prime}=a\phi+b\phi^{\prime}$ with $a,b\in\mbox{\Bbb C}$ is a solution to the mKP hierarchy if and
+only if $\phi$ and $\phi^{\prime}$ are wave functions
+corresponding to the same solution of the KP hierarchy. Proof. The “if” part is obvious: any linear combination of
+the wave functions $\phi$ , $\phi^{\prime}$ corresponding to one and the same
+solution to the KP hierarchy satisfies the linear
+equations ( 2.33 ) and thus is a KP wave function, too.
+To prove the “only if” part, we note that
+Theorem 3.3 implies that $\phi$ , $\phi^{\prime}$ and $\phi^{\prime\prime}$ can be
+represented as ratios of some KP tau-functions: $\phi=\frac{\hat{\tau}}{\tau},\qquad\phi^{\prime}=\frac{\bar{\tau}}{\tau^{\prime}},\qquad\phi^{\prime\prime}=a\phi+b\phi^{\prime}=\frac{\tilde{\tau}}{\tau^{\prime\prime}}.$ (3.38) We have to prove that $\tau^{\prime\prime}=\tau^{\prime}=\tau$ . To this end, we
+will use equation ( 3.8 ) written in the form of linear
+equations for $\phi$ , $\phi^{\prime}$ and $\phi^{\prime\prime}$ : $\begin{array}[]{l}a_{1}\phi_{2}-a_{2}\phi_{1}=a_{12}u_{12}\phi_{12},\\
+\\
+a_{1}\phi^{\prime}_{2}-a_{2}\phi^{\prime}_{1}=a_{12}u^{\prime}_{12}\phi^{\prime}_{12},\\
+\\
+a_{1}\phi^{\prime\prime}_{2}-a_{2}\phi^{\prime\prime}_{1}=a_{12}u^{\prime\prime}_{12}\phi^{\prime\prime}_{12},\end{array}$ (3.39) where $\phi^{\prime\prime}=a\phi+b\phi^{\prime}$ and $u_{12}=\frac{\tau\tau_{12}}{\tau_{1}\tau_{2}},\qquad u^{\prime}_{12}=\frac{\tau^{\prime}\tau^{\prime}_{12}}{\tau^{\prime}_{1}\tau^{\prime}_{2}},\qquad u^{\prime\prime}_{12}=\frac{\tau^{\prime\prime}\tau^{\prime\prime}_{12}}{\tau^{\prime\prime}_{1}\tau^{\prime\prime}_{2}}.$ Note that the 3-term bilinear equation for the KP tau-function
+implies that the equation $a_{12}u_{12}+a_{23}u_{23}+a_{31}u_{31}=0$ (3.40) holds together with the same equations for $u^{\prime}$ and $u^{\prime\prime}$ .
+Subtracting the last equation in ( 3.39 )
+from the sum of the first two, we get: $a(u_{12}-u_{12}^{\prime\prime})\phi_{12}+b(u^{\prime}_{12}-u_{12}^{\prime\prime})\phi_{12}^{\prime}=0$ (3.41) which should hold for all $a,b$ .
+Note, however, that $u_{12}^{\prime\prime}$ in principle may depend on $a,b$ , so we can not yet conclude
+from ( 3.41 )
+that $u_{12}=u_{12}^{\prime}=u_{12}^{\prime\prime}$ . To overcome this difficulty,
+we proceed as follows. Equation ( 3.41 ) can be rewritten as $u_{12}^{\prime\prime}=\frac{au_{12}\phi_{12}+bu^{\prime}_{12}\phi^{\prime}_{12}}{a\phi_{12}+b\phi^{\prime}_{12}}=u_{12}+b\frac{(u^{\prime}_{12}-u_{12})\phi^{\prime}_{12}}{a\phi_{12}+b\phi^{\prime}_{12}}=u^{\prime}_{12}-a\frac{(u^{\prime}_{12}-u_{12})\phi_{12}}{a\phi_{12}+b\phi^{\prime}_{12}}.$ (3.42) This relation allows us to obtain a system of homogeneous
+linear equations for $x_{\alpha}\equiv u^{\prime}_{\beta\gamma}-u_{\beta\gamma},\qquad(\alpha\beta\gamma)=(123),(231),(312).$ Multiplying both sides of the equalities in ( 3.42 ) by $a_{12}$ and summing over cyclic permutations of $(123)$ ,
+we get (using equations for $u$ , $u^{\prime}$ and $u^{\prime\prime}$ of the form ( 3.40 )): $\begin{array}[]{l}\displaystyle{\frac{a_{23}\phi^{\prime}_{23}x_{1}}{a\phi_{23}+b\phi^{\prime}_{23}}+\frac{a_{31}\phi^{\prime}_{31}x_{2}}{a\phi_{31}+b\phi^{\prime}_{31}}+\frac{a_{12}\phi^{\prime}_{12}x_{3}}{a\phi_{12}+b\phi^{\prime}_{12}}=0},\\
+\\
+\displaystyle{\frac{a_{23}\phi_{23}x_{1}}{a\phi_{23}+b\phi^{\prime}_{23}}+\frac{a_{31}\phi_{31}x_{2}}{a\phi_{31}+b\phi^{\prime}_{31}}+\frac{a_{12}\phi_{12}x_{3}}{a\phi_{12}+b\phi^{\prime}_{12}}=0}.\end{array}$ It is important to note that $a$ and $b$ in the two equations
+are not necessarily the same: each equation should hold
+for arbitrary $a,b$ . Putting successively $a=0$ , $b=0$ in
+the first equation and $a=0$ in the second one, we get the
+following system of linear equations: $\left\{\begin{array}[]{l}a_{23}x_{1}+a_{31}x_{2}+a_{12}x_{3}=0,\\
+\\
+a_{23}r_{23}x_{1}+a_{31}r_{31}x_{2}+a_{12}r_{12}x_{3}=0,\\
+\\
+a_{23}r^{-1}_{23}x_{1}+a_{31}r_{31}^{-1}x_{2}+a_{12}r^{-1}_{12}x_{3}=0,\end{array}\right.$ where $r_{ij}=\phi^{\prime}_{ij}/\phi_{ij}$ . It is a homogeneous
+linear system of the form ${\sf M}\vec{x}=0$ , with the determinant
+of the matrix ${\sf M}$ equal to $\det{\sf M}=\frac{a_{12}a_{23}a_{31}}{r_{12}r_{23}r_{31}}\,(r_{12}-r_{13})(r_{12}-r_{23})(r_{13}-r_{23}).$ This determinant is nonzero unless $r_{ij}=r_{ik}$ for some $i,j,k=1,2,3$ (i.e., $\phi({\bf t}+[a^{-1}])=\phi^{\prime}({\bf t})$ which implies that $\phi({\bf t})=\phi^{\prime}({\bf t})$ ),
+but this is impossible since we have assumed that the wave
+functions $\phi$ and $\phi^{\prime}$ are different. Therefore, the system
+has only the trivial solution $x_{1}=x_{2}=x_{3}=0$ which means
+that $u=u^{\prime}$ , (and, moreover, $u=u^{\prime}=u^{\prime\prime}$ , as this
+follows from ( 3.41 )), i.e., $\displaystyle{\frac{\tau\tau_{12}}{\tau_{1}\tau_{2}}=\frac{\tau^{\prime}\tau^{\prime}_{12}}{\tau^{\prime}_{1}\tau^{\prime}_{2}}.}$ Denoting $f=\tau^{\prime}/\tau$ , we write this as $f_{12}/f_{2}=f_{1}/f$ ,
+or $g({\bf t}+[a^{-1}])=g({\bf t})$ for the function $g=f_{1}/f$ . It then follows that $g({\bf t})=1$ ,
+i.e., we have $f({\bf t}+[a^{-1}])=f({\bf t})$ . In the same way, this
+implies that $f({\bf t})=c$ , where $c$ is a constant, i.e., $\tau^{\prime}=c\tau$ . The constant can be put equal to 1 without
+any loss of generality because the tau-function $\tau^{\prime}$ is defined
+by ( 3.38 ) only up to a constant factor. The same argument
+works for $\tau^{\prime\prime}$ . Therefore, we have proved that $\tau^{\prime}=\tau^{\prime\prime}=\tau$ in ( 3.38 ), so the wave functions $\phi$ , $\phi^{\prime}$ and $\phi^{\prime\prime}$ correspond to one and the same
+solution of KP with the tau-function $\tau$ . 3.3 Baker-Akhiezer functions for the mKP hierarchy Just as it was done for the KP hierarchy,
+one may introduce BA functions for the mKP hierarchy,
+so that they would satisfy a bilinear relation similar to
+( 2.13 ). Following [ 31 , 32 , 14 ] , we define them
+by the formulas $\begin{array}[]{l}\displaystyle{\varphi({\bf t},z)=e^{\xi({\bf t},z)}\,\frac{\tau({\bf t}-[z^{-1}])}{\hat{\tau}({\bf t})}},\\
+\\
+\displaystyle{\varphi^{*}({\bf t},z)=e^{-\xi({\bf t},z)}\,\frac{\hat{\tau}({\bf t}+[z^{-1}])}{z\,\tau({\bf t})}}.\end{array}$ (3.43) They are connected with the BA functions for the KP hierarchy
+in the following way: $\begin{array}[]{l}\varphi({\bf t},z)=\phi^{-1}({\bf t})\psi({\bf t},z),\\
+\\
+\varphi^{*}({\bf t},z)=\phi({\bf t})\hat{\psi}^{*}({\bf t},z).\end{array}$ (3.44) The expansions as $z\to\infty$ are of the form $\begin{array}[]{l}\displaystyle{\varphi({\bf t},z)=e^{\xi({\bf t},z)}\,\Bigl(w_{0}({\bf t})+w_{1}({\bf t})z^{-1}+w_{2}({\bf t})z^{-2}+\ldots\,\Bigr),}\\
+\\
+\displaystyle{\varphi^{*}({\bf t},z)=z^{-1}e^{-\xi({\bf t},z)}\,\Bigl(w_{0}^{-1}({\bf t})+w^{*}_{1}({\bf t})z^{-1}+w^{*}_{2}({\bf t})z^{-2}+\ldots\,\Bigr),}\end{array}$ (3.45) where $w_{0}({\bf t})=\frac{\tau({\bf t})}{\hat{\tau}({\bf t})}=(\phi({\bf t}))^{-1}\,$ (3.46) (see ( 3.12 )). In terms of the $\varphi$ -functions,
+equation ( 3.5 ) acquires the form $\frac{1}{2\pi i}\oint_{C_{\infty}}\!\varphi({\bf t},z)\varphi^{*}({\bf t^{\prime}},z)\,dz=1.$ (3.47) Its role in the mKP theory is the same as that of equation ( 2.13 )
+for the KP theory (see Remark 2.1 ). 3.4 Lax-Sato formalism for the mKP hierarchy One can introduce an mKP-analogue of the dressing operator.
+It is a pseudo-differential
+operator ${\cal W}$ of order 0 of the form ${\cal W}=w_{0}+w_{1}\partial_{x}^{-1}+w_{2}\partial_{x}^{-2}+\ldots\,,$ (3.48) where the coefficient functions $w_{i}=w_{i}({\bf t})$ are the same
+as in ( 3.45 ).
+Clearly, we can write $\varphi({\bf t},z)={\cal W}e^{\xi({\bf t},z)}.$ (3.49) The Lax operator for the mKP hierarchy is defined as ${\cal L}={\cal W}\partial_{x}{\cal W}^{-1}=\partial_{x}+v_{0}+v_{1}\partial_{x}^{-1}+v_{2}\partial_{x}^{-2}+\ldots\,,$ (3.50) where $v_{0}=-\partial_{x}\log w_{0}.$ (3.51) It is a pseudo-differential operator of order 1,
+but, unlike the Lax operator for KP, the coefficient
+in front of $(\partial_{x})^{0}$ is nonzero.
+Along with the Lax operator, we introduce the purely differential
+operators ${\cal B}_{k}=({\cal L}^{k})_{\geq 1},\qquad k\geq 1.$ (3.52) For example, ${\cal B}_{1}=\partial_{x}$ , ${\cal B}_{2}=\partial_{x}^{2}+v_{0}\partial_{x}$ . The next theorem is an mKP-analogue of Theorem 2.1 . Theorem 3.4 Let $\varphi({\bf t},z)$ , $\varphi^{*}({\bf t},z)$ be functions of the form ( 3.45 ).
+If the bilinear relation ( 3.47 ) is satisfied, then there exists a dressing operator ${\cal W}$ of the form ( 3.48 )
+such that $\varphi({\bf t},z)={\cal W}e^{\xi({\bf t},z)}$ satisfying the evolution
+equations $\partial_{t_{k}}{\cal W}=-({\cal L}^{k})_{\leq 0}{\cal W}\;\;\mbox{for any $k\geq 1$}.$ (3.53) Proof. For the proof we need the following mKP-analogue
+of Lemma 2.1 : Lemma 3.2 Let ${\cal P}$ and ${\cal Q}$ be pseudo-differential operators
+of the form ${\cal P}=w(x)+\sum_{j\geq 1}p_{j}(x)\partial_{x}^{-j},\quad{\cal Q}=w^{-1}(x)(-\partial_{x}^{-1})+\sum_{j\geq 1}q_{j}(x)(-\partial_{x})^{-j-1}.$ Then the condition $\oint_{C_{\infty}}({\cal P}_{x}e^{xz})\,({\cal Q}_{x^{\prime}}e^{-x^{\prime}z})\,dz=c$ (3.54) for all $x,x^{\prime}$ , where $c$ is some constant,
+implies that $\Bigl({\cal P}\,{\cal Q}^{{\dagger}}\Bigr)_{<0}=c\partial_{x}^{-1}.$ (3.55) Set $\varphi({\bf t},z)={\cal W}e^{\xi({\bf t},z)},\quad\varphi^{*}({\bf t},z)={\cal V}e^{-\xi({\bf t},z)},$ where both ${\cal W}$ and ${\cal V}$ are of the form ( 3.48 )
+(the latter one is of order $-1$ ).
+Plugging this
+into ( 3.47 ) with $t_{k}=t^{\prime}_{k}$ for $k\geq 2$ , we have: $\oint_{C_{\infty}}({\cal W}_{x}e^{xz})\,({\cal V}_{x^{\prime}}e^{-x^{\prime}z})\,dz=1.$ Now we can apply Lemma 3.2 with ${\cal P}={\cal W}$ , ${\cal Q}={\cal V}$ and conclude that $({\cal W}\,{\cal V}^{{\dagger}})_{<0}=\partial_{x}^{-1}$ . Since the operator
+in the left-hand side is of negative order, we have ${\cal W}\,{\cal V}^{{\dagger}}=\partial_{x}^{-1}$ , hence ${\cal V}=({\cal W}^{-1}\partial_{x}^{-1})^{{\dagger}}$ and $\varphi^{*}({\bf t},z)=({\cal W}^{-1}\partial_{x}^{-1})^{{\dagger}}e^{-\xi({\bf t},z)}.$ Next, define the operators ${\cal L}$ and ${\cal B}_{k}$ as in ( 3.50 ) and
+( 3.52 ). Then ( 3.47 ) implies $\oint_{C_{\infty}}(\partial_{t_{n}}-{\cal B}_{n})\,\varphi({\bf t},z)\varphi^{*}({\bf t^{\prime}},z)\,dz=0$ (3.56) for all ${\bf t}$ , ${\bf t^{\prime}}$ .
+We have, using ( 3.49 ) and ( 3.50 ): $(\partial_{t_{n}}-{\cal B}_{n})\varphi({\bf t},z)=(\partial_{t_{n}}{\cal W}+{\cal W}\partial_{x}^{n}-{\cal B}_{n}{\cal W})e^{\xi({\bf t},z)}$ $=(\partial_{t_{n}}{\cal W}+{\cal L}^{n}{\cal W}-{\cal B}_{n}{\cal W})e^{\xi({\bf t},z)}=(\partial_{t_{n}}{\cal W}+({\cal L}^{n})_{\leq 0}{\cal W})e^{\xi({\bf t},z)}.$ Again, putting $t_{k}=t_{k}^{\prime}$ for $k\geq 2$ , we rewrite ( 3.56 ) as $\oint_{C_{\infty}}({\cal R}e^{xz})\,(({\cal W}^{-1}\partial_{x}^{-1})^{{\dagger}}e^{-x^{\prime}z})\,dz=0,$ where ${\cal R}$ is the operator ${\cal R}=\partial_{t_{n}}{\cal W}+({\cal L}^{n})_{\leq 0}{\cal W}$ .
+By Lemma 3.2 (with $c=0$ ), we
+conclude that $({\cal R}\,{\cal W}^{-1}\partial_{x}^{-1})_{<0}=0$ .
+Clearly, ${\cal R}$ contains non-positive powers of $\partial_{x}$ only
+while the operator ${\cal R}\,{\cal W}^{-1}\partial_{x}^{-1}$ is of strictly negative
+order i.e., $({\cal R}\,{\cal W}^{-1}\partial_{x}^{-1})_{\leq 0}={\cal R}\,{\cal W}^{-1}\partial_{x}^{-1}=0$ .
+Since ${\cal W}$ is an invertible operator of order
+zero, it follows from this that ${\cal R}=0$ ,
+which proves ( 3.53 ). Corollary 3.1 The function $\varphi({\bf t},z)$ is an eigenfunction of the Lax operator ${\cal L}$ ( 3.50 )
+with eigenvalue $z$ , ${\cal L}\varphi({\bf t},z)=z\varphi({\bf t},z),$ (3.57) and for any $z\in\mbox{\Bbb C}$ it satisfies the differential equations $\partial_{t_{k}}\varphi({\bf t},z)={\cal B}_{k}\varphi({\bf t},z)\;\;\mbox{for any $k\geq 1$},$ (3.58) where the $k$ -th order differential operators ${\cal B}_{k}$ of the form $\displaystyle{{\cal B}_{k}=\partial_{x}^{k}+\sum_{j=1}^{k-1}c_{k}\partial_{x}^{j}}$ are given by equation ( 3.52 ). Proof. The eigenvalue equation ( 3.57 ) is a trivial consequence
+of ( 3.49 ), ( 3.50 ). Equation ( 3.58 ) easily
+follows from ( 3.53 ): $\begin{array}[]{lll}\partial_{t_{k}}\varphi({\bf t},z)&=&\partial_{t_{k}}{\cal W}\,e^{\xi({\bf t},z)}+{\cal W}z^{k}e^{\xi({\bf t},z)}\\
+&&\\
+&=&-({\cal L}^{k})_{\leq 0}{\cal W}e^{\xi({\bf t},z)}+{\cal W}\partial_{x}^{k}e^{\xi({\bf t},z)}\\
+&&\\
+&=&\Bigl(-({\cal L}^{k})_{\leq 0}+{\cal L}^{k}\Bigr){\cal W}e^{\xi({\bf t},z)}=({\cal L}^{k})_{\geq 1}\varphi({\bf t},z).\end{array}$ There are similar statements for the
+adjoint BA function $\varphi^{*}({\bf t},z)$ .
+From the proof of Theorem 3.4 we already know
+that $\varphi^{*}({\bf t},z)=({\cal W}^{-1}\partial_{x}^{-1})^{{\dagger}}e^{-\xi({\bf t},z)}.$ (3.59) Using ( 3.53 ) one can prove the following corollary. Corollary 3.2 The function $\varphi^{*}({\bf t},z)$ satisfies
+the equations ${\cal L}^{*}\varphi^{*}({\bf t},z)=z\varphi^{*}({\bf t},z),$ (3.60) $-\partial_{t_{k}}\varphi^{*}({\bf t},z)={\cal B}^{*}\varphi^{*}({\bf t},z)\;\;\;\mbox{for any $k\geq 1$},$ (3.61) where ${\cal L}^{*}=\partial_{x}^{-1}{\cal L}^{{\dagger}}_{k}\,\partial_{x},\qquad{\cal B}^{*}=\partial_{x}^{-1}{\cal B}^{{\dagger}}_{k}\,\partial_{x}.$ (3.62) Remark 3.3 Taking into account equations ( 2.11 ), we can represent
+the dressing operator ${\cal W}$ as ${\cal W}={\scriptstyle{{\bullet}\atop{\bullet}}}\frac{\tau({\bf t}-[\partial_{x}^{-1}])}{\hat{\tau}({\bf t})}{\scriptstyle{{\bullet}\atop{\bullet}}},\qquad({\cal W}^{{\dagger}})^{-1}={\scriptstyle{{\bullet}\atop{\bullet}}}\frac{\hat{\tau}({\bf t}+[\partial_{x}^{-1}])}{\tau({\bf t})}{\scriptstyle{{\bullet}\atop{\bullet}}}$ (3.63) where the normal ordering means that operator $\partial_{x}$ in each term of the expansion in negative powers of $\partial_{x}^{-1}$ is moved to the right.
+(cf. Remark 2.3 ). Like in the case of the KP hierarchy,
+compatibility of equations ( 3.57 ),
+( 3.58 ) implies the
+Lax equations $\partial_{t_{k}}{\cal L}=[{\cal B}_{k},{\cal L}],\quad k\geq 1,$ (3.64) and equations of the Zakharov-Shabat type $\partial_{t_{n}}{\cal B}_{m}-\partial_{t_{m}}{\cal B}_{n}+[{\cal B}_{m},{\cal B}_{n}]=0,\quad n,m\geq 1.$ (3.65) Usually, this infinite system of equations
+serves as a definition of the mKP hierarchy. Wave functions for the mKP hierarchy are introduced in the same way
+as in the KP case (see Definition 2.1 ). Definition 3.1 Any solution $S({\bf t})$ to the system of linear
+differential equations ( 3.58 ), i.e., $\partial_{t_{k}}S({\bf t})={\cal B}_{k}S({\bf t})\;\;\;\;\mbox{for any $k\geq 1$},$ (3.66) is called a wave function for the mKP hierarchy.
+Any solution $S^{*}({\bf t})$ to the system ( 3.61 ), i.e., $-\partial_{t_{k}}S^{*}({\bf t})={\cal B^{*}}_{k}S^{*}({\bf t})\;\;\;\;\mbox{for any $k\geq 1$},$ (3.67) is called an adjoint wave function. For brevity, we will sometimes call both $S$ and $S^{*}$ wave functions. Like in the KP case, mKP wave functions of general form
+can be obtained by integrating
+the mKP BA functions with respect to the
+spectral parameter $z$ with arbitrary density functions
+or distributions $\sigma(z)$ , $\sigma^{*}(z)$ : $\begin{array}[]{l}\displaystyle{S({\bf t})=\int_{\mbox{\Bbbb C}}\varphi({\bf t};z)\sigma(z)d^{2}z,}\\
+\\
+\displaystyle{S^{*}({\bf t})=\int_{\mbox{\Bbbb C}}\varphi^{*}({\bf t};z)\sigma^{*}(z)d^{2}z}.\end{array}$ (3.68) Remark 3.4 Since the operators ${\cal B}_{k}$ , $\hat{\cal B}_{k}$ are of the
+form ${\cal A}\,\partial_{x}$ , where ${\cal A}$ is a differential operator,
+the simplest mKP wave functions are $S({\bf t})=S^{*}({\bf t})=1$ . 4 From mKP to SchKP (and HD) and back 4.1 BD transformations of the mKP hierarchy In the previous section the mKP hierarchy was described in terms of
+a BD transformation of KP. Such a BD transformation of any solution $\tau({\bf t})$ of the KP hierarchy to another solution $\hat{\tau}({\bf t})$ is determined by choosing a wave function $\phi({\bf t})$ of the KP hierarchy, then $\hat{\tau}({\bf t})=\phi({\bf t})\tau({\bf t})$ . The pair $(\tau,\hat{\tau})$ obtained in this way is a solution of the mKP hierarchy. A similar description of the SchKP and HD hierarchies
+requires that in addition to the already selected
+KP wave function $\phi$ ,
+one should fix another one, $\phi^{\prime}({\bf t})$ .
+This wave function defines another BD
+transformation $\tau\to\bar{\tau}=\phi^{\prime}\tau$ for KP,
+and thus the pair $(\tau,\bar{\tau})$ is some other solution to the mKP hierarchy.
+The transition from $(\tau,\hat{\tau})$ to $(\tau,\bar{\tau})$ is nothing else than a BD transformation
+for the mKP hierarchy. Alternatively (and equivalently) it can
+be described in the same manner as it was done for the KP hierarchy:
+given a solution $(\tau,\hat{\tau})$ , we construct another
+solution by fixing a wave function $S({\bf t})$ of the mKP hierarchy,
+then $\bar{\tau}=S\tau$ , with $S=\phi^{\prime}/\phi$ . As a preliminary step,
+we should obtain a bilinear equation which connects the tau-functions $\tau$ , $\hat{\tau}$ and $\bar{\tau}$ . To this end, we need to
+consider composition of the KP BD transformations $\tau\to\hat{\tau}$ and $\tau\to\bar{\tau}$ which sends $\tau$ to some
+other KP tau-function which we denote as $\hat{\bar{\tau}}$ .
+It is instructive to define it in a slightly more general setup.
+Consider
+two chains of forward BD transformations
+defined by fixing two sequences of density functions $\{\rho_{1}^{(1)}(z),\rho_{2}^{(1)}(z),\ldots\}$ and $\{\rho_{1}^{(2)}(z),\rho_{2}^{(2)}(z),\ldots\}$ . Starting from
+any initial KP tau-function $\tau({\bf t})$ , one can apply
+the first transformation $n_{1}$ times and then the second one $n_{2}$ times. We denote the resulting tau-function as $\tau(n_{1},n_{2},{\bf t})$ . Let us denote the first and
+the second transformations by ${\bf B}_{1}$ and ${\bf B}_{2}$ , then we can write: $\begin{array}[]{l}\displaystyle{{\bf B}_{1}\tau(n_{1},n_{2},{\bf t})=\tau(n_{1}+1,n_{2},{\bf t})=\int_{\mbox{\Bbbb C}}e^{\xi({\bf t},z)}z^{n_{1}+n_{2}}\rho^{(1)}_{n_{1}+1}(z)\tau(n_{1},n_{2},{\bf t}-[z^{-1}])d^{2}z,}\\
+\\
+\displaystyle{{\bf B}_{2}\tau(n_{1},n_{2},{\bf t})=\tau(n_{1},n_{2}+1,{\bf t})=\int_{\mbox{\Bbbb C}}e^{\xi({\bf t},z)}z^{n_{1}+n_{2}}\rho^{(2)}_{n_{2}+1}(z)\tau(n_{1},n_{2},{\bf t}-[z^{-1}])d^{2}z.}\end{array}$ (4.1) There are two ways to obtain $\tau(n_{1}+1,n_{2}+1,{\bf t})$ from $\tau(n_{1},n_{2},{\bf t})$ (first apply ${\bf B}_{1}$ , then ${\bf B}_{2}$ or vice versa): $\tau(n_{1},n_{2},{\bf t})\stackrel{{\scriptstyle{\bf B}_{1}}}{{\longrightarrow}}\tau(n_{1}+1,n_{2},{\bf t})\stackrel{{\scriptstyle{\bf B}_{2}}}{{\longrightarrow}}\tau(n_{1}+1,n_{2}+1,{\bf t}),$ $\tau(n_{1},n_{2},{\bf t})\stackrel{{\scriptstyle{\bf B}_{2}}}{{\longrightarrow}}\tau(n_{1},n_{2}+1,{\bf t})\stackrel{{\scriptstyle{\bf B}_{1}}}{{\longrightarrow}}\tau(n_{1}+1,n_{2}+1,{\bf t}).$ Writing the two composite transformations explicitly as
+double integrals, one can
+easily see that the results differ by a sign, i.e., the
+anti-commutation relation ${\bf B}_{1}{\bf B}_{2}=-{\bf B}_{2}{\bf B}_{1}$ (4.2) holds true. Therefore, given $\tau(n_{1},n_{2},{\bf t})$ ,
+the function $\tau(n_{1}+1,n_{2}+1,{\bf t})$ is defined
+only up to a sign. For our needs, it is enough to fix this uncertainty
+by the convention that the transformation $\tau\to\hat{\tau}$ (which is ${\bf B}_{1}$ ) is applied first. So, we have four KP tau-functions $\tau({\bf t})=\tau(0,0,{\bf t}),\quad\hat{\tau}({\bf t})=\tau(1,0,{\bf t}),\quad\bar{\tau}({\bf t})=\tau(0,1,{\bf t}),\quad\hat{\bar{\tau}}({\bf t})=\tau(1,1,{\bf t}).$ (4.3) Proposition 4.1 The four KP tau-functions ( 4.3 ) satisfy the bilinear
+equation $a\Bigl(\hat{\tau}\bigl({\bf t}-[a^{-1}]\bigr)\bar{\tau}\bigl({\bf t}\bigr)-\bar{\tau}\bigl({\bf t}-[a^{-1}]\bigr)\hat{\tau}\bigl({\bf t}\bigr)\Bigr)=\hat{\bar{\tau}}({\bf t}\bigr)\,\tau({\bf t}-[a^{-1}]\bigr),$ (4.4) or, in the short-hand notation, $a_{1}\Bigl(\hat{\tau}^{1}\bar{\tau}-\bar{\tau}^{1}\hat{\tau}\Bigr)=\hat{\bar{\tau}}\,\tau^{1}.$ (4.5) Proof. Explicitly, the tau-functions $\hat{\tau}$ , $\bar{\tau}$ and $\hat{\bar{\tau}}$ are given by $\begin{array}[]{l}\displaystyle{\hat{\tau}({\bf t})=\int_{\mbox{\Bbbb C}}e^{\xi({\bf t},z)}\hat{\rho}(z)\tau\Bigl({\bf t}-[z^{-1}]\Bigr)d^{2}z,}\\
+\\
+\displaystyle{\bar{\tau}({\bf t})=\int_{\mbox{\Bbbb C}}e^{\xi({\bf t},w)}\bar{\rho}(w)\tau\Bigl({\bf t}-[w^{-1}]\Bigr)d^{2}w,}\end{array}$ $\hat{\bar{\tau}}({\bf t})=\int_{\mbox{\Bbbb C}}\!\int_{\mbox{\Bbbb C}}e^{\xi({\bf t},z)+\xi({\bf t},w)}\hat{\rho}(z)\bar{\rho}(w)(w-z)\tau\Bigl({\bf t}-[z^{-1}]-[w^{-1}]\Bigr)d^{2}zd^{2}w.$ Using these formulas, we can write: $\begin{array}[]{l}a_{1}\Bigl(\hat{\tau}\bigl({\bf t}-[a_{1}^{-1}]\bigr)\bar{\tau}\bigl({\bf t}\bigr)-\bar{\tau}\bigl({\bf t}-[a_{1}^{-1}]\bigr)\hat{\tau}\bigl({\bf t}\bigr)\Bigr)-\hat{\bar{\tau}}({\bf t}\bigr)\,\tau({\bf t}-[a^{-1}]\bigr)\\
+\\
+\phantom{aaaaaaaaaaaaaaaaaaa}\displaystyle{=\int_{\mbox{\Bbbb C}}\!\int_{\mbox{\Bbbb C}}e^{\xi({\bf t},z)+\xi({\bf t},w)}\hat{\rho}(z)\bar{\rho}(w)\,T(z,w,{\bf t})d^{2}zd^{2}w,}\end{array}$ (4.6) where $\begin{array}[]{lll}T(z,w,{\bf t})&=&(a_{1}-z)\tau\Bigl({\bf t}-[z^{-1}]-[a_{1}^{-1}]\Bigr)\tau\Bigl({\bf t}-[w^{-1}]\Bigr)\\
+&&\\
+&&-(a_{1}-w)\tau\Bigl({\bf t}-[w^{-1}]-[a_{1}^{-1}]\Bigr)\tau\Bigl({\bf t}-[z^{-1}]\Bigr)\\
+&&\\
+&&-(w-z)\tau\Bigl({\bf t}-[z^{-1}]-[w^{-1}]\Bigr)\tau\Bigl({\bf t}-[a_{1}^{-1}]\Bigr).\end{array}$ But since $\tau({\bf t})$ is a KP
+tau-function, $T(z,w,{\bf t})=0$ by virtue of equation ( 2.2 ),
+where one should put $a_{2}=z$ , $a_{3}=w$ . We will need two corollaries of equation ( 4.5 ) obtained by
+expanding the both sides in inverse powers of $a_{1}$ as $a_{1}\to\infty$ . In the leading order we obtain the equation $\partial_{x}\log\frac{\bar{\tau}}{\hat{\tau}}=\frac{\hat{\bar{\tau}}\,\tau}{\hat{\tau}\,\bar{\tau}}$ (4.7) (recall that $x=t_{1}$ ). The expansion to the next order
+gives the equation $\partial_{t_{2}}\log\frac{\bar{\tau}}{\hat{\tau}}-\partial^{2}_{x}\log\frac{\bar{\tau}}{\hat{\tau}}+(\partial_{x}\log\hat{\tau})^{2}-(\partial_{x}\log\bar{\tau})^{2}+2\frac{\hat{\bar{\tau}}\,\tau}{\hat{\tau}\,\bar{\tau}}\,\partial_{x}\log\tau=0.$ (4.8) Combining it with ( 4.7 ), one can exclude $\hat{\bar{\tau}}$ and obtain the equation $\partial_{t_{2}}\log\frac{\bar{\tau}}{\hat{\tau}}-\partial^{2}_{x}\log\frac{\bar{\tau}}{\hat{\tau}}-\Bigl(\partial_{x}\log\frac{\bar{\tau}}{\hat{\tau}}\Bigr)^{2}-2\Bigl(\partial_{x}\log\frac{\hat{\tau}}{\tau}\Bigr)\Bigl(\partial_{x}\log\frac{\bar{\tau}}{\hat{\tau}}\Bigr)=0,$ (4.9) which will be used below. It is convenient to depict the four KP tau-functions
+( 4.3 ) on the following diagram: $\begin{array}[]{ccc}\bar{\tau}&\stackrel{{\scriptstyle\bar{\phi}}}{{\longrightarrow}}&\hat{\bar{\tau}}\\
+\uparrow\hbox to0.0pt{$\displaystyle{\scriptstyle\phi^{\prime}}$\hss}&&\uparrow\hbox to0.0pt{$\displaystyle{\scriptstyle\hat{\phi}}$\hss}\\
+\tau&\stackrel{{\scriptstyle\phi}}{{\longrightarrow}}&\hat{\tau}\end{array}$ (4.10) Each arrow in ( 4.10 ) is equipped with the KP wave
+function that defines the corresponding mKP solution (i.e., the
+KP BD transformation). They are: $\phi=\frac{\hat{\tau}}{\tau},\quad\phi^{\prime}=\frac{\bar{\tau}}{\tau},\quad\bar{\phi}=\frac{\hat{\bar{\tau}}}{\bar{\tau}},\quad\hat{\phi}=\frac{\hat{\bar{\tau}}}{\hat{\tau}}.$ (4.11) The first two are associated with the KP Lax operator $L$ corresponding to the initial solution with the tau-function $\tau$ ,
+while the other two, $\bar{\phi}$ and $\hat{\phi}$ , are associated
+with the KP Lax operators $\bar{L}$ and $\hat{L}$ corresponding to
+the KP solutions with the tau-functions $\bar{\tau}$ and $\hat{\tau}$ respectively. The mKP Lax operators for the four mKP solutions $(\tau,\hat{\tau})$ , $(\tau,\bar{\tau})$ , $(\hat{\tau},\hat{\bar{\tau}})$ , $(\bar{\tau},\hat{\bar{\tau}})$ will be denoted as ${\cal L}$ , ${\cal L}^{\prime}$ , $\hat{\cal L}$ , $\bar{\cal L}$ respectively. Each of them is obtained by
+“dressing” the differential operator $\partial_{x}$ with the dressing
+operators ${\cal W}$ , ${\cal W}^{\prime}$ , $\hat{\cal W}$ , $\bar{\cal W}$ as in ( 3.50 ): $\begin{array}[]{ccc}\bar{\tau}&\stackrel{{\scriptstyle\bar{\cal W}}}{{\longrightarrow}}&\hat{\bar{\tau}}\\
+\uparrow\hbox to0.0pt{$\displaystyle{\scriptstyle{\cal W}^{\prime}}$\hss}&&\uparrow\hbox to0.0pt{$\displaystyle{\scriptstyle\hat{\cal W}}$\hss}\\
+\tau&\stackrel{{\scriptstyle{\cal W}}}{{\longrightarrow}}&\hat{\tau}\end{array}$ (4.12) Accordingly, along with $\varphi({\bf t},z)$ given by ( 3.43 ), we can introduce the BA functions for the
+other three solutions: $\begin{array}[]{l}\displaystyle{\varphi^{\prime}({\bf t},z)={\cal W}^{\prime}e^{\xi({\bf t},z)}=e^{\xi({\bf t},z)}\frac{\tau({\bf t}-[z^{-1}])}{\bar{\tau}({\bf t})}},\\
+\\
+\displaystyle{\hat{\varphi}({\bf t},z)=\hat{\cal W}e^{\xi({\bf t},z)}=e^{\xi({\bf t},z)}\frac{\hat{\tau}({\bf t}-[z^{-1}])}{\hat{\bar{\tau}}({\bf t})}},\\
+\\
+\displaystyle{\bar{\varphi}({\bf t},z)=\bar{\cal W}e^{\xi({\bf t},z)}=e^{\xi({\bf t},z)}\frac{\bar{\tau}({\bf t}-[z^{-1}])}{\hat{\bar{\tau}}({\bf t})}}.\end{array}$ (4.13) The next theorem states that the mKP dressing
+operators ${\cal W}^{\prime}$ , $\hat{\cal W}$ , $\bar{\cal W}$ can be expressed through ${\cal W}$ and the ratio $S({\bf t})=\frac{\bar{\tau}({\bf t})}{\hat{\tau}({\bf t})},$ (4.14) which in what follows will be identified with a wave function
+for the mKP Lax operator ${\cal L}$ in the sense
+of Definition 3.1 (see Theorem 4.4 below). Theorem 4.1 The dressing operators ${\cal W}^{\prime}$ , $\hat{\cal W}$ , $\bar{\cal W}$ in the diagram
+( 4.12 ) are expressed through ${\cal W}$ and $S$ given by
+( 4.14 ) as follows: $\begin{array}[]{l}{\cal W}^{\prime}=S^{-1}{\cal W},\\
+\\
+\hat{\cal W}=S_{x}^{-1}\partial_{x}{\cal W}\partial_{x}^{-1},\\
+\\
+\bar{\cal W}=S_{x}^{-1}S^{2}\partial_{x}S^{-1}{\cal W}\partial_{x}^{-1},\end{array}$ (4.15) where the right-hand sides are to be understood
+as compositions of the operators and $S_{x}=\partial_{x}S$ . Proof. The first equality in ( 4.15 ) is evident from the definitions.
+To prove the second one, it is enough to check the equality $e^{\xi({\bf t},z)}\frac{\hat{\tau}({\bf t}-[z^{-1}])}{\hat{\bar{\tau}}({\bf t})}=z^{-1}S_{x}^{-1}({\bf t})\partial_{x}\varphi({\bf t},z)$ (4.16) which is the result of acting by both sides of $\hat{\cal W}=S_{x}^{-1}\partial_{x}{\cal W}\partial_{x}^{-1}$ to the
+exponential function $e^{\xi({\bf t},z)}$ . Plugging here $\varphi$ from ( 3.43 ), we rewrite ( 4.16 ) as $S_{x}\,\frac{\hat{\tau}^{[z]}}{\hat{\bar{\tau}}}=\frac{\tau^{[z]}}{\hat{\tau}}\Bigl(1+z^{-1}\partial_{x}\log\frac{\tau^{[z]}}{\hat{\tau}}\Bigr),$ (4.17) where for the sake of brevity we have
+denoted $\tau^{[z]}=\tau({\bf t}-[z^{-1}])$ , $\hat{\tau}^{[z]}=\hat{\tau}({\bf t}-[z^{-1}])$ .
+Equation ( 4.7 ) states that $S_{x}=\frac{\hat{\bar{\tau}}\tau}{\hat{\tau}^{2}},$ (4.18) which is to be substituted into the the left-hand side of
+( 4.17 ).
+To transform the right-hand side, we use equation ( 3.7 ).
+Letting $a_{2}\to\infty$ and $a_{1}=z$ in it, we obtain the
+equality $1+z^{-1}\partial_{x}\log\frac{\tau^{[z]}}{\hat{\tau}}=\frac{\hat{\tau}^{[z]}\tau}{\hat{\tau}\tau^{[z]}},$ which, together with ( 4.18 ), converts equation ( 4.17 )
+into identity. The third equation in ( 4.15 ) can be
+proved in a similar way. Remark 4.1 The BD transformations of the mKP hierarchy defined by the
+diagram ( 4.10 ) were considered in [ 12 , 32 ] (along with transformations of some other types) under
+the name of “gauge transformations”. 4.2 From mKP to SchKP and back The pair of
+KP tau-functions $(\hat{\tau},\bar{\tau})$ considered in Section 4.1 can be regarded as
+a solution of the SchKP and, after a change of variables,
+HD hierarchies.
+Moreover, any solution of the latter hierarchies can be obtained
+in this way. It turns out that there exist bilinear equations which
+connect $\hat{\tau}$ and $\bar{\tau}$ , without any participation
+of $\tau$ . Theorem 4.2 Let the pairs $(\tau,\hat{\tau})$ , $(\tau,\bar{\tau})$ be any two solutions of the mKP hierarchy with the same
+first members of the pairs. Then the KP tau-functions $\hat{\tau}$ , $\bar{\tau}$ satisfy the bilinear equation $\oint_{C_{\infty}}e^{\xi({\bf t}-{\bf t^{\prime}},\lambda)}\Bigl[\hat{\tau}({\bf t}-[\lambda^{-1}])\bar{\tau}({\bf t^{\prime}}+[\lambda^{-1}])+\hat{\tau}({\bf t^{\prime}}+[\lambda^{-1}])\bar{\tau}({\bf t}-[\lambda^{-1}])\Bigr]\,d\lambda=0$ (4.19) valid for all ${\bf t},\,{\bf t^{\prime}}$ . Proof. The first step is to make the Miwa substitution ( 2.6 )
+in ( 4.19 ),
+which converts the equation to be proved into the following one: $\begin{array}[]{l}\displaystyle{\sum_{k=1}^{m+1}(-1)^{k-1}\Delta_{m}(a_{1},\ldots,\hat{a}_{k},\ldots,a_{m+1})\prod_{i=1}^{m-1}(b_{i}-a_{k})}\\
+\\
+\phantom{aaaaaaa}\displaystyle{\times\,\left[\hat{\tau}\Bigl({\bf t}-\sum_{j=1,\neq k}^{m+1}[a_{j}^{-1}]\Bigr)\bar{\tau}\Bigl({\bf t}-[a^{-1}_{k}]-\sum_{j=1}^{m-1}[b_{j}^{-1}]\Bigr)\right.}\\
+\\
+\phantom{aaaaaaaaaaaaaaa}\displaystyle{+\,\left.\bar{\tau}\Bigl({\bf t}-\sum_{j=1,\neq k}^{m+1}[a_{j}^{-1}]\Bigr)\hat{\tau}\Bigl({\bf t}-[a^{-1}_{k}]-\sum_{j=1}^{m-1}[b_{j}^{-1}]\Bigr)\right]=0,\quad m\geq 2.}\end{array}$ (4.20) (The residue calculus is the same as the one leading to ( 2.7 ).)
+In fact, equation ( 4.20 )
+is actually equivalent to ( 4.19 ).
+Namely, the argument from [ 36 ] (see the proof of Proposition 1 there), which uses properties of
+symmetric functions, allows us to prove
+the following proposition. Proposition 4.2 Equations ( 4.19 ) and ( 4.20 ) are equivalent
+(provided that the latter one
+is valid for all $m\geq 2$ and all sets of points). Using the short-hand notation ( 2.3 ), we write: $\hat{\tau}\Bigl({\bf t}-\!\!\sum_{j=1,\neq k}^{m+1}[a_{j}^{-1}]\Bigr)=\hat{\tau}^{1\,\ldots\,\hat{k}\ldots\,m\!+\!1},\qquad\bar{\tau}\Bigl({\bf t}-\![a_{k}^{-1}]-\!\!\sum_{l=1}^{m-1}[b_{l}^{-1}]\Bigr)=\bar{\tau}^{k\tilde{1}\,\ldots\,\widetilde{m\!-\!1}},$ where $\tilde{l}$ is related to $b_{l}$ . This allows us to
+represent
+( 4.20 ) in a more compact form: $\begin{array}[]{l}\displaystyle{\sum_{k=1}^{m+1}(-1)^{k-1}\Delta_{m}(a_{1},\ldots,\hat{a}_{k},\ldots,a_{m+1})\Delta_{m}(a_{k},b_{1},\,\ldots,\,,b_{m-1})}\\
+\\
+\phantom{aaaaaaaaaaaaaaa}\displaystyle{\times\,\Bigl(\hat{\tau}^{1\,\ldots\,\hat{k}\ldots\,m\!+\!1}\,\bar{\tau}^{k\tilde{1}\,\ldots\,\widetilde{m\!-\!1}}\,+\,\bar{\tau}^{1\,\ldots\,\hat{k}\ldots\,m\!+\!1}\,\hat{\tau}^{k\tilde{1}\,\ldots\,\widetilde{m\!-\!1}}\Bigr)=0.}\end{array}$ (4.21) The next step is to use the first equation in ( 2.36 ).
+Adopted to our case, it yields: $\begin{array}[]{l}\displaystyle{\hat{\tau}\Bigl({\bf t}-\!\!\sum_{j=1,\neq k}^{m+1}[a_{j}^{-1}]\Bigr)=\int_{\mbox{\Bbbb C}}d^{2}z\hat{\rho}(z)\,e^{\xi({\bf t},z)}\Bigl(\prod_{j=1,\neq k}^{m+1}\!\!\frac{a_{j}-z}{a_{j}}\Bigr)\tau\Bigl({\bf t}\!-\![z^{-1}]-\!\!\sum_{j=1,\neq k}^{m+1}[a_{j}^{-1}]\Bigr)}\end{array}$ (4.22) $\begin{array}[]{l}\displaystyle{\bar{\tau}\Bigl({\bf t}-\![a_{k}^{-1}]-\!\!\sum_{l=1}^{m-1}[b_{l}^{-1}]\Bigr)=\int_{\mbox{\Bbbb C}}d^{2}\zeta\bar{\rho}(\zeta)\,e^{\xi({\bf t},\zeta)}\frac{a_{k}-\zeta}{a_{k}}\Bigl(\prod_{j=1,\neq k}^{m+1}\!\!\frac{b_{l}-\zeta}{b_{l}}\Bigr)}\\
+\\
+\displaystyle{\phantom{aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}\times\,\tau\Bigl({\bf t}\!-\![\zeta^{-1}]\!-\![a_{k}^{-1}]\!-\!\!\sum_{l=1}^{m-1}[b_{l}^{-1}]\Bigr)}.\end{array}$ (4.23) Then the left-hand side of ( 4.21 ), call it $F$ ,
+becomes, up to an irrelevant
+common factor: $F=\int_{\mbox{\Bbbb C}}\!\int_{\mbox{\Bbbb C}}d^{2}zd^{2}\zeta\hat{\rho}(z)\bar{\rho}(\zeta)\,e^{\xi({\bf t},z)+\xi({\bf t},\zeta)}\left(\sum_{k=1}^{m+1}(-1)^{k-1}\Bigl(R_{k}(z,\zeta)+R_{k}(\zeta,z)\Bigr)\right),$ where $\begin{array}[]{lll}R_{k}(z,\zeta)&=&\Delta_{m+1}(a_{1},\ldots,\hat{a}_{k},\ldots,a_{m+1},z)\Delta_{m+1}(a_{k},b_{1},\,\ldots,\,,b_{m-1},\zeta)\\
+&&\\
+&&\times\,\,\displaystyle{\tau\Bigl({\bf t}\!-\![z^{-1}]-\!\!\sum_{j=1,\neq k}^{m+1}[a_{j}^{-1}]\Bigr)\,\tau\Bigl({\bf t}\!-\![\zeta^{-1}]\!-\![a_{k}^{-1}]\!-\!\!\sum_{l=1}^{m-1}[b_{l}^{-1}]\Bigr).}\end{array}$ (4.24) To unify the notation for the
+variables, denote $z=a_{m+2}$ , $\zeta=b_{m}$ . Then, using the
+notation as in ( 2.10 ), we have: $R_{k}(a_{m+2},b_{m})=\tau\bigl[a_{1},\,\ldots,a_{m+2}\bigr]\,\tau\bigl[a_{k},b_{1},\,\ldots,b_{m}\bigr].$ Then equation ( 2.10 ) with the change $m\to m+1$ yields: $\sum_{k=1}^{m+1}(-1)^{k-1}R_{k}(a_{m+2},b_{m})=(-1)^{m}\,\tau\bigl[a_{1},\ldots,a_{m+1}\bigr]\,\tau\bigl[a_{m+2},b_{1},\ldots,b_{m}\bigr].$ (4.25) Since the second multiplier is antisymmetric with respect to
+the interchange $a_{m+2}\leftrightarrow b_{m}$ , we have $\sum_{k=1}^{m+1}(-1)^{k-1}\Bigl(R_{k}(z,\zeta)+R_{k}(\zeta,z)\Bigr)=0,$ so $F=0$ and equation ( 4.20 ) is proved.
+By virtue of Proposition 4.2 , this
+proves equation ( 4.19 ). Corollary 4.1 For all $a,b\in\mbox{\Bbb C}$ , the function $\tau({\bf t}|a,b)=a\hat{\tau}({\bf t})+b\bar{\tau}({\bf t})$ is a tau-function of the KP hierarchy, i.e., it
+satisfies the integral bilinear relation ( 2.1 ).
+More generally, let $n$ pairs $(\tau,\tau^{(\alpha)})$ ( $\alpha=1,\ldots,n$ ) be
+solutions to the mKP hierarchy, then for all $c_{1},\ldots,c_{n}\in\mbox{\Bbb C}$ the function $\tau({\bf t}|\{c_{1},\ldots,c_{n}\})=\sum_{\alpha=1}^{n}c_{\alpha}\tau^{(\alpha)}({\bf t})$ is a KP tau-function. This statement immediately follows from ( 4.19 )
+and from the fact that all the $\tau^{(\alpha)}$ ’s are
+KP tau-functions. Corollary 4.2 Let $(\tau,\hat{\tau})$ , $(\tau,\bar{\tau})$ be any two
+solutions of the mKP hierarchy. Then the KP tau-functions $\hat{\tau}$ , $\bar{\tau}$ satisfy the bilinear equation $a_{12}\Bigl(\hat{\tau}^{12}\bar{\tau}^{3}+\hat{\tau}^{3}\bar{\tau}^{12}\Bigr)+a_{23}\Bigl(\hat{\tau}^{23}\bar{\tau}^{1}+\hat{\tau}^{1}\bar{\tau}^{23}\Bigr)+a_{31}\Bigl(\hat{\tau}^{13}\bar{\tau}^{2}+\hat{\tau}^{2}\bar{\tau}^{13}\Bigr)=0,$ (4.26) where the short-hand notations ( 2.3 ) are used. Proof. This is the simplest particular case of ( 4.20 )
+obtained at $m=2$ , $b_{1}=\infty$ . Let us give another proof of equation ( 4.26 ) which is not
+based on explicit realization of the BD transformations.
+The starting point is the following system of equations
+of the type ( 3.7 ) written for the mKP solutions $(\tau,\hat{\tau})$ and $(\tau,\bar{\tau})$ : $\left\{\begin{array}[]{l}a_{1}\hat{\tau}^{13}\tau^{23}-a_{2}\hat{\tau}^{23}\tau^{13}-a_{12}\hat{\tau}^{3}\tau^{123}=0,\\
+\\
+a_{1}\bar{\tau}^{13}\tau^{23}-a_{2}\bar{\tau}^{23}\tau^{13}-a_{12}\bar{\tau}^{3}\tau^{123}=0,\\
+\\
+a_{2}\hat{\tau}^{21}\tau^{31}-a_{3}\hat{\tau}^{31}\tau^{21}-a_{23}\hat{\tau}^{1}\tau^{123}=0,\\
+\\
+a_{2}\bar{\tau}^{21}\tau^{31}-a_{3}\bar{\tau}^{31}\tau^{21}-a_{23}\bar{\tau}^{1}\tau^{123}=0,\\
+\\
+a_{3}\hat{\tau}^{32}\tau^{12}-a_{1}\hat{\tau}^{12}\tau^{32}-a_{31}\hat{\tau}^{2}\tau^{123}=0,\\
+\\
+a_{3}\bar{\tau}^{21}\tau^{31}-a_{1}\bar{\tau}^{12}\tau^{32}-a_{31}\bar{\tau}^{2}\tau^{123}=0.\end{array}\right.$ Let us consider the first four equation. They form a system
+of homogeneous linear equations for $\tau^{12},\tau^{23},\tau^{31},\tau^{123}$ .
+Existence of nontrivial solutions implies that the matrix $M_{13}=\left(\begin{array}[]{cccc}0&a_{1}\hat{\tau}^{13}&-a_{2}\hat{\tau}^{23}&-a_{12}\hat{\tau}^{3}\\
+&&&\\
+0&a_{1}\bar{\tau}^{13}&-a_{2}\bar{\tau}^{23}&-a_{12}\bar{\tau}^{3}\\
+&&&\\
+-a_{3}\hat{\tau}^{31}&0&a_{2}\hat{\tau}^{21}&-a_{23}\hat{\tau}^{1}\\
+\\
+-a_{3}\bar{\tau}^{31}&0&a_{2}\bar{\tau}^{21}&-a_{23}\bar{\tau}^{1}\end{array}\right).$ is degenerate, i.e., $\det M_{13}=0$ . Calculation of the
+determinant gives: $\frac{\det M_{13}}{a_{1}a_{2}a_{3}}=\hat{\tau}^{13}\bar{\tau}^{13}R-(\hat{\tau}^{13})^{2}\bar{H}-(\bar{\tau}^{13})^{2}\hat{H},$ where $\begin{array}[]{l}R=a_{12}\Bigl(\hat{\tau}^{12}\bar{\tau}^{3}+\hat{\tau}^{3}\bar{\tau}^{12}\Bigr)+a_{23}\Bigl(\hat{\tau}^{23}\bar{\tau}^{1}+\hat{\tau}^{1}\bar{\tau}^{23}\Bigr)+a_{31}\Bigl(\hat{\tau}^{13}\bar{\tau}^{2}+\hat{\tau}^{2}\bar{\tau}^{13}\Bigr),\\
+\\
+\hat{H}=a_{12}\hat{\tau}^{12}\hat{\tau}^{3}+a_{23}\hat{\tau}^{23}\hat{\tau}^{1}+a_{31}\hat{\tau}^{31}\hat{\tau}^{2},\\
+\\
+\bar{H}=a_{12}\bar{\tau}^{12}\bar{\tau}^{3}+a_{23}\bar{\tau}^{23}\bar{\tau}^{1}+a_{31}\bar{\tau}^{31}\bar{\tau}^{2}.\end{array}$ Since both $\hat{\tau}$ and $\bar{\tau}$ are KP tau-functions, $\bar{H}=\hat{H}=0$ by virtue of equation
+( 2.4 ). Therefore, $\det M_{13}=0$ if and only if $R=0$ . Remark 4.2 Equation ( 4.26 ) alone does not imply that $\hat{\tau}$ and $\bar{\tau}$ are KP tau-functions.
+The simplest counterexample is $\hat{\tau}({\bf t})=1$ (satisfies KP), $\bar{\tau}({\bf t})=t_{n}$ for $n\geq 2$ (does not satisfy KP), but
+this pair solves equation ( 4.26 ). Corollary 4.3 The function $S({\bf t})=\frac{\bar{\tau}({\bf t})}{\hat{\tau}({\bf t})}$ (4.27) satisfies the linear equation $a_{12}\hat{\tau}^{3}\hat{\tau}^{12}(S^{3}+S^{12})+a_{23}\hat{\tau}^{1}\hat{\tau}^{23}(S^{1}+S^{23})+a_{31}\hat{\tau}^{2}\hat{\tau}^{31}(S^{2}+S^{31})=0,$ (4.28) or, in a more compact form, $\sum_{(\alpha\beta\gamma)=(123)\atop\rm and\;cycles}a_{\alpha\beta}\hat{\tau}^{\alpha\beta}\hat{\tau}^{\gamma}(S^{\alpha\beta}+S^{\gamma})=0.$ (4.29) Proof. This directly follows from equation
+( 4.26 ) after the substitution ( 4.27 ). There are more equations for the $S$ -function which follow
+from ( 4.26 ) just in an equally simple way as ( 4.29 ).
+An analog of
+( 4.29 ) with the $\bar{\tau}$ -function instead of $\hat{\tau}$ is $\sum_{(\alpha\beta\gamma)=(123)\atop\rm and\;cycles}a_{\alpha\beta}\bar{\tau}^{\alpha\beta}\bar{\tau}^{\gamma}\Bigl(\frac{1}{S^{\alpha\beta}}+\frac{1}{S^{\gamma}}\Bigr)=0.$ (4.30) From the fact that $\bar{\tau}$ is a KP tau-function, it follows that
+along with ( 4.29 ) the function $S$ satisfies the bilinear
+equation $\sum_{(\alpha\beta\gamma)=(123)\atop\rm and\;cycles}a_{\alpha\beta}\hat{\tau}^{\alpha\beta}\hat{\tau}^{\gamma}S^{\alpha\beta}S^{\gamma}=0.$ (4.31) Theorem 4.3 The function $S({\bf t})$ defined in ( 4.27 ) satisfies the
+equation $\frac{S^{1}-S^{12}}{S^{3}-S^{23}}\cdot\frac{S^{2}-S^{23}}{S^{1}-S^{13}}\cdot\frac{S^{3}-S^{13}}{S^{2}-S^{12}}=1,$ (4.32) which is the discrete SchKP equation. Proof. Let us write the
+three equations ( 4.29 ), ( 4.31 ) and the 3-term
+bilinear KP equation for $\hat{\tau}$ in the
+matrix form: $\left(\begin{array}[]{ccc}1&1&1\\
+S^{1}+S^{23}&S^{2}+S^{13}&S^{3}+S^{12}\\
+S^{1}S^{23}&S^{2}S^{13}&S^{3}S^{12}\end{array}\right)\left(\begin{array}[]{c}a_{23}\hat{\tau}^{1}\hat{\tau}^{23}\\
+a_{31}\hat{\tau}^{2}\hat{\tau}^{13}\\
+a_{12}\hat{\tau}^{3}\hat{\tau}^{12}\end{array}\right)=0.$ (4.33) In order for this system to have nonzero solutions,
+determinant of the $3\times 3$ matrix must vanish: $\left|\begin{array}[]{ccc}1&1&1\\
+\\
+S^{1}+S^{23}&S^{2}+S^{13}&S^{3}+S^{12}\\
+\\
+S^{1}S^{23}&S^{2}S^{13}&S^{3}S^{12}\end{array}\right|=0.$ Calculation of the determinant gives equation ( 4.32 ). At the same time, equation ( 4.32 ) generates the whole
+infinite hierarchy of SchKP partial differential
+equations for $S({\bf t})$ . To see this, recall that $S^{j}=S({\bf t}-[a_{j}^{-1}])$ , $S^{jk}=S({\bf t}-[a_{j}^{-1}]-[a_{k}^{-1}])$ . Letting successively $a_{3}\to\infty$ , $a_{2}\to\infty$ and, eventually, $a_{1}\to\infty$ , in ( 4.32 ), and
+expanding the $S$ -function in inverse powers of $a_{1},a_{2},a_{3}$ ,
+one arrives at the equation $\left(4\frac{S_{t}}{S_{x}}-\{S,x\}\right)_{x}=3\left(\frac{S_{y}}{S_{x}}\right)_{y}+\frac{3}{2}\left(\frac{S_{y}^{2}}{S_{x}^{2}}\right)_{x},$ (4.34) where we put $t_{1}=x$ , $t_{2}=y$ , $t_{3}=t$ and $\{S,x\}=\frac{S_{xxx}}{S_{x}}-\frac{3}{2}\left(\frac{S_{xx}}{S_{x}}\right)^{2}$ (4.35) is the Schwarzian derivative.
+This is the (2+1)-dimensional
+Schwarzian KP equation. Its solutions that do not depend on $y$ satisfy the simpler (1+1)-dimensional Schwarzian KdV equation $4S_{t}=S_{x}\{S,x\}.$ (4.36) Let us present some other forms and corollaries of the linear
+equation ( 4.28 ) for the $S({\bf t})$ .
+First of all we note that it can be rewritten
+in the form $a_{1}^{-1}(a_{2}^{-1}-a_{3}^{-1})\hat{U}^{23}\Delta^{23}S+a_{2}^{-1}(a_{3}^{-1}-a_{1}^{-1})\hat{U}^{31}\Delta^{31}S+a_{3}^{-1}(a_{1}^{-1}-a_{2}^{-1})\hat{U}^{12}\Delta^{12}S=0,$ (4.37) or, after an overall shift of the variables, $a_{1}^{-1}(a_{2}^{-1}-a_{3}^{-1})\hat{U}_{23}\Delta_{23}S+a_{2}^{-1}(a_{3}^{-1}-a_{1}^{-1})\hat{U}_{31}\Delta_{31}S+a_{3}^{-1}(a_{1}^{-1}-a_{2}^{-1})\hat{U}_{12}\Delta_{12}S=0,$ (4.38) where $\hat{U}^{\alpha\beta}=\frac{\hat{\tau}\,\hat{\tau}^{\alpha\beta}}{\hat{\tau}^{\alpha}\hat{\tau}^{\beta}},\qquad\hat{U}_{\alpha\beta}=\frac{\hat{\tau}\,\hat{\tau}_{\alpha\beta}}{\hat{\tau}_{\alpha}\hat{\tau}_{\beta}}$ and $\Delta^{\alpha\beta}S=S^{\alpha\beta}+S-S^{\alpha}-S^{\beta},\qquad\Delta_{\alpha\beta}S=S_{\alpha\beta}+S-S_{\alpha}-S_{\beta}.$ So, $\Delta_{\alpha\beta}$ is the difference operator $\Delta_{\alpha\beta}=1+e^{D(a_{\alpha})+D(a_{\beta})}-e^{D(a_{\alpha})}-e^{D(a_{\beta})},$ (4.39) where the operator $D(a)$ is defined in ( 3.13 ), and
+similarly for the $\Delta^{\alpha\beta}$ . It is not difficult to see that in the limit $a_{3}\to\infty$ ( 4.38 ) converts into the equation $(a_{1}-a_{2})\hat{U}_{12}\Delta_{12}S+\partial_{t_{1}}(S_{1}-S_{2})=0.$ (4.40) The further limit $a_{2}\to\infty$ yields the equation $\Bigl(\partial_{t_{1}}\log(\hat{\tau}_{1}/\hat{\tau})-a_{1}\Bigr)\partial_{t_{1}}(S_{1}-S)+\partial_{t_{1}}^{2}S+\frac{1}{2}(\partial_{t_{2}}+\partial_{t_{1}}^{2})(S_{1}-S)=0,$ or $\partial_{t_{1}}\log(\hat{\tau}_{1}/\hat{\tau})\Bigl(e^{D(a_{1})}\!-\!1\Bigr)\partial_{t_{1}}S+\frac{1}{2}\Bigl(e^{D(a_{1})}\!-\!1\Bigr)\Bigl(\partial_{t_{2}}S+\partial_{t_{1}}^{2}S-2a_{1}\partial_{t_{1}}S\Bigr)+\partial_{t_{1}}^{2}S=0.$ (4.41) The notation $S({\bf t})$ for the ratio ( 4.27 ) is deliberately
+chosen to be the same as the one introduced in Theorem 3.1 .
+The next theorem provides identification of the $S({\bf t})$ with
+a wave function of the mKP hierarchy. Theorem 4.4 Let $\phi({\bf t})$ , $\phi^{\prime}({\bf t})$ be two
+wave functions of the KP hierarchy associated
+with the KP tau-functions $\hat{\tau}({\bf t})$ and $\bar{\tau}({\bf t})$ respectively. Then the following holds: a) The mKP Lax operators ${\cal L}$ and $\bar{\cal L}$ corresponding to the solutions $(\tau,\hat{\tau})$ , $(\tau,\bar{\tau})$ determined by $\phi({\bf t})$ and $\phi^{\prime}({\bf t})$ respectively,
+are connected by the formula $\bar{\cal L}=S^{-1}{\cal L}S.$ (4.42) b) The function $S({\bf t})=\frac{\phi^{\prime}({\bf t})}{\phi({\bf t})}=\frac{\bar{\tau}({\bf t})}{\hat{\tau}({\bf t})}$ (4.43) is an mKP wave function in the sense
+of Definition 3.1 .
+Conversely, any mKP wave function has the form ( 4.43 )
+with some KP wave functions $\phi$ , $\phi^{\prime}$ ; c) $S^{*}({\bf t})=S^{-1}({\bf t})$ is an adjoint mKP wave function
+in the sense
+of Definition 3.1 ; Part a) easily follows from the definitions.
+An outline of the proof of part b) is given below.
+For the proof we need the following lemma. Lemma 4.1 The function $S=S({\bf t})$ defined in ( 4.43 ) satisfies the
+linear equation $\partial_{t_{2}}S=\partial_{x}^{2}S+2v_{0}\partial_{x}S,\qquad v_{0}=\partial_{x}\log\frac{\hat{\tau}}{\tau},$ (4.44) which is equation ( 3.66 ) for $k=2$ . Proof. In terms of the function $S$ , equation ( 4.9 ) acquires
+the form $\partial_{t_{2}}\log S-\partial_{x}^{2}\log S-(\partial_{x}\log S)^{2}-2v_{0}\partial_{x}\log S=0,$ which is the same as ( 4.44 ). Proof of Theorem 4.4 . The idea and the main steps of the proof are similar to
+those of Theorem 3.1 , so we omit some details. The starting point is equation ( 4.41 ). Substituting $\partial_{t_{2}}S$ from ( 4.44 ), we rewrite it as $\Bigl(\partial_{x}\log\frac{\hat{\tau}_{1}\tau}{\tau_{1}\hat{\tau}}\Bigr)e^{D(a_{1})}\partial_{x}S+\partial_{x}\log\frac{\hat{\tau}_{1}}{\tau}\Bigl(e^{D(a_{1})}\!-\!1\Bigr)\partial_{x}S+e^{D(a_{1})}\partial_{x}^{2}S-a_{1}\Bigl(e^{D(a_{1})}\!-\!1\Bigr)\partial_{x}S=0.$ (4.45) To transform the left-hand side, we use equation
+( 3.8 ). Letting $a_{2}\to\infty$ in it, we obtain the
+relation $\partial_{x}\log\frac{\hat{\tau}_{1}}{\tau}=a_{1}-a_{1}\frac{\hat{\tau}\tau_{1}}{\hat{\tau}_{1}\tau}$ (4.46) to be substituted into ( 4.45 ). After some simple transformations,
+equation ( 4.45 ) can be rewritten in the form $\partial_{x}\left(a\Bigl(1-e^{-D(a)}\Bigr)S-\Bigl(1-a^{-1}\partial_{x}\log\frac{\hat{\tau}}{\tau^{[a]}}\Bigr)^{-1}\partial_{x}S\right)=0,$ (4.47) where $\tau^{[a]}=\tau({\bf t}-[a^{-1}])$ .
+Therefore, we conclude that $a\Bigl(1-e^{-D(a)}\Bigr)S-\Bigl(1-a^{-1}\partial_{x}\log\frac{\hat{\tau}}{\tau^{[a]}}\Bigr)^{-1}\partial_{x}S=f,$ where the function $f$ does not depend on $x=t_{1}$ . This function
+is actually equal to zero. This follows from the fact that
+the same equation (but with zero right-hand side) is satisfied
+by the function $S$ defined in ( 4.43 ).
+Indeed, it is not difficult to check that $\Bigl(a_{1}+\partial_{x}\log\frac{\tau^{1}}{\hat{\tau}}\Bigr)\Bigl(\frac{\bar{\tau}}{\hat{\tau}}-\frac{\bar{\tau}^{1}}{\hat{\tau}^{1}}\Bigr)-\partial_{x}\Bigl(\frac{\bar{\tau}}{\hat{\tau}}\Bigr)=0$ (4.48) holds. To do this, one should use equations ( 4.5 ) and
+( 4.46 ). Therefore, we have proved that the
+function $S$ satisfies the linear equation $a\Bigl(1-e^{-D(a)}\Bigr)S({\bf t})-W({\bf t},a)\partial_{x}S({\bf t})=0,$ (4.49) where $W({\bf t},a)=\Bigl(1-a^{-1}\partial_{x}\log\frac{\hat{\tau}}{\tau^{[a]}}\Bigr)^{-1}=1+\sum_{k\geq 1}W_{k}({\bf t})a^{-k},\qquad W_{1}({\bf t})=v_{0}({\bf t}).$ (4.50) The functions $W_{k}({\bf t})$ are expressed through logarithmic
+derivatives of the tau-functions $\tau$ and $\hat{\tau}$ .
+The operator $e^{-D(a)}-1$ can be expanded using the
+elementary Schur polynomials as in ( 3.20 ): $\displaystyle{e^{-D(a)}-1=\sum_{k\geq 1}p_{k}(-[\partial_{x}^{-1}])a^{-k}.}$ Then from equation ( 4.49 ) it follows that the function $S$ satisfies linear equations of the form $p_{k+1}(-[\partial_{x}^{-1}])S+W_{k}\partial_{x}S=0,\qquad k\geq 1.$ (4.51) To identify them with ( 3.66 ), we note that
+the mKP BA function $\varphi({\bf t},z)$ given by ( 3.43 )
+satisfies the same equation ( 4.49 ), i.e., $\varphi({\bf t},z)-\varphi({\bf t}-[a^{-1}],z)-\Bigl(\partial_{x}\log\varphi({\bf t},a)\Bigr)^{-1}\partial_{x}\varphi({\bf t},z)=0.$ (4.52) This can be easily checked by
+substituting the expression ( 3.43 ) for $\varphi({\bf t},z)$ and
+using equation ( 4.46 ), then one can see that ( 4.52 ) is
+equivalent to the bilinear equation for the KP tau-function $\tau({\bf t})$ . Therefore, the BA function $\varphi$ satisfies ( 4.51 ): $p_{k+1}(-[\partial_{x}^{-1}])\varphi+W_{k}\partial_{x}\varphi=0,\qquad k\geq 1.$ (4.53) The structure of these equations allows one to
+express the derivative $\partial_{t_{k}}\varphi$ through derivatives $\partial_{t_{l}}\varphi$ with $l<k$ : $\partial_{t_{k}}\varphi={\sf A}_{k}(\partial_{t_{k-1}},\ldots,\partial_{t_{1}})\varphi,$ where ${\sf A}_{k}$ in the right-hand side is some differential
+operator in the variables $t_{1},\ldots,t_{k-1}$ . Applying it
+successively for $k=2,3,\ldots$ , it is possible to represent
+the right-hand side as a differential operator containing $\partial_{t_{1}}=\partial_{x}$ only: $\partial_{t_{k}}\varphi={\sf B}_{k}(\partial_{x})\varphi.$ However, we already know from Corollary 3.1 that
+for the BA function the operators ${\sf B}_{k}(\partial_{x})$ coincide with the
+operators ${\cal B}_{k}$ defined in ( 3.52 ) (see ( 3.58 )).
+Since the function $S$ satisfies the same linear equations as
+the BA function $\varphi$ , we conclude that from ( 4.51 )
+it follows that $\partial_{t_{k}}S={\cal B}_{k}S$ , i.e., $S$ defined
+in ( 4.43 ) is indeed an mKP wave function. It remains to prove the inverse statement: that
+any mKP wave function $S$ can be
+represented as a ratio of two KP tau-functions $\hat{\tau}$ and $\bar{\tau}$ obtained from some KP tau-function $\tau$ as results
+of two forward BD transformations $\tau\to\hat{\tau}$ and $\tau\to\bar{\tau}$ . This is already almost evident from the
+calculations done above. Indeed, we have checked that the BA
+function satisfies equation ( 4.52 ). Integrating it
+over $z$ with some density, we see that the same equation
+is satisfied by any wave function $S$ (i.e., equation
+( 4.49 )). But equation ( 4.48 ) means that $S$ can be represented as ratio of $\hat{\tau}$ and $\bar{\tau}$ . Remark 4.3 The transformation $\hat{\tau}\rightarrow\bar{\tau}$ is
+a BD transformation for KP hierarchy meaning that it sends any its solution
+to another solution. However, such BD transformations
+are in a sense of a different type
+than the forward and backward ones
+defined by equations ( 3.11 ) and ( 3.24 ) respectively.
+To be more precise, they can be realized as a composition of
+a forward and backward transformations, and for this reason they
+are called binary BD transformations.
+In this paper, we consider them from a slightly
+different angle than is usually accepted in the literature.
+Namely, following a more traditional approach one constructs
+a binary BD transformation starting from the pair $(\phi,\phi^{\prime*})$ of a KP wave function and an adjoint one. In this approach, the role
+of the function $S$ (the function which satisfies the SchKP equation)
+is played by the Baker-Akhiezer kernel doubly integrated with
+two density functions (for details see, e.g., the recent
+review [ 33 ] ). We, however, prefer to avoid dealing with
+adjoint wave functions and develop the theory
+using the couple of wave functions $(\phi,\phi^{\prime})$ . Now, let us prove an SchKP analogue of
+Theorem 3.3 , i.e., the statement
+that is in a sense inverse to the one of Theorem 4.4 . Theorem 4.5 Let $S({\bf t})$ be any solution to the SchKP equation
+( 4.32 ). Then there exist two functions $\hat{\tau}({\bf t})$ , $\bar{\tau}({\bf t})$ such that: a) The function $S$ is given by $S({\bf t})=\bar{\tau}({\bf t})/\hat{\tau}({\bf t})$ ; b) Both $\hat{\tau}({\bf t})$ and $\bar{\tau}({\bf t})$ are KP tau-functions satisfying the
+bilinear equation ( 2.1 ) and equation ( 4.26 )
+that connects them. Proof. The proof starts from rewriting equation ( 4.32 )
+in the form $(S^{1}-S^{12})(S^{2}-S^{23})(S^{3}-S^{13})=(S^{3}-S^{23})(S^{1}-S^{13})(S^{2}-S^{12}).$ Note that it is invariant under cyclic permutation of
+indices $(123)$ . Letting $a_{\gamma}\to\infty$ for $\gamma=1,2,3$ ,
+we have: $S_{x}^{\alpha}(S^{\beta}-S^{\alpha\beta})(S-S^{\beta})=S_{x}^{\beta}(S^{\alpha}-S^{\alpha\beta})(S-S^{\alpha})$ (4.54) for $(\alpha\beta)=(12),(23),(31)$ , where $S_{x}^{\alpha}=\partial_{x}S^{\alpha}$ . In terms of the function $R({\bf t},z)=\frac{S({\bf t})-S({\bf t}-[z^{-1}])}{S_{x}({\bf t})}$ equation ( 4.54 ) acquires the form $\frac{R({\bf t}-[a_{\alpha}^{-1}],a_{\beta})}{R({\bf t},a_{\beta})}=\frac{R({\bf t}-[a_{\beta}^{-1}],a_{\alpha})}{R({\bf t},a_{\alpha})},$ which allows us to apply Lemma 3.1 . It then
+follows that there exists a function $g({\bf t})$ such that $R({\bf t},a)=\frac{g({\bf t}-[a^{-1}])}{a\,g({\bf t})}.$ (4.55) A direct calculation (which uses equation ( 4.32 ))
+shows that the function $\phi({\bf t})=1/g({\bf t})$ (4.56) satisfies equation ( 3.33 ), i.e., is a solution to the mKP hierarchy.
+Theorem 3.3 implies
+that there exists a pair of KP tau-functions $\tau,\hat{\tau}$ connected by the bilinear equation ( 3.5 ) such that $\phi=\hat{\tau}/\tau$ . Note that if $S$ is a solution to ( 4.32 ), then $S^{\prime}=S^{-1}$ is another solution. Repeating the arguments above
+for this solution, we conclude that the function $\phi^{\prime}=S\phi=S/g$ , as well as $\phi$ , solves the mKP hierarchy. More generally, $S^{\prime\prime}=(aS+b)/(cS+d)$ for all $a,b,c,d\in\mbox{\Bbb C}$ is a solution, too.
+In the same way, this implies that any linear combination $\phi^{\prime\prime}=c\phi^{\prime}+d\phi$ solves the mKP hierarchy.
+According to Proposition 3.2 , $\phi$ and $\phi^{\prime}$ (and $\phi^{\prime\prime}$ ) are
+wave functions corresponding to one and the same solution to KP
+with a tau-function $\tau$ . Then $\phi=\hat{\tau}/\tau$ , $\phi^{\prime}=\bar{\tau}/\tau$ , and $(\tau,\hat{\tau})$ , $(\tau,\bar{\tau})$ are two solutions to the mKP hierarchy.
+Equations ( 4.19 ) and ( 4.28 ) that connect the tau-functions $\hat{\tau},\,\bar{\tau}$ then follow from Theorem 4.2 . Remark 4.4 It can be shown (see, e.g. [ 33 ] ) that the pair of tau-functions $(\tau,\hat{\bar{\tau}})$ on the second diagonal in
+the square diagram ( 4.10 ) satisfy the integral
+bilinear relation $\begin{array}[]{l}\displaystyle{\oint_{C_{\infty}}z^{2}e^{\xi({\bf t}-{\bf t}^{\prime},z)}\hat{\bar{\tau}}({\bf t}-[z^{-1}])\tau({\bf t}^{\prime}+[z^{-1}])\,dz=0,}\end{array}$ (4.57) and, therefore, can be regarded as a solution to the
+2-mKP hierarchy in the sense of
+Section 3.1 (see ( 3.2 )). 4.3 From mKP and SchKP to HD We have shown that the bilinear formulation of the SchKP hierarchy
+requires two KP tau-functions $\hat{\tau}$ and $\bar{\tau}$ such that
+they are connected by the bilinear equation ( 4.19 ).
+The dependent variable of the hierarchy is the $S$ -function,
+which is their ratio. The infinite
+hierarchy itself is obtained by expanding
+equation ( 4.32 ) in a Taylor series in negative powers
+of $a_{1},a_{2},a_{3}$ . A natural question arises whether the SchKP hierarchy admits
+a formulation of the Lax-Sato type, as it is the case for
+KP and mKP.
+In this section we show that the answer is yes, and the Lax-Sato
+form of the SchKP hierarchy is just what is called
+the (2+1) HD hierarchy. First of all, we need some technical preparations.
+Let $S(x)$ and $X(s)$ be two mutually inverse functions: $S\circ X=X\circ S=\mbox{Id}$ , or $S(X(s))=s,\qquad X(S(x))=x.$ (4.58) Differentiating these formulas, we get $S_{x}\,X_{s}=1,\;\;\mbox{where}\;\;S_{x}\equiv\partial_{x}S(x),\;X_{s}\equiv\partial_{s}X(s),$ where it is implied that $x$ and $s$ depend on each other
+as $s=S(x)$ (or $x=X(s)$ ).
+Given any function $f(x)$ of $x$ , the corresponding function of $s$ is $f(X(s))$ . The notation $f^{(x)}(x)$ for
+the $f(x)$ and $f^{(s)}(s)$ for $f(X(s))$ are sometimes useful,
+then we have the identity $f^{(x)}(x)=f^{(s)}(s)$ which states that
+the function $f$ is an invariant object defined regardless
+of the choice of coordinate ( $x$ or $s$ ).
+The vector fields $\partial_{x}$ and $\partial_{s}$ are connected by the formula $\partial_{x}=S_{x}\partial_{s},\quad S_{x}=S_{x}(X(s)).$ (4.59) Consider pseudo-differential operators in the variables $x$ and $s$ : $A^{(x)}=\sum_{k}a_{k}^{(x)}(x)\partial_{x}^{k},\qquad A^{(s)}=\sum_{k}a_{k}^{(s)}(s)(S_{x}\partial_{s})^{k},$ (4.60) with $A^{(x)}=A^{(s)}$ by the definition. Lemma 4.2 For a pseudo-differential operaror $A^{(x)}=A^{(s)}=A$ it holds: a) $A^{(s)}_{\geq 1}=A^{(x)}_{\geq 1}$ , b) $A_{\geq 2}^{(s)}=A^{(x)}_{\geq 1}-(A^{(x)}_{\geq 1}S)S_{x}^{-1}\partial_{x}$ , where $(A^{(x)}_{\geq 1}S)$ means action of the differential
+operator $A^{(x)}_{\geq 1}$ to the function $S(x)$ . The both equalities easily follow from the definitions.
+Some details of the proof can be found in [ 12 ] . The last technical remark is related to the case when
+the functions under consideration depend on a parameter $t$ (actually, we are interested in the case when the set
+of parameters ${\sf t}=\{t_{2},t_{3},t_{4},\ldots\}$ is infinite).
+Then the rule of change of variables from $(x,t)$ to $(s,t)$ implies that $\partial_{t}\Bigr|_{x}=\partial_{t}\Bigr|_{s}+S_{t}\partial_{s},\quad S_{t}\equiv\partial_{t}S(x,t),$ (4.61) where $\partial_{t}\Bigr|_{x}$ ( $\partial_{t}\Bigr|_{s}$ ) is the partial
+derivative at constant $x$ (respectively, $s$ ). Now we are ready to reformulate the results of the previous
+section using the framework of pseudo-differential operators.
+Let $S({\bf t})=S(x,{\sf t})$ ( ${\sf t}=\{t_{2},t_{3},\ldots\}$ ) be a wave function of the mKP
+hierarchy given by ( 4.43 ). In what follows it plays the
+role of the $S$ -function from ( 4.58 ) depending on
+the $t_{k}$ ’s as on parameters. So, we consider the change
+of variables $x\to s$ , where $s=S(x,{\sf t})$ (with fixed ${\sf t}$ ).
+Consider the mKP Lax operator ${\cal L}={\cal L}^{(x)}$ ( 3.50 ) acting to functions of $x$ and its $s$ -version,
+as in ( 4.60 ): ${\cal L}^{(x)}=\partial_{x}+\sum_{k\geq 0}v_{k}^{(x)}(x)\partial_{x}^{-k},\qquad{\sf L}^{(s)}=S_{x}\partial_{s}+\sum_{k\geq 0}v_{k}^{(s)}(s)(S_{x}\partial_{s})^{-k},$ (4.62) Proposition 4.3 Let $S(x,{\sf t})$ be a wave function for the mKP Lax operator ${\cal L}$ and the new independent space variable be $s=S(x,{\sf t})$ . Then the Lax equations ( 3.64 )
+for ${\cal L}={\cal L}^{(x)}$ imply the following Lax equations for ${\sf L}={\sf L}^{(s)}$ given by ( 4.62 ): $\partial_{t_{k}}{\sf L}=[({\sf L}^{k})_{\geq 2},\,{\sf L}],\qquad k\geq 2$ (4.63) (the $t_{k}$ -derivative in the left-hand side is taken at constant $s$ ). Proof. Using ( 4.61 ), we can write: $\partial_{t_{k}}{\sf L}=\Bigl[\partial_{t_{k}}\Bigr|_{s},\,{\sf L}\Bigr]=\Bigl[\partial_{t_{k}}\Bigr|_{x},\,{\cal L}\Bigr]-\Bigl[S_{t_{k}}\partial_{s},\,{\sf L}\Bigr]=\partial_{t_{k}}{\cal L}-\Bigl[S_{t_{k}}\partial_{s},\,{\sf L}\Bigr].$ Next, using Lemma 4.2 , we have: $\partial_{t_{k}}{\sf L}-[({\sf L}^{k})_{\geq 2},\,{\sf L}]=\partial_{t_{k}}{\cal L}-\Bigl[S_{t_{k}}\partial_{s},\,{\sf L}\Bigr]-\Bigl[({\cal L}^{k})_{\geq 1}-(({\cal L}^{k})_{\geq 1}S)\partial_{s},\,{\sf L}\Bigr]$ $=\partial_{t_{k}}{\cal L}-\Bigl[({\cal L}^{k})_{\geq 1},\,{\sf L}\Bigr]+\Bigl[(({\cal L}^{k})_{\geq 1}S-S_{t_{k}})\partial_{s},\,{\sf L}\Bigr].$ If $S$ is a wave function for ${\cal L}$ , i.e., $S_{t_{k}}=({\cal L}^{k})_{\geq 1}S$ , then the last term in the right-hand side
+vanishes. The rest terms also vanish by virtue of the Lax equation
+for ${\cal L}$ , and we obtain zero in the right-hand side.
+Therefore, the Lax equation ( 4.63 ) is proved. Comparing ${\sf L}$ with $L^{\rm HD}$ from ( 1.10 ),
+we see that to identify them one should put $U(s,{\sf t})=S_{x}(X(s),{\sf t}).$ (4.64) In terms of the function $U$ we have: $\partial_{x}=U\partial_{s}.$ (4.65) So, ${\sf L}$ is the Lax operator for the HD hierarchy. Its
+dependent variable $U$ is directly connected with $S$ , the one subject
+to equations of the SchKP hierarchy. Namely,
+take the $x$ -derivative $S_{x}(x,{\sf t})=\partial_{x}S(x,{\sf t})$ and consider it
+as a function of $s$ (and of all the times) via the substitution $x=X(s,{\sf t})$ , where $X(s,{\sf t})$ is the function inverse
+to $S(x,{\sf t})$ , as equation ( 4.64 ) suggests. The dressing operator ${\sf W}$ for the HD hierarchy is
+a pseudo-differential operator in the variable $s$ of the form ${\sf W}=w_{0}+w_{1}(U\partial_{s})^{-1}+w_{2}(U\partial_{s})^{-2}+\ldots$ (4.66) such that ${\sf L}={\sf W}\,U\partial_{s}{\sf W}^{-1}=U\partial_{s}+v_{0}+v_{1}(U\partial_{s})^{-1}+\ldots\,.$ (4.67) In fact it is the mKP dressing operator ${\cal W}$ in which
+the change of variables $x\to s$ is done. By analogy with Definition 3.1 it is natural
+to introduce wave functions for the HD hierarchy. Definition 4.1 Any solution $\Phi(s,{\sf t})$ to the system of linear
+differential equations $\partial_{t_{k}}\Phi(s,{\sf t})={\sf B}_{k}\Phi(s,{\sf t}),\qquad{\sf B}_{k}=({\sf L}^{k})_{\geq 2},\quad k\geq 2$ (4.68) is called wave function for the HD Lax operator ${\sf L}$ ( 4.67 ). Wave functions for the HD hierarchy admit a simple
+description in terms of those for the mKP hierarchy. Proposition 4.4 Let $S(x,{\sf t})$ and $\tilde{S}(x,{\sf t})$ be two wave functions of the mKP hierarchy.
+Then $\Phi(s,{\sf t})=\tilde{S}(X(s,{\sf t}),{\sf t})$ is a wave function of the HD hierarchy associated with $S$ (as before, $X(s,{\sf t})$ is the function inverse
+to $S(x,{\sf t})$ ).
+Moreover the opposite is also true:
+if $\Phi(s,{\sf t})$ is a wave function of the HD hierarchy
+associated with $S$ , then there exists
+a wave function $\tilde{S}(s,{\sf t})$ of the mKP hierarchy
+such that $\Phi(s,{\sf t})=\tilde{S}(X(s,{\sf t}),{\sf t})$ . Proof. According to the definitions and Lemma 4.2 we can write
+the following chain of equalities: $\begin{array}[]{lll}\partial_{t_{k}}\Phi(s,{\sf t})-({\sf L}^{k})_{\geq 2}\Phi(s,{\sf t})&=&\partial_{t_{k}}\tilde{S}(x,{\sf t})+\partial_{t_{k}}X(s,{\sf t})\tilde{S}_{x}(x,{\sf t})-({\sf L}^{k})_{\geq 2}\tilde{S}(X(s,{\sf t}),{\sf t})\\
+&&\\
+&=&({\cal L}^{k})_{\geq 1}\tilde{S}-({\cal L}^{k})_{\geq 1}\tilde{S}+({\cal L}^{k})_{\geq 1}S)S_{x}^{-1}\tilde{S}_{x}+\partial_{t_{k}}X(s,{\sf t})\tilde{S}_{x}\\
+&&\\
+&=&\Bigl(\partial_{t_{k}}X(s,{\sf t})+\partial_{t_{k}}S(x,{\sf t})S_{x}^{-1}(x,{\sf t})\Bigr)\tilde{S}_{x}\end{array}$ (4.69) Taking the $t_{k}$ -derivative of the identity $X(S(x,{\sf t}),{\sf t})=x$ , we get: $\partial_{t_{k}}X(s,{\sf t})+\partial_{t_{k}}S(x,{\sf t})\partial_{s}X(s,{\sf t})=0$ But $\partial_{s}X(s,{\sf t})=S_{x}^{-1}(x,{\sf t})$ as they are derivatives
+of the mutually inverse functions. Therefore, the expression
+in the last line in
+( 4.69 ) vanishes and we have $\partial_{t_{k}}\Phi(s,{\sf t})-({\sf L}^{k})_{\geq 2}\Phi(s,{\sf t})=0,$ which just means that $\Phi(s,{\sf t})=\tilde{S}(X(s,{\sf t}),{\sf t})$ is a wave function of the HD hierarchy
+if and only if $\tilde{S}$ is a wave function of the mKP hierarchy. Remark 4.5 Since the differential operators ${\sf B}_{k}$ are divisible by $\partial_{s}^{2}$ from the right,
+it is evident that the simplest HD wave functions are $\Phi=1$ and $\Phi=s$ . The corresponding second
+mKP wave functions $\tilde{S}$ from Proposition 4.4 in these two cases are $\tilde{S}=1$ and $\tilde{S}=S$ respectively. 4.4 Wave functions and BD transformations Figure 1: The square For both KP and mKP hierarchies, their wave functions allow
+one to construct other solutions by means of BD transformations.
+In the KP case, this is part a) of Theorem 3.1 ,
+and there is only one such solution corresponding to
+a given wave function.
+In the mKP case, given an mKP wave function $S$ ,
+there are three different solutions described by
+Theorem 4.1 .
+All this is summarized by the square
+in Fig. 1 , which is
+a pictorial version of diagrams ( 4.10 ) or ( 4.12 ).
+In the figure, the vertices correspond to KP tau-functions,
+the directed edges correspond to mKP Lax operators
+and the face corresponds to the Lax operator ${\sf L}$ of the HD hierarchy. A similar pattern holds for HD wave functions. Proposition 4.5 Let $\mathcal{L}$ be an mKP Lax operator and $S,F$ be its
+two wave functions, $\mathcal{L}^{\prime}=S^{-1}\mathcal{L}S$ , $\hat{\mathcal{L}}=S^{-1}_{x}\partial_{x}\mathcal{L}\partial^{-1}S_{x}$ , $\bar{\mathcal{L}}=S^{-1}_{x}S^{2}\partial_{x}S^{-1}\mathcal{L}S\partial_{x}^{-1}S^{-2}S_{x}$ , then $\begin{array}[]{c}F^{\prime}=FS^{-1},\qquad\hat{F}=F_{x}S_{x}^{-1},\qquad\bar{F}=S^{2}(F/S)_{x}S_{x}^{-1}\end{array}$ (4.70) are wave functions of ${\cal L}^{\prime}$ , $\hat{\cal L}$ and $\bar{\cal L}$ respectively. Proof. First of all, we note that all the three cases can
+be considered at once since $F^{\prime}=V(F)$ , where $V$ is a pseudo-differential operator such that $\mathcal{L}^{\prime}=V\mathcal{L}V^{-1}$ . The same holds
+for $\hat{F}$ and $\bar{F}$ .
+Moreover, for $V\mathcal{L}V^{-1}$ to be an mKP Lax operator, the
+relation $\partial_{t_{k}}V=((V\mathcal{L}V^{-1})^{k})_{>1}V-V(\mathcal{L}^{k})_{>1}$ must hold.
+Calculating $\partial_{t_{k}}(V(F))$ , one gets $\partial_{t_{k}}(V(F))=(((V\mathcal{L}V^{-1})^{k})_{>1}V-V(\mathcal{L}^{k})_{>1}-V(\mathcal{L}^{k})_{>1})(F)=((V\mathcal{L}V^{-1})^{k})_{>1}(V(F)),$ (4.71) which completes the proof. Figure 2: The cube To depict the HD Lax operator $\sf L$ with its wave function $\Phi$ ,
+we need to add an extra dimension to Fig. 1 , see
+the cube in Fig. 2 .
+Here, too, each vertex corresponds to a solution of the
+KP hierarchy, and each edge equipped with arrow symbolizes
+a solution to the mKP hierarchy.
+The bottom face corresponds to ${\sf L}={\sf L}(\hat{\tau},\bar{\tau})$ ;
+the diagonal from $\hat{\tau}$ to $\tilde{\tau}$ on the front face corresponds to $F$ ,
+which is another wave function for $\mathcal{L}$ ,
+connected to $\Phi$ as in Proposition 4.4 .
+Using Proposition 4.5 we define $F^{\prime}$ , $\hat{F}$ , $\bar{F}$ , from which the HD Lax operators
+corresponding to the walls of the cube can be defined. Let us define the Lax operator corresponding to the roof
+of the cube. Firstly, we obtain the mKP Lax operator
+corresponding to the upper edge of the front wall: $\tilde{\mathcal{L}}=F^{-1}_{x}F^{2}\partial_{x}F^{-1}\mathcal{L}F\partial_{x}^{-1}F^{-2}F_{x}$ , then,
+according to Proposition 4.5 , $F^{2}(S/F)_{x}F_{x}^{-1}$ is its wave function, which allows us
+to construct the desired Lax operator.
+The results are summarized in the following list
+of equations: $\begin{array}[]{l}{\sf L}_{\rm face}={\mathcal{L}}^{(f)},\\
+\\
+{\sf L}_{\rm left}=(S^{-1}{\mathcal{L}}S)^{(r_{1})},\\
+\\
+{\sf L}_{\rm right}=((S_{x})^{-1}\partial_{x}\mathcal{L}\partial_{x}^{-1}S_{x}))^{(r_{2})},\\
+\\
+{\sf L}_{\rm back}=[((S^{-1})_{x})^{-1}\partial_{x}S^{-1}\mathcal{L}S\partial_{x}^{-1}(S^{-1})_{x}]^{(r_{3})},\\
+\\
+{\sf L}_{\rm top}=[((F^{-1})_{x})^{-1}\partial_{x}F^{-1}\mathcal{L}F\partial_{x}^{-1}(F^{-1})_{x}]^{(r_{4})}.\end{array}$ (4.72) Here the notation $\mathcal{A}^{(r)}$ means the operator ${\cal A}$ acting on functions of the variable $r$ , which in the first line
+is $f$ , in the second line is $r_{1}$ , etc. These variables are defined
+as follows: $f={\rm Inv}(F)$ , $r_{1}={\rm Inv}(F/S)$ , $r_{2}={\rm Inv}(F_{x}/S_{x})$ , $r_{3}={\rm Inv}((F/S)_{x}/(S^{-1})_{x})$ , $r_{4}={\rm Inv}((S/F)_{x}/(F^{-1})_{x})$ ,
+where ${\rm Inv}$ means the inverse function: $H({\rm Inv}(H(x)))=x$ . Moreover, there are expressions for the tau-functions associated
+with vertices of the cube in terms of $\hat{\tau},\tau,S,F$ : $\begin{array}[]{lll}\displaystyle{\hat{\bar{\tau}}=\frac{S_{x}\hat{\tau}}{\tau},}&\bar{\tau}=S\hat{\tau},&\displaystyle{\tilde{\bar{\tau}}=(F/S)_{x}\frac{S^{2}\hat{\tau}^{2}}{\tau}},\\
+&&\\
+\displaystyle{\tilde{\hat{\tau}}=\frac{F_{x}\hat{\tau}}{\tau}},&\tilde{\tau}=F\hat{\tau},&\displaystyle{\tilde{\hat{\bar{\tau}}}=\left(\frac{F_{x}}{S_{x}}\right)_{x}(S^{-1})_{x}\frac{\hat{\tau}}{\tau^{2}}}.\end{array}$ (4.73) Remark 4.6 As it was already mentioned, there are
+two distinct choices of HD wave functions $\Phi=s$ and $\Phi=c$ ,
+and their linear combinations lead to the $PSL(2)$ -action on $S$ and consequently on ${\sf L}$ . The $S\rightarrow S+c$ with constant $c$ does not affect ${\sf L}$ , however, $S\rightarrow S^{-1}$ leads to the transformation ${\sf L}^{(s)}\rightarrow(s^{-1}{\sf L}s)^{(1/s)}$ . This can be also interpreted as the connection of the HD Lax operator to the side of the face,
+and since each face is two-sided, this transformation corresponds to a flip. Remark 4.7 One can try to construct other solutions of the HD hierarchy
+(for example, using $\tilde{\mathcal{L}}$ ) to define Lax operators corresponding to the walls of the cube. However, the result will be the same up to a flip (see the previous remark). This is due
+to the commutativity of the BD transformations for
+the KP hierarchy. 5 Embedding into multi-component KP hierarchy In this section we will show that the SchKP hierarchy
+defined by the bilinear equation ( 4.19 ) admits an
+embedding into the multi-component KP hierarchy [ 39 , 40 , 41 , 42 ] . In this hierarchy,
+independent variables are $n$ infinite sets of (in general complex)
+“times” ${\bf t}=\{{\bf t}_{1},{\bf t}_{2},\ldots,{\bf t}_{n}\},\qquad{\bf t}_{\alpha}=\{t_{\alpha,1},t_{\alpha,2},t_{\alpha,3},\ldots\,\},\qquad\alpha=1,\ldots,n$ and $n$ additional variables $s_{1},\ldots,s_{n}\in\mbox{\Bbb Z}$ such that $\sum_{\alpha=1}^{n}s_{\alpha}=0.$ (5.1) By ${\bf s}$ we denote the vector ${\bf s}=\{s_{1},\ldots,s_{n}\}$ and by ${\bf e}_{\alpha}$ the vector
+whose $\alpha$ ’s component is 1 and all other components are 0.
+We will also use the following standard
+notation: $\left({\bf t}\pm[z^{-1}]_{\gamma}\right)_{\alpha j}=t_{\alpha,j}\pm\delta_{\alpha\gamma}\frac{z^{-j}}{j},\qquad\xi({\bf t}_{\alpha},z)=\sum_{j\geq 1}t_{\alpha,j}z^{j}.$ (5.2) In the bilinear formalism,
+the dependent variable is the tau-function $\tau({\bf s},{\bf t})$ .
+The hierarchy is defined as an infinite set of bilinear equations
+for the tau-function which are encoded in the basic bilinear
+relation [ 39 , 42 ] $\begin{array}[]{l}\displaystyle{\sum_{\mu=1}^{n}\epsilon_{\alpha\mu}({\bf s})\epsilon_{\beta\mu}({\bf s}^{\prime})\oint_{C_{\infty}}\!dz\,z^{s_{\mu}-s_{\mu}^{\prime}+\delta_{\alpha\mu}+\delta_{\beta\mu}-2}e^{\xi({\bf t}_{\mu}-{\bf t}_{\mu}^{\prime},\,z)}}\\
+\\
+\displaystyle{\phantom{aaaaaaaaaa}\times\tau\left({\bf s}+{\bf e}_{\alpha}-{\bf e}_{\mu},{\bf t}-[z^{-1}]_{\mu}\right)\tau\left({\bf s}^{\prime}+{\bf e}_{\mu}-{\bf e}_{\beta},{\bf t}^{\prime}+[z^{-1}]_{\mu}\right)=0}\end{array}$ (5.3) valid for all ${\bf t}$ , ${\bf t}^{\prime}$ , ${\bf s}$ , ${\bf s}^{\prime}$ subject to the constraint ( 5.1 )).
+In ( 5.3 ) $epsilon_{\alpha\mu}({\bf s})$ is a sign
+factor defined as $\epsilon_{\alpha\mu}({\bf s})=\left\{\begin{array}[]{cl}\hskip 8.5359pt(-1)^{s_{\alpha+1}+\ldots+s_{\mu}},&\quad\alpha<\mu\\
+\hskip-42.67912pt1,&\quad\alpha=\mu\\
+-(-1)^{s_{\mu+1}+\ldots+s_{\alpha}}&\quad\alpha>\mu.\end{array}\right.$ (5.4) Different bilinear relations
+for the tau-function of the Hirota-Miwa type which follow from
+( 5.3 ) for special choices of ${\bf s}-{\bf s}^{\prime}$ and ${\bf t}-{\bf t}^{\prime}$ are given in [ 42 ] . The following well known statement directly follows from the
+general equation ( 5.3 ). Proposition 5.1 The tau-function $\tau({\bf s},{\bf t})$ , regarded as a function
+of ${\bf t}_{\alpha}$ , with any ${\bf s}$ and ${\bf t}_{\mu}$ with $\mu\neq\alpha$ fixed, is a tau-function of the KP hierarchy, i.e.,
+it satisfies the bilinear equation ( 2.1 ). Let us fix three distinct indices $\alpha,\beta,\gamma\in\{1,2,\ldots,n\}$ such that $\alpha<\beta<\gamma$ and
+consider the case when $s_{\mu}=s^{\prime}_{\mu}$ unless $\mu=\alpha,\beta,\gamma$ and ${\bf t}_{\mu}={\bf t^{\prime}}_{\mu}$ unless $\mu=\alpha$ (in the latter case we put ${\bf t}_{\alpha}={\bf t}$ , ${\bf t^{\prime}}_{\alpha}={\bf t^{\prime}}$ for simplicity of the notation).
+It is easy to see that in this case the sum in ( 5.3 )
+contains only three non-zero terms: $\begin{array}[]{c}\displaystyle{\oint_{C_{\infty}}\!dz\,z^{s_{\alpha}-s_{\alpha}^{\prime}}e^{\xi({\bf t}-{\bf t^{\prime}},\,z)}\tau\left({\bf s},{\bf t}-[z^{-1}]\right)\tau\left({\bf s}^{\prime},{\bf t}^{\prime}+[z^{-1}]\right)}\\
+\\
+\displaystyle{+\,\epsilon_{\alpha\beta}({\bf s})\epsilon_{\alpha\beta}({\bf s^{\prime}})\oint_{C_{\infty}}\!dz\,z^{s_{\beta}-s^{\prime}_{\beta}-2}\tau\left({\bf s}+{\bf e}_{\alpha}-{\bf e}_{\beta},{\bf t}-[z^{-1}]_{\beta}\right)\tau\left({\bf s^{\prime}}+{\bf e}_{\beta}-{\bf e}_{\beta},{\bf t}^{\prime}+[z^{-1}]_{\beta}\right)}\\
+\\
+\displaystyle{+\,\epsilon_{\alpha\gamma}({\bf s})\epsilon_{\alpha\gamma}({\bf s^{\prime}})\oint_{C_{\infty}}\!dz\,z^{s_{\gamma}-s^{\prime}_{\gamma}-2}\tau\left({\bf s}\!+\!{\bf e}_{\alpha}\!-\!{\bf e}_{\gamma},{\bf t}\!-\![z^{-1}]_{\gamma}\right)\tau\left({\bf s^{\prime}}\!+\!{\bf e}_{\beta}\!-\!{\bf e}_{\gamma},{\bf t}^{\prime}\!+\![z^{-1}]_{\gamma}\right)}=0.\end{array}$ (5.5) Putting here ${\bf s}={\bf e}_{\beta}-{\bf e}_{\gamma}$ , ${\bf s^{\prime}}={\bf 0}$ or ${\bf s}={\bf 0}$ , ${\bf s^{\prime}}={\bf e}_{\beta}-{\bf e}_{\gamma}$ ,
+we see that the last two integrals are given by residues at infinity.
+This leads to the following two equations: $\begin{array}[]{l}\displaystyle{\frac{1}{2\pi i}\oint_{C_{\infty}}e^{\xi({\bf t}-{\bf t^{\prime}},\,z)}\tau\left({\bf e}_{\beta}-{\bf e}_{\gamma},{\bf t}-[z^{-1}]\right)\tau\left({\bf 0},{\bf t}^{\prime}+[z^{-1}]\right)\,dz}\\
+\\
+\phantom{aaaaaaaaaaaaaa}+\displaystyle{\epsilon_{\alpha\beta}({\bf e}_{\beta}-{\bf e}_{\gamma})\epsilon_{\alpha\beta}({\bf 0})\tau\left({\bf e}_{\alpha}-{\bf e}_{\gamma},{\bf t}\right)\tau\left({\bf e}_{\beta}-{\bf e}_{\alpha},{\bf t}\right)=0},\end{array}$ (5.6) $\begin{array}[]{l}\displaystyle{\frac{1}{2\pi i}\oint_{C_{\infty}}e^{\xi({\bf t}-{\bf t^{\prime}},\,z)}\tau\left({\bf 0},{\bf t}-[z^{-1}]\right)\tau\left({\bf e}_{\beta}-{\bf e}_{\gamma},{\bf t}^{\prime}+[z^{-1}]\right)\,dz}\\
+\\
+\phantom{aaaaaaaaaaaaaa}+\displaystyle{\epsilon_{\alpha\gamma}({\bf e}_{\beta}-{\bf e}_{\gamma})\epsilon_{\alpha\gamma}({\bf 0})\tau\left({\bf e}_{\alpha}-{\bf e}_{\gamma},{\bf t}\right)\tau\left({\bf e}_{\beta}-{\bf e}_{\alpha},{\bf t}\right)=0}.\end{array}$ (5.7) It is easy to see that $\epsilon_{\alpha\beta}({\bf e}_{\beta}-{\bf e}_{\gamma})\epsilon_{\alpha\beta}({\bf 0})+\epsilon_{\alpha\gamma}({\bf e}_{\beta}-{\bf e}_{\gamma})\epsilon_{\alpha\gamma}({\bf 0})=0.$ Therefore, summing the two equations ( 5.6 ), ( 5.7 ),
+we obtain the equation $\begin{array}[]{l}\displaystyle{\oint_{C_{\infty}}e^{\xi({\bf t}-{\bf t^{\prime}},\,z)}\Bigl[\tau\left({\bf 0},{\bf t}-[z^{-1}]\right)\tau\left({\bf e}_{\beta}\!-\!{\bf e}_{\gamma},{\bf t}^{\prime}+[z^{-1}]\right)}\\
+\\
+\phantom{aaaaaaaaaaaaa}\displaystyle{+\,\tau\left({\bf e}_{\beta}\!-\!{\bf e}_{\gamma},{\bf t}-[z^{-1}]\right)\tau\left({\bf 0},{\bf t^{\prime}}+[z^{-1}]\right)\Bigr]dz=0}\end{array}$ (5.8) which coincides with ( 4.19 ) after the identification $\tau\left({\bf 0},{\bf t}\right)=\hat{\tau}({\bf t}),\qquad\tau\left({\bf e}_{\beta}\!-\!{\bf e}_{\gamma},{\bf t}\right)=\bar{\tau}({\bf t}).$ (5.9) It also follows from Proposition 5.1 that
+both $\tau\left({\bf 0},{\bf t}\right)$ and $\tau\left({\bf e}_{\beta}\!-\!{\bf e}_{\gamma},{\bf t}\right)$ are KP tau-functions. Summarizing, in this section we have proved the following theorem. Theorem 5.1 The SchKP hierarchy is
+embedded into the $n$ -component KP hierarchy with $n\geq 3$ in the following way. The independent variables corresponding to
+all but three components are to be frozen and put equal to zero
+(for definiteness, let the three unfrozen components be numbered
+by indexes 1, 2, 3 with the tau-function $\tau({\bf s},{\bf t})=\tau(s_{1},s_{2},s_{3};{\bf t}_{1},{\bf t}_{2},{\bf t}_{3})$ ).
+Then $\hat{\tau}({\bf t})=\tau(0,0,0;{\bf t},{\bf 0},{\bf 0}),\quad\bar{\tau}({\bf t})=\tau(0,1,-1;{\bf t},{\bf 0},{\bf 0})$ is a pair of tau-functions for the SchKP hierarchy, i.e., they
+satisfy equation ( 4.19 ). 6 Concluding remarks The main result of this paper is the established
+equivalence between the
+Harry Dym (HD) hierarchy of partial differential equations and the
+bilinear integral equation ( 4.19 ) for pairs $(\hat{\tau},\bar{\tau})$ of functions such that each of them is a tau-function
+of the KP hierarchy (i.e. satisfies ( 2.1 )). More precisely,
+equation ( 4.19 ) defines the Schwarzian KP
+(SchKP) hierarchy within the framework of the
+bilinear formalism while the HD hierarchy
+arises as its equivalent reformulation in terms of the Lax-Sato
+approach. In contrast to what happens for the KP and mKP hierarchies,
+such reformulation requires switching to a new space variable $s=S(x)$ , with $S$ being a wave function for the Lax operator
+of the mKP hierarchy,
+so $\partial_{x}=S_{x}\partial_{s}$ , and $U(s)$ from ( 1.9 )
+and ( 1.10 ) (the dependent variable in the HD equation) is defined
+as $U=S_{x}$ . Another result is an embedding of the SchKP hierarchy into
+the multi-component KP hierarchy, which, to the best of our knowledge,
+was not discussed in the literature before.
+Also, some known results related to Bäcklund-Darboux transformations
+of integrable hierarchies have been reformulated in this paper
+in terms of tau-functions. An interesting open question is whether the bilinear equation
+( 4.26 ) (which was obtained as a particular corollary of the
+more general integral equation ( 4.19 ) is actually
+equivalent to the whole hierarchy, like this is the case for the
+KP and mKP hierarchies. The problem is that the direct method
+of proving this equivalence based on some determinant or pfaffian
+identities (suggested in [ 36 ] for KP,
+mKP and BKP) seems to be not applicable to ( 4.26 )
+because of a more complicated structure of the equation. So, one should
+probably try to apply some indirect methods (similar to those
+developed in [ 35 ] ). Another open question is whether
+any solution to SchKP can be realized as a solution to the
+multi-component KP hierarchy. At last, we note that the connection with Bäcklund-Darboux
+transformations and integrable discretizations of soliton
+equations deserves further study. In particular, this seems
+to be an especially promising direction of further
+investigation, taking into
+account that BD transformations of integrable hierarchies play
+an important role in applications to quantum integrable
+model solvable by Bethe ansatz (see, e.g. the recent review [ 43 ] ). Acknowledgments We are grateful to A. Orlov and T. Takebe for
+illuminating discussions.
+The work of V.P. (Sections 3.2, 4.2, 5)
+and A.Z (Sections 2, 3.1, 4.1)
+was implemented in the framework
+of the Basic Research Program at HSE University (HSE-BR-2025-84). References [2] B. Kadomtsev, V. Petviashvili, On the stability of solitary waves in weakly dispersive media , Sov. Phys. Dokl. 15 (1970) 539–-541. [3] V. Zakharov, S. Manakov, S. Novikov, L. Pitaevski, Theory of solitons. The inverse problem method , Nauka, Moscow,
+1980, Plenum (1984). [4] E. Date, M. Jimbo, M. Kashiwara and T. Miwa, Transformation groups for soliton equations:
+Nonlinear integrable systems –
+classical theory and quantum theory (Kyoto, 1981),
+Singapore: World Scientific,
+1983, 39–119. [5] M. Jimbo and T. Miwa, Solitons and
+infinite dimensional Lie
+algebras , Publ. Res. Inst. Math. Sci. Kyoto 19 (1983) 943–1001. [6] R. Hirota, Direct methods in soliton theory ,
+Cambridge Tracts in Mathematics, vol. 155, 2004. [7] J. Harnad and F. Balogh, Tau functions and their applications ,
+Cambridge Monographs on Mathematical Physics, Cambridge University
+Press, 2021. [8] B. Kupershmidt, Mathematics of dispersive
+water waves , Comm. Math. Phys. 99 (1985) 51–73. [9] B. Kupershmidt, On the integrability of
+modified Lax equations , J. Phys. A: Math. Gen. 22 (1989)
+L993–L998. [10] K. Kiso, A remark on the commuting flows defined by Lax
+equations , Prog. Theor. Phys. 83 (1990) 1108–1125. [11] B. Konopelchenko, W. Oevel, An $r$ -matrix approach to
+nonstandard classes of integrable equations , Publ. RIMS,
+Kyoto Univ. 29 (1993) 581–666. [12] W. Oevel, C. Rogers, Gauge transformations
+and reciprocal links in 2+1 dimensions , Rev. Math. Phys. 05 (1993) 299–330. [13] L. Dickey, Modified KP and discrete KP , Lett. Math. Phys. 48 (1999) 277–289. [14] T. Takebe, L. Teo, Coupled modified KP hierarchy
+and its dispersionless limit , SIGMA 2 (2006) 072. [15] K. Ueno and K. Takasaki, Toda lattice hierarchy ,
+Adv. Studies in Pure Math. 4 (1984) 1–95. [16] J. Weiss, The Painlevé property
+for partial differential equations: II. Bäcklund
+transformations, Lax pairs
+and Schwarzian derivative , J. Math. Phys. 24 (1983) 1405–-1413. [17] L. Bogdanov, B. Konopelchenko, Analytic-bilinear approach to
+integrable hierarchies:
+I.Generalized KP hierarchy , J. Math. Phys. 39 (1998) 4683–-4700. [18] L. Bogdanov, B. Konopelchenko, Möbius invariant integrable lattice
+equations associated with KP
+and 2DTL hierarchies , Phys. Lett. A 256 (1999) 39–-46. [19] B. Konopelchenko, W. Schief, Menelaus’ theorem, Clifford
+configurations and inversive geometry of the Schwarzian KP
+hierarchy , J. Phys. A: Math. Gen. 35 (2002) 6125–6144. [20] W. Schief, Lattice geometry of the discrete Darboux, KP,
+BKP and CKP equations. Menelaus’ and
+Carnot’s theorems ,
+J. Nonlinear Math. Phys. 10 (Supplement 2) (2003)
+194-–208. [21] M. Kruskal, Nonlinear wave equations , in: Dynamical systems,
+theory and applications: Battelle Seattle 1974 Recontres, ed. J. Moser,
+Berlin, Heidelberg: Springer, 1975 (pp. 310–354). [22] L. Kadanoff, Exact solutions for the Saffman-Taylor
+problem with surface tension , Phys. Rev. Lett. 65 (1990)
+2986–2988. [23] B. Konopelchenko, V. Dubrovsky, Some new integrable
+nonlinear evolution equations in 2+1 dimensions , Phys. Lett. A 102 (1984) 15–17. [24] A. Alexandrov, A. Zabrodin, Free fermions and tau-functions ,
+Journal of Geometry and Physics 67 (2013) 37–80. [25] V.B. Matveev, M.A. Salle, Darboux transformations and solitons ,
+Berlin: Springer, 1991. [26] C. Rogers, W. Schieff, Bäcklund and Darboux transformations ,
+Cambridge Texts in Applied Mathematics 30 , Cambridge
+University Press, 2002. [27] J.J.C. Nimmo, Darboux transformations and the discrete KP equation ,
+J. Math. Phys. A: Math. Gen. 30 (1997) 8693–-8704. [28] J.J.C. Nimmo, R. Willox, Darboux transformations for the two-dimensional Toda system ,
+Proc. R. Soc. Lond. A 453 (1997) 2497–2525. [29] J. Harnad, Y. Saint-Aubin, S. Shnider, Bäcklund transformations for nonlinear sigma models
+with values in Riemannian symmetric spaces ,
+Commun. Math. Phys. 92 (1984) 329–367. [30] H. Aratyn, E. Nissimov, S. Pacheva, Method of squared
+eigenfunction potentials in integrable hierarchies ,
+Comm. Math. Phys. 193 (1998) 493–525. [31] H. Chen, L. Geng, N. Li, J. Cheng, Solving the constrained modified KP hierarchy by gauge
+transformations , J. Nonlin. Math.
+Phys. 26 (2019) 54–68. [32] J.P. Cheng, The gauge transformation of
+modified KP hierarchy , J. Nonlin. Math. Phys. 25 (2018)
+66–-85. [33] A. Zabrodin, Revisiting Bäcklund-Darboux transformations
+for KP and BKP integrable hierarchies ,
+arXiv:2506.07208. [34] T. Miwa, On Hirota’s difference equations ,
+Proc. Japan Acad. 58 Ser. A (1982) 9–12. [35] K. Takasaki, T. Takebe, Integrable hierarchies and dispersionless limit ,
+Rev. Math. Phys. 7 (1995) 743–808,
+arXiv:hep-th/9405096. [36] Y. Shigyo, On addition formulae of KP, mKP
+and BKP hierarchies , SIGMA 9 (2013) 035. [37] V.E. Zakharov, S.V. Manakov, Construction of higher-dimensional
+nonlinear integrable systems and of their solutions ,
+Funct. Anal. and Its Appl. 19 (1985) 89–-101. [38] A. Zabrodin, Lectures on nonlinear integrable equations
+and their solutions , arXiv:1812.11813. [39] E. Date, M. Jimbo, M. Kashiwara and
+T. Miwa, Transformation groups
+for soliton equations III , J. Phys. Soc. Japan 50 (1981) 3806–3812. [40] V. Kac and J. van de Leur, The $n$ -component KP hierarchy and
+representation theory , in: A.S. Fokas, V.E. Zakharov (Eds.), Important Developments
+in Soliton Theory, Springer-Verlag, Berlin, Heidelberg, 1993. [41] K. Takasaki and T. Takebe, Universal
+Whitham hierarchy, dispersionless Hirota equations
+and multicomponent KP hierarchy , Physica D 235 (2007) 109–125. [42] L.-P. Teo, The multicomponent KP hierarchy:
+differential Fay identities and Lax
+equations , J. Phys. A: Math. Theor. 44 (2011) 225201. [43] A. Zabrodin, Classical facets of quantum integrability , to be published in
+Proceedings of Beijing Summer Workshop in
+Mathematics and Mathematical Physics, 2024,
+arXiv:2501.18557. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

@@ -1,0 +1,117 @@
+{
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "1",
+      "1",
+      "-1",
+      "-1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "-u(x, y, z, t)**5 - u(x, y, z, t)**3 + Derivative(u(x, y, z, t), (x, 2)) + Derivative(u(x, y, z, t), (y, 2))",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      9,
+      2,
+      23,
+      2,
+      21,
+      2,
+      7,
+      3,
+      7,
+      3,
+      7,
+      3,
+      7,
+      3,
+      7,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "uxx",
+      "+",
+      "uyy",
+      "+",
+      "u^3",
+      "+",
+      "u",
+      "*",
+      "u",
+      "*",
+      "u",
+      "*",
+      "u",
+      "*",
+      "u",
+      "E"
+    ],
+    "normalized_latex": "(u_{xx})+(u_{yy})+({u}^{3})+(u)\\cdot (u)\\cdot (u)\\cdot (u)\\cdot (u)=0",
+    "reconstructed_support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(3))",
+      "Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(5))"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2)))",
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(3))",
+      "Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(5))"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "family": "double_power_elliptic",
+  "gre_ids": [
+    5,
+    9,
+    2,
+    23,
+    2,
+    21,
+    2,
+    7,
+    3,
+    7,
+    3,
+    7,
+    3,
+    7,
+    3,
+    7,
+    1
+  ],
+  "latex_origin": "declared_family_instance",
+  "normalized_latex": "(u_{xx})+(u_{yy})+({u}^{3})+(u)\\cdot (u)\\cdot (u)\\cdot (u)\\cdot (u)=0",
+  "original_latex": "u_{xx}+u_{yy}=u^{3}+u^{5}",
+  "parameters": {
+    "n": 3
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [],
+  "source_file": "data/formulas/diverse_pde_v4/sources/npde3102.pdf",
+  "source_group": "eqworld:npde3102",
+  "source_id": "eqworld:1c7fba7213d08f8f3adb0de0",
+  "source_kind": "external_review_candidate",
+  "source_location": "first displayed governing equation; choices declared separately",
+  "source_sha256": "b6ecfcfc23383044808dd563bc6056037394d23164f71b2068305f93631bb231",
+  "source_template_latex": "u_{xx}+u_{yy}=a u^n+b u^{2n-1}",
+  "source_transformations": [
+    "source dependent variable w -> u",
+    "scalar coefficients fixed nonzero when present; no term removal",
+    "arbitrary functions/powers explicitly instantiated as recorded; not a new physical family"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/npde/npde3102.pdf"
+}

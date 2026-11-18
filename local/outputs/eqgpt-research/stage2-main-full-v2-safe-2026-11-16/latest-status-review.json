@@ -1,0 +1,171 @@
+{
+  "queue": {
+    "supervisor_pid": 3441792,
+    "gpu": 3,
+    "parallelism": 4,
+    "running": [
+      {
+        "job": "811-v320-seed525",
+        "pid": 3441796
+      },
+      {
+        "job": "622-v320-seed525",
+        "pid": 3441797
+      },
+      {
+        "job": "811-v128-seed525",
+        "pid": 3441798
+      },
+      {
+        "job": "622-v128-seed525",
+        "pid": 3441799
+      }
+    ],
+    "pending": [
+      "811-v192-seed525",
+      "622-v192-seed525"
+    ],
+    "complete": [],
+    "failed": [],
+    "time": 1794896393.7651513,
+    "queue_paused_on_failure": false
+  },
+  "jobs": [
+    {
+      "job": "811-v320-seed525",
+      "state": "training",
+      "progress": {
+        "epoch": 1,
+        "batch": 11,
+        "successful": 61,
+        "attempts": 281,
+        "seconds": 988.0441299676895,
+        "stage": "train_candidates",
+        "candidate_phase": "generating"
+      },
+      "age_seconds": 11.3,
+      "completed_batches": 10,
+      "validation_files": [],
+      "failures": [],
+      "numerics": {
+        "action": "fit",
+        "phase": "complete",
+        "worker_peak_rss_mb": 1741.80859375,
+        "error": null
+      },
+      "latest_batch": "epoch001_batch000010.json",
+      "latest_best_reward": 0.5289990184608274,
+      "latest_best_r2": [
+        0.7932381231732751,
+        0.612127909272128,
+        0.7975360002847734
+      ],
+      "sft_loss": [
+        2.3076847510345924,
+        2.231711421636248
+      ]
+    },
+    {
+      "job": "622-v320-seed525",
+      "state": "training",
+      "progress": {
+        "epoch": 1,
+        "batch": 8,
+        "successful": 17,
+        "attempts": 124,
+        "seconds": 538.9110062941909,
+        "stage": "train_candidates",
+        "candidate_phase": "generating"
+      },
+      "age_seconds": 2.3,
+      "completed_batches": 7,
+      "validation_files": [],
+      "failures": [],
+      "numerics": {
+        "action": "fit",
+        "phase": "complete",
+        "worker_peak_rss_mb": 1732.125,
+        "error": null
+      },
+      "latest_batch": "epoch001_batch000007.json",
+      "latest_best_reward": 0.46114812592382143,
+      "latest_best_r2": [
+        0.5243848823802776,
+        0.6970534119178815,
+        0.6008590009933829
+      ],
+      "sft_loss": [
+        2.8772048008294755,
+        2.784238677386464
+      ]
+    },
+    {
+      "job": "811-v128-seed525",
+      "state": "training",
+      "progress": {
+        "epoch": 1,
+        "batch": 19,
+        "successful": 15,
+        "attempts": 65,
+        "seconds": 189.4073749575764,
+        "stage": "train_candidates",
+        "candidate_phase": "generating"
+      },
+      "age_seconds": 1.4,
+      "completed_batches": 18,
+      "validation_files": [],
+      "failures": [],
+      "numerics": {
+        "action": "fit",
+        "phase": "complete",
+        "worker_peak_rss_mb": 1803.64453125,
+        "error": null
+      },
+      "latest_batch": "epoch001_batch000018.json",
+      "latest_best_reward": 0.6452883535804665,
+      "latest_best_r2": [
+        0.8078940856716426,
+        0.9520030646462849,
+        0.824890478928249
+      ],
+      "sft_loss": [
+        1.7237560708447384,
+        1.6636006524673053
+      ]
+    },
+    {
+      "job": "622-v128-seed525",
+      "state": "training",
+      "progress": {
+        "epoch": 1,
+        "batch": 17,
+        "successful": 4,
+        "attempts": 17,
+        "seconds": 37.32396855019033,
+        "stage": "train_candidates",
+        "candidate_phase": "scoring"
+      },
+      "age_seconds": 0.4,
+      "completed_batches": 16,
+      "validation_files": [],
+      "failures": [],
+      "numerics": {
+        "action": "fit",
+        "phase": "started",
+        "worker_peak_rss_mb": null,
+        "error": null
+      },
+      "latest_batch": "epoch001_batch000016.json",
+      "latest_best_reward": 0.6748816523053804,
+      "latest_best_r2": [
+        0.9441704191289791,
+        0.7791239524172788,
+        0.8075118245989182
+      ],
+      "sft_loss": [
+        1.1128382845903546,
+        1.0556940274459254
+      ]
+    }
+  ]
+}

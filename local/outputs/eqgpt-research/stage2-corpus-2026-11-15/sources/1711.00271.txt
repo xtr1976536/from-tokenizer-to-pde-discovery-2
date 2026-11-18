@@ -1,0 +1,440 @@
+On hp-Streamline Diffusion and Nitsche schemes for the Relativistic Vlasov-Maxwell System Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Introduction 2 Notation and Assumptions 3 hp-Streamline Diffusion Method 3.1 Maxwell Equations 3.2 Vlasov-Maxwell Equations 4 Stability and Convergence of hp-SDFEM 4.1 Maxwell Equations 4.2 Vlasov-Maxwell Equations 5 Nitsche’s method for Maxwell equations 5.1 A modified Ritz projection 5.2 Convergence 5.3 Time discretization 6 Numerical Results 6.1 Accuracy tests 6.2 Streaming Weibel instability tests 7 Conclusion References License: arXiv.org perpetual non-exclusive license arXiv:1711.00271v1 [math.NA] 01 Nov 2017 On hp-Streamline Diffusion and Nitsche schemes for the Relativistic Vlasov-Maxwell System M. Asadzadeh Address: Department of Mathematics,
+Chalmers University of Technology and Göteborg University,
+SE–412 96, Göteborg, Sweden Email address: mohammad@chalmers.se , P. Kowalczyk Address: Institute of Applied Mathematics and Mechanics,
+University of Warsaw,
+Banacha 2, 02-097 Warszawa, Poland Email address: pkowal@mimuw.edu.pl and C. Standar Address: Department of Mathematics,
+Chalmers University of Technology and Göteborg University,
+SE–412 96, Göteborg, Sweden Email address: standarc@chalmers.se Abstract. We study stability and convergence of $hp$ -streamline diffusion (SD) finite element,
+and Nitsche’s schemes for the three dimensional,
+relativistic (3 spatial dimension and 3 velocities), time dependent
+Vlasov-Maxwell system
+and Maxwell’s equations, respectively.
+For the $hp$ scheme for the Vlasov-Maxwell system,
+assuming that the exact solution is in the Sobolev space $H^{s+1}(\Omega)$ , we derive global a priori error bound of
+order ${\mathcal{O}}(h/p)^{s+1/2}$ ,
+where $h(=\max_{K}h_{K})$ is the mesh parameter and $p(=\max_{K}p_{K})$ is the spectral order.
+This estimate is based on the local version with $h_{K}=\mbox{ diam }K$ being the diameter of the phase-space-time element $K$ and $p_{K}$ is the spectral order (the degree of approximating finite element
+polynomial) for $K$ .
+As for the
+Nitsche’s scheme, by a simple calculus of the field equations,
+first we convert the Maxwell’s system to an elliptic type equation.
+Then, combining the Nitsche’s method for the spatial discretization
+with a second order time scheme, we obtain optimal convergence of ${\mathcal{O}}(h^{2}+k^{2})$ , where $h$ is the spatial mesh size and $k$ is the time step. Here, as in the classical literature, the second
+order time scheme requires higher order regularity assumptions. Numerical justification of the results, in
+lower dimensions, is presented
+and is also the subject of a forthcoming computational work [ 20 ] . Key words and phrases: hp-method  and Streamline Diffusion  and Discontinuous Galerkin
+ and Vlasov-Maxwell system  and Nitsche scheme 1. Introduction We study stability and convergence for some specific finite element
+schemes for a model problem for the three dimensional,
+relativistic, Vlasov-Maxwell (VM) system
+with 3-dimensional spatial domain ( $\mathbf{x}\in\Omega_{x}\subset{\mathbb{R}}^{3}$ )
+and 3-dimensional velocities domain ( $\mathbf{v}\in\Omega_{v}\subset{\mathbb{R}}^{3}$ ).
+The objective is two-fold: i) Numerical investigations of the $hp$ -version of the streamline diffusion (SD)
+finite element method for VM where both Maxwell’s
+and Vlasov equations are discretized using a
+space-velocity-time scheme both in $h$ (mesh size) and
+in $p$ (spatial order) versions. In this part we derive optimal
+a priori error bounds for a SD scheme in a $L_{2}$ -based norm. ii)
+The study of the combined
+effect of Nitsche’s symmetrization (cf [ 21 ] and [ 6 ] )
+in the spatial scheme for a Galerkin method
+and a time discretization, for a second order pde obtained through
+the combined Maxwell’s fields. The SD method was suggested by Hughes and Brooks in [ 18 ] for the
+fluid problems. The method was further developed
+(by T. Houghs and co-workers) to include several engineering problems.
+A through mathematical analysis was first given by Johnson et al in [ 19 ] in a study of the Navier-Stokes equations and was
+extended to most pdes with hyperbolic nature, where, e.g., [ 2 ] - [ 5 ] and [ 24 ] are relevant in the present study.
+In the SD method the test function is modified by adding a multiple
+of the streaming part in the equation, in terms of the test function, to it.
+Then, in the weak formulation we obtain a multiple of streaming
+terms in test and trial functions.
+This can be viewed as an extra diffusion term in the streaming direction in
+the original equation. Hence, the name of the method
+(the streamline diffusion). Such an extra diffusion would improve both the
+stability and convergence properties of the underlying Galerkin scheme.
+It is well known that the standard Galerkin method has a weaker convergence
+property for the
+hyperbolic problems: ${\mathcal{O}}(h^{s-1})$ versus ${\mathcal{O}}(h^{s})$ for the elliptic and parabolic problems with
+exact solution in the Sobolev space $H^{s}(\Omega)$ .
+The SD method improves this weak convergence to ${\mathcal{O}}(h^{s-1/2})$ (see [ 1 ] for Sobolev spaces of non-integer order)
+and also, having an upwinding character, enhances the stability. These two properties are achieved by discontinuous Galerkin as well (see, e.g. [ 7 ] ).
+The $hp$ -approach is to capture local behavior in the sense that: in
+the vicinity of singularities refined mesh $h$ is combined with the
+lower order (small $p$ ) polynomial approximations, whereas in more smooth
+regions higher order polynomials (large $p$ ) and non-refined (large $h$ ) meshes
+are used. In a sense the $hp$ -approach may be interpreted as a kind of
+automatic adaptivity. The Vlasov-Maxwell (VM) system which describes the time evolution of
+collisionless
+plasma is formulated as $\displaystyle\partial_{t}f$ $\displaystyle+\hat{v}\cdot\nabla_{x}f+q(E+c^{-1}\hat{v}\times B)\cdot\nabla_{v}f=0,$ (1.1) $\displaystyle\partial_{t}E=c\nabla_{x}\times B-j,\qquad\nabla_{x}\cdot E=\rho,$ $\displaystyle\partial_{t}B=-c\nabla_{x}\times E,\qquad\nabla_{x}\cdot B=0$ with properly assigned initial data $f(0,x,v)=f^{0}(x,v)\geq 0$ , $E(0,x)=E^{0}(x)$ , $B(0,x)=B^{0}(x)$ .
+Here $f$ is the density, in phase space, time of
+particles with charge $q$ ,
+mass $m$ and velocity $\hat{v}=(m^{2}+c^{-2}|v|^{2})^{-1/2}v\qquad(v\,\,\mbox{is momentum}).$ Further, $c$ is the speed of light and the charge and current densities $\rho$ and $j$ are given by $\rho(t,x)=4\pi\int qf\,dv\quad\mbox{and}\quad j(t,x)=4\pi\int qf\hat{v}\,dv.$ The phase-space variables may have different dimension: $(x,v)\in{\mathbb{R}}^{d}\times{\mathbb{R}}^{d^{\prime}},\,d\leq d^{\prime}$ . The Vlasov-Maxwell equations arises in several branches of continuum physics,
+e.g. in astrophysics or rarefied gas dynamics.
+The main assumption underlying the model is that collisions are
+rare and therefore negligible. In this setting the above system describes the
+motion of a collisionless plasma, e.g., a high-temperature,
+low-density, ionized gas. For a thorough mathematical study of
+VM models we refer to
+DiPerna and Lions [ 12 ] and a most recent work by Glassey and co-workers [ 14 ] - [ 15 ] and
+the references therein. The results in [ 14 ] are for
+a lower dimensional model where the interest lies in classical solutions,
+and are based on compactness and regularity assumptions on the
+initial density and fields. The main mathematical
+concern in dealing with the Vlasov-Maxwell system is related to the
+nonlinear term $(E+\hat{v}\times B)\cdot\nabla_{v}f$ which can be written in
+the divergence free form, viz. $(E+\hat{v}\times B)\cdot\nabla_{v}f={\mbox{d}iv}_{v}\Big((E+\hat{v}\times B)f\Big)$ .
+In [ 12 ] the nonlinear form $(E+\hat{v}\times B)f$ is analyzed. Numerical approaches for the VM system
+have been considered by several authors in different setting.
+The most relevant studies to this work are given by
+Gamba and co-workers [ 9 ] devoted to
+a discontinuous Galerkin approach, and Standar in [ 22 ] where
+the stability and a priori error estimates for
+the $h$ version of SD method for VM are derived.
+As some related studies we mention the analysis of
+a one dimensional model problem for the relativistic
+VM system in an interval given by Filbet and co-workers in [ 13 ] . Also in a very recent work [ 11 ] Degond and co-workers study a particle-in-cell method
+for the Vlasov-Maxwell system. An outline of this paper is as follows.
+We gather notation and assumptions in Section 2.
+In Section 3 we formulate the SD schemes for both Maxwell’s equations and the
+Vlasov-Maxwell system. Section 4 is on stability and convergence of the $hp$ SD finite element method of the Maxwell’s equations, based on a
+space-time iterative scheme. We insert such approximated field function
+in the drift term in Vlasov-Maxwell equation and prove stability and
+derive optimal convergence rates in the SD
+phase-space-time discretization scheme. Section 5 is devoted to a
+the study of a Nitsche
+scheme combined with a time discretization
+for a second order pde obtained from the Maxwell’s equations.
+Here, we rely on a modified form of the Ritz projection and derive optimal
+error estimates for the Nitsche scheme in spatial discretization.
+Assuming additional regularities in time we also prove optimal convergence of
+a second order time scheme for the fields.
+Finally, in our concluding Section 6 we present some numerical tests
+of the studied schemes in lower dimensional geometry. 2. Notation and Assumptions The divergence equations in ( 1.1 ) can be derived from the rest of
+the equations, assuming that the initial data $E^{0}$ and $B^{0}$ satisfy
+corresponding divergence equations.
+Hence we will consider the following relativistic
+Vlasov-Maxwell system in ${\mathbb{R}}^{d}$ (in the paper we focus on the dimension $d=3$ , but one can easily obtain
+the analogous results for $d=2$ ) $\displaystyle\partial_{t}f$ $\displaystyle+\hat{v}\cdot\nabla_{x}f+(E+\hat{v}\times B)\cdot\nabla_{v}f=0,$ (2.1) $\displaystyle\partial_{t}E=\nabla_{x}\times B-j,$ $\displaystyle\partial_{t}B=-\nabla_{x}\times E$ with $\hat{v}=(1+|v|^{2})^{-1/2}v$ and $j(t,x)=\int f\hat{v}\,dv$ ,
+where for simplicity we set the charge $q$ and all constants equal to one. Our objective is to use an iterative scheme to approximate the solution of
+the Vlasov-Maxwell (henceforth referred as VM) equations.
+First we take a guess for the density $f$ and then calculate the corresponding $j$ .
+Next, we plug these quantities into the Maxwell’s equations
+and solve these equations. Finally,
+we solve the Vlasov equation with the such approximated $E$ and $B$ as coefficients. We start from the Maxwell’s part.
+Set $E=(E_{1},E_{2},E_{3})^{T}\!$ , $B=(B_{1},B_{2},B_{3})^{T}\!$ , $j=(j_{1},j_{2},j_{3})^{T}\!$ .
+Then the Maxwell’s equations in ( 2.1 ) can be written in the
+following form: $\displaystyle\partial_{t}E_{1}$ $\displaystyle=\partial_{2}B_{3}-\partial_{3}B_{2}-j_{1},$ $\displaystyle\partial_{t}E_{2}$ $\displaystyle=\partial_{3}B_{1}-\partial_{1}B_{3}-j_{2},$ $\displaystyle\partial_{t}E_{3}$ $\displaystyle=\partial_{1}B_{2}-\partial_{2}B_{1}-j_{3},$ $\displaystyle\partial_{t}B_{1}$ $\displaystyle=-\partial_{2}E_{3}+\partial_{3}E_{2},$ $\displaystyle\partial_{t}B_{2}$ $\displaystyle=-\partial_{3}E_{1}+\partial_{1}E_{3},$ $\displaystyle\partial_{t}B_{3}$ $\displaystyle=-\partial_{1}E_{2}+\partial_{2}E_{1},$ where $\partial_{i}$ denotes the derivative with respect to $x_{i}$ .
+Hence defining the matrices $M_{1}=\left[\begin{array}[]{cccccc}0&0&0&0&0&0\\
+0&0&0&0&0&1\\
+0&0&0&0&-1&0\\
+0&0&0&0&0&0\\
+0&0&-1&0&0&0\\
+0&1&0&0&0&0\\
+\end{array}\right],\quad M_{2}=\left[\begin{array}[]{cccccc}0&0&0&0&0&-1\\
+0&0&0&0&0&0\\
+0&0&0&1&0&0\\
+0&0&1&0&0&0\\
+0&0&0&0&0&0\\
+-1&0&0&0&0&0\\
+\end{array}\right],$ $M_{3}=\left[\begin{array}[]{cccccc}0&0&0&0&1&0\\
+0&0&0&-1&0&0\\
+0&0&0&0&0&0\\
+0&-1&0&0&0&0\\
+1&0&0&0&0&0\\
+0&0&0&0&0&0\\
+\end{array}\right]$ and letting $W=(E_{1},E_{2},E_{3},B_{1},B_{2},B_{3})^{T}\!$ , $W^{0}=(E_{1}^{0},E_{2}^{0},E_{3}^{0},B_{1}^{0},B_{2}^{0},B_{3}^{0})^{T}\!$ and $b=(-j_{1},-j_{2},-j_{3},0,0,0)^{T}\!$ ,
+the Maxwell’s equations can be written as the system $\left\{\begin{array}[]{ll}\partial_{t}W+M_{1}\partial_{1}W+M_{2}\partial_{2}W+M_{3}\partial_{3}W=b,\\
+W(0,x)=W^{0}(x).\end{array}\right.$ (2.2) Now we return to the Vlasov equation given by $\left\{\begin{array}[]{ll}\partial_{t}f+\hat{v}\cdot\nabla_{x}f+(E+\hat{v}\times B)\cdot\nabla_{v}f=0,\\
+f(0,x,v)=f^{0}(x,v)\geq 0.\end{array}\right.$ (2.3) For simplicity, we introduce the notation $G(f)=(\hat{v},E+\hat{v}\times B)$ and define the total gradient $\nabla f=(\nabla_{x}f,\nabla_{v}f),$ so that, we can rewrite the Vlasov equation in compact form as $\partial_{t}f+G(f)\cdot\nabla f=0.$ Note that $G$ is divergence free $\nabla G(f)=\sum_{i=1}^{d}\frac{\partial\hat{v}}{\partial x_{i}}+\sum_{i=d+1}^{2d}\frac{\partial(E+\hat{v}\times B)}{\partial v_{i-d}}=\nabla_{v}\big(\hat{v}\times B\big)=0.$ Throughout this paper $C$ will denote a generic constant,
+not necessarily the same at each occurrence, and independent of the parameters
+in the equations, unless otherwise explicitly specified. 3. hp-Streamline Diffusion Method Let $\Omega_{x}\subset{\mathbb{R}}^{3}$ and $\Omega_{v}\subset{\mathbb{R}}^{3}$ denote the space
+and velocity domains,
+respectively. We assume that $f(t,x,v)$ , $E_{i}(t,x)$ , $B_{i}(t,x)$ for $i=1,2,3$ have compact
+supports in $\Omega_{x}$ and that $f(t,x,v)$ has compact support in $\Omega_{v}$ . Now we will introduce a finite element structure on $\Omega=\Omega_{x}\times\Omega_{v}$ .
+Let $T_{h}^{x}=\{\tau_{x}\}$ and $T_{h}^{v}=\{\tau_{v}\}$ be finite element subdivisions
+of $\Omega_{x}$ with elements $\tau_{x}$ and $\Omega_{v}$ with elements $\tau_{v}$ , respectively.
+Then $T_{h}=T_{h}^{x}\times T_{h}^{v}=\{\tau_{x}\times\tau_{v}\}=\{\tau\}$ is a subdivision
+of $\Omega$ .
+Let $0=t_{0}<t_{1}<\ldots<t_{M-1}<t_{M}=T$ be a partition of $[0,T]$ into
+sub-intervals $I_{m}=(t_{m},t_{m+1}]$ , $m=0,\ldots,M-1$ .
+Further let $\mathcal{C}_{h}$ be the corresponding subdivision of $Q_{T}=[0,T]\times\Omega$ into elements $K=I_{m}\times\tau$ , with $h_{K}=\textnormal{diam}\,K$ as the mesh parameter.
+We also define a piecewise constant mesh function $h(t,x,v):=h_{K}$ , $(t,x,v)\in K$ . Finally, we
+introduce $\mathcal{\tilde{C}}_{h}$ as the finite element subdivision of $[0,T]\times\Omega_{x}$ . Remark 3.1 . Henceforth, the discrete problems are the
+finite element approximations for the equations ( 2.2 ) and
+( 2.3 ) formulated for $(x,v,t)\in(0,T]\times{\Omega_{x}}\times{\Omega_{v}}$ ,
+associated with initial and corresponding boundary data.
+Here one may assume that $f$ has compact support in the
+velocity space ${\mathbb{R}}_{v}^{d}$ , and hence assume homogeneous
+Dirichlet boundary
+condition for $\Omega_{v}$ . Thus to define an adequate finite element space we let $\mathcal{H}_{0}=\prod_{m=0}^{M-1}H_{0}^{1}(I_{m}\times\Omega_{x}\times\Omega_{v})\quad\mbox{and}\quad\mathcal{\tilde{H}}_{0}=\prod_{m=0}^{M-1}H^{1}_{0}(I_{m}\times\Omega_{x}),$ where $H^{1}_{0}(I_{m}\times\Omega)=\{w\in H^{1};w=0\,\,\textnormal{on}\,\,\partial\Omega\}.$ Here $\Omega$ stands for either $\Omega_{x}$ or $\Omega_{x}\times\Omega_{v}$ . For $k=0,1,2,\ldots$ ,
+we define the finite element spaces for the Maxwell’s
+equations (resp. Vlasov equation) as the space of piecewise polynomials which are
+continuous in $x$ (resp. in $x$ and $v$ ) and with possible discontinuities at the
+interior time levels $t_{m},\,m=1,\ldots,M$ : $\tilde{V}_{h}=\{g\in[\mathcal{\tilde{H}}_{0}]^{6};g_{i}|_{\tilde{K}}\in P_{p_{\tilde{K}}}(I_{m})\times P_{p_{\tilde{K}}}(\tau_{x}),\,\forall\tilde{K}=I_{m}\times\tau_{x}\in\mathcal{\tilde{C}}_{h},\,1\leq i\leq 6\},$ with the extension for the Vlasov part and with $\tau=\tau_{x}\times\tau_{v}$ , viz: ${V}_{h}=\{g\in\mathcal{H}_{0};g|_{K}\in P_{p_{K}}(I_{m})\times P_{p_{K}}(\tau_{x})\times P_{p_{K}}(\tau_{v}),\,\forall K=I_{m}\times\tau\in\mathcal{C}_{h}\}.$ where $P_{p_{K}}(\cdot)$ is the set of polynomial of degree at most $p_{K}$ on the given set. In this setting we allow the degree of polynomial
+to vary from cell to cell, hence we define the piecewise constant function $p(t,x,v):=p_{K}$ .
+We shall also use some notation, viz. $(f,g)_{m}=(f,g)_{S_{m}},\qquad\|g\|_{m}=(g,g)_{m}^{1/2}$ and $\langle f,g\rangle_{m}=(f(t_{m},\ldots),g(t_{m},\ldots))_{\Omega},\qquad|g|_{m}=\langle g,g\rangle_{m}^{1/2},$ where $S_{m}=I_{m}\times\Omega$ , is the slab at $m$ -th level, $m=0,\ldots,M-1$ , and $\Omega$ stands for $\Omega_{x}$ in Maxwell’s equations and $\Omega_{x}\times\Omega_{v}$ for the Vlasov case. 3.1. Maxwell Equations Define $f^{h,i}$ , $b^{h,i}$ and $W^{h,i}$ as the approximation on the $i$ th step
+of $f$ , $b$ and $W$ , respectively.
+The global hp version of the streamline diffusion method on
+the $i$ th step
+for the Maxwell’s part can now be formulated as follows:
+find $W^{h,i}\in\tilde{V}_{h}$ such that for $m=0,1,\ldots,M-1$ , $\Big(\partial_{t}W^{h,i}+\sum_{l=1}^{3}M_{l}\partial_{l}W^{h,i},g+\delta(\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g)\Big)_{m}+\langle W^{h,i}_{+},g_{+}\rangle_{m}=\\
+=\Big(b^{h,i-1},g+\delta(\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g)\Big)_{m}+\langle W^{h,i}_{-},g_{+}\rangle_{m},\quad\forall\,g\in\tilde{V}_{h},$ (3.1) where $g=(g_{1},\ldots,g_{6})^{T}$ , $g_{\pm}(t,x)=\lim_{s\rightarrow 0^{\pm}}g(t+s,x)$ .
+The problem ( 3.1 ) is equivalent to:
+find $W^{h,i}\in\tilde{V}_{h}$ such that $\tilde{\mathcal{B}}(W^{h,i},g)=\tilde{\mathcal{L}}(b^{h,i-1};g)\quad\forall\,g\in\tilde{V}_{h},$ (3.2) where the bilinear form is defined as $\tilde{\mathcal{B}}(W,g)=\sum_{m=0}^{M-1}\Big(\partial_{t}W+\sum_{l=1}^{3}M_{l}\partial_{l}W,g+\delta(\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g)\Big)_{m}\\
++\sum_{m=1}^{M-1}\langle[W],g_{+}\rangle_{m}+\langle W_{+},g_{+}\rangle_{0}$ and the linear form by $\tilde{\mathcal{L}}(b;g)=\sum_{m=0}^{M-1}\Big(b,g+\delta(\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g)\Big)_{m}+\langle W^{0},g_{+}\rangle_{0},$ where $[W]=W_{+}-W_{-}$ . Now let $(\cdot,\cdot)_{K}$ denote the $L_{2}$ -inner product over K
+and define a non-negative piecewise constant function $\delta$ by $\delta|_{K}=\delta_{K},\quad\mbox{for }K\in\mathcal{\tilde{C}}_{h},$ i.e., $\delta_{K}$ is a non-negative constant on element $K$ .
+Counting for the local character of the parameters $h_{K}$ , $p_{K}$ and $\delta_{K}$ ,
+to formulate a finite element method based on the local
+space-time elements, the problem
+( 3.2 ) would have an alternative formulation where we
+replace in the definitions
+for $\tilde{\mathcal{B}}$ and $\tilde{\mathcal{L}}$ the sum of the inner products $(\cdot,\cdot)_{m}$ involving $\delta_{K}$ by the corresponding sum $\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!{}(\cdot,\cdot)_{K}$ and all $\delta$ by $\delta_{K}$ .
+Thus we have the problem ( 3.2 ) where in the bilinear, and linear,
+forms the first sum is replaced by $\sum_{K\in\tilde{\mathcal{C}}_{h}}$ as, e.g., $\tilde{\mathcal{B}}(W,g)=\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big(\partial_{t}W+\sum_{l=1}^{3}M_{l}\partial_{l}W,g+\delta_{K}(\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g)\Big)_{K}\\
++\sum_{m=1}^{M-1}\langle[W],g_{+}\rangle_{m}+\langle W_{+},g_{+}\rangle_{0}$ We also have that the solution $W$ of equation ( 2.2 ) satisfies $\tilde{\mathcal{B}}(W,g)=\tilde{\mathcal{L}}(b;g)\quad\forall\,g\in\tilde{V}_{h}.$ Subtracting ( 3.2 ) from this equation,
+we end up with the following relation $\tilde{\mathcal{B}}(W-W^{h,i},g)=\tilde{\mathcal{L}}(b;g)-\tilde{\mathcal{L}}(b^{h,i-1};g)\quad\forall\,g\in\tilde{V}_{h},$ (3.3) which is of vital importance in the error analysis. Now assuming jump discontinuities at the time levels $t=t_{m},\,\,m=1,\ldots,M-1$ , the suitable norm for
+stability and convergence would read as follows: $|\mkern-1.0mu|\mkern-1.0mu|g|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}=\frac{1}{2}\Big(|g_{+}|^{2}_{0}+|g_{-}|^{2}_{M}+\sum_{m=1}^{M-1}|[g]|^{2}_{m}+2\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\delta_{K}\|\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g\|_{K}^{2}\Big).$ 3.2. Vlasov-Maxwell Equations The hp-streamline diffusion method on the $i$ -th step
+for the Vlasov part ( 2.3 ) can be formulated as follows:
+find $f^{h,i}\in V_{h}$ such that for $m=0,1,\ldots,M-1$ , $\Big(\partial_{t}f^{h,i}+G(f^{h,i-1})\cdot\nabla f^{h,i},g+\delta(\partial_{t}g+G(f^{h,i-1})\cdot\nabla g)\Big)_{m}\\
++\langle f^{h,i}_{+},g_{+}\rangle_{m}=\langle f^{h,i}_{-},g_{+}\rangle_{m}\quad\forall g\in V_{h}.$ (3.4) The problem ( 3.4 ) is equivalent to: find $f^{h,i}\in V_{h}$ such that $\mathcal{B}(G(f^{h,i-1});f^{h,i},g)=\mathcal{L}(g)\quad\forall g\in V_{h},$ (3.5) where the trilinear form $\mathcal{B}$ is defined as $\begin{split}\mathcal{B}(G;f,g)=&\sum_{m=0}^{M-1}\Big(\partial_{t}f+G\cdot\nabla f,g+\delta(\partial_{t}g+G(f^{h,i-1})\cdot\nabla g)\Big)_{m}\\
+&+\sum_{m=1}^{M-1}\langle[f],g_{+}\rangle_{m}+\langle f_{+},g_{+}\rangle_{0}\end{split}$ (3.6) and the linear form $L$ is given by $\mathcal{L}(g)=\langle f^{0},g_{+}\rangle_{0}.$ Analogously as for the Maxwell’s equations we reformulate
+( 3.5 ) considering phase-space-time finite element
+discretization. This yields replacing the first sum in ( 3.6 )
+by a sum over
+the prismatic elements $K\in{\mathcal{C}}_{h}$ of the form $\sum_{K\in{\mathcal{C}}_{h}}$ and thus have
+the terms with $\sum_{m=0}^{M-1}(\cdot,\cdot)_{m}$ replaced by $\sum_{K\in{\mathcal{C}}_{h}}(\cdot,\cdot)_{K}$ . Hence $\mathcal{B}(G;f,g)=\sum_{K\in\mathcal{C}_{h}}\!\!\Big(\partial_{t}f+G\cdot\nabla f,g+\delta_{K}(\partial_{t}g+G(f^{h,i-1})\cdot\nabla g)\Big)_{K}\\
++\sum_{m=1}^{M-1}\langle[f],g_{+}\rangle_{m}+\langle f_{+},g_{+}\rangle_{0}.$ Therefore, the adequate norm to derive
+stability and convergence estimates for the Vlasov equation
+will be the following triple norm: $|\mkern-1.0mu|\mkern-1.0mu|g|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}=\frac{1}{2}\Big(|g_{+}|^{2}_{0}+|g_{-}|^{2}_{M}+\sum_{m=1}^{M-1}|[g]|^{2}_{m}+2\!\sum_{K\in\mathcal{C}_{h}}\!\!\delta_{K}\|\partial_{t}g+G(f^{h,i-1})\cdot\nabla g\|^{2}_{K}\Big).$ 4. Stability and Convergence of hp-SDFEM 4.1. Maxwell Equations Lemma 4.1 (M-coercivity) . The bilinear form $\tilde{\mathcal{B}}(\cdot,\,\cdot)$ satisfies the coercivity relation $\tilde{\mathcal{B}}(g,g)=|\mkern-1.0mu|\mkern-1.0mu|g|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2},\qquad\forall g\in\mathcal{\tilde{H}}_{0}.$ Proof. By definition of $\tilde{\mathcal{B}}$ we have that $\tilde{\mathcal{B}}(g,g)=\sum_{m=0}^{M-1}(\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g,g)_{m}\\
++\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\delta_{K}\|\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g\|_{K}^{2}+\sum_{m=1}^{M-1}\langle[g],g_{+}\rangle_{m}+|g_{+}|^{2}_{0}.$ Integrating by parts we get that $\sum_{m=0}^{M-1}(\partial_{t}g,g)+\sum_{m=1}^{M-1}\langle[g],g_{+}\rangle_{m}+|g_{+}|^{2}_{0}=\frac{1}{2}\Big(\sum_{m=1}^{M-1}|[g]|^{2}_{m}+|g_{-}|^{2}_{M}+|g_{+}|^{2}_{0}\Big)$ and since $g(t,x)=0$ on $I\times\partial\Omega_{x}$ , we have that $\sum_{m=0}^{M-1}(M_{l}\partial_{l}g,g)_{m}=0,\quad\mbox{for }l=1,2,3.$ (4.1) Then, the proof follows immediately through adding all above terms.
+∎ Lemma 4.2 (Poincaré-type M-estimate) . For any positive constant $C$ we have that for $g\in\mathcal{\tilde{H}}_{0}$ , $\|g\|^{2}_{m}\leq\Big(|g_{-}|^{2}_{m+1}+\frac{1}{C}\|\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g\|^{2}_{m}\Big)he^{2Ch}.$ Proof. For $t_{m}<t<t_{m+1}$ , we may write $\begin{split}\|g(t)\|^{2}_{\Omega_{x}}&=|g_{-}|^{2}_{m+1}-\int_{t}^{t_{m+1}}\frac{d}{ds}\|g(s)\|^{2}_{\Omega_{x}}ds\\
+&=|g_{-}|^{2}_{m+1}-2\int_{t}^{t_{m+1}}(\partial_{s}g+\sum_{l=1}^{3}M_{l}\partial_{l}g,g)_{\Omega_{x}}ds\\
+&\leq|g_{-}|^{2}_{m+1}+\frac{1}{C}\|\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g\|^{2}_{m}+C\int_{t}^{t_{m+1}}\|g\|^{2}_{\Omega_{x}},\\
+\end{split}$ where in the second equality we used ( 4.1 ).
+Finally, by Grönwall’s lemma we have that $\|g(t)\|^{2}_{\Omega_{x}}\leq\Big(|g_{-}|^{2}_{m+1}+\frac{1}{C}\|\partial_{t}g+\sum_{l=1}^{3}M_{l}\partial_{l}g\|^{2}_{m}\Big)e^{2Ch}.$ Now, integrating over $[t_{m},t_{m+1}]$ we obtain the desired result.
+∎ We proceed to the error analysis.
+First, let $\tilde{W}$ be an interpolant of $W$ in the finite dimensional
+discrete function space $\tilde{V}_{h}$ and denote by $W^{h,i}$ a solution to ( 3.2 ).
+Then we represent the error as the following split $\tilde{e}=W-W^{h,i}=(W-\tilde{W})-(W^{h,i}-\tilde{W})=\tilde{\eta}-\tilde{\xi},$ where $\tilde{\eta}=(\tilde{\eta}_{1},\ldots,\tilde{\eta}_{6})^{T}$ is the interpolation error
+and $\tilde{\xi}=(\tilde{\xi}_{1},\ldots,\tilde{\xi}_{6})^{T}$ . To estimate the convergence rate for both the Maxwell’s and the Vlasov-Maxwell
+equations we use the Theorem 3.2 from [ 5 ] , which are based on
+classical interpolation estimates by [ 10 ] .
+As a consequence of this Theorem we have the following bounds
+for the interpolation error $\eta=f-\tilde{f}$ of a function $f\in H^{k+1}([0,T]\times\Omega)$ (where $\Omega$ stands for $\Omega_{x}$ in the Maxwell’s equations
+and $\Omega_{x}\times\Omega_{v}$ for the Vlasov case)
+and its gradient: $\displaystyle\|\eta\|^{2}$ $\displaystyle\leq C\sum_{K}\left(\frac{h_{K}}{2}\right)^{2s_{K}+2}\Phi_{1}(p_{K},s_{K})\|f\|^{2}_{s_{K}+1,K},$ (4.2) $\displaystyle\|\mathcal{D}\eta\|^{2}$ $\displaystyle\leq C\sum_{K}\left(\frac{h_{K}}{2}\right)^{2s_{K}}\Phi_{2}(p_{K},s_{K})\|f\|^{2}_{s_{K}+1,K},$ (4.3) where the sums are taken over all space-time
+elements of the triangulation of the domain, $[0,T]\times\Omega$ , $0\leq s_{K}\leq\min(p_{K},k)$ , with $p_{K}$ being the local spectral order.
+Closed formulas for $\Phi_{1}$ and $\Phi_{2}$ are given in Theorem 3.2 of [ 5 ] . A less involved formula for $\Phi_{1}$ can be found in [ 16 ] . Now we state the following convergence theorem for the Maxwell’s equations. Theorem 4.3 . Assume that $W\in H^{k+1}([0,T]\times\Omega)$ . Moreover
+on each $K$ , the parameter $\delta_{K}$ satisfies $\delta_{K}=C_{1}\frac{h_{K}}{p_{K}}$ for some constant $C_{1}>0$ with $p_{K}h_{K}\leq C_{2}<1$ for some constant $C_{2}>0$ .
+Then there exists a constant $C>0$ independent of $p_{K}$ , $h_{K}$ and $s_{K}$ such that $|\mkern-1.0mu|\mkern-1.0mu|W-W^{h,i}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}\leq C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{M}}(p_{K},s_{K})\|W\|^{2}_{s_{K}+1,K}\\
++C\|f-f^{h,i-1}\|^{2}_{Q_{T}},$ where $\Phi_{\mathrm{M}}=\max(\Phi_{1},\Phi_{2})$ with $\mathcal{N}=\textnormal{dim }\Omega_{x}+1$ for $\Phi_{1}$ and $\Phi_{2}$ (recall that M , as a subscript in the triple norm above,
+is to emphasis that it concerns the triple norm of the Maxwell’s equations). Proof. We have by Lemma 4.1 and ( 3.3 ) that $|\mkern-1.0mu|\mkern-1.0mu|\tilde{\xi}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}=\tilde{\mathcal{B}}(\tilde{\xi},\tilde{\xi})=\tilde{\mathcal{B}}(\tilde{\eta},\tilde{\xi})-\tilde{\mathcal{L}}(b;\tilde{\xi})+\tilde{\mathcal{L}}(b^{h,i-1};\tilde{\xi}).$ We start with the term $\tilde{\mathcal{B}}(\tilde{\eta},\tilde{\xi})=\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big(\partial_{t}\tilde{\eta}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\eta},\tilde{\xi}+\delta_{K}(\partial_{t}\tilde{\xi}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\xi})\Big)_{K}+\sum_{m=1}^{M-1}\langle[\tilde{\eta}],\tilde{\xi}_{+}\rangle_{m}+\langle\tilde{\eta}_{+},\tilde{\xi}_{+}\rangle_{0}.$ Partial integration gives the identities $(\partial_{t}\tilde{\eta},\tilde{\xi})_{m}=\int_{\Omega_{x}}[\,\tilde{\eta}\tilde{\xi}\,]_{t=t_{m}}^{t_{m+1}}dx-(\tilde{\eta},\partial_{t}\tilde{\xi})_{m}=\langle\tilde{\eta}_{-},\tilde{\xi}_{-}\rangle_{m+1}-\langle\tilde{\eta}_{+},\tilde{\xi}_{+}\rangle_{m}-(\tilde{\eta},\partial_{t}\tilde{\xi})_{m}$ and $(M_{l}\partial_{l}\tilde{\eta},\tilde{\xi})_{m}=-(\tilde{\eta},M_{l}\partial_{l}\tilde{\xi})_{m},$ since $\tilde{\eta}$ and $\tilde{\xi}$ have compact support in $\Omega_{x}$ .
+Inserting these equations into the expression for $\tilde{\mathcal{B}}(\tilde{\eta},\tilde{\xi})$ we end up with the following equality $|\tilde{\mathcal{B}}(\tilde{\eta},\tilde{\xi})|=|\langle\tilde{\eta}_{-},\tilde{\xi}_{-}\rangle_{M}-\sum_{m=1}^{M-1}\langle\tilde{\eta}_{-},[\tilde{\xi}]\rangle_{m}\\
+-\sum_{m=0}^{M-1}(\tilde{\eta},\partial_{t}\tilde{\xi}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\xi})_{m}+\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\delta_{K}\Big(\partial_{t}\tilde{\eta}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\eta},\partial_{t}\tilde{\xi}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\xi}\Big)_{K}|.$ Further, using some standard inequalities it follows that $|\tilde{\mathcal{B}}(\tilde{\eta},\tilde{\xi})|\leq\frac{1}{16}|\mkern-1.0mu|\mkern-1.0mu|\tilde{\xi}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}+32\sum_{m=0}^{M-1}|\tilde{\eta}_{-}|^{2}_{m+1}+\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big(\frac{32}{\delta_{K}}\|\tilde{\eta}\|^{2}_{K}+32\delta_{K}\|\partial_{t}\tilde{\eta}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\eta}\|^{2}_{K}\Big).$ Now let us estimate the second term $|\tilde{\mathcal{L}}(b^{h,i-1};\tilde{\xi})-\tilde{\mathcal{L}}(b;\tilde{\xi})|=\Big|\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big(b^{h,i-1}-b,\tilde{\xi}+\delta_{K}(\partial_{t}\tilde{\xi}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\xi})\Big)_{K}\Big|\\
+\leq\frac{1}{16}|\mkern-1.0mu|\mkern-1.0mu|\tilde{\xi}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}+\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!(\frac{C}{2}+8\delta_{K})\|b-b^{h,i-1}\|^{2}_{K}+\sum_{m=0}^{M-1}\big(\frac{1}{2C}\|\tilde{\eta}\|^{2}_{m}+\frac{1}{2C}\|\tilde{e}\|_{m}^{2}\big).$ The above two inequalities and Lemma 4.2 , with properly chosen $C$ and the bound on $p_{K}h_{K}$ , imply the estimate $|\mkern-1.0mu|\mkern-1.0mu|\tilde{\xi}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}\leq\frac{1}{8}|\mkern-1.0mu|\mkern-1.0mu|\tilde{\xi}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}+\frac{7}{16}|\mkern-1.0mu|\mkern-1.0mu|\tilde{e}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}+C\|f-f^{h,i-1}\|^{2}_{Q_{T}}\\
++C\sum_{m=0}^{M-1}(|\tilde{\eta}_{-}|^{2}_{m+1}+h|\tilde{e}_{-}|^{2}_{m+1})+C\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big((1+\frac{1}{\delta_{K}})\|\tilde{\eta}\|^{2}_{K}+\delta_{K}\|\partial_{t}\tilde{\eta}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\eta}\|^{2}_{K}\Big).$ Hiding the $\tilde{\xi}$ -term on the right hand side in the $\tilde{\xi}$ -term on the left hand side,
+gives us the following inequality $|\mkern-1.0mu|\mkern-1.0mu|\tilde{\xi}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}\leq\frac{1}{2}|\mkern-1.0mu|\mkern-1.0mu|\tilde{e}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}+C\|f-f^{h,i-1}\|^{2}_{Q_{T}}+C\sum_{m=0}^{M-1}(|\tilde{\eta}_{-}|^{2}_{m+1}+h|\tilde{e}_{-}|^{2}_{m+1})\\
++C\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big((1+\delta_{K}^{-1})\|\tilde{\eta}\|^{2}_{K}+\delta_{K}\|\partial_{t}\tilde{\eta}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\eta}\|^{2}_{K}\Big).$ Thus, we have estimated $|\mkern-1.0mu|\mkern-1.0mu|\tilde{\xi}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}$ . This implies that $|\mkern-1.0mu|\mkern-1.0mu|\tilde{e}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}\leq|\mkern-1.0mu|\mkern-1.0mu|\tilde{\eta}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}+|\mkern-1.0mu|\mkern-1.0mu|\tilde{\xi}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}\leq\frac{1}{2}|\mkern-1.0mu|\mkern-1.0mu|\tilde{e}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}+C\|f-f^{h,i-1}\|^{2}_{Q_{T}}+C\sum_{m=1}^{M}h|\tilde{e}_{-}|^{2}_{m}\\
++C\Big(|\tilde{\eta}_{+}|^{2}_{0}+\sum_{m=0}^{M-1}|\tilde{\eta}_{-}|^{2}_{m+1}+\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!(\delta_{K}^{-1}\|\tilde{\eta}\|_{K}^{2}+\delta_{K}\|\partial_{t}\tilde{\eta}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\eta}\|^{2}_{K})+\sum_{m=1}^{M-1}|[\tilde{\eta}]|^{2}_{m}\Big).$ (4.4) Now we have to estimate the interpolation error terms: $\begin{split}J_{1}&:=\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big(\delta_{K}^{-1}\|\tilde{\eta}\|_{K}^{2}+\delta_{K}\|\partial_{t}\tilde{\eta}+\sum_{l=1}^{3}M_{l}\partial_{l}\tilde{\eta}\|^{2}_{K}\Big),\\
+J_{2}&:=|\tilde{\eta}_{+}|^{2}_{0}+\sum_{m=0}^{M-1}|\tilde{\eta}_{-}|^{2}_{m+1}+\sum_{m=1}^{M-1}|[\tilde{\eta}]|^{2}_{m}.\\
+\end{split}$ For the term $J_{1}$ we use ( 4.2 ) and ( 4.3 ) to get $J_{1}\leq C\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\left(\frac{h_{K}}{2}\right)^{2s_{K}}\Phi_{\mathrm{M}}(p_{K},s_{K})p_{K}^{-2}\big(\delta_{K}^{-1}h^{2}_{K}+\delta_{K}\big)\|W\|_{s_{K}+1,K}^{2}.$ (4.5) To estimate the term $J_{2}$ we use the trace
+estimate combined with the inverse inequality and get $\|\tilde{\eta}\|_{\partial K}^{2}\leq C\Big(\big(\sum_{l=1}^{6}\|\nabla\tilde{\eta}_{l}\|_{K}\big)\|\tilde{\eta}\|_{K}+h_{K}^{-1}\|\tilde{\eta}\|_{K}^{2}\Big),$ (4.6) to obtain $J_{2}\leq C\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\left[\left(\frac{h_{K}}{2}\right)^{s_{K}}\Phi_{\mathrm{M}}^{1/2}(p_{K},s_{K})\left(\frac{h_{K}}{2}\right)^{s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{M}}^{1/2}(p_{K},s_{K})\right.\\
++\left.h_{K}^{-1}\left(\frac{h_{K}}{2}\right)^{2s_{K}+2}p_{K}^{-2}\Phi_{\mathrm{M}}(p_{K},s_{K})\right]\|W\|_{s_{k}+1,K}^{2},$ (4.7) where for all terms in $J_{2}$ we combined ( 4.6 )
+with ( 4.2 ) and ( 4.3 ). Now, moving the triple norm of $\tilde{e}$ on the right hand side of ( 4.4 )
+to the left hand side and using estimates ( 4.5 ) and ( 4.7 )
+it follows that $|\mkern-1.0mu|\mkern-1.0mu|\tilde{e}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}^{2}\leq C\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{M}}(p_{K},s_{K})\|W\|^{2}_{s_{K}+1,K}\\
++C\|f-f^{h,i-1}\|^{2}_{Q_{T}}+C\sum_{m=1}^{M}h|\tilde{e}_{-}|^{2}_{m}.$ (4.8) The next step is to apply a discrete Grönwall lemma of the form:
+suppose $\{a_{\ell}\}^{M}_{1}$ satisfies $a_{\ell}\leq C_{1}+C_{2}\sum_{j=1}^{\ell}a_{j}h,\qquad\ell=1,\ldots,M.$ If $h\leq 1/2C_{2}$ , then we have that $a_{\ell}\leq 2C_{1}e^{2C_{2}(\ell-1)h}\quad\mbox{for}\quad\ell=1,\ldots,M.$ The discrete Grönwall’s lemma yields $|\tilde{e}_{-}|^{2}_{\ell}\leq C\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{M}}(p_{K},s_{K})\|W\|^{2}_{s_{K}+1,K}\\
++C\|f-f^{h,i-1}\|^{2}_{Q_{T}}$ for $\ell=1,\ldots,M$ . Plugging these inequalities into ( 4.8 )
+will give the stated error estimate and the proof is complete.
+∎ Remark 4.4 . Theorem 4.3 and Lemma 4.2 , with properly chosen $C$ and the bound on $p_{K}h_{K}$ , with the definition of $|\mkern-1.0mu|\mkern-1.0mu|\cdot|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{M}}$ imply the following $L_{2}$ -norm error estimate $\|W-W^{h,i}\|^{2}_{I\times\Omega_{x}}\leq C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{M}}(p_{K},s_{K})\|W\|^{2}_{s_{K}+1,K}\\
++Cph\|f-f^{h,i-1}\|^{2}_{Q_{T}}.$ (4.9) 4.2. Vlasov-Maxwell Equations Lemma 4.5 (V-coercivity) . We have that $\mathcal{B}(G(f^{h,i-1});g,g)=|\mkern-1.0mu|\mkern-1.0mu|g|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}\quad\forall g\in\mathcal{H}_{0}.$ Proof. Taking into account that $\nabla G(f^{h,i-1})=0$ , $g$ is zero on $\partial\Omega$ and
+following the proof of Lemma 4.1 we get the desired result.
+∎ Lemma 4.6 (Poincaré-type V-estimate) . For any constant $C$ we have for $g\in\mathcal{H}_{0}$ , $\|g\|^{2}_{m}\leq\Big(|g_{-}|^{2}_{m+1}+\frac{1}{C}\|\partial_{t}g+G(f^{h,i-1})\cdot\nabla g\|^{2}_{m}\Big)he^{Ch}.$ The proof is similar to that of Lemma 4.2 and therefore is
+omitted. Now we proceed with the error analysis.
+First we let $\tilde{f}$ be an interpolant of $f$ .
+Then we set $e=f-f^{h,i}=(f-\tilde{f})-(f^{h,i}-\tilde{f})=\eta-\xi.$ We state the following convergence theorem. Theorem 4.7 . Let $f^{h,i}$ be a solution to ( 3.5 ) and assume that the exact solution $f$ of ( 2.3 ) is in the Sobolev class $H^{k+1}(Q_{T})$ and satisfies the bound $\|\nabla f\|_{\infty}+\|G(f)\|_{\infty}+\|\nabla\eta\|_{\infty}\leq C,$ (4.10) and the parameter $\delta_{K}$ on each $K$ satisfies $\delta_{K}=C_{1}\frac{h_{K}}{p_{K}}$ for some positive constant $C_{1}$ with $p_{K}h_{K}\leq C_{2}<1$ for some constant $C_{2}>0$ .
+Then there exists a constant $C>0$ independent of $p_{K}$ , $s_{K}$ and $h_{K}$ such that $|\mkern-1.0mu|\mkern-1.0mu|f-f^{h,i}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}\leq C\bigg(\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{M}}(p_{K},s_{K})\|W\|^{2}_{s_{K}+1,K}+ph\|f-f^{h,i-1}\|^{2}_{Q_{T}}\\
++\!\!\sum_{K\in\mathcal{C}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{V}}(p_{K},s_{K})\|f\|^{2}_{s_{K}+1,K}\bigg),$ (4.11) where $0\leq s_{K}\leq\min(p_{K},k)$ and the subscript $V$ in the triple norm above,
+as well as a subscript for $\Phi$ is to emphasize that
+these quantities are in the Vlasov part.
+Here, $\Phi_{\mathrm{V}}=\max(\Phi_{1},\Phi_{2})$ with $\mathcal{N}=\dim\Omega_{x}+\dim\Omega_{v}+1$ for $\Phi_{1}$ and $\Phi_{2}$ . Proof. By ( 3.5 ) and Lemma 4.5 we get that $|\mkern-1.0mu|\mkern-1.0mu|\xi|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}=\mathcal{B}(G(f^{h,i-1});\xi,\xi)=\mathcal{L}(\xi)-\mathcal{B}(G(f^{h,i-1});\tilde{f},\xi)=T_{1}+T_{2},$ where $T_{1}=\mathcal{B}(G(f^{h,i-1});\eta,\xi)$ and $T_{2}=\mathcal{B}(G(f);f,\xi)-\mathcal{B}(G(f^{h,i-1});f,\xi).$ We start with the term $T_{1}$ .
+Integrating by parts and using the facts that $\eta$ and $\xi$ are zero on $\partial\Omega$ and $\nabla G(f^{h,i-1})=0$ , we get $\begin{split}T_{1}&=\sum_{K\in\mathcal{C}_{h}}\!\!\big(\partial_{t}\eta+G(f^{h,i-1})\cdot\nabla\eta,\xi+\delta_{K}(\partial_{t}\xi+G(f^{h,i-1})\cdot\nabla\xi)\big)_{K}\\
+&\qquad+\sum_{m=1}^{M-1}\langle[\eta],\xi_{+}\rangle_{m}+\langle\eta_{+},\xi_{+}\rangle_{0}\\
+&=-(\eta,\partial_{t}\xi+G(f^{h,i-1})\cdot\nabla\xi)_{Q_{T}}+\langle\eta_{-},\xi_{-}\rangle_{M}-\sum_{m=1}^{M-1}\langle\eta_{-},[\xi]\rangle_{m}\\
+&\qquad+\sum_{K\in\mathcal{C}_{h}}\!\!\delta_{K}\big(\partial_{t}\eta+G(f^{h,i-1})\cdot\nabla\eta,\partial_{t}\xi+G(f^{h,i-1})\cdot\nabla\xi\big)_{K}.\end{split}$ Now using Cauchy-Schwarz inequality we obtain the estimate $|T_{1}|\leq\frac{1}{8}|\mkern-1.0mu|\mkern-1.0mu|\xi|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}+C\Big(\sum_{m=1}^{M}|\eta_{-}|_{m}^{2}+\delta_{K}^{-1}\|\eta\|_{K}^{2}+\sum_{K\in\mathcal{C}_{h}}\!\!\big(\delta_{K}\|\partial_{t}\eta+G(f^{h,i-1})\cdot\nabla\eta\|_{K}^{2}\big)\Big),$ where for the last term we have the bound $\|\partial_{t}\eta+G(f^{h,i-1})\cdot\nabla\eta\|_{K}\leq\\
+\leq\|\partial_{t}\eta\|_{K}+\|G(f)\|_{\infty}\|\nabla\eta\|_{K}+\|\nabla\eta\|_{\infty}\|G(f^{h,i-1})-G(f)\|_{K}.$ (4.12) Next we estimate $T_{2}$ : $\begin{split}|T_{2}|&\leq\sum_{K\in\mathcal{C}_{h}}\!\!\delta_{K}\big|\big((G(f)-G(f^{h,i-1}))\cdot\nabla f,\partial_{t}\xi+G(f^{h,i-1})\cdot\nabla\xi\big)_{K}\big|\\
+&\qquad+\big|\big((G(f)-G(f^{h,i-1}))\cdot\nabla f,\xi\big)_{Q_{T}}\big|\\
+&\leq C\Big(\delta_{K}\|G(f)-G(f^{h,i-1})\|_{Q_{T}}^{2}\|\nabla f\|_{\infty}^{2}+\!\!\sum_{K\in\mathcal{C}_{h}}\!\!\frac{\delta_{K}}{8}\|\partial_{t}\xi+G(f^{h,i-1})\cdot\nabla\xi\|_{K}^{2}\Big)\\
+&\qquad+C\|G(f)-G(f^{h,i-1})\|_{Q_{T}}\|\nabla f\|_{\infty}\|\xi\|_{Q_{T}}.\end{split}$ To proceed we need to estimate $\|G(f)-G(f^{h,i-1})\|_{Q_{T}}$ .
+By the definition of $G$ we have that $G(f)-G(f^{h,i-1})=(0,E-E^{h,i}+\hat{v}\times(B-B^{h,i})),$ which gives $\|G(f)-G(f^{h,i-1})\|_{Q_{T}}^{2}\leq C(\|E-E^{h,i}\|_{Q_{T}}^{2}+\|\hat{v}\times(B-B^{h,i})\|_{Q_{T}}^{2}).$ Hence using ( 4.9 ) we obtain $\|G(f)-G(f^{h,i-1})\|_{Q_{T}}^{2}\leq C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}\Psi_{\mathrm{M}}(p_{K},s_{K})+Cph\|f-f^{h,i-1}\|^{2}_{Q_{T}},$ (4.13) where we denote $\Psi_{\mathrm{M}}(p_{K},s_{K}):=p_{K}^{-1}\Phi_{\mathrm{M}}(p_{K},s_{K})\|W\|^{2}_{s_{K}+1,K}.$ Now combining the estimates for $T_{1}$ and $T_{2}$ together with ( 4.12 ),
+( 4.13 ) and ( 4.10 ) we have $|\mkern-1.0mu|\mkern-1.0mu|\xi|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}\leq\frac{1}{4}|\mkern-1.0mu|\mkern-1.0mu|\xi|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}+C\|\xi\|_{Q_{T}}^{2}+C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}\Psi_{\mathrm{M}}(p_{K},s_{K})+Cph\|f-f^{h,i-1}\|^{2}_{Q_{T}}\\
++C\!\sum_{m=1}^{M}|\eta_{-}|^{2}_{m}+C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big(\delta_{K}^{-1}\|\eta\|^{2}_{K}+\delta_{K}\big(\|\partial_{t}\eta\|_{K}^{2}+\|\nabla\eta\|_{K}^{2}\big)\Big).$ Moving the triple norm to the left hand side
+and estimating $\|\xi\|^{2}_{Q_{T}}\leq C(\|e\|^{2}_{Q_{T}}+\|\eta\|^{2}_{Q_{T}})$ ,
+will give us the following inequality $|\mkern-1.0mu|\mkern-1.0mu|\xi|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}\leq C\|e\|_{Q_{T}}^{2}+C\|\eta\|_{Q_{T}}^{2}+C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}\Psi_{\mathrm{M}}(p_{K},s_{K})+Cph\|f-f^{h,i-1}\|^{2}_{Q_{T}}\\
++C\!\sum_{m=1}^{M}|\eta_{-}|^{2}_{m}+C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big(\delta_{K}^{-1}\|\eta\|^{2}_{K}+\delta_{K}\big(\|\partial_{t}\eta\|_{K}^{2}+\|\nabla\eta\|_{K}^{2}\big)\Big).$ We now estimate $|\mkern-1.0mu|\mkern-1.0mu|e|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}$ as follows $|\mkern-1.0mu|\mkern-1.0mu|e|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}\leq 2|\mkern-1.0mu|\mkern-1.0mu|\xi|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}+2|\mkern-1.0mu|\mkern-1.0mu|\eta|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}\leq\\
+\leq C\|e\|_{Q_{T}}^{2}+C\|\eta\|_{Q_{T}}^{2}+C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}\Psi_{\mathrm{M}}(p_{K},s_{K})+Cph\|f-f^{h,i-1}\|^{2}_{Q_{T}}\\
++C\!\sum_{m=1}^{M}|\eta_{-}|^{2}_{m}+C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big(\delta_{K}^{-1}\|\eta\|^{2}_{K}+\delta_{K}\big(\|\partial_{t}\eta\|_{K}^{2}+\|\nabla\eta\|_{K}^{2}\big)\Big)+|\eta_{+}|^{2}_{0}+\sum_{m=1}^{M-1}|[\eta]|^{2}_{m}.$ Using Lemma 4.6 for the term $\|e\|^{2}_{Q_{T}}$ with an appropriately chosen constant $C$ and the bound on $p_{K}h_{K}$ we get $|\mkern-1.0mu|\mkern-1.0mu|e|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}\leq\frac{1}{2}|\mkern-1.0mu|\mkern-1.0mu|e|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}+Ch\!\sum_{m=1}^{M}|e_{-}|^{2}_{m}+C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}\Psi_{\mathrm{M}}(p_{K},s_{K})+Cph\|f-f^{h,i-1}\|^{2}_{Q_{T}}\\
++C\|\eta\|_{Q_{T}}^{2}+C\!\sum_{m=1}^{M}|\eta_{-}|^{2}_{m}+|\eta_{+}|^{2}_{0}+\sum_{m=1}^{M-1}|[\eta]|^{2}_{m}\\
++C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!\Big(\delta_{K}^{-1}\|\eta\|^{2}_{K}+\delta_{K}\big(\|\partial_{t}\eta\|_{K}^{2}+\|\nabla\eta\|_{K}^{2}\big)\Big).$ Recalling ( 4.2 ) and ( 4.3 ) for all $\eta$ -terms we obtain
+(in a similar way as in the proof of Theorem 4.3 for the terms $J_{1}$ and $J_{2}$ ) $|\mkern-1.0mu|\mkern-1.0mu|e|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}\leq Ch\!\sum_{m=1}^{M}|e_{-}|^{2}_{m}+C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}\Psi_{\mathrm{M}}(p_{K},s_{K})+Cph\|f-f^{h,i-1}\|^{2}_{Q_{T}}\\
++C\!\!\sum_{K\in\mathcal{C}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{V}}(p_{K},s_{K})\|f\|^{2}_{s_{K}+1,K}.$ Now we use the discrete Grönwall lemma stated in the proof of
+Theorem 4.3 and we get the following inequality $|\mkern-1.0mu|\mkern-1.0mu|e|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}\leq C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{M}}(p_{K},s_{K})\|W\|^{2}_{s_{K}+1,K}+Cph\|f-f^{h,i-1}\|^{2}_{Q_{T}}\\
++C\!\!\sum_{K\in\mathcal{C}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{V}}(p_{K},s_{K})\|f\|^{2}_{s_{K}+1,K},$ which gives the desired result and completes the proof.
+∎ Corollary 4.8 . Under the assumptions of Theorem 4.7 we have $|\mkern-1.0mu|\mkern-1.0mu|f-f^{h,i}|\mkern-1.0mu|\mkern-1.0mu|_{\mathrm{V}}^{2}\leq C\!\!\sum_{K\in\mathcal{\tilde{C}}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{M}}(p_{K},s_{K})\|W\|^{2}_{s_{K}+1,K}+C\big(ph\big)^{i}\\
++C\!\!\sum_{K\in\mathcal{C}_{h}}\!\!h_{K}^{2s_{K}+1}p_{K}^{-1}\Phi_{\mathrm{V}}(p_{K},s_{K})\|f\|^{2}_{s_{K}+1,K}.$ Proof. Using Lemma 4.6 with a properly chosen constant $C$ and the bound on $p_{K}h_{K}$ we get $\|f-f^{h,i}\|^{2}_{s_{K}+1,K}\leq S+Cph\|f-f^{h,i-1}\|^{2}_{s_{K}+1,K},$ where $S$ denotes the terms with sums from
+the right hand side of ( 4.11 ).
+Using this inequality repeatedly will give us $\|f-f^{h,i}\|^{2}_{s_{K}+1,K}\leq CS+C(ph)^{i},$ which ends the proof.
+∎ Remark 4.9 (The DG approach) . The whole theory developed in the previous sections
+work for the streamline diffusion based discontinuous Galerkin (SDDG)
+method as well.
+In this method our approximations are also allowed to have jump
+discontinuities
+across the inter-element boundaries. Then the norms, including
+the sum over such jump terms, are much more involved.
+However, as we mentioned above, the analysis although lengthy
+follow the same path. 5. Nitsche’s method for Maxwell equations Alternative, yet more desirable numerical scheme for
+the Maxwell’s equations can be obtained using a symmetrizing
+penalty approach known as Nitsche’s method.
+This, however cannot be extended to the Vlasov part due
+to the hyperbolic nature of the Vlasov equation.
+Nevertheless, the advantages of the symmetrizing are
+overwhelming.
+Therefore below we include analysis of the Nitsche’s
+approach for the Maxwell part. Recall that we have the Maxwell’s equations given by $\displaystyle E_{t}-\nabla_{x}\times B=-j,$ $\displaystyle B_{t}+\nabla_{x}\times E=0.$ We differentiate the first equation with respect to time to get $E_{tt}-\nabla_{x}\times B_{t}=-j_{t},$ (5.1) and plug the second Maxwell’s equation into the equation ( 5.1 )
+to obtain $E_{tt}+\nabla_{x}\times(\nabla_{x}\times E)=-j_{t}.$ (5.2) Multiplying ( 5.2 ) with $g\in H(\textnormal{curl},\Omega_{x})=\{v\in L_{2}(\Omega_{x}):\nabla_{x}\times v\in L_{2}(\Omega_{x})\}$ and integrating over $\Omega_{x}$ yields $\int_{\Omega_{x}}E_{tt}\cdot g\,dx+\int_{\Omega_{x}}\nabla_{x}\times(\nabla_{x}\times E)\cdot g\,dx=-\int_{\Omega_{x}}j_{t}\cdot g\,dx.$ (5.3) Now recall the Green’s formula $\int_{\Omega_{x}}u\cdot\nabla_{x}\times v\,dx-\int_{\Omega_{x}}\nabla_{x}\times u\cdot v\,dx=-\int_{\Gamma_{x}}(u\times n)\cdot v\,ds,$ where $n=n(x)$ is the unit outward normal to the boundary at the point $x\in\partial\Omega_{x}$ .
+Apply Green’s formula to ( 5.3 ) $\int_{\Omega_{x}}E_{tt}\cdot g\,dx+\int_{\Omega_{x}}\nabla_{x}\times E\cdot\nabla_{x}\times g\,dx-\int_{\Gamma_{x}}\nabla_{x}\times E\cdot(g\times n)\,ds=-\int_{\Omega_{x}}j_{t}\cdot g\,dx.$ This relation being non-symmetric
+(see the contribution from the boundary terms)
+causes severe restrictions in, e.g., deriving stability estimates.
+To circumvent such draw-backs Nitsche introduced a symmetrized
+scheme for elliptic and parabolic problems (see [ 21 ] ), which is also known as
+the penalty method . This can be seen in, e.g., [ 8 ] and [ 23 ] .
+In our case Nitsche’s method is performed
+by the add of extra boundary terms making the bilinear form
+symmetric and coercive, viz. $\displaystyle\int_{\Omega_{x}}E_{tt}\cdot g\,dx+\int_{\Omega_{x}}\nabla_{x}\times E\cdot\nabla_{x}\times g\,dx-\int_{\Gamma_{x}}\nabla_{x}\times E\cdot(g\times n)\,ds$ $\displaystyle-\int_{\Gamma_{x}}(E\times n)\cdot\nabla_{x}\times g\,ds+\frac{\gamma}{h}\int_{\Gamma_{x}}E\cdot g\,ds=-\int_{\Omega_{x}}j_{t}\cdot g\,dx.$ Here $\gamma$ is a constant that will be specified later.
+Now, we define the symmetric bilinear form $\displaystyle a(E,g):=$ $\displaystyle\int_{\Omega_{x}}\nabla_{x}\times E\cdot\nabla_{x}\times g\,dx-\int_{\Gamma_{x}}\nabla_{x}\times E\cdot(g\times n)\,ds$ $\displaystyle-\int_{\Gamma_{x}}(E\times n)\cdot\nabla_{x}\times g\,ds+\frac{\gamma}{h}\int_{\Gamma_{x}}E\cdot g\,ds$ and the element space of piecewise linear polynomials $V^{x}_{h}=\{g\in H(\textnormal{curl},\Omega_{x}):g|_{\tau_{x}}\in P_{1}(\tau_{x}),\,\forall\tau_{x}\in T^{x}_{h}\}.$ Thus, we can formulate the semi-discrete problem as: for each fixed $t$ ,
+find $E^{h}(t,\cdot)\in V^{x}_{h}$ , such that $(E_{tt}^{h},g)_{\Omega_{x}}+a(E^{h},g)=-(j_{t},g)_{\Omega_{x}}\quad\forall g\in V^{x}_{h}.$ (5.4) It is straightforward to observe the consistency of the method. Lemma 5.1 (Consistency) . The exact solution $E$ of ( 5.2 ) satisfies $(E_{tt},g)_{\Omega_{x}}+a(E,g)=-(j_{t},g)_{\Omega_{x}}\quad\forall g\in H(\textnormal{curl},\Omega_{x}).$ Now, defining the mesh dependent discrete norm $\|g\|^{2}_{h}:=\|\nabla_{x}\times g\|^{2}_{\Omega_{x}}+\|h^{-1/2}g\|^{2}_{\Gamma_{x}},$ we have $\displaystyle a(g,g)$ $\displaystyle=\|\nabla_{x}\times g\|^{2}_{\Omega_{x}}-2(\nabla_{x}\times g,g\times n)_{\Gamma_{x}}+\frac{\gamma}{h}\|g\|^{2}_{\Gamma_{x}}$ $\displaystyle\geq\|\nabla_{x}\times g\|^{2}_{\Omega_{x}}-2\|h^{1/2}\nabla_{x}\times g\|_{\Gamma_{x}}\|h^{-1/2}g\times n\|_{\Gamma_{x}}+\gamma\|h^{-1/2}g\|^{2}_{\Gamma_{x}}$ $\displaystyle\geq\|\nabla_{x}\times g\|^{2}_{\Omega_{x}}-\frac{1}{\alpha}\|h^{1/2}\nabla_{x}\times g\|^{2}_{\Gamma_{x}}-\alpha\|h^{-1/2}g\times n\|^{2}_{\Gamma_{x}}+\gamma\|h^{-1/2}g\|^{2}_{\Gamma_{x}}$ $\displaystyle\geq\frac{\alpha-\tilde{C}}{\alpha}\|\nabla_{x}\times g\|^{2}_{\Gamma_{x}}+(\gamma-4\alpha)\|h^{-1/2}g\|^{2}_{\Gamma_{x}},$ where in the last inequality we used the following trace estimate: $\|h^{1/2}\nabla_{x}\times g\|^{2}_{\Gamma_{x}}\leq\tilde{C}\|\nabla_{x}\times g\|^{2}_{\Omega_{x}}\quad\forall g\in V^{x}_{h}$ and the trivial inequality $\|h^{-1/2}g\times n\|^{2}_{\Gamma_{x}}\leq 4\|h^{-1/2}g\|^{2}_{\Gamma_{x}}\quad\forall g\in L_{2}(\Gamma_{x}).$ (5.5) Now, if we choose the constants $\gamma$ and $\alpha$ , such that $\gamma>4\alpha$ and $\alpha>\tilde{C}$ ,
+then we have proved the following coercivity result. Lemma 5.2 (Coercivity) . If $\gamma$ is large enough, then there exists a constant $C>0$ ,
+such that $a(g,g)\geq C\|g\|^{2}_{h}\quad\forall g\in V^{x}_{h}.$ To have continuity of the form $a(\cdot,\cdot)$ we need to define a mesh dependent triple norm as $|\mkern-1.0mu|\mkern-1.0mu|g|\mkern-1.0mu|\mkern-1.0mu|^{2}_{h}:=\|g\|^{2}_{h}+\|h^{1/2}\nabla_{x}\times g\|^{2}_{\Gamma_{x}}.$ Then we have the following lemma. Lemma 5.3 (Continuity) . The bilinear form $a(\cdot,\cdot)$ is continuous
+with respect to the triple norm $|\mkern-1.0mu|\mkern-1.0mu|\cdot|\mkern-1.0mu|\mkern-1.0mu|_{h}$ and we have the following estimate $|a(u,v)|\leq(9+\gamma)|\mkern-1.0mu|\mkern-1.0mu|u|\mkern-1.0mu|\mkern-1.0mu|_{h}|\mkern-1.0mu|\mkern-1.0mu|v|\mkern-1.0mu|\mkern-1.0mu|_{h}.$ Proof. Using inequality ( 5.5 ) and simple algebra we get the result: $\displaystyle|a(u,v)|\leq$ $\displaystyle\|\nabla_{x}\times u\|_{\Omega_{x}}\|\nabla_{x}\times v\|_{\Omega_{x}}+\|h^{1/2}\nabla_{x}\times u\|_{\Gamma_{x}}\|h^{-1/2}v\times n\|_{\Gamma_{x}}$ $\displaystyle+\|h^{-1/2}u\times n\|_{\Gamma_{x}}\|h^{1/2}\nabla_{x}\times v\|_{\Gamma_{x}}+\gamma\|h^{-1/2}u\|_{\Gamma_{x}}\|h^{-1/2}v\|_{\Gamma_{x}}$ $\displaystyle\leq$ $\displaystyle|\mkern-1.0mu|\mkern-1.0mu|u|\mkern-1.0mu|\mkern-1.0mu|_{h}|\mkern-1.0mu|\mkern-1.0mu|v|\mkern-1.0mu|\mkern-1.0mu|_{h}+4|\mkern-1.0mu|\mkern-1.0mu|u|\mkern-1.0mu|\mkern-1.0mu|_{h}|\mkern-1.0mu|\mkern-1.0mu|v|\mkern-1.0mu|\mkern-1.0mu|_{h}+4|\mkern-1.0mu|\mkern-1.0mu|u|\mkern-1.0mu|\mkern-1.0mu|_{h}|\mkern-1.0mu|\mkern-1.0mu|v|\mkern-1.0mu|\mkern-1.0mu|_{h}+\gamma|\mkern-1.0mu|\mkern-1.0mu|u|\mkern-1.0mu|\mkern-1.0mu|_{h}|\mkern-1.0mu|\mkern-1.0mu|v|\mkern-1.0mu|\mkern-1.0mu|_{h}$ $\displaystyle\leq$ $\displaystyle(9+\gamma)|\mkern-1.0mu|\mkern-1.0mu|u|\mkern-1.0mu|\mkern-1.0mu|_{h}|\mkern-1.0mu|\mkern-1.0mu|v|\mkern-1.0mu|\mkern-1.0mu|_{h}.$ ∎ For the triple norm $|\mkern-1.0mu|\mkern-1.0mu|\cdot|\mkern-1.0mu|\mkern-1.0mu|_{h}$ we have the following inverse estimate $|\mkern-1.0mu|\mkern-1.0mu|g|\mkern-1.0mu|\mkern-1.0mu|_{h}\leq Ch^{-1}\|g\|_{\Omega_{x}},$ which holds for all $g\in V^{x}_{h}$ .
+We note that the trace estimate implies the coercivity of the form $a(\cdot,\cdot)$ also in the triple norm. 5.1. A modified Ritz projection Let us define a projection $Q_{h}:H(\textnormal{curl},\Omega_{x})\rightarrow V^{x}_{h}$ by $a(Q_{h}u,v)=a(u,v)\quad\forall v\in V^{x}_{h}.$ We have the following error estimates for the projection $Q_{h}$ : Lemma 5.4 . There exists a constant $C$ , such that $\|u-Q_{h}u\|_{\Omega_{x}}+h|\mkern-1.0mu|\mkern-1.0mu|u-Q_{h}u|\mkern-1.0mu|\mkern-1.0mu|_{h}\leq Ch^{2}\|u\|_{H^{2}(\Omega_{x})}.$ (5.6) Proof. Consider the stationary problem $\displaystyle\nabla_{x}\times(\nabla_{x}\times\varphi)=$ $\displaystyle f\quad\mbox{in}\,\,\,\Omega_{x},$ $\displaystyle\varphi=$ $\displaystyle 0\quad\mbox{on}\,\,\,\Gamma_{x}.$ The Nitsche formulation for this problem is given by:
+Find $\varphi^{h}\in V^{x}_{h}$ , such that $a(\varphi^{h},\chi)=(f,\chi)\quad\forall\chi\in V^{x}_{h}.$ (5.7) Further, we have the Galerkin orthogonality $a(\varphi-\varphi^{h},\chi)=0\quad\forall\chi\in V^{x}_{h}.$ (5.8) Hence, the projection $Q_{h}$ can be seen as the solution operator of
+( 5.7 ).
+We therefore need an a priori error estimate of ( 5.7 ).
+To this end we split the error into two terms $\varphi-\varphi^{h}=(\varphi-I_{h}\varphi)+(I_{h}\varphi-\varphi^{h})=\eta+\xi$ ,
+where $I_{h}$ is the standard nodal interpolation operator.
+By coercivity, continuity of $a(\cdot,\cdot)$ and the Galerkin orthogonality
+( 5.8 ) we have that $|\mkern-1.0mu|\mkern-1.0mu|\xi|\mkern-1.0mu|\mkern-1.0mu|_{h}^{2}\leq Ca(\xi,\xi)=-Ca(\xi,\eta)\leq C|\mkern-1.0mu|\mkern-1.0mu|\xi|\mkern-1.0mu|\mkern-1.0mu|_{h}|\mkern-1.0mu|\mkern-1.0mu|\eta|\mkern-1.0mu|\mkern-1.0mu|_{h}.$ It follows that $|\mkern-1.0mu|\mkern-1.0mu|\xi|\mkern-1.0mu|\mkern-1.0mu|_{h}\leq C|\mkern-1.0mu|\mkern-1.0mu|\eta|\mkern-1.0mu|\mkern-1.0mu|_{h}$ ,
+so it remains to estimate $|\mkern-1.0mu|\mkern-1.0mu|\eta|\mkern-1.0mu|\mkern-1.0mu|_{h}$ .
+Below we estimate each term in $|\mkern-1.0mu|\mkern-1.0mu|\eta|\mkern-1.0mu|\mkern-1.0mu|_{h}$ separately.
+For the interpolation error we have $\|\nabla_{x}\times\eta\|^{2}_{\Omega_{x}}\leq 2\|\nabla_{x}\eta\|^{2}_{\Omega_{x}}\leq Ch^{2}\|\varphi\|^{2}_{H^{2}(\Omega_{x})}.$ As for the boundary integrals, by trace inequality we have the estimates $\displaystyle\|h^{-1/2}\eta\|^{2}_{\Gamma_{x}}$ $\displaystyle\leq C\|h^{-1/2}\eta\|_{\Omega_{x}}\|h^{-1/2}\eta\|_{H^{1}(\Omega_{x})}$ $\displaystyle\leq C\left(h^{-1}\|h^{-1/2}\eta\|^{2}_{\Omega_{x}}+h\|h^{-1/2}\eta\|^{2}_{H^{1}(\Omega_{x})}\right)$ $\displaystyle\leq Ch^{2}\|\varphi\|^{2}_{H^{2}(\Omega_{x})},$ and similarly $\displaystyle\|h^{1/2}\nabla_{x}\times\eta\|^{2}_{\Gamma_{x}}$ $\displaystyle\leq C\left(h^{-1}\|h^{1/2}\nabla_{x}\times\eta\|^{2}_{\Omega_{x}}+h\|h^{1/2}\nabla_{x}(\nabla_{x}\times\eta)\|^{2}_{\Omega_{x}}\right)$ $\displaystyle\leq Ch^{2}\|\varphi\|^{2}_{H^{2}(\Omega_{x})},$ where, in both estimates, in the last inequalities
+we have used the interpolation estimates.
+Summing up we end up with $|\mkern-1.0mu|\mkern-1.0mu|\eta|\mkern-1.0mu|\mkern-1.0mu|_{h}\leq Ch\|\varphi\|_{H^{2}(\Omega_{x})}.$ It remains to estimate the error in the $L_{2}$ -norm. To this end
+we consider the auxiliary problem $\displaystyle\nabla_{x}\times(\nabla_{x}\times\psi)=$ $\displaystyle\varphi-\varphi^{h}\quad\mbox{in}\,\,\,\Omega_{x},$ $\displaystyle\psi=$ $\displaystyle 0\quad\mbox{on}\,\,\,\Gamma_{x}.$ Multiplying the first equation with $\varphi-\varphi^{h}$ and integrating
+over $\Omega_{x}$ yields $\displaystyle\|\varphi-\varphi^{h}\|^{2}_{\Omega_{x}}$ $\displaystyle=(\varphi-\varphi^{h},\nabla_{x}\times(\nabla_{x}\times\psi))_{\Omega_{x}}$ $\displaystyle=(\nabla_{x}\times(\varphi-\varphi^{h}),\nabla_{x}\times\psi)_{\Omega_{x}}-\langle(\varphi-\varphi^{h})\times n,\nabla_{x}\times\psi\rangle_{\Gamma_{x}}$ $\displaystyle=a(\varphi-\varphi^{h},\psi)=a(\varphi-\varphi^{h},\psi-I_{h}\psi)$ $\displaystyle\leq|\mkern-1.0mu|\mkern-1.0mu|\varphi-\varphi^{h}|\mkern-1.0mu|\mkern-1.0mu|_{h}|\mkern-1.0mu|\mkern-1.0mu|\psi-I_{h}\psi|\mkern-1.0mu|\mkern-1.0mu|_{h}$ $\displaystyle\leq Ch^{2}\|\varphi\|_{H^{2}(\Omega_{x})}\|\psi\|_{H^{2}(\Omega_{x})}.$ By the stability of the elliptic problem $\|\psi\|_{H^{2}(\Omega_{x})}\leq C\|\varphi-\varphi^{h}\|_{\Omega_{x}}$ the estimate for the $L_{2}$ -norm follows.
+∎ 5.2. Convergence Let us split the error as $E-E^{h}=(E-Q_{h}E)+(Q_{h}E-E^{h})=\rho+\theta.$ In order to bound $\theta$ we note that $\displaystyle(\theta_{tt},\chi)_{\Omega_{x}}+a(\theta,\chi)$ $\displaystyle=(Q_{h}E_{tt},\chi)_{\Omega_{x}}+a(Q_{h}E,\chi)-(E^{h}_{tt},\chi)_{\Omega_{x}}-a(E^{h},\chi)$ $\displaystyle=(Q_{h}E_{tt},\chi)_{\Omega_{x}}+a(Q_{h}E,\chi)-(E_{tt},\chi)_{\Omega_{x}}-a(E,\chi)$ $\displaystyle=-(\rho_{tt},\chi)_{\Omega_{x}}$ for $\chi\in V^{x}_{h}$ . We choose $\chi=\theta_{t}$ to get $(\theta_{tt},\theta_{t})_{\Omega_{x}}+a(\theta,\theta_{t})=-(\rho_{tt},\theta_{t})_{\Omega_{x}},$ which leads to $\frac{1}{2}\frac{d}{dt}\left(\|\theta_{t}\|^{2}_{\Omega_{x}}+a(\theta,\theta)\right)\leq\|\rho_{tt}\|_{\Omega_{x}}\|\theta_{t}\|_{\Omega_{x}}.$ Integrating in time over $[0,t]$ and noting that $\theta(0)=\theta_{t}(0)=0$ we get the following estimate $\displaystyle\|\theta_{t}(t)\|^{2}_{\Omega_{x}}+a(\theta(t),\theta(t))$ $\displaystyle\leq 2\int^{t}_{0}\|\rho_{ss}\|_{\Omega_{x}}\|\theta_{s}\|_{\Omega_{x}}ds$ (5.9) $\displaystyle\leq 2\int^{t}_{0}\|\rho_{ss}\|_{\Omega_{x}}ds\max_{s\in[0,T]}\|\theta_{t}\|_{\Omega_{x}}$ $\displaystyle\leq 2\left(\int^{t}_{0}\|\rho_{ss}\|_{\Omega_{x}}ds\right)^{2}+\frac{1}{2}\left(\max_{s\in[0,T]}\|\theta_{t}\|_{\Omega_{x}}\right)^{2}.$ Since this holds for all $t\in[0,T]$ and $a(\theta(t),\theta(t))\geq 0$ , we have $\frac{1}{2}\left(\max_{s\in[0,T]}\|\theta_{t}\|_{\Omega_{x}}\right)^{2}\leq 2\left(\int^{T}_{0}\|\rho_{ss}\|_{\Omega_{x}}ds\right)^{2}.$ Inserting this into ( 5.9 ) and using Lemma 5.4 leads to $\|\theta_{t}(t)\|^{2}_{\Omega_{x}}+a(\theta(t),\theta(t))\leq 4\left(\int^{T}_{0}\|\rho_{ss}\|_{\Omega_{x}}ds\right)^{2}\leq 4\left(Ch^{2}\int^{T}_{0}\|E_{ss}\|_{H^{2}(\Omega_{x})}ds\right)^{2}.$ It follows that $\|\theta_{t}(t)\|_{\Omega_{x}}\leq Ch^{2}\int^{T}_{0}\|E_{ss}\|_{H^{2}(\Omega_{x})}ds$ (5.10) and $|\mkern-1.0mu|\mkern-1.0mu|\theta(t)|\mkern-1.0mu|\mkern-1.0mu|_{h}\leq Ch^{2}\int^{T}_{0}\|E_{ss}\|_{H^{2}(\Omega_{x})}ds.$ (5.11) Next we note that $\displaystyle 2\|\theta\|_{\Omega_{x}}\frac{d}{dt}\|\theta\|_{\Omega_{x}}$ $\displaystyle=\frac{d}{dt}\|\theta\|^{2}_{\Omega_{x}}=\frac{d}{dt}\int_{\Omega_{x}}|\theta|^{2}dx$ $\displaystyle=2\int_{\Omega_{x}}\theta\cdot\theta_{t}dx\leq 2\|\theta\|_{\Omega_{x}}\|\theta_{t}\|_{\Omega_{x}}.$ After cancellation and integration we have $\|\theta(t)\|_{\Omega_{x}}\leq\int^{t}_{0}\|\theta_{s}(s)\|_{\Omega_{x}}\,ds\leq Ch^{2}t\int^{T}_{0}\|E_{ss}\|_{H^{2}(\Omega_{x})}ds.$ (5.12) Now we have the following a priori error estimates theorem. Theorem 5.5 . Let $E$ and $E^{h}$ be the solutions of ( 5.2 ) and ( 5.4 ),
+respectively, such that $E(t),E_{t}(t)\in H^{2}(\Omega_{x})$ and $E_{tt}\in L_{1}\left((0,T);H^{2}(\Omega_{x})\right)$ .
+Then, there exists a positive constant $C$ such that for $t\geq 0$ , $\displaystyle\|E(t)-E^{h}(t)\|_{\Omega_{x}}$ $\displaystyle\leq Ch^{2}\|E(t)\|_{H^{2}(\Omega_{x})}+Ch^{2}t\int^{T}_{0}\|E_{ss}\|_{H^{2}(\Omega_{x})}ds,$ $\displaystyle\|E_{t}(t)-E^{h}_{t}(t)\|_{\Omega_{x}}$ $\displaystyle\leq Ch^{2}\|E_{t}(t)\|_{H^{2}(\Omega_{x})}+Ch^{2}\int^{T}_{0}\|E_{ss}\|_{H^{2}(\Omega_{x})}ds,$ $\displaystyle|\mkern-1.0mu|\mkern-1.0mu|E(t)-E^{h}(t)|\mkern-1.0mu|\mkern-1.0mu|_{h}$ $\displaystyle\leq Ch\|E(t)\|_{H^{2}(\Omega_{x})}+Ch^{2}\int^{T}_{0}\|E_{ss}\|_{H^{2}(\Omega_{x})}ds.$ The proof follows from ( 5.10 )-( 5.12 ) together with Lemma 5.4 . Remark 5.6 . For the magnetic field $B$ we get a slightly different system of equations,
+but the same error estimates will hold. 5.3. Time discretization Let $\{t_{m}\}_{m=0}^{M}$ be a uniform partition of $[0,T]$ of step size $k=T/M$ .
+Before formulating the fully discrete problem,
+we introduce the following notations of difference quotients $\displaystyle\bar{\partial}_{t}u^{m}$ $\displaystyle=\frac{u^{m}-u^{m-1}}{k},$ $\displaystyle\bar{\partial}_{t}^{2}u^{m}$ $\displaystyle=\frac{u^{m}-2u^{m-1}+u^{m-2}}{k^{2}},$ $\displaystyle\hat{u}^{m}$ $\displaystyle=\frac{u^{m}+2u^{m-1}+u^{m-2}}{4},$ where $u^{m}=u(t_{m})$ . Then a fully discrete problem reads as follows:
+for $m=2,3,\ldots,M$ , find $\mathcal{E}^{m}$ such that $(\bar{\partial}_{t}^{2}\mathcal{E}^{m},\chi)+a(\hat{\mathcal{E}}^{m},\chi)=-(j_{t}^{m-1},\chi)\quad\forall\chi\in V^{x}_{h}.$ (5.13) The choices of the first two approximations $\mathcal{E}^{0}$ and $\mathcal{E}^{1}$ will be discussed later.
+We split the error as $e^{m}=E^{m}-\mathcal{E}^{m}=(E^{m}-Q_{h}E^{m})+(Q_{h}E^{m}-\mathcal{E}^{m})=\rho^{m}+\theta^{m}.$ We use Lemma 5.4 to estimate $\rho^{m}$ ,
+hence it remains to estimate $\theta^{m}$ .
+To do so we note that $\displaystyle(\bar{\partial}_{t}^{2}\theta^{m},\chi)+a(\hat{\theta}^{m},\chi)$ $\displaystyle=(\bar{\partial}_{t}^{2}Q_{h}E^{m},\chi)+a(Q_{h}\hat{E}^{m},\chi)-(\bar{\partial}_{t}^{2}\mathcal{E}^{m},\chi)-a(\hat{\mathcal{E}}^{m},\chi)$ $\displaystyle=(\bar{\partial}_{t}^{2}Q_{h}E^{m},\chi)+a(Q_{h}\hat{E}^{m},\chi)-(j_{t}^{m-1},\chi)$ $\displaystyle=(\bar{\partial}_{t}^{2}Q_{h}E^{m},\chi)+a(Q_{h}\hat{E}^{m},\chi)-(E_{tt}^{m-1},\chi)-a(E^{m-1},\chi)$ $\displaystyle=(\omega^{m},\chi)+\frac{k^{2}}{4}a(\bar{\partial}_{t}^{2}Q_{h}E^{m},\chi),$ where $\omega^{m}=\bar{\partial}_{t}^{2}Q_{h}E^{m}-E_{tt}^{m-1}$ .
+Choose $\chi=\theta^{m}-\theta^{m-2}=k(\bar{\partial}_{t}\theta^{m}+\bar{\partial}_{t}\theta^{m-1})=(\theta^{m}+\theta^{m-1})-(\theta^{m-1}+\theta^{m-2}).$ Then we have $\displaystyle(\bar{\partial}_{t}^{2}\theta^{m},\theta^{m}-\theta^{m-2})+a(\hat{\theta}^{m},\theta^{m}-\theta^{m-2})=$ $\displaystyle\frac{1}{k}(\bar{\partial}_{t}\theta^{m}-\bar{\partial}_{t}\theta^{m-1},\theta^{m}-\theta^{m-2})$ (5.14) $\displaystyle+a(\hat{\theta}^{m},\theta^{m}-\theta^{m-2})$ $\displaystyle=$ $\displaystyle(\omega^{m},\theta^{m}-\theta^{m-2})$ $\displaystyle+\frac{k^{2}}{4}a(\bar{\partial}_{t}^{2}Q_{h}E^{m},\theta^{m}-\theta^{m-2}).$ We define the discrete energy $\mathbb{E}^{m}=\|\bar{\partial}_{t}\theta^{m}\|^{2}_{\Omega_{x}}+\frac{1}{4}a(\theta^{m}+\theta^{m-1},\theta^{m}+\theta^{m-1}).$ Now, if in the left hand side of ( 5.14 )
+we use the second form of $\chi$ in the first term and the third form in the second term,
+and in the right hand side we use the second form of $\chi$ in both terms, then we get $\mathbb{E}^{m}-\mathbb{E}^{m-1}=k(\omega^{m},\bar{\partial}_{t}\theta^{m}+\bar{\partial}_{t}\theta^{m-1})+\frac{k^{3}}{4}a(\bar{\partial}_{t}^{2}Q_{h}E^{m},\bar{\partial}_{t}\theta^{m}+\bar{\partial}_{t}\theta^{m-1}).$ We estimate the right hand side
+using the continuity of $a(\cdot,\cdot)$ , with $C_{a}=(9+\gamma)$ ,
+and the inverse inequality for the triple norm to get $\displaystyle\mathbb{E}^{m}-\mathbb{E}^{m-1}\leq$ $\displaystyle k\|\omega^{m}\|_{\Omega_{x}}\left(\|\bar{\partial}_{t}\theta^{m}\|_{\Omega_{x}}+\|\bar{\partial}_{t}\theta^{m-1}\|_{\Omega_{x}}\right)$ $\displaystyle+C_{a}\frac{k^{3}}{4}|\mkern-1.0mu|\mkern-1.0mu|\bar{\partial}_{t}^{2}Q_{h}E^{m}|\mkern-1.0mu|\mkern-1.0mu|_{h}\left(|\mkern-1.0mu|\mkern-1.0mu|\bar{\partial}_{t}\theta^{m}|\mkern-1.0mu|\mkern-1.0mu|_{h}+|\mkern-1.0mu|\mkern-1.0mu|\bar{\partial}_{t}\theta^{m-1}|\mkern-1.0mu|\mkern-1.0mu|_{h}\right)$ $\displaystyle\leq$ $\displaystyle k\|\omega^{m}\|_{\Omega_{x}}\left(\sqrt{\mathbb{E}^{m}}+\sqrt{\mathbb{E}^{m-1}}\right)$ $\displaystyle+C_{a}\frac{k^{3}h^{-2}}{4}\|\bar{\partial}_{t}^{2}Q_{h}E^{m}\|_{\Omega_{x}}\left(\|\bar{\partial}_{t}\theta^{m}\|_{\Omega_{x}}+\|\bar{\partial}_{t}\theta^{m-1}\|_{\Omega_{x}}\right)$ $\displaystyle\leq$ $\displaystyle\left(k\|\omega^{m}\|_{\Omega_{x}}+C_{a}\frac{k^{3}h^{-2}}{4}\|\bar{\partial}_{t}^{2}Q_{h}E^{m}\|_{\Omega_{x}}\right)\left(\sqrt{\mathbb{E}^{m}}+\sqrt{\mathbb{E}^{m-1}}\right).$ After cancellation it follows that $\sqrt{\mathbb{E}^{m}}\leq\sqrt{\mathbb{E}^{m-1}}+k\|\omega^{m}\|_{\Omega_{x}}+C_{a}\frac{k^{3}h^{-2}}{4}\|\bar{\partial}_{t}^{2}Q_{h}E^{m}\|_{\Omega_{x}}.$ Iterating the above inequality leads to $\sqrt{\mathbb{E}^{m}}\leq\sqrt{\mathbb{E}^{1}}+k\sum_{j=2}^{m}\|\omega^{j}\|_{\Omega_{x}}+C_{a}\frac{k^{3}h^{-2}}{4}\sum_{j=2}^{m}\|\bar{\partial}_{t}^{2}Q_{h}E^{j}\|_{\Omega_{x}}.$ (5.15) Now we estimate the terms on the right hand side.
+Let us begin with $\omega^{j}$ and split it as $\omega^{j}=(Q_{h}-I)\bar{\partial}_{t}^{2}E^{j}+(\bar{\partial}_{t}^{2}E^{j}-E_{tt}^{j-1})=:\omega_{1}^{j}+\omega_{2}^{j}.$ We write $\omega_{1}^{j}$ in the following way $\omega_{1}^{j}=\frac{1}{k^{2}}(Q_{h}-I)(E^{j}-2E^{j-1}+E^{j-2})=\frac{1}{k^{2}}(Q_{h}-I)\left(\int_{t_{j-1}}^{t_{j}}E_{t}\,dt-\int_{t_{j-2}}^{t_{j-1}}E_{t}\,dt\right).$ Summing over $j$ and using Lemma 5.4 gives $k\sum_{j=2}^{m}\|\omega_{1}^{j}\|_{\Omega_{x}}\leq\frac{1}{k}\sum_{j=2}^{m}\int_{t_{j-2}}^{t_{j}}\|(Q_{h}-I)E_{t}\|_{\Omega_{x}}\,dt\leq\frac{2Ch^{2}}{k}\int_{0}^{t_{m}}\|E_{t}\|_{H^{2}(\Omega_{x})}\,dt.$ As for $\omega_{2}^{j}$ we use Taylor expansion of $E^{j}$ and $E^{j-2}$ in polynomials of degree 2 about $t_{j-1}$ .
+Then, due to cancellations, we end up with $\omega_{2}^{j}=\frac{1}{6k^{2}}\left(\int_{t_{j-1}}^{t_{j}}(t-t_{j-1})^{2}E_{ttt}\,dt-\int_{t_{j-2}}^{t_{j-1}}(t-t_{j-1})^{2}E_{ttt}\,dt\right).$ Once again summing over $j$ leads to $k\sum_{j=2}^{m}\|\omega_{2}^{j}\|_{\Omega_{x}}\leq\frac{1}{6k}\sum_{j=2}^{m}\int_{t_{j-2}}^{t_{j}}(t-t_{j-1})^{2}\|E_{ttt}\|_{\Omega_{x}}\,dt\leq\frac{k}{3}\int_{0}^{t_{m}}\|E_{ttt}\|_{\Omega_{x}}\,dt.$ The third term in ( 5.15 ) will be estimated as follows $\displaystyle\frac{k^{3}h^{-2}}{4}\sum_{j=2}^{m}\|\bar{\partial}_{t}^{2}Q_{h}E^{j}\|_{\Omega_{x}}$ $\displaystyle\leq\frac{k^{3}h^{-2}}{4}\sum_{j=2}^{m}\|\omega^{j}\|_{\Omega_{x}}+\|E_{tt}^{j-1}\|_{\Omega_{x}}.$ It remains to estimate $\mathbb{E}^{1}$ , which depends on how $\mathcal{E}^{0}$ and $\mathcal{E}^{1}$ are chosen.
+Let $\mathcal{E}^{0}=Q_{h}E^{0}$ and assume that $\mathcal{E}^{1}$ is chosen such that $\|\theta^{1}\|_{\Omega_{x}}\leq C(h^{2}+k^{2})$ .
+Then we have $\displaystyle\sqrt{\mathbb{E}^{1}}=\sqrt{\|\frac{\theta^{1}}{k}\|^{2}_{\Omega_{x}}+\frac{1}{4}a(\theta^{1},\theta^{1})}$ $\displaystyle\leq\frac{1}{k}\|\theta^{1}\|_{\Omega_{x}}+\frac{1}{2}|\mkern-1.0mu|\mkern-1.0mu|\theta^{1}|\mkern-1.0mu|\mkern-1.0mu|_{h}$ $\displaystyle\leq\left(\frac{1}{k}+\frac{1}{2h}\right)\|\theta^{1}\|_{\Omega_{x}}\leq C\left(\frac{1}{k}+\frac{1}{2h}\right)(h^{2}+k^{2}).$ We combine the above estimates to get $\|\bar{\partial}_{t}\theta^{m}\|_{\Omega_{x}}\leq C(h+k)$ for $m=2,3,\ldots,M$ ,
+assuming that $k$ is proportional to $h$ .
+Finally, if we use the following estimate $\|\theta^{m}\|_{\Omega_{x}}\leq\|\theta^{1}\|_{\Omega_{x}}+k\sum_{j=2}^{m}\|\bar{\partial}_{t}\theta^{j}\|_{\Omega_{x}},$ then we also have that $\|\theta^{m}\|_{\Omega_{x}}\leq C(h+k)$ .
+We sum up the results in the following theorem. Theorem 5.7 . Let $E$ and $\mathcal{E}^{m}$ be the solutions of
+( 5.2 ) and ( 5.13 ), respectively.
+Under the assumptions of Theorem 5.5 ,
+assuming moreover that $E_{t}\in L_{1}\left((0,T);H^{2}(\Omega_{x})\right)$ , $E_{ttt}\in L_{1}\left((0,T);L_{2}(\Omega_{x})\right)$ and that $\mathcal{E}^{1}$ is chosen such that $\|\theta^{1}\|_{\Omega_{x}}\leq C(h^{2}+k^{2})$ ,
+we have the following error estimate $\|E(t_{m})-\mathcal{E}^{m}\|_{\Omega_{x}}\leq C(h+k).$ Remark 5.8 . If we assume extra regularity on $E$ we can prove that $\|E(t_{m})-\mathcal{E}^{m}\|_{\Omega_{x}}\leq C(h^{2}+k^{2}).$ More precisely, we need to assume that $E_{tt}\in L_{1}\left((0,T);H^{2}(\Omega_{x})\right)$ , $E_{tttt}\in L_{1}\left((0,T);L_{2}(\Omega_{x})\right)$ and that $\mathcal{E}^{1}$ is chosen such that $\|\theta^{1}\|_{\Omega_{x}}\leq C(h^{3}+k^{3})$ . 6. Numerical Results Here we present some numerical results justifying the accuracy of our method.
+We performed the calculations for the simplified case of one space variable
+and two velocities variables, i.e. the one and one-half dimensional
+Vlasov-Maxwell system (cf [ 22 ] ), which takes the following form: $\begin{array}[]{c}\partial_{t}f+v_{1}\partial_{x}f+(E_{1}+v_{2}B)\partial_{v_{1}}f+(E_{2}-v_{1}B)\partial_{v_{2}}f=0,\\
+\partial_{t}E_{1}=-\int v_{1}fdv=-j_{1}(t,x),\\
+\partial_{t}E_{2}+\partial_{x}B=-\int v_{2}fdv=-j_{2}(t,x),\\
+\partial_{t}B+\partial_{x}E_{2}=0,\end{array}$ where $f=f(t,x,v_{1},v_{2})$ , $E_{1}=E_{1}(t,x)$ , $E_{2}=E_{2}(t,x)$ , $B=B(t,x)$ with $x\in\Omega_{x}\subset{\mathbb{R}}$ and $v=(v_{1},v_{2})\in\Omega_{v}\subset{\mathbb{R}}^{2}$ .
+We assume here the non-relativistic case of the Vlasov-Maxwell system,
+since there is a wider literature available to compare the numerical test with.
+We note that our theoretical results are also valid in this case. The initial conditions are given by $\begin{array}[]{c}f(0,x,v_{1},v_{2})=\frac{1}{\pi\beta}e^{-v_{1}^{2}/\beta}\left[\mu e^{-(v_{2}-v_{0,1})^{2}/\beta}+(1-\mu)e^{-(v_{2}+v_{0,2})^{2}/\beta}\right],\\
+E_{1}(0,x)=E_{2}(0,x)=0,\quad B(0,x)=-b\sin(k_{0}x_{1}),\end{array}$ which corresponds to the streaming Weibel instability (cf [ 9 ] )
+with $\beta=0.01$ and $b=0.001$ .
+We perform the calculations for two sets of values of parameters: $\begin{array}[]{ll}\mbox{case 1:}&\mu=0.5,\ v_{0,1}=v_{0,2}=-0.3,\ k_{0}=0.2,\\
+\mbox{case 2:}&\mu=1/6,\ v_{0,1}=-0.5,\ v_{0,2}=-0.1,\ k_{0}=0.2,\\
+\end{array}$ with $x\in[0,L]$ , $L=2\pi/k_{0}$ .
+Periodic boundary condition is assumed for $x$ variable, which
+we normalized in our computations taking $x\in[0,1]$ .
+For the accuracy test we set $\Omega_{v}=[-1,1]^{2}$ ,
+whereas for the other test we set $\Omega_{v}=[-1.1,1.1]^{2}$ . 6.1. Accuracy tests The Vlasov-Maxwell system is reversible in time for the above.
+Thus denoting the initial conditions as $f(0,x,v)$ , $E(0,x)$ , $B(0,x)$ ,
+we get at time $t=T$ the solution $f(T,x,v)$ , $E(T,x)$ , $B(T,x)$ .
+Now, taking $f(T,x,-v)$ , $E(T,x)$ , $-B(T,x)$ as the initial solution at $t=0$ ,
+we recover $f(0,x,-v)$ , $E(0,x)$ , $-B(0,x)$ at $t=T$ . Using this theoretical fact we run the calculation for $T=5$ and show the $L_{1}$ and $L_{2}$ errors of solutions
+for several choices of degree of polynomials $p$ and mesh parameters $h_{t}$ , $h_{x}$ , $h_{v}$ .
+For all calculations we used the uniform degrees $p$ in all cells of uniform meshes.
+We present the results for the following choice of mesh sizes sets: $H_{1}$ corresponds to $h_{t}=h_{x}=0.1$ and $h_{v}=\sqrt{2}/6$ ; $H_{2}$ corresponds to $h_{t}=h_{x}=0.05$ and $h_{v}=\sqrt{2}/12$ ; $H_{3}$ corresponds to $h_{t}=h_{x}=0.025$ and $h_{v}=\sqrt{2}/24$ . Table 1 lists the errors for the fixed mesh set $H_{1}$ and increasing degree of finite elements polynomial approximation,
+whereas in Table 2 we list the errors for the fixed degree $p=1$ of polynomial approximation and different mesh sizes. Table 1. $L_{1}$ and $L_{2}$ errors for different polynomial degrees and fixed
+mesh sizes set $H_{1}$ . Error Degree $f$ $E_{1}$ $E_{2}$ $B$ $L_{1}$ $p=1$ 3.801e-1 7.086e-4 1.599e-6 1.645e-5 $p=2$ 1.614e-1 3.248e-9 1.770e-7 9.092e-7 $p=3$ 1.891e-2 2.295e-10 9.753e-9 3.321e-8 $L_{2}$ $p=1$ 7.302e-1 6.204e-7 3.517e-12 4.303e-10 $p=2$ 1.632e-1 1.498e-17 4.113e-14 1.070e-12 $p=3$ 2.833e-3 6.648e-20 1.185e-16 2.186e-15 Table 2. $L_{1}$ and $L_{2}$ errors for different mesh sizes and fixed
+polynomial degree $p=1$ . Error Mesh sizes set $f$ $E_{1}$ $E_{2}$ $B$ $L_{1}$ $H_{1}$ 3.801e-1 7.086e-4 1.599e-6 1.645e-5 $H_{2}$ 1.629e-1 8.304e-10 1.791e-7 8.387e-6 $H_{3}$ 4.324e-2 2.016e-10 4.750e-8 2.099e-6 $L_{2}$ $H_{1}$ 7.302e-1 6.204e-7 3.517e-12 4.303e-10 $H_{2}$ 1.939e-1 8.520e-19 3.956e-14 9.298e-11 $H_{3}$ 1.444e-2 5.014e-20 2.784e-15 5.850e-12 We can see from the tables the convergence of our method for all functions.
+We present the results for one value of the stability parameter $\delta=0.05$ ,
+since its choice does not influence importantly (in some reasonable interval of values)
+the accuracy, but only the stability of the method. 6.2. Streaming Weibel instability tests In this section we present the preliminary results
+for the streaming Weibel instability tests. More results will be included
+in the forthcoming paper [ 20 ] . We present the time evolution of the magnetic, electric and kinetic energies
+for both cases of parameters values.
+The calculations were carried out for the mesh sizes $h_{t}=1/20$ , $h_{x}=1/30$ , $h_{v}=\sqrt{2}\cdot 11/300$ with $p=1$ .
+We plot the components of electric energy $E_{i}=\frac{1}{2L}\int_{0}^{L}E_{i}^{2}\,dx_{1}$ , $i=1,2$ , and the magnetic energy $B=\frac{1}{2L}\int_{0}^{L}B^{2}\,dx_{1}$ in Figure 1 .
+The kinetic energy is showed in Figure 2 as the separate components
+defined by $K_{i}=\frac{1}{2L}\int_{0}^{L}\int_{\Omega_{v}}v_{i}^{2}f\,dvdx_{1}$ , $i=1,2$ .
+The qualitative behaviour of the time evolution of both the electromagnetic
+and kinetic energies is in agreement with the theory
+and the results presented in [ 9 ] for different numerical methods. Figure 1. Magnetic ( $B$ ) and electric ( $E_{1}$ , $E_{2}$ ) energy for case 1 (left)
+and case 2 (right). Figure 2. Kinetic energy for case 1 (left) and case 2 (right). 7. Conclusion This paper concerns two approaches in the numerical investigation for the
+Vlasov-Maxwell system.
+The first study is devoted to the $hp$ streamline diffusion method for the
+relativistic Vlasov-Maxwell system in fully 3-dimensions.
+Our objective is to present unified phase-space (for Maxwell’s equations)
+and phase-space-time (for the Vlasov-Maxwell system) discretization schemes
+that have optimal order convergence for the hyperbolic problems
+( ${\mathcal{O}}(h^{s-1/2})$ for solutions in the Sobolev space $H^{s}(\Omega)$ )
+with strong stability properties and adaptivity features.
+The adaptivity in a priori regime is based on refining in the vicinity of
+singularities combined with lower order approximating polynomials and
+non-refined mesh with higher spectral order in smooth regions.
+In this way we have constructed a finite
+element mesh with several improving properties, e.g.
+stability, convergence, and adaptivity, gathered in it. To our knowledge,
+except in some work in convection-diffusion problems, see e.g. [ 17 ] and our study in [ 5 ] , such approach
+is not considered for this type of equations elsewhere. The second study concerns a penalty method for the Maxwell’s equations, which
+is based on a certain Nitsche type symmetrization scheme. In this part we have
+combined the field equations to a second order pde. For this equation
+we derive a second order spatial approximation for the Nitsche’s scheme.
+We also prove a second order temporal discretization,
+assuming a somewhat more regular-in-time field functions. Even this approach
+is not considered in any other works for the VM system. The results are justified in lower dimensional cases through the accuracy
+and the streaming Weibel instability tests presented in this paper
+and through implementing some numerical examples in the forthcoming paper,
+see [ 20 ] .
+The full-dimensions are to expensive to experiment.
+However, the theoretical analysis and numerical justifications in
+low dimensions are indicating the robustness of the considered schemes. Acknowledgment The research of the first author was supported by the
+Swedish Research Council VR. References [1] R. A. Adams : Sobolev spaces , Academic press, 1975. [2] M. Asadzadeh : Streamline diffusion methods for the Vlasov-Poisson equation , Modelisation mathematique et analyse numerique, 24 (1990), pp 177–196. [3] M. Asadzadeh, P. Kowalczyk : Convergence analysis of the streamline diffusion and discontinuous Galerkin methods for the Vlasov-Fokker-Planck system , Numerical Methods for Partial Differential Equations. An International Journal, 21 (2005), no. 3, pp 472–495. [4] M. Asadzadeh, P. Kowalczyk : Convergence analysis for backward-Euler and mixed discontinuous Galerkin
+methods for the Vlasov-Poisson system ,  Adv. Comput. Math. 41 (2015), no. 4, pp 833–852. [5] M. Asadzadeh, A. Sopasakis : Convergence of a hp-Streamline Diffusion Scheme for Vlasov-Fokker-Planck System , Mathematical Models and Methods in Applied Sciences, 17 (2007), no. 8, pp 1159–1182. [6] F. Assous, M. Michaeli : Solving Maxwell’s equations in singular domains with a Nitsche type method , J. Comput. Phys., 230 (2011), pp 4922–4939. [7] F. Brezzi, L. D. Marini, E. Süli : Discontinuous Galerkin methods for first-order hyperbolic problems , Mathematical Models and Methods in Applied Sciences, 14 (2004), no. 12, pp 1893–1903. [8] E. Burman, P. Hansbo : Fictitious domain finite element methods using cut elements: II. A stabilized Nitsche method , Appl. Numer. Math., 62 (2012), no. 4, pp 328–341. [9] Y. Cheng, I. M. Gamba, F. Li, P. J. Morrison : Discontinuous Galerkin methods for the Vlasov-Maxwell equations , SIAM J. Numer. Anal. 52 (2014), no. 2, pp 1017–1049. [10] P. Ciarlet : The Finite Element Method for Elliptic Problems , North-Holland, Amsterdam, 1978. [11] P. Degond, F. Deluzet, D. Doyen : Asymptotic-preserving particle-in-cell methods for the Vlasov-Maxwell
+system in the quasi-neutral limit ,  J. Comput. Phys. 330 (2017), pp 467–492. [12] R. J.  DiPerna and P. L. Lions : Global weak solutions of Vlasov-Maxwell systems , Comm. Pure Appl. Math., 42 (1989), pp 729–757. [13] F. Filbet, Y. Guo and Shu, Chi-Wang : Analysis of the relativistic Vlasov-Maxwell model in an interval ,  Quart. Appl. Math. 63 (2005), no. 4, pp 691–714. [14] R. Glassey, S, Pankavich, and J. Schaeffer : Separated characteristics and global solvability for the one and one-half dimensional Vlasov-Maxwell system , Kinet. Relat. Models 9 (2016), no. 3, pp 455–467. [15] R. Glassey, J. Schaeffer : On the ’One and One-half Dimensional’ Relativistic Vlasov-Maxwell System , Mathematical Methods in the Applied Sciences, 13 (1990), pp 169–179. [16] P. Houston, C. Schwab, E. Süli : Discontinuous hp-finite element methods for advection-diffusion-reaction problems , SIAM J. Numer. Anal. 39 (2002), no. 6, pp 2133–2163. [17] P. Houston, C. Schwab and E. Süli : Stabilized hp-finite element methods for first-order hyperbolic problems ,  SIAM J. Numer. Anal. 37 (2000), no. 5, pp 1618–1643. [18] T. J. R. Hughes, A. Brooks : A multidimensional upwind scheme with no crosswind diffusion. Finite element methods for convection dominated flows , (Papers, Winter Ann. Meeting Amer. Soc. Mech. Engrs., New York, 1979), pp 19-35, AMD, 34, Amer. Soc. Mech. Engrs. (ASME), New York, 1979.. [19] C. Johnson, J. Saranen : Streamline Diffusion Methods for the Incompressible Euler and Navier-Stokes Equations , Mathematics of Computation, 47 (1986), pp 1–18. [20] J.B. Malmberg, C. Standar : Computational aspects of the streamline diffusion schemes for the one
+and one-half dimensional Vlasov-Maxwell system , In preparation. [21] J. Nitsche : Über ein Variationsprinzip zur Lösung von Dirichlet-Problemen
+bei Verwendung von Teilräumen, die keinen Randbedingungen unterworfen sind , Abh. Math, Sem. Univ. Hamburg, 36 (1971), pp 9–15. [22] C. Standar : On streamline diffusion schemes for the one and one-half dimensional relativistic Vlasov-Maxwell system , Calcolo 53 (2016), no. 2, pp 147–169. [23] S. Sticko, G. Kreiss : A stabilized Nitsche cut element method for the wave equation , Comput. Methods Appl. Mech. Engrg., 309 (2016), pp 364–387. [24] A. Szepessy : Convergence of a streamline diffusion finite element method for scalar conservation laws with boundary conditions ,  RAIRO Modél. Math. Anal. Numér. 25 (1991), no. 6, pp 749–782. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

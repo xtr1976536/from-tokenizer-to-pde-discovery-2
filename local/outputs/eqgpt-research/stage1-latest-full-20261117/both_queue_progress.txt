@@ -1,0 +1,25 @@
+QUEUE AST 288 87 6 195 failures [] age 1.0
+ACTIVE AST 212 622 ast_bpe_128 525 KdV_equation ["CANDIDATE_BUDGET {'target': 400, 'attempts': 757, 'evaluated': 400, 'cap': 15000}", 'STUDY3_CYCLE KdV_equation ast_bpe 4']
+ACTIVE AST 212 622 ast_bpe_128 525 Chaffee_Infante_equation ["CANDIDATE_BUDGET {'target': 400, 'attempts': 740, 'evaluated': 400, 'cap': 15000}", 'STUDY3_CYCLE Chaffee_Infante_equation ast_bpe 4']
+ACTIVE AST 212 622 ast_bpe_160 525 Convection_diffusion_equation ["CANDIDATE_BUDGET {'target': 400, 'attempts': 733, 'evaluated': 400, 'cap': 15000}", 'STUDY3_CYCLE Convection_diffusion_equation ast_bpe 4']
+ACTIVE AST 212 622 ast_bpe_160 525 KG_equation ["CANDIDATE_BUDGET {'target': 400, 'attempts': 1148, 'evaluated': 400, 'cap': 15000}", 'STUDY3_CYCLE KG_equation ast_bpe 1']
+ACTIVE AST 212 622 ast_bpe_160 525 Burgers_equation ["CANDIDATE_BUDGET {'target': 400, 'attempts': 1148, 'evaluated': 400, 'cap': 15000}", 'STUDY3_CYCLE Burgers_equation ast_bpe 1']
+ACTIVE AST 212 622 ast_bpe_160 525 Eq_6_2_12 []
+QUEUE EQGPT 96 2 4 90 failures [] age 2.8
+ACTIVE EQGPT 212 811 eqgpt_reference 525 Convection_diffusion_equation []
+ACTIVE EQGPT 212 811 eqgpt_reference 525 Burgers_equation ["CANDIDATE_BUDGET {'target': 400, 'attempts': 430, 'evaluated': 400, 'cap': 15000}", 'STUDY3_CYCLE Burgers_equation eqgpt 4']
+ACTIVE EQGPT 212 811 eqgpt_reference 525 Eq_6_2_12 []
+ACTIVE EQGPT 212 811 eqgpt_reference 525 PDE_divide []
+GROUP (212, '622', 'ast_bpe_128', 'model', 525) n 6 top1 5 top10 6
+GROUP (212, '622', 'ast_bpe_160', 'model', 525) n 1 top1 1 top10 1
+GROUP (212, '622', 'ast_bpe_96', 'model', 525) n 8 top1 8 top10 8
+GROUP (212, '811', 'ast_bpe_128', 'model', 525) n 8 top1 7 top10 8
+GROUP (212, '811', 'ast_bpe_128', 'model', 526) n 8 top1 5 top10 8
+GROUP (212, '811', 'ast_bpe_128', 'model', 527) n 8 top1 5 top10 8
+GROUP (212, '811', 'ast_bpe_160', 'model', 525) n 8 top1 7 top10 8
+GROUP (212, '811', 'ast_bpe_160', 'model', 526) n 8 top1 6 top10 8
+GROUP (212, '811', 'ast_bpe_160', 'model', 527) n 8 top1 6 top10 8
+GROUP (212, '811', 'ast_bpe_96', 'model', 525) n 8 top1 5 top10 8
+GROUP (212, '811', 'ast_bpe_96', 'model', 526) n 8 top1 6 top10 8
+GROUP (212, '811', 'ast_bpe_96', 'model', 527) n 8 top1 6 top10 8
+GROUP (212, '811', 'eqgpt_reference', 'legacy', 525) n 2 top1 1 top10 2

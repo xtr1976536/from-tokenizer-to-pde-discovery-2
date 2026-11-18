@@ -1,0 +1,244 @@
+Global well-posedness issues for the inviscid Boussinesq system with Yudovich’s type data Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Proof of Theorem 2 A global result for infinite energy initial velocity 3 Further results and concluding remarks 3.1 Remarks concerning the Boussinesq system 3.2 The Bénard system References License: arXiv.org perpetual non-exclusive license arXiv:0806.4081v1 [math.AP] 25 Jun 2008 Global well-posedness issues for the inviscid Boussinesq system with
+Yudovich’s type data Thanks: 1 Université Paris-Est, Laboratoire d’Analyse
+et de Mathématiques Appliquées, UMR 8050,
+61 avenue du Général de Gaulle,
+94010 Créteil Cedex, France. E-mail: danchin $@$ univ-paris12.fr Thanks: 2 Université Paris 11, Laboratoire de Mathématiques,
+Bâtiment 425, 91405 Orsay Cedex, France.
+E-mail: marius.paicu $@$ math.u-psud.fr Raphaël Danchin 1 and Marius Paicu 2 Date: August 24, 2026 Abstract. The present paper is dedicated to the study of the global existence
+for the inviscid two-dimensional Boussinesq system.
+We focus on finite energy data with bounded vorticity
+and we find out that, under quite a natural additional assumption on
+the initial temperature, there exists a global unique solution. None smallness conditions are imposed on the data.
+The global existence issues for infinite energy initial velocity,
+and for the Bénard system are also discussed. Introduction The incompressible Euler equations
+have been intensively studied from a mathematical viewpoint.
+The present paper aims at extending
+the celebrated result by Yudovich concerning the two-dimensional
+Euler system (see [ 17 ] ) to the
+following two-dimensional Boussinesq system : ( B κ , ν ) $\begin{cases}\partial_{t}\theta+u\cdot\nabla\theta-\kappa\Delta\theta=0\\
+\partial_{t}u+u\cdot\nabla u-\nu\Delta u+\nabla\Pi=\theta\,e_{2}\quad\hbox{with}\quad e_{2}=(0,1),\\
+\,\mbox{\rm div}\,u=0.\end{cases}$ The above system describes the evolution of the velocity field $u$ of a two-dimensional
+incompressible fluid moving under a vertical force the magnitude $\theta$ of which is transported with or without diffusion by $u.$ Above the molecular diffusion parameter $\kappa$ and
+viscosity $\nu$ are nonnegative, and $\Pi$ stands for the pressure
+in the fluid.
+For the sake of simplicity, we restrict our attention
+to the case where the space variable $x$ belongs to
+the whole plan $\mathbb{R}^{2}$ (our results extend with no difficulty
+to periodic boundary conditions, though). The Boussinesq system is of relevance to study a number
+of models coming from atmospheric or oceanographic turbulence
+where rotation and stratification play an important role (see e.g. [ 15 ] ).
+The scalar function $\theta$ may for instance represent temperature
+variation in a gravity field, and $\theta\,e_{2},$ the buoyancy force. From the mathematical point of view, if both $\kappa$ and $\nu$ are positive then standard energy methods yield global existence of smooth
+solutions for arbitrarily large data (see e.g. [ 5 , 12 ] ). In contrast, in
+the case when $\kappa=\nu=0,$ the Boussinesq system exhibits vorticity
+intensification and the global well-posedness issue remains an unsolved
+challenging open problem (except if $\theta_{0}$ is a constant of course)
+which may be formally compared to the similar problem
+for the three-dimensional axisymmetric Euler equations with swirl (see e.g. [ 10 ] for more explanations). As pointed out by H. K. Moffatt in [ 14 ] , knowing whether
+having $\kappa>0$ or $\nu>0$ precludes the formation of finite time singularities
+is an important issue.
+In [ 9 ] , we stated that in the case $\kappa=0$ and $\nu>0$ no such formation may be encountered for finite energy initial data.
+More precisely, we stated that for any $(\theta_{0},u_{0})$ in $L^{2}(\mathbb{R}^{2})$ with $\,\mbox{\rm div}\,u_{0}=0,$ System $(B_{0,\nu})$ has a unique global finite energy solution. In the present paper, we aim at investigating the opposite case, namely $\kappa>0$ and $\nu=0.$ The corresponding Boussinesq system thus reads ( B κ , 0 ) $\begin{cases}\partial_{t}\theta+u\cdot\nabla\theta-\kappa\Delta\theta=0\\
+\partial_{t}u+u\cdot\nabla u+\nabla\Pi=\theta\,e_{2}\\
+\,\mbox{\rm div}\,u=0\end{cases}$ and may be seen as a coupling between the two-dimensional Euler equations
+and a transport-diffusion equation.
+In passing, let us point out that in the case $\theta\equiv 0,$ System $(B_{\kappa,0})$ reduces to the Euler equation. It is well known that the standard Euler equation is globally well-posed in $H^{s}$ for any $s>2.$ A similar result has been stated for $(B_{\kappa,0})$ in the case $s\geq 3$ by D. Chae in [ 6 ] , then
+extended to rough data by T. Hmidi and S. Keraani in [ 13 ] . There, global well-posedness is shown whenever the initial
+velocity $u_{0}$ belongs to $B^{1+\frac{2}{p}}_{p,1}$ and
+the initial temperature $\theta_{0}$ is in $L^{r}$ for
+some $(p,r)$ satisfying $2<r\leq p\leq\infty$ (plus a technical condition
+if $p=r=\infty$ ).
+Let us emphasize that in the Besov spaces framework, the assumption
+on $u_{0}$ is somewhat optimal (since it is optimal for the
+standard Euler equations, see [ 16 ] ). Here we want to state global existence
+for less regular data satisfying Yudovich’s type conditions.
+Roughly, we want to consider data $(\theta_{0},u_{0})$ in $L^{2}$ such that the initial vorticity $\omega_{0}:=\partial_{1}v_{0}^{2}-\partial_{2}v_{0}^{1}$ is bounded.
+Note however that, since we expect the corresponding solution to have
+bounded vorticity for all positive time, we have to introduce an
+additional assumption on $\theta_{0}.$ Indeed, the vorticity equation reads $\partial_{t}\omega+u\cdot\nabla\omega=\partial_{1}\theta.$ Therefore, since no gain of smoothness
+may be expected from the above transport equation,
+having $\omega$ bounded requires that $\partial_{1}\theta\in L^{1}_{loc}(\mathbb{R}_{+};L^{\infty}).$ Now, considering that $\theta$ satisfies the following heat equation $\partial_{t}\theta-\kappa\Delta\theta=f\quad\hbox{with}\quad f:=-u\cdot\nabla\theta,$ the assumptions on $\theta_{0}$ should ensure
+that (1) $\nabla e^{\kappa t\Delta}\theta_{0}\in L^{1}_{loc}(\mathbb{R}_{+};L^{\infty})$ where $(e^{\lambda\Delta})_{\lambda>0}$ stands for the heat semi-group. It turns out that ( 1 ) is equivalent to
+having $\nabla\theta_{0}$ in the nonhomogeneous Besov space $B^{-2}_{\infty,1}$ (see e.g. [ 3 ] ).
+This motivates the following statement which is the main
+result of the paper: Theorem 1 . Let $\theta_{0}\in L^{2}\cap B^{-1}_{\infty,1}$ and $u_{0}\in L^{2}$ with $\,\mbox{\rm div}\,u_{0}=0.$ Assume in addition that the initial vorticity $\omega_{0}$ belongs to $L^{r}\cap L^{\infty}$ for some $r\geq 2.$ System $(B_{\kappa,0})$ admits a unique
+global solution $(\theta,u)$ satisfying (2) $\begin{array}[]{c}\theta\in{\mathcal{C}}(\mathbb{R}_{+};L^{2}\cap B^{-1}_{\infty,1})\cap L^{2}_{loc}(\mathbb{R}_{+};H^{1})\cap L^{1}_{loc}(\mathbb{R}_{+};B^{1}_{\infty,1}),\\[6.45831pt]
+u\in{\mathcal{C}}^{0,1}_{loc}(\mathbb{R}_{+};L^{2})\ \hbox{
+and }\ \omega\in L^{\infty}_{loc}(\mathbb{R}_{+};L^{r}\cap L^{\infty}).\end{array}$ Remark 1 . As a by-product of our proof,
+we gather that if in addition $\theta_{0}\in L^{p}$ (resp. $u_{0}\in B^{1}_{\infty,1}$ ) for some $p\in[1,+\infty]$ then $\theta\in L^{\infty}(\mathbb{R}_{+};L^{p})$ (resp. $u\in{\mathcal{C}}(\mathbb{R}_{+};B^{1}_{\infty,1})$ ). Remark 2 . The $B^{-1}_{\infty,1}$ hypothesis over $\theta_{0}$ is quite mild compared to
+the $L^{2}$ hypothesis. Indeed, it may be shown that $L^{2}$ is continuously embedded in the Besov space $B^{-1}_{\infty,2}$ which is slightly larger than $B^{-1}_{\infty,1}.$ The paper unfolds as follows.
+In the first section, we prove Theorem 1 .
+In the second section, motivated by the fact that having $u_{0}$ in $L^{2}$ and $\omega_{0}\in L^{1}$ requires the vorticity
+to have zero average over $\mathbb{R}^{2},$ we consider initial velocities
+which are $L^{2}$ perturbations of infinite energy smooth stationary solutions for
+the incompressible Euler equations.
+Some extensions to Theorem 1 are discussed
+in the third section.
+A few technical inequalities have been postponed in the appendix. 1. Proof of Theorem 1 Proving Theorem 1 requires our using
+the (nonhomogeneous) Littlewood-Paley decomposition.
+One can proceed as in [ 7 ] :
+first we consider a dyadic partition of unity: $1=\chi(\xi)+\sum\limits_{q\geq 0}\varphi(2^{-q}\xi),$ for some nonnegative function $\chi\in{\mathcal{C}}^{\infty}(B(0,\frac{4}{3}))$ with value $1$ over the ball $B(0,\frac{3}{4}),$ and $\varphi(\xi):=\chi(\xi/2)-\chi(\xi)$ . Next, we introduce the dyadic blocks $\Delta_{q}$ of our decomposition by setting $\Delta_{q}u:=0\ \hbox{ if }\ q\leq-2,\qquad\Delta_{-1}u:={\mathcal{F}}^{-1}(\chi{\mathcal{F}}u)\quad\hbox{and}\quad\Delta_{q}u:={\mathcal{F}}^{-1}(\varphi(2^{-q}\cdot){\mathcal{F}}u)\ \text{ if }\ q\geq 0.$ One may prove that for all tempered
+distribution $u$ the following Littlewood-Paley decomposition holds
+true: $u=\sum\limits_{q\geq-1}\Delta_{q}u.$ For $s\in\mathbb{R},$ $p\in[1,\infty]$ and $r\in[1,\infty],$ one can now define the nonhomogeneous Besov space $B^{s}_{p,r}:=B^{s}_{p,r}(\mathbb{R}^{2})$ as the set of tempered distributions $u$ over $\mathbb{R}^{2}$ so that $\|u\|_{B^{s}_{p,r}(\mathbb{R}^{2})}:=\bigl\|2^{qs}\|\Delta_{q}u\|_{L^{p}(\mathbb{R}^{2})}\bigr\|_{\ell^{r}(\mathbb{Z})}<\infty.$ We shall also use several times the following
+well-known fact for incompressible fluid mechanics (see the proof in e.g. [ 7 ] , Chap. 3): Proposition 1 . For any $p\in]1,\infty[$ the operator $\omega\mapsto\nabla u$ is bounded in $L^{p}.$ More precisely, there exists a constant $C$ such that $\|\nabla u\|_{L^{p}}\leq C\frac{p^{2}}{p-1}\,\|\omega\|_{L^{p}}.$ One can now tackle the proof of Theorem 1 .
+One shall proceed as follows. 1. We smooth out the data so as to get a sequence
+of global smooth solutions to $(B_{\kappa,0}).$ 2. Energy estimates are proved. 3. We establish estimates in larger norms. 4. We state uniform estimates for the first order time derivatives. 5. We pass to the limit in the system by means of compactness arguments. 6. Uniqueness is proved. First step. We smooth out the initial data $(\theta_{0},u_{0})$ (use e.g. a convolution process)
+and get a sequence of smooth initial data $(\theta_{0}^{n},u_{0}^{n})_{n\in\mathbb{N}}$ which is bounded in the space
+given in the statement of the theorem.
+In addition, those smooth data belong to all the Sobolev spaces $H^{s}.$ Hence, applying Chae’s result [ 6 ] provides us with
+a sequence of smooth global solutions $(\theta^{n},u^{n})_{n\in\mathbb{N}}$ which belong to all the spaces ${\mathcal{C}}(\mathbb{R}_{+};H^{s}).$ From system $(B_{\kappa,0})$ and standard product laws in Sobolev spaces,
+we deduce that $(\theta^{n},u^{n})$ belongs to ${\mathcal{C}}^{1}(\mathbb{R}_{+};H^{s})$ for all $s\in\mathbb{R},$ and thus also
+to ${\mathcal{C}}^{1}(\mathbb{R}_{+};L^{p})$ for all $p\in[2,\infty].$ This will be more than enough to make the computations in the following two
+steps rigorous. Second step. We want to state energy type estimates
+for $(\theta^{n},u^{n}).$ Let us first take the $L^{2}(\mathbb{R}^{2})$ inner product of $\theta^{n}$ with the equation
+satisfied by $\theta^{n}.$ Performing
+a space integration by parts in the diffusion term and a time integration yields (3) $\|\theta^{n}(t)\|_{L^{2}}^{2}+2\kappa\int_{0}^{t}\|\nabla\theta^{n}\|_{L^{2}}^{2}\,d\tau=\|\theta^{n}_{0}\|_{L^{2}}^{2}\quad\hbox{for all}\ t\in\mathbb{R}_{+}.$ As for the velocity $u^{n},$ a similar argument gives $\|u^{n}(t)\|_{L^{2}}\leq\|u^{n}_{0}\|_{L^{2}}+\int_{0}^{t}\|\theta^{n}\|_{L^{2}}\,d\tau.$ Hence, bounding $\|\theta^{n}\|_{L^{2}}$ according to ( 3 ), we get (4) $\|u^{n}(t)\|_{L^{2}}\leq\|u_{0}^{n}\|_{L^{2}}+t\|\theta^{n}_{0}\|_{L^{2}}.$ Third step. This is the core of the proof of global existence.
+We here want to get uniform estimates for the Besov norms
+of $\theta^{n}$ and for $\|\omega^{n}\|_{L^{r}\cap L^{\infty}}.$ Let us first consider the vorticity. As explained in the introduction,
+we have $\partial_{t}\omega^{n}+u^{n}\cdot\nabla\omega^{n}=\partial_{1}\theta^{n}.$ Therefore, for all $p\in[r,\infty],$ (5) $\|\omega^{n}(t)\|_{L^{p}}\leq\|\omega^{n}_{0}\|_{L^{p}}+\int_{0}^{t}\|\partial_{1}\theta^{n}\|_{L^{p}}\,d\tau.$ Hence, getting uniform bounds on $\|\omega^{n}\|_{L^{r}\cap L^{\infty}}$ requires uniform bounds for $\partial_{1}\theta^{n}$ in the space $L^{1}_{loc}(\mathbb{R}_{+};L^{r}\cap L^{\infty}).$ Because Equality ( 3 ) supplies a bound in $L^{2}(\mathbb{R}_{+};L^{2})$ for $\partial_{1}\theta^{n},$ it is enough to get a suitable bound for $(\partial_{1}\theta^{n})_{n\in\mathbb{N}}$ in $L^{1}_{loc}(\mathbb{R}_{+};L^{\infty}).$ Given that the operator $\partial_{1}$ maps $B^{1}_{\infty,1}$ in $B^{0}_{\infty,1},$ and that $B^{0}_{\infty,1}\hookrightarrow L^{\infty},$ the problem reduces to proving uniform estimates for $\theta^{n}$ in $L^{1}_{loc}(\mathbb{R}_{+};B^{1}_{\infty,1}).$ For doing so, we rewrite the equation for $\theta^{n}$ as follows : (6) $\partial_{t}\theta^{n}-\kappa\Delta\theta^{n}=-u^{n}\cdot\nabla\theta^{n}$ and take advantage of the smoothing properties of
+the heat equation.
+More precisely, it is stated in the appendix that for all $\alpha\in[1,\infty],$ (7) $\kappa^{\frac{1}{\alpha}}\|\theta^{n}\|_{L_{T}^{\alpha}(B^{-1+\frac{2}{\alpha}}_{\infty,1})}\leq C(1+\kappa t)^{\frac{1}{\alpha}}\biggl(\|\theta_{0}^{n}\|_{B^{-1}_{\infty,1}}+\int_{0}^{t}\|u^{n}\cdot\nabla\theta^{n}\|_{B^{-1}_{\infty,1}}\,d\tau\biggr).$ In order to bound the source term, one may use
+the following Bony’s decomposition : (8) $u^{n}\cdot\nabla\theta^{n}=\,\mbox{\rm div}\,R(u^{n},\theta^{n})+\sum_{j=1}^{2}\Bigl(T_{\partial_{j}\theta^{n}}u^{n}_{j}+T_{u^{n}_{j}}\partial_{j}\theta^{n}\Bigr).$ In the above formula, $T$ (resp. $R$ ) stands for the paraproduct
+(resp. remainder) operator defined by (9) $T_{f}g:=\sum_{q\geq 1}S_{q-1}f\Delta_{q}g\quad\biggl(\hbox{resp. }\ R(f,g):=\sum_{q\geq-1}\Delta_{q}f\,\widetilde{\Delta}_{q}g\biggr)$ with $S_{p}:=\sum_{p^{\prime}\leq p-1}\Delta_{p^{\prime}}$ and $\widetilde{\Delta}_{p}:=\Delta_{p-1}+\Delta_{p}+\Delta_{p+1},$ and we use the fact that, owing to $\,\mbox{\rm div}\,u^{n}=0,$ we have $\sum_{j=1}^{2}R(u^{n}_{j},\partial_{j}\theta^{n})=\,\mbox{\rm div}\,R(u^{n},\theta^{n}).$ For the remainder term $R,$ it is standard (see e.g. [ 3 ] ) that (10) $\|R(u^{n},\theta^{n})\|_{B^{1}_{\infty,\infty}}\leq C\|\theta^{n}\|_{B^{0}_{\infty,\infty}}\|u^{n}\|_{B^{1}_{\infty,\infty}}.$ Now, because $\Delta u^{n}=\nabla^{\bot}\omega^{n}$ with $\nabla^{\bot}:=(-\partial_{2},\partial_{1}),$ one may decompose $u^{n}$ into $u^{n}=\Delta_{-1}u^{n}-\sum_{q\geq 0}\nabla^{\bot}(-\Delta)^{-1}\Delta_{q}\omega^{n}.$ Using Bernstein inequalities and the fact that operator $\nabla^{\bot}(-\Delta)^{-1}$ is homogeneous of degree $-1,$ we eventually get (11) $\|u^{n}\|_{B^{1}_{\infty,\infty}}\leq C\bigl(\|u^{n}\|_{L^{\infty}}+\|\omega^{n}\|_{L^{\infty}}\bigr).$ As operator div maps $B^{1}_{\infty,\infty}$ in $B^{0}_{\infty,\infty},$ and
+as $B^{0}_{\infty,\infty}\hookrightarrow B^{-1}_{\infty,1}$ and $H^{1}\hookrightarrow B^{0}_{\infty,\infty},$ we thus get from ( 10 ) and ( 11 ), (12) $\|\,\mbox{\rm div}\,R(\theta^{n},u^{n})\|_{B^{-1}_{\infty,1}}\leq C\|\theta^{n}\|_{H^{1}}\bigl(\|u^{n}\|_{L^{\infty}}+\|\omega^{n}\|_{L^{\infty}}\bigr).$ Next, making use of continuity properties for the paraproduct operator (see
+e.g. [ 3 ] ), we discover that $\|T_{\partial_{j}\theta^{n}}u^{n}_{j}\|_{B^{-1}_{\infty,1}}+\|T_{u^{n}_{j}}\partial_{j}\theta^{n}\|_{B^{-1}_{\infty,1}}\leq C\|u^{n}_{j}\|_{L^{\infty}}\|\partial_{j}\theta^{n}\|_{B^{-1}_{\infty,1}}\quad\hbox{for}\quad j=1,2.$ Plugging this latter inequality and ( 12 ) in ( 8 ),
+we get (13) $\|u^{n}\cdot\nabla\theta^{n}\|_{B^{-1}_{\infty,1}}\leq C\Bigl(\bigl(\|u^{n}\|_{L^{\infty}}+\|\omega^{n}\|_{L^{\infty}}\bigr)\|\theta^{n}\|_{H^{1}}+\|u^{n}\|_{L^{\infty}}\|\theta^{n}\|_{B^{0}_{\infty,1}}\Bigr).$ In order to conclude, one may use the following
+two inequalities the proof of which has been postponed in the appendix: (14) $\displaystyle\|u^{n}\|_{L^{\infty}}\leq C\|u^{n}\|_{L^{2}}^{\frac{1}{2}}\|\omega^{n}\|_{L^{\infty}}^{\frac{1}{2}},$ (15) $\displaystyle\|\theta^{n}\|_{B^{0}_{\infty,1}}\leq C\|\theta^{n}\|_{L^{2}}^{\frac{1}{2}}\|\theta^{n}\|_{B^{1}_{\infty,1}}^{\frac{1}{2}}.$ Inserting ( 14 ) and ( 15 ) in ( 13 )
+then using Young inequality, we get for all $\varepsilon>0,$ $\hfil\displaystyle\int_{0}^{t}\|u^{n}\cdot\nabla\theta^{n}\|_{B^{-1}_{\infty,1}}\,d\tau\leq C\biggl(\int_{0}^{t}\|\theta^{n}\|_{H^{1}}\bigl(\|u^{n}\|_{L^{2}}+\|\omega^{n}\|_{L^{\infty}}\bigr)\,d\tau\hfill$ $\hfil\displaystyle\hfill+\frac{1+\kappa t}{\varepsilon\kappa}\int_{0}^{t}\|u^{n}\|_{L^{2}}\|\omega^{n}\|_{L^{\infty}}\|\theta^{n}\|_{L^{2}}\,d\tau+\frac{\varepsilon\kappa}{1+\kappa t}\int_{0}^{t}\|\theta^{n}\|_{B^{1}_{\infty,1}}\,d\tau\biggr).$ Taking $\varepsilon$ sufficiently small and coming back to ( 7 ),
+we end up with $\hfil\displaystyle\Theta^{n}(t)\leq C(1+\kappa t)\biggl(\Theta^{n}_{0}+\int_{0}^{t}\|\theta^{n}\|_{H^{1}}\|u^{n}\|_{L^{2}}\,d\tau\hfill$ $\hfil\displaystyle\hfill+\int_{0}^{t}\bigl(\|\theta^{n}\|_{H^{1}}+(\kappa^{-1}+t)\|u^{n}\|_{L^{2}}\|\theta^{n}\|_{L^{2}}\bigl)\|\omega^{n}\|_{L^{\infty}}\,d\tau\biggr)$ where $\Theta^{n}(t):=\sup_{\alpha\in[1,\infty]}\kappa^{\frac{1}{\alpha}}\|\theta^{n}\|_{L_{t}^{\alpha}(B^{-1+\frac{2}{\alpha}}_{\infty,1})}$ and $\Theta^{n}_{0}:=\|\theta_{0}^{n}\|_{B^{-1}_{\infty,1}}.$ On the one hand, the above inequality rewrites (16) $\Theta^{n}(t)\leq f^{n}(t)+(1+\kappa t)^{2}\int_{0}^{t}g^{n}(\tau)\|\omega^{n}(\tau)\|_{L^{\infty}}\,d\tau$ with $\ \left\{\begin{array}[]{lll}f^{n}(t)&=&C(1+\kappa t)\biggl(\Theta_{0}^{n}+\displaystyle\int_{0}^{t}\|\theta^{n}\|_{H^{1}}\|u^{n}\|_{L^{2}}\,d\tau\biggr),\\[6.45831pt]
+g^{n}(t)&=&C\bigl(\|\theta^{n}(t)\|_{H^{1}}+\kappa^{-1}\|u^{n}(t)\|_{L^{2}}\|\theta^{n}(t)\|_{L^{2}}\bigr).\end{array}\right.$ On the other hand, according to ( 5 )
+and as $B^{0}_{\infty,1}\hookrightarrow L^{\infty},$ we have (17) $\|\omega^{n}(t)\|_{L^{\infty}}\leq\|\omega_{0}^{n}\|_{L^{\infty}}+C\kappa^{-1}\Theta^{n}(t).$ Inserting the above inequality in ( 16 )
+and making use of Gronwall lemma thus yields (18) $\Theta^{n}(t)\leq\biggl(f^{n}(t)+(1+\kappa t)^{2}\|\omega_{0}^{n}\|_{L^{\infty}}\int_{0}^{t}g^{n}(\tau)\,d\tau\biggr)e^{C\kappa^{-1}(1+\kappa t)^{2}\int_{0}^{t}g^{n}(\tau)\,d\tau}.$ Obviously, ( 3 ) and ( 4 ) imply that $(u^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2})$ and that $(\theta^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}(\mathbb{R}_{+};L^{2})\cap L^{2}_{loc}(\mathbb{R}_{+};H^{1}).$ Therefore the right-hand side of ( 18 )
+may be bounded independently of $n.$ This provides a uniform bound for $\theta^{n}$ in the space $L^{1}_{loc}(\mathbb{R}_{+};B^{1}_{\infty,1})\cap L^{\infty}_{loc}(\mathbb{R}_{+};B^{-1}_{\infty,1}).$ Next, coming back to ( 17 ) yields
+a bound for $(\omega^{n})_{n\in\mathbb{N}}$ in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{\infty}).$ Fourth step. In order to show that $(\theta^{n},u^{n})_{n\in\mathbb{N}}$ converges (up to extraction),
+a boundedness information over $(\partial_{t}\theta^{n},\partial_{t}u^{n})$ is needed. As for the temperature, because $\partial_{t}\theta^{n}=\kappa\Delta\theta^{n}-u^{n}\cdot\nabla\theta^{n},$ the previous steps imply that $(\partial_{t}\theta^{n})_{n\in\mathbb{N}}$ is bounded in $L^{2}_{loc}(\mathbb{R}_{+};H^{-1}).$ We claim that $(\partial_{t}u^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}).$ Indeed, applying the Leray projector ${\mathcal{P}}$ over divergence free vector-fields to the velocity equation
+yields $\partial_{t}u^{n}=-{\mathcal{P}}(\theta^{n}e_{2}-u^{n}\cdot\nabla u^{n}).$ Since $(\theta^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}(\mathbb{R}_{+};L^{2}),$ so is ${\mathcal{P}}(\theta^{n}e_{2}).$ Next, as $(\omega^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{r}),$ so is $(\nabla u^{n})_{n\in\mathbb{N}}$ according to proposition 1 . Finally,
+the previous results imply that sequence $(u^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}\cap L^{\infty}),$ thus in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{s})$ with $s=2r/(r-2).$ Thanks to Hölder inequality, one can thus conclude that $(u^{n}\cdot\nabla u^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}).$ Fifth step. Passing to the limit. According to the previous steps, we have • $(\theta^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}\cap B^{1}_{\infty,1})\cap L^{2}_{loc}(\mathbb{R}_{+};H^{1})\cap L^{1}_{loc}(\mathbb{R}_{+};B^{1}_{\infty,1}),$ • $(\partial_{t}\theta^{n})_{n\in\mathbb{N}}$ is bounded in $L^{2}_{loc}(\mathbb{R}_{+};H^{-1}),$ • $(u^{n})_{n\in\mathbb{N}}$ and $(\partial_{t}u^{n})_{n\in\mathbb{N}}$ are bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}),$ • $(\omega^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{r}\cap L^{\infty}).$ Because $H^{-1}$ is (locally) compactly embedded in $L^{2}$ the classical Aubin-Lions argument (see e.g. [ 2 ] )
+ensures that, up to extraction,
+sequence $(\theta^{n},u^{n})_{n\in\mathbb{N}}$ strongly converges in $L^{\infty}_{loc}(\mathbb{R}_{+};H^{-1}_{loc})$ to some function $(\theta,u)$ so that $\hfil\displaystyle\theta\in L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}\cap B^{1}_{\infty,1})\cap L^{2}_{loc}(\mathbb{R}_{+};H^{1})\cap L^{1}_{loc}(\mathbb{R}_{+};B^{1}_{\infty,1}),$ $\hfil\displaystyle u\in C^{0,1}_{loc}(\mathbb{R}_{+};L^{2})\!\!\quad\hbox{and}\!\!\quad\omega\in L^{\infty}_{loc}(\mathbb{R}_{+};L^{r}\cap L^{\infty}).$ Now, interpolating with the uniform bounds stated in the previous
+steps, it is easy to pass to the limit in $(B_{\kappa,0}).$ Finally, from standard properties for the heat equation (see e.g. [ 8 ] )
+we get in addition $\theta\in{\mathcal{C}}(\mathbb{R}_{+};L^{2}\cap B^{-1}_{\infty,1}).$ This completes the proof of existence. Sixth step. In order to show the uniqueness part
+of our statement, we shall use the Yudovich argument [ 17 ] revisited by P. Gérard in [ 11 ] . Let $(\theta_{1},u_{1},\Pi_{1})$ and $(\theta_{2},u_{2},\Pi_{2})$ satisfy ( 2 ) and $(B_{\kappa,0})$ with
+the same data.
+Denote $\delta\!\theta:=\theta_{2}-\theta_{1},$ $\delta\!u:=u_{2}-u_{1}$ and $\delta\!\Pi:=\Pi_{2}-\Pi_{1}.$ Because $\partial_{t}\delta\!u+u_{2}\cdot\nabla\delta\!u+\nabla\delta\!\Pi=-\delta\!u\cdot\nabla u_{1}+\delta\!\theta\,e_{2},$ a standard energy method combined with Hölder inequality yields
+for all $p\in[2,\infty[$ $\frac{1}{2}\frac{d}{dt}\|\delta\!u\|_{L^{2}}^{2}\leq\|\nabla u_{1}\|_{L^{p}}\|\delta\!u\|_{L^{2p^{\prime}}}^{2}+\|\delta\!\theta\|_{L^{2}}\|\delta\!u\|_{L^{2}}\quad\hbox{with }\ p^{\prime}:=\frac{p}{p-1}\cdotp$ This inequality rewrites (19) $\frac{1}{2}\frac{d}{dt}\|\delta\!u\|_{L^{2}}^{2}\leq p\|\nabla u_{1}\|_{L}\|\delta\!u\|_{L^{\infty}}^{\frac{2}{p}}\|\delta\!u\|_{L^{2}}^{\frac{2}{p^{\prime}}}+\|\delta\!\theta\|_{L^{2}}\|\delta\!u\|_{L^{2}}$ with $\|\nabla u_{1}\|_{L}:=\sup_{r\leq p<\infty}\frac{\|\nabla u_{1}\|_{L^{p}}}{p}\cdotp$ Let us point out that, by virtue of Proposition 1 ,
+as $\omega_{1}\in L^{\infty}_{loc}(\mathbb{R}_{+};L^{r}\cap L^{\infty})$ the term $\|\nabla u_{1}(t)\|_{L}$ is locally bounded.
+Of course, combining the fact that $u_{i}\in L^{\infty}_{loc}(\mathbb{R}_{+};L^{2})$ and $\omega_{i}\in L^{\infty}_{loc}(\mathbb{R}_{+};L^{\infty})$ for $i=1,2,$ implies that $\delta\!u\in L^{\infty}_{loc}(\mathbb{R}_{+};L^{\infty}).$ Next, we notice that $\delta\!\theta$ satisfies $\partial_{t}\delta\!\theta-\kappa\Delta\delta\!\theta=-u_{2}\cdot\nabla\delta\!\theta-\delta\!u\cdot\nabla\theta_{1},\qquad\partial_{t}\delta\!\theta_{|t=0}=0.$ Our regularity assumptions over the solutions ensure that the right-hand
+side belongs to $L^{2}_{loc}(\mathbb{R}_{+};L^{2})$ .
+Hence, according to a standard maximal regularity result for the heat equation,
+we deduce that $\partial_{t}\delta\theta\in L^{2}_{loc}(\mathbb{R}_{+};L^{2}).$ Hence, using an energy method yields (20) $\frac{1}{2}\frac{d}{dt}\|\delta\!\theta\|_{L^{2}}^{2}\leq\|\nabla\theta_{1}\|_{L^{\infty}}\|\delta\!\theta\|_{L^{2}}\|\delta\!u\|_{L^{2}}.$ Let $\varepsilon$ be a small parameter (bound to tend to $0$ ).
+Denote $X_{\varepsilon}(t):=\sqrt{\|\delta\!\theta(t)\|_{L^{2}}^{2}+\|\delta\!u(t)\|_{L^{2}}^{2}+\varepsilon^{2}}.$ Putting inequalities ( 19 ) and ( 20 ) together gives $\frac{d}{dt}X_{\varepsilon}\leq p\|\nabla u_{1}\|_{L}\|\delta\!u\|_{L^{\infty}}^{\frac{2}{p}}X_{\varepsilon}^{1-\frac{2}{p}}+\frac{1}{2}(1+\|\nabla\theta_{1}\|_{L^{\infty}})X_{\varepsilon}.$ Let $\gamma(t):=\frac{1}{2}(1+\|\nabla\theta_{1}(t)\|_{L^{\infty}}).$ The assumptions over $\theta_{1}$ ensure that
+function $\gamma$ is in $L^{1}_{loc}(\mathbb{R}_{+}).$ Therefore, setting $Y_{\varepsilon}:=e^{-\int_{0}^{t}\gamma(\tau)\,d\tau}X_{\varepsilon},$ the previous inequality rewrites $\frac{2}{p}Y_{\varepsilon}^{\frac{2}{p}-1}\frac{d}{dt}Y_{\varepsilon}\leq 2\|\nabla u_{1}\|_{L}\|\delta\!u\|_{L^{\infty}}^{\frac{2}{p}}e^{-\frac{2}{p}\int_{0}^{t}\gamma(\tau)\,d\tau}.$ Performing a time integration yields $Y_{\varepsilon}(t)\leq\biggl(\varepsilon^{\frac{2}{p}}+2\int_{0}^{t}\|\nabla u_{1}\|_{L}\|\delta\!u\|_{L^{\infty}}^{\frac{2}{p}}\,d\tau\biggr)^{\frac{p}{2}}.$ Having $\varepsilon$ tend to $0,$ we end up with (21) $\|\delta\!\theta(t)\|_{L^{2}}^{2}+\|\delta\!u(t)\|_{L^{2}}^{2}\leq\|\delta\!u\|_{L_{t}^{\infty}(L^{\infty})}^{2}\biggl(2\int_{0}^{t}\|\nabla u_{1}\|_{L}\,d\tau\biggr)^{p}\quad\hbox{for all }\ t\in\mathbb{R}^{+}.$ As explained above, the term $\|\nabla u_{1}(t)\|_{L}$ is locally bounded. Hence
+one may find a positive time $T$ so that $\int_{0}^{T}\|\nabla u_{1}\|_{L}\,d\tau<\frac{1}{2}.$ Letting $p$ tend to infinity in ( 21 ) thus entails
+that $(\delta\!\theta,\delta\!u)\equiv 0$ on $[0,T].$ Because $\delta\!\theta$ and $\delta\!u$ are continuous in time with values in $L^{2},$ it is now easy to conclude that $(\delta\!\theta,\delta\!u)\equiv 0$ on $\mathbb{R}^{+},$ by means of a standard connectivity argument. 2. A global result for infinite energy initial velocity In dimension two, the assumption that $u_{0}$ is in $L^{2}$ is somewhat restrictive since it entails that
+the vorticity $\omega_{0}$ has $0$ average over $\mathbb{R}^{2}.$ This in particular precludes our considering vortex patches like structures
+or, more generally, data with compactly supported
+nonnegative vorticity.
+The present section aims at generalizing our study to initial velocity fields
+with (possibly) infinite energy.
+The functional setting we shall introduce below is borrowed
+from Chemin’s in [ 7 ] . Let us first notice that whenever $g$ is a radial ${\mathcal{C}}_{c}^{\infty}$ function supported
+away from the origin then the smooth vector field $\sigma$ defined
+by (22) $\sigma(x)=\frac{x^{\bot}}{|x|^{2}}\int_{0}^{|x|}rg(r)\,dr$ is a stationary solution to the two-dimensional incompressible Euler
+equations, and has vorticity $\omega_{\sigma}:x\mapsto g(|x|).$ For $m\in\mathbb{R},$ we then define $E_{m}$ as the set of all divergence-free $L^{2}$ perturbations of a velocity field $\sigma$ satisfying ( 22 ) and (23) $\int_{\mathbb{R}^{2}}g(|x|)\,dx=m.$ Showing that the definition of $E_{m}$ depends
+only on $m$ is left to the reader (it is only a matter of using Fourier
+variables). The rest of this section is devoted to the proof of the following
+generalization of Theorem 1 . Theorem 2 . Let $\theta_{0}\in L^{2}\cap B^{-1}_{\infty,1}$ and $u_{0}\in E_{m}$ for some $m\in\mathbb{R}.$ Assume in addition that the initial vorticity $\omega_{0}$ belongs to $L^{r}\cap L^{\infty}$ for some $r\geq 2.$ Then System $(B_{\kappa,0})$ admits a unique
+global solution $(\theta,u)$ such that (24) $\begin{array}[]{c}\theta\in{\mathcal{C}}(\mathbb{R}_{+};L^{2}\cap B^{1}_{\infty,1})\cap L^{2}_{loc}(\mathbb{R}_{+};H^{1})\cap L^{1}_{loc}(\mathbb{R}_{+};B^{1}_{\infty,1}),\\[6.45831pt]
+u\in{\mathcal{C}}^{0,1}_{loc}(\mathbb{R}_{+};E_{m})\ \hbox{ and }\ \omega\in L^{\infty}_{loc}(\mathbb{R}_{+};L^{r}\cap L^{\infty}).\end{array}$ Proof: As it is very similar to that of Theorem 1 ,
+we just sketch the proof and
+point out what has to be changed. Throughout we fix a stationary vector-field $\sigma$ satisfying ( 22 ) and ( 23 ). Setting $u=v+\sigma,$ System $(B_{\kappa,0})$ rewrites (25) $\begin{cases}\partial_{t}\theta+(v+\sigma)\cdot\nabla\theta-\kappa\Delta\theta=0\\
+\partial_{t}v+(v+\sigma)\cdot\nabla v+v\cdot\nabla\sigma+\nabla\Pi=\theta\,e_{2}\\
+\,\mbox{\rm div}\,v=0.\end{cases}$ As $\,\mbox{\rm div}\,\sigma=\,\mbox{\rm div}\,v=0,$ the energy estimates for $\theta$ remain the same.
+As for the velocity field, having the new term $v\cdot\nabla\sigma$ in the equation
+implies that (26) $\|v(t)\|_{L^{2}}\leq e^{t\|\nabla\sigma\|_{L^{\infty}}}\|v_{0}\|_{L^{2}}+\biggl(\frac{e^{t\|\nabla\sigma\|_{L^{\infty}}}-1}{\|\nabla\sigma\|_{L^{\infty}}}\biggr)\|\theta_{0}\|_{L^{2}}.$ Now, the vorticity $\omega_{v}$ associated to $v$ satisfies $\partial_{t}\omega_{v}+(v+\sigma)\cdot\nabla\omega_{v}+v\cdot\nabla\omega_{\sigma}=\partial_{1}\theta.$ Hence for all $p\in[r,\infty],$ $\|\omega_{v}(t)\|_{L^{p}}\leq\|\omega_{v}(0)\|_{L^{p}}+\int_{0}^{t}\|\partial_{1}\theta\|_{L^{p}}\,d\tau+\int_{0}^{t}\|v\|_{L^{p}}\|\nabla\omega_{\sigma}\|_{L^{\infty}}\,d\tau.$ Splitting $v$ into $v=\Delta_{-1}v-\sum_{q\in\mathbb{N}}\nabla^{\bot}(-\Delta)^{-1}\Delta_{q}\omega_{v}$ and using Bernstein inequality, we readily get $\|v\|_{L^{p}}\leq C\bigl(\|v\|_{L^{2}}+\|\omega_{v}\|_{L^{p}}\bigr).$ Therefore, as in the proof of theorem
+( 1 ), in order to bound $\omega_{v}$ in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{r}\cap L^{\infty}),$ it suffices
+to get a bound for $\partial_{1}\theta$ in $L^{1}_{loc}(\mathbb{R}_{+};L^{\infty}).$ This may be achieved by bounding $\partial_{1}\theta$ in $L^{1}_{loc}(\mathbb{R}_{+};B^{0}_{\infty,1}),$ given that $\partial_{t}\theta-\kappa\Delta\theta=-v\cdot\nabla\theta-\sigma\cdot\nabla\theta.$ Arguing as in ( 7 ) reduces the problem to getting
+an appropriate bound for the new term $\sigma\cdot\nabla\theta$ in $L^{1}_{loc}(\mathbb{R}_{+};B^{-1}_{\infty,1}).$ For this
+purpose, one may use again Bony’s decomposition, the fact that $\,\mbox{\rm div}\,\sigma=0$ and classical continuity properties for the paraproduct and remainder
+operators. One ends up for instance with: $\|\sigma\cdot\nabla\theta\|_{B^{-1}_{\infty,1}}\leq C\|\sigma\|_{B^{\varepsilon}_{\infty,\infty}}\|\theta\|_{L^{\infty}}.$ Combining ( 14 ) and Young inequality, it is now easy to
+get an inequality similar to ( 16 ), and thus a bound for $\theta$ in $L^{1}_{loc}(\mathbb{R}_{+};B^{1}_{\infty,1})\cap L^{\infty}_{loc}(\mathbb{R}_{+};B^{-1}_{\infty,1}).$ In order to prove the uniqueness, it is fundamental to notice that
+if $(\theta_{1},u_{1})$ and $(\theta_{2},u_{2})$ both solve $(B_{\kappa,0})$ with the same data, and satisfy
+( 24 ) with the same $m$ (an assumption which is not restrictive since we know that $u_{1}$ and $u_{2}$ coincide initially) then one may
+write $u_{1}=\sigma+v_{1}$ and $u_{2}=\sigma+v_{2}$ for some
+stationary vector-field $\sigma$ satisfying ( 22 ),( 23 )
+and $v_{1},v_{2}$ in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}).$ Taking advantage of Equation $\eqref{eq:modifiee}_{2},$ is is obvious that $\partial_{t}v_{1}$ and $\partial_{t}v_{2}$ are in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}).$ Now, we notice that $(\delta\!v,\delta\!\theta):=(v_{2}-v_{1},\theta_{2}-\theta_{1})$ satisfy $\left\{\begin{array}[]{l}\partial_{t}\delta\!\theta+u_{2}\cdot\nabla\delta\!\theta-\kappa\Delta\delta\!\theta=-\delta\!v\cdot\nabla\theta_{1},\\[4.30554pt]
+\partial_{t}\delta\!v+u_{2}\cdot\nabla\delta\!v+\nabla\delta\!\Pi=-\delta\!v\cdot\nabla u_{1}+\delta\!\theta\,e_{2}-\delta\!v\cdot\nabla\sigma.\end{array}\right.$ Up to the additional term $-\delta\!v\cdot\nabla\sigma$ which may be bounded as follows: $\|\delta\!v\cdot\nabla\sigma\|_{L^{2}}\leq\|\delta\!v\|_{L^{2}}\|\nabla\sigma\|_{L^{\infty}},$ the energy bounds for the above system
+are the same as in the case $\sigma=0.$ Hence, from argument similar to those used in the previous section,
+it is easy to conclude the proof of uniqueness.
+The details are left to the reader. 3. Further results and concluding remarks In this concluding section, we list a few extensions
+which may be obtained by straightforward generalizations
+of our method. 3.1. Remarks concerning the Boussinesq system Let us stress that the key to the proof of Theorems 1 and 2 is that, on the one hand, the solution does not develop singularities as long
+as $\int_{0}^{T}\|\nabla\theta\|_{L^{\infty}}\,dt<\infty,$ and that, on the other hand, under quite weak assumptions over the initial
+data, the above integral remains finite for all $T<\infty.$ In fact, a quick revisitation of our proof shows that
+if one assumes in addition that $\omega_{0}\in C^{\varepsilon}$ and $\theta_{0}\in C^{-1+\varepsilon}$ (with $C^{-1+\varepsilon}:=B^{-1+\varepsilon}_{\infty,\infty}$ )
+for some $\varepsilon\in]0,1[$ then both $\nabla\theta$ and $\nabla u$ are in $L^{1}_{loc}(\mathbb{R}_{+};L^{\infty}(\mathbb{R}^{2}))$ so that the additional Hölder regularity is conserved during the evolution.
+We believe that, more generally, our study
+opens a way to investigate vortex patches structures
+(or striated regularity) for the Boussinesq system with $\kappa>0$ and $\nu=0.$ Let us also emphasize that
+if, in addition to the hypotheses of Theorem 1 ,
+we have $u_{0}\in B^{1}_{\infty,1}$ then the corresponding solution $(\theta,u)$ also satisfies $u\in{\mathcal{C}}(\mathbb{R}_{+};B^{1}_{\infty,1}).$ Indeed, according to a result by M. Vishik in [ 16 ] concerning the transport equation, one can propagate the $B^{0}_{\infty,1}$ regularity over the vorticity $\omega$ provided $\partial_{1}\theta$ is in $L^{1}_{loc}(\mathbb{R}_{+};B^{0}_{\infty,1})$ and there exists some universal constant $C$ such that (27) $\|\omega(t)\|_{B^{0}_{\infty,1}}\leq C\biggl(1+\int_{0}^{t}\|\nabla u\|_{L^{\infty}}\biggr)\biggl(\|\omega_{0}\|_{B^{0}_{\infty,1}}+\int_{0}^{t}\|\partial_{1}\theta\|_{B^{0}_{\infty,1}}\biggr).$ Now, under the sole assumptions of Theorem 1 ,
+one may bound $\partial_{1}\theta$ in $L^{1}_{loc}(\mathbb{R}_{+};B^{0}_{\infty,1})$ by means of the norms of the data.
+Because, owing to $B^{0}_{\infty,1}\hookrightarrow L^{\infty}$ and ( 14 ), one may write $\|\nabla u\|_{L^{\infty}}\leq C\bigl(\|u\|_{L^{2}}+\|\omega\|_{B^{0}_{\infty,1}}\bigr),$ Inequality ( 27 ) combined with Gronwall lemma
+ensures the conservation of
+the additional $B^{0}_{\infty,1}$ regularity for the vorticity
+(and thus of the $B^{1}_{\infty,1}$ regularity for the velocity).
+This argument provides another proof of Hmidi and
+Keraani’s result in [ 13 ] under somewhat weaker assumptions over $\theta_{0}$ (there having $\theta_{0}$ in (a subspace of) $L^{\infty}$ was
+needed). 3.2. The Bénard system Our method may also be adapted with almost no change
+to the study of the following Bénard system : (28) $\begin{cases}\partial_{t}\theta+u\cdot\nabla\theta-\kappa\Delta\theta=u_{2}\\
+\partial_{t}u+u\cdot\nabla u+\nabla p=\theta\,e_{2}\\
+(\theta,u)|_{t=0}=(\theta_{0},u_{0}),\end{cases}$ which describes convective motions in a heated
+two-dimensional inviscid incompressible
+fluid under thermal effects (see e.g. [ 1 ] , Chap. 6). We get Theorem 3 . For all data $(\theta_{0},u_{0})$ with $\theta_{0}\in L^{2}\cap B^{-1}_{\infty,1}$ and $u_{0}\in L^{2}$ satisfying $\,\mbox{\rm div}\,u_{0}=0$ and $\omega_{0}\in L^{r}\cap L^{\infty}$ for some $r\in[2,\infty[,$ System ( 28 ) has a unique global solution $(\theta,u)$ such that (29) $\begin{array}[]{c}\theta\in{\mathcal{C}}(\mathbb{R}_{+};L^{2}\cap B^{1}_{\infty,1})\cap L^{2}_{loc}(\mathbb{R}_{+};H^{1})\cap L^{1}_{loc}(\mathbb{R}_{+};B^{1}_{\infty,1}),\\[6.45831pt]
+\quad u\in{\mathcal{C}}^{0,1}_{loc}(\mathbb{R}_{+};L^{2})\ \hbox{ and }\ \omega\in L^{\infty}_{loc}(\mathbb{R}_{+};L^{r}\cap L^{\infty}).\end{array}$ Proof: We just briefly indicate what has to be changed compared
+to the proof of Theorem 1 .
+Owing to the new term $u_{2}$ in the equation for the temperature,
+the energy estimates read (30) $\displaystyle\frac{1}{2}\frac{d}{dt}\|\theta\|_{L^{2}}^{2}+\kappa\|\nabla\theta\|_{L^{2}}^{2}=\int\theta\>u_{2}\,dx,$ (31) $\displaystyle\frac{1}{2}\frac{d}{dt}\|u\|_{L^{2}}^{2}=\int\theta\>u_{2}\,dx.$ Adding up inequalities ( 30 ) and ( 31 ) yields $\displaystyle\frac{1}{2}\frac{d}{dt}\|(\theta,u)(t)\|_{L^{2}}^{2}+\kappa\|\nabla\theta\|_{L^{2}}^{2}=2\displaystyle\int\theta\>u_{2}\,dx,\\
+\leq\|(\theta,u)\|_{L^{2}}^{2}.$ Thanks to the Gronwall inequality, we thus infer that $\|(\theta,u)(t)\|_{L^{2}}^{2}+2\kappa\int_{0}^{t}\|\nabla\theta(\tau)\|_{L^{2}}^{2}\,d\tau\leq\|(\theta_{0},u_{0})\|_{L^{2}}^{2}\>e^{2t}.$ The rest of the proof of Theorem 3 follows the lines
+of that of Theorem 1 , once it has been noticed
+that the computations leading to Inequality ( 7 ) (see the
+appendix) also yield $\bigg\|\int_{0}^{t}e^{(t-s)\kappa\Delta}u_{2}(s)ds\bigg\|_{L_{T}^{1}(B^{1}_{\infty,1})}\leq C\int_{0}^{T}\|u\|_{L^{\infty}}\,dt.$ Note also that having the new (lower order) term $u_{2}$ in Equation $\eqref{eq:benard}_{1}$ is harmless
+for proving uniqueness. Appendix Here we prove a few inequalities which have been used
+throughout the paper. Proof of Inequality ( 7 ) : Assume that $\theta$ satisfies $\partial_{t}\theta-\kappa\Delta\theta=f,\qquad\theta_{|t=0}=\theta_{0}.$ Then applying the dyadic operator $\Delta_{q}$ to the above equality
+yields $\partial_{t}\Delta_{q}\theta-\kappa\Delta_{q}\Delta\theta=\Delta_{q}f\quad\hbox{for all }\ q\geq-1.$ From the maximum principle, we readily get $\|\Delta_{-1}\theta(t)\|_{L^{\infty}}\leq\|\Delta_{-1}\theta_{0}\|_{L^{\infty}}+\int_{0}^{t}\|\Delta_{-1}f(\tau)\|_{L^{\infty}}\,d\tau$ whence for all $\alpha\in[1,\infty]$ and $t>0,$ (32) $\|\Delta_{q}\theta\|_{L^{\alpha}([0,t];L^{\infty})}\leq Ct^{\frac{1}{\alpha}}\Bigl(\|\Delta_{-1}\theta_{0}\|_{L^{\infty}}+\|\Delta_{-1}f\|_{L^{1}([0,t];L^{\infty})}\Bigr).$ Next, for bounding the high frequency blocks $\Delta_{q}\theta$ with $q\geq 0,$ one may write (33) $\Delta_{q}\theta(t)=e^{\kappa t\Delta}\Delta_{q}\theta_{0}+\int_{0}^{t}e^{\kappa(t-\tau)\Delta}\Delta_{q}f(\tau)\,d\tau$ where $(e^{\lambda\Delta})_{\lambda>0}$ stands
+for the heat semi-group, and take advantage of the
+following inequality stated by J.-Y. Chemin in [ 8 ] :
+there exists two positive constants $c$ and $C$ such that (34) $\|e^{\lambda\Delta}\Delta_{q}g\|_{L^{\infty}}\leq Ce^{-c\lambda 2^{2q}}\|\Delta_{q}g\|_{L^{\infty}}\ \hbox{ for all }\ \lambda>0\ \hbox{ and }\ q\geq 0.$ From ( 33 ) and ( 34 ), we get $\|\Delta_{q}\theta(t)\|_{L^{\infty}}\leq C\biggl(e^{-c\kappa 2^{2q}t}\|\Delta_{q}\theta_{0}\|_{L^{\infty}}+\int_{0}^{t}e^{-c\kappa 2^{2q}(t-\tau)}\|\Delta_{q}f(\tau)\|_{L^{\infty}}\,d\tau\biggr).$ Therefore, for all $\alpha\in[1,\infty],$ $q\geq 0$ and $t>0,$ $\kappa^{\frac{1}{\alpha}}2^{(\frac{2}{\alpha}-1)q}\|\Delta_{q}\theta\|_{L^{\alpha}([0,t];L^{\infty})}\leq C2^{-q}\Bigl(\|\Delta_{q}\theta_{0}\|_{L^{\infty}}+\|\Delta_{q}f\|_{L^{1}([0,t];L^{\infty})}\Bigr).$ Summing on $q\geq 0$ and using
+( 32 ), it is now easy to complete the proof of Inequality
+( 7 ). Proof of Inequalities ( 14 ) and ( 15 ) : For proving the first inequality, let us consider
+a $L^{2}$ divergence free vector-field $u$ with bounded vorticity $\omega.$ As $u$ is in $L^{2},$ one may write $u=\sum_{q\in\mathbb{Z}}\dot{\Delta}_{q}u\quad\hbox{with}\quad\dot{\Delta}_{q}:=\varphi(2^{-q}D).$ Let $N$ be an integer parameter to be chosen hereafter.
+Given that $u=-\nabla^{\perp}(-\Delta)^{-1}\omega$ and using the Bernstein
+inequalities, we have $\|u\|_{L^{\infty}}\leq\sum\limits_{q\leq N}\|\dot{\Delta}_{q}u\|_{L^{\infty}}+\sum\limits_{q>N}\|\dot{\Delta}_{q}u\|_{L^{\infty}}\leq C2^{N}\|u\|_{L^{2}}+C\sum\limits_{q>N}2^{-q}\|\dot{\Delta}_{q}\omega\|_{L^{\infty}}.$ Therefore, $\|u\|_{L^{\infty}}\leq C2^{N}\|u\|_{L^{2}}+C2^{-N}\|\omega\|_{L^{\infty}}.$ Taking $N$ so that $2^{N}\|u\|_{L^{2}}\approx 2^{-N}\|\omega\|_{L^{\infty}}$ ,
+we get the desired inequality. Proving Inequality ( 15 ) relies on the
+similar decomposition into low and high frequencies. The
+details are left to the reader. References [1] A. Ambrosetti , G. Prodi : A primer of nonlinear analysis , Cambridge studies in advanced mathematics, 34 (1995). [2] J.-P. Aubin : Un théorème de
+compacité. Comptes Rendus de l’Académie des Sciences, Paris , 256 (1963),
+5042–5044. [3] H. Bahouri , J.-Y. Chemin and
+R. Danchin : Fourier Analysis and Nonlinear Partial Differential Equations, Springer, to appear. [4] J.-M. Bony : Calcul symbolique et propagation des
+singularités pour les
+équations aux dérivées partielles non linéaires, Annales scientifiques de l’école Normale supérieure , 14 , (1981), 209–246. [5] J. R. Cannon , E. Dibenedetto :
+The initial value problem for the Boussinesq equations with data in $L^{p}$ , Lecture Notes in Math. 771 , Springer, 1980, 129–144. [6] D. Chae : Global regularity for the $2$ -D Boussinesq
+equations with partial viscous terms, Advances in Mathematics , 203 (2), (2006), 497–513. [7] J.-Y. Chemin : Fluides parfaits incompressibles. Astérisque, 230, 1995. [8] J.-Y. Chemin : Théorèmes d’unicité pour le
+système de Navier-Stokes tridimensionnel, Journal d’Analyse
+Mathématique , 77 (1999), 25–50. [9] R. Danchin and M. Paicu :
+Le théorème de Leray et le théorème de Fujita-Kato
+pour le système de Boussinesq
+partiellement visqueux, to appear in Bulletin de la Société Mathématique de France . [10] W. E , C.-W. Shu : Small-scale structures in
+Boussinesq convection, Physics of Fluids , 6 (1) (1994), 49–58. [11] P. Gérard : Résultats récents sur les fluides
+parfaits incompressibles bidimensionnels (d’après J.-Y. Chemin et J.-M.
+Delort), Séminaire Bourbaki, Vol.
+1991/92, Astérisque , 206 (1992), 411–444. [12] B. Guo : Spectral method for solving two-dimensional Newton-Boussineq equation, Acta Mathematicae Applicatae Sinica , 5 (1989) 27–50. [13] T. Hmidi , S. Keraani :
+On the global well-posedness of the Boussinesq
+system with zero viscosity, preprint 2007. [14] H. K. Moffatt : Some remarks on topological fluid mechanics, in An Introduction to the geometry and
+Topology of Fluid Flows, R. L. Ricca, ed., Kuwer Academic Publishers, Dordrecht, The Netherlands, 3-10, 2001. [15] J. Pedlosky : Geophysical fluid dynamics. Springer Verlag, New-York, 1987. [16] M. Vishik : Hydrodynamics in Besov spaces. Archive for
+Rational Mechanics and Analysis
+145 (1998), no.3, 197–214. [17] V. Yudovich :
+Non-stationary flows of an ideal incompressible fluid, Akademija Nauk SSSR. Žurnal Vyčislitel’noĭ
+Matematiki i Matematičeskoĭ Fiziki , 3 (1963), 1032–1066. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

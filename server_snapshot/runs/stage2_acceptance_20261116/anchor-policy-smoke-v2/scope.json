@@ -1,0 +1,27 @@
+{
+  "kind": "fresh generation reduced Cylinder chain",
+  "split": "811",
+  "vocab": 320,
+  "training_candidates": 2,
+  "validation_candidates": 1,
+  "attempts_per_stage": 512,
+  "sampling_batch": 8,
+  "max_tokens": 1024,
+  "random_fraction": 0.0,
+  "minimum_equation_r2": 0.3,
+  "sft": {
+    "epochs": 5,
+    "scheduler": "cosine",
+    "learning_rate": 1e-05,
+    "minimum_learning_rate": 1e-07,
+    "early_stopping": false,
+    "restore_previous_best": false,
+    "weight_decay": 0.0,
+    "batch_size": 128,
+    "token_budget": 8192,
+    "gradient_clip": 1.0
+  },
+  "formal_configuration_changed": false,
+  "full_search_started": false,
+  "production_sampling_attempts": 640000
+}

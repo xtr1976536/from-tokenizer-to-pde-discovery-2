@@ -1,0 +1,618 @@
+Is a nonlocal diffusion strategy convenientfor biological populations in competition? Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme 1 Introduction 2 Biological models and mathematical tools 2.1 Population dynamics 2.2 The nonlocal dispersive strategy and the fractional Laplacian 2.3 Linearization of the system 3 Linear instability 3.1 Rescaling arguments 3.2 Branching arguments 4 A purely nonlocal phenomenon 5 Further comments on stability and nontrivial solutions References License: arXiv.org perpetual non-exclusive license arXiv:1503.01629v3 [math.AP] 29 Mar 2016 Is a nonlocal diffusion
+strategy convenient for biological populations in competition? Annalisa Massaccesi – Enrico Valdinoci † † thanks: This work
+has been supported by ERC grant 277749 “EPSILON Elliptic
+Pde’s and Symmetry of Interfaces and Layers for Odd Nonlinearities”. Abstract: We study the viability of a nonlocal dispersal strategy
+in a
+reaction-diffusion system with a fractional Laplacian operator. We show that there are
+circumstances - namely, a precise condition on the distribution of the resource - under which the introduction of a new
+nonlocal dispersal behavior is favored with respect to the local dispersal behavior of the resident population. In particular, we consider the linearization of a biological system that models
+the interaction of two biological species, one with local and one with nonlocal
+dispersal, that are competing for the same resource. We give a simple, concrete example
+of resources for
+which the equilibrium with only the local population
+becomes linearly unstable. In a sense, this example shows that nonlocal strategies can invade an environment in which purely local
+strategies are dominant at the beginning, provided that the resource
+is sufficiently sparse. Indeed, the example considered presents a high variance of the distribution of the dispersal,
+thus suggesting that the shortage of resources
+and their unbalanced supply may be some of the basic
+environmental factors that favor nonlocal
+strategies. MSC2010 Classification Numbers: 35Q92, 46N60. Keywords: Fractional equations, population dynamics. “When the sun comes up, you better be running.” The Fable of the Lion and the Gazelle, popular quotation by Undetermined Author, http://quoteinvestigator.com/2011/08/05/lion-gazelle/ 1 Introduction The goal of this paper is to study the possible fate of
+a nonlocal diffusion
+strategy for a biological population
+in presence of a highly oscillating distribution of resource. The study of dispersal
+strategies and the comparison between local and nonlocal
+diffusive behaviors have recently attracted a great attention and several
+researches have been developed both in terms of experiments
+and from the purely mathematical point of view (see for instance [ 39 , 29 , 22 , 34 ] and references therein).
+Remarkably, the phenomenon of possibly nonlocal hunting strategies has attracted
+also the attention of the mass-media, and related news can be found in popular
+newspapers and magazines (see e.g. [ 1 ] ). In this framework, even the distinction between local and nonlocal strategies is
+somehow a delicate issue and it is still not exactly clear in all situations
+what factors favor one behavior against the other.
+Of course, in general, as we know even from
+experience in our everyday life, it may
+be very difficult
+to deduce from overall principles 1 1 1 By “overall principles” we mean the availability of a general method, depending on the measurement of some parameters in the environment, which allows a population to choose an optimal strategy. We are referring to the impossibility of having a satisfactory and complete model for population dynamics, due to the complexity of the biological world. the optimal strategy to follow in each complex situation.
+Therefore, it is not surprising that
+the question of detecting the optimal strategy
+in a logistic mathematical model cannot have just a simple
+answer that is valid in every situation, and, concretely,
+very different dispersal
+strategies have been directly
+observed in nature. Detecting, analyzing and understanding the differences
+between diffusive
+strategies is therefore a difficult, but
+important, task in biology. One of the possible distinctions
+among the different strategies lies in rigorously defining
+the concept of “locality”
+(when a predator, roughly speaking, diffuses randomly
+in the neighborhood looking for an available prey)
+versus “nonlocality” (the short periods of hunting activity
+are followed by rather long journeys of the predator in the
+search for food). As expected, hunting strategies
+of predators are definitely influenced by the distribution
+of the resources.
+When the resources are “easily” available,
+it is conceivable that predators do not need to
+elaborate a nonlocal hunting strategy and indeed it can be more
+convenient not to drift too much to take advantage of
+the rather abundant resource in their neighborhood. Conversely,
+when the prey is sparse, it may be worth for
+predators to interchange the local hunting activity
+with suitable nonlocal travels in different possible regions. Of course, the more sophisticated the species involved in the hunt, the easier
+the latter phenomenon is expected to occur: namely,
+an intelligent species of preys will
+run away from the danger, thus making the distribution of
+resources for the predator sparse, and therefore making
+a nonlocal hunting strategy possibly more favorable.
+However, in the model considered in this paper the resource $\sigma$ is
+independent of the distribution of the populations, so this
+effect is not taken into consideration by the setting discussed here. It is also evident that the distinction between local or nonlocal
+strategy is a mathematical abstraction based on the consideration
+of different space/time scales: i.e., the ambient space
+that the population has at its disposal
+is not infinitely large in the real cases, and species cannot
+really perform discontinuous, nonlocal jumps. Nevertheless,
+a good mathematical model in which different scales are
+taken into account may furnish a justification for
+the diffusive strategy in a “large enough” environment
+in which the time scales of travel and hunting activities
+can be somehow distinguished in practice. We will try to give a rigorous mathematical framework to these
+naïves considerations by showing the possible advantages
+of the long-jump dispersal strategies (i.e. the ones based
+on nonlocal diffusion)
+in regimes where the distribution of resources may be considerably
+different at different points of the ambient space.
+Not too surprisingly having in mind the concrete
+applications, we will use for this scope
+the mathematical framework of linearized systems
+and scaling properties of the eigenvalues, which take
+into account the stability property of equilibrium configurations. Our mathematical framework can be discussed as follows.
+Reaction-diffusion systems provide
+an effective continuous model for the biological problem of competition between different species.
+The typical example of local
+reaction-diffusion equation is $u_{t}=\Delta u+(\sigma-u)u\quad{\rm in}\ (0,T)\times\Omega\,.$ (1.1) We study here the case of Dirichlet boundary conditions. Though other boundary conditions may be also taken into account to model different situations, our focus on the Dirichlet data is motivated by biological considerations (for instance, prescribing the solution to vanish outside a given domain corresponds to a confinement situation, for instance in a hostile environment).
+In this model, the environment is represented by the open bounded set $\Omega\subset\mathbb{R}^{n}$ , with $n\geqslant 2$ , and a heterogeneous resource $\sigma:\Omega\to[0,+\infty)$ is given (stationary in time). The growth of the population density $u$ depends on a dispersal differential operator and on the reproductive rate of the population itself, which is proportional to the temporary availability of the resource $(\sigma-u)$ . Dirichlet boundary conditions model a lethal environment for the population $u$ outside the domain $\Omega$ . A reaction-diffusion system involves at least two species,
+with distribution $u$ and $v$ , whose behavior is ruled
+by a reaction-diffusion equation like ( 1.1 ).
+The two competing species differ for some special features:
+indeed, ( 1.1 ) has to be modified in order to describe the
+foraging and reproductive habits of the species and further data
+concerning the environment. As it is customary in Adaptive Dynamics (see [ 19 ] and [ 24 ] ), the first step in the study of the evolution of a given feature is to single it out and then assume that the two populations differ for this feature only. For instance, in our main 2 2 2 Up to Section 2.3 we investigate the opposite situation, too, that is, when the resident population has a nonlocal dispersal strategy and the mutant population has a local one. case the resident population has a local dispersal strategy and the mutant population has a nonlocal one. In [ 22 ] and [ 19 ] , one can find a
+comprehensive survey of the problem and of the standard approach in Adaptive Dynamics; many different features have been
+studied and compared in [ 21 , 9 , 10 ] (different dispersal rates and genetic mutations), in [ 31 ] (time-periodic sources) and in [ 11 , 12 , 14 ] (addition of a chemotactic component depending on the gradient of the resource). We are interested in the comparison of the dispersal strategies: in particular, we focus on the competition between a population with “standard” diffusion and a second population with nonlocal dispersal. Therefore, our model is $\left\{\begin{array}[]{l}u_{t}=\hphantom{-(-)^{s}}\Delta u+\left(\sigma-(u+v)\right)u\\
+v_{t}=-(-\Delta)^{s}v\,+\left(\sigma-(u+v)\right)v\,.\\
+\end{array}\right.$ (1.2) At a discrete level, the “standard” assumption is that the motion of the population is governed by a random walk and this obviously leads to a Laplacian operator in the continuous model. Analogously, since our interest is focused on a second population with nonlocal dispersal, we adopt the fractional Laplacian operator as dispersal operator for the
+second distribution. The choice of such nonlocal diffusion operator
+is motivated by the fact that the fractional Laplacian has good stability properties in terms
+of the associated stochastic processes (it is the “continuous version” of the discrete motion governed by Lévy flights, see e.g. [ 38 ] for a simple motivation and [ 3 ] for more advanced material), it possesses natural
+scaling features and it seems also to appear in real experiments
+(see e.g. [ 39 , 29 ] ).
+The present literature on the subject of nonlocal dispersal mostly
+considers convolution operators (see [ 21 , 32 , 33 , 13 , 15 ] ).
+In particular, in [ 32 ] , the model under investigation is $\left\{\begin{array}[]{l}u_{t}=\mu\Delta u+\left(\sigma-(u+v)\right)u\\
+v_{t}=\nu\left(\delta^{-n}\int_{D}k\left(\frac{\cdot-y}{\delta}\right)v(y)\,dy-v\right)+\left(\sigma-(u+v)\right)v\,,\\
+\end{array}\right.$ (1.3) where $\mu,\nu$ are the dispersal rates of the two populations, respectively, and $\delta$ is the dispersal distance of the second population. Of course, it is a delicate business to decide, in concrete
+situations, which models better describe the dispersion of
+a real biological population, and many nonlocal terms have
+been taken into account in order to comprise long-range effects.
+In general, we believe that fractional equations may be an important
+tool to further understand the complex problems arising
+in the mathematical modelization of biological species
+and we hope that the framework given in this paper can lead to
+a further development of the subject. In Section 2 we provide
+details and further explanations about the model considered here
+and some basic facts about the fractional Laplacian operator. We study the stability of a stationary solution $(\tilde{u},0)$ of the aforementioned system, by means of a formal linearization at $(\tilde{u},0)$ , that we explain in Subsection 2.3 . The complete understanding
+of the global dynamics of a general system of diffusive and competing populations
+is beyond the scope of this paper and it seems, at first glance,
+very challenging from a mathematical point of view, since
+a variety of possible situations may occur. Nevertheless, let us stress that even the analysis of the stability of a stationary solution (also called “invasibility” analysis) is
+interesting and meaningful from an evolutionary point of view, as it is suggested in the principal literature in Adaptive Dynamics (again, see [ 19 ] ). In fact, a small perturbation around $(\tilde{u},0)$ mirrors the occurrence of a genetic mutation in the first population, involving the dispersal strategy. At $(\tilde{u},0)$ the first population benefits from an equilibrium state, while the second one does not even exist. Then a small portion of the first population (with density $\tilde{u}$ ) undergoes a genetic mutation, which starts a second population (with very small density $v$ ) which competes for the resource with the former. Of course, the genetic mutation of this theoretical experiment involves only the hunting/dispersal strategy, passing from a local to a nonlocal one. In this context, the expected outcome
+of the analysis of the stationary solution is, in most
+of the cases experienced in practice, stability,
+that is, the second population does not find the right conditions
+to evolve
+and it
+gets rapidly extinguished. On the contrary, (even partial)
+instability of these type of equilibria
+is rather surprising and interesting, since in this case
+the new dispersal strategy is convenient enough
+to allow a short term survival of the second species and to provide a situation
+of coexistence of two different populations. The core of this paper is Section 3 , where we show how
+the stability of $(\tilde{u},0)$ (namely, the sign of the eigenvalues associated with the linearized system) depends on the distribution of the resource $\sigma$ . In particular, we will show that
+if a certain relationship between the variation of $\sigma$ and the
+fractional Poincaré-Sobolev constant in $\Omega$ is fulfilled (see Definition 3.1 ), then the linearized system has a positive eigenvalue and $(\tilde{u},0)$ is unstable. It is transparent from Definition 3.1 that the distributions leading to instability of $(\tilde{u},0)$ (and suggesting convenience of a nonlocal dispersal strategy) are those with a “huge variation”. The last part of Section 3 is devoted to show that such a distribution $\sigma$ may occur. Summarizing, the
+result that states that the local dispersive strategy may become
+unstable in presence of a new population endowed with nonlocal
+diffusive strategies can be formally stated as follows: Theorem 1.1 . Let $\Omega\subset\mathbb{R}^{n}$ be an open subset of $\mathbb{R}^{n}$ with Lipschitz boundary and let $s\in(0,1)$ . There exist bounded functions $\sigma:\Omega\to[0,+\infty)$ and $\tilde{u}:\Omega\to[0,+\infty)$ such that $(u,v):=(\tilde{u},0)$ is a linearly unstable equilibrium for the system $\left\{\begin{array}[]{rcll}u_{t}=&\Delta u&\!\!\!\!+(\sigma-(u+v))u&\quad\text{in }\Omega\\
+v_{t}=&\!\!\!\!-(-\Delta)^{s}v&\!\!\!\!+(\sigma-(u+v))v&\quad\text{in }\Omega\\
+u\hphantom{{}_{t}}=&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!0&&\quad\text{on }\partial\Omega\\
+v\hphantom{{}_{t}}=&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!0&&\quad\text{in }\mathbb{R}^{n}\setminus\Omega\,.\end{array}\right.$ (1.4) More precisely, the function $\tilde{u}$ is a solution of $\left\{\begin{array}[]{ll}\Delta\tilde{u}(x)+(\sigma(x)-\tilde{u}(x))\tilde{u}(x)=0&{\mbox{ in }}\Omega,\\
+\tilde{u}=0&{\mbox{ on }}\partial\Omega,\end{array}\right.$ (1.5) and the linearization of system in ( 1.4 ) at $(\tilde{u},0)$ has a negative and a positive eigenvalue. The existence of distributions of resource $\sigma$ which support the phenomenon described in Theorem 1.1 is motivated by concrete models. To be precise, in this paper we examine two particular cases: 1. a rescaled resource $\sigma_{\lambda}$ on a sufficiently small domain $\Omega_{\lambda}$ in Section 3.1 ; 2. a large multiple of the characteristic function of a ball in Section 3.2 . We remark that Theorem 1.1 states that $\tilde{u}$ is a linearly stable solution of the autonomous,
+scalar Fisher-KPP equation in ( 1.5 ), but $(\tilde{u},0)$ is a linearly unstable equilibrium for the system in ( 1.4 ).
+More explicitly, the positive eigenvalue of the linearized system
+takes into account the fact that if the density of the first
+population undergoes a small variation without the appearance
+of the second species, then the system has the tendency to return
+to the original position. Conversely, the negative eigenvalue
+shows that if a second population appears, then the system does
+not go back to the original situation, and the second species
+has indeed chances to survive and colonize the environment. It is interesting to contrast this result with those obtained in [ 32 ] : when the dispersal rates are equal 3 3 3 In our model, we do not even take into account different dispersal rates $\mu$ and $\nu$ . , that is $\mu=\nu$ , if the dispersal distance $\delta$ in ( 1.3 ) is sufficiently small, then $v$ can invade the local population $u$ but $u$ cannot invade the nonlocal population $v$ . This suggests, as a general principle, that the smaller spreader may be favored by evolution, especially in hostile environments. Our approach is rather different: in some sense, we consider the dispersal distance as already fixed (in the definition of fractional Laplacian) and we investigate the dependence of the possibility of an invasion based on the availability of the resource $\sigma$ . Our attempt is to put in evidence the role of the environment (more precisely, the fact that Definition 3.1 is fulfilled) in the selection of the dispersal strategy. Roughly speaking, the condition (in Definition 3.1 ) which
+allows the instability of the system records the fact that the
+first population, with local diffusion, cannot saturate the given
+resource and leaves enough “leftovers” for the second species to
+survive. In this sense, a natural question is to
+determine whether a population exhausts the resource.
+For this, as a second result,
+we provide an example
+of a purely nonlocal phenomenon in population modeling. We
+show that, fixed any
+arbitrarily small $\varepsilon>0$ and
+given any resource $\sigma\in C^{k}(B_{1},\,[0,+\infty))$ , there exists a
+resource $\sigma_{\varepsilon}\in C^{k}(B_{1},\,[0,+\infty))$ that is $\varepsilon$ -close to $\sigma$ in the norm of $C^{k}(B_{1})$ , a radius $R_{\varepsilon,\sigma}>1$ and a function $u_{\varepsilon}$ which vanishes outside $B_{R_{\varepsilon,\sigma}}$ ,
+which is $s$ -harmonic in $B_{1}$ ,
+which equals to $\sigma_{\varepsilon}$ in $B_{1}$ and which therefore
+satisfies $(-\Delta)^{s}u_{\varepsilon}=(\sigma_{\varepsilon}-u_{\varepsilon})u_{\varepsilon}\quad{\mbox{ in\penalty\ $B_{1}$.}}$ That is, up to an arbitrarily small error,
+a nonlocal population can locally adapt to any given resource
+(provided that the density of the population
+is artificially and appropriately regulated in a suitable region).
+The formal statement of this result goes as follows. Theorem 1.2 . Let $k\in\mathbb{N}$ and $\sigma\in C^{k}(B_{1},\,[0,+\infty))$ .
+Fix $\varepsilon>0$ .
+Then there exists $\sigma_{\varepsilon}\in C^{k}(B_{1})$ with $\|\sigma-\sigma_{\varepsilon}\|_{C^{k}(B_{1})}\leqslant\varepsilon$ (1.6) and there exist $R_{\varepsilon,\sigma}>1$ and $u_{\varepsilon}\in C^{k}(B_{1})\cap C^{s}(\mathbb{R}^{n})$ such that $\displaystyle u_{\varepsilon}(x)=\sigma_{\varepsilon}(x)\quad\text{for any }x\in B_{1}$ (1.7) $\displaystyle(-\Delta)^{s}u_{\varepsilon}(x)=0\quad\text{for any }x\in B_{1}$ (1.8) $\displaystyle u_{\varepsilon}(x)=0\quad\text{for any }x\in\mathbb{R}^{n}\setminus B_{R_{\varepsilon,\sigma}}\,.$ (1.9) In particular $(-\Delta)^{s}u_{\varepsilon}(x)=(\sigma_{\varepsilon}(x)-u_{\varepsilon}(x))\,u_{\varepsilon}(x)\quad\text{for any }x\in B_{1}\,.$ (1.10) It is worth mentioning that Theorem 1.2 heavily relies on the nonlocal feature of the equation and
+it does not have any local counterpart
+(this will be clearly explained in Section 4 ). Let us stress the fact that Theorem 1.2 does not prove (and cannot prove,
+since this would be false in general)
+that a nonlocal population always exhausts completely
+the resource, since a small error $\varepsilon$ has
+to be taken into account. In a sense,
+the solution given by Theorem 1.2 is different
+than the original one, since it does not attain the
+homogeneous Dirichlet boundary datum: it has prescribed,
+non-homogeneous (but compactly supported)
+Dirichlet boundary datum outside the strategic region in which
+the equation is satisfied 4 4 4 The fact that the Dirichlet boundary condition is not homogeneous reflects mathematically the practical condition of performing an effective distribution plan for the population outside the strategic region. . We observe that Theorem 1.2 has important (though socially
+not embraceable!) practical consequences.
+For instance, a given population may have a strong intention to consume
+all the given resource in a region of particular strategic importance
+(say, a region contained in
+the ball $B_{1}$ in our example). Indeed, in concrete cases,
+this strategic area might be favorable for generating a new competing
+species, or might be easily accessible
+by a similar population coming from abroad which can be
+considered dangerous or undesired
+by the local population,
+and the possible leftover of the resource might obviously favor the
+newcomers. For these reasons, a “socially conservative”
+(and rather unkind!)
+population may wish to avoid to leave available resources
+in strategic regions which can be used by unwanted competitors. The result in Theorem 1.2 says,
+roughly speaking, that in this case, a nonlocal population is able to
+find a suitable, somehow “artificial”, distribution of population far
+away in order to consume the resource in the strategic region and thus
+penalize the newcomers (viceversa, a local population cannot do that). Notice that this suitable distribution of
+the conservative population may require a modification of the conditions
+far away: indeed the supporting ball $B_{R_{\varepsilon,\sigma}}$ in
+Theorem 1.2 may become larger and larger for small $\varepsilon$ :
+that is, in a sense, the conservative population may need to change its
+plan “close to infinity” in order to consume more efficiently the
+inner resource (in this sense, a “global plan” for the
+population distribution is in order, and it is indeed
+conceivable that an optimal use of resources may involve
+strategic plans on the distribution of the population
+in the large). The rest of this paper is organized as follows.
+In Section 2 we recall the basic notation
+about the population dynamics model that we study.
+The linearized dynamics of the system is then analyzed in
+Section 3 , where we will also give
+two examples that establish Theorem 1.1 .
+Finally, in Section 4 we will prove
+Theorem 1.2 and show that it is a new phenomenon,
+which only arises in nonlocal dispersion models. 2 Biological models and mathematical tools 2.1 Population dynamics Let us denote by $u,v:[0,T)\times\Omega\to[0,+\infty)$ the densities of two species coexisting in the same domain $\Omega$ and competing for a common resource $\sigma:\Omega\to\mathbb{R}$ . Here and in the rest of the paper we consider as a domain an open, bounded set $\Omega\subset\mathbb{R}^{n}$ with Lipschitz boundary $\partial\Omega$ .
+The resource $\sigma$ belongs to the space of measurable, essentially bounded functions $L^{\infty}(\Omega)$ .
+We study the linear
+stability of a stationary solution of the reaction-diffusion system with
+Dirichlet boundary conditions $\left\{\begin{array}[]{ll}u_{t}=\hphantom{-(-)^{s}}\Delta u+\left(\sigma-(u+v)\right)u&\text{in }[0,T)\times\Omega\\
+v_{t}=-(-\Delta)^{s}v\,+\left(\sigma-(u+v)\right)v&\text{in }[0,T)\times\Omega\\
+u(t,\cdot)=0&\text{on }\partial\Omega,\,\forall\,t\in[0,T)\\
+v(t,\cdot)=0&\text{in }\mathbb{R}^{n}\setminus\Omega,\,\forall\,t\in[0,T)\,.\end{array}\right.$ (2.1) For this, we perform a formal linearization around a stationary point $(\tilde{u},0)$ of ( 2.1 ) and then we focus only on the corresponding
+linearized system, that is $\left\{\begin{array}[]{ll}\hphantom{(}-\Delta u\hphantom{)^{s}}\!\!\!=(\sigma-2\tilde{u})u-\tilde{u}v&{\rm in}\ \Omega\\
+(-\Delta)^{s}v=(\sigma-\tilde{u})v&{\rm in}\ \Omega\\
+\hphantom{(}u=0&{\rm on}\ \partial\Omega\\
+\hphantom{(}v=0&{\rm in}\ \mathbb{R}^{n}\setminus\Omega\,.\end{array}\right.$ Remark 2.1 . Though the global dynamics is beyond the scope of this paper, we recall that there is a detailed and specialized
+literature about the well-posedness of the initial value problem associated to ( 2.1 ) with $u(0,x)=u_{0}(x)$ and $v(0,x)=v_{0}(x)$ for some given functions $u_{0},v_{0}$ (see [ 35 ] for the well-posedness of the problem in $C^{k}(\overline{\Omega})$ , for instance). The analysis of the global dynamics of semilinear parabolic systems is performed through the theory of Monotone Dynamical Systems (see [ 26 ] , [ 27 ] and [ 36 ] ). For the fractional Fisher-KPP equation one should see [ 6 ] and [ 4 ] , for instance. See also Section 5 for further remarks. Before focusing on the aforementioned linearized system, let us recall some useful definitions and facts about the pseudodifferential operator $(-\Delta)^{s}$ that is involved in ( 2.1 ). 2.2 The nonlocal dispersive strategy and the fractional Laplacian Consider an open set $\Omega\subset\mathbb{R}^{n}$ and $s\in(0,1)$ , the Gagliardo seminorm of a measurable function $u$ is defined as $[u]_{H^{s}(\mathbb{R}^{n})}:=\left(\int_{\mathbb{R}^{n}}\int_{\mathbb{R}^{n}}\frac{|u(x)-u(y)|^{2}}{|x-y|^{n+2s}}\,dx\,dy\right)^{\frac{1}{2}}\,.$ The fractional Sobolev space that we denote here $H^{s}_{0}(\Omega)$ is the linear set containing all the measurable functions $u:\mathbb{R}^{n}\to\mathbb{R}$ such that: • $\|u\|_{L^{2}(\Omega)}<+\infty$ , • $[u]_{H^{s}(\mathbb{R}^{n})}<+\infty$ , and • $u(x)=0$ for a.e. $x\in\mathbb{R}^{n}\setminus\Omega$ . The Gagliardo seminorm is naturally related to the fractional Laplacian,
+since $(-\Delta)^{s}u(x):=\left(\frac{\Gamma(n/2+s)}{\pi^{2s+n/2}\Gamma(-s)}\right)\lim_{\varepsilon\to 0}\int_{\mathbb{R}^{n}\setminus B_{\varepsilon}(x)}\frac{u(x)-u(y)}{|x-y|^{n+2s}}\,dy\,,$ where $\Gamma$ is the Euler’s function.
+For an introduction to the fractional Laplacian and the fractional
+Sobolev spaces see for instance [ 18 ] .
+In our framework,
+the scalar version of ( 2.1 ), that is $v_{t}=-(-\Delta)^{s}v+(\sigma-v)v\,,$ is known as Fisher-KPP equation with fractional diffusion and for the many established results one can see, for instance, [ 6 ] and [ 37 ] . In this section we summarize the results needed in this paper only. Theorem 2.2 (Fractional Poincaré-Sobolev embedding theorem) . Fix $s\in(0,1)$ and an open bounded set $\Omega\subset\mathbb{R}^{n}$ with Lipschitz boundary. There exists a positive constant $C_{\sharp}=C_{\sharp}(s,\Omega)$ such that $\forall\,\phi\in H^{s}_{0}(\Omega)\,,\quad\|\phi\|^{2}_{L^{2}(\Omega)}\leqslant C_{\sharp}[\phi]^{2}_{H^{s}(\mathbb{R}^{n})}\,.$ (2.2) This means that $H^{s}_{0}(\Omega)$ is continuously embedded in $L^{2}(\Omega)$ . Proof. We give the proof, which is of classical flavor, for the facility
+of the reader. We argue by contradiction, supposing that
+there exists a sequence $\phi_{k}\in H^{s}_{0}(\Omega)$ such that $\|\phi_{k}\|_{L^{2}(\Omega)}\geqslant k[\phi_{k}]_{H^{s}(\mathbb{R}^{n})}$ .
+We define $\psi_{k}:=\frac{\phi_{k}}{\|\phi_{k}\|_{L^{2}(\Omega)}}.$ Then $\psi_{k}\in H^{s}_{0}(\Omega)$ and $\left(\int_{\mathbb{R}^{n}}\int_{\mathbb{R}^{n}}\frac{|\psi_{k}(x)-\psi_{k}(y)|^{2}}{|x-y|^{n+2s}}\,dx\,dy\right)^{\frac{1}{2}}=[\psi_{k}]_{H^{s}(\mathbb{R}^{n})}=\frac{[\phi_{k}]_{H^{s}(\mathbb{R}^{n})}}{\|\phi_{k}\|_{L^{2}(\Omega)}}\leqslant\frac{1}{k}.$ (2.3) Therefore $\left(\int_{\Omega}\int_{\Omega}\frac{|\psi_{k}(x)-\psi_{k}(y)|^{2}}{|x-y|^{n+2s}}\,dx\,dy\right)^{\frac{1}{2}}\leqslant\frac{1}{k}.$ Also, $\|\psi_{k}\|_{L^{2}(\Omega)}=1$ .
+Therefore, by compactness (see e.g. Theorem 7.1
+in [ 18 ] , used here with $p=q=2$ ), we obtain that,
+up to a subsequence, $\psi_{k}$ converges to some $\psi$ in $L^{2}(\Omega)$ and a.e. in $\Omega$ . Defining $\psi(x):=0$ for any $x\in\mathbb{R}^{n}\setminus\Omega$ , we have that $\psi_{k}=\psi=0$ a.e. in $\mathbb{R}^{n}\setminus\Omega$ , and consequently $\psi_{k}$ converges
+to $\psi$ a.e. in $\mathbb{R}^{n}$ . Thus, by taking the limit in ( 2.3 )
+and using Fatou’s Lemma, $\displaystyle\int_{\mathbb{R}^{n}}\int_{\mathbb{R}^{n}}\frac{|\psi(x)-\psi(y)|^{2}}{|x-y|^{n+2s}}\,dx\,dy\leqslant\liminf_{k\to+\infty}\int_{\mathbb{R}^{n}}\int_{\mathbb{R}^{n}}\frac{|\psi_{k}(x)-\psi_{k}(y)|^{2}}{|x-y|^{n+2s}}\,dx\,dy$ $\displaystyle\qquad\leqslant\liminf_{k\to+\infty}\frac{1}{k^{2}}=0.$ Accordingly $\psi$ must be constant in $\mathbb{R}^{n}$ and therefore
+identically equal to zero (up to sets of null measure).
+This implies that $1=\lim_{k\to+\infty}\|\psi_{k}\|_{L^{2}(\Omega)}=\lim_{k\to+\infty}\|\psi_{k}-\psi\|_{L^{2}(\Omega)}=0.$ This is a contradiction and it proves the desired result.
+∎ In the following, we will always assume $C_{\sharp}(s,\Omega)$ to be the sharp constant such that ( 2.2 ) holds, namely $C_{\sharp}^{-1}(s,\Omega)=\inf_{\begin{subarray}{c}\phi\in H^{s}_{0}(\Omega)\\
+\phi\not\equiv 0\end{subarray}}\frac{[\phi]^{2}_{H^{s}(\mathbb{R}^{n})}}{\|\phi\|^{2}_{L^{2}(\Omega)}}=\inf_{\begin{subarray}{c}\phi\in H^{s}_{0}(\Omega)\\
+\phi\not\equiv 0\end{subarray}}\frac{[\phi]^{2}_{H^{s}(\mathbb{R}^{n})}}{\|\phi\|^{2}_{L^{2}(\mathbb{R}^{n})}}\,.$ (2.4) Remark 2.3 . If $r>0$ and $\phi\in H^{s}_{0}(B_{1})$ , one can consider
+the rescaled function $\phi_{r}(x):=r^{-n/2}\phi(x/r)$ .
+Then $\phi_{r}$ vanishes a.e. outside $B_{r}$ . Moreover, $\|\phi_{r}\|_{L^{2}(\mathbb{R}^{n})}=\|\phi\|_{L^{2}(\mathbb{R}^{n})}$ and $[\phi_{r}]_{H^{s}(\mathbb{R}^{n})}=r^{-s}[\phi]_{H^{s}(\mathbb{R}^{n})}$ .
+Accordingly, $C_{\sharp}(s,B_{r})=r^{2s}C_{\sharp}(s,B_{1})\,.$ 2.3 Linearization of the system Let $\Omega\subset\mathbb{R}^{n}$ and $\sigma\in L^{\infty}(\Omega)$ be as in Section 2 . Our purpose is a qualitative study of an equilibrium state of the following system $\left\{\begin{array}[]{l}u_{t}=\hphantom{-(-}\Delta u\hphantom{)^{s}}\!+\left(\sigma-(u+v)\right)u\\
+v_{t}=-(-\Delta)^{s}v+\left(\sigma-(u+v)\right)v\end{array}\right.$ (2.5) More precisely, we look for an equilibrium state of the form $(\tilde{u},0)$ with $\tilde{u}\in H^{1}_{0}(\Omega)$ and $\tilde{u}\geqslant 0$ . For the sake of completeness, we also investigate the existence of an equilibrium state of the form $(0,\tilde{v})$ , with $\tilde{v}\in H^{s}_{0}(\Omega)$ and $\tilde{v}\geqslant 0$ . The linearization of ( 2.5 ) at $(0,\tilde{v})$ and further conclusions are postponed to Section 4 . Definition 2.4 . Given a bounded function $\sigma:\Omega\to[0+\infty)$ ,
+we say that $\sigma$ satisfies a
+reverse Poincaré-Sobolev condition if $\sup_{u\in H^{1}_{0}(\Omega)}\int_{\Omega}\sigma(x)u(x)^{2}\,dx-\int_{\Omega}|\nabla u|^{2}\,dx>0\,.$ (2.6) Furthermore, $\sigma$ satisfies a reverse fractional Poincaré-Sobolev condition with parameter $s$ if $\sup_{v\in H^{s}_{0}(\Omega)}\int_{\Omega}\sigma(x)v(x)^{2}\,dx-[v]^{2}_{H^{s}(\mathbb{R}^{n})}>0\,.$ (2.7) In order to make computations easier, we give a sufficient
+condition that ensures ( 2.6 ). Lemma 2.5 . Let $\lambda_{1}(\Omega)$ be the first eigenvalue of
+the Laplacian in $\Omega$ with Dirichlet boundary
+condition and let $\phi_{1}\in H^{1}_{0}(\Omega)$ be the
+corresponding eigenfunction.
+If $\lambda_{1}(\Omega)\int_{\Omega}\phi_{1}(x)^{2}\,dx<\int_{\Omega}\sigma(x)\phi_{1}(x)^{2}\,dx\,,$ (2.8) then the reverse Poincaré-Sobolev condition in ( 2.6 ) is satisfied. Proof. By construction $\left\{\begin{array}[]{ll}-\Delta\phi_{1}=\lambda_{1}(\Omega)\phi_{1}&\text{in }\Omega\\
+\phi_{1}=0&\text{on }\partial\Omega\,,\end{array}\right.$ and so, by ( 2.8 ), $\int_{\Omega}|\nabla\phi_{1}(x)|^{2}\,dx=\lambda_{1}(\Omega)\int_{\Omega}\phi_{1}(x)^{2}\,dx<\int_{\Omega}\sigma(x)\phi_{1}(x)^{2}\,dx$ which proves ( 2.6 ).∎ Remark 2.6 . It is worth noticing that
+condition ( 2.8 )
+is satisfied, for a fixed domain $\Omega$ ,
+for any resource $\sigma$ that is sufficiently large
+in an open subset of $\Omega$ .
+Hence, fixed $\Omega$ , there are many examples
+of smooth resources satisfying ( 2.8 )
+and therefore ( 2.6 ). Remark 2.7 . We also observe that the converse of Lemma 2.5 does not hold true,
+i.e. the reverse Poincaré-Sobolev condition in ( 2.6 ) does not
+necessarily imply ( 2.8 ): as an example, one may consider $\Omega=(0,\pi)$ , $\sigma(x)=\varepsilon^{-29/10}\chi_{(0,\varepsilon)}(x)$ and $u(x)=|x|^{2/3}$ , with $\varepsilon>0$ suitably small. Then $u\in H^{1}_{0}(\Omega)$ and ( 2.6 ) holds true, since $\displaystyle\int_{\Omega}\sigma(x)u(x)^{2}\,dx-\int_{\Omega}|\nabla u|^{2}\,dx=\varepsilon^{-29/10}\int_{0}^{\varepsilon}x^{4/3}\,dx-\frac{4}{9}\int_{0}^{\pi}x^{-2/3}\,dx$ $\displaystyle\qquad=\frac{3}{7}\varepsilon^{-29/10}\varepsilon^{7/3}-\frac{4\pi^{1/3}}{3}>0.$ On the other hand,
+in this case $\phi_{1}(x)=\sin x$ , $\lambda_{1}(\Omega)=1$ ,
+and $\displaystyle\,\lambda_{1}(\Omega)\int_{\Omega}\phi_{1}(x)^{2}\,dx-\int_{\Omega}\sigma(x)\phi_{1}(x)^{2}\,dx$ $\displaystyle=$ $\displaystyle\,\int_{0}^{\pi}\sin^{2}x\,dx-\varepsilon^{-29/10}\int_{0}^{\varepsilon}\sin^{2}x\,dx$ $\displaystyle=$ $\displaystyle\,\frac{\pi}{2}-\frac{\varepsilon^{-29/10}}{2}\big(\varepsilon-\sin\varepsilon\cos\varepsilon\big)\,.$ Thus, since, by a Taylor expansion, $\sin\varepsilon\cos\varepsilon=(\varepsilon+O(\varepsilon^{3}))(1+O(\varepsilon^{2}))=\varepsilon+O(\varepsilon^{3})$ it follows that $\varepsilon^{-29/10}\big(\varepsilon-\sin\varepsilon\cos\varepsilon\big)=O(\varepsilon^{1/10})$ and so $\lambda_{1}(\Omega)\int_{\Omega}\phi_{1}(x)^{2}\,dx-\int_{\Omega}\sigma(x)\phi_{1}(x)^{2}\,dx=\frac{\pi}{2}-O(\varepsilon^{1/10})>0,$ which shows that $\phi_{1}$ does not satisfy ( 2.8 ). The fractional equivalent of Lemma 2.5 is stated in the following lemma. We omit its proof, which would be a repetition of the proof of Lemma 2.5 . Lemma 2.8 . Let $\phi_{s}\in H^{s}_{0}(\Omega)$ a minimizer for the Rayleigh quotient ( 2.4 ). If $C_{\sharp}^{-1}(s,\Omega)\|\phi_{s}\|^{2}_{L^{2}(\Omega)}<\int_{\Omega}\sigma(x)\phi_{s}(x)^{2}\,dx\,,$ then the reverse fractional Poincaré-Sobolev condition with parameter $s$ in ( 2.7 ) is satisfied. Remark 2.9 . As we noticed in Remark 2.6 for the local analog of the reverse fractional Poincaré-Sobolev condition, if the resource $\sigma$ is sufficiently abundant in the domain $\Omega$ , then condition ( 2.7 ) is satisfied. The reverse Poincaré-Sobolev condition in ( 2.6 )
+is a useful tool to obtain
+non-trivial solution of the local stationary equation,
+as stated in the following result. Theorem 2.10 . Consider $s\in(0,1]$ and a bounded function $\sigma:\Omega\to[0,+\infty)$ satisfying either (1) the reverse Poincaré-Sobolev condition in ( 2.6 ) (when $s=1$ ) or (2) the reverse fractional Poincaré-Sobolev condition in ( 2.7 ) (when $s<1$ ). Then there exists a non-trivial, non-negative function $\tilde{u}\in H^{s}_{0}(\Omega)$ (i.e. $\tilde{u}\geqslant 0$ and $\tilde{u}\not\equiv 0$ ) satisfying $\left\{\begin{array}[]{ll}(-\Delta)^{s}\tilde{u}(x)=(\sigma(x)-\tilde{u}(x))\tilde{u}(x)&\text{in }\Omega\\
+\tilde{u}=0&\text{on }\partial\Omega\,.\end{array}\right.$ (2.9) Proof. The proof is a minimization argument, based on coercivity and energy methods. Though the idea of the proof is rather standard,
+see e.g. [ 8 ] , we provide the necessary details for the facility of the reader. The proof also gives us the possibility of a comparison between local and nonlocal case. First, we prove the theorem for the local case $s=1$ and then we provide the suitable changes in order to prove the nonlocal case, too. (1) Consider the following energy $E(u):=\int_{\Omega}\frac{|\nabla u|^{2}}{2}-\sigma\frac{u^{2}}{2}+\frac{|u|^{3}}{3}$ defined on $H^{1}_{0}(\Omega)$ . Notice that the Euler-Lagrange equation for $E$ gives $-\Delta u=(\sigma-|u|)u\,.$ We show that the energy $E$ is coercive in $H^{1}_{0}(\Omega)$ , that is $E(u)\to+\infty\ \text{as }\|u\|_{H^{1}_{0}(\Omega)}\to+\infty\,.$ (2.10) For this, we use the Young inequality with exponents $3/2$ and $3$ to see that, for any $a$ , $b\geqslant 0$ , $ab\leqslant\frac{2}{3}a^{\frac{3}{2}}+\frac{1}{3}b^{3}\,.$ In particular, taking $a:=2^{-2/3}u^{2}$ and $b:=2^{-1/3}\|\sigma\|_{L^{\infty}(\Omega)}$ , we obtain that $\sigma\frac{u^{2}}{2}\leqslant\|\sigma\|_{L^{\infty}(\Omega)}\frac{u^{2}}{2}\leqslant\frac{|u|^{3}}{3}+\frac{\|\sigma\|_{L^{\infty}(\Omega)}^{3}}{6},$ hence $-\sigma\frac{u^{2}}{2}+\frac{|u|^{3}}{3}\geqslant-c_{0},$ for some $c_{0}>0$ independent of $u$ . Accordingly, $E(u)\geqslant\int_{\Omega}\frac{|\nabla u(x)|^{2}}{2}\,dx-c_{0}|\Omega|,$ that establishes ( 2.10 ). As a consequence of ( 2.10 ),
+we have that $E$ has a global minimum $\overline{u}\in H^{1}_{0}(\Omega)$ , satisfying $-\Delta\overline{u}=(\sigma-|\overline{u}|)\overline{u}\,.$ Since $\overline{u}$ is a minimum, then $\tilde{u}:=|\overline{u}|$ is a minimum too, because $E(\overline{u})=E(|\overline{u}|)$ . Thus we can consider a non-negative function $\tilde{u}\geqslant 0$ satisfying $-\Delta\tilde{u}=(\sigma-\tilde{u})\tilde{u}\,.$ We conclude the proof by
+showing that condition ( 2.6 ) guarantees that $E(\tilde{u})<0$ and then $\tilde{u}\not\equiv 0$ . By ( 2.6 ),
+there exists a function $u\in H^{1}_{0}(\Omega)$ with $\int_{\Omega}\sigma(x)u(x)^{2}\,dx-\int_{\Omega}|\nabla u|^{2}\,dx>0\,.$ By density, we can suppose that $u\in C^{\infty}_{0}(\Omega)$ .
+For every $\varepsilon>0$ we can rewrite the energy $E$ evaluated at $\varepsilon u$ as $E(\varepsilon u)=\varepsilon^{2}\left(\int_{\Omega}\frac{|\nabla u|^{2}}{2}-\sigma\frac{u^{2}}{2}+\varepsilon\frac{u^{3}}{3}\right)\,,$ hence $E(\tilde{u})\leqslant E(\varepsilon u)<0$ provided $\varepsilon$ is small enough. (2) The energy $E_{s}(v):=\int_{\mathbb{R}^{n}\times\mathbb{R}^{n}}\frac{|v(x)-v(y)|^{2}}{|x-y|^{n+2s}}\,dx\,dy-\int_{\Omega}\sigma\frac{v^{2}}{2}+\frac{|v|^{3}}{3}$ is well defined 5 5 5 For the sake of simplicity, we omit the multiplicative normalization constants. and coercive in $H^{s}_{0}(\Omega)$ and the proof is the same as in the local case. Moreover, the Euler-Lagrange equation for $E_{s}$ is $(-\Delta)^{s}v=(\sigma-|v|)v\,.$ Consequently, $E_{s}$ has a global minimum $\overline{v}$ and $\tilde{v}=|\overline{v}|$ is a minimum, too, because $\displaystyle E_{s}(\tilde{v})$ $\displaystyle=\int_{\mathbb{R}^{n}\times\mathbb{R}^{n}}\frac{||\overline{v}(x)|-|\overline{v}(y)||^{2}}{|x-y|^{n+2s}}\,dx\,dy-\int_{\Omega}\sigma\frac{|\overline{v}|^{2}}{2}+\frac{|\overline{v}|^{3}}{3}$ $\displaystyle\leqslant\int_{\mathbb{R}^{n}\times\mathbb{R}^{n}}\frac{|\overline{v}(x)-\overline{v}(y)|^{2}}{|x-y|^{n+2s}}\,dx\,dy-\int_{\Omega}\sigma\frac{\overline{v}^{2}}{2}+\frac{|\overline{v}|^{3}}{3}=E_{s}(\overline{v})\,.$ As we proved in part (1), condition ( 2.7 ) ensures that $E_{s}(\tilde{v})<0$ and thus $\tilde{v}\not\equiv 0$ .∎ The result in Theorem 2.10 and several variations of it
+are rather of classical flavor: with slightly different assumptions on $\sigma$ (take, for instance, $\sigma>0$ in $\Omega$ ) and a branching condition matching ( 2.6 ) for the existence of non-trivial solutions, it can be found in [ 2 ] and in [ 3 ] . In view of Theorem 2.10 and comparing with Remark 2.6 and Remark 2.9 , we obtain the fact that the richer the environment is, the easier the survival of a population. This fact, which matches the intuition, finds a detailed quantification in the following observation. Remark 2.11 . Since the reverse (fractional) Poincaré-Sobolev inequalities ( 2.6 ) and ( 2.7 ) seem to play a symmetric role in Theorem 2.10 , let us compare them more carefully. In some sense, the Dirichlet boundary conditions being equal for ( 2.9 ) when $s=1$ and when $s<1$ , the nonlocal population has an advantage when the diameter of the domain tends to $0$ . More precisely, as we remarked in Remark 2.6 , a resource $\sigma$ needs to be sufficiently large in order to meet ( 2.8 ), which implies ( 2.6 ). How large should $\sigma$ be is proportional to the first eigenvalue of the Laplacian $\lambda_{1}(\Omega)=C_{\sharp}(1,\Omega)^{-1}$ . Now, if $\Omega=B_{r}$ , we observe that $\lambda_{1}(B_{r})=\frac{1}{r^{2}C_{\sharp}(1,B_{1})}\longrightarrow+\infty\qquad\text{as }r\to 0\,,$ that is, the environment becomes more and more lethal for the local population, because ( 2.8 ) is very difficult to satisfy. The situation is milder for the nonlocal population, because, thanks to Remark 2.3 $\frac{1}{\lambda_{1}(B_{r})C_{\sharp}(s,B_{r})}=\frac{r^{2}C_{\sharp}(1,B_{1})}{r^{2s}C_{\sharp}(s,B_{1})}\longrightarrow 0\qquad\text{as }r\to 0\,.$ This means that the criticality of the domain size is slower to prevail on a nonlocal population. In this sense, the lethal property of the boundary
+(as described by the homogeneous Dirichlet datum
+outside the domain) has a different
+influence on local and nonlocal populations, depending
+on the scale of the domain. For instance,
+for small balls (when $1/r\gg 1/r^{s}$ ),
+nonlocal populations are favored. Conversely,
+for large balls (when $1/r\ll 1/r^{s}$ ),
+local populations are favored (heuristically,
+because the local diffusion has little chance to
+reach the deadly boundary). In the perspective of an applied analysis, one can find explicit fractional Sobolev constants in [ 16 ] . In the remaining part of this section, we focus on the local case, that is, on the properties of a stationary point for the system ( 2.5 ) of type $(\tilde{u},0)$ . This is motivated by the evolutionary point of view of studying the effect of the advent of a new population (this approach is indeed often adopted in the literature, see e.g. [ 21 ] , [ 24 ] ). Of course, we think that it would be also an interesting problem to investigate the cases of a dominant nonlocal population (corresponding to a stationary point of type $(0,\tilde{v})$ ) and of the possible coexistence of two different populations, namely provide concrete assumptions on the resources and the domains that allow the existence of equilibria $(u^{*},v^{*})$ with both $u^{*}$ and $v^{*}$ nontrivial. Of course, an easier approach to the existence of mixed states $(u^{*},v^{*})$ may be taken by
+studying the case of different resources in the two logistic equations, but we do not address this problem
+in the present paper. Remark 2.12 . As a byproduct of the proof of
+Theorem 2.10 , we have that the solution
+found is an energy minimizer. That is, if $\tilde{u}$ is the solution obtained in Theorem 2.10 ,
+then $E(\tilde{u}+\varepsilon u)\geqslant E(\tilde{u})$ ,
+for any $u\in H^{1}_{0}(\Omega)$ . Accordingly, the map $\varepsilon\mapsto{\mathcal{E}}(\varepsilon):=E(\tilde{u}+\varepsilon u)$ attains its minimum at $\varepsilon=0$ and therefore $0\leqslant{\mathcal{E}}^{\prime\prime}(0)=\int_{\Omega}|\nabla u|^{2}-\sigma u^{2}+2\tilde{u}u^{2}\,dx.$ (2.11) In particular, the solution is linearly stable,
+i.e. the second derivative of the energy is a positive quadratic form. The energy functional is quite useful to capture the
+stability of the pure states, such as the ones of the type $(\tilde{u},0)$ .
+For related approaches, also based on the linearization of
+semilinear systems, see e.g. [ 8 ] .
+Also, it is useful to recall that the population $\tilde{u}$ cannot beat the resource $\sigma$ , as stated in the following result: Lemma 2.13 . Consider a bounded function $\sigma:\Omega\to[0,+\infty)$ and a non-negative solution $\tilde{u}\in H^{1}_{0}(\Omega)$ of ( 2.9 ).
+Then $\tilde{u}(x)\leqslant\|\sigma\|_{L^{\infty}(\Omega)}$ , for any $x\in\Omega$ . Proof. Let $\Theta:=\|\sigma\|_{L^{\infty}(\Omega)}$ . We test equation ( 2.9 )
+against $v:=\max\{\tilde{u}-\Theta,\,0\}$ and we see that $\int_{\Omega}|\nabla v|^{2}=\int_{\Omega}\nabla\tilde{u}\cdot\nabla v=\int_{\Omega}(\sigma-\tilde{u})\tilde{u}v=\int_{\{\tilde{u}\geqslant\Theta\}}(\sigma-\tilde{u})\tilde{u}(\tilde{u}-\Theta)\,.$ Now observe that, in $\{\tilde{u}\geqslant\Theta\}$ ,
+we have $\sigma-\tilde{u}\leqslant\Theta-\tilde{u}\leqslant 0$ ,
+which shows that $\int_{\Omega}|\nabla v|^{2}\leqslant 0.$ Accordingly, $v$ vanishes identically and so $\tilde{u}\leqslant\Theta$ .
+∎ Corollary 2.14 . Consider a bounded function $\sigma:\Omega\to[0,+\infty)$ and a non-negative solution $\tilde{u}\in H^{1}_{0}(\Omega)$ of ( 2.9 ).
+Then $\tilde{u}$ is continuous inside $\Omega$ . Proof. One defines $\Theta:=\|\sigma\|_{L^{\infty}(\Omega)}$ and tests equation ( 2.9 )
+against $v:=\max\{\tilde{u}-\Theta,\,0\}$ to obtain the desired
+result (see e.g. [ 8 ] ).
+∎ From now on, we focus on the stability of the system around the stationary point $(\tilde{u},0)$ , where the distribution of resources $\sigma$ satisfies ( 2.6 ) and $\tilde{u}\in H^{1}_{0}(\Omega)$ is a non-trivial, non-negative solution of ( 2.9 ). The linearization of the system ( 2.5 ) at $(\tilde{u},0)$ gives, as a result, the linear operator $\begin{split}L_{(\tilde{u},0)}(u,v)\,&=\left(\begin{array}[]{cc}\Delta+(\sigma-2\tilde{u})&-\tilde{u}\\
+0&-(-\Delta)^{s}+(\sigma-\tilde{u})\end{array}\right)\left(\begin{array}[]{c}u\\
+v\end{array}\right)\\
+&=\left(\begin{array}[]{c}\Delta u+(\sigma-2\tilde{u})u-\tilde{u}v\\
+-(-\Delta)^{s}v+(\sigma-\tilde{u})v\end{array}\right)\,,\end{split}$ (2.12) for any $(u,v)\in H^{1}_{0}(\Omega)\times H^{s}_{0}(\Omega)$ .
+The associated quadratic form, with respect to the duality in $H^{1}_{0}(\Omega)\times H^{s}_{0}(\Omega)$ ,
+is $Q_{(\tilde{u},0)}(u,v)=-[u]_{H^{1}(\mathbb{R}^{n})}^{2}-[v]_{H^{s}(\mathbb{R}^{n})}^{2}+\int_{\Omega}(\sigma-2\tilde{u})u^{2}-\tilde{u}uv+(\sigma-\tilde{u})v^{2}\,dx\,,$ (2.13) for any $(u,v)\in H^{1}_{0}(\Omega)\times H^{s}_{0}(\Omega)$ .
+From the triangular form
+of $L_{(\tilde{u},0)}$ ,
+the relevant information is concentrated on the signs of the principal eigenvalues of the pseudodifferential operators on the diagonal
+of ( 2.12 ).
+In this spirit, we first point out that the direction $(\tilde{u},0)$ is
+always linearly stable. This is pretty obvious if we think at the biological
+model, since $(\tilde{u},0)$ is the stationary configuration
+of just one population, and slightly and proportionally
+modifying the density of this population
+without letting any new population come into the environment should
+not drive the system too far from the previous equilibrium.
+The formal statement goes as follows: Lemma 2.15 . As long as there exists a solution $\tilde{u}$ for ( 2.9 ), we have that $Q_{(\tilde{u},0)}(\tilde{u},0)<0.$ Proof. By testing ( 2.9 ) against $\tilde{u}$ ,
+we obtain that $[\tilde{u}]_{H^{1}(\mathbb{R}^{n})}^{2}=\int_{\Omega}(\sigma-\tilde{u})^{2}\tilde{u}^{2}\,dx.$ As a consequence, $Q_{(\tilde{u},0)}(\tilde{u},0)=-[\tilde{u}]_{H^{1}(\mathbb{R}^{n})}^{2}+\int_{\Omega}(\sigma-2\tilde{u})\tilde{u}^{2}\,dx=-\int_{\Omega}\tilde{u}^{3}\,dx.$ The latter term is strictly negative, thanks to Theorem 2.10 and so we obtain the desired result.
+∎ We point out that Lemma 2.15 is a particular case of a more general stability result.
+Namely, the stationary configuration $(\tilde{u},0)$ , which corresponds
+to the local population colonizing the whole
+of the environment, is also linearly stable with respect
+to all the perturbations in which only the the density
+of the local species varies
+(i.e. the possible source of instability in this setting
+may only come from the advent of a nonlocal population).
+The formal result goes as follows: Lemma 2.16 . As long as there exists a solution $\tilde{u}$ for ( 2.9 ), we have that $Q_{(\tilde{u},0)}(u,0)\leqslant 0$ for any $u\in H^{1}_{0}(\Omega)$ . This lemma is well-known, due to the variational characterization of the associated eigenvalue problem. We include a proof for the convenience of the reader. Proof. From ( 2.13 ), $Q_{(\tilde{u},0)}(u,0)=-\int_{\Omega}|\nabla u|^{2}\,dx+\int_{\Omega}(\sigma-2\tilde{u})u^{2}\,dx,$ hence the claim follows from ( 2.11 ).
+∎ In view of Lemma 2.15 , we obtain that
+a good way to detect the possible
+linear instability of the point $(\tilde{u},0)$ is to rely upon
+the perturbations of the form $(0,v)$ , i.e. in the possible
+advent of a new population with different diffusive strategy.
+The purpose of the next section is therefore to understand
+when it is possible to obtain that $Q_{(\tilde{u},0)}(0,v_{\star})>0,$ for a suitable choice of $v_{\star}\in H^{s}_{0}(\Omega)$ . 3 Linear instability Our aim in this section
+is to enlighten the connection between the distribution of resources $\sigma$ and the possible instability of the system, which would suggest some convenience in a nonlocal dispersal strategy of the second species $v$ .
+For this, we introduce the following notation: Definition 3.1 . Let $\sigma:\Omega\to[0,+\infty)$ satisfy the
+reverse Poincaré-Sobolev condition of Definition 2.4 .
+Let $\tilde{u}\geqslant 0$ be a non-trivial solution of the non-linear equation ( 2.9 ), provided by Theorem 2.10 .
+We say that the pair $(\sigma,\tilde{u})$ is mismatched in $\Omega$ if
+there exists $x_{0}\in\Omega$ and $r>0$ with $B_{r}(x_{0})\subset\Omega$ and $\inf_{x\in B_{r}(x_{0})}\big(\sigma(x)-\tilde{u}(x)\big)>\frac{1}{C_{\sharp}(s,B_{r}(x_{0}))}\,.$ (3.1) In this formula,
+the constant $C_{\sharp}(s,B_{r}(x_{0}))$ is the sharp fractional Poincaré-Sobolev constant with respect to the ball $B_{r}(x_{0})$ provided by Theorem 2.2 . Roughly speaking, condition ( 3.1 )
+says that the solution $\tilde{u}$ is not capable to
+exhaust the whole of the resource $\sigma$ in the whole
+of the domain: that is, at least, in the region $B_{r}(x_{0})$ ,
+the population does not manage to take advantage of all the resource
+at its disposal and there is at least a quantity $C_{\sharp}(s,\Omega)^{-1}r^{-2s}$ as a leftover. In Subsection 3.2 we will see an example of mismatching $(\sigma,\tilde{u})$ and it will be clear in that case that the mismatch condition depends
+basically on $\sigma$ only. In our setting, condition ( 3.1 ) is sufficient to
+ensure linear instability, as given by the following result. Proposition 3.2 . If the mismatch
+condition in ( 3.1 ) is satisfied, then
+there exists $v_{\star}\in H^{s}_{0}(\Omega)$ such that $Q_{(\tilde{u},0)}(0,v_{\star})>0$ . Proof. By ( 2.4 )
+and ( 3.1 ), we know that there exists $x_{0}\in\Omega$ and $r>0$ such that $B_{r}(x_{0})\subset\Omega$ (3.2) and $\inf_{x\in B_{r}(x_{0})}\big(\sigma(x)-\tilde{u}(x)\big)>\frac{1}{C_{\sharp}(s,B_{r}(x_{0}))}=\inf_{\begin{subarray}{c}\phi\in H^{s}_{0}(B_{r}(x_{0}))\\
+\phi\not\equiv 0\end{subarray}}\frac{[\phi]_{H^{s}(\mathbb{R}^{n})}^{2}}{\|\phi\|_{L^{2}(B_{r}(x_{0}))}^{2}}.$ As a consequence, there exists $v_{\star}\in H^{s}_{0}(B_{r}(x_{0}))$ such that $v_{\star}\not\equiv 0$ and $\inf_{x\in B_{r}(x_{0})}\big(\sigma(x)-\tilde{u}(x)\big)>\frac{[v_{\star}]_{H^{s}(\mathbb{R}^{n})}^{2}}{\|v_{\star}\|_{L^{2}(B_{r}(x_{0}))}^{2}}.$ (3.3) Now notice that $\|v_{\star}\|_{L^{2}(B_{r}(x_{0}))}=\|v_{\star}\|_{L^{2}(\Omega)}$ and $v_{\star}$ vanishes
+a.e. outside $\Omega$ , thanks to ( 3.2 ).
+This gives that $v_{\star}\in H^{s}_{0}(\Omega)$ .
+Moreover, by ( 2.13 )
+and ( 3.3 ), $\displaystyle Q_{(\tilde{u},0)}(0,v_{\star})$ $\displaystyle=-[v_{\star}]_{H^{s}(\mathbb{R}^{n})}^{2}+\int_{B_{r}(x_{0})}(\sigma-\tilde{u})v_{\star}^{2}\,dx$ $\displaystyle>-[v_{\star}]_{H^{s}(\mathbb{R}^{n})}^{2}+\frac{[v_{\star}]_{H^{s}(\mathbb{R}^{n})}^{2}}{\|v_{\star}\|_{L^{2}(B_{r}(x_{0}))}^{2}}\,\int_{B_{r}(x_{0})}v_{\star}^{2}\,dx=0\,,$ which gives the desired result.
+∎ Remark 3.3 . Proposition 3.2 proves the
+linear instability of the point $(\tilde{u},0)$ with respect to
+perturbation of the type $(0,v_{\star})$ (compare with the theory of Monotone Dynamical Systems in [ 36 ] or see [ 8 ] ). Indeed, $Q_{(\tilde{u},0)}(0,v_{\star})=\|v_{\star}\|_{L^{2}}^{2}\lambda(\Omega)\,,$ where $\lambda(\Omega)$ is the principal eigenvalue of the linear pseudodifferential operator $-(-\Delta)^{s}+(\sigma-\tilde{u})$ (see the characterization of the principal eigenvalue by Rayleigh quotient in [ 4 ] ), thus $L_{(\tilde{u},0)}$ has a negative eigenvalue and a positive one and the stability of a stationary state is determined by the spectrum of the linearization (for this general principle see [ 35 ] ). Heuristically, this
+can be understood as follows: by formally plugging $(u,v)=(\tilde{u},0)+\varepsilon(0,v_{\star})+o(\varepsilon)$ into ( 1.4 ) we obtain $v_{t}=-(-\Delta)^{s}v+(\sigma-(u+v))v=-\varepsilon(-\Delta)^{s}v_{\star}+\varepsilon(\sigma-\tilde{u}-\varepsilon v_{\star})v_{\star}+o(\varepsilon).$ Thus, since $v_{t}=\varepsilon\partial_{t}v_{\star}+o(\varepsilon)$ , we formally
+obtain $\partial_{t}v_{\star}=-(-\Delta)^{s}v_{\star}+(\sigma-\tilde{u})v_{\star}+o(1).$ Hence $\partial_{t}\|v_{\star}\|_{L^{2}(\mathbb{R}^{n})}^{2}=2\int_{\mathbb{R}^{n}}v_{\star}\partial_{t}v_{\star}\,dx=Q_{(\tilde{u},0)}(0,v_{\star})+o(1),$ which is positive by Proposition 3.2 . Therefore,Proposition 3.2 states that the size of the
+new population (measured in the $L^{2}$ -norm) has chances to
+increase (at least for short times). These type of linearization arguments in the neighborhood
+of equilibria that correspond to only one biological species
+are widely used in Adaptive Dynamics, see for instance [ 19 ] , [ 24 ] , [ 30 ] and the references therein. The rest of this section is devoted to show that the assumptions of Proposition 3.2 hold for some $\sigma:\Omega\to\mathbb{R}$ . 3.1 Rescaling arguments We propose here a rather simple rescaling argument which gives the existence of a domain $\Omega_{\lambda}$ and a distribution of resources $\sigma_{\lambda}$ satisfying the assumptions in Proposition 3.2 .
+The main drawback of this argument is the fact that the domain $\Omega_{\lambda}$ changes with the parameter. On the other side, it is immediately evident that the resource $\sigma_{\lambda}$ leads to instability at $(\tilde{u}_{\lambda},0)$ when it starts being sparse and far from being
+homogeneous. We consider here a smooth function $\sigma:\Omega\to[0,+\infty)$ satisfying the
+reverse Poincaré-Sobolev condition
+in ( 2.6 ) (recall Remark 2.6 ) and
+the corresponding
+stationary solution $\tilde{u}$ given by Theorem 2.10 .
+We see that, in this case, the population $\tilde{u}$ does not exhaust the resource $\sigma$ in the whole of $\Omega$ .
+More precisely, we have: Lemma 3.4 . Let $\sigma:\Omega\to[0,+\infty)$ be a
+smooth function
+satisfying the
+reverse Poincaré-Sobolev condition
+in ( 2.6 ) and
+let $\tilde{u}$ be the corresponding
+stationary solution given by Theorem 2.10 . Then there exist $x_{0}\in\Omega$ , $r>0$ and $c_{0}>0$ such that $B_{r}(x_{0})\subset\Omega$ and $\sigma(x)-u(x)\geqslant c_{0}$ for any $x\in B_{r}(x_{0})$ . Proof. By testing ( 2.9 ) against $\tilde{u}$ , we obtain that $0<\int_{\Omega}|\nabla\tilde{u}(x)|^{2}\,dx=\int_{\Omega}(\sigma(x)-\tilde{u}(x))\tilde{u}^{2}(x)\,dx.$ This implies that there exists $x_{0}\in\Omega$ such that $\sigma(x_{0})-\tilde{u}(x_{0})>0$ . The desired result follows
+from the continuity of $\tilde{u}$ given by Corollary 2.14 .
+∎ In the notation of Lemma 3.4 ,
+by possibly translating the domain,
+we can assume that $x_{0}=0$ , and so $\sigma-\tilde{u}\geqslant c_{0}>0$ in $B_{r}$ . (3.4) Then we consider the family of rescaled domains $\Omega_{\lambda}:=\{\lambda^{-\frac{1}{2}}y:\,y\in\Omega\}$ and rescaled functions $\sigma_{\lambda}(x):=\lambda\sigma(\sqrt{\lambda}x)\,,\quad\forall\,x\in\Omega_{\lambda}$ with $\lambda\geqslant 1$ . Then $\tilde{u}_{\lambda}(x):=\lambda\tilde{u}(\sqrt{\lambda}x)\,,\quad\forall\,x\in\Omega_{\lambda}$ is a positive stationary solution for the equation ( 2.9 ) with resource $\sigma_{\lambda}$ , since $\left(\Delta\tilde{u}_{\lambda}+(\sigma_{\lambda}-\tilde{u}_{\lambda})\tilde{u}_{\lambda}\right)(x)=\left(\lambda^{2}\Delta\tilde{u}+\lambda^{2}(\sigma-\tilde{u})\tilde{u}\right)(\sqrt{\lambda}x)=0\,,\quad\forall\,x\in\Omega_{\lambda}\,.$ Proposition 3.5 . There exists $\Lambda\geqslant 1$ such that, for every $\lambda\geqslant\Lambda$ , the pair $(\sigma_{\lambda},\tilde{u}_{\lambda})$ is
+mismatched
+in the corresponding domain $\Omega_{\lambda}$ , according to
+Definition 3.1 . Proof. We take $r_{\lambda}:=\lambda^{-\frac{1}{2}}r$ .
+By ( 3.4 ), $\begin{split}&\inf_{|x|<r_{\lambda}}\big(\sigma_{\lambda}(x)-\tilde{u}_{\lambda}(x)\big)=\inf_{|x|<\lambda^{-\frac{1}{2}}r}\lambda\,\big(\sigma(\sqrt{\lambda}x)-\tilde{u}_{\lambda}(\sqrt{\lambda}x)\big)\\
+&\qquad=\inf_{|y|<r}\lambda\,\big(\sigma(y)-\tilde{u}_{\lambda}(y)\big)\geqslant c_{0}\lambda.\end{split}$ (3.5) On the other hand, by Remark 2.3 , $C_{\sharp}(s,B_{r_{\lambda}})=r_{\lambda}^{2s}C_{\sharp}(s,B_{1})=\lambda^{-2}r^{2s}C_{\sharp}(s,B_{1}).$ By comparing this with ( 3.5 ), we conclude that $\inf_{x\in B_{r_{\lambda}}}\big(\sigma_{\lambda}(x)-\tilde{u}_{\lambda}(x)\big)\geqslant c_{0}\lambda>\frac{\lambda^{s}}{r^{2s}C_{\sharp}(s,B_{1})}=\frac{1}{C_{\sharp}(s,B_{r_{\lambda}}(x_{0}))},$ provided that $\lambda>\left(c_{0}\,r^{2s}\,C_{\sharp}(s,B_{1})\right)^{-\frac{1}{1-s}}\,.\qed$ From Propositions 3.5 and 3.2 , we obtain that
+there exists $v_{\star,\lambda}\in H^{s}_{0}(\Omega_{\lambda})$ such that $Q_{(\tilde{u}_{\lambda},0)}(0,v_{\star,\lambda})>0$ ,
+as long as $\lambda$ is large enough,
+hence $(\tilde{u}_{\lambda},0)$ is linearly unstable. This is a first example that shows the validity of Theorem 1.1 (a different one will be constructed in the remaining part of this paper).
+It is worth pointing out that the condition that $\lambda$ is large
+translates into the fact that the domain $\Omega_{\lambda}$ is small and the resource $\sigma_{\lambda}$ is very unevenly
+distributed. In some sense, the nonlocal diffusion may allow
+the population to take advantage of the small region in which
+the resource is abundant, while a less diffusive population
+may starve in the portion of the environment with limited
+resource. 3.2 Branching arguments In this subsection we focus on a particular family of distributions, indeed we assume $B_{r}(x_{0})\subset\Omega$ and $\sigma_{\tau}(x):=\tau\chi_{B_{r}(x_{0})}(x)=\left\{\begin{array}[]{lr}\tau&x\in B_{r}(x_{0})\\
+0&x\notin B_{r}(x_{0})\end{array}\right.$ We show that there exist $\tau,r>0$ such that the assumptions of Proposition 3.2 hold. First of all we have to deal with with Definition 2.4 , which located a branching point for solutions of ( 2.9 ). For this, for any $\tau\in\mathbb{R}$ , $x_{0}\in\mathbb{R}^{n}$ , $r>0$ , such that $B_{r}(x_{0})\subset\Omega$ ,
+we introduce the quantity $e(\tau,x_{0},r):=\sup_{\begin{subarray}{c}u\in H^{1}_{0}(\Omega)\\
+\|u\|_{L^{2}(\Omega)}=1\end{subarray}}\tau\int_{B_{r}(x_{0})}u^{2}-\int_{\Omega}|\nabla u|^{2}\,.$ (3.6) We observe that if $\tau\leqslant 0$ then obviously $e(\tau,x_{0},r)\leqslant 0$ .
+Thus we use the
+following notation. Definition 3.6 . We denote $\underline{\tau}(x_{0},r):=\sup\left\{\tau\in\mathbb{R}\;:\;e(\tau,x_{0},r)\leqslant 0\right\}\,.$ Now we discuss some basic properties of the quantities that
+we have just defined. Lemma 3.7 . The quantity introduced in Definition 3.6 is finite, namely $\underline{\tau}(x_{0},r)\in[0,+\infty)\,.$ Proof. Let $\phi\in C^{\infty}_{0}(B_{r})$ with $\|\phi\|_{L^{2}(B_{r})}=1$ ,
+and let $u(x):=\phi(x-x_{0})$ . Then $\|u\|_{L^{2}(\Omega)}=\|u\|_{L^{2}(B_{r}(x_{0}))}=\|\phi\|_{L^{2}(B_{r})}=1$ , and $e(\tau,x_{0},r)\geqslant\tau\int_{B_{r}(x_{0})}u^{2}-\int_{\Omega}|\nabla u|^{2}=\tau-\int_{B_{r}}|\nabla\phi|^{2}>0$ provided that $\tau>\int_{B_{r}}|\nabla\phi|^{2}$ .
+∎ Lemma 3.8 . For any $\tau_{1}\leqslant\tau_{2}$ we have that $e(\tau_{2},x_{0},r)-e(\tau_{1},x_{0},r)\in[0,\tau_{2}-\tau_{1}].$ Proof. Fix $\varepsilon>0$ . For any $i\in\{1,2\}$ ,
+there exists $u_{(i,\varepsilon)}\in H^{1}_{0}(\Omega)$ ,
+with $\|u_{(i,\varepsilon)}\|_{L^{2}(\Omega)}=1$ such that $e(\tau_{i},x_{0},r)\leqslant\varepsilon+\tau_{i}\int_{B_{r}(x_{0})}u_{(i,\varepsilon)}^{2}-\int_{\Omega}|\nabla u_{(i,\varepsilon)}|^{2}.$ Therefore $\displaystyle e(\tau_{2},x_{0},r)-e(\tau_{1},x_{0},r)$ $\displaystyle\geqslant$ $\displaystyle\tau_{2}\int_{B_{r}(x_{0})}u_{(1,\varepsilon)}^{2}-\int_{\Omega}|\nabla u_{(1,\varepsilon)}|^{2}-e(\tau_{1},x_{0},r)$ $\displaystyle\geqslant$ $\displaystyle\tau_{1}\int_{B_{r}(x_{0})}u_{(1,\varepsilon)}^{2}-\int_{\Omega}|\nabla u_{(1,\varepsilon)}|^{2}-e(\tau_{1},x_{0},r)$ $\displaystyle\geqslant$ $\displaystyle-\varepsilon,$ and $\displaystyle e(\tau_{1},x_{0},r)-e(\tau_{2},x_{0},r)$ $\displaystyle\geqslant$ $\displaystyle\tau_{1}\int_{B_{r}(x_{0})}u_{(2,\varepsilon)}^{2}-\int_{\Omega}|\nabla u_{(2,\varepsilon)}|^{2}-e(\tau_{2},x_{0},r)$ $\displaystyle\geqslant$ $\displaystyle(\tau_{1}-\tau_{2})\int_{B_{r}(x_{0})}u_{(2,\varepsilon)}^{2}-\varepsilon$ $\displaystyle\geqslant$ $\displaystyle-(\tau_{2}-\tau_{1})\int_{\Omega}u_{(2,\varepsilon)}^{2}-\varepsilon$ $\displaystyle=$ $\displaystyle-(\tau_{2}-\tau_{1})-\varepsilon.$ The desired result now follows by taking $\varepsilon$ as small as we wish.
+∎ Corollary 3.9 . If $\tau\downarrow\underline{\tau}(x_{0},r)$ , then $e(\tau,x_{0},r)\to 0$ . Proof. Suppose not, i.e. there exists a sequence $\tau_{j}\geqslant\underline{\tau}(x_{0},r)$ (3.7) with $\tau_{j}\to\underline{\tau}(x_{0},r)$ as $j\to+\infty$ ,
+such that $|e(\tau_{j},x_{0},r)|\geqslant a,$ (3.8) for some $a>0$ .
+We claim that $e(\tau_{j},x_{0},r)\geqslant a.$ (3.9) We prove it by contradiction: if not, by ( 3.8 ),
+we would have that $e(\tau_{j},x_{0},r)\leqslant-a$ . Thus,
+we set $\tau_{a}:=\underline{\tau}(x_{0},r)+\frac{a}{2}.$ We notice that $\tau_{a}>\underline{\tau}(x_{0},r)$ ,
+therefore, by Definition 3.6 , we have that $e(\tau_{a},x_{0},r)>0\,.$ In addition, we have that $\tau_{a}>\tau_{j}$ if $j$ is large enough,
+thus we make use of
+Lemma 3.8 and we obtain that, for large $j$ , $0+a\leqslant e(\tau_{a},x_{0},r)-e(\tau_{j},x_{0},r)\leqslant\tau_{a}-\tau_{j}.$ Taking the limit in $j$ , we conclude that $a\leqslant\tau_{a}-\underline{\tau}(x_{0},r)=\frac{a}{2}.$ This is a contradiction and ( 3.9 ) is established. Also, by Definition 3.6 ,
+we know that there exists a sequence $\tilde{\tau}_{j}\leqslant\underline{\tau}(x_{0},r)$ with $\tilde{\tau}_{j}\to\underline{\tau}(x_{0},r)$ ,
+such that $e(\tilde{\tau}_{j},x_{0},r)\leqslant 0$ .
+Accordingly, by ( 3.9 ), $e(\tau_{j},x_{0},r)-e(\tilde{\tau}_{j},x_{0},r)\geqslant a.$ (3.10) Notice that $\tau_{j}\geqslant\underline{\tau}(x_{0},r)\geqslant\tilde{\tau}_{j}$ and $\lim_{t\to+\infty}\tau_{j}-\tilde{\tau}_{j}=\underline{\tau}(x_{0},r)-\underline{\tau}(x_{0},r)=0.$ Thus, by Lemma 3.8 $\lim_{t\to+\infty}e(\tau_{j},x_{0},r)-e(\tilde{\tau}_{j},x_{0},r)\leqslant\lim_{t\to+\infty}\tau_{j}-\tilde{\tau}_{j}=0.$ This is in contradiction with ( 3.10 )
+and so the desired result is proved.
+∎ Before stating and proving the main theorem
+of this subsection, we investigate the behavior of $\underline{\tau}(x_{0},r)$ under scaling. Proposition 3.10 . Fix $s^{\prime}\in(0,1)$ . There exists a constant $\tau_{*}:=\tau_{*}(s^{\prime},\Omega)$ such that $\underline{\tau}(x_{0},r)\geqslant r^{-2s^{\prime}}\tau_{*}(s^{\prime},\Omega)$ for every $x_{0}\in\Omega$ and $r>0$ such that $B_{r}(x_{0})\subset\Omega$ . Proof. We claim that $\int_{B_{r}(x_{0})}u^{2}\leqslant c(s^{\prime},\Omega)\,r^{2s^{\prime}}\|\nabla u\|^{2}_{L^{2}(\Omega)},$ (3.11) for some constant $c(s^{\prime},\Omega)>0$ .
+Once ( 3.11 ) is proved, one can finish the proof
+of the desired result by arguing as follows. One sets $\tau_{*}(s^{\prime},\Omega):=1/c(s^{\prime},\Omega)$ . Then,
+for every $\tau\leqslant r^{-2s^{\prime}}\tau_{*}(s^{\prime},\Omega)$ (i.e. for every $\tau\leqslant 1/(c(s^{\prime},\Omega)\,r^{2s^{\prime}})$ ), one has that $\int_{\Omega}|\nabla u|^{2}-\tau\int_{B_{r}(x_{0})}u^{2}\geqslant\int_{\Omega}|\nabla u|^{2}-\frac{1}{c(s^{\prime},\Omega)\,r^{2s^{\prime}}}\int_{B_{r}(x_{0})}u^{2}\geqslant 0\,,$ where the latter inequality is a consequence of the claim ( 3.11 ).
+This gives that $e(\tau,x_{0},r)\geqslant 0$ for any $\tau\leqslant r^{-2s^{\prime}}\tau_{*}(s^{\prime},\Omega)$ ,
+and so, by Definition 3.6 ,
+we have that $\underline{\tau}(x_{0},r)\geqslant r^{-2s^{\prime}}\tau_{*}(s^{\prime},\Omega)$ ,
+thus proving the desired result. Due to these observations, it only remains to prove ( 3.11 ).
+To this scope, we observe that, given $p>2$ ,
+by the Hölder inequality
+with exponents $\frac{p}{2}$ and $\frac{p}{p-2}$ , we have $\int_{B_{r}(x_{0})}u^{2}\leqslant\left(\omega_{n}r^{n}\right)^{\frac{p-2}{p}}\|u\|^{2}_{L^{p}(\Omega)}.$ Therefore, the claim in ( 3.11 ) is established if
+we show that there exists $p>2$ such that $r^{\frac{(p-2)n}{p}}\|u\|^{2}_{L^{p}(\Omega)}\leqslant C(s^{\prime},\Omega,p)\,r^{2s^{\prime}}\,\|\nabla u\|^{2}_{L^{2}(\Omega)},$ (3.12) for some $C(s^{\prime},\Omega,p)>0$ . So, now it only remains to prove ( 3.12 ).
+To this goal,
+we deal separately 6 6 6 The case $n\geqslant 3$ is
+simpler because the Sobolev conjugated exponent $2^{*}=2n/(n-2)$ is not critical. Indeed, in this case the parameter $s^{\prime}$ does not play much role. with the cases $n=2$ and $n\geqslant 3$ . We start with $n\geqslant 3$ . In this case,
+we denote by $p:=\frac{2n}{n-2}>2$ the Sobolev conjugate exponent of 2.
+Notice that ${\frac{(p-2)n}{p}}=2$ and
+the Sobolev inequality (see e.g. formula (7.26) in [ 23 ] )
+bounds $\|u\|^{2}_{L^{p}(\Omega)}$ with $C(\Omega)\,\|\nabla u\|^{2}_{L^{2}(\Omega)}$ ,
+for some $C(\Omega)>0$ . Hence,
+if we denote by $D_{0}>0$ the diameter of $\Omega$ , we have that $r^{\frac{(p-2)n}{p}}\|u\|^{2}_{L^{p}(\Omega)}=r^{2}\|u\|^{2}_{L^{p}(\Omega)}\leqslant C_{0}r^{2s^{\prime}}D_{0}^{2-2s^{\prime}}\|\nabla u\|^{2}_{L^{2}(\Omega)},$ and estimate ( 3.12 ) follows in this case. For the case $n=2$ , we observe that $\lim_{p\to+\infty}\frac{p-2}{p}=1>s^{\prime},$ so we can choose an even integer $p=p(s^{\prime})\in(2,+\infty)$ large enough such that $\frac{p-2}{p}>s^{\prime}\,.$ (3.13) Also, the critical Sobolev embedding (see e.g. formula (7.38)
+in [ 23 ] ) yields that $\int_{\Omega}{\rm exp}\,\left(\frac{|u(x)|}{c_{1}\|\nabla u\|_{L^{2}(\Omega)}}\right)^{2}\,dx\leqslant c_{2}\,|\Omega|,$ (3.14) for suitable $c_{1}$ , $c_{2}>0$ . Then, since $e^{t}=\sum_{k=0}^{+\infty}\frac{t^{k}}{k!}\geqslant\frac{t^{p/2}}{(p/2)!},$ we deduce from ( 3.14 ) that $\int_{\Omega}\left(\frac{|u(x)|}{\|\nabla u\|_{L^{2}(\Omega)}}\right)^{p}\,dx\leqslant C(\Omega,p),$ for some $C(\Omega,p)>0$ . Therefore $\|u\|^{2}_{L^{p}(\Omega)}\leqslant C^{\prime}(\Omega,p)\,\|\nabla u\|_{L^{2}(\Omega)}^{2},$ for some $C^{\prime}(\Omega,p)>0$ .
+As a consequence,
+if $D_{0}>0$ is the diameter of $\Omega$ , $\displaystyle r^{\frac{(p-2)n}{p}}\|u\|^{2}_{L^{p}(\Omega)}$ $\displaystyle=r^{2\left(\frac{(p-2)}{p}-s^{\prime}\right)}\,r^{2s^{\prime}}\,\|u\|^{2}_{L^{p}(\Omega)}$ $\displaystyle\leqslant C^{\prime}(\Omega,p)\,D_{0}^{2\left(\frac{(p-2)}{p}-s^{\prime}\right)}\,r^{2s^{\prime}}\|\nabla u\|_{L^{2}(\Omega)}^{2}\,.$ This completes the proof of ( 3.12 ) when $n=2$ .
+∎ Theorem 3.11 . Let $r$ , $\tau>0$ .
+Consider the family of distributions $\sigma_{\tau}=\tau\chi_{B_{r}(x_{0})}$ and a corresponding family of stationary solutions $\tilde{u}_{\tau}\in H^{1}_{0}(\Omega)$ , that is $-\Delta\tilde{u}_{\tau}=(\sigma_{\tau}-\tilde{u}_{\tau})\tilde{u}_{\tau}\,.$ If $\tau\downarrow\underline{\tau}(x_{0},r)$ , then $\tilde{u}_{\tau}\to 0$ uniformly. Proof. First of all, we notice that $\tilde{u}_{\tau}\leqslant\tau,$ (3.15) thanks to Lemma 2.13 .
+Now we fix $\varepsilon\in(0,1)$ and we claim that $\|\tilde{u}_{\tau}\|_{L^{3}(\Omega)}\leqslant\varepsilon,$ (3.16) provided that $\tau$ is close enough to $\underline{\tau}(x_{0},r)$ .
+To establish this, we test the equation against $\tilde{u}_{\tau}$ itself,
+and we obtain that $\int_{\Omega}|\nabla\tilde{u}_{\tau}|^{2}=\int_{\Omega}(\sigma_{\tau}-\tilde{u}_{\tau})\tilde{u}_{\tau}^{2}=\tau\int_{B_{r}(x_{0})}\tilde{u}_{\tau}^{2}-\int_{\Omega}\tilde{u}_{\tau}^{3},$ which in turn gives $\|\tilde{u}_{\tau}\|_{L^{3}(\Omega)}^{3}=\int_{\Omega}\tilde{u}_{\tau}^{3}=\tau\int_{B_{r}(x_{0})}\tilde{u}_{\tau}^{2}-\int_{\Omega}|\nabla\tilde{u}_{\tau}|^{2}\leqslant e(\tau,x_{0},r),$ thanks to ( 3.6 ).
+This and Corollary 3.9 imply ( 3.16 ). Now we set $g(x):=(\sigma_{\tau}-\tilde{u}_{\tau})\tilde{u}_{\tau}$ .
+Notice that $-\Delta u_{\tau}=g$ in $\Omega$ and, by ( 3.15 )
+and Lemma 3.7 , $|g|\leqslant(\sigma_{\tau}+\tilde{u}_{\tau})\,\tilde{u}_{\tau}\leqslant 2\tau\,\,\tilde{u}_{\tau}\leqslant 2(\underline{\tau}(x_{0},r)+1)\,\tilde{u}_{\tau}\leqslant C_{0}\,\tilde{u}_{\tau},$ for some $C_{0}>0$ independent of $\tau$ , as long as $\tau$ is sufficiently close to $\underline{\tau}(x_{0},r)$ .
+In particular, by ( 3.15 ) and ( 3.16 ), $\|g\|_{L^{n+3}(\Omega)}\leqslant C_{0}\,\left(\int_{\Omega}\tilde{u}_{\tau}^{n+3}\right)^{\frac{1}{n+3}}\leqslant C_{1}\,\left(\int_{\Omega}\tilde{u}_{\tau}^{3}\right)^{\frac{1}{n+3}}\leqslant C_{1}\varepsilon^{\frac{3}{n+3}},$ (3.17) for some $C_{1}>0$ .
+Moreover, using the Hölder inequality with exponents $3$ and $3/2$ , $\|\tilde{u}_{\tau}\|_{L^{2}(\Omega)}^{2}=\int_{\Omega}\tilde{u}_{\tau}^{2}\leqslant|\Omega|^{\frac{1}{3}}\,\left(\int_{\Omega}\tilde{u}_{\tau}^{3}\right)^{\frac{2}{3}}=|\Omega|^{\frac{1}{3}}\,\|\tilde{u}_{\tau}\|_{L^{3}(\Omega)}^{2},$ therefore, recalling ( 3.16 ) and ( 3.17 ), $\|\tilde{u}_{\tau}\|_{L^{2}(\Omega)}+\|g\|_{L^{n+3}(\Omega)}\leqslant|\Omega|^{\frac{1}{6}}\varepsilon+C_{1}\varepsilon^{\frac{3}{n+3}}\leqslant C_{2}\varepsilon^{\frac{3}{n+3}},$ for some $C_{2}>0$ .
+We combine this information with Theorem 8.15
+of [ 23 ] (used here with $f:=0$ and $q:=2(n+3)>n$ ), thus we obtain that $\|\tilde{u}_{\tau}\|_{L^{\infty}(\Omega)}\leqslant C\,\big(\|\tilde{u}_{\tau}\|_{L^{2}(\Omega)}+\|g\|_{L^{3}(\Omega)}\big)\leqslant C\,C_{2}\,\varepsilon^{\frac{3}{n+3}},$ for some $C>0$ ,
+as long as $\tau$ is sufficiently close to $\underline{\tau}(x_{0},r)$ ,
+which is the desired claim.
+∎ Corollary 3.12 . Fix $s^{\prime}\in(s,1)$ . Let $r$ , $\tau>0$ .
+Assume that $r<\left(\frac{C_{\sharp}(s,B_{1})\,\tau_{*}(s^{\prime},\Omega)}{2}\right)^{\frac{1}{2(s^{\prime}-s)}},$ (3.18) where $C_{\sharp}(s,B_{1})$ is the Poincaré-Sobolev constant in ( 2.4 )
+and $\tau_{*}(s^{\prime},\Omega)$ is given by
+Proposition 3.10 . Consider the family of distributions $\sigma_{\tau}=\tau\chi_{B_{r}(x_{0})}$ .
+Then there exists $\tau>\underline{\tau}(x_{0},r)$ such that
+both the reverse Poincaré-Sobolev condition in ( 2.6 )
+and the mismatch condition
+in ( 3.1 )
+are satisfied. Proof. By taking $\tau$ large enough, one
+can easily fulfill ( 2.8 ).
+This and Lemma 2.5 guarantee the
+reverse Poincaré-Sobolev condition in ( 2.6 ). In particular, by Theorem 2.10 ,
+we can consider the solution $\tilde{u}_{\tau}$ corresponding
+to the resource $\sigma_{\tau}$ . Now we fix $\varepsilon\in\left(0,\,\frac{\tau_{*}(s^{\prime},\Omega)}{2\,r^{2(s^{\prime}-s)}}\right).$ (3.19) Thanks to Theorem 3.11 , we can choose $\tau$ sufficiently
+close to $\underline{\tau}(x_{0},r)$ such that $\|\tilde{u}_{\tau}\|_{L^{\infty}(\Omega)}\leqslant r^{-2s}\varepsilon$ .
+Therefore, for every $x\in B_{r}(x_{0})$ , we have that $\sigma_{\tau}(x)-\tilde{u}_{\tau}(x)\geqslant\sigma_{\tau}(x)-r^{-2s}\varepsilon>\underline{\tau}(x_{0},r)-r^{-2s}\varepsilon.$ From this and
+Proposition 3.10 , we have that, for every $x\in B_{r}(x_{0})$ , $\sigma_{\tau}(x)-\tilde{u}_{\tau}(x)\geqslant r^{-2s^{\prime}}\tau_{*}(s^{\prime},\Omega)-r^{-2s}\varepsilon\,.$ So, recalling ( 3.19 ), $\inf_{x\in x\in B_{r}(x_{0})}\big(\sigma_{\tau}(x)-\tilde{u}_{\tau}(x)\big)>\frac{r^{-2s^{\prime}}\tau_{*}(s^{\prime},\Omega)}{2}.$ Thus, from Remark 2.3 and ( 3.18 ), we obtain $\displaystyle\frac{1}{C_{\sharp}(s,B_{r}(x_{0}))}$ $\displaystyle=\frac{1}{r^{2s}C_{\sharp}(s,B_{1})}=\frac{r^{-2s^{\prime}}\,r^{2(s^{\prime}-s)}}{C_{\sharp}(s,B_{1})}$ $\displaystyle<\frac{r^{-2s^{\prime}}\,C_{\sharp}(s,B_{1})\,\tau_{*}(s^{\prime},\Omega)}{2\,C_{\sharp}(s,B_{1})}$ $\displaystyle=\frac{r^{-2s^{\prime}}\tau_{*}(s^{\prime},\Omega)}{2}<\inf_{x\in B_{r}(x_{0})}\left(\sigma_{\tau}(x)-\tilde{u}_{\tau}(x)\right)\,.$ This establishes the mismatch condition
+in ( 3.1 ).
+∎ From Proposition 3.2 and Corollary 3.12 ,
+it follows that we have constructed another example for which
+the equilibrium $(\tilde{u}_{\tau},0)$ is linearly unstable,
+confirming again Theorem 1.1 .
+Once again,
+this example corresponds to a resource that is unevenly spread
+in the environment, and the nonlocal diffusion
+may compensate such unbalanced distribution of resource. As a final observation, we would like to stress that most of
+the techniques discussed in this paper are of quite general
+nature and can be efficiently exploited in similar problems
+with different species and different dispersive properties. 4 A purely nonlocal phenomenon Goal of this section is to rely the stability of stationary points of type $(0,\tilde{v})$ with Theorem 1.2 and show how, with our arguments, there is no hope to prove an analogue of Theorem 1.1 for $(0,\tilde{v})$ . We include the proof of Theorem 1.2 and clarify that it is a purely nonlocal feature. The linearization of the system ( 2.5 ) at $(0,\tilde{v})$ gives $L_{(0,\tilde{v})}(u,v)=\left(\begin{array}[]{cc}\Delta+(\sigma-\tilde{v})&0\\
+-\tilde{v}&-(-\Delta)^{s}+(\sigma-2\tilde{v})\end{array}\right)\left(\begin{array}[]{c}u\\
+v\end{array}\right)\,.$ Thus, any instability result would be a consequence of an inequality of type $Q_{(0,\tilde{v})}(u_{\star},0)=-[u_{\star}]_{H^{1}}^{2}+\int(\sigma-\tilde{v})u_{\star}^{2}>0\,.$ This means that, if we want to run the same argument that we did in Section 3 for $(\tilde{u},0)$ , then we have to find an analogue for the mismatch condition ( 3.1 ). Roughly speaking, we need to know that, at least in certain circumstances, the amount of leftovers of the dominant population $\tilde{v}$ exceeds a given constant, depending on the size of the domain. But, around a stationary point of type $(0,\tilde{v})$ , the nonlocal population $\tilde{v}$ tends to exhaust all the available resource $\sigma$ in the domain $\Omega$ . This claim is motivated by Theorem 1.2 , because formula ( 1.7 ) states that the population $u_{\varepsilon}$ locally fits with any given resource, up to an arbitrarily small
+error estimated by ( 1.6 ). Of course we are neglecting the Dirichlet boundary condition on $u_{\varepsilon}$ . We are now left with the proof of Theorem 1.2 . Proof of Theorem 1.2 . By Theorem 1.1 in [ 20 ] ,
+we know that we can approximate $\sigma$ by a $s$ -harmonic
+function in $B_{1}$ : namely,
+we have that there exist $R_{\varepsilon,\sigma}>1$ and $u_{\varepsilon}\in C^{k}(B_{1})\cap C^{s}(\mathbb{R}^{n})$ satisfying ( 1.8 ), ( 1.9 ) and $\|\sigma-u_{\varepsilon}\|_{C^{k}(B_{1})}\leqslant\varepsilon.$ (4.1) Now we define $\sigma_{\varepsilon}:=u_{\varepsilon}.$ (4.2) In this framework, formula ( 1.6 )
+follows from ( 4.1 ) and ( 4.2 ).
+Moreover, by ( 1.8 ) and ( 4.2 ), $(\sigma_{\varepsilon}(x)-u_{\varepsilon}(x))\,u_{\varepsilon}(x)=0=(-\Delta)^{s}u_{\varepsilon}(x),$ for any $x\in B_{1}$ , which proves ( 1.10 ).∎ We stress that Theorem 1.2 is only due to the nonlocal feature of the equation and
+it does not have any local counterpart, as pointed
+out by the next result. Proposition 4.1 . Let $M>0$ .
+Let $\sigma\in C^{2}(B_{1})$ with $\displaystyle\sigma(x)\geqslant M\quad\text{for any }x\in B_{1/16}\hphantom{\setminus B_{1}}$ and $\displaystyle\sigma(x)\leqslant 1\quad\text{for any }x\in B_{1}\setminus B_{1/10}\,.$ Then, there exists $M_{0}>0$ and $\varepsilon>0$ such that, for any $M\geqslant M_{0}$ , if $\sigma_{\varepsilon}\in C^{2}(B_{1})$ satisfies $\|\sigma-\sigma_{\varepsilon}\|_{C^{2}(B_{1})}\leqslant\varepsilon$ (4.3) and $u_{\varepsilon}\in C^{2}(B_{1})$ satisfies $-\Delta u_{\varepsilon}(x)=(\sigma_{\varepsilon}(x)-u_{\varepsilon}(x))\,u_{\varepsilon}(x)\quad\text{for any }x\in B_{1}\,,$ (4.4) then $\|u_{\varepsilon}-\sigma_{\varepsilon}\|_{C^{2}(B_{1})}>\varepsilon$ (4.5) In particular, the local counterpart of Theorem 1.2 is false. Proof. Suppose by contradiction that for every $\varepsilon>0$ there exist $\sigma_{\varepsilon}$ and $u_{\varepsilon}$ satisfying not only ( 4.3 ) and ( 4.4 ), but also $\|u_{\varepsilon}-\sigma_{\varepsilon}\|_{C^{2}(B_{1})}\leqslant\varepsilon\,.$ From ( 4.3 ) and ( 4.5 ),
+we know that $\|u_{\varepsilon}-\sigma\|_{L^{\infty}(B_{1})}\leqslant\|u_{\varepsilon}-\sigma\|_{C^{2}(B_{1})}\leqslant 2\varepsilon.$ (4.6) As a consequence, $\|u_{\varepsilon}\|_{L^{\infty}(B_{1})}\leqslant 2+\|\sigma\|_{C^{2}(B_{1})}\leqslant C_{\sigma},$ for some $C_{\sigma}>0$ , possibly depending on the fixed resource $\sigma$ .
+This, ( 4.5 ) and ( 4.4 ) give that, in $B_{1}$ , $|\Delta u_{\varepsilon}|\leqslant|\sigma_{\varepsilon}-u_{\varepsilon}|\,|u_{\varepsilon}|\leqslant C_{\sigma}\,\varepsilon.$ Thus, the weak Harnack inequality (see e.g. Theorem 8.18
+in [ 23 ] ) gives that $\|u_{\varepsilon}\|_{L^{1}(B_{1/4})}\leqslant C_{1}\,\Big(\inf_{B_{1/8}}u_{\varepsilon}+C_{\sigma}\,\varepsilon\Big),$ (4.7) for some constant $C_{1}>0$ .
+Now, by ( 4.6 ) and ( 4.3 ), we see that $u_{\varepsilon}(x)\geqslant M-2\varepsilon$ in $B_{1/16}$ and therefore $\|u_{\varepsilon}\|_{L^{1}(B_{1/4})}\geqslant\int_{B_{1/16}}u_{\varepsilon}(x)\,dx\geqslant C_{2}\,(M-2\varepsilon),$ (4.8) for some constant $C_{2}>0$ . Similarly, from ( 4.6 ) and ( 4.3 ),
+we have that $u_{\varepsilon}\leqslant 1+2\varepsilon$ in $B_{1}\setminus B_{1/10}$ and therefore $\inf_{B_{1/8}}u_{\varepsilon}\leqslant 1+2\varepsilon\leqslant 2.$ (4.9) By inserting ( 4.8 ) and ( 4.9 )
+into ( 4.7 ) we obtain that $M-2\varepsilon\leqslant C_{3}\,(2+C_{\sigma}\,\varepsilon),$ for some $C_{3}>0$ .
+Thus, we take $M\geqslant M_{0}:=3C_{3}$ .
+This fixes $\sigma$ and gives that $C_{3}\leqslant M-2C_{3}\leqslant 2\varepsilon+C_{3}\,(2+C_{\sigma}\,\varepsilon)-2C_{3}=(2+C_{3}C_{\sigma})\,\varepsilon.$ By taking $\varepsilon$ small, we obtain a contradiction
+and we complete the proof of Proposition 4.1 .
+∎ 5 Further comments on stability and nontrivial solutions Of course, the results presented in this paper do not aim
+to exhaust the variety of scenarios offered by the analysis
+of local and nonlocal competing species.
+In particular, further investigations about
+existence and local/global stability of equilibrium solution
+are desirable, also with the aim of establishing under which
+conditions local and nonlocal strategies are convenient for
+the evolution. In particular, while we focused here on the local stability
+(i.e. whether or not a mutation of strategy turns out to
+be persistent for small times), the strategic question
+for biological
+population in competition for large times is mostly related to
+global stability. The question of attractors for the global dynamics
+is related to the regularity properties of the semiflow
+and to the associated maximum and comparison principles.
+For this reason, though not directly used in this paper,
+we present here in detail a general comparison principle
+for a single fractional equation (the general case of
+systems deserves a separate analysis,
+also due to the lack of
+cooperativeness between biological species, see e.g. formula (7)
+in [ 5 ] , and we plan future further
+investigation along the lines of [ 25 , 28 ] ): Lemma 5.1 . Let $T>0$ and consider a locally Lipschitz function $f$ . Let $v$ and $w$ be bounded and continuous solutions
+of $\partial_{t}v+(-\Delta)^{s}v+f(v)\geqslant\partial_{t}w+(-\Delta)^{s}w+f(w)$ (5.1) on $\mathbb{R}^{n}\times(0,T]$ , with $v(x,t)\geqslant w(x,t)$ for any $x\in\mathbb{R}^{n}\setminus\Omega$ and any $t\in[0,T]$ , and $v(x,0)\geqslant w(x,0)$ for any $x\in\Omega$ . Then $v(x,t)\geqslant w(x,t)$ for any for any $x\in\mathbb{R}^{n}$ and any $t\in[0,T]$ . Proof. The proof is of classical flavor,
+see e.g. Proposition A.5 in [ 17 ] .
+By possibly iterating the argument,
+it is enough to prove the result up to a small time,
+hence, without loss of generality we may assume that $T\leqslant\frac{1}{4(M+1)},$ (5.2) where $M\geqslant 0$ is the (local) Lipschitz constant of $f$ – more precisely, we take $M$ such that $f(w(x,t)-\eta)-f(w(x,t))\leqslant M|\eta|$ for any $\eta\in[-1,1]$ . (5.3) Now we suppose, by contradiction, that the claim were false.
+Then, it would exist $(\bar{x},\bar{t})\in\Omega\times[0,T]$ such that $v(\bar{x},\bar{t})<w(\bar{x},\bar{t})$ .
+We define $\varepsilon:=\min\left\{\frac{w(\bar{x},\bar{t})-v(\bar{x},\bar{t})}{4},\;\frac{T}{4}\right\}$ (5.4) and $W:=v-w+\varepsilon t+\varepsilon^{2}$ .
+Notice that $\displaystyle W(x,0)=v(x,0)-w(x,0)+\varepsilon^{2}>0$ and $\displaystyle W(\bar{x},\bar{t})=v(\bar{x},\bar{t})-w(\bar{x},\bar{t})+\varepsilon\bar{t}+\varepsilon^{2}\leqslant v(\bar{x},\bar{t})-w(\bar{x},\bar{t})+2\varepsilon<0,$ thanks to ( 5.4 ).
+Hence,
+there exists $z_{*}:=(x_{*},t_{*})\in\Omega\times[0,\bar{t}]\subseteq\Omega\times[0,T]$ such that $W(x,t)>0$ for any $x\in\Omega$ and any $t\in[0,t_{*})$ ,
+with $W(x_{*},t_{*})=0$ . In particular, $W(x,t_{*})\geqslant 0=W(x_{*},t_{*})$ , and so the
+integrodifferential definition of the fractional Laplacian gives that $(-\Delta)^{s}W(x_{*},t_{*})\leqslant 0$ . Also, $W(x_{*},t)\geqslant 0=W(x_{*},t_{*})$ , and thus $\partial_{t}W(x_{*},t_{*})\leqslant 0$ .
+In addition, we have that $v(z_{*})=W(z_{*})+w(z_{*})-\varepsilon t_{*}-\varepsilon^{2}=w(z_{*})-\eta_{*},$ where $\eta_{*}:=\varepsilon t_{*}+\varepsilon^{2}\in\left[0,\frac{\varepsilon}{2(M+1)}\right]$ ,
+thanks to ( 5.2 )
+and ( 5.4 ). As a consequence of these observations, and recalling ( 5.1 )
+and ( 5.3 ), we find that $\displaystyle 0$ $\displaystyle\geqslant$ $\displaystyle\partial_{t}W(z_{*})+(-\Delta)^{s}W(z_{*})$ $\displaystyle=$ $\displaystyle\big(\partial_{t}v+(-\Delta)^{s}v\big)(z_{*})-\big(\partial_{t}w-(-\Delta)^{s}w\big)(z_{*})+\varepsilon$ $\displaystyle\geqslant$ $\displaystyle f(w(z_{*}))-f(v(z_{*}))+\varepsilon$ $\displaystyle=$ $\displaystyle f(w(z_{*}))-f(w(z_{*})-\eta_{*})+\varepsilon$ $\displaystyle\geqslant$ $\displaystyle-M\eta_{*}+\varepsilon$ $\displaystyle>$ $\displaystyle 0,$ which is a contradicition.
+∎ In addition, we remark that the theory developed in the previous
+pages also allows us to investigate the stability
+of nonlocal species. For instance, one sees
+that large resources allow both
+local and nonlocal populations to stem from the pure equilibria.
+More precisely, if $\sigma$ is larger than the first classical
+and fractional eigenvalue, then the
+reverse Poincaré-Sobolev condition in ( 2.6 )
+(and its fractional counterpart ( 2.7 )) are satisfied. So, in case system ( 1.4 ) possesses two unstable
+pure equilibria $(\tilde{u},0)$ and $(0,\tilde{v})$ ,
+a positive mixed equilibrium $(u_{*}(x),v_{*}(x))$ may arise. Of course, a detailed analysis of all these circumstances
+in a general setting
+and a careful check of the nontrivial details involved
+by the dynamics associated to the flow
+go beyond the scope of this paper, but we refer also to [ 7 ] for a series of examples which carefully
+compare local and nonlocal behaviors of biological populations
+in terms of the size of the domain and of the sparseness
+of the resources. References [1] Giuliano Aluffi. Per andare a caccia la medusa si muove come un computer. Il Venerdì di Repubblica , August 2014. [2] A. Ambrosetti and G. Prodi. On the inversion of some differentiable mappings with singularities
+between Banach spaces. Ann. Mat. Pura Appl. (4) , 93:231–246, 1972. [3] H. Berestycki, P.-L. Lions, and L. A. Peletier. An ODE approach to the existence of positive solutions for
+semilinear problems in ${\bf R}^{N}$ . Indiana Univ. Math. J. , 30(1):141–157, 1981. [4] Henri Berestycki, Jean-Michel Roquejoffre, and Luca Rossi. The periodic patch model for population dynamics with fractional
+diffusion. Discrete Contin. Dyn. Syst. Ser. S , 4(1):1–13, 2011. [5] G. Boyadjiev and N. Kutev. Comparison principle for quasilinear elliptic and parabolic systems. C. R. Acad. Bulgare Sci. , 55(1):9–12, 2002. [6] Xavier Cabré and Jean-Michel Roquejoffre. Propagation de fronts dans les équations de Fisher-KPP avec
+diffusion fractionnaire. C. R. Math. Acad. Sci. Paris , 347(23-24):1361–1366, 2009. [7] L. Caffarelli, S. Dipierro, and E. Valdinoci. A logistic equation with nonlocal interactions. ArXiv e-prints , January 2016. [8] Robert Stephen Cantrell and Chris Cosner. Spatial ecology via reaction-diffusion equations . Wiley Series in Mathematical and Computational Biology. John Wiley
+& Sons, Ltd., Chichester, 2003. [9] Robert Stephen Cantrell, Chris Cosner, and Vivian Hutson. Permanence in ecological systems with spatial heterogeneity. Proc. Roy. Soc. Edinburgh Sect. A , 123(3):533–559, 1993. [10] Robert Stephen Cantrell, Chris Cosner, and Vivian Hutson. Ecological models, permanence and spatial heterogeneity. Rocky Mountain J. Math. , 26(1):1–35, 1996. [11] Robert Stephen Cantrell, Chris Cosner, and Yuan Lou. Advection-mediated coexistence of competing species. Proc. Roy. Soc. Edinburgh Sect. A , 137(3):497–518, 2007. [12] Robert Stephen Cantrell, Chris Cosner, and Yuan Lou. Evolution of dispersal and the ideal free distribution. Math. Biosci. Eng. , 7(1):17–36, 2010. [13] Robert Stephen Cantrell, Chris Cosner, Yuan Lou, and Daniel Ryan. Evolutionary stability of ideal free dispersal strategies: a
+nonlocal dispersal model. Can. Appl. Math. Q. , 20(1):15–38, 2012. [14] Xinfu Chen, Richard Hambrock, and Yuan Lou. Evolution of conditional dispersal: a reaction-diffusion-advection
+model. J. Math. Biol. , 57(3):361–386, 2008. [15] Chris Cosner, Juan Dávila, and Salome Martínez. Evolutionary stability of ideal free nonlocal dispersal. J. Biol. Dyn. , 6(2):395–405, 2012. [16] Athanase Cotsiolis and Nikolaos K. Tavoularis. Best constants for Sobolev inequalities for higher order
+fractional derivatives. J. Math. Anal. Appl. , 295(1):225–236, 2004. [17] Rafael de la Llave and Enrico Valdinoci. Multiplicity results for interfaces of
+Ginzburg-Landau-Allen-Cahn equations in periodic media. Adv. Math. , 215(1):379–426, 2007. [18] Eleonora Di Nezza, Giampiero Palatucci, and Enrico Valdinoci. Hitchhiker’s guide to the fractional Sobolev spaces. Bull. Sci. Math. , 136(5):521–573, 2012. [19] Odo Diekmann. A beginner’s guide to adaptive dynamics. In Mathematical modelling of population dynamics , volume 63
+of Banach Center Publ. , pages 47–86. Polish Acad. Sci., Warsaw,
+2004. [20] Serena Dipierro, Ovidiu Savin, and Enrico Valdinoci. All functions are locally $s$ -harmonic up to a small error. To appear on J. Eur. Math. Soc. (JEMS) . [21] Jack Dockery, Vivian Hutson, Konstantin Mischaikow, and Mark Pernarowski. The evolution of slow dispersal rates: a reaction diffusion model. J. Math. Biol. , 37(1):61–83, 1998. [22] Avner Friedman. PDE problems arising in mathematical biology. Netw. Heterog. Media , 7(4):691–703, 2012. [23] David Gilbarg and Neil S. Trudinger. Elliptic partial differential equations of second order . Classics in Mathematics. Springer-Verlag, Berlin, 2001. Reprint of the 1998 edition. [24] Alan Hastings. Can spatial variation alone lead to selection for dispersal? Theoretical Population Biology , 24(3):244–251, 1983. [25] Morris W. Hirsch. Systems of differential equations which are competitive or
+cooperative. I. Limit sets. SIAM J. Math. Anal. , 13(2):167–179, 1982. [26] Morris W. Hirsch. Stability and convergence in strongly monotone dynamical systems. J. Reine Angew. Math. , 383:1–53, 1988. [27] Morris W. Hirsch. Systems of differential equations which are competitive or
+cooperative. III. Competing species. Nonlinearity , 1(1):51–71, 1988. [28] Morris W. Hirsch and Hal L. Smith. Competitive and cooperative systems: mini-review. In Positive systems (Rome, 2003) , volume 294 of Lecture
+Notes in Control and Inform. Sci. , pages 183–190. Springer, Berlin, 2003. [29] Nicolas E. Humphries, Nuno Queiroz, Jennifer R. M. Dyer, Nicolas G. Pade,
+Michael K. Musyl, Kurt M. Schaefer, Daniel W. Fuller, Juerg M.
+Brunnschweiler, Thomas K. Doyle, Jonathan D. R. Houghton, Graeme C. Hays,
+Catherine S. Jones, Leslie R. Noble, Victoria J. Wearmouth, Emily J.
+Southall, and David W. Sims. Environmental context explains Lévy and Brownian movement
+patterns of marine predators. Nature , 465:1066–1069, 2010/06/24/print. [30] V. Hutson, S. Martinez, K. Mischaikow, and G. T. Vickers. The evolution of dispersal. J. Math. Biol. , 47(6):483–517, 2003. [31] V. Hutson, K. Mischaikow, and P. Poláčik. The evolution of dispersal rates in a heterogeneous time-periodic
+environment. J. Math. Biol. , 43(6):501–533, 2001. [32] Chiu-Yen Kao, Yuan Lou, and Wenxian Shen. Random dispersal vs. non-local dispersal. Discrete Contin. Dyn. Syst. , 26(2):551–596, 2010. [33] Chiu-Yen Kao, Yuan Lou, and Wenxian Shen. Evolution of mixed dispersal in periodic environments. Discrete Contin. Dyn. Syst. Ser. B , 17(6):2047–2072, 2012. [34] Eugenio Montefusco, Benedetta Pellacci, and Gianmaria Verzini. Fractional diffusion with Neumann boundary conditions: the logistic
+equations. Preprint , 2012. [35] Xavier Mora. Semilinear parabolic problems define semiflows on $C^{k}$ spaces. Trans. Amer. Math. Soc. , 278(1):21–55, 1983. [36] Hal L. Smith. Monotone dynamical systems , volume 41 of Mathematical
+Surveys and Monographs . American Mathematical Society, Providence, RI, 1995. An introduction to the theory of competitive and cooperative systems. [37] Diana Stan and Juan Luis Vázquez. The Fisher-KPP equation with nonlinear fractional diffusion. SIAM J. Math. Anal. , 46(5):3241–3276, 2014. [38] Enrico Valdinoci. From the long jump random walk to the fractional Laplacian. Bol. Soc. Esp. Mat. Apl. S $\vec{\rm e}$ MA , (49):33–44, 2009. [39] G. M. Viswanathan, V. Afanasyev, S. V. Buldyrev, E. J. Murphy, P. A. Prince,
+and H. E. Stanley. Lévy flight search patterns of wandering albatrosses. Nature , 381(1):413–415, 1996/05/30/print. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

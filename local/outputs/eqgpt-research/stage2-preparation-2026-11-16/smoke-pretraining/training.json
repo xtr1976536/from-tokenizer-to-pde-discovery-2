@@ -1,0 +1,51 @@
+{
+  "history": [
+    {
+      "epoch": 1,
+      "learning_rate": 0.0002,
+      "train": {
+        "token_cross_entropy": 4.434914311576594,
+        "nats_per_byte": 2.8980181934387703,
+        "tokens": 643
+      },
+      "validation": {
+        "token_cross_entropy": 4.40203857421875,
+        "nats_per_byte": 2.2388746556837376,
+        "tokens": 207
+      }
+    },
+    {
+      "epoch": 2,
+      "learning_rate": 0.00019877498988921623,
+      "train": {
+        "token_cross_entropy": 4.407855518869071,
+        "nats_per_byte": 2.8803364823504194,
+        "tokens": 643
+      },
+      "validation": {
+        "token_cross_entropy": 4.385585619055706,
+        "nats_per_byte": 2.230506690772804,
+        "tokens": 207
+      }
+    }
+  ],
+  "best_loss": 4.385585619055706,
+  "early_reference": 4.385585619055706,
+  "bad_epochs": 0,
+  "best_epoch": 2,
+  "settings": {
+    "maximum_epochs": 2,
+    "cosine_epochs": 20,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-06,
+    "patience": 8,
+    "min_delta": 0.0001,
+    "minimum_epochs": 10,
+    "weight_decay": 0.0001,
+    "batch_size": 4,
+    "token_budget": 2048,
+    "gradient_clip": 1.0
+  },
+  "train_sha256": "0bae0ad7bc228dab5ab62b8e300141ccec0598e2b4c23c0bc7fdbbe14710f973",
+  "validation_sha256": "1e69704062e311b4db10b02d7c0a5e1ea8a3fb9ddba050f35b0581c9c68bf492"
+}

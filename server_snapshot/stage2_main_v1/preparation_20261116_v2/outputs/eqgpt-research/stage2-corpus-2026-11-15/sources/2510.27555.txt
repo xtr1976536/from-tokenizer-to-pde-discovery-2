@@ -1,0 +1,397 @@
+On the global existence and uniform-in-time bounds for three-component reaction-diffusion systems with mass control and polynomial growth Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 1.1 Problem setting 1.2 State of the art and motivation 1.3 Main results and key ideas 1.4 Structure of the paper 2 Proof of main results 2.1 Preliminaries 2.2 Theorem : Global existence 2.3 Theorem : Uniform-in-time bounds 2.4 Proof of Theorem 2.5 Generalizations: Proof of Theorems and . 3 Applications 3.1 Example 1 3.2 Example 2 3.3 Example 3: HOIs three-species Lotka-Voltera model References License: CC BY 4.0 arXiv:2510.27555v1 [math.AP] 31 Oct 2025 On the global existence and uniform-in-time bounds for three-component reaction-diffusion systems with mass control and polynomial growth Journal: Journal of Differential Equations Redouane Douaifia a,b , Salem Abdelmalek c , Mokhtar Kirane d,∗ Address: (a) Process Engineering Department, Faculty of Technology, University of Blida 1, Blida, Algeria (b) Water Environment and Sustainable Development Laboratory, Faculty of Technology, Blida 1 University, PO Box 270-09000, Blida, Algeria (c) Department of Mathematics, Laboratory (LAMIS), Echahid Cheikh Larbi Tebessi University, Tebessa, Algeria (d) Department of Mathematics, College of Computing and Mathematical Sciences, Khalifa University, P.O. Box: 127788, Abu
+Dhabi, UAE (*) Corresponding author, email: mokhtar.kirane@ku.ac.ae Abstract We investigate a class of three-component reaction–diffusion systems subject to mass control and a newly introduced structural assumption, referred to as linear intermediate weighted sum condition. Under these hypotheses, we establish the global existence of classical solutions in arbitrary spatial dimensions and wide class of boundary conditions, even when the nonlinearities exhibit arbitrary polynomial growth. We establish also that, under slight-stronger assumptions and mixed boundary conditions, solutions admit uniform-in-time bounds. Our approach relies on the extension of $L^{p}$ -energy polynomial functionals, together with the regularizing effect for parabolic equations. Furthermore, we demonstrate the applicability of our framework by analyzing three-species sub-skew-symmetric Lotka–Volterra systems with higher-order interactions. Keywords: Reaction-diffusion systems; mass control; linear intermediate weighted sum; polynomial growth; global existence; $L^{p}$ -energy polynomial functionals; three-species Lotka-Voltera model; higher order interactions. 2010 MSC 35A01 , 35Q92 , 35K57 , 35K58. Contents 1 Introduction 1.1 Problem setting 1.2 State of the art and motivation 1.3 Main results and key ideas 1.4 Structure of the paper 2 Proof of main results 2.1 Preliminaries 2.2 Theorem : Global existence 2.3 Theorem : Uniform-in-time bounds 2.4 Proof of Theorem 2.5 Generalizations: Proof of Theorems and . 3 Applications 3.1 Example 1 3.2 Example 2 3.3 Example 3: HOIs three-species Lotka-Voltera model References 1 Introduction This work examines the global existence of classical solutions for a
+class of semilinear reaction-diffusion systems consisting of three
+equations. 1.1 Problem setting Let $N\in\mathbb{N}$ , and $\Omega\subset\mathbb{R}^{N}$ is a bounded domain with smooth boundary $\partial\Omega$ . We consider
+the reaction-diffusion system. $\left\{\begin{array}[]{cc}\displaystyle\frac{\partial u}{\partial t}-d_{1}\Delta u=f\left(u,v,w\right),&\text{in }\Omega\times\left(0,+\infty\right),\\
+\\
+\displaystyle\frac{\partial v}{\partial t}-d_{2}\Delta v=g\left(u,v,w\right),&\text{in }\Omega\times\left(0,+\infty\right),\\
+\\
+\displaystyle\frac{\partial w}{\partial t}-d_{3}\Delta w=h\left(u,v,w\right),&\text{in }\Omega\times\left(0,+\infty\right),\\
+\\
+\displaystyle\frac{\partial u}{\partial\eta}\left(x,t\right)=\frac{\partial v}{\partial\eta}\left(x,t\right)=\frac{\partial w}{\partial\eta}\left(x,t\right)=0,&\text{on }\partial\Omega\times\left(0,+\infty\right),\\
+\\
+u\left(x,0\right)=u_{0}(x)\text{, }v\left(x,0\right)=v_{0}(x)\text{, }w\left(x,0\right)=w_{0}(x),&\text{in }\Omega,\end{array}\right.$ (1.1) where $d_{1},d_{2}>0$ are diffusion coefficients, $\eta$ is the unit
+outward normal vector on $\partial\Omega$ , $u_{0}$ , $v_{0}$ , and $w_{0}$ are initial data. Under the notations $\xi=(\xi_{1},\xi_{2},\xi_{3})$ and $\Lambda(\xi)=1+\xi_{1}+\xi_{2}+\xi_{3}$ , the following assumptions are made regarding the nonlinearities: ( $\mathcal{A}$ 1) (Quasi-positivity and Local Lipschitz) The nonlinearities $f,g,h:\mathbb{R}^{3}\longrightarrow\mathbb{R}$ are locally Lipschitz, and $f\left(0,\xi_{2},\xi_{3}\right),g\left(\xi_{1},0,\xi_{3}\right),h\left(\xi_{1},\xi_{2},0\right)\geq 0,\ \text{ for any }\xi\in\mathbb{R}_{+}^{3}.$ (1.2) ( $\mathcal{A}$ 2) (Mass Control) There exists $K_{1}\geq 0$ , such that $f\left(\xi\right)+g\left(\xi\right)+h\left(\xi\right)\leq K_{1}\Lambda(\xi),\ \text{ for any }\xi\in\mathbb{R}_{+}^{3}.$ (1.3) ( $\mathcal{A}$ 3) (Linear Intermediate Weighted Sum) There exist $K_{i}\geq 0$ for $i=2,3,4$ , and $\lambda_{1},\lambda_{2}>1$ (or $\lambda_{1},\lambda_{2}<1$ ), such that $\left\{\begin{array}[]{c}\lambda_{1}f\left(\xi\right)+g\left(\xi\right)+h\left(\xi\right)\leq K_{2}\Lambda(\xi),\\
+\\
+\lambda_{2}f\left(\xi\right)+\lambda_{2}g\left(\xi\right)+h\left(\xi\right)\leq K_{3}\Lambda(\xi),\\
+\\
+\lambda_{1}\lambda_{2}f\left(\xi\right)+\lambda_{2}g\left(\xi\right)+h\left(\xi\right)\leq K_{4}\Lambda(\xi),\end{array}\right.$ (1.4) for any $\xi\in\mathbb{R}_{+}^{3}.$ ( $\mathcal{A}$ 4) (Polynomial Growth) There exist $m\in\mathbb{N}$ and $M>0$ , such that $f\left(\xi\right),g\left(\xi\right),h\left(\xi\right)\leq M(\Lambda(\xi))^{m},\ \text{for any }\xi\in\mathbb{R}_{+}^{3}.$ (1.5) We now turn to a discussion of the structural assumptions (
+                  
+                    A
+                  
+                1) - (
+                  
+                    A
+                  
+                4) . Assumption (
+                  
+                    A
+                  
+                1) , which requires quasi-positivity together with local Lipschitz continuity, is classical in the analysis of reaction–diffusion systems. These conditions guarantee local existence of solutions and, importantly, ensure their non-negativity, i.e. the invariance of the positive octant under the flow. The latter property is particularly relevant for systems arising in biology or chemistry, since it preserves the physical meaning of the model: if the initial concentration (or density, or population) is non-negative, then the corresponding solution remains non-negative throughout its evolution. Assumption (
+                  
+                    A
+                  
+                2) serves as a unifying framework that extends several classical hypotheses commonly used in the literature, in particular: • mass conservation: $f\left(\xi\right)+g\left(\xi\right)+h\left(\xi\right)=0,\ \text{ for any }\xi\in\mathbb{R}_{+}^{3}.$ (1.6) • mass dissipation: $f\left(\xi\right)+g\left(\xi\right)+h\left(\xi\right)\leq 0,\ \text{ for any }\xi\in\mathbb{R}_{+}^{3}.$ (1.7) The assumption (
+                  
+                    A
+                  
+                3) that we have called " intermediate wheighted sum condition (IWSC)", which is a modefied version of the so-called "intermediate sum condition (ISC)": There exist an $3\times 3$ lower triangle matrix $A=(a_{ij})$ with nonnegative elements and $a_{ii}>0$ for all $i=1,2,3$ , a constant $r\geq 1$ and a constant $K>0$ , such that $\left\{\begin{array}[]{c}a_{11}f\left(\xi\right)\leq K\Lambda^{r}(\xi),\\
+\\
+a_{21}f\left(\xi\right)+a_{22}g\left(\xi\right)\leq K\Lambda^{r}(\xi),\\
+\\
+a_{31}f\left(\xi\right)+a_{32}g\left(\xi\right)+a_{33}h\left(\xi\right)\leq K\Lambda^{r}(\xi),\end{array}\right.$ (1.8) for any $\xi\in\mathbb{R}_{+}^{3}.$ The essential difference between these conditions is that, in (ISC) one of the nonlinearties is assumed to be upper bounded by a polynomial of order $r$ (in particular less than $1+\frac{2}{N}$ , or, for small dimension, $r$ is at most $3$ ), while in (IWSC), we need three wheighted sum of all nonlinearties.
+Assumption (
+                  
+                    A
+                  
+                4) requires that the nonlinearities exhibit at most polynomial growth of order $m$ . It is worth emphasizing that the results established in this paper impose no restriction on the value of $m$ . 1.2 State of the art and motivation The investigation of global existence for reaction-diffusion systems has attracted continuous attention for last decades as a fundamental question. Despite being a classical subject, it remains a source of numerous open questions and mathematical challenges, even in systems that look simple and are based on real-world uses, such reversible chemical processes. A major difficulty arises from the fact that, reaction-diffusion systems generally (consisting of two or more equations) lack a maximum principle or invariant regions, often nonlinearities have not a constant sign and this means that the local solution is a priori bounded or at least bounded in some $L^{p}$ -space. Early contributions to this topic include the works of Alikakos [ 5 ] , Haraux and Kirane [ 15 ] , Masuda [ 24 ] , Rothe [ 32 ] , Amann [ 6 ] , Hollis, Martin, and Pierre [ 18 ] , Haraux and Youkana [ 16 ] , Morgan [ 25 ] , Kouachi [ 21 , 22 ] , as well as Abdelmalek and Kouachi [ 1 ] . It is well known that assumptions (
+                  
+                    A
+                  
+                1) and (
+                  
+                    A
+                  
+                2) by themselves do not exclude the possibility of finite-time blow-up of solutions to system ( 1.1 ); see [ 28 ] . This observation naturally led to an intensive study of systems supplemented by additional structural conditions, in particular (
+                  
+                    A
+                  
+                4) . Some advance were obtained by [ 14 , 7 , 9 , 30 , 26 ] , where, under the entropy inequality or without, global existence of bounded solutions was established with specific assumptions, for instance, small space dimensions ( $N=1,2$ ) and at most cubic systems or strictly sub-quadratic systems in all dimensions.
+The global existence of quadratic systems in higher dimensions remained unresolved until a series of contributions [ 33 , 8 , 12 ] closed this gap. In the first two, the entropy inequality continued to play a role, whereas the last one succeeded in removing this requirement. Moreover, Fellner et al. , complemented the analysis in [ 13 ] by establishing the uniform boundedness in time of solutions.
+It is worth noting that most of the previous works dealt with systems that impose homogeneous conditions (Neumann and/or Dirichlet), but some of them dealt with non-homogeneous boundary conditions as in [ 25 , 19 , 22 , 1 ] . For more details we refer the reader to the surveys [ 29 , 31 ] . The results summarized above indicate that global existence together with uniform-in-time bounds for nonnegative classical solutions can be ensured either in the presence of quadratic nonlinearities (or super-quadratic ones subject to dimension constraints), or under structural conditions of the form ( 1.8 ). However, such conditions are not generally satisfied by a wide class of systems. To illustrate this limitation, we consider the following nonlinearities: $\left\{\begin{aligned} f(\xi)&=\xi_{2}^{5}-\xi_{1}^{6},\\
+g(\xi)&=\xi_{3}^{7}-B\xi_{2}^{5},\\
+h(\xi)&=\xi_{1}^{6}-C\xi_{3}^{7},\end{aligned}\right.$ (1.9) where $B$ and $C$ are positive constants chosen sufficiently large. It is clear that the nonlinearities ( 1.9 ) do not satisfy the so-called linear intermediate sum condition ( 1.8 ), as well as are not quadratic. Nevertheless, it can be verified that the nonlinearities ( 1.9 ) satisfy our proposed condition, referred to as the linear intermediate weighted sum ( 1.4 ), by an appropriate choice of the parameters $B$ and $C$ . This observation constitutes a central motivation of the present work. Specifically, by employing the linear intermediate weighted sum condition (
+                  
+                    A
+                  
+                3) , we are able to accommodate nonlinearities with arbitrary polynomial growth. A natural question then arises: can one establish uniform-in-time bounds for solutions of ( 1.1 ) subject to mixed boundary conditions under assumptions (
+                  
+                    A
+                  
+                1) - (
+                  
+                    A
+                  
+                4) ? We give a positive answer to this issue in this work. 1.3 Main results and key ideas During this section, we will use the following notation: $A_{ij}=\frac{d_{i}+d_{j}}{2\sqrt{d_{i}d_{j}}}$ for $i,j=1,2,3$ . The main contribution of this paper is encapsulated in the following
+theorems. Theorem 1 . Assume the conditions (
+                  
+                    A
+                  
+                1) , (
+                  
+                    A
+                  
+                2) , (
+                  
+                    A
+                  
+                3) , (
+                  
+                    A
+                  
+                4) , for some $\lambda_{1}\geq$ $\theta^{2(p-1)}$ , $\lambda_{2}\geq$ $\sigma^{2(p-1)}$ , with $\left\{\begin{array}[]{c}\theta>A_{12},\\
+\text{ and }\\
+\left(\theta^{2}-\left(A_{12}\right)^{2}\right)\left(\theta^{2}\sigma^{2}-\left(A_{13}\right)^{2}\right)>\left(A_{23}\theta^{2}-A_{12}A_{13}\right)^{2},\\
+\end{array}\right.$ (1.10) such that $p=\min\left\{l\in\mathbb{N}\ :\ l>\frac{m(N+2)}{2}\right\},$ (1.11) and $u_{0},v_{0},w_{0}\in L^{\infty}\left(\Omega;\mathbb{R}_{+}\right)$ .
+Then the system ( 1.1 ) possesses a unique nonnegative global
+classical solution. Moreover, if $K_{i}=0$ for all $i=1,\dots,4$ , then the solution is bounded uniformly in time, i.e. $\sup_{t\geq 0}\|u(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|v(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|w(.,t)\|_{L^{\infty}(\Omega)}<+\infty.$ (1.12) We have also the following result. Theorem 2 . Assume the conditions (
+                  
+                    A
+                  
+                1) , (
+                  
+                    A
+                  
+                2) , (
+                  
+                    A
+                  
+                3) for
+some $\lambda_{1}\leq$ $\theta^{-2p}$ , $\lambda_{2}\leq$ $\sigma^{-2p}$ , and (
+                  
+                    A
+                  
+                4) where the assumptions ( 1.10 ), ( 1.11 ) are fulfilled, and $u_{0},v_{0},w_{0}\in L^{\infty}\left(\Omega;\mathbb{R}_{+}\right)$ . Then the system ( 1.1 ) possesses a unique nonnegative global classical solution. Moreover, if $K_{i}=0$ for all $i=1,\dots,4$ , then the solution is bounded uniformly in time, as ( 1.12 ). Remark 1 (Generalization) . We can consider the following system with general boundary conditions. $\left\{\begin{array}[]{cc}\displaystyle\frac{\partial u}{\partial t}-d_{1}\Delta u=f\left(u,v,w\right),&\text{in }\Omega\times\left(0,+\infty\right),\\
+\\
+\displaystyle\frac{\partial v}{\partial t}-d_{2}\Delta v=g\left(u,v,w\right),&\text{in }\Omega\times\left(0,+\infty\right),\\
+\\
+\displaystyle\frac{\partial w}{\partial t}-d_{3}\Delta w=h\left(u,v,w\right),&\text{in }\Omega\times\left(0,+\infty\right),\\
+\\
+\begin{array}[]{c}\displaystyle\lambda_{1}u(x,t)+\left(1-\lambda_{1}\right)\frac{\partial u}{\partial\eta}\left(x,t\right)=\beta_{1},\\
+\\
+\displaystyle\lambda_{2}v(x,t)+\left(1-\lambda_{2}\right)\frac{\partial v}{\partial\eta}\left(x,t\right)=\beta_{2},\\
+\\
+\displaystyle\lambda_{3}w(x,t)+\left(1-\lambda_{3}\right)\frac{\partial w}{\partial\eta}\left(x,t\right)=\beta_{3},\end{array}&\text{on }\partial\Omega\times\left(0,+\infty\right),\\
+\\
+u\left(x,0\right)=u_{0}(x)\text{, }v\left(x,0\right)=v_{0}(x)\text{, }w\left(x,0\right)=w_{0}(x),&\text{in }\Omega.\end{array}\right.$ (1.13) The same result (for global existence) as in Theorem 1 and Theorem 2 can be obtained for homogeneous
+Dirichlet BCs, nonhomogeneous Robin BCs, and a mixture of homogeneous
+Dirichlet with nonhomogeneous Robin boundary conditions, i.e., the boundary conditions are
+defined as follows: • For homogeneous Neumann boundary conditions, we use $\lambda_{i}=0\quad\text{and}\quad\beta_{i}\equiv 0,\quad\text{for}\quad i=1,2,3.$ (1.14) • For homogeneous Dirichlet boundary conditions, we use $1-\lambda_{i}=0\quad\text{and}\quad\beta_{i}\equiv 0,\quad\text{for}\quad i=1,2,3.$ (1.15) • For nonhomogeneous Robin boundary conditions, we use $\lambda_{i}\in\left(0,1\right)\text{, and }\beta_{i}\in C^{1}\left(\partial\Omega;\mathbb{R}_{+}\right),\quad\text{for}\quad i=1,2,3.$ (1.16) • For a mixture of homogeneous Dirichlet with nonhomogeneous Robin
+boundary conditions, we use $\left\{\begin{array}[]{ll}\exists\,i\in\{1,2,3\}:&\lambda_{i}=1,\quad\text{and}\quad\beta_{i}\equiv 0,\\
+\\
+\text{when}\quad j\neq i,\quad\text{for}\quad j=1,2,3:&\lambda_{j}\in(0,1),\quad\text{and}\quad\beta_{j}\in C^{1}\!\left(\partial\Omega;\mathbb{R}_{+}\right).\end{array}\right.$ (1.17) We now state the results that generalize Theorem 1 and Theorem 2 . Theorem 3 . Assume the conditions (
+                  
+                    A
+                  
+                1) , (
+                  
+                    A
+                  
+                2) , (
+                  
+                    A
+                  
+                3) for some $\lambda_{1}\geq$ $\theta^{2(p-1)}$ , $\lambda_{2}\geq$ $\sigma^{2(p-1)}$ , and (
+                  
+                    A
+                  
+                4) where the assumptions ( 1.10 ) and ( 1.11 ) are fulfilled.
+Then, for any $u_{0},v_{0},w_{0}\in L^{\infty}\left(\Omega;\mathbb{R}_{+}\right)$ the system ( 1.13 ) with one of the boundary conditions $\left(\text{\ref{HNBCs_EX3}}\right)$ - $\left(\text{\ref{MixNHRBCsHDBCs_EX3}}\right)$ imposed, possesses a unique nonnegative global
+classical solution. Moreover, if $K_{i}=0$ for all $i=1,\dots,4$ , and in ( 1.16 ) or ( 1.17 ), we have $\beta_{i}\equiv 0$ for $i=1,2,3$ , then the solution is bounded uniformly in time, i.e. $\sup_{t\geq 0}\|u(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|v(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|w(.,t)\|_{L^{\infty}(\Omega)}<+\infty.$ (1.18) Furthermore, we have the following result. Theorem 4 . Assume the conditions (
+                  
+                    A
+                  
+                1) , (
+                  
+                    A
+                  
+                2) , (
+                  
+                    A
+                  
+                3) for
+some $\lambda_{1}\leq$ $\theta^{-2p}$ , $\lambda_{2}\leq$ $\sigma^{-2p}$ , and (
+                  
+                    A
+                  
+                4) where the assumptions ( 1.10 ) and ( 1.11 ) are fulfilled.
+Then, for any $u_{0},v_{0},w_{0}\in L^{\infty}\left(\Omega;\mathbb{R}_{+}\right)$ the system ( 1.13 ) with one of the boundary conditions $\left(\text{\ref{HNBCs_EX3}}\right)$ - $\left(\text{\ref{MixNHRBCsHDBCs_EX3}}\right)$ imposed, possesses a unique nonnegative global
+classical solution. Moreover, if $K_{i}=0$ for all $i=1,\dots,4$ , and in ( 1.16 ) or ( 1.17 ), we have $\beta_{i}\equiv 0$ for $i=1,2,3$ , then the solution is bounded uniformly in time. 1.4 Structure of the paper The rest of this paper is organized as follows. Section 2 is devoted to the proofs of the main results; Subsection 2.1 recalls some preliminaries, Subsection 2.2 establishes the global existence of solutions in Theorem 1 , Subsection 2.3 derives the uniform-in-time bounds associated with Theorem 1 , Subsection 2.4 provides the proof of Theorem 2 , and Subsection 2.5 presents the generalizations leading to the proofs of Theorems 3 and 4 . Section 3 discusses applications of the results to specific models; Example 1 is treated in Subsection 3.1 , Example 2 in Subsection 3.2 , and Example 3 of three-species sub-skew-symmetric Lotka–Volterra systems with higher-order interactions, in Subsection 3.3 . 2 Proof of main results 2.1 Preliminaries We start with the definition of classical solutions. Definition 1 (Classical solutions) . Let $0<T\leq\infty$ . A classical solution to ( 1.13 ) on $(0,T)$ is a vector of functions $S:=(u,v,w)$ , satisfying $u,v,w\in C([0,T];L^{p}(\Omega))\cap L^{\infty}(\Omega\times(0,T))\cap C^{1,2}(\overline{\Omega}\times(\tau,T))$ for all $p>1$ and all $0<\tau<T$ , and $S$ satisfies each equation in ( 1.13 ) pointwise in $\Omega\times(0,T)$ . According to assumption (
+                  
+                    A
+                  
+                1) , it is a classical task to show
+the existence of a unique local nonnegative classical solution of system ( 1.1 ) on $[0,T_{max})$ , where $T_{max}$ is the eventual
+blow-up time in $L^{\infty}\left(\Omega\right)$ (see e.g. [ 17 , 32 ] ). Proposition 1 . Suppose that $u_{0},v_{0},w_{0}\in L^{\infty}\left(\Omega;\mathbb{R}_{+}\right)$ and (
+                  
+                    A
+                  
+                1) holds. Then there exists $T_{max}>0$ such that ( 1.1 ) admits a unique nonnegative
+classical solution on $[0,T_{max})$ . Moreover, if $T_{max}<+\infty$ , then $\limsup_{t\rightarrow T_{max}^{-}}\left(\|u(\cdot,t)\|_{L^{\infty}(\Omega)}+\|v(\cdot,t)\|_{L^{\infty}(\Omega)}+\|w(\cdot,t)\|_{L^{\infty}(\Omega)}\right)=+\infty.$ It is essential to first establish the following lemmas. Lemma 1 . Let $\Phi(\xi),\Psi(\xi)$ be two real-valued functions defined on $\mathbb{R}_{+}^{3}$ , $\alpha>1$ (or $0<\alpha<1$ ), and $C_{1},C_{2}\geq 0$ . Then, for all $\xi\in\mathbb{R}_{+}^{3}$ , we have $\text{ }\left\{\begin{array}[]{c}\Phi(\xi)+\Psi(\xi)\leq C_{1}\Lambda(\xi),\\
+\\
+\text{and}\\
+\\
+\alpha\Phi(\xi)+\Psi(\xi)\leq C_{2}\Lambda(\xi),\end{array}\right.$ (2.1) implies $\alpha^{\ast}\Phi(\xi)+\Psi(\xi)\leq\max\left\{C_{1},C_{2}\right\}\Lambda(\xi),$ for all $\alpha^{\ast}\in[1,\alpha]$ (or for all $\alpha^{\ast}\in[\alpha,1]$ ). Proof. The proof is by contradiction. Let $\xi\in\mathbb{R}_{+}^{3}$ , and there exists $\alpha^{\ast}\in[1,\alpha]$ , such that $\left\{\begin{array}[]{c}\Phi(\xi)+\Psi(\xi)\leq C_{1}\Lambda(\xi),\\
+\text{and}\\
+\alpha\Phi(\xi)+\Psi(\xi)\leq C_{2}\Lambda(\xi),\end{array}\right.$ and $\alpha^{\ast}\Phi(\xi)+\Psi(\xi)>\max\left\{C_{1},C_{2}\right\}\Lambda(\xi).$ Thus $\left\{\begin{array}[]{c}\Phi(\xi)+\Psi(\xi)<\alpha^{\ast}\Phi(\xi)+\Psi(\xi),\\
+\text{and}\\
+\alpha\Phi(\xi)+\Psi(\xi)<\alpha^{\ast}\Phi(\xi)+\Psi(\xi).\end{array}\right.$ We obtain $\left\{\begin{array}[]{c}\Phi(\xi)+\Psi(\xi)-\alpha^{\ast}\Phi(\xi)-\Psi(\xi)<0,\\
+\text{and}\\
+\alpha\Phi(\xi)+\Psi(\xi)-\alpha^{\ast}\Phi(\xi)-\Psi(\xi)<0.\end{array}\right.$ Hence, for the case $\alpha^{\ast}\in(1,\alpha)$ , we get $\left\{\begin{array}[]{c}(1-\alpha^{\ast})\Phi(\xi)<0\text{ implies }\Phi(\xi)>0,\\
+\text{and}\\
+(\alpha-\alpha^{\ast})\Phi(\xi)<0\text{ implies }\Phi(\xi)<0.\end{array}\right.$ This leads to a contradiction.
+For the case $\alpha^{\ast}\in(\alpha,1)$ , we obtain $\left\{\begin{array}[]{c}(1-\alpha^{\ast})\Phi(\xi)<0\text{ implies }\Phi(\xi)<0,\\
+\text{and}\\
+(\alpha-\alpha^{\ast})\Phi(\xi)<0\text{ implies }\Phi(\xi)>0.\end{array}\right.$ We arrive at a contradiction. Therefore, the desired result holds.
+∎ Lemma 2 . Let $p$ be a positive integer, and $\widehat{\mathcal{H}}_{p}(\xi)=\sum_{j=0}^{p}\sum_{i=0}^{j}C_{p}^{j}C_{j}^{i}\theta_{i}\sigma_{j}\xi_{1}^{i}\xi_{2}^{j-i}\xi_{3}^{p-j}\text{, for all }\xi\in\mathbb{R}_{+}^{3},$ (2.2) be a homogeneous polynomial with $\left(\theta_{i}\right)_{0\leq i\leq p}$ and $\left(\sigma_{j}\right)_{0\leq j\leq p}$ arbitrary finite
+sequences. Then, we have $\partial_{\xi_{1}}\widehat{\mathcal{H}}_{p}(\xi)=p\sum_{j=0}^{p-1}\sum_{i=0}^{j}C_{p-1}^{j}C_{j}^{i}\theta_{i+1}\sigma_{j+1}\xi_{1}^{i}\xi_{2}^{j-i}\xi_{3}^{\left(p-1\right)-j},$ $\partial_{\xi_{2}}\widehat{\mathcal{H}}_{p}(\xi)=p\sum_{j=0}^{p-1}\sum_{i=0}^{j}C_{p-1}^{j}C_{j}^{i}\theta_{i}\sigma_{j+1}\xi_{1}^{i}\xi_{2}^{j-i}\xi_{3}^{\left(p-1\right)-j},$ $\partial_{\xi_{3}}\widehat{\mathcal{H}}_{p}(\xi)=p\sum_{j=0}^{p-1}\sum_{i=0}^{j}C_{p-1}^{j}C_{j}^{i}\theta_{i}\sigma_{j}\xi_{1}^{i}\xi_{2}^{j-i}\xi_{3}^{\left(p-1\right)-j}.$ Proof. It is sufficient to follow the proof steps provided in [ 22 , 1 ] .
+∎ Lemma 3 . Let $\widehat{\mathcal{H}}_{p}$ be the homogeneous polynomial defined in $\left(\text{\ref{HomPolyH}}\right)$ . Then $\partial^{2}_{\xi_{1}^{2}}\widehat{\mathcal{H}}_{p}(\xi)=p(p-1)\sum_{j=0}^{p-2}\sum_{i=0}^{j}C_{p-2}^{j}C_{j}^{i}\theta_{i+2}\sigma_{j+2}\xi_{1}^{i}\xi_{2}^{j-i}\xi_{3}^{\left(p-2\right)-j},$ $\partial^{2}_{\xi_{2}^{2}}\widehat{\mathcal{H}}_{p}(\xi)=p(p-1)\sum_{j=0}^{p-2}\sum_{i=0}^{j}C_{p-2}^{j}C_{j}^{i}\theta_{i}\sigma_{j+2}\xi_{1}^{i}\xi_{2}^{j-i}\xi_{3}^{\left(p-2\right)-j},$ $\partial^{2}_{\xi_{3}^{2}}\widehat{\mathcal{H}}_{p}(\xi)=p(p-1)\sum_{j=0}^{p-2}\sum_{i=0}^{j}C_{p-2}^{j}C_{j}^{i}\theta_{i}\sigma_{j}\xi_{1}^{i}\xi_{2}^{j-i}\xi_{3}^{\left(p-2\right)-j},$ $\partial^{2}_{\xi_{1}\xi_{2}}\widehat{\mathcal{H}}_{p}(\xi)=p(p-1)\sum_{j=0}^{p-2}\sum_{i=0}^{j}C_{p-2}^{j}C_{j}^{i}\theta_{i+1}\sigma_{j+2}\xi_{1}^{i}\xi_{2}^{j-i}\xi_{3}^{\left(p-2\right)-j},$ $\partial^{2}_{\xi_{1}\xi_{3}}\widehat{\mathcal{H}}_{p}(\xi)=p(p-1)\sum_{j=0}^{p-2}\sum_{i=0}^{j}C_{p-2}^{j}C_{j}^{i}\theta_{i+1}\sigma_{j+1}\xi_{1}^{i}\xi_{2}^{j-i}\xi_{3}^{\left(p-2\right)-j},$ $\partial^{2}_{\xi_{2}\xi_{3}}\widehat{\mathcal{H}}_{p}(\xi)=p(p-1)\sum_{j=0}^{p-2}\sum_{i=0}^{j}C_{p-2}^{j}C_{j}^{i}\theta_{i}\sigma_{j+1}\xi_{1}^{i}\xi_{2}^{j-i}\xi_{3}^{\left(p-2\right)-j}.$ Proof. It is sufficient to follow the proof steps provided in [ 22 , 1 ] .
+∎ 2.2 Theorem 1 : Global existence The key element of the proof of Theorem 1 is a Lyapunov functional introduced in the following proposition. Proposition 2 . Let $p$ be any positive integer, the positive real numbers $\theta$ and $\sigma$ satisfy ( 1.10 ), ( 1.11 ). Assume that $f,g,h$ satisfy (
+                  
+                    A
+                  
+                1) with (
+                  
+                    A
+                  
+                2) , and (
+                  
+                    A
+                  
+                3) for some $\lambda_{1}\geq$ $\theta^{2(p-1)}$ , $\lambda_{2}\geq$ $\sigma^{2(p-1)}$ . Let $S$ be a maximal solution of system ( 1.1 ), and let $\mathcal{L}(t)=\int_{\Omega}\mathcal{H}_{p}(S(x,t))dx,$ where $\mathcal{H}_{p}(S)=\sum_{j=0}^{p}\sum_{i=0}^{j}C_{p}^{j}C_{j}^{i}\theta^{i^{2}-i}\sigma^{j^{2}-j}u^{i}v^{j-i}w^{p-j}.$ Then the functional $\mathcal{L}$ is uniformly bounded on the interval $[0,T^{\ast}]$ , where $T^{\ast}<T_{max}$ . Proof. Set $\varphi(t,x)=\theta v(t,x)$ , $\psi(t,x)=\theta\sigma w(t,x)$ and $\widetilde{\mathcal{L}}(t)=\left(\theta\sigma\right)^{p}\mathcal{L}(t)$ .
+We obtain $(\theta\sigma)^{p}\mathcal{H}_{p}(S)=\sum_{j=0}^{p}\sum_{i=0}^{j}C_{p}^{j}C_{j}^{i}\theta^{i^{2}}\sigma^{j^{2}}u^{i}\varphi^{j-i}\psi^{p-j}=:\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi),$ where $\varphi(t,x)$ and $\psi(t,x)$ solve $\frac{\partial\varphi}{\partial t}-d_{2}\Delta\varphi=\theta g(S)$ , $\frac{\partial\psi}{\partial t}-d_{3}\Delta\psi=\theta\sigma h(S)$ , respectively. Taking the derivative of $\widetilde{\mathcal{L}}$ with respect to $t$ gives $\displaystyle\widetilde{\mathcal{L}}^{\prime}(t)$ $\displaystyle=$ $\displaystyle\int_{\Omega}\left(\partial_{u}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)\frac{\partial u}{\partial t}+\partial_{\varphi}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)\frac{\partial\varphi}{\partial t}+\partial_{\psi}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)\frac{\partial\psi}{\partial t}\right)\,dx$ $\displaystyle=$ $\displaystyle\int_{\Omega}\left(d_{1}\partial_{u}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)\Delta u+d_{2}\partial_{\varphi}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)\Delta\varphi+d_{3}\partial_{\psi}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)\Delta\psi\right)dx$ $\displaystyle+\int_{\Omega}\left(f\left(u,v,w\right)\partial_{u}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)+\theta g(u,v,w)\partial_{\varphi}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)+\theta\sigma h(u,v,w)\partial_{\psi}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)\right)dx$ $\displaystyle=$ $\displaystyle\mathcal{I}+\mathcal{J}.$ Utilizing Green’s formula together with the homogeneous Neumann boundary
+condition, we derive $\displaystyle\mathcal{I}$ $\displaystyle\mathcal{=}$ $\displaystyle-\int_{\Omega}d_{1}\left(\partial^{2}_{u^{2}}\widetilde{\mathcal{H}}_{p}\right)\left|\nabla u\right|^{2}+\left(d_{1}+d_{2}\right)\left(\partial^{2}_{u\varphi}\widetilde{\mathcal{H}}_{p}\right)\nabla u\nabla\varphi+\left(d_{1}+d_{3}\right)\left(\partial^{2}_{u\psi}\widetilde{\mathcal{H}}_{p}\right)\nabla u\nabla\psi dx$ $\displaystyle-\int_{\Omega}d_{2}\left(\partial^{2}_{\varphi^{2}}\widetilde{\mathcal{H}}_{p}\right)\left|\nabla\varphi\right|^{2}+\left(d_{2}+d_{3}\right)\left(\partial^{2}_{\varphi\psi}\widetilde{\mathcal{H}}_{p}\right)\nabla\varphi\nabla\psi+d_{3}\left(\partial^{2}_{\psi^{2}}\widetilde{\mathcal{H}}_{p}\right)\left|\nabla\psi\right|^{2}dx.$ By invoking lemma 3 , we arrive at $\mathcal{I=-}p(p-1)\int_{\Omega}\sum_{j=0}^{p-2}\sum_{i=0}^{j}C_{p-2}^{j}C_{j}^{i}\left(\mathcal{V}^{T}\left(\mathcal{B}_{ij}\otimes I_{N}\right)\mathcal{V}\right)u^{i}\varphi^{j-i}\psi^{\left(p-2\right)-j}dx,$ (2.3) where $I_{N}$ represents the identity matrix, $\mathcal{V}=\left(\nabla u,\nabla\varphi,\nabla\psi\right)^{T}$ , and $\mathcal{B}_{ij}=\left(\begin{array}[]{ccc}d_{1}\theta^{\left(i+2\right)^{2}}\sigma^{\left(j+2\right)^{2}}&\frac{d_{1}+d_{2}}{2}\theta^{\left(i+1\right)^{2}}\sigma^{\left(j+2\right)^{2}}&\frac{d_{1}+d_{3}}{2}\theta^{\left(i+1\right)^{2}}\sigma^{\left(j+1\right)^{2}}\\
+\frac{d_{1}+d_{2}}{2}\theta^{\left(i+1\right)^{2}}\sigma^{\left(j+2\right)^{2}}&d_{2}\theta^{i^{2}}\sigma^{\left(j+2\right)^{2}}&\frac{d_{2}+d_{3}}{2}\theta^{i^{2}}\sigma^{\left(j+1\right)^{2}}\\
+\frac{d_{1}+d_{3}}{2}\theta^{\left(i+1\right)^{2}}\sigma^{\left(j+1\right)^{2}}&\frac{d_{2}+d_{3}}{2}\theta^{i^{2}}\sigma^{\left(j+1\right)^{2}}&d_{3}\theta^{i^{2}}\sigma^{j^{2}}\end{array}\right).$ According to the assumption ( 1.10 ), all the principal minors in the
+top-left corner of $\mathcal{B}_{ij}$ are positive. Consequently, all the
+quadratic forms $\mathcal{V}^{T}\left(\mathcal{B}_{ij}\otimes I_{N}\right)\mathcal{V}$ ,
+for $i=0,...,j$ and $j=0,...,p-2$ , are positive definite. Thus, for all $t\in[0,T_{max})$ , we get $\mathcal{I\leq}0.$ On the other hand, $\displaystyle\mathcal{J}$ $\displaystyle=$ $\displaystyle\int_{\Omega}p\sum_{j=0}^{p-1}\sum_{i=0}^{j}\left[C_{p-1}^{j}C_{j}^{i}u^{i}\varphi^{j-i}\psi^{(p-1)-j}\right]$ (2.4) $\displaystyle\times\left(\theta^{(i+1)^{2}}\sigma^{(j+1)^{2}}f\left(S\right)+\theta^{i^{2}+1}\sigma^{(j+1)^{2}}g\left(S\right)+\theta^{i^{2}+1}\sigma^{j^{2}+1}h\left(S\right)\right)\,dx$ $\displaystyle=$ $\displaystyle\int_{\Omega}p\sum_{j=0}^{p-1}\sum_{i=0}^{j}\left[C_{p-1}^{j}C_{j}^{i}u^{i}\varphi^{j-i}\psi^{(p-1)-j}\right]\theta^{i^{2}+1}\sigma^{j^{2}+1}$ $\displaystyle\times\left(\frac{\theta^{(i+1)^{2}}}{\theta^{i^{2}+1}}\frac{\sigma^{(j+1)^{2}}}{\sigma^{j^{2}+1}}f\left(S\right)+\frac{\sigma^{(j+1)^{2}}}{\sigma^{j^{2}+1}}g\left(S\right)+h\left(S\right)\right)\,dx$ $\displaystyle=$ $\displaystyle\int_{\Omega}p\sum_{j=0}^{p-1}\sum_{i=0}^{j}\left[C_{p-1}^{j}C_{j}^{i}u^{i}\varphi^{j-i}\psi^{(p-1)-j}\right]\theta^{i^{2}+1}\sigma^{j^{2}+1}$ $\displaystyle\times\left(\theta^{2i}\sigma^{2j}f\left(S\right)+\sigma^{2j}g\left(S\right)+h\left(S\right)\right)\,dx.$ In the light of the conditions (
+                  
+                    A
+                  
+                2) , (
+                  
+                    A
+                  
+                3) for some $\lambda_{1}\geq$ $\theta^{2(p-1)}$ , $\lambda_{2}\geq$ $\sigma^{2(p-1)}$ and Lemma 1 , we get $\displaystyle\mathcal{J}$ $\displaystyle\leq$ $\displaystyle\widetilde{K}\int_{\Omega}p\sum_{j=0}^{p-1}\sum_{i=0}^{j}C_{p-1}^{j}C_{j}^{i}u^{i}\varphi^{j-i}\psi^{(p-1)-j}\Lambda(S)dx$ $\displaystyle=$ $\displaystyle\widetilde{K}\int_{\Omega}p\sum_{j=0}^{p-1}\sum_{i=0}^{j}\theta^{j-i}\sigma^{p-j-1}C_{p-1}^{j}C_{j}^{i}\Lambda(S)u^{i}v^{j-i}w^{p-j-1}dx,$ where $\widetilde{K}\geq 0$ . Using a similar approach as in [ 21 ] , it follows that there exist
+positive constants $M_{1}$ and $M_{2}$ such that the functional $\widetilde{\mathcal{L}}$ satisfies the differential inequality $\widetilde{\mathcal{L}}^{\prime}(t)\leq M_{1}\widetilde{\mathcal{L}}(t)+M_{2}\widetilde{\mathcal{L}}^{\frac{p-1}{p}}(t).$ (2.5) By setting $\mathcal{E=}\widetilde{\mathcal{L}}^{\frac{1}{p}}$ , then 2.5 can be rewritten as $p\mathcal{E}^{\prime}(t)\leq M_{1}\mathcal{E}(t)+M_{2}.$ (2.6) Thus, a straightforward integration of ( 2.6 ) yields a uniform bound
+for the functional $\widetilde{\mathcal{L}}$ over the interval $[0,T^{\ast}]$ , with $T^{\ast}<T_{max}$ , i.e., there exists a positive constant $\alpha$ such that $\left(\theta\sigma\right)^{p}\mathcal{L}(t)=\widetilde{\mathcal{L}}\left(t\right)\leq\alpha,\ \forall t\in[0,T^{\ast}],\ T^{\ast}\in\left(0,T_{max}\right).$ (2.7) Hence, the functional $\mathcal{L}$ is upper bounded by $\beta:=\alpha\left(\theta\sigma\right)^{-p}$ on the interval $[0,T^{\ast}]$ , with $T^{\ast}<T_{max}$ .
+∎ Now, since $\|u(.,t)+v(.,t)+w(.,t)\|_{L^{p}(\Omega)}^{p}\leq\mathcal{L}(t),\quad\text{ on }\left[0,T_{max}\right),$ (2.8) by virtue of Proposition 2 , for any positive integer $p$ , we
+obtain $u+v+w\in L^{\infty}\left(\left(0,T_{max}\right);L^{p}(\Omega)\right).$ (2.9) Thus, $\Lambda\left(S\right)\in L^{\infty}\left(\left(0,T_{max}\right);L^{p}(\Omega)\right).$ (2.10) On the other hand, from (
+                  
+                    A
+                  
+                4) , we get $\left\{\begin{array}[]{c}\|f\left(S(.,t)\right)\|_{L^{q}(\Omega)}^{q}\leq\gamma\|\Lambda\left(S(.,t)\right)\|_{L^{p}(\Omega)}^{p},\\
+\\
+\|g\left(S(.,t)\right)\|_{L^{q}(\Omega)}^{q}\leq\gamma\|\Lambda\left(S(.,t)\right)\|_{L^{p}(\Omega)}^{p},\\
+\\
+\|h\left(S(.,t)\right)\|_{L^{q}(\Omega)}^{q}\leq\gamma\|\Lambda\left(S(.,t)\right)\|_{L^{p}(\Omega)}^{p},\end{array}\right.\text{ on }\left(0,T_{max}\right),$ (2.11) where $q=\frac{p}{m}$ and $\gamma>0$ . Finally, by combaining ( 2.11 ), ( 2.10 ), ( 1.11 ) and using the $L^{p}$ -regularity of the heat operator (see [ 15 , 23 ] ),
+we conclude that the system ( 1.1 ) has a unique nonnegative
+global classical solution. 2.3 Theorem 1 : Uniform-in-time bounds We first show that for any $1\leq p<\infty$ , there exists a constant $C_{p}>0$ such that $\sup_{t\geq 0}\|u(.,t)\|_{L^{p}(\Omega)},\sup_{t\geq 0}\|v(.,t)\|_{L^{p}(\Omega)},\sup_{t\geq 0}\|w(.,t)\|_{L^{p}(\Omega)}\leq C_{p}.$ (2.12) Indeed, by employing the $L^{p}$ -energy function $\mathcal{L}(t)$ together with $\widetilde{\mathcal{L}}(t)=(\theta\sigma)^{p}\mathcal{L}(t)$ , and carrying out computations analogous to those in Proposition 2 , while taking into account the assumptions (
+                  
+                    A
+                  
+                2) and (
+                  
+                    A
+                  
+                3) with $K_{i}=0$ , for all $i=1,\dots,4$ , we obtain $\widetilde{\mathcal{L}}^{\prime}(t)\leq 0.$ (2.13) Thus, there exists a positive constant $\widehat{C}$ , such that $\sup_{t\geq 0}\mathcal{L}(t)\leq\widehat{C}.$ Hence, we get ( 2.12 ). To finally see that the solution is bounded uniformly in time in sup norm, we use a smooth cut-off function $\psi:\mathbb{R}\to[0,1]$ with $\psi(s)=0$ for $s\leq 0$ and $\psi(s)=1$ for $s\geq 1$ , $0\leq\psi^{\prime}\leq M$ , with $M>0$ , and its shifted version $\psi_{\tau}(\cdot)=\psi(\cdot-\tau)$ for any $\tau\in\mathbb{N}$ . Let $\tau\in\mathbb{N}$ be arbitrary. By multiplying the system ( 1.1 ) by $\psi_{\tau}$ , we obtain $\left\{\begin{array}[]{cc}\displaystyle\frac{\partial(\psi_{\tau}u)}{\partial t}-d_{1}\Delta(\psi_{\tau}u)=\psi_{\tau}^{\prime}u+\psi_{\tau}f\left(u,v,w\right),&\text{in }\Omega\times\left(\tau,\tau+\rho\right),\\
+\\
+\displaystyle\frac{\partial(\psi_{\tau}v)}{\partial t}-d_{2}\Delta(\psi_{\tau}v)=\psi_{\tau}^{\prime}v+\psi_{\tau}g\left(u,v,w\right),&\text{in }\Omega\times\left(\tau,\tau+\rho\right),\\
+\\
+\displaystyle\frac{\partial(\psi_{\tau}w)}{\partial t}-d_{3}\Delta(\psi_{\tau}w)=\psi_{\tau}^{\prime}w+\psi_{\tau}h\left(u,v,w\right),&\text{in }\Omega\times\left(\tau,\tau+\rho\right),\\
+\\
+\displaystyle\frac{\partial(\psi_{\tau}u)}{\partial\eta}\left(x,t\right)=\frac{\partial(\psi_{\tau}v)}{\partial\eta}\left(x,t\right)=\frac{\partial(\psi_{\tau}w)}{\partial\eta}\left(x,t\right)=0,&\text{on }\partial\Omega\times\left(\tau,\tau+\rho\right),\\
+\\
+(\psi_{\tau}u)\left(x,\tau\right)=(\psi_{\tau}v)\left(x,\tau\right)=(\psi_{\tau}w)\left(x,\tau\right)=0,&\text{in }\Omega,\end{array}\right.$ (2.14) where $2\leq\rho\in\mathbb{N}$ . Thanks to ( 2.12 ) and the polynomial growth (
+                  
+                    A
+                  
+                4) , we have $\psi_{\tau}^{\prime}u+\psi_{\tau}f\left(S\right),\quad\psi_{\tau}^{\prime}v+\psi_{\tau}g\left(S\right),\quad\psi_{\tau}^{\prime}w+\psi_{\tau}h\left(S\right)\leq\widetilde{\Lambda}(S):=C(\Lambda(S))^{m}.$ Again thanks to ( 2.12 ) for any $1\leq p<\infty$ , a constant $C_{p}>0$ exists such that $\|\widetilde{\Lambda}(S)\|_{L^{p}(\Omega\times(\tau,\tau+\rho))}\leq C_{p}.$ Therefore, by choosing $p>\frac{N+2}{2}$ and using the smooth effect of parabolic operator (see e.g. [ 27 , Proposition 3.1] ), we get $\|\psi_{\tau}u\|_{L^{\infty}(\Omega\times(\tau,\tau+\rho))},\|\psi_{\tau}v\|_{L^{\infty}(\Omega\times(\tau,\tau+\rho))},\|\psi_{\tau}w\|_{L^{\infty}(\Omega\times(\tau,\tau+\rho))}\leq C,$ where $C$ is a constant independent of $\tau\in\mathbb{N}$ . Thanks to $\psi_{\tau}\geq 0$ and $\psi|_{(\tau+1,\tau+\rho)}\equiv 1$ , we obtain finally the uniform-in-time bound $\sup_{t\geq 0}\|u(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|v(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|w(.,t)\|_{L^{\infty}(\Omega)}\leq C.$ 2.4 Proof of Theorem 2 The key element of the proof of Theorem 2 is the following
+Lyapunov functional. Proposition 3 . Let $p$ , $\theta$ , and $\sigma$ satisfy the same assumptions as in Proposition 2 .  Assume that $f,g,h$ fulfill conditions (
+                  
+                    A
+                  
+                1) , (
+                  
+                    A
+                  
+                2) , and (
+                  
+                    A
+                  
+                3) for some $\lambda_{1}\leq$ $\theta^{-2p}$ , $\lambda_{2}\leq$ $\sigma^{-2p}$ . Let $S$ be a maximal solution of system ( 1.1 ), and let $\mathcal{L}_{1}(t)=\int_{\Omega}\mathcal{H}_{p}^{\ast}(S(x,t))dx,$ where $\mathcal{H}_{p}^{\ast}(S)=\sum_{j=0}^{p}\sum_{i=0}^{j}C_{p}^{j}C_{j}^{i}\theta^{\left(p-i\right)^{2}-i}\sigma^{\left(p-j\right)^{2}-j}u^{i}v^{j-i}w^{p-j}.$ Then, the functional $\mathcal{L}_{1}$ is uniformly bounded on the interval $[0,T^{\ast}]$ , where $T^{\ast}<T_{max}$ . Proof of Proposition 3 . Set $\varphi(t,x)=\theta v(t,x)$ , $\psi(t,x)=\theta\sigma w(t,x)$ and $\widetilde{\mathcal{L}}_{1}(t)=\left(\theta\sigma\right)^{p}\mathcal{L}_{1}(t)$ . We obtain $(\theta\sigma)^{p}\mathcal{H}_{p}^{\ast}(S)=\sum_{j=0}^{p}\sum_{i=0}^{j}C_{p}^{j}C_{j}^{i}\theta^{\left(p-i\right)^{2}}\sigma^{\left(p-j\right)^{2}}u^{i}\varphi^{j-i}\psi^{p-j}=:\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi),$ where $\varphi(t,x)$ and $\psi(t,x)$ solve $\frac{\partial\varphi}{\partial t}-d_{2}\Delta\varphi=\theta g(u,v,w)$ , $\frac{\partial\psi}{\partial t}-d_{3}\Delta\psi=\theta\sigma h(u,v,w)$ , respectively.
+Taking the derivative of $\widetilde{\mathcal{L}}$ with respect to $t$ gives $\displaystyle\widetilde{\mathcal{L}}_{1}^{\prime}(t)$ $\displaystyle=$ $\displaystyle\int_{\Omega}\left(\partial_{u}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)\frac{\partial u}{\partial t}+\partial_{\varphi}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)\frac{\partial\varphi}{\partial t}+\partial_{\psi}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)\frac{\partial\psi}{\partial t}\right)\,dx$ (2.15) $\displaystyle=$ $\displaystyle\int_{\Omega}\left(d_{1}\partial_{u}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)\Delta u+d_{2}\partial_{\varphi}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)\Delta\varphi+d_{3}\partial_{\psi}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)\Delta\psi\right)dx$ $\displaystyle+\int_{\Omega}\left(f\left(S\right)\partial_{u}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)+\theta g(S)\partial_{\varphi}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)+\theta\sigma h(S)\partial_{\psi}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)\right)dx$ $\displaystyle=$ $\displaystyle\mathcal{I}^{\ast}+\mathcal{J}^{\ast}.$ On one hand, similar to the proof of Proposition 2 , we derive for
+all $t\in[0,T_{max})$ $\mathcal{I}^{\ast}\mathcal{\leq}0.$ On the other hand, we have $\displaystyle\mathcal{J}^{\ast}$ $\displaystyle=$ $\displaystyle\int_{\Omega}p\sum_{j=0}^{p-1}\sum_{i=0}^{j}\left[C_{p-1}^{j}C_{j}^{i}u^{i}\varphi^{j-i}\psi^{(p-1)-j}\right]$ $\displaystyle\times\left(\theta^{(p-i-1)^{2}}\sigma^{(p-j-1)^{2}}f\left(S\right)+\theta^{(p-i)^{2}+1}\sigma^{(p-j-1)^{2}}g\left(S\right)+\theta^{(p-i)^{2}+1}\sigma^{(p-j)^{2}+1}h\left(S\right)\right)\,dx$ $\displaystyle=$ $\displaystyle\int_{\Omega}p\sum_{j=0}^{p-1}\sum_{i=0}^{j}\left[C_{p-1}^{j}C_{j}^{i}u^{i}\varphi^{j-i}\psi^{(p-1)-j}\right]\theta^{(p-i)^{2}+1}\sigma^{(p-j)^{2}+1}$ $\displaystyle\times\left(\frac{\theta^{(p-i-1)^{2}}}{\theta^{(p-i)^{2}+1}}\frac{\sigma^{(p-j-1)^{2}}}{\sigma^{(p-j)^{2}+1}}f\left(S\right)+\frac{\sigma^{(p-j-1)^{2}}}{\sigma^{(p-j)^{2}+1}}g\left(S\right)+h\left(S\right)\right)\,dx$ $\displaystyle=$ $\displaystyle\int_{\Omega}p\sum_{j=0}^{p-1}\sum_{i=0}^{j}\left[C_{p-1}^{j}C_{j}^{i}u^{i}\varphi^{j-i}\psi^{(p-1)-j}\right]\theta^{(p-i)^{2}+1}\sigma^{(p-j)^{2}+1}$ $\displaystyle\times\left(\theta^{2(i-p)}\sigma^{2(j-p)}f\left(S\right)+\sigma^{2(j-p)}g\left(S\right)+h\left(S\right)\right)\,dx.$ In the light of the conditions (
+                  
+                    A
+                  
+                2) , (
+                  
+                    A
+                  
+                3) for some $\lambda_{1}\leq$ $\theta^{-2p}$ , $\lambda_{2}\leq$ $\sigma^{-2p}$ and using Lemma 1 , we get $\displaystyle\mathcal{J}^{\ast}$ $\displaystyle\leq$ $\displaystyle\hat{K}\int_{\Omega}p\sum_{j=0}^{p-1}\sum_{i=0}^{j}C_{p-1}^{j}C_{j}^{i}u^{i}\varphi^{j-i}\psi^{(p-1)-j}\Lambda(S)dx$ $\displaystyle=$ $\displaystyle\hat{K}\int_{\Omega}p\sum_{j=0}^{p-1}\sum_{i=0}^{j}\theta^{j-i}\sigma^{p-j-1}C_{p-1}^{j}C_{j}^{i}\Lambda(S)u^{i}v^{j-i}w^{p-j-1}dx,$ where $\hat{K}\geq 0$ . Now, by following the remaining steps in the proof of
+Proposition 2 , there exists a positive constant $\alpha^{\ast}$ ,
+such that $\left(\theta\sigma\right)^{p}\mathcal{L}_{1}(t)=\widetilde{\mathcal{L}}_{1}\left(t\right)\leq\alpha^{\ast},\ \forall t\in[0,T^{\ast}],\ T^{\ast}\in\left(0,T_{max}\right).$ (2.16) Hence, the functional $\mathcal{L}_{1}$ is upper bounded by $\beta^{\ast}:=\alpha^{\ast}\left(\theta\sigma\right)^{-p}$ on the interval $[0,T^{\ast}]$ , with $T^{\ast}<T_{max}$ .
+∎ Now, since $\|u(.,t)+v(.,t)+w(.,t)\|_{L^{p}(\Omega)}^{p}\leq\left(\theta\sigma\right)^{p}\mathcal{L}_{1}(t),\quad\text{ on }\left[0,T_{max}\right),$ (2.17) by virtue of Proposition 3 , for any positive integer $p$ , we
+obtain $u+v+w\in L^{\infty}\left(\left(0,T_{max}\right);L^{p}(\Omega)\right).$ (2.18) Then, the rest of the proof is the same as in the proof of Theorem 1 . Hence, we conclude that the system ( 1.1 ) has a
+unique nonnegative global classical solution. 2.5 Generalizations: Proof of Theorems 3 and 4 . Proof of Theorem 3 . The proof proceeds in a manner similar to that of Theorem 1 , differing only in that $\widetilde{\mathcal{L}}^{\prime}(t)=\mathcal{I}+\widehat{\mathcal{I}}+\mathcal{J},$ (2.19) where $\mathcal{I}$ and $\mathcal{J}$ are the same as in ( 2.3 ) and ( 2.4 ), respectively. The additional term is given by $\widehat{\mathcal{I}}=\displaystyle\int_{\partial\Omega}\left(d_{1}\partial_{u}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)\frac{\partial u}{\partial\eta}+d_{2}\partial_{\varphi}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)\frac{\partial\varphi}{\partial\eta}+d_{3}\partial_{\psi}\widetilde{\mathcal{H}}_{p}(u,\varphi,\psi)\frac{\partial\psi}{\partial\eta}\right)dx.$ (2.20) We now seek to show that, there exists $C\geq 0$ , such that $\widehat{\mathcal{I}}\leq C.$ (2.21) Indeed, we follow the steps as in [ 22 , Page 7] . Thus, we get ( 2.21 ) with $C>0$ for non-homogeneous or mixed homogeneous and non-homogeneous boundary conditions, as well as we have $C=0$ for homogeneous boundary conditions.
+∎ Proof of Theorem 4 . The proof proceeds in a manner similar to that of Theorem 2 , differing only in that $\widetilde{\mathcal{L}}_{1}^{\prime}(t)=\mathcal{I}^{\ast}+\widehat{\mathcal{I}}^{\ast}+\mathcal{J}^{\ast},$ (2.22) where $\mathcal{I}^{\ast}$ and $\mathcal{J}^{\ast}$ are the same as in ( 2.15 ). The additional term is given by $\widehat{\mathcal{I}}^{\ast}=\displaystyle\int_{\partial\Omega}\left(d_{1}\partial_{u}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)\frac{\partial u}{\partial\eta}+d_{2}\partial_{\varphi}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)\frac{\partial\varphi}{\partial\eta}+d_{3}\partial_{\psi}\widetilde{\mathcal{H}}_{p}^{\ast}(u,\varphi,\psi)\frac{\partial\psi}{\partial\eta}\right)dx.$ (2.23) We now seek to show that, there exists $\widetilde{C}\geq 0$ , such that $\widehat{\mathcal{I}}^{\ast}\leq\widetilde{C}.$ (2.24) Indeed, we follow the steps as in [ 22 , Page 7] . Thus, we get ( 2.24 ) with $\widetilde{C}>0$ for non-homogeneous or mixed homogeneous and non-homogeneous boundary conditions, as well as we have $\widetilde{C}=0$ for homogeneous boundary conditions.
+∎ 3 Applications 3.1 Example 1 Consider the example: $\left\{\begin{array}[]{cc}\displaystyle\frac{\partial u}{\partial t}-d_{1}\Delta u=v^{l}-u^{q},&\text{in }\Omega\times\left(0,+\infty\right),\\
+\\
+\displaystyle\frac{\partial v}{\partial t}-d_{2}\Delta v=w^{r}-Bv^{l},&\text{in }\Omega\times\left(0,+\infty\right),\\
+\\
+\displaystyle\frac{\partial w}{\partial t}-d_{3}\Delta w=Au^{q}-Cw^{r},&\text{in }\Omega\times\left(0,+\infty\right),\\
+\\
+\displaystyle\frac{\partial u}{\partial\eta}\left(x,t\right)=\frac{\partial v}{\partial\eta}\left(x,t\right)=\frac{\partial w}{\partial\eta}\left(x,t\right)=0,&\text{on }\partial\Omega\times\left(0,+\infty\right),\\
+\\
+u\left(x,0\right)=u_{0}(x)\text{, }v\left(x,0\right)=v_{0}(x)\text{, }w\left(x,0\right)=w_{0}(x),&\text{in }\Omega,\end{array}\right.$ (3.1) where $l,q,r\geq 1$ , $A$ , $B$ , and $C$ are positive constants such that $A<\min\left\{B,C\right\}$ . The present example is inspired by the system of two equations considered by Kouachi in [ 21 , (4.11)-(4.12)] .
+We have the following result. Theorem 5 . Let $A\leq 1$ , $B\geq\theta^{2(p-1)}$ , $C\geq\sigma^{2(p-1)}$ , such that $p>\frac{\left(N+2\right)}{2}\max\{l.q.r\}$ , and $\theta,\sigma$ satisfy $\left(\text{\ref{Teta_Sigma_Conds}}\right)$ . Then for any $u_{0},v_{0},w_{0}\in L^{\infty}\left(\Omega;\mathbb{R}_{+}\right)$ ,
+there exists a unique nonnegative global classical solution to $\left(\text{\ref{Sys_Ex1}}\right)$ . Moreover, the solution is bounded uniformly in time, i.e. $\sup_{t\geq 0}\|u(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|v(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|w(.,t)\|_{L^{\infty}(\Omega)}<+\infty.$ (3.2) Proof. As all the assumptions of Theorem 1 are fulfilled. Then, the
+global existence and uniform boundedness in time of the solution to system $\left(\text{\ref{Sys_Ex1}}\right)$ follows directly.
+∎ 3.2 Example 2 Consider the following generalized example: $\left\{\begin{array}[]{ll}\displaystyle\frac{\partial u}{\partial t}-d_{1}\Delta u=f\left(S\right)&\text{in }\Omega\times\left(0,\infty\right),\\
+\\
+\displaystyle\frac{\partial v}{\partial t}-d_{2}\Delta v=g\left(S\right)&\text{in }\Omega\times\left(0,\infty\right),\\
+\\
+\displaystyle\frac{\partial w}{\partial t}-d_{3}\Delta w=h\left(S\right)&\text{in }\Omega\times\left(0,\infty\right),\\
+\\
+\displaystyle\frac{\partial u}{\partial\eta}\left(x,t\right)=\frac{\partial v}{\partial\eta}\left(x,t\right)=\frac{\partial w}{\partial\eta}\left(x,t\right)=0&\text{on }\partial\Omega\times\left(0,\infty\right),\\
+\\
+\begin{array}[]{l}u\left(x,0\right)=u_{0}(x)\geqslant 0\text{, }v\left(x,0\right)=v_{0}(x)\geqslant 0,\\
+w\left(x,0\right)=w_{0}(x)\geqslant 0\end{array}&\text{in }\Omega,\end{array}\right.$ (3.3) where, $\left\{\begin{array}[]{c}f(S):=\Psi_{2}(S)-\Psi_{1}(S)-s_{1}\Psi_{3}(S),\\
+\\
+g(S):=\Psi_{3}(S)-\zeta_{2}\Psi_{2}(S)-s_{2}\Psi_{1}(S),\\
+\\
+h(S):=\zeta_{1}\Psi_{1}(S)-\zeta_{3}\Psi_{3}(S)-s_{3}\Psi_{2}(S),\end{array}\right.$ (3.4) subject to the following constraints $s_{1},s_{2},s_{3}\geq 0,\text{ }1\geq\zeta_{1}.$ (3.5) $\Psi_{1},\Psi_{2},\Psi_{3}\in C^{1}\left(\mathbb{R}_{+}^{3};\mathbb{R}_{+}\right).$ (3.6) $\left\{\begin{array}[]{c}\Psi_{1}(0,v,w)=\Psi_{2}(0,v,w)=\Psi_{3}(0,v,w)=0,\text{ for all }(v,w)\in\mathbb{R}_{+}^{2},\\
+\\
+\Psi_{1}(u,0,w)=\Psi_{2}(u,0,w)=\Psi_{3}(u,0,w)=0,\text{ for all }(u,w)\in\mathbb{R}_{+}^{2},\\
+\\
+\Psi_{1}(u,v,0)=\Psi_{2}(u,v,0)=\Psi_{3}(u,v,0)=0,\text{ for all }(u,v)\in\mathbb{R}_{+}^{2}.\end{array}\right.$ (3.7) There exist $C>0$ and $m\in\mathbb{N}$ , such that $\Psi_{1}(S),\Psi_{2}(S),\Psi_{3}(S)\leq C\Lambda(S)^{m},\ \text{ for all }S\in\mathbb{R}_{+}^{3}.$ (3.8) $\displaystyle p$ $\displaystyle=$ $\displaystyle\min\left\{l\in\mathbb{N}\ :\ l>\frac{m\left(N+2\right)}{2}\right\},$ (3.9) $\displaystyle\text{ }\zeta_{2}$ $\displaystyle>$ $\displaystyle\lambda_{1}\geqslant\theta^{2\left(p-1\right)},\text{ }\zeta_{3}>\lambda_{2}\geqslant\sigma^{2\left(p-1\right)}.$ We have the following result. Theorem 6 . According to the assumptions $\left(\text{\ref{Cond1_Ex2}}\right)$ - $\left(\text{\ref{Cond5_Ex2}}\right)$ where $\left(\text{\ref{Teta_Sigma_Conds}}\right)$ holds, and for any $u_{0},v_{0},w_{0}\in L^{\infty}\left(\Omega;\mathbb{R}_{+}\right)$ , there exists a unique nonnegative
+global classical solution to the system ( 3.3 ). Moreover, the solution is bounded uniformly in time, i.e. $\sup_{t\geq 0}\|u(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|v(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|w(.,t)\|_{L^{\infty}(\Omega)}<+\infty.$ (3.10) Proof. The reaction functions $\left(\text{\ref{ReacFuncs_Ex2}}\right)$ , under
+the conditions $\left(\text{\ref{Cond1_Ex2}}\right)$ - $\left(\text{\ref{Cond5_Ex2}}\right)$ , can be readily verified to satisfy the assumptions of
+Theorem 1 . Consequently, the global existence and uniform boundedness in time of the solution to system $\left(\text{\ref{Sys_Ex2}}\right)$ are established.
+∎ 3.3 Example 3: HOIs three-species Lotka-Voltera model In contrast to the previous examples, where the parameters of the systems
+are dependent on the spatial dimension, the growth polynomial’s order, and
+the diffusion coefficients, the current example admits parameters that remain independent of these quantities. A direct
+application of Theorems 3 and 4 demonstrates
+the existence of global classical solution in arbitrary spatial dimensions
+for nonlinear three-species sub-skew-symmetric Lotka-Volterra involving
+higher order interactions and linear diffusion, expressed in the following
+form: $\left\{\begin{array}[]{cc}\vskip 5.69046pt\displaystyle\frac{\partial u}{\partial t}-d_{1}\Delta u=\tau_{1}u+u^{\gamma_{1}}\left(a_{11}u^{\gamma_{1}}+a_{12}v^{\gamma_{2}}+a_{13}w^{\gamma_{3}}\right),&\text{in }\Omega\times\left(0,+\infty\right),\\
+\vskip 5.69046pt\displaystyle\frac{\partial v}{\partial t}-d_{2}\Delta v=\tau_{2}v+v^{\gamma_{2}}\left(a_{21}u^{\gamma_{1}}+a_{22}v^{\gamma_{2}}+a_{23}w^{\gamma_{3}}\right),&\text{in }\Omega\times\left(0,+\infty\right),\\
+\displaystyle\frac{\partial w}{\partial t}-d_{3}\Delta w=\tau_{3}w+w^{\gamma_{3}}\left(a_{31}u^{\gamma_{1}}+a_{32}v^{\gamma_{2}}+a_{33}w^{\gamma_{3}}\right),&\text{in }\Omega\times\left(0,+\infty\right),\\
+\begin{array}[]{c}\displaystyle\lambda_{1}u(x,t)+\left(1-\lambda_{1}\right)\frac{\partial u}{\partial\eta}\left(x,t\right)=\beta_{1},\\
+\displaystyle\lambda_{2}v(x,t)+\left(1-\lambda_{2}\right)\frac{\partial v}{\partial\eta}\left(x,t\right)=\beta_{2},\\
+\displaystyle\lambda_{3}w(x,t)+\left(1-\lambda_{3}\right)\frac{\partial w}{\partial\eta}\left(x,t\right)=\beta_{3},\end{array}&\text{on }\partial\Omega\times\left(0,+\infty\right),\\
+u\left(x,0\right)=u_{0}(x)\text{, }v\left(x,0\right)=v_{0}(x)\text{, }w\left(x,0\right)=w_{0}(x),&\text{in }\Omega,\end{array}\right.$ (3.11) where $A=(a_{ij})\in\mathbb{R}^{3\times 3}$ is sub-skew-symmetric matrix, i.e. $A+A^{T}\leq 0$ where all
+elements of $A+A^{T}$ are non-positive, $(\tau_{1},\tau_{2},\tau_{3})\in\mathbb{R}^{3}$ , and $\gamma_{i}\geq 1$ for $i=1,2,3$ . The boundary conditions are
+defined as ( 1.14 )-( 1.17 ). The diffusive Lotka-Volterra model with higher order interactions $\left(\text{\ref{3SHOIs_LV}}\right)$ , is inspired by the works [ 3 , 4 , 10 , 11 , 34 , 36 ] . The model $\left(\text{\ref{3SHOIs_LV}}\right)$ with $\gamma_{i}=1$ for $i=1.2.3$ , and homogeneous Neumann or Dirichlet boundary
+conditions, have been extensively investigated in the literature due to
+their wide application in biology, see e.g. [ 17 , 30 , 32 , 35 ] . All
+the previous mentioned works concern either weak solutions in all space
+dimensions or classical solutions in small (one and two) space dimensions.
+Until recently, Fellner et al. [ 12 , 13 ] dealt with the case of skew-symmetric Lotka-Volterra systems (i.e. $A+A^{T}=0$ ) with $m-$ equations and $2\leq m\in\mathbb{N}$ , their results imply the existence of classical solution in all space
+dimensions. It is worth noting that their results cannot guarantee
+the global existence of solutions to the system $\left(\text{\ref{3SHOIs_LV}}\right)$ with nonhomogeneous Robin boundary conditions, even at least for $\gamma_{i}=1$ , for $i=1.2.3$ . The outcomes of our study ensure the global
+existence of classical solutions of a class of $\left(\text{\ref{3SHOIs_LV}}\right)$ ,
+where these systems hold for a wide range of boundary conditions $\left(\text{\ref{HNBCs_EX3}}\right)$ - $\left(\text{\ref{MixNHRBCsHDBCs_EX3}}\right)$ , and $\gamma_{i}\geq 1$ for $i=1.2.3$ . In order to simplify the
+notations, we define $\mathcal{SK}_{3\times 3}=\left\{A=(a_{ij})_{1\leq i,j\leq 3}\in\mathbb{R}^{3\times 3}\ :\ A+A^{T}\leq 0\right\},$ $\mathcal{SK}_{3\times 3}^{+}=\left\{A\in\mathcal{SK}_{3\times 3}:\text{ }a_{ij}\geq 0\text{ with }i<j\text{, for }i,j=1,2,3\right\},$ and $\mathcal{SK}_{3\times 3}^{-}=\left\{A\in\mathcal{SK}_{3\times 3}:a_{ij}\leq 0\text{ with }i<j\text{, for }i,j=1,2,3\right\}.$ By employing our aforementioned approach, we can deduce the following result. Theorem 7 (HOIs 3-species Lotka-Voltera model) . Let $N\in\mathbb{N}$ , and $\Omega\subset\mathbb{R}^{N}$ is a bounded domain with smooth boundary $\partial\Omega$ , where $\tau_{i}\in\mathbb{R}$ , and $\gamma_{i}\geq 1$ for $i=1,2,3$ . Additionally, let $A\in\mathcal{SK}_{3\times 3}^{-}$ or $A\in\mathcal{SK}_{3\times 3}^{+}$ . Then for any
+non-negative initial conditions $u_{0},v_{0},w_{0}\in L^{\infty}\left(\Omega\right)$ , and when one of the boundary conditions $\left(\text{\ref{HNBCs_EX3}}\right)$ - $\left(\text{\ref{MixNHRBCsHDBCs_EX3}}\right)$ is
+imposed, there exists a unique nonnegative global classical solution to $\left(\text{\ref{3SHOIs_LV}}\right)$ .
+Moreover, if $\tau_{i}\leq 0$ for all $i=1,2,3$ and in ( 1.16 ) or ( 1.17 ) we have $\beta_{i}\equiv 0$ for $i=1,2,3$ , then the solution is bounded uniformly in time, i.e. $\sup_{t\geq 0}\|u(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|v(.,t)\|_{L^{\infty}(\Omega)},\quad\sup_{t\geq 0}\|w(.,t)\|_{L^{\infty}(\Omega)}<+\infty.$ (3.12) Proof. Set $\left\{\begin{array}[]{c}\widetilde{f}(S):=u^{\gamma_{1}}\left(a_{11}u^{\gamma_{1}}+a_{12}v^{\gamma_{2}}+a_{13}w^{\gamma_{3}}\right),\\
+\widetilde{g}(S):=v^{\gamma_{2}}\left(a_{21}u^{\gamma_{1}}+a_{22}v^{\gamma_{2}}+a_{23}w^{\gamma_{3}}\right),\\
+\widetilde{h}(S):=w^{\gamma_{3}}\left(a_{31}u^{\gamma_{1}}+a_{32}v^{\gamma_{2}}+a_{33}w^{\gamma_{3}}\right),\end{array}\right.$ (3.13) and $\left\{\begin{array}[]{c}\widetilde{\mathcal{C}}_{1}(S):=\lambda_{1}\widetilde{f}(S)+\widetilde{g}(S)+\widetilde{h}(S),\\
+\widetilde{\mathcal{C}}_{2}(S):=\lambda_{2}\widetilde{f}(S)+\lambda_{2}\widetilde{g}(S)+\widetilde{h}(S),\\
+\widetilde{\mathcal{C}}_{3}(S):=\lambda_{1}\lambda_{2}f(S)+\lambda_{2}g(S)+h(S).\end{array}\right.$ The verification of the assumptions (
+                  
+                    A
+                  
+                1) and (
+                  
+                    A
+                  
+                4) is
+straightforward. Since $A\in\mathcal{SK}_{3\times 3}^{-}\subset\mathcal{SK}$ or $A\in\mathcal{SK}_{3\times 3}^{+}\subset\mathcal{SK}$ , thus the
+assumption (
+                  
+                    A
+                  
+                2) is easily obtained. Now, by substituting $\left(\text{\ref{RFs_EX3proof}}\right)$ into the left-hand side of the inequalities $\left(\text{\ref{EqCond_a3}}\right)$ , we get $\left\{\begin{array}[]{c}\widetilde{\mathcal{C}}_{1}(S)\leq\left(\allowbreak\lambda_{1}a_{12}+a_{21}\right)u^{\gamma_{1}}v^{\gamma_{2}}+\left(\allowbreak\lambda_{1}a_{13}+a_{31}\right)u^{\gamma_{1}}w^{\gamma_{3}},\\
+\widetilde{\mathcal{C}}_{2}(S)\leq\left(\lambda_{2}a_{13}+\allowbreak a_{31}\right)u^{\gamma_{1}}w^{\gamma_{3}}+\left(\lambda_{2}a_{23}+a_{32}\right)v^{\gamma_{2}}w^{\gamma_{3}},\\
+\widetilde{\mathcal{C}}_{3}(S)\leq\left(\lambda_{1}\lambda_{2}a_{13}+a_{31}\right)u^{\gamma_{1}}w^{\gamma_{3}}+\left(\lambda_{1}a_{12}+a_{21}\right)u^{\gamma_{1}}v^{\gamma_{2}}\lambda_{2}+\left(\lambda_{2}a_{23}+a_{32}\right)v^{\gamma_{2}}w^{\gamma_{3}}.\end{array}\right.$ Therefore, in order for the following inequalities to be achieved (according to the non-negativity of each component of $S$ ) $\left\{\begin{array}[]{c}\widetilde{\mathcal{C}}_{1}(S)\leq 0,\\
+\widetilde{\mathcal{C}}_{2}(S)\leq 0,\\
+\widetilde{\mathcal{C}}_{3}(S)\leq 0,\end{array}\right.$ it is enough to verify that $\left\{\allowbreak\begin{array}[]{c}\allowbreak\lambda_{1}a_{12}+a_{21}\leq 0,\\
+\allowbreak\lambda_{1}a_{13}+a_{31}\leq 0,\\
+\lambda_{2}a_{13}+\allowbreak a_{31}\leq 0,\\
+\lambda_{2}a_{23}+a_{32}\leq 0,\\
+\lambda_{1}\lambda_{2}a_{13}+a_{31}\leq 0.\end{array}\right.$ (3.14) So we distinguish two cases: • When $A\in\mathcal{SK}_{3\times 3}^{-}:$ It hold that $a_{ij}\leq 0$ with $i<j$ , and $a_{ij}+a_{ji}\leq 0$ , for $i,j=1,2,3$ . Consequently,
+choosing any values $\lambda_{1},\lambda_{2}>1$ is sufficient to ensure
+that ( 3.14 ) is satisfied, and thus the assumption (
+                  
+                    A
+                  
+                3) . Hence, by applying
+Theorem 3 , the desired result is established. • When $A\in\mathcal{SK}_{3\times 3}^{+}:$ It hold that $a_{ij}\geq 0$ with $i<j$ , and $a_{ij}+a_{ji}\leq 0$ , for $i,j=1,2,3$ . Consequently,
+choosing any values $\lambda_{1},\lambda_{2}<1$ is sufficient to ensure
+that ( 3.14 ) is satisfied, and thus the assumption (
+                  
+                    A
+                  
+                3) . Hence, By invoking Theorem 4 , the desired result is established. This completes the proof.
+∎ Remark 2 . If the diffusion coefficients differ from each other, the question of whether system ( 3.11 ) possesses global classical solutions(with or without uniform-in-time bounds) or undergoes blow-up remains open, in the following cases: • When $\gamma_{i}=1$ for $i=1,2,3$ , and $A\in\mathcal{SK}_{3\times 3}\backslash\left(\mathcal{SK}_{3\times 3}^{-}\cup\mathcal{SK}_{3\times 3}^{+}\right)$ , under the boundary condition ( 1.16 ) or ( 1.17 ). • When $\gamma_{i}>1$ for $i=1,2,3$ , and $A\in\mathcal{SK}_{3\times 3}\backslash\left(\mathcal{SK}_{3\times 3}^{-}\cup\mathcal{SK}_{3\times 3}^{+}\right)$ , under one of the boundary conditions ( 1.14 )–( 1.17 ). • When $\gamma_{i}\geq 1$ for $i=1,2,3$ , and $A\in\mathcal{SK}_{3\times 3}$ , under nonlinear boundary conditions. References [1] S. Abdelmalek, S. Kouachi, Proof of existence of global solutions for $m$ -component reaction–diffusion systems with mixed boundary conditions via the Lyapunov functional method, J. Phys. A Math. Theor. 40 (2007) 12335. https://doi.org/10.1088/1751-8113/40/41/005. [2] S. Abdelmalek, M. Kirane, A. Youkana, A Lyapunov functional for a triangular reaction–diffusion system with nonlinearities of exponential growth, Math. Meth. Appl. Sci. 36 (2013) 80–85. https://doi.org/10.1002/mma.2572 [3] M. AlAdwani, S. Saavedra, Is the addition of higher-order interactions in ecological models increasing the understanding of ecological dynamics? Math. Biosci. 315 (2019) 108222. https://doi.org/10.1016/j.mbs.2019.108222 [4] M. AlAdwani, S. Saavedra, Ecological models: higher complexity in, higher feasibility out, J. R. Soc. Interface 17 (172) (2020) 20200607. https://doi.org/10.1098/rsif.2020.0607 [5] N.D. Alikakos, $L^{p}$ -bounds of solutions of reaction–diffusion equations, Commun. Partial Differ. Equ. 4 (1979) 827–868. https://doi.org/10.1080/03605307908820113 [6] H. Amann. Global existence for semilinear parabolic systems. Journal für die reine und angewandte Mathematik, 360 (1985), 47–83. https://doi.org/10.1515/crll.1985.360.47 [7] M.C. Caputo, A. Vasseur, Global regularity of solutions to systems of reaction–diffusion with sub-quadratic growth in any dimension, Commun. Partial Differ. Equ. 34 (2009) 1228–1250. https://doi.org/10.1080/03605300903089867 [8] M.C. Caputo, T. Goudon, A.F. Vasseur, Solutions of the 4-species quadratic reaction–diffusion system are bounded and $C^{\infty}$ -smooth, in any space dimension, Anal. PDE 12 (2019) 1773–1804. https://doi.org/10.2140/apde.2019.12.1773 [9] J.A. Cañizo, L. Desvillettes, K. Fellner, Improved duality estimates and applications to reaction–diffusion equations, Commun. Partial Differ. Equ. 39 (2014) 1185–1204. https://doi.org/10.1080/03605302.2013.829500 [10] L. Desvillettes, T. Lepoutre, A. Moussa, Entropy, duality, and cross diffusion, SIAM J. Math. Anal. 46 (2014) 820–853. https://doi.org/10.1137/130908701 [11] L. Desvillettes, T. Lepoutre, A. Moussa, A. Trescases, On the entropic structure of reaction–cross diffusion systems, Commun. Partial Differ. Equ. 40 (2015) 1705–1747. https://doi.org/10.1080/03605302.2014.998837 [12] K. Fellner, J. Morgan, B.Q. Tang, Global classical solutions to quadratic systems with mass control in arbitrary dimensions, Ann. Inst. H. Poincaré C Anal. Non Linéaire 37 (2020) 281–307. https://doi.org/10.1016/j.anihpc.2019.09.003 [13] K. Fellner, J. Morgan, B.Q. Tang, Uniform-in-time bounds for quadratic reaction–diffusion systems with mass dissipation in higher dimensions, Discrete Contin. Dyn. Syst. Ser. S 14 (2021) 635–651. https://doi.org/10.3934/dcdss.2020334 [14] T. Goudon, A. Vasseur, Regularity analysis for systems of reaction–diffusion equations, Ann. Sci. Éc. Norm. Supér. 43 (2010) 117–142. https://doi.org/10.24033/asens.2117 [15] A. Haraux, M. Kirane, Estimations $C^{1}$ pour des problèmes paraboliques semi-linéaires, Ann. Fac. Sci. Toulouse Math. 5 (1983) 265–280. [16] A. Haraux, A. Youkana, On a result of K. Masuda concerning reaction–diffusion equations, Tohoku Math. J. 40 (1988) 159–163. https://doi.org/10.2748/tmj/1178228084 [17] D. Henry, Geometric Theory of Semilinear Parabolic Equations, Lecture Notes in Mathematics, vol. 840, Springer-Verlag, 1981. [18] S.L. Hollis, R.H. Martin, M. Pierre, Global existence and boundedness in reaction–diffusion systems, SIAM J. Math. Anal. 18 (1987) 744–761. https://doi.org/10.1137/0518057 [19] S.L. Hollis, On the question of global existence for reaction–diffusion systems with mixed boundary conditions, Q. Appl. Math. 51 (1993) 241–250. [20] M. Kirane, Global bounds and asymptotics for a system of reaction–diffusion equations, J. Math. Anal. Appl. 138 (1989) 328–342. https://doi.org/10.1016/0022-247X(89)90293-X [21] S. Kouachi, Existence of global solutions to reaction–diffusion systems via a Lyapunov functional, Electron. J. Differ. Equ. 68 (2001) 1–10. [22] S. Kouachi, Existence of global solutions to reaction–diffusion systems with nonhomogeneous boundary conditions via a Lyapunov functional, Electron. J. Differ. Equ. 88 (2002) 1–13. [23] O. Lady $\breve{\text{z}}$ enskaja, V. Solonnikov, N. Ural’ceva, Linear and Quasi-Linear Equations of Parabolic Type, Amer. Math. Soc., 1968. [24] K. Masuda, On the global existence and asymptotic behavior of solutions of reaction–diffusion equations, Hokkaido Math. J. 12 (1983) 360–370. https://doi.org/10.14492/hokmj/1470081012 [25] J. Morgan, Global existence for semilinear parabolic systems, SIAM J. Math. Anal. 20 (1989) 1128–1144. https://doi.org/10.1137/0520075 [26] J. Morgan, B.Q. Tang, Boundedness for reaction–diffusion systems with Lyapunov functions and intermediate sum conditions, Nonlinearity 33 (2020) 3105. https://doi.org/10.1088/1361-6544/ab8772 [27] R. Nittka, Inhomogeneous parabolic Neumann problems, Czechoslovak Math. J. 64 (2014) 703–742. https://doi.org/10.1007/s10587-014-0127-4 [28] M. Pierre, D. Schmitt, Blowup in reaction–diffusion systems with dissipation of mass, SIAM Rev. 42 (2000) 93–106. https://doi.org/10.1137/S0036144599359735 [29] M. Pierre, Global existence in reaction–diffusion systems with control of mass: a survey, Milan J. Math. 78 (2010) 417–455. https://doi.org/10.1007/s00032-010-0133-4 [30] M. Pierre, T. Suzuki, Y. Yamada, Dissipative reaction–diffusion systems with quadratic growth, Indiana Univ. Math. J. 68 (2019) 291–322. [31] P. Quittner, P. Souplet, Superlinear parabolic problems, Springer International Publishing, 2019. [32] F. Rothe, Global Solutions of Reaction-Diffusion Systems, Lecture Notes in Mathematics 1072, Springer-Verlag, Berlin-New York, 1984. [33] P. Souplet, Global existence for reaction–diffusion systems with dissipation of mass and quadratic growth, J. Evol. Equ. 18 (2018) 1713–1720. https://doi.org/10.1007/s00028-018-0458-y [34] T. Suzuki, Y. Yamada, A Lotka–Volterra system with diffusion, in: Nonlinear Analysis in Interdisciplinary Sciences–Modellings, Theory and Simulations, GAKUTO Internat. Ser. Math. Sci. Appl. 36 (2013) 215–236. [35] T. Suzuki, Y. Yamada, Global-in-time behavior of Lotka–Volterra system with diffusion: skew-symmetric case, Indiana Univ. Math. J. 64 (2015) 181–216. [36] J.H. Vandermeer, The competitive structure of communities: an experimental approach with protozoa, Ecol. 50 (1969) 362–371. https://doi.org/10.2307/1933884 Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

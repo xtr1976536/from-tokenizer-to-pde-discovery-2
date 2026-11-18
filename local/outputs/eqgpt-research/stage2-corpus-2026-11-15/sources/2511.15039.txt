@@ -1,0 +1,705 @@
+The existence and instability of blowing-up steady states for the Shigesada-Kawasaki-Teramoto competition model with cross-diffusion Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 Formulation of the problem and statement of main results 3 Existence and parameterization of the solution branches to the 2nd shadow system ( ) near the blow-up points 3.1 Lyapunov-Schmidt reduction scheme 3.2 The limiting system of ( ) as $\varepsilon\to 0$ 3.3 Proofs of Theorems and 4 Instability of steady states for the shadow system
+near the blow-up point 5 Existence and instability of coexistence states of the SKT model with large cross diffusion 5.1 Perturbation of positive stationary solutions of the 2nd shadow system 5.2 Perturbation of unstable eigenvalues of the linearized problem
+for the 2nd shadow system References License: CC BY 4.0 arXiv:2511.15039v1 [math.AP] 19 Nov 2025 The existence and instability of blowing-up steady states for the Shigesada-Kawasaki-Teramoto competition model with cross-diffusion Corresponding author,
+e-mail address:
+yaping_wu@hotmail.com (Y. Wu). Kousuke Kuto Affiliation: Department of Applied Mathematics, Waseda University Affiliation: 3-4-1 Ohkubo, Shinjuku-ku,
+Tokyo 169-8555,
+Japan Affiliation: Yaping Wu Affiliation: School of Mathematical Sciences, Capital Normal University Affiliation: Beijing 100048, China Abstract This paper is concerned with the existence and stability of a type of blowing-up positive steady states for a
+shadow system of the Shigesada-Kawasaki-Teramoto two species competition model and the perturbed SKT model with a large enough cross diffusion parameter and bounded random diffusion parameters.
+The asymptotic behavior of coexistence steady states
+to the SKT model as one of the cross-diffusion terms
+tends to infinity was studied by Lou and Ni [ 16 ] and it was revealed that
+almost all coexistence states can be characterized by
+one of three shadow systems.
+In [ 7 ] ,
+the first author of this paper studied one of these
+shadow systems with one cross diffusion term in one space dimension
+and proved that a component on the bifurcation branch
+blows up
+as a bifurcation parameter approaches the least positive eigenvalue of $-\Delta$ with homogeneous Neumann boundary condition.
+By applying a different approach from [ 7 ] based on special transformation and Lyapunov-Schmidt reduction method, in this paper we derive the existence and the detailed asymptotic structure of several branches of positive steady states
+near the blow-up points in one or multi-dimensional cases for the shadow system with one or two cross diffusion terms, and all the
+branches of the large steady states obtained for the shadow system near the blow-up points are proved to be spectrally unstable.
+Further by applying perturbation argument, we also proved the existence and instability of several branches of
+the perturbed positive steady states for the original SKT model when one of cross diffusion parameter is large enough. MSC : 35B35, 35B40, 35K20, 35K57, 35P05. Keywords : competition model;
+cross-diffusion;
+Lyapunov-Schmidt reduction; stability of steady states;
+spectral analysis. 1 Introduction In this paper,
+we are concerned with the following
+Lotka-Volterra competition model
+with one or two quasilinear cross diffusion terms $\begin{cases}u_{t}=d_{1}\Delta[\,(1+\alpha v)u\,]+u(a_{1}-b_{1}u-c_{1}v)\ \ &\mbox{in}\ \Omega\times(0,T),\\
+v_{t}=d_{2}\Delta[\,(1+\beta u)v\,]+v(a_{2}-b_{2}u-c_{2}v)\ \ &\mbox{in}\ \Omega\times(0,T),\\
+\frac{\partial u}{\partial\nu}=\frac{\partial v}{\partial\nu}=0\ \ &\mbox{on}\ \partial\Omega\times(0,T),\\
+u(x,0)=u_{0}(x)\geq 0,\ v(x,0)=v_{0}(x)\geq 0\ \ &\mbox{in}\ \Omega,\end{cases}$ (1.1) where $0<T\leq+\infty$ ; $\Omega\,(\subset\mathbb{R}^{N})$ is a bounded domain
+with a smooth boundary $\partial\Omega$ ; $\nu(x)$ denotes the outward unit normal vector at $x\in\partial\Omega$ ; the unknown functions $u(x,t)$ and $v(x,t)$ ,
+respectively, stand for the population densities of
+competing species
+at location $x$ in the habitat $\Omega$ and time $t>0$ ; and the
+positive constants $(a_{1},a_{2})$ , $(b_{1},c_{2})$ and $(c_{1},b_{2})$ represent the birth rates of respective species,
+degrees of the intra-specific competitions
+and
+the degrees of the inter-specific competitions; and the
+positive constants $d_{i}$ represent the rates of diffusion caused by
+random movement of individuals of each species.
+The nonlinear diffusion term $d_{1}\alpha\Delta(uv)$ (resp. $d_{2}\beta\Delta(uv)$ )
+is usually referred as
+the SKT type of cross-diffusion term which describes an ability
+of the species of $u$ (resp. $v$ ) which diffuses from the high
+density region of the competitor $v$ (resp. $u$ )
+toward the low density region;
+we refer to [ 23 ] for the ecological background of
+such cross-diffusion terms. A class of Lotka-Volterra competition models
+with the SKT type of quasilinear cross-diffusion terms were first proposed
+by Shigesada, Kawasaki and Teramoto [ 24 ] for the purpose of realizing the segregation phenomena
+of two competing species observed
+in the real ecosystem, and the
+system ( 1.1 ) is a simplified Shigesada-Kawasaki-Teramoto competition model with cross diffusion under the homogeneous Neumann boundary condition, which will be simply called the SKT system in the following of this paper. Since the pioneering work [ 24 ] , the effect of cross-diffusion on global existence of solutions in time, and the existence and stability/instability of nontrivial steady states for SKT types of cross diffusion systems have been widely and deeply investigated by many mathematicians, and the review of some earlier important research works on SKT types of cross diffusion systems can be found in the survey papers [ 2 , 21 , 29 , 30 ] . In this paper we focus on the investigation of the existence and stability/instability of some special types of co-existence steady states $(u(x),v(x))$ to the SKT system ( 1.1 ) with a large enough cross diffusion parameter, where the steady states are nontrivial positive solutions
+to the Neumann boundary value problem of the following nonlinear elliptic system: $\begin{cases}d_{1}\Delta[\,(1+\alpha v)u\,]+u(a_{1}-b_{1}u-c_{1}v)=0\ \ &\mbox{in}\ \Omega,\\
+d_{2}\Delta[\,(1+\beta u)v\,]+v(a_{2}-b_{2}u-c_{2}v)=0\ \ &\mbox{in}\ \Omega,\\
+\frac{\partial u}{\partial\nu}=\frac{\partial v}{\partial\nu}=0\ \ &\mbox{on}\ \partial\Omega,\\
+u>0,\ v>0\ \ &\mbox{in}\ \Omega.\end{cases}$ (1.2) The first important theoretical work on the existence of nontrivial positive steady states of ( 1.1 ) with a large cross diffusion parameter is due to Mimura, Nishiura, et al. [ 19 ] , in which it was shown that for the strong competition case $\frac{b_{1}}{b_{2}}<\frac{c_{1}}{c_{2}}$ when $d_{2}>0$ is small, $d_{1}$ is large enough and $\alpha>0$ is not small, the SKT model ( 1.1 ) with one dimensional $\Omega$ admits several types of positive steady states with transition layers or boundary layers; and the spectral stability/instability of such steady states of ( 1.1 ) were proved in [ 3 ] . The existence/nonexistence of nontrivial positive solutions to the stationary SKT system ( 1.2 ) with one dimensional or multi-dimensional $\Omega$ were widely and deeply investigated in [ 15 ] and [ 16 ] . Especially for the system ( 1.2 ) with large $\alpha$ and bounded $d_{2}>0$ and small $\beta\geq 0$ , Lou and Ni [ 16 ] proved the uniform boundedness of all positive steady states and
+found several types of shadow systems which can characterize
+the limits of positive solutions of ( 1.2 ) as $\alpha\to\infty$ with $d_{1}\to d_{\infty}>0$ or $d_{1}\to\infty$ for the fixed $d_{2}$ and $\beta\geq 0$ .
+To be precise,
+three types of shadow systems were obtained in the following sense: Theorem 1.1 ( [ 16 , Theorem 1.4] ) . Suppose that $N\leq 3$ , $a_{1}/a_{2}\neq b_{1}/b_{2}$ , $a_{1}/a_{2}\neq c_{1}/c_{2}$ and $a_{2}/d_{2}\neq\lambda_{j}$ for
+any positive eigenvalue $\lambda_{j}$ of $-\Delta$ with the homogeneous Neumann boundary condition on $\partial\Omega$ . Let $(u_{n},v_{n})$ be a sequence of positive nontrivial solutions of ( 1.2 ) with $(d_{1},\;\alpha)=(d_{1,n},\alpha_{n})$ and each fixed $d_{2}>0$ and $\beta\geq 0$ , then there exists a small $\delta=$ $\delta(a_{i},b_{i},c_{i},d_{i})>0$ such that
+if $\beta\leq\delta$ ,
+the following conclusions hold. (1) If $\alpha_{n}\rightarrow\infty$ and $d_{1,\;n}\rightarrow d_{1}\in(0,\;\infty)$ as $n\to+\infty$ , then by passing to a subsequence if necessary, the sequence of $\{(u_{n},v_{n})\}$ must satisfy either (i) or (ii) below; (2) If $\alpha_{n}\rightarrow\infty$ and $d_{1,\;n}\rightarrow\infty$ as $n\to+\infty$ , then by passing to a subsequence if necessary, the sequence $\{(u_{n},v_{n})\}$ must satisfy either (i) or (iii) below, where (i) $(u_{n},\;v_{n})$ converges uniformly to positive $(\frac{\tau}{v},v)$ as $n\to+\infty$ , where $\tau$ is a positive constant and $(\tau,v(x))$ satisfies $\displaystyle\begin{cases}\displaystyle\int_{\Omega}\dfrac{1}{v}\left(a_{1}-\dfrac{b_{1}\tau}{v}-c_{1}v\right)=0\;,\\
+d_{2}\Delta v+v(a_{2}-c_{2}v)-b_{2}\tau=0\ \ &\mbox{in}\ \Omega,\\
+\frac{\partial v}{\partial\nu}=0\ \ &\mbox{on}\ \partial\Omega;\\
+\end{cases}$ (1.3) (ii) $(u_{n},\;\alpha_{n}v_{n})$ converges uniformly to positive $(u,w)$ as $n\to+\infty$ , where $(u,w)$ is a positive solution of $\displaystyle\left\{\begin{array}[]{ll}d_{1}\Delta[(1+w)u]+u(a_{1}-b_{1}u)=0&\mbox{in}\ \Omega,\\
+d_{2}\Delta[(1+\beta u)w]+w(a_{2}-b_{2}u)=0&\mbox{in}\ \Omega,\\
+\frac{\partial u}{\partial\nu}=\frac{\partial w}{\partial\nu}=0&\mbox{on}\ \partial\Omega;\end{array}\right.$ (iii) $(u_{n},\;\alpha_{n}v_{n})$ converges uniformly to positive $(\frac{\tau}{1+w},w)$ , where $\tau$ is a positive constant and $(\tau,w(x))$ satisfies $\displaystyle\left\{\begin{aligned} &\int_{\Omega}\frac{a_{1}}{(1+w)}-\int_{\Omega}\frac{b_{1}\tau}{(1+w)^{2}}=0,\\
+&d_{2}\Delta[(1+\beta\frac{\tau}{1+w})w]+w\left(a_{2}-\frac{b_{2}\tau}{1+w}\right)=0\ \mbox{in}\ \Omega,\\
+&w>0,\ x\in\Omega;\ \frac{\partial w}{\partial\nu}=0\;\;\mbox{on}\ \partial\Omega.\end{aligned}\right.$ (1.8) Theorem 1.1 gives
+three shadow systems
+( 1.3 ), ( 1.1 ) and ( 1.8 ) as $\alpha\to\infty$ .
+In this paper, we call ( 1.3 ) the 1st shadow system , ( 1.1 ) the 2nd shadow system , and ( 1.8 ) the 3rd shadow system .
+It can be ecologically said that
+the first shadow system ( 1.3 )
+characterizes the segregation in the sense that $v$ has a positive limit and $uv\to\tau$ as $\alpha\to+\infty$ with bounded $d_{1}$ or $d_{1}\to\infty$ ,
+whereas
+the 2nd system ( 1.1 ) characterizes the extinction
+of the species of $v$ with the order $1/\alpha$ as $\alpha\to+\infty$ with bounded or fixed $d_{1}$ , and 3rd shadow system ( 1.1 ) characterizes the extinction
+of the species of $v$ as $\alpha\to+\infty$ and $d_{1}\to+\infty$ . In this paper we always denote $A=\frac{a_{1}}{a_{2}}$ , $B=\frac{b_{1}}{b_{2}}$ and $C=\frac{c_{1}}{c_{2}}$ . Since the pioneering work of Lou and Ni [ 16 ] , the 1st shadow system ( 1.3 ) has been deeply and widely investigated by some mathematicians (see [ 6 , 17 , 18 , 20 , 21 , 27 , 28 , 31 ] ). In the one dimensional case with $\Omega=(0,1)$ , Lou, Ni and Yotsutani [ 17 ] obtained remarkable results in which
+almost all solutions of ( 1.3 )
+are explicitly expressed by elliptic functions.
+In [ 17 ] , the diffusion coefficient $d_{2}$ is
+employed as a main parameter to analyze the set
+of solutions.
+As a rough description of results obtained in [ 17 ] for the 1st shadow system ( 1.3 ),
+for the case when $A>B$ ,
+the existence range of $d_{2}$ for the positive strictly monotone solutions
+is contained in $(0,a_{2}/\pi^{2})$ .
+Further, in [ 17 ] they obtained the asymptotic behavior
+of the monotone solutions for the 1st shadow system ( 1.3 ) as $d_{2}\to 0$ or $d_{2}\to a_{2}/\pi^{2}$ .
+In [ 17 ] for the case $A>\frac{1}{4}B+\frac{3}{4}C\;\;{\rm if}\;B<C$ , and the case $A>\frac{B+C}{2}\;\;{\rm if}\;B>C$ ; it was proved that for small enough $d_{2}>0$ there exist positive spiky steady states to the 1st shadow system ( 1.3 ) with $\Omega=(0,1)$ , which are naturally expected to be perturbed to a type of large spiky steady states of the original SKT system ( 1.2 ) with large $\alpha$ and small $d_{2}$ . In [ 28 ] for any $A>\frac{B+3C}{4}$ and small $d_{2}>0$ , the second author of the present paper and her cooperator obtained the existence and detailed spiky structure of large spiky steady states to the original SKT system ( 1.2 ) with $\Omega=(0,1)$ when both $d_{1}$ and $\alpha$ are large enough. Kolokolnikov and Wei [ 6 ] obtained the existence and the stability/instability of large spiky steady states in some multi-dimensional case of some simplified SKT competition model ( 1.1 ) with large cross diffusion. In [ 17 ] it was also proved that for any $A>B$ the 1st shadow system ( 1.3 ) with $\Omega=(0,1)$ has a type of nontrivial positive steady states $(\xi_{d_{2}},\psi_{d_{2}}(x))$ with singular bifurcation structure when $d_{2}$ is less than and near $a_{2}/\pi^{2}$ , where $(\xi_{d_{2}},\psi_{d_{2}}(x))\to(0,0)$ and $\frac{\xi_{d_{2}}}{\psi_{d_{2}}(x)}\to$ $\frac{a_{2}}{b_{2}}\frac{1}{1-\sqrt{1-B/A}\cos(\pi x)}$ as $d_{2}\to a_{2}/\pi^{2}$ . Ni, Wu and Xu [ 22 ] obtained the detailed structure of $(\xi_{d_{2}},\psi_{d_{2}}(x))$ as $d_{2}\to a_{2}/\pi^{2}$ and proved the existence and stability of steady states $(u(x),v(x))$ perturbed from $(\xi_{d_{2}}/\psi_{d_{2}}(x),\psi_{d_{2}}(x))$ for the original SKT model ( 1.1 ) with $\Omega=(0,1)$ and $\beta=0$ when both $d_{1}$ and $\alpha$ are large enough. For some multi-dimensional $\Omega$ , by applying a different approach from [ 22 ] , Lou, Ni and Yotsutani [ 18 ] proved the existence and stability of several branches of
+positive steady states for the corresponding evolution problem of the 1st shadow system ( 1.3 ) and for the original SKT model ( 1.1 ) with large $d_{1}$ and $\alpha$ when $d_{2}$ is slightly less than $a_{2}/\lambda_{j}$ . Recently, a series of works were obtained by Yotsunani’s group
+( [ 20 , 31 ] )
+for further results on the 1st shadow system ( 1.3 ) with one dimensional $\Omega$ . As far as we know, there are not much work on the shadow system ( 1.1 ) or ( 1.8 ), where the $v$ component of the steady state to the original SKT system ( 1.2 ) is assumed to tend to zero but $\alpha v(x)$ tends to a positive and bounded function as $\alpha\to+\infty$ . The first theoretical work based on the investigation of the 3rd shadow system ( 1.8 ) (the limiting system of 2nd shadow system ( 1.1 ) as $d_{1}\to+\infty$ ) is due to Lou and Ni [ 16 ] , in which for any $A>B$ and small enough $d_{2}>0$ and when $\Omega$ is an interval, they proved the existence of positive spiky steady states
+to the 3rd shadow system ( 1.8 ) and the existence of the corresponding spiky steady states near $(a_{1}/b_{1},0)$ to the original SKT model ( 1.1 ) with $\beta=0$ and small $d_{2}>0$ when both $d_{1}$ and $\alpha$ are large enough; such spiky steady states of the evolution 3rd shadow system ( 1.8 ) and the original SKT model ( 1.1 ) with large $d_{1}$ and $\alpha$ are proved to be unstable in [ 26 ] . However, there was no paper discussing
+the 2nd shadow system ( 1.1 ) (with bounded $d_{1}>0$ ) before [ 7 ] .
+In [ 7 ] , the first author of the present paper
+studied the bifurcation
+structure of the set of nontrivial positive steady states
+to the 2nd shadow system ( 1.1 )
+with $\beta=0$ ; in which it was shown that if $d_{2}\lambda_{1}<a_{1}b_{2}/b_{1}$ ,
+then monotone positive solutions bifurcate from a positive constant
+solution at $a_{2}=a_{1}b_{2}/b_{1}$ in the multi-dimensional case.
+Furthermore, Li and the second author of the present paper [ 13 ] derived more detailed structure and the instability of the local bifurcating steady states
+near the bifurcation point. For the 2nd shadow system ( 1.1 ) with $\beta=0$ and 1-dimensional $\Omega$ ,
+it was also proved
+in [ 7 ] that there exists a global branch
+of positive steady state $(u(x),w(x))$ for $d_{2}\pi^{2}<a_{2}<a_{1}b_{2}/b_{1}$ bifurcating from $a_{2}=a_{1}b_{2}/b_{1}$ and blowing up as $a_{2}$ tends to $d_{2}\lambda_{1}$ .
+By replacing the bifurcation parameter $a_{2}$ by $d_{2}$ ,
+the global bifurcating result can be interpreted as that
+the $w$ component on the branch blows up
+as $d_{2}$ approaches $a_{2}/\lambda_{1}$ .
+Furthermore, in [ 7 ] it was verified that
+the asymptotic profiles
+of solutions of the two shadow systems
+( 1.3 ) and ( 1.1 )
+as $d_{2}\to a_{2}/\lambda_{1}$ coincide with each other after normalization
+in the case when $\beta=0$ and $\Omega$ is an interval. It can be conjectured that for the multi-dimensional case the 2nd shadow system ( 1.1 ) still admits a positive solution branch with $w$ -component blowing up as $d_{2}$ tends to $a_{2}/\lambda_{1}$ , and it is naturally guessed that the original SKT model ( 1.2 )
+with sufficiently large $\alpha$ and $\beta=0$ admits some lower branches of positive solutions perturbed from some
+solution branches of the 2nd
+shadow system ( 1.1 ), which connect some upper branches of positive solutions perturbed from the
+solution branches of the 1st
+shadow system ( 1.3 ) as $d_{2}\uparrow a_{2}/\lambda_{1}$ . Recently Li and the second author of present paper [ 14 ] (for the case $\beta=0$ ) and Tang [ 25 ] (for the case $\beta>0$ ) proved the existence and instability of several branches of positive steady states bifurcating from infinity to the 3rd shadow system ( 1.8 ) when $d_{2}$ is near $a_{2}/\lambda_{1}$ and $\Omega$ can be multi-dimensional, by applying special transformation and detailed spectral analysis combined with Lyapunov-Schmidt decomposition technique. The results obtained in [ 14 ] and [ 25 ] also verify the above conjecture about the existence of some lower branches of positive steady states to the original SKT model when both $d_{1}$ and $\alpha$ are large enough and $d_{2}$ is less than and near $a_{2}/\lambda_{1}$ . However the transformation and decomposition techniques applied in [ 14 ] and [ 25 ] cannot be applied to the 2nd shadow system (when $d_{1}$ is bounded and fixed) directly, and the asymptotic structures of the branches of blow-up steady states to the 2nd shadow system seem to be more complicated than those of the 3rd shadow system, which will be stated and remarked in the following section. The asymptotic behavior of positive steady states to the SKT system ( 1.2 )
+when one or two cross diffusion parameters tend to infinity have been pursued in various settings
+by several research groups in recent years. In [ 11 , 12 ] , the first author of the present paper and Yamada investigated the asymptotic behavior of nontrivial positive steady states to the SKT system ( 1.2 ) as $\alpha\to\infty$ with $d_{1}$ kept bounded under Dirichlet boundary conditions, and proved that the 2nd shadow system ( 1.1 ) with Dirichlet boundary condition is the unique limiting system, the global bifurcation structures of the positive steady states to the related limiting system were also established in [ 11 , 12 ] . The first author of the present paper and his group also studied the asymptotic behavior of nontrivial positive steady states of ( 1.2 ) when both $\alpha$ and $\beta$ tend to infinity with the same rate (the so-called full cross-diffusion limit). Under the Neumann boundary conditions as in ( 1.2 ),
+the existence of a unique limiting system for positive steady states was established in [ 8 ] ,
+and the global bifurcation structure of positive steady states in one dimensional case was obtained in [ 9 ] .
+On the other hand, for the stationary SKT problem ( 1.2 ) with Dirichlet boundary conditions, two distinct limiting systems arise under the full cross-diffusion limit, and their global bifurcation structures
+were investigated in [ 1 ] .
+Furthermore, the stability of the global bifurcation branches obtained therein
+was analyzed in [ 10 ] . It is worth mentioning that due to some essential or technical difficulties in proving the uniform boundedness of some norms of the classical solutions with time, such as $\|u_{t}(t,\cdot)\|_{L_{\infty}(\Omega)}$ or $\|\alpha v(t,\cdot)\|_{L_{\infty}(\Omega)}$ , to the evolution SKT model ( 1.1 ) with large enough $\alpha$ , even in finite time interval $[0,T]$ and in one dimensional $\Omega$ ; or in proving the global existence of solution in time for any given nonnegative initial data in higher dimensional $\Omega$ or when both $\alpha$ and $\beta$ are positive; it seems that the investigation on all the possible limiting systems or the asymptotic behavior of all the positive solutions with time to the evolution SKT model ( 1.1 ) under large cross-diffusion limit (as $\alpha\to+\infty$ ) are more difficult or more complicated than those of the stationary SKT problems. However under some additional assumptions on the uniform boundedness or special types of boundedness of solutions with time, several types of evolution shadow systems of SKT model ( 1.1 ) under large cross diffusion limit can be similarly derived whose steady states satisfy the related stationary shadow systems (see also Kan-on [ 5 ] for the related argument). The investigation on the spectral stability/instability on the steady states to the corresponding evolution shadow system usually play key roles in proving the spectral stability/instability of the perturbed steady states for the original evolution SKT system ( 1.1 ) with large cross diffusion. The existence of new types of stable nontrivial positive steady states to the original SKT models with large cross diffusion also indicates the appearance of new types of pattern formation induced by large cross diffusion, in this sense the stability analysis of nontrivial steady states to the SKT model is also interesting or more important in both math and application. In this paper we shall apply a different approach from [ 7 , 14 , 25 ] to investigate the existence and the detailed asymptotic behavior of several branches of positive steady states bifurcating from infinity to the more general 2nd shadow system ( 1.1 ) with bounded $\beta\geq 0$ and fixed $d_{1}>0$ when $d_{2}$ is near $a_{2}/\lambda_{j}$ , where $\Omega$ can be multi-dimensional, our new results also verify the above mentioned conjectures when $d_{2}$ is close to $a_{2}/\lambda_{j}$ . In this paper we also study the spectral stability/instability of large steady states to the evolution 2nd shadow system ( 1.1 ) with $\beta\geq 0$ and $d_{1}>0$ when $d_{2}$ is near $a_{2}/\lambda_{j}$ . Furthermore we also investigate the existence and the stability of the perturbed steady states to the original SKT system ( 1.1 ) with bounded $\beta\geq 0$ and fixed $d_{1}>0$ when $d_{2}$ is near $a_{2}/\lambda_{j}$ and $\alpha$ is large enough. The results obtained in this paper also cover the case when $d_{1}$ is large enough. 2 Formulation of the problem and statement of main results For convenience of later investigation on the detailed asymptotic behavior and stability/instability of the blowing-up steady states to the 2nd
+shadow system or to the original system ( 1.1 ) when $d_{2}$ is close to $a_{2}/\lambda_{j}$ , we first investigate the original evolution system ( 1.1 ) and the corresponding evolution system of the 2nd shadow system after a series of transformations. Let $(u_{n}(x,t),v_{n}(x,t))$ be a sequence of positive solutions of the original SKT evolution system ( 1.1 ) with cross diffusion parameters $\alpha=\alpha_{n}$ and fixed $\beta\geq 0$ and smooth nonnegative initial data $(u_{0}(x),v_{n0}(x))$ , after the transformation $w=\alpha_{n}v$ , then $(u_{n}(x,t),w_{n}(x,t))$ satisfy the following initial boundary value problem: $\begin{cases}u_{nt}=d_{1}\Delta[\,(1+w_{n})u_{n}\,]+u_{n}(a_{1}-b_{1}u_{n}-c_{1}\frac{w_{n}}{\alpha_{n}})\ \ &\mbox{in}\ \Omega\times(0,T),\\
+w_{nt}=d_{2}\Delta[\,(1+\beta u_{n})w_{n}\,]+w_{n}(a_{2}-b_{2}u_{n}-c_{2}\frac{w_{n}}{\alpha_{n}})\ \ &\mbox{in}\ \Omega\times(0,T),\\
+\frac{\partial u_{n}}{\partial\nu}=\frac{\partial w_{n}}{\partial\nu}=0\ \ &\mbox{on}\ \partial\Omega\times(0,T),\\
+u_{n}(x,0)=u_{0}(x)\geq 0,\;w_{n}(x,0)=\alpha_{n}v_{n0}(x)\geq 0&\mbox{in}\ \Omega.\\
+\end{cases}$ (2.1) Assume that $\alpha_{n}\to+\infty$ and $\alpha_{n}v_{n0}(x)\to w_{0}(x)\geq 0$ in $W^{1,p}(\Omega)$ ( $p>N$ ) as $n\to+\infty$ and $\|w_{n}(\cdot,t)\|_{W^{1,p}(\Omega)}$ and $\|u_{n}(\cdot,t)\|_{W^{1,p}(\Omega)}$ are bounded as $\alpha_{n}\rightarrow\infty$ for the bounded $\beta\geq 0$ and any $t\in[0,T)$ ,
+then it can be proved that $(u_{n}(x,t),w_{n}(x,t))\to(u(x,t),w(x,t))$ in some classical sense for $t\in[0,T)$ , where $(u,w)$ is the unique classical nonnegative solution to the following limiting system of ( 2.1 ) as $\alpha\to+\infty$ : $\begin{cases}u_{t}=d_{1}\Delta[\,(1+w)u\,]+u(a_{1}-b_{1}u)\ \ &\mbox{in}\ \Omega\times(0,T),\\
+w_{t}=d_{2}\Delta[\,(1+\beta u)w\,]+w(a_{2}-b_{2}u)\ \ &\mbox{in}\ \Omega\times(0,T),\\
+\frac{\partial u}{\partial\nu}=\frac{\partial w}{\partial\nu}=0\ \ \ &\mbox{on}\ \partial\Omega\times(0,T),\\
+u(x,0)=u_{0}(x)\geq 0,\;w(x,0)=w_{0}(x)\geq 0&\mbox{in}\ \Omega.\\
+\end{cases}$ (2.2) In this paper, we let $\{\lambda_{j}\}_{j=0}^{\infty}$ denote the eigenvalues of $-\Delta$ with homogeneous Neumann boundary condition on $\partial\Omega$ , ordered increasingly: $0=\lambda_{0}<\lambda_{1}<\lambda_{2}<\cdots.$ Assume that $a_{2}\lambda_{j}^{-1}-d_{2}>0$ is sufficiently small and denote $\varepsilon=a_{2}\lambda_{j}^{-1}-d_{2}>0$ for some simple eigenvalue $\lambda_{j}$ ( $j\geq 1$ ).
+We intend to prove that, under this assumption the shadow system ( 2.2 ) admits a branch of blow-up steady states $(u(x,d_{2}),w(x,d_{2}))$ for $N\geq 1$ , $\beta\geq 0$ , with $\|w(x,d_{2})\|_{L^{\infty}(\Omega)}\to+\infty,\qquad\|u(x,d_{2})\|_{L^{\infty}(\Omega)}\ \text{bounded,\; as}\ d_{2}\uparrow a_{2}/\lambda_{j}.$ Denote $\varepsilon=a_{2}\lambda^{-1}_{j}-d_{2}$ ,
+after the transformation $\tilde{w}=\varepsilon w,~~\phi=\varepsilon(1+w)u=(\varepsilon+\tilde{w})u,~\psi=(1+\beta u)\tilde{w}$ (2.3) for $u,w>0$ ,
+then the evolutional system ( 2.2 ) becomes $\begin{cases}\varepsilon u_{t}=d_{1}\Delta[(\varepsilon+\tilde{w})u]+\varepsilon u(a_{1}-b_{1}u)\ \ &\mbox{in}\ \Omega\times(0,T),\\
+\tilde{w}_{t}=d_{2}\Delta[(1+\beta u)\tilde{w}]+\tilde{w}(a_{2}-b_{2}u)\ \ &\mbox{in}\ \Omega\times(0,T),\\
+\frac{\partial u}{\partial\nu}=\frac{\partial\tilde{w}}{\partial\nu}=0\ \ \ &\mbox{on}\ \partial\Omega\times(0,T),\\
+\end{cases}$ (2.4) Using $u=\frac{\phi}{\varepsilon+\tilde{w}},~~\tilde{w}=\frac{\psi}{1+\beta u}=\frac{(\varepsilon+\tilde{w})\psi}{\beta\phi+\varepsilon+\tilde{w}}$ and $\psi>\beta\phi$ for $\beta>0$ and $u,\tilde{w}>0$ ,
+then for any $\beta\geq 0$ $\begin{cases}u=h_{1\varepsilon}(\phi,\psi):=\frac{2\phi}{\psi-\beta\phi+\varepsilon+\sqrt{(\psi-\beta\phi+\varepsilon)^{2}+4\varepsilon\beta\phi}},\\[5.69054pt]
+\tilde{w}=h_{2\varepsilon}(\phi,\psi):=\frac{\psi-\beta\phi-\varepsilon+\sqrt{(\psi-\beta\phi+\varepsilon)^{2}+4\varepsilon\beta\phi}}{2}.\\
+\end{cases}$ (2.5) Thus the system ( 2.4 ) can be written as the evolutional system of $(\phi,\psi)$ : $\begin{cases}\varepsilon(h_{1\varepsilon}(\phi,\psi))_{t}=d_{1}\Delta\phi+\varepsilon h_{1\varepsilon}(a_{1}-b_{1}h_{1\varepsilon})\ \ &\mbox{in}\ \Omega\times(0,T),\\
+(h_{2\varepsilon}(\phi,\psi))_{t}=d_{2}\Delta\psi+h_{2\varepsilon}(a_{2}-b_{2}h_{1\varepsilon})\ \ &\mbox{in}\ \Omega\times(0,T),\\
+\frac{\partial\phi}{\partial\nu}=\frac{\partial\psi}{\partial\nu}=0\ \ \ &\mbox{on}\ \partial\Omega\times(0,T).\\
+\end{cases}$ (2.6) Using $\varepsilon=\frac{a_{2}}{\lambda_{j}}-d_{2}$ , $\hat{\varepsilon}=\frac{1}{d_{2}}-\frac{\lambda_{j}}{a_{2}}\sim\frac{\lambda^{2}_{j}}{a^{2}_{2}}\varepsilon$ as $\varepsilon\downarrow 0$ ;
+and note that $\begin{cases}h_{1\varepsilon}(\phi,\psi)=h_{10}(\phi,\psi)+\varepsilon h^{*}_{1}(\phi,\psi)+O(\varepsilon^{2}),\\
+h_{2\varepsilon}(\phi,\psi)=h_{20}(\phi,\psi)+\varepsilon h^{*}_{2}(\phi,\psi)+O(\varepsilon^{2}),\end{cases}$ (2.7) with $\begin{cases}h_{10}(\phi,\psi)=\frac{\phi}{\psi-\beta\phi},~~~~~~h^{*}_{1}(\phi,\psi)=\frac{\partial h_{1\varepsilon}}{\partial\varepsilon}(\phi,\psi)|_{\varepsilon=0}=-\frac{\phi}{(\psi-\beta\phi)^{2}}[1+\frac{\beta\phi}{\psi-\beta\phi}],\\
+h_{20}(\phi,\psi)=\psi-\beta\phi,~~~h^{*}_{2}(\phi,\psi)=\frac{\partial h_{2\varepsilon}}{\partial\varepsilon}(\phi,\psi)|_{\varepsilon=0}=\frac{\beta\phi}{\psi-\beta\phi},\end{cases}$ (2.8) then the boundary value problem of ( 2.6 ) can be rewritten as $\begin{cases}\frac{\varepsilon}{d_{1}}(h_{1\varepsilon}(\phi,\psi))_{t}=\Delta\phi+\varepsilon f_{1}(\phi,\psi,\varepsilon)\ \ &\mbox{in}\;\Omega\times(0,T),\\[5.69054pt]
+\frac{1}{d_{2}}(h_{2\varepsilon}(\phi,\psi))_{t}=\Delta\psi+\lambda_{j}\psi-\left(\beta+\frac{b_{2}}{a_{2}}\right)\lambda_{j}\phi+\varepsilon f_{2}(\phi,\psi,\varepsilon)\ \ &\mbox{in}\;\Omega\times(0,T),\\[5.69054pt]
+\frac{\partial\phi}{\partial\nu}=\frac{\partial\psi}{\partial\nu}=0\ \ &\mbox{on}\ \partial\Omega\times(0,T),\\
+\end{cases}$ (2.9) with $\begin{cases}f_{1}(\phi,\psi,\varepsilon)=\frac{h_{1\varepsilon}}{d_{1}}(a_{1}-b_{1}h_{1\varepsilon}),\\
+f_{2}(\phi,\psi,\varepsilon)=\frac{1}{\varepsilon}\left[\frac{h_{2\varepsilon}}{d_{2}}(a_{2}-b_{2}h_{1\varepsilon})-\frac{h_{20}\lambda_{j}}{a_{2}}(a_{2}-b_{2}h_{10})\right],\end{cases}$ (2.10) and it is easy to check that as $\varepsilon\to 0$ , $\begin{array}[]{l}f_{1}(\phi,\psi,\varepsilon)\rightarrow f^{0}_{1}(\phi,\psi):=\frac{h_{10}}{d_{1}}(a_{1}-b_{1}h_{10})=\frac{\phi}{d_{1}(\psi-\beta\phi)}\left(a_{1}-b_{1}\frac{\phi}{\psi-\beta\phi}\right),\\[5.69054pt]
+f_{2}(\phi,\psi,\varepsilon)\rightarrow f^{0}_{2}(\phi,\psi)=\left(\frac{\lambda^{2}_{j}}{a^{2}_{2}}h_{20}+\frac{\lambda_{j}}{{a_{2}}}h^{*}_{2}\right)(a_{2}-b_{2}h_{10})-\frac{\lambda_{j}}{a_{2}}b_{2}h_{20}h^{*}_{1}\\[5.69054pt]
+=\left(\frac{\lambda^{2}_{j}}{a^{2}_{2}}(\psi-\beta\phi)+\frac{\lambda_{j}\beta\phi}{a_{2}(\psi-\beta\phi)}\right)\left(a_{2}-b_{2}\frac{\phi}{\psi-\beta\phi}\right)+\frac{\lambda_{j}b_{2}}{a_{2}}\frac{\phi}{\psi-\beta\phi}\left(1+\frac{\beta\phi}{\psi-\beta\phi}\right)\\[5.69054pt]
+=\frac{\lambda^{2}_{j}}{a_{2}}(\psi-\beta\phi)-\frac{\lambda^{2}_{j}b_{2}\phi}{a^{2}_{2}}+\left(\beta+\frac{b_{2}}{a_{2}}\right)\lambda_{j}\frac{\phi}{\psi-\beta\phi}.\end{array}$ (2.11) For the fixed $j\geq 1$ , consider the system of positive steady states of ( 2.9 ) $\begin{cases}\Delta\phi+\varepsilon f_{1}(\phi,\psi,\varepsilon)=0\ \ &\mbox{in}\;\Omega,\\
+\Delta\psi+\lambda_{j}\psi-\left(\beta+\frac{b_{2}}{a_{2}}\right)\lambda_{j}\phi+\varepsilon f_{2}(\phi,\psi,\varepsilon)=0\ \ &\mbox{in}\;\Omega,\\
+\frac{\partial\phi}{\partial\nu}=\frac{\partial\psi}{\partial\nu}=0\ \ &\mbox{on}\;\partial\Omega;\end{cases}$ (2.12) or $\mathcal{L}\biggl[\begin{array}[]{c}\phi\\
+\psi\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{l}f_{1}(\phi,\psi,\varepsilon)\\
+f_{2}(\phi,\psi,\varepsilon)\end{array}\biggr]=\biggl[\begin{array}[]{c}0\\
+0\end{array}\biggr],$ (2.13) with $\mathcal{L}=\biggl[\begin{array}[]{cc}\Delta&0\\
+-\left(\beta+\frac{b_{2}}{a_{2}}\right)\lambda_{j}&\Delta+\lambda_{j}\end{array}\biggr].$ The kernel of $\mathcal{L}$ consists of the following two-dimensional space: $\mbox{Ker}(\mathcal{L})=\mbox{Span}\,\biggl\{\,\boldsymbol{e}_{1}:=\biggl(1,\beta+\frac{b_{2}}{a_{2}}\biggr),\quad\boldsymbol{e}_{2}:=(0,1)\varphi_{j}\,\biggr\};$ (2.14) where $\varphi_{j}(x)$ is an eigenfunction satisfying $-\Delta\varphi_{j}=\lambda_{j}\varphi_{j}\ \ \mbox{in}\ \Omega,\quad\frac{\partial\varphi_{j}}{\partial\nu}=0\ \ \mbox{on}\ \partial\Omega,\quad\|\varphi_{j}\|_{L^{2}(\Omega)}=1.$ (2.15) Under the assumption that $N\leq 4$ and $a_{1}/a_{2}>b_{1}/b_{2}$ and $\lambda_{j}>0$ is a simple eigenvalue, by applying
+the Lyapunov-Schmidt reduction method, our proof will find
+the existence of $(s_{j,0}^{+},\mu_{j,0}^{+})$ and $(s_{j,0}^{-},\mu_{j,0}^{-})$ such that $s^{\pm}_{j,0}>0$ , $\mu^{-}_{j,0}<0<\mu^{+}_{j,0}$ and the solution $(\phi(x),\psi(x))$ of
+the limiting system of ( 2.12 ) at $\varepsilon\to 0$ satisfying $(\phi(x),\psi(x))-s^{\pm}_{j,0}\biggl(1,\beta+\frac{b_{2}}{a_{2}}(1+\mu^{\pm}_{j,0}\varphi_{j}(x))\biggr)\in{\rm Range}(\mathcal{L}).$ Next, for each $j$ and sign of $\pm$ ,
+we use the Implicit Function Theorem to construct
+a curve $(\phi_{\varepsilon},\psi_{\varepsilon})$ to the system ( 2.12 )
+with small enough $\varepsilon>0$ .
+It should be noted that
+the profile of $h_{j}(\mu)=\dfrac{\int_{\Omega}(1+\mu\varphi_{j}(x))^{-2}{\rm d}x}{\int_{\Omega}(1+\mu\varphi_{j}(x))^{-1}{\rm d}x}$ obtained by [ 18 ] plays an important role
+in solving the limiting system of ( 2.12 ) in higher dimensional case ( $N>1$ ) at $\varepsilon=0$ and
+checking a non-degenerate condition
+for use of the Implicit Function Theorem.
+By the transformation ( 2.3 ),
+this curve realizes the bifurcation branch of
+( 1.1 ) on which the $w$ component blows up
+with the rate $O(1/\varepsilon)$ as $\varepsilon:=a_{2}\lambda_{j}^{-1}-d_{2}>0$ tends to zero. The contents of this paper are as follows:
+In Section 2, we state the main existence and stability results of this paper.
+In Section 3, we mainly discuss the construction of nonconstant
+solutions of ( 2.12 ).
+In Section 4, we show the instability of the solution branches obtained in
+the previous section. In Section 5, we investigate the existence and stability of the
+nonconstant steady states of the original SKT model ( 1.1 ) with large enough $\alpha$ . The following Theorems 2.1 and 2.2 are concerned with the existence and asymptotic
+behavior of the solution branches $(\phi^{\pm}_{j,\varepsilon}(x),\psi^{\pm}_{j,\varepsilon}(x))$ of ( 2.12 ) and $\varGamma_{j,\pm}$ of the shadow system ( 1.1 ) near the blow-up point $d_{2}=a_{2}/\lambda_{j}$ .
+Theorem 2.2 shows that each branch of $\varGamma_{j,\pm}$ can be parameterized by $\varepsilon:=a_{2}\lambda_{j}^{-1}-d_{2}>0$ ,
+and then, the $w$ component of each branch blows up
+with the rate $O(\varepsilon^{-1})$ as $\varepsilon\to 0$ . Theorem 2.1 . Assume that $N\leq 4$ , $a_{1}/a_{2}>b_{1}/b_{2}$ and $\lambda_{j}$ is
+simple. Denote $\varepsilon=a_{2}\lambda_{j}^{-1}-d_{2}$ .
+Then for any given $d_{1}>0$ , $\beta\geq 0$ and each sign of $\pm$ ,
+there exists $\overline{\varepsilon}>0$ such that, for any $\varepsilon\in[0,\overline{\varepsilon}]$ , the system ( 2.12 )
+has a positive solution $(\phi^{\pm}_{j,\varepsilon}(x),\psi^{\pm}_{j,\varepsilon}(x))$ satisfying $\biggl[\begin{array}[]{c}\phi^{\pm}_{j,\varepsilon}(x)\\
+\psi^{\pm}_{j,\varepsilon}(x)\end{array}\biggr]=s^{\pm}_{j}(\varepsilon)\biggl(\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}\end{array}\biggr]+\mu^{\pm}_{j}(\varepsilon)\biggl[\begin{array}[]{c}0\\
+\frac{b_{2}}{a_{2}}\varphi_{j}(x)\end{array}\biggr]\biggr)+\varepsilon\biggl[\begin{array}[]{c}\widetilde{\phi}^{\pm}_{j}(x,\varepsilon)\\
+\widetilde{\psi}^{\pm}_{j}(x,\varepsilon)\end{array}\biggr],$ (2.16) where $\boldsymbol{\varPhi}^{*\pm}_{j}(x,\varepsilon):=(\widetilde{\phi}^{\pm}_{j}(x,\varepsilon),\widetilde{\psi}^{\pm}_{j}(x,\varepsilon))\in{\rm Range}(\mathcal{L})$ and $(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon))\in\mathbb{R}^{2}$ are functions of $C^{1}$ -class
+for $\varepsilon\in[0,\overline{\varepsilon}]$ satisfying $(s^{\pm}_{j}(0),\mu^{\pm}_{j}(0))=(s_{j,0}^{\pm},\mu^{\pm}_{j,0})\ \ \mbox{and}\ \ \boldsymbol{\varPhi}^{*\pm}_{j}(x,0)=-\mathcal{L}_{X_{0}}^{-1}(I-P)F_{0}(s_{0},t_{0}),$ where $\mu^{\pm}_{j,0}$ is obtained in Proposition 3.2 , $s^{\pm}_{j,0}$ is defined by ( 3.26 ),
+and $\boldsymbol{\varPhi}^{*\pm}_{j}(x,0)$ is defined in Section 3. Theorem 2.2 . Suppose that $N\leq 4$ , $a_{1}/a_{2}>b_{1}/b_{2}$ and $\lambda_{j}>0$ is simple.
+For any such $j$ and each sign of $\pm$ ,
+there exists a small positive number $\overline{\varepsilon}_{j,\pm}>0$ such that the 2nd shadow system ( 1.1 ) with $\beta\geq 0$ , $d_{1}>0$ and $d_{2}=a_{2}\lambda_{j}^{-1}-\varepsilon>0$ admits a curve $\varGamma_{j,\pm}:=\biggl\{(u,w,d_{2})=\biggl(u^{\pm}_{j,\varepsilon}(x),w^{\pm}_{j,\varepsilon}(x),\dfrac{a_{2}}{\lambda_{j}}-\varepsilon\biggr)\,:\,\varepsilon\in(0,\overline{\varepsilon}_{j,\pm})\biggr\}$ (2.17) of nonconstant positive solutions.
+Furthermore, $\varGamma_{j,\pm}$ forms a unbounded curve
+parameterized by $\varepsilon\in(0,\overline{\varepsilon}_{j,\pm}]$ , which is continuously differentiable in $\varepsilon$ and
+has the following asymptotic behavior $\begin{cases}u^{\pm}_{j,\varepsilon}(x)\to u^{\pm}_{j,0}(x)=\frac{a_{2}}{b_{2}(1+\mu^{\pm}_{j,0}\varphi_{j}(x))}>0,&{\rm as}\;\varepsilon\downarrow 0,\\
+\varepsilon w^{\pm}_{j,\varepsilon}(x)\to\frac{b_{2}}{a_{2}}s^{\pm}_{j,0}(1+\mu^{\pm}_{j,0}\varphi_{j}(x))>0,&{\rm as}\;\varepsilon\downarrow 0;\end{cases}$ (2.18) where $\mu^{\pm}_{j,0}$ is defined in Proposition 3.2 and $s^{\pm}_{j,0}>0$ is defined by ( 3.26 ). From the view-point of the bifurcation theory,
+it can be said that Theorem 2.2 shows a
+phenomenon so called
+bifurcation from infinity at $d_{2}=a_{2}/\lambda_{j}$ . In Section 4, we investigate the stability/instability of each steady state $(u^{\pm}_{j,\varepsilon}(x)$ , $w^{\pm}_{j,\varepsilon}(x))$ for the time-evolutional 2nd shadow system ( 2.2 ) with small $\varepsilon=a_{2}\lambda_{j}^{-1}-d_{2}>0$ .
+It suffices to investigate the eigenvalue problem corresponding to the linearized system of ( 2.9 ) around the steady state $(\phi^{\pm}_{j,\varepsilon}(x),\psi^{\pm}_{j,\varepsilon}(x))$ , which can be expressed in the following form: $\sigma T^{\varepsilon}(x)\biggl[\begin{array}[]{c}\widehat{\phi}(x)\\
+\widehat{\psi}(x)\end{array}\biggr]=\mathcal{L}\biggl[\begin{array}[]{c}\widehat{\phi}(x)\\
+\widehat{\psi}(x)\end{array}\biggr]+\varepsilon F^{\varepsilon}_{(\phi_{\varepsilon},\psi_{\varepsilon})}(x)\biggl[\begin{array}[]{c}\widehat{\phi}(x)\\
+\widehat{\psi}(x)\end{array}\biggr].$ (2.19) By applying perturbation argument, it is naturally expected that for each small $\varepsilon>0$ the eigenvalue problem ( 2.19 ) has at least one eigenvalue near zero, the sign of the real part of the eigenvalue near zero may determine the stability/instability of the steady state. In Section 4, by seeking the precise location of an eigenvalue near zero and applying special Lyapunov-Schmidt decomposition estimates on the corresponding eigenfunction, we prove the spectral instability and nonlinear instability of all the branches of steady states of ( 2.2 ) with small enough $\varepsilon>0$ . Theorem 2.3 . Let $(u^{\pm}_{j,\varepsilon}(x),w^{\pm}_{j,\varepsilon}(x))$ be the steady states of ( 2.2 ) with $d_{2}=a_{2}\lambda_{j}^{-1}-\varepsilon$ obtained in Theorem 2.2 .
+Then for small enough $\varepsilon>0$ , $(u^{\pm}_{j,\varepsilon}(x),w^{\pm}_{j,\varepsilon}(x))$ are spectrally unstable; and the eigenvalue problem ( 2.19 ) has a positive eigenvalue $\sigma_{\varepsilon}=\varepsilon\Lambda_{\varepsilon}>0$ with $\Lambda_{\varepsilon}\to\lambda_{j}$ as $\varepsilon\to 0$ . By the perturbation of solutions of the 2nd shadow
+system ( 1.1 ), in Section 5
+we construct the curves of nonconstant positive solutions
+to the original stationary SKT model ( 1.2 )
+with sufficiently large $\alpha$ and small $a_{2}\lambda_{j}^{-1}-d_{2}>0$ , and show that the obtained positive steady states of the SKT model ( 1.1 ) are nonlinearly and spectrally unstable. Theorem 2.4 . Assume that $N\leq 4$ , $a_{1}/a_{2}>b_{1}/b_{2}$ and $\lambda_{j}>0$ is simple. For any such $j$ and each sign of $\pm$ ,
+there exists $\overline{\varepsilon}>0$ such that
+for any $\underline{\varepsilon}\in(0,\overline{\varepsilon})$ ,
+there exists a large $\overline{\alpha}^{\pm}_{j,\underline{\varepsilon}}>0$ such that
+if $\varepsilon\in(\underline{\varepsilon},\overline{\varepsilon})$ ,
+the SKT model ( 1.1 ) with fixed $\beta\geq 0$ , $d_{1}>0$ and $\alpha>\overline{\alpha}^{\pm}_{j,\underline{\varepsilon}}$ admits a branch of nonconstant positive steady states $\varGamma_{j,\pm}^{(\alpha)}=\Bigl\{\,(u,v,\alpha):=\Bigl(u^{\pm}_{j,\varepsilon,\alpha}(x),v^{\pm}_{j,\varepsilon,\alpha}(x),\,\alpha\Bigr)\,:\,\alpha>\overline{\alpha}^{\pm}_{j,\underline{\varepsilon}}\,\Bigr\}.$ Here $(u^{\pm}_{j,\varepsilon,\alpha}(x),v^{\pm}_{j,\varepsilon,\alpha}(x))$ satisfy $\lim\limits_{\alpha\to\infty}(u^{\pm}_{j,\varepsilon,\alpha}(x),\alpha v^{\pm}_{j,\varepsilon,\alpha}(x))=(u^{\pm}_{j,\varepsilon}(x),w^{\pm}_{j,\varepsilon}(x))\ \ \mbox{uniformly in}\ \overline{\Omega},$ (2.20) with $(u^{\pm}_{j,\varepsilon}(x),w^{\pm}_{j,\varepsilon}(x),\varepsilon)\in\varGamma_{j,\pm}$ defined by ( 2.17 ).
+Furthermore, $(u^{\pm}_{j,\varepsilon,\alpha}(x),v^{\pm}_{j,\varepsilon,\alpha}(x))$ are spectrally unstable. Remark 2.1 . For the special case when $\Omega$ is one or two dimensional, it is well known that for any fixed nonnegative initial data the SKT evolutional system ( 1.1 ) with $\beta=0$ and $\alpha>0$ admits a uniformly bounded global solution in time, however the spectral and nonlinear instability of the lower branches of positive steady states obtained in Theorem 2.4 when $d_{2}$ is slightly less than $a_{2}/\lambda_{j}$ indicate that no matter how closeness of the initial data to the unstable steady state, there always exist global solutions staying away from the unstable steady state for large $t$ , the longtime behavior of such solutions in time are still open problems. Also note that for the case when $d_{2}$ is slightly less than $a_{2}/\lambda_{1}$ in [ 18 ] it was proved that the SKT model ( 1.1 ) with $\beta=0$ and large $\alpha$ has another two (upper) branches of steady states perturbed from the 1st shadow system ( 1.1 ) and they are stable steady states, which attract all the solutions with small initial perturbation of such steady states. For the other cases when $\Omega$ is higher dimensional or $\beta>0$ , it is unknown that whether the SKT model ( 1.1 ) still admit global solutions in time when the initial data are near the unstable lower branches of steady states, the solutions may blow-up in finite time or in infinite time or tend to other types of steady states. Remark 2.2 . From the expression of $s^{\pm}_{j}(0)$ , $\mu^{\pm}_{j}(0)$ and $\boldsymbol{\varPhi}^{*\pm}_{j}(x,0)$ obtained in Section 3, we can see that $\mu^{\pm}_{j}(0)$ is independent of $d_{1}$ , $s^{\pm}_{j}(0)$ has a positive lower bound for all $d_{1}>0$ , and $s^{\pm}_{j}(0)\sim\frac{C_{1}}{d_{1}}$ as $d_{1}\to 0$ , which with
+Theorems 2.2 and 2.4 indicate that for any $d_{1}>0$ and $\beta\geq 0$ , the 2nd shadow system ( 1.1 ) with small $a_{2}\lambda_{j}^{-1}-d_{2}>0$ admit several branches of positive solutions $(u^{\pm}_{j,\varepsilon}(x),w^{\pm}_{j,\varepsilon}(x))$ with bounded $u$ -component (uniformly in both $d_{1}$ and $d_{2}$ ) and blowing up $w$ -component (as $d_{2}\uparrow a_{2}/\lambda_{j}$ or $d_{1}\downarrow 0$ ). Also note that $s^{\pm}_{j,0}\to s^{\pm*}_{j,0}>0$ , $\boldsymbol{\varPhi}^{*\pm}_{j}(x,0)\to(0,\widetilde{\psi}^{\pm*}_{j}(x,\varepsilon))$ as $d_{1}\to+\infty$ ;
+thus the expressions of ( 2.16 ) in Theorem 2.1 and ( 2.18 ) in Theorem 2.2 have finite limits for the limiting case when $d_{1}\to+\infty$ , and the limiting asymptotic expression of the blowing up solution branches in ( 2.16 ) and ( 2.18 ) in the limiting case $d_{1}\to+\infty$ coincide with the asymptotic expression of the blowing-up solution branches obtained in [ 14 ] and [ 25 ] for the 3rd shadow system ( 1.8 ) (the limiting system of ( 1.1 ) when $d_{1}\to+\infty$ after some transformation). For the limiting case when $d_{1}\to+\infty$ , it is known that the positive solution $(u(x),w(x))$ of the 2nd shadow system ( 1.1 ) satisfies $u(x)(1+w(x))\to\tau$ (a positive constant), where $(\tau,w(x))$ satisfies the 3rd shadow system ( 1.8 ). In [ 14 ] and [ 25 ] , by applying special transformation to the 3rd shadow system ( 1.8 ) and applying Lyapunov-Schmidt reduction method (where the kernel of the limiting linearized operator can be one-dimensional after some transformation), the authors proved the existence and asymptotic behavior of some blowing up branches of positive solutions $(\tau,w(x))$ to the 3rd shadow system ( 1.8 ). It is worth mentioning that the techniques and perturbation argument applied in [ 14 ] and [ 25 ] to the 3rd shadow system or to the corresponding perturbed stationary SKT competition model ( 1.2 ) (when both $d_{1}$ and $\alpha$ are large enough) are not applicable to the case when $d_{1}$ is not large enough. As for the 2nd shadow system ( 1.1 ) with bounded $d_{1}>0$ ,
+the higher degeneracy of the limiting operator $\mathcal{L}$ (with two dimensional $\mbox{Ker}\,(\mathcal{L})$ )
+induces some technical difficulties and complexity in applying the Lyapunov-Schmidt reduction method for obtaining the detailed asymptotic structure and doing stability analysis of the blowing up steady states. 3 Existence and parameterization of the solution branches to the 2nd shadow system ( 1.1 ) near the blow-up points As formulated in Section 2, in order to magnify a neighborhood of each blow-up point at $d_{2}=a_{2}/\lambda_{j}$ by rescaling,
+we employ the rescaling transformation ( 2.3 )
+in the 2nd shadow system ( 1.1 ), the
+new unknown functions $\phi$ and $\psi$ satisfy the Neumann boundary value problem ( 2.12 ) or ( 2.13 ), which can be expressed as the following nonlinear system with small parameter $\varepsilon>0$ : $\mathcal{L}\biggl[\begin{array}[]{c}\phi\\
+\psi\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{l}f_{1}(\phi,\psi,\varepsilon)\\
+f_{2}(\phi,\psi,\varepsilon)\end{array}\biggr]=\biggl[\begin{array}[]{c}0\\
+0\end{array}\biggr],$ (3.1) where the linear operator $\mathcal{L}:X\to Y$ is defined by $\mathcal{L}:=\biggl[\begin{array}[]{cc}\Delta&0\\
+-\left(\beta+\frac{b_{2}}{a_{2}}\right)\lambda_{j}&\Delta+\lambda_{j}\end{array}\biggr],$ (3.2) with $X:=W^{2,p}_{\nu}(\Omega)\times W^{2,p}_{\nu}(\Omega)$ and $Y:=L^{p}(\Omega)\times L^{p}(\Omega)$ for $p>1$ ; $f_{1}$ and $f_{2}$ are defined by $\begin{split}&f_{1}(\phi,\psi,\varepsilon):=\frac{h_{1\varepsilon}}{d_{1}}(a_{1}-b_{1}h_{1\varepsilon}),\\
+&f_{2}(\phi,\psi,\varepsilon):=\frac{1}{\varepsilon}\left[\frac{h_{2\varepsilon}}{d_{2}}(a_{2}-b_{2}h_{1\varepsilon})-\frac{h_{20}\lambda_{j}}{a_{2}}(a_{2}-b_{2}h_{10})\right],\end{split}$ (3.3) where $(h_{1\varepsilon},h_{2\varepsilon})$ and $(h_{10},h_{20})$ are defined by ( 2.5 ) and ( 2.8 ),
+respectively. 3.1 Lyapunov-Schmidt reduction scheme In what follows, we use the Lyapunov-Schmidt reduction method
+to construct the set of solutions to the system
+( 3.1 ) for small $\varepsilon>0$ .
+In a crucial step of our proof of Theorem 2.1 ,
+we shall derive the limiting set of solutions of ( 3.1 )
+as $\varepsilon\to 0$ .
+More precisely, we shall
+construct the set of positive solutions of
+( 3.1 )
+as $\varepsilon\to 0$ (see Theorem 2.1 ). In order to obtain the kernel of the
+linear part $\mathcal{L}\,:\,X\to Y$ of ( 3.2 ),
+we solve the Neumann boundary value problem of the following
+linear elliptic system: $\begin{cases}\Delta\phi=0\ \ &\mbox{in}\ \Omega,\\
+\Delta\psi+\lambda_{j}\psi-\left(\beta+\frac{b_{2}}{a_{2}}\right)\lambda_{j}\phi=0\ \ &\mbox{in}\ \Omega,\\
+\frac{\partial\phi}{\partial\nu}=\frac{\partial\psi}{\partial\nu}=0\ \ &\mbox{on}\ \partial\Omega.\end{cases}$ (3.4) Since $\phi=\tau$ (constant)
+from the first equation of ( 3.4 ),
+then we substitute it into the second equation of ( 3.4 ) to see $-\Delta\psi(x)=\lambda_{j}\psi(x)-\lambda_{j}\left(\beta+\dfrac{b_{2}}{a_{2}}\right)\tau\ \ \mbox{in}\ \Omega,\qquad\frac{\partial\psi}{\partial\nu}(x)=0\ \ \mbox{on}\ \partial\Omega.$ Hence it follows that $\psi(x)-\left(\beta+\dfrac{b_{2}}{a_{2}}\right)\tau=s\varphi_{j}(x),\ \ \mbox{that is,}\ \ \psi(x)=\left(\beta+\dfrac{b_{2}}{a_{2}}\right)\tau+s\varphi_{j}(x),$ where $s\in\mathbb{R}$ and $\varphi_{j}(x)$ is
+an eigenfunction satisfying ( 2.15 ).
+Thus $\mbox{Ker}(\mathcal{L})$ consists of the following two-dimensional space: $\mbox{Ker}(\mathcal{L})=\mbox{Span}\,\left\{\,\boldsymbol{e}_{1}:=\left(1,\beta+\frac{b_{2}}{a_{2}}\right),\ \ \boldsymbol{e}_{2}:=(0,1)\varphi_{j}(x)\,\right\}.$ (3.5) Here it follows that $\langle\boldsymbol{e}_{1},\boldsymbol{e}_{2}\rangle:=\int_{\Omega}\boldsymbol{e}_{1}\cdot\boldsymbol{e}_{2}=0$ .
+By the Fredholm alternative theorem,
+we see that $\mbox{Range}(\mathcal{L})=(\,\mbox{Ker}(\mathcal{L}^{*})\,)^{\bot}$ in $Y$ ,
+where $\mathcal{L}^{*}\,:\,X\to Y$ is the adjoint operator of $\mathcal{L}$ expressed as $\mathcal{L}^{*}=\biggl[\begin{array}[]{cc}\Delta&-(\beta+\frac{b_{2}}{a_{2}})\lambda_{j}\\
+0&\Delta+\lambda_{j}\end{array}\biggr].$ It is easily verified that $\mbox{Ker}\,(\mathcal{L}^{*})=\mbox{Span}\,\biggl\{\boldsymbol{e}_{1}^{*}:=\biggl(\dfrac{1}{|\Omega|},\,0\biggr),\quad\boldsymbol{e}_{2}^{*}:=\biggl(-\beta-\dfrac{b_{2}}{a_{2}},\,1\biggr)\varphi_{j}(x)\biggr\}.$ (3.6) and thereby, $\langle\boldsymbol{e}_{1},\boldsymbol{e}_{1}^{*}\rangle=1,\qquad\langle\boldsymbol{e}_{2},\boldsymbol{e}_{2}^{*}\rangle=1,\qquad\langle\boldsymbol{e}_{1},\boldsymbol{e}_{2}^{*}\rangle=\langle\boldsymbol{e}_{2},\boldsymbol{e}_{1}^{*}\rangle=0.$ For applying the Lyapunov-Schmidt reduction method,
+we employ
+the following direct sum decompositions
+of $X$ and $Y$ : $X=\mbox{Ker}(\mathcal{L})\oplus X_{0}\quad\mbox{and}\quad Y=\mbox{Ker}(\mathcal{L})\oplus Y_{0},$ (3.7) where $X_{0}=\mbox{Range}(\mathcal{L})\cap X$ , $Y_{0}=\mbox{Range}(\mathcal{L})$ and $\mbox{Ker}(\mathcal{L})=\mbox{Span}\{\boldsymbol{e}_{1},\boldsymbol{e}_{2}\}$ . By virtue of ( 3.7 ),
+we introduce the projection $P\,:\,Y\to\mbox{Ker}(\mathcal{L})$ as $P\,\boldsymbol{\varPhi}=s\boldsymbol{e}_{1}+t\boldsymbol{e}_{2}\quad\mbox{for}\quad\boldsymbol{\varPhi}=(\phi,\psi)\in Y,$ (3.8) where $\begin{array}[]{l}s=\dfrac{\langle\boldsymbol{\varPhi},\boldsymbol{e}_{1}^{*}\rangle}{\langle\boldsymbol{e}_{1},\boldsymbol{e}^{*}_{1}\rangle}=\dfrac{1}{|\Omega|}\displaystyle\int_{\Omega}\phi(x)\,{\rm d}x,\\[11.38109pt]
+t=\dfrac{\langle\boldsymbol{\varPhi},\boldsymbol{e}_{2}^{*}\rangle}{\langle\boldsymbol{e}_{2},\boldsymbol{e}^{*}_{2}\rangle}=\displaystyle\int_{\Omega}\left[-\left(\beta+\frac{b_{2}}{a_{2}}\right)\phi(x)+\psi(x)\right]\,\varphi_{j}(x)\,{\rm d}x.\end{array}$ (3.9) Furthermore,
+the projections $P_{i}\,:\,Y\to\mbox{Span}\{\boldsymbol{e}_{i}\}$ , $i=1,2$ are defined by $P_{1}\,\boldsymbol{\varPhi}=s\boldsymbol{e}_{1},\qquad P_{2}\,\boldsymbol{\varPhi}=t\boldsymbol{e}_{2}.$ (3.10) Hence it follows that $P=P_{1}+P_{2}$ and the operator $I-P$ gives a projection from $Y$ to $Y_{0}=\mbox{Range}(\mathcal{L})$ .
+Then we decompose the unknown function $\boldsymbol{\varPhi}=(\phi,\psi)\in X$ of the system ( 3.1 ) into $\mbox{Span}\{\boldsymbol{e}_{1}\}$ , $\mbox{Span}\{\boldsymbol{e}_{2}\}$ and $X_{0}$ components as $\boldsymbol{\varPhi}(x)=s\boldsymbol{e}_{1}(x)+t\boldsymbol{e}_{2}(x)+\varepsilon\boldsymbol{\varPhi}^{*}(x),$ (3.11) where $(s,t)$ is defined by ( 3.9 ) and $\varepsilon\,\boldsymbol{\varPhi}^{*}=(I-P)\boldsymbol{\varPhi}\in X_{0}$ . We set $t=\frac{b_{2}}{a_{2}}s\mu$ for $s\neq 0$ , then $s\boldsymbol{e}_{1}+t\boldsymbol{e}_{2}=s\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}(1+\mu\varphi_{j}(x))\end{array}\biggr],$ (3.12) thus $\biggl[\begin{array}[]{c}\phi(x)\\
+\psi(x)\end{array}\biggr]=s\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}(1+\mu\varphi_{j}(x))\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{c}\phi^{*}(x)\\
+\psi^{*}(x)\end{array}\biggr]$ (3.13) with $(\phi^{*}(x),\psi^{*}(x)):=\boldsymbol{\varPhi}^{*}(x)\in X_{0}=\mbox{Range}(\mathcal{L})\cap X.$ Denote $\boldsymbol{\varPhi}^{0}=(\phi^{0},\psi^{0})=s(1,\;\beta+\frac{b_{2}}{a_{2}}(1+\mu\varphi_{j}))$ .
+Using the Taylor expansion of $f_{i}(\phi,\psi,\varepsilon)$ and the
+expression ( 3.13 ), it is easy to check that $\begin{split}f_{1}(\phi^{0}+\varepsilon\phi^{*},\;\psi^{0}+\varepsilon\psi^{*},\;\varepsilon)&=f^{0}_{1}(\phi^{0},\psi^{0})+\varepsilon f^{1}_{1}(s,\mu,\phi^{*},\psi^{*},\varepsilon)\\
+&=\frac{1}{d_{1}}\,\frac{a_{2}}{b_{2}(1+\mu\varphi_{j})}\left(a_{1}-b_{1}\frac{a_{2}}{b_{2}(1+\mu\varphi_{j})}\right)\\
+&\quad+\varepsilon f^{*}_{1}(s,\mu,\phi^{*},\psi^{*},\varepsilon),\end{split}$ (3.14) and $\begin{split}f_{2}(\phi^{0}+\varepsilon\phi^{*},\;\psi^{0}+\varepsilon\psi^{*},\;\varepsilon)&=f^{0}_{2}(\phi^{0},\psi^{0})+\varepsilon f^{1}_{2}(s,\mu,\phi^{*},\psi^{*},\varepsilon)\\
+&=\frac{\lambda_{j}^{2}}{a_{2}}(\psi^{0}-\beta\phi^{0})-\frac{\lambda_{j}^{2}b_{2}}{a_{2}^{2}}\phi^{0}+\lambda_{j}\Bigl(\beta+\dfrac{b_{2}}{a_{2}}\Bigr)\frac{\phi^{0}}{\psi^{0}-\beta\phi^{0}}\\
+&\quad+\varepsilon f^{*}_{2}(s,\mu,\phi^{*},\psi^{*},\varepsilon)\\[4.30554pt]
+&=s\,\frac{\lambda_{j}^{2}b_{2}}{a_{2}^{2}}\,\mu\varphi_{j}+\frac{\lambda_{j}(a_{2}\beta+b_{2})}{b_{2}(1+\mu\varphi_{j})}\\
+&\quad+\varepsilon f^{*}_{2}(s,\mu,\phi^{*},\psi^{*},\varepsilon),\end{split}$ (3.15) with some bounded functions $f^{*}_{j}(s,\mu,\phi^{*},\psi^{*},\varepsilon)$ of $C^{1}$ class,
+where $f^{0}_{1}$ and $f^{0}_{2}$ are defined by ( 2.11 ). For small $\varepsilon>0$ , plugging ( 3.13 )-( 3.15 ) into the system ( 3.1 ),
+then the system ( 3.1 ) becomes the following system of $(s_{,}\mu,\phi^{*},\psi^{*})$ $-\mathcal{L}\biggl[\begin{array}[]{l}\phi^{*}(x)\\
+\psi^{*}(x)\end{array}\biggr]=(I-P)\biggl[\begin{array}[]{c}f_{1}(\phi^{0}+\varepsilon\phi^{*},\psi^{0}+\varepsilon\psi^{*},\varepsilon)\\
+f_{2}(\phi^{0}+\varepsilon\phi^{*},\psi^{0}+\varepsilon\psi^{*},\varepsilon)\end{array}\biggr],$ (3.16) and $P\biggl[\begin{array}[]{c}f_{1}(\phi^{0}+\varepsilon\phi^{*},\psi^{0}+\varepsilon\psi^{*},\varepsilon)\\
+f_{2}(\phi^{0}+\varepsilon\phi^{*},\psi^{0}+\varepsilon\psi^{*},\varepsilon)\end{array}\biggr]=0,$ (3.17) with $\boldsymbol{\varPhi}^{0}=(\phi^{0},\psi^{0})=s(1,\;\beta+\frac{b_{2}}{a_{2}}(1+\mu\varphi_{j}))$ for $s,\mu\in\mathbb{R}$ and $(\phi^{*}(x),\psi^{*}(x))\in X_{0}$ . We denote the linear operator $\mathcal{L}$ with the domain
+restricted to $X_{0}$ by $\mathcal{L}_{X_{0}}\;:\,X_{0}\to Y_{0}=\mbox{Range}(\mathcal{L}_{X_{0}})$ , then $\mathcal{L}_{X_{0}}$ is an isomorphism from $X_{0}$ to $Y_{0}$ .
+By ( 3.14 ) and ( 3.15 ), we can rewrite the equations
+( 3.16 ) and ( 3.17 ) as $\begin{cases}P_{1}(F_{0}(s,\mu)+\varepsilon F_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon))=0,\\
+P_{2}(F_{0}(s,\mu)+\varepsilon F_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon))=0,\\
+\boldsymbol{\varPhi}^{*}=-\mathcal{L}_{X_{0}}^{-1}(I-P)(F_{0}(s,\mu)+\varepsilon F_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)),\end{cases}$ (3.18) where $F_{0}(s,\mu):=\left[\begin{array}[]{c}f^{0}_{1}(\mu),\\
+f_{2}^{0}(s,\mu)\end{array}\right],\quad F_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)=\left[\begin{array}[]{c}f^{*}_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\\
+f^{*}_{2}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\\
+\end{array}\right]$ with $\begin{cases}f^{0}_{1}(\mu):=\dfrac{1}{d_{1}}\dfrac{a_{2}}{b_{2}(1+\mu\varphi_{j}(x))}\left(a_{1}-b_{1}\dfrac{a_{2}}{b_{2}(1+\mu\varphi_{j}(x))}\right),\vskip 5.69054pt\\
+f^{0}_{2}(s,\mu):=s\lambda^{2}_{j}\dfrac{b_{2}}{a^{2}_{2}}\mu\varphi_{j}(x)+\dfrac{\lambda_{j}(a_{2}\beta+b_{2})}{b_{2}(1+\mu\varphi_{j}(x))}.\end{cases}$ (3.19) As a framework to solve ( 3.18 ),
+we define $g_{j}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\in\mathbb{R}$ $(j=1,2)$ and $g_{3}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\in X_{0}$ by $\begin{cases}g_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\boldsymbol{e}_{1}:=P_{1}(F_{0}(s,\mu)+\varepsilon F_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)),\\
+g_{2}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\boldsymbol{e}_{2}:=P_{2}(F_{0}(s,\mu)+\varepsilon F_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)),\\
+g_{3}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon):=\boldsymbol{\varPhi}^{*}+\mathcal{L}_{X_{0}}^{-1}(I-P)(F_{0}(s,\mu)+\varepsilon F_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)),\end{cases}$ (3.20) for any $(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\in\mathbb{R}^{2}\times X_{0}\times[0,\varepsilon_{0}]$ with small $\varepsilon_{0}>0$ ,
+then ( 3.18 ) is reduced to the system $0=G(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon):=\left[\begin{array}[]{c}g_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\\
+g_{2}(s,\mu,\boldsymbol{\varPhi^{*}},\varepsilon)\\
+g_{3}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\\
+\end{array}\right].$ (3.21) 3.2 The limiting system of ( 3.21 ) as $\varepsilon\to 0$ To construct the branch of solutions of
+( 3.21 ) with small $\varepsilon>0$ ,
+we set $\varepsilon=0$ in ( 3.20 ) and ( 3.21 ) to
+introduce the following limiting system $G(s,\mu,\boldsymbol{\varPhi}^{*},0)=\left[\begin{array}[]{l}g_{1}^{0}(s,\mu)\\
+g_{2}^{0}(s,\mu)\\
+\boldsymbol{\varPhi}^{*}+\mathcal{L}_{X_{0}}^{-1}(I-P)F_{0}(s,\mu)\end{array}\right]=\left[\begin{array}[]{l}0\\
+0\\
+0\end{array}\right],$ (3.22) where $g_{1}^{0}(s,\mu)\boldsymbol{e}_{1}:=P_{1}F_{0}(s,\mu)$ and $g_{2}^{0}(s,\mu)\boldsymbol{e}_{2}:=P_{2}F_{0}(s,\mu)$ . It is noted that $g^{0}_{1}(s,\mu)$ is independent of $s$ , then
+we denote $g^{0}_{1}(s,\mu)$ by $g^{0}_{1}(\mu)$ .
+Indeed,
+from ( 3.9 ), ( 3.10 ) and ( 3.19 ),
+one can see that $\begin{split}g_{1}^{0}(\mu)&=\langle F_{0}(s,\mu),\boldsymbol{e}_{1}^{*}\rangle=\dfrac{1}{|\Omega|}\displaystyle\int_{\Omega}{f}^{0}_{1}(\mu)\,{\rm d}x\\[5.69054pt]
+&=\dfrac{a_{1}a_{2}}{b_{2}d_{1}|\Omega|}\displaystyle\int_{\Omega}\left(\frac{1}{1+\mu\varphi_{j}(x)}-\frac{B}{A}\frac{1}{(1+\mu\varphi_{j}(x))^{2}}\right){\rm d}x,\end{split}$ (3.23) where we use the notation $A=\frac{a_{1}}{a_{2}}$ and $B=\frac{b_{1}}{b_{2}}$ ,
+which make the subsequent calculations somewhat more transparent.
+Moreover, our results concern the case $A>B$ .
+Similarly we obtain the expression of $g^{0}_{2}(s,\mu)$ as follows: $\begin{split}g_{2}^{0}(s,\mu)&=\langle F_{0}(s,\mu),\boldsymbol{e}_{2}^{*}\rangle=-\biggl(\beta+\frac{b_{2}}{a_{2}}\biggr)\displaystyle\int_{\Omega}f^{0}_{1}(\mu)\varphi_{j}(x){\rm d}x+\displaystyle\int_{\Omega}f^{0}_{2}(s,\mu)\varphi_{j}(x){\rm d}x\\
+=&-\biggl(\beta+\frac{b_{2}}{a_{2}}\biggr)\frac{a_{2}}{b_{2}d_{1}}\displaystyle\int_{\Omega}\left[\frac{a_{1}\varphi_{j}(x)}{1+\mu\varphi_{j}(x)}-\frac{a_{2}b_{1}\varphi_{j}(x)}{b_{2}(1+\mu\varphi_{j}(x))^{2}}\right]{\rm d}x\\
+&+s\lambda^{2}_{j}\frac{b_{2}\mu}{a^{2}_{2}}+\frac{\lambda_{j}}{b_{2}}(a_{2}\beta+b_{2})\displaystyle\int_{\Omega}\frac{\varphi_{j}(x)}{1+\mu\varphi_{j}(x)}{\rm d}x\end{split}$ $\begin{split}=&s\mu\lambda^{2}_{j}\frac{b_{2}}{a^{2}_{2}}+\frac{(a_{2}\beta+b_{2})a_{1}}{b_{2}\mu d_{1}}\left(-|\Omega|+\dfrac{B}{A}\displaystyle\int_{\Omega}\frac{{\rm d}x}{1+\mu\varphi_{j}(x)}\right)\\
+&+\frac{(a_{2}\beta+b_{2})}{b_{2}\mu}\lambda_{j}\left(|\Omega|-\displaystyle\int_{\Omega}\frac{{\rm d}x}{1+\mu\varphi_{j}(x)}\right)\\
+&+\frac{(a_{2}\beta+b_{2})a_{1}}{b_{2}\mu d_{1}}\left[\displaystyle\int_{\Omega}\frac{{\rm d}x}{1+\mu\varphi_{j}(x)}-\dfrac{B}{A}\displaystyle\int_{\Omega}\frac{{\rm d}x}{(1+\mu\varphi_{j}(x))^{2}}\right],\end{split}$ (3.24) where the last equality comes from $\displaystyle\int_{\Omega}\dfrac{\varphi_{j}(x)}{1+\mu\varphi_{j}}{\rm d}x=\dfrac{1}{\mu}\biggl(|\Omega|-\displaystyle\int_{\Omega}\dfrac{{\rm d}x}{1+\mu\varphi_{j}(x)}\biggr),$ and $\displaystyle\int_{\Omega}\dfrac{\varphi_{j}(x)}{(1+\mu\varphi_{j})^{2}}{\rm d}x=\dfrac{1}{\mu}\biggl\{\displaystyle\int_{\Omega}\dfrac{{\rm d}x}{1+\mu\varphi_{j}(x)}-\displaystyle\int_{\Omega}\dfrac{{\rm d}x}{(1+\mu\varphi_{j}(x))^{2}}\biggr\}.$ Following an idea proposed by Lou, Ni and Yotsutani [ 18 ] ,
+we introduce the function $h_{j}(\mu):=\dfrac{\int_{\Omega}\frac{{\rm d}x}{(1+\mu\varphi_{j}(x))^{2}}}{\int_{\Omega}\frac{{\rm d}x}{1+\mu\varphi_{j}(x)}}\ \ \mbox{for}\ \ -\dfrac{1}{\max_{\overline{\Omega}}\varphi_{j}}<\mu<-\dfrac{1}{\min_{\overline{\Omega}}\varphi_{j}}.$ (3.25) This function $h_{j}(\mu)$ will play an important role in constructing the set
+of solutions of ( 3.22 ).
+In [ 18 ] ,
+they obtained the following profile of $h_{j}(\mu)$ to construct a branch of solutions of ( 1.2 ) perturbed by
+that of solutions of the 1st shadow system ( 1.3 ). Lemma 3.1 ( [ 18 ] ) . Assume that $\lambda_{j}>0$ is simple, let $m_{j}:=-\dfrac{1}{\max\limits_{\overline{\Omega}}\varphi_{j}}<0$ and $M_{j}:=-\dfrac{1}{\min\limits_{\overline{\Omega}}\varphi_{j}}>0$ ,
+then $h_{j}(0)=1$ , $h_{j}^{\prime}(0)=0$ and $\mu h_{j}^{\prime}(\mu)>0$ for $\mu\in(m_{j},M_{j})\setminus\{0\}$ .
+Furthermore if $N\leq 4$ , then $\lim\limits_{\mu\downarrow m_{j}}h_{j}(\mu)=\lim\limits_{\mu\uparrow M_{j}}h_{j}(\mu)=+\infty$ . By virtue of Lemma 3.1 , we have Proposition 3.2 . Suppose that $N\leq 4$ , $A>B$ and $\lambda_{j}>0$ is simple.
+Then there exist $\mu^{\pm}_{j,0}$ satisfying $m_{j}<\mu^{-}_{j,0}<0<\mu^{+}_{j,0}<M_{j}$ and $h_{j}(\mu^{\pm}_{j,0})=\frac{A}{B}=\frac{a_{1}b_{2}}{a_{2}b_{1}}>1,$ thus $g^{0}_{1}(\mu^{\pm}_{j,0})=0$ . Further we can prove the following inequalities: Proposition 3.3 . Suppose that $N\leq 4$ , $A>B$ and $\lambda_{j}>0$ is simple, and let $\mu^{\pm}_{j,0}$ be selected as in Proposition 3.2 , i.e. $\displaystyle\int_{\Omega}\frac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}(x)}=\frac{B}{A}\displaystyle\int_{\Omega}\frac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))^{2}},$ then $\begin{split}&(i)\ \ \displaystyle\int_{\Omega}\frac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}(x)}>|\Omega|,\\
+&(ii)\ \ \displaystyle\int_{\Omega}\frac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}(x)}\leq\frac{A}{B}|\Omega|,\\
+&(iii)\ \ \frac{A}{B}\displaystyle\int_{\Omega}\frac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))^{2}}\leq\displaystyle\int_{\Omega}\frac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))^{3}}.\end{split}$ Proof. (i) Let $I(\mu):=\displaystyle\int_{\Omega}\frac{{\rm d}x}{1+\mu\varphi_{j}}$ ,
+we observe that $I^{\prime}(\mu)=-\displaystyle\int_{\Omega}\dfrac{\varphi_{j}}{(1+\mu\varphi_{j})^{2}}{\rm d}x,\quad\mbox{especially,}\quad I^{\prime}(0)=0,$ and moreover, $I^{\prime\prime}(\mu)=2\displaystyle\int_{\Omega}\dfrac{\varphi_{j}^{2}}{(1+\mu\varphi_{j})^{3}}{\rm d}x>0\quad\mbox{for any}\ \mu\in(m_{j},M_{j}).$ Together with $I(0)=|\Omega|>0$ ,
+we see that $I(\mu)>I(0)=|\Omega|$ for any $\mu\in(m_{j},M_{j})$ . (ii) Note that $\begin{split}\int_{\Omega}\dfrac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}}\leq&|\Omega|^{\frac{1}{2}}\biggl(\int_{\Omega}\dfrac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j})^{2}}\biggl)^{\frac{1}{2}}\\
+=&\sqrt{\frac{A}{B}}|\Omega|^{\frac{1}{2}}\biggl(\int_{\Omega}\dfrac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}}\biggl)^{\frac{1}{2}},\end{split}$ which proves (ii). (iii) Using the fact $\int_{\Omega}\frac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j})^{2}}=\frac{A}{B}\int_{\Omega}\frac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}},$ then $\begin{split}\biggl(\int_{\Omega}\frac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j})^{2}}\biggr)^{2}&\leq\int_{\Omega}\frac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}}\int_{\Omega}\frac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j})^{3}}\\
+&=\frac{B}{A}\int_{\Omega}\frac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j})^{2}}\int_{\Omega}\frac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j})^{3}};\end{split}$ one can prove $(iii).$ ∎ Lemma 3.4 . Suppose that $N\leq 4$ and $A>B$ , and let $\mu^{\pm}_{j,0}$ be selected as in Proposition 3.2 , which satisfies $m_{j}<\mu^{-}_{j,0}<0<\mu^{+}_{j,0}<M_{j}$ and $h_{j}(\mu^{\pm}_{j,0})=\frac{A}{B}=\frac{a_{1}b_{2}}{a_{2}b_{1}}>1.$ Then the following properties hold: (i) The equations $g^{0}_{1}(\mu)=g^{0}_{2}(s,\mu)=0$ admit roots $\mu=\mu^{\pm}_{j,0}$ and $\begin{split}s=s^{\pm}_{j,0}:=\dfrac{a_{1}a^{2}_{2}(a_{2}\beta+b_{2})}{b^{2}_{2}d_{1}(\mu^{\pm}_{j,0})^{2}\lambda^{2}_{j}}\bigg(|\Omega|-\frac{B}{A}\int_{\Omega}\frac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}(x)}\bigg)\\
++\dfrac{a^{2}_{2}(a_{2}\beta+b_{2})}{\lambda_{j}b^{2}_{2}(\mu^{\pm}_{j,0})^{2}}\bigg(\int_{\Omega}\frac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}(x)}-|\Omega|\bigg)>0.\end{split}$ (3.26) (ii) All solutions of ( 3.22 ) are represented as $(s,\mu,\boldsymbol{\varPhi}^{*})=(s^{\pm}_{j,0},\mu^{\pm}_{j,0},-\mathcal{L}_{X_{0}}^{-1}(I-P)F_{0}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})).$ (3.27) Proof. By ( 3.23 ) and Proposition 3.2 , $g^{0}_{1}(\mu)=0$ has two roots $\mu=\mu^{\pm}_{j,0}$ .
+Setting $\mu=\mu^{\pm}_{j,0}$ in ( 3.24 ) , by simple computation we see that $g_{2}^{0}(s,\mu^{\pm}_{j,0})=0$ holds if and only if $\begin{split}s=s^{\pm}_{j,0}=\frac{(a_{2}\beta+b_{2})a_{1}a_{2}^{2}}{d_{1}b^{2}_{2}\lambda^{2}_{j}(\mu^{\pm}_{j,0})^{2}}\left(|\Omega|-\frac{B}{A}\displaystyle\int_{\Omega}\frac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}(x)}\right)\\
++\frac{(a_{2}\beta+b_{2})a^{2}_{2}}{\lambda_{j}b^{2}_{2}(\mu^{\pm}_{j,0})^{2}}\left(\displaystyle\int_{\Omega}\frac{{\rm d}x}{1+\mu^{\pm}_{j,0}\varphi_{j}(x)}-|\Omega|\right),\end{split}$ which with (i) and (ii) of Proposition 3.3 implies that $s^{\pm}_{j,0}>0$ . Substituting $(s,\mu)=(s^{\pm}_{j,0},\mu^{\pm}_{j,0})$ into the equations of $\boldsymbol{\varPhi}^{*}$ component of ( 3.22 ), we
+obtain ( 3.27 ).
+∎ 3.3 Proofs of Theorems 2.1 and 2.2 Proof of Theorem 2.1 . As a perturbation of solutions of the limiting system ( 3.22 ),
+we aim to construct the set of solutions of ( 3.21 ) for small $\varepsilon>0$ , by applying the Implicit Function Theorem.
+Note that Lemma 3.4 implies that $G(s^{\pm}_{j,0},\mu^{\pm}_{j,0},\boldsymbol{\varPhi}^{*\pm}_{j,0},0)=0,$ (3.28) with $\boldsymbol{\varPhi}^{*\pm}_{j,0}=\mathcal{L}_{X_{0}}^{-1}(I-P)F_{0}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})$ .
+To prove the existence of solutions in the form of ( 2.16 ) satisfying $G(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)=0$ for small $\varepsilon>0$ , it remains to
+check the following non-degeneracy of $G(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)=0$ at $(s^{\pm}_{j,0},\mu^{\pm}_{j,0},\boldsymbol{\varPhi}^{*\pm}_{j,0},0)$ : Lemma 3.5 . Let $G_{(s,\mu,\boldsymbol{\varPhi}^{*})}(s^{\pm}_{j,0},\mu^{\pm}_{j,0},\boldsymbol{\varPhi}^{*\pm}_{j,0},0)$ be the Fréchet derivative of $G$ respect to $(s,\mu,\boldsymbol{\varPhi}^{*})$ around $(s^{\pm}_{j,0},\mu^{\pm}_{j,0},\boldsymbol{\varPhi}^{*\pm}_{j,0},0)$ .
+Then $G_{(s,\mu,\boldsymbol{\varPhi}^{*})}(s^{\pm}_{j,0},\mu^{\pm}_{j,0},\boldsymbol{\varPhi}^{*\pm}_{j,0},0)\,:\,\mathbb{R}^{2}\times X_{0}\to\mathbb{R}^{2}\times X_{0}$ is invertible. Proof. The Fréchet derivative of $G$ can be expressed as $\begin{split}&G_{(s,\mu,\boldsymbol{\varPhi}^{*})}(s^{\pm}_{j,0},\mu^{\pm}_{j,0},\boldsymbol{\varPhi}^{*\pm}_{j,0},0)\\
+=&\left[\begin{array}[]{ccc}0&(g_{1}^{0})_{\mu}(\mu^{\pm}_{j,0})&0\\
+(g_{2}^{0})_{s}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})&(g_{2}^{0})_{\mu}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})&0\\
+\mathcal{L}_{X_{0}}^{-1}(I-P)(F_{0})_{s}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})&\mathcal{L}_{X_{0}}^{-1}(I-P)(F_{0})_{\mu}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})&I\end{array}\right].\end{split}$ (3.29) Since $\mathcal{L}_{X_{0}}^{-1}(I-P)\,:\,Y\to X_{0}$ is bounded,
+then $\mathcal{L}_{X_{0}}^{-1}(I-P)(F_{0})_{s}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})$ and $\mathcal{L}_{X_{0}}^{-1}(I-P)(F_{0})_{\mu}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})$ are also bounded by ( 3.19 ).
+Thus in order to prove that $G_{(s,t,\boldsymbol{\varPhi}^{*})}(s^{\pm}_{j,0},\mu^{\pm}_{j,0},\boldsymbol{\varPhi}^{*\pm}_{j,0},0)$ is invertible, we only need to verify that $\mbox{Det}\biggl[\begin{array}[]{cc}0&(g_{1}^{0})_{\mu}(\mu^{\pm}_{j,0})\\
+(g_{2}^{0})_{s}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})&(g_{2}^{0})_{\mu}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})\end{array}\biggr]=-(g_{1}^{0})_{\mu}(g_{2}^{0})_{s}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})\neq 0.$ (3.30) Differentiating ( 3.23 ) and ( 3.24 ), and then by Propositions 3.2 and 3.3 , we have $\begin{split}&-(g_{2}^{0})_{s}(g_{1}^{0})_{\mu}(s^{\pm}_{j,0},\mu^{\pm}_{j,0})\\
+&=A\,\dfrac{\mu_{j,0}^{\pm}\lambda_{j}^{2}}{d_{1}|\Omega|}\biggl[\displaystyle\int_{\Omega}\dfrac{\varphi_{j}(x)}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))^{2}}{\rm d}x-\dfrac{2B}{A}\displaystyle\int_{\Omega}\dfrac{\varphi_{j}(x)}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))^{3}}{\rm d}x\biggr]\\
+&=A\,\dfrac{\lambda_{j}^{2}}{d_{1}|\Omega|}\left[\displaystyle\int_{\Omega}\dfrac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))}\right.\\
+&\left.-\left(1+\frac{2B}{A}\right)\displaystyle\int_{\Omega}\dfrac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))^{2}}+\frac{2B}{A}\displaystyle\int_{\Omega}\dfrac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))^{3}}\right]\\
+&=A\,\dfrac{\lambda_{j}^{2}}{d_{1}|\Omega|}\biggl[-\left(1+\frac{B}{A}\right)\displaystyle\int_{\Omega}\dfrac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))^{2}}+\frac{2B}{A}\displaystyle\int_{\Omega}\dfrac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))^{3}}\biggr]\\
+&\geq A\,\dfrac{\lambda_{j}^{2}}{d_{1}|\Omega|}\left(1-\frac{B}{A}\right)\displaystyle\int_{\Omega}\dfrac{{\rm d}x}{(1+\mu^{\pm}_{j,0}\varphi_{j}(x))^{2}}>0;\end{split}$ (3.31) which proves ( 3.30 ) and completes the proof of Lemma 3.5 .
+∎ Owing to Lemma 3.5 , the application of the Implicit
+Function Theorem for $G$ near $(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)=(s^{\pm}_{j,0},\mu^{\pm}_{j,0},\boldsymbol{\varPhi}^{*\pm}_{j,0},0)$ ensures that,
+for each $j$ and sign of $\pm$ , there exists
+a continuously differentiable function $(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon))$ with respect to $\varepsilon\in[0,\overline{\varepsilon}]$ for some $\overline{\varepsilon}>0$ such that $\begin{cases}G(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon),\varepsilon)=0\ \ \mbox{for any}\ \ \varepsilon\in[0,\overline{\varepsilon}],\\
+(s^{\pm}_{j}(0),\mu^{\pm}_{j}(0),\boldsymbol{\varPhi}^{*\pm}_{j}(x,0))=(s^{\pm}_{j,0},\mu^{\pm}_{j,0},\boldsymbol{\varPhi}^{*\pm}_{j,0}(x)).\end{cases}$ (3.32) Since the system $G(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)=0$ is equivalent to ( 2.12 ), which completes the proof of Theorem 2.1 .
+∎ Proof of Theorem 2.2 . By ( 2.3 ), substituting ( 2.16 ) into ( 2.5 ), i.e. $u^{\pm}_{j,\varepsilon}(x)=h_{1\varepsilon}(\phi^{\pm}_{j,\varepsilon}(x),\psi^{\pm}_{j,\varepsilon}(x)),\;\;w^{\pm}_{j,\varepsilon}(x)=\frac{1}{\varepsilon}h_{2\varepsilon}(\phi^{\pm}_{j,\varepsilon}(x),\psi^{\pm}_{j,\varepsilon}(x)),$ we get the branches of nonconstant positive solutions of the 2nd shadow system
+( 1.1 ) for $\varepsilon\in(0,\overline{\varepsilon}]$ ; which are continuous differentiable in $\varepsilon$ . By ( 2.5 ) ( 2.7 ) and ( 2.8 ), it can be checked that $u^{\pm}_{j,\varepsilon}(x)\to\frac{\phi^{\pm}_{j,0}(x)}{\psi^{\pm}_{j,0}(x)-\beta\phi^{\pm}_{j,0}(x)}=\frac{a_{2}}{b_{2}(1+\mu^{\pm}_{j,0}\varphi_{j}(x))}>0\ {\rm as}\;\varepsilon\downarrow 0;$ and $\varepsilon w^{\pm}_{j,\varepsilon}(x)\to\psi^{\pm}_{j,0}(x)-\beta\phi^{\pm}_{j,0}(x)=\frac{b_{2}}{a_{2}}s^{\pm}_{j,0}(1+\mu^{\pm}_{j,0}\varphi_{j}(x))>0\ {\rm as}\;\varepsilon\downarrow 0;$ which completes the proof of Theorem 2.2 .
+∎ 4 Instability of steady states for the shadow system
+near the blow-up point This section is devoted to a proof of Theorem 2.3 .
+Under the transformation ( 2.3 ), the evolutional shadow system ( 2.2 ) can be written as the evolutional
+system ( 2.9 ), i.e. $\dfrac{\partial}{\partial t}\biggl[\begin{array}[]{c}\frac{\varepsilon}{d_{1}}\,h_{1\varepsilon}(\phi(x,t),\psi(x,t))\\[5.69054pt]
+\frac{1}{d_{2}}\,h_{2\varepsilon}(\phi(x,t),\psi(x,t))\end{array}\biggr]=\mathcal{L}\biggl[\begin{array}[]{c}\phi(x,t)\\
+\psi(x,t)\end{array}\biggr]+\varepsilon\,F(\phi(x,t),\psi(x,t),\varepsilon),$ (4.1) where $(h_{1\varepsilon}(\phi,\psi),h_{2\varepsilon}(\phi,\psi))$ and $\mathcal{L}$ are defined by ( 2.5 ) and ( 3.2 ),
+respectively, and $F(\phi,\psi,\varepsilon):=\biggl[\begin{array}[]{c}f_{1}(\phi,\psi,\varepsilon)\\
+f_{2}(\phi,\psi,\varepsilon)\end{array}\biggr]$ with $f_{1}$ and $f_{2}$ defined by ( 3.3 ), and $\begin{array}[]{l}h_{1\varepsilon}(\phi,\psi)=h_{10}(\phi,\psi)+\varepsilon h^{*}_{1\varepsilon}(\phi,\psi),\;\;h_{10}(\phi,\psi)=\frac{\phi}{\psi-\beta\phi},\\
+h_{2\varepsilon}(\phi,\psi)=h_{20}(\phi,\psi)+\varepsilon h^{*}_{2\varepsilon}(\phi,\psi),\;\;h_{20}(\phi,\psi)=\psi-\beta\phi.\end{array}$ (4.2) We recall ( 2.11 ) to note $F^{0}(\phi,\psi):=F(\phi,\psi,0)=\left(\begin{array}[]{cc}\frac{1}{d_{1}}\frac{\phi}{\psi-\beta\phi}\left(a_{1}-b_{1}\frac{\phi}{\psi-\beta\phi}\right)\\[5.69054pt]
+\frac{\lambda^{2}_{j}}{a_{2}}(\psi-\beta\phi)-b_{2}\frac{\lambda^{2}_{j}}{a^{2}_{2}}\phi+\lambda_{j}\left(\beta+\frac{b_{2}}{a_{2}}\right)\frac{\phi}{\psi-\beta\phi}\end{array}\right).$ For any small $\varepsilon\in(0,\overline{\varepsilon}]$ ,
+let $(\phi_{\varepsilon}(x),\psi_{\varepsilon}(x))$ be
+a positive stationary solution of ( 4.1 ) obtained by
+Theorem 2.1 . The linearized evolutional system ( 4.1 ) around $(\phi_{\varepsilon}(x),\psi_{\varepsilon}(x))$ is in the following form: $T^{\varepsilon}(x)\biggl[\begin{array}[]{c}\widehat{\phi}_{t}(x,t)\\
+\widehat{\psi}_{t}(x,t)\end{array}\biggr]=\mathcal{L}\biggl[\begin{array}[]{c}\widehat{\phi}(x,t)\\
+\widehat{\psi}(x,t)\end{array}\biggr]+\varepsilon F^{\varepsilon}_{(\phi,\psi)}(\phi_{\varepsilon}(x),\psi_{\varepsilon}(x),\varepsilon)\biggl[\begin{array}[]{c}\widehat{\phi}(x,t)\\
+\widehat{\psi}(x,t)\end{array}\biggr];$ (4.3) where $T^{\varepsilon}(x):=\biggl[\begin{array}[]{cc}\frac{\varepsilon}{d_{1}}(h_{1\varepsilon})_{\phi}&\frac{\varepsilon}{d_{1}}(h_{1\varepsilon})_{\psi}\\
+\frac{1}{d_{2}}(h_{2\varepsilon})_{\phi}&\frac{1}{d_{2}}(h_{2\varepsilon})_{\psi}\end{array}\biggr]\biggl|_{(\phi,\psi)=(\phi_{\varepsilon}(x),\psi_{\varepsilon}(x))}=T^{0}+\varepsilon T^{\varepsilon}_{1}(x),$ (4.4) with $T^{0}:=\biggl[\begin{array}[]{cc}0&0\\
+-\frac{\beta\lambda_{j}}{a_{2}}&\frac{\lambda_{j}}{a_{2}}\end{array}\biggr].$ (4.5) Here we note that $d_{2}=a_{2}/\lambda_{j}$ when $\varepsilon=0$ .
+In what follows, we denote $F_{(\phi,\psi)}^{\varepsilon}(x):=F_{(\phi,\psi)}\bigl(\phi_{\varepsilon}(x),\,\psi_{\varepsilon}(x),\,\varepsilon\bigr),$ (4.6) for the sake of simplicity of notation.
+Denote $(\phi_{0}(x),\psi_{0}(x))=(\phi^{\pm}_{j,0}(x),\psi^{\pm}_{j,0}(x))=(s^{\pm}_{j,0},s^{\pm}_{j,0}(\beta+b_{2}/a_{2}(1+\mu^{\pm}_{j,0}\varphi_{j}(x))),$ $F^{0}_{(\phi,\psi)}(x)=\left(\begin{array}[]{cc}c^{0}_{11}(x)&c^{0}_{12}(x)\\
+c^{0}_{21}(x)&c^{0}_{22}(x)\end{array}\right),$ (4.7) and $l_{0}(x)=1+\mu^{\pm}_{j,0}\varphi_{j}(x)$ , then $\psi_{0}(x)-\beta\phi_{0}(x)=\dfrac{b_{2}}{a_{2}}s^{\pm}_{j,0}l_{0}(x),\qquad\frac{\phi_{0}(x)}{\psi_{0}(x)-\beta\phi_{0}(x)}=\frac{a_{2}}{b_{2}l_{0}(x)}.$ After some simple computation, it can be checked that $\displaystyle c^{0}_{11}(x)$ $\displaystyle=\frac{1}{d_{1}}\frac{\psi_{0}(x)}{(\psi_{0}(x)-\beta\phi_{0}(x))^{2}}\left(a_{1}-2b_{1}\frac{\phi_{0}(x)}{\psi_{0}(x)-\beta\phi_{0}(x)}\right)$ $\displaystyle=\frac{1}{d_{1}}\left(\beta+\frac{b_{2}}{a_{2}}l_{0}(x)\right)\frac{a_{1}a_{2}^{2}}{b_{2}^{2}s^{\pm}_{j,0}}\left(\frac{1}{l_{0}(x)^{2}}-\frac{2B}{A\,l_{0}(x)^{3}}\right),$ $\displaystyle c^{0}_{12}(x)$ $\displaystyle=-\frac{1}{d_{1}}\frac{\phi_{0}(x)}{(\psi_{0}(x)-\beta\phi_{0}(x))^{2}}\left(a_{1}-2b_{1}\frac{\phi_{0}(x)}{\psi_{0}(x)-\beta\phi_{0}(x)}\right)$ $\displaystyle=-\frac{1}{d_{1}}\frac{a_{1}a_{2}^{2}}{b_{2}^{2}s^{\pm}_{j,0}}\left(\frac{1}{l_{0}(x)^{2}}-\frac{2B}{A\,l_{0}(x)^{3}}\right),$ $\displaystyle c^{0}_{21}(x)$ $\displaystyle=\frac{\lambda_{j}^{2}(b_{2}+a_{2}\beta)}{a_{2}^{2}}\left(-1+\frac{a_{2}}{\lambda_{j}(\psi_{0}(x)-\beta\phi_{0}(x))}+\frac{a_{2}\beta\phi_{0}}{\lambda_{j}(\psi_{0}(x)-\beta\phi_{0}(x))^{2}}\right)$ $\displaystyle=-\frac{\lambda_{j}^{2}(b_{2}+a_{2}\beta)}{a_{2}^{2}}+\frac{a_{2}\lambda_{j}(b_{2}+a_{2}\beta)}{b_{2}^{2}s^{\pm}_{j,0}l_{0}(x)^{2}}\left(\beta+\frac{b_{2}}{a_{2}}l_{0}(x)\right),$ $\displaystyle c^{0}_{22}(x)$ $\displaystyle=\frac{\lambda_{j}^{2}}{a_{2}}-\frac{(b_{2}+a_{2}\beta)\lambda_{j}}{a_{2}}\frac{\phi_{0}(x)}{(\psi_{0}(x)-\beta\phi_{0}(x))^{2}}$ $\displaystyle=\frac{\lambda_{j}^{2}}{a_{2}}-\frac{a_{2}\lambda_{j}(b_{2}+a_{2}\beta)}{b_{2}^{2}s^{\pm}_{j,0}l_{0}(x)^{2}}.$ In the following of this section, we investigate the existence and the precise location of an eigenvalue $\sigma$ near zero with an eigenfunction $(\widehat{\phi}(x),\widehat{\psi}(x))$ of the following eigenvalue problem corresponding to the linearized system ( 4.3 ), $\sigma T^{\varepsilon}(x)\biggl[\begin{array}[]{c}\widehat{\phi}(x)\\
+\widehat{\psi}(x)\end{array}\biggr]=\mathcal{L}\biggl[\begin{array}[]{c}\widehat{\phi}(x)\\
+\widehat{\psi}(x)\end{array}\biggr]+\varepsilon F^{\varepsilon}_{(\phi,\psi)}(x)\biggl[\begin{array}[]{c}\widehat{\phi}(x)\\
+\widehat{\psi}(x)\end{array}\biggr].$ (4.8) Theorem 4.1 . Assume that $\beta\geq 0$ , $N\leq 4$ , $A>B$ and $\lambda_{j}$ is simple.
+For any $j$ and each sign of $\pm$ , let $\mu^{\pm}_{j,0}$ be selected as in Proposition 3.2 , then
+there exists $\overline{\varepsilon}>0$ such that for any $\varepsilon\in[0,\overline{\varepsilon}]$ ,
+the eigenvalue problem ( 4.8 ) has a
+positive eigenvalue $\sigma_{\varepsilon}:=\sigma^{\pm}_{j}(\varepsilon)$ expressed as $\sigma^{\pm}_{j}(\varepsilon)=\varepsilon\varLambda^{\pm}_{j}(\varepsilon)$ (4.9) with an eigenfunction $(\widehat{\phi}_{\varepsilon}(x),\widehat{\psi}_{\varepsilon}(x))=(\widehat{\phi}^{\pm}_{j}(x;\varepsilon),\widehat{\psi}^{\pm}_{j}(x;\varepsilon))$ expressed as $\biggl[\begin{array}[]{c}\widehat{\phi}^{\pm}_{j}(x,\varepsilon)\\
+\widehat{\psi}^{\pm}_{j}(x,\varepsilon)\end{array}\biggr]=\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}\ell_{0}(x)\end{array}\biggr]+\gamma^{\pm}_{j}(\varepsilon)\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{c}\widetilde{\phi}^{\pm}_{j}(x;\varepsilon)\\
+\widetilde{\psi}^{\pm}_{j}(x;\varepsilon)\end{array}\biggr],$ (4.10) where $\ell_{0}(x):=1+\mu^{\pm}_{j,0}\varphi_{j}(x).$ (4.11) Here $\varLambda^{\pm}_{j}(\varepsilon)$ , $\gamma^{\pm}_{j}(\varepsilon)\in\mathbb{R}$ and $(\widetilde{\phi}^{\pm}_{j}(x;\varepsilon),\widetilde{\psi}^{\pm}_{j}(x;\varepsilon))\in X_{0}$ are continuous for $\varepsilon\in[0,\overline{\varepsilon}]$ and satisfy $\varLambda^{\pm}_{j}(0)=\lambda_{j},\quad\gamma^{\pm}_{j}(0)=0,\quad\biggl[\begin{array}[]{c}\widetilde{\phi}_{j}(x,0)\\
+\widetilde{\psi}_{j}(x,0)\end{array}\biggr]=\dfrac{b_{2}\lambda_{j}^{2}}{a_{2}}\mathcal{L}_{X_{0}}^{-1}\left[\begin{array}[]{c}0\\
+1\end{array}\right].$ (4.12) Proof. Following the Lyapunov-Schmidt reduction procedure
+in the previous section,
+we seek for an eigenpair of ( 4.8 ) in
+the form $\sigma=\varepsilon\varLambda\quad\mbox{and}\quad\biggl[\begin{array}[]{c}\widehat{\phi}(x)\\
+\widehat{\psi}(x)\end{array}\biggr]=\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}\ell_{0}(x)\end{array}\biggr]+\gamma\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{c}\widetilde{\phi}(x)\\
+\widetilde{\psi}(x)\end{array}\biggr],$ (4.13) where $\varLambda,\gamma\in\mathbb{R}$ and $(\widetilde{\phi},\widetilde{\psi})\in X_{0}=X\cap\mbox{Range}(\mathcal{L})$ . Substituting ( 4.13 ) into ( 4.8 ),
+we see that the eigenvalue problem ( 4.8 )
+is reduced to the system $\mathcal{L}\biggl[\begin{array}[]{c}\widetilde{\phi}\\
+\widetilde{\psi}\end{array}\biggr]=(\varLambda T^{\varepsilon}(x)-F^{\varepsilon}_{(\phi,\psi)}(x))\biggl[\begin{array}[]{l}1+\gamma+\varepsilon\widetilde{\phi}\\
+\beta(1+\gamma)+\frac{b_{2}}{a_{2}}(\ell_{0}(x)+\gamma)+\varepsilon\widetilde{\psi}\end{array}\biggr].$ (4.14) It will be considered that $(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi})$ are the unknown variables for the system ( 4.14 ) with a given $\varepsilon>0$ .
+Our task is to construct solutions of ( 4.14 )
+by the Lyapunov-Schmidt reduction method for small enough $\varepsilon>0$ .
+To this end, we decompose ( 4.14 ) into
+the $\mbox{Ker}(\mathcal{L})$ component and $\mbox{Range}(\mathcal{L})$ component
+as follows: $\begin{cases}P_{i}(\varLambda T^{\varepsilon}(x)-F^{\varepsilon}_{(\phi,\psi)}(x))\biggl(\biggl[\begin{array}[]{l}1+\gamma\\
+\beta(1+\gamma)+\frac{b_{2}}{a_{2}}(\ell_{0}(x)+\gamma)\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{l}\widetilde{\phi}\\
+\widetilde{\psi}\end{array}\biggr]\biggr)=\biggl[\begin{array}[]{c}0\\
+0\end{array}\biggr],\\[5.69054pt]
+\biggl[\begin{array}[]{c}\widetilde{\phi}\\
+\widetilde{\psi}\end{array}\biggr]=\mathcal{L}_{X_{0}}^{-1}(I-P)\biggl((\varLambda T^{\varepsilon}(x)-F^{\varepsilon}_{(\phi,\psi)}(x))\biggl[\begin{array}[]{l}1+\gamma+\varepsilon\widetilde{\phi}\\
+\beta(1+\gamma)+\frac{b_{2}}{a_{2}}(\ell_{0}(x)+\gamma)+\varepsilon\widetilde{\psi}\end{array}\biggr]\biggr),\end{cases}$ (4.15) with $P_{i}$ $(i=1,2)$ defined by ( 3.10 ). Set $Q^{\varepsilon}(\varLambda,\gamma):=(\Lambda T^{\varepsilon}(x)-F^{\varepsilon}_{(\phi,\psi)}(x))\biggl[\begin{array}[]{l}1+\gamma\\
+\beta(1+\gamma)+\frac{b_{2}}{a_{2}}(\ell_{0}(x)+\gamma)\end{array}\biggr],$ and $\widetilde{Q}^{\varepsilon}(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi}):=(\varLambda T^{\varepsilon}(x)-F^{\varepsilon}_{(\phi,\psi)}(x))\biggl[\begin{array}[]{l}\widetilde{\phi}\\
+\widetilde{\psi}\end{array}\biggr],$ then ( 4.15 ) can be written as $\begin{cases}P_{1}(Q^{\varepsilon}(\varLambda,\gamma)+\varepsilon\widetilde{Q}^{\varepsilon}(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi}))=0,\\
+P_{2}(Q^{\varepsilon}(\varLambda,\gamma)+\varepsilon\widetilde{Q}^{\varepsilon}(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi}))=0,\\[5.69054pt]
+\biggl[\begin{array}[]{l}\widetilde{\phi}\\
+\widetilde{\psi}\end{array}\biggr]=\mathcal{L}_{X_{0}}^{-1}(I-P)(Q^{\varepsilon}(\varLambda,\gamma)+\varepsilon\widetilde{Q}^{\varepsilon}(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi})).\end{cases}$ (4.16) Therefore, if we set $\begin{array}[]{ll}p_{i1}(\varLambda,\gamma,\varepsilon)\boldsymbol{e}_{i}&:=P_{i}Q^{\varepsilon}(\varLambda,\gamma),\\
+p_{i2}(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon)\boldsymbol{e}_{i}&:=P_{i}\widetilde{Q}^{\varepsilon}(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi}),\end{array}$ (4.17) for $i=1,2$ ,
+then ( 4.16 ) is reduced to $\begin{cases}p_{11}(\varLambda,\gamma,\varepsilon)+\varepsilon\,p_{12}(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon)=0,\vskip 2.84526pt\\
+p_{21}(\varLambda,\gamma,\varepsilon)+\varepsilon\,p_{22}(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon)=0,\vskip 2.84526pt\\
+\biggl[\begin{array}[]{c}\widetilde{\phi}\\
+\widetilde{\psi}\end{array}\biggr]=\mathcal{L}_{X_{0}}^{-1}(I-P)(Q^{\varepsilon}(\varLambda,\gamma)+\varepsilon\widetilde{Q}^{\varepsilon}(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi})).\end{cases}$ (4.18) After some simple computation, it can be verified that $\begin{array}[]{ll}Q^{0}(\varLambda,\gamma)&:=(\varLambda T^{0}(x)-F^{0}_{(\phi,\psi)}(x))\biggl[\begin{array}[]{l}1+\gamma\\
+\beta(1+\gamma)+\dfrac{b_{2}}{a_{2}}(\ell_{0}(x)+\gamma)\end{array}\biggr]\\
+&=\left[\begin{array}[]{l}\displaystyle\frac{\gamma a_{1}a_{2}^{2}}{d_{1}b_{2}^{2}s^{\pm}_{j,0}}\frac{1-l_{0}(x)}{l_{0}(x)^{2}}\left(1-\frac{2B}{Al_{0}(x)}\right)\\[8.53581pt]
+\displaystyle\frac{\lambda_{j}^{2}b_{2}}{a_{2}^{2}}+\frac{\lambda_{j}b_{2}(\varLambda-\lambda_{j})}{a_{2}^{2}}l_{0}(x)+\frac{\gamma\Lambda\lambda_{j}b_{2}}{a_{2}^{2}}+\frac{\gamma\lambda_{j}(b_{2}+a_{2}\beta)}{b_{2}s^{\pm}_{j,0}}\frac{1-l_{0}(x)}{l_{0}(x)^{2}}\end{array}\right]\\[5.69054pt]
+&:=\left[\begin{array}[]{l}q_{1}^{0}(x,\gamma)\\[2.84526pt]
+q_{2}^{0}(x,\varLambda,\gamma)\end{array}\right]\end{array}$ (4.19) To construct the solutions of
+( 4.16 ) for small $\varepsilon>0$ ,
+we first focus on finding the solution $(\varLambda^{0},\gamma^{0})$ of the first two equations of the limiting system of ( 4.18 ) at $\varepsilon=0$ : $p_{11}(\varLambda^{0},\gamma^{0},0)=0\ \ \mbox{and}\ \ p_{21}(\varLambda^{0},\gamma^{0},0)=0.$ (4.20) By ( 3.10 ) ( 4.16 ) ( 4.17 ) and ( 4.19 ), we see that
+( 4.20 ) is reduced to $\begin{cases}0=p_{11}(\varLambda^{0},\gamma^{0},0)=\dfrac{1}{|\Omega|}\displaystyle\int_{\Omega}q^{0}_{1}(x,\gamma^{0}){\rm d}x,\vskip 2.84526pt\\
+0=p_{21}(\varLambda^{0},\gamma^{0},0)=\displaystyle\int_{\Omega}\left[-\left(\beta+\frac{b_{2}}{a_{2}}\right)q_{1}^{0}(x,\gamma^{0})+q_{2}^{0}(x,\varLambda^{0},\gamma^{0})\right]\varphi_{j}(x){\rm d}x,\end{cases}$ (4.21) with $q^{0}_{1}$ and $q^{0}_{2}$ are defined by ( 4.19 ). Lemma 4.2 . Assume that $N\leq 4$ , $A>B$ and $\lambda_{j}>0$ is simple.
+Then the system ( 4.21 ) has a unique solution $(\varLambda^{0},\gamma^{0})=(\lambda_{j},0)$ . Proof. It follows from ( 4.19 ) and ( 4.21 ) that $\begin{split}p_{11}(\varLambda,\gamma,0)=&\dfrac{1}{|\Omega|}\displaystyle\int_{\Omega}q^{0}_{1}(x,\gamma){\rm d}x=\dfrac{\gamma a^{2}_{2}a_{1}}{d_{1}b^{2}_{2}s^{\pm}_{j,0}|\Omega|}\displaystyle\int_{\Omega}\frac{1-l_{0}(x)}{l_{0}^{2}}\bigg(1-\frac{2B}{Al_{0}(x)}\bigg){\rm d}x\\
+=&\dfrac{\gamma a^{2}_{2}a_{1}}{d_{1}b^{2}_{2}s^{\pm}_{j,0}|\Omega|}\displaystyle\int_{\Omega}\left[-\frac{1}{l_{0}(x)}+\bigg(\frac{2B}{A}+1\bigg)\frac{1}{l^{2}_{0}(x)}-\frac{2B}{Al^{3}_{0}(x)}\right]{\rm d}x\\
+=&\dfrac{\gamma a^{2}_{2}a_{1}}{d_{1}b^{2}_{2}s^{\pm}_{j,0}|\Omega|}\displaystyle\int_{\Omega}\left[\bigg(\frac{B}{A}+1\bigg)\frac{1}{l^{2}_{0}(x)}-\frac{2B}{Al^{3}_{0}(x)}\right]{\rm d}x:=C_{0}\gamma,\end{split}$ (4.22) where we used the fact that $l_{0}(x)=1+\mu^{\pm}_{j,0}\varphi_{j}(x)$ satisfies $\int_{\Omega}\dfrac{{\rm d}x}{l_{0}(x)}=\dfrac{B}{A}\int_{\Omega}\dfrac{{\rm d}x}{l_{0}^{2}(x)}$ by Proposition 3.2 .
+Furthermore,
+by Proposition 3.3 , we have $\displaystyle\int_{\Omega}\left[\bigg(\frac{B}{A}+1\bigg)\frac{1}{l^{2}_{0}(x)}-\frac{2B}{Al^{3}_{0}(x)}\right]{\rm d}x\leq\displaystyle\int_{\Omega}\bigg(\frac{B}{A}-1\bigg)\frac{1}{l^{2}_{0}(x)}{\rm d}x<0.$ (4.23) Thus $C_{0}<0$ and $p_{11}(\varLambda^{0},\gamma^{0},0)=0$ if and only if $\gamma^{0}=0$ . Since $\gamma^{0}=0$ and $q^{0}_{1}(x,0)\equiv 0$ , the second equation of ( 4.21 ) is
+equivalent to $\begin{split}0&=\displaystyle\int_{\Omega}q_{2}^{0}(x,\varLambda^{0},0)\varphi_{j}(x)\,{\rm d}x\\
+&=\frac{b_{2}\lambda_{j}}{a_{2}^{2}}\displaystyle\int_{\Omega}\bigg[\lambda_{j}+(\varLambda^{0}-\lambda_{j})(1+\mu^{\pm}_{j,0})\varphi_{j}(x)\bigg]\varphi_{j}(x)\,{\rm d}x\\
+&=\frac{b_{2}\lambda_{j}}{a_{2}^{2}}(\varLambda^{0}-\lambda_{j})\mu^{\pm}_{j,0}\int_{\Omega}\varphi^{2}_{j}(x){\rm d}x=\frac{b_{2}\lambda_{j}}{a_{2}^{2}}(\varLambda-\lambda_{j})\mu^{\pm}_{j,0}.\end{split}$ (4.24) Thus system ( 4.21 ) has a unique solution $(\varLambda^{0},\gamma^{0})=(\lambda_{j},0)$ , which completes the proof of Lemma 4.2 .
+∎ We continue the proof of Theorem 4.1 .
+By Lemma 4.2 ,
+we see that $p_{11}(\lambda_{j},0,0)=p_{21}(\lambda_{j},0,0)=0.$ (4.25) In view of the infinitely dimensional component $(\widetilde{\phi},\widetilde{\psi})$ of the limiting system of
+( 4.18 ) at $\varepsilon=0$ , we set $(\varLambda,\varepsilon)=(\lambda_{j},0)$ in the third equation to get $\left[\begin{array}[]{c}\widetilde{\phi}_{0}\\
+\widetilde{\psi}_{0}\end{array}\right]:=\mathcal{L}_{X_{0}}^{-1}(I-P)\left[\begin{array}[]{c}q_{1}^{0}(x,0)\\
+q_{2}^{0}(x,\lambda_{j},0)\end{array}\right]=\dfrac{b_{2}\lambda_{j}^{2}}{a^{2}_{2}}\mathcal{L}_{X_{0}}^{-1}(I-P)\left[\begin{array}[]{c}0\\
+1\end{array}\right].$ (4.26) Since $\boldsymbol{e}_{1}^{*}=(1,0)$ , $\boldsymbol{e}_{2}^{*}=(-\beta-\frac{b_{2}}{a_{2}},1)\varphi_{j}(x)\in\mbox{Ker}(\mathcal{L}^{*}))$ and $\mbox{Range}(\mathcal{L})=(\mbox{Ker}(\mathcal{L}^{*}))^{\bot}$ ,
+by the Fredholm alternative and the fact that $(0,1)\cdot\boldsymbol{e}^{*}_{1}=0$ and $(0,1)\cdot\boldsymbol{e}^{*}_{2}=0$ implies $(0,1)\in Y_{0}$ ,
+therefore, ( 4.26 ) has a unique solution $\biggl[\begin{array}[]{c}\widetilde{\phi}_{0}(x)\\
+\widetilde{\phi}_{0}(x)\end{array}\biggr]=\dfrac{b_{2}\lambda_{j}^{2}}{a^{2}_{2}}\mathcal{L}_{X_{0}}^{-1}\left[\begin{array}[]{c}0\\
+1\end{array}\right].$ Consequently, we see that ( 4.18 ) has a solution expressed as
+( 4.12 ) for the limiting case $\varepsilon=0$ . In what follows, we construct the solutions of ( 4.18 )
+with sufficiently small $\varepsilon>0$ as the perturbation of the limiting case.
+To do so, we define an operator associated with ( 4.18 ) as follows $\begin{split}H(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon)=\left[\begin{array}[]{l}p_{11}(\varLambda,\gamma,\varepsilon)+\varepsilon\,p_{12}(\lambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon)\\
+p_{21}(\varLambda,\gamma,\varepsilon)+\varepsilon\,p_{22}(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon)\\[5.69054pt]
+\biggl[\begin{array}[]{c}\widetilde{\phi}\\
+\widetilde{\psi}\end{array}\biggr]-\mathcal{L}_{X_{0}}^{-1}(I-P)\biggl((\varLambda T^{\varepsilon}(x)-F^{\varepsilon}_{(\phi,\psi)}(x))\cdot\\[5.69054pt]
+~~~~~~~~\biggl[\begin{array}[]{l}(1+\gamma)+\varepsilon\widetilde{\phi}\\
+\beta(1+\gamma)+\frac{b_{2}}{a_{2}}(\ell_{0}(x)+\gamma)+\varepsilon\widetilde{\psi}\end{array}\biggr]\biggr)\end{array}\right].\end{split}$ (4.27) Hence the set of solutions of ( 4.18 ) coincides with
+the set of solutions of $H(\varLambda,\gamma,\widetilde{\phi}$ , $\widetilde{\psi},\varepsilon)=0$ .
+By the set ( 4.12 ) of solutions to ( 4.18 ) with $\varepsilon=0$ ,
+one can see $H(\lambda_{j},0,\widetilde{\phi}_{0},\widetilde{\psi}_{0}$ , $0)=0$ .
+In order to apply the Implicit Function Theorem to $H$ around $(\lambda_{j},0,\widetilde{\phi}_{0},\widetilde{\psi}_{0},0)$ ,
+we need to verify that
+the Fréchet derivative $H_{(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi})}(\lambda_{j},0$ , $\widetilde{\phi}_{0},\widetilde{\psi}_{0},0)\,:\,\mathbb{R}\times\mathbb{R}\times X_{0}\to\mathbb{R}\times\mathbb{R}\times X_{0}$ is invertible.
+From ( 4.27 ), straightforward calculations yield $H_{(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi})}(\lambda_{j},0,\widetilde{\phi}_{0},\widetilde{\psi}_{0},0)=\left[\begin{array}[]{ccc}(p_{11})_{\varLambda}(\lambda_{j},0,0)&(p_{11})_{\gamma}(\lambda_{j},0,0)&0\\
+(p_{21})_{\varLambda}(\lambda_{j},0,0)&(p_{21})_{\gamma}(\lambda_{j},0,0)&0\\[5.69054pt]
+-\mathcal{L}_{X_{0}}^{-1}(I-P)Q^{0}_{\varLambda}(\lambda_{j},0)&-\mathcal{L}_{X_{0}}^{-1}(I-P)Q^{0}_{\gamma}(\lambda_{j},0)&I\end{array}\right],$ (4.28) here $Q^{0}_{\varLambda}(\lambda_{j},0)=T^{0}(x)$ and $Q^{0}_{\gamma}(\lambda_{j},0)=(\lambda_{j}T^{0}(x)-F^{0}_{(\phi,\psi)}(x))(1,\beta+\frac{b_{2}}{a_{2}})$ are bounded operators.
+Then it suffices to show that $\mbox{Det}\,\biggl[\begin{array}[]{cc}(p_{11})_{\varLambda}(\lambda_{j},0,0)&(p_{11})_{\gamma}(\lambda_{j},0,0)\\
+(p_{21})_{\varLambda}(\lambda_{j},0,0)&(p_{21})_{\gamma}(\lambda_{j},0,0)\end{array}\biggr]\neq 0.$ (4.29) Note that $(p_{11})_{\varLambda}(\lambda_{j},0,0)=0,$ $(p_{11})_{\gamma}(\lambda_{j},0,0)=\frac{a^{2}_{2}a_{1}}{d_{1}b^{2}_{2}s^{\pm}_{j,0}|\Omega|}\displaystyle\int_{\Omega}\frac{l_{0}(x)-1}{l^{2}_{0}(x)}\left(1-\frac{2B}{Al_{0}(x)}\right)dx=C_{0}<0,$ by Lemma 5.2,
+and $(p_{21})_{\varLambda}(\lambda_{j},0,0)=\frac{\lambda_{j}b_{2}}{a^{2}_{2}}\displaystyle\int_{\Omega}l_{0}(x)\varphi_{j}(x)dx=\frac{\lambda_{j}b_{2}}{a^{2}_{2}}\mu^{\pm}_{j,0}\neq 0,$ thus $\mbox{Det}\,\left[\begin{array}[]{cc}(p_{11})_{\varLambda}(\lambda_{j},0,0)&(p_{11})_{\gamma}(\lambda_{j},0,0)\\
+(p_{21})_{\varLambda}(\lambda_{j},0,0)&(p_{21})_{\gamma}(\lambda_{j},0,0)\end{array}\right]=-(p_{11})_{\gamma}(p_{21})_{\varLambda}(\lambda_{j},0,0)\neq 0.$ Then the Fréchet derivative $H_{(\varLambda,\gamma,\widetilde{h},\widetilde{k})}(\lambda_{j},0,\widetilde{h}_{0},\widetilde{k}_{0},0):\mathbb{R}\times\mathbb{R}\times X_{0}\to\mathbb{R}\times\mathbb{R}\times X_{0}$ is invertible.
+We apply the Implicit Function Theorem to $F$ around $(\lambda_{j},0,\widetilde{h}_{0},\widetilde{k}_{0},0)$ to get the local curve $(\varLambda_{\varepsilon},\gamma_{\varepsilon},\widetilde{\phi}_{\varepsilon},\widetilde{\psi}_{\varepsilon})\in\mathbb{R}^{2}\times X_{0}$ for any $\varepsilon\in[0,\overline{\varepsilon}]$ with small $\overline{\varepsilon}>0$ satisfying ( 4.12 ).
+Then the proof of Theorem 4.1 is complete.
+∎ Proof of Theorem 2.3 . By Theorem 4.1 ,
+the stationary solutions $(\phi^{\pm}_{j,\varepsilon}(x),\psi^{\pm}_{j,\varepsilon}(x))$ of ( 4.1 ) are spectrally unstable if $\varepsilon\in(0,\overline{\varepsilon}]$ .
+By virtue of the smoothness of the change of variables ( 2.3 ),
+we see that the above spectral instability induces the spectral instability and nonlinear instability
+of $(u^{\pm}_{j,\varepsilon}(x),w^{\pm}_{j,\varepsilon}(x))=\biggl(h_{1}(\phi^{\pm}_{j,\varepsilon}(x),\psi^{\pm}_{j,\varepsilon}(x),\frac{1}{\varepsilon}h_{2}(\phi^{\pm}_{j,\varepsilon}(x),\psi^{\pm}_{j,\varepsilon}(x))\biggr)$ to the evolutional system ( 2.2 ).
+The proof of Theorem 2.3 is complete.
+∎ 5 Existence and instability of coexistence states of the SKT model with large cross diffusion 5.1 Perturbation of positive stationary solutions of the 2nd shadow system In this section, we construct the branch of positive solutions to the original stationary SKT system ( 1.2 )
+as the perturbation of the branch of solutions of the 2nd shadow system ( 1.1 )
+when $\alpha$ is sufficiently large and $\varepsilon=a_{2}\lambda_{j}^{-1}-d_{2}$ is small.
+In view of Theorem 1.1 (ii),
+it is natural to set $w=\alpha v$ in the SKT model ( 1.2 ), which is a perturbed system of the 2nd shadow system ( 1.1 ).
+Hence ( 1.2 ) is reduced to $\begin{cases}d_{1}\Delta[\,(1+w)u\,]+u(a_{1}-b_{1}u-\eta\,c_{1}w)=0\ \ &\mbox{in}\ \Omega,\\
+d_{2}\Delta[(1+\beta u)w]+w(a_{2}-b_{2}u-\eta\,c_{2}w)=0\ \ &\mbox{in}\ \Omega,\\
+\frac{\partial u}{\partial\nu}=\frac{\partial w}{\partial\nu}=0\ \ &\mbox{on}\ \partial\Omega,\\
+u\geq 0,\ w\geq 0\ \ &\mbox{in}\ \Omega,\end{cases}$ (5.1) with $\eta=1/\alpha$ .
+Our aim is to construct positive solutions of ( 5.1 )
+in the case when $\eta=1/\alpha$ and $\varepsilon=a_{2}\lambda_{j}^{-1}-d_{2}>0$ are small enough.
+For this end,
+we use the change of variables ( 2.3 ) i.e. $\tilde{w}=\varepsilon w,~~\phi=\varepsilon(1+w)u=(\varepsilon+\tilde{w})u,~\psi=(1+\beta u)\tilde{w}$ to reduce
+( 5.1 ) to the following semilinear elliptic system: $\begin{cases}\Delta\phi+\varepsilon f_{1}(\phi,\psi,\varepsilon)-\eta\,r_{1}(\phi,\psi,\varepsilon)=0\ \ &\mbox{in}\ \Omega,\\
+\Delta\psi+\lambda_{j}\psi-\left(\beta+\frac{b_{2}\lambda_{j}}{a_{2}}\right)\phi+\varepsilon f_{2}(\phi,\psi,\varepsilon)-\eta\,r_{2}(\phi,\psi,\varepsilon)=0\ \ &\mbox{in}\ \Omega,\\
+\frac{\partial\phi}{\partial\nu}=\frac{\partial\psi}{\partial\nu}=0\ \ &\mbox{on}\ \partial\Omega,\\
+\end{cases}$ (5.2) where $f_{1}$ and $f_{2}$ are defined by ( 2.10 ), $r_{1}(\phi,\psi,\varepsilon):=\dfrac{\varepsilon c_{1}h_{1\varepsilon}(\phi,\psi)h_{2\varepsilon}(\phi,\psi)}{d_{1}},\qquad r_{2}(\phi,\psi,\varepsilon):=\dfrac{c_{2}h^{2}_{2\varepsilon}(\phi,\psi)\lambda_{j}}{\varepsilon(a_{2}-\varepsilon\lambda_{j})},$ with $h_{1\varepsilon}$ and $h_{2\varepsilon}$ defined by ( 2.5 ).
+Then ( 5.2 ) can be represented as the equation: $\mathcal{L}\biggl[\begin{array}[]{c}\phi\\
+\psi\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{l}f_{1}(\phi,\psi,\varepsilon)\\
+f_{2}(\phi,\psi,\varepsilon)\end{array}\biggr]-\eta\biggl[\begin{array}[]{l}r_{1}(\phi,\psi,\varepsilon)\\
+r_{2}(\phi,\psi,\varepsilon)\end{array}\biggr]=\biggl[\begin{array}[]{c}0\\
+0\end{array}\biggr].$ (5.3) Following the Lyapunov-Schmidt reduction framework in
+the previous section,
+we employ the decomposition ( 3.13 )
+for the unknown functions $(\phi,\psi)$ of ( 5.3 ), i.e. $\biggl[\begin{array}[]{c}\phi(x)\\
+\psi(x)\end{array}\biggr]=s\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}(1+\mu\varphi_{j}(x))\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{c}\phi^{*}(x)\\
+\psi^{*}(x)\end{array}\biggr].$ Then, ( 5.3 ) can also be decomposed into three subspaces, $\mathrm{Span}\{\boldsymbol{e}_{1}\}$ , $\mathrm{Span}\{\boldsymbol{e}_{2}\}$ ,
+and $Y_{0}$ , as follows: $K(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon,\eta)=0,$ (5.4) with the operator $K\,:\,\mathbb{R}^{2}\times X_{0}\times\mathbb{R}^{2}\to\mathbb{R}^{2}\times X_{0}$ is defined by $K(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon,\eta):=G(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)-\dfrac{\eta}{\varepsilon}\left[\begin{array}[]{c}\kappa_{1}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\\
+\kappa_{2}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\\
+\kappa_{3}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\\
+\end{array}\right],$ (5.5) where $G(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)$ is defined by ( 3.20 ) and ( 3.21 ),
+and $\kappa_{i}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon,\eta)$ are
+defined by $\kappa_{i}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)\boldsymbol{e}_{i}=P_{i}R^{*}(s,\mu,\phi^{*},\psi^{*},\varepsilon)\quad\mbox{for}\ i=1,2$ (5.6) with $R^{*}(s,\mu,\phi^{*},\psi^{*},\varepsilon):=R\left(s+\varepsilon\phi^{*}(x),s\left(\beta+\frac{b_{2}}{a_{2}}(1+\mu\varphi_{j}(x))\right)+\varepsilon\psi^{*}(x)),\varepsilon\right),$ (5.7) and $R(\phi,\psi,\varepsilon):=\biggl[\begin{array}[]{c}r_{1}(\phi,\psi,\varepsilon)\\
+r_{2}(\phi,\psi,\varepsilon)\end{array}\biggr],$ whereas $\kappa_{3}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon)$ is defined by $\kappa_{3}(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon,\eta):=\mathcal{L}_{X_{0}}^{-1}(I-P)R^{*}(s,\mu,{\varPhi}^{*},\varepsilon).$ Lemma 5.1 . Let $(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon))\in\mathbb{R}^{2}\times X_{0}$ be the
+continuously differentiable function in ( 3.32 ).
+Then there exists a small positive number $\overline{\varepsilon}$ such that,
+for any $\underline{\varepsilon}\in(0,\overline{\varepsilon})$ ,
+there exists $\delta=\delta(\underline{\varepsilon})>0$ such that
+if $\varepsilon\in(\underline{\varepsilon}/2,2\overline{\varepsilon})$ and $\eta\in[0,\delta)$ , then $K_{(s,\mu,\boldsymbol{\varPhi}^{*})}(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon),\varepsilon,\eta)\,:\,\mathbb{R}^{2}\times X_{0}\to\mathbb{R}^{2}\times X_{0}$ is invertible. Proof. We recall that $G_{(s,\mu,\boldsymbol{\varPhi}^{*})}(s^{\pm}_{j,0},\mu^{\pm}_{j,0},\boldsymbol{\varPhi}^{\pm}_{j,0},0)\,:\,\mathbb{R}^{2}\times X_{0}\to\mathbb{R}^{2}\times X_{0}$ is an isomorphism by Lemma 3.5 .
+By virtue of the perturbation property of the resolvent,
+we can see that $G_{(s,\mu,\boldsymbol{\varPhi}^{*})}(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon),\boldsymbol{\varPhi}^{\pm}_{j,0},\varepsilon)$ is also an isomorphism if $\varepsilon\in(0,\overline{\varepsilon})$ with some small $\overline{\varepsilon}>0$ .
+Therefore, in view of ( 5.5 ),
+for any $\underline{\varepsilon}\in(0,\overline{\varepsilon})$ ,
+we can find a small $\delta=\delta(\underline{\varepsilon})>0$ such that $K_{(s,\mu,\boldsymbol{\varPhi}^{*})}(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon),\varepsilon,\eta)$ is invertible
+if $\varepsilon\in(\underline{\varepsilon}/2,2\overline{\varepsilon})$ and $\eta\in(0,\delta)$ .
+∎ Let $\varepsilon\in(\underline{\varepsilon},\overline{\varepsilon})$ be fixed arbitrary.
+In view of ( 3.32 ) and Lemma 5.1 ,
+we know that $K(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon),\varepsilon,0)=G(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon),\varepsilon)=0$ and $K_{(s,\mu,\boldsymbol{\varPhi}^{*})}(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon)\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon),\varepsilon,0)$ is invertible.
+Therefore, the Implicit Function Theorem
+yields a pair of neighborhoods $\mathcal{U}^{\pm}$ of $(s_{j}^{\pm}(\varepsilon),\mu_{j}^{\pm}(\varepsilon),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon),\varepsilon,0)$ ,
+respectively,
+small positive constants $\delta_{1}(\varepsilon)\in(0,\varepsilon)$ and $\delta_{2}(\underline{\varepsilon})$ such that
+all the solutions in $\mathcal{U}^{\pm}$ of $K(s,\mu,\boldsymbol{\varPhi}^{*},\varepsilon^{\prime},\eta)=0$ can be represented as $(s,\mu,\boldsymbol{\varPhi}^{*})=(s^{\pm}_{j}(\varepsilon^{\prime},\eta),\mu^{\pm}_{j}(\varepsilon^{\prime},\eta),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon^{\prime},\eta))$ (5.8) for any $(\varepsilon^{\prime},\eta)\in(\varepsilon-\delta_{1},\varepsilon+\delta_{1})\times(0,\delta_{2})$ .
+Here $(s^{\pm}_{j}(\varepsilon^{\prime},\eta),\mu^{\pm}_{j}(\varepsilon^{\prime},\eta),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon^{\prime},\eta))$ is continuously differentiable in $\varepsilon^{\prime}$ and $\eta$ , and satisfies $(s^{\pm}_{j}(\varepsilon^{\prime},0),\mu^{\pm}_{j}(\varepsilon^{\prime},0),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon^{\prime},0))=(s^{\pm}_{j}(\varepsilon^{\prime}),\mu^{\pm}_{j}(\varepsilon^{\prime}),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon^{\prime})).$ Thus we obtain the following existence result for the branch of
+positive solutions of ( 5.2 ): Theorem 5.2 . Assume that $N\leq 4$ , $A>B$ and $\lambda_{j}\in\mathbb{N}$ is simple.
+For any such $j$ and each sign of $\pm$ ,
+there exists $\overline{\varepsilon}>0$ such that
+for any $\underline{\varepsilon}\in(0,\overline{\varepsilon})$ ,
+there exists $\delta^{*}=\delta^{*}(\underline{\varepsilon})$ such that
+if $\varepsilon\in(\underline{\varepsilon},\overline{\varepsilon})$ and $\eta\in(0,\delta^{*})$ ,
+( 5.2 )
+has positive solutions $(\phi^{\pm}_{j}(x;\varepsilon,\eta),\psi^{\pm}_{j}(x;\varepsilon,\eta))$ satisfying $\biggl[\begin{array}[]{c}\phi^{\pm}_{j}(x;\varepsilon,\eta)\\
+\psi^{\pm}_{j}(x;\varepsilon,\eta)\end{array}\biggr]=s^{\pm}_{j}(\varepsilon,\eta)\biggl(\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}\end{array}\biggr]+\mu^{\pm}_{j}(\varepsilon,\eta)\biggl[\begin{array}[]{c}0\\
+\frac{b_{2}}{a_{2}}\varphi_{j}(x)\end{array}\biggr]\biggr)+\varepsilon\biggl[\begin{array}[]{c}\widetilde{\phi}^{\pm}_{j}(x;\varepsilon,\eta)\\
+\widetilde{\psi}^{\pm}_{j}(x;\varepsilon,\eta)\end{array}\biggr],$ (5.9) where $\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon,\eta):=(\widetilde{\phi}^{\pm}_{j}(\varepsilon,\eta),\widetilde{\psi}^{\pm}_{j}(\varepsilon,\eta))\in X_{0}$ and $(s^{\pm}_{j}(\varepsilon,\eta),\mu^{\pm}_{j}(\varepsilon,\eta))\in\mathbb{R}^{2}$ are functions of $C^{1}$ -class
+for $(\varepsilon,\eta)\in(\underline{\varepsilon},\overline{\varepsilon})\times[0,\delta^{*})$ satisfying $(s^{\pm}_{j}(\varepsilon,0),\mu^{\pm}_{j}(\varepsilon,0))=(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon))\ \ \mbox{and}\ \ \boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon,0)=\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon),$ where $(s^{\pm}_{j}(\varepsilon),\mu^{\pm}_{j}(\varepsilon),\boldsymbol{\varPhi}^{*\pm}_{j}(\varepsilon))$ are defined by Theorem 2.1 . 5.2 Perturbation of unstable eigenvalues of the linearized problem
+for the 2nd shadow system By setting $w=\alpha v$ in the original evolutional SKT system ( 1.1 ),
+we obtain $\begin{cases}u_{t}=\Delta[\,(d_{1}+w)u\,]+u(a_{1}-b_{1}u-\eta\,c_{1}w)\ \ &\mbox{in}\ \Omega\times(0,T),\\
+w_{t}=d_{2}\Delta[(1+\beta u)w]+w(a_{2}-b_{2}u-\eta\,c_{2}w)\ \ &\mbox{in}\ \Omega\times(0,T),\\
+\frac{\partial u}{\partial\nu}=\frac{\partial w}{\partial\nu}=0\ \ &\mbox{on}\ \partial\Omega\times(0,T),\\
+\end{cases}$ where $\eta=1/\alpha$ .
+Furthermore, the change of variables ( 2.3 ) reduces the
+above system to $\dfrac{\partial}{\partial t}\biggl[\begin{array}[]{c}\frac{\varepsilon}{d_{1}}h_{1\varepsilon}(\phi,\psi)\\
+\frac{1}{d_{2}}h_{2\varepsilon}(\phi,\psi)\end{array}\biggr]=\mathcal{L}\biggl[\begin{array}[]{c}\phi\\
+\psi\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{c}f_{1}(\phi,\psi,\varepsilon)\\
+f_{2}(\phi,\psi,\varepsilon)\end{array}\biggr]-\eta\biggl[\begin{array}[]{c}r_{1}(\phi,\psi,\varepsilon)\\
+r_{2}(\phi,\psi,\varepsilon)\end{array}\biggr]$ (5.10) In view of Theorem 5.2 , we denote $(\phi_{\varepsilon,\eta}(x),\psi_{\varepsilon,\eta}(x)):=(\phi^{\pm}_{j}(x;\varepsilon,\eta),\psi^{\pm}_{j}(x;\varepsilon,\eta))\quad\mbox{for}\quad(\varepsilon,\eta)\in(\underline{\varepsilon},\overline{\varepsilon})\times[0,\delta^{*})$ by the stationary solutions of system ( 5.10 ).
+To investigate the spectral stability/instability of $(\phi_{\varepsilon,\eta},\psi_{\varepsilon,\eta})$ ,
+we consider the linearized evolutional system of ( 5.10 ) around $(\phi_{\varepsilon,\eta},\psi_{\varepsilon,\eta})$ , and the corresponding eigenvalue problem of the linearized evolutional system is as follows: $\sigma T^{\varepsilon,\eta}(x)\biggl[\begin{array}[]{c}\phi\\
+\psi\end{array}\biggr]=\mathcal{L}\biggl[\begin{array}[]{c}\phi\\
+\psi\end{array}\biggr]+(\varepsilon F^{\varepsilon,\eta}_{(\phi,\psi)}(x)-\eta R^{\varepsilon,\eta}_{(\phi,\psi)}(x))\biggl[\begin{array}[]{c}\phi\\
+\psi\end{array}\biggr],$ (5.11) where $T^{\varepsilon,\eta}(x)$ and $F^{\varepsilon,\eta}_{(\phi,\psi)}(x)$ are respectively defined as ( 4.4 ) and ( 4.6 ) with $(\phi_{\varepsilon},\psi_{\varepsilon})$ replaced by $(\phi_{\varepsilon,\eta},\psi_{\varepsilon,\eta})$ .
+As the $\eta$ -perturbation of Theorem 4.1 ,
+we obtain the spectral instability of $(\phi_{\varepsilon,\eta},\psi_{\varepsilon,\eta})$ as follows: Theorem 5.3 . Assume that $N\leq 4$ , $A>B$ and $\lambda_{j}$ is simple.
+For any such $j\geq 1$ and each sign of $\pm$ ,
+the eigenvalue problem ( 5.11 ) has a
+positive eigenvalue $\sigma^{\pm}_{j}(\varepsilon,\eta)=\varepsilon\varLambda^{\pm}_{j}(\varepsilon,\eta)$ (5.12) with an eigenfunction $(\widehat{\phi}_{\varepsilon,\eta}(x),\widehat{\psi}_{\varepsilon,\eta}(x)):=(\widehat{\phi^{\pm}_{j}}(x;\varepsilon,\eta),\widehat{\psi^{\pm}_{j}}(x;\varepsilon,\eta))$ expressed by $\biggl[\begin{array}[]{c}\widehat{\phi}_{\varepsilon,\eta}(x)\\
+\widehat{\psi}_{\varepsilon,\eta}(x)\end{array}\biggr]=\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}\ell_{0}(x)\end{array}\biggr]+\gamma_{\varepsilon,\eta}\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{c}\widetilde{\phi}_{\varepsilon,\eta}(x)\\
+\widetilde{\psi}_{\varepsilon,\eta}(x)\end{array}\biggr],$ (5.13) where $\ell_{0}(x):=1+\mu^{\pm}_{j,0}\varphi_{j}(x).$ (5.14) Here $\varLambda^{\pm}_{j}(\varepsilon,\eta)$ , $\gamma_{\varepsilon,\eta}\in\mathbb{R}$ and $(\widetilde{\phi}_{\varepsilon,\eta},\widetilde{\psi}_{\varepsilon,\eta})\in Y_{0}$ are continuous for $(\varepsilon,\eta)\in(\underline{\varepsilon},\overline{\varepsilon})\times[0,\delta^{*})$ and satisfy $\varLambda_{\varepsilon,0}=\varLambda^{\pm}(\varepsilon),\quad\gamma_{\varepsilon,0}=\gamma^{\pm}(\varepsilon),\quad(\widetilde{\phi}_{\varepsilon,0}(x),\widetilde{\psi}_{\varepsilon,0}(x))=(\widetilde{\phi}^{\pm}(x,\varepsilon),\widetilde{\psi}^{\pm}(x,\varepsilon))$ (5.15) with $(\varLambda^{\pm}(\varepsilon),\gamma^{\pm}(\varepsilon),\widetilde{\phi}^{\pm}(x,\varepsilon),\widetilde{\psi}^{\pm}(x,\varepsilon))$ obtained in Theorem 4.1 . Proof. Following the idea of the proof of Theorem 4.1 ,
+in order
+to seek for the eigenpairs of ( 5.11 ) in the form $\sigma=\varepsilon\varLambda\quad\mbox{and}\quad\biggl[\begin{array}[]{c}\phi(x)\\
+\psi(x)\end{array}\biggr]=\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}\ell_{0}(x)\end{array}\biggr]+\gamma\biggl[\begin{array}[]{c}1\\
+\beta+\frac{b_{2}}{a_{2}}\end{array}\biggr]+\varepsilon\biggl[\begin{array}[]{c}\widetilde{\phi}(x)\\
+\widetilde{\psi}(x)\end{array}\biggr],$ we substitute them into ( 5.11 ) to get
+the reduced system $\begin{array}[]{c}\mathcal{L}\biggl[\begin{array}[]{c}\widetilde{\phi}\\
+\widetilde{\psi}\end{array}\biggr]=\\
+\biggl(\varLambda T^{\varepsilon,\eta}(x)-F^{\varepsilon,\eta}_{(\phi,\psi)}(x)+\dfrac{\eta}{\varepsilon}R^{\varepsilon,\eta}_{(\phi,\psi)}(x)\biggr)\biggl[\begin{array}[]{l}1+\gamma+\varepsilon\widetilde{\phi}(x)\\
+(1+\gamma)\left(\beta+\frac{b_{2}}{a_{2}}\right)+\frac{b_{2}}{a_{2}}\mu^{\pm}_{j,0}\varphi_{j}(x)+\varepsilon\widetilde{\psi}(x)\end{array}\biggr].\end{array}$ (5.16) By applying the Lyapunov-Schmidt reduction argument
+as in the proof of Theorem 4.1 ,
+we reduce
+( 5.16 ) to the system $\begin{array}[]{c}H(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon)\\
+=-\dfrac{\eta}{\varepsilon}\left[\begin{array}[]{l}\rho_{1}(\lambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon)\\
+\rho_{2}(\lambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon)\\
+-\mathcal{L}_{X_{0}}^{-1}(I-P)R^{\varepsilon}_{(\phi,\psi)}(x)\biggl[\begin{array}[]{l}1+\gamma+\varepsilon\widetilde{\phi}\\
+\beta+\frac{b_{2}}{a_{2}}\ell_{0}(x)+\gamma(\beta+\frac{b_{2}}{a_{2}})+\varepsilon\widetilde{\psi}\end{array}\biggr]\end{array}\right]\end{array}$ (5.17) where $H$ is the operator defined by ( 4.27 ) and $\rho_{i}(\lambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon)\boldsymbol{e}_{i}:=P_{i}\biggl(R^{\varepsilon,\eta}_{(\phi,\psi)}(x)\biggl[\begin{array}[]{l}1+\gamma+\varepsilon\widetilde{\phi}\\
+(1+\gamma)\left(\beta+\frac{b_{2}}{a_{2}}\right)+\frac{b_{2}}{a_{2}}\mu^{\pm}_{j,0}\varphi_{j}(x)+\varepsilon\widetilde{\psi}\end{array}\biggr]\biggr).$ By ( 4.29 ), we recall that $H_{(\Lambda,\gamma,\widetilde{\phi},\widetilde{\psi})}(\lambda_{j},0,\widetilde{\phi}_{0},\widetilde{\psi}_{0},0)\,:\,\mathbb{R}\times\mathbb{R}\times X_{0}\to\mathbb{R}\times\mathbb{R}\times Y_{0}$ is invertible.
+By the perturbation of the resolvent,
+one can see that $H_{(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi})}(\lambda_{\varepsilon},\gamma_{\varepsilon},\widetilde{h}_{\varepsilon}$ , $\widetilde{k}_{\varepsilon},\varepsilon)$ is also invertible if $\varepsilon\in(0,\overline{\varepsilon})$ with some $\overline{\varepsilon}>0$ .
+In view of the left-hand side
+of ( 5.17 ),
+one can see that, for any $\underline{\varepsilon}\in(0,\overline{\varepsilon})$ ,
+there exists $\delta^{*}=\delta^{*}(\underline{\varepsilon})>0$ such that if $\varepsilon\in(\underline{\varepsilon},\overline{\varepsilon})$ and $\eta\in[0,\delta^{*})$ ,
+the application of the Implicit Function Theorem near $(\varLambda,\gamma,\widetilde{\phi},\widetilde{\psi},\varepsilon,\eta)=(\varLambda^{\pm}(\varepsilon),\gamma^{\pm}(\varepsilon),\widetilde{\phi}^{\pm}(x,\varepsilon),\widetilde{\psi}^{\pm}(x,\varepsilon),\varepsilon,0)$ enables us to construct the set of solutions of
+( 5.17 ) expressed as ( 5.13 ) and ( 5.15 ).
+Then the proof of Theorem 5.3 is complete.
+∎ Proof of Theorem 2.4 . By substituting ( 5.9 ) into ( 2.3 ) with $w=\alpha v$ , then by ( 2.5 )
+we see that $\begin{array}[]{l}u^{\pm}_{j,\varepsilon,\alpha}(x):=h_{1\varepsilon}(\phi^{\pm}_{j}(x,\varepsilon,\alpha^{-1}),\psi^{\pm}_{j}(x;\varepsilon,\alpha^{-1})),\\
+v^{\pm}_{j,\varepsilon,\alpha}(x):=\dfrac{h_{2\varepsilon}(\phi^{\pm}_{j}(x,\varepsilon,\alpha^{-1}),\psi^{\pm}_{j}(x;\varepsilon,\alpha^{-1}))}{\alpha\varepsilon},\quad d_{2}=\dfrac{a_{2}}{\lambda_{j}}-\varepsilon,\end{array}$ (5.18) when $\varepsilon\in(\underline{\varepsilon}_{j,\pm},\overline{\varepsilon}_{j,\pm})$ and $\alpha>0$ is sufficiently large.
+Hence ( 5.18 ) transforms the curve ( 5.9 ) of
+solutions of ( 5.2 ) to $\varGamma^{(\alpha)}_{j,\pm}$ stated in Theorem 2.4 .
+Furthermore, ( 2.20 ) follows from the regularity of ( 5.18 ) and Theorem 5.2 . The spectral instability of solutions of $\varGamma^{(\alpha)}_{j,\pm}$ follows from the spectral instability of solutions on the curve ( 5.9 )
+and the regularity of ( 5.18 ), which completes the proof of Theorem 2.4 .
+∎ Acknowledgment Kousuke Kuto was supported by
+was supported by
+JSPS KAKENHI Grant-in-Aid for Scientific Research (B),
+Grant Number 25K00917, Yaping Wu was supported by NSF of China (No. 12371209 and No. 11871048) and Beijing NSF (No. 1232004). References [1] J. Inoue, K. Kuto and H. Sato, Coexistence-segregation dichotomy in the full cross-diffusion limit of the stationary SKT model ,
+Journal of Differential Equations,
+373 (2023), 48–107. [2] A. Jüngel, Diffusive and nondiffusive population models .
+In: G. Naldi, L. Pareschi and G. Toscani (eds.),
+Mathematical modeling of collective behavior
+in socio-economic and life sciences, 397–425,
+Model. Simul. Sci. Eng. Technol.,
+Birkhäuser, Basel, 2010. [3] Y. Kan-on, Stability of singularly perturbed solutions to nonlinear
+diffusion systems arising in population dynamics ,
+Hiroshima Math. J., 28 (1993), 509–536. [4] Y. Kan-on, On the structure of positive solutions for the Shigesada-Kawasaki-Teramoto model with large interspecific competition rate ,
+Internat. J. Bifur. Chaos Appl. Sci. Engrg.
+30 (1), 2050001 (9 pages). [5] Y. Kan-on, On the limiting system in the Shigesada, Kawasaki and Teramoto model with large cross-diffusion rates ,
+Discrete Contin. Dyn. Syst. 40 (2020),
+3561-3570. [6] T. Kolokolnikov and J. Wei, Stability of spiky solutions in a competition model with cross-diffusion ,
+SIAM J. Appl. Math., 71 (2011), 1428–1457. [7] K. Kuto, Limiting structure of shrinking solutions to
+the stationary SKT model with large cross-diffusion ,
+SIAM J. Math. Anal.,
+47 (2015), 3993–4024. [8] K. Kuto, Full cross-diffusion limit in the stationary
+Shigesada-Kawasaki-Teramoto model ,
+Ann. Inst. Henri Poincaré (C) Anal. Non Lineaire,
+38 (2021), 1943–1959. [9] K. Kuto, Global structure of steady-states to the full cross-diffusion limit in the Shigesada-Kawasaki-Teramoto model ,
+J. Differential Equations,
+333 (2022), 103–143. [10] K. Kuto and H. Sato, Morse index of steady-states to the SKT model
+with Dirichlet boundary conditions ,
+SIAM J. Math. Anal.,
+56 (2024), 5386–5408. [11] K. Kuto and Y. Yamada, Positive solutions for Lotka-Volterra competition systems
+with large cross-diffusion ,
+Appl. Anal.,
+89 (2010)
+1037-1066. [12] K. Kuto and Y. Yamada, On limit systems for some population models with cross-diffusion ,
+Discrete Contin. Dyn. Syst. B,
+17 (2012) 2745-2769. [13] Q. Li and Y. Wu, Stability analysis on a type of steady state for the SKT competition model with large cross diffusion ,
+J. Math. Anal. Appl.,
+462 (2018) 1048–1078. [14] Q. Li and Y. Wu, Existence and instability of some nontrivial
+steady states for the SKT competition model
+with large cross diffusion ,
+Discrete Contin. Dyn. Syst., 40 (2020) 3657–3682. [15] Y. Lou and W.-M. Ni, Diffusion, self-diffusion and cross-diffusion ,
+J. Differential Equations, 131 (1996), 79–131. [16] Y. Lou and W.-M. Ni, Diffusion vs cross-diffusion: an elliptic approach ,
+J. Differential Equations, 154 (1999), 157–190. [17] Y. Lou, W.-M, Ni and S. Yotsutani, On a limiting system in the Lotka-Volterra competition with
+cross-diffusion ,
+Discrete Contin. Dyn. Syst., 10 (2004), 435–458. [18] Y. Lou, W.-M, Ni and S. Yotsutani, Pattern formation in a cross-diffusion system ,
+Discrete Contin. Dyn. Syst., 35 (2015), 1589–1607. [19] M. Mimura, Y. Nishiura, A. Tesei and T. Tsujikawa, Coexistence problem for two competing species models with
+density-dependent diffusion ,
+Hiroshima Math. J., 14 (1984), 425–449. [20] T. Mori, T. Suzuki and S. Yotsutani, Numerical approach to existence and stability of stationary
+solutions to a SKT cross-diffusion equation ,
+Math. Models Methods Appl. Sci.,
+11 (2018), 2191–2210. [21] W.-M. Ni, The Mathematics of Diffusion ,
+CBMS-NSF Regional Conference Series in Applied Mathematics 82,
+SIAM,
+Philadelphia, 2011. [22] W.-M. Ni, Y. Wu and Q. Xu, The existence and stability of nontrivial steady states for
+S-K-T competition model with cross diffusion ,
+Discrete Contin. Dyn. Syst., 34 (2014), 5271–5298. [23] A. Okubo and L. A. Levin, Diffusion and Ecological Problems:
+Modern Perspective ,
+Second edition.
+Interdisciplinary Applied Mathematics,
+14, Springer-Verlag, New York, 2001. [24] N. Shigesada, K. Kawasaki and E. Teramoto, Spatial segregation of interacting species ,
+J. Theor. Biol., 79 (1979), 83–99. [25] Z. Tang, Existence and instability of some nontrivial positive
+steady states for the SKT model with double cross
+diffusion , Acta Math. Appl. Sinica, English Series, 3 (2023) 623-637. [26] L. Wang, Y. Wu and Q. Xu, Instability of spiky steady states for S-K-T biological competing
+model with cross-diffusion ,
+Nonlinear Analysis, 159 (2017), 424–457. [27] Y. Wu, The instability of spiky steady states for a competing species
+model with cross-diffusion ,
+J. Differential Equations, 213 (2005), 289–340. [28] Y. Wu and Q. Xu, The existence and structure of large spiky steady states for
+S-K-T competition systems with cross diffusion ,
+Discrete Contin. Dyn. Syst., 29 (2011), 367–385. [29] Y. Yamada, Positive solutions for Lotka-Volterra systems with cross-diffusion ,
+In: M. Chipot (ed.),
+Handbook of Differential Equations,
+Stationary Partial
+Differential Equations, Vol. 6, 411–501,
+Elsevier,
+Amsterdam, 2008. [30] Y. Yamada, Global solutions for the Shigesada-Kawasaki-Teramoto model
+with cross-diffusion .
+In: Y. Du, H. Ishii and W.-Y. Lin (eds.),
+Recent progress on reaction-diffusion systems and viscosity solutions,
+282–299, World Sci. Publ., Hackensack, NJ, 2009. [31] S. Yotsutani, Multiplicity of solutions in the Lotka-Volterra
+competition with cross-diffusion ,
+RIMS Kokyuroku, No. 1838 (2013), 116–125. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

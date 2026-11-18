@@ -1,0 +1,258 @@
+Interface dynamics of the porous medium equation with a bistable reaction term Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 Comparison principle,
+well-posedness 3 Motion of the transition layers 3.1 Materials 3.2 Construction of sub-solutions 3.3 Construction of super-solutions 4 Proof of Theorem 4.1 A generation of interface property 4.2 Proof of the main theorem References License: arXiv.org perpetual non-exclusive license arXiv:1107.3543v1 [math.AP] 18 Jul 2011 Interface dynamics of the porous medium equation with a bistable reaction term Abstract We consider a degenerate partial differential equation arising in
+population dynamics, namely the porous medium equation with a
+bistable reaction term. We study its asymptotic behavior as a
+small parameter, related to the thickness of a diffuse interface,
+tends to zero. We prove the rapid formation of transition layers
+which then propagate. We prove the convergence to a sharp
+interface limit whose normal velocity, at each point, is that of
+the underlying
+degenerate travelling wave. Key Words: degenerate diffusion, singular
+perturbation, sharp interface limit, population
+dynamics. 2 2 2 AMS Subject Classifications: 35K65, 35B25,
+35R35, 92D25. Matthieu Alfaro 1 1 1 The first author is supported
+by the French Agence Nationale de la Recherche within the
+project IDEE
+(ANR-2010-0112-01). I3M, Université de Montpellier 2, CC051, Place Eugène Bataillon, 34095 Montpellier Cedex 5, France, Danielle Hilhorst CNRS and Laboratoire de Mathématiques, Université de Paris-Sud 11, 91405 Orsay Cedex, France. 1 Introduction In this paper we consider the rescaled porous medium equation with
+a bistable reaction term $(P^{\;\!\varepsilon})\quad\begin{cases}u_{t}=\varepsilon\Delta(u^{m})+\displaystyle{\frac{1}{\varepsilon}}f(u)&\text{in }\Omega\times(0,\infty)\\
+\displaystyle\frac{\partial(u^{m})}{\partial\nu}=0&\text{on }\partial\Omega\times(0,\infty)\\
+u(x,0)=u_{0}(x)&\text{in }\Omega\,,\end{cases}$ and study the sharp interface limit as $\varepsilon\to 0$ . Here $\Omega$ is
+a smooth bounded domain in $\mathbb{R}^{N}$ ( $N\geq 2$ ), $\nu$ is the
+Euclidian unit normal vector exterior to $\partial\Omega$ and $m>1$ . We assume that $f$ is smooth, has exactly three zeros $0<a<1$ such
+that $f^{\prime}(0)<0\,,\qquad f^{\prime}(a)>0\,,\qquad f^{\prime}(1)<0\,,$ (1.1) and that $\int_{0}^{1}mu^{m-1}f(u)\,du>0\,.$ (1.2) The above assumption implies that the speed of the underlying
+degenerate travelling wave is positive (see subsection 3.1 ), so that the region enclosed by the limit
+interface is expanding (see below). This explains why the
+requirement ( 1.2 ) is convenient for the study of
+invasion processes. As far as the initial data is concerned, we assume that $0\leq u_{0}\leq M$ (for some $M>a$ ) is a $C^{2}(\overline{\Omega})$ function with compact
+support $Supp\,u_{0}:={\rm Cl}\{x\in\Omega:\,u_{0}(x)>0\}\subset\subset\Omega\,.$ Furthermore we define the initial interface $\Gamma_{0}$ by $\Gamma_{0}:=\{x\in\Omega:\,u_{0}(x)=a\}\,,$ and suppose that $\Gamma_{0}$ is a smooth hypersurface without
+boundary, such that, $n$ being the Euclidian unit normal vector
+exterior to $\Gamma_{0}$ , $\Gamma_{0}\subset\subset\Omega\quad\mbox{ and }\quad\nabla u_{0}(x)\neq 0\quad\text{if $x\in\Gamma_{0}$\,,}$ (1.3) $u_{0}>a\quad\text{ in }\quad\Omega_{0}^{(1)}\,,\quad u_{0}<a\quad\text{ in }\quad\Omega_{0}^{(0)}\,,$ (1.4) where $\Omega_{0}^{(1)}$ denotes the region enclosed by $\Gamma_{0}$ and $\Omega_{0}^{(0)}$ the region enclosed between $\partial\Omega$ and $\Gamma_{0}$ . Problem $(P^{\;\!\varepsilon})$ possesses a unique weak solution $u^{\varepsilon}$ as
+it is explained in Section 2 . As $\varepsilon\rightarrow 0$ , by formally neglecting the diffusion term, we see
+that, in the very early stage, the value of $u^{\varepsilon}$ quickly becomes
+close to either $1$ or $0$ in most part of $\Omega$ , creating a
+steep interface (transition layers) between the regions $\{u^{\varepsilon}\approx 1\}$ and $\{u^{\varepsilon}\approx 0\}$ . Once such an interface
+develops, the diffusion term is large near the interface and comes
+to balance with the reaction term. As a result, the interface
+ceases rapid development and starts to propagate in a slower time
+scale. Therefore the limit solution $\tilde{u}(x,t)$ will be a
+step function taking the value $1$ on one side of the moving
+interface, and $0$ on the other side. We shall prove that this sharp interface limit, which we denote by $\Gamma_{t}$ , obeys the law of motion $(P^{\;\!0})\quad\begin{cases}\,V_{n}=c^{*}\quad\text{ on }\Gamma_{t}\vskip 3.0pt\\
+\,\Gamma_{t}\big|_{t=0}=\Gamma_{0}\,,\end{cases}$ where $V_{n}$ is the normal velocity of $\Gamma_{t}$ in the exterior
+direction, and $c^{*}$ the positive speed of the underlying
+travelling wave (see subsection 3.1 ). Problem $(P^{\;\!0})$ possesses a unique smooth solution on $[0,T^{max})$ for some $T^{max}>0$ . We denote this solution by $\Gamma=\cup_{0\leq t<T^{max}}(\Gamma_{t}\times\{t\})$ . From now on, we fix $0<T<T^{max}$ and work on $[0,T]$ . We set $Q_{T}:=\Omega\times(0,T)\,,$ and, for each $t\in[0,T]$ , we denote by $\Omega_{t}^{(1)}$ the region
+enclosed by the hypersurface $\Gamma_{t}$ , and by $\Omega_{t}^{(0)}$ the
+region enclosed between $\partial\Omega$ and $\Gamma_{t}$ . We define a
+step function $\tilde{u}(x,t)$ by $\tilde{u}(x,t):=\begin{cases}\,1&\text{in }\Omega_{t}^{(1)}\\
+\,0&\text{in }\Omega_{t}^{(0)}\end{cases}\quad\text{for }t\in[0,T]\,,$ (1.5) which represents the formal asymptotic limit of $u^{\varepsilon}$ as $\varepsilon\to 0$ . Our main result, Theorem 1.1 , describes both
+the emergence and the propagation of the layers. First, it gives
+the profile of the solution after a very short initial period: the
+solution $u^{\varepsilon}$ quickly becomes close to $1$ or $0$ , except in a
+small neighborhood of the initial interface $\Gamma_{0}$ , creating
+a steep transition layer around $\Gamma_{0}$ ( generation of
+interface ). The time needed to develop such a transition layer,
+which we will denote by $t^{\varepsilon}$ , is $\mathcal{O}(\varepsilon|\ln\varepsilon|)$ .
+Then the theorem states that the solution $u^{\varepsilon}$ remains close to
+the step function $\tilde{u}$ on the time interval $[t^{\varepsilon},T]$ ( motion of interface ). Theorem 1.1 (Generation and motion of interface) . Assume $m\geq 2$ . Define $\mu$ as the derivative of $f(u)$ at the
+unstable equilibrium $u=a$ , that is $\mu=f^{\prime}(a)\,.$ Let $\eta\in(0,\min(a,1-a))$ be arbitrary. Fix $\alpha_{0}>0$ arbitrarily small. Then there exist positive constants $\varepsilon_{0}$ and $\mathcal{C}$ such that, for all $\,\varepsilon\in(0,\varepsilon_{0})$ and for all $(x,t)$ such that $\,t^{\varepsilon}\leq t\leq T$ , where $t^{\varepsilon}:=\mu^{-1}\varepsilon|\ln\varepsilon|\,,$ (1.6) we have $u^{\varepsilon}(x,t)\in\begin{cases}\,[1-2\varepsilon,1+\eta]&\quad\text{if}\quad x\in\Omega_{t}^{(1)}\setminus\mathcal{N}_{\mathcal{C}\varepsilon|\ln\varepsilon|}(\Gamma_{t})\\
+\,[0,1+\eta]&\quad\text{if}\quad x\in\Omega\\
+\,[0,\eta]&\quad\text{if}\quad x\in\Omega_{t}^{(0)}\setminus\mathcal{N}_{\alpha_{0}}(\Gamma_{t})\,,\end{cases}$ (1.7) where $\mathcal{N}_{r}(\Gamma_{t}):=\{x\in\Omega:\,dist(x,\Gamma_{t})<r\}$ denotes the $r$ -tubular neighborhood of $\Gamma_{t}$ . Remark 1.2 (About the thickness of the interface) . Since the
+construction of super-solutions is much more involved than that of
+sub-solutions, the statement ( 1.7 ) is more accurate in $\Omega_{t}^{(1)}$ than in $\Omega_{t}^{(0)}$ . More precisely, on the
+one hand, ( 1.7 ) shows that the convergence to 1 is
+uniform “inside the interface” except in $\mathcal{O}(\varepsilon|\ln\varepsilon|)$ tubular neighborhoods of the sharp interface limit;
+on the other hand, ( 1.7 ) only shows that the
+convergence to 0 is uniform “outside the interface” except
+in $\mathcal{O}(1)$ tubular neighborhoods of the sharp interface
+limit. Remark 1.3 (About the assumption $m\geq 2$ ) . Note that the sub- and super-solutions we shall construct to
+study the motion of interface allow $m>1$ . Nevertheless, since we
+consider not well-prepared initial data , we need to quote a
+generation of interface result from [ 2 ] which is valid
+only for $m\geq 2$ (if $1<m<2$ the partial differential equation
+is not only degenerate but also singular). When initial data have
+a “suitable shape”, the restriction $m\geq 2$ can be
+removed. As a direct consequence of Theorem 1.1 , we have the
+following convergence result. Corollary 1.4 (Convergence) . Assume $m\geq 2$ . As $\varepsilon\to 0$ , the solution $u^{\varepsilon}$ converges to $\tilde{u}$ in $\cup_{0<t\leq T}(\Omega^{(i)}_{t}\times\{t\})$ , where $i=0,1$ . For the relevance of nonlinear diffusion in population
+dynamics models, we refer the reader to Gurney and Nisbet [ 9 ] , Gurtin and Mac Camy [ 10 ] : density dependent
+diffusion is efficient to study the dynamics of a population which
+regulates its size below the carrying capacity set by the supply
+of nutrients. Since density dependent equations degenerate at
+points where $u=0$ , a loss of regularity of solutions occurs and
+their support propagates at finite speed. Let us mention some earlier works on problems involving nonlinear
+diffusion that are related to ours. Feireisl [ 6 ] has studied
+the singular limit of $(P^{\;\!\varepsilon})$ in the whole space $\mathbb{R}^{N}$ , which
+allows to reduce the issue to the radially symmetric case.
+Hilhorst, Kersner, Logak and Mimura [ 11 ] have investigated
+the singular limit of the equation posed in a bounded domain of $\mathbb{R}^{N}$ , with $f(u)$ of the Fisher-KPP type. Note that the authors
+in [ 11 ] assume the convexity of $\Omega_{0}^{(1)}$ which
+allows them to construct a single super-solution for both the
+generation and the motion of interface. Here, we dot not make such
+a geometric assumption. The organization of this work is as follows. In
+Section 2 , we briefly recall known results
+concerning the well-posedness of Problem $(P^{\;\!\varepsilon})$ . Section 3 is the body of the paper: we construct sub- and
+super-solutions to study the motion of the transition layers.
+Finally, we prove Theorem 1.1 in Section 4 . 2 Comparison principle,
+well-posedness Since the diffusion term degenerates when $u=0$ a loss of
+regularity of solutions occurs. We define below a notion of weak
+solution for Problem $(P^{\;\!\varepsilon})$ , which is very similar to the one
+proposed by Aronson, Crandall and Peletier [ 3 ] for the one
+dimensional problem with homogeneous Dirichlet boundary
+conditions. Concerning the initial data, we suppose here that $u_{0}\in L^{\infty}(\Omega)$ and $u_{0}\geq 0$ a.e. Note that in this
+subsection, and only in this subsection, we assume, without loss
+of generality, that $\varepsilon=1$ , which yields the Problem $(P)\quad\begin{cases}u_{t}=\Delta(u^{m})+f(u)&\text{in }\Omega\times(0,\infty)\\
+\displaystyle\frac{\partial(u^{m})}{\partial\nu}=0&\text{on }\partial\Omega\times(0,\infty)\\
+u(x,0)=u_{0}(x)&\text{in }\Omega\,.\end{cases}$ Definition 2.1 . A function $u:[0,\infty)\to L^{1}(\Omega)$ is a solution of Problem $(P)$ if, for all $T>0$ , (i) $u\in C\left([0,\infty);L^{1}(\Omega)\right)\cap L^{\infty}(Q_{T})\,;$ (ii) for all $\varphi\in C^{2}(\overline{Q_{T}})$ such that $\varphi\geq 0$ and $\displaystyle\frac{\partial\varphi}{\partial\nu}=0$ on $\partial\Omega$ , it holds that $\int_{\Omega}u(T)\varphi(T)-\int\int_{Q_{T}}(u\varphi_{t}+u^{m}\Delta\varphi)=\int_{\Omega}u_{0}\varphi(0)+\int\int_{Q_{T}}f(u)\varphi\,.$ (2.1) A sub-solution (respectively a super-solution) of Problem $(P)$ is
+a function satisfying (i) and (ii) with equality replaced by $\leq$ (respectively $\geq$ ). Theorem 2.2 (Existence and
+comparison principle) . The following
+properties hold. (i) Let $u^{-}$ and $u^{+}$ be a sub-solution and a super-solution
+of Problem $(P^{\varepsilon})$ with initial data $u_{0}^{-}$ and $u_{0}^{+}$ respectively. $\mbox{If~}\quad u_{0}^{-}\leq u_{0}^{+}\,\quad{a.e.}\quad\mbox{~then~}\quad u^{-}\leq u^{+}\mbox{~in~}Q_{T}\,;$ (ii) Problem $(P)$ has a unique solution $u$ on $[0,\infty)$ and $0\leq u\leq\max(1,\|u_{0}\|_{L^{\infty}(\Omega)})\quad\mbox{~in~}Q_{T}\,;$ (2.2) (iii) $u\in C(\overline{Q_{T}})$ . The proof of the theorem above can be performed in the same lines
+as in [ 3 , Theorem 5] (see also [ 13 ] and [ 4 ] for related results). The continuity of $u^{\varepsilon}$ follows from [ 5 ] . The following result turns out to be an essential tool when
+constructing smooth sub- and super-solutions of Problem $(P^{\;\!\varepsilon})$ . Lemma 2.3 . Let $u$ be a continuous nonnegative function in $\overline{\Omega}\times[0,T]$ . Define $\Omega_{t}^{\star}=\{x\in\Omega:\,u(x,t)>0\}$ and $\Gamma_{t}^{\star}=\partial\Omega_{t}^{\star}$ for all $t\in[0,T]$ . Suppose the
+family $\Gamma:=\cup_{0<t\leq T}\Gamma_{t}^{\star}\times\{t\}$ is sufficiently smooth and let $\nu_{t}^{\star}$ be the outward normal
+vector on $\Gamma_{t}^{\star}$ . Suppose moreover that (i) $\nabla(u^{m})\text{ is continuous in }\ \overline{\Omega}\times[0,T]$ (ii) ${\cal L}[u]:=u_{t}-\Delta(u^{m})-f(u)=0\;\text{ in }\ \{(x,t)\in\overline{\Omega}\times[0,T]:\,u(x,t)>0\}$ (iii) $\displaystyle{\frac{\partial(u^{m})}{\partial\nu_{t}^{\star}}}=0\;\text{ on }\ \partial\Omega_{t}^{\star},\;\text{ for all }\ t\in[0,T]$ . Then $u$ is a solution of Problem $(P)$ . Similarly a sub-solution
+(respectively a super-solution) of Problem $(P)$ is a function
+satisfying (i) and (ii)—(iii) with equality replaced by $\leq$ (respectively $\geq$ ). The proof of this result can be found in [ 11 ] . 3 Motion of the transition layers 3.1 Materials Underlying travelling waves. Hosono [ 12 ] has
+investigated travelling wave solutions for the degenerate one
+dimensional equation $u_{t}=(u^{m})_{xx}+f(u)\,.$ He proved that there exists a unique
+travelling wave $(c^{*},U)$ , that the sign of the velocity $c^{*}$ is
+that of $\int_{0}^{1}u^{m-1}f(u)\,du$ , and that the profiles vary
+with the sign of the velocity. More precisely, for $c^{*}<0$ , the
+front is smooth and $U\in C^{\infty}(\mathbb{R})$ , whereas, for $c^{*}>0$ , we
+only have $({U}^{m-1})^{\prime}\in L^{\infty}(\mathbb{R})$ , but $({U}^{m-1})^{\prime}\notin C(\mathbb{R})$ . These different behaviors of the travelling waves are in
+contrast with the density independent diffusion models, where
+fronts are smooth whatever their velocities are (see [ 7 ] ). In the present paper, the assumption ( 1.2 )
+implies that $c^{*}>0$ . More precisely the following holds (see [ 12 ] for details). The travelling wave $(c^{*},U)$ is the
+solution of the auxiliary problem $\left\{\begin{array}[]{ll}({U}^{m})^{\prime\prime}+c^{*}U^{\prime}+f(U)=0&\text{ on }(-\infty,\omega)\\
+U(-\infty)=1\\
+U(0)=a\\
+{U}^{\prime}<0&\text{ on }(-\infty,\omega)\\
+({U}^{m})^{\prime}(\omega)=0\\
+U\equiv 0&\text{ on
+}[\omega,\infty)\,,\end{array}\right.$ (3.1) for some $\omega>0$ . As $z\to-\infty$ , terms are exponentially
+decaying: $\max\left(1-U(z),|{U}^{\prime}(z)|,|{U}^{\prime\prime}(z)|\right)\leq Ce^{-\lambda|z|}\quad\text{ for }z\leq 0\,,$ (3.2) for some positive constants $C$ and $\lambda$ . As $z\nearrow\omega$ , we have $\lim_{z\nearrow\omega}\left({U}^{m-1}\right)^{\prime}(z)=-\frac{m-1}{m}c^{*}\quad\text{ and }\quad\lim_{z\nearrow\omega}({U}^{m-1})^{\prime\prime}(z)=-\frac{(m-1)^{2}}{m^{2}}f^{\prime}(0)\,,$ (3.3) and $U^{\prime}(\omega)\in[-\infty,0)$ . Moreover, for a positive constant
+which we denote again by $C$ , there holds $|(U^{m})^{\prime\prime}(z)|\leq C|U^{\prime}(z)|=-CU^{\prime}(z)\quad\text{ for all }z\in(-\infty,\omega)\,.$ (3.4) The cut-off signed distance function. Another classical ingredient in similar situations (see [ 14 ] or [ 8 ] ) is a cut-off signed distance function $d$ which we now define. Let $\widetilde{d}(\cdot,t)$ be the signed
+distance function to $\Gamma_{t}$ , namely $\widetilde{d}(x,t):=\begin{cases}-&\hskip-10.0pt{\rm dist}(x,\Gamma_{t})\quad\text{ for }x\in\Omega_{t}^{(1)}\\
+&\hskip-10.0pt{\rm dist}(x,\Gamma_{t})\quad\text{ for }x\in\Omega_{t}^{(0)}\,,\end{cases}$ (3.5) where ${\rm dist}(x,\Gamma_{t})$ is the distance from $x$ to the
+hypersurface $\Gamma_{t}$ . We remark that $\widetilde{d}(\cdot,t)=0$ on $\Gamma_{t}$ and that $|\nabla\widetilde{d}|=1$ in
+a neighborhood of the interface, say $|\nabla\widetilde{d}(x,t)|=1$ if $|\widetilde{d}(x,t)|<2d_{0}$ , for some $d_{0}>0$ . By reducing $d_{0}$ if necessary we can assume that $\widetilde{d}$ is smooth in $\{(x,t)\in\overline{\Omega}\times[0,T]:\,|\widetilde{d}(x,t)|<3d_{0}\}$ and that $dist(\Gamma_{t},\partial\Omega)\geq 3d_{0}\quad\textrm{ for all }t\in[0,T]\,.$ (3.6) Next, let $\zeta(s)$ be a smooth increasing function on $\mathbb{R}$ such
+that $\zeta(s)=\left\{\begin{array}[]{ll}s&\textrm{ if }\ |s|\leq d_{0}\\
+-2d_{0}&\textrm{ if }\ s\leq-2d_{0}\\
+2d_{0}&\textrm{ if }\ s\geq 2d_{0}\,.\end{array}\right.$ We then define the cut-off signed distance function $d$ by $d(x,t):=\zeta\left(\tilde{d}(x,t)\right)\,.$ (3.7) Note that $\text{ if }\quad|d(x,t)|<d_{0}\quad\text{ then }\quad|\nabla d(x,t)|=1\,,$ (3.8) that $d$ is constant ( $=2d_{0}$ ) in a neighborhood of $\partial\Omega$ , and that the equation of motion $(P^{\;\!0})$ yields $\text{ if }\quad|d(x,t)|<d_{0}\quad\text{ then }\quad d_{t}(x,t)+c^{*}=0\,.$ (3.9) Moreover, there exists a constant $C>0$ such that $|\nabla d(x,t)|+|\Delta d(x,t)|\leq C\quad\textrm{ for all }(x,t)\in\overline{Q_{T}}\,.$ (3.10) 3.2 Construction of sub-solutions Equipped with the travelling wave $(c^{*},U)$ and the signed
+distance function $d$ , we are looking for sub-solutions in the
+form $u^{-}_{\varepsilon}(x,t):=(1-\varepsilon)U\left(\frac{d(x,t)+\varepsilon|\ln\varepsilon|p\,e^{t}}{\varepsilon}\right)=(1-\varepsilon)U(z^{-}_{\varepsilon}(x,t))\,,$ (3.11) where $z^{-}_{\varepsilon}(x,t):=\displaystyle\frac{d(x,t)+\varepsilon|\ln\varepsilon|p\,e^{t}}{\varepsilon}\,.$ (3.12) Lemma 3.1 (Sub-solutions) . Let $p>0$ be arbitrary. Then, for $\varepsilon>0$ small enough, $u^{-}_{\varepsilon}$ is a sub-solution for Problem $(P^{\;\!\varepsilon})$ . Proof. In this proof (and only in this proof) we set $u^{-}_{\varepsilon}=u$ and $z^{-}_{\varepsilon}=z$ . Note that $\Omega_{t}^{\star}=\{x\in\Omega:\,d(x,t)<-\varepsilon|\ln\varepsilon|p\,e^{t}+\varepsilon\omega\}\,,$ (3.13) where $\Omega_{t}^{\star}$ is defined as in Lemma 2.3 . It
+follows that $u\equiv 0$ near the boundary $\partial\Omega$ so
+that the Neumann boundary condition $(iii)$ in Lemma 2.3 is fulfilled. Since $(U^{m})^{\prime}(\omega)=0$ we
+see that $\nabla(u^{m})$ is continuous in $\overline{\Omega}\times[0,T]$ .
+Therefore, by virtue of Lemma 2.3 , it is enough
+to prove that $\varepsilon\mathcal{L}^{\varepsilon}[u]:=\varepsilon u_{t}-\varepsilon^{2}\Delta(u^{m})-f(u)\leq 0$ in $\{(x,t):\,d(x,t)<-\varepsilon|\ln\varepsilon|pe^{t}+\varepsilon\omega\}=\{(x,t):\,z(x,t)<\omega\}$ . By using straightforward computations we get $\begin{array}[]{lll}\varepsilon u_{t}=(1-\varepsilon)\left(d_{t}+\varepsilon|\ln\varepsilon|p\,e^{t}\right)U^{\prime}(z)\\
+\varepsilon^{2}\Delta(u^{m})=(1-\varepsilon)^{m}|\nabla d|^{2}(U^{m})^{\prime\prime}(z)+(1-\varepsilon)^{m}\varepsilon\Delta d(U^{m})^{\prime}(z)\,,\end{array}$ where $z=z(x,t)$ . Then using the ordinary differential equation $(U^{m})^{\prime\prime}+c^{*}U^{\prime}+f(U)=0$ , we see that $\varepsilon\mathcal{L}^{\varepsilon}[u]=E_{1}+\cdots+E_{4}\,,$ with $\qquad\quad E_{1}:=(1-\varepsilon)\left[d_{t}+c^{*}-(1-\varepsilon)^{m-1}\varepsilon\Delta d(mU^{m-1})(z)+\varepsilon|\ln\varepsilon|p\,e^{t}\right]U^{\prime}(z)$ $\qquad\quad E_{2}:=(1-\varepsilon)^{m}(1-|\nabla d|^{2})(U^{m})^{\prime\prime}(z)$ $\qquad\quad E_{3}:=\left((1-\varepsilon)-(1-\varepsilon)^{m}\right)(U^{m})^{\prime\prime}(z)$ $\qquad\quad E_{4}:=-f\left((1-\varepsilon)U(z)\right)+(1-\varepsilon)f(U(z))\,.$ In the following we shall denote by $C$ some positive constants
+which do not depend on $\varepsilon>0$ small enough (and may change from
+place to place). We start with some observations on the term $E_{4}$ . Note that $f\left((1-\varepsilon)u\right)-(1-\varepsilon)f(u)=-\varepsilon uf^{\prime}(\theta)+\varepsilon f(u)\,,$ (3.14) for some $\theta\in((1-\varepsilon)u,u)$ . Hence $|E_{4}|\leq C\varepsilon\,.$ Moreover, since $f(1)=0$ and $f^{\prime}(1)<0$ , it follows from
+( 3.14 ) that, for $u$ sufficiently close to 1, $f\left((1-\varepsilon)u\right)-(1-\varepsilon)f(u)\geq\beta\varepsilon u\,,$ (3.15) for some $\beta>0$ . Hence since $U(-\infty)=1$ , by choosing $\gamma\gg 1$ we see that $E_{4}\leq-\beta\varepsilon U(z)\leq-\frac{1}{2}\beta\varepsilon\quad\text{ for all
+}z\leq-\gamma\,.$ (3.16) In the following we distinguish three cases, namely ( 3.17 ),
+( 3.19 ) and ( 3.20 ). Assume that $-\varepsilon|\ln\varepsilon|pe^{t}-\varepsilon\gamma\leq d(x,t)<-\varepsilon|\ln\varepsilon|pe^{t}+\varepsilon\omega\,,$ (3.17) which in turn implies that $-\gamma\leq z<\omega$ . Since $U^{\prime}<0$ on $(-\infty,\omega)$ and $U^{\prime}(\omega)\in[-\infty,0)$ , it holds that $U^{\prime}(z)\leq-\alpha$ , for some $\alpha>0$ . If $\varepsilon>0$ is small enough ( 3.8 ) shows that $E_{2}=0$ ; from ( 3.4 )
+we deduce that $|E_{3}|\leq-C\varepsilon U^{\prime}(z)$ ; moreover we have $|E_{4}|\leq C\varepsilon$ . In view of ( 3.9 ), $E_{1}$ reduces to $E_{1}=(1-\varepsilon)\left[-(1-\varepsilon)^{m-1}\varepsilon\Delta d(mU^{m-1})(z)+\varepsilon|\ln\varepsilon|p\,e^{t}\right]U^{\prime}(z)\,.$ (3.18) Since $|-(1-\varepsilon)^{m-1}\varepsilon\Delta d(mU^{m-1})(z)|\leq C\varepsilon$ , inequality $E_{1}\leq\frac{1}{2}p\,\varepsilon|\ln\varepsilon|U^{\prime}(z)$ holds. Collecting
+theses estimates we have $\begin{array}[]{ll}{\mathcal{L}}^{\varepsilon}[u]&\leq(\frac{1}{2}p\,\varepsilon|\ln\varepsilon|-C\varepsilon)U^{\prime}(z)+C\varepsilon\\
+&\leq-\frac{1}{4}p\,\alpha\varepsilon|\ln\varepsilon|+C\varepsilon\\
+&\leq 0\,,\end{array}$ if $\varepsilon>0$ is sufficiently small. Assume that $-d_{0}\leq d(x,t)<-\varepsilon|\ln\varepsilon|pe^{t}-\varepsilon\gamma\,,$ (3.19) which in turn implies that $z<-\gamma$ so that ( 3.16 )
+implies $E_{4}\leq 0$ . Here again ( 3.8 ) shows that $E_{2}=0$ , from ( 3.4 ) we deduce that $|E_{3}|\leq-C\varepsilon U^{\prime}(z)$ , and $E_{1}$ reduces to ( 3.18 ). Hence we collect ${\mathcal{L}}^{\varepsilon}[u]\leq U^{\prime}(z)\left[-(1-\varepsilon)\varepsilon C+(1-\varepsilon)p\,\varepsilon|\ln\varepsilon|-C\varepsilon\right]\leq 0\,,$ for $\varepsilon>0$ small enough. Assume that $-2d_{0}\leq d(x,t)<-d_{0}\,,$ (3.20) which in turn implies that, for $\varepsilon>0$ small enough, $z\leq-\frac{d_{0}}{2\varepsilon}$ . In this range ( 3.8 ) and
+( 3.9 ) no longer apply but the exponential decay
+( 3.2 ) shows that $|E_{1}|+|E_{2}|+|E_{3}|\leq Ce^{-\lambda\frac{d_{0}}{2\varepsilon}}$ . Last $E_{4}\leq-\frac{1}{2}\beta\varepsilon$ (see
+( 3.16 )) shows that, for $\varepsilon>0$ small enough, ${\mathcal{L}}^{\varepsilon}[u]\leq 0$ . The lemma is proved.
+∎ 3.3 Construction of super-solutions The construction of super-solutions is more involved: since we
+want them to be positive it is no longer possible to use the
+natural travelling wave $(c^{*},U)$ which is compactly supported.
+Therefore we shall first consider slightly larger speeds $c>c^{*}$ which provide faster travelling wave solutions which tend to $+\infty$ in $-\infty$ ; then a small modification will provide us
+positive and more regular functions which are “nearly”
+travelling wave solutions. Before making this argument more
+precise, let us note that, as it will clearly appear below, the
+possibility of the above strategy follows from [ 12 ] . Let $\eta\in(0,\min(a,1-a))$ be arbitrary. Let $\alpha_{0}>0$ be fixed. Let us recall that we have fixed $0<T<T^{max}$ , where $T^{max}$ denotes the time when the first
+singularities occur in $(P^{\;\!0})$ . Therefore we can select $\rho>0$ small enough so that the following holds. First the smooth
+solution $(\Gamma_{t}^{c})$ of the free boundary problem $(P^{0}_{c})\quad\begin{cases}\,V_{n}=c:=c^{*}+\rho\quad\text{ on }\Gamma_{t}^{c}\vskip 3.0pt\\
+\,\Gamma_{t}^{c}\big|_{t=0}=\Gamma_{0}\,,\end{cases}$ exists at least on $[0,T]$ . Secondly, if we denote by $d^{c}(x,t)$ the cut-off signed distance function associated with $\Gamma^{c}:=\cup_{0\leq t\leq T}(\Gamma_{t}^{c}\times\{t\})$ then, for all $(x,t)\in Q_{T}$ , $d(x,t)\geq\alpha_{0}\Longrightarrow d^{c}(x,t)\geq\frac{\alpha_{0}}{2}\,.$ (3.21) Since $c>c^{*}$ , as explained in [ 12 , Remark 3.1] , there
+exists a faster travelling wave $(c,V)$ which satisfies the same
+requirements as $(c^{*},U)$ in the auxiliary problem
+( 3.1 ), except that $V(-\infty)=+\infty$ rather than $U(-\infty)=1$ . In particular, $V$ is still compactly
+supported from one side. Next, for all $n\geq 1$ , following the construction which comes before
+Proposition 4.1 in [ 12 ] (it consists in slightly modifying
+the above travelling wave $(c,V)$ ), we can consider $(c,U_{n})$ such
+that (i) $U_{n}$ satisfies the ordinary differential equation $({U_{n}}^{m})^{\prime\prime}+c{U_{n}}^{\prime}+f(U_{n})=0\quad\text{ on some $(-\infty,Z_{n})\,,$}$ where ${U_{n}}^{\prime}<0$ holds (ii) $U_{n}$ is
+constant equal to some $(\delta_{n})^{\frac{1}{m-1}}>0$ on $[Z_{n},\infty)$ (iii) $(U_{n})^{m-1}\in C^{1}(\mathbb{R})$ together with $U_{n}(0)=a$ and $U_{n}(-\infty)=+\infty$ . Moreover $\delta_{n}\to 0$ as $n\to\infty$ , so that we can fix $n_{0}\gg 1$ such that $(\delta_{n_{0}})^{\frac{1}{m-1}}\leq\eta$ . As a conclusion, if we denote $U_{n_{0}}$ , $\delta_{n_{0}}$ and $Z_{n_{0}}$ by $W$ , $\delta$ and $Z$ we are now equipped with $(c,W)$ such that $W^{m-1}\in C^{1}(\mathbb{R})$ and $\left\{\begin{array}[]{ll}({W}^{m})^{\prime\prime}+cW^{\prime}+f(W)=0&\text{ on }(-\infty,Z)\\
+W(-\infty)=+\infty\\
+W(0)=a\\
+{W}^{\prime}<0&\text{ on }(-\infty,Z)\\
+W\equiv\delta^{\frac{1}{m-1}}\leq\eta&\text{ on }[Z,\infty)\,.\end{array}\right.$ (3.22) We are now looking for super-solutions in the form $u_{\varepsilon}^{+}(x,t):=W\left(\frac{d^{c}(x,t)-\varepsilon|\ln\varepsilon|Ke^{t}}{\varepsilon}\right)\,.$ (3.23) In the sequel we set $z^{+}_{\varepsilon}(x,t):=\displaystyle\frac{d^{c}(x,t)-\varepsilon|\ln\varepsilon|Ke^{t}}{\varepsilon}\,.$ (3.24) Remark 3.2 (The sub-domain $\Sigma$ ) . We shall consider below a sub-domain $\Sigma$ whose slice at time $t$ , namely $\sigma_{t}:=\{x:\,(x,t)\in\Sigma\}$ , is the region
+enclosed between $\partial\Omega$ and (more or less) $\Gamma^{c}_{t}$ . We shall prove that $u_{\varepsilon}^{+}$ is a super-solution in $\Sigma$ . Thanks to ( 4.4 ) this will be sufficient for
+our purpose (see Section 4 ). Denote by $-\theta$ the point where $W(-\theta)=1+\eta$ . For each $0\leq t\leq T$ , define the open set $\sigma_{t}:=\{x\in\Omega:\,d^{c}(x,t)>\varepsilon|\ln\varepsilon|Ke^{t}-\varepsilon\theta\}=\{x:\,z^{+}_{\varepsilon}(x,t)>-\theta\}\,,$ and the sub-domain $\Sigma:=\cup_{0<t<T}(\sigma_{t}\times\{t\})\,.$ Note that the lateral boundary of $\Sigma$ is made of $\partial_{\text{out}}\Sigma:=\partial\Omega\times(0,T)$ and $\partial_{\text{in}}\Sigma:=\cup_{0<t<T}(s_{t}\times\{t\})$ where $s_{t}$ denotes the smooth hypersurface $s_{t}:=\{x\in\Omega:\,d^{c}(x,t)=\varepsilon|\ln\varepsilon|Ke^{t}-\varepsilon\theta\}=\{x:\,z^{+}_{\varepsilon}(x,t)=-\theta\}\,.$ Lemma 3.3 (Super-solutions in $\Sigma$ ) . Let $\eta\in(0,\min(a,1-a))$ be arbitrary and let $\alpha_{0}>0$ be fixed. Then, for all $K>0$ , all $\varepsilon>0$ small enough, $u^{+}_{\varepsilon}$ is such that (i) ${\cal L}^{\varepsilon}[u^{+}_{\varepsilon}]:=(u^{+}_{\varepsilon})_{t}-\varepsilon\Delta((u^{+}_{\varepsilon})^{m})-\displaystyle{\frac{1}{\varepsilon}}f(u^{+}_{\varepsilon})\geq 0\;\text{ in }\Sigma$ (ii) $\displaystyle{\frac{\partial((u^{+}_{\varepsilon})^{m})}{\partial\nu}}=0\;\text{ on }\ \partial_{\text{out}}\Sigma=\partial\Omega\times(0,T)$ (iii) $u^{+}_{\varepsilon}\equiv 1+\eta\;\text{ on }\partial_{\text{in}}\Sigma=\cup_{0<t<T}(s_{t}\times\{t\})\,.$ Proof. In this proof (and only in this proof) we put $u^{+}_{\varepsilon}=u$ and $z^{+}_{\varepsilon}=z$ . Recall that $d^{c}$ is constant near the boundary $\partial\Omega$ so that the Neumann boundary condition $(ii)$ is
+fulfilled. Moreover the Dirichlet boundary condition $(iii)$ is
+clear from the definition of $s_{t}$ and the fact that $W(-\theta)=1+\eta$ . Therefore it remains to prove that $\varepsilon\mathcal{L}^{\varepsilon}[u]=\varepsilon u_{t}-\varepsilon^{2}\Delta(u^{m})-f(u)\geq 0$ in $\Sigma=\{(x,t):\;z(x,t)>-\theta\}$ . If $z(x,t)\geq Z$ then $\mathcal{L}^{\varepsilon}[u]=\mathcal{L}^{\varepsilon}[\delta^{\frac{1}{m-1}}]\geq 0$ . We now assume
+that $z(x,t)\in(-\theta,Z)$ , i.e. $\varepsilon|\ln\varepsilon|Ke^{t}-\varepsilon\theta<d^{c}(x,t)<\varepsilon|\ln\varepsilon|Ke^{t}+\varepsilon Z\,.$ (3.25) Straightforward computations combined with the ordinary
+differential equation $(W^{m})^{\prime\prime}+cW^{\prime}+f(W)=0$ yield $\varepsilon\mathcal{L}^{\varepsilon}[u]=(d^{c}_{t}+c)W^{\prime}-\varepsilon|\ln\varepsilon|Ke^{t}W^{\prime}-\varepsilon\Delta d^{c}(W^{m})^{\prime}+(1-|\nabla d^{c}|^{2})(W^{m})^{\prime\prime}\,.$ If $\varepsilon>0$ is small enough, then ( 3.25 ) combined
+with ( 3.8 ) and ( 3.9 ) — with $d^{c}$ and $c$ playing the roles of $d$ and $c^{*}$ — shows that the above
+equality reduces to $\varepsilon\mathcal{L}^{\varepsilon}[u]=-\varepsilon W^{\prime}\left(|\ln\varepsilon|Ke^{t}+\Delta d^{c}(mW^{m-1})\right)\,.$ Since $W^{\prime}\leq 0$ we have $\varepsilon\mathcal{L}^{\varepsilon}[u]\geq 0$ , for $\varepsilon>0$ small enough. The lemma is proved.
+∎ 4 Proof of Theorem 1.1 4.1 A generation of interface property We first state a result on the generation of interface. Lemma 4.1 (Generation of interface) . Assume $m\geq 2$ . Let $\eta>0$ be arbitrary small. Then, for all $x\in\Omega$ , we have, for $\varepsilon>0$ small enough, $0\leq u^{\varepsilon}(x,t^{\varepsilon})\leq 1+\eta\,,$ (4.1) and there exists $M_{0}>0$ such that, for $\varepsilon>0$ small enough, $\displaystyle u_{0}(x)\geq a+M_{0}\varepsilon|\ln\varepsilon|\Longrightarrow u^{\varepsilon}(x,t^{\varepsilon})\geq 1-\varepsilon$ (4.2) $\displaystyle u_{0}(x)\leq a-M_{0}\varepsilon|\ln\varepsilon|\Longrightarrow u^{\varepsilon}(x,t^{\varepsilon})\leq\varepsilon\,,$ (4.3) where $t^{\varepsilon}=\mu^{-1}\varepsilon|\ln\varepsilon|$ . Proof. We only give an outline since the arguments can be found in [ 1 ] , [ 2 ] . Denote by $Y(\tau;\xi)$ the solution of the bistable ordinary
+differential equation $Y_{\tau}=f(Y)$ on $(0,\infty)$ supplemented
+with the initial condition $Y(0;\xi)=\xi$ . Modulo a change of the
+time variable, we can use the sub- and super-solutions constructed
+in [ 2 ] to deduce that, for some $C^{*}>0$ , for $\varepsilon>0$ small enough, $\left[Y\left(\frac{t^{\varepsilon}}{\varepsilon};\,u_{0}(x)-\varepsilon^{2}C^{*}(e^{\mu t^{\varepsilon}/\varepsilon}-1)\right)\right]^{+}\\
+\leq u^{\varepsilon}(x,t^{\varepsilon})\leq\left[Y\left(\frac{t^{\varepsilon}}{\varepsilon};\,u_{0}(x)+\varepsilon^{2}C^{*}(e^{\mu t^{\varepsilon}/\varepsilon}-1)\right)\right]^{+}\,.$ Next a straightforward modification of [ 1 , Lemma
+3.9] —which specifies the instability of the
+equilibrium $Y\equiv a$ and the stability of the equilibria $Y\equiv 0$ , $Y\equiv 1$ — shows that for $\varepsilon>0$ small enough, for all $\xi\in(-1,2)$ , we have $Y(\mu^{-1}|\ln\varepsilon|;\xi)\leq 1+\eta\,,$ and that $\displaystyle\xi\geq a+\varepsilon|\ln\varepsilon|\Longrightarrow Y(\mu^{-1}|\ln\varepsilon|;\xi)\geq 1-\varepsilon$ $\displaystyle\xi\leq a-\varepsilon|\ln\varepsilon|\Longrightarrow Y(\mu^{-1}|\ln\varepsilon|;\xi)\leq\varepsilon\,.$ The combination of the above arguments completes the proof of the
+lemma.
+∎ 4.2 Proof of the main theorem We are now in the position to prove Theorem 1.1 . To that
+purpose we show that solutions are in between the propagation of
+interface sub- and super-solutions at time $t^{\varepsilon}$ . Proof. Assume $m\geq 2$ . Let $\eta\in(0,\min(a,1-a))$ be arbitrary.
+First note that the comparison principle directly implies that
+inequality ( 4.1 ) persists for later times, i.e. $u^{\varepsilon}(x,t)\in[0,1+\eta]\quad\text{ for all $x\in\Omega$ and all
+$t^{\varepsilon}\leq t\leq T\,.$}$ (4.4) Since $\nabla u_{0}\neq 0$ everywhere on $\Gamma_{0}=\{x\in\Omega:\,u_{0}(x)=a\}$ and since $\Gamma_{0}$ is a compact hypersurface, we
+can find a positive constant $M_{1}$ such that $\begin{array}[]{ll}\text{ if }\quad d(x,0)\leq\ -M_{1}\varepsilon|\ln\varepsilon|&\text{ then }\quad u_{0}(x)\geq a+M_{0}\varepsilon|\ln\varepsilon|\\
+\text{ if }\quad d(x,0)\geq{}M_{1}\varepsilon|\ln\varepsilon|&\text{ then }\quad u_{0}(x)\leq a-M_{0}\varepsilon|\ln\varepsilon|\,,\end{array}$ (4.5) with $M_{0}$ the constant which appears in Lemma 4.1 . We first investigate the behavior “inside the interface”. In
+view of ( 3.13 ), we can choose $p>0$ large enough so that,
+for $\varepsilon>0$ small enough, the sub-solution $u_{\varepsilon}^{-}$ defined in
+( 3.11 ) is such that the set $\{x:\,u_{\varepsilon}^{-}(x,0)>0\}$ is
+included in $\{x:\;d(x,0)\leq-M_{1}\varepsilon|\ln\varepsilon|\}$ . Therefore,
+from the correspondence ( 4.5 ), the estimate
+( 4.2 ) and the fact that $u_{\varepsilon}^{-}(x,0)\leq 1-\varepsilon$ , we
+deduce that, for all $x\in\Omega$ , $u_{\varepsilon}^{-}(x,0)\leq u^{\varepsilon}(x,t^{\varepsilon})\,.$ It follows from the comparison principle that $u_{\varepsilon}^{-}(x,t-t^{\varepsilon})=(1-\varepsilon)U\left(\frac{d(x,t-t^{\varepsilon})+\varepsilon|\ln\varepsilon|p\,e^{t-t^{\varepsilon}}}{\varepsilon}\right)\leq u^{\varepsilon}(x,t)\,,$ (4.6) for all $(x,t)\in\Omega\times[t^{\varepsilon},T]$ . We choose $\mathcal{C}\gg\max(c^{*}\mu^{-1},p\,e^{T},\lambda)$ so that $\frac{-\mathcal{C}\varepsilon|\ln\varepsilon|+c^{*}\mu^{-1}\varepsilon|\ln\varepsilon|+\varepsilon|\ln\varepsilon|p\,e^{t-t^{\varepsilon}}}{\varepsilon}\leq-\frac{\mathcal{C}}{2}|\ln\varepsilon|\leq-\frac{2}{\lambda}|\ln\varepsilon|\,,$ (4.7) where $\lambda>0$ is the constant appearing in ( 3.2 ).
+We take $x\in\Omega_{t}^{(1)}\setminus\mathcal{N}_{\mathcal{C}\varepsilon|\ln\varepsilon|}(\Gamma_{t})$ , i.e. $d(x,t)\leq-\mathcal{C}\varepsilon|\ln\varepsilon|\,,$ (4.8) and prove below that $u^{\varepsilon}(x,t)\geq 1-2\varepsilon$ , for $t^{\varepsilon}\leq t\leq T$ . Note that, for $\varepsilon>0$ small enough, $d(x,t-t^{\varepsilon})=d(x,t)+c^{*}t^{\varepsilon}\,,$ (4.9) which, combined with ( 4.6 ) and ( 4.7 ), implies $\begin{array}[]{lll}u^{\varepsilon}(x,t)&\geq(1-\varepsilon)U\left(-\frac{2}{\lambda}|\ln\varepsilon|\right)\\
+&\geq(1-\varepsilon)(1-C\varepsilon^{2})\\
+&\geq 1-2\varepsilon\,,\end{array}$ where we have used ( 3.2 ). Last we investigate the behavior “outside the interface”.
+Fix $\alpha_{0}>0$ arbitrarily small. For such $\alpha_{0}>0$ , we follow
+the strategy of subsection 3.3 to construct
+super-solutions in $\Sigma$ . More precisely define $K=2M_{1}$ , where $M_{1}>0$ is the constant that appears in ( 4.5 ); then
+construct $u_{\varepsilon}^{+}(x,t)$ as in ( 3.23 ). In view of
+Lemma 3.3 $(ii)$ , $(iii)$ , the super-solution $u^{+}_{\varepsilon}(x,t)$ and the solution $u^{\varepsilon}(x,t+t^{\varepsilon})$ satisfy a Neumann
+boundary condition on $\partial_{\text{out}}\Sigma$ and —
+taking advantage of ( 4.4 )— are ordered on $\partial_{\text{in}}\Sigma$ . Last we claim that (note that $d^{c}(x,0)=d(x,0)$ since $\Gamma_{0}^{c}=\Gamma_{0}$ ) $u^{\varepsilon}(x,t^{\varepsilon})\leq W\left(\frac{d(x,0)-2M_{1}\varepsilon|\ln\varepsilon|}{\varepsilon}\right)=u_{\varepsilon}^{+}(x,0)\,,$ (4.10) for all $x\in\sigma_{0}=\{x:\;d(x,0)>2M_{1}\varepsilon|\ln\varepsilon|-\varepsilon\theta\}$ . Indeed, ( 4.5 ) and ( 4.3 ) show that $u^{\varepsilon}(x,t^{\varepsilon})\leq\varepsilon$ and the conclusion ( 4.10 ) follows
+from the fact that $\delta^{\frac{1}{m-1}}\leq W$ . Hence the
+comparison principle yields $u^{\varepsilon}(x,t)\leq W\left(\frac{d^{c}(x,t-t^{\varepsilon})-\varepsilon|\ln\varepsilon|2M_{1}e^{t-t^{\varepsilon}}}{\varepsilon}\right)=u_{\varepsilon}^{+}(x,t-t^{\varepsilon})\,,$ (4.11) for all $(x,t)\in\Sigma$ with $t^{\varepsilon}\leq t\leq T$ . We take $x\in\Omega_{t}^{(0)}\setminus\mathcal{N}_{\alpha_{0}}(\Gamma_{t})$ , i.e. $d(x,t)\geq\alpha_{0}\,,$ (4.12) and prove below that $u^{\varepsilon}(x,t)\leq\eta$ , for $t^{\varepsilon}\leq t\leq T$ . From ( 3.21 ) we deduce that $(x,t)\in\Sigma$ so that ( 4.11 ) applies.
+Note also that $d^{c}(x,t-t^{\varepsilon})=d^{c}(x,t)+ct^{\varepsilon}$ . Therefore we
+infer from ( 3.21 ) that, for $\varepsilon>0$ small enough, $d^{c}(x,t-t^{\varepsilon})\geq\frac{\alpha_{0}}{3}$ which in turn implies $u_{\varepsilon}^{+}(x,t-t^{\varepsilon})\leq W\left(\frac{\frac{\alpha_{0}}{3}-2M_{1}e^{T}\varepsilon|\ln\varepsilon|}{\varepsilon}\right)=\delta^{\frac{1}{m-1}}\leq\eta\,,$ since $W(+\infty)=\delta^{\frac{1}{m-1}}$ . Conclusion follows
+from ( 4.11 ). Theorem 1.1 is proved.∎ References [1] M. Alfaro, D. Hilhorst and H. Matano, The singular limit of the Allen-Cahn equation and the
+FitzHugh-Nagumo system , J. Differential Equations 245 (2008), no. 2, 505–565. [2] M. Alfaro and D. Hilhorst, Generation of interface for an Allen-Cahn equation with nonlinear diffusion ,
+Math. Model. Nat. Phenom. 5 (2010), no. 5, 1–12. [3] D. Aronson, M. G. Crandall and
+L. A. Peletier, Stabilization of solutions of a degenerate
+nonlinear diffusion problem , Nonlinear Anal. 6 (1982),
+1001–1022. [4] M. Bertsch, M. Kersner and L. A. Peletier, Positivity versus localization in degenerate diffusion
+equations , Nonlinear Anal. 9 (1985), 987–1008. [5] E. DiBenedetto, Continuity of weak solutions to a
+general porous medium equation, Indiana University Mathematics J. 32 (1983), 83–118. [6] E. Feireisl, Front propagation for
+degenerate parabolic equations , Nonlinear Anal. 35 (1999),
+735–746. [7] P. C. Fife and J. B. McLeod, The approach of
+solutions of nonlinear diffusion equations to traveling front
+solutions , Arch. Rational Mech. Anal. 65 (1977), 335–361. [8] D. Gilbarg and N. Trudinger, Elliptic Partial
+Differential Equations of Second Order , Springer-Verlag: Berlin,
+1977. [9] W. S. C. Gurney and R. M. Nisbet, The regulation of inhomogeneous populations ,
+J. Theoret. Biol. 52 (1975), 441–457. [10] M. E. Gurtin and R. C. MacCamy, On the diffusion of biological populations , Math. Biosci. 33 (1979), 35–49. [11] D. Hilhorst, R. Kersner, E. Logak and M. Mimura, Interface dynamics of the Fisher equation with degenerate
+diffusion , J. Differential Equations 244 (2008),
+2872–2889. [12] Y. Hosono, Traveling wave solutions for some density dependent diffusion
+equations , Japan J. Appl. Math. 3 (1986), 163–196. [13] A. S. Kalašnikov, The nature of the propagation of
+perturbations in problems of nonlinear heat conduction with
+absorption , Ž. Vyčisl. Mat. i Mat. Fiz. 14 (1974),
+891-905, 1075. [14] J. Serrin, The problem of Dirichlet for quasilinear elliptic
+differential equations with many independent variables , Philos.
+Trans. Roy. Soc. London Ser. A 264 (1969), 413-496. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

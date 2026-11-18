@@ -1,0 +1,169 @@
+On Persistence and Stability of some Biological Systems with Cross Diffusion Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 Cross diffusion in a predator-prey model 3 Cross diffusion in epidemics 4 Cross diffusion and evolutionarily stable strategy 5 Cross diffusion and the dynamics of learning in multiagent systems 6 Conclusions License: Assumed arXiv.org perpetual non-exclusive license arXiv:nlin/0404021v1 [nlin.AO] 09 Apr 2004 On Persistence and Stability of some Biological Systems with Cross Diffusion E. Ahmed A. S. Hegazi A. S. Elgazzar Affiliation: Mathematics Department, Faculty of Science35516 Mansoura, Egypt Affiliation: Mathematics Department, Faculty of ScienceAl-Ain, P. O. Box 17551, UAE Affiliation: Mathematics Department, Faculty of Science - Al-JoufKing Soad University, Kingdom of Saudi Arabia Affiliation: Mathematics Department, Faculty of Education45111 El-Arish, Egypt Abstract The concept of cross diffusion is applied to some biological systems. The
+conditions for persistence and Turing instability in the presence of cross
+diffusion are derived. Many examples including: predator-prey, epidemics
+(with and without delay), hawk-dove-retaliate and prisoner’s dilemma games
+are given. 1 Introduction Cross diffusion is the diffusion of one type of species due to the presence
+of another [Okubo 1980, Chattopadhyay and Chatterjee 2001]. This phenomena
+is abundant in nature e.g. predator-prey systems where the predator diffuses
+towards the regions where the prey is more abundant. On the other hand, the
+prey tries to avoid predators by diffusing away from them. Another area of
+application is in epidemics where susceptible individuals try to avoid
+infected individuals. Our aim is to generalize some biological systems to the case of the presence
+of cross diffusion. We study the persistence and Turing instability of the
+generalized models. Several examples are given e.g. predator-prey system,
+epidemic model, hawk-dove-retaliate game and prisoner’s dilemma game. The paper is organized as follows: In section 2 the conditions for Turing
+instability in the presence of cross diffusion are derived then applied to a
+predator-prey system. Necessary conditions for persistence of a predator
+prey system in the presence of cross diffusion are derived. In section 3,
+cross diffusion is introduced in an epidemic model. Its effect on wave
+solution with and without delay is derived. In section 4, the effect of
+cross diffusion on evolutionarily stable strategy is studied.
+Hawk-dove-retaliate game is given as an example. Cross diffusion is applied
+to the dynamics of learning in multiagent systems in section 5. Some
+conclusions are summarized in section 6. 2 Cross diffusion in a predator-prey model Cross diffusion is expected to be relevant to predator-prey systems where
+the predator diffuses towards the regions where the prey is more abundant.
+On the other hand, the prey tries to avoid predators by diffusing away from
+them. Cross diffusion term expresses the population flux of one species due
+to the presence of another species. The value of the cross diffusion may be
+positive, negative or zero. Positive cross diffusion means that one type of species tends to move in the
+direction of lower density of the other type and vice versa. Hence the cross
+diffusion term is positive for the prey and negative for the predator.
+Generalizing Lotka-Volterra predator-prey model (with prey saturation) to
+include cross diffusion, one gets $\begin{array}[]{l}\frac{\partial u_{1}}{\partial t}=u_{1}(\alpha_{1}-\beta_{1}u_{1}-u_{2})+D_{1}\frac{\partial^{2}u_{1}}{\partial x^{2}}+\frac{\partial}{\partial x}(D_{12}^{\prime}(u_{1})\frac{\partial u_{2}}{\partial x}),\\
+\frac{\partial u_{2}}{\partial t}=u_{2}(-\alpha_{2}+u_{1})+D_{2}\frac{\partial^{2}u_{2}}{\partial x^{2}}-\frac{\partial}{\partial x}(D_{21}^{\prime}(u_{2})\frac{\partial u_{1}}{\partial x}),\end{array}$ (1) where $D_{12}^{\prime}(u_{1})$ is the density dependent diffusion
+coefficient of cross diffusion such that $D_{12}^{\prime}(u_{1})\rightarrow 0\;as\;u_{1}\rightarrow 0.\;$ Following Chattopadhyay and Chatterjee
+[Chattopadhyay and Chatterjee 2001] we assume that $D_{12}^{\prime}=D_{12}u_{1}/(\epsilon+u_{1})\approx D_{12}(1-\epsilon/u_{1}+...),$ where $\epsilon$ is very small hence $D_{12}^{\prime}\approx D_{12}\;\;\forall u_{1}>>\epsilon.$ Similarly for $D_{21}$ thus we get $\begin{array}[]{l}\frac{\partial u_{1}}{\partial t}=u_{1}(\alpha_{1}-\beta_{1}u_{1}-u_{2})+D_{1}\frac{\partial^{2}u_{1}}{\partial x^{2}}+D_{12}\frac{\partial^{2}u_{2}}{\partial x^{2}},\\
+\frac{\partial u_{2}}{\partial t}=u_{2}(-\alpha_{2}+u_{1})+D_{2}\frac{\partial^{2}u_{2}}{\partial x^{2}}-D_{21}\frac{\partial^{2}u_{1}}{\partial x^{2}},\end{array}$ (2) where $u_{1}(u_{2})$ is the prey (predator) density, and all the constants $\alpha_{1},\;\alpha_{2},\;\beta_{1},\newline
+ D_{1},\;D_{2},\;D_{12},\;D_{21}$ are nonnegative. We have used $-D_{21}$ since predators move to regions with higher prey density. The value $\alpha_{1}$ is the net growth rate of the prey population in the absence of
+predators, while $\alpha_{2}$ is the net death rate of predators due to the
+absence of prey. The term $\beta_{1}u_{1}$ corresponds to the competition
+within the prey species. The existence of solutions of systems similar to (2) has been studied in
+[Chen et al 2003 and Le 2003]. This system has a unique homogeneous coexistence solution $u_{1}^{*}=\alpha_{2},\;\;\;u_{2}^{*}=\alpha_{1}-\alpha_{2}\beta_{1},\;\;\;\;\alpha_{1}-\alpha_{2}\beta_{1}>0.\;\;$ (3) It is straightforward to see that the solution (3) is asymptotically stable
+in the case of no diffusion $(D_{1}=0,\;D_{2}=0,\;D_{21}=0,\;D_{12}=0).$ In Turing instability [Okubo 1980], it is required to see whether diffusion
+terms can destabilize the steady state (2). We derive Turing instability in
+the presence of cross diffusion: Consider two interacting species with
+different diffusion coefficients $\displaystyle\frac{\partial u_{1}}{\partial t}$ $\displaystyle=$ $\displaystyle f_{1}(u_{1},u_{2})+D_{1}\frac{\partial^{2}u_{1}}{\partial x^{2}}+D_{12}\frac{\partial^{2}u_{2}}{\partial x^{2}},$ (4) $\displaystyle\frac{\partial u_{2}}{\partial t}$ $\displaystyle=$ $\displaystyle f_{2}(u_{1},u_{2})+D_{2}\frac{\partial^{2}u_{2}}{\partial x^{2}}+D_{21}\frac{\partial^{2}u_{1}}{\partial x^{2}}.$ Assume that $(u_{1}^{*},u_{2}^{*})$ are the spatially uniform steady states
+i.e. $f_{j}(u_{1}^{*},u_{2}^{*})=0,\;j=1,2$ . To examine the linear stability
+of $(u_{1}^{*},u_{2}^{*})$ let $u_{j}=u_{j}^{*}+\varepsilon_{j}\exp(ikx+\lambda t),\;\;\;\;j=1,2.$ (5) One gets $\left|\begin{array}[]{ll}\lambda+D_{1}k^{2}-a_{11}&-a_{12}+D_{12}k^{2}\\
+-a_{21}+D_{21}k^{2}&\lambda+D_{2}k^{2}-a_{22}\end{array}\right|=0,$ where $\displaystyle\lambda$ $\displaystyle=$ $\displaystyle\frac{1}{2}\left[(b_{11}+b_{22})\pm\sqrt{(b_{11}+b_{22})^{2}-4(b_{11}b_{22}-b_{12}b_{21})}\right],$ $\displaystyle b_{jj}$ $\displaystyle=$ $\displaystyle a_{jj}-D_{j}k^{2},\;\;\;b_{ij}=a_{ij}-D_{ij}k^{2},\;i\neq j,$ $\displaystyle a_{ij}$ $\displaystyle=$ $\displaystyle\frac{\partial f_{i}(u_{1}^{*},u_{2}^{*})}{\partial u_{j}}.$ Turing instability occurs when $(u_{1}^{*},u_{2}^{*})$ is asymptotically
+stable if diffusion does not exist $(k=0)$ ; but unstable if diffusion exists $(k\neq 0)$ . Thus the conditions for Turing instability are $a_{11}+a_{22}<0,\;\;a_{11}a_{22}-a_{12}a_{21}>0,\;b_{11}b_{22}-b_{12}b_{21}<0.$ The third condition implies $\begin{array}[]{l}(D_{1}D_{2}-D_{12}D_{21})k^{4}-(D_{1}a_{22}+D_{2}a_{11}-D_{12}a_{21}-D_{21}a_{12})k^{2}+\\
+(a_{11}a_{22}-a_{12}a_{21})<0,\;\;\;\;\forall k.\end{array}$ Minimizing the left hand side of the above inequality with respect to $k$ one gets the conditions for Turing instability in the following form $(D_{1}a_{22}+D_{2}a_{11}-D_{12}a_{21}-D_{21}a_{12})>2\sqrt{(a_{11}a_{22}-a_{12}a_{21})(D_{1}D_{2}-D_{12}D_{21})}>0.$ (6) Now we consider Turing instability for the system (2). Following the above
+procedure one gets: Proposition 1: The system (2) is Turing stable if $D_{21}>0,\;\;D_{12}>0$ (7) Proof : For the system (2), we have $a_{11}=-\beta_{1}\alpha_{2}<0,\;\;a_{12}=-\alpha_{2}<0,\;\;\;a_{21}=\alpha_{1}-\beta_{1}\alpha_{2}>0,\;\;\;a_{22}=0.\;$ Since $D_{1}\geq 0,\;D_{2}\geq 0,$ then $(D_{1}a_{22}+D_{2}a_{11}-D_{12}a_{21}-D_{21}a_{12})<0,$ hence the condition (6) is not satisfied. Now the persistence of the system (2) is discussed: Definition 1: A partial differential equation $F(t,x,u(t,x),\partial u/\partial t,\partial u/\partial x,...)=0,$ defined on a spatial domain $\Omega$ is persistent in the context of zero
+Dirichlet boundary conditions if there exist a region $V=\{u:\;0<u<w\}$ in $\Omega$ such that all solutions with nontrivial, nonnegative initial
+conditions are attracted to $V$ . Equivalently the boundary of the positive cone in the space where the
+solutions exist act as a repeller. Persistence [Hofbauer and Sigmund 1998] is an important concept in
+population biology since it means that a certain species will continue to
+exist. The work of Cantrell et al [Cantrell et al 1993] is basic in finding
+sufficient conditions for persistence in some partial differential equations
+without cross diffusion. Therefore we will use it to derive the necessary
+conditions for persistence of the system (2). Here zero Dirichlit boundary
+conditions are assumed: $u_{i}=0\;\mathrm{at}\;x=0,\;x=L.$ For the sake of completeness we mention the following results
+[Cantrell et al 1993] with slight modifications: Theorem (1) : (i) Suppose that $f(\overrightarrow{r},u)$ is Lipschitz in $\overrightarrow{r}$ and continuously differentiable in $u$ with $\partial f/\partial u\leq 0\;\mathrm{for}\;u\geq 0,\;f(\overrightarrow{r},u)\leq 0\;\mathrm{if}\;u\geq l,$ for some constant $l$ , and $f(\overrightarrow{r},0)>0$ at some
+point in the domain $\Omega$ , then the problem $\partial u/\partial t=D\nabla^{2}u\;+uf(\overrightarrow{r},u)\;\;\;\;\;\;in\;\Omega\times(0.\infty),$ (8) with Dirichlet or Neumann boundary conditions has a unique
+positive steady state $u^{ss}$ which is a global attractor for nontrivial
+non-negative solutions (hence the system (8) is persistent) if the following
+problem has a positive eigenvalue $\sigma$ $\sigma u=D\nabla^{2}u\;+uf(\overrightarrow{r},0)\;\;\;\;\;\;in\;\Omega\;,$ with the same boundary conditions as (8). (ii) Suppose that $f_{1}(\overrightarrow{r},u_{1},u_{2})$ and $f_{2}(\overrightarrow{r},u_{1},u_{2})$ are $C^{2}$ ,bounded, that $f_{1}(\overrightarrow{r},u_{1},0)$ satisfies the conditions of part (i) with
+positive $\sigma$ , that $f_{2}(\overrightarrow{r},0,u_{2})\leq 0$ for $u_{2}\geq 0.$ Let $\sigma_{0}$ be the largest eigenvalue of the system $\sigma_{0}u_{1}=D_{1}\nabla^{2}u_{1}\;+u_{1}f_{1}(\overrightarrow{r},0,0)\;\;\;\;\;\;in\;\Omega,$ with Dirichlet or Neumann boundary conditions. Also let $\sigma_{2}$ be the
+largest eigenvalue of the system $\sigma_{2}u_{2}=D_{2}\nabla^{2}u_{2}\;+u_{2}f_{2}(\overrightarrow{r},u_{1}^{ss},0)\;\;\;\;\;\;in\;\Omega,$ where $u_{1}^{ss}$ is given by $f_{1}(\overrightarrow{r},u_{1}^{ss},0)=0,$ then the following system is persistent if both $\sigma_{0}$ and $\sigma_{2}$ are  positive $\displaystyle\partial u_{1}/\partial t$ $\displaystyle=$ $\displaystyle D_{1}\nabla^{2}u_{1}\;+u_{1}f_{1}(\overrightarrow{r},u_{1},u_{2}),$ (9) $\displaystyle\;\partial u_{2}/\partial t$ $\displaystyle=$ $\displaystyle D_{2}\nabla^{2}u_{2}\;+u_{2}f_{2}(\overrightarrow{r},u_{1},u_{2})\;\ \ \ \ in\;\Omega\times(0.\infty).$ Now we consider the persistence of system (2). The first persistence
+criteria is that the prey model alone (without predators) should be
+persistent, hence [Cantrell et al 1993] $\alpha_{1}>D_{1}\left(\frac{\pi}{L}\right)^{2}.$ (10) The second criteria is that the predator system should be persistent when
+the prey is at its maximum capacity $u_{1}=\alpha_{1}/\beta_{1}$ , hence $\frac{\alpha_{1}}{\beta_{1}}-\alpha_{2}>D_{2}\left(\frac{\pi}{L}\right)^{2}.$ (11) Now we study persistence in the presence of cross diffusion. The most
+critical region is where both $u_{1}$ and $u_{2}$ are small, hence we
+assume that $u_{j}=\varepsilon_{j}\exp(\lambda t)\sin\left(\frac{\pi x}{L}\right),\;\;\;\;j=1,2,$ and linearize in $\varepsilon_{j},$ we get the following sufficient
+conditions for persistence $(\lambda>0).$ Proposition 2: In addition to Eqs. (9) and (10) one of the
+following conditions is necessary for the persistence of the system (2): $\alpha_{1}-\alpha_{2}>\left(D_{1}+D_{2}\right)\left(\frac{\pi}{L}\right)^{2},$ (12) or $\left[\alpha_{1}-D_{1}\left(\frac{\pi}{L}\right)^{2}\right]\left[\alpha_{2}+D_{2}\left(\frac{\pi}{L}\right)^{2}\right]>D_{12}D_{21}\left(\frac{\pi}{L}\right)^{4}.$ (13) Proof: Substituting $u_{j}$ in (2) and linearizing in $\varepsilon_{j}$ one gets $\displaystyle\varepsilon_{1}[\lambda-\alpha_{1}+D_{1}(\pi/L)^{2}]+\;\varepsilon_{2}D_{12}(\pi/L)^{2}$ $\displaystyle=$ $\displaystyle 0$ $\displaystyle\varepsilon_{2}[\lambda+\alpha_{2}+D_{2}(\pi/L)^{2}]-\;\varepsilon_{1}D_{21}(\pi/L)^{2}$ $\displaystyle=$ $\displaystyle 0$ To get a nonzero solution the determinant of the coefficients has to be zero
+which gives the following equation $\begin{array}[]{l}\lambda^{2}+\lambda[-(\alpha_{1}-\alpha_{2})+\left(D_{1}+D_{2}\right)\left(\frac{\pi}{L}\right)^{2}]+[(-\alpha_{1}+D_{1}\left(\frac{\pi}{L}\right)^{2})(\alpha_{2}+D_{2}\left(\frac{\pi}{L}\right)^{2})+\\
+D_{12}D_{21}\left(\frac{\pi}{L}\right)^{4}=0.\end{array}$ Persistence requires that the real part of one of the roots, at least,
+should be positive hence $\alpha_{1}-\alpha_{2}>\left(D_{1}+D_{2}\right)\left(\frac{\pi}{L}\right)^{2},$ or $\left[\alpha_{1}-D_{1}\left(\frac{\pi}{L}\right)^{2}\right]\left[\alpha_{2}+D_{2}\left(\frac{\pi}{L}\right)^{2}\right]>D_{12}D_{21}\left(\frac{\pi}{L}\right)^{4}.$ This completes the proof. 3 Cross diffusion in epidemics In this section, we will study an epidemic model where the population is
+classified into susceptible (S), and infected and infective (I), according
+to the health of each individual. The transition between the two states
+occurs according to the following rules: Susceptible individual having at least one infected nearest
+neighbor is infected in the next time step. Infected individuals are recovered and become susceptible with a
+rate $\lambda$ . Cross diffusion will be included, where S-individuals diffuse away from
+I-individuals. This system will be studied both without and with delay. In
+the first case we have $\begin{array}[]{l}\frac{\partial S}{\partial t}=-SI,\\
+\frac{\partial I}{\partial t}=SI-\lambda I-D\frac{\partial^{2}S}{\partial x^{2}},\end{array}$ (14) where both $\lambda$ and $D$ are nonnegative constants. Here we consider that only susceptibles are capable of diffusing. This
+corresponds to the case where the disease has symptoms hence susceptibles
+try to avoid infectives. Studying the wave solution of Eq. (14) $S=S(z),\;I=I(z),\;z=x-ct,$ with the boundary conditions $S(\infty)\simeq 1,0\leq S(-\infty)\leq 1,\;I(\infty)=I(-\infty)\simeq 0,$ (15) one gets $I=c\frac{S^{\prime}}{S},\;-cI^{\prime}=-DS^{\prime\prime}-\lambda I+SI,\;\;S^{\prime}=\frac{\mathrm{d}S}{\mathrm{d}z},\;I^{\prime}=\frac{\mathrm{d}I}{\mathrm{d}z}.$ Substituting from the first equation and integrating the second one, we get $F-cI=-D\frac{SI}{c}-\lambda c\ln S+cS.$ To determine the constant ( $F$ ), consider $z\rightarrow\infty$ i.e. the
+past then Eq. (15) implies that $F=c$ . Now consider the future $z\rightarrow-\infty$ , and let $S(t=\infty)=\sigma$ , then the fraction of survivors $\sigma$ is given by the transcendental equation as follows: $\frac{1-\sigma}{\ln(\sigma)}=\lambda,$ (16) which is identical to an equation obtained by Murray [Murray 1993] in
+another context. It is straightforward to see that the homogeneous solution $(S=1,\;I=0)$ is
+asymptotically stable if $\lambda<1,\;\ c\geq\sqrt{D}.$ (17) Introducing delay, the system (14) becomes $\begin{array}[]{l}\frac{\partial S}{\partial t}=-SI,\\
+\frac{\partial I}{\partial t}=S(x,t-T)\;I(x,t-T)-\lambda I-D\frac{\partial^{2}S}{\partial x^{2}}.\end{array}$ (18) This model is similar but not identical to that of Mendez [Mendez 1998].
+Consider the wave solution of Eq. (18) with the boundary conditions (15),
+and studying the stability of the homogeneous solution $(S=1,\;I=0)$ , then
+one gets $\left(c-\frac{D}{c}\right)I^{\prime}-\lambda I+\sum_{n=0}\frac{(cT)^{n}}{n!}\frac{\mathrm{d}^{n}I}{\mathrm{d}z^{n}}\;=0.$ Substituting with $I=e^{mz}$ , then $\left(c-\frac{D}{c}\right)m-\lambda+\exp(cTm)=0.$ (19) Denoting the left hand side of Eq. (19) by $f(m)$ , then it is easy to see
+that $f^{\prime}(m)>0\;\forall\;c\geq\sqrt{D}$ i.e. $f(m)$ is
+monotonically increasing. Furthermore $f(0)>0\;\forall\;0<\lambda<1.$ Thus
+we have Proposition 3: The solution $(S=1,\;I=0)$ for Eq. (18) subject to
+the boundary conditions (15) is asymptotically stable for $(z\rightarrow\infty)$ , if the conditions (17) are satisfied. The derivation of the fraction of survivals $\sigma$ after the epidemic
+wave is similar to the case without delay and is given by Eq. (16). Also, we will discuss one of the mechanisms of cross diffusion namely
+recruitment through signals [Saffre and Deneubourg 2002]. In this case
+swarming individuals e.g. insects recruit others via signals e.g. pheromone
+for ant colonies. Here we generalize the model of Saffre and Deneubourg to
+include diffusion, and study the boundedness and persistence of the
+solutions. Let $u$ be the population density and $v$ be the pheromone density, then $\begin{array}[]{c}\frac{\partial u}{\partial t}=(\alpha+\mu u)u(1-u)-\theta uv+D_{1}\vskip 12.0pt plus 4.0pt minus 4.0pt\frac{\partial^{2}u}{\partial x^{2}},\\
+\frac{\partial v}{\partial t}=\theta uv-v+D_{2}\vskip 12.0pt plus 4.0pt minus 4.0pt\frac{\partial^{2}v}{\partial x^{2}},\end{array}$ (20) where the parameters $\alpha,\beta,\theta,\mu$ are nonnegative. There
+are three homogeneous equilibrium solutions $(u,v)=(0,0),\;(1,0),\;\left(\frac{1}{\theta},\;\frac{1}{\theta^{3}(\theta-1)(\alpha\theta+\mu)}\right).$ The solution $(0,0)$ is unstable, the solution $(1,0)$ is asymptotically
+stable if $\theta<1.$ The third (positive) solution is asymptotically
+stable if $\theta>1,\;\mu(1-2.\theta)<\alpha.$ The results of Cantrell et al [Cantrell et al 1993] are directly applicable
+to the system (20), hence the solutions of Eq. (20) are persistent if $\alpha>D_{1}\left(\frac{\pi}{L}\right)^{2},\;\;\;\theta>1+D_{2}\left(\frac{\pi}{L}\right)^{2}.$ (21) To study the boundedness of the solutions to Eq. (20), we will consider only
+solutions satisfying the following condition $u(0)\geq 0,\;v(0)\geq 0\Rightarrow u(t)\geq 0,\;v(t)\geq 0\;\forall t>0.$ It is direct to see that $\partial u/\partial t<0\;\forall\;u>1$ , hence $\sup\;u(t)\leq 1$ . Consequently $\partial v/\partial t\leq(\theta-1)v\;\Rightarrow\;\forall\;\theta\leq 1$ , then $v(t)\leq v(0).$ Thus we
+have: Proposition 4: (i) For $0\leq\theta\leq 1$ , the solutions of the system (20) with $D_{1}=D_{2}=0\;$ are bounded in $R_{+}^{2}=\left\{(x,y)\;\mathrm{such\;that}\;x\geq 0,\;y\geq 0\right\}$ . (ii) The solutions of Eq. (20) are persistent given that the
+conditions (21) are valid. 4 Cross diffusion and evolutionarily stable strategy Evolutionarily stable strategy ESS [Hofbauer and Sigmund 1998] is an
+important concept in population dynamics. Consider a population in which
+each individual adopts one of $k$ possible strategies. A strategy $I^{*}$ is
+ESS if for all $I\neq I^{*}$ (yet close to it), then (i) $A(I^{*},I^{*})>A(I,I^{*})$ ; or (ii) If $A(I^{*},I^{*})=A(I,I^{*})$ , then $A(I^{*},I)>A(I,I)$ , where $A$ is the payoff matrix. The dynamics of ESS is given by replicator
+dynamics $\frac{\mathrm{d}p_{i}}{\mathrm{d}t}=p_{i}\left[(Ap)_{i}-pAp\right],\;i=1,2,3,...,k,$ (22) where $p_{i}$ is the fraction of the population adopting the strategy $i$ . Recently Hofbauer has introduced the concept of spatial game [Hofbauer
+1999], where the system is given by $\frac{\partial p_{i}}{\partial t}=p_{i}\left[(Ap)_{i}-pAp\right]+D_{i}\frac{\partial^{2}p_{i}}{\partial x^{2}}.$ (23) This concept is generalized to asymmetric games [Ahmed et al. 2002]. Here we
+generalize it further to contain cross diffusion in addition to ordinary
+diffusion. The equations become $\frac{\partial p_{i}}{\partial t}=p_{i}\left[(Ap)_{i}-pAp\right]+D_{i}\frac{\partial^{2}p_{i}}{\partial x^{2}}+\sum_{j\neq i}^{k}D_{ij}\frac{\partial^{2}p_{j}}{\partial x^{2}}.$ (24) The condition $\sum_{i}p_{i}=1$ implies $D_{i}-D_{k}+\sum_{j\neq i}^{k}D_{ij}=0.$ Applying to the hawk(H)-dove(D)- retaliate(R) game [Maynard Smith 1982]
+where players either fight for a given prize with value $v$ or agree to
+share it. The first strategy is called hawk (H) and its drawback is that
+fight costs value $c>v$ . The second strategy is called dove (D) and its
+drawback is that it loses against hawks. The third strategy is called
+retaliate where the player imitates the strategy of the opponent. Hence he
+(or she) is a hawk (dove) if the opponent is a hawk (dove). Thus the payoff
+matrix $A$ is $A=\left[\begin{array}[]{ccc}\frac{1}{2}(v-c)&v&\frac{1}{2}(v-c)\\
+0&\frac{v}{2}&\frac{v}{2}\\
+\frac{1}{2}(v-c)&\frac{v}{2}&\frac{v}{2}\end{array}\right],$ where $c$ and $v$ are constants and $c>v>0$ . Let $p_{1}(p_{2})$ be the
+fraction of population adopting H(D) strategy, respectively, then the system
+(24) becomes $\displaystyle\frac{\partial p_{1}}{\partial t}$ $\displaystyle=$ $\displaystyle p_{1}\left[-\frac{c}{2}+\frac{p_{1}}{2\left(c-\frac{v}{2}\right)}+\frac{p_{2}(v+c)}{2}-\frac{p_{1}^{2}c}{2}-cp_{1}p_{2}\right]+$ (25) $\displaystyle D_{1}\frac{\partial^{2}p_{1}}{\partial x^{2}}+D_{12}\frac{\partial^{2}p_{2}}{\partial x^{2}},$ $\displaystyle\frac{\partial p_{2}}{\partial t}$ $\displaystyle=$ $\displaystyle p_{2}\left[p_{1}\left(c-\frac{v}{2}\right)-\frac{p_{1}^{2}c}{2}-cp_{1}p_{2}\right]+D_{2}\frac{\partial^{2}p_{2}}{\partial x^{2}}+D_{21}\frac{\partial^{2}p_{1}}{\partial x^{2}}.$ Assuming $1\geq x\geq 0$ , then linear stability analysis shows that $p_{1}=p_{2}=0$ is unstable if $D_{12}D_{21}>D_{2}\left(D_{1}+\frac{c}{2\pi^{2}}\right).$ (26) Thus cross diffusion can destabilize equilibrium solution, in some cases, if $D_{12},D_{21}$ are large enough. 5 Cross diffusion and the dynamics of learning in multiagent systems Recently [Sato and Crutchfield 2002] have studied the dynamics of learning
+in multiagent systems, where the agents use reinforcement learning. They
+showed that, although the agents are not directly interacting with each
+other, a collective game between them arises through their interaction with
+the environment. Such interactions can be modelled via replicator type
+equations. Consider two agents $u$ and $v$ with $n$ possible actions, let $u_{j}(t)\;(v_{j}(t))$ be a measure of the probability that the agent $u(v)$ will take the action $j$ at time $t$ . Sato and Crutchfield [Sato and
+Crutchfield 2002] have shown that $u_{j}(t),v_{j}(t)$ satisfy the following
+equations $\displaystyle\frac{\mathrm{d}u_{i}}{\mathrm{d}t}$ $\displaystyle=$ $\displaystyle u_{i}\beta_{1}\left[(Av)_{i}-uAv\right]+\alpha_{1}u_{i}\sum_{j}u_{j}\ln\left(\frac{u_{j}}{u_{i}}\right),$ $\displaystyle\frac{\mathrm{d}v_{i}}{\mathrm{d}t}$ $\displaystyle=$ $\displaystyle v_{i}\beta_{2}\left[(Bu)_{i}-vBu\right]+\alpha_{2}v_{i}\sum_{j}v_{j}\ln\left(\frac{v_{j}}{v_{i}}\right),$ (27) where $A$ and $B$ are payoff (reward) matrices for $u$ and $v$ ,
+respectively, and $\alpha_{1},\alpha_{2},\beta_{1},\beta_{2}$ are
+nonnegative constants. If $\alpha_{1}=\alpha_{2}=0$ , then one regains
+the standard asymmetric replicator equations [Hofbauer and Sigmund 1998,
+Ahmed et al. 2002]. For simplicity we consider the following payoff matrices $A=\mathrm{diag}(a_{1},a_{2}),\;B=\mathrm{diag}(b_{1},b_{2}),\;a_{i}\geq 0,\;b_{i}\geq 0$ , hence the system (27) becomes $(u_{1}=u,\;u_{2}=1-u,\;v_{1}=v,\;v_{2}=1-v)$ $\displaystyle\frac{\mathrm{d}u}{\mathrm{d}t}$ $\displaystyle=$ $\displaystyle\beta_{1}u(1-v)\left(u(a_{1}+a_{2})-a_{2}\right),$ $\displaystyle\frac{\mathrm{d}v}{\mathrm{d}t}$ $\displaystyle=$ $\displaystyle\beta_{2}v(1-u)\left(v(b_{1}+b_{2})-b_{2}\right).$ (28) There are four equilibria $(u,v)$ : $E_{0}=(0,0),\;E_{1}=\left(a_{2}/(a_{1}+a_{2}),0\right),\;E_{2}=\left(0,b_{2}/(b_{1}+b_{2})\right),\;E_{3}=(1,1)$ . The solution $E_{0}$ is asymptotically stable while $E_{1},E_{2},E_{3}$ are saddle points, hence Corollary 1: The system (28) is not persistent. Including cross diffusion the system becomes $\displaystyle\frac{\mathrm{d}u}{\mathrm{d}t}$ $\displaystyle=$ $\displaystyle\beta_{1}u(1-v)\left(u(a_{1}+a_{2})-a_{2}\right)+D_{12}\frac{\partial^{2}v}{\partial x^{2}},$ $\displaystyle\;\frac{\mathrm{d}v}{\mathrm{d}t}$ $\displaystyle=$ $\displaystyle\beta_{2}v(1-u)\left(v(b_{1}+b_{2})-b_{2}\right)+D_{21}\frac{\partial^{2}u}{\partial x^{2}},$ (29) where $1\geq x\geq 0$ , and the following Dirichlet boundary conditions are
+assumed $u(0,t)=u(1,t)=v(0,1)=v(1,t)=0$ . Assuming $u=u_{eq}+u_{0}\exp(\sigma t)\sin\pi x,\;v=v_{eq}+v_{0}\exp(\sigma t)\sin\pi x,\;$ where $(u_{eq},v_{eq})$ is one of the equilibrium solutions $E_{1},E_{2},E_{0}$ , one gets Proposition 5: The following condition is necessary for persistence
+of the system (29): $D_{12}D_{21}>\max\left\{\frac{\beta_{1}\beta_{2}a_{2}b_{2}}{\pi^{4}},\;\frac{\beta_{1}\beta_{2}a_{1}b_{2}}{\pi^{4}(a_{1}+a_{2})},\;\frac{\beta_{1}\beta_{2}b_{1}a_{2}}{\pi^{4}(b_{1}+b_{2})}\right\}.$ (30) Proof. The condition (30) implies that $E_{1},E_{2},E_{0}$ are
+unstable which is a necessary condition for the persistence of the system. 6 Conclusions Conditions for Turing instability and persistence in the presence of cross
+diffusion are derived. The predator-prey model is generalized to the cross
+diffusion case. Several types of interactions are assumed. . Stability and persistence of the solutions of an epidemic model with cross
+diffusion is studied. The effect of cross diffusion to evolutionary games is studied. In some
+cases, cross diffusion destabilizes the equilibrium solution. Conditions for persistence and stability for the dynamics of learning in
+multiagent systems are concluded. Acknowledgments: We thank R. S. Cantrell and C. Cosner for their comments. Also we thank the
+referees for their helpful comments. References Ahmed E., Hegazi A. S. and Elgazzar A. S. (2002), On spatial
+asymmetric games. Advances in complex systems 5, 433-444. Cantrell R. S., Cosner C. and Hutson V. (1993), Permanence in ecological
+systems with spatial heterogeneity. Proceeding of the Royal. Society of
+Edinburgh 123A, 533-559. Chattopadhyay J. and Chatterjee S. (2001), Cross diffusional effects in a
+Lotka-Volterra competitive system, Nonlin. Phen. in Complex Sys. 4, 364-369. Chen L., Hsiao L. and Li Y.(2003), Strong solution to a kind of cross
+diffusion parabolic system, Comm. Math. Sci. 1, 799. Hofbauer J. (1999), The spatially dominant equilibrium of a game.
+Annals of Operations Research 89, 233-251. Hofbauer J. and Sigmund K. (1998), Evolutionary games and
+population dynamics. Cambridge university press, Cambridge. Le D. (2003), Cross diffusion systems on n-dimensional domains, Electronic
+J. Diff. Eqns, Conference 10, 193. Maynard Smith J. (1982), Evolution and theory of games, Cambridge
+Univ. Press U.K. Mendez V. (1998), Epidemic model with infected infectious period.
+Phys. Rev. E 57, 3622-3624. Murray J.D.. (2003), ”Mathematical biology”, Springer Publishers.. Okubo A. (1980), Diffusion and ecological problem.
+Springer-Verlag, Berlin.. Saffre F. and Deneubourg J. L. (2002), Swarming strategies for
+cooperative species. J. Theor. Biol. 214, 441-451. Sato Y. and Crutchfield J. P. (2002), Coupled replicator equations
+for the dynamics of learning in multiagent systems, Nlin AO/0204057. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

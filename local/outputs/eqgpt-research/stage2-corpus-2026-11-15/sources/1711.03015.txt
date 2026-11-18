@@ -1,0 +1,493 @@
+Derivation of a bacterial nutrient-taxis system with doubly degenerate cross-diffusion as the parabolic limit of a velocity-jump process Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Introduction 2 Velocity-jump processes and formal asymptotic expansions 2.1 The method of Hillen and Othmer 2.2 Interior parabolic limit 2.3 Boundary conditions 3 Modelling density-dependent cross-diffusion 3.1 Choice of the perturbed turning rate 3.2 Equation for the chemical signal, reaction term and non-dimensionalization 4 Discussion References License: arXiv.org perpetual non-exclusive license arXiv:1711.03015v1 [math.AP] 08 Nov 2017 Derivation of a bacterial
+nutrient-taxis system with doubly degenerate cross-diffusion as the
+parabolic limit of a velocity-jump process Ramón G. Plaza Address: Instituto de
+Investigaciones en Matemáticas Aplicadas y en Sistemas Universidad Nacional Autónoma de
+México Circuito Escolar s/n, C.P. 04510 Cd. de México (Mexico) Email address: plaza@mym.iimas.unam.mx Abstract. This paper is devoted to the justification of the macroscopic, mean-field nutrient taxis system with
+doubly degenerate cross-diffusion proposed by Leyva et al. [ 39 ] to model the
+complex spatio-temporal dynamics exhibited by the bacterium B. subtilis during experiments run in vitro . This justification is based on a microscopic description of the movement of individual
+cells whose changes in velocity (in both speed and orientation) obey a velocity jump process [ 47 ] , governed by a transport equation of Boltzmann type. For that purpose, the asymptotic method
+introduced by Hillen and Othmer [ 27 , 48 ] is applied, which consists of the computation of the
+leading order term in a regular Hilbert expansion for the solution to the transport equation, under an
+appropriate parabolic scaling and a first order perturbation of the turning rate of Schnitzer type [ 54 ] . The resulting parabolic limit equation at leading order for the bacterial cell density
+recovers the degenerate nonlinear cross diffusion term and the associated chemotactic drift appearing in the
+original system of equations. Although the bacterium B. subtilis is used as a prototype, the method
+and results apply in more generality. Key words and phrases: chemotaxis, degenerate diffusion, velocity jump processes, transport equations 2010 Mathematics Subject Classification 35K65, 92C17, 60J75 1. Introduction When grown in vitro , many species of bacteria exhibit a variety of complex spatial patterns which
+depend upon environmental conditions such as the level of nutrients or the hardness of the substrate.
+Continuous mean-field systems of partial differential equations for the bacterial density and the nutrient
+concentration have been proposed to simulate these patterns with moderate to relative great success (see, for
+example, Murray [ 44 ] , the discussion and criticism by Ben-Jacob and collaborators [ 6 , 22 ] , and the references therein). In a recent contribution, Leyva et al. [ 39 ] introduced a system of reaction-diffusion and nutrient taxis system of equations to model the complex
+spatio-temporal dynamics exhibited by strains of the bacterium Bacillus subtilis observed in
+experiments (cf. [ 46 ] ). The model reads $\begin{aligned} u_{t}&=\nabla\cdot\big(\sigma uv\nabla u\big)-\nabla\cdot\left(\sigma u^{2}v\frac{\chi_{0}K_{d}}{(K_{d}+v)^{2})}\nabla v\right)+\theta kuv,\\
+v_{t}&=D_{v}\Delta v-kuv,\end{aligned}\qquad\quad x\in\Omega,\;\;t>0,$ (1.1) for scalar unknowns $u=u(x,t)$ and $v=v(x,t)$ , where $\Omega\subset\mathbb{R}^{n}$ , $n=1,2$ , is a bounded open
+domain, with piecewise regular boundary, and $\sigma,\theta,k,K_{d},D_{v},\chi_{0}>0$ are positive
+constants. In addition, $u$ and $v$ satisfy no-flux boundary conditions of the form $\begin{aligned} \left(uv\nabla u-u^{2}v\frac{\chi_{0}K_{d}}{(K_{d}+v)^{2})}\nabla v\right)\cdot\hat{\nu}&=0,\\
+\nabla v\cdot\hat{\nu}&=0,\end{aligned}\qquad\quad x\in\partial\Omega,\;\;t>0,$ (1.2) where $\hat{\nu}\in\mathbb{R}^{n}$ , $|\hat{\nu}|=1$ , denotes the outer unit normal at each point of $\partial\Omega$ . System ( 1.1 ) is further endowed with initial conditions, $u(x,0)=u_{0}(x),\;\;\;\;v(x,0)=v_{0}(x),\qquad x\in\Omega,$ (1.3) where $u_{0}$ and $v_{0}$ are known functions. In this model, $u$ and $v$ represent the bacterial density and the
+nutrient concentration, respectively. Thus, $u_{0}$ and $v_{0}$ represent the initial spatial distribution of
+bacteria and nutrient. The constant $\sigma$ is related to the hardness of the substrate on the Petri dish
+(usually agar or a similar substance), $\theta$ is the conversion rate factor in the signal consumption
+mechanism, $K_{d}$ is the receptor-ligand dissociation constant, $k$ is the intrinsic consumption rate, and $D_{v}$ is the diffusion coefficient for the nutrient. Notice that the equation for the bacterial density
+contains a chemotactic term that models the response of the bacteria towards changes in the gradient of a
+chemical signal (in this case, originated by the nutrient). The constant $\chi_{0}>0$ measures the intensity
+of such signal. One of the main features of system ( 1.1 ) is the appearance of a non-linear, degenerate,
+cross-diffusion coefficient in the bacterial density equation of the form $D_{u}(u,v)=\sigma uv,$ (1.4) which was originally proposed by Kawasaki et al. [ 32 ] . When grown
+on semi-solid agar plates with poor-to-medium nutrient levels, the B. subtilis strain form densely
+branched, highly structured stable patterns (cf. Oghiwari et al. [ 46 ] ). Experiments suggest that
+the bacterial colony envelope is a boundary layer of cells whose activity is high around the front, but
+immotile either inside of the envelope (where the nutrient is almost completely consumed) or in the outermost
+region (where the bacterial density is still low). Kawasaki and collaborators modelled this behaviour by
+allowing the diffusivity of the bacteria $D_{u}$ to be low when either the nutrient concentration or the
+bacterial density are low, and consequently proposed the form of the diffusion coefficient in
+( 1.4 ). The original model by Kawasaki et al. is a reaction-diffusion system with no
+transport terms due to taxis. The motivation of Leyva and collaborators to extend Kawasaki’s model originated from the theoretical and
+experimental work by E. Ben-Jacob and his group [ 5 , 14 , 22 ] , who argued in favour of the
+chemotactic response of bacteria as an essential ingredient to understand some of the fundamental features of
+the spatio-temporal patterns observed in experiments. Chemotactic terms in Keller-Segel type models [ 34 , 35 ] usually appear in the equation for bacterial density as the divergence of a chemotactic flux , $\boldsymbol{J}_{c}$ , having the generic form, $\boldsymbol{J}_{c}=-\zeta(u,v)\chi(v)\nabla v.$ The function $\chi=\chi(v)$ is known as the chemotactic sensitivity function and it usually depends
+on the chemical concentration alone. The function $\zeta=\zeta(u,v)$ was labeled by Ben-Jacob as the bacterial response function . It measures the response of the bacteria to the effective sensed
+gradient, namely, $\chi(v)\nabla v$ . Based on experimental observations [ 14 ] , Ben-Jacob and
+collaborators [ 5 , 22 ] proposed an empirical rule: the bacterial response function should be
+proportional to the product of the bacterial density and its corresponding diffusion
+coefficient 1 1 1 notice that when the diffusion coefficient is constant, $D_{u}\equiv 1>0$ (after
+normalizations), this rule implies that the bacterial response function should be $\zeta=u$ , and the
+chemotactic flux reads $\boldsymbol{J}_{c}=-u\chi(v)\nabla v$ , recovering the standard Keller-Segel model [ 34 , 35 ] . , that is, $|\zeta|\propto uD_{u}.$ (1.5) Based on this suggestion and on the form of the effective diffusion coefficient ( 1.4 ), Leyva et al. [ 39 ] proposed a chemotactic flux of the form $\boldsymbol{J}_{c}=-\sigma u^{2}v\chi(v)\nabla v,$ where the chemotactic sensitivity obeys a Lapidus-Schiller receptor law [ 36 ] , $\chi(v)=\frac{\chi_{0}K_{d}}{(K_{d}+v)^{2}}.$ The result is the taxis term appearing in ( 1.1 ). This new chemotactic term affects the velocity of
+the colony envelope as well as the morphology of the patterns, as numerical simulations and asymptotic
+calculations actually show (see [ 39 ] ). In addition, the presence of an increasing chemotactic signal
+supresses the onset for instabilities [ 10 ] (for a related discussion, see [ 3 ] ). The new model
+seems to capture well the complexity of the observed patterns. In Figure 1 , the results of the
+numerical computation of a non-dimensionalization of system ( 1.1 ) - ( 1.3 ) (see equations
+( 3.21 ) - ( 3.23 ) below) are presented. The simulations were performed in the dense
+branch morphology regime, that is, for medium-to-soft agar and poor level of nutrients. The initial
+condition for the bacterial density is a Gaussian function resembling inoculation of the strain at the center
+of the Petri dish. After some time, the envelope front moves outward, forming spatial patterns which exhibit
+more activity near its boundary. (a) $t=0.463\sim 0^{+}$ (b) $t=5.098$ Figure 1. Numerical simulation of the non-dimensional system ( 3.21 ) -
+( 3.23 ) on a square domain $\Omega=(-L/2,L/2)\times(-L/2,L/2)$ , with $L=680$ . The pictures show the computed values of the bacterial density $u$ . The initial
+conditions were $v_{0}(x,y)\equiv 0.71$ (uniform nutrient initial distribution) and $u_{0}(x,y)=0.71e^{-(x^{2}+y^{2})/6.25}$ . The bacterial colony is depicted at a time very close to the initial distribution, $t\sim 0^{+}$ (figure 1(a) ), and for a later time step where the envelope front has already spreaded out
+(figure 1(b) ). The parameter values considered were $\sigma_{0}=4.0$ (soft agar) and $\chi_{0}=2.5$ (color plot online). Density-dependent diffusion coefficients are used in many biological contexts, such as continuous models in
+population biology [ 2 , 23 , 45 ] , spatial ecology [ 57 ] , and eukaryotic cell biology [ 55 ] , just to mention a few. From the mathematical viewpoint, when the nonlinearity of the diffusion
+coefficient is degenerate (meaning that diffusion approaches zero when the density does also), these
+equations or systems of equations are endowed with interesting properties. Among the new mathematical
+features one finds that equations with degenerate diffusion might exhibit finite speed of propagation
+of initial disturbances [ 21 ] , in contrast with the strictly parabolic case. Another property is the
+emergence of traveling waves of “sharp” type (cf. [ 53 , 56 ] ). The cross-diffusion system
+( 1.1 ) has been the subject of recent investigations. Among the new findings we mention the global
+existence of bounded weak solutions and the absence of finite time blow-up [ 61 ] , even in the case
+of several space dimensions [ 60 ] . Thus, density-dependent diffusion systems with appropriately
+coupled taxis terms warrant attention from the community working on the analysis of partial differential
+equations thanks to their rich mathematical structure. The underlying problem when using macroscopic field equations like ( 1.1 ) is how to justify the
+form of the chemotactic flux and/or of the diffusion coefficient which, under a pure phenomenological
+approach, are simply postulated based on empiric considerations. Another issue is how to incorporate
+microscopic responses of individual cells into the chemotactic sensitivity. There is, however, a stochastic
+process that has become standard (and appropriate) for describing the motion of cells, known as
+the velocity jump process . Based on experimental observations [ 7 , 8 , 33 ] showing
+that individual cells exhibit dynamics based on a run-and-tumble type of motion (see section 2 below), kinetic transport equations of Boltzmann type with jumps in velocity space are common to model
+the movement of biological agents and their chemotactic responses (see [ 51 , 1 , 47 ] and the
+references therein). Moreover, kinetic equations have been also used to derive macroscopic mean-field
+continuous equations after a limiting procedure (cf. [ 27 , 48 , 18 , 28 ] ),
+involving outer (or Hilbert) asymptotic expansions which are customary in kinetic theory [ 17 , 24 , 37 ] . The purpose of this work is to take a closer look at the mathematical modelling approach that leads to the
+particular form of system ( 1.1 ), by showing that the former can be retrieved as the parabolic
+diffusion limit of a velocity-jump process. Under the assumptions of a parabolic scaling together with an
+unbiased unperturbed turning kernel and a perturbed turning frequency (which depends on the chemical and
+population densities), it is shown that the leading order term in the Hilbert expansion to solutions of the
+Boltzmann type transport equation is a solution to the equation for the bacterial density in
+( 1.1 ). The key ingredient is to consider that the unperturbed turning frequency does not depend on
+the velocity, but does depend on the zero velocity moment (or marginal density) of the agent population as
+well as on the chemical concentration. Furthermore, the next order in the expansion of the turning
+frequency does depend on the velocity and encodes the bacterial response to the chemotactic signal. In
+addition, it is also shown that kinetic no-mass-flux boundary conditions for solutions to the transport
+equation lead to the no flux boundary conditions for $u$ in ( 1.2 ). These observations are summarized in
+Theorem 3.5 . It is important to mention that this procedure is strictly formal. Yet, the
+main purpose of this derivation is to connect the forms of the chemotactic flux
+term and of the density dependent cross-diffusion coefficient ( 1.4 ) with microscopic features of
+the underlying velocity-jump process such as the bias due to the chemotactic signal and the turning frequency
+of individuals. In this fashion, a simple microscopic interpretation of the (otherwise purely
+phenomenological) choices for the particular form of the diffusion and advection terms appearing in
+( 1.1 ) is presented. Up to our knowledge, this work is the first attempt to derive degenerate
+cross-diffusion coefficients and chemotactic sensitivities which are density-dependent and related to each
+other, from a velocity jump process. Although the bacterium B. subtilis and system ( 1.1 )
+are used as a prototype, the methodology and results apply more generally. The plan of the paper is as follows. In section 2 the master transport equation
+governing velocity jump processes is recalled. Section 2.1 contains a description of the
+method introduced by Hillen and Othmer [ 27 , 48 ] , and the interior limit under a
+parabolic scaling is presented. Particular attention is devoted to boundary conditions. It is shown that, in
+the limit, the no-flux boundary conditions in ( 1.2 ) depend on the no normal
+mass flux across the boundary nature of the conditions imposed on the solutions to the transport equations,
+regardless of their particular form. The central section 3 contains the mathematical
+modelling of the perturbed turning kernel and frequency that leads to the explicit form of system
+( 1.1 ). Finally, in section 4 the main features of this derivation and some
+potential consequences, both at the mathematical and at the biological levels, are discussed. 2. Velocity-jump processes and formal asymptotic expansions Experimental observations show that some species of bacteria alternate two basic modes of motion: a simple
+linear motion with constant speed, called a run , followed by a tumble , which is basically a
+reorientation of the cell (for experimental evidence of this behaviour see [ 8 , 7 ] for the
+species E. coli , and [ 33 ] for B. subtilis ). During a tumble the bacterium’s location
+remains essentially constant while it spins around. After a tumble, the cell selects a new direction of
+movement. Experiments show that (i) the duration of a tumble is short in comparison to that of a run; (ii)
+the distribution of the change in direction between the run preceding a tumble and the following one is the
+same from tumble to tumble; and, (iii) the speed of the bacterium during a run does not change from run to
+run. To sum up, the frequency of tumbles seems to be a function of time, position and direction, whereas run
+speed and distribution of the change in direction due to a tumble appear to be relatively constant. This
+run-and-tumble type of bacterial movement can be efficiently described by a Boltzmann-type transport equation
+from kinetic theory. This description is called a velocity-jump process, and it is based on the assumption
+that generic agents (which can be particles, cells or microorganisms) make instantaneous jumps in velocity
+space rather than in physical space. Thus, the motion consists on a sequence of runs separated by
+reorientations during which a new velocity is chosen. It is assumed that the changes in velocity are the
+result of a Poisson process of intensity $\lambda>0$ (called the turning frequency or turning
+rate ), that is, the probability distribution specifying the time between turning events is exponential with
+mean $1/\lambda$ (the mean run duration). In such processes, agents follow a given velocity $\boldsymbol{v}^{\prime}\in V\subset\mathbb{R}^{n}$ , $n=1,2,3$ , for a finite time.
+Here $V$ is the set of allowed velocities (often regarded as a symmetric with respect to the origin, compact
+set). A new velocity is chosen according to a function $T:V\times V\to\mathbb{R}$ , where $T(\boldsymbol{v},\boldsymbol{v}^{\prime})$ is the
+probability density of turning from velocity $\boldsymbol{v}^{\prime}$ to velocity $\boldsymbol{v}$ , given that a reorientation occurs. $T$ is called the turning kernel . Let $p=p(x,t,\boldsymbol{v})$ be the probability density function describing
+the population of agents which, at position $x\in\Omega\subseteq\mathbb{R}^{n}$ and at time $t>0$ , travel with
+velocity $\boldsymbol{v}\in V$ . Here $\Omega\subseteq\mathbb{R}^{n}$ is an open set. In a velocity jump process, the evolution
+of $p$ is governed by the following transport (or forward Kolmogorov) equation (cf. [ 47 ] ), $\frac{\partial}{\partial t}p(x,t,\boldsymbol{v})+\boldsymbol{v}\cdot\nabla_{x}p(x,t,\boldsymbol{v})=-\lambda p(x,t,\boldsymbol{v})+\lambda\int_{V}T(\boldsymbol{v},\boldsymbol{v}^{\prime})p(x,t,\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime}+\mathcal{G},$ (2.1) where $\mathcal{G}$ accounts for the rate of change in $p$ due to reaction. The drift term $\boldsymbol{v}\cdot\nabla_{x}p$ represents straight runs with velocity $\boldsymbol{v}$ , whereas the absorption term $-\lambda p$ on the
+right hand side corresponds to agents leaving the “state” $(x,\boldsymbol{v})$ (position $x$ with velocity $\boldsymbol{v}$ ). The
+integral term accounts for the agents jumping into the state $(x,\boldsymbol{v})$ after a reorientation. Since $T:V\times V\to\mathbb{R}_{+}$ is a probability density, we assume it is non-negative and normalized so that $\int_{V}T(\boldsymbol{v},\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime}=1,$ for all $\boldsymbol{v}\in V$ . For many purposes, one does not need to determine the distribution $p=p(x,t,\boldsymbol{v})$ but
+only some of its first velocity moments, such as the marginal density (or zero moment), $\rho(x,t)=\int_{V}p(x,y,\boldsymbol{v})\,d\boldsymbol{v},$ which is the density of individuals at position $x$ at time $t>0$ , whatever their velocity. Velocity-jump processes have been often used to model the movement of biological individuals, such as the
+bacteria E. coli [ 7 ] and B. subtilis [ 42 ] , or even reef fish larvae [ 13 ] . A backward equation similar to ( 2.1 ) was first derived by Stroock [ 58 ] to
+describe random motion of bacteria. We employ the transport equation ( 2.1 ) as the master equation to
+describe the motion of biological agents, as proposed by Othmer et al. [ 47 ] . Our goal is to
+derive an approximate, continuous, mean-field limit system that encodes an external bias imposed on the
+motion due to a chemical signal. For that purpose we follow the general method by Hillen and Othmer [ 27 , 48 ] , which is based on regular perturbation (Hilbert) expansions on solutions to equation
+( 2.1 ). 2.1. The method of Hillen and Othmer Let $\Omega\subseteq\mathbb{R}^{n}$ be an open domain. The set of admissible velocities $V\subset\mathbb{R}^{n}$ is assumed
+to
+be symmetric with respect to the origin (that is, $\boldsymbol{v}\in V\Rightarrow-\boldsymbol{v}\in V$ ) and compact. Let us
+assume that $\lambda>0$ is constant in $\boldsymbol{v}$ . Let $\mathcal{K}:=\{f\in L^{2}(V)\,:\,f\geq 0\}$ be
+the cone of non-negative functions in $L^{2}(V)$ . Then, for fixed $(x,t)\in\Omega\times(0,+\infty)$ we
+regard ${\mathcal{T}}p(\boldsymbol{v}):=\int_{V}T(\boldsymbol{v},\boldsymbol{v}^{\prime})p(x,t,\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime},$ (2.2) as an integral operator in $L^{2}(V)$ . Hillen and Othmer [ 27 ] impose the following structural
+assumptions on $T$ . $T(\boldsymbol{v},\boldsymbol{v}^{\prime})\geq 0$ for all $(\boldsymbol{v},\boldsymbol{v}^{\prime})\in V\times V$ ; $\int_{V}T(\boldsymbol{v},\boldsymbol{v}^{\prime})\,d\boldsymbol{v}=1$ , for all $\boldsymbol{v}^{\prime}\in V$ , and $\int_{V}\int_{V}T(\boldsymbol{v},\boldsymbol{v}^{\prime})^{2}\,d\boldsymbol{v}\,d\boldsymbol{v}^{\prime}<+\infty$ . (T 1 ) There exist functions $\eta_{0},\phi,\psi$ in $\mathcal{K}$ satisfying $\eta_{0}\not\equiv 0$ , $\phi,\psi\neq 0$ a.e., such that $\eta_{0}(\boldsymbol{v})\phi(\boldsymbol{v}^{\prime})\leq T(\boldsymbol{v},\boldsymbol{v}^{\prime})\leq\eta_{0}(\boldsymbol{v})\psi(\boldsymbol{v}^{\prime}),$ for all $(\boldsymbol{v},\boldsymbol{v}^{\prime})\in V\times V$ . (T 2 ) $\|\mathcal{T}\|_{\langle 1\rangle^{\perp}\to\langle 1\rangle^{\perp}}<1$ , where $\langle 1\rangle^{\perp}\subset L^{2}(V)$ is the orthogonal complement of constants in $L^{2}(V)$ . (T 3 ) $\int_{V}T(\boldsymbol{v},\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime}=1$ , for all $\boldsymbol{v}\in V$ . (T 4 ) For every given $\lambda>0$ , constant in $\boldsymbol{v}\in V$ , the turning operator , ${\mathcal{L}}:L^{2}(V)\to L^{2}(V)$ , is defined as ${\mathcal{L}}p(\boldsymbol{v}):=-\lambda p(\boldsymbol{v})+\lambda{\mathcal{T}}p(\boldsymbol{v})=-\lambda p(\boldsymbol{v})+\lambda\int_{V}T(\boldsymbol{v},\boldsymbol{v}^{\prime})p(\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime}.$ (2.3) The following theorem summarizes the most important properties of the turning operator that we shall need. Theorem 2.1 (Hillen and Othmer [ 27 , 48 ] ) . Under assumptions ( T1 ) - ( T2 ) the following properties hold: (a) $\mu=0$ is a simple eigenvalue of ${\mathcal{L}}:L^{2}(V)\to L^{2}(V)$ with eigenfunction $f(\boldsymbol{v})\equiv 1$ . (b) For all $g\in\langle 1\rangle^{\perp}$ , $\langle g,{\mathcal{L}}g\rangle_{L^{2}}=\int_{V}g{\mathcal{L}}g\,d\boldsymbol{v}\leq-\mu_{2}\|g\|_{L^{2}(V)}^{2},$ where $\mu_{2}=\lambda(1-\|\mathcal{T}\|_{\langle 1\rangle^{\perp}\to\langle 1\rangle^{\perp}})$ . (c) All non-zero eigenvalues $\mu$ of ${\mathcal{L}}$ satisfy the estimate $-2\lambda<\mathrm{Re}\,\mu\leq-\mu_{2}<0$ , and to within scalar multiples there is no other positive eigenfunction. (d) $\|{\mathcal{L}}\|_{L^{2}\to L^{2}}\leq 2\lambda$ . (e) ${\mathcal{L}}$ restricted to $\langle 1\rangle^{\perp}\subset L^{2}(V)$ has a linear pseudo-inverse ${\mathcal{F}}$ with
+norm $\|{\mathcal{F}}\|_{\langle 1\rangle^{\perp}\to\langle 1\rangle^{\perp}}\leq\frac{1}{\mu_{2}}.$ Let us now consider a velocity-jump processes (for simplicity in the course of this section, in the absence
+of reaction terms or external forces) governed by the equation $\frac{\partial}{\partial t}p(x,t,\boldsymbol{v})+\boldsymbol{v}\cdot\nabla_{x}p(x,t,\boldsymbol{v})=-\lambda p(x,t,\boldsymbol{v})+\int_{V}\lambda T(\boldsymbol{v},\boldsymbol{v}^{\prime})p(x,t,\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime},$ (2.4) where the turning rate $\lambda$ may as well depend on the velocity $\boldsymbol{v}\in V$ and on other external
+signals, represented by $S=S(x,t)$ (for example, the density function of a chemo-attractant or a
+chemo-repellent substance). $\lambda$ may also depend on $(x,t)$ via other state variables such as the
+marginal density $\rho=\rho(x,t)$ . As Hillen and Othmer point out, the dependence of $\lambda$ is not only
+on $S$ pointwise (on the value of $S$ at $(x,t)$ ), but also on $\nabla S$ , or nonlocally on $S$ as well.
+Thus, following [ 48 ] , we write $\lambda=\lambda(\boldsymbol{v},\hat{S})$ to indicate this behaviour. According to custom in the study of transport equations, we consider a scaling limit that allows to
+approximate the description of the motion by a simpler model, such as a diffusion- or drift-dominated
+partial differential equation. Here we adopt a parabolic (or diffusion) scaling with its corresponding
+Hilbert expansion and limiting equation (cf. [ 27 , 26 , 28 ] ). The parabolic scaling takes the form $\tau=\epsilon^{2}t,\quad\xi=\epsilon x,$ (2.5) under the fundamental assumption that $\tau,\,\xi\,=O(1),\quad\text{as}\;\;\epsilon\to 0^{+}.$ (2.6) Remark 2.2 . In the description of the motion of bacteria, for instance, these quantities can be determined
+experimentally, leading to the justification of the use of this scaling in certain regimes of the physical
+parameters under consideration. For example, the bacterium E. coli on a Petri dish displays a
+characteristic speed of $s\approx 10$ $\mu$ m/sec. and a mean run time of $1/\lambda\approx 1$ sec. (cf. [ 49 ] ). Under similar experimental conditions, strains of B. subtilis show characteristic
+speeds of $s\approx 1$ $\mu$ m/sec. (cf. [ 29 ] ) with average run time of $1/\lambda\approx 1$ sec.
+(cf. [ 30 ] ). Choosing a typical experimental length scale of $L=1$ mm. and a time scale of $T=10^{4}$ sec., we have that $s=O(\epsilon^{-1})$ and $\lambda=O(\epsilon^{-2})$ , with $\epsilon=10^{-2}$ for E.
+coli and $\epsilon=10^{-1}$ for B. subtilis . Adopting the scaling ( 2.5 ) we have that, in both
+cases, the assumption ( 2.6 ) holds for a small, non-dimensional parameter $\epsilon>0$ . Rewriting equation ( 2.4 ) in the new space and time coordinates, $(\xi,\tau)$ , we obtain $\epsilon^{2}\frac{\partial}{\partial\tau}p(\xi,\tau,\boldsymbol{v})+\epsilon\boldsymbol{v}\cdot\nabla_{\xi}p(\xi,\tau,\boldsymbol{v})=-\lambda p(\xi,\tau,\boldsymbol{v})+\int_{V}\lambda T(\boldsymbol{v},\boldsymbol{v}^{\prime})p(\xi,\tau,\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime},$ (2.7) where $(\xi,\tau)\in\widetilde{\Omega}\times(0,+\infty)$ , $\widetilde{\Omega}:=\epsilon\Omega=\{\epsilon x\,:\,x\in\Omega\}$ , $\boldsymbol{v}\in V$ . We are interested in the case where the velocity-jump process is influenced by the presence of an external
+chemical field, whose concentration in the scaled variables will be denoted as $S=S(\xi,\tau)$ . Following [ 48 ] we propose a first order perturbation of a certain turning frequency $\lambda_{0}$ independent of $\boldsymbol{v}$ , together with an unperturbed turning kernel $T_{0}$ that depends only on $(\boldsymbol{v},\boldsymbol{v}^{\prime})\in V\times V$ : $\displaystyle T$ $\displaystyle=T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime}),$ (2.8) $\displaystyle\lambda(\boldsymbol{v},\hat{S})$ $\displaystyle=\lambda_{0}(\xi,\tau,\hat{S})+\epsilon\lambda_{1}(\boldsymbol{v},\hat{S}).$ Here the turning kernel is unperturbed from a normalized turning kernel $T_{0}:V\times V\to\mathbb{R}_{+}$ which is
+assumed to satisfy assumptions ( T1 ) - ( T4 ), whereas $\lambda_{0}$ may depend on $(\xi,\tau)$ via
+the marginal density $\rho$ and the chemical concentration $S$ . The important fact is that $\lambda_{0}$ does
+not depend on $\boldsymbol{v}$ (it is constant with respect to the operator acting on $L^{2}(V)$ for each
+fixed $(\xi,\tau)$ ). The perturbation $\lambda_{1}$ is assumed to be bounded. Thus, we denote ${\mathcal{L}}_{0}p(\boldsymbol{v}):=-\lambda_{0}p(\boldsymbol{v})+\lambda_{0}\int_{V}T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})p(\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime},\qquad\quad{\mathcal{L}}_{0}:L^{2}(V)\to L^{2}(V),$ (2.9) an operator which belongs to the class of operators acting on $L^{2}(V)$ as described in Theorem 2.1 . Under our parabolic scaling, it is assumed that the population density underlies a regular perturbation
+expansion of the form $p(\xi,\tau,\boldsymbol{v})=p_{0}(\xi,\tau,\boldsymbol{v})+\epsilon p_{1}(\xi,\tau,\boldsymbol{v})+\epsilon^{2}p_{2}(\xi,\tau,\boldsymbol{v})+O(\epsilon^{3}),$ (2.10) also called an outer or Hilbert expansion in the context of kinetic theory (cf. [ 17 , 24 , 37 ] ). Since the marginal density is independent of $\epsilon>0$ we may assume that $\int_{V}p_{j}(\xi,\tau,\boldsymbol{v})\,d\boldsymbol{v}=0,$ (2.11) for all $j\geq 1$ and all $(\xi,\tau)\in\widetilde{\Omega}\times(0,+\infty)$ , without loss of
+generality. 2.2. Interior parabolic limit In this section we derive a mean field equation for the leading order term in the Hilbert expansion
+( 2.10 ) which has been reported in [ 48 ] . We include the details of such derivation for
+completeness. Let us assume that $(\xi,\tau)\in\widetilde{\Omega}\times(0,+\infty)$ are fixed. Being $\widetilde{\Omega}$ an open set, this means that we do not consider boundary conditions for the moment. Upon
+substitution of the expansions ( 2.10 ) and ( 2.8 ) into equation ( 2.7 ) we obtain a
+hierarchy of equations by comparing terms of equal order in powers of $\epsilon$ . First, at leading order $O(1)$ we obtain the equation $0=-\lambda_{0}p_{0}(\xi,\tau,\boldsymbol{v})+\lambda_{0}\int_{V}T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})p_{0}(\xi,\tau,\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime}={\mathcal{L}}_{0}p_{0}(\xi,\tau,\boldsymbol{v}).$ (2.12) In view of Theorem 2.1 , $p_{0}(\xi,\tau,\boldsymbol{v})$ belongs to the kernel of ${\mathcal{L}}_{0}$ with dimension equal
+to one (the zero eigenvalue is simple) and generated by the eigenfunction $f(\boldsymbol{v})=1$ . Thus, we conclude
+that $p_{0}$ does not depend on $\boldsymbol{v}$ , $p_{0}(\xi,\tau,\boldsymbol{v})=\bar{p}_{0}(\xi,\tau)$ ( $p_{0}$ is constant in $\boldsymbol{v}$ for each fixed $(\xi,\tau)$ ). This implies, in turn, that $\int_{V}\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\,d\boldsymbol{v}=0,$ (2.13) because $V$ is a symmetric set. At the next order, $O(\epsilon)$ , the resulting equation is $\displaystyle\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)$ $\displaystyle=-\lambda_{0}p_{1}(\xi,\tau,\boldsymbol{v})-\lambda_{1}(\boldsymbol{v},\hat{S})\bar{p}_{0}(\xi,\tau)+\lambda_{0}\int_{V}T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})p_{1}(\xi,\tau,\boldsymbol{v})\,d\boldsymbol{v}^{\prime}+$ $\displaystyle+\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})\bar{p}_{0}(\xi,\tau)\,d\boldsymbol{v}^{\prime},$ which can be recast as ${\mathcal{L}}_{0}p_{1}(\xi,\tau,\boldsymbol{v})=\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)+\lambda_{1}(\boldsymbol{v},\hat{S})\bar{p}_{0}(\xi,\tau)-\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})\bar{p}_{0}(\xi,\tau)\,d\boldsymbol{v}^{\prime}.$ (2.14) It is well-known (cf. [ 31 ] ) that if ${\mathcal{L}}$ is a closed, linear operator and $\mu$ is an eigenvalue
+with finite multiplicity, then its complex conjugate, $\overline{\mu}$ , is an eigenvalue of the formal
+adjoint ${\mathcal{L}}^{*}$ with the same algebraic and geometric multiplicities. Hence, in view of Theorem 2.1 ,
+we observe that $\mu=0$ is a simple eigenvalue of ${\mathcal{L}}^{*}$ with a unique positive eigenfunction $g(\boldsymbol{v})\equiv 1\in L^{2}(V)$ . Therefore, the right hand side of ( 2.14 ) must satisfy a solvability
+condition, inasmuch as $\langle 1,{\mathcal{L}}_{0}p_{1}(\xi,\tau,\boldsymbol{v})\rangle_{L^{2}(V)}=\langle{\mathcal{L}}_{0}^{*}\,1\,,p_{1}(\xi,\tau,\boldsymbol{v})\rangle_{L^{2}(V)}=0,$ as ${\mathcal{L}}_{0}$ is singular. In view of ( 2.13 ), the solvability condition reads $0=\int_{V}\lambda_{1}(\boldsymbol{v},\hat{S})\bar{p}_{0}(\xi,\tau)\,d\boldsymbol{v}-\int_{V}\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})\bar{p}_{0}(\xi,\tau)d\boldsymbol{v}\,d\boldsymbol{v}^{\prime},$ a relation which is trivially satisfied because of ( T1 ). By Theorem 2.1 we can define a
+pseudo-inverse of ${\mathcal{L}}_{0}$ on $\langle 1\rangle^{\perp}\subset L^{2}(V)$ , denoted by ${\mathcal{F}}_{0}=({{\mathcal{L}}_{0}}_{|\langle 1\rangle^{\perp}})^{-1}$ , and, consequently, the solution to ( 2.14 ) can be expressed as $p_{1}(\xi,\tau,\boldsymbol{v})={\mathcal{F}}_{0}\Big(\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)+\lambda_{1}(\boldsymbol{v},\hat{S})\bar{p}_{0}(\xi,\tau)-\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})\bar{p}_{0}(\xi,\tau)\,d\boldsymbol{v}^{\prime}\Big).$ (2.15) Let us denote the operator ${\mathcal{R}}_{1}p(\boldsymbol{v}):=\boldsymbol{v}\cdot\nabla_{\xi}p(\boldsymbol{v})+\lambda_{1}(\boldsymbol{v},\hat{S})p(\boldsymbol{v})-\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})p(\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime},$ for $p(\boldsymbol{v})\in L^{2}(V)$ . Under assumptions ( T1 ) - ( T4 ) and by boundedness of $\lambda_{1}$ , this is
+a linear operator acting on $L^{2}(V)$ . Whence, the solution $p_{1}$ can be written in simplified form as $p_{1}(\xi,\tau,\boldsymbol{v})={\mathcal{F}}_{0}\big({\mathcal{R}}_{1}(\bar{p}_{0}(\xi,\tau))\big).$ (2.16) At order $O(\epsilon^{2})$ the equation for $p$ is given by $\displaystyle\frac{\partial}{\partial\tau}\bar{p}_{0}(\xi,\tau)+\boldsymbol{v}\cdot\nabla_{\xi}p_{1}(\xi,\tau,\boldsymbol{v})$ $\displaystyle=-\lambda_{1}(\boldsymbol{v},\hat{s})p_{1}(\xi,\tau,\boldsymbol{v})-\lambda_{0}p_{2}(\xi,\tau,\boldsymbol{v})+$ (2.17) $\displaystyle+\lambda_{0}\int_{V}T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})p_{2}(\xi,\tau,\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime}+$ $\displaystyle+\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})p_{1}(\xi,\tau,\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime},$ yielding, $\displaystyle{\mathcal{L}}_{0}p_{2}(\xi,\tau,\boldsymbol{v})$ $\displaystyle=\frac{\partial}{\partial\tau}\bar{p}_{0}(\xi,\tau)+\boldsymbol{v}\cdot\nabla_{\xi}p_{1}(\xi,\tau,\boldsymbol{v})+\lambda_{1}(\boldsymbol{v},\hat{s})p_{1}(\xi,\tau,\boldsymbol{v})+$ $\displaystyle-\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})p_{1}(\xi,\tau,\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime}$ $\displaystyle=\frac{\partial}{\partial\tau}\bar{p}_{0}(\xi,\tau)+{\mathcal{R}}_{1}\big(p_{1}(\xi,\tau,\boldsymbol{v})\big).$ By the same argument, the solvability condition for $p_{2}$ can be obtained by taking the $L^{2}(V)$ product of
+last equation with the (constant) sole positive eigenfunction of ${\mathcal{L}}_{0}^{*}$ . The result is $0=\int_{V}\Big[\frac{\partial}{\partial\tau}\bar{p}_{0}(\xi,\tau)+{\mathcal{R}}_{1}\big({\mathcal{F}}_{0}\big({\mathcal{R}}_{1}(\bar{p}_{0}(\xi,\tau))\big)\big)\Big]\,d\boldsymbol{v},$ (2.18) after substituting ( 2.16 ). Let us now define $\bar{\lambda}_{1}(\boldsymbol{v},\hat{S}):=\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime},$ which can be interpreted as the average bias, over all incoming velocities, of the turning rate to $\boldsymbol{v}$ .
+Thus, $\displaystyle p_{1}(\xi,\tau,\boldsymbol{v})$ $\displaystyle={\mathcal{F}}_{0}\big({\mathcal{R}}_{1}(\bar{p}_{0}(\xi,\tau))\big)$ (2.19) $\displaystyle={\mathcal{F}}_{0}\Big(\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)+\lambda_{1}(\boldsymbol{v},\hat{S})\bar{p}_{0}(\xi,\tau)-\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})\bar{p}_{0}(\xi,\tau)\,d\boldsymbol{v}^{\prime}\Big)$ $\displaystyle={\mathcal{F}}_{0}\big(\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\big)+{\mathcal{F}}_{0}\big((\lambda_{1}(\boldsymbol{v},\hat{S})-\bar{\lambda}_{1}(\boldsymbol{v},\hat{S}))\bar{p}_{0}(\xi,\tau)\big).$ First note that, clearly, $\int_{V}\frac{\partial}{\partial\tau}\bar{p}_{0}(\xi,\tau)\,d\boldsymbol{v}=|V|\frac{\partial}{\partial\tau}\bar{p}_{0}(\xi,\tau).$ Also, substituting ( 2.19 ) we obtain $\displaystyle\int_{V}\boldsymbol{v}\cdot\nabla_{\xi}p_{1}(\xi,\tau,\boldsymbol{v})\,d\boldsymbol{v}$ $\displaystyle=\int_{V}\boldsymbol{v}\cdot\nabla_{\xi}\Big({\mathcal{F}}_{0}\big(\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\big)\Big)\,d\boldsymbol{v}+$ (2.20) $\displaystyle+\int_{V}\boldsymbol{v}\cdot\nabla_{\xi}\Big({\mathcal{F}}_{0}\big((\lambda_{1}(\boldsymbol{v},\hat{S})-\bar{\lambda}_{1}(\boldsymbol{v},\hat{S}))\bar{p}_{0}(\xi,\tau)\big)\Big)\,d\boldsymbol{v}.$ From the identity $\boldsymbol{v}\cdot\nabla_{\xi}\Big({\mathcal{F}}_{0}\big(\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}\big)\Big)=\nabla_{\xi}\cdot\Big([\boldsymbol{v}({\mathcal{F}}_{0}\boldsymbol{v})^{\top}]\nabla_{\xi}\bar{p}_{0}\Big)$ (observe that $\boldsymbol{v}({\mathcal{F}}_{0}\boldsymbol{v})^{\top}=\boldsymbol{v}\otimes({\mathcal{F}}_{0}\boldsymbol{v})$ is a tensor product), we can write the first
+integral on the right hand side of ( 2.20 ) as $\int_{V}\boldsymbol{v}\cdot\nabla_{\xi}\Big({\mathcal{F}}_{0}\big(\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\big)\Big)\,d\boldsymbol{v}=-\nabla_{\xi}\cdot\big(|V|\mathbb{D}\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\big),$ where the diffusion tensor $\mathbb{D}$ is defined as $\mathbb{D}:=-\frac{1}{|V|}\int_{V}\boldsymbol{v}\otimes({\mathcal{F}}_{0}\boldsymbol{v})\,d\boldsymbol{v}.$ (2.21) Let us as well define the chemotactic velocity $\boldsymbol{w}_{c}$ as $\boldsymbol{w}_{c}:=-\frac{1}{|V|}\int_{V}\boldsymbol{v}{\mathcal{F}}_{0}\big(\bar{\lambda}_{1}(\boldsymbol{v},\hat{S})-\lambda_{1}(\boldsymbol{v},\hat{S})\big)\,d\boldsymbol{v}.$ (2.22) Hence, from the identity $\int_{V}\boldsymbol{v}\cdot\nabla_{\xi}\big(\beta\bar{p}_{0}\big)\,d\boldsymbol{v}=\nabla_{\xi}\cdot\Big(\bar{p}_{0}\int_{V}\beta\boldsymbol{v}\,d\boldsymbol{v}\Big),$ which is valid for any scalar function $\beta=\beta(\xi,\tau,\boldsymbol{v},\hat{S})$ , we recognize that the second
+integral on the right hand side of ( 2.20 ) can be written as $\int_{V}\boldsymbol{v}\cdot\nabla_{\xi}\Big({\mathcal{F}}_{0}\big((\lambda_{1}(\boldsymbol{v},\hat{S})-\bar{\lambda}_{1}(\boldsymbol{v},\hat{S}))\bar{p}_{0}(\xi,\tau)\big)\Big)\,d\boldsymbol{v}=\nabla_{\xi}\cdot\big(|V|\bar{p}_{0}(\xi,\tau)\boldsymbol{w}_{c}\big).$ Therefore, the solvability condition ( 2.18 ) can be recast as $\displaystyle 0$ $\displaystyle=|V|\frac{\partial}{\partial\tau}\bar{p}_{0}(\xi,\tau)-\nabla_{\xi}\cdot\big(|V|\mathbb{D}\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\big)+\nabla_{\xi}\cdot\big(|V|\bar{p}_{0}(\xi,\tau)\boldsymbol{w}_{c}\big)+$ $\displaystyle+\!\int_{V}\lambda_{1}(\boldsymbol{v},\hat{S}){\mathcal{F}}_{0}\Big(\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)+(\lambda_{1}(\boldsymbol{v},\hat{S})-\bar{\lambda}_{1}(\boldsymbol{v},\hat{S}))\bar{p}_{0}(\xi,\tau)\Big)\,d\boldsymbol{v}+$ $\displaystyle-\!\int_{V}\int_{V}\!\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime}){\mathcal{F}}_{0}\Big(\boldsymbol{v}^{\prime}\!\cdot\!\nabla_{\xi}\bar{p}_{0}(\xi,\tau)+(\lambda_{1}(\boldsymbol{v}^{\prime},\hat{S})\!-\!\bar{\lambda}_{1}(\boldsymbol{v}^{\prime},\hat{S}))\bar{p}_{0}(\xi,\tau)\Big)d\boldsymbol{v}^{\prime}d\boldsymbol{v}.$ The last two integrals cancel each other because of ( T1 ) and Fubini’s theorem. Thus, the resulting
+equation for $\bar{p}_{0}=\bar{p}_{0}(\xi,\tau)$ is $\frac{\partial\bar{p}_{0}}{\partial\tau}=\nabla_{\xi}\cdot\big(\mathbb{D}\,\nabla_{\xi}\bar{p}_{0}\big)-\nabla_{\xi}\cdot\big(\bar{p}_{0}\boldsymbol{w}_{c}\big).$ (2.23) This is essentially a diffusion equation, with drift term given by the chemotactic velocity $\boldsymbol{w}_{c}$ , for the
+total marginal density $\rho(\xi,\tau)=|V|\bar{p}_{0}(\xi,\tau)=\int_{V}p(\xi,\tau,\boldsymbol{v})\,d\boldsymbol{v},$ in view of ( 2.11 ). To sum up, we can state the following Proposition 2.3 (interior parabolic limit with perturbed turning rate) . Let $\Omega\subset\mathbb{R}^{n}$ be an open domain, and let $V\subset\mathbb{R}^{n}$ be a compact, symmetric with respect to
+the origin set of admissible velocities. Let $T_{0}:V\times V\to\mathbb{R}$ be a turning kernel satisfying
+assumptions ( T1 ) - ( T4 ). Furthermore, let us assume that there exists a small parameter $\epsilon>0$ such that $\tau=\epsilon^{2}t=O(1)$ and $\xi=\epsilon x=O(1)$ , for all $(x,t)\in\Omega\times(0,+\infty)$ (parabolic scaling). If $p=p(\xi,\tau,\boldsymbol{v})$ is a solution to the scaled transport equation ( 2.7 ),
+where the turning kernel admits a first order perturbation of the form $\lambda=\lambda_{0}+\epsilon\lambda_{1}(\boldsymbol{v})$ (with $\lambda_{0}$ independent of $\boldsymbol{v}$ ), then the leading order term $p_{0}$ of a regular
+Hilbert expansion $p=p_{0}+\epsilon p_{1}+\epsilon^{2}p_{2}+O(\epsilon^{3})$ satisfies $p_{0}(\xi,\tau,\boldsymbol{v})=\bar{p}_{0}(\xi,\tau),\qquad\rho(\xi,\tau)=\int_{V}p(\xi,\tau,\boldsymbol{v})\,d\boldsymbol{v}=|V|\bar{p}_{0}(\xi,\tau),$ where the marginal density $\rho=\rho(\xi,\tau)$ is a solution to the parabolic limit equation $\frac{\partial\rho}{\partial\tau}=\nabla_{\xi}\cdot\big(\mathbb{D}\,\nabla_{\xi}\rho-\rho\boldsymbol{w}_{c}\big),$ for $\xi\in\widetilde{\Omega}=\epsilon\Omega$ (away from
+the boundary), and $\tau>0$ . The diffusion tensor $\mathbb{D}\in\mathbb{R}^{n\times n}$ and the chemotactic velocity $\boldsymbol{w}_{c}\in\mathbb{R}^{n}$ are given by $\mathbb{D}=-\frac{1}{|V|}\int_{V}\boldsymbol{v}\otimes({\mathcal{F}}_{0}\boldsymbol{v})\,d\boldsymbol{v},$ and $\boldsymbol{w}_{c}=-\frac{1}{|V|}\int_{V}\boldsymbol{v}{\mathcal{F}}_{0}\big(\bar{\lambda}_{1}(\boldsymbol{v})-\lambda_{1}(\boldsymbol{v})\big)\,d\boldsymbol{v},$ respectively, where $\bar{\lambda}_{1}(\boldsymbol{v})=\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime},$ is the average bias. Here ${\mathcal{F}}_{0}$ denotes the pseudo-inverse of the operator ${\mathcal{L}}_{0}$ defined by
+( 2.9 ), restricted to the subspace $\langle 1\rangle^{\perp}\subset L^{2}(V)$ . 2.3. Boundary conditions In this section, boundary conditions for the leading term $\bar{p}_{0}=\bar{p}_{0}(\xi,\tau)$ of the Hilbert
+expansion ( 2.10 ) are derived, under the assumptions of a parabolic scaling with perturbed turning
+rate of the previous section. In general, these boundary conditions depend upon the boundary conditions
+imposed on the solutions to the transport equation. We shall see, however, that when the turning kernel is
+unperturbed and the turning frequency is $O(\epsilon)$ -perturbed, the boundary conditions on the limit
+equation depend only on the no normal mass flux nature of the boundary conditions for the transport equation,
+independently of their form. Let us assume that $\Omega\subset\mathbb{R}^{n}$ is a bounded domain with piecewise smooth boundary. In the rescaled
+variables, for each $\xi\in\partial\widetilde{\Omega}$ with $\widetilde{\Omega}=\epsilon\Omega$ , we
+denote the outer unit normal vector at $\xi\in\partial\widetilde{\Omega}$ by $\hat{\nu}(\xi)$ . The
+boundary of the phase space can be written as $\partial\widetilde{\Omega}\times V=\Gamma_{+}\cup\Gamma_{-}\cup\Gamma_{0},$ where $\Gamma_{\pm}:=\{(\xi,\boldsymbol{v})\in\partial\widetilde{\Omega}\times V\,:\,\pm\,\boldsymbol{v}\cdot\hat{\nu}(\xi)>0\},\quad\Gamma_{0}:=\{(\xi,\boldsymbol{v})\in\partial\widetilde{\Omega}\times V\,:\,\boldsymbol{v}\cdot\hat{\nu}(\xi)=0\}.$ We assume that $\Gamma_{0}$ is of zero measure with respect to $d\gamma_{\xi}d\boldsymbol{v}$ , where $d\gamma_{\xi}$ is the
+Lebesgue measure on $\partial\widetilde{\Omega}$ , and define the trace spaces $L^{2}_{\pm}:=L^{2}(\Gamma_{\pm};|\boldsymbol{v}\cdot\hat{\nu}(\xi)|d\gamma_{\xi}d\boldsymbol{v}\}.$ Let us suppose that $p$ is regular enough, say, $p\in H^{1}(\widetilde{\Omega}\times V)$ , so that the
+range of the trace operator lies in $L^{2}(\partial\widetilde{\Omega}\times V)$ . Thus, let us
+denote $p_{|\Gamma_{\pm}}\in L^{2}_{\pm}$ as the trace of $p\in H^{1}(\widetilde{\Omega}\times V)$ on $\Gamma_{\pm}$ , for fixed $\tau>0$ . For instance, if $p$ is smooth enough (at least of class $C^{1}$ ) then it
+is known that the trace of $p$ coincides with the continuous limit to the boundary, so
+that, $p_{|\partial\widetilde{\Omega}\times V}(\xi,\tau,\boldsymbol{v})=\lim_{\begin{subarray}{c}\widetilde{\xi}\in\widetilde{\Omega}\\
+\widetilde{\xi}\to\xi\end{subarray}}\,p(\widetilde{\xi},\tau,\boldsymbol{v}),\qquad\text{for each }\,\xi\in\partial\widetilde{\Omega}.$ (2.24) Likewise, if we denote, for each $\xi\in\partial\widetilde{\Omega}$ , $V^{\pm}:=\{\boldsymbol{v}\in V\,:\,\pm\boldsymbol{v}\cdot\hat{\nu}(\xi)>0\},$ then we may as well define $p_{|\partial\widetilde{\Omega}\times V}(\xi,\tau,\boldsymbol{v})=:\begin{cases}p_{|{\Gamma_{+}}}(\xi,\tau,\boldsymbol{v}),&\text{if}\,\boldsymbol{v}\in V^{+},\\
+p_{|{\Gamma_{-}}}(\xi,\tau,\boldsymbol{v}),&\text{if}\,\boldsymbol{v}\in V^{-}.\end{cases}$ In general, boundary conditions for solutions to transport equations have the form $p_{|\Gamma_{-}}(\xi,\tau,\boldsymbol{v})=(\mathcal{B}p_{|{\Gamma_{+}}})(\xi,\boldsymbol{v},\tau),\quad(\xi,\boldsymbol{v})\in\Gamma_{-},\,\tau>0,$ expressing that the incoming flux of cells, $p_{|\Gamma_{-}}$ , is related to the outgoing one, $p_{|\Gamma_{+}}$ ,
+through a linear bounded operator $\mathcal{B}:L^{2}_{+}\to L^{2}_{-}$ . Although making precise the form of the boundary operator $\mathcal{B}$ is necessary to solve the transport
+equation, for our purposes we only require that it satisfies the following no normal mass flux
+across the boundary condition (see [ 38 ] , section 2.4), $\int_{V}p(\xi,\tau,\boldsymbol{v})\,(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}=0,\quad\text{for all }\;\xi\in\partial\widetilde{\Omega},\;\tau>0.$ (2.25) Here $p=p(\xi,\tau,\boldsymbol{v})=p_{|{\Gamma_{+}}}(\xi,\tau,\boldsymbol{v})+(\mathcal{B}p_{|{\Gamma_{+}}})(\xi,\tau,\boldsymbol{v})$ denotes the trace of the solution to the transport
+equation $p=p(\xi,\tau,\boldsymbol{v})$ on $\partial\widetilde{\Omega}\times V$ for each fixed $\tau>0$ . Condition
+( 2.25 ) simply expresses that no agents (cells or particles) move across the boundary. An important class of no normal mass flux kinetic boundary conditions are the regular reflection boundary
+operators defined by Palczewski [ 50 ] (see also [ 40 ] ). Definition 2.4 (Palczewski [ 50 ] ) . $\mathcal{B}\in\mathscr{L}(L_{+}^{2},L_{-}^{2})$ is a regular reflection boundary operator if there exists
+a $C^{1}$ -piecewise mapping $\mathcal{V}:\Gamma_{-}\to\mathbb{R}^{n}$ satisfying: (a) If $(\xi,\boldsymbol{v})\in\Gamma_{-}$ then $(\xi,\mathcal{V}(\xi,\boldsymbol{v}))\in\Gamma_{+}$ . (b) $(\mathcal{B}p)(\xi,\boldsymbol{v})=p(\xi,\mathcal{V}(\xi,\boldsymbol{v}))$ , for all $(\xi,\boldsymbol{v})\in\Gamma_{-}$ , $p\in L^{2}_{+}$ . (c) $|\mathcal{V}(\xi,\boldsymbol{v})|=|\boldsymbol{v}|$ for any $(\xi,\boldsymbol{v})\in\Gamma_{-}$ . (d) $|\hat{\nu}(\xi)\cdot\boldsymbol{v}|=|\hat{\nu}(\xi)\cdot\mathcal{V}(\xi,\boldsymbol{v})||\det\partial\mathcal{V}/\partial\boldsymbol{v}|$ , for all $(\xi,\boldsymbol{v})\in\Gamma_{-}$ . (e) $\mathcal{V}(\xi,\beta\boldsymbol{v})=\beta\mathcal{V}(\xi,\boldsymbol{v})$ for any $\beta>0$ , $(\xi,\boldsymbol{v})\in\Gamma_{-}$ . Remark 2.5 . As customary examples of regular reflection boundary operators in kinetic theory we have the bounce-back
+reflection condition , $\mathcal{V}(\xi,\boldsymbol{v})=-\boldsymbol{v},\qquad(\xi,\boldsymbol{v})\in\Gamma_{-},$ which states that an agent (particle or cell) hits the boundary and bounces back with the same velocity but
+with opposite direction, and the specular reflection boundary condition , $\mathcal{V}(\xi,\boldsymbol{v})=\boldsymbol{v}-2(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,\hat{\nu}(\xi),\qquad(\xi,\boldsymbol{v})\in\Gamma_{-},$ which expresses that the boundary acts like a mirror and the agent is reflected making the same angle with
+respect to the tangent to the boundary. In both cases the speed $|\boldsymbol{v}|$ is preserved (see Figure 2 ). (a) Specular reflection (b) Bounce-back reflection Figure 2. Typical examples of regular reflection boundary operators. In the specular reflection case (figure 2(a) ), the agent is reflected making the same angle with respect to the tangent to the boundary; in
+the case of the bounce-back operator (figure 2(b) ) the agent is reflected exactly in the opposite
+direction. In both cases the speed is preserved (color plot online). Lemma 2.6 . Every regular reflection boundary operator satisfies the no normal mass flux across the boundary condition
+( 2.25 ). Proof. Follows directly from Definition 2.4 ; indeed, use (a), (b) and (d) to obtain $\displaystyle\int_{V}$ $\displaystyle p(\xi,\boldsymbol{v},\tau)(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}=\!\!\int_{V^{+}}\!p_{|\Gamma_{+}}(\xi,\tau,\boldsymbol{v})\,(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}+\!\!\int_{V^{-}}\!p_{|\Gamma_{-}}(\xi,\tau,\boldsymbol{v})\,(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}$ $\displaystyle=\int_{V^{+}}p_{|\Gamma_{+}}(\xi,\tau,\boldsymbol{v})\,(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}-\int_{V^{-}}(\mathcal{B}p_{|\Gamma_{+}})(\xi,\tau,\boldsymbol{v})\,|\boldsymbol{v}\cdot\hat{\nu}(\xi)|\,d\boldsymbol{v}$ $\displaystyle=\int_{V^{+}}\!p_{|\Gamma_{+}}(\xi,\tau,\boldsymbol{v})(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}-\!\!\int_{V^{-}}\!p(\xi,\tau,\mathcal{V}(\xi,\boldsymbol{v}))\,|\hat{\nu}(\xi)\cdot\mathcal{V}(\xi,\boldsymbol{v})||\det\partial\mathcal{V}/\partial\boldsymbol{v}|\,d\boldsymbol{v}$ $\displaystyle=\int_{V^{+}}\!p_{|\Gamma_{+}}(\xi,\tau,\boldsymbol{v})\,(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}-\int_{V^{+}}\!p_{|\Gamma_{+}}(\xi,\tau,\boldsymbol{w})(\boldsymbol{w}\cdot\hat{\nu}(\xi))\,d\boldsymbol{w}$ $\displaystyle=0,$ for each $\xi\in\partial\widetilde{\Omega}$ , $\tau>0$ , as claimed.
+∎ Remark 2.7 . The no normal mass flux across the boundary condition ( 2.25 ) might as well be
+satisfied by other boundary conditions that could include, for instance, boundary operators of Maxwell type,
+in which reflection and diffusion effects are combined, even containing nonlocal terms (see [ 4 , 40 ] for further information). In the sequel, we assume that the solution $p$ to the transport equation is smooth enough so that the trace
+can be computed via an interior limit (equation ( 2.24 )) and that the general kinetic boundary
+condition satisfies ( 2.25 ), regardless of its form. Since we are assuming that a regular
+Hilbert expansion is valid in the open domain $\widetilde{\Omega}$ , we can compute the trace taking the limit
+to the boundary on ( 2.10 ). In that case, the no normal mass flux across the boundary condition
+( 2.25 ) reads $\int_{V}\big(p_{0}(\xi,\tau,\boldsymbol{v})+\epsilon p_{1}(\xi,\tau,\boldsymbol{v})+O(\epsilon^{2})\big)(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}=0,\qquad\xi\in\partial\widetilde{\Omega},\,\tau>0.$ In view that this condition is independent of $\epsilon>0$ , we may assume that $\int_{V}p_{j}(\xi,\tau,\boldsymbol{v})(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}=0,$ for all $j\geq 0$ , $\xi\in\partial\widetilde{\Omega}$ , $\tau>0$ . The condition for $j=0$ is trivially
+satisfied, $\int_{V}p_{0}(\xi,\tau,\boldsymbol{v})(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}=\bar{p}_{0}(\xi,\tau)\Big(\int_{V}\boldsymbol{v}\,d\boldsymbol{v}\Big)\cdot\hat{\nu}(\xi)=0,$ inasmuch as $p_{0}$ is independent of $\boldsymbol{v}$ and $V$ is symmetric. The condition for $j=1$ will provide the
+boundary conditions for the leading term $\bar{p}_{0}=\bar{p}_{0}(\xi,\tau)$ . The latter reads $\int_{V}p_{1}(\xi,\tau,\boldsymbol{v})(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}=0.$ Substituting ( 2.19 ) one arrives at $\int_{V}\Big({\mathcal{F}}_{0}\big(\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\big)+{\mathcal{F}}_{0}\big((\lambda_{1}(\boldsymbol{v},\hat{S})-\bar{\lambda}_{1}(\boldsymbol{v},\hat{S}))\bar{p}_{0}(\xi,\tau)\big)\Big)(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}=0.$ (2.26) Using the identity, ${\mathcal{F}}_{0}\big(\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}\big)(\boldsymbol{v}\cdot\hat{\nu}(\xi))=\Big(\boldsymbol{v}({\mathcal{F}}_{0}\boldsymbol{v})^{\top}\nabla_{\xi}\bar{p}_{0}\Big)\cdot\hat{\nu}(\xi)$ (which can be easily verified), we find that $\displaystyle\int_{V}{\mathcal{F}}_{0}\big(\big(\boldsymbol{v}\cdot\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\big)\big)(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}$ $\displaystyle=\int_{V}\Big(\boldsymbol{v}({\mathcal{F}}_{0}\boldsymbol{v})^{\top}\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\Big)\cdot\hat{\nu}(\xi)\,d\boldsymbol{v}$ $\displaystyle=\left[\Big(\int_{V}\boldsymbol{v}({\mathcal{F}}_{0}\boldsymbol{v})^{\top}\,d\boldsymbol{v}\Big)\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\right]\cdot\hat{\nu}(\xi)$ $\displaystyle=-|V|\big(\mathbb{D}\nabla_{\xi}\bar{p}_{0}(\xi,\tau)\big)\cdot\hat{\nu}(\xi).$ On the other hand, we observe, since $\bar{p}_{0}$ is independent of $\boldsymbol{v}$ , that $\displaystyle\int_{V}{\mathcal{F}}_{0}\big((\lambda_{1}(\boldsymbol{v},\hat{S})-\bar{\lambda}_{1}(\boldsymbol{v},\hat{S}))$ $\displaystyle\bar{p}_{0}(\xi,\tau)\big)(\boldsymbol{v}\cdot\hat{\nu}(\xi))\,d\boldsymbol{v}=$ $\displaystyle=\Big(\int_{V}{\mathcal{F}}_{0}(\lambda_{1}(\boldsymbol{v},\hat{S})-\bar{\lambda}_{1}(\boldsymbol{v},\hat{S}))\,\boldsymbol{v}\,d\boldsymbol{v}\Big)\cdot\hat{\nu}(\xi)\bar{p}_{0}(\xi,\tau)$ $\displaystyle=|V|(\boldsymbol{w}_{c}\cdot\hat{\nu}(\xi))\bar{p}_{0}(\xi,\tau).$ Therefore the boundary condition ( 2.26 ) can be written as $|V|\Big(\mathbb{D}\nabla_{\xi}\bar{p}_{0}(\xi,\tau)-\bar{p}_{0}(\xi,\tau)\boldsymbol{w}_{c}\Big)\cdot\hat{\nu}(\xi)=0,$ or, equivalently, $\Big(\mathbb{D}\nabla_{\xi}\rho(\xi,\tau)-\rho(\xi,\tau)\boldsymbol{w}_{c}\Big)\cdot\hat{\nu}(\xi)=0,$ (2.27) for each $\xi\in\partial\widetilde{\Omega}$ , $\tau>0$ . We summarize these observations as follows. Proposition 2.8 (no flux boundary conditions in the parabolic limit) . Under the assumptions of Proposition 2.3 , let us suppose that $\partial\Omega$ is piecewise
+smooth, that the regular Hilbert expansion ( 2.10 ) of the solution to the transport equation
+( 2.7 ) is smooth enough, and that the kinetic boundary conditions imposed on $p$ satisfy the no normal
+mass flux across the boundary condition ( 2.25 ). Then the leading term $\rho(\xi,\tau)=|V|\bar{p}_{0}(\xi,\tau)$ of the Hilbert expansion satisfies the following no flux boundary condition at $\partial\widetilde{\Omega}$ , $\Big(\mathbb{D}\nabla_{\xi}\rho(\xi,\tau)-\rho(\xi,\tau)\boldsymbol{w}_{c}\Big)\cdot\hat{\nu}(\xi)=0,\qquad\xi\in\partial\widetilde{\Omega},\;\tau>0,$ whereupon the diffusion tensor $\mathbb{D}$ and the chemotactic velocity $\boldsymbol{w}_{c}$ are defined as in Proposition 2.3 . 3. Modelling density-dependent cross-diffusion We now turn our attention to specific choices of the turning kernel and the turning frequency that lead to
+the
+special form of equations ( 1.1 ). In the case of the turning kernel, we simply suppose that it is
+unperturbed from a
+normalized turning kernel $T_{0}$ which is a multiple of the identity, $T=T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime}):=\frac{1}{|V|},$ (3.1) corresponding to a uniform reorientation in velocity space. In this case, the turning kernel is unbiased and
+it clearly satisfies assumptions ( T1 ) - ( T4 ). We also define the set $V$ of admissible velocities
+to be $V:=s\mathbb{S}^{n-1}:=\{s\boldsymbol{v}\,:\,|\boldsymbol{v}|=1,\boldsymbol{v}\in\mathbb{R}^{n}\},$ (3.2) for a certain constant speed $s>0$ . This choice is tantamount to a uniform distribution of velocities in
+all directions with constant magnitude $s>0$ . Clearly, $V$ is compact and symmetric with respect to the
+origin. 3.1. Choice of the perturbed turning rate Regarding the turning frequency, we follow a suggestion by Othmer et al. [ 47 ] . They observed
+that dispersal or aggregation can be modelled if one assumes that $\lambda$ depends explicitly on the
+marginal density $\rho$ (see also [ 41 ] ). Aggregation effects, for instance, can be described if $\lambda$ is a decreasing function of $\rho$ , in which case the waiting time between jumps increases with the
+density. Likewise, $\lambda$ may also depend on the chemical concentration and its gradient. Experiments
+show, for instance, that the turning time is low when the concentration of the chemoattractant is low (see,
+e.g., [ 42 ] in the case of B. subtilis and oxygen as chemoattractant 2 2 2 we are
+unaware of similar experimental results for E. coli , for example, or for any other chemoattractant,
+such as peptone (nutrient); still, we conjecture that this assumption is reasonable within certain regimes of
+concentration. ). In view of the above observations, we propose the following space- and time-dependent
+unperturbed turning rate in ( 2.8 ), $\lambda_{0}(\xi,\tau):=\frac{\mu_{0}}{\rho(\xi,\tau)S(\xi,\tau)},$ where $\mu_{0}>0$ is a constant with the appropriate units: for $\lambda_{0}$ to have frequency units
+( $1/[T]$ ), $\mu_{0}$ must have units of square moles over time ( $[M]^{2}/[T]$ ), and it can be regarded as a
+turning frequency per square unit mass. To encode the dependence of $\lambda$ on the
+gradient of the chemical signal, we follow [ 48 ] and set the $O(\epsilon)$ -perturbation of the
+turning rate to be $\lambda_{1}(\boldsymbol{v},\hat{S}):=\kappa(S)(\boldsymbol{v}\cdot\nabla_{\xi}S),$ (3.3) where $\kappa=\kappa(S)$ is a scalar function to be chosen (and interpreted) later. In this fashion, the
+turning rate takes the following form, $\lambda(\boldsymbol{v},\hat{S})=\lambda_{0}(\xi,\tau)+\epsilon\lambda_{1}(\boldsymbol{v},\hat{S})=\frac{\mu_{0}}{\rho(\xi,\tau)S(\xi,\tau)}+\epsilon\kappa(S(\xi,\tau))\,(\boldsymbol{v}\cdot\nabla_{\xi}S(\xi,\tau)).$ (3.4) Remark 3.1 . The turning frequency considered here is of Schnitzer type [ 54 ] , $\lambda=\lambda_{0}+\epsilon\lambda_{1}(\boldsymbol{v})$ , in which the order $O(\epsilon)$ perturbation depends on the velocity, whereas $\lambda_{0}$ does
+not. $\lambda_{0}$ and $\lambda_{1}$ , however, may depend on space and time (see also the Discussion section in [ 48 ] ). We assume that this dependence happens through the marginal population density $\rho$ and the
+chemical concentration density $S$ . It is to be observed that our choice for such dependence, namely $\lambda_{0}\sim\rho^{-1}S^{-1}$ , is motivated by experimental observations which indicate that the running
+time is low when the chemical concentration is low (cf. [ 42 ] ), and that $\lambda$ must be a
+decreasing function of $\rho$ in order to model aggregation [ 41 , 47 ] . Moreover, notice that the
+dependence of $\lambda$ on space and time occurs at the lowest order in $\epsilon$ , affecting the form of the
+resulting chemotactic velocity. If the turning kernel $T=T_{0}$ is defined by ( 3.1 ) then the pseudo-inverse, $\mathcal{F}_{0}\,:\,\langle 1\rangle^{\perp}\subset L^{2}(V)\to L^{2}(V)$ , of the operator $\mathcal{L}_{0}$ defined in ( 2.9 )
+reduces to multiplication by $-\lambda_{0}^{-1}$ (see [ 27 ] ). Therefore, the expression for the
+diffusion tensor ( 2.21 ) reduces to $\mathbb{D}=-\frac{1}{|V|}\int_{V}\boldsymbol{v}\otimes({\mathcal{F}}_{0}\boldsymbol{v})\,d\boldsymbol{v}=\frac{\lambda_{0}^{-1}}{|V|}\int_{V}\boldsymbol{v}\otimes\boldsymbol{v}\,d\boldsymbol{v}.$ Since $|V|=s^{n-1}|\mathbb{S}^{n-1}|=:s^{n-1}\omega_{n}$ and $\int_{V}\boldsymbol{v}\otimes\boldsymbol{v}\,d\boldsymbol{v}=\int_{\mathbb{S}^{n-1}}s^{2}\boldsymbol{\eta}\otimes\boldsymbol{\eta}s^{n-1}\,dS_{\boldsymbol{\eta}}=s^{n+1}\frac{\omega_{n}}{n}\mathbb{I}_{n},$ then the (cross) diffusion tensor takes the form $\mathbb{D}=(\lambda_{0}s^{2}/n)\mathbb{I}_{n}$ , that is, $\mathbb{D}=\mathbb{D}(\rho,S)=\left(\frac{s^{2}}{\mu_{0}n}\right)\rho S\,\mathbb{I}_{n}.$ (3.5) In order to compute the chemotactic velocity ( 2.22 ), first we observe that the average bias vanishes, $\displaystyle\overline{\lambda_{1}}(\boldsymbol{v})=\int_{V}\lambda_{1}(\boldsymbol{v}^{\prime})T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime}$ $\displaystyle=\frac{1}{|V|}\int_{V}\kappa(S)(\boldsymbol{v}^{\prime}\cdot\nabla_{\xi}S)\,d\boldsymbol{v}^{\prime}$ $\displaystyle=\frac{\kappa(S)}{|V|}\left(\int_{V}\boldsymbol{v}\,d\boldsymbol{v}\right)\cdot\nabla_{\xi}S$ $\displaystyle=0,$ inasmuch as $V$ is symmetric with respect to the origin and, consequently, $\int_{V}\boldsymbol{v}\,d\boldsymbol{v}=0$ .
+Therefore the chemotactic velocity ( 2.22 ) reduces to $\boldsymbol{w}_{c}=\frac{1}{|V|}\int_{V}\boldsymbol{v}{\mathcal{F}}_{0}\big(\lambda_{1}(\boldsymbol{v},\hat{S})\big)\,d\boldsymbol{v}=-\,\frac{\lambda_{0}^{-1}}{|V|}\int_{V}\boldsymbol{v}\kappa(S)(\boldsymbol{v}\cdot\nabla_{\xi}S)\,d\boldsymbol{v}=-\mathbb{X}\nabla_{\xi}S,$ where $\mathbb{X}:=\frac{\kappa(S)}{\lambda_{0}|V|}\int_{V}\boldsymbol{v}\otimes\boldsymbol{v}\,d\boldsymbol{v},$ (3.6) is the chemotactic sensitivity tensor . In view that $V=s\mathbb{S}^{n-1}$ we readily obtain $\mathbb{X}(\rho,S)=\left(\frac{s^{2}}{\mu_{0}n}\right)\kappa(S)\rho S\,\mathbb{I}_{n}.$ (3.7) Therefore, the chemotactic velocity takes the form $\boldsymbol{w}_{c}=-\left(\frac{s^{2}}{\mu_{0}n}\right)\kappa(S)\rho S\nabla_{\xi}S.$ (3.8) The scalar function $\kappa=\kappa(S)$ can be interpreted as the standard chemotactic sensitivity
+function . If $\kappa<0$ then the chemotactic signal is attractive and the chemical is known as a
+chemo-attractant. If $\kappa>0$ then the signal is repulsive and the substance is known as a
+chemo-repellent. As expected, the attractive/repellent behaviour of the chemical signal can be modelled
+by the choice of the sign of the function $\kappa$ . Notice that, from the form of ( 3.3 ) and since $\lambda_{1}$ has frequency units, the function $\kappa$ must have dimensions of $1/[M]$ ( $1/$ chemical
+concentration moles). Upon substitution into the resulting equation ( 2.23 ) for $\bar{p}_{0}=|V|^{-1}\rho$ we arrive at the
+following parabolic, cross-diffusion equation for the density function $\rho$ : $\frac{\partial\rho}{\partial\tau}=\nabla_{\xi}\cdot\left(\Big(\frac{s^{2}}{\mu_{0}n}\Big)\,\rho\,S\,\nabla_{\xi}\rho\right)+\nabla_{\xi}\cdot\left(\Big(\frac{s^{2}}{\mu_{0}n}\Big)\,\rho^{2}\,S\,\kappa(S)\nabla_{\xi}S\right).$ (3.9) Remark 3.2 . It should be observed that the quantity $D(\rho,S):=\Big(\frac{s^{2}}{\mu_{0}n}\Big)\rho S,$ (3.10) has dimensions of square length over time ( $\,[L]^{2}/[T]$ ) and, thus, it may be interpreted as an effective
+diffusion coefficient for the population density $\rho$ . Moreover, equation ( 3.9 ) underlies the
+experimental (yet, phenomenological) observation by Ben-Jacob and his group [ 22 , 5 ] . Indeed,
+if we define the chemotactic flux as $\boldsymbol{J}_{c}:=-\Big(\frac{s^{2}}{\mu_{0}n}\Big)\kappa(S)\rho^{2}S\nabla_{\xi}S,$ then it clearly follows the empirical rule ( 1.5 ), where the bacterial
+response function $\zeta$ is proportional to the product of $\rho$ with the effective diffusion coefficient, $\zeta(\rho,S)=\Big(\frac{s^{2}}{\mu_{0}n}\Big)\rho^{2}S=\rho D(\rho,S).$ Finally, as to the chemotactic sensitivity function is concerned, $\kappa=\kappa(S)$ will be assumed to be
+attractive ( $\kappa(S)<0$ ) and to follow the Lapidus-Schiller model or “receptor law” [ 36 ] , $\kappa(S)=-\,\frac{\chi_{0}K_{d}}{(K_{d}+S)^{2}},$ (3.11) where $\chi_{0}>0$ is a dimensionless constant measuring the strength of the chemotaxis, and $K_{d}>0$ is the
+receptor-ligand binding dissociation constant, which has nutrient concentration units $[M]$ (it represents
+the nutrient level needed for half receptor to be occupied), has a unique value that depends on the bacterial
+strain and the chemical signal under consideration, and must be determined experimentally. The
+receptor law was designed to fulfill experimental observations (see [ 43 ] ) which indicate that, for
+very high concentrations of the chemical signal, the chemotactic response of bacteria vanishes due to
+saturation of the receptors. We also recall that it has been reported from experiments (cf. Block et
+al. [ 9 ] ) that the turning frequency depends on the rate of change of the fraction $S/(K_{d}+S)$ ,
+and that is why the chemotactic sensitivity is encoded in the expression for the turning frequency. Upon substitution of the receptor law ( 3.11 ) into ( 3.9 ) we arrive at the following
+cross-diffusion equation $\frac{\partial\rho}{\partial\tau}=\nabla_{\xi}\cdot\left(\Big(\frac{s^{2}}{\mu_{0}n}\Big)\,\rho\,S\,\nabla_{\xi}\rho\right)-\nabla_{\xi}\cdot\left(\Big(\frac{s^{2}}{\mu_{0}n}\Big)\,\rho^{2}\,S\,\frac{\chi_{0}K_{d}}{(K_{d}+S)^{2}}\nabla_{\xi}S\right).$ (3.12) Finally, the boundary condition ( 2.27 ) takes the form $\Big(\rho S\nabla_{\xi}\rho-\rho^{2}S\frac{\chi_{0}K_{d}}{(K_{d}+S)^{2}}\nabla_{\xi}S\Big)\cdot\hat{\nu}(\xi)=0,\qquad\xi\in\partial\widetilde{\Omega},\;\tau>0.$ (3.13) 3.2. Equation for the chemical signal, reaction term and non-dimensionalization The pure movement velocity jump process expressed by equation ( 2.4 ) is Markovian, that is, the
+probability that agents reach the position $x$ at time $t$ does not depend on previous times, $t-T$ , with $T>0$ . In other words, there is no history dependence. In our case, this property holds because the jumps
+are governed by a Poisson process (see, e.g., Feller [ 19 ] ). Hence, it is legitimate to account for
+population growth/production by simply adding a reaction function to the right hand side of equation
+( 2.4 ). Here we adopt the kinetics considered by Kawasaki et al. [ 32 ] and by Leyva et al. [ 39 ] , for which the chemical signal is due to nutrient concentration. If $\widetilde{{\mathcal{G}}}(p,S)$ represents the consumption rate of the nutrient by the bacteria, then the growth rate
+of the former is $\theta\widetilde{{\mathcal{G}}}(p,S)$ , where $\theta>0$ is a (dimensionless) conversion constant
+or conversion rate of consumed nutrient to bacterial growth. This consumption rate function or kinetic
+function is chosen to follow the Michaelis-Menten rule, $\widetilde{{\mathcal{G}}}(p,S)=\frac{kpS}{1+\gamma S},$ whereupon $k>0$ is the intrinsic consumption rate and $\gamma>0$ is a saturation constant ( $k/\gamma$ is
+the maximum consumption rate by one single cell.) This function can be approximated by $\widetilde{{\mathcal{G}}}(p,S)=kpS,$ (3.14) for low nutrient concentrations (see [ 32 ] ). It measures the probability of encounters between
+bacterial agents with nutrient molecules. We now make one further assumption, and suppose that the number of directional changes outnumber the
+birth events , implying that the pure movement velocity jump process occurs on a much faster scale than the
+production events due to kinetics (see, e.g., Hillen [ 25 ] ). Since $t$ is the fast time variable and $\tau$ denotes the slow time scale, the pure kinetics are governed by an equation of the form $p_{\tau}=\widetilde{{\mathcal{G}}}(p,S)$ , that is, $p_{t}=\epsilon^{2}\widetilde{{\mathcal{G}}}(p,S)$ . Hence we define, ${{\mathcal{G}}}(p,S):=\epsilon^{2}\widetilde{{\mathcal{G}}}(p,S)=\epsilon^{2}kpS,$ and the resulting scaled velocity jump process equation with reaction term reads $\displaystyle\epsilon^{2}\frac{\partial}{\partial\tau}p(\xi,\tau,\boldsymbol{v})+\epsilon\boldsymbol{v}\cdot\nabla_{\xi}p(\xi,\tau,\boldsymbol{v})=$ $\displaystyle-\lambda p(\xi,\tau,\boldsymbol{v})+\int_{V}\lambda T(\boldsymbol{v},\boldsymbol{v}^{\prime})p(\xi,\tau,\boldsymbol{v}^{\prime})\,d\boldsymbol{v}^{\prime}+$ (3.15) $\displaystyle+\epsilon^{2}kp(\xi,\tau,\boldsymbol{v})S(\xi,\tau).$ It is to be observed that the kinetic term appears at order $O(\epsilon^{2})$ . If we perform the Hilbert
+expansion approximation on equation ( 3.15 ) as in section 2.2 , the kinetic term shows up at
+the right hand side of the order $O(\epsilon^{2})$ -equation ( 2.17 ), in the form $k\theta\bar{p}_{0}(\xi,\tau)S(\xi,\tau)$ . The solvability condition ( 2.18 ) is then modified to read $0=\int_{V}\Big[\frac{\partial}{\partial\tau}\bar{p}_{0}(\xi,\tau)+{\mathcal{R}}_{1}\big({\mathcal{F}}_{0}\big({\mathcal{R}}_{1}(\bar{p}_{0}(\xi,\tau))\big)\big)+k\theta\bar{p}_{0}(\xi,\tau)S(\xi,\tau)\Big]\,d\boldsymbol{v}.$ Since $\int_{V}k\theta\bar{p}_{0}(\xi,\tau)S(\xi,\tau)\,d\boldsymbol{v}=|V|k\theta\bar{p}_{0}(\xi,\tau)S(\xi,\tau)$ , then
+the resulting parabolic limit equation ( 2.23 ) now incorporates the kinetic term as follows, $\frac{\partial\bar{p}_{0}}{\partial\tau}=\nabla_{\xi}\cdot\big(\mathbb{D}\,\nabla_{\xi}\bar{p}_{0}\big)-\nabla_{\xi}\cdot\big(\bar{p}_{0}\boldsymbol{w}_{c}\big)+k\theta\bar{p}_{0}S.$ Specialized to the choices of the turning frequency and kernel in ( 3.4 ) and ( 3.1 ), last
+equation leads to the following bacterial density equation with kinetic term, $\frac{\partial\rho}{\partial\tau}=\nabla_{\xi}\cdot\Big(\sigma\rho\,S\,\nabla_{\xi}\rho\Big)-\,\nabla_{\xi}\cdot\left(\sigma\rho^{2}S\frac{\chi_{0}K_{d}}{(K_{d}+S)^{2}}\nabla_{\xi}S\right)+k\theta\rho S,$ (3.16) where $\sigma:=\frac{s^{2}}{\mu_{0}n}.$ (3.17) Remark 3.3 . If the medium is very hard then the typical velocity of agents $s$ is small, and the turning frequency
+per square unit mass $\mu_{0}$ is large (in soft, non-resistant media the bacteria tend to continue with
+same velocity in the absence of an external chemotactic signal). In this fashion, lower values of $\sigma$ indicate harder substrates. In the same fashion, since the boundary condition for $\bar{p}_{0}$ is determined by the $O(\epsilon)$ -no mass flux
+condition for $p_{1}$ , the kinetic term plays no role and the boundary condition for $\rho$ is given by
+( 3.13 ) (details are left to the reader). Finally, the dynamics of the chemical (or nutrient)
+concentration $S=S(\xi,\tau)$ is governed by a standard reaction-diffusion equation (which is well-known to
+derive as the diffusion limit of a stochastic positional jump process) of the form $\frac{\partial S}{\partial\tau}=D_{S}\Delta_{\xi}S-k\rho S,\qquad\xi\in\widetilde{\Omega},\;\tau>0,$ (3.18) and subject to Neumann (no-flux) boundary conditions, $\nabla_{\xi}S\cdot\hat{\nu}(\xi)=0,\qquad\xi\in\partial\widetilde{\Omega},\,\tau>0.$ (3.19) Here $D_{S}>0$ denotes the diffusion constant associated to the nutrient concentration and $-k\rho S$ is
+the consumption rate of the nutrient by the bacteria. The system of equations is endowed with initial
+conditions of the form $\rho(\xi,0)=\rho_{0}(\xi),\quad S(\xi,0)=S_{0}(\xi),\qquad\xi\in\widetilde{\Omega},$ (3.20) being $\rho_{0},S_{0}$ , known functions. The resulting system is given by equation ( 3.16 ) for the
+bacterial density, equation ( 3.18 ) for the chemical signal, the boundary conditions ( 3.13 )
+and ( 3.19 ), and the initial conditions ( 3.20 ). It is clear that we have arrived at system of
+equations ( 1.1 ) - ( 1.3 ) (after relabelling the variables for the bacterial and chemical
+concentration densities). For analytical and numerical purposes we perform a further non-dimensionalization procedure. We apply
+the same transformation as in [ 39 ] , and define, with a slight abuse of notation, the non-dimensional
+independent space and time variables, $x:=\left(\frac{\theta K_{d}k}{D_{S}}\right)^{1/2}\xi,\qquad t:=\theta kK_{d}\tau,$ the chemical and agent densities, $v:=\frac{S}{K_{d}},\qquad u:=\frac{\rho}{\theta K_{d}},$ as well as the non-dimensional constants $\sigma_{0}:=\left(\frac{\theta K_{d}^{2}}{D_{S}}\right)\sigma,\qquad\widetilde{s}:=\frac{s}{(\theta kK_{d}D_{S})^{1/2}}.$ Upon substitution we arrive at a system of equations for the rescaled bacterial density, $u=u(x,t)$ , and
+the
+nutrient concentration, $v=v(x,t)$ , namely, $\begin{aligned} u_{t}&=\nabla\cdot(\sigma_{0}uv\nabla u)-\nabla\cdot\left(\sigma_{0}\chi_{0}\frac{u^{2}v}{(1+v)^{2}}\nabla v\right)+uv,\\
+v_{t}&=\Delta v-uv,\end{aligned}\qquad x\in\Omega,\;t>0,$ (3.21) with boundary conditions, $\begin{aligned} \left(uv\nabla u-\chi_{0}\frac{u^{2}v}{(1+v)^{2}}\nabla v\right)\cdot\hat{\nu}=0,\\
+\nabla v\cdot\hat{\nu}=0,\end{aligned}\qquad x\in\partial\Omega,\;t>0,$ (3.22) and initial conditions $u(x,0)=u_{0}(x),\quad v(x,0)=v_{0}(x),\qquad x\in\Omega,$ (3.23) where now $\Omega$ denotes the rescaled bounded, open domain in the new non-dimensional variables. Remark 3.4 . Under the non-dimensionalization procedure considered here, system ( 3.21 ) - ( 3.23 )
+contains the minimum number of free physical parameters, which in our case reduce to the chemotactic
+sensitivity $\chi_{0}>0$ , a dimensionless constant coefficient measuring the intensity of the chemotactic
+signal, and $\sigma_{0}>0$ , a non-dimensional parameter measuring the hardness of the substrate (agar). As a final observation, we notice that the chemotactic sensitivity function may be chosen freely, depending on
+the species of bacteria and of the chemical under consideration. Even in the case of a single species like B. subtilis one may consider (besides the Lapidus-Schiller receptor law) the classical
+Keller-Segel model [ 34 , 35 ] , the Rivero-Tranquillo-Buettner-Lauffenberger (or RTBL) chemotactic
+flux [ 52 ] , or the recently proposed finite range log-sensing model [ 42 ] . They all
+appear indicated as the function $\kappa=\kappa(S)$ in both the density equation ( 3.12 ) and the
+boundary conditions ( 3.13 ). After the same non-dimensionalization procedure the resulting system of
+equations can be expressed more generally in terms of an arbitrary chemotactic sensitivity function $\chi=\chi(v)$ . Recall that, for the chemotactic flux of the form $\boldsymbol{J}_{c}=-\zeta(u,v)\chi(v)\nabla v$ to be attractive, one requires the chemotactic sensitivity function to be negative, $\chi(\cdot)<0$ ,
+provided, of course, that $\zeta(\cdot)>0$ . Thus, one may change its sign in the expressions with no harm.
+A more general result can be expressed in terms of the non-dimensional system as follows. Theorem 3.5 (formal parabolic limit) . Let $\Omega\subset\mathbb{R}^{n}$ be an open, bounded domain, with piecewise smooth boundary $\partial\Omega$ . Then
+system of equations $\begin{aligned} u_{t}&=\sigma_{0}\nabla\cdot\left(uv\nabla u-u^{2}v\chi(v)\nabla v\right)+uv,\\
+v_{t}&=\Delta v-uv,\end{aligned}\qquad x\in\Omega,\;t>0,$ (3.24) together with boundary and initial conditions of the form $\begin{aligned} \big(uv\nabla u-u^{2}v\chi(v)\nabla v\big)\cdot\hat{\nu}=0,\\
+\nabla v\cdot\hat{\nu}=0,\end{aligned}\qquad x\in\partial\Omega,\;t>0,$ (3.25) and $u(x,0)=u_{0}(x),\quad v(x,0)=v_{0}(x),\qquad x\in\Omega,$ (3.26) respectively, constitute the formal parabolic limit when $\epsilon\to 0^{+}$ of the solutions to a velocity
+jump process governed by a transport equation for a non-dimensional agent distribution $q=q(x,t,\boldsymbol{v})$ , of
+the form $\epsilon^{2}q_{t}+\epsilon\boldsymbol{v}\cdot\nabla q=-\lambda q+\int_{\overline{V}}\lambda T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})q\,d\boldsymbol{v}^{\prime}+\epsilon^{2}qv,$ (3.27) and the standard reaction diffusion equation for the (non-dimensional) chemical signal concentration $v=v(x,t)$ in ( 3.24 ), where $u(x,t)=\int_{\overline{V}}q(x,y,\boldsymbol{v})\,d\boldsymbol{v},$ is the zero velocity moment or marginal density. Here $\overline{V}=\widetilde{s}\,\mathbb{S}^{n-1}:=\{\widetilde{s}\,\boldsymbol{v}\,:\,|\boldsymbol{v}|=1,\boldsymbol{v}\in\mathbb{R}^{n}\},$ is the uniform set of non-dimensional velocities, the turning kernel and turning frequency admit asymptotic
+expansions of the form $T_{0}(\boldsymbol{v},\boldsymbol{v}^{\prime})=\frac{1}{|\overline{V}|},\qquad\lambda=\frac{1}{u(x,t)v(x,t)}-\epsilon\chi(v)(\boldsymbol{v}\cdot\nabla v),$ and the solution $q$ to the transport equation ( 3.27 ) is further endowed with boundary
+conditions of no normal mass flux type satisfying $\int_{\overline{V}}q(x,t,\boldsymbol{v})(\boldsymbol{v}\cdot\hat{\nu}(x))\,d\boldsymbol{v}=0,\qquad x\in\partial\Omega,\,t>0,$ together with standard Neumann boundary conditions for the chemical concentration as in ( 3.25 ). The
+function $\chi=\chi(v)$ is understood as the chemotactic sensitivity function, and it is positive
+(respectively, negative) in the case of a chemoattractant (respectively, chemorepellent).
+Finally, $\epsilon>0$ is a dimensionless small parameter associated to the velocity jump process in the
+parabolic regime. The limiting process is taken in the following sense: if $q$ admits a formal Hilbert
+expansion of the form $q=q_{0}+\epsilon q_{1}+O(\epsilon^{2})$ for $0<\epsilon\ll 1$ small, then the
+leading order term is independent of the velocity $\boldsymbol{v}\in\overline{V}$ , it is proportional to the
+marginal density, $q_{0}=|\overline{V}|u$ , and $u$ and $v$ satisfy system
+( 3.24 ) - ( 3.26 ). Moreover, $v_{0}(x):=v(x,0)$ denotes the initial nutrient
+concentration,
+and $u_{0}(x):=u(x,0)=\int_{\overline{V}}q(x,0,\boldsymbol{v})\,d\boldsymbol{v},$ is the initial distribution of agents for all possible velocities. 4. Discussion In this paper, a formal macroscopic limit (in the parabolic regime) of a velocity jump
+process in order to arrive at systems of equations ( 1.1 ) - ( 1.3 ) was performed. The
+system is endowed with a doubly degenerate cross-diffusion term and a nutrient taxis drift term. Both fluxes
+(the diffusive and the chemotactic) are density-dependent, degenerate, and related to each other. The
+derivation makes precise the microscopic interpretation of the phenomenological bacterial response function
+introduced by Ben-Jacob and his group in terms of the turning frequency at the level of the kinetic transport
+equation. The latter is supposed to be perturbed from a turning rate which does not depend on the velocity of
+the cells, but does depend on the chemical concentration. The first order perturbation of the turning
+frequency is assumed to be of Schnitzer type, that is, it depends on the velocity of the cells; in addition,
+it encodes the response to the chemotactic signal as well. The turning kernel corresponds to a uniform
+reorientation in velocity space. These choices for the turning frequency and kernel are compatible with the
+observed frequency of tumbles as a function of time, position and direction, keeping both the run speed and
+the distribution of changes in direction essentially constant. Moreover, the decreasing functional form of
+the unperturbed turning frequency in terms of the chemical concentration obeys recent experimental
+observations. It is also decreasing as a function of the bacterial density in order to model aggregation, as
+suggested by Othmer et al. [ 47 ] . Its functional form is arbitrary and suitably chosen for our
+needs, but it may be of course modified to fit other observed phenomena, or different responses in other
+parameter regimes. In other words, the procedure presented here can be applied to more general situations. Up to our knowledge this is the first derivation of a doubly degenerate cross-diffusion model with
+density-dependent (and related to the diffusion) chemotactic drift term from a velocity jump process.
+This derivation is formal, but helpful to understand the interplay of the microscopic description of both
+diffusion and taxis, as well as the main features of the mean field model. From the mathematical viewpoint,
+systems of the form ( 1.1 ) pose technical challenges which are of interest to the community working
+on partial differential equations, such as the existence and regularity of global solutions (for recent
+advances, see [ 15 , 60 , 59 , 61 ] ). Another open mathematical question is the rigorous
+scaling limit, in the spirit of the analysis by Chalub et al. [ 12 , 11 ] , of the solutions
+to the transport equation converging to the weak solutions of the macroscopic diffusion-drift system
+recently obtained in [ 60 ] . This is an interesting topic for further investigation. Finally, from
+the biological viewpoint, it is of course of interest to explore the consequences of allowing turning
+frequencies to depend on density distributions in order to incorporate more complex spatial and temporal
+dependencies of microscopic quantities into models of related phenomena, such as macromolecular crowding [ 16 ] , aggregation [ 41 ] , or microscopic exclusion processes of intracellular transport [ 20 ] , just to mention a few. Acknowledgements The author warmly thanks Thomas Hillen and Michael Winkler for enlightening conversations. This research was
+partially supported by DGAPA-UNAM, program PAPIME, grant PE-104116. References [1] W. Alt , Biased random walk models for chemotaxis and related
+diffusion approximations , J. Math. Biol., 9 (1980), pp. 147–177. [2] D. G. Aronson , Density-dependent interaction-diffusion systems , in
+Dynamics and modelling of reactive systems (Proc. Adv. Sem., Math.
+Res. Center, Univ. Wisconsin, Madison, Wis., 1979), W. E.
+Stewart, W. H. Ray, and C. C. Conley, eds., vol. 44 of Publ. Math. Res.
+Center Univ. Wisconsin, Academic Press, New York-London, 1980, pp. 161–176. [3] S. Arouh and H. Levine , Nutrient chemotaxis suppression of a
+diffusive instability in bacterial colony dynamics , Phys. Rev. E, 62 (2000),
+pp. 1444–1447. [4] R. Beals and V. Protopopescu , Abstract time-dependent transport
+equations , J. Math. Anal. Appl., 121 (1987), pp. 270–405. [5] E. Ben-Jacob, I. Cohen, and H. Levine , Cooperative self-organization
+of microorganisms , Advances in Physics, 49 (2000), pp. 395–554. [6] E. Ben-Jacob and H. Levine , Self-engineering capabilities of
+bacteria , J. Royal Soc. Interface, 3 (2006), pp. 197–214. [7] H. C. Berg , Random walks in biology , Princeton University Press,
+Princeton, NJ, 1983. [8] H. C. Berg and D. A. Brown , Chemotaxis in Escherichia coli analysed by three-dimensional tracking , Nature, 239 (1972), pp. 500–504. [9] S. M. Block, J. E. Segall, and H. C. Berg , Adaptation kinetics in
+bacterial chemotaxis , J. Bacteriol., 154 (1983), pp. 312–323. [10] J. A. Butanda, C. Málaga, and R. G. Plaza , On the stabilizing
+effect of chemotaxis on bacterial aggregation patterns , Appl. Math.
+Nonlinear Sci., 2 (2017), pp. 157–172. [11] F. A. C. C. Chalub, Y. Dolak-Struss, P. Markowich, D. Oelz, C. Schmeiser,
+and A. Soreff , Model hierarchies for cell aggregation by chemotaxis ,
+Math. Models Methods Appl. Sci., 16 (2006), pp. 1173–1197. [12] F. A. C. C. Chalub, P. A. Markowich, B. Perthame, and C. Schmeiser , Kinetic models for chemotaxis and their drift-diffusion limits , Monatsh.
+Math., 142 (2004), pp. 123–141. [13] E. A. Codling, N. A. Hill, J. W. Pitchford, and S. D. Simpson , Random walk models for the movement and recruitment of reef fish larvae ,
+Marine Ecol. Prog. Ser., 279 (2004), pp. 215–224. [14] I. Cohen, A. Czirók, and E. Ben-Jacob , Chemotactic-based
+adaptive self organization during colonial development , Phys. A, 233 (1996),
+pp. 678–698. [15] S. Dai and Q. Du , Weak solutions for the Cahn-Hilliard equation
+with degenerate mobility , Arch. Ration. Mech. Anal., 219 (2016),
+pp. 1161–1184. [16] R. J. Ellis , Macromolecular crowding: obvious but underappreciated ,
+Trends Biochem. Sci., 26 (2001), pp. 597–604. [17] R. S. Ellis , Chapman-Enskog-Hilbert expansion for a Markovian
+model of the Boltzmann equation , Comm. Pure Appl. Math., 26 (1973),
+pp. 327–359. [18] R. Erban and H. G. Othmer , From individual to collective behavior in
+bacterial chemotaxis , SIAM J. Appl. Math., 65 (2004/05), pp. 361–391. [19] W. Feller , An introduction to probability theory and its
+applications. Vol. I , Third edition, John Wiley & Sons, Inc., New
+York-London-Sydney, 1968. [20] M. Galanti, D. Fanelli, and F. Piazza , Macroscopic transport
+equations in many-body systems from microscopic exclusion processes in
+disordered media: A review , Frontiers Phys., 4 (2016), p. 33. [21] B. H. Gilding and R. Kersner , A necessary and sufficient condition
+for finite speed of propagation in the theory of doubly nonlinear degenerate
+parabolic equations , Proc. Roy. Soc. Edinburgh Sect. A, 126 (1996),
+pp. 739–767. [22] I. Golding, Y. Kozlovsky, I. Cohen, and E. Ben-Jacob , Studies of
+bacterial branching growth using reaction-diffusion models for colonial
+development , Phys. A, 260 (1998), pp. 510–554. [23] M. E. Gurtin and R. C. MacCamy , On the diffusion of biological
+populations , Math. Biosci., 33 (1977), pp. 35–49. [24] G. J. Habetler and B. J. Matkowsky , Uniform asymptotic expansions in
+transport theory with small mean free paths, and the diffusion
+approximation , J. Math. Phys., 16 (1975), pp. 846–854. [25] T. Hillen , Transport equations with resting phases , European J.
+Appl. Math., 14 (2003), pp. 613–636. [26] , On the $L^{2}$ -moment closure of transport equations: the Cattaneo approximation ,
+Discrete Contin. Dyn. Syst. Ser. B, 4 (2004), pp. 961–982. [27] T. Hillen and H. G. Othmer , The diffusion limit of transport
+equations derived from velocity-jump processes , SIAM J. Appl. Math., 61
+(2000), pp. 751–775. [28] T. Hillen and K. J. Painter , Transport and anisotropic diffusion
+models for movement in oriented habitats , in Dispersal, individual movement
+and spatial ecology, M. A. Lewis, P. K. Maini, and S. V. Petrovskii, eds.,
+vol. 2071 of Lecture Notes in Math., Springer, Heidelberg, 2013,
+pp. 177–222. [29] A. J. Hillesdon, T. J. Pedley, and J. O. Kessler , The development of
+concentration gradients in a suspension of chemotactic bacteria , Bull. Math.
+Biol., 57 (1995), pp. 299–344. [30] M. Ito, N. Terahara, S. Fujinami, and T. A. Krulwich , Properties of
+motility in Bacillus subtilis powered by the H+-coupled MotAB
+flagellar stator, Na+-coupled MotPS or hybrid stators MotAS or
+MotPB , J. Mol. Biol., 352 (2005), pp. 396–408. [31] T. Kato , Perturbation Theory for Linear Operators , Classics in
+Mathematics, Springer-Verlag, New York, Second ed., 1980. [32] K. Kawasaki, A. Mochizuki, M. Matsushita, T. Umeda, and N. Shigesada , Modeling spatio-temporal patterns generated by Bacillus
+subtilis , J. of Theor. Biol., 188 (1997), pp. 177 – 185. [33] D. B. Kearns and R. Losick , Swarming motility in undomesticated Bacillus subtilis , Molecular Microbiol., 49 (2003), pp. 581–590. [34] E. F. Keller and L. A. Segel , Model for chemotaxis , J. Theor.
+Biol., 30 (1971), pp. 225 – 234. [35] , Traveling bands of
+chemotactic bacteria: A theoretical analysis , J. Theor. Biol., 30 (1971),
+pp. 235 – 248. [36] R. I. Lapidus and R. Schiller , Model for the chemotactic response of
+a bacterial population , Biophys. J., 16 (1976), pp. 779–789. [37] E. W. Larsen and J. B. Keller , Asymptotic solution of neutron
+transport problems for small mean free paths , J. Math. Phys., 15 (1974),
+pp. 75–81. [38] M. Lemou and L. Mieussens , A new asymptotic preserving scheme based
+on micro-macro formulation for linear kinetic equations in the diffusion
+limit , SIAM J. Sci. Comput., 31 (2008), pp. 334–368. [39] J. F. Leyva, C. Málaga, and R. G. Plaza , The effects of nutrient
+chemotaxis on bacterial aggregation patterns with non-linear degenerate cross
+diffusion , Phys. A, 392 (2013), pp. 5644–5662. [40] B. Lods , Semigroup generation properties of streaming operators with
+noncontractive boundary conditions , Math. Comput. Modelling, 42 (2005),
+pp. 1441–1462. [41] V. Méndez, D. Campos, I. Pagonabarraga, and S. Fedotov , Density-dependent dispersal and population aggregation patterns , J. Theoret.
+Biol., 309 (2012), pp. 113–120. [42] F. Menolascina, R. Rusconi, V. I. Fernandez, S. Smriga, Z. Aminzare, E. D.
+Sontag, and R. Stocker , Logarithmic sensing in Bacillus
+subtilis aerotaxis , npj Syst. Biol. Appl., 3 (2017). Art. no. 16036. [43] R. Mesibov, G. W. Ordal, and J. Adler , The range of attractant
+concentrations for bacterial chemotaxis and the threshold and size of
+response over this range , J. Gen. Physiol., 62 (1973), pp. 203–223. [44] J. D. Murray , Mathematical biology I. An introduction , vol. 17 of
+Interdisciplinary Applied Mathematics, Springer-Verlag, New York, third ed.,
+2002. [45] J. H. Myers and C. J. Krebs , Population cycles in rodents ,
+Scientific American, 230 (1974), pp. 38–46. [46] M. Ohgiwari, M. Matsushita, and T. Matsuyama , Morphological changes
+in growth phenomena of bacterial colony patterns , J. Phys. Soc. Jpn., 61
+(1992), pp. 816–822. [47] H. G. Othmer, S. R. Dunbar, and W. Alt , Models of dispersal in
+biological systems , J. Math. Biol., 26 (1988), pp. 263–298. [48] H. G. Othmer and T. Hillen , The diffusion limit of transport
+equations. II. Chemotaxis equations , SIAM J. Appl. Math., 62 (2002),
+pp. 1222–1250. [49] H. G. Othmer and C. Xue , The mathematical analysis of biological
+aggregation and dispersal: progress, problems and perspectives , in
+Dispersal, individual movement and spatial ecology, M. A. Lewis, P. K. Maini,
+and S. V. Petrovskii, eds., vol. 2071 of Lecture Notes in Math., Springer,
+Heidelberg, 2013, pp. 79–127. [50] A. Palczewski , Velocity averaging for boundary value problems , in
+Nonlinear kinetic theory and mathematical aspects of hyperbolic systems
+(Rapallo, 1992), V. C. Boffi, F. Bampi, and G. Toscani, eds., vol. 9 of
+Ser. Adv. Math. Appl. Sci., World Sci. Publ., River Edge, NJ, 1992,
+pp. 179–186. [51] C. S. Patlak , Random walk with persistence and external bias , Bull.
+Math. Biophys., 15 (1953), pp. 311–338. [52] M. A. Rivero, R. T. Tranquillo, H. M. Buettner, and D. A. Lauffenburger , Transport models for chemotactic cell populations based on individual
+cell behavior , Chem. Eng. Sci., 44 (1989), pp. 2881 – 2897. [53] F. Sánchez-Garduño, P. K. Maini, and M. E. Kappos , A review
+on travelling wave solutions of one-dimensional reaction-diffusion equations
+with non-linear diffusion term , Forma, 11 (1996), pp. 45–59. [54] M. J. Schnitzer , Theory of continuum random walks and application to
+chemotaxis , Phys. Rev. E (3), 48 (1993), pp. 2553–2568. [55] B. G. Sengers, C. P. Please, and R. O. Oreffo , Experimental
+characterization and computational modelling of two-dimensional cell
+spreading for skeletal regeneration , Journal of The Royal Society Interface,
+4 (2007), pp. 1107–1117. [56] J. A. Sherratt , On the form of smooth-front travelling waves in a
+reaction-diffusion equation with degenerate nonlinear diffusion , Math.
+Model. Nat. Phenom., 5 (2010), pp. 64–79. [57] N. Shigesada, K. Kawasaki, and E. Teramoto , Spatial segregation of
+interacting species , Journal of Theoretical Biology, 79 (1979), pp. 83 –
+99. [58] D. W. Stroock , Some stochastic processes which arise from a model of
+the motion of a bacterium , Z. Wahrscheinlichkeitstheorie und Verw. Gebiete,
+28 (1973/74), pp. 303–315. [59] M. Winkler , How far can chemotactic cross-diffusion enforce
+exceeding carrying capacities? , J. Nonlinear Sci., 24 (2014), pp. 809–855. [60] . Private communication, 2017. [61] , Does spatial
+homogeneity ultimately prevail in nutrient taxis systems? Preprint, 2017. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

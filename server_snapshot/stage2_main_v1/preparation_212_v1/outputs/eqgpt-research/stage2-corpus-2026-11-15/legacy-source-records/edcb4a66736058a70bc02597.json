@@ -1,0 +1,117 @@
+{
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "1",
+      "1",
+      "-1",
+      "-1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "-u(x, y, z, t)**3 + Derivative(u(x, y, z, t), (y, 2)) + Derivative(u(x, y, z, t), (x, 2))/x - Derivative(u(x, y, z, t), x)/x**2",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      23,
+      2,
+      9,
+      4,
+      22,
+      2,
+      8,
+      4,
+      22,
+      4,
+      22,
+      2,
+      21,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "uyy",
+      "+",
+      "uxx",
+      "/",
+      "x",
+      "+",
+      "ux",
+      "/",
+      "x",
+      "/",
+      "x",
+      "+",
+      "u^3",
+      "E"
+    ],
+    "normalized_latex": "(u_{yy})+(u_{xx})/(x)+(u_{x})/(x)/(x)+({u}^{3})=0",
+    "reconstructed_support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Mul(Pow(Symbol('x'), Integer(-1)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2))))",
+      "Mul(Pow(Symbol('x'), Integer(-2)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(1))))",
+      "Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(3))"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2)))",
+      "Mul(Pow(Symbol('x'), Integer(-1)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2))))",
+      "Mul(Pow(Symbol('x'), Integer(-2)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(1))))",
+      "Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(3))"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "family": "anisotropic_inhomogeneous_elliptic",
+  "gre_ids": [
+    5,
+    23,
+    2,
+    9,
+    4,
+    22,
+    2,
+    8,
+    4,
+    22,
+    4,
+    22,
+    2,
+    21,
+    1
+  ],
+  "latex_origin": "declared_family_instance",
+  "normalized_latex": "(u_{yy})+(u_{xx})/(x)+(u_{x})/(x)/(x)+({u}^{3})=0",
+  "original_latex": "\\partial_x(x^{-1}u_x)+\\partial_y(y^{0}u_y)=u^3",
+  "parameters": {
+    "a": 1,
+    "b": 1,
+    "f": "u^3",
+    "m": 0,
+    "n": -1
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [],
+  "source_file": "data/formulas/diverse_pde_v4/sources/npde3201.pdf",
+  "source_group": "eqworld:npde3201",
+  "source_id": "eqworld:edcb4a66736058a70bc02597",
+  "source_kind": "external_review_candidate",
+  "source_location": "first displayed governing equation; choices declared separately",
+  "source_sha256": "6135c0cf1ab752ea908c20ff05fc2fbb0e9f796adc56a9fa608a0569318b41f8",
+  "source_template_latex": "\\partial_x(a x^n u_x)+\\partial_y(b y^m u_y)=f(u)",
+  "source_transformations": [
+    "source dependent variable w -> u",
+    "scalar coefficients fixed nonzero when present; no term removal",
+    "arbitrary functions/powers explicitly instantiated as recorded; not a new physical family"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/npde/npde3201.pdf"
+}

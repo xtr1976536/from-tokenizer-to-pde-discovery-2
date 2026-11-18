@@ -1,0 +1,589 @@
+Global existence results for the anisotropic Boussinesq system in dimension two Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Introduction 2 The case of an horizontal viscosity 2.1 Global weak solutions 2.2 Local smooth solutions 2.3 Global smooth solutions 2.4 Global well-posedness for rough data 2.5 Uniqueness for rough data 3 The case of an horizontal diffusivity 3.1 Global weak solutions: the case $\theta_{0}\in L^{2}$ and $u_{0}\in H^{1}$ 3.2 $H^{1}$ a priori estimates for the temperature 3.3 A uniqueness result 3.4 Anisotropic a priori estimates 3.5 A global existence result 4 Appendix 4.1 A few inequalities 4.2 Losing a priori estimates References License: arXiv.org perpetual non-exclusive license arXiv:0809.4984v1 [math.AP] 29 Sep 2008 Global existence results for the anisotropic
+Boussinesq system in dimension two Thanks: 1 Université Paris-Est, Laboratoire d’Analyse
+et de Mathématiques Appliquées, UMR 8050,
+61 avenue du Général de Gaulle,
+94010 Créteil Cedex, France. E-mail: danchin $@$ univ-paris12.fr Thanks: 2 Université Paris 11, Laboratoire de Mathématiques,
+Bâtiment 425, 91405 Orsay Cedex, France.
+E-mail: marius.paicu $@$ math.u-psud.fr Raphaël Danchin 1 and Marius Paicu 2 Date: August 24, 2026 Abstract. We study the global existence issue
+for the two-dimensional Boussinesq system with horizontal viscosity in only one equation.
+We first examine the case where
+the Navier-Stokes equation with no vertical viscosity is coupled with a transport equation.
+Second, we consider a coupling between the
+classical two-dimensional incompressible Euler equation
+and a transport-diffusion equation with
+diffusion in the horizontal direction only. For the both systems and for arbitrarily large data, we construct global weak solutions à la Leray . Next, we state global well-posedness results for more
+regular data. Our results strongly rely on the fact
+that the diffusion occurs in a direction perpendicular to the buoyancy force. 1. Introduction The Boussinesq system describes the influence of the convection (or convection-diffusion) phenomenon in a viscous or inviscid fluid.
+It is used as a toy model for geophysical fluids whenever
+rotation and stratification play an important role (see for example J. Pedlosky’s book [ 23 ] ).
+In the two-dimensional case, the Boussinesq system reads: ( B κ , ν ) $\begin{cases}\partial_{t}\theta+u\cdot\nabla\theta-\kappa\Delta\theta=0\\
+\partial_{t}u+u\cdot\nabla u-\nu\Delta u+\nabla\Pi=\theta\,e_{2}\quad\hbox{with}\quad e_{2}=(0,1),\\
+\,\mbox{\rm div}\,u=0.\end{cases}$ Above, $u=u(t,x)$ denotes the velocity vector-field and $\theta=\theta(t,x)$ is a scalar quantity such
+as the concentration of a chemical substance or the temperature variation in a
+gravity field, in which case $\theta\,e_{2}$ represents the buoyancy force.
+The nonnegative parameters $\kappa$ and $\nu$ denote respectively the molecular diffusion and the viscosity.
+In order to simplify the presentation, we restrict ourselves to the whole
+plan case (that is the space variable $x$ describes the whole $\mathbb{R}^{2}$ ) and
+focus on the evolution for positive times (i.e. $t\in\mathbb{R}_{+}$ ). In the case where both $\kappa$ and $\nu$ are positive, classical methods allow to establish the global existence of regular solutions (see for example [ 6 , 18 ] ).
+On the other hand, if $\kappa=\nu=0$ then constructing global unique solutions for some
+nonconstant $\theta_{0}$ is a challenging open problem (even in the two-dimensional case)
+which has many similarities with the global existence problem for
+the three-dimensional incompressible Euler equations. The intermediate situation where the diffusion acts only on one of
+the equations has been investigated in a number of recent papers.
+Under various regularity assumptions on the initial data, it has been shown that
+for arbitrarily large initial data,
+systems $(B_{\kappa,0})$ with $\kappa>0$ and $(B_{0,\nu})$ with $\nu>0$ admit a global unique solution
+(see for example [ 1 , 7 , 13 , 14 , 15 , 19 , 20 ] ). In the present paper, we aim at making one more step toward the study
+of the system with $\kappa=\nu=0$ by assuming that the diffusion or the viscosity occurs in the
+horizontal direction and in one of the equations only.
+More precisely, we want to consider the following two systems: (1) $\begin{cases}\partial_{t}\theta+u\cdot\nabla\theta=0\\
+\partial_{t}u+u\cdot\nabla u-\nu\partial_{1}^{2}u+\nabla\Pi=\theta\,e_{2}\\
+\,\mbox{\rm div}\,u=0\end{cases}$ and (2) $\begin{cases}\partial_{t}\theta+u\cdot\nabla\theta-\kappa\partial_{1}^{2}\theta=0\\
+\partial_{t}u+u\cdot\nabla u+\nabla\Pi=\theta e_{2}\\
+\,\mbox{\rm div}\,u=0.\end{cases}$ Let us stress that the anisotropic viscosity or diffusion assumptions
+are consistent with the study of geophysical fluids.
+It turns out that, in certain regimes and after suitable rescaling,
+the vertical viscosity (or diffusion) is negligible with respect to the horizontal viscosity
+(or diffusion) (for more details, one may refer to [ 11 ] ).
+For the standard three-dimensional incompressible Navier-Stokes equations,
+the first mathematical results concerning anisotropic viscosity have been obtained in [ 10 , 22 ] . On the one hand, it is clear that small variations over the classical methods for solving quasi-linear hyperbolic
+systems would give local well-posedness for Systems ( 1 )
+and ( 2 ) with initial data in Sobolev spaces
+with suitably large index.
+On the other hand, since diffusion occurs in only one direction and one
+equation, it is not obvious that those solutions are actually global.
+The present paper is dedicated to the study of global existence for the initial
+value problem associated to Systems
+( 1 )
+and ( 2 ) with (possibly) large initial data. In order to state our main result pertaining to System ( 1 ), let
+us introduce the set $\sqrt{L}$ of those functions $f$ which belong to every space $L^{p}$ with $2\leq p<\infty$ and satisfy (3) $\|f\|_{\sqrt{L}}:=\sup_{p\geq 2}\,\frac{\|f\|_{L^{p}}}{\sqrt{p\!-\!1}}<\infty.$ Theorem 1 . Let $s\in]1/2,1].$ For all function $\theta_{0}\in H^{s}\cap L^{\infty}$ and divergence free
+vector-field $u_{0}\in H^{1}$ with vorticity $\omega_{0}:=\partial_{1}v_{0}^{2}-\partial_{2}v_{0}^{1}$ in $\sqrt{L},$ System ( 1 ) with data $(\theta_{0},u_{0})$ admits a unique global solution $(\theta,u)$ such that 1 1 1 In all the paper,
+we agree that if $X$ is a reflexive Banach space,
+and $I\subset\mathbb{R},$ an interval then ${\mathcal{C}}_{w}(I;X)$ stands
+for the set of weakly continuous functions on $I$ with values in $X.$ $\theta\in{\mathcal{C}}_{w}(\mathbb{R}_{+};L^{\infty})\cap{\mathcal{C}}(\mathbb{R}_{+};H^{s-\varepsilon})$ for all $\varepsilon>0$ and $u\in{\mathcal{C}}_{w}(\mathbb{R}_{+};H^{1}),\quad\omega\in L^{\infty}_{loc}(\mathbb{R}_{+};\sqrt{L})\ \hbox{ and }\ \nabla u\in L^{2}_{loc}(\mathbb{R}_{+};\sqrt{L}).$ Remark 1 . The assumption that $\theta_{0}\in H^{s}(\mathbb{R}^{2})$ for some $s>\frac{1}{2}$ is needed for uniqueness only.
+It turns out that for less regular
+initial data one can construct
+finite energy global weak solutions to System ( 1 ),
+in the spirit of those which have been obtained by J. Leray for
+the standard Navier-Stokes equation in his pioneering paper [ 21 ] . We shall also establish a global well-posedness results
+for smooth initial data. Let us now state our main result pertaining
+to System ( 2 ): Theorem 2 . Let $1<s<\frac{3}{2}$ and $\theta_{0}\in H^{1}$ such that $|\partial_{1}|^{s}\theta_{0}\in L^{2}.$ Let $u_{0}$ be a divergence free vector-field
+with coefficients in $H^{1}$ and vorticity $\omega_{0}$ in $L^{\infty}.$ Then System ( 2 ) with initial data $(\theta_{0},u_{0})$ admits a global unique solution $(\theta,u)$ in ${\mathcal{C}}_{w}(\mathbb{R}_{+};H^{1})$ such that, in addition, $\hfil\displaystyle\theta\in L^{\infty}(\mathbb{R}_{+};H^{1}),\quad|\partial_{1}|^{s}\theta\in L^{\infty}(\mathbb{R}_{+};L^{2}),\quad\omega\in L^{\infty}_{loc}(\mathbb{R}_{+};L^{\infty})$ $\hfil\displaystyle\partial_{1}\theta\in L^{2}(\mathbb{R}_{+};H^{1}),\quad|\partial_{1}|^{1+s}\theta\in L^{2}_{loc}(\mathbb{R}_{+};L^{2}).$ Notation 1 . In the above statement, operator $|\partial_{1}|^{\sigma}$ is
+defined as follows: $|\partial_{1}|^{\sigma}f(x):=\frac{1}{4\pi^{2}}\int e^{ix\cdot\xi}|\xi_{1}|^{\sigma}\widehat{f}(\xi)\,d\xi.$ Remark 2 . Further in the paper, we shall also state the global existence
+of finite energy weak solutions corresponding to less regular initial data (see Theorem 10 ). Remark 3 . Like in [ 15 ] , in all the statements pertaining to System ( 2 ),
+one may replace the assumption that $u_{0}\in L^{2}$ (which is slightly restrictive since in the case $\omega_{0}\in L^{1}$ it implies that $\int_{\mathbb{R}^{2}}\omega_{0}\,dx=0$ )
+by $(u_{0}-\sigma)\in L^{2}$ for some fixed smooth stationary
+radial solution $\sigma$ to Euler equations.
+For the sake of simplicity however, we here restrict ourselves to the case
+where $u_{0}$ is in $L^{2}.$ Let us emphasize that, in contrast with the previous studies devoted
+to the Boussinesq system, all the results presented here
+strongly rely on the fact that the buoyancy force is vertical .
+As a matter of fact, it is not clear at all that if the direction
+of the force is changed then having horizontal
+diffusion allows to improve significantly the results compared
+to the case $\kappa=\nu=0.$ Let us now briefly explain where the direction of the buoyancy
+force comes into play, and give an insight of the main
+arguments that we used in the proofs.
+In the case of System ( 1 ), the vorticity $\omega:=\partial_{1}u^{2}-\partial_{2}u^{1}$ satisfies $\partial_{t}\omega+u\cdot\nabla\omega-\nu\partial_{1}^{2}\omega=\partial_{1}\theta,$ from which we easily get (at least formally) $\frac{1}{2}\frac{d}{dt}\|\omega\|_{L^{2}}^{2}+\nu\|\partial_{1}\omega\|_{L^{2}}^{2}=-\int_{\mathbb{R}^{2}}\theta\>\partial_{1}\omega\;dx.$ Taking advantage of the Young inequality and of the fact that $\|\theta(t)\|_{L^{2}}\leq\|\theta_{0}\|_{L^{2}},$ it
+is thus possible to get a bound for $\omega$ in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}).$ In fact, it turns out that similar arguments enable us
+to bound stronger norms of the solution so that
+it will be possible to prove the global existence part of Theorem 1 .
+As the velocity field that we have constructed
+fails to be Lipschitz, proving uniqueness requires our
+using losing estimates
+for transport or transport-diffusion equations in the spirit of [ 3 , 12 , 13 , 14 ] . If we consider System ( 2 ) then
+the vorticity equation reduces to $\partial_{t}\omega+u\cdot\nabla\omega=\partial_{1}\theta,$ so that one may write $\frac{1}{2}\frac{d}{dt}\|\omega\|_{L^{2}}^{2}=\int\partial_{1}\theta\>\omega\;dx.$ Now, it turns out that the temperature equation in System
+( 2 ) provides us with the following bound: $\|\theta(t)\|_{L^{2}}^{2}+2\kappa\int_{0}^{t}\|\partial_{1}\theta(\tau)\|^{2}_{L^{2}(\mathbb{R}^{2})}d\tau\leq\|\theta_{0}\|_{L^{2}}^{2}.$ Therefore, using Young’s inequality, it is still
+possible to get a global control on $\omega$ in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}).$ In order to get a global result with uniqueness however,
+we have to consider initial data with much more regularity.
+Indeed, we have to observe that System
+( 2 ) contains the Euler system as a particular case
+(just take $\theta\equiv 0$ ) so that, according to Yudovich result in [ 24 ] one can
+barely expect
+to have uniqueness if the vorticity is not in $L^{\infty}.$ Now, from the vorticity equation, it is clear that bounding the vorticity
+in $L^{\infty}$ requires that $\partial_{1}\theta$ is in $L^{1}_{loc}(\mathbb{R}_{+};L^{\infty})$ . If we assume that $\theta_{0}\in H^{1})$ then we shall be able to prove that
+the horizontal smoothing effect ensures that $\nabla\theta$ is in $L^{2}_{loc}(\mathbb{R}_{+};H^{1}).$ As the space $H^{1}$ fails to be embedded in $L^{\infty}$ however,
+we will have to assume even more regularity in the horizontal direction,
+and to check that this additional regularity is preserved for all positive time.
+These plain considerations explain the assumptions made in the statement of Theorem 2 .
+As for uniqueness, it will follow from adaptations of the Yudovich method in [ 24 ] . The paper unfolds as follows: section 2 is devoted to the study of System ( 1 )
+whereas Section 3 deals with System ( 2 ).
+A few technical lemmas have been postponed in
+the final section of the paper (in particular losing a priori estimates
+for transport equation with anisotropic diffusion). As usual, we agree that $C$ denotes a harmless positive
+constant, the meaning of which is clear from the context. 2. The case of an horizontal viscosity This part is devoted to the study of the initial value problem
+for System ( 1 ) under various
+regularity hypotheses. We aim at getting global
+results for possibly large data. More precisely, in the first subsection, we prove that for
+any data $(\theta_{0},u_{0})\in L^{2}\times H^{1}$ with $\,\mbox{\rm div}\,u_{0}=0,$ System ( 1 ) admits at least one global solution
+with finite energy.
+The next subsection is devoted to a local well-posedness result
+for smooth data, together
+with a continuation criterion involving the $L^{\infty}$ norm
+of $(\theta,\nabla u).$ In subsection 2.3 , we state a sharper continuation criterion
+involving a weaker norm
+of the velocity which is (formally) controlled for
+all time by System ( 1 ).
+This will enable us to state that the system is globally
+well-posed in Sobolev spaces with large enough index
+(see Theorem 5 ).
+The last two subsections are devoted to the proof
+of our global existence and uniqueness result for rough data
+(namely Theorem 1 ). 2.1. Global weak solutions In order to motivate our statement, let
+us first write out the “natural” energy estimates
+associated to System
+( 1 ). On the one hand, because $\,\mbox{\rm div}\,u=0,$ we have (4) $\|\theta(t)\|_{L^{2}}\leq\|\theta_{0}\|_{L^{2}}.$ On the other hand,
+taking the $L^{2}$ inner product of the velocity
+equation with $u,$ we find that $\frac{1}{2}\frac{d}{dt}\biggl(\|u(t)\|_{L^{2}}^{2}+2\nu\int_{0}^{t}\|\partial_{1}u\|_{L^{2}}^{2}\,d\tau\biggr)\leq\|\theta\|_{L^{2}}\|u\|_{L^{2}}.$ Using Gronwall lemma and
+( 4 ), we thus get (5) $\|u(t)\|_{L^{2}}^{2}+2\nu\int_{0}^{t}\|\partial_{1}u\|_{L^{2}}^{2}\,d\tau\leq\bigl(\|u_{0}\|_{L^{2}}+t\,\|\theta_{0}\|_{L^{2}}\bigr)^{2}.$ Let us stress the fact that the
+above energy bounds imply that all the components of $\nabla u$ except $\partial_{2}u^{1}$ are smoothed out
+for positive time.
+Indeed, combining the $L^{2}_{loc}(\mathbb{R}_{+};L^{2})$ bound for $\partial_{1}u$ which is available from
+( 5 )
+with the fact that $\,\mbox{\rm div}\,u=0$ ensures that $\partial_{1}u^{1}$ $\partial_{1}u^{2}$ and $\partial_{2}u^{2}$ are in $L^{2}_{loc}(\mathbb{R}_{+};L^{2}).$ However, as the last component $\partial_{2}u^{1}$ is unlikely to
+be bounded in $L^{2}_{loc}(\mathbb{R}_{+};L^{2})$ if no stronger assumption,
+it is not clear that
+one may construct global weak solutions for $L^{2}$ data
+(in contrast with the standard Navier-Stokes equations [ 21 ] or with the Boussinesq system with isotropic
+viscosity [ 13 ] ). This induces us to consider initial velocity fields in $H^{1}.$ Now,
+in order to get a global bound for the $H^{1}$ norm
+of the velocity, one may consider the vorticity
+equation (6) $\partial_{t}\omega+u\cdot\nabla\omega-\nu\partial_{1}^{2}\omega=\partial_{1}\theta.$ Combining an energy method
+with Young’s inequality, we get $\frac{1}{2}\frac{d}{dt}\|\omega\|_{L^{2}}^{2}+\nu\|\partial_{1}\omega\|_{L^{2}}^{2}=-\int\theta\,\partial_{1}\omega\,dx\leq\frac{\nu}{2}\|\partial_{1}\omega\|_{L^{2}}^{2}+\frac{1}{2\nu}\|\theta\|^{2}_{L^{2}}.$ Therefore, $\frac{d}{dt}\|\omega\|_{L^{2}}^{2}+\nu\|\partial_{1}\omega\|_{L^{2}}^{2}\leq\frac{1}{\nu}\|\theta\|^{2}_{L^{2}},$ whence, according to ( 4 ), (7) $\|\omega(t)\|_{L^{2}}^{2}+\nu\int_{0}^{t}\|\partial_{1}\omega\|_{L^{2}}^{2}\,d\tau\leq\|\omega_{0}\|_{L^{2}}^{2}+\frac{t}{\nu}\|\theta_{0}\|^{2}_{L^{2}}.$ In short, one may formally bound $u$ in $L^{\infty}_{loc}(\mathbb{R}_{+};H^{1})$ and $\theta$ in $L^{\infty}(\mathbb{R}_{+};L^{2})$ which leads to the following statement. Theorem 3 . Let $u_{0}\in H^{1}$ be a divergence free vector-field
+and $\theta_{0}\in L^{2}$ .
+System ( 1 ) has a unique global solution $(\theta,u)$ such that 2 2 2 We agree that if $X$ is a Banach space,
+and $I\subset\mathbb{R},$ an interval then ${\mathcal{C}}_{b}(I;X)$ stands
+for the set of continuous bounded
+functions on $I$ with values in $X.$ (8) $\theta\in{\mathcal{C}}_{b}(\mathbb{R}_{+};L^{2}),\quad u\in{\mathcal{C}}_{w}(\mathbb{R}_{+};H^{1})\quad\hbox{and}\quad u^{2}\in L^{2}_{loc}(\mathbb{R}_{+};H^{2}).$ Proof: It is only a matter of making
+the above computations rigorous.
+For that, one may for instance
+use the Friedrichs method:
+define the spectral cut-off $J_{n}$ by $\widehat{J_{n}f}(\xi)=1_{[0,n]}(|\xi|)\widehat{f}(\xi),\qquad n\geq 1,$ and solve the following ODE
+in the space $L^{2}_{n}:=\bigl\{f\in(L^{2}(\mathbb{R}^{2}))^{3}\,/\,\supp\widehat{f}\subset B(0,n)\bigr\}$ : (9) $\begin{cases}\partial_{t}\theta+J_{n}\,\mbox{\rm div}\,(J_{n}\theta\,J_{n}u)=0,\\
+\partial_{t}u+{\mathcal{P}}J_{n}\,\mbox{\rm div}\,({\mathcal{P}}J_{n}u\otimes{\mathcal{P}}J_{n}u)-\nu\partial_{1}^{2}{\mathcal{P}}J_{n}u={\mathcal{P}}J_{n}(\theta e_{2}),\\
+(\theta,u)|_{t=0}=J_{n}(\theta_{0},u_{0}).\end{cases}$ From the Cauchy-Lipschitz theorem,
+we get a unique maximal solution $(\theta_{n},u_{n})$ in ${\mathcal{C}}^{1}([0,T_{n}^{*}[;L^{2}_{n}).$ Because $J_{n}^{2}=J_{n},$ ${\mathcal{P}}^{2}={\mathcal{P}}$ and $J_{n}{\mathcal{P}}={\mathcal{P}}J_{n},$ we discover that $(\theta_{n},{\mathcal{P}}u_{n})$ and $(J_{n}\theta_{n},J_{n}u_{n})$ are also solutions. By uniqueness,
+we thus have ${\mathcal{P}}u_{n}=u_{n}$ (i. e. $\,\mbox{\rm div}\,u_{n}=0$ ), $J_{n}u_{n}=u_{n}$ and $J_{n}\theta_{n}=\theta_{n}.$ Therefore, (10) $\begin{cases}\partial_{t}\theta_{n}+J_{n}\,\mbox{\rm div}\,(\theta_{n}u_{n})=0,\\
+\partial_{t}u_{n}+{\mathcal{P}}J_{n}\,\mbox{\rm div}\,(u_{n}\otimes u_{n})-\nu\partial_{1}^{2}u_{n}={\mathcal{P}}J_{n}(\theta_{n}e_{2}),\\
+\,\mbox{\rm div}\,u_{n}=0.\end{cases}$ As Operators $J_{n}$ and ${\mathcal{P}}J_{n}$ are orthogonal projectors
+for the $L^{2}$ inner product,
+the above formal calculations remain unchanged.
+Therefore, we still have as before (11) $\displaystyle\|\theta_{n}(t)\|_{L^{2}}^{2}=\|J_{n}\theta_{0}\|_{L^{2}}^{2}\leq\|\theta_{0}\|_{L^{2}}^{2},$ (12) $\displaystyle\|u_{n}(t)\|_{L^{2}}^{2}+2\nu\displaystyle\int_{0}^{t}\|\partial_{1}u_{n}\|_{L^{2}}^{2}\,d\tau\leq\bigl(\|u_{0}\|_{L^{2}}+t\,\|\theta_{0}\|_{L^{2}}\bigr)^{2}.$ This implies that $(\theta_{n},u_{n})$ remains bounded in $L^{2}_{n}$ for finite time, whence $T_{n}^{*}=+\infty.$ Next, applying the ${\rm curl}\,$ operator
+to $\eqref{eq:approche1}_{2},$ we get $\partial_{t}\omega_{n}+J_{n}(u_{n}\cdot\nabla\omega_{n})-\nu\partial^{2}_{1}\omega_{n}=\partial_{1}\theta_{n}\quad\hbox{with}\quad\omega_{n}=\partial_{1}u_{n}^{2}-\partial_{2}u_{n}^{1}.$ Arguing as for proving ( 7 ), we thus get (13) $\|\omega_{n}(t)\|_{L^{2}}^{2}+\nu\int_{0}^{t}\|\partial_{1}\omega_{n}\|_{L^{2}}^{2}\,d\tau\leq\|\omega_{0}\|_{L^{2}}^{2}+\frac{t}{\nu}\|\theta_{0}\|_{L^{2}}^{2}.$ This implies that $(\omega_{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}).$ Now, it is well known
+that the divergence-free property
+entails that $\|\nabla u_{n}\|_{L^{2}}=\|\omega_{n}\|_{L^{2}}\quad\hbox{et}\quad\Delta u^{2}_{n}=\partial_{1}\omega_{n}.$ So one can conclude that • $(\theta_{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}(\mathbb{R}_{+};L^{2}),$ • $(u_{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};H^{1}),$ • $(u_{n}^{2})_{n\in\mathbb{N}}$ is bounded in $L^{2}_{loc}(\mathbb{R}_{+};H^{2}).$ This is enough to pass to the limit (up to extraction)
+in ( 10 ).
+Indeed, putting together
+the continuous embedding $H^{1}\hookrightarrow L^{4}$ and Hölder inequality,
+we see that the first two properties imply
+that $(\theta_{n}u_{n})_{n\in\mathbb{N}}$ is
+bounded in $L^{4}_{loc}(\mathbb{R}_{+};L^{\frac{4}{3}})$ whence,
+by embedding, in $L^{4}_{loc}(\mathbb{R}_{+};H^{-\frac{1}{2}}).$ Therefore $(\partial_{t}\theta_{n})_{n\in\mathbb{N}}$ is bounded in $L^{4}_{loc}(\mathbb{R}_{+};H^{-\frac{3}{2}}).$ Likewise, $(\partial_{t}u_{n})_{n\in\mathbb{N}}$ is bounded in $L^{2}_{loc}(\mathbb{R}_{+};H^{-1}).$ Since the embeddings $H^{-\frac{3}{2}}\hookrightarrow L^{2}$ and $H^{-1}\hookrightarrow H^{1}$ are locally compact,
+the classical Aubin-Lions argument (see
+e.g. [ 2 ] ) allows to conclude that, up to extraction, sequence $(\theta_{n},u_{n})_{n\in\mathbb{N}}$ has a limit $(\theta,u)$ satisfying
+System ( 1 ) and that $\theta\in L^{\infty}(\mathbb{R}_{+};L^{2}),\quad u\in L^{\infty}_{loc}(\mathbb{R}_{+};H^{1})\ \hbox{ and }\ u^{2}\in L^{2}_{loc}(\mathbb{R}_{+};H^{2}).$ From standard arguments
+relying on the time continuity of $(\theta,u)$ in low norms, it is easy
+to prove the weak time continuity result.
+Finally, since $\theta$ is transported
+by the flow of a divergence free vector-field
+with coefficients in $L^{2}_{loc}(\mathbb{R}_{+};H^{1}),$ we get in addition that $\theta\in{\mathcal{C}}(\mathbb{R}_{+};L^{2})$ (see e.g. [ 16 ] ). 2.2. Local smooth solutions Here we aim at proving the local well-posedness for
+System ( 1 ) with initial data $(\theta_{0},u_{0})$ in $H^{s-1}\times H^{s}$ for some $s>2.$ The proof will follow from an energy method once
+the system has been localized in dyadic frequencies.
+This localization may be done by means of a nonhomogeneous
+Littlewood-Paley decomposition.
+In order to define the dyadic blocks $\Delta_{q}$ used in this decomposition, one may proceed
+as in [ 8 ] : starting from a couple $(\chi,\varphi)$ of smooth nonnegative functions such that $\hfil\displaystyle\,\mbox{\rm Supp}\,\chi\subset\{\xi\in\mathbb{R}^{2}\,/\,|\xi|\leq 4/3\},\qquad\,\mbox{\rm Supp}\,\varphi\subset\{\xi\in\mathbb{R}^{2}\,/\,3/4\leq|\xi|\leq 8/3\},$ $\hfil\displaystyle\chi(\xi)+\sum_{q\geq 0}\varphi(2^{-q}\xi)=1\quad\hbox{for all }\ \xi\in\mathbb{R}^{2},$ we set $\Delta_{q}:=0\ \hbox{ if }\ q\leq-2,\quad\Delta_{-1}:=\chi(D)\quad\hbox{and}\quad\Delta_{q}:=\varphi(2^{-q}D)\ \hbox{ if }\ q\geq 0.$ We also introduce the low frequency cut-off $S_{q}:=\sum_{p\leq q-1}\Delta_{q}$ and (for technical purposes) the modified low frequency cut-off $\overline{S}_{q}$ defined by (14) $\overline{S}_{-1}=\Delta_{-1}=S_{0}\quad\hbox{and}\quad\overline{S}_{q}=S_{q}\quad\hbox{if}\quad q\not=-1.$ It may be easily checked that $u=\sum_{q\geq-1}\Delta_{q}u\quad\hbox{for all tempered distribution }\ u$ and that the set of tempered distributions $u$ satisfying $\biggl(\sum_{q\geq-1}2^{2qs}\|\Delta_{q}u\|_{L^{2}}^{2}\biggr)^{\frac{1}{2}}<\infty$ coincides with the Sobolev space $H^{s},$ the above
+left-hand side defining a norm equivalent
+to the usual one. Let us now state the main result of this subsection: Proposition 4 . Let $(\theta_{0},u_{0})$ be in $H^{s-1}\times H^{s}$ with $s>2.$ Assume that ${\rm div}\,u_{0}=0.$ There exists a positive time $T$ depending
+only (continuously) on $\nu$ and on $\|(\theta_{0},\omega_{0})\|_{H^{s-1}}$ such that
+System ( 1 ) admits a unique solution $(\theta,u)$ in ${\mathcal{C}}([0,T];H^{s-1}\times H^{s}).$ Moreover, $u^{2}\in L^{2}([0,T];H^{s+1}).$ Proof: The uniqueness is a straightforward consequence of
+a more general result (see Proposition 9 ) the proof of which is postponed to subsection 2.5 .
+So let us focus on the existence part
+of the above proposition, which
+is mostly a consequence of the $H^{s-1}\times H^{s}$ a priori estimates associated to System
+( 1 ). 1. A priori estimates in $H^{s-1}\times H^{s}$ Let $(\theta,u)\in{\mathcal{C}}^{1}([0,T];H^{\infty})$ satisfy ( 1 ).
+We claim that
+there exists a constant $C$ depending only on $s$ and such that
+for all $t\in[0,T],$ we have (15) $\|(\theta,\omega)(t)\|_{H^{s-1}}^{2}+\nu\int_{0}^{t}\|\partial_{1}\omega\|_{H^{s-1}}^{2}\,d\tau\leq\|(\theta_{0},\omega_{0})\|_{H^{s-1}}^{2}\,e^{\frac{t}{\nu}}\,e^{C\int_{0}^{t}\|(\theta,\nabla v)\|_{L^{\infty}}\,d\tau}.$ Indeed, applying operator $\Delta_{q}$ to the equation satisfied by $\theta$ yields $\partial_{t}\Delta_{q}\theta+\overline{S}_{q-1}u\cdot\nabla\Delta_{q}\theta=F_{q}(u,\theta)\quad\hbox{with}\quad F_{q}(u,\theta):=\overline{S}_{q-1}u\cdot\nabla\Delta_{q}\theta-\Delta_{q}(u\cdot\nabla\theta).$ Taking the $L^{2}$ inner product of the above equality with $\Delta_{q}\theta$ and using the divergence free condition, we thus get $\frac{1}{2}\frac{d}{dt}\|\Delta_{q}\theta\|_{L^{2}}^{2}\leq\|F_{q}(u,\theta)\|_{L^{2}}\|\Delta_{q}\theta\|_{L^{2}}.$ In the appendix (see Inequality ( 68 )), we state that $\|F_{q}(u,\theta)\|_{L^{2}}\leq C\Bigl(\|\nabla u\|_{L^{\infty}}\sum_{q^{\prime}\geq q-4}2^{q-q^{\prime}}\|\Delta_{q^{\prime}}\theta\|_{L^{2}}+\|\theta\|_{L^{\infty}}\sum_{|q^{\prime}-q|\leq 1}\|\Delta_{q^{\prime}}\omega\|_{L^{2}}\Bigr).$ Plugging this inequality in ( 35 ) then multiplying both sides by $2^{2q(s-1)}$ and summing up over $q\geq-1,$ we get (16) $\frac{d}{dt}\|\theta\|_{H^{s-1}}^{2}\leq C\Bigl(\|\nabla u\|_{L^{\infty}}\|\theta\|_{H^{s-1}}^{2}+\|\theta\|_{L^{\infty}}\|\omega\|_{H^{s-1}}\|\theta\|_{H^{s-1}}\Bigr).$ In order to get a $H^{s-1}$ estimate for $\omega,$ one may apply $\Delta_{q}$ to the vorticity equation.
+With the above notation, we get $\partial_{t}\Delta_{q}\omega+\overline{S}_{q-1}u\cdot\nabla\Delta_{q}\omega-\nu\partial_{1}\Delta_{q}\omega=\partial_{1}\Delta_{q}\theta+F_{q}(u,\omega).$ Taking the $L^{2}$ inner product of this inequality with $\Delta_{q}\omega$ and using once again the divergence free condition, we get
+after integration by parts, $\frac{1}{2}\frac{d}{dt}\|\Delta_{q}\omega\|_{L^{2}}^{2}+\nu\|\partial_{1}\Delta_{q}\omega\|_{L^{2}}^{2}=-\int\Delta_{q}\theta\partial_{1}\Delta_{q}\omega\,dx+\int F_{q}(u,\omega)\Delta_{q}\omega\,dx.$ Now, we notice that, by virtue of the Young inequality, $-\!\int\!\Delta_{q}\theta\partial_{1}\Delta_{q}\omega\,dx\leq\frac{\|\Delta_{q}\theta\|_{L^{2}}^{2}}{2\nu}+\frac{\nu}{2}\|\partial_{1}\Delta_{q}\omega\|_{L^{2}}^{2},$ and, according to ( 70 ), $\|F_{q}(u,\omega)\|_{L^{2}}\leq C\|\nabla u\|_{L^{\infty}}\!\!\sum_{q^{\prime}\geq q\!-\!4}2^{q-q^{\prime}}\|\Delta_{q^{\prime}}\omega\|_{L^{2}}.$ Therefore $\frac{d}{dt}\|\Delta_{q}\omega\|_{L^{2}}^{2}+\nu\|\partial_{1}\Delta_{q}\omega\|_{L^{2}}^{2}\leq\nu^{-1}\|\Delta_{q}\theta\|_{L^{2}}^{2}+C\|\Delta_{q}\omega\|_{L^{2}}\|\nabla u\|_{L^{\infty}}\!\sum_{q^{\prime}\geq q-4}2^{q-q^{\prime}}\|\Delta_{q^{\prime}}\omega\|_{L^{2}}.$ Multiplying both sides by $2^{2q(s-1)}$ then summing up over $q\geq-1,$ we end up with $\frac{d}{dt}\|\omega\|_{H^{s-1}}^{2}+\nu\|\partial_{1}\omega\|_{H^{s-1}}^{2}\leq\nu^{-1}\|\theta\|_{H^{s-1}}^{2}+C\|\nabla u\|_{L^{\infty}}\|\omega\|_{H^{s-1}}^{2}.$ It is now clear that adding up this latter
+inequality to ( 16 ) then applying Gronwall lemma completes
+the proof of Inequality ( 15 ). 2. The proof of local existence. One can use again the Friedrichs method introduced in
+the proof of Theorem 3 .
+As Operators $J_{n}$ are orthogonal projectors for all Sobolev spaces,
+they do not modify the energy estimates leading to Inequality ( 15 ).
+Therefore, the approximate solution $(\theta_{n},u_{n})$ to ( 10 ) satisfies $\|(\theta_{n},\omega_{n})(t)\|_{H^{s-1}}^{2}+\nu\int_{0}^{t}\|\partial_{1}\omega_{n}\|_{H^{s-1}}^{2}\,d\tau\leq\|J_{n}(\theta_{0},\omega_{0})\|_{H^{s-1}}^{2}\,e^{\frac{t}{\nu}}\,e^{C\int_{0}^{t}\|(\theta_{n},\nabla u_{n})\|_{L^{\infty}}\,d\tau}.$ Of course, the $L^{2}$ norm of $u_{n}$ is controlled by virtue of ( 12 ).
+As $s>2,$ the space $H^{s-1}$ continuously embeds in $L^{\infty}.$ Since $\|\nabla u_{n}\|_{H^{s-1}}=\|\omega_{n}\|_{H^{s-1}},$ the previous inequality thus entails that $X_{n}(t)\leq\|(\theta_{0},\omega_{0})\|_{H^{s\!-\!1}}\,e^{\frac{t}{2\nu}}\,e^{C\int_{0}^{t}X_{n}(\tau)\,d\tau}\quad\hbox{with}\quad X_{n}^{2}(t):=\|(\theta_{n},\omega_{n})(t)\|_{H^{s\!-\!1}}^{2}+\nu\int_{0}^{t}\|\partial_{1}\omega_{n}\|_{H^{s\!-\!1}}^{2}\,d\tau.$ This inequality may be easily integrated into $\exp\biggl(-C\int_{0}^{t}X_{n}(\tau)\,d\tau\biggr)\geq 1-2C\nu X_{0}e^{\frac{t}{2\nu}}\quad\hbox{for all}\quad t\geq 0.$ Therefore, there exists a $c>0$ such that if we set (17) $T:=2\nu\log\biggl(\frac{c}{\nu\|(\theta_{0},\omega_{0})\|_{H^{s-1}}}\biggr)$ then • $(\theta_{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}([0,T];H^{s-1}),$ • $(u_{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}([0,T];H^{s}),$ • $(u_{n}^{2})_{n\in\mathbb{N}}$ is bounded in $L^{2}([0,T];H^{s+1}).$ Mimicking the compactness argument used for proving Theorem 3 , one can now conclude that there exists a solution $(\theta,u)$ satisfying $(\theta,u)\in L^{\infty}([0,T];H^{s-1}\times H^{s})$ and $u^{2}\in L^{2}([0,T];H^{s+1}).$ The time continuity follows from the fact that $\theta$ and $\omega$ satisfy transport equations with $H^{s-1}$ initial
+data and a $L^{2}([0,T];H^{s-1})$ source term.
+This completes the proof of Proposition 4 . 2.3. Global smooth solutions Here we aim at proving that the local smooth solutions
+which have been constructed so far may
+be extended to all positive time.
+Exhibiting a polynomial control of $\|\nabla u(t)\|_{\sqrt{L}}$ (where the space $\sqrt{L}$ has been defined in
+( 3 )) is the cornerstone of
+this extension. More precisely, we shall
+first prove that the $L^{1}([0,T];LL)$ norm of $\nabla u$ with (18) $LL:=\biggl\{f\in{\mathcal{S}}^{\prime}\,/\,\|f\|_{LL}:=\sup_{q\geq 0}\frac{\|S_{q}f\|_{L^{\infty}}}{q+1}<\infty\biggr\}$ controls the Sobolev regularity of the solutions to System ( 1 ).
+Next, we shall state that, under the hypotheses of Proposition 4 ,
+the norm of $\nabla u$ in $L^{2}([0,T];\sqrt{L})$ (which is stronger to
+the $L^{1}([0,T];LL)$ norm) may be bounded for all time by a fixed polynomial
+the coefficients of which depend only on low norms of the data, and on $\nu.$ Combining this with Proposition 4 will lead to the following global existence statement: Theorem 5 . Let $(\theta_{0},u_{0})$ be in $H^{s-1}\times H^{s}$ for some $s>2.$ Assume that ${\rm div}\,u_{0}=0.$ Then system ( 1 ) has a unique global solution $(\theta,u)$ such that $(\theta,u)\in{\mathcal{C}}(\mathbb{R}_{+};H^{s-1}\times H^{s})\quad\hbox{and}\quad u^{2}\in L^{2}_{loc}(\mathbb{R}_{+};H^{s+1}).$ As a first step for proving Theorem 5 ,
+let us show the following lemma: Lemma 6 . Let $(\theta,u)$ be a solution to ( 1 ) in ${\mathcal{C}}([0,T);H^{s-1}\times H^{s})$ with $s>2$ .
+If $\int_{0}^{T}\|\nabla u(t)\|_{LL}\,dt<\infty$ then $(\theta,u)$ may be continued beyond $T$ into a smooth solution of $\eqref{eq:b-vitesse}.$ Proof: Putting together the lower bound for the lifespan
+of $(\theta,u)$ given by ( 17 ) and the uniqueness
+of smooth solutions, it suffices to state that
+under the assumptions of the lemma, we have $\sup_{0\leq t<T}\bigl(\|\theta(t)\|_{H^{s-1}}+\|\omega(t)\|_{H^{s-1}}\bigr)<\infty.$ First, as $\theta$ is
+transported by the vector-field $u$ (which is lipschitz for $s>2$ implies $H^{s-1}\hookrightarrow L^{\infty}$ ),
+we get the following control: $\|\theta(t)\|_{L^{\infty}}=\|\theta_{0}\|_{L^{\infty}}\quad\hbox{for
+all}\quad t\in[0,T).$ In consequence, Inequality ( 15 ) ensures that (19) $\|(\theta,\omega)(t)\|_{H^{s-1}}^{2}+\nu\int_{0}^{t}\|\partial_{1}\omega\|_{H^{s-1}}^{2}\,d\tau\leq\|(\theta_{0},\omega_{0})\|_{H^{s-1}}^{2}\,e^{(\nu^{-1}+C\|\theta_{0}\|_{L^{\infty}})t}\,e^{C\int_{0}^{t}\|\nabla u\|_{L^{\infty}}\,d\tau}.$ On the other hand, in the appendix, it is shown that (20) $\|\nabla u\|_{L^{\infty}}\leq C\bigl(1+\|\nabla u\|_{LL}\log(e+\|\omega\|_{H^{s-1}})\bigr).$ Putting together ( 19 ) and ( 20 ),
+we deduce that for all $t\in[0,T),$ $\hfil\displaystyle\log\bigl(e+\|(\theta,\omega)(t)\|_{H^{s-1}}^{2}\bigr)\leq\log\bigl(e+\|(\theta_{0},\omega_{0})\|_{H^{s-1}}^{2}\bigr)+C\bigl(1+\nu^{-1}+\|\theta_{0}\|_{L^{\infty}}\bigr)t\hfill$ $\hfil\displaystyle\hfill+C\int_{0}^{t}\|\nabla u\|_{LL}\log\bigl(e+\|(\theta,\omega)(t)\|_{H^{s-1}}^{2}\bigr)\,d\tau,$ whence, according to Gronwall Lemma, $\log\bigl(e+\|(\theta,\omega)(t)\|_{H^{s-1}}^{2}\bigr)\leq\Bigl(\log\bigl(e+\|(\theta_{0},\omega_{0})\|_{H^{s-1}}^{2}\bigr)+C\bigl(1+\nu^{-1}+\|\theta_{0}\|_{L^{\infty}}\bigr)t\Bigr)e^{C\int_{0}^{t}\|\nabla u\|_{LL}\,d\tau}.$ As the argument of $\exp$ is, by assumption, bounded for $t\in[0,T),$ we gather that $(\theta,\omega)\in L^{\infty}([0,T);H^{s-1}),$ which completes the proof of the lemma. The next step involves showing that the norm used
+in the previous lemma is controlled by the system.
+In fact, we shall state a slightly more accurate result: Lemma 7 . Let $(\theta,u)$ be a solution to ( 1 ) in ${\mathcal{C}}([0,T);H^{2}\times H^{3}).$ There exists a continuous function $f:\mathbb{R}_{+}\rightarrow\mathbb{R}_{+}$ depending only (continuously) on $\nu,$ $\|u_{0}\|_{L^{2}},$ $\|\theta_{0}\|_{L^{2}\cap L^{\infty}}$ and $\|\omega_{0}\|_{\sqrt{L}}$ such that $\int_{0}^{t}\|\nabla u\|_{\sqrt{L}}^{2}\,dt\leq f(t)\quad\hbox{for all }\ t\in[0,T).$ Proof: Let us first notice that, because $\,\mbox{\rm div}\,u=0$ and $u$ is Lipschitz, we have (21) $\|\theta(t)\|_{L^{p}}=\|\theta_{0}\|_{L^{p}}\quad\hbox{for all}\quad p\in[2,\infty]\quad\hbox{and}\quad t\in[0,T).$ In order to get a control
+of $\nabla u$ in $L^{2}([0,T);\sqrt{L}),$ we are going to state that (22) $\|\omega(t)\|_{\sqrt{L}}^{2}\leq\|\omega_{0}\|_{\sqrt{L}}^{2}+\frac{t}{2\nu}\|\theta_{0}\|_{L^{2}\cap L^{\infty}}^{2}.$ For showing that, one may multiply the vorticity equation with $|\omega|^{p-2}\omega$ and perform a space integration.
+As our hypotheses on the solution entail that $\omega\in{\mathcal{C}}^{1}([0,T);H^{1})$ and thus $\omega\in{\mathcal{C}}^{1}([0,T);L^{p})$ for
+all $p\in[2,+\infty),$ we get $\begin{array}[]{lll}\displaystyle\frac{1}{p}\displaystyle\frac{d}{dt}\displaystyle\int|\omega|^{p}\,dx+(p\!-\!1)\nu\!\displaystyle\int\!|\partial_{1}\omega|^{2}|\omega|^{p-2}\,dx&\leq(p\!-\!1)\displaystyle\int|\theta||\partial_{1}\omega||\omega|^{p-2}\,dx,\\[4.30554pt]
+&\leq(p\!-\!1)\nu\!\displaystyle\int|\partial_{1}\omega|^{2}|\omega|^{p-2}\,dx+\frac{p\!-\!1}{4\nu}\!\int\!|\theta|^{2}|\omega|^{p-2}\,dx\\[4.30554pt]
+&\leq(p\!-\!1)\nu\!\displaystyle\int\!|\partial_{1}\omega|^{2}|\omega|^{p-2}\,dx+\frac{p\!-\!1}{4\nu}\,\|\theta\|_{L^{p}}^{2}\,\|\omega\|_{L^{p}}^{p\!-\!2}.\end{array}$ Therefore, $\frac{d}{dt}\|\omega\|_{L^{p}}^{2}\leq\biggl(\frac{p-1}{2\nu}\biggr)\|\theta\|_{L^{p}}^{2}$ hence, by virtue of ( 21 ), $\|\omega(t)\|_{L^{p}}^{2}\leq\|\omega_{0}\|_{L^{p}}^{2}+\biggl(\frac{p-1}{2\nu}\biggr)\|\theta_{0}\|_{L^{p}}^{2}\,t,$ whence ( 22 ). This does not imply that $\nabla u\in L^{\infty}([0,T);\sqrt{L})$ for the classical result on Calderon-Zygmund operators (see e.g. [ 8 ] , Chap. 3)
+gives only that (23) $\|\nabla u(t)\|_{L^{p}}\leq Cp\|\omega(t)\|_{L^{p}}\quad\hbox{for all}\quad p\in[2,\infty).$ However, because $\partial_{1}\omega=\Delta u^{2}$ and $\partial_{1}u^{1}=-\partial_{2}u^{2},$ Inequalities
+( 5 ) and ( 7 )
+entail that (24) $\sqrt{\nu}\|\partial_{i}u^{j}\|_{L_{t}^{2}(H^{1})}\leq\|u_{0}\|_{H^{1}}+\biggl(t+\sqrt{\frac{t}{\nu}}\biggr)\|\theta_{0}\|_{L^{2}}\quad\hbox{for }\ t\in[0,T)\ \hbox{ and }\ (i,j)\not=(2,1).$ By virtue of Lemma 13 (see the appendix), we thus get
+the desired bound for all the components of $\nabla u$ except $\partial_{2}u^{1}.$ In order to get a suitable bound for $\partial_{2}u^{1},$ one may use
+the fact that $\partial_{2}u^{1}=\partial_{1}u^{2}-\omega.$ Putting together Inequalities ( 22 )
+and ( 24 ), it is now easy to conclude Proof of Theorem 5 : For the sake of simplicity, we restrict ourselves to the case $s\geq 3$ so that one may use Lemma 7 .
+The case $2<s<3$ easily follows from the case $s\geq 3$ : it is only a
+matter of smoothing out the initial data then pass to the limit. So let us assume from now on that $s\geq 3$ and let us
+denote by $(\theta,u)$ the maximal solution supplied by Proposition 4 , and by $T^{*}$ the lifespan of $(\theta,u).$ If we assume (by contradiction) that $T^{*}$ is finite
+then Proposition 7 ensures that (25) $\nabla u\in L^{2}([0,T^{*});\sqrt{L}).$ Remark that the space $\sqrt{L}$ is continuously embedded in the space $LL^{\frac{1}{2}}$ defined by (26) $LL^{\frac{1}{2}}:=\biggl\{f\in{\mathcal{S}}^{\prime}\,/\,\|f\|_{LL^{\frac{1}{2}}}:=\sup_{q\geq 0}\frac{\|S_{q}f\|_{L^{\infty}}}{\sqrt{q+1}}<\infty\biggr\}.$ Indeed, thanks to Bernstein inequality, there exists a constant $C$ such that for all $N\in\mathbb{N}$ and $p\in[2,\infty[,$ we have (27) $\|S_{N}\nabla u\|_{L^{\infty}}\leq C2^{\frac{2N}{p}}\|\nabla u\|_{L^{p}}\leq C2^{\frac{2N}{p}}\sqrt{p-1}\,\|\nabla u\|_{\sqrt{L}}.$ If we choose $p=N+2$ then we get (28) $\|S_{N}\nabla u\|_{L^{\infty}}\leq C\sqrt{N+1}\,\|\nabla u\|_{\sqrt{L}},$ whence the desired embedding. It is obvious that $LL^{\frac{1}{2}}\hookrightarrow LL.$ Resorting to ( 25 ), we thus get $\nabla u\in L^{1}([0,T^{*});LL)$ and Lemma 6 ensures that the solution $(\theta,u)$ may
+be continued beyond $T^{*}.$ This contradicts the definition of $T^{*}.$ 2.4. Global well-posedness for rough data In this section, we want to state global existence with
+uniqueness for a class of data as large as possible.
+Having in mind the previous subsection, it seems reasonable to require that $\theta_{0}\in L^{2}\cap L^{\infty},$ that $u_{0}\in H^{1}$ and that $\omega_{0}\in\sqrt{L}.$ As those regularity assumptions are (formally) conserved
+by the system during the evolution,
+we thus expect to get a global solution $(\theta,u)$ such that $\nabla u\in L^{2}_{loc}(\mathbb{R}_{+};\sqrt{L}).$ This would imply that $u\in L^{2}_{loc}(\mathbb{R}_{+};{\rm LogLip}^{\frac{1}{2}})$ where ${\rm LogLip}^{\frac{1}{2}}$ stands for the set of bounded functions $f$ such that $\sup_{\begin{subarray}{c}x\not=y\\
+|x-y|\leq 1/2\end{subarray}}\frac{|f(y)-f(x)|}{|x-y|\log^{\frac{1}{2}}(|x-y|^{-1})}<\infty.$ The above inequality is an obvious corollary of ( 28 )
+and of Proposition 2.107 in [ 4 ] . Even though the vector-field $u$ fails to be lipschitz,
+it has enough regularity so that
+we have $\theta\in{\mathcal{C}}(\mathbb{R}_{+};H^{s-\varepsilon})$ for all $\varepsilon>0$ if we start from $\theta_{0}$ in $H^{s}$ for some $s\in]-1,1]$ (this is in fact a consequence of Theorem 3.12 in [ 12 ] ).
+These plain observations will lead us to the following
+statement which obviously contains Theorem 1 : Theorem 8 . Let $\theta_{0}\in L^{2}\cap L^{\infty},$ and $u_{0}\in H^{1}$ with $\,\mbox{\rm div}\,u_{0}=0$ and $\omega_{0}\in\sqrt{L}.$ Then System ( 1 ) admits a global solution $(\theta,u)$ such that (29) $\begin{array}[]{c}\theta\in{\mathcal{C}}_{b}(\mathbb{R}_{+};L^{2})\cap{\mathcal{C}}_{w}(\mathbb{R}_{+};L^{\infty})\cap L^{\infty}(\mathbb{R}_{+};L^{\infty}),\\[6.45831pt]
+u\in{\mathcal{C}}_{w}(\mathbb{R}_{+};H^{1}),\quad\!u^{2}\in L^{2}_{loc}(\mathbb{R}_{+};H^{2}),\!\quad\omega\in L^{\infty}_{loc}(\mathbb{R}_{+};\sqrt{L}),\quad\!\nabla u\!\in\!L^{2}_{loc}(\mathbb{R}_{+};\sqrt{L}).\end{array}$ If in addition $\theta_{0}\in H^{s}$ for some real number $s\in(0,1]$ then $\theta\in{\mathcal{C}}(\mathbb{R}_{+};H^{s-\varepsilon})$ for all $\varepsilon>0.$ Finally, if $s>1/2$ then the solution is unique. Proof: The uniqueness is a consequence
+of Proposition 9 below so let us focus on the
+existence part of the statement.
+To achieve it, one may smooth out the initial data $(\theta_{0},u_{0})_{n\in\mathbb{N}}$ so as to get a sequence $(\theta_{0,n},u_{0,n})_{n\in\mathbb{N}}$ of $H^{\infty}$ functions which tends to $(\theta_{0},u_{0})$ in
+(say) $L^{2}\times H^{1}.$ Resorting to Theorem 5 , we get a sequence $(\theta_{n},u_{n})_{n\in\mathbb{N}}$ of smooth global solutions.
+Moreover, by virtue of Inequalities ( 5 ), ( 7 ),
+( 21 ) and ( 22 ), we have • $(\theta_{n})_{n\in\mathbb{N}}$ bounded in $L^{\infty}(\mathbb{R}_{+};L^{2}\cap L^{\infty}),$ • $(u_{n})_{n\in\mathbb{N}}$ bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};H^{1}),$ • $(u_{n}^{2})_{n\in\mathbb{N}}$ bounded in $L^{2}_{loc}(\mathbb{R}_{+};H^{2}),$ • $(\omega_{n}^{2})_{n\in\mathbb{N}}$ bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};\sqrt{L}).$ As explained in the proof of Lemma
+( 7 ), these proprieties
+imply that $(\nabla u_{n})_{n\in\mathbb{N}}$ is bounded
+in $L^{2}_{loc}(\mathbb{R}_{+};\sqrt{L}).$ Now, taking advantage of the losing estimates
+proved in Proposition 16 ,
+we deduce that if, in addition, $\theta_{0}\in H^{s}$ for some $s\in(0,1)$ then, for all $\varepsilon>0,$ $(\theta_{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};H^{s-\varepsilon}).$ In order to conclude to the existence part of
+the statement, one may use again
+a compactness argument à la Aubin-Lions as in the proof of Theorem 3 . 2.5. Uniqueness for rough data The difference $(\delta\!\theta,\delta\!u,\delta\!\Pi)$ between two solutions $(\theta_{1},u_{1},\Pi_{1})$ and $(\theta_{2},u_{2},\Pi_{2})$ satisfies: (30) $\begin{cases}\partial_{t}\delta\!\theta+\,\mbox{\rm div}\,(u_{2}\,\delta\!\theta)=-\,\mbox{\rm div}\,(\delta\!u\,\theta_{1}),\\
+\partial_{t}\delta\!u+\,\mbox{\rm div}\,(u_{2}\otimes\delta\!u)+\,\mbox{\rm div}\,(\delta\!u\otimes u_{1})-\nu\partial_{1}^{2}\delta\!u+\nabla\delta\!\Pi=\delta\!\theta\,e_{2}.\end{cases}$ First of all, let us notice that if $\theta_{1}\in L^{\infty}([0,T];H^{\gamma})$ then the right-hand side of the first equation is at most in $L^{\infty}([0,T];H^{\gamma-1}).$ As, under the hypotheses of Theorem 5 , $u_{2}$ fails to be lipschitz but has gradient in $L^{2}_{loc}(\mathbb{R}_{+};\sqrt{L}),$ Proposition 16 will enable us to bound $\delta\!\theta$ in $H^{\gamma-1-\varepsilon}$ provided that $\,\mbox{\rm div}\,(\delta\!u\,\theta_{1})$ be bounded in $L^{1}([0,T];H^{\gamma-1}),$ a condition which requires a control over the $L^{1}([0,T];L^{\infty})$ norm of $\delta\!u.$ If the velocity equation had a full Laplace operator
+then the resulting smoothing effect would be strong enough
+so as to provide us with a control over this norm.
+We shall see that in the framework of anisotropic viscosity,
+one can still get an appropriate bound for $\delta\!u$ in $L^{1}([0,T];L^{\infty})$ provided $\gamma>1/2.$ In short, we expect to be able to control $\delta\!\theta$ in $L^{\infty}([0,T];H^{\beta-1})$ for some $\beta\in]1/2,\gamma[,$ $\delta\!u$ in $L^{\infty}([0,T];H^{\alpha})$ and $\partial_{1}\delta\!u$ in $L^{2}([0,T[;H^{\alpha})$ for some $\alpha\in]1/2,\beta[.$ This motivates the following statement
+which implies the uniqueness part of Theorem 8 : Proposition 9 . Let $(\theta_{1},u_{1})$ and $(\theta_{2},u_{2})$ be two
+solutions of ( 1 ) on $[0,T]\times\mathbb{R}^{2}$ with the same initial data.
+Assume that $\nabla u_{i}\in L^{1}([0,T];LL^{\frac{1}{2}})$ and that there exists some $\gamma\in]1/2,1[$ such that $\theta_{i}\in L^{\infty}([0,T];L^{\infty}\cap H^{\gamma})\ \hbox{ and }\ u_{i}\in L^{\infty}([0,T];H^{\gamma})\quad\hbox{for }\ i=1,2.$ Then the two solutions coincide. Proof: According to the above heuristics, we have
+to bound $\delta\!\theta\ \hbox{ in }\ L^{\infty}([0,T];H^{\beta-1}),\quad\delta\!u\ \hbox{ in }\ L^{\infty}([0,T];H^{\alpha})\ \hbox{ and }\ \partial_{1}\delta\!u\ \hbox{ in }\ L^{2}([0,T];H^{\alpha})$ for some fixed $(\alpha,\beta)$ such that $1/2<\alpha<\beta<\gamma.$ In order to bound $\delta\!\theta,$ one may use Proposition 16 with the vector-field $u_{2}.$ Because $\delta\!\theta(0)=0,$ we have $\|\delta\!\theta(t)\|_{H^{\beta-1}}\leq C\int_{0}^{t}\|\,\mbox{\rm div}\,(\delta\!u\,\theta_{1})\|_{H^{\gamma-1}}\quad\hbox{for all}\quad t\in[0,T].$ In order to bound the right-hand side, one may resort
+to the following Bony’s decomposition [ 5 ] : (31) $\,\mbox{\rm div}\,(\delta\!u\,\theta_{1})=\,\mbox{\rm div}\,\Bigl(T_{\delta\!u}\theta_{1}+R(\delta\!u,\theta_{1})\Bigr)+\sum_{i=1}^{2}T_{\partial_{i}\theta_{1}}\delta\!u^{i},$ where the paraproduct operator $T$ (resp. reminder operator $R$ )
+is defined by $T_{f}g:=\sum_{q}S_{q-1}f\Delta_{q}g\qquad\biggl(\hbox{resp. }\quad R(f,g):=\sum_{q}\Delta_{q}f\bigl(\Delta_{q-1}g\!+\!\Delta_{q}g\!+\!\Delta_{q-1}g\bigr)\biggr).$ Let us stress that the condition $\,\mbox{\rm div}\,\delta\!u=0$ has
+been used in order to have the derivative act on the left for the first two terms
+of ( 31 ). From standard continuity results for operators $T$ and $R$ (see e.g. [ 4 ] ) we have $\|T_{\delta\!u}\theta_{1}+R(\delta\!u,\theta_{1})\|_{H^{\gamma}}\leq C\|\delta\!u\|_{L^{\infty}}\|\theta_{1}\|_{H^{\gamma}}.$ As for the last term, given that $\gamma-1<0,$ one can write $\|T_{\partial_{i}\theta_{1}}\delta\!u^{i}\|_{H^{\gamma-1}}\leq C\|\nabla\theta_{1}\|_{H^{\gamma-1}}\|\delta\!u\|_{L^{\infty}}.$ We eventually get (32) $\|\delta\!\theta\|_{L_{t}^{\infty}(H^{\beta-1})}\leq C\|\theta_{1}\|_{L_{t}^{\infty}(H^{\gamma})}\|\delta\!u\|_{L_{t}^{1}(L^{\infty})}.$ In order to bound $\delta\!u,$ one may use Proposition 17 .
+We get for all $t\in[0,T],$ $\|\delta\!u\|_{L^{\infty}_{t}(H^{\alpha})}+\|\partial_{1}\delta\!u\|_{L_{t}^{2}(H^{\alpha})}\leq C\bigl(\|\delta\!\theta\|_{L^{2}_{t}(H^{\beta-1})}+\|\delta\!u\cdot\nabla u_{1}\|_{L^{2}_{t}(H^{\beta-1})}\bigr)$ for some constant $C$ depending only on $\alpha,$ $\beta,$ $\nu$ and $u_{2}.$ Using again the Bony decomposition
+and arguing exactly as for proving ( 32 ),
+we get $\|\delta\!u\cdot\nabla u_{1}\|_{H^{\beta-1}}\leq C\|\delta\!u\|_{L^{\infty}}\|u_{1}\|_{H^{\beta}}.$ Therefore, given that $u_{1}\in L^{\infty}([0,T];H^{\beta}),$ (33) $\|\delta\!u\|_{L^{\infty}_{t}(H^{\alpha})}+\|\partial_{1}\delta\!u\|_{L_{t}^{2}(H^{\alpha})}\leq C\bigl(\|\delta\!\theta\|_{L^{2}_{t}(H^{\beta-1})}+\|\delta\!u\|_{L^{2}_{t}(L^{\infty})}\bigr).$ In order to complete the proof of the proposition,
+it is only a matter of showing that $\|\delta\!u\|_{L^{1}_{t}(L^{\infty})}$ may be bounded in terms of $\|\delta\!u\|_{L^{\infty}_{t}(H^{\alpha})}$ and of $\|\partial_{1}\delta\!u\|_{L_{t}^{2}(H^{\alpha})}.$ This is the only point where the assumption $\alpha>1/2$ (and thus $\gamma>1/2$ )
+is going to play a role.
+First of all, thanks to the trace theorem, one may write (with obvious notation) $H^{\alpha}(\mathbb{R}^{2})\hookrightarrow L^{\infty}(\mathbb{R}_{x_{2}};H^{\alpha-\frac{1}{2}}(\mathbb{R}_{x_{1}})).$ Therefore, one may write (34) $\|\delta\!u\|_{L^{\infty}_{x_{2}}(H^{\alpha-\frac{1}{2}}_{x_{1}})}\leq C\|\delta\!u\|_{H^{\alpha}}\quad\hbox{and}\quad\|\partial_{1}\delta\!u\|_{L^{\infty}_{x_{2}}(H^{\alpha-\frac{1}{2}}_{x_{1}})}\leq C\|\partial_{1}\delta\!u\|_{H^{\alpha}}.$ As for all $\alpha\in]0,1[,$ Gagliardo-Nirenberg inequality implies that $\|\delta\!u(\cdot,x_{2})\|_{L^{\infty}(\mathbb{R})}\leq C\|\delta\!u(\cdot,x_{2})\|_{H^{\alpha-\frac{1}{2}}(\mathbb{R})}^{\alpha}\|\partial_{1}\delta\!u(\cdot,x_{2})\|_{H^{\alpha-\frac{1}{2}}(\mathbb{R})}^{1-\alpha}\quad\hbox{for all }\ x_{2}\in\mathbb{R},$ we have, by combination with ( 34 ), $\|\delta\!u\|_{L^{\infty}(\mathbb{R}^{2})}\leq C\|\delta\!u\|_{H^{\alpha}(\mathbb{R}^{2})}^{\alpha}\|\partial_{1}\delta\!u\|_{H^{\alpha}(\mathbb{R}^{2})}^{1-\alpha}.$ Coming back to ( 32 ) and ( 33 ),
+we deduce that for some constant $C$ depending only on $\nu,$ $T$ and on the norms of $(\theta_{1},u_{1})$ and $(\theta_{2},u_{2}),$ we have $\hfil\displaystyle\|\delta\!\theta\|_{L_{t}^{\infty}(H^{\beta-1})}\leq Ct^{\frac{1}{2}+\frac{\alpha}{2}}\delta\!U(t)$ $\hfil\displaystyle\delta\!U(t)\leq C\Bigl(t^{\frac{1}{2}}\|\delta\!\theta\|_{L_{t}^{\infty}(H^{\beta-1})}+t^{\frac{\alpha}{2}}\delta\!U(t)\Bigr)$ with $\delta\!U(t):=\|\delta\!u\|_{L_{t}^{\infty}(H^{\alpha})}+\|\partial_{1}\delta\!u\|_{L_{t}^{2}(H^{\alpha})}.$ Inserting the first inequality in the second one,
+one may conclude that $\delta\!u\equiv 0$ (and thus $\delta\!\theta\equiv 0$ )
+on a suitably small time interval.
+Finally, let us notice that our assumptions on the solutions ensure
+that $\delta\!\theta\in{\mathcal{C}}([0,T];H^{\beta-1})$ and $\delta\!u\in{\mathcal{C}}([0,T];H^{\alpha}).$ Using a classical connectivity argument, it is now easy to get
+the uniqueness on the whole interval $[0,T].$ 3. The case of an horizontal diffusivity This section is devoted to the study of System ( 2 ).
+In other words, in contrast with the previous section,
+we now assume that the velocity satisfies
+the incompressible Euler equation with buoyancy force
+whereas the temperature experiences diffusion in the horizontal
+variable only . We aim at stating various global existence results
+for arbitrarily large data.
+More precisely, we first prove that any data $\theta_{0}\in L^{2}$ and $u_{0}\in H^{1}$ with $\,\mbox{\rm div}\,u_{0}=0$ generates a global weak solution with finite energy.
+The rest of this section is mainly devoted to the proof
+of Theorem 2 .
+As a first step, in subsection 3.2 , we state $H^{1}$ a priori estimates for the
+la temperature. In the next subsection, we prove
+a uniqueness result for a large class of solutions.
+As this uniqueness result requires in particular that $\nabla\theta\in L^{1}_{loc}(\mathbb{R}_{+};L^{\infty})$ and that $\nabla u\in L^{1}_{loc}([0,T];L),$ our next
+task amounts to finding additional regularity
+conditions on the data which may be propagated globally by the
+system.
+It turns out that it is possible to propagate
+some anisotropic Sobolev regularity over the temperature,
+and thus to complete the proof of Theorem 2 . 3.1. Global weak solutions: the case $\theta_{0}\in L^{2}$ and $u_{0}\in H^{1}$ Let us first derive the formal energy estimates
+for System ( 2 )
+in the case $\theta_{0}\in L^{2}$ and $u_{0}\in H^{1}.$ First, multiply $\eqref{eq:b-temperature}_{1}$ by $\theta$ and integrate over $[0,t]\times\mathbb{R}^{2}.$ We get (35) $\|\theta(t)\|_{L^{2}}^{2}+2\kappa\int_{0}^{t}\|\partial_{1}\theta(s)\|_{L^{2}}^{2}\,ds\leq\|\theta_{0}\|^{2}_{L^{2}}.$ Combining this with the standard energy estimate for $u$ yields (36) $\|u(t)\|_{L^{2}}\leq\|u_{0}\|_{L^{2}}+t\|\theta_{0}\|_{L^{2}}.$ In order to get a $H^{1}$ bound for the velocity, one may
+consider the vorticity equation: $\partial_{t}\omega+u\cdot\nabla\omega=\partial_{1}\theta.$ Multiplying by $\omega$ then integrating with respect to
+the space variable, we find that $\frac{1}{2}\frac{d}{dt}\|\omega\|^{2}_{L^{2}}\leq\|\omega\|_{L^{2}}\|\partial_{1}\theta\|_{L^{2}}$ whence, (37) $\displaystyle\|\omega(t)\|_{L^{2}}$ $\displaystyle\leq$ $\displaystyle\|\omega_{0}\|_{L^{2}}+\int_{0}^{t}\|\partial_{1}\theta\|_{L^{2}}\,ds,$ $\displaystyle\leq$ $\displaystyle\|\omega_{0}\|_{L^{2}}+\sqrt{\frac{t}{2\kappa}}\|\theta_{0}\|_{L^{2}}.$ Now, using a Friedrichs method quite similar
+to that of the proof of Theorem 3 ,
+we easily get the following statement: Theorem 10 . Let $\theta_{0}\in L^{2}$ and $u_{0}\in H^{1}$ with $\,\mbox{\rm div}\,u_{0}=0.$ Then System ( 2 ) with data $(\theta_{0},u_{0})$ has a global solution $(\theta,u)$ such that $\theta\in{\mathcal{C}}_{w}(\mathbb{R}_{+};L^{2}),\quad\partial_{1}\theta\in L^{2}(\mathbb{R}_{+};L^{2})\quad\!\hbox{and}\!\quad u\in{\mathcal{C}}(\mathbb{R}_{+};H^{1}).$ 3.2. $H^{1}$ a priori estimates for the temperature In the present paragraph, we show that one may get (at least formally)
+a global control over both the $H^{1}$ norm of $\theta$ and of $u.$ To start with, let us point out that Inequalities ( 35 ),
+( 36 ) and ( 37 ) provide us with a bound
+for $\theta$ in $L^{\infty}(\mathbb{R}_{+};L^{2}),$ for $\partial_{1}\theta$ in $L^{2}(\mathbb{R}_{+};L^{2})$ and for $u$ in $L^{\infty}_{loc}(\mathbb{R}_{+};H^{1}).$ We claim that if we assume in addition that $\nabla\theta_{0}\in L^{2}$ then one may bound $\nabla\theta$ in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{2}).$ Indeed, applying operator $\partial_{i}$ ( $i=1,2$ ) to the equation
+satisfied
+by $\theta$ yields $\partial_{t}\partial_{i}\theta+u\cdot\nabla\partial_{i}\theta+\partial_{i}u\cdot\nabla\theta-\kappa\partial_{1}^{2}\partial_{i}\theta=0.$ Let us multiply this equality by $\partial_{i}\theta,$ integrate over $\mathbb{R}^{2}$ then add up the equalities
+for $i=1,2.$ Integrating by parts where needed and using the fact that $\,\mbox{\rm div}\,u=0,$ we easily find that (38) $\displaystyle\frac{1}{2}\displaystyle\frac{d}{dt}\|\nabla\theta\|^{2}_{L^{2}}+\kappa\|\partial_{1}\nabla\theta\|^{2}_{L^{2}}+\sum_{1\leq i,j\leq 2}\displaystyle\int\partial_{i}\theta\,\partial_{j}u^{i}\,\partial_{j}\theta\,dx=0.$ For $(i,j)\not=(2,2),$ the terms in the above summation
+are easy to handle.
+Indeed, taking advantage of the anisotropic Hölder inequality,
+one can write $\biggl|\displaystyle\int\partial_{i}\theta\,\partial_{j}u^{i}\,\partial_{j}\theta\,dx\biggr|\leq\|\nabla u\|_{L^{2}}\|\partial_{1}\theta\|_{L^{2}_{x_{1}}(L^{\infty}_{x_{2}})}\|\nabla\theta\|_{L^{\infty}_{x_{1}}(L^{2}_{x_{2}})}.$ Let us admit the following two inequalities (the proof
+of which is postponed in the appendix): (39) $\|f\|_{L^{2}_{x_{1}}(L^{\infty}_{x_{2}})}\leq C\|f\|_{L^{2}}^{\frac{1}{2}}\|\partial_{2}f\|_{L^{2}}^{\frac{1}{2}}\quad\hbox{and}\quad\|f\|_{L^{\infty}_{x_{1}}(L^{2}_{x_{2}})}\leq C\|f\|^{\frac{1}{2}}_{L^{2}}\|\partial_{1}f\|^{\frac{1}{2}}_{L^{2}}.$ Applying these inequalities to $\partial_{1}\theta$ and to $\nabla\theta,$ and using the fact that $\|\nabla u\|_{L^{2}}=\|\omega\|_{L^{2}},$ we deduce that $\biggl|\displaystyle\int\partial_{i}\theta\,\partial_{j}u^{i}\,\partial_{j}\theta\,dx\biggr|\leq C\|\omega\|_{L^{2}}\|\nabla\theta\|_{L^{2}}\|\partial_{1}\nabla\theta\|_{L^{2}}\quad\hbox{if}\quad(i,j)\not=(2,2).$ In order to bound the term corresponding to $(i,j)=(2,2),$ one may
+use the fact that $\partial_{2}u^{2}=-\partial_{1}u^{1}$ and integrate by parts. We get $\int\partial_{2}u^{2}(\partial_{2}\theta)^{2}\,dx=-\int\partial_{1}u^{1}(\partial_{2}\theta)^{2}\,dx=2\int u^{1}\partial_{2}\theta\,\partial_{1}\partial_{2}\theta\,dx.$ Therefore, thanks to the anisotropic Hölder inequalities and
+to ( 39 ), $\begin{array}[]{lll}\biggl|\displaystyle\int\partial_{2}u^{2}(\partial_{2}\theta)^{2}\,dx\biggr|&\leq&2\|\partial_{1}\partial_{2}\theta\|_{L^{2}}\|u^{1}\|_{L^{2}_{x_{1}}(L^{\infty}_{x_{2}})}\|\partial_{2}\theta\|_{L^{\infty}_{x_{1}}(L^{2}_{x_{2}})},\\[4.30554pt]
+&\leq&C\|\partial_{1}\partial_{2}\theta\|_{L^{2}}\|u\|_{L^{2}}^{\frac{1}{2}}\|\omega\|_{L^{2}}^{\frac{1}{2}}\|\partial_{2}\theta\|_{L^{2}}^{\frac{1}{2}}\|\partial_{1}\partial_{2}\theta\|_{L^{2}}^{\frac{1}{2}},\\[4.30554pt]
+&\leq&C\|u\|_{L^{2}}^{\frac{1}{2}}\|\omega\|_{L^{2}}^{\frac{1}{2}}\|\partial_{2}\theta\|_{L^{2}}^{\frac{1}{2}}\|\partial_{1}\partial_{2}\theta\|_{L^{2}}^{\frac{3}{2}}.\end{array}$ So finally, Young inequality leads to $\biggl|\sum_{1\leq i,j\leq 2}\displaystyle\int\partial_{i}\theta\,\partial_{j}u^{i}\,\partial_{j}\theta\,dx\biggr|\leq\frac{\kappa}{2}\|\partial_{1}\nabla\theta\|_{L^{2}}^{2}+\frac{C}{\kappa}\|\omega\|_{L^{2}}^{2}\biggl(1+\frac{\|u\|_{L^{2}}^{2}}{\kappa^{2}}\biggr)\|\nabla\theta\|_{L^{2}}^{2}.$ Plugging this inequality in ( 38 )
+and using Gronwall lemma, we end up with $\|\nabla\theta(t)\|_{L^{2}}^{2}+\kappa\int_{0}^{t}\|\partial_{1}\nabla\theta(s)\|^{2}_{L^{2}}\,ds\leq\|\nabla\theta_{0}\|_{L^{2}}^{2}\exp\biggl\{\frac{C}{\kappa}\int_{0}^{t}\|\omega\|_{L^{2}}^{2}\biggl(1+\frac{\|u\|_{L^{2}}^{2}}{\kappa^{2}}\biggr)\,d\tau\biggr\}.$ Putting together ( 35 ), ( 36 ) and ( 37 ),
+we conclude that (40) $\|\theta(t)\|_{H^{1}}^{2}+\kappa\int_{0}^{t}\|\partial_{1}\theta(s)\|^{2}_{H^{1}}\,ds\leq C(t,\kappa,\theta_{0},u_{0})$ with $\,\displaystyle{C(t,\kappa,\theta_{0},u_{0}):=\|\theta_{0}\|_{H^{1}}^{2}\exp\bigg\{\frac{Ct}{\kappa}\biggl(\|\omega_{0}\|_{L^{2}}^{2}+\frac{t}{\kappa}\|\theta_{0}\|_{L^{2}}^{2}\biggr)\biggl(1+\frac{\|u_{0}\|_{L^{2}}^{2}+t^{2}\|\theta_{0}\|_{L^{2}}^{2}}{\kappa^{2}}\biggr)\bigg\}\cdotp}$ 3.3. A uniqueness result In this section, we establish a uniqueness result
+for System ( 2 ) under “minimal”
+assumptions. In order to motivate those assumptions, let us remind
+that in the isotropic case (that is with a full Laplacian
+in the temperature equation) which has been
+investigated in [ 15 ] , uniqueness
+is true in the class of $C^{0,1}(\mathbb{R}_{+};L^{2})$ solutions which satisfy in
+addition (41) $\nabla\theta\in L^{1}_{loc}(\mathbb{R}_{+};L^{\infty})\quad\hbox{and}\quad\nabla u\in L^{1}_{loc}(\mathbb{R}_{+};L).$ As in the case that we now consider the smoothing effect over the temperature
+is obviously weaker ,
+we expect the conditions leading to uniqueness to be stronger than ( 41 ).
+We shall prove the following result: Proposition 11 . Let $(\theta_{1},u_{1})$ and $(\theta_{2},u_{2})$ be two solutions of ( 2 ) with the same data. Assume
+that both solutions belong to $L^{\infty}([0,T];H^{1})\cap C^{0,1}([0,T];L^{2})$ and that, in addition, $\partial_{1}\theta_{2}\in L^{2}([0,T];H^{1})$ and $\nabla u_{2}\in L^{1}([0,T];L).$ Then $(\theta_{1},u_{1})\equiv(\theta_{2},u_{2})$ on $[0,T]\times\mathbb{R}^{2}.$ Proof: With the usual notation, $(\delta\!\theta,\delta\!u)$ satisfies: $\begin{cases}\partial_{t}\delta\!\theta+u_{1}\cdot\nabla\delta\!\theta+\,\mbox{\rm div}\,(\delta\!u\theta_{2})-\kappa\partial_{1}^{2}\delta\!\theta=0\\
+\partial_{t}\delta\!u+u_{1}\cdot\nabla\delta\!u+\delta\!u\cdot\nabla u_{2}=-\nabla\delta\!\Pi+\delta\!\theta\,e_{2}.\end{cases}$ From a standard energy method, we get (42) $\displaystyle\displaystyle\frac{1}{2}\frac{d}{dt}\|\delta\!\theta\|_{L^{2}}^{2}+\kappa\|\partial_{1}\delta\!\theta\|^{2}_{L^{2}}\leq\bigg|\int\,\mbox{\rm div}\,(\theta_{2}\delta\!u)\delta\!\theta\,dx\bigg|,$ (43) $\displaystyle\displaystyle\frac{1}{2}\frac{d}{dt}\|\delta\!u\|_{L^{2}}^{2}\leq\bigg|\int\delta\!u\cdot\nabla u_{2}\>\delta\!\theta\,dx\bigg|+\bigg|\int\delta\!\theta\delta\!u^{2}\,dx\bigg|.$ In order to bound the right-hand side of ( 42 ), one may write (44) $\int\,\mbox{\rm div}\,(\theta_{2}\delta\!u)\delta\!\theta=-\int\theta_{2}\delta\!u^{1}\partial_{1}\delta\theta\,dx-\int\theta_{2}\delta\!u^{2}\partial_{2}\delta\!\theta\,dx.$ The first term is easy to deal with:
+using Cauchy-Schwarz inequality, we get (45) $\biggl|\displaystyle\int\theta_{2}\delta\!u_{1}\partial_{1}\delta\!\theta\,dx\biggr|\leq\|\delta\!u\|_{L^{2}}\|\theta_{2}\|_{L^{\infty}}\|\partial_{1}\delta\!\theta\|_{L^{2}}.$ Next, applying the following inequality (see the proof in the appendix) (46) $\|\theta_{2}\|_{L^{\infty}}\leq C\|\theta_{2}\|_{L^{2}}^{1/4}\|\partial_{1}\theta_{2}\|_{L^{2}}^{1/4}\|\partial_{2}\theta_{2}\|_{L^{2}}^{1/4}\|\partial_{1}\partial_{2}\theta_{2}\|_{L^{2}}^{1/4},$ and using Young inequality, we find that (47) $\left|\displaystyle\int\theta_{2}\delta\!u_{1}\partial_{1}\delta\!\theta\,dx\right|\leq\frac{C}{\kappa}\|\theta_{2}\|_{H^{1}}^{3/2}\|\partial_{1}\partial_{2}\theta_{2}\|_{L^{2}}^{1/2}\|\delta\!u\|_{L^{2}}^{2}+\frac{\kappa}{6}\|\partial_{1}\delta\!\theta\|_{L^{2}}^{2}.$ The second term of ( 44 ) is more intricate.
+If we integrate by parts and use the fact that $\,\mbox{\rm div}\,\delta\!u=0,$ we get $\begin{array}[]{lll}-\displaystyle\int\theta_{2}\delta u^{2}\partial_{2}\delta\!\theta\,dx&=&\displaystyle\int\partial_{2}\theta_{2}\delta\!u^{2}\>\delta\!\theta\,dx+\int\theta_{2}\partial_{2}\delta\!u^{2}\delta\!\theta\,dx,\\
+&=&\displaystyle\int\partial_{2}\theta_{2}\delta\!u^{2}\>\delta\!\theta\,dx-\int\theta_{2}\partial_{1}\delta\!u^{1}\delta\!\theta\,dx,\\
+&=&A_{1}+A_{2}+A_{3}\end{array}$ with $A_{1}:=\displaystyle\int\partial_{2}\theta_{2}\>\delta\!u^{2}\>\delta\!\theta\,dx,\quad A_{2}:=\int\theta_{2}\delta\!u^{1}\partial_{1}\delta\!\theta\,dx\ \hbox{ and }\ A_{3}:=\int\partial_{1}\theta_{2}\delta\!u^{1}\delta\!\theta\,dx.$ The term $A_{2}$ may be bounded according to
+( 47 ). In order to bound $A_{3},$ we use the anisotropic Hölder
+inequality and ( 39 ). This leads to $\begin{array}[]{lll}|A_{3}|&\leq&\|\delta\!\theta\|_{L^{\infty}_{x_{1}}(L^{2}_{x_{2}})}\|\partial_{1}\theta_{2}\|_{L^{2}_{x_{1}}(L^{\infty}_{x_{2}})}\|\delta\!u\|_{L^{2}},\\[8.61108pt]
+&\leq&C\|\delta\!\theta\|_{L^{2}}^{1/2}\|\partial_{1}\delta\!\theta\|_{L^{2}}^{1/2}\|\partial_{1}\theta_{2}\|_{L^{2}}^{1/2}\|\partial_{1}\partial_{2}\theta_{2}\|_{L^{2}}^{1/2}\|\delta\!u\|_{L^{2}},\end{array}$ whence, resorting again to Young inequality, (48) $|A_{3}|\leq\frac{C}{\kappa}\|\delta\theta\|_{L^{2}}^{2}\|\partial_{1}\theta_{2}\|_{L^{2}}^{2}\|\partial_{1}\partial_{2}\theta_{2}\|_{L^{2}}^{2}+\|\delta\!u\|_{L^{2}}^{2}+\frac{\kappa}{6}\|\partial_{1}\delta\!\theta\|_{L^{2}}^{2}.$ The term $A_{1}$ is the most difficult to deal with.
+To get an appropriate bound, let us first notice that, as $\,\mbox{\rm div}\,\delta\!u=0,$ we may write $\delta\!u^{2}=(1-\partial_{2}^{2})^{-1}(\delta\!u^{2})+(1-\partial_{2}^{2})^{-1}\partial_{2}\partial_{1}\delta\!u^{1}.$ Therefore, integrating by parts, we get $A_{1}=A_{1}^{1}+A_{1}^{2}+A_{1}^{3}$ with $\begin{array}[]{lll}A_{1}^{1}&:=&\displaystyle\int(1-\partial_{2}^{2})^{-1}(\delta\!u^{2})\>\partial_{2}\theta_{2}\>\delta\!\theta\,dx,\\
+A_{1}^{2}&:=&-\displaystyle\int\partial_{2}(1-\partial_{2}^{2})^{-1}(\delta\!u^{1})\>\partial_{1}\partial_{2}\theta_{2}\>\delta\!\theta\,dx,\\
+A_{1}^{3}&:=&-\displaystyle\int\partial_{2}(1-\partial_{2}^{2})^{-1}(\delta\!u^{1})\>\partial_{2}\theta_{2}\>\partial_{1}\delta\!\theta\,dx.\end{array}$ First of all, we have $|A_{1}^{3}|\leq\|\partial_{2}(1-\partial_{2}^{2})^{-1}\delta\!u\|_{L^{2}_{x_{1}}(L^{\infty}_{x_{2}})}\|\partial_{2}\theta_{2}\|_{L^{\infty}_{x_{1}}(L^{2}_{x_{2}})}\|\partial_{1}\delta\!\theta\|_{L^{2}}.$ Taking advantage of ( 39 ), we get $\hfil\displaystyle\|\partial_{2}(1-\partial_{2}^{2})^{-1}\delta\!u^{1}\|_{L^{2}_{x_{1}}(L^{\infty}_{x_{2}})}\leq C\|\partial_{2}(1-\partial_{2}^{2})^{-1}(\delta\!u^{1})\|_{L^{2}}^{\frac{1}{2}}\|\partial_{2}^{2}(1-\partial_{2}^{2})^{-1}\delta\!u^{1}\|_{L^{2}}^{\frac{1}{2}}\leq C\|\delta\!u\|_{L^{2}}$ $\hfil\displaystyle\|\partial_{2}\theta_{2}\|_{L^{\infty}_{x_{1}}(L^{2}_{x_{2}})}\leq C\|\partial_{2}\theta\|_{L^{2}}^{\frac{1}{2}}\|\partial_{1}\partial_{2}\theta\|_{L^{2}}^{\frac{1}{2}}.$ In consequence, thanks to Young inequality, we have $|A_{1}^{3}|\leq\frac{C}{\kappa}\|\partial_{2}\theta\|_{L^{2}}\|\partial_{1}\partial_{2}\theta\|_{L^{2}}\|\delta\!u\|_{L^{2}}^{2}+\frac{\kappa}{6}\|\partial_{1}\delta\theta\|_{L^{2}}^{2}.$ To deal with $A_{1}^{2},$ one may write that, by virtue of
+( 39 ) and of Young inequality $\begin{array}[]{lll}|A_{1}^{2}|&\leq&\|\partial_{2}(1-\partial_{2}^{2})^{-1}\delta\!u^{1}\|_{L^{2}_{x_{1}}(L^{\infty}_{x_{2}})}\|\partial_{1}\partial_{2}\theta_{2}\|_{L^{2}}\|\delta\!\theta\|_{L^{\infty}_{x_{1}}(L^{2}_{x_{2}})},\\[8.61108pt]
+&\leq&C\|\delta\!u\|_{L^{2}}\|\partial_{1}\partial_{2}\theta_{2}\|_{L^{2}}\|\delta\!\theta\|_{L^{2}}^{\frac{1}{2}}\|\partial_{1}\delta\!\theta\|_{L^{2}}^{\frac{1}{2}},\\[8.61108pt]
+&\leq&\frac{C}{\kappa}\|\delta\!u\|_{L^{2}}^{2}\|\partial_{1}\partial_{2}\theta_{2}\|_{L^{2}}^{2}+\frac{3\kappa}{2}\|\delta\!\theta\|_{L^{2}}^{2}+\frac{\kappa}{6}\|\partial_{1}\delta\!\theta\|^{2}_{L^{2}}.\end{array}$ Finally, for $A_{1}^{1}$ we have $\begin{array}[]{lll}|A_{1}^{1}|&\leq&\|(1-\partial_{2}^{2})^{-1}(\delta\!u_{2})\|_{L^{2}_{x_{1}}(L^{\infty}_{x_{2}})}\|\partial_{2}\theta_{2}\|_{L^{2}}\|\delta\!\theta\|_{L^{\infty}_{x_{1}}(L^{2}_{x_{2}})},\\[4.30554pt]
+&\leq&C\|\delta\!u\|_{L^{2}}\|\partial_{2}\theta_{2}\|_{L^{2}}\|\delta\!\theta\|_{L^{2}}^{\frac{1}{2}}\|\partial_{1}\delta\!\theta\|_{L^{2}}^{\frac{1}{2}},\\[4.30554pt]
+&\leq&\frac{C}{\kappa}\|\delta\!u\|_{L^{2}}^{2}\|\partial_{1}\theta_{2}\|_{L^{2}}^{2}+\frac{3\kappa}{2}\|\delta\!\theta\|_{L^{2}}^{2}+\frac{\kappa}{6}\|\partial_{1}\delta\!\theta\|_{L^{2}}^{2}.\end{array}$ Putting together all the previous inequalities, we conclude that (49) $|A_{1}|\leq\frac{\kappa}{2}\|\partial_{1}\delta\!\theta\|_{L^{2}}^{2}+3\kappa\|\delta\!\theta\|_{L^{2}}^{2}+\frac{C}{\kappa}\|\partial_{1}\theta_{2}\|_{H^{1}}^{2}\|\delta\!u\|_{L^{2}}^{2}.$ Now, inserting Inequalities ( 47 ),
+( 48 ) and ( 49 ) in ( 44 ),
+we deduce that there exists an integrable function $f_{2}$ over $[0,T]$ depending only on $(\theta_{2},u_{2})$ and on $\kappa$ such that (50) $\frac{1}{2}\frac{d}{dt}\|\delta\!\theta\|_{L^{2}}^{2}\leq f_{2}(t)\,\|(\delta\!\theta,\delta\!u)\|_{L^{2}}^{2}.$ Adapting the well-known Yudovich’s argument (see [ 17 ] and [ 24 ] ), it is now easy to complete the proof of uniqueness.
+Indeed, from Inequality
+( 43 ), we get for all $p\in[2,\infty[,$ (51) $\frac{1}{2}\frac{d}{dt}\|\delta\!u\|_{L^{2}}^{2}\leq\|\nabla u_{2}\|_{L^{p}}\|\delta\!u\|_{L^{\infty}}^{\frac{2}{p}}\|\delta\!u\|_{L^{2}}^{2-\frac{2}{p}}+\|\delta\!\theta\|_{L^{2}}\|\delta\!u\|_{L^{2}}.$ Setting $X_{\varepsilon}(t):=\sqrt{\|(\delta\!\theta,\delta\!u)(t)\|_{L^{2}}^{2}+\varepsilon^{2}}$ for $\varepsilon>0,$ and using ( 50 ) and ( 51 ), we obtain $\frac{d}{dt}X_{\varepsilon}\leq p\|\nabla u_{2}\|_{L}\|\delta\!u\|_{L^{\infty}}^{\frac{2}{p}}X_{\varepsilon}^{1-\frac{2}{p}}+(\frac{1}{2}+f_{2})X_{\varepsilon}.$ Now, if we set $Y_{\varepsilon}=X_{\varepsilon}\exp\bigl(-\int_{0}^{t}(\frac{1}{2}+f_{2}(\tau))\,d\tau)\bigr),$ we have $\frac{2}{p}Y_{\varepsilon}^{\frac{2}{p}-1}\frac{d}{dt}Y_{\varepsilon}\leq 2\|\nabla u_{2}\|_{L}\|\delta\!u\|_{L^{\infty}}^{\frac{2}{p}},$ whence $Y_{\varepsilon}(t)\leq\biggl(\varepsilon^{\frac{2}{p}}+2\int_{0}^{t}\|\nabla u_{2}\|_{L}\|\delta\!u\|_{L^{\infty}}^{\frac{2}{p}}\,d\tau\biggr)^{\frac{p}{2}}.$ Having $\varepsilon$ tend to $0,$ we discover that for all $t\in\mathbb{R}_{+},$ $\|(\delta\!\theta,\delta\!u)(t)\|_{L^{2}}^{2}\leq\|\delta\!u\|_{L_{t}^{\infty}(L^{\infty})}^{2}\biggl(2\int_{0}^{t}\|\nabla u_{2}\|_{L}\,d\tau\biggr)^{p}.$ By Sobolev embedding and thanks to ( 23 ) with $p=4,$ we have (52) $\|\delta\!u\|_{L^{\infty}}\leq C\bigl(\|\delta\!u\|_{L^{2}}+\|\delta\!\omega\|_{L^{4}}\bigr).$ As the assumptions made in the proposition ensure that $\omega_{i}\in L^{\infty}([0,T];W^{1,4})$ and that $u_{i}\in L^{\infty}([0,T];L^{2}),$ we deduce that $\delta\!u\in L^{\infty}([0,T]\times\mathbb{R}^{2}).$ Therefore, there exists some $T_{0}>0$ such that the right-hand side of the above inequality
+tend to $0$ when $p$ goes to infinity. This yields uniqueness
+on $[0,T_{0}].$ From a standard connectivity argument, it is now easy
+to conclude to uniqueness on the whole interval $[0,T].$ 3.4. Anisotropic a priori estimates If in addition to the $H^{1}$ hypothesis on $(\theta_{0},u_{0})$ ,
+we assume that $\omega_{0}\in L^{p}$ for some $p$ in $[2,\infty[,$ then the vorticity equation (53) $\partial_{t}\omega+u\cdot\nabla\omega=\partial_{1}\theta$ implies that (54) $\|\omega(t)\|_{L^{p}}\leq\|\omega_{0}\|_{L^{p}}+\int_{0}^{t}\|\partial_{1}\theta\|_{L^{p}}.$ Now, remind that as $\theta_{0}\in H^{1},$ a bound
+for $\partial_{1}\theta$ in $L^{2}_{loc}(\mathbb{R}_{+};H^{1})$ is available,
+whence also in $L^{2}_{loc}(\mathbb{R}_{+};L^{p})$ by Sobolev embedding.
+In fact, we even have a more accurate information
+if $\omega_{0}\in\sqrt{L}.$ Indeed, Lemma 13 ensures that $H^{1}$ is continuously embedded in $\sqrt{L}$ so that, according to ( 54 ), (55) $\|\omega(t)\|_{\sqrt{L}}\leq\|\omega_{0}\|_{\sqrt{L}}+C\sqrt{t}\,\|\partial_{1}\theta\|_{L^{2}_{t}(H^{1})}.$ However, this bound does not imply that $\nabla u\in L^{1}_{loc}(\mathbb{R}_{+};L)$ so that one cannot get uniqueness by a direct application of Proposition 11 .
+In fact, thanks to ( 23 ), it is obvious that $\nabla u\in L^{1}_{loc}(\mathbb{R}_{+};L)$ provided $\omega\in L^{1}_{loc}(\mathbb{R}_{+};L^{2}\cap L^{\infty}).$ According to ( 54 ), having $\partial_{1}\theta$ in $L^{1}(\mathbb{R}_{+};L^{\infty})$ will entail that
+the vorticity is bounded. In order to get this, we shall first show that one may propagate some
+additional horizontal Sobolev regularity for $\theta.$ By virtue of Lemma 14 (see the appendix), this will enable
+us to estimate $\partial_{1}\theta$ in $L^{1}(\mathbb{R}_{+};L^{\infty})$ (and even in $L^{2}_{loc}(\mathbb{R}_{+};L^{\infty})$ actually). More precisely, we assume from now on that $(\theta_{0},u_{0})\in H^{1}(\mathbb{R}^{2})$ and $\omega_{0}\in\sqrt{L},$ and that, in addition, $|\partial_{1}|^{1+s}\theta_{0}\in L^{2}$ for some $s\in(0,\frac{1}{2}].$ In order to propagate the additional regularity, one
+may apply operator $|\partial_{1}|^{1+s}$ to the equation $\partial_{t}\theta+u\cdot\nabla\theta-\kappa\partial_{1}^{2}\theta=0,$ and take
+the $L^{2}(\mathbb{R}^{2})$ inner product with $|\partial_{1}|^{1+s}\theta$ . After integrating by
+parts, we find that (56) $\frac{1}{2}\frac{d}{dt}\||\partial_{1}|^{1+s}\theta\|_{L^{2}}^{2}+\kappa||\partial_{1}|^{2+s}\theta\|_{L^{2}}^{2}\leq\big|(|\partial_{1}|^{1+s}\big(u\cdot\nabla\theta),|\partial_{1}|^{1+s}\theta\big)_{L^{2}}\big|.$ Bounding the right-hand side is the main difficulty.
+First of all, let us notice that $i|\partial_{1}|=\partial_{1}R_{1}$ where $R_{1}$ stands for the Riesz operator with respect to the first variable.
+As $|\partial_{1}|^{s}$ is a symmetric operator, one may write $\big|(|\partial_{1}|^{1+s}\big(u\cdot\nabla\theta),|\partial_{1}|^{1+s}\theta\big)_{L^{2}}\big|=\big|(\partial_{1}\big(u\cdot\nabla\theta),R_{1}|\partial_{1}|^{1+2s}\theta\big)_{L^{2}}\big|\leq I_{1}+I_{2}$ with $I_{1}:=\big|\big(\partial_{1}u\cdot\nabla\theta,R_{1}|\partial_{1}|^{1+2s}\theta\big)_{L^{2}}\big|\quad\hbox{and}\quad I_{2}:=\big|\bigl(u\cdot\nabla\partial_{1}\theta,R_{1}|\partial_{1}|^{1+2s}\theta\bigr)_{L^{2}}\bigr|.$ The term $I_{2}$ is easy to deal with.
+Indeed, for $s\in(0,1/2]$ , we have, according to Hölder and
+Parseval inequalities, $\begin{array}[]{lll}I_{2}&\leq&\|u\|_{L^{\infty}}\|\nabla\partial_{1}\theta\|_{L^{2}}\||\partial_{1}|^{1+2s}\theta\|_{L^{2}},\\[4.30554pt]
+&\leq&\|u\|_{L^{\infty}}\|\partial_{1}\theta\|_{H^{1}}^{2}.\end{array}$ Thanks to ( 52 ) and by virtue of
+Inequalities ( 36 ),
+( 40 ) and ( 55 ), we thus have (57) $\int_{0}^{t}I_{2}(\tau)\,d\tau\leq C(t,\kappa,\theta_{0},u_{0})$ where, from now on, $C(t,\kappa,\theta_{0},u_{0})$ denotes
+a positive continuous function depending only on $t,$ $\kappa$ and on the norm of $(\theta_{0},u_{0})$ in $H^{1}\times\bigl(H^{1}\cap W^{1,4}\bigr).$ In order to bound the term $I_{1}$ one may write $I_{1}\leq I_{1}^{1}+I_{1}^{2}$ with $\begin{array}[]{lll}I_{1}^{1}&:=&\big|\big(\partial_{1}u^{1}\partial_{1}\theta,R_{1}|\partial_{1}|^{1+2s}\theta\big)_{L^{2}}\big|,\\[4.30554pt]
+I_{1}^{2}&:=&\big|\big(\partial_{1}u^{2}\partial_{2}\theta,R_{1}|\partial_{1}|^{1+2s}\theta\big)_{L^{2}}\big|.\end{array}$ For $I_{1}^{1},$ as $\partial_{1}u_{1}=-\partial_{2}u_{2},$ integrating by parts yields $\begin{array}[]{lll}I_{1}^{1}&\leq&\bigl|\bigl(u^{2}\partial_{2}\partial_{1}\theta,R_{1}|\partial_{1}|^{1+2s}\theta\bigr)_{L^{2}}\bigr|+\bigl|\bigl(u^{2}\partial_{1}\theta,R_{1}|\partial_{1}|^{1+2s}\partial_{2}\theta\bigr)_{L^{2}}\bigr|,\\[4.30554pt]
+&\leq&\widetilde{I}_{1}^{1}+\widehat{I}_{1}^{1}\end{array}$ with $\widetilde{I}_{1}^{1}:=\bigl|\bigl(u^{2}\partial_{2}\partial_{1}\theta,R_{1}|\partial_{1}|^{1+2s}\theta\bigr)_{L^{2}}\bigr|\ \hbox{ and }\ \widehat{I}_{1}^{1}:=\bigl|\bigl(|\partial_{1}|^{2s}(u^{2}\partial_{1}\theta),R_{1}|\partial_{1}|\partial_{2}\theta\bigr)\bigr|.$ In order to bound the term $\widetilde{I}_{1}^{1},$ one may combine
+Hölder Inequality and ( 52 ). As $0<s\leq 1/2,$ we get $\begin{array}[]{lll}\widetilde{I}_{1}^{1}&\leq&\|u\|_{L^{\infty}}\|\partial_{1}\theta\|_{H^{1}}\||\partial_{1}|^{1+2s}\theta\|_{L^{2}},\\[4.30554pt]
+&\leq&C\bigl(\|u\|_{L^{2}}+\|\omega\|_{L^{4}}\bigr)\|\partial_{1}\theta\|_{H^{1}}^{2}.\end{array}$ In consequence, by virtue of ( 36 ),
+( 40 ) and ( 55 ), we have (58) $\int_{0}^{t}\widetilde{I}_{1}^{1}(\tau)d\tau\leq C(t,\kappa,\theta_{0},u_{0}).$ As for $\widehat{I}_{1}^{1},$ we use the fact that (59) $\widehat{I}_{1}^{1}\leq\||\partial_{1}|^{2s}(u^{2}\partial_{1}\theta)\|_{L^{2}}\|\partial_{1}\partial_{2}\theta\|_{L^{2}}.$ Because $s\in(0,1/2],$ we have $\||\partial_{1}|^{2s}(u^{2}\partial_{1}\theta)\|_{L^{2}}\leq\|u^{2}\partial_{1}\theta\|_{H^{1}},$ whence $\begin{array}[]{lll}\||\partial_{1}|^{2s}(u^{2}\partial_{1}\theta)\|_{L^{2}}&\leq&\|u^{2}\partial_{1}\theta\|_{L^{2}}+\|\partial_{1}\theta\nabla u^{2}\|_{L^{2}}+\|u^{2}\,\partial_{1}\nabla\theta\|_{L^{2}},\\[4.30554pt]
+&\leq&\|u\|_{L^{\infty}}\|\partial_{1}\theta\|_{L^{2}}+\|\nabla u^{2}\|_{L^{4}}\|\partial_{1}\theta\|_{L^{4}}+\|u\|_{L^{\infty}}\|\nabla\partial_{1}\theta\|_{L^{2}}.\end{array}$ Thanks to the Sobolev embedding $H^{1}\hookrightarrow L^{4}$ and to ( 23 ),
+( 52 )
+we get $\||\partial_{1}|^{2s}(u^{2}\partial_{1}\theta)\|_{L^{2}}\leq C\bigl(\|u\|_{L^{\infty}}+\|\omega\|_{L^{4}}\bigr)\|\partial_{1}\theta\|_{H^{1}}.$ Coming back to ( 59 ) and using ( 52 ),
+one can now conclude that (60) $\int_{0}^{t}\widehat{I}_{1}^{1}(\tau)d\tau\leq C(t,\kappa,\theta_{0},u_{0}).$ The term $I_{1}^{2}$ is more intricate to deal with. To start with,
+we integrate by parts to rewrite this term as follows: $I_{1}^{2}\leq\biggl|\int u_{2}\>\partial_{1}\partial_{2}\theta\>R_{1}|\partial_{1}|^{1+2s}\theta\,dx\biggr|+\biggl|\int|\partial_{1}|^{s}(u_{2}\partial_{2}\theta)|\partial_{1}|^{2+s}\theta\,dx\biggr|,$ from which we get the following bound: $I_{1}^{2}\leq\|u_{2}\|_{L^{\infty}}\|\partial_{1}\partial_{2}\theta\|_{L^{2}}\||\partial_{1}|^{1+2s}\theta\|_{L^{2}}+\||\partial_{1}|^{s}(u_{2}\partial_{2}\theta)\|_{L^{2}}\||\partial_{1}|^{2+s}\theta\|_{L^{2}}.$ As $s\in(0,1/2],$ Young inequality enables us to write (61) $I_{1}^{2}\leq\|u\|_{L^{\infty}}\|\partial_{1}\theta\|_{H^{1}}^{2}+\frac{\kappa}{2}\||\partial_{1}|^{2+s}\theta\|_{L^{2}}^{2}+\frac{1}{2\kappa}\||\partial_{1}|^{s}(u_{2}\partial_{2}\theta)\|_{L^{2}}^{2}.$ Let us admit (see the proof in appendix) that there exists a constant $C$ such that
+for all $s\in(0,1/2]$ we have (62) $\||\partial_{1}|^{s}(u_{2}\partial_{2}\theta)\|_{L^{2}}\leq C\|u\|_{H^{1}}\bigl(\|\partial_{2}\theta\|_{L^{2}}+\|\partial_{1}\partial_{2}\theta\|_{L^{2}}\bigr).$ Using ( 52 ) and plugging
+( 36 ),
+( 40 ) and ( 55 ) in ( 61 ), we get (63) $\int_{0}^{t}I_{1}^{2}(\tau)\,d\tau\leq C(t,\kappa,\theta_{0},u_{0})+\frac{\kappa}{2}\int_{0}^{t}\||\partial_{1}|^{2+s}\theta(\tau)\|_{L^{2}}^{2}\,d\tau.$ It is now suitable to integrate ( 56 ) with respect to time
+and to plug ( 57 ), ( 58 ), ( 60 ) in
+( 63 ). We eventually get for all $s\in(0,1/2],$ (64) $\||\partial_{1}|^{1+s}|\theta(t)\|_{L^{2}}^{2}+\kappa\int_{0}^{t}\||\partial_{1}|^{2+s}\theta\|\,d\tau\leq\||\partial_{1}|^{1+s}|\theta_{0}\|_{L^{2}}^{2}+C(t,\kappa,\theta_{0},u_{0}).$ Resorting to Lemma ( 14 ) with $s_{1}=1+s$ and $s_{2}=1,$ we find that $\int_{0}^{t}\|\partial_{1}\theta\|_{L^{\infty}}^{2}\,d\tau\leq C\int_{0}^{t}\Bigl(\|\partial_{1}\theta\|_{L^{2}}^{2}+\||\partial_{1}|^{2+s}\theta\|_{L^{2}}^{2}+\|\partial_{1}\partial_{2}\theta\|_{L^{2}}^{2}\Bigr)\,d\tau.$ Therefore, by virtue of Inequalities
+( 40 ) and ( 64 ),
+we get a bound for $\partial_{1}\theta$ in $L^{2}([0,t];L^{\infty})$ in terms of $t$ and of the norms of the initial
+data. As explained before,
+this supplies the desired bound for the vorticity
+in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{\infty}).$ 3.5. A global existence result This paragraph is devoted to proving the following result (which
+obviously implies Theorem ( 2 )): Theorem 12 . Let $(\theta_{0},u_{0})\in H^{1}$ with $\,\mbox{\rm div}\,u_{0}.$ System ( 2 ) has a global solution $(\theta,u)$ such that $(\theta,u)\in{\mathcal{C}}_{w}(\mathbb{R}_{+};H^{1})\quad\hbox{and}\quad\partial_{1}\theta\in L^{2}_{loc}(\mathbb{R}_{+};H^{1}).$ If in addition $\omega_{0}\in\sqrt{L}$ then one may construct
+a global solution which also satisfies $\omega\in L^{\infty}_{loc}(\mathbb{R}_{+};\sqrt{L}).$ If in addition $\omega_{0}\in L^{\infty}$ and there exists $s\in(0,1/2]$ such that $|\partial_{1}|^{1+s}\theta_{0}\in L^{2}$ then the above solution is unique,
+strongly continuous in time with values in $H^{1},$ and satisfies $|\partial_{1}|^{1+s}\theta\in{\mathcal{C}}(\mathbb{R}_{+};L^{2})\quad\hbox{and}\quad|\partial_{1}|^{2+s}\theta\in L^{2}_{loc}(\mathbb{R}_{+};L^{2}).$ Proof: The result may be obtained by means of the
+Friedrichs method. With the notation of the previous section, we
+solve the following ODE in $L^{2}_{n}$ : $\begin{cases}\partial_{t}\theta+J_{n}\,\mbox{\rm div}\,(J_{n}\theta\,J_{n}u)-\kappa\partial_{1}^{2}{\mathcal{P}}J_{n}\theta=0,\\
+\partial_{t}u+{\mathcal{P}}J_{n}\,\mbox{\rm div}\,({\mathcal{P}}J_{n}u\otimes{\mathcal{P}}J_{n}u)={\mathcal{P}}J_{n}(\theta e_{2}),\\
+(\theta,u)|_{t=0}=J_{n}(\theta_{0},u_{0}).\end{cases}$ Cauchy-Lipschitz theorem gives
+a unique maximal solution $(\theta_{n},u_{n})$ in the space ${\mathcal{C}}^{1}([0,T_{n}^{*});L^{2}_{n}).$ As $J_{n}^{2}=J_{n},$ ${\mathcal{P}}^{2}={\mathcal{P}}$ et $J_{n}{\mathcal{P}}={\mathcal{P}}J_{n},$ we deduce that ${\mathcal{P}}u_{n}=u_{n},$ $J_{n}u_{n}=u_{n}$ and $J_{n}\theta_{n}=\theta_{n}.$ Therefore $(\theta_{n},u_{n})$ satisfies (65) $\begin{cases}\partial_{t}\theta_{n}+J_{n}\,\mbox{\rm div}\,(\theta_{n}u_{n})-\kappa\partial_{1}^{2}\theta_{n}=0,\\
+\partial_{t}u_{n}+{\mathcal{P}}J_{n}\,\mbox{\rm div}\,(u_{n}\otimes u_{n})={\mathcal{P}}J_{n}(\theta_{n}e_{2}).\end{cases}$ As usual , because operators $J_{n}$ and ${\mathcal{P}}J_{n}$ are orthogonal projectors in all the Sobolev
+spaces, all the previous formal a priori estimates pertaining to Sobolev
+norms remind true. More precisely, we still have ( 36 ),
+( 37 ) and ( 40 ) so that • $(\theta_{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};H^{1}),$ • $(\partial_{1}\theta_{n})_{n\in\mathbb{N}}$ is bounded in $L^{2}_{loc}(\mathbb{R}+;H^{1}),$ • $(u_{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};H^{1}).$ This is fully enough to pass to the limit (up to extraction)
+in System ( 65 ) and to get
+the first part of the theorem. In order to construct weak solutions preserving the $\sqrt{L}$ and the anisotropic regularities, one may
+smooth out System ( 2 )
+by means of an artificial viscosity.
+More precisely, we first solve the following system for $\varepsilon>0$ : $\begin{cases}\partial_{t}\theta+u\cdot\nabla\theta-\kappa\partial_{1}^{2}\theta-\varepsilon\Delta\theta=0\\
+\partial_{t}u+u\cdot\nabla u+\nabla\Pi-\varepsilon\Delta u=\theta e_{2}\\
+\,\mbox{\rm div}\,u=0\end{cases}$ supplemented with smoothed out initial data $(\theta_{0}^{\varepsilon},u_{0}^{\varepsilon}).$ Resorting again to the Friedrichs method that has been
+used in the case $\varepsilon=0,$ and noticing that the cut-off
+operator $J_{n}$ does not modify the Sobolev estimates,
+we get a global solution $(\theta^{\varepsilon},u^{\varepsilon})$ in ${\mathcal{C}}(\mathbb{R}_{+};H^{1})\cap L^{2}_{loc}(\mathbb{R}_{+};H^{2})$ satisfying Inequalities ( 37 ) and
+( 40 ) uniformly with respect to $\varepsilon.$ Actually, using standard methods, one can check that the $H^{2}$ regularity controls higher Sobolev norms.
+As the initial data are in $H^{\infty},$ the solution $(\theta^{\varepsilon},u^{\varepsilon})$ thus belongs to
+all the Sobolev spaces, which will enable us to
+make the following computations rigorous. The $L^{p}$ estimate over the vorticity may be proved
+by multiplying the vorticity equation $\partial_{t}\omega^{\varepsilon}+u^{\varepsilon}\cdot\nabla\omega^{\varepsilon}-\varepsilon\Delta\omega^{\varepsilon}=\partial_{1}\theta^{\varepsilon}$ by $|\omega^{\varepsilon}|^{p-2}\omega^{\varepsilon}$ , and performing an integration over $\mathbb{R}^{2}.$ This gives again $\|\omega^{\varepsilon}(t)\|_{L^{p}}\leq\|\omega_{0}\|_{L^{p}}+\int_{0}^{t}\|\partial_{1}\theta^{\varepsilon}\|_{L^{p}}\leq\|\omega_{0}\|_{L^{p}}+C\sqrt{pt}\,\|\partial_{1}\theta^{\varepsilon}\|_{L^{2}_{t}(H^{1})}.$ It is also clear that all the anisotropic Sobolev estimates
+remain the same, uniformly with respect to $\varepsilon.$ Therefore, having $\varepsilon$ tend to $0$ yields the end of the existence
+part of Theorem 10 . Finally, the uniqueness result
+is a mere consequence of Proposition 11 . 4. Appendix 4.1. A few inequalities Here we prove a few inequalities which have
+been used throughout the paper. Proof of Inequality ( 20 ) : For proving ( 20 ), one may split $\nabla u$ into low and high
+frequencies according to the Littlewood-Paley decomposition.
+More precisely, for any $N\in\mathbb{N}$ one may write $\nabla u=S_{N}\nabla u+\sum_{q\geq N}\Delta_{q}\nabla u.$ We thus have $\|\nabla u\|_{L^{\infty}}\leq\|S_{N}\nabla u\|_{L^{\infty}}+\sum_{q\geq N}\|\Delta_{q}\nabla u\|_{L^{\infty}},$ whence, using the definition of $\|\cdot\|_{LL}$ and Bernstein inequalities, $\|\nabla u\|_{L^{\infty}}\leq(N+1)\|\nabla u\|_{LL}+C\sum_{q\geq N}2^{q}\|\Delta_{q}\nabla u\|_{L^{2}}.$ Given that $\|\Delta_{q}\nabla u\|_{L^{2}}=\|\Delta_{q}\omega\|_{L^{2}}$ and that $2-s<0,$ we readily get $\|\nabla u\|_{L^{\infty}}\leq(N+1)\|\nabla u\|_{LL}+C2^{N(2-s)}\|\omega\|_{H^{s-1}}.$ Now, if $C\|\omega\|_{H^{s-1}}\leq\|\nabla u\|_{LL}$ then
+taking $N=0$ obviously yields the desired inequality.
+Else, one may choose for $N$ the integer part of $\frac{1}{s-2}\log_{2}\biggl(\frac{C\|\omega\|_{H^{s-1}}}{\|\nabla v\|_{LL}}\biggr)$ and we still get the desired result. Lemma 13 . In dimension two, the Sobolev space $H^{1}$ continuously embeds
+in the space $\sqrt{L}.$ Proof: For any $p\in[2,\infty[$ and $v\in H^{1},$ using the Littlewood-Paley
+decomposition and a Bernstein inequality
+enables us to write $\begin{array}[]{lll}\|v\|_{L^{p}}&\leq&\displaystyle\sum_{q\geq-1}\|\Delta_{q}v\|_{L^{p}},\\[4.30554pt]
+&\leq&C\displaystyle\sum_{q\geq-1}2^{-\frac{2q}{p}}\,2^{q}\|\Delta_{q}v\|_{L^{2}},\\[4.30554pt]
+&\leq&C\biggl(\displaystyle\sum_{q\geq-1}2^{-\frac{4q}{p}}\biggr)^{\frac{1}{2}}\|v\|_{H^{1}},\\[8.61108pt]
+&\leq&C\sqrt{p-1}\|v\|_{H^{1}},\end{array}$ whence the desired result. Proof of Inequalities ( 39 ): For stating the first inequality,
+the starting point
+is the following classical one-dimensional
+Gagliardo-Nirenberg inequality: (66) $\|f(x_{1},\cdot)\|_{L^{\infty}_{x_{2}}}\leq\|f(x_{1},\cdot)\|_{L^{2}_{x_{2}}}^{1/2}\|\partial_{2}f(x_{1},\cdot)\|_{L^{2}_{x_{2}}}^{1/2}.$ Taking the $L^{2}_{x_{1}}$ norm of both
+sides and using Cauchy-Schwarz inequality, we get $\|f\|_{L^{2}_{x_{1}}(L^{\infty}_{x_{2}})}\leq C\|f\|_{L^{2}(\mathbb{R}^{2})}^{\frac{1}{2}}\|\partial_{2}f\|_{L^{2}(\mathbb{R}^{2})}^{\frac{1}{2}}.$ For proving the second inequality, it is only
+a matter of swapping the roles of variables $x_{1}$ and $x_{2},$ and using Minkowski’s inequality. Proof of Inequality ( 46 ): From ( 66 ), we deduce that $\|f\|_{L^{\infty}}\leq C\|f\|_{L^{\infty}_{x_{1}}(L^{2}_{x_{2}})}^{1/2}\|\partial_{2}f\|_{L^{\infty}_{x_{1}}(L^{2}_{x_{2}})}^{1/2}.$ Applying the second inequality of
+( 39 ) to $f$ and $\partial_{2}f,$ it is now easy to complete
+the proof. Proof of Inequality
+( 62 ): Obviously, it suffices
+to state that $\|fg\|_{L^{2}_{x_{2}}(H^{1/2}_{x_{1}})}\leq C\|f\|_{H^{1}}\bigl(\|g\|_{L^{2}}+\|\partial_{1}g\|_{L^{2}}\bigr).$ For proving the above inequality, we first notice
+that the standard product laws for one-dimensional
+Sobolev spaces ensure that for all fixed $x_{2},$ we have $\|(fg)(\cdot,x_{2})\|_{H^{1/2}(\mathbb{R})}\leq C\|f(\cdot,x_{2})\|_{H^{1/2}(\mathbb{R})}\|g(\cdot,x_{2})\|_{H^{1}(\mathbb{R})}.$ Therefore $\|fg\|_{L^{2}_{x_{2}}(H^{1/2}_{x_{1}})}\leq C\|f\|_{L^{\infty}_{x_{2}}(H^{1/2}_{x_{1}})}\|g\|_{L^{2}_{x_{2}}(H^{1}_{x_{1}})}.$ Because the trace operator on $x_{2}=cste$ is continuous from $H^{1}(\mathbb{R}^{2})$ to $H^{1/2}(\mathbb{R}),$ we get the desired inequality. In the last part of the paper, anisotropic
+Sobolev norms have been used several times.
+Below, we state a sufficient condition under which
+anisotropic Sobolev spaces are embedded in the
+set of bounded functions. Lemma 14 . For any couple $(s_{1},s_{2})$ of positive real numbers satisfying $1/s_{1}+1/s_{2}<2$ there exists a constant $C$ such that $\|u\|_{L^{\infty}}\leq C\bigl(\|u\|_{L^{2}}+\||\partial_{1}|^{s_{1}}u\|_{L^{2}}+\||\partial_{2}|^{s_{2}}u\|_{L^{2}}\bigr).$ Proof: Using Fourier variables, we see that $\|\widehat{u}(\xi)\|_{L^{1}(\mathbb{R}^{2})}^{2}\leq\bigg(\int(1+|\xi_{1}|^{2s_{1}}+|\xi_{2}|^{2s_{2}})|\widehat{u}(\xi)|^{2}\,d\xi\bigg)\times\bigg(\int(1+|\xi_{1}|^{2s_{1}}+|\xi_{2}|^{2s_{2}})^{-1}\,d\xi\bigg).$ Therefore, it suffices to show that $\int(1+|\xi_{1}|^{2s_{1}}+|\xi_{2}|^{2s_{2}})^{-1}\,d\xi<\infty.$ If we make the
+change of variable $\xi_{1}=(1+|\xi_{2}|^{2s_{2}})^{\frac{1}{2s_{1}}}\zeta_{1}$ we get $\int(1+|\xi_{1}|^{2s_{1}}+|\xi_{2}|^{2s_{2}})^{-1}\,d\xi=\int(1+|\xi_{2}|^{2s_{2}})^{-1+\frac{1}{2s_{1}}}(1+\zeta_{1}^{2s_{1}})^{-1}\,d\zeta_{1}\,d\xi_{2}.$ This integral is finite whenever $s_{1}>\frac{1}{2}$ and $s_{2}(1-\frac{1}{2s_{1}})>\frac{1}{2}$ , a condition which is equivalent
+to $1/s_{1}+1/s_{2}<2.$ 4.2. Losing a priori estimates The second part of the appendix is mainly devoted
+to the proof of losing a priori estimates
+for the following anisotropic Stokes system with convection (67) $\left\{\begin{array}[]{l}\partial_{t}w+v\cdot\nabla w-\nu\partial_{1}^{2}w+\nabla\Pi=f+g\,e_{2},\\
+\,\mbox{\rm div}\,w=0\end{array}\right.$ in the case where the gradient of the divergence free
+vector field is only in $L^{1}([0,T];LL^{\frac{1}{2}})$ (where $LL^{\frac{1}{2}}$ has been defined in ( 26 )).
+Remind that those estimates are the key to the proof of uniqueness
+in Theorem 1 .
+Albeit similar results have been proved before in [ 12 ] ,
+we also prove losing
+a priori estimates for ordinary transport equations for the reader convenience. The key to the proof of all those losing a priori estimates
+is the following commutator estimate
+(which is also used in the proof of
+Inequality ( 15 )). Lemma 15 . Let $v$ be a divergence free vector-field
+over $\mathbb{R}^{2}.$ Let $\omega:=\partial_{1}v^{2}-\partial_{2}v^{1}.$ There exists
+a positive constant $C$ such that for all $q\geq-1,$ the term $F_{q}(v,\rho):=\overline{S}_{q-1}v\cdot\nabla\Delta_{q}\rho-\Delta_{q}(v\cdot\nabla\rho)$ (with $\overline{S}_{q-1}$ defined in ( 14 ))
+satisfies the following estimates : (68) $\displaystyle\|F_{q}(v,\rho)\|_{L^{2}}\leq C\|\nabla v\|_{L^{\infty}}\displaystyle\sum_{q^{\prime}\geq q-4}2^{q-q^{\prime}}\|\Delta_{q^{\prime}}\rho\|_{L^{2}}+\|\rho\|_{L^{\infty}}\sum_{|q-q^{\prime}|\leq 4}\|\Delta_{q^{\prime}}\omega\|_{L^{2}},$ (69) $\displaystyle\|F_{q}(v,\rho)\|_{L^{2}}\leq C\sqrt{q+2}\,\|\nabla v\|_{LL^{\frac{1}{2}}}\displaystyle\sum_{q^{\prime}}2^{-|q-q^{\prime}|}\|\Delta_{q^{\prime}}\rho\|_{L^{2}}.$ In the case $\rho=\omega,$ we have in addition (70) $\|F_{q}(v,\omega)\|_{L^{2}}\leq C\|\nabla v\|_{L^{\infty}}\displaystyle\sum_{q^{\prime}\geq q-4}2^{q-q^{\prime}}\|\Delta_{q^{\prime}}\omega\|_{L^{2}}.$ Proof: Decompose $F_{q}(v,\rho)$ into $F_{q}^{1}(v,\rho)+F_{q}^{2}(v,\rho)+F_{q}^{3}(v,\rho)+F_{q}^{4}(v,\rho)$ with $\begin{array}[]{lll}F_{q}^{1}(v,\rho):=\displaystyle\sum_{q^{\prime}\geq-1}[\overline{S}_{q^{\prime}-1}v,\Delta_{q}]\cdot\nabla\Delta_{q^{\prime}}\rho,&&F_{q}^{2}(v,\rho):=\displaystyle\sum_{q^{\prime}\geq-1}\bigl(\overline{S}_{q-1}-\overline{S}_{q^{\prime}-1}\bigr)v\cdot\nabla\Delta_{q}\Delta_{q^{\prime}}\rho,\\
+F_{q}^{3}(v,\rho):=-\Delta_{q}\Bigl(\displaystyle\sum_{q^{\prime}\geq 1}S_{q^{\prime}-1}\partial_{i}\rho\,\Delta_{q^{\prime}}v^{i}\Bigr),&&F_{q}^{4}(v,\rho):=-\!\displaystyle\sum_{q^{\prime}\geq 0}\partial_{i}\Delta_{q}\biggl(\Delta_{q^{\prime}}v^{i}\Bigl(\displaystyle\sum_{|\alpha|\leq 1}\Delta_{q^{\prime}\!+\!\alpha}\Bigr)\rho\biggr).\end{array}$ Let us emphasize that only the term $F_{q}^{1}$ involves low frequencies of $v.$ Taking advantage of the support properties
+of the function $\varphi$ defined
+at the beginning of Subsection 2.2 ,
+we notice that the summation
+in the definition of $F_{q}^{1}$ may be restricted to those
+indices $q^{\prime}$ such that $|q^{\prime}-q|\leq 4.$ Therefore, a standard commutator inequality
+(see e.g. [ 4 ] , Chap. 2) ensures that (71) $\|F_{q}^{1}(v,\rho)\|_{L^{2}}\leq C\displaystyle\sum_{|q^{\prime}-q|\leq 4}\|{\nabla\overline{S}_{q^{\prime}-1}v}\|_{L^{\infty}}\|\Delta_{q^{\prime}}\rho\|_{L^{2}}.$ For $F_{q}^{2}(v,\rho),$ we obtain, according to Hölder and
+Bernstein inequalities, and to the localization
+properties of the Littlewood-Paley decomposition, (72) $\|F_{q}^{2}(v,\rho)\|_{L^{2}}\leq C\displaystyle\sum_{|q^{\prime}-q|\leq 1}\|{\nabla\check{\Delta}_{q}v}\|_{L^{\infty}}\|\Delta_{q}\rho\|_{L^{2}}\ \hbox{ with }\ \check{\Delta}_{q}:=\sum_{|\alpha|\leq 4}\Delta_{q+\alpha}.$ From the definition of operator $S_{q^{\prime}-1},$ the localization properties of operators $\Delta_{q}$ and Bernstein inequalities, we get (73) $\|F_{q}^{3}(v,\rho)\|_{L^{2}}\leq\displaystyle\sum_{q^{\prime}\leq q+3}2^{q^{\prime\prime}-q}\|{\Delta_{q^{\prime\prime}}\rho}\|_{L^{2}}\|{\check{\Delta}_{q}\nabla v}\|_{L^{\infty}}.$ Notice that one can alternately get the following inequality : (74) $\|F_{q}^{3}(v,\rho)\|_{L^{2}}\leq C\|\rho\|_{L^{\infty}}\sum_{|q^{\prime}-q|\leq 4}\|\Delta_{q^{\prime}}\omega\|_{L^{2}}.$ Indeed, it is only a matter of using
+that the sum defining $F_{q}^{3}(v,\rho)$ may be restricted to $q^{\prime}\geq 1$ and thus, according
+to Bernstein inequalities and to $\|\nabla\Delta_{q^{\prime}}v\|_{L^{2}}=\|\Delta_{q^{\prime}}\omega\|_{L^{2}},$ one may write $\begin{array}[]{lll}\|S_{q^{\prime}-1}\partial_{i}\rho\,\Delta_{q^{\prime}}v^{i}\|_{L^{2}}&\leq&C\|S_{q^{\prime}-1}\partial_{i}\rho\|_{L^{\infty}}2^{-q^{\prime}}\|\nabla\Delta_{q^{\prime}}v^{i}\|_{L^{2}},\\[4.30554pt]
+&\leq&C\|\rho\|_{L^{\infty}}\|\Delta_{q^{\prime}}\omega\|_{L^{2}}.\end{array}$ Finally the term $F_{q}^{4}(v,\rho)$ may
+be bounded as follows: (75) $\|F_{q}^{4}\|_{L^{2}}\leq\displaystyle\sum_{q^{\prime}\geq q-3}\!2^{q-q^{\prime}}\|\Delta_{q^{\prime}}\rho\|_{L^{2}}\|\nabla\check{\Delta}_{q^{\prime}}v\|_{L^{\infty}}.$ Because $\|\nabla\check{\Delta}_{q}v\|_{L^{\infty}}\leq C\|\nabla v\|_{L^{\infty}}\quad\hbox{and}\quad\|\nabla\check{\Delta}_{q}v\|_{L^{\infty}}\leq C\sqrt{q\!+\!2}\,\|\nabla v\|_{LL^{\frac{1}{2}}},$ Inequalities ( 71 ) to ( 75 ) enable
+us to get ( 68 ) and ( 69 ). Inequality ( 70 )
+stems from ( 68 ). One can turn to the statement of losing
+a priori estimates.
+For technical reasons, we adopt
+the framework of Besov spaces $B^{\sigma}_{2,\infty}.$ As we have $H^{\sigma}\hookrightarrow B^{\sigma}_{2,\infty}$ and $B^{\sigma}_{2,\infty}\hookrightarrow H^{\sigma^{\prime}}$ for all $\sigma>\sigma^{\prime},$ it is of course not difficult to
+rewrite all those estimates in terms of Sobolev norms. For the transport equation, we shall prove
+the following result (in the spirit of [ 3 , 12 ] ). Proposition 16 . Let $\rho$ satisfy the transport equation (76) $\partial_{t}\rho+v\cdot\nabla\rho=f$ with initial data $\rho_{0}\in B^{s}_{2,\infty}$ and source term $f\in L^{1}([0,T];B^{s}_{2,\infty}).$ Assume in addition
+that ${\rm div}\,v=0$ and that, for some $V\in L^{1}([0,T])$ we have (77) $\sup_{N\geq 0}\frac{\|\nabla S_{N}v(t)\|_{L^{\infty}}}{\sqrt{1+N}}\leq V(t).$ For all $s\in(-1,1),$ there exists a constant $C$ depending
+only on $s$ such that
+for all $\varepsilon\in]0,(s+1)/2[$ and $t\in[0,T],$ we have $\|\rho(t)\|_{B^{s-\varepsilon}_{2,\infty}}\leq C\exp\biggl(\frac{C}{\varepsilon}\biggl(\int_{0}^{t}V(\tau)\,d\tau\biggr)^{\!2}\biggr)\biggl(\|\rho_{0}\|_{B^{s}_{2,\infty}}+\|f\|_{L^{1}_{t}(B^{s}_{2,\infty})}\biggr).$ Proof: Applying $\Delta_{q}$ to Equation ( 76 ),
+one may write $\partial_{t}\Delta_{q}\rho+\overline{S}_{q-1}v\cdot\nabla\Delta_{q}\rho=\Delta_{q}f+F_{q}(v,\rho)\quad\hbox{with}\quad F_{q}(v,\rho):=\overline{S}_{q-1}v\cdot\nabla\Delta_{q}\rho-\Delta_{q}(v\cdot\nabla\rho).$ Taking the $L^{2}$ inner product of this inequality
+with $\Delta_{q}\rho$ and observing that $\,\mbox{\rm div}\,\overline{S}_{q-1}v=0,$ we thus get (78) $\|\Delta_{q}\rho(t)\|_{L^{2}}\leq\|\Delta_{q}\rho_{0}\|_{L^{2}}+\int_{0}^{t}\|\Delta_{q}f\|_{L^{2}}\,d\tau+\int_{0}^{t}\|F_{q}(v,\rho)\|_{L^{2}}\,d\tau.$ From Inequality ( 69 ), we readily get
+for all $\varepsilon\in]0,(s+1)/2[,$ $q\geq-1$ and $t\in[0,T],$ (79) $2^{q(s-\varepsilon)}\|F_{q}(v(t),\rho(t))\|_{L^{2}}\leq C\sqrt{q+2}\,V(t)\|\rho(t)\|_{B^{s-\varepsilon}_{2,\infty}}$ for some constant $C$ depending
+only on $s.$ Set $\eta=\varepsilon/\int_{0}^{T}V(\tau)\,d\tau$ and $s_{t}:=s-\eta\int_{0}^{t}V(\tau)\,d\tau$ for $t\in[0,T].$ Putting ( 78 ) and ( 79 ) together
+yields $\displaystyle 2^{(2\!+\!q)s_{t}}\|\Delta_{q}\rho(t)\|_{L^{2}}\leq 2^{(2\!+\!q)s}\|\Delta_{q}\rho_{0}\|_{L^{2}}2^{-\eta(2\!+\!q)\int_{0}^{t}V(\tau^{\prime})\,d\tau^{\prime}}\hskip 85.35826pt$ $\displaystyle+\displaystyle\int_{0}^{t}2^{(2\!+\!q)s_{\tau}}\|\Delta_{q}f(\tau)\|_{L^{2}}2^{-\eta(2\!+\!q)\int_{\tau}^{t}V(\tau^{\prime})\,d\tau^{\prime}}\,d\tau\qquad\qquad$ (80) $\displaystyle\hskip 142.26378pt+C\displaystyle\int_{0}^{t}\sqrt{2\!+\!q}\,V(\tau)2^{-\eta(2\!+\!q)\int_{\tau}^{t}V(\tau^{\prime})\,d\tau^{\prime}}\|\rho(\tau)\|_{B^{s_{\tau}}_{2,\infty}}\,d\tau.$ Notice that if $q$ satisfies (81) $2+q\geq\frac{4C^{2}}{\eta^{2}\log 4}$ then the last term may be bounded by $\frac{1}{2}\sup_{\tau\in[0,t]}\|\rho(\tau)\|_{B^{s_{\tau}}_{2,\infty}}$ whereas if $q$ does not satisfy ( 81 )
+then it may be bounded by $\frac{2C^{2}}{\eta\log 2}\int_{0}^{t}V(\tau)\|\rho(\tau)\|_{B^{s_{\tau}}_{2,\infty}}\,d\tau.$ So finally, taking the supremum over $q\geq-1$ in ( 80 )
+and using the above two inequalities, we get $\sup_{\tau\in[0,t]}\|\rho(\tau)\|_{B^{s_{\tau}}_{2,\infty}}\leq 2\|\rho_{0}\|_{B^{s}_{2,\infty}}+2\int_{0}^{t}\|f(\tau)\|_{B^{s_{\tau}}_{2,\infty}}d\tau+\frac{C}{\eta}\int_{0}^{t}V(\tau)\|\rho(\tau)\|_{B^{s_{\tau}}_{2,\infty}}\,d\tau.$ Thanks to Gronwall lemma, we end up with $\sup_{t\in[0,T]}\|\rho(t)\|_{B^{s_{t}}_{2,\infty}}\leq 2e^{\frac{C}{\eta}\int_{0}^{T}V(t)\,dt}\biggl(\|\rho_{0}\|_{B^{s}_{2,\infty}}+\int_{0}^{T}\|f(t)\|_{B^{s_{t}}_{2,\infty}}\,dt\biggr),$ which entails the desired inequality
+given that $s\geq s_{t}\geq s-\varepsilon$ for all $t\in[0,T].$ A similar result turns
+to be true for System 67 .
+In addition, owing to
+the anisotropic viscosity,
+we get an extra horizontal smoothing
+(which was the key to the proof
+of Proposition 9 .
+More precisely, we have: Proposition 17 . Let $v$ and $s$ be as in Proposition $\ref{p:transport}.$ Then we have $\hfil\displaystyle\|w(t)\|_{B^{s-\varepsilon}_{2,\infty}}+\nu^{\frac{1}{2}}\|\partial_{1}w\|_{L_{t}^{2}(B^{s-\varepsilon}_{2,\infty})}\hfill$ $\hfil\displaystyle\hfill\leq C(1+\sqrt{\nu t})\exp\biggl(\frac{C}{\varepsilon}\biggl(\int_{0}^{t}V(\tau)\,d\tau\biggr)^{\!2}\biggr)\biggl(\|\rho_{0}\|_{B^{s}_{2,\infty}}+\|f\|_{L^{1}_{t}(B^{s}_{2,\infty})}+\nu^{-\frac{1}{2}}\|g\|_{L^{2}_{t}(B^{s-1}_{2,\infty})}\biggr).$ Proof: Let us first apply operator $\Delta_{q}$ to
+System ( 67 ).
+With the notation introduced
+in the proof of Proposition 16 ,
+we have $\partial_{t}\Delta_{q}w+\overline{S}_{q-1}v\cdot\nabla\Delta_{q}w-\nu\partial_{1}^{2}\Delta_{q}w+\nabla\Delta_{q}\Pi=\Delta_{q}f+\Delta_{q}g\>e_{2}+F_{q}(v,w)$ with $F_{q}(v,w)$ satisfying ( 79 ). Taking the $L^{2}$ inner product and using the
+fact that $\,\mbox{\rm div}\,v=\,\mbox{\rm div}\,w=0,$ we see that (82) $\frac{1}{2}\frac{d}{dt}\|\Delta_{q}w\|_{L^{2}}^{2}+\nu\|\partial_{1}\Delta_{q}w\|_{L^{2}}^{2}=\int\Delta_{q}f\cdot\Delta_{q}w\,dx+\int F_{q}(v,w)\cdot\Delta_{q}w\,dx+\int\Delta_{q}g\Delta_{q}w^{2}\,dx.$ Assume that $q\geq 0.$ Taking advantage of Parseval equality, one may write $\begin{array}[]{lll}\displaystyle\int\Delta_{q}g\Delta_{q}w^{2}\,dx&=&-\displaystyle\int(-\Delta)^{-1}\Delta_{q}g\,\Delta\Delta_{q}w^{2}\,dx,\\
+&=&-\displaystyle\int(-\Delta)^{-1}\Delta_{q}g\,\Delta_{q}\partial_{1}^{2}w^{2}\,dx-\displaystyle\int(-\Delta)^{-1}\Delta_{q}g\,\Delta_{q}\partial_{2}^{2}w^{2}\,dx.\end{array}$ As $\,\mbox{\rm div}\,w=0,$ integrating by parts yields $\begin{array}[]{lll}\displaystyle\int\Delta_{q}g\Delta_{q}w^{2}\,dx&=&-\displaystyle\int(-\Delta)^{-1}\Delta_{q}g\,\Delta_{q}\partial_{1}^{2}w^{2}\,dx+\displaystyle\int(-\Delta)^{-1}\Delta_{q}g\,\Delta_{q}\partial_{1}\partial_{2}w^{1}\,dx,\\
+&=&\displaystyle\int\partial_{1}(-\Delta)^{-1}\Delta_{q}g\,\Delta_{q}\partial_{1}w^{2}\,dx-\displaystyle\int\partial_{2}(-\Delta)^{-1}\Delta_{q}g\,\Delta_{q}\partial_{1}w^{1}\,dx.\end{array}$ Next, applying Bernstein and Young inequalities, we
+deduce that $\int\Delta_{q}g\Delta_{q}w^{2}\,dx\leq C2^{-q}\|\Delta_{q}g\|_{L^{2}}\|\partial_{1}\Delta_{q}w\|_{L^{2}}\leq\frac{\nu}{2}\|\partial_{1}\Delta_{q}w\|_{L^{2}}^{2}+\frac{C}{2\nu}2^{-2q}\|\Delta_{q}w\|_{L^{2}}^{2}.$ Then coming back to ( 82 ) and integrating,
+we thus get for all $q\geq 0,$ $\hfil\displaystyle\|\Delta_{q}w\|_{L_{t}^{\infty}(L^{2})}^{2}+\nu\|\partial_{1}\Delta_{q}w\|_{L_{t}^{2}(L^{2})}^{2}\leq\|\Delta_{q}w_{0}\|_{L^{2}}^{2}\hfill$ $\hfil\displaystyle\hfill+2\|\Delta_{q}f\|_{L^{1}_{t}(L^{2})}^{2}+2\|F_{q}(v,w)\|_{L^{1}_{t}(L^{2})}^{2}+\frac{C}{\nu}2^{-2q}\|\Delta_{q}g\|_{L_{t}^{2}(L^{2})}^{2}.$ For $q=-1,$ we merely have $\|\Delta_{-1}w(t)\|_{L^{2}}\leq\|\Delta_{-1}w_{0}\|_{L^{2}}+\int_{0}^{t}\Bigl(\|\Delta_{-1}f\|_{L^{2}}+\|\Delta_{-1}g\|_{L^{2}}+\|F_{-1}(v,w)\|_{L^{2}}\Bigr)\,d\tau.$ Of course $\|\partial_{1}\Delta_{-1}w\|_{L^{2}_{t}(L^{2})}\leq Ct^{\frac{1}{2}}\|\Delta_{-1}w\|_{L^{\infty}_{t}(L^{2})}.$ So finally, for all $q\geq-1,$ we have $\hfil\displaystyle\|\Delta_{q}w\|_{L_{t}^{\infty}(L^{2})}+\nu^{\frac{1}{2}}\|\partial_{1}\Delta_{q}w\|_{L_{t}^{2}(L^{2})}\hfill$ $\hfil\displaystyle\hfill\leq 2(1+\sqrt{\nu t})\biggl(\|\Delta_{q}w_{0}\|_{L^{2}}+\|\Delta_{q}f\|_{L^{1}_{t}(L^{2})}+\|F_{q}(v,w)\|_{L^{1}_{t}(L^{2})}+\frac{C}{\nu^{\frac{1}{2}}}2^{-q}\|\Delta_{q}g\|_{L_{t}^{2}(L^{2})}\biggr).$ With Inequality ( 79 ) at our disposal,
+it is now easy to conclude the proof
+of the proposition.
+It is just a matter of
+arguing exactly as in Proposition 16 . References [1] H. Abidi , T. Hmidi : On the global
+well-posedness for Boussinesq system, Journal
+of Differential Equations , 233 (2007), 199–220. [2] J.-P. Aubin : Un théorème de
+compacité. Comptes Rendus de l’Académie des Sciences, Paris , 256 (1963),
+5042–5044. [3] H. Bahouri , J.-Y. Chemin :
+Équations de transport relatives à des champs de vecteurs
+non-lipschitziens et mécanique des fluides, Archive for Rational
+Mechanics and Analysis , 127 (1994), 159–181. [4] H. Bahouri , J.-Y. Chemin and
+R. Danchin : Fourier Analysis and Nonlinear Partial Differential Equations, Springer, to appear. [5] J.-M. Bony : Calcul symbolique et propagation des
+singularités pour les
+équations aux dérivées partielles non linéaires, Annales scientifiques de l’école Normale supérieure , 14 , (1981), 209–246. [6] J. R. Cannon , E. Dibenedetto :
+The initial value problem for the Boussinesq equations with data in $L^{p}$ , Lecture Notes in Math. 771 , Springer, 1980, 129–144. [7] D. Chae : Global regularity for the $2$ -D Boussinesq
+equations with partial viscous terms, Advances in Mathematics , 203 (2), (2006), 497–513. [8] J.-Y. Chemin : Fluides parfaits incompressibles. Astérisque, 230, 1995. [9] J.-Y. Chemin : Théorèmes d’unicité pour le
+système de Navier-Stokes tridimensionnel, Journal d’Analyse
+Mathématique , 77 (1999), 25–50. [10] J.-Y. Chemin , B. Desjardins , I. Gallagher and E. Grenier : Fluids with anisotropic viscosity ,
+M2AN Math. Model. Numer. Anal. 34 (2000), no. 2, 315–335. [11] J.-Y. Chemin , B. Desjardins ,
+I. Gallagher and E. Grenier , Mathematical Geophysics: An introduction to rotating fluids
+and to the Navier-Stokes equations, Oxford University Press,
+2006. [12] R. Danchin : Estimates in Besov spaces for transport
+and transport-diffusion equations with almost Lipschitz
+coefficients, Revista Matemática Iberoamericana , 21 (2005)
+863–888. [13] R. Danchin and M. Paicu :
+Le théorème de Leray et le théorème de Fujita-Kato
+pour le système de Boussinesq
+partiellement visqueux, to appear in Bulletin de la Société Mathématique de France . [14] R. Danchin and M. Paicu :
+Existence and uniqueness results
+for the Boussinesq system with data in Lorentz spaces, Physica D , 237 (2008), 1444–1460. [15] R. Danchin and M. Paicu :
+Global well-posedness issues for the inviscid Boussinesq system
+with Yudovich’s type data, submitted. [16] R. Di Perna and P.-L. Lions :
+Ordinary differential equations, transport theory and Sobolev spaces, Inventiones Mathematicae , 98 (1989), 511–547. [17] P. Gérard : Résultats récents sur les fluides
+parfaits incompressibles bidimensionnels (d’après J.-Y. Chemin et J.-M.
+Delort), Séminaire Bourbaki, Vol.
+1991/92, Astérisque , 206 (1992), 411–444. [18] B. Guo : Spectral method for solving two-dimensional Newton-Boussineq equation, Acta Mathematicae Applicatae Sinica , 5 (1989) 27–50. [19] T. Hmidi , S. Keraani :
+On the global well-posedness of the two-dimensional Boussinesq
+system with a zero diffusivity, Advances in Differential Equations , 12 (2007), no. 4, 461–480. [20] T. Hmidi , S. Keraani :
+On the global well-posedness of the Boussinesq
+system with zero viscosity, preprint 2007. [21] J. Leray :
+Sur le mouvement d’un liquide visqueux remplissant l’espace, Acta Mathematica, 63 (1934), 193–248. [22] M. Paicu : Équation anisotrope de
+Navier-Stokes dans des espaces critiques, Rev. Mat. Iberoamericana 21 (1) (2005), 179–235. [23] J. Pedlosky : Geophysical fluid dynamics. Springer Verlag, New-York, 1987. [24] V. Yudovich :
+Non-stationary flows of an ideal incompressible fluid, Akademija Nauk SSSR. Žurnal Vyčislitel’noĭ
+Matematiki i Matematičeskoĭ Fiziki , 3 (1963), 1032–1066. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

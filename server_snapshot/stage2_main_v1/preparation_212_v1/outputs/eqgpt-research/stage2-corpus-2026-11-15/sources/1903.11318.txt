@@ -1,0 +1,542 @@
+A new (and optimal) result for boundedness of solution of a quasilinear chemotaxis–haptotaxis model (with logistic source) Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 Preliminaries 3 A priori estimates 4 The proof of main results References License: arXiv.org perpetual non-exclusive license arXiv:1903.11318v3 [math.AP] 24 Feb 2020 A new (and optimal) result for boundedness of solution of a quasilinear chemotaxis–haptotaxis model (with logistic source) Ling Liu Affiliation: Department of Basic ScienceJilin Jianzhu University, Changchun 130118, P.R.China Jiashan Zheng † † thanks: Corresponding author. E-mail address:
+zhengjiashan2008@163.com (J. Zheng) Affiliation: School of Mathematics and Statistics ScienceLudong University, Yantai 264025, P.R.China Yu Li Affiliation: School of Mathematics and Statistics ScienceLudong University, Yantai 264025, P.R.China Weifang Yan Affiliation: School of Mathematics and Statistics ScienceLudong University, Yantai 264025, P.R.China Abstract This article deals with an initial-boundary value problem for the coupled chemotaxis-haptotaxis
+system with nonlinear diffusion $\left\{\begin{array}[]{ll}u_{t}=\nabla\cdot(D(u)\nabla u)-\chi\nabla\cdot(u\nabla v)-\xi\nabla\cdot(u\nabla w)+\mu u(1-u-w),x\in\Omega,t>0,\\
+\displaystyle{\tau v_{t}=\Delta v-v+u},\quad x\in\Omega,t>0,\\
+\displaystyle{w_{t}=-vw},\quad x\in\Omega,t>0,\\
+\end{array}\right.$ ( 0.1 ) under homogeneous Neumann boundary conditions in a smooth bounded domain $\Omega\subset\mathbb{R}^{N}(N\geq 1)$ , where $\tau\in\{0,1\}$ and $\chi$ , $\xi$ and $\mu$ are given nonnegative parameters. The diffusivity $D(u)$ is assumed to satisfy $D(u)\geq C_{D}(u+1)^{m-1}~\mbox{for all}~u\geq 0~~\mbox{and}~~C_{D}>0.$ In the present work it is shown that
+if $m\geq 2-\frac{2}{N}\lambda~~\mbox{with}~~0<\mu<\kappa_{0},\begin{array}[]{ll}\\
+\end{array}$ $m>2-\frac{2}{N}\lambda~~\mbox{with}~~\mu\geq\kappa_{0},\begin{array}[]{ll}\\
+\end{array}$ or $m>2-\frac{2}{N}~~\mbox{and}~~~\mu=0$ or $m=2-\frac{2}{N}~~\mbox{and}~~~C_{D}>\frac{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}}{4}(2-\frac{2}{N})^{2}\kappa_{0},$ then for all reasonably regular initial data, a corresponding initial-boundary value
+problem for $(0.1)$ possesses a unique global classical solution that is uniformly bounded in $\Omega\times(0,\infty)$ , where $\lambda=\frac{\kappa_{0}}{(\kappa_{0}-\mu)_{+}}$ and $\kappa_{0}=\left\{\begin{array}[]{ll}\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})~~\tau=1,\\
+\chi~~~~~~\mbox{if}~~\tau=0.\\
+\end{array}\right.$ Here $C_{GN}$ and $\lambda_{0}$ are the constants which are corresponding to the Gagliardo–Nirenberg inequality (see Lemma 2.1 ) and the maximal Sobolev
+regularity (see Lemma 2.2 ), respectively.
+Relying on a new $L^{p}$ -estimate techniques to raise the a priori
+estimate of a solution from $L^{1}(\Omega)\rightarrow L^{\lambda-\varepsilon}(\Omega)\rightarrow L^{\lambda}(\Omega)\rightarrow L^{\lambda+\varepsilon}(\Omega)\rightarrow L^{p}(\Omega)(\mbox{for all}~p>1)$ ,
+these results thereby significantly extending results of previous results of several authors (see Remarks 1.1 and 1.2) and some optimal results are obtained. Key words: Boundedness;
+Chemotaxis–haptotaxis; Nonlinear diffusion;
+Global existence 2010 Mathematics Subject Classification :  92C17, 35K55,
+35K59, 35K20 1 Introduction In order to describe the cancer cell invasion into surrounding
+healthy tissue,
+in 2005, Chaplain and Lolas ( [ 4 ] )
+proposed a pioneering mathematical model which is called chemotaxis–haptotaxis model $\left\{\begin{array}[]{ll}u_{t}=\nabla\cdot(D\nabla u)-\chi\nabla\cdot(u\nabla v)-\xi\nabla\cdot(u\nabla w)+\mu u(1-u-w),\quad x\in\Omega,t>0,\\
+\displaystyle{\tau v_{t}=\Delta v+u-v},\quad x\in\Omega,t>0,\\
+\displaystyle{w_{t}=-vw},\quad x\in\Omega,t>0,\\
+\end{array}\right.$ (1.1) where $D$ , $\chi,\xi$ and $\mu$ are the cancer cell random
+motility, the chemotactic coefficients, the haptotactic coefficients and the proliferation rate of the cells,
+respectively.
+Here $\tau\in\{0,1\},$ $\Omega\subset\mathbb{R}^{N}(N\geq 1)$ is the physical domain which we assume to be bounded with
+smooth boundary, and the unknown quantities $u$ , $v$ and $w$ represent the density of
+cancer cells, the concentration of matrix degrading enzymes (MDE) and the density of extracellular matrix (ECM),
+respectively. As a subsystem, ( 1.1 ) contains the celebrated Keller–Segel ( [ 17 ] ) chemotaxis system (with logistic source, $\mu\neq 0$ ) $\left\{\begin{array}[]{ll}u_{t}=\nabla\cdot(D\nabla u)-\chi\nabla\cdot(u\nabla v)+\mu u(1-u),\quad x\in\Omega,t>0,\\
+\displaystyle{\tau v_{t}=\Delta v+u-v},\quad x\in\Omega,t>0\\
+\end{array}\right.$ (1.2) by setting $w\equiv 0$ .
+Over the last four decades, there is a wide variety of patterns associated Keller–Segel system ( 1.2 ) have been studied extensively, and the main interest lies in whether the solution
+is global or blow up (see e.g., Cieślak [ 6 ] , Cieślak and Winkler [ 5 ] , Ishida et al. [ 13 ] , Painter and Hillen [ 27 ] , Winkler [ 47 , 51 , 51 , 49 ] , Li and Xiang [ 19 ] , Tello and Winkler [ 42 ] , Wang et al. [ 44 ] , Zheng et al. [ 61 ] ).
+In fact, if $\mu=0,$ the two behaviors (boundedness and blow-up)
+of solutions strongly depend on the space dimension and the total mass of cells ( [ 2 , 10 , 11 , 48 ] ).
+When $\tau=0$ , Tello and Winkler ( [ 42 ] ) mainly proved that
+the global boundedness for model ( 1.1 ) exists
+under the condition $\mu>\frac{(N-2)^{+}}{N}\chi$ , moreover, they gave the weak solutions
+for arbitrary small $\mu>0$ . Kang and Stevens [ 16 ] (see also [ 53 , 12 ] ) improve
+the results of Tello and Winkler ( [ 42 ] )
+to the case $\mu\geq{\bf\frac{(N-2)_{+}}{N}\chi}$ .
+While if $\tau=1$ and $\mu>\frac{(N-2)_{+}}{N}\chi C_{\frac{N}{2}+1}^{\frac{1}{\frac{N}{2}+1}}$ (where $C_{\frac{N}{2}+1}$ is a positive constant), Zheng ( [ 61 ] ) proved that
+for any sufficiently smooth initial data, the corresponding initial-boundary
+value problem for ( 1.2 ) possesses a globally defined bounded solution,
+which give the lower bound estimation for the logistic source, so that, improves the result of [ 47 ] .
+Furthermore, some recent studies have shown that
+the blow-up of solutions can be inhibited by the nonlinear diffusion (see Ishida et al. [ 13 ] , Winkler et al. [ 1 , 36 , 55 , 54 , 46 , 52 ] ) and nonlinear logistic term (see [ 54 , 56 ] ). There have been large literature on the global existence and the large time behavior of
+solutions to the system ( 1.1 ). We refer to [ 3 , 22 , 33 , 37 , 38 , 41 , 60 ] and the references therein.
+In fact, when $\tau=0$ , MDEs diffuses much faster than cells (see [ 15 , 38 ] ), Tao and Wang [ 33 ] proved that model ( 1.1 ) possesses a unique global bounded classical solution for
+any $\mu>0$ in two space dimensions, and for large $\mu>0$ in three space dimensions.
+In [ 38 ] ,Tao and Winkler improved the condition on $\mu$ ( ${\bf\mu>\frac{(N-2)^{+}}{N}\chi}$ ), so that it coincides with the best one known for
+the parabolic-elliptic Keller-Segel system ( 1.2 ) (see Tello and Winkler [ 42 ] ), moreover, in additional explicit
+smallness on $w_{0}$ , they gave the exponential decay of $w$ in the large time limit. However, this problem is left open for
+the critical case ${\bf\mu=\frac{(N-2)^{+}}{N}\chi}$ .
+While, if $\tau=1$ , refined
+approaches involving a more subtle analysis of ( 1.1 ), Tao ( [ 32 ] ) and Cao ( [ 3 ] ) obtained
+the boundedness of global solution for the 2D and 3D space respectively, especially, for the 3D
+space, similar to the chemotaxis-only system ( [ 61 , 47 ] ), the global solution is obtained only for large $\mu$ ,
+and it remains open for small $\mu$ . The diffusion of cancer cell may depend nonlinearly on their densities ( [ 9 , 30 , 35 ] ), and so we are led to consider the cell motility $D$ as
+a nonlinear function of the cancer cell density, $D\equiv D(u)=C_{D}(u+1)^{m-1},m\in\mathbb{R},C_{D}>0$ .
+Introducing
+this into the model ( 1.1 ) leads to the following chemotaxis-haptotaxis system with nonlinear diffusion $\left\{\begin{array}[]{ll}u_{t}=\nabla\cdot(D(u)\nabla u)-\chi\nabla\cdot(u\nabla v)-\xi\nabla\cdot(u\nabla w)+\mu u(1-u-w),\quad x\in\Omega,t>0,\\
+\displaystyle{\tau v_{t}=\Delta v+u-v},\quad x\in\Omega,t>0,\\
+\displaystyle{w_{t}=-vw},\quad x\in\Omega,t>0,\\
+\displaystyle{D(u)\frac{\partial u}{\partial\nu}-\chi\frac{\partial v}{\partial\nu}-\xi\frac{\partial w}{\partial\nu}=\frac{\partial v}{\partial\nu}=0},\quad x\in\partial\Omega,t>0,\\
+\displaystyle{u(x,0)=u_{0}(x)},\tau v(x,0)=\tau v_{0}(x),w(x,0)=w_{0}(x),\quad x\in\Omega,\\
+\end{array}\right.$ (1.3) where $u,v$ and $w$ are denoted as before, $\mu\geq 0,\tau\in\{0,1\}$ ,
+the diffusion function $D(u)$ fulfills $D\in C^{2}([0,\infty))$ (1.4) and there
+exist constants $m\in\mathbb{R}$ and $C_{D}$ such that $D(u)\geq C_{D}(u+1)^{m-1}~\mbox{for all}~u\geq 0.$ (1.5) This parabolic-parabolic-ODE
+system ( $\tau=1$ in ( 1.3 )) and its parabolic-elliptic-ODE simplifications ( $\tau=0$ in ( 1.3 )) have been objects of extensive studies in recent decades.
+In fact, in $N=2$ , Zheng et al. ( [ 62 ] ) studied the global boundedness for model ( 1.3 )
+with $D$ satisfies ( 1.4 )–( 1.5 ) and $m>1$ , moreover, in additional explicit
+smallness on $w_{0}$ , they gave the exponential decay of $w$ in the large time limit.
+Moreover, if $D$ satisfies ( 1.4 )–( 1.5 ) with $m>\max\{1,\bar{m}\}$ and $\bar{m}:=\left\{\begin{array}[]{ll}\frac{2N^{2}+4N-4}{N(N+4)}~~\mbox{if}~~N\leq 8,\\
+\frac{2N^{2}+3N+2-\sqrt{8N(N+1)}}{N(N+20)}~~\mbox{if}~~N\geq 9,\\
+\end{array}\right.$ (1.6) Tao and Winkler ( [ 35 ] ) proved that model ( 1.3 ) possesses at least one nonnegative
+global classical solution, however, their boundedness is left as an open problem.
+Using the boundedness of $\int_{\Omega}|\nabla v|^{l}(1\leq l<\frac{N}{N-1})$ ,
+Wang ( [ 45 ] ) and Li, Lankeit ( [ 20 ] ) proved that
+the
+global solvability and boundedness of classical solution (or weak solution) for
+any $D$ satisfies ( 1.4 )–( 1.5 ) and $m>2-\frac{2}{N}$ .
+Recently, Zheng ( [ 58 ] ) and Jin ( [ 14 ] ) extended these results to the case $m>\frac{2N}{N+2}$ and $m>0$ (as well as large $\mu$ ), respectively. But the cases $m\leq 0$ remain unknown.
+Other variants of the model that are commonly treated including
+the (nonlinear) logistic
+types and the re-establishment of ECM components, please refer to [ 29 , 26 , 39 , 57 ] , etc, and
+references therein. Thus it is meaningful to analyze the following question: $(Q)$ : Which size of $m$ , $\chi,\xi$ and $\mu$ are sufficient to ensure boundedness of solutions to ( 1.3 )? It is our goal in this work to give answers to $(Q)$ .
+To the best of our knowledge, this is the first result which gives a explicit condition between $m,\chi,\xi$ and $\mu$ that yields to the boundedness
+of the solution. Motivated by the above works,
+the aim of the present paper is to
+study the quasilinear parabolic–elliptic–ODE ( $\tau=0$ in ( 1.3 )) and parabolic–parabolic–ODE ( $\tau=1$ in ( 1.3 )) chemotaxis–haptotaxis model ( 1.3 ) under the conditions ( 1.4 )–( 1.5 ). Our main result is the following: Theorem 1.1 . Let $\Omega\subset\mathbb{R}^{N}(N\geq 1)$ be
+a bounded domain with smooth boundary $\partial\Omega$ . Assume
+that $D$ satisfy ( 1.4 )–( 1.5 ) and the initial data $(u_{0},w_{0})$ fulfills $\left\{\begin{array}[]{ll}\displaystyle{u_{0}\in C(\bar{\Omega})~~\mbox{with}~~u_{0}\geq 0~~\mbox{in}~~\Omega~~\mbox{and}~~u_{0}\not\equiv 0},\\
+\displaystyle{w_{0}\in C^{2+\vartheta}(\bar{\Omega})~~\mbox{with}~~w_{0}\geq 0~~\mbox{in}~~\bar{\Omega}~~\mbox{and}~~\frac{\partial w_{0}}{\partial\nu}=0~~\mbox{on}~~\partial\Omega}\\
+\end{array}\right.$ (1.7) with some $\vartheta\in(0,1).$ If one of the following cases holds: (i) $m\geq 2-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}}$ with $0<\mu<\chi$ ; (ii) $m>2-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}}$ with $\mu\geq\chi$ ; (iii) $m>2-\frac{2}{N}$ with $\mu=0$ ; (iv) $m=2-\frac{2}{N}$ and $C_{D}>\frac{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}}{4}(2-\frac{2}{N})^{2}\chi$ ; then there exists a triple $(u,v,w)\in(C^{0}(\bar{\Omega}\times[0,\infty))\cap C^{2,1}(\bar{\Omega}\times(0,\infty)))^{3}$ which solves ( 1.3 ) in the classical sense. Here $C_{GN}$ is a positive constant which is corresponding to the Gagliardo–Nirenberg inequality (see Lemma 2.1 ).
+Moreover, both $u$ , $v$ and $w$ are bounded in $\Omega\times(0,\infty)$ . Before we prove theorem 1.1 , there exist a few remarks in order. Remark 1.1 . (i) Theorem 1.1 extends the results of Theorem 1.1 of Tao and Winkler ( [ 38 ] )
+for the critical case $\mu=\frac{(N-2)_{+}}{N}\chi$ and $D(u)=1.$ (ii) If $\mu=0,$ in comparison to the result
+for the corresponding haptotaxis-free system ( [ 52 ] , $w\equiv 0$ ), it is easy to see that the restriction on $m$ here is optimal . (iii) Observing that if $\mu\geq\frac{(N-2)_{+}}{N}\chi$ and $w\equiv 0$ , then $2-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}}<1$ , therefore, Theorem 1.1 also
+extends the results of Theorem 1.1 of Tello and Winkler ( [ 42 ] ). (iv) Obviously, if $\mu>\chi$ , then $2-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}}<1$ , so that, Theorem 1.1 extends the results of Theorem 1.1 of Tao and Winkler ( [ 37 ] ). (v) Obviously, if $w\equiv 0$ and $\mu>0,$ then $2-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}}<2-\frac{2}{N}$ , so that, Theorem 1.1 also
+partly extends the results of Theorem 1.1 of Wang et al. ( [ 44 ] ). (vi) Obviously, if $w\equiv 0$ , $\mu\geq\frac{(N-2)_{+}}{N}\chi$ and $D(u)\equiv 1$ , then $2-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}}\leq 1$ , so that, Theorem 1.1 is consistent with the results of Theorem 3 of [ 16 ] . Theorem 1.2 . Let $\Omega\subset\mathbb{R}^{N}(N\geq 1)$ be
+a bounded domain with smooth boundary $\partial\Omega$ .
+Assume
+that $D$ satisfy ( 1.4 )–( 1.5 ) and the initial data $(u_{0},v_{0},w_{0})$ fulfills $\left\{\begin{array}[]{ll}\displaystyle{u_{0}\in W^{1,\infty}(\Omega)~~\mbox{with}~~u_{0}\geq 0~~\mbox{in}~~\Omega~~\mbox{and}~~u_{0}\not\equiv 0},\\
+\displaystyle{v_{0}\in W^{1,\infty}(\Omega)~~\mbox{with}~~v_{0}\geq 0~~\mbox{in}~~\Omega~~\mbox{and}~~\frac{\partial v_{0}}{\partial\nu}=0~~\mbox{on}~~\partial\Omega},\\
+\displaystyle{w_{0}\in C^{2+\vartheta}(\bar{\Omega})~~\mbox{with}~~w_{0}\geq 0~~\mbox{in}~~\bar{\Omega}~~\mbox{and}~~\frac{\partial w_{0}}{\partial\nu}=0~~\mbox{on}~~\partial\Omega}\\
+\end{array}\right.$ (1.8) with some $\vartheta\in(0,1).$ If one of the following cases holds: (i) $m\geq 2-\frac{2}{N}\frac{\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})}{[\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu]_{+}}$ with $0<\mu<\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})$ ; (ii) $m>2-\frac{2}{N}\frac{\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})}{[\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu]_{+}}$ with $\mu\geq\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})$ ; (iii) $m>2-\frac{2}{N}$ with $\mu=0$ ; (iv) $m=2-\frac{2}{N}$ and $C_{D}>\frac{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}}{4}(2-\frac{2}{N})^{2}\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})$ ; then there exists a pair $(u,v,w)\in(C^{0}(\bar{\Omega}\times[0,\infty))\cap C^{2,1}(\bar{\Omega}\times(0,\infty))^{2}$ which solves ( 1.3 ) in the classical sense, where $C_{GN}$ and $\lambda_{0}:=\lambda_{0}(\gamma)$ are the constants which are corresponding to the Gagliardo–Nirenberg inequality (see Lemma 2.1 ) and the maximal Sobolev
+regularity (see Lemma 2.2 ), respectively.
+Moreover, both $u$ and $v$ are bounded in $\Omega\times(0,\infty)$ . Remark 1.2 . (i) Obviously, if $\mu>\frac{(N-2)_{+}}{N}\chi\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}},$ $2-\frac{2}{N}\frac{\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})}{[\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu]_{+}}<1$ , hence, Theorem 1.2 extends the results of Ke and Zheng ( [ 60 ] ) and partly extends the result of Liu et al ( [ 21 ] ). (ii) Obviously, if $\mu>0$ , $2-\frac{2}{N}\frac{\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})}{[\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu]_{+}}<2-\frac{2}{N}$ , hence Theorem 1.2 extends the results of Wang ( [ 45 ] ) and Li and Lankeit
+( [ 20 ] ). (iii) Theorem 1.2 extends the results of Zheng et al. ( [ 59 ] )
+for the critical case $\mu\geq\frac{(N-2)_{+}}{N}\chi$ as well as $w\equiv 0$ and $D(u)=1.$ (iv) If $\mu=0$ and $w\equiv 0$ , then ( 1.3 )
+possess some solutions which blow up in finite time provided that $D$ satisfy ( 1.4 )–( 1.5 ) with $m<2-\frac{2}{N}$ (see e.g. [ 46 , 6 ] ). Therefore,
+In comparison to the result
+for the corresponding haptotaxis-free system ( $w\equiv 0$ in ( 1.3 )), it is easy to see that the restriction on $m$ here is optimal . (v) If $N=2$ , then $2-\frac{2}{N}\frac{\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})}{[\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu]_{+}}=2-\frac{\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})}{[\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu]_{+}}<1,$ therefore, Theorem 1.1 extends the results of Wang et al. ( [ 62 ] ),
+who proved the possibility of global and bounded, in the cases, $D$ satisfies ( 1.4 )–( 1.5 ) with ${\bf m>1}$ . The main novelty and difficulty of the paper is how to control the chemotaxis term $\chi\nabla\cdot(u\nabla v)$ , haptotaxis term $\xi\nabla\cdot(u\nabla w)$ and strong degeneracies caused
+by system ( 1.3 ). To overcome this difficulty, the purpose of the present paper is to demonstrate how far an adequate combination of maximal Sobolev regularity theory and
+develop new $L^{p}$ -estimate techniques (see Lemmas 3.4 – 3.11 ) can be used to obtain the global existence and boundedness of solutions
+to ( 1.3 ). The rest of the paper is organized in the following way.
+Section 2 will be concerned with preliminaries, including some basic facts and a local existence result. In section 3, by careful analysis, this paper develops some $L^{p}$ -estimate techniques to raise the a priori
+estimate of a solution from $L^{1}(\Omega)\rightarrow L^{\lambda-\varepsilon}(\Omega)\rightarrow L^{\lambda}(\Omega)\rightarrow L^{\lambda+\varepsilon}(\Omega)\rightarrow L^{p}(\Omega)(~\mbox{for all}~~p>1)$ ,
+where $\lambda=\frac{\kappa_{0}}{(\kappa_{0}-\mu)_{+}}$ and $\kappa_{0}=\left\{\begin{array}[]{ll}\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})~~\mbox{if}~~~~\tau=1,\\
+\chi~~~~~~\mbox{if}~~\tau=0.\\
+\end{array}\right.$ (1.9) To this end, by using the maximal Sobolev
+regularity and the standard estimate for the solution, we may derive entropy-like inequalities (see ( 3.26 ) and ( 3.23 )). Then in order to estimate
+the right term $\int_{\Omega}u^{k+1}$ and $\int_{\Omega}u^{k}$ on the rightmost of ( 3.26 ) and ( 3.23 ), we need to deal with for two steps from $\|u(\cdot,t)\|_{L^{\lambda-\varepsilon}(\Omega)}\rightarrow\|u(\cdot,t)\|_{L^{\lambda}(\Omega)}$ (see the proof of Lemmas 3.4 and 3.5 ), which plays a key rule in obtaining the main results. Then employing a bootstrap
+argument
+(see ( 3.48 ) and ( 3.49 )), one could derive the boundedness of $\|u(\cdot,t)\|_{L^{\lambda+\varepsilon}(\Omega)}$ (see Lemma 3.6 ). Relying on this, we develop new $L^{p}$ -estimate techniques to raise the a priori estimate of solutions from $L^{\lambda+\varepsilon}(\Omega)\rightarrow L^{p}(\Omega)(\mbox{for all}~p>1)$ (see Lemmas 3.7 – 3.11 ).
+Finally,
+applying the standard Alikakos–Moser iteration, we prove the main results of this paper in the last part. 2 Preliminaries In this section, we will recall some lemmas and elementary inequalities which
+will be used frequently later.
+To begin with, let us collect some basic solution properties which essentially have already been used
+in [ 18 ] . Lemma 2.1 . ( [ 8 ] )
+Let $\theta\in(0,p)$ .
+There exists a positive constant $C_{GN}$ such that for all $u\in W^{1,2}(\Omega)\cap L^{\theta}(\Omega)$ , $\|u\|_{L^{p}(\Omega)}\leq C_{GN}(\|\nabla u\|_{L^{2}(\Omega)}^{a}\|u\|^{1-a}_{L^{\theta}(\Omega)}+\|u\|_{L^{\theta}(\Omega)})$ is valid with $a=\displaystyle{\frac{\frac{N}{\theta}-\frac{N}{p}}{1-\frac{N}{2}+\frac{N}{\theta}}}\in(0,1)$ . Lemma 2.2 . ( [ 18 ] )
+Suppose that $\gamma\in(1,+\infty)$ and $g\in L^{\gamma}((0,T);L^{\gamma}(\Omega))$ .
+Consider the following evolution equation $\left\{\begin{array}[]{ll}v_{t}-\Delta v+v=g,~~~(x,t)\in\Omega\times(0,T),\\
+\displaystyle\frac{\partial v}{\partial\nu}=0,~~~(x,t)\in\partial\Omega\times(0,T),\\
+v(x,0)=v_{0}(x),~~~(x,t)\in\Omega.\\
+\end{array}\right.$ For each $v_{0}\in W^{2,\gamma}(\Omega)$ such that $\displaystyle\frac{\partial v_{0}}{\partial\nu}=0$ and any $g\in L^{\gamma}((0,T);L^{\gamma}(\Omega))$ , there exists a unique solution $v\in W^{1,\gamma}((0,T);L^{\gamma}(\Omega))\cap L^{\gamma}((0,T);W^{2,\gamma}(\Omega)).$ In addition, if $s_{0}\in[0,T)$ , $v(\cdot,s_{0})\in W^{2,\gamma}(\Omega)(\gamma>N)$ with $\displaystyle\frac{\partial v(\cdot,s_{0})}{\partial\nu}=0,$ then there exists a positive constant $\lambda_{0}:=\lambda_{0}(\Omega,\gamma,N)$ such that $\begin{array}[]{rl}&\displaystyle{\int_{s_{0}}^{T}e^{\gamma s}\|v(\cdot,t)\|^{\gamma}_{W^{2,\gamma}(\Omega)}ds\leq\lambda_{0}\left(\int_{s_{0}}^{T}e^{\gamma s}\|g(\cdot,s)\|^{\gamma}_{L^{\gamma}(\Omega)}ds+e^{\gamma s_{0}}(\|v_{0}(\cdot,s_{0})\|^{\gamma}_{W^{2,\gamma}(\Omega)})\right).}\\
+\end{array}$ The local-in-time existence of classical solutions to the chemotaxis–haptotaxis model ( 1.3 ) is
+quite standard; see similar discussions in [ 35 , 21 ] .
+Therefore we omit it. Lemma 2.3 . Assume that the nonnegative functions $u_{0},v_{0},$ and $w_{0}$ satisfies ( 1.8 ) (or ( 1.7 ), if $\tau=0$ )
+for some $\vartheta\in(0,1),$ $D$ satisfies ( 1.4 ) and ( 1.5 ).
+Then there exists a maximal existence time $T_{max}\in(0,\infty]$ and a triple of nonnegative functions $\begin{array}[]{rl}&\displaystyle{u\in C^{0}(\bar{\Omega}\times[0,T_{max}))\cap C^{2,1}(\bar{\Omega}\times(0,T_{max})),}\\
+&\displaystyle{v\in C^{0}(\bar{\Omega}\times[0,T_{max}))\cap C^{2,1}(\bar{\Omega}\times(0,T_{max})),}\\
+&\displaystyle{w\in C^{2,1}(\bar{\Omega}\times[0,T_{max}))}\\
+\end{array}$ which solves ( 1.3 ) classically and satisfies $w\leq\|w_{0}\|_{L^{\infty}(\Omega)}$ in $\Omega\times(0,T_{max})$ .
+Moreover, if $T_{max}<+\infty$ , then $\|u(\cdot,t)\|_{L^{\infty}(\Omega)}+\|v(\cdot,t)\|_{W^{1,\infty}(\Omega)}\rightarrow\infty~~\mbox{as}~~t\nearrow T_{max}.$ (2.1) According to the above existence theory, for any $s\in(0,T_{max})$ , $(u(\cdot,s),v(\cdot,s),w(\cdot,s))\in C^{2}(\bar{\Omega})$ .
+Without
+loss of generality, we can assume that there exists a positive constant $K$ such that $\|u_{0}\|_{C^{2}(\bar{\Omega})}+\|v_{0}\|_{C^{2}(\bar{\Omega})}+\|w_{0}\|_{C^{2}(\bar{\Omega})}\leq K.$ (2.2) Employing the same arguments as in the proof of Lemma 2.3 in [ 41 ] (see also [ 32 ] ), we derive the following Lemma: Lemma 2.4 . Let $(u,v,w)$ solve ( 1.3 ) in $\Omega\times(0,T_{max})$ .
+Then $\begin{array}[]{rl}-\Delta w(x,t)\leq&\displaystyle{\tau\|w_{0}\|_{L^{\infty}(\Omega)}\cdot v(x,t)+\kappa~~~\mbox{for all}~~x\in\Omega~~\mbox{and}~~~t\in(0,T_{max}),}\\
+\end{array}$ (2.3) where $\kappa:=\|\Delta w_{0}\|_{L^{\infty}(\Omega)}+4\|\nabla\sqrt{w_{0}}\|_{L^{\infty}(\Omega)}^{2}+\frac{\|w_{0}\|_{L^{\infty}(\Omega)}}{e}.$ (2.4) 3 A priori estimates In this section, we are going to establish an iteration step to develop the main ingredient of our result.
+The iteration depends on a series of a priori estimates.
+Firstly, the following two
+lemmas provide some elementary material that will be essential to our bootstrap
+procedure. Lemma 3.1 . Let $\mu=0,$ then
+the solution $(u,v,w)$ of ( 1.3 ) satisfies $\begin{array}[]{rl}\|u(\cdot,t)\|_{L^{1}(\Omega)}=\|u_{0}\|_{L^{1}(\Omega)}~~~\mbox{for all}~~t\in(0,T_{max}).\end{array}$ (3.1) In contrast to the situation without source terms ( $\mu=0$ in ( 1.3 )), we cannot hope for mass conservation in the first
+component. Nevertheless, the following inequality still holds: Lemma 3.2 . (see e.g. [ 60 ] )
+Assume that $\mu>0.$ There exists a positive constant $K_{0}$ such that
+the solution $(u,v,w)$ of ( 1.3 ) satisfies $\begin{array}[]{rl}\|u(\cdot,t)\|_{L^{1}(\Omega)}\leq K_{0}~~~\mbox{for all}~~t\in(0,T_{max})\end{array}$ (3.2) and $\int_{t}^{t+\tau}\int_{\Omega}{u^{2}}\leq K_{0}~~\mbox{for all}~~t\in(0,T_{max}-\tau),$ (3.3) where $\tau:=\min\{1,\frac{1}{6}T_{max}\}.$ (3.4) Now, we now proceed to derive a uniform upper bound for $u$ , which
+turns out to be the key to obtain all the higher order estimates and thus to extend the
+classical solution globally.
+To do this, employing the maximal Sobolev
+regularity, in light of Lemma 3.1 , as a first conclusion towards global existence of the classical
+solutions is the following a priori
+estimate which asserts that, in sharp contrast to the case $\mu=0$ (see also [ 47 ] )
+is a priori
+uniformly bounded in $L^{k}(\Omega)$ for some $k$ larger than one. In order to deal with the critical case ( $k=\lambda$ ), the novelty of paper, we first obtain the bounded of $\|u(\cdot,t)\|_{L^{k_{0}}(\Omega)}$ where $k_{0}\in(\max\{1,\lambda-\frac{N}{2}\},\lambda)$ . And then by some careful analysis, one can finally derive the bounded of the critical case, which are the following Lemmas: Lemma 3.3 . Let $(u,v,w)$ be a solution to ( 1.3 ) on $(0,T_{max})$ . Then for any $k>1,$ one can
+find positive constants $\rho_{0}$ and $\rho_{1}$ such that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{[\frac{({k}-1)}{{k}}\kappa_{0}-\mu]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{\rho_{0}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+\rho_{1}~~~\mbox{for all}~~t\in(0,T_{max}),}\\
+\end{array}$ (3.5) where $\kappa_{0}$ is the same as ( 1.9 ). Proof. Multiplying the first equation in ( 1.3 )
+by $u^{k-1}$ , and integrating in space and using $w\geq 0$ , we get $\begin{array}[]{rl}&\displaystyle{\frac{1}{k}\frac{d}{dt}\|u\|^{k}_{L^{k}(\Omega)}+(k-1)\int_{\Omega}u^{k-2}D(u)|\nabla u|^{2}dx}\\
+\leq&\displaystyle{-\chi\int_{\Omega}\nabla\cdot(u\nabla v)u^{k-1}dx-\xi\int_{\Omega}\nabla\cdot(u\nabla w)u^{k-1}+\mu\int_{\Omega}u^{k-1}u(1-u-w)}\\
+\leq&\displaystyle{-\chi\int_{\Omega}\nabla\cdot(u\nabla v)u^{k-1}dx-\xi\int_{\Omega}\nabla\cdot(u\nabla w)u^{k-1}+\mu\int_{\Omega}u^{k-1}u(1-u)}\\
+\end{array}$ (3.6) for all $t\in(0,T_{max})$ . Case $\tau=0:$ Integrating by parts to the first term on the right hand side of ( 3.6 ) and from $(\ref{1.1})_{2}$ we obtain $\begin{array}[]{rl}&\displaystyle{-\chi\int_{\Omega}\nabla\cdot(u\nabla v)u^{k-1}}\\
+=&\displaystyle{(k-1)\chi\int_{\Omega}u^{k-1}\nabla u\cdot\nabla v}\\
+\leq&\displaystyle{\frac{k-1}{k}\chi\int_{\Omega}u^{k+1},}\\
+\end{array}$ (3.7) where we have used the fact that $v\geq 0.$ Summing up ( 2.3 ) and ( 2.4 )
+yields to $\begin{array}[]{rl}&\displaystyle{-\xi\int_{\Omega}\nabla\cdot(u\nabla w)u^{k-1}}\\
+=&\displaystyle{-\frac{({k-1})}{k}\xi\int_{\Omega}u^{k}\Delta w}\\
+\leq&\displaystyle{\kappa\frac{({k-1})\xi}{k}\int_{\Omega}u^{k}}\\
+\leq&\displaystyle{\kappa\xi\int_{\Omega}u^{k},}\\
+\end{array}$ (3.8) where $\kappa$ is give by ( 2.4 ) and
+we have used the fact that $\tau=0$ in ( 2.3 ). Here, by some basic calculation, we deduce that $\begin{array}[]{rl}&\displaystyle{\mu\int_{\Omega}u^{k-1}u(1-u)=-\mu\int_{\Omega}u^{k+1}+\mu\int_{\Omega}u^{k}.}\\
+\end{array}$ (3.9) Therefore, combined with
+( 3.8 ), ( 3.9 ),
+and ( 3.6 ) and ( 1.5 ), we have $\begin{array}[]{rl}&\displaystyle{\frac{1}{k}\frac{d}{dt}\|u\|^{k}_{L^{k}(\Omega)}+\frac{4C_{D}(k-1)}{(m+k-1)^{2}}\|\nabla u^{\frac{m+k-1}{2}}\|^{2}_{L^{2}(\Omega)}+\frac{k+1}{k}\int_{\Omega}u^{k}}\\
+\leq&\displaystyle{(-\mu+\frac{k-1}{k}\chi)\int_{\Omega}u^{k+1}+C_{1}\int_{\Omega}u^{k}~~\mbox{for all}~~t\in(0,T_{max}),}\\
+\end{array}$ (3.10) where $C_{1}=\mu+\kappa\xi+2.$ (3.11) Here we have used the fact that $\frac{k+1}{k}\leq 2$ (by $k>1$ ).
+For any $t\in(0,T_{max})$ , applying the Gronwall Lemma to the above inequality, we have $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{(-\mu+\frac{k-1}{k}\chi)\int_{0}^{t}\int_{\Omega}u^{k+1}dxds+C_{1}\int_{0}^{t}\int_{\Omega}u^{k}dxds+C_{2}~~\mbox{for all}~~t\in(0,T_{max}),}\\
+\end{array}$ (3.12) with $C_{2}:=C_{2}({k})=\frac{1}{{k}}\|u_{0}\|^{{{k}}}_{L^{{k}}(\Omega)}.$ (3.13) Case $\tau=1:$ Integrating by parts to the first term on the right hand side of ( 3.6 ) and from $(\ref{1.1})_{2}$ we obtain for any $\varepsilon_{1}>0,$ $\begin{array}[]{rl}&\displaystyle{-\chi\int_{\Omega}\nabla\cdot(u\nabla v)u^{k-1}}\\
+=&\displaystyle{-\frac{({k-1})\chi}{k}\int_{\Omega}u^{k}\Delta v}\\
+\leq&\displaystyle{\frac{(k-1)\chi}{k}\int_{\Omega}u^{k}|\Delta v|}\\
+\leq&\displaystyle{\varepsilon_{1}\int_{\Omega}u^{k+1}+\gamma_{1}\varepsilon_{1}^{-k}\int_{\Omega}|\Delta v|^{k+1},}\\
+\end{array}$ (3.14) where $\gamma_{1}=\frac{1}{k+1}\left(\frac{k+1}{k}\right)^{-k}\left(\frac{(k-1)\chi}{k}\right)^{k+1}.$ (3.15) Due to ( 2.3 ) and ( 2.4 ), it follows that for any $\varepsilon_{2}>0,$ $\begin{array}[]{rl}&\displaystyle{-\xi\int_{\Omega}\nabla\cdot(u\nabla w)u^{k-1}}\\
+=&\displaystyle{-\frac{({k-1})\xi}{k}\int_{\Omega}u^{k}\Delta w}\\
+\leq&\displaystyle{\kappa\frac{({k-1})\xi}{k}\int_{\Omega}u^{k}+\frac{({k-1})\xi\|w_{0}\|_{L^{\infty}(\Omega)}}{k}\int_{\Omega}u^{k}v}\\
+\leq&\displaystyle{\kappa\xi\int_{\Omega}u^{k}+\frac{({k-1})\xi\|w_{0}\|_{L^{\infty}(\Omega)}}{k}\int_{\Omega}u^{k}v}\\
+\leq&\displaystyle{\kappa\xi\int_{\Omega}u^{k}+\frac{({k-1})\xi\|w_{0}\|_{L^{\infty}(\Omega)}}{k}\int_{\Omega}u^{k}v}\\
+\leq&\displaystyle{\kappa\xi\int_{\Omega}u^{k}+\varepsilon_{2}\int_{\Omega}u^{k+1}+\gamma_{2}\varepsilon_{2}^{-k}\int_{\Omega}v^{k+1},}\\
+\end{array}$ (3.16) where $\gamma_{2}:=\frac{1}{k+1}\left(\frac{k+1}{k}\right)^{-k}\left(\frac{({k-1})\xi\|w_{0}\|_{L^{\infty}(\Omega)}}{k}\right)^{k+1}.$ (3.17) Here $\kappa$ is give by ( 2.4 ) and
+we have used the fact that $\tau=1$ in ( 2.3 ). On the other hand, in view of the Young inequality, we also derive that $\begin{array}[]{rl}\mu\displaystyle\int_{\Omega}u^{k-1}u(1-u)=&\displaystyle{-\mu\int_{\Omega}u^{k+1}+(\mu+\frac{k+1}{k})\int_{\Omega}u^{k}-\frac{k+1}{k}\int_{\Omega}u^{k}}\\
+\leq&\displaystyle{-\mu\int_{\Omega}u^{k+1}+(\mu+2)\int_{\Omega}u^{k}-\frac{k+1}{k}\int_{\Omega}u^{k}}\\
+\end{array}$ (3.18) by using $k>1.$ Therefore, combined with ( 3.14 ),
+( 3.16 ), ( 3.6 ) as well as
+( 3.18 ) and ( 1.5 ), we have $\begin{array}[]{rl}&\displaystyle{\frac{1}{k}\frac{d}{dt}\|u\|^{k}_{L^{k}(\Omega)}+C_{D}(k-1)\int_{\Omega}u^{m+k-3}|\nabla u|^{2}+\frac{k+1}{k}\int_{\Omega}u^{k}}\\
+\leq&\displaystyle{(-\mu+\varepsilon_{1}+\varepsilon_{2})\int_{\Omega}u^{k+1}+\gamma_{1}\int_{\Omega}|\Delta v|^{k+1}+\gamma_{2}\int_{\Omega}v^{k+1}+C_{1}\int_{\Omega}u^{k},}\\
+\end{array}$ (3.19) where $C_{1}$ is the same as ( 3.11 ).
+For any $t\in(0,T_{max})$ , applying the Gronwall Lemma to the above inequality shows that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}}\\
+\leq&\displaystyle{\frac{1}{{k}}e^{-({{k}+1})t}\|u_{0}\|^{{{k}}}_{L^{{k}}(\Omega)}+(\varepsilon_{1}+\varepsilon_{2}-\mu)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{\gamma_{1}\varepsilon_{1}^{-k}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}|\Delta v|^{{k}+1}dxds+C_{1}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds}\\
+&\displaystyle{+\gamma_{2}\varepsilon_{2}^{-k}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}v^{{{k}+1}}dxds}\\
+\leq&\displaystyle{(\varepsilon_{1}+\varepsilon_{2}-\mu)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}+1}}dxds+\gamma_{1}\varepsilon_{1}^{-k}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}|\Delta v|^{{k}+1}dxds}\\
+&+\displaystyle{\gamma_{2}\varepsilon_{2}^{-k}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}v^{{{k}+1}}dxds+C_{1}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+C_{2},}\\
+\end{array}$ (3.20) where $C_{2}$ is given by ( 3.13 ).
+Next, a use of Lemma 2.2 leads to $\begin{array}[]{rl}&\displaystyle{\gamma_{1}\varepsilon_{1}^{-k}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}|\Delta v|^{{k}+1}dxds}\\
+=&\displaystyle{\gamma_{1}\varepsilon_{1}^{-k}e^{-({{k}+1})t}\int_{0}^{t}e^{({{k}+1})s}\int_{\Omega}|\Delta v|^{{k}+1}dxds}\\
+\leq&\displaystyle{\gamma_{1}\varepsilon_{1}^{-k}e^{-({{k}+1})t}\lambda_{0}(\int_{0}^{t}\int_{\Omega}e^{({{k}+1})s}u^{{k}+1}dxds+\|v_{0}\|^{{k}+1}_{W^{2,{{k}+1}}})}\\
+\end{array}$ (3.21) and $\begin{array}[]{rl}&\displaystyle{\gamma_{2}\varepsilon_{2}^{-k}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}v^{{k}+1}dxds}\\
+=&\displaystyle{\gamma_{2}\varepsilon_{2}^{-k}e^{-({{k}+1})t}\int_{0}^{t}e^{({{k}+1})s}\int_{\Omega}v^{{k}+1}dxds}\\
+\leq&\displaystyle{\gamma_{2}\varepsilon_{2}^{-k}e^{-({{k}+1})t}\lambda_{0}(\int_{0}^{t}\int_{\Omega}e^{({{k}+1})s}u^{{k}+1}dxds+\|v_{0}\|^{{k}+1}_{W^{2,{{k}+1}}})}\\
+\end{array}$ (3.22) for all $t\in(0,T_{max})$ .
+On the other hand, choosing $\varepsilon_{1}=\frac{(k-1)\chi}{k+1}\lambda_{0}^{\frac{1}{k+1}}$ and $\varepsilon_{2}=\frac{(k-1)\xi\|w_{0}\|_{L^{\infty}(\Omega)}}{k+1}\lambda_{0}^{\frac{1}{k+1}}$ , with the help of ( 3.15 ) and ( 3.17 ), a simple calculation shows that $\varepsilon_{1}+\gamma_{1}\lambda_{0}\varepsilon_{1}^{-k}=\frac{({k}-1)}{{k}}\lambda_{0}^{\frac{1}{{k}+1}}\chi$ and $\varepsilon_{2}+\gamma_{2}\lambda_{0}\varepsilon_{2}^{-k}=\frac{({k}-1)}{{k}}\lambda_{0}^{\frac{1}{{k}+1}}\xi\|w_{0}\|_{L^{\infty}(\Omega)},$ so that,
+substituting ( 3.21 )–( 3.22 ) into ( 3.20 ) implies that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{(\varepsilon_{1}+\gamma_{1}\lambda_{0}\varepsilon_{1}^{-k}+\varepsilon_{2}+\gamma_{2}\lambda_{0}\varepsilon_{2}^{-k}-\mu)\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{(\gamma_{1}\varepsilon_{2}^{-k}+\gamma_{2}\varepsilon_{2}^{-k})e^{-({k}+1)t}\lambda_{0}\|v_{0}\|^{{k}+1}_{W^{2,{{k}+1}}}+C_{1}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+C_{2}}\\
+=&\displaystyle{(\frac{({k}-1)}{{k}}\lambda_{0}^{\frac{1}{{k}+1}}\chi+\frac{({k}-1)}{{k}}\lambda_{0}^{\frac{1}{{k}+1}}\xi\|w_{0}\|_{L^{\infty}(\Omega)}-\mu)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{(\gamma_{1}\varepsilon_{2}^{-k}+\gamma_{2}\varepsilon_{2}^{-k})e^{-({k}+1)t}\lambda_{0}\|v_{0}\|^{{k}+1}_{W^{2,{{k}+1}}}+C_{1}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+C_{2}}\\
+\leq&\displaystyle{[\frac{({k}-1)}{{k}}\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{C_{1}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+C_{3}}\\
+\end{array}$ (3.23) with $C_{3}=(\gamma_{1}\varepsilon_{2}^{-k}+\gamma_{2}\varepsilon_{2}^{-k})e^{-({k}+1)t}\lambda_{0}\|v_{0}\|^{{k}+1}_{W^{2,{{k}+1}}}+C_{2}.$ Finally, choosing $\rho_{0}=\mu+\kappa\xi+2$ and $\rho_{1}=C_{3}$ , using ( 3.12 ) and ( 3.23 ), applying ( 1.9 ), we derive that ( 3.5 ) holds.
+∎ Lemma 3.4 . Let $(u,v,w)$ be a solution to ( 1.3 ) on $(0,T_{max})$ . If $\tau=0$ and $\mu>0,$ then for any $k\in\left\{\begin{array}[]{ll}(1,\frac{\chi}{(\chi-\mu)_{+}}],~~\mbox{if}~~0<\mu<\chi~~{and}~~m\geq 2-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}},\\
+(1,\frac{\chi}{(\chi-\mu)_{+}}),~~\mbox{if}~~\mu\geq\chi,\\
+\end{array}\right.$ (3.24) one can
+find a positive constant $C$ such that $\|u(\cdot,t)\|_{L^{k}(\Omega)}\leq C~~\mbox{for all}~~t\in(0,T_{max})$ (3.25) holds. Proof. Firstly, applying Lemma 3.3 , using $\tau=0$ and ( 1.9 ), we conclude that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{[\frac{({k}-1)}{{k}}\chi-\mu]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{\rho_{0}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+\rho_{1}~~~\mbox{for all}~~t\in(0,T_{max}),}\\
+\end{array}$ (3.26) where $\rho_{0}$ and $\rho_{0}$ are the same as Lemma 3.3 . Case $\mu<\chi$ : Step 1. The boundedness of $\|u(\cdot,t)\|_{L^{k}(\Omega)}$ for all $t\in(0,T_{max})$ and $k\in(1,\frac{\chi}{(\chi-\mu)_{+}})$ . To this end, for any $\varepsilon>0$ , pick $k=\frac{\chi}{(\chi-\mu)_{+}}-\varepsilon$ in ( 3.26 ), then, $-\mu+\frac{k-1}{k}\chi<0$ (by $0<\mu<\chi$ ), so that, ( 3.26 ) implies that there exists a positive constant $C_{1}$ such that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+&+\displaystyle{\frac{1}{2}[\mu-\frac{({k}-1)}{{k}}\chi]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+\leq&\displaystyle{C_{1}~~~\mbox{for all}~~t\in(0,T_{max})}\\
+\end{array}$ (3.27) by using the Young inequality.
+Applying the Gronwall lemma to ( 3.27 ), we derive $\|u(\cdot,t)\|_{L^{\frac{\chi}{(\chi-\mu)_{+}}-\varepsilon}(\Omega)}\leq C_{2}~~\mbox{for all}~~t\in(0,T_{max}),$ (3.28) which combined with the arbitrariness of $\varepsilon$ and the Hölder inequality yields to for any $k\in(1,\frac{\chi}{(\chi-\mu)_{+}})$ , $\|u(\cdot,t)\|_{L^{k}(\Omega)}\leq C_{3}~~\mbox{for all}~~t\in(0,T_{max}).$ (3.29) Step 2. The boundedness of $\|u(\cdot,t)\|_{L^{k}(\Omega)}$ for all $t\in(0,T_{max})$ and $k\in(1,\frac{\chi}{(\chi-\mu)_{+}}]$ . To achieve this, by step 1,
+we may pick $k_{0}\in(\max\{1,\frac{\chi}{(\chi-\mu)_{+}}-\frac{N}{2}\},\frac{\chi}{(\chi-\mu)_{+}})$ such that $\|u(\cdot,t)\|_{L^{k_{0}}(\Omega)}\leq C_{4}~~\mbox{for all}~~t\in(0,T_{max}).$ (3.30) Now, set $k=\frac{\chi}{(\chi-\mu)_{+}}$ in ( 3.26 ), then, $-\mu+\frac{k-1}{k}\chi=0$ (by $0<\mu<\chi$ ), so that, ( 3.26 ) implies that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{\rho_{0}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+\rho_{1}~~~\mbox{for all}~~t\in(0,T_{max}).}\\
+\end{array}$ (3.31) Now, observe that $m\geq 2-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}}$ and $k_{0}>\max\{1,\frac{\chi}{(\chi-\mu)_{+}}-\frac{N}{2}\}$ implies that $\begin{array}[]{rl}\displaystyle{m+k-1+\frac{2}{N}\times k_{0}}&\geq{2-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}}+k-1+\frac{2}{N}\times k_{0}}\\
+&={k+1-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}}+\frac{2}{N}\times k_{0}}\\
+&>{k+1-\frac{2}{N}\frac{\chi}{(\chi-\mu)_{+}}+\frac{2}{N}\times(\frac{\chi}{(\chi-\mu)_{+}}-\frac{N}{2})}\\
+&={k,}\\
+\end{array}$ therefore, in view of ( 3.30 ), a use of the Gagliardo-Nirenberg inequality to ( 3.31 ) implies
+that
+there exist positive constants $C_{5}$ and $C_{6}$ such that $\begin{array}[]{rl}&\displaystyle\rho_{0}\int_{\Omega}u^{k}\\
+=&\displaystyle{\|u^{\frac{m+k-1}{2}}\|^{\frac{2{k}}{m+k-1}}_{L^{\frac{2{k}}{m+k-1}}(\Omega)}}\\
+\leq&\displaystyle{C_{5}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{\frac{m+k-1}{k}\frac{N(k-k_{0})}{N(m+k-1)+(2-N)k_{0}}}\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2k_{0}}{m+k-1}}(\Omega)}^{1-\frac{m+k-1}{k}\frac{N(k-k_{0})}{N(m+k-2)+(2-N)k_{0}}}}\\
+&\displaystyle{+\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2k_{0}}{m+k-1}}(\Omega)})^{\frac{2{k}}{m+k-1}}}\\
+\leq&\displaystyle{C_{6}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{\frac{2N(k-k_{0})}{N(m+k-1)+(2-N)k_{0}}}+1),}\\
+\end{array}$ (3.32) where combined with ${\frac{2N(k-k_{0})}{N(m+k-1)+(2-N)k_{0}}}<2$ (by $m+k-1+\frac{2}{N}\times k_{0}>k$ ) implies that $\begin{array}[]{rl}\displaystyle\rho_{0}\int_{\Omega}u^{k}\leq\displaystyle{\frac{2C_{D}(k-1)}{(m+k-1)^{2}}\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{2}+C_{7},}\\
+\end{array}$ for some positive constant $C_{7}$ .
+Substituting the above inequality into ( 3.31 ), one can easily deduce that there exists a positive constant $C_{8}$ such that $\begin{array}[]{rl}\|u(\cdot,t)\|_{L^{k_{0}}(\Omega)}\leq C_{8}~~\mbox{for all}~~t\in(0,T_{max}).\end{array}$ (3.33) Case $\mu\geq\chi:$ In view of $1<k<\frac{\chi}{(\chi-\mu)_{+}},$ $-\mu+\frac{k-1}{k}\chi<0,$ so that, ( 3.26 ) and the Young inequality yields to $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+&+\displaystyle{\frac{1}{2}[\mu-\frac{({k}-1)}{{k}}\chi]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+\leq&\displaystyle{C_{9}~~~\mbox{for all}~~t\in(0,T_{max}).}\\
+\end{array}$ This completes the proof.
+∎ Lemma 3.5 . Let $(u,v,w)$ be a solution to ( 1.3 ) on $(0,T_{max})$ and $\theta_{0}=\frac{\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})}{\left[\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu\right]_{+}}$ . If $\tau=1$ and $\mu>0,$ then for any $k\in\left\{\begin{array}[]{ll}(1,\theta_{0}],~~\mbox{if}~~0<\mu<\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})~~{and}~~m\geq 2-\frac{2}{N}\theta_{0},\\
+(1,\theta_{0}),~~\mbox{if}~~\mu\geq\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)}),\\
+\end{array}\right.$ (3.34) there exists a positive constant $C$ which depends on $k$ such that $\|u(\cdot,t)\|_{L^{k}(\Omega)}\leq C~~\mbox{for all}~~t\in(0,T_{max})$ (3.35) holds. Proof. Firstly, due to Lemma 3.3 as well as $\tau=1$ and ( 1.9 ), we have $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{[\frac{({k}-1)}{{k}}\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{\rho_{0}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+\rho_{1}~~~\mbox{for all}~~t\in(0,T_{max}),}\\
+\end{array}$ (3.36) where $\rho_{0}$ and $\rho_{0}$ are the same as Lemma 3.3 .
+In the sequel, we wish to bound the terms on the right-hand side of ( 3.36 )
+in terms of the dissipation term on its left-hand side. Case $\mu<\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})$ : Step 1. The boundedness of $\|u(\cdot,t)\|_{L^{k_{0}}(\Omega)}$ for all $t\in(0,T_{max})$ and $k_{0}\in(\max\{1,\theta_{0}-\frac{N}{2}\},\theta_{0})$ with $\theta_{0}=\frac{\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})}{\left[\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu\right]_{+}}.$ To this end, for any $\varepsilon>0$ , pick $k=\theta_{0}-\varepsilon$ in ( 3.36 ), then, $-\mu+\frac{({k}-1)}{{k}}\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})<0~~~(\mbox{by}~~0<\mu<\mu<\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)}),$ so that, ( 3.36 ) implies that for some positive constant $C_{1}$ such that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}}\\
+\leq&\displaystyle{\frac{1}{2}[\frac{({k}-1)}{{k}}\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds+C_{1}}\\
+\end{array}$ (3.37) by using the Young inequality.
+This combined with the arbitrariness of $\varepsilon$ and the Hölder inequality yields to for any $k_{0}\in(\max\{1,\theta_{0}-\frac{N}{2}\},\theta_{0})$ , $\|u(\cdot,t)\|_{L^{k_{0}}(\Omega)}\leq C_{2}~~\mbox{for all}~~t\in(0,T_{max})$ (3.38) and some positive constant $C_{2}$ . Step 2. The boundedness of $\|u(\cdot,t)\|_{L^{k}(\Omega)}$ for all $t\in(0,T_{max})$ and $k\in(1,\theta_{0}]$ , where $\theta_{0}=\frac{\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})}{\left[\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu\right]_{+}}$ . To achieve this, we pick $k=\theta_{0}$ in ( 3.36 ), then, $-\mu+\frac{({k}-1)}{{k}}\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})=0$ , so that, by ( 3.36 ), we have $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{\rho_{0}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+\rho_{1}~~\mbox{for all}~~t\in(0,T_{max}).}\\
+\end{array}$ (3.39) In the following, we shall apply the Gagliardo-Nirenberg interpolation inequality to
+control the second integral on the right-hand side of ( 3.39 ).
+To this end, in view of $m\geq 2-\frac{2}{N}\theta_{0}$ and $k_{0}>\max\{1,\theta_{0}-\frac{N}{2}\}$ implies that $m+k-1+\frac{2}{N}\times k_{0}>k,$ therefore, in view of ( 3.38 ),
+we deduce from the Gagliardo–Nirenberg inequality that
+there exist positive constants $C_{3}$ and $C_{4}$ such that $\begin{array}[]{rl}&\displaystyle\rho_{0}\int_{\Omega}u^{k}\\
+=&\displaystyle{\|u^{\frac{m+k-1}{2}}\|^{\frac{2{k}}{m+k-1}}_{L^{\frac{2{k}}{m+k-1}}(\Omega)}}\\
+\leq&\displaystyle{C_{3}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{\frac{m+k-1}{k}\frac{N(k-k_{0})}{N(m+k-1)+(2-N)k_{0}}}\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2k_{0}}{m+k-1}}(\Omega)}^{1-\frac{m+k-1}{k}\frac{N(k-k_{0})}{N(m+k-2)+(2-N)k_{0}}}}\\
+&\displaystyle{+\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2k_{0}}{m+k-1}}(\Omega)})^{\frac{2{k}}{m+k-1}}}\\
+\leq&\displaystyle{C_{4}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{\frac{2N(k-k_{0})}{N(m+k-1)+(2-N)k_{0}}}+1),}\\
+\end{array}$ (3.40) which, together with the fact ${\frac{2N(k-k_{0})}{N(m+k-1)+(2-N)k_{0}}}<2~(\mbox{by}~~m+k-1+\frac{2}{N}\times k_{0}>k),$ immediately gives that $\begin{array}[]{rl}\displaystyle\rho_{0}\int_{\Omega}u^{k}\leq\displaystyle{\frac{2C_{D}(k-1)}{(m+k-1)^{2}}\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{2}+C_{5}}\\
+\end{array}$ and some positive constant $C_{5}$ .
+Substituting the above inequality into ( 3.39 ), we can get
+( 3.35 ). Case $\mu\geq\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})$ : For any $\varepsilon>0,$ we choose $k=\frac{\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})}{\left[\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})-\mu\right]_{+}}-\varepsilon.$ Then $\frac{({k}-1)}{{k}}\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})<\mu,$ so that, ( 3.36 ) yields to for some positive constant $C_{6}$ such that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+&+\displaystyle{\frac{1}{2}[\mu-\frac{({k}-1)}{{k}}\max_{s\geq 1}\lambda_{0}^{\frac{1}{{{s}}+1}}(\chi+\xi\|w_{0}\|_{L^{\infty}(\Omega)})]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+\leq&\displaystyle{C_{6}~~~\mbox{for all}~~t\in(0,T_{max})}\\
+\end{array}$ by using Young inequality.
+The proof Lemma 3.5 is completed.
+∎ . Lemma 3.6 . Let $(u,v,w)$ be a solution to ( 1.3 ) on $(0,T_{max})$ . If $0<\mu<\kappa_{0}$ and $m\geq 2-\frac{2}{N}\lambda$ ,
+then there exist positive constants $\alpha_{0}>\lambda$ and $C$ which satisfy $\|u(\cdot,t)\|_{L^{\alpha_{0}}(\Omega)}\leq C~~\mbox{for all}~~t\in(0,T_{max}),$ (3.41) where $\lambda=\frac{\kappa_{0}}{(\kappa_{0}-\mu)_{+}}$ (3.42) and $\kappa_{0}$ is the same as
+( 1.9 ). Proof. Firstly, by ( 3.42 )
+and ( 1.9 ), in view of Lemma 3.4 and Lemma 3.5 , we deduce that $\|u(\cdot,t)\|_{L^{\lambda}(\Omega)}\leq C_{1}~~\mbox{for all}~~t\in(0,T_{max})$ (3.43) and some positive constant $C_{1},$ where $\lambda$ is given by ( 3.42 ).
+On the other hand, by Lemma 3.3 , we obtain that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{[\frac{({k}-1)}{{k}}\kappa_{0}-\mu]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{\rho_{0}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+\rho_{1}~~~\mbox{for all}~~t\in(0,T_{max}),}\\
+\end{array}$ where $\kappa_{0},\rho_{0}$ and $\rho_{1}$ are the same as Lemma 3.3 .
+This combined with the Young inequality implies that for any $\delta_{1}>0,$ $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{[\frac{({k}-1)}{{k}}\kappa_{0}+\delta_{1}-\mu]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds+C_{1}~~~\mbox{for all}~~t\in(0,T_{max})}\\
+\end{array}$ (3.44) and some positive constant $C_{1}$ .
+Next, in view of ( 3.43 ),
+we conclude from the Gagliardo–Nirenberg inequality that
+there exist positive constants $C_{2}=C_{2}(k)$ and $C_{3}=C_{3}(k)$ such that $\begin{array}[]{rl}&\displaystyle\int_{\Omega}u^{k+1}\\
+=&\displaystyle{\|u^{\frac{m+k-1}{2}}\|^{\frac{2{(k+1)}}{m+k-1}}_{L^{\frac{2{(k+1)}}{m+k-1}}(\Omega)}}\\
+\leq&\displaystyle{C_{2}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{\frac{N(m+k-1)}{k+1}\frac{k+1-\lambda}{\lambda(2-N)+N(m+k-1)}}\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2\lambda}{m+k-1}}(\Omega)}^{1-\frac{N(m+k-1)}{k+1}\frac{k+1-\lambda}{\lambda(2-N)+N(m+k-1)}}}\\
+&\displaystyle{+\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2\lambda}{m+k-1}}(\Omega)})^{\frac{2{(k+1)}}{m+k-1}}}\\
+\leq&\displaystyle{C_{3}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{\frac{2N(k+1-\lambda)}{\lambda(2-N)+N(m+k-1)}}+1),}\\
+\end{array}$ (3.45) where $\lambda$ is the same as ( 3.42 ).
+Since $m\geq 2-\frac{2}{N}\lambda$ , one can easily see that ${\frac{2N(k+1-\lambda)}{\lambda(2-N)+N(m+k-1)}}\leq 2,$ so that, ( 3.45 ) yields to $\begin{array}[]{rl}\displaystyle\int_{\Omega}u^{k+1}\leq&\displaystyle{C_{4}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{2}+1)}\\
+\end{array}$ (3.46) for some positive constant $C_{4}(k)>0.$ Substituting ( 3.46 ) into ( 3.44 ), we obatin that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}}\\
+&\displaystyle{+[\frac{4C_{D}(k-1)}{(m+k-1)^{2}}-(-\mu+\frac{k-1}{k}\kappa_{0})C_{4}+\delta_{1}C_{4}]\int_{0}^{t}e^{-({{k}+1})(t-s)}\|\nabla(u+1)^{\frac{m+k-1}{2}}\|^{2}_{L^{2}(\Omega)}ds}\\
+\leq&\displaystyle{C_{5}~~~\mbox{for all}~~t\in(0,T_{max})}\\
+\end{array}$ (3.47) and some positive constant $C_{5}$ .
+Let $k>\lambda$ . Then by some basic calculation, we derive that $\lim_{k\nearrow\lambda}[\frac{4C_{D}(k-1)}{(m+k-1)^{2}}-(-\mu+\frac{k-1}{k}\kappa_{0})C_{4}]=\frac{4C_{D}(\lambda-1)}{(m+\lambda-1)^{2}}>0$ (3.48) and $\frac{4C_{D}(k-1)}{(m+k-1)^{2}}-(-\mu+\frac{k-1}{k}\kappa_{0})C_{4}>0~~~\mbox{for all}~~k>\lambda,$ (3.49) where we have used the fact that $\mu<\kappa_{0}$ .
+Collecting ( 3.46 )–( 3.49 ), we may choose $k>\lambda$ which is close to $\lambda$ such that $\lim_{k\nearrow\lambda}[\frac{4C_{D}(k-1)}{(m+k-1)^{2}}-(\mu+\frac{k-1}{k}\kappa_{0})C_{4}]=\frac{2C_{D}(\lambda-1)}{(m+\lambda-1)^{2}}.$ (3.50) Next, substitute ( 3.50 ) into ( 3.47 ) and choose $\delta_{1}$ suitablely small (e.g. $\delta_{1}<\frac{2C_{D}(\lambda-1)}{C_{4}(m+\lambda-1)^{2}}$ ), then we have $\begin{array}[]{rl}\|u(\cdot,t)\|_{L^{{k}}(\Omega)}\leq&\displaystyle{C_{6}~~~\mbox{for all}~~t\in(0,T_{max})}\\
+\end{array}$ (3.51) and the proof of Lemma 3.6 is thus completed.
+∎ Along with the basic estimate from Lemmas 3.4 – 3.6 , this immediately implies the following Lemma: Lemma 3.7 . Assume that $\mu>0$ .
+If $m\geq 2-\frac{2}{N}\lambda~~~\mbox{with}~~\mu<\kappa_{0},\begin{array}[]{ll}\\
+\end{array}$ (3.52) then for $k>\max\{N+1,N(m+1)\}$ , there exists a positive constant $C=C(k,|\Omega|,\mu,\lambda_{0},\xi,\chi,m,C_{D})$ such that the solution of ( 1.3 ) from Lemma 2.3 satisfies $\int_{\Omega}u^{k}(x,t)dx\leq C~~~\mbox{for all}~~t\in(0,T_{max}),$ (3.53) where $\lambda$ and $\kappa_{0}$ are given by ( 3.42 )
+and ( 1.9 ), respectively. Proof. Firstly, due to Lemma 3.6 , we derive that there exists a positive constant $C_{1}$ such that $\|u(\cdot,t)\|_{L^{\alpha_{0}}(\Omega)}\leq C_{1}~~\mbox{for all}~~t\in(0,T_{max}),$ (3.54) where $\alpha_{0}$ is the same as Lemma 3.6 .
+Next,
+Lemma 3.3 implies that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{[\frac{({k}-1)}{{k}}\kappa_{0}-\mu]\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{\rho_{0}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+\rho_{1}~~~\mbox{for all}~~t\in(0,T_{max}),}\\
+\end{array}$ where $\kappa_{0},\rho_{0}$ and $\rho_{1}$ are the same as Lemma 3.3 .
+Therefore, we derive from the Young inequality that there exists a positive constant $C_{1}$ such that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{\kappa_{0}\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds+C_{1}~~~\mbox{for all}~~t\in(0,T_{max}).}\\
+\end{array}$ (3.55) For any $k>\max\{N+1,N(m+1),\alpha_{0}-1,1,1-m+\frac{N-2}{N}\alpha_{0}\}$ , $m\geq 2-\frac{2}{N}\lambda$ together with $\alpha_{0}>\lambda$ yields to $k+1\leq m+k-1+\frac{2}{N}\lambda<m+k-1+\frac{2}{N}\alpha_{0},$ so that, in particular, according to
+by the Gagliardo–Nirenberg inequality and ( 3.54 ), one can get there exist positive constants $C_{2}$ and $C_{3}$ such that $\begin{array}[]{rl}&\displaystyle\kappa_{0}\int_{\Omega}u^{k+1}\\
+=&\displaystyle{\kappa_{0}\|u^{\frac{m+k-1}{2}}\|^{\frac{2(k+1)}{m+k-1}}_{L^{\frac{2(k+1)}{m+k-1}}(\Omega)}}\\
+\leq&\displaystyle{C_{2}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{\frac{m+k-1}{k+1}}\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2\alpha_{0}}{m+k-1}}(\Omega)}^{1-\frac{m+k-1}{k+1}}+\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2\alpha_{0}}{m+k-1}}(\Omega)})^{\frac{2(k+1)}{m+k-1}}}\\
+\leq&\displaystyle{C_{3}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{2\frac{N(k+1)-N\alpha_{0}}{(2-N)\alpha_{0}+N(m+k-1)}}+1).}\\
+\end{array}$ (3.56) In view of $m\geq 2-\frac{2}{N}\lambda$ and $\alpha_{0}>\lambda$ , by some basic
+calculation,
+we derive that $\frac{N(k+1)-N\alpha_{0}}{(2-N)\alpha_{0}+N(m+k-1)}<1,$ so that, which returns, using again the Young inequality,
+for any $\delta_{1}>0$ , $\begin{array}[]{rl}&\displaystyle\kappa_{0}\int_{\Omega}u^{k+1}\leq\displaystyle{\delta_{1}\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{2}+C_{4}.}\\
+\end{array}$ (3.57) Combining the above three estimates and choosing $\delta_{1}$ appropriately small, we
+arrive at for some positive constant $C_{5}$ such that $\int_{\Omega}u^{k}(x,t)dx\leq C_{5}~~~\mbox{for all}~~t\in(0,T_{max}),$ (3.58) from which we readily infer ( 3.53 ).
+The proof of Lemma 3.7 is completed.
+∎ Lemma 3.8 . Assume that $\mu>0$ .
+If $m>2-\frac{2}{N}\lambda~~~\mbox{and}~~\mu\geq\kappa_{0},\begin{array}[]{ll}\\
+\end{array}$ (3.59) then for all $p>\max\{N+1,N(m+1)\}$ , there exists a positive constant $C=C(p,|\Omega|,\mu,\lambda_{0},\xi,\chi,m,C_{D})$ such that the solution of ( 1.3 ) from Lemma 2.3 satisfies $\int_{\Omega}u^{p}(x,t)dx\leq C~~~\mbox{for all}~~t\in(0,T_{max}),$ (3.60) where $\lambda$ and $\kappa_{0}$ are given by ( 3.42 )
+and ( 1.9 ), respectively. Proof. Firstly, in view of Lemma 3.5 , there exists a positive constant $C_{1}$ such that $\int_{\Omega}u^{l_{0}}(x,t)dx\leq C_{1}~~~\mbox{for all}~~t\in(0,T_{max}),$ (3.61) where $l_{0}=\lambda-\varepsilon$ with $\varepsilon=\frac{1}{3}\frac{N}{2}(m-2+\frac{2}{N}\lambda)$ .
+Next, by ( 3.55 ), we also have $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{\kappa_{0}\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds+C_{1}~~~\mbox{for all}~~t\in(0,T_{max}),}\\
+\end{array}$ (3.62) where $C_{1}$ is the same as ( 3.55 ).
+On the other hand, since $m>2-\frac{2}{N}\lambda,$ yields to $p+1<m+p-1+\frac{2}{N}l_{0},$ so that, in particular, according to
+by the Gagliardo–Nirenberg inequality and ( 3.61 ), one can get there exist positive constants $C_{2}$ and $C_{3}$ such that $\begin{array}[]{rl}&\displaystyle\kappa_{0}\int_{\Omega}u^{k+1}\\
+=&\displaystyle{\kappa_{0}\|u^{\frac{m+k-1}{2}}\|^{\frac{2(k+1)}{m+k-1}}_{L^{\frac{2(k+1)}{m+k-1}}(\Omega)}}\\
+\leq&\displaystyle{C_{2}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{\frac{m+k-1}{k+1}}\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2l_{0}}{m+k-1}}(\Omega)}^{1-\frac{m+k-1}{k+1}}+\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2l_{0}}{m+k-1}}(\Omega)})^{\frac{2(k+1)}{m+k-1}}}\\
+\leq&\displaystyle{C_{3}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{2\frac{N(k+1)-Nl_{0}}{(2-N)l_{0}+N(m+k-1)}}+1)}\\
+\end{array}$ (3.63) This together with $\frac{N(k+1)-Nl_{0}}{(2-N)l_{0}+N(m+k-1)}<1$ (by $m>2-\frac{2}{N}\lambda$ ) and the Young ineuqality implies that
+for any $\delta_{1}>0$ , $\begin{array}[]{rl}&\displaystyle\kappa_{0}\int_{\Omega}u^{k+1}\leq\displaystyle{\delta_{1}\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{2}+C_{4},}\\
+\end{array}$ (3.64) which combined with ( 3.62 ) implies that $\int_{\Omega}u^{k}(x,t)dx\leq C_{5}~~~\mbox{for all}~~t\in(0,T_{max})$ (3.65) by picking $\delta_{1}$ appropriately small in ( 3.64 ).
+Finally,
+using the Hölder inequality, we can get ( 3.60 ).
+The proof of Lemma 3.8 is completed.
+∎ Lemma 3.9 . Let $C_{D}>\frac{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}}{4}(2-\frac{2}{N})^{2}\kappa_{0}$ (3.66) and $h(p):=\frac{4C_{D}}{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}}-\frac{(1-\frac{2}{N}+p)^{2}}{{p}}\kappa_{0},$ where $\kappa_{0}$ is the same as ( 1.9 ), $p\geq 1,C_{D}$ and $C_{GN}$ are positive constants.
+Then there exists a positive constant $\tilde{p}_{0}>1$ such that $h(p)>0~~~\mbox{for all}~~p\in(1,\tilde{p}_{0}],$ (3.67) Proof. The idea comes from [ 59 ] . Indeed,
+due to ( 3.66 ), it is not difficult to verify that $h(1)\geq\frac{4C_{D}}{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}}-(2-\frac{2}{N})^{2}\kappa_{0}>0$ .
+Next, by basic calculation, we derive that for any $p\geq 1,$ $h^{\prime}(p)=\frac{(1-\frac{2}{N}+p)(p+\frac{2}{N}-1)}{p^{2}}\kappa_{0}<0.$ Therefore, from the monotonicity of $h$ , there exists a positive constant $\tilde{p}_{0}>1$ such that ( 3.67 ) holds.
+∎ Lemma 3.10 . Assume that $\mu=0$ .
+If $m>2-\frac{2}{N}\begin{array}[]{ll}\\
+\end{array}$ (3.68) or $m=2-\frac{2}{N}~~\mbox{and}~~~C_{D}>\frac{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}}{4}(2-\frac{2}{N})^{2}\kappa_{0},\begin{array}[]{ll}\\
+\end{array}$ (3.69) then there exists a positive constant $p_{0}>1$ such that the solution of ( 1.3 ) from Lemma 2.3 satisfies $\int_{\Omega}u^{p_{0}}(x,t)dx\leq C~~~\mbox{for all}~~t\in(0,T_{max}),$ (3.70) where $\kappa_{0}$ is the same as ( 1.9 ). Proof. Without loss of generality, we may assume that $m=2-\frac{2}{N}~~\mbox{and}~~~C_{D}>\frac{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}}{4}(2-\frac{2}{N})^{2}\kappa_{0},$ since, $m>2-\frac{2}{N}$ can be proved similarly and easily.
+Assume that $\tilde{p}_{0}$ is the same as lemma 3.9 and let $1<k\leq\min\{2,\tilde{p}_{0}\}$ .
+Then due to ( 3.5 ) and $\mu=0$ , we also derive that for the above $k,$ $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{\frac{({k}-1)}{{k}}\kappa_{0}\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{\rho_{0}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+\rho_{1}~~~\mbox{for all}~~t\in(0,T_{max}),}\\
+\end{array}$ (3.71) where $\kappa_{0},\rho_{0}$ and $\rho_{1}$ are the same as Lemma 3.3 .
+Here, in order to estimate the rightmost term appropriately, we
+employ the Gagliardo-Nirenberg inequality to obtain $C_{GN}>0$ such that $\begin{array}[]{rl}&\displaystyle\int_{\Omega}u^{k+1}\\
+=&\displaystyle{\|u^{\frac{1-\frac{2}{N}+k}{2}}\|^{\frac{2(k+1)}{1-\frac{2}{N}+k}}_{L^{\frac{2(k+1)}{1-\frac{2}{N}+k}}(\Omega)}}\\
+\leq&\displaystyle{C_{GN}(\|\nabla u^{\frac{1-\frac{2}{N}+k}{2}}\|_{L^{2}(\Omega)}^{\frac{1-\frac{2}{N}+k}{k+1}}\|u^{\frac{1-\frac{2}{N}+k}{2}}\|_{L^{\frac{2}{1-\frac{2}{N}+k}}(\Omega)}^{1-\frac{1-\frac{2}{N}+k}{k+1}}+\|u^{\frac{1-\frac{2}{N}+k}{2}}\|_{L^{\frac{2}{1-\frac{2}{N}+k}}(\Omega)})^{\frac{2(k+1)}{1-\frac{2}{N}+k}}}\\
+\leq&\displaystyle{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}(\|\nabla u^{\frac{1-\frac{2}{N}+k}{2}}\|_{L^{2}(\Omega)}^{2}+1)}\\
+\end{array}$ (3.72) by using ( 3.1 ),
+where in the last inequality we have used $k\leq 2$ and $C_{GN}$ is the same as Lemma 2.1 . In combination with ( 3.71 ) and ( 3.72 ), this shows that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}}\\
+&\displaystyle{+(\frac{4C_{D}(k-1)}{(1-\frac{2}{N}+k)^{2}}\frac{1}{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}}-\frac{({k}-1)}{{k}}\kappa_{0})\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+\leq&\displaystyle{\rho_{0}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+C_{1}~~~\mbox{for all}~~t\in(0,T_{max}).}\\
+\end{array}$ (3.73) Therefore,
+by ( 3.69 ) and $1<k\leq\min\{2,\tilde{p}_{0}\}$ , $\frac{4C_{D}(k-1)}{(1-\frac{2}{N}+k)^{2}}\frac{1}{C_{GN}(1+\|u_{0}\|_{L^{1}(\Omega)})^{3}}-\frac{({k}-1)}{{k}}\kappa_{0}>0.$ Hence, using Lemma 3.9 , we derive from the Young inequality and ( 3.73 ) that there exist positive constants $p_{0}>1$ and $C_{2}$ such that $\int_{\Omega}u^{p_{0}}(x,t)dx\leq C_{2}~~~\mbox{for all}~~t\in(0,T_{max}).$ (3.74) The proof of Lemma 3.10 is completed.
+∎ Our next goal is to make sure that Lemma 3.10 is sufficient to enforce boundedness of $\|u(\cdot,t)\|_{L^{p}(\Omega)}$ for all $t\in(0,T_{max})$ and $p>1$ , which
+plays a key step in the derivation of our main results. Lemma 3.11 . Suppose that the conditions of Lemma 3.10 hold.
+Then for any $p>1,$ there exists a positive constant $C:=C(p,|\Omega|,C_{D},C_{GN},\lambda_{0},m,\chi)$ such that $\begin{array}[]{rl}\|u(\cdot,t)\|_{L^{p}(\Omega)}\leq C~~~\mbox{for all}~~t\in(0,T_{max}).\end{array}$ (3.75) Proof. Firstly, let $k>\max\{N+1,N(m+1),p_{0}-1,1,1-m+\frac{N-2}{N}p_{0}\}$ , where $p_{0}>1$ is the same as Lemma 3.10 .
+In view of ( 3.71 ), we have $\begin{array}[]{rl}&\displaystyle{\frac{1}{{k}}\|u(\cdot,t)\|^{{{k}}}_{L^{{k}}(\Omega)}+C_{D}(k-1)\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{m+k-3}|\nabla u|^{2}dxds}\\
+\leq&\displaystyle{\kappa_{0}\int_{0}^{t}e^{-({k}+1)(t-s)}\int_{\Omega}u^{{{k}+1}}dxds}\\
+&+\displaystyle{\rho_{0}\int_{0}^{t}e^{-({{k}+1})(t-s)}\int_{\Omega}u^{{{k}}}dxds+\rho_{1}~~~\mbox{for all}~~t\in(0,T_{max}),}\\
+\end{array}$ (3.76) where $\kappa_{0},\rho_{0}$ and $\rho_{1}$ are the same as Lemma 3.3 .
+Next, observe that $m\geq 2-\frac{2}{N}$ and $p_{0}>1$ yields to $k+1<m+k-1+\frac{2}{N}p_{0},$ so that, in view of the Gagliardo–Nirenberg inequality, ( 3.70 ) and using the Young inequality, one can get there exist positive constants $C_{1},C_{2}$ and $C_{3}$ such that for any $\delta_{1}>0$ $\begin{array}[]{rl}&\displaystyle\kappa_{0}\int_{\Omega}u^{k+1}\\
+=&\displaystyle{\kappa_{0}\|u^{\frac{m+k-1}{2}}\|^{\frac{2(k+1)}{m+k-1}}_{L^{\frac{2(k+1)}{m+k-1}}(\Omega)}}\\
+\leq&\displaystyle{C_{1}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{\frac{m+k-1}{k+1}}\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2p_{0}}{m+k-1}}(\Omega)}^{1-\frac{m+k-1}{k+1}}+\|u^{\frac{m+k-1}{2}}\|_{L^{\frac{2p_{0}}{m+k-1}}(\Omega)})^{\frac{2(k+1)}{m+k-1}}}\\
+\leq&\displaystyle{C_{2}(\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{2\frac{N(k+1)-Np_{0}}{(2-N)p_{0}+N(m+k-1)}}+1)}\\
+\leq&\displaystyle{\delta_{1}\|\nabla u^{\frac{m+k-1}{2}}\|_{L^{2}(\Omega)}^{2}+C_{3},}\\
+\end{array}$ (3.77) where we have used $\frac{N(k+1)-Np_{0}}{(2-N)p_{0}+N(m+k-1)}<1$ together with $m\geq 2-\frac{2}{N}$ and $p_{0}>1$ .
+Inserting ( 3.77 ) into ( 3.76 ), choosing $\delta_{1}$ appropriately small and using the Hölder inequality, we can get ( 3.75 ).
+∎ 4 The proof of main results In this section, we are going to prove our main result. To this end, we will proceed
+in two steps. Firstly, applying the standard regularity theory of partial differential equation, we turn the bounds from Lemma 3.11 into a higher order bound for $\nabla v$ . Lemma 4.1 . Suppose that the conditions of Theorem 1.1 (or Theorem 1.2 ) hold.
+Let $T\in(0,T_{max})$ and $(u,v,w)$ be the solution of ( 1.3 ). Then there exists a constant $C>0$ independent of $T$ such that the
+component $v$ of $(u,v,w)$ satisfies $\begin{array}[]{rl}\|v(\cdot,t)\|_{W^{1,\infty}(\Omega)}\leq C~~~\mbox{for all}~~t\in(0,T).\end{array}$ (4.1) Proof. Due to $\|u(\cdot,t)\|_{L^{p}(\Omega)}$ is bounded for any large $p$ (see Lemma 3.11 ), we infer from the standard regularity theory of parabolic equation (or elliptic equation, $\tau=0$ ) (see e.g. [ 7 ] ) that
+( 4.1 ) holds.
+∎ The previous lemmas at hand, we can now pass to the proof of our main result.
+Its proof is
+based on a Moser-type iteration (see e.g. [ 36 ] and [ 18 ] ). Lemma 4.2 . Under the assumptions of Theorem 1.1 (or Theorem 1.2 ), one can find a positive constant
+such that for every $T\in(0,T_{max})$ $\begin{array}[]{rl}\|u(\cdot,t)\|_{L^{\infty}(\Omega)}\leq C~~~\mbox{for all}~~t\in(0,T).\end{array}$ (4.2) Proof. Throughout the proof of Lemma 4.2 , we use $C_{i}$ $(i\in\mathbb{N})$ to denote
+the different positive constants independent of $p$ and $k$ ( $k\in\mathbb{N}).$ Case $m\geq 1:$ For any $p>1,$ multiplying both sides of the first equation in ( 1.3 ) by $(u+1)^{p-1}$ , integrating over $\Omega$ , integrating by parts and using the Young inequality and ( 4.1 ) and ( 2.3 ), we derive that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{p}}\frac{d}{dt}\|u+1\|^{{p}}_{L^{{p}}(\Omega)}+C_{D}({{p}-1})\int_{\Omega}(u+1)^{m+{{p}-3}}|\nabla u|^{2}}\\
+\leq&\displaystyle{-\chi\int_{\Omega}\nabla\cdot(u\nabla v)(u+1)^{{p}-1}-\xi\int_{\Omega}\nabla\cdot(u\nabla w)(u+1)^{{p}-1}+\int_{\Omega}(u+1)^{{p}-1}(\mu u-\mu u^{2})}\\
+\leq&\displaystyle{\chi({p}-1)\int_{\Omega}u(u+1)^{{p}-2}|\nabla u||\nabla v|-\xi({p-1})\int_{\Omega}\int_{0}^{u}\tau(\tau+1)^{p-2}d\tau\Delta w}\\
+&\displaystyle{+\int_{\Omega}(u+1)^{{p}-1}(\mu u-\mu u^{2})}\\
+\leq&\displaystyle{\chi({p}-1)\int_{\Omega}u(u+1)^{{p}-2}|\nabla u||\nabla v|}\\
+&\displaystyle{+\frac{\xi({p-1})}{p}\int_{\Omega}(u+1)^{p-1}(\tau\|w_{0}\|_{L^{\infty}(\Omega)}\cdot v(x,t)+\kappa)+\int_{\Omega}(u+1)^{{p}-1}(\mu u-\mu u^{2})}\\
+\leq&\displaystyle{\chi({p}-1)C_{1}\int_{\Omega}(u+1)^{{p}-1}|\nabla u|+C_{2}\int_{\Omega}(u+1)^{{p}-1}+\int_{\Omega}(u+1)^{{p}-1}(\mu u-\mu u^{2})}\\
+\leq&\displaystyle{\frac{({{p}-1})}{4}\int_{\Omega}(u+1)^{m+{{p}-3}}|\nabla u|^{2}+\chi^{2}({p}-1)C_{1}^{2}\int_{\Omega}(u+1)^{{p}+1-m}+(C_{2}+\mu)\int_{\Omega}(u+1)^{{p}}}\\
+\leq&\displaystyle{\frac{({{p}-1})}{4}\int_{\Omega}(u+1)^{m+{{p}-3}}|\nabla u|^{2}+\chi^{2}({p}-1)C_{1}^{2}\int_{\Omega}(u+1)^{{p}}+(C_{2}+\mu)\int_{\Omega}(u+1)^{{p}}}\\
+\leq&\displaystyle{\frac{({{p}-1})}{4}\int_{\Omega}(u+1)^{m+{{p}-3}}|\nabla u|^{2}+C_{3}p\int_{\Omega}(u+1)^{{p}}-\int_{\Omega}(u+1)^{{p}}~~\mbox{for all}~~~t\in(0,T)}\\
+\end{array}$ (4.3) with $C_{1}=\sup_{t\in(0,T)}\|v(\cdot,t)\|_{W^{1,\infty}(\Omega)},C_{2}=\xi\|w_{0}\|_{L^{\infty}(\Omega)}C_{1}+\kappa,C_{3}=\chi^{2}C_{1}^{2}+C_{2}+\mu+1$ , where in the last inequality we have used the fact that $\int_{\Omega}\mu u(u+1)^{{p}-1}\leq\int_{\Omega}\mu(u+1)^{{p}}$ and $u\geq 0$ .
+Due to ( 4.3 ), we deduce that $\begin{array}[]{rl}&\displaystyle{\frac{d}{dt}\|u+1\|^{{p}}_{L^{{p}}(\Omega)}+\int_{\Omega}(u+1)^{{p}}+C_{3}\int_{\Omega}|\nabla(u+1)^{\frac{m+p-1}{2}}|^{2}\leq C_{2}p^{2}\int_{\Omega}(u+1)^{{p}}~~\mbox{for all}~~~t\in(0,T).}\\
+\end{array}$ (4.4) Now, we let ${l_{0}}>\max\{1,m-1\},p:=p_{k}=2^{k}({l_{0}}+1-m)+m-1$ and $M_{k}=\max\{1,\sup_{t\in(0,T)}\int_{\Omega}(u+1)^{p_{k}}\}~~~\mbox{for}~~k\in\mathbb{N}.$ (4.5) We now invoke the Gagliardo–Nirenberg inequality ensures that $\begin{array}[]{rl}&C_{2}p_{k}^{2}\displaystyle\int_{\Omega}(u+1)^{p_{k}}\\
+=&\displaystyle{C_{2}p_{k}^{2}\|(u+1)^{\frac{m+p_{k}-1}{2}}\|_{L^{\frac{2p_{k}}{m+p_{k}-1}}(\Omega)}^{\frac{2p_{k}}{m+p_{k}-1}}}\\
+\leq&\displaystyle{C_{4}p_{k}^{2}(\|\nabla(u+1)^{\frac{m+p_{k}-1}{2}}\|_{L^{2}(\Omega)}^{\frac{2p_{k}}{m+p_{k}-1}\varsigma_{1}}\|(u+1)^{\frac{m+p_{k}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2p_{k}}{m+p_{k}-1}(1-\varsigma_{1})}+\|(u+1)^{\frac{m+p_{k}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2p_{k}}{m+p_{k}-1}}),}\\
+\end{array}$ (4.6) where $\frac{2p_{k}}{m+p_{k}-1}\varsigma_{1}=\frac{2p_{k}}{m+p_{k}-1}\frac{N-\frac{N(m+p_{k}-1)}{2p_{k}}}{1-\frac{N}{2}+N}=\frac{2N(p_{k}+1-m)}{(N+2)(m+p_{k}-1)}<2$ and $\frac{2p_{k}}{m+p_{k}-1}(1-\varsigma_{1})=\frac{2p_{k}}{m+p_{k}-1}(1-\frac{N-\frac{N(m+p_{k}-1)}{2p_{k}}}{1-\frac{N}{2}+N})=2\frac{2p_{k}+N(m-1)}{(N+2)(m+p_{k}-1)}.$ Therefore, an application of the Young inequality yields $\begin{array}[]{rl}C_{2}p_{k}^{2}\displaystyle\int_{\Omega}(u+1)^{p_{k}}\leq&\displaystyle{C_{5}\|\nabla(u+1)^{\frac{m+p_{k}-1}{2}}\|_{L^{2}(\Omega)}^{2}+C_{6}p_{k}^{\frac{(N+2)(m+p_{k}-1)}{p_{k}+(N+1)(m-1)}}\|(u+1)^{\frac{m+p_{k}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2p_{k}+N(m-1)}{N(m-1)+m+p_{k}-1}}}\\
+&\displaystyle{+C_{7}p_{k}^{2}\|(u+1)^{\frac{m+p_{k}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2p_{k}}{m+p_{k}-1}}}\\
+\leq&\displaystyle{C_{3}\|\nabla(u+1)^{\frac{m+p_{k}-1}{2}}\|_{L^{2}(\Omega)}^{2}+C_{8}p_{k}^{\frac{(N+2)(m+p_{k}-1)}{p_{k}+(N+1)(m-1)}}\|(u+1)^{\frac{m+p_{k}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2p_{k}}{m+p_{k}-1}}.}\\
+\end{array}$ (4.7) Here we have used the fact that ${\frac{2p_{k}+N(m-1)}{N(m-1)+m+p_{k}-1}}\leq\frac{2p_{k}}{m+p_{k}-1}$ and ${\frac{(N+2)(m+p_{k}-1)}{p_{k}+(N+1)(m-1)}}\geq 2$ (by $p_{k}>m-1$ ).
+Thus, in light of $m\geq 1,$ by means of ( 4.5 )–( 4.7 ), $\begin{array}[]{rl}\displaystyle\frac{d}{dt}\|u+1\|^{p_{k}}_{L^{p_{k}}(\Omega)}+\int_{\Omega}(u+1)^{{p_{k}}}{}\leq&\displaystyle{C_{9}p_{k}^{\frac{(N+2)(m+p_{k}-1)}{p_{k}+(N+1)(m-1)}}\|(u+1)^{\frac{m+{p_{k}}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2p_{k}}{m+p_{k}-1}}}\\
+\leq&\displaystyle{\rho^{k}M_{k-1}^{\frac{2p_{k}}{m+p_{k}-1}}}\\
+\leq&\displaystyle{\rho^{k}M_{k-1}^{2}~~\mbox{for all}~~t\in(0,T)}\\
+\end{array}$ (4.8) with some $\rho>1.$ Here we have used the fact that ${\frac{(N+2)(m+p_{k}-1)}{p_{k}+(N+1)(m-1)}}=\frac{2^{k}({l_{0}}+1-m)(N+2)+2(N+2)(m-1)}{2^{k}({l_{0}}+1-m)+(N+2)(m-1)}\leq N+2$ and ${\frac{2p_{k}}{m+p_{k}-1}}\leq{\frac{2(p_{k}+m-1)}{m+p_{k}-1}}=2.$ Integrating ( 4.8 ) over $(0,t)$ with $t\in(0,T)$ , we derive $\begin{array}[]{rl}\displaystyle{\int_{\Omega}(u+1)^{p_{k}}(x,t)\leq\max\{\int_{\Omega}(u_{0}+1)^{{p_{k}}}{},\rho^{k}M_{k-1}^{2}\}~~\mbox{for all}~~t\in(0,T).}\\
+\end{array}$ (4.9) If $\int_{\Omega}(u+1)^{p_{k}}(x,t)\leq\int_{\Omega}(u_{0}+1)^{{p_{k}}}{}$ for any large $k\in\mathbb{N},$ then we obtain ( 4.2 ) directly.
+Otherwise,
+by a straightforward induction, we have $\begin{array}[]{rl}\displaystyle\int_{\Omega}(u+1)^{p_{k}}{}\leq&\displaystyle{\rho^{k}(\rho^{k-1}M_{k-2}^{2})^{2}}\\
+=&\displaystyle{\rho^{k+2(k-1)}M_{k-2}^{2^{2}}}\\
+\leq&\displaystyle{\rho^{k+\Sigma_{j=2}^{k}(j-1)}M_{0}^{2^{k}}.}\\
+\end{array}$ (4.10) Combined with the boundedness of $M_{0}$ and in light of $\ln(1+z)\leq z$ for
+all $z\geq 0$ , so that,
+taking $p_{k}$ -th
+roots on both sides of ( 4.10 ), we can easily get ( 4.2 ). Case $m<1$ : Due to Lemmas 3.7 , ( 3.8 ) and 3.11 , we may choose $\tilde{p}_{0}:>\max\{6N(1-m),5(1-m),(3N+3)(1-m),5N\}$ (4.11) such that $\int_{\Omega}(u+1)^{\tilde{p}_{0}}(x,t)\leq C_{10}~~~\mbox{for all}~~t\in(0,T).$ (4.12) Next,
+testing the first equation in ( 1.3 ) by $(u+1)^{p-1}$ , integrating over $\Omega$ , integrating by parts and applying the Young inequality and ( 4.1 ), we derive that $\begin{array}[]{rl}&\displaystyle{\frac{1}{{p}}\frac{d}{dt}\|u+1\|^{{p}}_{L^{{p}}(\Omega)}+C_{D}({{p}-1})\int_{\Omega}(u+1)^{m+{{p}-3}}|\nabla u|^{2}}\\
+\leq&\displaystyle{-\chi\int_{\Omega}\nabla\cdot(u\nabla v)(u+1)^{{p}-1}-\xi\int_{\Omega}\nabla\cdot(u\nabla w)(u+1)^{{p}-1}+\int_{\Omega}(u+1)^{{p}-1}(\mu u-\mu u^{2})}\\
+\leq&\displaystyle{\chi({p}-1)\int_{\Omega}u(u+1)^{{p}-2}|\nabla u||\nabla v|-\xi({p-1})\int_{\Omega}\int_{0}^{u}\tau(\tau+1)^{p-2}d\tau\Delta w+\int_{\Omega}(u+1)^{{p}-1}(\mu u-\mu u^{2})}\\
+\leq&\displaystyle{\chi({p}-1)\int_{\Omega}u(u+1)^{{p}-2}|\nabla u||\nabla v|}\\
+&\displaystyle{+\frac{\xi({p-1})}{p}\int_{\Omega}(u+1)^{p-1}(\tau\|w_{0}\|_{L^{\infty}(\Omega)}\cdot v(x,t)+\kappa)+\int_{\Omega}(u+1)^{{p}-1}(\mu u-\mu u^{2})}\\
+\leq&\displaystyle{\frac{({{p}-1})}{4}\int_{\Omega}(u+1)^{m+{{p}-3}}|\nabla u|^{2}+\chi^{2}({p}-1)C_{1}^{2}\int_{\Omega}(u+1)^{{p}+1-m}+(C_{2}+\mu)\int_{\Omega}(u+1)^{{p}}}\\
+\leq&\displaystyle{\frac{({{p}-1})}{4}\int_{\Omega}(u+1)^{m+{{p}-3}}|\nabla u|^{2}+\chi^{2}({p}-1)C_{1}^{2}\int_{\Omega}(u+1)^{{p}+1-m}+(C_{2}+\mu)\int_{\Omega}(u+1)^{{p}+1-m}}\\
+\leq&\displaystyle{\frac{({{p}-1})}{4}\int_{\Omega}(u+1)^{m+{{p}-3}}|\nabla u|^{2}+C_{10}p\int_{\Omega}(u+1)^{{p}+1-m}-\int_{\Omega}(u+1)^{{p}}~~\mbox{for all}~~~t\in(0,T),}\\
+\end{array}$ (4.13) with $C_{1}=\sup_{t\in(0,T)}\|v(\cdot,t)\|_{W^{1,\infty}(\Omega)},C_{2}=\xi\|w_{0}\|_{L^{\infty}(\Omega)}C_{1}+\kappa,C_{11}=\chi^{2}C_{1}^{2}+C_{2}+\mu+1$ .
+Here we have used the fact that $\int_{\Omega}u(u+1)^{{p}-1}\leq\int_{\Omega}(u+1)^{{p}}\leq\int_{\Omega}(u+1)^{{p}+1-m}$ and $u\geq 0$ .
+Therefore, ( 4.13 ) yields to $\begin{array}[]{rl}&\displaystyle{\frac{d}{dt}\|u+1\|^{{p}}_{L^{{p}}(\Omega)}+\int_{\Omega}(u+1)^{{p}}+C_{12}\int_{\Omega}|\nabla(u+1)^{\frac{m+p-1}{2}}|^{2}\leq C_{13}p^{2}\int_{\Omega}(u+1)^{{p}+1-m}}\\
+\end{array}$ (4.14) for all $t\in(0,T).$ Let $p:=\tilde{p}_{k}=2^{k}(\tilde{p}_{0}+1-m)+m-1$ and $\tilde{M}_{k}=\max\{1,\sup_{t\in(0,T)}\int_{\Omega}(u+1)^{\tilde{p}_{k}}\}~~~\mbox{for}~~k\in\mathbb{N},$ (4.15) where $\tilde{p}_{0}$ is given by ( 4.11 ).
+As moreover by the Gagliardo¨CNirenberg inequality, we have $\begin{array}[]{rl}&C_{13}\tilde{p}_{k}^{2}\displaystyle\int_{\Omega}(u+1)^{\tilde{p}_{k}+1-m}\\
+=&\displaystyle{C_{13}\tilde{p}_{k}^{2}\|(u+1)^{\frac{m+\tilde{p}_{k}-1}{2}}\|_{L^{\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}}(\Omega)}^{\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}}}\\
+\leq&\displaystyle{C_{14}\tilde{p}_{k}^{2}(\|\nabla(u+1)^{\frac{m+\tilde{p}_{k}-1}{2}}\|_{L^{2}(\Omega)}^{\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}\varsigma_{2}}\|(u+1)^{\frac{m+\tilde{p}_{k}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}(1-\varsigma_{2})}+\|(u+1)^{\frac{m+\tilde{p}_{k}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}}),}\\
+\end{array}$ (4.16) where $\begin{array}[]{rl}\displaystyle\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}\varsigma_{2}=&\displaystyle\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}\frac{N-\frac{N(m+\tilde{p}_{k}-1)}{2(\tilde{p}_{k}+1-m)}}{1-\frac{N}{2}+N}\\
+=&\displaystyle\frac{2N\tilde{p}_{k}+6N(1-m)}{(m+\tilde{p}_{k}-1)(N+2)}<2~\mbox{by}~\tilde{p}_{k}>(2N+1)(1-m)\\
+\end{array}$ and $\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}(1-\varsigma_{2})=\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}(1-\frac{N-\frac{N(m+\tilde{p}_{k}-1)}{2(\tilde{p}_{k}+1-m)}}{1-\frac{N}{2}+N})=4\frac{\tilde{p}_{k}+(m-1)(N-1)}{(m+\tilde{p}_{k}-1)(N+2)}.$ Therefore, in light of the Young inequality, we conclude that $\begin{array}[]{rl}&C_{13}\tilde{p}_{k}^{2}\displaystyle\int_{\Omega}(u+1)^{\tilde{p}_{k}+1-m}\\
+\leq&\displaystyle{C_{12}\|\nabla(u+1)^{\frac{m+\tilde{p}_{k}-1}{2}}\|_{L^{2}(\Omega)}^{2}+C_{15}\tilde{p}_{k}^{\frac{(m+\tilde{p}_{k}-1)(N+2)}{\tilde{p}_{k}+(m-1)(2N+1)}}\|(u+1)^{\frac{m+\tilde{p}_{k}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2[\tilde{p}_{k}+(N-1)(m-1)]}{\tilde{p}_{k}+(2N+1)(m-1)}}}\\
+&\displaystyle{+C_{16}\tilde{p}_{k}^{2}\|(u+1)^{\frac{m+\tilde{p}_{k}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}}}\\
+\leq&\displaystyle{C_{12}\|\nabla(u+1)^{\frac{m+\tilde{p}_{k}-1}{2}}\|_{L^{2}(\Omega)}^{2}+C_{17}\tilde{p}_{k}^{\frac{(m+\tilde{p}_{k}-1)(N+2)}{\tilde{p}_{k}+(m-1)(2N+1)}}\|(u+1)^{\frac{m+\tilde{p}_{k}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}},}\\
+\end{array}$ (4.17) where we have utilized the following facts $\frac{2[\tilde{p}_{k}+(N-1)(m-1)]}{\tilde{p}_{k}+(2N+1)(m-1)}\geq\frac{2(\tilde{p}_{k}+1-m)}{m+\tilde{p}_{k}-1}~~~\mbox{and}~~\frac{(m+\tilde{p}_{k}-1)(N+2)}{\tilde{p}_{k}+(m-1)(2N+1)}\geq 2.$ The fact $\tilde{p}_{0}>(1-m)(4N+1)$ then ensures $\begin{array}[]{rl}{\displaystyle\frac{(m+\tilde{p}_{k}-1)(N+2)}{\tilde{p}_{k}+(m-1)(2N+1)}}=&\displaystyle{(N+2)\frac{2^{k}({\tilde{p}_{0}}+1-m)+2(m-1)}{2^{k}({\tilde{p}_{0}}+1-m)+(2N+2)(m-1)}}\\
+\leq&\displaystyle{(N+2)\frac{{\tilde{p}_{0}}+1-m+2(m-1)}{{\tilde{p}_{0}}+1-m+(2N+2)(m-1)}}\\
+\leq&\displaystyle{2(N+2),}\\
+\end{array}$ so that, in light of
+( 4.11 ),
+( 4.15 )–( 4.17 ), $\begin{array}[]{rl}&\displaystyle\frac{d}{dt}\|u+1\|^{\tilde{p}_{k}}_{L^{\tilde{p}_{k}}(\Omega)}+\int_{\Omega}(u+1)^{{\tilde{p}_{k}}}\\
+\leq&\displaystyle{C_{18}\tilde{p}_{k}^{\frac{(m+\tilde{p}_{k}-1)(N+2)}{\tilde{p}_{k}+(m-1)(2N+1)}}\|(u+1)^{\frac{m+{\tilde{p}_{k}}-1}{2}}\|_{L^{1}(\Omega)}^{\frac{2[\tilde{p}_{k}+(N-1)(m-1)]}{\tilde{p}_{k}+(2N+1)(m-1)}}}\\
+\leq&\displaystyle{\tilde{\rho}^{k}\tilde{M}_{k-1}^{\frac{2[\tilde{p}_{k}+(N-1)(m-1)]}{\tilde{p}_{k}+(2N+1)(m-1)}}~~\mbox{for all}~~t\in(0,T)}\\
+\end{array}$ (4.18) with some $\tilde{\rho}>1,$ where $\begin{array}[]{rl}&{\displaystyle\frac{2[\tilde{p}_{k}+(N-1)(m-1)]}{\tilde{p}_{k}+(2N+1)(m-1)}}\\
+=&2{\frac{2^{k}(\tilde{p}_{0}+1-m)+N(m-1)}{2^{k}(\tilde{p}_{0}+1-m)+(2N+2)(m-1)}}\\
+=&2(1+{\frac{(N+2)(1-m)}{2^{k}(\tilde{p}_{0}+1-m)+(2N+2)(m-1)}}):=\kappa_{k}.\\
+\end{array}$ Here we note that $\kappa_{k}=2(1+\varepsilon_{k})$ for $k\geq 1$ , where $\varepsilon_{k}$ satisfies $\varepsilon_{k}\leq\frac{C_{19}}{2^{k}}$ for all $k$ with some $C_{17}>0$ .
+Next, we
+integrate ( 4.18 ) over $(0,t)$ with $t\in(0,T)$ , then yields to $\begin{array}[]{rl}\displaystyle{\int_{\Omega}(u+1)^{\tilde{p}_{k}}(x,t)\leq\max\{\int_{\Omega}(u_{0}+1)^{{\tilde{p}_{k}}}{},\tilde{\rho}^{k}\tilde{M}_{k-1}^{\frac{2[\tilde{p}_{k}+(N-1)(m-1)]}{\tilde{p}_{k}+(2N+1)(m-1)}}\}~~\mbox{for all}~~t\in(0,T).}\\
+\end{array}$ (4.19) If $\int_{\Omega}(u+1)^{\tilde{p}_{k}}(x,t)\leq\int_{\Omega}(u_{0}+1)^{{\tilde{p}_{k}}}{}$ for any large $k\in\mathbb{N},$ then we derive ( 4.2 ) holds.
+Otherwise,
+by a straightforward induction, we have $\begin{array}[]{rl}\displaystyle\int_{\Omega}(u+1)^{\tilde{p}_{k}}{}\leq&\displaystyle{\tilde{\rho}^{k+\sum_{j=2}^{k}(j-1)\cdot\prod_{i=j}^{k}\kappa_{i}}\tilde{M}_{0}^{\prod_{i=1}^{k}\kappa_{i}}~~\mbox{for all}~~k\geq 1.}\\
+\end{array}$ (4.20) On the other hand, due to the fact that $\ln(1+x)\leq x$ (for all $x\geq 0$ ), a simple computation yields $\begin{array}[]{rl}\displaystyle\prod_{i=j}^{k}\kappa_{i}=&2^{k+1-j}e^{\Sigma_{i=j}^{k}\ln(1+\varepsilon_{j})}\\
+\leq&2^{k+1-j}e^{\Sigma_{i=j}^{k}\varepsilon_{j}}\\
+\leq&2^{k+1-j}e^{C_{20}}~~~\mbox{for all}~~k\geq 1~~\mbox{and}~~j=\{1,\ldots,k\}.\\
+\end{array}$ This together with ( 4.20 ) entails that $\begin{array}[]{rl}\displaystyle\left(\int_{\Omega}(u+1)^{\tilde{p}_{k}}\right)^{\frac{1}{\tilde{p}_{k}}}{}\leq&\displaystyle{\tilde{\rho}^{\frac{k}{\tilde{p}_{k}}+\frac{\sum_{j=2}^{k}(j-1)\cdot\prod_{i=j}^{k}\kappa_{i}}{\tilde{p}_{k}}}\tilde{M}_{0}^{\frac{\prod_{i=1}^{k}\kappa_{i}}{\tilde{p}_{k}}}~~\mbox{for all}~~k\geq 1,}\\
+\end{array}$ (4.21) which after taking $k\rightarrow\infty$ readily implies that ( 4.2 ) is valid.
+∎ The previous lemmas at hand, we can conclude main results in a straightforward manner. The proof of main results Theorem 1.2 (and Theorem 1.1 ) will be proved if we can show $T_{max}=\infty$ . Suppose on contrary that $T_{max}<\infty$ .
+In view of ( 4.2 ), we apply Lemma 2.3 to reach a contradiction.
+Hence the classical solution $(u,v,w)$ of ( 1.3 ) is global in time and bounded. ∎ Acknowledgement : Acknowledgement :
+This work is partially supported by Shandong Provincial
+Science Foundation for Outstanding Youth (No. ZR2018JL005). References [1] N. Bellomo, A. Belloquid, Y. Tao, M. Winkler, Toward a mathematical theory of
+Keller–Segel models of pattern formation in biological tissues , Math. Models Methods Appl. Sci., 25(9)(2015), 1663–1763. [2] P. Biler, Local and global solvability of some parabolic systems modelling chemotaxis , Advances in Mathematical Sciences and Applications, 8(2)(1998), 715–743. [3] X. Cao, Boundedness in a three-dimensional chemotaxis–haptotaxis model , Z. Angew. Math. Phys., 67(1)2015, 1–13. [4] M. A. J. Chaplain, G. Lolas, Mathematical modelling of cancer invasion of tissue: The
+role of the urokinase plasminogen activation system , Math. Models Methods Appl. Sci., 11(2005), 1685–1734. [5] T. Cieślak, M. Winkler, Finite-time blow-up in a quasilinear system of chemotaxis, Nonlinearity, 21(2008), 1057–1076. [6] T. Cieślak, C. Stinner, Finite-time blowup and global-in-time unbounded solutions to a parabolic–parabolic quasilinear
+Keller–Segel system in higher dimensions, J. Diff. Eqns., 252(2012), 5832–5851. [7] L C. Evans, Partial differential equations , Providence, RI, 1998. [8] A. Friedman, Partial Differential Equations , Holt, Rinehart and Winston, New York, 1969. [9] T. Hillen, K. J. Painter, A use’s guide to PDE models for chemotaxis, J. Math. Biol., 58(2009), 183–217. [10] D. Horstmann, G. Wang, Blow-up in a chemotaxis model without symmetry assumptions , Eur. J. Appl. Math., 12(2001), 159–177. [11] D. Horstmann, M. Winkler, Boundedness vs. blow-up in a chemotaxis system , J. Diff. Eqns, 215(2005), 52–107. [12] B. Hu, Y. Tao, Boundedness in a parabolic-elliptic chemotaxis-growth system under a critical parameter condition ,
+Appl. Math. Lett., 64(2017), 1–7. [13] S. Ishida, K. Seki, T, Yokota, Boundedness in quasilinear Keller–Segel systems of parabolic–parabolic type on
+non-convex bounded domains , J. Diff. Eqns., 256(2014), 2993–3010. [14] C. Jin, Boundedness and global solvability to a chemotaxis–haptotaxis model with slow and fast diffusion , Discrete and Continuous Dynamical Systems-Series B, 2018, 23(4). [15] W. Jäger, S. Luckhaus, On explosions of solutions to a system of partial differential equations modelling
+chemotaxis , Trans. Am. Math. Soc., 329(1992), 819-824. [16] K. Kanga, A. Steven, Blowup and global solutions in a chemotaxis-growth system ,
+Nonlinear Anal., 135(2016), 57–72. [17] E. Keller, L. Segel, Model for chemotaxis , J. Theor. Biol., 30(1970), 225–234. [18] Y. Ke, J. Zheng, A note for global existence of a
+two-dimensional chemotaxis-haptotaxis model
+with remodeling of non-diffusible attractant , Nonlinearity, (31)(2018), 4602–4620. [19] X. Li, Z. Xiang, Boundedness in quasilinear Keller-Segel equations with nonlinear
+sensitivity and logistic source, Discrete Contin. Dyn. Syst., 35(2015), 3503–3531. [20] Y. Li, J. Lankeit, Boundedness in a chemotaxis-haptotaxis model with nonlinear diffusion , Nonlinearity, 29(5)(2016),
+1564–1595. [21] J. Liu, J. Zheng, Y. Wang, Boundedness in a quasilinear chemotaxis-haptotaxis system with logistic source , Z. Angew. Math. Phys., 67(2)(2016), 1–33. [22] A. Marciniak-Czochra, M. Ptashnyk, Boundedness of solutions of a haptotaxis model ,
+Math. Models Methods Appl. Sci., 20(2010), 449–476. [23] K. Osaki, T. Tsujikawa, A. Yagi, M. Mimura, Exponential attractor for a chemotaxisgrowth
+system of equations , Nonlinear Anal. TMA., 51(2002), 119–144. [24] K. Osaki, A. Yagi, Finite dimensional attractors for one-dimensional Keller–Segel equations , Funkcial. Ekvac., 44(2001), 441–469. [25] K. Osaki, A. Yagi, Global existence for a chemotaxis-growth system in $\mathbb{R}^{2}$ , Adv. Math.
+Sci. Appl., 12(2002), 587–606. [26] P. Pang, Y. Wang, Global existence of a two-dimensional chemotaxis–haptotaxis model with remodeling of non-diffusible attractant ,
+J. Diff. Eqns., 263(2)(2017), 1269–1292. [27] K. J. Painter, T. Hillen, Volume-filling and quorum-sensing in models for chemosensitive movement , Can. Appl. Math.
+Q., 10(2002), 501–543. [28] B. Perthame, Transport Equations in Biology , Birkhäuser Verlag, Basel, Switzerland, 2007. [29] C. Stinner, C. Surulescu, M. Winkler, Global weak solutions in a PDE-ODE system modeling
+multiscale cancer cell invasion , SIAM J. Math. Anal., 46(2014), 1969–2007. [30] Z. Szymaska, C. Morales-Rodrigo, M. Lachowicz, M. Chaplain, Mathematical modelling
+of cancer invasion of tissue: The role and effect of nonlocal interactions , Math.
+Models Methods Appl. Sci., 19(2009), 257–281. [31] Y. Tao, Global existence of classical solutions to a combined chemotaxis–haptotaxis model with
+logistic source , J. Math. Anal. Appl., 354(2009), 60–69. [32] Y. Tao, Boundedness in a two-dimensional chemotaxis–haptotaxis system , Journal of Oceanography, (70)(2014), 165–174. [33] Y. Tao, M. Wang, A combined chemotaxis–haptotaxis system: The role of logistic source ,
+SIAM J. Math. Anal., 41(2009), 1533–1558. [34] Y. Tao, M. Wang, Global existence for a haptotaxis model of cancer invasion with tissue remodeling ,
+Nonlinear Anal. RWA., 12(2011), 418–435. [35] Y. Tao, M. Winkler, A chemotaxis–haptotaxis model: the roles of porous medium
+diffusion and logistic source , SIAM J. Math. Anal., 43(2011), 685–704. [36] Y. Tao, M. Winkler, Boundedness in a quasilinear parabolic–parabolic Keller–Segel system with subcritical sensitivity , J.
+Diff. Eqns., 252(2012), 692–715. [37] Y. Tao, M. Winkler, Boundedness and stabilization in
+a multi-dimensional chemotaxis–haptotaxis model ,
+Proceedings of the Royal Society of Edinburgh, 144(2014), 1067–1084. [38] Y. Tao, M. Winkler, Dominance of chemotaxis in a
+chemotaxis–haptotaxis model ,
+Nonlinearity, 27(2014), 1225–1239. [39] Y. Tao, M. Winkler, Energy-type estimates and global solvability in a two-dimensional chemotaxis–haptotaxis
+model with remodeling of non-diffusible attractant , J. Diff. Eqns., 257(2014), 784–815. [40] Y. Tao, M. Winkler, Boundedness and decay enforced by quadratic degradation in a three-dimensional
+chemotaxis–fluid system , Z. Angew. Math. Phys., 66(2015), 2555–2573. [41] Y. Tao, M. Winkler, Large time behavior in a multidimensional chemotaxis-haptotaxis model with slow signal diffusion , SIAM J. Math. Anal., 47(6)(2015), 4229–4250. [42] J. I. Tello, M. Winkler, A chemotaxis system with logistic source , Comm. Partial
+Diff. Eqns., 32(2007), 849–877. [43] L. Wang, Y. Li, C. Mu, Boundedness in a parabolic–parabolic quasilinear chemotaxis system with logistic
+source , Discrete Contin. Dyn. Syst. Ser. A., 34(2014), 789–802. [44] L. Wang, C. Mu, P. Zheng, On a quasilinear parabolic–elliptic chemotaxis system with logistic source ,
+J. Diff. Eqns., 256(2014), 1847–1872. [45] Y. Wang, Boundedness in the higher-dimensional chemotaxis-haptotaxis model with nonlinear diffusion ,
+J. Diff. Eqns., 260(2)(2016), 1975–1989. [46] M. Winkler, Does a volume-filling effect always prevent chemotactic collapse , Math. Methods Appl. Sci., 33(2010), 12–24. [47] M. Winkler, Boundedness in the higher-dimensional parabolic–parabolic chemotaxis system with
+logistic source , Comm. Partial Diff. Eqns., 35(2010), 1516–1537. [48] M. Winkler, Aggregation vs. global diffusive behavior in the higher-dimensional Keller–Segel model , J. Diff.
+Eqns., 248(2010), 2889–2905. [49] M. Winkler, Blow-up in a higher-dimensional chemotaxis system despite logistic
+growth restriction, J. Math. Anal. Appl., 384(2011), 261–272. [50] M. Winkler, Finite-time blow-up in the higher-dimensional parabolic–parabolic Keller–Segel system , J. Math. Pures
+Appl., 100(2013), 748–767. [51] M. Winkler, Global asymptotic stability of constant equilibriain a fully parabolic chemotaxis system with strong logistic dampening ,
+J. Diff. Eqns., 257(2014), 1056–1077. [52] M. Winkler, K. C. Djie, Boundedness and finite-time
+collapse in a chemotaxis system with volume-filling effect , Nonlinear Anal. TMA., 72(2010), 1044–1064. [53] T. Xiang, Dynamics
+in a parabolic-ellptic chemotaxis system with growth source and nonlinear secretion ,
+Communi. Pure Appl. Anal., 18.1(2019). [54] J. Zheng, Boundedness of solutions to a quasilinear parabolic–elliptic Keller–Segel system with logistic source , J. Diff. Eqns.,
+259(1)(2015), 120–140. [55] J. Zheng, Boundedness of solutions to a quasilinear parabolic–parabolic Keller–Segel system with logistic source ,
+J. Math. Anal. Appl., 431(2)(2015), 867–888. [56] J. Zheng, Boundedness and global asymptotic stability of constant equilibria in a fully parabolic chemotaxis system with nonlinear a logistic source , J. Math. Anal. Appl., 450(2017), 104–1061. [57] J. Zheng, Boundedness of solution of a higher-dimensional parabolic–ODE–parabolic chemotaxis–haptotaxis model with generalized logistic source , Nonlinearity, 30(2017), 1987–2009. [58] J. Zheng, Boundedness of solutions to a quasilinear higher-dimensional chemotaxis–haptotaxis model with nonlinear diffusion ,
+Discrete and Continuous Dynamical Systems, (37)(1)(2017), 627–643. [59] L. Liu, J. Zheng, A new result for
+boundedness in the quasilinear parabolic-parabolic Keller-Segel model (with logistic source) , Computers and Mathematics with Applications, doi.org/10.1016/j.camwa.2019.08.029. [60] J. Zheng, Y. Ke, Large time behavior of solutions to a fully parabolic chemotaxis–haptotaxis model in $N$ dimensions ,
+J. Diff. Eqns., 266(4)(2019), 1969–2018. [61] J. Zheng et. al., A new result for global existence and boundedness of
+solutions to a parabolic–parabolic Keller–Segel system with logistic source , J. Math. Anal. Appl., 462(1)(2018), 1–25. [62] P. Zheng, C. Mu, X. Song, On the boundedness and decay of solutions for a chemotaxis-haptotaxis system with nonlinear diffusion , Disc. Cont. Dyna. Syst., 36(3)(2015), 1737–1757. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

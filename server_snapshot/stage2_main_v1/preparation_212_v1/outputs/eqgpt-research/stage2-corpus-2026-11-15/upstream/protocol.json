@@ -1,0 +1,61 @@
+{
+  "capacities": [
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400,
+    450,
+    500,
+    550,
+    600,
+    650,
+    700,
+    750,
+    800,
+    850,
+    900,
+    950,
+    1000,
+    1050,
+    1100,
+    1150,
+    1200,
+    1250,
+    1300,
+    1350,
+    1400,
+    1450,
+    1500
+  ],
+  "capacity_includes": [
+    "content",
+    "PAD",
+    "EOS",
+    "BOS"
+  ],
+  "step": 50,
+  "alphabet_size": 45,
+  "alphabet_source": "unaugmented train + stage1 numeric alphabet",
+  "vocab_training": "unaugmented train only",
+  "selection_data": "validation only",
+  "hard_gates": [
+    "exact-byte round trip for every formula",
+    "canonical reparse",
+    "command integrity=1",
+    "number integrity=1"
+  ],
+  "ranking": "sqrt((validation compression/max eligible compression)*(validation added-token usage/max eligible usage)); top3, then smaller capacity on ties",
+  "model": "Unmodified Stage1 HardASTBPE + CompactAlphabet; ranked merge prefixes of one maximum-capacity fit",
+  "scope": "Stage0 capacity-selection task and its four metrics; no Transformer pretraining; no generic-tokenizer comparison or separate easy-to-hard experiment claimed",
+  "range_extension": "Initial 100..1000 scan found only two capacities with full command integrity; extend upper bound to1500 without changing gates or reading test data. Rare sinh command is fragmented below950.",
+  "split_manifest_sha256": "5071e1ed961990216f8cca7fa316cd9842ee600eb785f31d78b8f199e8e316fb",
+  "maximum_supported_content_and_control_ids": 1438,
+  "unfilled_capacities": [
+    1450,
+    1500
+  ],
+  "unfilled_rule": "Do not invent unused tokens or report requested capacity as actual capacity"
+}

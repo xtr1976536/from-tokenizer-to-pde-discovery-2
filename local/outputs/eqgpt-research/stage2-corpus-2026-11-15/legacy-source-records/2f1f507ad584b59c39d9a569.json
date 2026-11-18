@@ -1,0 +1,120 @@
+{
+  "conversion": {
+    "coefficient_assumption": "Unspecified scalar symbols treated as spatially/temporally constant; zero/degenerate parameter cases not claimed",
+    "coefficients": [
+      "2",
+      "1",
+      "3",
+      "1"
+    ],
+    "domain_annotation": null,
+    "expanded_source": "u(x, y, z, t)**3*Derivative(u(x, y, z, t), (y, 2)) + u(x, y, z, t)**2*Derivative(u(x, y, z, t), (x, 2)) + 3*u(x, y, z, t)**2*Derivative(u(x, y, z, t), y)**2 + 2*u(x, y, z, t)*Derivative(u(x, y, z, t), x)**2",
+    "field_mapping": {
+      "u": "u"
+    },
+    "gre_ids": [
+      5,
+      7,
+      3,
+      14,
+      2,
+      9,
+      3,
+      19,
+      2,
+      19,
+      3,
+      37,
+      2,
+      21,
+      3,
+      23,
+      1
+    ],
+    "gre_words": [
+      "S",
+      "u",
+      "*",
+      "ux^2",
+      "+",
+      "uxx",
+      "*",
+      "u^2",
+      "+",
+      "u^2",
+      "*",
+      "uy^2",
+      "+",
+      "u^3",
+      "*",
+      "uyy",
+      "E"
+    ],
+    "normalized_latex": "(u)\\cdot ({u_{x}}^{2})+(u_{xx})\\cdot ({u}^{2})+({u}^{2})\\cdot ({u_{y}}^{2})+({u}^{3})\\cdot (u_{yy})=0",
+    "reconstructed_support": [
+      "Mul(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Pow(Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(1))), Integer(2)))",
+      "Mul(Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(2)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2))))",
+      "Mul(Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(2)), Pow(Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(1))), Integer(2)))",
+      "Mul(Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(3)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2))))"
+    ],
+    "roundtrip_verified": true,
+    "scalar_coefficient_symbols": [],
+    "support": [
+      "Mul(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Pow(Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(1))), Integer(2)))",
+      "Mul(Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(2)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('x'), Integer(2))))",
+      "Mul(Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(2)), Pow(Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(1))), Integer(2)))",
+      "Mul(Pow(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Integer(3)), Derivative(Function('u')(Symbol('x'), Symbol('y'), Symbol('z'), Symbol('t')), Tuple(Symbol('y'), Integer(2))))"
+    ],
+    "transformations": [
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "explicit partial derivative -> symbolic derivative",
+      "move RHS to LHS",
+      "exact product-rule/algebra expansion",
+      "strip only multiplicative scalar coefficients per term"
+    ]
+  },
+  "family": "stationary_anisotropic_nonlinear_diffusion",
+  "gre_ids": [
+    5,
+    7,
+    3,
+    14,
+    2,
+    9,
+    3,
+    19,
+    2,
+    19,
+    3,
+    37,
+    2,
+    21,
+    3,
+    23,
+    1
+  ],
+  "latex_origin": "declared_family_instance",
+  "normalized_latex": "(u)\\cdot ({u_{x}}^{2})+(u_{xx})\\cdot ({u}^{2})+({u}^{2})\\cdot ({u_{y}}^{2})+({u}^{3})\\cdot (u_{yy})=0",
+  "original_latex": "\\partial_x((u^2)u_x)+\\partial_y((u^3)u_y)=0",
+  "parameters": {
+    "f": "u^2",
+    "g": "u^3"
+  },
+  "review_status": "pending_human_review",
+  "source_conditions": [],
+  "source_file": "data/formulas/diverse_pde_v4/sources/npde3303.pdf",
+  "source_group": "eqworld:npde3303",
+  "source_id": "eqworld:2f1f507ad584b59c39d9a569",
+  "source_kind": "external_review_candidate",
+  "source_location": "first displayed governing equation; choices declared separately",
+  "source_sha256": "8ee03bd1ba1b4e2002b03de1ce7514a72aa1ba55d9c84eff65ecd2f52bb8e5c8",
+  "source_template_latex": "\\partial_x(f(u)u_x)+\\partial_y(g(u)u_y)=0",
+  "source_transformations": [
+    "source dependent variable w -> u",
+    "scalar coefficients fixed nonzero when present; no term removal",
+    "arbitrary functions/powers explicitly instantiated as recorded; not a new physical family"
+  ],
+  "source_url": "https://eqworld.ipmnet.ru/en/solutions/npde/npde3303.pdf"
+}

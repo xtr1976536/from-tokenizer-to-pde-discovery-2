@@ -1,0 +1,133 @@
+                         EqWorld                                                  http://eqworld.ipmnet.ru
+
+Exact Solutions > Linear Partial Differential Equations >
+Second-Order Elliptic Partial Differential Equations > Helmholtz Equation
+
+
+3.3. Helmholtz Equation ∆w + λw = –Φ(x)
+Many problems related to steady-state oscillations (mechanical, acoustical, thermal, electromag-
+netic) lead to the two-dimensional Helmholtz equation. For λ < 0, this equation describes mass
+transfer processes with volume chemical reactions of the first order.
+    The two-dimensional Helmholtz equation has the following form:
+
+                     ∂2w ∂2w
+                          +      + λw = −Φ(x, y) in the Cartesian coordinate system,
+                     ∂x2    ∂y 2
+               µ     ¶
+          1 ∂     ∂w     1 ∂2w
+                r      + 2       + λw = −Φ(r, ϕ) in the polar coordinate system.
+          r ∂r    ∂r     r ∂ϕ2
+
+3.3-1. Particular solutions of the homogeneous Helmholtz equation with Φ ≡ 0.
+1◦ . Particular solutions of the homogeneous Helmholtz equation in the Cartesian coordinate system:
+
+             w = (A cos µ1 x + B sin µ1 x)(C cos µ2 y + D sin µ2 y),                λ = µ21 + µ22 ,
+             w = (A cos µ1 x + B sin µ1 x)(C cosh µ2 y + D sinh µ2 y),              λ = µ21 − µ22 ,
+             w = (A cosh µ1 x + B sinh µ1 x)(C cos µ2 y + D sin µ2 y),              λ = −µ21 + µ22 ,
+             w = (A cosh µ1 x + B sinh µ1 x)(C cosh µ2 y + D sinh µ2 y),            λ = −µ21 − µ22 ,
+where A, B, C, and D are arbitrary constants.
+2◦ . Particular solutions of the homogeneous Helmholtz equation in the polar coordinate system:
+
+                   w = [AJm (µr) + BYm (µr)](C cos mϕ + D sin mϕ),                  λ = µ2 ,
+                   w = [AIm (µr) + BKm (µr)](C cos mϕ + D sin mϕ), λ = −µ2 ,
+where m = 1, 2, . . . ; A, B, C, D are arbitrary constants; the Jm (µ) and Ym (µ) are the Bessel
+functions; and the Im (µ) and Km (µ) are the modified Bessel functions.
+
+3.3-2. Domain: –∞ < x < ∞, –∞ < y < ∞.
+1◦ . Solution for λ = −s 2 < 0:
+                            Z ∞Z ∞                                           p
+                        1
+            w(x, y) =              Φ(ξ, η)K0 (s%) dξ dη,                %=    (x − ξ)2 + (y − η)2 .
+                       2π −∞ −∞
+
+2◦ . Solution for λ = k 2 > 0:
+                           Z Z                                               p
+                         i ∞ ∞
+            w(x, y) = −          Φ(ξ, η)H0(2) (k%) dξ dη,               %=    (x − ξ)2 + (y − η)2 ,
+                         4 −∞ −∞
+
+where H0(2) (z) is the Hankel function of the second kind of order 0. The radiation conditions
+(Sommerfeld conditions) at infinity were used to obtain this solution.
+
+3.3-3. Domain: –∞ < x < ∞, 0 ≤ y < ∞. First boundary value problem.
+A half-plane is considered. A boundary condition is prescribed:
+
+                                          w = f (x)       at   y = 0.
+
+                                                      1
+2                                                     HELMHOLTZ EQUATION
+
+     Solution:           Z ∞           ·                    ¸          Z ∞Z ∞
+                                            ∂
+          w(x, y) =            f (ξ)           G(x, y, ξ, η)      dξ +        Φ(ξ, η)G(x, y, ξ, η) dξ dη.
+                         −∞                 ∂η                η=0       0  −∞
+
+1◦ . The Green’s function for λ = −s 2 < 0:
+                                              1 £                     ¤
+                                        G(x, y, ξ, η) =
+                                                 K0 (s%1 ) − K0 (s%2 ) ,
+                           p                 2π         p
+                     %1 = (x − ξ) + (y − η)2 , %2 = (x − ξ)2 + (y + η)2 .
+                                     2
+
+2◦ . The Green’s function for λ = k 2 > 0:
+                                             i£                          ¤
+                            G(x, y, ξ, η) = − H0(2) (k%1 ) − H0(2) (k%2 ) .
+                                             4
+3.3-4. Domain: 0 ≤ x ≤ a, 0 ≤ y ≤ b. First boundary value problem.
+A rectangle is considered. Boundary conditions are prescribed:
+                       w = f1 (y) at x = 0,            w = f2 (y) at x = a,
+                       w = f3 (x) at y = 0,            w = f4 (x) at y = b.
+1◦ . Eigenvalues of the homogeneous problem with Φ ≡ 0 (it is convenient to label them with a
+double subscript):
+                              µ 2          ¶
+                                 n     m2
+                    λnm = π 2        +      ;      n = 1, 2, . . . ; m = 1, 2, . . .
+                                 a2     b2
+     Eigenfunctions and the norm squared:
+                                   µ       ¶ µ         ¶
+                                     nπx          mπy                      ab
+                       wnm = sin            sin          ,       kwnm k2 =    .
+                                       a            b                       4
+2◦ . Solution for λ ≠ λnm :
+                    Z aZ b
+          w(x, y) =         Φ(ξ, η)G(x, y, ξ, η) dη dξ
+                          0       0
+                         Z b            ·          ¸          Z b        ·                   ¸
+                                   ∂                                        ∂
+                     +         f1 (η)G(x, y, ξ, η)       dη −      f2 (η)      G(x, y, ξ, η)       dη
+                      0           ∂ξ                ξ=0        0            ∂ξ                 ξ=a
+                     Z a        ·                  ¸          Z a         ·                  ¸
+                                   ∂                                         ∂
+                  +      f3 (ξ)      G(x, y, ξ, η)       dξ −      f4 (ξ)      G(x, y, ξ, η)       dξ.
+                      0           ∂η                 η=0       0            ∂η                 η=b
+     Two forms of representation of the Green’s function:
+                          ∞                                         ∞
+                       2 X sin(pn x) sin(pn ξ)                   2 X sin(qm y) sin(qm η)
+      G(x, y, ξ, η) =                              Hn (y, η) =                                 Qm (x, ξ),
+                      a           βn sinh(βn b)                  b          µm sinh(µm a)
+                               n=1                                         m=1
+where                                                         ½
+                          q
+         πn                                                  sinh(βn η) sinh[βn (b − y)]         for b ≥ y > η ≥ 0,
+    pn =    ,     βn =         p2n − λ,         Hn (y, η) =
+          a                                                  sinh(βn y) sinh[βn (b − η)]         for b ≥ η > y ≥ 0,
+                              q                             ½
+         πm                                                   sinh(µm ξ) sinh[µm (a − x)]        for a ≥ x > ξ ≥ 0,
+    qm =      ,   µm =             2 − λ,
+                                  qm            Qm (x, ξ) =
+          b                                                   sinh(µm x) sinh[µm (a − ξ)]        for a ≥ ξ > x ≥ 0.
+
+                                                          References
+Budak, B. M., Samarskii, A. A., and Tikhonov, A. N., Collection of Problems on Mathematical Physics [in Russian],
+    Nauka, Moscow, 1980.
+Tikhonov, A. N. and Samarskii, A. A., Equations of Mathematical Physics, Dover Publ., New York, 1990.
+Polyanin, A. D., Handbook of Linear Partial Differential Equations for Engineers and Scientists , Chapman & Hall/CRC,
+    2002.
+
+
+Helmholtz Equation
+
+         ° 2004 Andrei D. Polyanin
+Copyright c                                                          http://eqworld.ipmnet.ru/en/solutions/lpde/lpde303.pdf
+

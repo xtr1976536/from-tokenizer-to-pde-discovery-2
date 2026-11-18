@@ -1,0 +1,388 @@
+Reduction to a single closed equation for 2 by 2 reaction-diffusion systems of Lotka-Volterra type. Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 Setting of the problem for typical Lotka-Volterra systems 2.1 System and assumptions 2.2 Main result 3 Application to a biological example 3.1 Presentation of the model 3.2 Large population asymptotic 3.3 Numerical illustration 4 Proof of convergence 4.1 Estimates 4.2 Convergence of $M$ 4.3 Compactness result and proof of Theorem Step 1: Local relative compactness. Step 2: Global convergence. Step 3: Limit equation. 5 Generalization of the result 6 Conclusion and perspectives References License: arXiv.org perpetual non-exclusive license arXiv:1602.01058v2 [math.AP] 03 Feb 2016 Reduction to a single closed equation for 2 by 2 reaction-diffusion systems of Lotka-Volterra type. Martin Strugarek † † thanks: AgroParisTech, Paris, France; Sorbonne Universités, UPMC Univ Paris 06, CNRS, INRIA, UMR 7598, Laboratoire Jacques-Louis Lions, Équipe MAMBA, 4, place Jussieu 75005, Paris, France. Nicolas Vauchelet † † thanks: Sorbonne Universités, UPMC Univ Paris 06, CNRS, INRIA, UMR 7598, Laboratoire Jacques-Louis Lions, Équipe MAMBA, 4, place Jussieu 75005, Paris, France. August 24, 2026 Abstract We consider general models of coupled reaction-diffusion systems for interacting variants of the same species.
+When the total population becomes large with intensive competition, we prove that the frequencies ( i.e. proportions) of the variants can be approached by the solution of a simpler reaction-diffusion system, through a singular limit method and a relative compactness argument.
+As an example of application, we retrieve the classical bistable equation for Wolbachia ’s spread into an arthropod population from a system modeling interaction between infected and uninfected individuals. Keywords: Reaction-diffusion systems; model reduction; asymptotic analysis: population dynamics. 2010 AMS subject classification: 35K57, 92D25. 1 Introduction We are interested in modeling situations when two biological populations of the same species interact with each other, especially move, reproduce and compete.
+The dynamics of these two populations are commonly described by a reaction-diffusion system of two equations in the whole space $\mathbb{R}^{d}$ ( $d\geq 1$ ). In this setting, reaction terms encompass the whole interaction. Usually, they are non-linear, in order to account for competition or mutualistic interaction.
+Denoting $n_{1}(t,x)$ and $n_{2}(t,x)$ the densities of each species’ variant at time $t>0$ and position $x\in\mathbb{R}^{d}$ ,
+the mathematical model reads: $\begin{cases}\partial_{t}n_{1}-\nabla\cdot(A(x)\nabla n_{1})&=n_{1}f_{1}(n_{1},n_{2}),\\
+\partial_{t}n_{2}-\nabla\cdot(A(x)\nabla n_{2})&=n_{2}f_{2}(n_{1},n_{2}),\end{cases}$ (1) where the diffusion matrix $A$ is elliptic and the regular functions $f_{1}$ and $f_{2}$ describe
+the interaction between variants.
+This system is complemented with initial conditions.
+Since the analysis of such systems is actually delicate, one prefers considering
+the proportion of one population, for instance $p=\frac{n_{1}}{n_{1}+n_{2}}$ .
+Then the interactions are described through the dynamics of the proportion $p$ by a reaction-diffusion system: $\partial_{t}p-\nabla\cdot(A(x)\nabla p)=pF(p).$ (2) Since the pioneering works of Fisher [ 7 ] and Kolmogorov, Petrovskii, Piskunov [ 15 ] ,
+this kind of reaction-diffusion equation has been extensively studied in mathematical literature.
+In particular many effort have been done to establish the existence of traveling waves and
+to describe the invasion phenomena (see e.g. [ 6 ] , [ 21 ] ).
+However, when considering systems of reaction-diffusion equations, many difficulties
+make such analysis harder. For instance, we mention the work [ 9 ] for competitive system.
+The aim of this paper, is to focus on the link between system ( 1 ) and ( 2 ).
+More precisely, the main question we want to address is to know if solutions of system
+( 1 ) can be rigorously approximated by system ( 2 ) for the proportion $p$ of one species.
+In our main result, we show that under suitable assumptions on the reaction terms in ( 1 ),
+the proportion $p=\frac{n_{1}}{n_{1}+n_{2}}$ is close (in a sense which will be defined below)
+to a solution to system ( 2 ).
+More precisely, we show that when the total population becomes large with intensive competition,
+the frequency $p=\frac{n_{1}}{n_{1}+n_{2}}$ for system ( 1 ) converges to the solution
+of equation ( 2 ) where the non-linear function in the right hand side $F$ is explicitely
+given with $f_{1}$ and $f_{2}$ .
+Our proof is based on a compactness argument resulting from a priori estimates.
+The closest results of model reduction for competition-diffusion systems, are those of [ 10 ] and [ 11 ] (in bounded domains, with a specific and extensive discussion on the boundary issues). Our first interest in this topic comes from the biological phenomenon of cytoplasmic incompatibility, caused by the endo-symbiotic bacterium Wolbachia in some arthropod species (see [ 23 ] , [ 2 ] , [ 13 ] ).
+These bacteria have gained interest lately because of their potential use as a tool to fight arboviruses (see [ 12 ] , [ 22 ] ).
+For this situation, modeled by a reaction-diffusion system, we prove that if reaction terms scale in a proper way, then the frequency of Wolbachia infection approaches the solution of a single closed reaction-diffusion equation, which is bistable.
+Bistable equations have been suggested long ago for this problem (see [ 2 ] for an account on this topic, and [ 19 ] for a specific discussion).
+When these models encompass a space-dependent total population density $\rho$ (as proposed e.g. in [ 17 , 1 , 2 ] ), they read $\partial_{t}p-\nabla\cdot(A(x)\nabla p)-2\frac{\nabla\rho}{\rho}A(x)\nabla p=pF(p).$ (3) In some sense our result justifies their use thanks to a rigorous singular limit method.
+We do not assume that $\rho$ and $p$ vary independently, and find that ( 3 ) must be corrected since $F$ is a function of $p$ and $\rho$ .
+We warn the reader that in order to simplify the computations, we will define a “reduced total population density” $n$ , instead of using the total population density $\rho$ directly. The outline of the paper is the following. In the next Section, we present the setting of the problem.
+In particular the assumptions on the reaction terms and the main result are presented.
+Section 3 is devoted to an example of application: the interaction between
+an infected and an uninfected mosquitoes population. A numerical illustration is also provided
+in dimension $d=1$ .
+The proof of our main result is provided in Section 4 .
+This proof relies strongly on a priori estimates that make us able to prove
+relative compactness of solutions families when a parameter describing the size
+of the population goes to $+\infty$ .
+We give in Section 5 some extension to our main result.
+Finally, Section 6 highlights questions this work opens. 2 Setting of the problem for typical Lotka-Volterra systems In this section, we first define the setting where our result applies (typical Lotka-Volterra systems), and then state it in Theorem 1 . 2.1 System and assumptions For $\epsilon>0$ , let $f_{1}^{\epsilon},f_{2}^{\epsilon}:\mathbb{R}^{2}\to\mathbb{R}$ be two functions.
+We start from the following system in $\mathbb{R}^{d}$ $\begin{cases}\partial_{t}n_{1}^{\epsilon}-\nabla\cdot(A(x)\nabla n_{1}^{\epsilon})&=n_{1}^{\epsilon}f_{1}^{\epsilon}(n_{1}^{\epsilon},n_{2}^{\epsilon}),\\
+\partial_{t}n_{2}^{\epsilon}-\nabla\cdot(A(x)\nabla n_{2}^{\epsilon})&=n_{2}^{\epsilon}f_{2}^{\epsilon}(n_{1}^{\epsilon},n_{2}^{\epsilon}),\end{cases}$ (4) with given initial data $n_{i}^{\epsilon}(t=0,x)=n_{i}^{\text{init},\epsilon}\geq 0$ for $i\in\{1,2\}$ .
+We assume that the matrix $A$ is elliptic and that $f_{1}^{\epsilon},f_{2}^{\epsilon}$ are smooth enough to
+guarantee existence and uniqueness of a global solution for fixed $\epsilon>0$ . More precisely, Assumption 1 (Ellipticity and symmetry of $A$ ) . The diffusion matrix $A:\mathbb{R}^{d}\to\mathbb{R}^{d\times d}$ is symmetric and
+the system ( 4 ) is uniformly elliptic, i.e. $\exists\nu_{0}\in\mathbb{R}_{+}^{*},\forall x,\zeta\in\mathbb{R}^{d},\,\zeta\cdot(A(x)\zeta)\geq\nu_{0}\lvert\zeta\rvert^{2},$ where $\lvert\cdot\rvert$ stands for the euclidean norm in $\mathbb{R}^{d}$ . We define “reduced total population” $n^{\epsilon}$ and frequency ( i.e. proportion of population $1$ ) $p^{\epsilon}$ by $n^{\epsilon}:=\frac{1}{\epsilon}-n_{1}^{\epsilon}-n_{2}^{\epsilon},\quad p^{\epsilon}:=\frac{n_{1}^{\epsilon}}{n_{1}^{\epsilon}+n_{2}^{\epsilon}}.$ (5) Since $0$ is a sub-solution for each equation in ( 4 ), and since initial
+data are nonnegative, we have $n_{i}^{\epsilon}(t,\cdot)\geq 0$ , for any $t\geq 0$ .
+By convention, we take $p^{\epsilon}=0$ whenever $n^{\epsilon}_{1}=n^{\epsilon}_{2}=0$ . We want to compute the limit as $\epsilon\to 0$ of the frequency $p^{\epsilon}$ under the above assumption on $A:\mathbb{R}^{d}\to\mathbb{R}^{d\times d}$ and on some assumptions
+on the families of functions $(f_{1}^{\epsilon},f_{2}^{\epsilon})_{\epsilon>0}$ . As a typical Lotka-Volterra system, we note that absence of either population of type $1$ or $2$ is a solution to this system: there is no spontaneous generation of one population from the other.
+In addition, the system is positive: for non-negative initial data, $0\leq p^{\epsilon}\leq 1$ .
+Now, we state our key assumptions. Assumption 2 (Dependence in $\epsilon$ ) . Functions $f_{1}^{\epsilon},f_{2}^{\epsilon}$ are of class $\mathcal{C}^{2}(\mathbb{R}_{+}^{2}-\{0\})$ , and for $i\in\{1,2\}$ there exists $F_{i}\in\mathcal{C}^{2}(\mathbb{R}_{+}^{2})$ (independent of $\epsilon>0$ ) such that $f_{i}^{\epsilon}(n_{1}^{\epsilon},n_{2}^{\epsilon})=F_{i}(n^{\epsilon},p^{\epsilon}).$ (6) In other words, for any $n_{1},n_{2}\geq 0$ , we may write $f_{i}^{\epsilon}(n_{1},n_{2})=F_{i}(\frac{1}{\epsilon}-n_{1}-n_{2},\frac{n_{1}}{n_{1}+n_{2}})$ . From now on we drop, the superscript $\epsilon$ when it is not equivocal. Adding the two equations in system ( 4 ) and using also the identity $\nabla\cdot(A(x)\nabla p)=\frac{1}{n_{1}+n_{2}}\nabla\cdot(A(x)\nabla n_{1})+\frac{p}{n_{1}+n_{2}}\nabla\cdot(A(x)\nabla n)+2\frac{1}{n_{1}+n_{2}}\nabla p\cdot(A(x)\nabla n),$ we deduce, after straightforward computations, that $(n,p)$ satisfies $\begin{cases}\partial_{t}n-\nabla\cdot(A(x)\nabla n)=\big(n-\frac{1}{\epsilon}\big)\big(pF_{1}(n,p)+(1-p)F_{2}(n,p)\big),\\[5.69054pt]
+\partial_{t}p-\nabla\cdot(A(x)\nabla p)+2\nabla p\cdot\displaystyle\frac{A(x)\nabla n}{\frac{1}{\epsilon}-n}=p(1-p)\big(F_{1}(n,p)-F_{2}(n,p)\big),\end{cases}$ (7) complemented with well-defined initial data.
+According to the first equation in ( 7 ), it appears interesting,
+when $\epsilon\to 0$ , to consider the function $H(n,p):=-pF_{1}(n,p)-(1-p)F_{2}(n,p).$ (8) The following assumption guarantees existence of zeros $(n,p)=(h(p),p)$ for each $p\in[0,1]$ for the above function $H$ . Assumption 3 (Nature of the interaction) . In addition to Assumption 6 , we assume (i) $\exists B>0$ such that $\forall n\geq 0,\,\forall p\in[0,1],\,\partial_{n}H(n,p)\leq-B$ ; (ii) $\forall p\in[0,1],\,H(0,p)>0$ . Conditions (i) and (ii) imply that for all $p\in[0,1]$ , there exists a unique $n=:h(p)\in\mathbb{R}_{+}^{*}$ such that $H(n,p)=0$ .
+We assume $H\in\mathcal{C}^{2}(\mathbb{R}_{+}^{2})$ (which is true if Assumption 6 holds), and thus $h\in\mathcal{C}^{2}(0,1;\mathbb{R})$ , with $H(h(p),p)=0$ for all $p\in[0,1]$ . In particular, $h(0)=\frac{1}{\epsilon}-\overline{n}_{2}^{\epsilon}$ , obtained at the population 1-free equilibrium $(0,\overline{n}_{2}^{\epsilon})$ for ( 4 ).
+By Assumption 3 , this equilibrium is unique and the reduced population $n^{\epsilon}$ does not depend on $\epsilon$ . Assumption 3 may seem a little awkward, therefore we would like to point out a sufficient condition. Lemma 1 . We assume that both $f_{1}^{\epsilon}$ and $f_{2}^{\epsilon}$ are smooth (say, of class $\mathcal{C}^{2}(\mathbb{R}_{+}^{2}-\{(0,0)\})$ ).
+We define the “triangle” $T_{\epsilon}=\{(n_{1},n_{2})\in\mathbb{R}_{+}^{2}\text{ such that }n_{1}+n_{2}\leq\frac{1}{\epsilon}\}$ .
+In addition to Assumption 6 , if $f_{1}^{\epsilon},f_{2}^{\epsilon}$ satisfy the following inequalities in $T_{\epsilon}$ , $\forall\underline{n}=(n_{1},n_{2})\in T_{\epsilon},\quad n_{1}^{2}\partial_{n_{1}}f_{1}^{\epsilon}(\underline{n})+n_{1}n_{2}(\partial_{n_{2}}f_{1}^{\epsilon}+\partial_{n_{1}}f_{2}^{\epsilon})(\underline{n})+n_{2}^{2}\partial_{n_{2}}f_{2}^{\epsilon}(\underline{n})\leq-B(n_{1}+n_{2})^{2},$ (9) together with a “boundary condition”: for all $\underline{n}\in\mathbb{R}_{+}^{2}$ with $\lVert\underline{n}\rVert_{1}=\frac{1}{\epsilon}$ , $n_{1}f_{1}^{\epsilon}(\underline{n})+n_{2}f_{2}^{\epsilon}(\underline{n})<0.$ (10) Then Assumption 3 holds. Remark 1 . Equation ( 9 ) on the lines $n_{1}=0$ and $n_{2}=0$ means that the profiles of $f_{1},f_{2}$ are below concave parabolic profiles.
+More generally, it ensures that the total population $n_{1}+n_{2}$ , in ( 7 ), will start decreasing (in time) before reaching the value $\frac{1}{\epsilon}$ . Proof of Lemma 1 . We verify each point (i) and (ii) in Assumption 3 . (i) We first recall that $\partial_{n}H=-(p\partial_{n}F_{1}+(1-p)\partial_{n}F_{2})$ .
+From ( 6 ), we express $\partial_{n_{i}}f_{1}^{\epsilon}$ and $\partial_{n_{i}}f_{2}^{\epsilon}$ , $\partial_{n_{i}}f_{j}^{\epsilon}=-\partial_{n}F_{j}+\frac{n_{3-i}}{n_{1}+n_{2}}\partial_{p}F_{j},\qquad i,j=1,2.$ Collecting these expressions yields straightforwardly $\begin{array}[]{ll}\partial_{n}H=-p\partial_{n}F_{1}-(1-p)\partial_{n}F_{2}=&\displaystyle p\frac{n_{1}}{n_{1}+n_{2}}\partial_{n_{1}}f_{1}^{\epsilon}+p\frac{n_{2}}{n_{1}+n_{2}}\partial_{n_{2}}f_{1}^{\epsilon}\\[5.69054pt]
+&\displaystyle+(1-p)\frac{n_{1}}{n_{1}+n_{2}}\partial_{n_{1}}f_{2}^{\epsilon}+(1-p)\frac{n_{2}}{n_{1}+n_{2}}\partial_{n_{2}}f_{2}^{\epsilon},\end{array}$ whence the equivalence with ( 9 ). (ii) For the boundary condition, we compute from ( 8 ) $H(0,p)=-\big(pF_{1}(0,p)+(1-p)F_{2}(0,p)\big).$ Then it suffices to recall that, by definition in ( 6 ), for $i\in\{1,2\}$ , $F_{i}(0,p)=f_{i}^{\epsilon}(\frac{p}{\epsilon},\frac{1-p}{\epsilon}).$ ∎ 2.2 Main result We are now in position to state our main result.
+We recall that we associate to any initial data $n_{i}^{\text{init},\epsilon}$ the corresponding solutions of ( 4 ), $(n_{i}^{\epsilon})$ , and their relative variable $n^{\epsilon}$ and $p^{\epsilon}$ , as defined in ( 5 ).
+In addition we may define $n^{\text{init},\epsilon}=\frac{1}{\epsilon}-n_{1}^{\text{init},\epsilon}-n_{2}^{\text{init},\epsilon},\quad p^{\text{init},\epsilon}=\frac{n_{1}^{\text{init},\epsilon}}{n_{1}^{\text{init},\epsilon}+n_{2}^{\text{init},\epsilon}}.$ Theorem 1 . We assume that Assumptions 1 , 6 , and 3 are satisfied.
+We consider the solutions of ( 4 ) with initial data $n_{i}^{\epsilon}(t=0)=n_{i}^{\text{init},\epsilon}\in L^{\infty}(\mathbb{R}^{d};\mathbb{R}_{+})$ for $i\in\{1,2\}$ .
+We assume moreover that there exists $p^{\text{init}}\in L^{2}(\mathbb{R}^{d})$ such that $p^{\text{init},\epsilon}\underset{\epsilon\to 0}{\rightharpoonup}p^{\text{init}}\mbox{ in }L^{2}(\mathbb{R}^{d})-\mbox{weak},\quad n^{\text{init},\epsilon}-h(0)\in L^{2}\cap L^{\infty}(\mathbb{R}^{d}),$ (11) with uniform bounds in $\epsilon>0$ . Then, for all $T>0$ , defining $\mathcal{H}^{1}_{T}=L^{2}(0,T;L^{2}(\mathbb{R}^{d}))$ and $\mathcal{H}^{2}_{T}=L^{2}(0,T;H^{1}(\mathbb{R}^{d}))$ , we have the convergence $\begin{cases}p^{\epsilon}\xrightarrow[\epsilon\to 0]{}p^{0}\text{ strongly in $\mathcal{H}^{1}_{T}$,}\text{ weakly in }\mathcal{H}^{2}_{T},\\
+n^{\epsilon}-h(p^{\epsilon})\xrightarrow[\epsilon\to 0]{}0\text{ strongly in $\mathcal{H}_{T}^{1}$,}\text{ weakly in }\mathcal{H}^{2}_{T},\end{cases}$ (12) where $p^{0}$ is the unique solution of the following initial value problem $\begin{cases}\partial_{t}p^{0}-\nabla\cdot(A(x)\nabla p^{0})=p^{0}F_{1}(h(p^{0}),p^{0}),\\
+p^{0}(t=0)=p^{\text{init}}.\end{cases}$ (13) This result asserts that, locally in time, the proportion of the first population, $p$ ,
+solution to system ( 4 ), under suitable assumption
+on the reaction term and on the initial data, is close to the solution
+of a single reaction-diffusion system ( 13 ).
+This latter system have been intensively studied, in particular existence of
+traveling waves, describing propagation phenomena (see e.g. [ 6 ] , [ 21 ] ).
+The main interest in this reduction process is that since the behavior of solutions to the scalar equation ( 13 )
+is well-known.
+Therefore we can deduce, for small values of $\epsilon$ ,
+the local in time behavior of solutions to ( 4 ). We observe that the limit reaction term $r(p):=pF_{1}(h(p),p)$ in ( 13 )
+satisfies $r(0)=0,\qquad r(1)=F_{1}(h(1),1)=0,$ because $H(h(p),p)=0=-pF_{1}(h(p),p)-(1-p)F_{2}(h(p),p)$ .
+It means that the states $p^{0}=0$ (only population $2$ ) and $p^{0}=1$ (only population $1$ ) are equilibria for this system. Moreover, $r^{\prime}(0)=F_{1}(h(0),0)$ and $r^{\prime}(1)=h^{\prime}(1)\partial_{n}F_{1}(h(1),1)+\partial_{p}F_{1}(h(1),1).$ Hence under some direct sign assumptions on $F_{1}$ and $\partial_{p}F_{1}$ ,
+the equilibria $0$ and $1$ for $p$ can be made stable in the limit equation, if $r^{\prime}(0)$ and $r^{\prime}(1)$ are negative.
+In particular, in the example in Section 3 , the function $r$ is bistable. Remark 2 . The assumption $n^{\text{init},\epsilon}-h(0)$ uniformly bounded with respect to $\epsilon$ in $L^{2}(\mathbb{R}^{d})$ together with the uniform bound of $p^{\text{init},\epsilon}$ in $L^{2}(\mathbb{R}^{d})$ imply, thanks to Assumption 3 , that $n^{\text{init}}-h(p^{\text{init},\epsilon})$ is bounded
+in $L^{2}(\mathbb{R}^{d})$ , uniformly in $\epsilon>0$ .
+Indeed, $h$ is Lipschitz on $(0,1)$ and by the triangle inequality, we have $\|n^{\text{init}}-h(p^{\text{init},\epsilon})\|_{L^{2}}\leq\|n^{\text{init},\epsilon}-h(0)\|_{L^{2}}+\|h\|_{Lip}\|p^{\text{init},\epsilon}\|_{L^{2}}$ . Remark 3 . One might be interested by the effect of the local introduction of a variant into a population at
+equilibrium. In this situation, at the time of introduction, variant $2$ is at equilibrium whereas
+the introduction of variant $1$ is modeled by a compactly supported continuous nonnegative function $\phi$ .
+Then we have $n_{2}^{\text{init},\epsilon}=\frac{1}{\epsilon}-h(0)$ on $\mathbb{R}^{d}\setminus\mbox{supp }\phi$ ,
+and we set $n_{1}^{\text{init},\epsilon}=\phi n_{2}^{\text{init},\epsilon}$ .
+Then, $p^{\text{init}}=\frac{\phi}{1+\phi}$ and assumption ( 11 )
+in Theorem 1 boils down to assuming that $\frac{1}{\epsilon}-(1+\phi)n_{2}^{\text{init},\epsilon}-h(0)\mbox{ is uniformly bounded with respect to }\epsilon\mbox{ in }L^{\infty}(\mathbb{R}^{d}).$ Finally, we mention that we can relax the assumption ( 11 ) by assuming that
+the sequence $(p^{\text{init},\epsilon})_{\epsilon}$ is uniformly bounded with respect to $\epsilon$ in $L^{2}(\mathbb{R}^{d})$ instead of assuming its convergence. In fact, we can extract a subsequence
+of $(p^{\text{init},\epsilon})_{\epsilon}$ that converges weakly towards $p^{\text{init}}$ and the result applies. But the uniqueness of the weak limit $p^{\text{init}}$ is not guaranteed
+and therefore, the result in Theorem 1 is available only up to an extraction
+of a subsequence. 3 Application to a biological example 3.1 Presentation of the model We consider the case of Wolbachia in arthropod species (for the biology of this bacterium, see [ 23 ] ; for mathematical modeling, see [ 2 ] , [ 5 ] , [ 13 ] , [ 3 ] ).
+It is an endo-symbiont that is maternally transmitted, causes cytoplasmic incompatibility (CI), and has several other effects on its host.
+Here, we understand CI as a mechanism through which one of the possible crossings is less viable. More precisely, if an uninfected female is fertilized by an infected male, a fraction only of its eggs will eventually hatch and give birth to viable larvae.
+For more details about CI, we refer to [ 23 ] .
+In the case of Aedes mosquitoes, Wolbachia reduces lifespan, changes fecundity and blocks the development of dengue virus (see [ 16 ] , [ 22 ] , [ 14 ] ).
+It is then a potential biological tool to fight dengue epidemics.
+However, it does not change the way mosquitoes move.
+Therefore, in order to model a Wolbachia invasion (assessed in the field in [ 12 ] ) we are precisely in our setting. Several (two) variants of the same species interact with each other in a complex way. Specifically, we define the uninfected death rate $d_{u}$ . This rate is multiplied by $\delta>1$ for infected mosquitoes: $d_{i}=\delta d_{u}$ .
+We also define an uninfected fecundity $F_{u}$ for uninfected mosquitoes, $F_{i}=(1-s_{f})F_{u}$ for infected mosquitoes ; a resource parameter $\sigma$ ;
+and a CI parameter $0<s_{h}\leq 1$ , which means that a fraction $s_{h}$ of uninfected females’ eggs fertilized by infected males won’t hatch. Parameters $\delta$ , $s_{f}$ and $s_{h}$ have been estimated in several cases and can be found in the literature (see [ 2 ] and references therein).
+We will always assume $s_{h}>s_{f}$ . (In practice, we usually have $s_{f}$ close to $0$ and $s_{h}$ close to $1$ ).
+Let us denote $n_{i}(t,x)$ , resp. $n_{u}(t,x)$ , the density of the infected, resp. uninfected,
+mosquitoes at time $t\geq 0$ , position $x\in\mathbb{R}^{d}$ . Several models have been written, using these parameters.
+In [ 3 ] (if we ignore the drift speed $v\in\mathbb{R}^{d}$ they used, which amounts at a change of coordinates) one find $\begin{cases}&\partial_{t}n_{i}-\nabla\cdot(A(x)\nabla n_{i})=n_{i}(1-\sigma(n_{u}+n_{i}))-d_{u}n_{i},\\
+&\partial_{t}n_{u}-\nabla\cdot(A(x)\nabla n_{u})=n_{u}F_{u}(1-s_{h}\frac{n_{i}}{n_{u}+n_{i}})(1-\sigma(n_{u}+n_{i}))-d_{u}n_{u}.\end{cases}$ (14) In this model, $\delta=1$ and variables are scaled so that $F_{u}(1-s_{f})=F_{i}=1$ . Here the reduced population is defined by $n=\frac{1}{\sigma}-(n_{i}+n_{u})$ .
+The corresponding dynamics in $(n,p)$ for ( 14 ) is written $\begin{cases}&\partial_{t}n-\nabla\cdot(A(x)\nabla n)=\big(\sigma n(p+F_{u}(1-p)(1-s_{h}p))-d_{u}\big),\\
+&\partial_{t}p-\nabla\cdot(A(x)\nabla p)+2\frac{\nabla n}{n}A(x)\nabla p=\sigma np(1-p)\big(d_{u}-F_{u}(1-s_{h}p)\big),\end{cases}$ (15) In ( 15 ), the reaction term for $p$ depends on $n$ merely for its intensity (it is a multiplicative factor).
+In particular, the unstable steady state (defining, in some sense, a possible “threshold for invasion”) is equal to $\frac{1}{s_{h}}(1-\frac{d_{u}}{F_{u}})$ does not depend on $n$ . To further reduce this class of models and prove the convergence towards ( 3 ), we introduce the parameter $\epsilon$ to characterize the high fertility and competition that result in a carrying capacity of order $\frac{1}{\epsilon}$ .
+Then we propose the following generalization of ( 14 ), which incorporates also
+the different death rate and the reduction of fecundity, $\begin{cases}\partial_{t}n_{i}-\nabla\cdot(A(x)\nabla n_{i})&=(1-s_{f})F_{u}n_{i}\big(\frac{1}{\epsilon}-\sigma(n_{i}+n_{u})\big)-\delta d_{u}n_{i},\\
+\partial_{t}n_{u}-\nabla\cdot(A(x)\nabla n_{u})&=F_{u}n_{u}(1-s_{h}\frac{n_{i}}{n_{i}+n_{u}})\big(\frac{1}{\epsilon}-\sigma(n_{i}+n_{u})\big)-d_{u}n_{u},\\
+\end{cases}$ (16) Straightforwardly, we can compute the equilibria for the associated dynamical system. Lemma 2 . As soon as $s_{f}+\delta-1<\delta s_{h}$ , there are four distinct equilibria associated with ( 16 ) in the non-negative quadrant. • Wolbachia invasion steady state $(n^{*}_{iW},n^{*}_{uW}):=(\frac{1}{\sigma\epsilon}-\frac{d_{u}}{F_{u}}\frac{\delta}{1-s_{f}},0)$ is stable; • Wolbachia extinction steady state $(n^{*}_{iE},n^{*}_{uE}):=(0,\frac{1}{\sigma\epsilon}-\frac{d_{u}}{F_{u}})$ is stable; • The co-existence steady state $(n^{*}_{iC},n^{*}_{uC}):=\big(\big(\frac{1}{\sigma\epsilon}-\frac{d_{u}}{F_{u}}\frac{\delta}{1-s_{f}}\big)\frac{\delta-(1-s_{f})}{\delta s_{h}},\big(\frac{1}{\sigma\epsilon}-\frac{d_{u}}{F_{u}}\frac{\delta}{1-s_{f}}\big)\frac{\delta(s_{h}-1)+(1-s_{f})}{\delta s_{h}}\big)$ is unstable; • The steady state $(0,0)$ is unstable. 3.2 Large population asymptotic We perform the limit $\epsilon\to 0$ for system ( 16 ).
+To recover notations from Theorem 1 , we identify $n_{1}=n_{i}$ , $n_{2}=n_{u}$ .
+As above we define the reduced quantity $n=\frac{1}{\sigma\epsilon}-(n_{1}+n_{2})$ and $p=\frac{n_{1}}{n_{1}+n_{2}}$ .
+Then with the notations in Section 2 , one has $\displaystyle F_{1}(n,p)$ $\displaystyle=\sigma n(1-s_{f})F_{u}-\delta d_{u},$ $\displaystyle F_{2}(n,p)$ $\displaystyle=\sigma nF_{u}(1-s_{h}p)-d_{u}.$ Therefore, by definition ( 8 ), we compute $\displaystyle H(n,p)$ $\displaystyle=-p(\sigma n(1-s_{f})F_{u}-\delta d_{u})-(1-p)(\sigma nF_{u}(1-s_{h}p)-d_{u})$ $\displaystyle=-\sigma F_{u}n(s_{h}p^{2}-(s_{f}+s_{h})p+1)+d_{u}((\delta-1)p+1).$ And Assumption 6 is satisfied. Then, Assumption 3 is easy to check since $H(0,p)=d_{u}((\delta-1)p+1)>0$ and using the fact that the polynomial $x\mapsto s_{h}x^{2}-(s_{f}+s_{h})x+1$ is minimal for $x=\frac{s_{f}+s_{h}}{2s_{h}}$ , we have $\partial_{n}H(n,p)=-\sigma F_{u}(s_{h}p^{2}-(s_{f}+s_{h})p+1)\leq-\sigma F_{u}(1-\frac{(s_{f}+s_{h})^{2}}{4s_{h}})<0,$ since we have $s_{f}<s_{h}$ .
+We notice also that this computation implies that the above second order polynomial
+in $p$ is always away from $0$ on $[0,1]$ .
+Moreover, recalling the definition $H(n,p)=0$ if and only if $n=h(p)$ from
+Assumption 3 , we can compute $h(p)=\frac{d_{u}}{\sigma F_{u}}\frac{(\delta-1)p+1}{s_{h}p^{2}-(s_{f}+s_{h})p+1}.$ Under Assumption 1 on $A$ , Theorem 1 applies, and $p^{\epsilon}$ converges towards the solution of the following equation $\left\{\begin{array}[]{rcl}\partial_{t}p^{0}-\nabla\cdot(A(x)\nabla p^{0})&=&r(p^{0}),\\
+p^{0}(t=0)&=&p^{\text{init}},\end{array}\right.$ (17) and the reaction term writes $r(p)=\delta d_{u}s_{h}\frac{p(1-p)(p-\theta)}{s_{h}p^{2}-(s_{f}+s_{h})p+1},\qquad\theta=\frac{s_{f}+\delta-1}{\delta s_{h}},$ which is bistable provided $\delta$ satisfies the condition from Lemma 2 : $s_{f}+\delta-1<\delta s_{h}.$ (18) If $\delta=1$ , we find the ubiquitous value $\theta(=p^{*})=\frac{s_{f}}{s_{h}}$ ,
+which corresponds to the model of spacial spread of Wolbachia proposed in [ 2 ] .
+In addition, this expression is coherent with the one in [ 19 ] for general $\delta$ .
+Even though the equation for $p$ has already been suggested for a while, as far as we know, no convergence result as ours had been proved before from a two-populations model to the bistable equation. A direct application of Theorem 1 establishes that, in the limit $\epsilon\to 0$ ,
+the derivation in [ 2 ] holds true in a strong topology. Corollary 1 . Assume that $A$ satisfies Assumption 1 .
+Given $n_{1}^{\text{init},\epsilon}$ and $n_{2}^{\text{init},\epsilon}$ such that there exists $p^{\text{init}}\in L^{2}(\mathbb{R}^{d})$ such that $p^{\text{init},\epsilon}\rightharpoonup p^{\text{init}}$ as $\epsilon\to 0$ in $L^{2}(\mathbb{R}^{d})$ -weak
+and $\frac{1}{\sigma\epsilon}-n_{1}^{\text{init},\epsilon}-n_{2}^{\text{init},\epsilon}-\frac{d_{u}}{\sigma F_{u}}\in L^{2}\cap L^{\infty}(\mathbb{R}^{d})$ with uniform bounds in $\epsilon>0$ ,
+then Theorem 1 applies and the solutions $(n_{i}^{\epsilon},n_{u}^{\epsilon})_{\epsilon>0}$ of ( 16 )
+satisfy the convergence result in ( 12 ) where the limiting equation is given in ( 17 ). 3.3 Numerical illustration A numerical illustration of this convergence result is shown in Figure 1 . Parameters are fixed according to biologically relevant data (freely adapted from [ 8 ] ). Time unit is the day, and parameters per day are $F_{i}=F_{u}=1.12$ (hence $s_{f}=0$ ), $d_{u}=.27$ and $d_{i}=.3$ , then $\delta=\frac{d_{i}}{d_{u}}=\frac{10}{9}$ .
+We choose $s_{f}=.1$ and $s_{h}=.8$ .
+We take $\sigma=1$ , and $A(x)\equiv.1$ , which amounts at choosing a space scale. Figure 1: Initial data (+) creating a traveling wave in the limit system (blue) and convergence of the two-population solution (dashed red) as $\epsilon$ diminishes. We discretize the one-dimensional computational domain $[-15;15]$ with space step $\Delta x=.05$ and take a time step $\Delta t=.005$ .
+The reaction diffusion equations are discretized thanks to semi-implicit finite
+difference scheme, the diffusion operator being treated implicitly
+(to avoid too restrictive stability conditions),
+while the reaction term is treated explicitly.
+Curves are plotted every $5000$ iterations, at times (in days) $T_{1}=25$ , $T_{2}=50$ , $T_{3}=75$ , $T_{4}=100$ and $T_{5}=125$ .
+We display 4 numerical tests with the same initial data $p^{\text{init}}$ compactly supported, plotted in pluses (+).
+The blue lines represent the solution of the limiting system ( 17 ).
+In dashed red lines are plotted the computed fraction $p=\frac{n_{i}}{n_{i}+n_{u}}$ where $(n_{i},n_{u})$ solves the system of two populations ( 16 ).
+In this computation the initial data are taken as noticed in Remark 3 :
+we consider the compactly supported function $\phi=p^{\text{init}}/(1-p^{\text{init}})$ and for given $n_{u}^{\text{init}}$ we take $n_{i}^{\text{init}}=\phi n_{u}^{\text{init}}$ .
+We observe that the solution of the limiting bistable system ( 17 )
+exhibits a traveling front which propagates into the whole domain.
+Then the numerical results for 4 different values of the parameter $\epsilon$ are represented.
+For large populations, we observe that as $\epsilon$ goes to $0$ (recall that the order of magnitude of the population size is $\frac{1}{\sigma\epsilon}$ ),
+the solution to the whole system ( 16 ) gets closer to the one of the limiting system.
+However, for $\epsilon=.6$ , the introduced population goes extinct, and $p$ does not behave as in the limiting model. This illustrates how the 2 by 2 system qualitatively differs from the limit reaction-diffusion equation. An additional conclusion we can draw from Figure 1 is that our approximation result will always be local in time .
+Indeed, for small $\epsilon$ we see a traveling wave appear in dashed red, that has a slower speed than the blue one.
+Hence the norm of their difference will be constantly growing in time. 4 Proof of convergence This Section is devoted to the proof of Theorem 1 .
+We write the system of equations satisfied by $(n^{\epsilon},p^{\epsilon})$ $\begin{cases}\partial_{t}n^{\epsilon}-\nabla\cdot(A(x)\nabla n^{\epsilon})=\big(\frac{1}{\epsilon}-n^{\epsilon}\big)H(n^{\epsilon},p^{\epsilon}),\\[5.69054pt]
+\partial_{t}p^{\epsilon}-\nabla\cdot(A(x)\nabla p^{\epsilon})+2\epsilon\nabla p^{\epsilon}\cdot\frac{A(x)\nabla n^{\epsilon}}{1-\epsilon n^{\epsilon}}=p^{\epsilon}(1-p^{\epsilon})\big(F_{1}-F_{2}\big)(n^{\epsilon},p^{\epsilon}),\\[5.69054pt]
+n^{\epsilon}(t=0)=n^{\text{init},\epsilon},\qquad p^{\epsilon}(t=0)=p^{\text{init},\epsilon}\,.\end{cases}$ (19) We recall that the initial data are assumed to satisfy ( 11 ).
+Then the sequence $(p^{\text{init},\epsilon})_{\epsilon}$ is bounded uniformly in $\epsilon$ in $L^{2}(\mathbb{R}^{d})$ and $(n^{\text{init},\epsilon}-h(0))_{\epsilon}$ is bounded uniformly in $\epsilon$ in $L^{2}\cap L^{\infty}(\mathbb{R}^{d})$ .
+The proof of Theorem 1 relies strongly on a sequence of a priori estimates
+uniform in $\epsilon$ , which give compactness and allow to pass to the limit in the
+equation for $p^{\epsilon}$ . From now on, we will drop the superscript $\epsilon$ in the notations. 4.1 Estimates For $\epsilon>0$ fixed, existence of solutions to ( 19 ) is classical (see e.g. [ 18 ] ).
+Now we establish some a priori estimates uniform in $\epsilon>0$ .
+First, we have the following $L^{\infty}$ bounds. Lemma 3 . Under the assumptions of Theorem 1 , for any positive initial data, the unique solution $(p,n)$ to ( 19 ) satisfies $\forall t>0,x\in\mathbb{R}^{d},\,0\leq p(t,x)\leq 1$ and $n\in L^{\infty}(\mathbb{R}_{+}\times\mathbb{R}^{d})$ . Moreover, there exists $\epsilon_{0}>0$ such that the $L^{\infty}$ bound on $n$ is uniform in $\epsilon_{0}>\epsilon>0$ . Proof. As stated before, positivity of $n_{1},n_{2}$ is straightforward and implies the uniform
+bounds on $p$ in $L^{\infty}$ . Using Stampacchia’s method for the bound on $n$ , we notice that, from Assumption 3 , for all $p\in[0,1]$ , $\big(\frac{1}{\epsilon}-n\big)H(n,p)$ is positive for $n$ between $0$ and $h(p)$ and negative afterwards until $\frac{1}{\epsilon}$ .
+Then, for $\tilde{K}=\max_{p\in[0,1]}h(p)$ , we define $y(t)=\int_{\mathbb{R}^{d}}\big(n(t,x)-\tilde{K}\big)_{+}dx$ . Multiplying the equation on $n-\tilde{K}$ by $1_{n>\tilde{K}}$ and
+integrating over $\mathbb{R}^{d}$ gives, for $\epsilon<\frac{1}{\tilde{K}}$ $\frac{d}{dt}y(t)+\int_{\mathbb{R}^{d}}\nabla(n-\tilde{K})_{+}\cdot A(x)\nabla(n-\tilde{K})_{+}dx\leq 0.$ And in particular, $\frac{d}{dt}{y}<0$ .
+Since, from Assumption ( 11 ), $n^{\text{init}}$ is bounded in $L^{\infty}$ uniformly
+with respect to $\epsilon$ , we can pick $\tilde{K}$ such that $\tilde{K}>\lVert n^{\text{init}}\rVert_{\infty}$ .
+Then $y(0)=0$ . We deduce that $y\equiv 0$ . To conclude, the result is proved with $\epsilon_{0}=\big(\max\,(\max_{p\in[0,1]}h(p),\lVert n^{\text{init}}\rVert_{\infty})\big)^{-1}.$ ∎ Now, we aim at getting the following boundedness result. Proposition 1 . Let $T>0$ . Under the assumptions in Theorem 1 , we define $M:=n-h(p)$ .
+Then, there exists $\epsilon_{0}>0$ such that $M$ and $p$ are uniformly bounded in $\mathcal{H}^{1}_{T}\cap\mathcal{H}^{2}_{T}$ , for all $\epsilon\leq\epsilon_{0}$ . We recall that the function $h$ is defined in Assumption 3 and belongs to $\mathcal{C}^{2}([0,1])$ .
+Then we may define $h_{0}=\|h\|_{L^{\infty}([0,1])},\quad h^{\prime}_{0}=\|h^{\prime}\|_{L^{\infty}([0,1])},\quad h^{\prime\prime}_{0}=\|h^{\prime\prime}\|_{L^{\infty}([0,1])}.$ (20) We notice that, by definition and from Lemma 3 , we have that $M$ is uniformly bounded
+in $L^{\infty}$ for $\epsilon\leq\epsilon_{0}$ .
+The proof of this result relies on estimates on $p$ and $M$ , and we postpone the proof of Proposition 1 after proving them in the two following technical Lemma. The first one is for $p$ . Lemma 4 . There is a positive constant $K$ independent of $\epsilon$ such that $\forall\epsilon>0$ , $\frac{1}{2}\frac{d}{dt}\int_{\mathbb{R}^{d}}p^{2}dx+(1-\epsilon C_{1})\int_{\mathbb{R}^{d}}\nabla pA(x)\nabla pdx\leq\epsilon C_{2}\int_{\mathbb{R}^{d}}\nabla MA(x)\nabla Mdx+K\int_{\mathbb{R}^{d}}p^{2}dx,$ where $C_{1}=2\big(1+\frac{h^{\prime}_{0}}{2}+(h^{\prime}_{0})^{2}\big)$ and $C_{2}=2(1+\frac{h^{\prime}_{0}}{2})$ . Proof. We multiply by $p$ the equation satisfied by $p$ in ( 19 ), and integrate over $\mathbb{R}^{d}$ $\frac{1}{2}\frac{d}{dt}\int_{\mathbb{R}^{d}}p^{2}dx+\int_{\mathbb{R}^{d}}\nabla pA(x)\nabla pdx+2\epsilon\int_{\mathbb{R}^{d}}\frac{p}{1-\epsilon n}\nabla p\cdot A(x)\nabla ndx\\
+\leq\int_{\mathbb{R}^{d}}p^{2}(1-p)\big(F_{1}-F_{2}\big)(n,p)dx.$ (21) Thanks to Lemma 3 , we know that $\frac{p}{1-\epsilon n}$ is well-defined for $\epsilon$ small enough, and the denominator is uniformly positive.
+Hence we may use a Cauchy-Schwarz inequality, $\int_{\mathbb{R}^{d}}\frac{p}{1-\epsilon n}\nabla nA(x)\nabla pdx\leq\frac{1}{2}\int_{\mathbb{R}^{d}}\frac{p}{1-\epsilon n}\nabla pA(x)\nabla pdx+\frac{1}{2}\int_{\mathbb{R}^{d}}\frac{p}{1-\epsilon n}\nabla nA(x)\nabla ndx.$ Since $n=M+h(p)$ , we have $\nabla n=\nabla M+h^{\prime}(p)\nabla p$ .
+We may also write, $\int_{\mathbb{R}^{d}}\nabla nA(x)\nabla ndx\leq((h^{\prime}_{0})^{2}+\frac{h^{\prime}_{0}}{2})\int_{\mathbb{R}^{d}}\nabla pA(x)\nabla pdx+(1+\frac{h^{\prime}_{0}}{2})\int_{\mathbb{R}^{d}}\nabla MA(x)\nabla Mdx.$ Now, collecting these inequalities for $\epsilon$ small enough, such that $\frac{p}{1-\epsilon n}\leq 2$ yields $\frac{1}{2}\frac{d}{dt}\int_{\mathbb{R}^{d}}p^{2}dx+\Big(1-2\epsilon\big(1+h^{\prime}_{0}(h^{\prime}_{0}+\frac{1}{2})\big)\Big)\int_{\mathbb{R}^{d}}\nabla pA(x)\nabla p\\
+\leq 2\epsilon\big(1+\frac{h^{\prime}_{0}}{2}\big)\int_{\mathbb{R}^{d}}\nabla MA(x)\nabla M+K_{F}\int_{\mathbb{R}^{d}}p^{2}dx,$ where $K_{F}:=\sup\{\lvert(1-p)(F_{1}-F_{2})(n,p)\rvert,\text{ as }\lvert n\rvert\leqslant\sup_{0<\epsilon\leqslant\epsilon_{0}}\|n\|_{L^{\infty}}\text{ and }0\leqslant p\leqslant 1\}.$ (22) Thanks to Lemma 3 and the continuity of the functions $F_{1}$ and $F_{2}$ , the constant $K_{F}$ is finite.
+This is the expected estimate.
+∎ Similarly, on $M:=n-h(p)$ , Lemma 5 . There are positive constants $C_{3},C_{4},C_{5},C_{6}$ independent of $\epsilon$ such that, for all $\epsilon>0$ , $\frac{1}{2}\frac{d}{dt}\int_{\mathbb{R}^{d}}M^{2}dx+(1-\epsilon C_{3})\int_{\mathbb{R}^{d}}\nabla MA(x)\nabla Mdx\\
+\leq\big(C_{4}-\frac{C_{5}}{\epsilon}\big)\int_{\mathbb{R}^{d}}M^{2}dx+C_{6}\big(\int_{\mathbb{R}^{d}}p^{2}dx+\int_{\mathbb{R}^{d}}\nabla pA(x)\nabla pdx\big),$ where $C_{3}=\frac{h^{\prime}_{0}}{2}$ , $C_{4}=B(h_{0}+\tilde{K}^{\prime})+\frac{h^{\prime}_{0}K_{F}}{2}$ , $C_{5}=B$ and $C_{6}=\max\big(\frac{h^{\prime}_{0}K_{F}}{2},\tilde{K}^{\prime}h^{\prime\prime}_{0}+\epsilon h^{\prime}_{0}(h^{\prime}_{0}+\frac{1}{2})\big)$ , and $\tilde{K}^{\prime},K_{F}$ are positive constants defined in ( 22 ) and ( 26 ). Proof. The quantity $M$ satisfies the following equation (obtained from ( 19 )) $\partial_{t}M-\nabla\cdot(A(x)\nabla M)=\partial_{t}n-\nabla\cdot(A(x)\nabla n)-h^{\prime}(p)\partial_{t}p+\nabla\cdot(h^{\prime}(p)A(x)\nabla p)\\
+=\big(\frac{1}{\epsilon}-M-h(p)\big)H(M+h(p),p)+h^{\prime\prime}(p)\nabla p\cdot(A(x)\nabla p)\\
+-h^{\prime}(p)\Big((1-p)(-F_{2}-H)(M+h(p),p)\\
+-2\epsilon\frac{1}{1-\epsilon n}(A(x)\nabla M+h^{\prime}(p)A(x)\nabla p)\cdot\nabla p\Big),$ (23) it is associated with an initial data $M^{\text{init}}=n^{\text{init}}-h(p^{\text{init}})$ bounded in $L^{2}(\mathbb{R}^{d})$ .
+Indeed, as noted in Remark 3 , we have, $\lvert n^{\text{init}}-h(p^{\text{init}})\rvert\leq\lvert n^{\text{init}}-h(0)\rvert+\lvert h(0)-h(p^{\text{init}})|\leq\lvert n^{\text{init}}-h(0)\rvert+h^{\prime}_{0}\lvert p^{\text{init}}\rvert.$ Moreover, from ( 11 ), $p^{\text{init}}$ is bounded in $L^{2}(\mathbb{R}^{d})$ and $n^{\text{init}}-h(0)$ is bounded in $L^{2}(\mathbb{R}^{d})$ , with uniform bounds in $\epsilon$ . It implies the uniform bound of $M^{\text{init}}$ in $L^{2}(\mathbb{R}^{d})$ . Now, we assume that $\epsilon$ is small enough, so that the term $\frac{1}{\epsilon}-M-h(p)$ remains positive (this is possible thanks to Lemma 3 ).
+We multiply by $M$ equation ( 23 ), and integrate over $\mathbb{R}^{d}$ $\frac{d}{dt}\int_{\mathbb{R}^{d}}M^{2}dx+\int_{\mathbb{R}^{d}}\nabla M\cdot(A(x)\nabla M)dx\\
+\leq-B\int_{\mathbb{R}^{d}}M^{2}\big(\frac{1}{\epsilon}-M-h(p)\big)dx\\
++\int_{\mathbb{R}^{d}}2Mh^{\prime}(p)\epsilon\frac{1}{1-\epsilon n}(A(x)\nabla M+h^{\prime}(p)A(x)\nabla p)\cdot\nabla pdx\\
++\int_{\mathbb{R}^{d}}Mh^{\prime\prime}(p)\nabla p\cdot(A(x)\nabla p)dx\\
+-\int_{\mathbb{R}^{d}}Mh^{\prime}(p)(1-p)(-F_{2}-H)(M+h(p),p)dx$ (24) Since $\partial_{n}H\leq-B$ (Assumption 3 ), $\displaystyle\frac{H(M+h(p),p)-H(h(p),p)}{M}\leq-B$ . Multiplying this inequality by $M^{2}\geqslant 0$ we get $MH(M+h(p))\leq-BM^{2}$ because $H(h(p),p)=0$ for all $p\in[0,1]$ . Now, we bound each one of these terms of the right hand side of ( 24 ) separately (keeping in mind the fact that $\epsilon$ will be chosen small enough) $-B\int_{\mathbb{R}^{d}}M^{2}\big(\frac{1}{\epsilon}-M-h(p)\big)dx\leq-B\big(\frac{1}{\epsilon}-h_{0}-\tilde{K}^{\prime}\big)\int_{\mathbb{R}^{d}}M^{2}dx,$ (25) where $\tilde{K}^{\prime}=\sup\{|n-h(p)|,\mbox{ as }|n|\leq\sup_{0<\epsilon\leqslant\epsilon_{0}}\|n\|_{L^{\infty}}\text{ and }0\leqslant p\leqslant 1\}.$ (26) From Lemma 3 , $\tilde{K}^{\prime}$ is finite and by definition $M=n-h(p)$ , $\tilde{K}^{\prime}$ bounds $|M|$ .
+We pick $\epsilon<\epsilon_{0}$ such that $1-\epsilon n>\frac{1}{2}$ (again, using Lemma 3 ). After using a Cauchy-Schwarz inequality, we get $\left\lvert\int_{\mathbb{R}^{d}}2Mh^{\prime}(p)\epsilon\frac{1}{1-\epsilon n}(A(x)\nabla M+h^{\prime}(p)A(x)\nabla p)\cdot\nabla pdx\right\rvert\\
+\leqslant h^{\prime}_{0}\tilde{K}^{\prime}\epsilon\Big((h^{\prime}_{0}+\frac{1}{2})\int_{\mathbb{R}^{d}}\nabla p\cdot(A(x)\nabla p)dx+\frac{1}{2}\int_{\mathbb{R}^{d}}\nabla M\cdot(A(x)\nabla M)dx\Big).$ (27) Finally, by definition of $H$ in ( 8 ), we have $(-F_{2}-H)(n,p)=p(F_{1}-F_{2})(n,p).$ Then using the constant $K_{F}$ defined in ( 22 ), we deduce, applying
+a Cauchy-Schwarz inequality, $\left\lvert\int_{\mathbb{R}^{d}}\big(Mh^{\prime\prime}(p)\nabla p\cdot(A(x)\nabla p)-Mh^{\prime}(p)(1-p)(-F_{2}-H)(M+h(p),p)\big)dx\right\rvert\\
+\leqslant h^{\prime\prime}_{0}\tilde{K}^{\prime}\int_{\mathbb{R}^{d}}\nabla p\cdot(A(x)\nabla p)dx+\frac{h^{\prime}_{0}K_{F}}{2}\int_{\mathbb{R}^{d}}M^{2}dx+\frac{h^{\prime}_{0}K_{F}}{2}\int_{\mathbb{R}^{d}}p^{2}dx.$ (28) Combining ( 25 ), ( 27 ) and ( 28 ) we get $\displaystyle\frac{1}{2}\displaystyle\frac{d}{dt}\int_{\mathbb{R}^{d}}M^{2}dx+\int_{\mathbb{R}^{d}}\nabla M\cdot(A(x)\nabla M)dx\\
+\leqslant-B(\frac{1}{\epsilon}-h_{0}-\tilde{K}^{\prime}-\frac{h^{\prime}_{0}K_{F}}{2B})\int_{\mathbb{R}^{d}}M^{2}dx+\frac{h^{\prime}_{0}K_{F}}{2}\int_{\mathbb{R}^{d}}p^{2}dx\\
++\big(\tilde{K}^{\prime}h^{\prime\prime}_{0}+h^{\prime}_{0}\epsilon(h^{\prime}_{0}+\frac{1}{2})\big)\int_{\mathbb{R}^{d}}\nabla p\cdot(A(x)\nabla p)dx\\
++h^{\prime}_{0}\frac{\epsilon}{2}\int_{\mathbb{R}^{d}}\nabla M\cdot(A(x)\nabla M)dx.$ This is the expected estimate.
+∎ With Lemmas 4 and 5 we can proceed to prove Proposition 1 . Proof of Proposition 1 . Let $\alpha>0$ , summing the inequality in Lemmas 4 and 5 ,
+we obtain $\frac{1}{2}\frac{d}{dt}\int_{\mathbb{R}^{d}}(M^{2}+\alpha p^{2})dx+(1-\epsilon C_{3}-\alpha\epsilon C_{2})\int_{\mathbb{R}^{d}}\nabla M\cdot(A(x)\nabla M)dx\\
++(\alpha(1-\epsilon C_{1})-C_{6})\int_{\mathbb{R}^{d}}\nabla p\cdot(A(x)\nabla p)dx\leq\big(C_{4}-\frac{C_{5}}{\epsilon}\big)\int_{\mathbb{R}^{d}}M^{2}dx+\big(C_{6}+\alpha K\big)\int_{\mathbb{R}^{d}}p^{2}dx.$ Now, we can pick $\alpha>0$ , $\epsilon_{0}^{\prime}\in(0,\epsilon_{0})$ such that for all $0<\epsilon<\epsilon_{0}^{\prime}$ , $1-\epsilon(C_{3}+\alpha C_{2})\geq\frac{1}{2},\quad\mbox{ and }\quad\alpha(1-\epsilon C_{1})-C_{6}\geq\frac{1}{2}.$ The choice $\alpha=C_{6}+1$ , then $\epsilon_{0}^{\prime}=\min(\frac{1}{2(C_{3}+C_{2}(C_{6}+1))},\frac{1}{2C_{1}(C_{6}+1)})$ suffices.
+Hence we arrive at $\frac{d}{dt}\int_{\mathbb{R}^{d}}(M^{2}+\alpha p^{2})dx+\int_{\mathbb{R}^{d}}\nabla M\cdot(A(x)\nabla M)dx+\int_{\mathbb{R}^{d}}\nabla p\cdot(A(x)\nabla p)dx\\
+\leq 2\big(C_{4}-\frac{C_{5}}{\epsilon}\big)\int_{\mathbb{R}^{d}}M^{2}dx+2\big(C_{6}+\alpha K\big)\int_{\mathbb{R}^{d}}p^{2}dx.$ (29) Next, using the positivity of $A$ , we may write for all $\epsilon>0$ smaller than $\epsilon_{0}$ and $C_{4}/C_{5}$ $\frac{d}{dt}\int_{\mathbb{R}^{d}}(M^{2}+\alpha p^{2})dx\leq 2\frac{C_{6}+\alpha K}{\alpha}\int_{\mathbb{R}^{d}}(\alpha p^{2}+M^{2})dx,$ and thus by Gronwall’s lemma, for all $\epsilon>0$ small enough, with $C_{0}:=2\frac{C_{6}+\alpha K}{\alpha}$ $\int_{\mathbb{R}^{d}}\big(M^{2}(t,x)+\alpha p^{2}(t,x)\big)dx\leq e^{C_{0}t}\big(\lVert M^{\text{init}}\rVert_{L^{2}(\mathbb{R}^{d})}^{2}+\alpha\lVert p^{\text{init}}\rVert_{L^{2}(\mathbb{R}^{d})}^{2}\big).$ Since initial data are uniformly bounded in $L^{2}(\mathbb{R}^{d})$ thanks to ( 11 ) and Remark 2 ,
+the first part of Proposition 1 is proved.
+For all $T>0$ , $M$ and $p$ are uniformly bounded in $\mathcal{H}^{1}_{T}$ for $\epsilon$ small enough. The second part follows easily from a time integration of ( 29 ). If $\epsilon$ is small enough, we get $\int_{0}^{t}\int_{\mathbb{R}^{d}}\big(\nabla M\cdot(A(x)\nabla M)+\nabla p\cdot(A(x)\nabla p)\big)dxds\leq 2\big(C_{6}+\alpha K\big)\int_{0}^{t}\int_{\mathbb{R}^{d}}p^{2}dxds\\
++\int_{\mathbb{R}^{d}}\big((M^{\text{init}})^{2}+\alpha(p^{\text{init}})^{2}\big)dx.$ Since we have proved the uniform $L^{2}$ -bound of $p$ , we conclude from the positivity of $A$ (Assumption 1 ), and the uniform bounds on the initial data.
+∎ 4.2 Convergence of $M$ Until now we have not used the strength of the negative term in $\frac{1}{\epsilon}$ in the right hand side of ( 29 ). Thanks to it, we can even get convergence of $M$ . Lemma 6 . Under the assumptions of Theorem 1 , for all $T>0$ , $M\xrightarrow[\epsilon\to 0]{}0$ strongly in $\mathcal{H}^{1}_{T}$ . Proof. Back to the estimate in Lemma 5 , and thanks to Proposition 1 , we may write $\frac{d}{dt}\int_{\mathbb{R}^{d}}M^{2}dx\leq\big(2C_{4}-\frac{2C_{5}}{\epsilon}\big)\int_{\mathbb{R}^{d}}M^{2}dx+C(t),$ where $C(t):=2C_{6}\big(\int_{\mathbb{R}^{d}}p^{2}dx+\int_{\mathbb{R}^{d}}\nabla p\cdot(A(x)\nabla p)dx)$ .
+From Proposition 1 , we deduce that $C$ is bounded in $L^{1}(0,T)$ .
+Applying a Gronwall’s lemma, we may write $\int_{\mathbb{R}^{d}}M^{2}dx\leq e^{-2(\frac{C_{5}}{\epsilon}-C_{4})t}\big(\lVert M^{\text{init}}\rVert_{L^{2}(\mathbb{R}^{d})}+\int_{0}^{t}e^{2(\frac{C_{5}}{\epsilon}-C_{4})t^{\prime}}C(t^{\prime})dt^{\prime}\big).$ Let $\epsilon$ be small enough such that $\frac{C_{5}}{\epsilon}>C_{4}$ .
+Then integrating the latter inequality for $t\in[0,T]$ , we deduce $\int_{0}^{T}\int_{\mathbb{R}^{d}}M^{2}dxdt\leq\frac{\epsilon}{2(C_{5}-\epsilon C_{4})}\|M^{\text{init}}\|_{L^{2}(\mathbb{R}^{d})}+\int_{0}^{T}\int_{0}^{t}e^{2(\frac{C_{5}}{\epsilon}-C_{4})(t^{\prime}-t)}C(t^{\prime})dt^{\prime}.$ We make a change of variable to estimate the last term in the right hand side: $\begin{array}[]{ll}\displaystyle\int_{0}^{T}\int_{0}^{t}e^{2(\frac{C_{5}}{\epsilon}-C_{4})(t^{\prime}-t)}C(t^{\prime})dt^{\prime}dt&\displaystyle=\int_{0}^{T}\int_{t^{\prime}}^{T}e^{2(\frac{C_{5}}{\epsilon}-C_{4})(t^{\prime}-t)}dt\,C(t^{\prime})dt^{\prime}\\[5.69054pt]
+&\displaystyle=\int_{0}^{T}\int_{t^{\prime}-T}^{0}e^{2(\frac{C_{5}}{\epsilon}-C_{4})\tau}d\tau\,C(t^{\prime})dt^{\prime}\\[5.69054pt]
+&\displaystyle\leq\frac{\epsilon}{2(C_{5}-\epsilon C_{4})}\int_{0}^{T}C(t^{\prime})dt^{\prime}.\end{array}$ We conclude that $\int_{0}^{T}\int_{\mathbb{R}^{d}}M^{2}dxdt\leq\frac{\epsilon}{2(C_{5}-\epsilon C_{4})}\left(\|M^{\text{init}}\|_{L^{2}(\mathbb{R}^{d})}+\int_{0}^{T}C(t^{\prime})dt^{\prime}\right).$ It implies the expected convergence as $\epsilon\to 0$ .
+∎ 4.3 Compactness result and proof of Theorem 1 Before proving our main result, we recall the following compactness result (see [ 20 ] ). Lemma (Lions-Aubin) . Let $T>0,q\in(1,\infty)$ , $(\psi_{n})_{n}$ a bounded sequence in $L^{q}(0,T;H)$ , where $H$ is a Banach space.
+If $\psi_{n}$ is bounded in $L^{q}(0,T;V)$ and $V$ compactly embeds in $H$ , and if $(\partial_{t}\psi_{n})_{n}$ is bounded in $L^{q}(0,T;V^{\prime})$ uniformly with respect to $n$ ,
+then $(\psi_{n})_{n}$ is relatively compact in $L^{q}(0,T;H)$ . Proof of Theorem 1 . We split the proof into three steps. First, our previous estimates together with Lions-Aubin lemma enable us to prove relative compactness on bounded domains.
+Then, through a diagonal extraction process, we prove that there exists (up to extracting a subsequence) a global limit.
+Finally, thanks to our uniform estimates, we prove that this limit satisfies a universal equation whose solution is unique, which in turn implies convergence of the whole sequence. Step 1: Local relative compactness. For $R>0$ we define the increasing sequence $(B_{R})_{R}$ of balls of radius $R$ with center $0$ in $\mathbb{R}^{d}$ , and $H_{R}=L^{2}(B_{R})$ , $V_{R}=H^{1}(B_{R})\cap L^{\infty}(B_{R})$ , and pick $T>0$ .
+Then, we check that Lions-Aubin Lemma with $q=2$ can be applied to $\psi^{(R)}_{\epsilon}=\mathchoice{{p^{\epsilon}\,\smash{\vrule height=5.71426pt,depth=2.12973pt}}_{\,B_{R}}}{{p^{\epsilon}\,\smash{\vrule height=5.31425pt,depth=2.12973pt}}_{\,B_{R}}}{{p^{\epsilon}\,\smash{\vrule height=4.13647pt,depth=2.29501pt}}_{\,B_{R}}}{{p^{\epsilon}\,\smash{\vrule height=2.87778pt,depth=2.88057pt}}_{\,B_{R}}}.$ Lemma 4 gives boundedness in $L^{q}(0,T;V_{R})$ . The compact embedding is classical (Rellich-Kondrachov).
+We check that the time derivative is bounded. Let $\chi\in V_{R}$ , $\langle\cdot,\cdot\rangle=\langle\cdot,\cdot\rangle_{V^{\prime}_{R},V_{R}}$ and $t\in(0,T)$ . $\int_{0}^{t}\lvert\langle\partial_{t}p^{\epsilon}(\tau),\chi\rangle\rvert^{2}d\tau=\int_{0}^{t}\big\lvert\langle\nabla\cdot(A(x)\nabla p^{\epsilon})-2\epsilon\nabla p^{\epsilon}\cdot\frac{A(x)\nabla n^{\epsilon}}{1-\epsilon n^{\epsilon}}+p^{\epsilon}(1-p^{\epsilon})(F_{1}-F_{2})(n^{\epsilon},p^{\epsilon}),\chi\rangle\big\rvert^{2}d\tau.$ This can be bounded $\displaystyle\int_{0}^{t}\lvert\langle\partial_{t}p^{\epsilon}(\tau),\chi\rangle\rvert^{2}d\tau$ $\displaystyle\leq\Big(\int_{0}^{t}\int_{B_{R}}\lvert A(x)\nabla p^{\epsilon}\cdot\nabla\chi\rvert\Big)^{2}$ $\displaystyle+\epsilon\Big(\int_{0}^{t}\int_{B_{R}}\lvert A(x)\nabla n^{\epsilon}\cdot\nabla p^{\epsilon}\rvert\Big)^{2}+Ct\int_{B_{R}}\chi^{2}$ $\displaystyle\leq\lVert\nabla\chi\rVert^{2}_{H_{R}}\lVert\nabla p^{\epsilon}\rVert^{2}_{L^{2}(0,T;H_{R})}$ $\displaystyle+2\epsilon\lVert\nabla n^{\epsilon}\rVert^{2}_{L^{2}(0,T;H_{R})}\lVert\nabla p^{\epsilon}\rVert^{2}_{L^{2}(0,T;H_{R})}\lVert\chi\rVert_{\infty}^{2}+CT\lVert\chi\rVert^{2}_{H_{R}},$ which gives the required bound, uniform in $0<\epsilon<\epsilon_{0}$ , for $\epsilon_{0}$ small enough.
+This holds thanks to Lemmas 4 and 5 . Step 2: Global convergence. Now, for all $R\in\mathbb{N}$ , one can extract converging (in $L^{2}(0,T;H_{R})$ )
+subsequence from $(p^{\epsilon})_{\epsilon}$ by Lions-Aubin Lemma.
+We perform a diagonal extraction process successively in $R$ , so that $p^{\epsilon_{m}^{(R)}}\xrightarrow[m\to\infty]{}p^{(R)}\text{ in }L^{2}(0,T;H_{R}),$ and by construction $(\epsilon_{m}^{(R_{1})})_{m}$ is a subsequence of $(\epsilon_{m}^{(R_{2})})_{m}$ if $R_{2}>R_{1}$ .
+Because the whole family $(p^{\epsilon})_{\epsilon}$ is in $L^{2}(0,T;H^{1}(\mathbb{R}^{d}))$ uniformly in $\epsilon$ (by Lemma 4 ),
+one gets weak convergence of gradient $\nabla p^{\epsilon_{m}^{(R)}}{\mathrel{\to}_{m\to\infty}}\nabla p^{(R)}\text{ in }L^{2}(0,T;H_{R}).$ Thanks to Lemma 4 , we know that the limits $p^{(R)}$ are well-defined, do not depend on the extracted subsequences, satisfy the same bounds as $(p^{\epsilon})_{\epsilon}$ and $R_{2}>R_{1}\implies\mathchoice{{p^{(R_{2})}\,\smash{\vrule height=7.50316pt,depth=3.40472pt}}_{\,B_{R_{1}}}}{{p^{(R_{2})}\,\smash{\vrule height=7.10315pt,depth=3.40472pt}}_{\,B_{R_{1}}}}{{p^{(R_{2})}\,\smash{\vrule height=5.41426pt,depth=3.57pt}}_{\,B_{R_{1}}}}{{p^{(R_{2})}\,\smash{\vrule height=4.63055pt,depth=4.15556pt}}_{\,B_{R_{1}}}}=p^{(R_{1})}.$ Therefore we can define $p^{0}\in L^{2}(0,T;L^{2}(\mathbb{R}^{d}))$ and we have constructed
+a subsequence, still denoted $(p^{\epsilon})_{\epsilon}$ , such that $p^{\epsilon}\xrightarrow[\epsilon\to 0]{}p^{0}$ strongly in $L^{2}(0,T;L^{2}(B_{R}))$ for all $R>0$ . To pass from local to global convergence, we need to have uniform in $\epsilon$ estimate in the tails $|x|>R$ . To do so, let us introduce $\phi\in\mathcal{C}^{\infty}(\mathbb{R}^{d})$ such that $0\leq\phi\leq 1$ , $\phi(x)=0$ if $|x|<1/2$ and $\phi(x)=1$ if $|x|>1$ .
+Then we denote $\phi_{R}(x)=\phi(x/R)$ .
+Multiplying the equation satisfied by $p^{\epsilon}$ in ( 19 ) by $p^{\epsilon}\phi_{R}$ and integrating over $\mathbb{R}^{d}$ , we deduce $\begin{array}[]{r}\displaystyle\frac{1}{2}\frac{d}{dt}\int_{\mathbb{R}^{d}}(p^{\epsilon})^{2}\phi_{R}\,dx+\int_{\mathbb{R}^{d}}\nabla(p^{\epsilon}\phi_{R})\cdot A(x)\nabla p^{\epsilon}\,dx+\int_{\mathbb{R}^{d}}\frac{2\epsilon}{1-\epsilon n^{\epsilon}}\phi_{R}p^{\epsilon}\nabla p^{\epsilon}\cdot A(x)\nabla n^{\epsilon}\,dx\\[5.69054pt]
+\displaystyle\leq K_{F}\int_{\mathbb{R}^{d}}(p^{\epsilon})^{2}\phi_{R}\,dx,\end{array}$ where $K_{F}$ has been defined in ( 22 ). Using a Cauchy-Schwarz inequality,
+we have $\begin{array}[]{rcl}\displaystyle\int_{\mathbb{R}^{d}}\nabla(\phi_{R}p^{\epsilon})\cdot A(x)\nabla p^{\epsilon}\,dx&=&\displaystyle\int_{\mathbb{R}^{d}}p^{\epsilon}\nabla\phi_{R}\cdot A(x)\nabla p^{\epsilon}\,dx+\int_{\mathbb{R}^{d}}\phi_{R}\nabla p^{\epsilon}\cdot A(x)\nabla p^{\epsilon}\,dx\\[5.69054pt]
+&\geq&\displaystyle-\left(\int_{\mathbb{R}^{d}}\nabla\phi_{R}\cdot A(x)\nabla\phi_{R}\,dx\right)^{1/2}\left(\int_{\mathbb{R}^{d}}\nabla p^{\epsilon}\cdot A(x)\nabla p^{\epsilon}\,dx\right)^{1/2}.\end{array}$ By definition of $\phi_{R}$ we have that $\nabla\phi_{R}(x)=\frac{1}{R}\nabla\phi(x/R)$ and $\nabla\phi_{R}(x)=0$ on $B_{R/2}\cup\mathbb{R}^{d}\setminus\overline{B_{R}}$ .
+As above, we take $\epsilon$ small enough such that $1-\epsilon n^{\epsilon}\geq\frac{1}{2}$ ,
+which can be done thanks to Lemma 3 .
+Then, as in the proof of Proposition 1 , there exists
+a nonnegative function $C(t)\in L^{1}(0,T)$ such that, thanks to a Cauchy-Schwarz inequality $\left|\int_{\mathbb{R}^{d}}\frac{2\epsilon}{1-\epsilon n^{\epsilon}}\phi_{R}p^{\epsilon}\nabla p^{\epsilon}\cdot A(x)\nabla n^{\epsilon}\,dx\right|\leq C(t)\epsilon,\qquad\mbox{ and }\quad-\int_{\mathbb{R}^{d}}\nabla\phi_{R}\cdot A(x)\nabla p^{\epsilon}\,dx\leq\frac{C(t)}{R}.$ Then, we have obtained $\frac{1}{2}\frac{d}{dt}\int_{\mathbb{R}^{d}}(p^{\epsilon})^{2}\phi_{R}\,dx\leq C(t)\big(\frac{1}{R}+\epsilon\big)+K_{F}\int_{\mathbb{R}^{d}}(p^{\epsilon})^{2}\phi_{R}\,dx.$ Using a Gronwall Lemma, it implies $\int_{\mathbb{R}^{d}}(p^{\epsilon})^{2}\phi_{R}\,dx\leq e^{2K_{F}t}\int_{\mathbb{R}^{d}}(p^{\text{init}})^{2}\phi_{R}\,dx+\big(\frac{1}{R}+\epsilon\big)\int_{0}^{t}2C(\tau)e^{2K_{F}(t-\tau)}\,d\tau.$ By definition of $\phi_{R}$ ( $\phi_{R}(x)=1$ on $\mathbb{R}^{d}\setminus B_{R}$ ),
+we deduce that for all $\epsilon>0$ small enough and all $R>0$ , $\int_{0}^{T}\int_{\mathbb{R}^{d}\setminus B_{R}}|p^{\epsilon}|^{2}\,dx\leq\int_{0}^{T}\int_{\mathbb{R}^{d}}(p^{\epsilon})^{2}\phi_{R}\,dx\leq\frac{e^{2K_{F}T}-1}{2K_{F}}\left(\int_{\mathbb{R}^{d}\setminus B_{R/2}}(p^{\text{init}})^{2}\,dx+(\frac{1}{R}+\epsilon)\int_{0}^{T}2C(t)\,dt\right).$ (30) It implies an uniform bound, since $p^{\text{init}}\in L^{2}(\mathbb{R}^{d})$ . Finally, we conclude that the subsequence $(p^{\epsilon})_{\epsilon}$ converges strongly
+towards $p^{0}$ in $L^{2}(0,T;L^{2}(\mathbb{R}^{d}))$ as $\epsilon\to 0$ . Indeed, we have $\int_{0}^{T}\int_{\mathbb{R}^{d}}|p^{\epsilon}-p^{0}|^{2}\,dxdt=\int_{0}^{T}\int_{B_{R}}|p^{\epsilon}-p^{0}|^{2}\,dxdt+\int_{0}^{T}\int_{\mathbb{R}^{d}\setminus B_{R}}|p^{\epsilon}-p^{0}|^{2}\,dxdt.$ The second term of the right hand side is uniformly bounded for $R$ large enough thanks to
+( 30 ) and the fact that $p^{0}\in L^{2}(0,T;L^{2}(\mathbb{R}^{d}))$ .
+For the first term we use the local convergence. Step 3: Limit equation. From the strong convergence of the sequence $(p^{\epsilon})\epsilon$ in $L^{2}(0,T;L^{2}(\mathbb{R}^{d}))$ and the Lipschitz continuity of the function $h$ , we deduce that $(h(p^{\epsilon}))_{\epsilon}$ converges strongly in $L^{2}(0,T;L^{2}(\mathbb{R}^{d}))$ towards $h(p^{0})$ .
+Moreover, using the triangle inequality, we have $|n^{\epsilon}-h(p^{0})|\leq|n^{\epsilon}-h(p^{\epsilon})|+h^{\prime}_{0}|p^{\epsilon}-p^{0}|.$ Applying Lemma 6 , we deduce that $n^{\epsilon}\xrightarrow[\epsilon\to 0]{}n^{0}:=h(p^{0})\text{ strongly in }L^{2}(0,T;L^{2}(\mathbb{R}^{d})).$ (31) Then, we obtain the equation satisfied by $p^{0}$ using the weak forms of the equations on $p^{\epsilon}$ in ( 19 ):
+for all $\chi\in\mathcal{C}_{c}^{\infty}(\mathbb{R}^{d})$ , $\displaystyle\int_{\mathbb{R}^{d}}p^{\epsilon}(T,x)\chi(x)dx-\underbrace{\int_{\mathbb{R}^{d}}p^{\text{init},\epsilon}(x)\chi(x)dx}_{\text{weak convergence}}+\underbrace{\int_{0}^{T}\int_{\mathbb{R}^{d}}\nabla p^{\epsilon}(t,x)\cdot A(x)\nabla\chi(x)dxdt}_{\text{weak convergence}}$ $\displaystyle+2\epsilon\underbrace{\int_{0}^{T}\int_{\mathbb{R}^{d}}\chi(x)\nabla p^{\epsilon}(t,x)\cdot\frac{A(x)\nabla n^{\epsilon}(t,x)}{1-\epsilon n^{\epsilon}(t,x)}dxdt}_{\text{bounded as }\epsilon\to 0}$ $\displaystyle=\int_{0}^{T}\int_{\mathbb{R}^{d}}\chi(x)\underbrace{p^{\epsilon}(1-p^{\epsilon})(F_{1}-F_{2})(n^{\epsilon},p^{\epsilon})}_{\text{strong convergence}}dxdt$ We can pass to the limit in each term, using also ( 11 ) for the second term. Hence $p^{0}$ is in $L^{2}(0,T;H^{1}(\mathbb{R}^{d}))$ and is a weak solution of the initial value problem $\begin{cases}&\partial_{t}p^{0}-\nabla\cdot(A(x)\nabla p^{0}=p^{0}(1-p^{0})(F_{1}-F_{2})(n^{0},p^{0}),\\
+&p^{0}(t=0,\cdot)=p^{\text{init}}.\end{cases}$ (32) Using ( 31 ) in ( 32 ) yields a self-contained initial valued
+reaction-diffusion system on $p^{0}$ that has a unique solution.
+It defines in turn uniquely $n^{0}$ through ( 31 ).
+Since solutions to the initial value system ( 32 ) are unique,
+all extracted subsequences converge to the same limit.
+Therefore, the whole sequences converge, strongly in $L^{2}$ with weak convergence of gradients. This concludes the proof of Theorem 1 . ∎ 5 Generalization of the result We have stated Theorem 1 so as to keep simplicity and stick to the biological application in Section 3 .
+It can be slightly generalized in order to encompass spontaneous transition between variants. Individuals in state $1$ may give birth to individuals in state $2$ , and vice versa .
+To do so, we consider more general reaction term and replace system ( 1 ) by $\begin{cases}\partial_{t}n_{1}-\nabla\cdot(A(x)\nabla n_{1})&=\widetilde{f}_{1}(n_{1},n_{2}),\\
+\partial_{t}n_{2}-\nabla\cdot(A(x)\nabla n_{2})&=\widetilde{f}_{2}(n_{1},n_{2}),\end{cases}$ In fact, the basic property we require in our proof is that $p$ stays between $0$ and $1$ , that is, $n_{i}$ remain non-negative.
+Here is the minimal hypothesis ensuring positivity (in the spirit of [ 18 ] ). Assumption 4 (Positivity) . We assume $\forall n_{1},n_{2}\in\mathbb{R}_{+},\quad\widetilde{f}_{1}(0,n_{2})\geq 0\mbox{ and }\widetilde{f}_{2}(n_{1},0)\geq 0.$ Proof of “Assumption 4 implies positivity“. We prove that if the initial data $n_{1}^{\text{init}}$ , $n_{2}^{\text{init}}$ are non-negative and if Assumption 4 holds, then $n_{1}$ and $n_{2}$ remain non-negative.
+It is a simple application of the comparison principle for this parabolic system.
+A solution that lies initially above a sub-solution remains above it. The constant $(0,0)$ is indeed a sub-solution.
+∎ For the sake of clarity of the presentation, we only consider an extension
+of the biological example from Section 3 .
+This allows us to take into account imperfect maternal transmission.
+We assume that at a rate $\mu$ , infected females lay eggs which do not carry Wolbachia .
+This quantity is very commonly tested by entomologists, and usually shown to be close to $0$ (see [ 23 ] and references, and for example [ 4 ] where they obtained $\mu=0.04$ and $\mu=0$ ).
+This feature is included in the following model taken from [ 5 ] (neglecting the pathogen effect), $\begin{cases}&\partial_{t}n_{i}-\nabla\cdot(A(x)\nabla n_{i})=n_{i}F_{u}(1-s_{f})(1-\mu)-n_{i}(d_{i}+\sigma(n_{i}+n_{u})),\\
+&\partial_{t}n_{u}-\nabla\cdot(A(x)\nabla n_{u})=n_{u}F_{u}(1-s_{h}\frac{n_{i}}{n_{u}+n_{i}})+\mu F_{u}(1-s_{f})n_{i}-n_{u}(d_{u}+\sigma(n_{i}+n_{u})).\end{cases}$ (33) Here, the reduced population would be $n=\sigma(n_{i}+n_{u})$ .
+The corresponding dynamics in $(n,p)$ reads, $\begin{cases}&\partial_{t}n-\nabla\cdot(A(x)\nabla n)=n\Big(F_{u}\big(p(1-s_{f})+(1-p)(1-s_{h}p)\big)-d_{u}\big((\delta-1)p+1\big)-n\Big),\\
+&\partial_{t}p-\nabla\cdot(A(x)\nabla p)-2\frac{\nabla n}{n}A(x)\nabla p=p\Big((1-p)\big(F_{u}(1-s_{h}p)-d_{u}(\delta-1)\big)-\mu F_{u}(1-s_{f})\Big).\end{cases}$ (34) We notice in particular that the reaction term for $p$ in ( 34 ) does not depend on $n$ .
+It yields directly the equation ( 3 ) with a function $n$ in the left
+hand side that depends on $p$ , whereas in [ 2 ] the function $n$ in the
+gradient in the left hand side is assumed to be given. As in Section 3 , we introduce the parameter $\epsilon$ to characterize
+the high fertility and strong competition and propose the following extension of
+system ( 16 ), with imperfect maternal transmission, $\begin{cases}\partial_{t}n_{i}-\nabla\cdot(A(x)\nabla n_{i})=(1-\mu)(1-s_{f})F_{u}n_{i}\big(\frac{1}{\epsilon}-\sigma(n_{i}+n_{u})\big)_{+}-\delta d_{u}n_{i},\\
+\partial_{t}n_{u}-\nabla\cdot(A(x)\nabla n_{u})=F_{u}\big(n_{u}(1-s_{h}p)+\mu(1-s_{f})n_{i}p\big)\big(\frac{1}{\epsilon}-\sigma(n_{i}+n_{u})\big)_{+}-d_{u}n_{u},\\
+\end{cases}$ (35) with $p=\frac{n_{i}}{n_{i}+n_{u}}$ as usual.
+In this system, the notation $a_{+}=\max\{0,a\}$ denotes
+the positive part of $a\in\mathbb{R}$ . For the reduction, as above, we identify $n_{1}=n_{i}$ and $n_{2}=n_{u}$ and we deduce
+from ( 35 ) the equations satisfied by $n=\frac{1}{\epsilon}-\sigma(n_{i}+n_{u})$ and $p$ , $\begin{array}[]{rl}\displaystyle\partial_{t}n-\nabla\cdot(A(x)\nabla n)=&\displaystyle-\big(\frac{1}{\epsilon}-n\big)F_{u}\left((1-s_{f})((1-\mu)p+\mu p^{2})+(1-p)(1-s_{h}p)\right)n_{+}\\[5.69054pt]
+&\displaystyle+d_{u}(\delta p+1-p)\big(\frac{1}{\epsilon}-n\big),\\[5.69054pt]
+\end{array}$ (36) $\begin{array}[]{rl}\displaystyle\partial_{t}p-\nabla\cdot(A(x)\nabla p)+2\frac{\nabla n}{n}A(x)\nabla p=&\displaystyle F_{u}p\Big((1-p)\big((1-\mu)(1-s_{f})-(1-s_{h})p\big)\\[5.69054pt]
+&\displaystyle+\mu(1-s_{f})p^{2}\Big)n_{+}+p(1-p)d_{u}(1-\delta).\end{array}$ (37) Using the notation in ( 5 ), we define as in ( 8 ) the function $H$ by $\begin{array}[]{rcl}H(n,p)&:=&-F_{u}n\big(p(1-\mu)(1-s_{f})+(1-p)(1-s_{h}p)+\mu(1-s_{f})p^{2}\big)+d_{u}(p(\delta-1)+1)\\[5.69054pt]
+&=&-F_{u}n\big((s_{h}+\mu(1-s_{f}))p^{2}-(s_{f}+s_{h}+\mu(1-s_{f}))p+1\big)+d_{u}((\delta-1)p+1).\end{array}$ When $\mu=0$ , we notice that we recover the same expression as in the case of perfect
+maternal transmission in Section 3 .
+Then, the function $h$ and the reaction term are modified. In this case, as in Lemma 2 , we may investigate the equilibria
+of ( 36 )–( 37 ). We get from straightforward computations: Lemma 7 . Let $\Delta=\big(\delta(s_{f}+s_{h})+(\delta-1-\mu)(1-s_{f})\big)^{2}-4\delta\big(s_{h}+\mu(1-s_{f})\big)\big(\delta-(1-\mu)(1-s_{f})\big).$ Let us assume that $\Delta>0$ .
+When $\mu=0$ , the condition $\Delta>0$ is equivalent to $\big(\delta s_{h}-\delta+(1-s_{f})\big)^{2}>0$ which is always satisfied.
+Then, there are 4 equilibria associated to the system
+( 37 )–( 36 ) in the reduced variable $(n,p)$ : • The co-existence equilibrium reads $\left\{\begin{array}[]{l}p^{*}_{C}=1-\displaystyle\frac{\delta(s_{f}+s_{h})+(\delta-1+\mu)(1-s_{f})-\sqrt{\Delta}}{2\delta(s_{h}+\mu(1-s_{f}))},\\[10.0pt]
+n^{*}_{C}=\displaystyle\frac{\delta d_{u}}{(1-\mu)(1-s_{f})F_{u}},\end{array}\right.$ it remains unstable. • The steady state $(0,0)$ is unstable. • The stable Wolbachia invasion equilibrium reads $\left\{\begin{array}[]{l}p^{*}_{W}=1-\displaystyle\frac{\delta(s_{f}+s_{h})+(\delta-1+\mu)(1-s_{f})+\sqrt{\Delta}}{2\delta(s_{h}+\mu(1-s_{f}))}<1,\\[10.0pt]
+n^{*}_{W}=\displaystyle\frac{\delta d_{u}}{(1-\mu)(1-s_{f})F_{u}}=n^{*}_{C}.\end{array}\right.$ • The stable Wolbachia extinction equilibrium is unchanged: $n_{E}^{*}=\displaystyle\frac{d_{u}}{F_{u}}$ , $p_{E}^{*}=0.$ From straightforward computation, we may adapt Theorem 1 in this framework. Then, the analogue of Corollary 1 reads Corollary 2 . Assume that $A$ satisfies Assumption 1 .
+Given $n_{1}^{\text{init},\epsilon}$ and $n_{2}^{\text{init},\epsilon}$ such that there exists $p^{\text{init}}\in L^{2}(\mathbb{R}^{d})$ such that $p^{\text{init},\epsilon}\rightharpoonup p^{\text{init}}$ as $\epsilon\to 0$ in $L^{2}(\mathbb{R}^{d})$ -weak
+and $\frac{1}{\epsilon}-\sigma(n_{1}^{\text{init},\epsilon}+n_{2}^{\text{init},\epsilon})-\frac{d_{u}}{F_{u}}\in L^{2}\cap L^{\infty}(\mathbb{R}^{d})$ with uniform bounds in $\epsilon>0$ ,
+then Theorem 1 applies and the solutions $(n_{i}^{\epsilon},n_{u}^{\epsilon})_{\epsilon>0}$ of ( 35 )
+satisfy the convergence result in ( 12 ). The limiting equation reads $\partial_{t}p-\nabla\cdot(A(x)\nabla p)=r_{\mu}(p),$ (38) where $\displaystyle r_{\mu}(p)$ $\displaystyle=d_{u}p\Big((1-\mu)(1-s_{f})\frac{(\delta-1)p+1}{(s_{h}+\mu(1-s_{f}))p^{2}-(s_{f}+s_{h}+\mu(1-s_{f}))p+1}-\delta\Big).$ For small $\mu$ , $r_{\mu}$ is still a bistable function provided $\Delta>0$ ,
+however the stable state $1$ is displaced. We give a numerical illustration of this case in Figure 2 , using
+a similar approach as in Section 3.3 .
+We use the same parameters as for Figure 1 , except that $s_{f}=0$ , $\mu=.04$ and the initial data is smaller (less infected mosquitoes are introduced). Figure 2: Initial data (+) creating a traveling wave in the limit system (blue) and convergence of the two-population solution (dashed red) as $\epsilon$ diminishes. For Figure 2 , we use the same discretization and numerical scheme as in Figure 1 .
+The blue lines represent the solution of the limiting system ( 38 ).
+In dashed red lines are plotted the numerical results for the system of
+two populations ( 37 ).
+We observe that the solution of the limiting bistable system ( 38 )
+exhibits a traveling front which propagates into the whole domain.
+Then the numerical results for 4 different values of the parameter $\epsilon$ are represented.
+For large populations, we observe that as $\epsilon$ goes to $0$ (recall that the order of magnitude of the population size is $\frac{1}{\sigma\epsilon}$ ),
+the solution to the whole system ( 37 ) gets closer to the one of the limiting system.
+However, for small populations, we see a clear modification of the wave’s shape and speed, which is slower than the limit wave. 6 Conclusion and perspectives We have established in this paper the rigorous convergence, under suitable assumptions,
+of a 2 by 2 reaction diffusion model of Lotka-Volterra type towards a simple model
+for the frequency of a variant. It justifies the use of such reduced model
+in applications.
+Let us discuss quickly our scaling choice in Assumption 6 ,
+in the case of Wolbachia . Another biologically relevant scaling assumption would not give a limiting system
+consisting in only one equation on frequency.
+Indeed, if we consider the following alternative model $\begin{cases}\partial_{t}n_{i}-\nabla\cdot(A(x)\nabla n_{i})&=(1-s_{f})F_{u}n_{i}\big(1-\epsilon\sigma(n_{i}+n_{u})\big)-\delta d_{u}n_{i},\\
+\partial_{t}n_{u}-\nabla\cdot(A(x)\nabla n_{u})&=F_{u}n_{u}(1-s_{h}\frac{n_{i}}{n_{i}+n_{u}})\big(1-\epsilon\sigma(n_{i}+n_{u})\big)-d_{u}n_{u}.\\
+\end{cases}$ (39) Then, $n$ and $p$ satisfy the following system, that does not depend on $\epsilon$ $\begin{cases}\partial_{t}n-\nabla\cdot(A(x)\nabla n)=F_{u}\big(1-n\big)\big(A(p)-B(p)n\big),\\
+\partial_{t}p-\nabla\cdot(A(x)\nabla p)+\frac{2\nabla p\cdot A(x)\nabla n}{1-n}=p(1-p)\big(F_{u}n(s_{h}p-s_{f})-d_{u}(\delta-1)\big),\\
+\end{cases}$ (40) where $\begin{cases}A(p)&=((\delta-1)p+1)\frac{d_{u}}{F_{u}},\\
+B(p)&=s_{h}p^{2}-(s_{f}+s_{h})p+1.\\
+\end{cases}$ The dependancy in $\epsilon$ in the resulting model is only through the initial data.
+Thus, $\epsilon\to 0$ does not imply $n-\frac{A(p)}{B(p)}\to 0$ in ( 39 ), ( 40 ). We conclude that the use of simple bistable models for the spatial spread
+of Wolbachia can be justified mathematically.
+This is the object of Theorem 1 .
+However, we must keep in mind that this result applies
+only if population size and fecundity scale properly. In the context of Wolbachia modeling, bistable equations like ( 3 ) have been used (for example in [ 2 ] or [ 19 ] ) because they provide with a unique (up to translations) and linearly stable traveling wave solution.
+Hence, with a bistable model at hand we can compute a speed that may be interpreted as an invasion speed. Therefore a natural continuation of the present work would be to try and specify Theorem 1 to traveling waves.
+The open question reads: does the frequency in the two-populations
+model converge to the unique traveling wave solution of the limit bistable equation?
+If yes, in what sense?
+Indeed, there are two types of convergence involved: on the first hand in the singular limit (where we identified
+a small parameter $\epsilon$ ), that proves convergence of the system’s frequency to a solution of the limit
+bistable equation; and on the other hand the well-known attractiveness result of the unique traveling wave solution
+in the bistable case.
+Moreover, existence and (local) stability of traveling waves has been proved for competitive systems (see [ 9 ] for example).
+How to compare the traveling speed for competitive system with the one for the reduced model on the frequency? Acknowledgements. The authors acknowledge partial supports from the Capes/Cofecub project
+Ma-833 15 “Modeling innovative control method for Dengue fever” and from the Programme Convergence Sorbonne Universités / FAPERJ “Control
+and identification for mathematical models of Dengue epidemics” . They warmly thank B. Perthame for his patient and constant help, useful discussions
+and valuable suggestions on the manuscript.
+They also acknowledge fruitful and interesting discussions with Claudia T. Codeço, Claudio J. Struchiner and Daniel A. M. Villela. References [1] N. Barton , The dynamics of hybrid zone , Heredity, 43 (1979),
+pp. 341–359. [2] N. H. Barton and M. Turelli , Spatial Waves of Advance with Bistable
+Dynamics: Cytoplasmic and Genetic Analogues of Allee Effects. , The American
+Naturalist, 178 (2011), pp. E48–E75. [3] M. H. T. Chan and P. S. Kim , Modeling a Wolbachia Invasion
+Using a Slow–Fast Dispersal Reaction–Diffusion Approach. , Bull Math
+Biol, 75 (2013), pp. 1501–1523. [4] H. L. C. Dutra, L. M. Barbosa dos Santos, E. P. Carsagata, J. B. L. Silva,
+D. A. M. Villela, R. Maciel-de Freitas, and L. A. Moreira , From Lab to
+Field: The Influence of Urban Landscapes on the Invasive Potential of
+Wolbachia in Brazilian Aedes Aegypti Mosquitoes. , PLoS
+Negl Trop Dis, 9 (4) (2015). [5] A. Fenton, K. N. Johnson, J. C. Brownlie, and G. D. D. Hurst , Solving the Wolbachia paradox: modeling the tripartite interaction
+between host, Wolbachia, and a natural enemy. , The American
+Naturalist, 178 (2011), pp. 333–342. [6] P. C. Fife , Mathematical aspects of reacting and diffusing systems ,
+vol. 28 of Lecture notes in biomathematics, Springer-Verlag, 1979. [7] R. A. Fisher , The advance of advantageous genes. , Ann. of
+Eugenics, 7 (1937), pp. 355–369. [8] D. A. Focks, D. G. Haile, E. Daniels, and G. A. Mount , Dynamic Life
+Table Model of a Container-Inhabiting Mosquito, Aedes aegypti (L.)
+(Diptera: Culicidae). Part 1. Analysis of the Literature and Model
+Development. , Journal of Medical Entomology, 30 (1993), pp. 1003–1017. [9] R. A. Gardner , Existence and stability of travelling wave solutions
+to competition models: a degree theoretic approach , J. Diff. Equations, 44
+(1982), pp. 343–364. [10] D. Hilhorst, M. Iida, M. Mimura, and H. Ninomiya , Relative
+compactness in $L^{p}$ of solutions of some $2m$ components
+competition-diffusion systems. , Discrete and continuous dynamical systems,
+21 (2008), pp. 233–244. [11] D. Hilhorst, S. Martin, and M. Mimura , Singular limit of a
+competition-diffusion system with large interspecific interaction. , J.
+Math. Anal. Appl., 390 (2012), pp. 2488–513. [12] A. Hoffmann, B. Montgomery, J. Popovici, I. Iturbe-Ormaetxe, P. Johnson,
+F. Muzzi, M. Greenfield, M. Durkan, Y. Leong, and Y. Dong , Successful
+establishment of Wolbachia in Aedes populations to suppress
+dengue transmission. , Nature, 476 (2011), pp. 454–457. [13] H. Hughes and N. F. Britton , Modeling the Use of Wolbachia
+to Control Dengue Fever Transmission. , Bull. Math. Biol., 75 (2013),
+pp. 796–818. [14] S. Joanne, I. Vythilingam, N. Yugavathy, C. S. Leong, M. Wong, and
+S. AbuBakar , Distribution and dynamics of Wolbachia infection
+in Malaysian Aedes albopictus. , Acta Trop., 148 (2015),
+pp. 38–45. [15] A. Kolmogorov, I. Petrovskii, and N. Piskunov , Etude de
+l’équation de la chaleur de matière et son application à un
+problème biologique , Bull. Moskov. Gos. Univ. Mat. Mekh., 1 (1937),
+pp. 1–25. [16] L. A. Moreira, I. Iturbe-Ormaetxe, J. A. Jeffery, G. Lu, A. T. Pyke, L. M.
+Hedges, B. C. Rocha, S. Hall-Mendelin, A. Day, M. Riegler, L. E. Hugo, K. N.
+Johnson, B. H. Kay, E. A. McGraw, A. F. van den Hurk, P. A. Ryan, and S. L.
+O’Neill , A wolbachia symbiont in aedes aegypti limits infection with
+dengue, chikungunya, and plasmodium , Cell, 139 (2009), pp. 1268–1278. [17] T. Nagylaki , Conditions for existence of clines , Genetics, 80
+(1975), pp. 595–615. [18] B. Perthame , Parabolic equations in biology , Lecture Notes on
+Mathematical Modelling in the Life Sciences, Springer International
+Publishing, 2015. [19] J. Schraiber, A. Kaczmarczyk, R. Kwok, M. Park, R. Silverstein,
+F. Rutaganira, T. Aggarwal, M. Schwemmer, C. Hom, R. Grosberg, and
+S. Schreiber , Constraints on the use of lifespan-shortening
+Wolbachia to control dengue fever , J. Theor. Bio., 297 (2012),
+pp. 26–32. [20] J. Simon , Compact sets in the space $L^{p}(0,T;B)$ . , Annali di
+Matematica Pura ed Applicata, 146 (1986), pp. 65–96. [21] A. Volpert, V. Volpert, and V. Volpert , Traveling wave solutions of
+parabolic systems. , vol. 140 of Translation of Mathematical Monographs,
+Amer. Math. Society, Providence, 1994. [22] T. Walker, P. H. Johnson, L. A. Moreira, I. Iturbe-Ormaetxe, F. D.
+Frentiu, C. J. McMeniman, Y. S. Leong, Y. Dong, J. Axford, P. Kriesner, A. L.
+Lloyd, S. A. Ritchie, S. L. O ´ Neill, and A. A. Hoffmann , The wMel
+Wolbachia strain blocks dengue and invades caged Aedes
+aegypti populations. , Nature, 476 (2011), pp. 450–453. [23] J. H. Werren, L. Baldo, and M. E. Clark , Wolbachia: master
+manipulators of invertebrate biology. , Nature Review Microbiology, 6
+(2008), pp. 741–751. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

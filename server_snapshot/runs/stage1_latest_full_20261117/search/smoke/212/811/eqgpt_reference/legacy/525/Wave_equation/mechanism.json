@@ -1,0 +1,164 @@
+{
+  "case": "Wave_equation",
+  "top1_correct": false,
+  "top10_correct": false,
+  "attempted": 4,
+  "evaluated": 4,
+  "raw_correct_occurrences": 0,
+  "raw_correct_complete": 0,
+  "ever_raw_complete_correct": false,
+  "ever_effective_correct_scored": false,
+  "generated_scored_correct_but_final_miss": false,
+  "first_cycle_raw_complete_correct": 0,
+  "invalid_status_counts": {},
+  "final_top1_classification": "incorrect",
+  "search_seconds": 2.066532267257571,
+  "effective_correct_scored_occurrences": 0,
+  "first_cycle_raw_correct": 0,
+  "first_cycle_effective_correct_scored": 0,
+  "first_raw_correct": null,
+  "ever_selected_correct": false,
+  "ever_retained_correct": false,
+  "conditional_retention_occurrences": null,
+  "interpretation": "First cycle isolates pretrained generation; later cycles also depend on selection/continuation. Never-generated means not observed within budget, not impossible.",
+  "structural_equivalence": "commutative term/factor permutations plus existing Laplacian expansion; not arbitrary symbolic equivalence",
+  "structure_timelines": {
+    "2415d2a2971ea60d4e7a33a649cddb94ee66cc208fa22ea067bdcaa0ac11cb27": [
+      {
+        "candidate_id": "1:0",
+        "cycle": 1,
+        "attempt": 0,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "evaluated",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          15,
+          2,
+          6,
+          2,
+          7,
+          3,
+          8,
+          1
+        ],
+        "reward": 0.00010264045054940671,
+        "selection_reward_float32": 0.0001026404497679323,
+        "raw_score_rank_competition": 1,
+        "selected_this_cycle": true,
+        "in_cumulative_top10": true,
+        "selection_reason": "retained_for_continuation"
+      }
+    ],
+    "0011feae765308372481dd54765bd5d794fd7ff2d7a0aada6d197da9d0c954a4": [
+      {
+        "candidate_id": "1:1",
+        "cycle": 1,
+        "attempt": 1,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "evaluated",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          6,
+          2,
+          9,
+          1
+        ],
+        "reward": 1.551273908327938e-05,
+        "selection_reward_float32": 1.551273999211844e-05,
+        "raw_score_rank_competition": 2,
+        "selected_this_cycle": true,
+        "in_cumulative_top10": true,
+        "selection_reason": "retained_for_continuation"
+      }
+    ],
+    "51002ebc7470b22647dfe0914cb833323cf0f1e495d83321706fd0d8c0ea3182": [
+      {
+        "candidate_id": "1:2",
+        "cycle": 1,
+        "attempt": 2,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "evaluated",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          51,
+          2,
+          8,
+          3,
+          7,
+          2,
+          6,
+          1
+        ],
+        "reward": -2.9731274844902624,
+        "selection_reward_float32": -2.973127603530884,
+        "raw_score_rank_competition": 4,
+        "selected_this_cycle": true,
+        "in_cumulative_top10": true,
+        "selection_reason": "retained_for_continuation"
+      }
+    ],
+    "bf7e46fbd47d53e8ab77a4138f13bd360c2b8c99072a1f6fbb06b143f2158670": [
+      {
+        "candidate_id": "1:3",
+        "cycle": 1,
+        "attempt": 3,
+        "raw_classification": "incorrect",
+        "effective_classification": "incorrect",
+        "status": "evaluated",
+        "stop_reason": "eos",
+        "gre": [
+          5,
+          14,
+          1
+        ],
+        "reward": 0.0,
+        "selection_reward_float32": 0.0,
+        "raw_score_rank_competition": 3,
+        "selected_this_cycle": true,
+        "in_cumulative_top10": true,
+        "selection_reason": "retained_for_continuation"
+      }
+    ]
+  },
+  "top10_by_cycle": [
+    {
+      "cycle": 1,
+      "candidates": [
+        {
+          "candidate_id": "1:0",
+          "rank": 1,
+          "reward": 0.0001026404497679323,
+          "structure_id": "2415d2a2971ea60d4e7a33a649cddb94ee66cc208fa22ea067bdcaa0ac11cb27",
+          "classification": "incorrect"
+        },
+        {
+          "candidate_id": "1:1",
+          "rank": 2,
+          "reward": 1.551273999211844e-05,
+          "structure_id": "0011feae765308372481dd54765bd5d794fd7ff2d7a0aada6d197da9d0c954a4",
+          "classification": "incorrect"
+        },
+        {
+          "candidate_id": "1:3",
+          "rank": 3,
+          "reward": 0.0,
+          "structure_id": "bf7e46fbd47d53e8ab77a4138f13bd360c2b8c99072a1f6fbb06b143f2158670",
+          "classification": "incorrect"
+        },
+        {
+          "candidate_id": "1:2",
+          "rank": 4,
+          "reward": -2.973127603530884,
+          "structure_id": "51002ebc7470b22647dfe0914cb833323cf0f1e495d83321706fd0d8c0ea3182",
+          "classification": "incorrect"
+        }
+      ]
+    }
+  ]
+}

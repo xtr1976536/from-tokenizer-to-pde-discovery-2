@@ -1,0 +1,51 @@
+{
+  "status": "ALL78_CANDIDATES_FIXED32_TRAJECTORY_BATCH_COMPLETE",
+  "candidate_count": 78,
+  "window_count": 32,
+  "unique_trajectories": 32,
+  "complete_candidates": 68,
+  "rejected_candidates": 10,
+  "states": {
+    "PASS": 68,
+    "INCOMPLETE_WINDOWS": 9,
+    "COMPILE_REJECTED": 1
+  },
+  "fit_attempts": 2464,
+  "reward_quantiles": {
+    "min": -2.647523483442265,
+    "p10": -0.07463336328804691,
+    "p25": 0.0025523593429621935,
+    "median": 0.027050121190977272,
+    "p75": 0.05947321009735468,
+    "p90": 0.1334997784873623,
+    "max": 0.3584957493375453
+  },
+  "positive": 53,
+  "negative": 15,
+  "systems_all3_equations_mean_r2_above_half": 0,
+  "top10_systems_with_min_equation_r2_below_point1": 8,
+  "top_candidate": {
+    "split": "811",
+    "vocab": 192,
+    "index": 13,
+    "reward": 0.3584957493375453,
+    "r_fit": 0.45280539445458273,
+    "r2_per_equation": [
+      0.00675035477053262,
+      0.7690122752223822,
+      0.5826535533708334
+    ],
+    "term_counts": [
+      3,
+      3,
+      5
+    ],
+    "text": "\\partial_{t}(u)+\\partial_{y}8\\partial_{y}(p)+\\partial_{t}(u)+\\partial_{x}(u\\cdot v)+\\partial_{y}(v)=0   \\\\(p\\cdot \\partial_{x}(v))+\\partial_{x}(u)+\\partial_{x}(u^{2})+\\partial_{x}(u)=0\\\\\\partial_{y}(u\\cdot \\partial_{y}(u)+\\partial_{y}(\\Delta(u))+\\partial_{x}(p^{2})+\\partial_{y}(u))+\\partial_{y}(p^{2})=0"
+  },
+  "test_read": false,
+  "future_fields_read": false,
+  "training_started": false,
+  "sampling_started": false,
+  "reward_formula_unchanged": true,
+  "limits": "Training-fit reward only; not proof of correct PDE or future prediction. R2 remains anchor-dependent."
+}

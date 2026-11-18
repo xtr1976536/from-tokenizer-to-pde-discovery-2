@@ -1,0 +1,756 @@
+1Introduction Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme 1 Introduction 2 Equivalence group 3 Preliminary analysis and classification result 4 Proof of the classification 4.1 One independent template-form equation 4.2 Two independent template-form equations 4.3 More independent template-form equations 5 Additional equivalence transformations and modified classification result 6 Conclusion References License: arXiv.org perpetual non-exclusive license arXiv:1911.02097v4 [nlin.SI] 25 Jul 2020 Lie symmetries of two-dimensional shallow water equations with variable bottom topography Alexander Bihlo † , Nataliia Poltavets † and Roman O. Popovych ‡ † Department of Mathematics and Statistics, Memorial University of Newfoundland, St. John’s (NL) A1C 5S7, Canada ‡ Fakultät für Mathematik, Universität Wien, Oskar-Morgenstern-Platz 1, A-1090 Wien, Austria Institute of Mathematics of NAS of Ukraine, 3 Tereshchenkivska Str., 01024 Kyiv, Ukraine E-mails:
+abihlo@mun.ca,
+natalkapoltavets@gmail.com,
+rop@imath.kiev.ua We carry out the group classification of the class
+of two-dimensional shallow water equations with variable bottom topography
+using an optimized version of the method of furcate splitting.
+The equivalence group of this class is found by the algebraic method.
+Using algebraic techniques,
+we construct additional point equivalences between some of the listed cases of Lie-symmetry extensions,
+which are inequivalent up to transformations from the equivalence group. 1 Introduction The shallow water equations are among the most studied models in geophysical fluid dynamics.
+Due to the ability of modeling both slow moving (Rossby) and fast moving (gravity) waves,
+the shallow water equations provide an ideal test bed for the development of new numerical approaches
+to be used for future numerical models in geophysical fluid dynamics,
+see e.g. [ 1 , 18 , 19 , 25 , 26 , 29 , 51 ] . Besides playing an important role as an intermediate-complexity model for designing new numerical approaches for weather and climate modeling,
+the shallow water equations are still routinely used in research and operational tsunami propagation models [ 19 , 56 , 57 , 58 ] .
+A main challenge arising in the application of the shallow water equations in ocean wave propagation is the need to incorporate a variable bottom topography,
+since the height of the water column over the bottom of the ocean basin determines the phase speed of gravity waves. Owing to the considerable interest in the shallow water equations,
+there is a large body of literature devoted to finding exact solutions and conservation laws for these equations.
+Both are important for numerical considerations
+since exact solutions can be used for benchmarking numerical methods
+and conservation laws can be applied to checking the reliability of new numerical schemes.
+The construction of exact solutions and conservation laws is already a challenging problem
+without considering variable bottom topographies.
+With variable bottom topography, exact solutions are mostly known for simple profiles,
+such as linear slopes [ 21 ] or parabolic bowls [ 54 ] . Below, we briefly review some of the existing works on the one- and the two-dimensional shallow water equations
+within the framework of group analysis of differential equations,
+which are related to the present paper and include the computation of exact solutions and conservation laws.
+The main point of division in the various studies in this regard is whether Lagrangian or Eulerian coordinates are used. The two-dimensional shallow water equations
+(as well as the semi-geostrophic equations that arise in meteorology and oceanography)
+in Lagrangian coordinates over flat bottom topography were considered
+from the point of view of the group analysis of differential equations, e.g., in [ 13 ] .
+Lie symmetries and certain potential and variational symmetries were computed therein,
+and variational symmetries were used for finding first-order conservation laws according to Noether’s theorem.
+The one-dimensional shallow water equations over flat bottom topography were considered in [ 52 ] in both Lagrangian and Eulerian coordinates as a limit case of the Green–Naghdi model,
+and their first-order conservation laws in Lagrangian coordinates with no counterparts among conservation laws in Eulerian variables were found.
+Special first-order conservation laws for the one-dimensional case over variable bottom topography in Lagrangian coordinates
+were constructed in [ 5 ] using their relation to hydrodynamic conservation laws
+of a potential system for the shallow water equations in Eulerian variables. In Eulerian variables,
+Lie symmetries of the two-dimensional shallow water equations with parabolic bottom topography were computed in [ 38 ] and then used for finding exact solutions via classifying classical Lie reductions.
+It was shown in [ 24 ] that in one dimension,
+the shallow water equations with a linear bottom topography can be mapped
+to the shallow water equations with flat bottom topography by a point transformation.
+Classical symmetry analysis of a modified system of one-dimensional shallow water equations,
+including the construction of the maximal Lie invariance algebra of this system
+and the classification of invariant solutions, was carried out in [ 53 ] .
+Lie symmetries and zeroth-order conservation laws
+in the one-dimensional case with variable bottom topography were described in [ 3 ] ,
+and the geometric structure of self-similar solutions of the second kind for the flat bottom topography
+was studied in [ 20 ] .
+Therein an excellent comprehensive review of previous results related to
+the symmetry analysis of the latter model was presented.
+The two-dimensional shallow water equations with constant Coriolis force were investigated in [ 22 ] ,
+where Lie symmetries were used to find a transformation relating this case to the shallow water equations in a resting reference frame.
+This result was generalized in [ 23 ] via finding a point transformation mapping the shallow water equations over a constantly rotating parabolic basin
+to the shallow water equations in a resting reference frame over a flat bottom topography. Non-canonical Hamiltonian structures and generalized Hamiltonian structures of the shallow water equations
+were considered in [ 51 ] , see also [ 50 ] .
+In [ 51 ] , these Hamiltonian structures were used to construct conservative numerical schemes for the shallow water equations,
+a subject which was continued in [ 65 ] , where conservation law characteristics were used for the same purpose.
+Numerical schemes preserving Lie symmetries of the shallow water equations in Lagrangian and Eulerian coordinates
+were considered in [ 10 ] . In the present paper, we carry out the complete group classification of the class of systems
+of two-dimensional shallow water equations with variable bottom topography,
+which are of the form $\begin{split}&u_{t}+uu_{x}+vu_{y}+h_{x}=b_{x},\\
+&v_{t}+uv_{x}+vv_{y}+h_{y}=b_{y},\\
+&h_{t}+(uh)_{x}+(vh)_{y}=0.\end{split}$ (1) Here $(u,v)$ is the horizontal fluid velocity averaged over the height of the fluid column, $h$ is the thickness of a fluid column, $b=b(x,y)$ is a parameter function that is the bottom topography measured downward with respect to a fixed reference level,
+and the gravitational acceleration is set to be equal 1 in dimensionless units.
+In this class, $(t,x,y)$ is the tuple of the independent variables, $(u,v,h)$ is the tuple of the dependent variables and $b$ is considered to be the arbitrary element of the class.
+These quantities are graphically represented in Figure 1 . Figure 1: The shallow water model. We classify cases of Lie-symmetry extensions for systems from the class ( 1 )
+up to equivalence generated by the equivalence group $G^{\sim}$ of this class.
+Then we find additional equivalences among listed $G^{\sim}$ -inequivalent cases of Lie-symmetry extensions.
+These additional equivalences are induced by admissible point transformations within the class ( 1 )
+that are not generated jointly by elements of $G^{\sim}$ and by point symmetry groups of systems from the class ( 1 ). We solve the group classification problem within the framework of the infinitesimal approach
+using an optimized version of the method of furcate splitting .
+This method was suggested in [ 40 ] in the course of group classification
+of the class of nonlinear Schrödinger equations of the form ${\rm i}\psi_{t}+\triangle\psi+F(\psi,\psi^{*})=0$ with an arbitrary number $n$ of space variables.
+Here, $\psi$ is an unknown complex-valued function of real variables $(t,x_{1},\dots,x_{n})$ ,
+and $F$ is an arbitrary sufficiently smooth function of $(\psi,\psi^{*})$ ,
+which is the arbitrary element of this class.
+Subsequently, the method of furcate splitting was applied
+to the group classification of various classes of (1+1)-dimensional variable-coefficient
+reaction–convection–diffusion equations,
+where arbitrary elements depend on single but possibly different arguments [ 33 , 34 , 44 , 48 , 62 , 63 ] .
+Other classes whose arbitrary elements depend on single arguments were also classified, including
+higher-order Burgers-like equations [ 17 ] ,
+Gardner equations with time-dependent coefficients [ 61 ] and multidimensional nonlinear wave equations [ 64 ] .
+Therefore, the present paper gives only the second example
+of solving the group classification problem with the method of furcate splitting
+for a class of (systems of) differential equations
+with arbitrary elements depending on two arguments.
+In the course of applying the method of furcate splitting,
+we obtained a set of template-form equations,
+which are inhomogeneous first-order quasilinear partial differential equations with respect to the arbitrary element $b$ with two independent variables $x$ and $y$ .
+Each of these equations is canonically associated with a vector field
+in the space with the coordinates $(x,y,b)$ .
+Optimizing the computation within the method of furcate splitting,
+we show that the set of such vector fields is a Lie algebra
+with respect to the Lie bracket of vector fields. The further organization of the paper is as follows.
+The equivalence group $G^{\sim}$ of the class ( 1 ) is computed in Section 2 by the algebraic method suggested in [ 30 , 31 ] .
+Section 3 contains the preliminary analysis of determining equations
+for Lie symmetries of systems from the class ( 1 )
+and the statement of results of the group classification of the class ( 1 ) up to $G^{\sim}$ -equivalence.
+The proof of this classification is presented in Section 4 .
+As the class ( 1 ) is not semi-normalized,
+additional equivalences between $G^{\sim}$ -equivalent cases of Lie-symmetry extensions have to be studied.
+This is done in Section 5 via comparing the structure of the corresponding maximal Lie invariance algebras.
+In the final Section 6 we summarize the findings of the paper and discuss possible future research directions. 2 Equivalence group According to the interpretation of $b$ as a varying arbitrary element or as a fixed function,
+we will refer to ( 1 ) as to a class of systems of differential equations or to a fixed system.
+The complete auxiliary system for the arbitrary element $b$ of the class ( 1 ) consists of the equations $\displaystyle b_{u}=b_{u_{t}}=b_{u_{x}}=b_{u_{y}}=0,\hskip 10.00002ptb_{v}=b_{v_{t}}=b_{v_{x}}=b_{v_{y}}=0,$ $\displaystyle b_{h}=b_{h_{t}}=b_{h_{x}}=b_{h_{y}}=0,\hskip 10.00002ptb_{t}=0.$ Note that there are no auxiliary inequalities for the arbitrary element $b$ . The arbitrary element $b$ depends only on independent variables.
+Therefore, we can treat it as one more dependent variable and consider the extended system $\begin{split}&u_{t}+uu_{x}+vu_{y}+h_{x}=b_{x},\\
+&v_{t}+uv_{x}+vv_{y}+h_{y}=b_{y},\\
+&h_{t}+(uh)_{x}+(vh)_{y}=0,\\
+&b_{t}=0.\end{split}$ (2) Here we also use the fact that the arbitrary element $b$ does not depend on $t$ as well. Since the arbitrary element $b$ does not involve derivatives of dependent variables,
+the generalized equivalence group $G^{\sim}$ of the class ( 1 )
+can be assumed to act in the space with the coordinates $(t,x,y,u,v,h,b)$ and thus to coincide with the point symmetry group $G$ of the system ( 2 ).
+Analogously, the generalized equivalence algebra $\mathfrak{g}^{\sim}$ of the class ( 1 )
+can be identified with the maximal Lie invariance algebra $\mathfrak{g}$ of the system ( 2 ).
+This is why it suffices to find $\mathfrak{g}$ and $G$ instead of $\mathfrak{g}^{\sim}$ and $G^{\sim}$ , respectively. To construct the group $G$ , we invoke Hydon’s automorphism-based version [ 30 , 31 ] of the algebraic method
+for finding discrete symmetries of systems of differential equations. 1 1 1 See also [ 7 , 9 , 27 , 28 , 36 ] for further development, other versions and extensions of this method. For this, we first need to compute the algebra $\mathfrak{g}$ ,
+and the infinitesimal method [ 14 , 15 , 41 , 45 ] is relevant here, see [ 2 ] .
+The algebra $\mathfrak{g}$ consists of the infinitesimal generators of one-parameter point symmetry groups of the system ( 2 ),
+which are vector fields in the space with coordinates $(t,x,y,u,v,h,b)$ , $\displaystyle\mathbf{v}=\tau\partial_{t}+\xi^{1}\partial_{x}+\xi^{2}\partial_{y}+\eta^{1}\partial_{u}+\eta^{2}\partial_{v}+\eta^{3}\partial_{h}+\eta^{4}\partial_{b},$ where the components $\tau$ , $\xi^{1}$ , $\xi^{2}$ and $\eta^{i}$ , $i=1,2,3,4$ , are smooth functions of these coordinates.
+For convenience, hereafter we simultaneously use the notation $(w^{1},w^{2},w^{3},w^{4})$ for $(u,v,h,b)$ .
+The infinitesimal invariance criterion implies that $\begin{split}&\mathop{\rm pr}\nolimits^{(1)}\mathbf{v}(w^{1}_{t}+w^{1}w^{1}_{x}+w^{2}w^{1}_{y}+w^{3}_{x}-w^{4}_{x})=0,\\
+&\mathop{\rm pr}\nolimits^{(1)}\mathbf{v}(w^{2}_{t}+w^{1}w^{2}_{x}+w^{2}w^{2}_{y}+w^{3}_{y}-w^{4}_{y})=0,\\
+&\mathop{\rm pr}\nolimits^{(1)}\mathbf{v}(w^{3}_{t}+(w^{1}w^{3})_{x}+(w^{2}w^{3})_{y})=0,\\
+&\mathop{\rm pr}\nolimits^{(1)}\mathbf{v}(w^{4}_{t})=0,\end{split}$ (3) whenever the system ( 2 ) holds.
+Here $\mathop{\rm pr}\nolimits^{(1)}\mathbf{v}$ is the first order prolongation of the vector field $\mathbf{v}$ , $\displaystyle\mathop{\rm pr}\nolimits^{(1)}\mathbf{v}=\mathbf{v}+\sum_{i=1}^{4}(\eta^{it}\partial_{w^{i}_{t}}+\eta^{ix}\partial_{w^{i}_{x}}+\eta^{iy}\partial_{w^{i}_{y}})$ with $\eta^{it}=\mathrm{D}_{t}(\eta^{i}-\tau w^{i}_{t}-\xi^{1}w^{i}_{x}-\xi^{2}w^{i}_{y})+\tau w^{i}_{tt}+\xi^{1}w^{i}_{tx}+\xi^{2}w^{i}_{ty},$ and similarly for $\eta^{ix}$ and $\eta^{iy}$ ; $\mathrm{D}_{t}$ , $\mathrm{D}_{x}$ and $\mathrm{D}_{y}$ denote the total derivative operators with respect to $t$ , $x$ and $y$ ,
+respectively. We substitute the expressions for $w^{i}_{t}$ , $i=1,\dots 4,$ in view of the system ( 2 ) into the expanded equations ( 3 )
+and then split them with respect to the derivatives $w^{i}_{x}$ and $w^{i}_{y}$ , $i=1,\dots,4$ .
+This procedure results in the system of differential equations on the components $\tau$ , $\xi^{1}$ , $\xi^{2}$ and $\eta^{i}$ , $i=1,\dots,4$ ,
+of the vector field $\mathbf{v}$ , which are called the determining equations.
+Integrating this system, we derive the explicit form of the vector field components, $\displaystyle\tau=(c_{5}-c_{7})t+c_{1},\hskip 10.00002pt\xi^{1}=c_{5}x+c_{6}y+c_{2},\hskip 10.00002pt\xi^{2}=-c_{6}x+c_{5}y+c_{3},$ $\displaystyle\eta^{1}=c_{7}u+c_{6}v,\hskip 10.00002pt\eta^{2}=-c_{6}u+c_{7}v,\hskip 10.00002pt\eta^{3}=2c_{7}h,\hskip 10.00002pt\eta^{4}=2c_{7}b+c_{4},$ where $c_{1},\dots,c_{7}$ are arbitrary real constants. Thus, the maximal Lie invariance algebra $\mathfrak{g}$ of the system ( 2 ) is spanned by the seven vector fields 2 2 2 The components of vector fields from $\mathfrak{g}$ that correspond to the independent variables $(t,x,y)$ and dependent variables $(u,v,h)$ of the system ( 1 )
+do not depend on the arbitrary element $b$ .
+Interpreting this result in terms of equivalence algebras,
+we obtain that the generalized equivalence algebra $\mathfrak{g}^{\sim}$ of the class ( 1 )
+coincides with its usual equivalence algebra. $\displaystyle P^{t}=\partial_{t},\hskip 10.00002ptP^{x}=\partial_{x},\hskip 10.00002ptP^{y}=\partial_{y},\hskip 10.00002ptP^{b}=\partial_{b},\hskip 10.00002ptD^{1}=x\partial_{x}+y\partial_{y}+u\partial_{u}+v\partial_{v}+2h\partial_{h}+2b\partial_{b},$ $\displaystyle D^{2}=t\partial_{t}-u\partial_{u}-v\partial_{v}-2h\partial_{h}-2b\partial_{b},\hskip 10.00002ptJ=x\partial_{y}-y\partial_{x}+u\partial_{v}-v\partial_{u}.$ Let us fix the basis $\mathcal{B}=(P^{t},P^{x},P^{y},P^{b},D^{1},D^{2},J)$ of the Lie algebra $\mathfrak{g}$ .
+Up to anticommutativity of the Lie bracket of vector fields,
+the only nonzero commutation relations between the basis elements are $\displaystyle[P^{x},D^{1}]=P^{x},\hskip 10.00002pt[P^{y},D^{1}]=P^{y},\hskip 10.00002pt[P^{b},D^{1}]=2P^{b},$ $\displaystyle[P^{t},D^{2}]=P^{t},\hskip 10.00002pt[P^{b},D^{2}]=-2P^{b},\hskip 10.00002pt[P^{x},J]=P^{y},\hskip 10.00002pt[P^{y},J]=-P^{x}.$ In other words, the complete list of nonzero structure constants of the Lie algebra $\mathfrak{g}$ in the basis $\mathcal{B}$ is exhausted, up to permutation of subscripts, by $\displaystyle c^{2}_{25}=1,\hskip 10.00002ptc^{3}_{35}=1,\hskip 10.00002ptc^{4}_{45}=2,\hskip 10.00002ptc^{1}_{16}=1,\hskip 10.00002ptc^{4}_{46}=-2,\hskip 10.00002ptc^{3}_{27}=1,\hskip 10.00002ptc^{2}_{37}=-1.$ The general form $A=(a^{i}_{j})_{i,j=1}^{7}$ of automorphism matrices of the algebra $\mathfrak{g}$ in the basis $\mathcal{B}$ can be found via solving the system of algebraic equations $c^{k^{\prime}}_{i^{\prime}j^{\prime}}a^{i^{\prime}}_{i}a^{j^{\prime}}_{j}=c^{k}_{ij}a^{k^{\prime}}_{k},\hskip 10.00002pti,j=1,\dots,7,$ (4) under the condition $\det A\neq 0$ .
+Here we assume summation over the repeated indices.
+As a result, we obtain that the automorphism group $\mathrm{Aut}(\mathfrak{g})$ of $\mathfrak{g}$ can be identified with the matrix group that consists of the matrices of the general form $\displaystyle A=\begin{pmatrix}a^{1}_{1}&0&0&0&0&a^{1}_{6}&0\\
+0&a^{2}_{2}&-\varepsilon a^{3}_{2}&0&a^{2}_{5}&0&a^{2}_{7}\\
+0&a^{3}_{2}&\varepsilon a^{2}_{2}&0&-\varepsilon a^{2}_{7}&0&\varepsilon a^{2}_{5}\\
+0&0&0&a^{4}_{4}&-a^{4}_{6}&a^{4}_{6}&0\\
+0&0&0&0&1&0&0\\
+0&0&0&0&0&1&0\\
+0&0&0&0&0&0&\varepsilon\end{pmatrix},$ where $\varepsilon=\pm 1$ , and the remaining parameters $a^{i}_{j}$ ’s are arbitrary real constants with $a^{1}_{1}\big((a^{2}_{2})^{2}+(a^{3}_{2})^{2}\big)a^{4}_{4}\neq 0.$ Theorem 1 . A complete list of discrete symmetry transformations of the extended system ( 2 )
+that are independent up to combining with each other and with continuous symmetry transformations of this system
+is exhausted by two transformations alternating signs of variables, $\displaystyle\begin{split}&(t,x,y,u,v,h,b)\mapsto(-t,x,y,-u,-v,h,b),\\
+&(t,x,y,u,v,h,b)\mapsto(t,x,-y,u,-v,h,b).\end{split}$ (5) Proof. The maximal Lie invariance algebra $\mathfrak{g}$ of the system ( 2 ) is finite-dimensional and nontrivial.
+The complete automorphism group $\mathrm{Aut}(\mathfrak{g})$ of $\mathfrak{g}$ is computed above.
+It is not much wider than the inner automorphism group $\mathrm{Inn}(\mathfrak{g})$ of $\mathfrak{g}$ ,
+which consists of the linear operators on $\mathfrak{g}$ with matrices of the form $\displaystyle\begin{pmatrix}e^{-\theta_{6}}&0&0&0&0&\theta_{1}&0\\
+0&e^{-\theta_{5}}\cos\theta_{7}&e^{-\theta_{5}}\sin\theta_{7}&0&\theta_{2}&0&-\theta_{3}\\
+0&-e^{-\theta_{5}}\sin\theta_{7}&e^{-\theta_{5}}\cos\theta_{7}&0&\theta_{3}&0&\theta_{2}\\
+0&0&0&e^{2\theta_{6}-2\theta_{5}}&2\theta_{4}&-2\theta_{4}&0\\
+0&0&0&0&1&0&0\\
+0&0&0&0&0&1&0\\
+0&0&0&0&0&0&1\end{pmatrix},$ where the parameters $\theta_{1},$ $\dots$ , $\theta_{7}$ are arbitrary constants.
+Continuous point symmetries of the system ( 2 ) can be easily found
+by composing elements of one-parameter groups generated by basis elements of $\mathfrak{g}$ .
+Moreover, such symmetries constitute the connected component of the identity transformation in the group $G$ ,
+which induces the entire group $\mathrm{Inn}(\mathfrak{g})$ .
+This is why it suffices to look only for discrete symmetry transformations,
+and in the course of the related computation within the framework of the algebraic method, one can factor out inner automorphisms.
+The quotient group $\mathrm{Aut}(\mathfrak{g})/\mathrm{Inn}(\mathfrak{g})$ can be identified
+with the matrix group consisting of the diagonal matrices of the form $\mathrm{diag}(\varepsilon^{\prime},1,\varepsilon,\varepsilon^{\prime\prime},1,1,\varepsilon)$ ,
+where $\varepsilon,\varepsilon^{\prime},\varepsilon^{\prime\prime}=\pm 1$ .
+Suppose that the push-forward $\mathcal{T}_{*}$ of vector fields in the space with the coordinates $(t,x,y,u,v,h,b)$ by a point transformation $\displaystyle\mathcal{T}\colon\hskip 10.00002pt(\tilde{t},\tilde{x},\tilde{y},\tilde{u},\tilde{v},\tilde{h},\tilde{b})=(T,X,Y,U,V,H,B)(t,x,y,u,v,h,b)$ generates the automorphism of $\mathfrak{g}$ with the matrix $\mathrm{diag}(\varepsilon^{\prime},1,\varepsilon,\varepsilon^{\prime\prime},1,1,\varepsilon)$ , i.e., $\displaystyle\mathcal{T}_{*}P^{t}=\varepsilon^{\prime}\tilde{P}^{t},\hskip 10.00002pt\mathcal{T}_{*}P^{x}=\tilde{P}^{x},\hskip 10.00002pt\mathcal{T}_{*}P^{y}=\varepsilon\tilde{P}^{y},\hskip 10.00002pt\mathcal{T}_{*}P^{b}=\varepsilon^{\prime\prime}\tilde{P}^{b},$ $\displaystyle\mathcal{T}_{*}D^{1}=\tilde{D}^{1},\hskip 10.00002pt\mathcal{T}_{*}D^{2}=\tilde{D}^{2},\hskip 10.00002pt\mathcal{T}_{*}J=\varepsilon\tilde{J}.$ Here tildes over vector fields mean that these vector fields are given in the new coordinates.
+The above conditions for $\mathcal{T}_{*}$ imply a system of differential equations for the components of $\mathcal{T}$ , $\displaystyle T_{t}=\varepsilon^{\prime},\hskip 10.00002ptT=tT_{t},\hskip 10.00002ptT_{x}=T_{y}=T_{u}=T_{v}=T_{h}=T_{b}=0,$ $\displaystyle X_{x}=1,\hskip 10.00002ptX=xX_{x},\hskip 10.00002ptX_{t}=X_{y}=X_{u}=X_{v}=X_{h}=X_{b}=0,$ $\displaystyle Y_{y}=\varepsilon,\hskip 10.00002ptY=yY_{y},\hskip 10.00002ptY_{t}=Y_{x}=Y_{u}=Y_{v}=Y_{h}=Y_{b}=0,$ $\displaystyle U_{t}=U_{x}=U_{y}=U_{b}=0,\hskip 10.00002ptV_{t}=V_{x}=V_{y}=V_{b}=0,$ $\displaystyle vU_{u}-uU_{v}=\varepsilon V,\hskip 10.00002ptuU_{u}+vU_{v}+2hU_{h}=U,$ $\displaystyle vV_{u}-uV_{v}=-\varepsilon U,\hskip 10.00002ptuV_{u}+vV_{v}+2hV_{h}=V,$ $\displaystyle H_{t}=H_{x}=H_{y}=H_{b}=0,\hskip 10.00002ptvH_{u}-uH_{v}=0,\hskip 10.00002ptuH_{u}+vH_{v}+2hH_{h}=2H,$ $\displaystyle B_{b}=\varepsilon^{\prime\prime},\hskip 10.00002ptB_{t}=B_{x}=B_{y}=0,\hskip 10.00002ptvB_{u}-uB_{v}=0,$ $\displaystyle uB_{u}+vB_{v}+2hB_{h}=2B-2\varepsilon^{\prime\prime}b.$ The general solution of the system is $\displaystyle T=\varepsilon^{\prime}t,\hskip 10.00002ptX=x,\hskip 10.00002ptY=\varepsilon y,$ $\displaystyle U=uF_{1}\left(\frac{h}{u^{2}+v^{2}}\right)+\varepsilon vF_{2}\left(\frac{h}{u^{2}+v^{2}}\right),$ $\displaystyle V=-uF_{2}\left(\frac{h}{u^{2}+v^{2}}\right)+\varepsilon vF_{1}\left(\frac{h}{u^{2}+v^{2}}\right),$ $\displaystyle H=(u^{2}+v^{2})F_{3}\left(\frac{h}{u^{2}+v^{2}}\right),\hskip 10.00002ptB=\varepsilon^{\prime\prime}b+(u^{2}+v^{2})F_{4}\left(\frac{h}{u^{2}+v^{2}}\right),$ where $F_{1}$ , $F_{2}$ , $F_{3}$ and $F_{4}$ are arbitrary smooth functions of $h/(u^{2}+v^{2})$ . We continue the computations within the framework of the direct method in order to complete the system of constraints for $\mathcal{T}$ .
+Using the chain rule, we express all required transformed derivatives $\tilde{w}^{i}_{\tilde{t}}$ , $\tilde{w}^{i}_{\tilde{x}}$ , $\tilde{w}^{i}_{\tilde{y}}$ , $i=1,\dots,4$ , in terms of the initial coordinates.
+Then, we substitute the obtained expressions into the copy of the system ( 2 ) in the new coordinates.
+The expanded system should identically be satisfied by each solution of the system ( 2 ).
+This condition implies that $\displaystyle T=\varepsilon^{\prime}t,\hskip 10.00002ptX=x,\hskip 10.00002ptY=\varepsilon y,\hskip 10.00002ptU=\varepsilon^{\prime}u,\hskip 10.00002ptV=\varepsilon\varepsilon^{\prime}v,\hskip 10.00002ptH=h,\hskip 10.00002ptB=b.$ Therefore, discrete symmetries of the equation ( 2 ) are exhausted, up to combining with continuous symmetries and with each other,
+by the two involutions ( 5 ),
+which are associated with the values $(\varepsilon^{\prime},\varepsilon)=(-1,1)$ and $(\varepsilon^{\prime},\varepsilon)=(1,-1)$ , respectively.
+∎ Corollary 2 . The quotient group of the complete point symmetry group $G$ of the extended system ( 2 )
+with respect to its identity component is isomorphic to the group $\mathbb{Z}_{2}\times\mathbb{Z}_{2}$ . The complete point symmetry group $G$ of the extended system ( 2 )
+is generated by one-parameter point transformation groups associated with vector fields
+from the algebra $\mathfrak{g}$ and two discrete transformations given in Theorem 1 . Corollary 3 . The complete point symmetry group $G$ of the extended system ( 2 ) consists of the transformations $\displaystyle\begin{split}&\tilde{t}=\delta_{1}t+\delta_{2},\quad\tilde{x}=\delta_{3}x-\varepsilon\delta_{4}y+\delta_{5},\quad\tilde{y}=\delta_{4}x+\varepsilon\delta_{3}y+\delta_{6},\\
+&\tilde{u}=\frac{\delta_{3}}{\delta_{1}}u-\varepsilon\frac{\delta_{4}}{\delta_{1}}v,\quad\tilde{v}=\frac{\delta_{4}}{\delta_{1}}u+\varepsilon\frac{\delta_{3}}{\delta_{1}}v,\quad\tilde{h}=\frac{\delta_{3}^{\,2}+\delta_{4}^{\,2}}{\delta_{1}^{\,2}}h,\quad\tilde{b}=\frac{\delta_{3}^{\,2}+\delta_{4}^{\,2}}{\delta_{1}^{\,2}}b+\delta_{7},\end{split}$ (6) where $\varepsilon=\pm 1$ and the parameters $\delta_{i},\,i=1,\dots,7,$ are arbitrary constants with $\delta_{1}(\delta_{3}^{\ 2}+\delta_{4}^{\ 2})\neq 0$ . Since the generalized equivalence group $G^{\sim}$ of the class of two-dimensional shallow water equations ( 1 )
+coincides with the complete point symmetry group $G$ of the system ( 2 ),
+we can rephrase Theorem 1 and Corollary 3 in terms of equivalence transformations of the class ( 1 ). Theorem 4 . A complete list of discrete equivalence transformations of the class of two-dimensional shallow water equations ( 1 )
+that are independent up to combining with each other and with continuous equivalence transformations of this class is exhausted
+by two involutions ( 5 ) alternating signs of variables. Theorem 5 . The generalized equivalence group $G^{\sim}$ of the class of two-dimensional systems of shallow water equations ( 1 )
+coincides with the usual equivalence group of this class and consists of the transformations of the form ( 6 ). 3 Preliminary analysis and classification result Let $\mathcal{L}_{b}$ be a system from the class ( 1 ) with a fixed value of the arbitrary element $b$ and suppose that a vector field $\mathbf{v}$ of the general form $\displaystyle\begin{split}\mathbf{v}={}&\tau(t,x,y,u,v,h)\partial_{t}+\xi^{1}(t,x,y,u,v,h)\partial_{x}+\xi^{2}(t,x,y,u,v,h)\partial_{y}\\
+&{}+\eta^{1}(t,x,y,u,v,h)\partial_{u}+\eta^{2}(t,x,y,u,v,h)\partial_{v}+\eta^{3}(t,x,y,u,v,h)\partial_{h}\end{split}$ defined in the space with the coordinates $(t,x,y,u,v,h)$ is
+the infinitesimal generator of a one-parameter Lie symmetry group for the system $\mathcal{L}_{b}$ .
+The set of such vector fields is the maximal Lie invariance algebra $\mathfrak{g}_{b}$ of the system $\mathcal{L}_{b}$ . The infinitesimal invariance criterion requires that $\displaystyle\mathop{\rm pr}\nolimits^{(1)}\mathbf{v}(\mathcal{L}_{b})\big|_{\mathcal{L}_{b}}=0.$ (7) The first prolongation $\mathop{\rm pr}\nolimits^{(1)}\mathbf{v}$ of the vector field $\mathbf{v}$ is computed
+similarly to the previous section.
+We expand the condition ( 7 ) and confine it on the manifold defined by $\mathcal{L}_{b}$ in the corresponding first-order jet space,
+assuming the first-order derivatives of the dependent variables $(u,v,h)$ with respect to $t$ as the leading ones and substituting for these derivatives in view of the system $\mathcal{L}_{b}$ , $\displaystyle u_{t}=-uu_{x}-vu_{y}-h_{x}+b_{x},$ $\displaystyle v_{t}=-uv_{x}-vv_{y}-h_{y}+b_{y},$ $\displaystyle h_{t}=-(uh)_{x}-(vh)_{y}.$ Then we split the obtained equations with respect to the first-order parametric derivatives,
+which are the first-order derivatives of the dependent variables $(u,v,h)$ with respect to $x$ and $y$ .
+After an additional rearrangement and excluding equations that are differential consequences of the others,
+we derive the system of determining equations for the components of the vector field $\mathbf{v}$ , $\begin{split}&\tau_{x}=\tau_{y}=\tau_{u}=\tau_{v}=\tau_{h}=0,\\[2.15277pt]
+&\xi^{1}_{u}=\xi^{1}_{v}=\xi^{1}_{h}=0,\quad\xi^{2}_{u}=\xi^{2}_{v}=\xi^{2}_{h}=0,\quad\xi^{1}_{x}=\xi^{2}_{y},\quad\xi^{1}_{y}+\xi^{2}_{x}=0,\\[2.15277pt]
+&\eta^{1}=(\xi^{1}_{x}-\tau_{t})u+\xi^{1}_{y}v+\xi^{1}_{t},\quad\eta^{2}=\xi^{2}_{x}u+(\xi^{2}_{y}-\tau_{t})v+\xi^{2}_{t},\quad\eta^{3}=2(\xi^{1}_{x}-\tau_{t})h,\\[2.15277pt]
+&\eta^{1}_{t}+u\eta^{1}_{x}+v\eta^{1}_{y}+\eta^{3}_{x}+(\eta^{1}_{u}-\tau_{t})b_{x}+\eta^{1}_{v}b_{y}=\xi^{1}b_{xx}+\xi^{2}b_{xy},\\[2.15277pt]
+&\eta^{2}_{t}+u\eta^{2}_{x}+v\eta^{2}_{y}+\eta^{3}_{y}+\eta^{2}_{u}b_{x}+(\eta^{2}_{v}-\tau_{t})b_{y}=\xi^{1}b_{xy}+\xi^{2}b_{yy},\\[2.15277pt]
+&\eta^{3}_{t}+u\eta^{3}_{x}+v\eta^{3}_{y}+h\eta^{1}_{x}+h\eta^{2}_{y}=0.\end{split}$ (8) Integrating the subsystem of the system ( 8 ) that consists of the equations not containing the arbitrary element $b$ ,
+we get the following form of the components of the vector field $\mathbf{v}$ : $\begin{split}&\tau=2F^{1}-c_{1}t,\\[2.15277pt]
+&\xi^{1}=F^{1}_{t}x+F^{0}y+F^{2},\\[2.15277pt]
+&\xi^{2}=-F^{0}x+F^{1}_{t}y+F^{3},\\[2.15277pt]
+&\eta^{1}=(-F^{1}_{t}+c_{1})u+F^{0}v+F^{1}_{tt}x+F^{2}_{t},\\[2.15277pt]
+&\eta^{2}=-F^{0}u+(-F^{1}_{t}+c_{1})v+F^{1}_{tt}y+F^{3}_{t},\\[2.15277pt]
+&\eta^{3}=2(-F^{1}_{t}+c_{1})h,\end{split}$ (9) where $F^{i}$ , $i=1,2,3,4$ , are sufficiently smooth functions of $t$ , and $c_{1}$ is a constant.
+From the last two equations of the system ( 8 ), we derive as a differential consequence that $F^{0}_{t}=0$ .
+Thus, $F^{0}$ is a constant, and we will denote $c_{2}:=F^{0}$ .
+In other words, for any $b$ , $\mathfrak{g}_{b}\subset\mathfrak{g}_{\mbox{\tiny$\langle\,\rangle$}}:=\langle D(F^{1}),\,D^{\rm s},\,J,\,P(F^{2},F^{3})\rangle=\langle D(F^{1}),\,D^{\rm t},\,J,\,P(F^{2},F^{3})\rangle,$ where the parameters $F^{1}$ , $F^{2}$ and $F^{3}$ run through the set of smooth functions of $t$ , $\displaystyle\begin{split}&D(F^{1}):=F^{1}\partial_{t}+\tfrac{1}{2}F^{1}_{t}x\partial_{x}+\tfrac{1}{2}F^{1}_{t}y\partial_{y}-\tfrac{1}{2}(F^{1}_{t}u-F^{1}_{tt}x)\partial_{u}-\tfrac{1}{2}(F^{1}_{t}v-F^{1}_{tt}y)\partial_{v}-F^{1}_{t}h\partial_{h},\!\\[2.15277pt]
+&D^{\rm s}:=x\partial_{x}+y\partial_{y}+u\partial_{u}+v\partial_{v}+2h\partial_{h},\quad J:=x\partial_{y}-y\partial_{x}+u\partial_{v}-v\partial_{u},\\[2.15277pt]
+&P(F^{2},F^{3}):=F^{2}\partial_{x}+F^{3}\partial_{y}+F^{2}_{t}\partial_{u}+F^{3}_{t}\partial_{v},\end{split}$ (10) and it is convenient to denote $D^{\rm t}:=D(t)-\frac{1}{2}D^{\rm s}=t\partial_{t}-u\partial_{u}-v\partial_{v}-2h\partial_{h}$ and sometimes use this vector field in the spanning set ( 10 )
+instead of $D^{\rm s}$ . Up to antisymmetry, the nonzero commutation relations between the vector fields spanning $\mathfrak{g}_{\mbox{\tiny$\langle\,\rangle$}}$ are exhausted by the following ones: $\displaystyle[D(F^{1}),D(\tilde{F}^{1})]=D(F^{1}\tilde{F}^{1}_{t}-\tilde{F}^{1}F^{1}_{t}),$ $\displaystyle[D(F^{1}),P(F^{2},F^{3})]=P\big(F^{1}F^{2}_{t}-\tfrac{1}{2}F^{1}_{t}F^{2},F^{1}F^{3}_{t}-\tfrac{1}{2}F^{1}_{t}F^{3}\big),$ $\displaystyle[D^{\rm s},P(F^{2},F^{3})]=-P(F^{2},F^{3}),\hskip 10.00002pt[J,P(F^{2},F^{3})]=P(F^{3},-F^{2}).$ Therefore, the span $\mathfrak{g}_{\mbox{\tiny$\langle\,\rangle$}}$ is an (infinite-dimensional) Lie algebra
+with respect to the Lie bracket of vector fields. The local one-parameter groups of point transformations generated by the vector fields ( 10 )
+respectively consist of the following point transformations, where $\delta$ is the group parameter: • $\tilde{t}=T,\ \tilde{x}=T_{t}^{1/2}x,\ \tilde{y}=T_{t}^{1/2}y,\ \tilde{u}=T_{t}^{-1/2}u+\frac{1}{2}T_{tt}T_{t}^{-3/2}x,\ \tilde{v}=T_{t}^{-1/2}v+\frac{1}{2}T_{tt}T_{t}^{-3/2}y$ , $\tilde{h}=T_{t}^{-1}h$ ,
+where $T=T(t,\delta):=\hat{H}\big(H(t)+\delta\big)$ with an antiderivative $H$ of $1/F^{1}$ and the inverse $\hat{H}$ of $H$ with respect to $t$ ; • $\tilde{t}=t,\ \tilde{x}=e^{\delta}x,\ \tilde{y}=e^{\delta}y,\ \tilde{u}=e^{\delta}u,\ \tilde{v}=e^{\delta}v,\ \tilde{h}=e^{2\delta}h$ ; • $\tilde{t}=t,\ \tilde{x}=x\cos\delta-y\sin\delta,\ \tilde{y}=x\sin\delta+y\cos\delta,\ \tilde{u}=u\cos\delta-v\sin\delta,\ \tilde{v}=u\sin\delta+v\cos\delta,$ $\tilde{h}=h$ ; • $\tilde{t}=t,\ \tilde{x}=x+\delta F^{2}(t),\ \tilde{y}=y+\delta F^{3}(t),\ \tilde{u}=u+\delta F^{2}_{t}(t),\ \tilde{v}=v+\delta F^{3}_{t}(t),\ \tilde{h}=h$ . These are
+arbitrary transformations of $t$ with simultaneous linear transformations of the other variables with coefficients depending on $t$ ,
+including shifts of $t$ ( $F^{1}=1$ ), concordant scalings of all variables ( $F^{1}=t$ ) and time inversions ( $F^{1}=t^{2}$ );
+scaling of the space variables $(x,y)$ with simultaneous scalings of the dependent variables;
+concordant rotations in the $(x,y)$ - and $(u,v)$ -planes;
+and generalized shifts of the space variables depending on $t$ , including their usual shifts ( $F^{2},F^{3}={\rm const}$ ) and Galilean boosts ( $F^{2}/t,F^{3}/t={\rm const}$ ). For elements of $\mathfrak{g}_{b}$ , which are of the form $2D(F^{1})-c_{1}D^{\rm t}-c_{2}J+P(F^{2},F^{3})$ ,
+the parameters $F^{1}$ , $F^{2}$ , $F^{3}$ , $c_{1}$ and $c_{2}$ additionally satisfy two equations
+implied by the last two equations from ( 8 ),
+which explicitly involve the arbitrary element $b$ and thus are the classifying equations for the class ( 1 ).
+They can be integrated to the single equation $\begin{split}&(F^{1}_{t}x+c_{2}y+F^{2})b_{x}+(-c_{2}x+F^{1}_{t}y+F^{3})b_{y}+2(F^{1}_{t}-c_{1})b\\
+&\qquad-F^{1}_{ttt}\frac{x^{2}+y^{2}}{2}-F^{2}_{tt}x-F^{3}_{tt}y-F^{4}=0,\end{split}$ (11) where $F^{4}$ is one more smooth parameter function of $t$ .
+The equation ( 11 ) can be considered as the only classifying equation instead of the above ones.
+Thus, the group classification problem for the class ( 1 )
+reduces to solving the equation ( 11 ) up to $G^{\sim}$ -equivalence
+with respect to the arbitrary element $b$ and the parameters $F^{1}$ , …, $F^{4}$ , $c_{1}$ and $c_{2}$ . The next theorem presents the results of the group classification of the class ( 1 ) up to $G^{\sim}$ -inequivalence.
+In this theorem and in Section 4 ,
+it is convenient to use, simultaneously with $(x,y)$ , the polar coordinates $(r,\varphi)$ on the $(x,y)$ -plane, $\displaystyle r:=\sqrt{x^{2}+y^{2}},\hskip 10.00002pt\varphi:=\arctan\frac{y}{x}.$ Theorem 6 . The kernel Lie invariance algebra of systems from the class ( 1 )
+is $\mathfrak{g}^{\cap}=\langle D(1)\rangle$ .
+A complete list of $G^{\sim}$ -inequivalent Lie-symmetry extensions within the class ( 1 )
+is exhausted by the following cases,
+where $f$ denotes an arbitrary smooth function of a single argument, $\alpha$ , $\beta$ , $\mu$ and $\nu$ are arbitrary constants with $\alpha\geqslant 0\bmod G^{\sim}$ , $\beta>0$ and additional constraints indicated in the corresponding cases, $\varepsilon=\pm 1\bmod G^{\sim}$ and $\delta\in\{0,1\}\bmod G^{\sim}$ . 1. $b=r^{\nu}f(\varphi+\alpha\ln r)$ , $(\alpha,\nu)\neq(0,-2)$ , $\nu\neq 0$ : $\mathfrak{g}_{b}=\big\langle D(1),\,4D(t)-(\nu+2)D^{\rm t}-2\alpha J\big\rangle$ ; 2. $b=f(\varphi+\alpha\ln r)+\nu\ln r$ , $\nu\in\{-1,0,1\}\bmod G^{\sim}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,2D(t)-D^{\rm t}-\alpha J\big\rangle$ ; 3. $b=f(r)+\delta\varphi$ : $\mathfrak{g}_{b}=\big\langle D(1),\,J\big\rangle$ ; 4. $b=f(r)e^{\beta\varphi}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,2J-\beta D^{\rm t}\big\rangle$ ; 5. $b=f(y)e^{x}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D^{\rm t}-P(2,0)\big\rangle$ ; 6. (a) $b=r^{-2}f(\varphi)$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(t),\,D(t^{2})\big\rangle$ ; (b) $b=r^{-2}f(\varphi)+\frac{1}{2}r^{2}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(e^{2t}),\,D(e^{-2t})\big\rangle$ ; (c) $b=r^{-2}f(\varphi)-\frac{1}{2}r^{2}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(\cos 2t),\,D(\sin 2t)\big\rangle$ ; 7. $b=f(y)+\delta x$ : $\mathfrak{g}_{b}=\big\langle D(1),\,P(1,0),\,P(t,0)\big\rangle$ ; 8. $b=f(y)+\tfrac{1}{2}x^{2}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,P(e^{t},0),\,P(e^{-t},0)\big\rangle$ ; 9. $b=f(y)-\tfrac{1}{2}x^{2}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,P(\cos t,0),\,P(\sin t,0)\big\rangle$ ; 10. $b=\delta\varphi-\nu\ln r$ , $\nu=\pm 1\bmod G^{\sim}$ if $\delta=0$ : $\mathfrak{g}_{b}=\big\langle D(1),\,2D(t)-D^{\rm t},\,J\big\rangle$ ; 11. $b=\varepsilon r^{\nu}e^{\alpha\varphi}$ , $\nu\neq-2$ , $(\alpha,\nu)\notin\{(0,0),(0,2)\}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,4D(t)-(\nu+2)D^{\rm t},\,2J-\alpha D^{\rm t}\big\rangle$ ; 12. (a) $b=\varepsilon r^{-2}e^{\alpha\varphi}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(t),\,D(t^{2}),\,\alpha D^{\rm s}+4J\big\rangle$ ; (b) $b=\varepsilon r^{-2}e^{\alpha\varphi}+\frac{1}{2}r^{2}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(e^{2t}),\,D(e^{-2t}),\,\alpha D^{\rm s}+4J\big\rangle$ ; (c) $b=\varepsilon r^{-2}e^{\alpha\varphi}-\frac{1}{2}r^{2}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(\cos 2t),\,D(\sin 2t),\,\alpha D^{\rm s}+4J\big\rangle$ ; 13. $b=\varepsilon|y|^{\nu}+\delta x$ , $\nu\notin\{-2,0,2\}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,4D(t)-(\nu+2)D^{\rm t}-\delta(\nu-1)P(t^{2},0),\,P(1,0),\,P(t,0)\big\rangle$ ; 14. $b=\varepsilon\ln|y|+\delta x$ : $\mathfrak{g}_{b}=\big\langle D(1),\,2D(t)-D^{\rm t}-\frac{1}{2}\delta P(t^{2},0)),\,P(1,0),\,P(t,0)\big\rangle;$ 15. $b=\varepsilon e^{y}+\delta x$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D^{\rm t}-P(\delta t^{2},2),\,P(1,0),\,P(t,0)\big\rangle;$ 16. (a) $b=\varepsilon y^{-2}+\delta x$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(t)+\frac{3}{4}\delta P(t^{2},0),\,D(t^{2})+\frac{1}{2}\delta P(t^{3},0),\,P(1,0),\,P(t,0)\big\rangle;$ (b) $b=\varepsilon y^{-2}+\frac{1}{2}r^{2}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(e^{2t}),\,D(e^{-2t}),\,P(e^{t},0),\,P(e^{-t},0)\big\rangle$ ; (c) $b=\varepsilon y^{-2}-\frac{1}{2}r^{2}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(\cos 2t),\,D(\sin 2t),\,P(\cos t,0),\,P(\sin t,0)\big\rangle$ ; 17. $b=\tfrac{1}{2}x^{2}+\tfrac{1}{2}\beta^{2}y^{2}$ , $0<\beta<1$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D^{\rm s},\,P(e^{t},0),\,P(e^{-t},0),\,P(0,e^{\beta t}),\,P(0,e^{-\beta t})\big\rangle$ ; 18. $b=\frac{1}{2}x^{2}+\delta y$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D^{\rm s}-\tfrac{1}{2}\delta P(0,t^{2}),\,P(e^{t},0),\,P(e^{-t},0),\,P(0,1),\,P(0,t)\big\rangle$ ; 19. $b=\tfrac{1}{2}x^{2}-\tfrac{1}{2}\beta^{2}y^{2}$ , $\beta>0$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D^{\rm s},\,P(e^{t},0),\,P(e^{-t},0),\,P(0,\cos\beta t),\,P(0,\sin\beta t)\big\rangle$ ; 20. $b=-\frac{1}{2}x^{2}+\delta y$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D^{\rm s}-\tfrac{1}{2}\delta P(0,t^{2}),\,P(\cos t,0),\,P(\sin t,0),\,P(0,1),\,P(0,t)\big\rangle$ ; 21. $b=-\tfrac{1}{2}x^{2}-\tfrac{1}{2}\beta^{2}y^{2}$ , $0<\beta<1$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D^{\rm s},\,P(\cos t,0),\,P(\sin t,0),\,P(0,\cos\beta t),\,P(0,\sin\beta t)\big\rangle$ ; 22. (a) $b=0$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(t),\,D(t^{2}),\,D^{\rm s},\,J,\,P(1,0),\,P(t,0),\,P(0,1),\,P(0,t)\big\rangle$ ; (b) $b=x$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(t)+\tfrac{3}{4}P(t^{2},0),\,D(t^{2})+\tfrac{1}{2}P(t^{3},0),\,D^{\rm s}-\tfrac{1}{2}P(t^{2},0),\,J-\tfrac{1}{2}P(0,t^{2})$ , $\phantom{\mbox{$b=x$:\hskip 10.00002pt}\mathfrak{g}_{b}=\big\langle}P(1,0),\,P(t,0),\,P(0,1),\,P(0,t)\big\rangle$ ; (c) $b=\frac{1}{2}r^{2}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(e^{2t}),\,D(e^{-2t}),\,D^{\rm s},\,J,\,P(e^{t},0),\,P(e^{-t},0),\,P(0,e^{t}),\,P(0,e^{-t})\big\rangle$ ;​ (d) $b=-\frac{1}{2}r^{2}$ : $\mathfrak{g}_{b}=\big\langle D(1),\,D(\cos 2t),\,D(\sin 2t),\,D^{\rm s},\,J$ , $\phantom{\mbox{$b=-\frac{1}{2}r^{2}$:\hskip 10.00002pt}\mathfrak{g}_{b}=\big\langle}P(\cos t,0),\,P(\sin t,0),\,P(0,\cos t),\,P(0,\sin t)\big\rangle$ . Remark 7 . For Cases 1 – 9 to really present maximal Lie-symmetry extensions,
+the parameter function $f$ should take only values
+for which the corresponding values of the arbitrary element $b$ are not $G^{\sim}$ -equivalent to ones from the other listed cases. Remark 8 . The usage of the $G^{\sim}$ -equivalence as the principal equivalence
+in the course of solving the group classification problem for the class ( 1 )
+is natural from the physical standpoint.
+The equivalence group $G^{\sim}$ of the class ( 1 ), which is presented in Theorem 5 ,
+is generated by elementary point transformations with the obvious physical interpretation
+as basic coordinate changes, more specifically,
+the shifts, the scalings and the reflections of the time and the space variables, the rotations of the space variables
+and the vertical shifts of the bottom topography.
+(The last transformations constitute a subgroup of $G^{\sim}$ ,
+which is the gauge equivalence group of the class ( 1 ),
+see [ 49 ] for definitions.)
+Roughly speaking, two bottom topographies are $G^{\sim}$ -equivalent
+if they coincide up to simple coordinate changes.
+On the other hand, the $G^{\sim}$ -equivalence is a necessary component of
+the rigorous formulation of the group classification problem for the class ( 1 )
+within the framework of the classical Lie–Ovsiannikov theory of group analysis of differential equations [ 45 , Chapter III] , which is justified by the fact
+that a point transformation between two systems of differential equations
+induces an isomorphism between their maximal Lie invariance algebras.
+Moreover, the construction and the usage of the equivalence group of the class ( 1 )
+are much simpler than those of the corresponding equivalence groupoid;
+see Section 5 below. Remark 9 . Among bottom topographies listed in Theorem 6 ,
+there are a number of those that are not globally defined.
+This fact is a manifestation of the local (in several aspects) nature of point symmetries in general.
+It is especially evident for
+Cases 1 – 4 , 6 and 10 – 12 ,
+where the associated bottom topographies are represented in polar coordinates.
+For $2\pi$ -periodic values of the parameter function $f$ in Cases 1 , 2 and 6 ,
+the corresponding bottom topographies have singularities only at the origin.
+In Case 3 with $\delta=0$ , the domain of $b$ with a fixed value of the parameter function $f$ merely depends on properties of this value, including its domain and its behavior at the origin.
+At the same time, for other values of $f$ and $\delta$ , and for the others of the above cases,
+the domains of bottom topographies are necessarily contained in the plane
+cut along the $x$ -axis from the origin to $+\infty$ ,
+and thus they cannot be preserved by transformations involving rotations
+even though such transformations are among Lie symmetries of these cases, except Case 6 . 3 3 3 The arbitrary element $b$ appears in the shallow water equations in the form of its gradient,
+and in contrast to $b$ itself, the gradient can be defined in rotationally invariant domains
+in Cases 3 and 10 with $\delta\neq 0$ . Nevertheless, such symmetries can still be used
+for finding (at least local) exact solutions of the shallow water equations with the discussed bottom topographies. Remark 10 . The maximal Lie invariance algebra $\mathfrak{g}_{0}$ of the system ( 1 ) with $b=0$ (Case 22a )
+was given in [ 32 , Section 5.4] via observing that this system coincides, after re-interpreting the meaning of the dependent variables,
+with the system of equations for two-dimensional isotropic gas flows with adiabatic exponent two,
+and the maximal Lie invariance algebra of the latter system had been known due to Ovsiannikov [ 45 , Section 11] .
+Cases 21 and 22d exhaust, up to $G^{\sim}$ -equivalence,
+Lie-symmetry extensions for shallow liquids in elliptic paraboloidal basins,
+where $b=-c_{1}x^{2}-c_{2}y^{2}$ with positive constants $c_{1}$ and $c_{2}$ .
+Similar Lie-symmetry extensions for the rotating reference frame were computed in [ 38 ] .
+For the subclass of systems $\mathcal{L}_{b}$ with rotationally invariant values of the arbitrary element $b$ , $b=b(r)$ ,
+a complete list of Lie-symmetry extensions inequivalent with respect to the equivalence group
+of this subclass is exhausted by Cases 3 δ=0 , 10 δ=0 , 11 α=0 , 12 α=0 , 22a , 22b and 22c .
+Although this subclass was considered in [ 55 ] , Case 10 δ=0 was missed there. Corollary 11 . The dimension of the maximal Lie invariance algebra of any system from the class ( 1 ) is not greater than nine.
+More specifically, $\dim\mathfrak{g}_{b}\in\{1,2,3,4,5,6,9\}$ for any $b=b(x,y)$ .
+We also have $\bigcup_{b}\mathfrak{g}_{b}\subsetneq\mathfrak{g}_{\mbox{\tiny$\langle\,\rangle$}}$ . Corollary 12 . A system from the class ( 1 ) is invariant with respect to a six-dimensional Lie algebra
+if and only if the corresponding value of the arbitrary element $b$ is at most a quadratic polynomial in $(x,y)$ . 4 Proof of the classification According to the method of furcate splitting,
+we fix an arbitrary value of the variable $t$ in the classifying equation ( 11 )
+and obtain the following template form of equations for the arbitrary element $b$ : $\begin{split}&a_{1}(xb_{x}+yb_{y})+a_{2}(yb_{x}-xb_{y})+a_{3}b_{x}+a_{4}b_{y}+a_{5}b\\
+&\qquad{}+a_{6}\frac{x^{2}+y^{2}}{2}+a_{7}x+a_{8}y+a_{9}=0,\end{split}$ (12) where $a_{1},\dots,a_{9}$ are constants.
+For each value of the arbitrary element $b$ ,
+we denote by $k=k(b)$ the maximal number of template-form equations
+with linearly independent coefficient tuples $\bar{a}^{i}=(a^{i}_{1},\dots,a^{i}_{9})$ , $i=1,\dots,k$ ,
+that are satisfied by this value of $b$ .
+It is obvious that $0\leqslant k\leqslant 9$ .
+Moreover, if $k>0$ , then for the system of template-form equations $\begin{split}&a^{i}_{1}(xb_{x}+yb_{y})+a^{i}_{2}(yb_{x}-xb_{y})+a^{i}_{3}b_{x}+a^{i}_{4}b_{y}+a^{i}_{5}b\\
+&\qquad{}+a^{i}_{6}\frac{x^{2}+y^{2}}{2}+a^{i}_{7}x+a^{i}_{8}y+a^{i}_{9}=0,\quad i=1,\dots,k,\end{split}$ (13) with $\mathop{\rm rank}\nolimits A=k$ to be consistent with respect to $b$ ,
+it is required that $k\leqslant 5$ .
+Here $A:=(a^{i}_{j})_{j=1,\dots,9}^{i=1,\dots,k}\,,\hskip 10.00002ptA_{l}:=(a^{i}_{j})_{j=1,\dots,l}^{i=1,\dots,k}\,,\hskip 10.00002pt1\leqslant l\leqslant 9,$ are the matrix of coefficients of the system ( 13 ) and
+its submatrix constituted by the first $l$ columns of $A$ , respectively, and thus $A_{9}=A$ .
+We also have $\mathop{\rm rank}\nolimits A_{5}=\mathop{\rm rank}\nolimits A=k$ , and, if $k<5$ , $\mathop{\rm rank}\nolimits A_{4}=k$ as well.
+Indeed, if the last condition is not satisfied,
+the system ( 13 ) has an algebraic consequence of the form $b=R(x,y):=\beta_{3}(x^{2}+y^{2})+\beta_{11}x+\beta_{12}y+\beta_{0}$ ,
+where $\beta_{0}$ , $\beta_{11}$ , $\beta_{12}$ and $\beta_{3}$ are constants,
+and such values of $b$ satisfy five independent template-form equations (see the case $k=5$ below), $xb_{x}+yb_{y}=xR_{x}+yR_{y}$ , $yb_{x}-xb_{y}=yR_{x}-xR_{y}$ , $b_{x}=R_{x}$ , $b_{y}=R_{y}$ , and $b=R$ . To check the consistency of the system ( 13 ) with $k>1$ ,
+to the $i$ th equation of this system for each $i=1,\dots,k$ we relate the vector field $\begin{split}\mathbf{v}_{i}={}&\left(a^{i}_{1}x+a^{i}_{2}y+a^{i}_{3}\right)\partial_{x}+\left(a^{i}_{1}y-a^{i}_{2}x+a^{i}_{4}\right)\partial_{y}\\
+&{}-\left(a^{i}_{5}b+\tfrac{1}{2}a^{i}_{6}(x^{2}+y^{2})+a^{i}_{7}x+a^{i}_{8}y+a^{i}_{9}\right)\partial_{b}.\end{split}$ (14) Note that $\mathbf{v}_{1},\dots,\mathbf{v}_{k}\in\mathfrak{a}$ , where $\mathfrak{a}:=\big\langle x\partial_{x}+y\partial_{y},\,-x\partial_{y}+y\partial_{x},\,\partial_{x},\,\partial_{y},\,b\partial_{b},\,(x^{2}+y^{2})\partial_{b},\,x\partial_{b},\,y\partial_{b},\,\partial_{b}\big\rangle.$ The span $\mathfrak{a}$ is closed with respect to the Lie bracket of vector fields,
+i.e., it is a Lie algebra, and thus $[\mathbf{v}_{i},\mathbf{v}_{i^{\prime}}]\in\mathfrak{a}$ , $i,i^{\prime}=1,\dots,k$ .
+More specifically, $\displaystyle[\mathbf{v}_{i},\mathbf{v}_{i^{\prime}}]\in[\mathfrak{a},\mathfrak{a}]=\big\langle\partial_{x},\,\partial_{y},(x^{2}+y^{2})\partial_{b},\,x\partial_{b},\,y\partial_{b},\,\partial_{b}\big\rangle\subset\mathfrak{a},\hskip 10.00002pti,i^{\prime}=1,\dots,k.$ In other words, the equation on $b$ that is associated with $[\mathbf{v}_{i},\mathbf{v}_{i^{\prime}}]$ is a differential consequence of the system ( 13 )
+and has the same template form ( 12 ).
+By its definition, the number $k=k(b)$ is equal to the maximal number of linearly independent vector fields
+associated with template-form equations for the corresponding value of the arbitrary element $b$ .
+Therefore, $\displaystyle[\mathbf{v}_{i},\mathbf{v}_{i^{\prime}}]\in\big\langle\mathbf{v}_{1},\dots,\mathbf{v}_{k}\big\rangle,\hskip 10.00002pti,i^{\prime}=1,\dots,k.$ (15) We can also use the counterpart of the condition ( 15 )
+for the projections $\hat{\mathbf{v}}_{1}$ , …, $\hat{\mathbf{v}}_{k}$ of the vector fields $\mathbf{v}_{1}$ , …, $\mathbf{v}_{k}$ to the space with the coordinates $(x,y)$ , $\displaystyle[\hat{\mathbf{v}}_{i},\hat{\mathbf{v}}_{i^{\prime}}]\in\big\langle\hat{\mathbf{v}}_{1},\dots,\hat{\mathbf{v}}_{k}\big\rangle,\hskip 10.00002pti,i^{\prime}=1,\dots,k.$ (16) To simplify the computation, we can gauge coefficients of the system ( 13 )
+by linearly combining its equations and using transformations from $G^{\sim}$ .
+In particular, we can set $a^{i}_{j}=1$ ,
+dividing the entire $i$ th equation of ( 13 ) by $a^{i}_{j}$ if $a^{i}_{j}\neq 0$ .
+In the case $(a^{i}_{1},a^{i}_{2})\neq(0,0)$ , we can make $a^{i}_{3}=a^{i}_{4}=0$ with point equivalence transformations of simultaneous shifts with respect to $x$ and $y$ .
+Another possibility is to use these shifts for setting $a^{i}_{7}=a^{i}_{8}=0$ if $a^{i}_{6}\neq 0$ .
+Similarly, if $a^{i}_{5}\neq 0$ , then we can shift $b$ to set $a^{i}_{9}=0$ . The case with $k=0$ corresponds to the kernel Lie invariance algebra $\mathfrak{g}^{\cap}$ of systems from the class ( 1 ),
+which is also the Lie invariance algebra for a general value of $b$ .
+For elements of $\mathfrak{g}^{\cap}$ ,
+the classifying equation ( 11 ) is identically satisfied by $b$ .
+Thus, we can successively split it with respect to $b$ and its derivatives
+and with respect to $x$ and $y$ to obtain $F^{1}_{t}=F^{2}=F^{3}=0$ and $c_{2}=c_{1}=0$ ,
+i.e., $\tau={\rm const}$ , $\xi^{1}=\xi^{2}=\eta^{1}=\eta^{2}=\eta^{3}=0$ .
+In other words,
+the algebra $\mathfrak{g}^{\cap}$ is one-dimensional and spanned by the only basis element $\partial_{t}$ , $\mathfrak{g}^{\cap}=\langle\partial_{t}\rangle.$ In the next sections, we separately consider the cases $k=1$ , …, $k=5$ .
+For each of these cases,
+we make the following steps, splitting the consideration into subcases
+depending on values of the parameters $a^{i}_{1}$ , …, $a^{i}_{9}$ , $i=1,\dots,k$ : • find the values of the parameters $a$ ’s
+for which the corresponding system ( 13 )
+is compatible and follow from the equation ( 11 ), • gauge, if possible, some of the parameters $a$ ’s
+by recombining template-form equations and by transformations from the group $G^{\sim}$ and re-denote the remaining parameters $a$ ’s, • integrate the system ( 13 )
+with respect to the arbitrary element $b$ , • gauge, if possible, the integration constant by transformations from the group $G^{\sim}$ , and • via solving the system of determining equations with respect to the parameters $c_{1}$ , $c_{2}$ , $F^{1}$ , $F^{2}$ and $F^{3}$ ,
+construct the maximal Lie invariance algebras $\mathfrak{g}_{b}$ of systems from the class ( 1 ) with the obtained values of $b$ . The order of the steps can vary, and some steps can intertwine. 4.1 One independent template-form equation In the case $k=1$ , the right-hand side of the equation ( 11 )
+is proportional to the right-hand side of the single equation ( 13 )
+with the proportionality coefficient $\lambda$ that is a sufficiently smooth function of $t$ , $\displaystyle F^{1}_{t}(xb_{x}+yb_{y})+c_{2}(yb_{x}-xb_{y})+F^{2}b_{x}+F^{3}b_{y}+2(F^{1}_{t}-c_{1})b$ $\displaystyle\hskip 20.00003pt{}-F^{1}_{ttt}\frac{x^{2}+y^{2}}{2}-F^{2}_{tt}x-F^{3}_{tt}y-F^{4}$ $\displaystyle=\lambda\bigg(a^{1}_{1}(xb_{x}+yb_{y})+a^{1}_{2}(yb_{x}-xb_{y})+a^{1}_{3}b_{x}+a^{1}_{4}b_{y}+a^{1}_{5}b$ $\displaystyle\hskip 20.00003pt{}+a^{1}_{6}\frac{x^{2}+y^{2}}{2}+a^{1}_{7}x+a^{1}_{8}y+a^{1}_{9}\bigg).$ The function $\lambda$ does not vanish for any vector field
+from the complement of $\mathfrak{g}^{\cap}$ in $\mathfrak{g}_{b}$ .
+We can split the last equation with respect to derivatives of $b$ , including $b$ itself, and the independent variables $x$ and $y$ .
+As a result, we obtain the system $\begin{split}&F^{1}_{t}=a^{1}_{1}\lambda,\quad c_{2}=a^{1}_{2}\lambda,\quad F^{2}=a^{1}_{3}\lambda,\quad F^{3}=a^{1}_{4}\lambda,\quad 2(F^{1}_{t}-c_{1})=a^{1}_{5}\lambda,\\[4.30554pt]
+&F^{1}_{ttt}=-a^{1}_{6}\lambda,\quad F^{2}_{tt}=-a^{1}_{7}\lambda,\quad F^{3}_{tt}=-a^{1}_{8}\lambda,\quad F^{4}=-a^{1}_{9}\lambda.\end{split}$ (17) The condition $\mathop{\rm rank}\nolimits A_{4}=k=1$ means here that $(a^{1}_{1},a^{1}_{2},a^{1}_{3},a^{1}_{4})\neq(0,0,0,0)$ .
+Therefore, the further consideration splits into three cases, $a^{1}_{1}\neq 0;\hskip 10.00002pta^{1}_{1}=0,\ a^{1}_{2}\neq 0;\hskip 10.00002pta^{1}_{1}=a^{1}_{2}=0,\ (a^{1}_{3},a^{1}_{4})\neq(0,0).$ $\boldsymbol{a^{1}_{1}\neq 0.}$ We can set $a^{1}_{1}=1$ by rescaling the entire equation ( 13 ).
+To simplify the computation we gauge other coefficients of ( 13 ) by transformations from $G^{\sim}$ .
+Thus, we can make $a^{1}_{3}=a^{1}_{4}=0$ with point equivalence transformations of simultaneous shifts with respect to $x$ and $y$ .
+Consequently, we have that $F^{2}=0$ and $F^{3}=0$ .
+Then the system ( 17 ) implies that $a^{1}_{7}=a^{1}_{8}=0$ .
+The equation ( 13 ) reduces in the polar coordinates $(r,\varphi)$ to the form $rb_{r}-a^{1}_{2}b_{\varphi}+a^{1}_{5}b+\frac{1}{2}a^{1}_{6}r^{2}+a^{1}_{9}=0.$ The integration of the above equation depends on the values of the parameters $a^{1}_{j}$ , $j=2,5,6,9$ . If $(a^{1}_{2},a^{1}_{5})=(0,2)$ , then we can set $a^{1}_{9}=0$ by shifts with respect to $b$ and $a^{1}_{6}\in\{0,-4,4\}$ by scaling equivalence transformations,
+which leads to Cases 6a , 6b and 6c of Theorem 6 , respectively. If $(a^{1}_{2},a^{1}_{5})\neq(0,2)$ , in view of the system ( 17 )
+we get that $c_{1}=(1-a^{1}_{5}/2)\lambda$ , $c_{2}=a^{1}_{2}\lambda$ .
+Thus, $\lambda$ is a constant, which yields that $F^{1}_{t}$ is also constant, and therefore $a^{1}_{6}=0$ .
+Depending on whether $a^{1}_{5}\neq 0$ or $a^{1}_{5}=0$ , we get Cases 1 and 2 , respectively.
+In the former case, we additionally set $a^{1}_{9}=0$ by shifts with respect to $b$ . $\boldsymbol{a^{1}_{1}=0,\,a^{1}_{2}\neq 0.}$ Rescaling the equation ( 13 ) and using shifts with respect to $x$ and $y$ ,
+we can set $a^{1}_{2}=1$ and $a^{1}_{3}=a^{1}_{4}=0$ .
+In view of the system ( 17 ), the above conditions for $a$ ’s imply $F^{1}_{t}=0$ , $F^{2}=F^{3}=0$ , $\lambda=c_{2}$ , and thus $a^{1}_{6}=a^{1}_{7}=a^{1}_{8}=0$ .
+In the polar coordinates $(r,\varphi)$ ,
+the equation ( 13 ) takes the form $b_{\varphi}=a^{1}_{5}b+a^{1}_{9}$ .
+Integrating this equation separately for $a^{1}_{5}=0$ and for $a^{1}_{5}\neq 0$ we get Cases 3 and 4 , respectively.
+Under the former condition, we additionally set $a^{1}_{9}=-1$ by equivalence transformations of scalings and alternating the signs of $(y,v)$ if $a^{1}_{9}\neq 0$ .
+We also can set $a^{1}_{9}=0$ by shifts with respect to $b$ if $a^{1}_{5}\neq 0$ . $\boldsymbol{a^{1}_{1}=a^{1}_{2}=0,\,(a^{1}_{3},a^{1}_{4})\neq(0,0).}$ Due to rotation equivalence transformations
+and the possibility of scaling the entire equation ( 13 ),
+we can rotate and scale the vector $(a^{1}_{3},a^{1}_{4})$ to set $a^{1}_{3}=1$ and $a^{1}_{4}=0$ .
+From the system ( 17 ), we derive that $F^{1}_{t}=F^{3}=0$ , $c_{2}=0$ , $2c_{1}=-a^{1}_{5}\lambda$ , $F^{2}=\lambda$ and thus $a^{1}_{6}=a^{1}_{8}=0$ and $F^{2}_{tt}=-a^{1}_{7}F^{2}$ .
+The template-form equation ( 13 ) reduces to $b_{x}+a^{1}_{5}b+a^{1}_{7}x+a^{1}_{9}=0$ . If $a^{1}_{5}=0$ , then we can set $a^{1}_{7}\in\{0,-1,1\}$ by using scaling equivalence transformations,
+which leads to Cases 7 , 8 and 9 , respectively.
+Note that $a^{1}_{9}=0\bmod G^{\sim}$ if $a^{1}_{7}\neq 0$ and $a^{1}_{9}\in\{0,-1\}\bmod G^{\sim}$ if $a^{1}_{7}=0$ . If $a^{1}_{5}\neq 0$ , then $\lambda$ is a constant, and thus $a^{1}_{7}=0$ .
+We can again set $a^{1}_{9}=0$ by shifts with respect to $b$ as well as $a^{1}_{5}=1$ up to scaling equivalence transformations and alternating signs of $(x,u)$ .
+This leads to Case 5 . 4.2 Two independent template-form equations For $k=2$ , the right-hand side of the equation ( 11 ) is
+a linear combination of right-hand sides of the first and the second equations of the system ( 13 )
+with coefficients $\lambda^{1}$ and $\lambda^{2}$ that depend on $t$ , $\displaystyle F^{1}_{t}(xb_{x}+yb_{y})+c_{2}(yb_{x}-xb_{y})+F^{2}b_{x}+F^{3}b_{y}+2(F^{1}_{t}-c_{1})b$ $\displaystyle\hskip 20.00003pt{}-F^{1}_{ttt}\frac{x^{2}+y^{2}}{2}-F^{2}_{tt}x-F^{3}_{tt}y-F^{4}$ $\displaystyle=\sum_{i=1}^{2}\lambda^{i}\bigg(a^{i}_{1}(xb_{x}+yb_{y})+a^{i}_{2}(yb_{x}-xb_{y})+a^{i}_{3}b_{x}+a^{i}_{4}b_{y}+a^{i}_{5}b$ $\displaystyle\hskip 20.00003pt{}+a^{i}_{6}\frac{x^{2}+y^{2}}{2}+a^{i}_{7}x+a^{i}_{8}y+a^{i}_{9}\bigg).$ Remark 13 . The coefficients $\lambda^{1}$ and $\lambda^{2}$ are not proportional
+with the same constant multiplier for all vector fields from $\mathfrak{g}_{b}$ since otherwise there is no additional Lie-symmetry extension in comparison with
+the more general case of Lie-symmetry extension with $k=1$ ,
+where the corresponding linear combination of equations of the system ( 13 )
+plays the role of a single template-form equation.
+For the same reason, both these coefficients do not vanish identically for some vector fields from $\mathfrak{g}_{b}$ . Splitting the resulting condition with respect to $b$ , its derivatives $b_{x}$ and $b_{y}$ and the independent variables $x$ and $y$ , we derive the system $\begin{split}&F^{1}_{t}=a^{1}_{1}\lambda^{1}+a^{2}_{1}\lambda^{2},\quad c_{2}=a^{1}_{2}\lambda^{1}+a^{2}_{2}\lambda^{2},\quad F^{2}=a^{1}_{3}\lambda^{1}+a^{2}_{3}\lambda^{2},\quad F^{3}=a^{1}_{4}\lambda^{1}+a^{2}_{4}\lambda^{2},\\
+&2(F^{1}_{t}-c_{1})=a^{1}_{5}\lambda^{1}+a^{2}_{5}\lambda^{2},\quad F^{1}_{ttt}=-a^{1}_{6}\lambda^{1}-a^{2}_{6}\lambda^{2},\\
+&F^{2}_{tt}=-a^{1}_{7}\lambda^{1}-a^{2}_{7}\lambda^{2},\quad F^{3}_{tt}=-a^{1}_{8}\lambda^{1}-a^{2}_{8}\lambda^{2},\quad F^{4}=-a^{1}_{9}\lambda^{1}-a^{2}_{9}\lambda^{2}.\end{split}$ (18) The further consideration for $k=2$ is partitioned into different cases
+depending on the rank of the submatrix $A_{2}$ that is constituted by the first two columns of $A$ .
+Since $\mathop{\rm rank}\nolimits A_{2}\leqslant 2$ , we have the cases $\mathop{\rm rank}\nolimits A_{2}=2$ , $\mathop{\rm rank}\nolimits A_{2}=1$ and $\mathop{\rm rank}\nolimits A_{2}=0$ . $\boldsymbol{\mathop{\rm rank}\nolimits A_{2}=2.}$ Linearly re-combining equations of the system ( 13 ),
+we can set the matrix $A_{2}$ to be the identity matrix, i.e., $a^{1}_{1}=a^{2}_{2}=1$ and $a^{1}_{2}=a^{2}_{1}=0$ .
+To further simplify the form of the system ( 13 ),
+we set $a^{1}_{3}=a^{1}_{4}=0$ by equivalence transformations of shifts with respect to $x$ and $y$ .
+In view of the condition ( 15 ),
+the vector fields $\mathbf{v}_{1}$ and $\mathbf{v}_{2}$ ,
+which are associated with the first and the second equations of the reduced system ( 13 ), respectively, commute.
+This yields the system of algebraic equations with respect to the coefficients $a^{i}_{j}$ , $\begin{split}&a^{2}_{3}=a^{2}_{4}=0,\quad a^{1}_{7}-a^{2}_{8}+a^{1}_{8}a^{2}_{5}-a^{1}_{5}a^{2}_{8}=0,\quad a^{1}_{8}+a^{2}_{7}-a^{1}_{7}a^{2}_{5}+a^{1}_{5}a^{2}_{7}=0,\\
+&2a^{2}_{6}-a^{1}_{6}a^{2}_{5}+a^{1}_{5}a^{2}_{6}=0,\quad a^{1}_{9}a^{2}_{5}-a^{1}_{5}a^{2}_{9}=0.\end{split}$ (19) The reduced form of the system ( 18 ) is $\begin{split}&F^{1}_{t}=\lambda^{1},\quad c_{2}=\lambda^{2},\quad F^{2}=0,\quad F^{3}=0,\quad(a^{1}_{5}-2)\lambda^{1}=-2c_{1}-a^{2}_{5}c_{2},\\
+&\lambda^{1}_{tt}+a^{1}_{6}\lambda^{1}+a^{2}_{6}\lambda^{2}=0,\quad a^{1}_{7}\lambda^{1}+a^{2}_{7}\lambda^{2}=0,\quad a^{1}_{8}\lambda^{1}+a^{2}_{8}\lambda^{2}=0,\quad F^{4}=-a^{1}_{9}\lambda^{1}-a^{2}_{9}\lambda^{2}.\end{split}$ (20) In view of Remark 13 ,
+the seventh and the eighth equations of the system ( 20 )
+imply $a^{1}_{7}=a^{2}_{7}=0$ and $a^{1}_{8}=a^{2}_{8}=0$ , respectively.
+The reduced form of the system ( 13 ) in the polar coordinates $(r,\varphi)$ is $rb_{r}+a^{1}_{5}b+\frac{1}{2}a^{1}_{6}r^{2}+a^{1}_{9}=0$ , $b_{\varphi}=a^{2}_{5}b+\frac{1}{2}a^{2}_{6}r^{2}+a^{2}_{9}$ .
+In view of the last equation of ( 19 ),
+up to shifts of $b$ we can set $a^{1}_{9}=a^{2}_{9}=0$ if $(a^{1}_{5},a^{2}_{5})\neq(0,0)$ . The further consideration depends on whether or not the parameter $a^{1}_{5}$ is equal to 2,
+and if it is not, whether or not the parameter $a^{2}_{5}$ is zero. If $a^{1}_{5}=2$ , then we can assume the parameter $a^{1}_{6}$ to belong to $\{0,-4,4\}$ ,
+and $a^{2}_{6}=a^{2}_{5}a^{1}_{6}/4$ .
+Integrating the corresponding system ( 13 ),
+we find the general form of the arbitrary element $b$ , $\displaystyle b=b_{0}r^{-2}\exp(a^{2}_{5}\varphi)-\frac{a^{1}_{6}}{8}r^{2},$ where the integration constant $b_{0}$ is nonzero
+since otherwise this value of $b$ is associated with the value $k=5$ .
+This is why we can scale $b_{0}$ by an equivalence transformation to $\varepsilon=\pm 1$ ,
+which leads, depending on the value of $a^{1}_{6}$ ,
+to Cases 12a , 12b and 12c of Theorem 6 . If $a^{1}_{5}\neq 2$ , then $\lambda^{1}$ is a constant.
+Then the sixth equation of the system ( 20 ) takes the form $a^{1}_{6}\lambda^{1}+a^{2}_{6}\lambda^{2}=0$ ,
+implying, according to Remark 13 ,
+that $a^{1}_{6}=a^{2}_{6}=0$ .
+Depending on whether $(a^{1}_{5},a^{2}_{5})\neq(0,0)$ or $a^{1}_{5}=a^{2}_{5}=0$ ,
+we obtain Cases 10 and 11 of Theorem 6 , respectively. $\boldsymbol{\mathop{\rm rank}\nolimits A_{2}=1.}$ Linearly recombining equations of the system ( 13 ),
+we reduce the matrix $A_{2}$ to the form $\displaystyle A_{2}=\begin{pmatrix}a^{1}_{1}&a^{1}_{2}\\
+0&0\end{pmatrix},$ i.e., $a^{2}_{1}=a^{2}_{2}=0$ and $(a^{1}_{1},a^{1}_{2})\neq(0,0)$ .
+We also have $(a^{2}_{3},a^{2}_{4})\neq(0,0)$ since $\mathop{\rm rank}\nolimits A_{4}=2$ .
+Hence we can set $a^{2}_{3}=1$ , $a^{2}_{4}=0$ by a rotation equivalence transformation
+and re-scaling the second equation and make $a^{1}_{3}=a^{1}_{4}=0$ by shifts of $x$ and $y$ .
+The condition ( 15 ) implies that $a^{1}_{2}=0$ and hence $a^{1}_{1}\neq 0$ ,
+so we can set $a^{1}_{1}=1$ by rescaling of the first equation.
+Then the condition ( 15 ) is equivalent to the commutation relation $[\mathbf{v}_{1},\mathbf{v}_{2}]=-\mathbf{v}_{2}$ ,
+yielding the following system of algebraic equations on the remaining coefficients $a^{i}_{j}$ : $a^{2}_{5}=0,\hskip 10.00002pta^{2}_{6}(a^{1}_{5}+3)=0,\hskip 10.00002pta^{2}_{8}(a^{1}_{5}+2)=0,\hskip 10.00002pta^{2}_{7}(a^{1}_{5}+2)=a^{1}_{6},\hskip 10.00002pta^{2}_{9}(a^{1}_{5}+1)=a^{1}_{7}.$ (21) The system ( 18 ) is simplified to $\begin{split}&F^{1}_{t}=\lambda^{1},\quad c_{2}=0,\quad F^{2}=\lambda^{2},\quad F^{3}=0,\quad 2c_{1}=(2-a^{1}_{5})\lambda^{1},\\
+&F^{1}_{ttt}=-a^{1}_{6}\lambda^{1}-a^{2}_{6}\lambda^{2},\quad F^{2}_{tt}=-a^{1}_{7}\lambda^{1}-a^{2}_{7}\lambda^{2},\quad a^{1}_{8}\lambda^{1}+a^{2}_{8}\lambda^{2}=0,\quad F^{4}=-a^{1}_{9}\lambda^{1}-a^{2}_{9}\lambda^{2}.\end{split}$ (22) In view of Remark 13 ,
+the eighth equation of the system ( 22 ) implies $a^{1}_{8}=a^{2}_{8}=0$ . Supposing that $a^{2}_{6}\neq 0$ , we successively derive from the second equation of ( 21 )
+and the system ( 22 ) that $a^{1}_{5}=-3$ , $\lambda^{1}$ is a constant, $a^{1}_{6}\lambda^{1}+a^{2}_{6}\lambda^{2}=0$ and, according to Remark 13 , $a^{1}_{6}=a^{2}_{6}=0$ ,
+which is a contradiction. Hence $a^{2}_{6}=0$ . It is obvious from the fifth equation of ( 22 ) that the value $a^{1}_{5}=2$ is special.
+For $a^{1}_{5}\neq 2$ , we obtain $\lambda^{1}={\rm const}$ , $F^{1}_{tt}=0$ , $a^{1}_{6}=0$ ,
+and thus the fourth equation of the system ( 21 ) takes the form $(a^{1}_{5}+2)a^{2}_{7}=0$ ,
+implying $a^{2}_{7}=0$ if $a^{1}_{5}\neq-2$ .
+Therefore, the value $a^{1}_{5}=-2$ is special as well.
+In the course of integrating the system ( 13 ), the value $a^{1}_{5}=0$ is additionally singled out.
+Moreover, if $a^{1}_{5}\neq 0$ , we can make $a^{1}_{9}=0$ using a shift of $b$ .
+As a result, we need to separately consider each of the above values $2$ , $0$ , $-2$ of $a^{1}_{5}$ and the case $a^{1}_{5}\notin\{-2,0,2\}$ . 1. $a^{1}_{5}=2$ . Shifting $b$ , we set $a^{1}_{9}=0$ .
+The system ( 21 ) reduces to the equations $a^{2}_{7}=a^{1}_{6}/4$ and $a^{2}_{9}=a^{1}_{7}/3$ . Let $a^{1}_{6}\neq 0$ .
+Then shifting $x$ and $b$ and recombining equations of the system ( 13 ),
+we also set $a^{1}_{7}=0$ , and consequently $a^{2}_{9}=0$ .
+The general solution to the system ( 13 ) is $b=b_{0}y^{-2}-\frac{1}{8}a^{1}_{6}(x^{2}+y^{2})$ ,
+where the integration constant $b_{0}$ is nonzero
+since otherwise this value of the arbitrary element $b$ is associated with $k=5$ .
+Using scaling equivalence transformations, we can set $b_{0},a^{1}_{6}/4\in\{-1,1\}$ .
+Depending on the sign of $a^{1}_{6}$ ,
+we obtain Cases 16b and 16c of Theorem 6 . If $a^{1}_{6}=0$ , then $a^{2}_{7}$ is also zero. Integrating ( 13 ), we get $b=b_{0}y^{-2}-a^{2}_{9}x$ ,
+where again the integration constant $b_{0}$ is nonzero since otherwise this value of the arbitrary element $b$ is associated with $k=5$ .
+Using scaling equivalence transformations and alternating the signs of $(x,u)$ ,
+we can set $b_{0}\in\{-1,1\}$ and $a^{2}_{9}\in\{0,-1\}$ ,
+which gives Case 16a . 2. $a^{1}_{5}=0$ . Then $a^{2}_{7}=0$ and $a^{1}_{7}=a^{2}_{9}$ .
+The system ( 13 ) integrates to $b=-a^{1}_{9}\ln|y|-a^{2}_{9}x+b_{0}$ ,
+where the parameter $a^{1}_{9}$ is nonzero since otherwise $k=5$ .
+The integration constant $b_{0}$ can be set to zero by shifts of $b$ ,
+as well as $a^{1}_{6}\in\{-1,1\}$ and $a^{2}_{9}\in\{-1,0\}$ up to scaling equivalence transformations and alternating the signs of $(x,u)$ .
+This leads to Case 14 . 3. $a^{1}_{5}=-2$ . Then $a^{1}_{7}=-a^{2}_{9}$ .
+We shift $b$ for setting $a^{1}_{9}=0$ .
+The general solution of the system ( 13 ) is $b=b_{0}y^{2}-\frac{1}{2}a^{2}_{7}x^{2}-a^{2}_{9}x$ but this value of the arbitrary element $b$ is associated with $k>2$ . 4. $a^{1}_{5}\notin\{-2,0,2\}$ .
+Solving the system ( 13 ), we obtain $b=b_{0}|y|^{-a^{1}_{5}}-a^{2}_{9}x$ ,
+where the integration constant $b_{0}$ has be nonzero for $k=2$ .
+Setting $b_{0}\in\{-1,1\}$ and $a^{2}_{9}\in\{-1,0\}$ by scaling equivalence transformations and alternating the signs of $(x,u)$ results in Case 13 . $\boldsymbol{\mathop{\rm rank}\nolimits A_{2}=0.}$ This means that $a^{1}_{1}=a^{1}_{2}=a^{2}_{1}=a^{2}_{2}=0$ .
+Since $\mathop{\rm rank}\nolimits A_{4}=2$ , we can linearly recombine equations of the system ( 13 )
+to set $a^{1}_{3}=a^{2}_{4}=1$ and $a^{1}_{4}=a^{2}_{3}=0$ .
+The compatibility condition ( 15 ) means
+that the vector fields $\mathbf{v}_{1}$ and $\mathbf{v}_{2}$ associated to equations of the reduced system ( 13 )
+commutes, $[\mathbf{v}_{1},\mathbf{v}_{2}]=0$ , which results in the system $\begin{split}&a^{2}_{6}-a^{1}_{7}a^{2}_{5}+a^{1}_{5}a^{2}_{7}=0,\quad a^{1}_{6}a^{2}_{5}-a^{1}_{5}a^{2}_{6}=0,\\
+&a^{1}_{6}+a^{1}_{8}a^{2}_{5}-a^{1}_{5}a^{2}_{8}=0,\quad a^{1}_{8}-a^{2}_{7}+a^{1}_{9}a^{2}_{5}-a^{1}_{5}a^{2}_{9}=0.\end{split}$ (23) Suppose that $a^{1}_{5}=a^{2}_{5}=0$ .
+The system ( 23 ) then reduces to $a^{1}_{6}=a^{2}_{6}=0$ and $a^{1}_{8}=a^{2}_{7}$ .
+In view of the last equation, we can set $a^{1}_{8}=a^{2}_{7}=0$ by rotation equivalence transformations.
+The general solution of the system ( 13 ) is $\displaystyle b=-\frac{a^{1}_{7}}{2}x^{2}-\frac{a^{2}_{8}}{2}y^{2}-a^{1}_{9}x-a^{2}_{9}y+b_{0},$ where $b_{0}$ is an integration constant.
+This form of the arbitrary element $b$ is related to the value $k=3$ if $a^{1}_{7}\neq a^{2}_{8}$ and to the value $k=5$ if $a^{1}_{7}=a^{2}_{8}$ , which contradicts the supposition $k=2$ . This is why $(a^{1}_{5},a^{2}_{5})\neq(0,0)$ , and we set $a^{1}_{5}=0$ and $a^{2}_{5}=-1$ by equivalence transformations of rotations, scalings and alternating signs.
+Then the first equation of the system ( 23 ) implies $a^{1}_{6}=0$ ,
+and thus the first six equations of the system ( 18 ) take the form $F^{1}_{t}=0$ , $c_{2}=0$ , $F^{2}=\lambda^{1}$ , $F^{3}=\lambda^{2}=2c_{1}$ and $a^{2}_{6}\lambda^{2}=0$ .
+In view of the last equation, we get $a^{2}_{6}=0$ .
+Therefore, the system ( 23 ) is equivalent to $a^{1}_{7}=a^{1}_{8}=0$ and $a^{2}_{7}=-a^{1}_{9}$ .
+The eighth equation of ( 18 ) gives $a^{2}_{8}\lambda^{2}=0$ , i.e., $a^{2}_{8}=0$ .
+We can set $a^{2}_{9}=0$ up to equivalence transformations of shifts of $b$ .
+The system ( 13 ) integrates to $b=b_{0}e^{y}+a^{2}_{7}x$ ,
+where the integration constant $b_{0}$ is nonzero
+since otherwise $b$ is a linear function, for which $k=5$ .
+Equivalence transformations of scalings and alternating the signs of $(x,u)$ allow us to set $b_{0}=\pm 1$ and $a^{2}_{7}\in\{0,1\}$ .
+This results in Case 15 of Theorem 6 . 4.3 More independent template-form equations We show below that $k>2$ if and only if $b$ is at most quadratic polynomial in $(x,y)$ . $\boldsymbol{k=3.}$ Since $\mathop{\rm rank}\nolimits A_{4}=\mathop{\rm rank}\nolimits A=k=3$ , we have that $\mathop{\rm rank}\nolimits A_{2}>0$ . Suppose that the submatrix $A_{2}$ is of rank two.
+Recombining equations of the system ( 13 ), we can reduce this submatrix to the form $A_{2}=\begin{pmatrix}1&0\\
+0&1\\
+0&0\end{pmatrix}.$ Then the projections $\hat{\mathbf{v}}_{1}$ , $\hat{\mathbf{v}}_{2}$ and $\hat{\mathbf{v}}_{3}$ of the vector fields $\mathbf{v}_{1}$ , $\mathbf{v}_{2}$ and $\mathbf{v}_{3}$ to the space with the coordinates $(x,y)$ are $\displaystyle\hat{\mathbf{v}}_{1}=(x+a^{1}_{3})\partial_{x}+(y+a^{1}_{4})\partial_{y},\hskip 10.00002pt\hat{\mathbf{v}}_{2}=(y+a^{2}_{3})\partial_{x}-(x-a^{2}_{4})\partial_{y},\hskip 10.00002pt\hat{\mathbf{v}}_{3}=a^{3}_{3}\partial_{x}+a^{3}_{4}\partial_{y}.$ (24) In view of the condition ( 16 ),
+the commutator $[\hat{\mathbf{v}}_{2},\hat{\mathbf{v}}_{3}]=-a^{3}_{4}\partial_{x}+a^{3}_{3}\partial_{y}$ should belong to the span $\langle\hat{\mathbf{v}}_{1},\hat{\mathbf{v}}_{2},\hat{\mathbf{v}}_{3}\rangle$ but this is not the case, which is a contradiction. Therefore, $\mathop{\rm rank}\nolimits A_{2}=1$ , and thus the matrix $A_{4}$ can be reduced to the form $A_{4}=\begin{pmatrix}a^{1}_{1}&a^{1}_{2}&0&0\\
+0&0&1&0\\
+0&0&0&1\end{pmatrix},\hskip 10.00002pt\mbox{where}\hskip 10.00002pt(a^{1}_{1},a^{1}_{2})\neq(0,0).$ Then the compatibility condition ( 15 ) is equivalent to
+the commutation relations $[\mathbf{v}_{1},\mathbf{v}_{2}]=-a^{1}_{1}\mathbf{v}_{2}+a^{1}_{2}\mathbf{v}_{3},\hskip 10.00002pt[\mathbf{v}_{1},\mathbf{v}_{3}]=-a^{1}_{1}\mathbf{v}_{3}-a^{1}_{2}\mathbf{v}_{2},\hskip 10.00002pt[\mathbf{v}_{2},\mathbf{v}_{3}]=0.$ From the first two commutation relations, we obtain $a^{1}_{1}a^{2}_{5}-a^{1}_{2}a^{3}_{5}=0$ , $a^{1}_{2}a^{2}_{5}+a^{1}_{1}a^{3}_{5}=0$ ,
+and thus $a^{2}_{5}=a^{3}_{5}=0$ since $(a^{1}_{1},a^{1}_{2})\neq(0,0)$ .
+Then the last commutation relation yields $a^{2}_{6}=a^{3}_{6}=0$ and $a^{3}_{7}=a^{2}_{8}$ .
+Up to rotation equivalence transformations, we can set $a^{2}_{8}=a^{3}_{7}=0$ .
+Under this gauge, from the former commutation relations we get the system $\displaystyle\begin{split}&(2a^{1}_{1}+a^{1}_{5})(a^{2}_{7}-a^{3}_{8})=0,\quad a^{1}_{2}(a^{2}_{7}-a^{3}_{8})=0,\\
+&a^{1}_{6}=(2a^{1}_{1}+a^{1}_{5})a^{2}_{7},\quad a^{1}_{7}=(a^{1}_{1}+a^{1}_{5})a^{2}_{9}-a^{1}_{2}a^{3}_{9},\quad a^{1}_{8}=(a^{1}_{1}+a^{1}_{5})a^{3}_{9}+a^{1}_{2}a^{2}_{9}.\end{split}$ (25) Since the arbitrary element $b$ satisfies the equations $b_{x}+a^{2}_{7}x+a^{2}_{9}=0$ and $b_{y}+a^{3}_{8}y+a^{3}_{9}=0$ ,
+it is a quadratic function of $(x,y)$ .
+More specifically, $\displaystyle b=-\frac{1}{2}a^{2}_{7}x^{2}-\frac{1}{2}a^{3}_{8}y^{2}-a^{2}_{9}x-a^{3}_{9}y$ (26) up to equivalence transformations of shifts with respect to $b$ .
+Hence $a^{2}_{7}\neq a^{3}_{8}$ since otherwise $k=5$ for this value of $b$ ,
+which contradicts the supposition $k=3$ .
+Then the system ( 25 ) reduces to $\displaystyle a^{1}_{2}=0,\hskip 10.00002pta^{1}_{5}=-2a^{1}_{1},\hskip 10.00002pta^{1}_{6}=0,\hskip 10.00002pta^{1}_{7}=-a^{1}_{1}a^{2}_{9},\hskip 10.00002pta^{1}_{8}=-a^{1}_{1}a^{3}_{9}$ and guarantees that the above value of $b$ satisfies the entire corresponding system ( 13 ). Modulo $G^{\sim}$ -equivalence, we can assume that $a^{2}_{7}=\pm 1$ , $a^{2}_{9}=0$ ; $|a^{3}_{8}|<|a^{2}_{7}|$ if $a^{2}_{7}a^{3}_{8}>0$ ; $a^{3}_{9}=0$ if $a^{3}_{8}\neq 0$ ; $a^{3}_{9}\in\{-1,0\}$ if $a^{3}_{8}=0$ . $G^{\sim}$ -inequivalent values of $b$ of the form ( 26 )
+with the associated maximal Lie invariance algebras are listed in
+Cases 17 – 21 of Theorem 6 . $\boldsymbol{k=4.}$ Since $\mathop{\rm rank}\nolimits A_{4}=\mathop{\rm rank}\nolimits A=4$ , by linearly re-combining the equations ( 13 ),
+we can set $A_{4}$ to be the $4\times 4$ identity matrix.
+In view of the form of the vector fields $\mathbf{v}_{1}$ , …, $\mathbf{v}_{4}$ associated to the equations of the reduced system ( 13 ),
+
+the compatibility condition ( 15 ) implies
+the commutation relations $[\mathbf{v}_{2},\mathbf{v}_{3}]=\mathbf{v}_{4},\hskip 10.00002pt[\mathbf{v}_{2},\mathbf{v}_{4}]=-\mathbf{v}_{3},\hskip 10.00002pt[\mathbf{v}_{3},\mathbf{v}_{4}]=0.$ From the first two commutation relations, we get that $a^{3}_{5}=a^{4}_{5}=0$ .
+The last commutation relation together with the previous restrictions on the coefficients $a^{i}_{j}$ yields $a^{3}_{6}=a^{4}_{6}=0$ and $a^{3}_{8}=a^{4}_{7}$ .
+Returning to the first two commutation relations, we obtain the equations $a^{2}_{6}=-2a^{3}_{8}+a^{2}_{5}a^{3}_{7}=2a^{3}_{8}+a^{2}_{5}a^{4}_{8},\hskip 10.00002pta^{3}_{7}-a^{4}_{8}+a^{2}_{5}a^{3}_{8}=0$ implying $a^{3}_{8}=0$ and $a^{3}_{7}=a^{4}_{8}$ .
+Since the arbitrary element $b$ satisfies the equations $b_{x}+a^{3}_{7}x+a^{3}_{9}=0$ and $b_{y}+a^{3}_{7}y+a^{4}_{9}=0$ ,
+it is a quadratic function of $(x,y)$ with the same coefficients of $x^{2}$ and of $y^{2}$ and with zero coefficient of $xy$ .
+This means that in fact $k=5$ , which contradicts the supposition $k=4$ . $\boldsymbol{k=5.}$ The $5\times 5$ matrix $A_{5}$ of the coefficients of the system ( 13 ) is of rank $5$ and, up to recombining equations of this system, can be assumed to be the $5\times 5$ identity matrix.
+Then the last equation of the system ( 13 ) implies
+that $b$ is the specific quadratic polynomial of $(x,y)$ , $b=-\tfrac{1}{2}a^{5}_{6}(x^{2}+y^{2})-a^{5}_{7}x-a^{5}_{8}y-a^{5}_{9}.$ There are four $G^{\sim}$ -inequivalent values of the arbitrary element $b$ among such quadratic polynomials, $b=0$ , $b=x$ , $b=\tfrac{1}{2}(x^{2}+y^{2})$ and $b=-\tfrac{1}{2}(x^{2}+y^{2})$ ,
+which correspond to Cases 22a , 22b , 22c and 22d of Theorem 6 , respectively. 5 Additional equivalence transformations and modified classification result It is obvious that the class ( 1 ) is not normalized.
+In other words, it possesses admissible transformations
+(e.g., those related to Lie symmetries of systems from this class)
+that are not generated by elements of $G^{\sim}$ .
+See [ 8 , 37 , 43 , 46 , 49 , 60 ] for definitions.
+Moreover, we will show below that the class ( 1 ) is not even semi-normalized
+since some of its admissible transformations cannot be presented as compositions
+of those generated by elements of $G^{\sim}$ and those generated by point symmetries of systems from this class.
+Such admissible transformations may lead to additional point equivalences
+among classification cases listed in Theorem 6 . Since we do not have the complete description of the equivalence groupoid of the class ( 1 ),
+in the course of looking for the above additional equivalences,
+we need to use algebraic tools that do not rely on this description.
+If two systems of differential equations are similar with respect to a point transformation,
+then the corresponding maximal Lie invariance algebras are isomorphic in the sense of abstract Lie algebras.
+Moreover, these maximal Lie invariance algebras are similar
+as realizations of Lie algebras by vector fields with respect to the same point transformation.
+This gives necessary conditions of similarity for systems of differential equations with respect to point transformations. Lie algebras of different dimensions are nonisomorphic.
+Hence we categorize the Lie algebras presented in Theorem 6 according to their dimensions to distinguish the cases that are definitely not equivalent to each other
+with respect to point transformations, • $\dim\mathfrak{g}_{b}=2$ : Cases 1 , 2 , 3 , 4 and 5 ; • $\dim\mathfrak{g}_{b}=3$ : Cases 6a , 6b , 6c , 7 , 8 , 9 , 10 and 11 ; • $\dim\mathfrak{g}_{b}=4$ : Cases 12a , 12b , 12c , 13 , 14 and 15 ; • $\dim\mathfrak{g}_{b}=5$ : Cases 16a , 16b and 16c ; • $\dim\mathfrak{g}_{b}=6$ : Cases 17 , 18 , 19 , 20 and 21 ; • $\dim\mathfrak{g}_{b}=9$ : Cases 22a , 22b , 22c and 22d . However, the same dimension of algebras does not ensure their isomorphism. Finding a pair of classification cases with isomorphic maximal Lie invariance algebras
+and fixing bases of these algebras that are concordant under the found algebra isomorphism,
+we aim to obtain a point transformation that respectively maps the basis elements of the first algebra to the basis elements of the second one.
+The existence of such a point transformation hints that the two classification cases may be equivalent with respect to this very transformation. In this way, we find three families of $G^{\sim}$ -inequivalent admissible transformations for the class ( 1 )
+that are not induced by equivalence transformations of this class and whose target arbitrary elements differ from their source arbitrary elements.
+In each of these families, the source arbitrary elements are parameterized by an arbitrary function of a single argument.
+We present these families jointly with
+the corresponding induced additional equivalences between classification cases of Theorem 6 : 1. $b=r^{-2}f(\varphi)-\frac{1}{2}r^{2}$ , $\tilde{b}=\tilde{r}^{-2}f(\tilde{\varphi})$ , $\tilde{t}=\tan t$ , $\tilde{x}=x\sec t$ , $\tilde{y}=y\sec t$ , $\tilde{u}=u\cos t+x\sin t$ , $\tilde{v}=v\cos t+y\sin t$ , $\tilde{h}=h\cos^{2}t$ , 6c $\to$ 6a , 12c $\to$ 12a , 16b $\to$ 16a δ=0 , 22d $\to$ 22a . 2. $b=r^{-2}f(\varphi)+\frac{1}{2}r^{2}$ , $\tilde{b}=\tilde{r}^{-2}f(\tilde{\varphi})$ , $\tilde{t}=\tfrac{1}{2}e^{2t}$ , $\tilde{x}=e^{t}x$ , $\tilde{y}=e^{t}y$ , $\tilde{u}=e^{-t}\left(u+x\right)$ , $\tilde{v}=e^{-t}\left(v+y\right)$ , $\tilde{h}=e^{-2t}h$ , 6b $\to$ 6a , 12b $\to$ 12a , 16c $\to$ 16a δ=0 , 22c $\to$ 22a . 3. $b=f(y)+x$ , $\tilde{b}=f(\tilde{y})$ , $\tilde{t}=t$ , $\tilde{x}=x+\tfrac{1}{2}t^{2}$ , $\tilde{y}=y$ , $\tilde{u}=u+t$ , $\tilde{v}=v$ , $\tilde{h}=h$ , 22b $\to$ 22a , 7 , 13 , 14 , 15 , 16a , 18 , 20 : 4 4 4 For Cases 18 and 20 , we should compose the corresponding point transformation with
+the permutation $(x,u)\leftrightarrow(y,v)$ ,
+which is related to an equivalence transformations of the class ( 1 ). $\delta=1$ $\to$ $\delta=0$ . The first and the second families of admissible transformations can be generalized to the rotating reference frame.
+The generalization of the transformation with $f=0$ from the first family
+to the rotating reference frame was found for the first time
+for the shallow water equations in cylindrical coordinates in [ 23 , Theorem 1] . Each of the above admissible transformations is $G^{\sim}$ -equivalent to no admissible transformation
+generated by point symmetries of systems from this class.
+Therefore, the class ( 1 ) is not semi-normalized. As a by-product, we also prove the following assertions. Proposition 14 . Any system from the class ( 1 ) that is invariant with respect to a nine-dimensional Lie algebra of vector fields
+is equivalent, up to point transformations, to the system from the same class with $b=0$ ,
+which is the system of shallow water equations with flat bottom topography. Proposition 15 . Any system from the class ( 1 ) with five-dimensional maximal Lie invariance algebra
+is reduced by a point transformation to the system from the same class with $b=\pm y^{-2}$ . For the other possible dimensions of maximal Lie invariance algebras of systems from the class ( 1 ),
+we prove the inequivalence of the remaining classification cases whenever it is possible to do so using the algebraic technique
+based on Mubarakzianov’s classification of Lie algebras up to dimension four [ 39 ] and Turkowski’s classification of six-dimensional solvable Lie algebras with four-dimensional nilradicals [ 59 ] .
+For convenience, we take these classifications in the form given in [ 16 ] .
+There, the notation of algebras from Mubarakzianov’s classification was modified, in particular,
+by indicating parameters for families of algebras,
+and the basis elements of the algebras from Turkowski’s classification
+were renumbered in order to have bases in $K$ -canonical forms.
+For each abstract Lie algebra appearing in the consideration,
+we present all the nonzero commutation relations among basis elements up to antisymmetry. Unfortunately, the algebraic criterion of inequivalence with respect to point transformations
+is not sufficiently powerful for systems with two-dimensional maximal Lie invariance algebra
+since there are only two nonisomorphic two-dimensional Lie algebras $2A_{1}$ and $A_{2.1}$ , the abelian and the non-abelian ones.
+Applying this criterion, we can only partition the corresponding classification cases into two sets,
+Cases 1 ν=2 and 3 with abelian two-dimensional Lie invariance algebras and
+Cases 1 ν≠2 , 2 , 4 and 5 with non-abelian two-dimensional Lie invariance algebras.
+There are definitely no point transformations between cases that belong to different sets. For the classification cases with maximal Lie invariance algebras of greater dimensions,
+the algebraic criterion is more advantageous.
+Thus, the maximal Lie invariance algebras
+in Cases 6a , 7 δ=0 , 8 , 9 , 10 and 11 of Theorem 6 are isomorphic to the three-dimensional Lie algebras ${\rm sl}(2,\mathbb{R})$ , $A_{3.1}$ , $A_{3.4}^{-1}$ , $A_{3.5}^{0}$ , $A_{2.1}\oplus A_{1}$ and $A_{2.1}\oplus A_{1}$ ,
+respectively.
+These Lie algebras are defined by the following commutation relations: ${\rm sl}(2,\mathbb{R})$ : $[e_{1},e_{2}]=e_{1},\ [e_{2},e_{3}]=e_{3},\ [e_{1},e_{3}]=-2e_{2}$ ; $A_{3.1}$ : $[e_{2},e_{3}]=e_{1}$ ; $A_{3.4}^{-1}$ : $[e_{1},e_{3}]=e_{1},\ [e_{2},e_{3}]=-e_{2}$ ; $A_{3.5}^{0}$ : $[e_{1},e_{3}]=-e_{2},\ [e_{2},e_{3}]=e_{1}$ ; $A_{2.1}\oplus A_{1}$ : $[e_{1},e_{2}]=e_{1}$ , and they are well known to be non-isomorphic to each other.
+This implies the pairwise inequivalence of the above cases of Lie-symmetry extensions with respect to point transformations,
+except the pair of Cases 10 and 11 . In a similar way, we prove that the maximal Lie invariance algebras
+associated with Cases 12a , 13 δ=0 , 14 δ=0 and 15 δ=0 are also not isomorphic to each other although all of them are four-dimensional.
+The corresponding abstract Lie algebras are ${\rm sl}(2,\mathbb{R})\oplus A_{1}$ (Case 12a ) as well as $A_{4,8}^{a}$ with $a=\nu/(2-\nu)$ if $\nu<1$ and with $a=(2-\nu)/\nu$ if $\nu\geqslant 1$ (Case 13 ),
+with $a=0$ (Case 14 ) and with $a=-1$ (Case 15 ),
+where $A_{4.8}^{a}$ , $|a|\leqslant 1$ : $[e_{2},e_{3}]=e_{1}$ , $[e_{1},e_{4}]=(1+a)e_{1}$ , $[e_{2},e_{4}]=e_{2}$ , $[e_{3},e_{4}]=ae_{3}$ . As a result, Cases 12a , 13 , 14 and 15 of Theorem 6 are equivalent neither to each other nor to other cases of this theorem with respect to point transformations.
+Moreover, the parameter $\nu$ in Case 13 cannot be gauged by point transformations. In Cases 17 , 18 δ=0 , 19 , 20 δ=0 and 21 ,
+the corresponding maximal Lie invariance algebras are six-dimensional solvable Lie algebras with four-dimensional abelian nilradicals
+that are respectively isomorphic to the algebras $N_{6.1}^{abcd}$ with $(a,b,c,d)=\frac{1}{2}(1-\beta,1+\beta,1+\beta,1-\beta)$ , $N_{6.2}^{-1,1,1}$ , $N_{6.13}^{-1/\beta,1/\beta,1,1}$ , $N_{6.16}^{01}$ , $N_{6.18}^{0\beta 1}$ from Turkowski’s classification with the following canonical commutation relations: $N_{6.1\mathstrut}^{abcd\mathstrut}$ ${}^{ac\neq 0\mathstrut}_{b^{2}+d^{2}\neq 0\mathstrut}$ $\begin{array}[]{l}[e_{1},e_{5}]=ae_{1},\ [e_{2},e_{5}]=be_{2},\ [e_{4},e_{5}]=e_{4},\\[2.15277pt]
+[e_{1},e_{6}]=ce_{1},\ [e_{2},e_{6}]=de_{2},\ [e_{3},e_{6}]=e_{3};\end{array}$ $N_{6.2\mathstrut}^{abc\mathstrut}$ $a^{2}{+}b^{2}{\neq}0$ $\begin{array}[]{l}[e_{1},e_{5}]=ae_{1},\ [e_{2},e_{5}]=e_{2},\ [e_{4},e_{5}]=e_{3},\\[2.15277pt]
+[e_{1},e_{6}]=be_{1},\ [e_{2},e_{6}]=ce_{2},\ [e_{3},e_{6}]=e_{3},\ [e_{4},e_{6}]=e_{4};\end{array}$ $N_{6.13\mathstrut}^{abcd\mathstrut}$ ${}^{a^{2}+c^{2}\neq 0\mathstrut}_{b^{2}+d^{2}\neq 0\mathstrut}$ $\begin{array}[]{l}[e_{1},e_{5}]=ae_{1},\ [e_{2},e_{5}]=be_{2},\ [e_{3},e_{5}]=e_{4},\ [e_{4},e_{5}]=-e_{3},\\[2.15277pt]
+[e_{1},e_{6}]=ce_{1},\ [e_{2},e_{6}]=de_{2},\ [e_{3},e_{6}]=e_{3},\ [e_{4},e_{6}]=e_{4};\end{array}$ $N_{6.16\mathstrut}^{ab\mathstrut}$ $\begin{array}[]{l}[e_{2},e_{5}]=e_{1},\ [e_{3},e_{5}]=ae_{3}+e_{4},\ [e_{4},e_{5}]=-e_{3}+ae_{4},\\[2.15277pt]
+[e_{1},e_{6}]=e_{1},\ [e_{2},e_{6}]=e_{2},\ [e_{3},e_{6}]=be_{3},\ [e_{4},e_{6}]=be_{4};\end{array}$ $N_{6.18\mathstrut}^{abc\mathstrut}$ $b{\neq}0$ $\begin{array}[]{l}[e_{1},e_{5}]=e_{2},\ [e_{2},e_{5}]=-e_{1},\ [e_{3},e_{5}]=ae_{3}+be_{4},\ [e_{4},e_{5}]=-be_{3}+ae_{4},\\[2.15277pt]
+[e_{1},e_{6}]=e_{1},\ [e_{2},e_{6}]=e_{2},\ [e_{3},e_{6}]=ce_{3},\ [e_{4},e_{6}]=ce_{4}.\end{array}$ Since the above isomorphisms are not as obvious as for algebras of lower dimensions,
+we present the necessary basis changes to $(e_{1},e_{2},e_{3},e_{4},e_{5},e_{6})$ : $\displaystyle\mbox{Case}~\ref{case17}\colon\hskip 10.00002pt\big(P(0,e^{\beta t}),\,P(0,e^{-\beta t}),\,P(e^{t},0),\,P(e^{-t},0),\,\tfrac{1}{2}D^{\rm s}+\tfrac{1}{2}D(1),\,\tfrac{1}{2}D^{\rm s}-\tfrac{1}{2}D(1)\big);$ $\displaystyle\mbox{Case}~\ref{case18}\colon\hskip 10.00002pt\big(P(e^{t},0),\,P(e^{-t},0),\,P(0,1),\,P(0,t),\,-D(1),\,D^{\rm s}\big)\hskip 10.00002pt\mbox{for}\hskip 10.00002pt\delta=0;$ $\displaystyle\mbox{Case}~\ref{case19}\colon\hskip 10.00002pt\big(P(e^{t},0),\,P(e^{-t},0),\,P(0,\cos\beta t),\,P(0,\sin\beta t),\,\beta^{-1}D(1),\,D^{\rm s}\big);$ $\displaystyle\mbox{Case}~\ref{case20}\colon\hskip 10.00002pt\big(P(0,1),\,P(0,t),\,P(\sin t,0),\,P(\cos t,0),\,-D(1),\,D^{\rm s}\big)\hskip 10.00002pt\mbox{for}\hskip 10.00002pt\delta=0;$ $\displaystyle\mbox{Case}~\ref{case21}\colon\hskip 10.00002pt\big(P(\cos t,0),\,P(\sin t,0),\,P(0,\cos\beta t),\,P(0,\sin\beta t),\,D(1),\,D^{\rm s}\big).$ The Lie algebras from Turkowski’s classification appearing in the consideration
+are not isomorphic to each other,
+including the pairs of algebras from the same series with different values of the parameter $\beta$ within ranges indicated in the corresponding cases of Theorem 6 .
+The claim on such pairs was checked by direct computation in Maple .
+This is why Cases 17 , 18 δ=0 , 19 , 20 δ=0 and 21 are inequivalent with respect to point transformations.
+Moreover, the parameter $\beta$ in Cases 17 , 19 and 21 cannot be gauged further. Analyzing the classification cases listed in Theorem 6 ,
+the additional equivalences among them that are found in this section
+and the above consideration of the necessary algebraic conditions for their inequivalence,
+we can suppose that the following assertion holds. Conjecture 16 . A complete list of inequivalent (up to all admissible transformations) Lie-symmetry extensions in the class ( 1 ) is exhausted by
+Cases 1 , 2 , 3 , 4 , 5 , 6a , 7 δ=0 , 8 , 9 , 10 , 11 , 12a , 13 δ=0 , 14 δ=0 , 15 δ=0 , 16a δ=0 , 17 , 18 δ=0 , 19 , 20 δ=0 , 21 and 22a of Theorem 6 . To prove this conjecture, we need to complete the verification of inequivalence of cases
+within the sets of cases $\{\ref{case1}_{\nu=2},\ref{case3}\}$ , $\{\ref{case1}_{\nu\neq 2},\ref{case2},\ref{case4},\ref{case5}\}$ and $\{\ref{case10},\ref{case11}\}$ as well as of impossibility of further gauging of constant parameters remaining in some cases.
+This could be done via constructing the equivalence groupoid of the class ( 1 ),
+which is a nontrivial and cumbersome problem.
+It is quite difficult to prove even principal properties of admissible transformations of the class ( 1 ),
+which can be conjectured after analyzing the equivalence transformations of this class,
+the Lie symmetries of equations from this class and
+the three obtained $G^{\sim}$ -inequivalent families of admissible transformations.
+These properties include
+the affineness with respect to the dependent variables,
+the fiber-preservation, i.e., the projectability to the space with the coordinates $(t,x,y)$ ,
+as well as the projectability to the space with the coordinate $t$ .
+We can also conjecture the explicit structure of the equivalence groupoid of the class ( 1 ). Conjecture 17 . $G^{\sim}$ -inequivalent non-identity admissible transformations of the class ( 1 )
+that are independent up to inversion and composing with each other
+and with admissible transformations generated by Lie symmetries of systems from this class
+are exhausted by the three families found in this section. 6 Conclusion We solved the group classification problem for the class ( 1 )
+of two-dimensional shallow water equations with variable bottom topography.
+The result is summarized in Theorem 6 . Applying the algebraic method, we first construct the generalized equivalence group $G^{\sim}$ of the class ( 1 ),
+which is presented in Theorem 5 and which is a necessary ingredient for solving the group classification problem.
+Note that the generalized equivalence group of the class ( 1 ) coincides with its usual equivalence group. The integration of the system of determining equations for the components of Lie symmetry vector fields,
+which is quite complicated in this case, required the application of the advanced method of furcate splitting.
+This method was additionally optimized via reducing
+the study of compatibility of template-form equations for the arbitrary element $b$ to checking whether the set of vector fields associated with these equations
+is closed with respect to the Lie bracket of vector fields.
+In the course of the classification, we continuously used transformations from the equivalence group $G^{\sim}$ for gauging various constants involved in the specific values of the arbitrary element $b$ ,
+which leads to a significant simplification of computations. One more complication of the group classification for the class ( 1 ) is that
+this class is not normalized and even not semi-normalized.
+In other words, this class possesses admissible point transformations
+which cannot be decomposed
+into those generated by equivalence transformations of the class
+and those generated by point symmetry transformations of systems belonging to it.
+Such admissible transformations give rise to additional point equivalences
+among the $G^{\sim}$ -inequivalent classification cases listed in Theorem 6 .
+In Section 5 we found
+three families of $G^{\sim}$ -inequivalent independent admissible transformations of the above kind in the class ( 1 )
+and presented
+the corresponding additional equivalences within the group-classification list for this class up to the $G^{\sim}$ -equivalence.
+Moreover, for all the pairs of listed cases that could be inequivalent to each other with respect to point transformations,
+we checked their inequivalences via comparing the structure of the corresponding maximal Lie invariance algebras,
+except for the inequivalences within three small subsets of cases with two- or three-dimensional maximal Lie invariance algebras.
+This allowed us to conjecture the group classification of the class ( 1 ) up to its equivalence groupoid $\mathcal{G}^{\sim}$ . In future work, we plan to continue our study of shallow water equations to extend and generalize the obtained results.
+The presented classification of Lie symmetries
+of systems of two-dimensional shallow water equations with variable bottom topography
+provides the basis for a wide research program for these systems
+within the framework of group analysis of differential equations,
+including classifications of admissible transformations, invariant solutions,
+generalized symmetries, cosymmetries, local conservations laws and Hamiltonian structures. The first natural step in the further study is to describe
+the equivalence groupoid $\mathcal{G}^{\sim}$ of the class ( 1 ),
+proving Conjecture 17 .
+If this conjecture is proved,
+then the proof of Conjecture 16 will be straightforward.
+Moreover, the class ( 1 ) will then give,
+in addition to the class studied in [ 43 , Section X] and in [ 42 ] ,
+one more example of a class that is not semi-normalized
+but in which all admissible transformations not generated by equivalence transformations
+are still related to Lie-symmetry extensions.
+An interesting question about the structure of $\mathcal{G}^{\sim}$ is
+how many $G^{\sim}$ -inequivalent maximal conditional equivalence groups of the class ( 1 ) exist;
+see related definitions in [ 46 , 49 ] . An obvious possibility for using Lie symmetries of systems from the class ( 1 )
+is given by Lie-symmetry reductions of these systems and the successive construction of their exact invariant solutions.
+Such solutions can be employed to testing numerical schemes for the shallow water equations.
+Moreover, Lie symmetries themselves may be applied
+for designing invariant parameterization and numerical schemes [ 12 , 47 ] .
+The detected additional point equivalences within the classification list are of great relevance here
+since they allow one to avoid repeating the construction of exact solutions for systems
+that are similar to simpler systems with respect to point transformations.
+We have already started to carry out
+the Lie-reduction procedure and the construction of invariant parameterization schemes
+for the system of shallow water equations with the flat bottom topography. The study of zeroth-order conservations laws of systems from the class ( 1 )
+was initiated in [ 4 , 6 ] but the results obtained there were preliminary or not exhaustive.
+Extending the optimized version of the method of furcate splitting
+suggested in Section 4 to conservation laws
+and following the solution of the group classification problem in the present paper,
+in [ 11 ] we have classified zeroth-order conservation laws
+of systems from the class ( 1 ) up to $G^{\sim}$ -equivalence
+and indicated all additional point equivalences between the listed cases
+of extensions of the space of zeroth-order conservation laws.
+We have also constructed minimal generating sets of zeroth-order conservation laws
+for these systems under the action of corresponding Lie-symmetry groups therein.
+Moreover, generalizing the well-known Hamiltonian representation for
+the shallow water equations with flat bottom topography,
+we have derived the Hamiltonian representations for all systems from the class ( 1 ).
+This has allowed us to connect the classification results of [ 11 ] and the present paper
+via the Noether relation between Hamiltonian symmetries and conservation laws.
+Due to knowing the Hamiltonian representations,
+we have shown that each system from the class ( 1 ) admits,
+along with zeroth-order conservation laws,
+an infinite-dimensional space of first-order conservation laws
+associated with distinguished (Casimir) functionals of the Hamiltonian operator,
+which is common for all such systems. We conjecture that for any system from the class ( 1 ),
+its generalized symmetries are in fact exhausted,
+up to the equivalence of generalized symmetries, by its Lie symmetries.
+If this conjecture is proved, then the Noether relation will imply
+that for any system from the class ( 1 )
+the entire space of its local conservation laws is spanned
+by the above zeroth- and first-order conservation laws. Acknowledgments The authors are grateful to the reviewers for useful suggestions.
+The authors also thank Michael Kunzinger, Dmytro Popovych and Galyna Popovych for helpful discussions.
+The research of AB and NP was undertaken, in part, thanks to funding from the Canada Research Chairs program,
+the InnovateNL LeverageR&D program and the NSERC Discovery program.
+The research of ROP was supported by the Austrian Science Fund (FWF), projects P25064 and P30233. References [1] Aechtner M., Kevlahan N. and Dubos T.,
+A conservative adaptive wavelet method for the shallow-water equations on the sphere, Q. J. Royal Meteorol. Soc. 141 (2015), 1712–1726. [2] Akhatov I.S., Gazizov R.K. and Ibragimov N.Kh.,
+Nonlocal symmetries. A heuristic approach,
+in Current Problems in Mathematics. Newest Results, Vol. 34 , Akad. Nauk SSSR, Vsesoyuz. Inst. Nauchn. i Tekhn. Inform., Moscow, 1989, pp. 3–83. (in Russian);
+translated in J. Soviet Math. 55 (1991), 1401–1450. [3] Aksenov A.V. and Druzhkov K.P.,
+Conservation laws and symmetries of the shallow water system above rough bottom, J. Phys. Conf. Ser. 722 (2016), 012001. [4] Aksenov A.V. and Druzhkov K.P.,
+Conservation laws of the two-dimensional shallow water system above the rough bottom, Vestnik natsional’nogo issledovatel’skogo yadernogo universiteta “MIFI” 7 (2018), 240–248 (in Russian). [5] Aksenov A.V. and Druzhkov K.P.,
+Conservation laws of the system of equations of one-dimensional shallow water over uneven bottom in Lagrange’s variables, Internat. J. Non-Linear Mech. 119 (2020) 103348, arXiv:1812.05096. [6] Atamanchuk-Anhel L., Classification of conservation laws of shallow-water equations ,
+M.Sc. thesis, Memorial University, St. John’s, 2019. [7] Bihlo A., Dos Santos Cardoso-Bihlo E. and Popovych R.O.,
+Algebraic method for finding equivalence groups, J. Phys.: Conf. Ser. 621 (2015), 012001, arXiv:1503.06487. [8] Bihlo A., Dos Santos Cardoso-Bihlo E.M. and Popovych R.O.,
+Complete group classification of a class of nonlinear wave equations, J. Math. Phys. 53 (2012), 123515, arXiv:1106.4801. [9] Bihlo A. and Popovych R.O.,
+Point symmetry group of the barotropic vorticity equation,
+in Proceedings of Fifth Workshop “Group Analysis of Differential Equations & Integrable Systems” (June 6–10, 2010, Protaras, Cyprus) ,
+University of Cyprus, Nicosia, 2011, pp. 15–27. [10] Bihlo A. and Popovych R.O.,
+Invariant discretization schemes for the shallow-water equations, SIAM J. Sci. Comput. 34 (2012), B810–B839, arXiv:1201.0498. [11] Bihlo A. and Popovych R.O.,
+Zeroth-order conservation laws of two-dimensional shallow water equations with variable bottom topography,
+arXiv:1912.11468. [12] Bihlo A. and Valiquette F.,
+Symmetry-preserving numerical schemes,
+in Symmetries and integrability of difference equations , CRM Ser. Math. Phys., Springer, Cham, 2017, pp. 261–324. [13] Bîlǎ N., Mansfield E. and Clarkson P.,
+Symmetry group analysis of the shallow water and semi-geostrophic equations, Quart. J. Mech. Appl. Math. 59 (2006), 95–123. [14] Bluman G. and Kumei S., Symmetries and differential equations ,
+Springer, New York, 1989. [15] Bluman G.W., Cheviakov A.F. and Anco S.C., Application of symmetry methods to partial differential equations ,
+Springer, New York, 2010. [16] Boyko V.M., Patera J. and Popovych R.O.,
+Computation of invariants of Lie algebras by means of moving frames, J. Phys. A 39 (2006), 5749–5762, arXiv:math-ph/0602046. [17] Boyko V.M. and Popovych V.O.,
+Group classification of Galilei-invariant higher-orders equations, Proceedings of Institute of Mathematics of NAS of Ukraine , 2001, 36 , 45–50. [18] Brecht R., Bauer W., Bihlo A., Gay-Balmaz F. and MacLachlan S.,
+Variational integrator for the rotating shallow-water equations on the sphere, Q. J. Royal Meteorol. Soc. 145 (2019), 1070–1088, arXiv:1808.10507. [19] Brecht R., Bihlo A., MacLachlan S. and Behrens J.,
+A well-balanced meshless tsunami propagation and inundation model, Adv. Water Resour. 115 (2018), 273–285, arXiv:1705.09831 . [20] Camassa R., Falqui G., Ortenzi G. and Pedroni M.,
+On the geometry of extended self-similar solutions of the Airy shallow water equations, SIGMA 15 (2019), 087, 17 pages, arXiv:1907.10920. [21] Carrier G.F. and Greenspan H.P.,
+Water waves of finite amplitude on a sloping beach, J. Fluid Mech. 4 (1958), 97–109. [22] Chesnokov A.A.,
+Symmetries and exact solutions of the rotating shallow-water equations, Eur. J. Appl. Math. 20 (2009), 461–477, arXiv:0808.1490. [23] Chesnokov A.A.,
+Properties and exact solutions of the equations of motion of shallow water in a spinning paraboloid, J. Appl. Math. Mech. 75 (2011), 350–356. [24] Chirkunov Yu.A., Dobrokhotov S.Yu., Medvedev S.B. and Minenkov D.S.,
+Exact solutions of one-dimensional nonlinear shallow water equations over even and sloping bottoms, Teoret. Mat. Fiz. 178 (2014), 322–345 (in Russian); translated in Theoret. and Math. Phys. 178 (2014), 278–298. [25] Cotter C.J. and Thuburn J.,
+A finite element exterior calculus framework for the rotating shallow-water equations, J. Comput. Phys. 257 (2014), 1506–1526. [26] De Leffe M., Le Touzé D. and Alessandrini B.,
+SPH modeling of shallow-water coastal flows, J. Hydraul. Res. 48 (2010), 118–125. [27] Dos Santos Cardoso-Bihlo E.M. and Popovych R.O.,
+Complete point symmetry group of the barotropic vorticity equation on a rotating sphere, J. Engrg. Math. 82 (2013), 31–38, arXiv:1206.6919. [28] Dos Santos Cardoso-Bihlo E. and Popovych R.O.,
+On the ineffectiveness of constant rotation in the primitive equations and their symmetry analysis,
+arXiv:1503.04168, 15 pp. [29] Flyer N., Lehto E., Blaise S., Wright G.B. and St-Cyr A.,
+A guide to RBF-generated finite differences for nonlinear transport: Shallow water simulations on a sphere, J. Comput. Phys. 231 (2012), 4078–4095. [30] Hydon P.E.,
+Discrete point symmetries of ordinary differential equations, Proc. R. Soc. Lond. Ser. A Math. Phys. Eng. Sci. 454 (1998), 1961–1972. [31] Hydon P.E.,
+How to construct the discrete symmetries of partial differential equations, Eur. J. Appl. Math. 11 (2000), 515–527. [32] Ibragimov N.H. Transformation groups applied to mathematical physics ,
+D. Reidel Publishing Co., Dordrecht, 1985. [33] Ivanova N.M., Popovych R.O. and Sophocleous C.,
+Group analysis of variable coefficient diffusion-convection equations. I. Enhanced group classification, Lobachevskii J. Math. 31 (2010), 100–122, arXiv:0710.2731. [34] Ivanova N.M. and Sophocleous C.,
+On the group classification of variable coefficient nonlinear diffusion–convection equations, J. Comput. Appl. Math. 197 (2006), 322–344. [35] Khamitova, R.S.,
+The structure of a group and the basis of conservation laws, Teoret. Mat. Fiz. 52 (1982), 244–251 (in Russian); translated in Theoret. and Math. Phys. 52 (1982), 777–781. [36] Kontogiorgis S., Popovych R.O. and Sophocleous C.,
+Enhanced symmetry analysis of two-dimensional Burgers system, Acta Appl. Math. 163 (2019), 91–128, arXiv:1709.02708. [37] Kurujyibwami C., Basarab-Horwath P. and Popovych R.O.,
+Algebraic method for group classification of (1+1)-dimensional linear Schrödinger equations, Acta Appl. Math. 157 (2018), 171–203, arXiv:1607.04118. [38] Levi D., Nucci M.C., Rogers C. and Winternitz P.,
+Group theoretical analysis of a rotating shallow liquid in a rigid container, J. Phys. A 22 (1989), 4743–4767. [39] Mubarakzyanov G.M.,
+On solvable Lie algebras, Izv. Vys. Ucheb. Zaved. Matematika (1963), no. 1 (32), 114–123 (in Russian). [40] Nikitin A.G. and Popovych R.O.,
+Group classification of nonlinear Schrödinger equations, Ukraïn. Mat. Zh. 53 (2001), 1053–1060 (in Ukrainian); translated in Ukrainian Math. J. 53 (2001), 1255–1265, arXiv:math-ph/0301009. [41] Olver P.J., Application of Lie groups to differential equations ,
+Springer, New York, 2000. [42] Opanasenko S.,
+Equivalence groupoid of a class of general Burgers–Korteweg–de Vries equations with space-dependent coefficients, Collection of Works of Institute of Mathematics , Kyiv 16 (2019), 130–154, arXiv:math-ph/1909.00036. [43] Opanasenko S., Bihlo A. and Popovych R.O.,
+Group analysis of general Burgers–Korteweg–de Vries equations, J. Math. Phys. 58 (2017), 081511, arXiv:1703.06932. [44] Opanasenko S., Boyko V. and Popovych R.,
+Enhanced group classification of nonlinear diffusion-reaction equations with gradient-dependent diffusion, J. Math. Anal. Appl. 484 (2020), 123739, arXiv:1804.08776. [45] Ovsiannikov L.V., Group analysis of differential equations ,
+Academic Press, New York – London, 1982. [46] Popovych R.O.,
+Classification of admissible transformations of differential equations,
+in Collection of Works of Institute of Mathematics , vol. 3, Institute of Mathematics, Kyiv, 2006, pp. 239–254. [47] Popovych R.O. and Bihlo A.,
+Symmetry preserving parameterization schemes, J. Math. Phys. 53 (2012), 073102, arXiv:1010.3010. [48] Popovych R.O. and Ivanova N.M.,
+New results on group classification of nonlinear diffusion–convection equations, J. Phys. A 37 (2004), 7547–7565, arXiv:math-ph/0306035. [49] Popovych R.O., Kunzinger M. and Eshraghi H.,
+Admissible transformations and normalized classes of nonlinear Schrödinger equations, Acta Appl. Math. 109 (2010), 315–359, arXiv:math-ph/0611061. [50] Salmon R., Lectures on geophysical fluid dynamics ,
+Oxford University Press, New York, 1998. [51] Salmon R.,
+A general method for conserving energy and potential enstrophy in shallow-water models, J. Atmos. Sci. 64 (2007), 515–531. [52] Siriwat P. and Kaewmanee C. and Meleshko S. V.,
+Symmetries of the hyperbolic shallow water equations and the Green–Naghdi model in Lagrangian coordinates, Int. J. Non-Linear Mech. 86 (2016), 185–195. [53] Szatmari S. and Bihlo A.,
+Symmetry analysis of a system of modified shallow-water equations, Commun. Nonlinear Sci. Numer. Simul. 19 (2014) 530–537. [54] Thacker W.C.,
+Some exact solutions to the nonlinear shallow-water wave equations, J. Fluid Mech. 107 (1981), 499–508. [55] Titov V.S.,
+On symmetries and conservation laws of the equations of shallow water with an axisymmetric profile of bottom, Acta Appl. Math. 15 (1989), 137–147. [56] Titov V.V. and Gonzalez F.I., Implementation and testing of the method of splitting tsunami (MOST) model , Tech. rep. , NOAA Technical Memorandum ERL PMEL-112, 1997. [57] Titov V.V. and Synolakis C.E.,
+Modeling of breaking and nonbreaking long-wave evolution and runup using VTCS-2, J. Waterway, Port, Coastal, Ocean Eng. 121 (1995), 308–316. [58] Titov V.V. and Synolakis C.E.,
+Numerical modeling of tidal wave runup, J. Waterway, Port, Coastal, Ocean Eng. 124 (1998), 157–171. [59] Turkowski P.,
+Solvable Lie algebras of dimension six, J. Math. Phys. 31 (1990), 1344–1350. [60] Vaneeva O.O., Bihlo A. and Popovych R.O.,
+Equivalence groupoid and group classification of a class of nonlinear wave and elliptic equations, arXiv:2002.08939, 38 pp. [61] Vaneeva O., Kuriksha O. and Sophocleous C.,
+Enhanced group classification of Gardner equations with time-dependent coefficients, Commun. Nonlinear Sci. Numer. Simulat. 22 (2015), 1243–1251, arXiv:1407.8488. [62] Vaneeva O.O., Popovych R.O. and Sophocleous C.,
+Extended group analysis of variable coefficient reaction–diffusion equations with exponential nonlinearities, J. Math. Anal. Appl. 396 (2012), 225–242, arXiv:1111.5198. [63] Vaneeva O.O., Sophocleous C. and Leach P.G.L.,
+Lie symmetries of generalized Burgers equations: application to boundary-value problems, J. Eng. Math. 91 (2015), 165–176, arXiv:1303.3548. [64] Vasilenko O.F. and Yehorchenko I.A.,
+Group classification of multidimensional nonlinear wave equations, Proceedings of Institute of Mathematics of NAS of Ukraine 36 (2001), 63–66 (in Ukrainian). [65] Wan A., Bihlo A. and Nave J.C.,
+The multiplier method to construct conservative finite difference schemes for ordinary and partial differential equations, SIAM J. Numer. Anal. 54 (2016), 86–119, arXiv:1411.7720. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

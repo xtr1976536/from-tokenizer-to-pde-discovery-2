@@ -1,0 +1,96 @@
+{
+  "version": "stage2-main-seen75-v2-20261115",
+  "dataset_revision": "0ae4426085d250787f96d5456bc0d30ce5f277d2",
+  "dataset_branch": "numerical",
+  "fields": [
+    "u",
+    "v",
+    "p"
+  ],
+  "spatial_dimensions": 2,
+  "equation_count": 3,
+  "input_frames": 20,
+  "output_frames": 20,
+  "batch_size": 32,
+  "successful_candidates_per_batch": 400,
+  "selection_candidates": 50,
+  "top_k": 10,
+  "reward_lambdas": [
+    0.5,
+    0.2,
+    0.0
+  ],
+  "sparsity_coefficient": 0.2,
+  "maximum_outer_epochs": 50,
+  "early_stop_patience": 10,
+  "relative_min_improvement": 0.01,
+  "seed": 525,
+  "maximum_sampling_attempts": 320000,
+  "pretraining": {
+    "maximum_epochs": 200,
+    "scheduler": "cosine",
+    "learning_rate": 0.0001,
+    "minimum_learning_rate": 1e-06,
+    "validation_metric": "token_weighted_formula_cross_entropy",
+    "patience": 15,
+    "min_delta": 1e-05,
+    "checkpoint": "minimum_validation_cross_entropy"
+  },
+  "sft": {
+    "epochs": 5,
+    "scheduler": "cosine",
+    "learning_rate": 1e-05,
+    "minimum_learning_rate": 1e-07,
+    "early_stopping": false,
+    "restore_previous_best": false
+  },
+  "region": {
+    "outer_cells": 1,
+    "solid_interface_cells": 1,
+    "requires_geometry_audit": true
+  },
+  "baseline": {
+    "source": "baseline_code",
+    "modify_original_code": false,
+    "unet_batch_size": 12,
+    "unet_updates": 10000,
+    "fno_batch_size": 32,
+    "fno_updates": 4000,
+    "checkpoint_selection_audited": false,
+    "training_roles": [
+      "train_fit",
+      "reward_holdout"
+    ],
+    "checkpoint_selection_role": "validation_stop"
+  },
+  "readiness": {
+    "simulation_data_audited": true,
+    "geometry_frozen": true,
+    "three_field_generator_available": false,
+    "three_equation_numerical_backend_available": false,
+    "system_term_count_audited": false,
+    "corpus_audited": true
+  },
+  "assets": {
+    "data_manifest": "data/cylinder_numerical_stage2_v1/manifest.json",
+    "data_storage": "server_only",
+    "legacy_eqgpt_reference": "stage2_main_v1/legacy_eqgpt/REFERENCE.json",
+    "legacy_training_corpus": "stage2_main_v1/legacy_eqgpt/training_corpus",
+    "legacy_checkpoint": "stage2_main_v1/legacy_eqgpt/checkpoint/model.pt",
+    "split_policy": "seen_temporal_blocks250_guard20_each_side_stride40_train75_val12p5_test12p5_v2",
+    "frozen_corpus": "outputs/eqgpt-research/stage2-corpus-2026-11-15/frozen/base-structures.jsonl",
+    "corpus_split_manifest": "outputs/eqgpt-research/stage2-corpus-2026-11-15/frozen/split-manifest.json"
+  },
+  "preparation": {
+    "corpus_structures": 212,
+    "three_field_structures": 80,
+    "upstream_selected_vocab_sizes": [
+      950,
+      1000,
+      1050
+    ],
+    "parameter_review_pending": true,
+    "formal_pretraining_started": false,
+    "main_experiment_started": false
+  }
+}

@@ -1,0 +1,362 @@
+Conservation laws of coupled semilinearwave equations Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract. 1 Introduction 2 Conservation laws 3 Classification results 3.1 Multipliers, conserved densities and fluxes 3.2 Conserved quantities 4 Concluding remarks References License: arXiv.org perpetual non-exclusive license arXiv:1510.09160v3 [math-ph] 03 Jun 2016 Conservation laws of coupled semilinear wave equations Stephen C. Anco 1 ,
+Chaudry Masood Khalique 2 1 department of mathematics and statistics,
+brock university st. catharines, on l2s3a1, canada 2 international institute for symmetry analysis and mathematical modelling department of mathematical sciences north-west university mafikeng campus, south africa Abstract. A complete classification of all low-order conservation laws is carried out
+for a system of coupled semilinear wave equations
+which is a natural two-component generalization of
+the nonlinear Klein-Gordon equation.
+The conserved quantities defined by these conservation laws
+are derived and their physical meaning is discussed. 1. Introduction We study a system of coupled semilinear wave equations $\displaystyle u_{tt}-a^{2}u_{xx}+f(u)+p(v)=0,$ (1a) $\displaystyle v_{tt}-b^{2}v_{xx}+g(v)+q(u)=0,$ (1b) where $a>0$ and $b>0$ are constant wave speeds, $f(u)$ and $g(v)$ are self-interaction terms, $p(v)$ and $q(u)$ are nonlinear coupling terms,
+such that $p^{\prime\prime}(v)\neq 0$ , $q^{\prime\prime}(u)\neq 0$ , and $f(0)=p(0)=g(0)=q(0)=0$ .
+With these conditions, the system is
+nonlinear (i.e. both equations contain a nonlinear term),
+coupled (i.e. neither equation is decoupled),
+and homogeneous (i.e. $u=v=0$ is a solution). In general this nonlinear system
+does not have a Lagrangian formulation.
+When $a=b$ and $f^{\prime}=g^{\prime}=\text{const.}$ , however,
+there is a Lagrangian given by $L=-u_{t}v_{t}+c^{2}u_{x}v_{x}\pm m^{2}uv+\int p(v)\,dv+\int q(u)\,du$ (2) with $c=\text{const.}$ and $m=\text{const.}$ ,
+which yields $0=\frac{\delta L}{\delta u}=v_{tt}-c^{2}v_{xx}\pm m^{2}v+q(u),\quad 0=\frac{\delta L}{\delta v}=u_{tt}-c^{2}u_{xx}\pm m^{2}u+p(v).$ (3) Note that these Euler-Lagrange equations are twisted in the sense that
+the variational derivative of $L$ with respect to $u,v$ yields
+the wave equations for $v,u$ , respectively.
+In both equations, $c>0$ is the constant wave speed and $m\geq 0$ is the mass coefficient. The semilinear system ( 1 ) is interesting
+as it is a natural two-component generalization of
+the nonlinear Klein-Gordon equation,
+where each wave component has a different speed.
+Systems of this type arise in many physical applications
+(see e.g. Ref. [ 1 ] ),
+and analytical aspects of these systems have been studied recently [ 1 , 2 ] .
+Conservation laws have been found in the case of cubic and other power nonlinearities [ 3 ] . The aim in the present paper is to derive a complete classification of
+all low-order conservation laws
+for the semilinear system ( 1 )
+without special assumptions on the nonlinearities.
+Conservation laws are important for many reasons:
+they yield conserved quantities and constants of motion;
+they can detect integrability;
+they provide potentials and nonlocally-related systems;
+they can be used to check accuracy of numerical solution methods;
+and they provide a way to develop good discretizations. In section 2 ,
+we apply the direct method of multipliers [ 4 , 5 , 6 , 7 ] to set up the standard determining equations for finding the conservation laws
+admitted by the semilinear system ( 1 ). In section 3 ,
+we first present the classification of all low-order conservation laws and their multipliers.
+Then we examine the conserved quantities defined by these conservation laws,
+and we discuss their physical meaning
+as well as their connection to variational symmetries in the case when
+the semilinear system ( 1 ) has a Lagrangian formulation ( 3 ). Several interesting results are obtained.
+In the case when the wave speeds are equal, $a=b$ ,
+we find that the semilinear system ( 1 )
+has conserved quantities
+representing energy, momentum, and boost momentum.
+This case also has a conserved energy-momentum quantity that depends on
+an arbitrary function of light-cone derivatives of $u,v$ when the nonlinearities are related by $f(u)=(1/\alpha)q(u)$ , $g(v)=\alpha p(v)$ , with $\alpha=\text{const.}$ .
+In the Lagrangian case,
+we find that for nonlinearities given by powers of $u,v$ ,
+the semilinear system ( 3 )
+has two additional conserved quantities
+representing a dilational energy-momentum and a $SO(2)$ rotation charge.
+Somewhat surprisingly,
+without any conditions relating the wave speeds $a$ and $b$ ,
+the semilinear system ( 1 ) also admits
+elementary conserved quantities, which are linear in derivatives of $u,v$ . In section 4 ,
+we make some concluding remarks. 2. Conservation laws A conservation law of the semilinear system ( 1 )
+is a space-time divergence such that $D_{t}T(t,x,u,v,u_{t},v_{t},u_{x},v_{x},\ldots)+D_{x}X(t,x,u,v,u_{t},v_{t},u_{x},v_{x},\ldots)=0$ (4) holds for all solutions $(u(t,x),v(t,x))$ of the system ( 1 ).
+The spatial integral of the conserved density $T$ formally satisfies $\frac{d}{dt}\int_{-\infty}^{\infty}Tdx=-X\Big|_{-\infty}^{\infty}$ (5) and so if the spatial flux $X$ vanishes at spatial infinity,
+then ${\mathcal{C}}[u,v]=\int_{-\infty}^{\infty}Tdx=\text{const.}$ (6) formally yields a conserved quantity
+for the semilinear system ( 1 ).
+Conversely, any such conserved quantity arises from
+a conservation law ( 4 ).
+Two conservation laws are equivalent if
+their conserved densities $T(t,x,u,v,u_{t},v_{t},u_{x},v_{x},\ldots)$ differ by a total $x$ -derivative $D_{x}\Theta(t,x,u,v,u_{t},v_{t},u_{x},v_{x},\ldots)$ on all solutions $(u(t,x),v(t,x))$ ,
+thereby giving the same conserved quantity $\mathcal{C}[u,v]$ up to boundary terms.
+Correspondingly,
+the fluxes $X(t,x,u,v,u_{t},v_{t},u_{x},v_{x},\ldots)$ of two equivalent conservation laws
+differ by a total time derivative $-D_{t}\Theta(t,x,u,v,u_{t},v_{t},u_{x},v_{x},\ldots)$ on all solutions $(u(t,x),v(t,x))$ .
+A conservation law is called locally trivial if $T=\Phi+D_{x}\Theta,\quad X=\Psi-D_{t}\Theta$ (7) such that $\Phi=\Psi=0$ holds on all solutions $(u(t,x),v(t,x))$ .
+Thus, equivalent conservation laws differ by a locally trivial conservation law. The set of all conservation laws (up to equivalence)
+admitted by the semilinear system ( 1 )
+forms a vector space on which there is a natural action [ 8 , 9 , 10 ] by the group of all Lie symmetries of the system ( 1 ). Each conservation law ( 4 ) has
+an equivalent characteristic form in which $u_{tt}$ , $v_{tt}$ , and all derivatives of $u_{tt}$ and $v_{tt}$ are eliminated from $T$ and $X$ through use of the system ( 1 )
+and its differential consequences.
+There are two steps to obtaining the characteristic form.
+Let ${\mathcal{E}}$ denote the space of all solutions $(u(t,x),v(t,x))$ of the system ( 1 ).
+First,
+we eliminate $u_{tt},v_{tt},u_{ttx},v_{ttx},\ldots$ to get $\hat{T}=T\big|_{\mathcal{E}}=T-\Phi,\quad\hat{X}=X\big|_{\mathcal{E}}=X-\Psi$ (8) where $\hat{T}$ and $\hat{X}$ are functions only of $t,x,u,v,u_{t},v_{t},u_{x},v_{x},u_{tx},v_{tx},u_{xx},v_{xx},u_{txx},v_{txx},\ldots$ ,
+so that, on all solutions of the semilinear system ( 1 ), $\big(D_{t}\hat{T}+D_{x}\hat{X}\big)\big|_{\mathcal{E}}=0$ (9) holds with $\displaystyle\begin{aligned} D_{t}\big|_{\mathcal{E}}&=\partial_{t}+u_{t}\partial_{u}+v_{t}\partial_{v}+u_{tx}\partial_{u_{x}}+v_{tx}\partial_{v_{x}}+\cdots+\big(a^{2}u_{xx}-f(u)-p(v)\big)\partial_{u_{t}}\\
+&\qquad+\big(b^{2}v_{xx}-g(v)-q(u)\big)\partial_{v_{t}}+D_{x}\big(a^{2}u_{xx}-f(u)-p(v)\big)\partial_{u_{tx}}\\
+&\qquad+D_{x}\big(b^{2}v_{xx}-g(v)-q(u)\big)\partial_{v_{tx}}+\cdots\end{aligned}$ (10) $\displaystyle D_{x}\big|_{\mathcal{E}}=D_{x}.$ (11) Next, moving off of solutions,
+we use the identity $\displaystyle D_{t}=$ $\displaystyle D_{t}\big|_{\mathcal{E}}+\big(u_{tt}-a^{2}u_{xx}+f(u)+p(v)\big)\partial_{u_{t}}+\big(v_{tt}-b^{2}v_{xx}+g(v)+q(u)\big)\partial_{v_{t}}$ (12) $\displaystyle+D_{x}\big(u_{tt}-a^{2}u_{xx}+f(u)+p(v)\big)\partial_{u_{tx}}+D_{x}\big(v_{tt}-b^{2}v_{xx}+g(v)+q(u)\big)\partial_{v_{tx}}$ $\displaystyle+\cdots.$ This yields the characteristic form of the conservation law ( 4 ) $D_{t}\hat{T}+D_{x}\big(\hat{X}+\hat{\Psi}\big)=\big(u_{tt}-a^{2}u_{xx}+f(u)+p(v)\big)Q^{u}+\big(v_{tt}-b^{2}v_{xx}+g(v)+q(u)\big)Q^{v}$ (13) holding identically,
+where $\displaystyle\hat{\Psi}$ $\displaystyle=E_{u_{tx}}(\hat{T})\big(u_{tt}-a^{2}u_{xx}+f(u)+p(v)\big)+E_{v_{tx}}(\hat{T})\big(v_{tt}-b^{2}v_{xx}+g(v)+q(u)\big)$ (14) $\displaystyle+E_{u_{txx}}(\hat{T})D_{x}(u_{tt}-a^{2}u_{xx}+f(u)+p(v)\big)+E_{v_{txx}}(\hat{T})D_{x}\big(v_{tt}-b^{2}v_{xx}+g(v)+q(u)\big)$ $\displaystyle+\cdots$ is a trivial flux,
+and where the pair of functions $Q^{u}=E_{u_{t}}(\hat{T}),\quad Q^{v}=E_{v_{t}}(\hat{T})$ (15) is called a multiplier (or a characteristic ).
+Here $E_{w}=\partial_{w}-D_{x}\partial_{w_{x}}+D_{x}^{2}\partial_{w_{xx}}-\cdots$ denotes the (spatial) Euler operator [ 8 , 7 ] with respect to a variable $w$ .
+This operator has the important property [ 8 , 7 ] that a function $h(t,x,w,w_{x},w_{xx},\ldots)$ is annihilated by $E_{w}$ iff the function is a total (spatial) derivative, $h=D_{x}\theta(t,x,w,w_{x},w_{xx},\ldots)$ . The relation ( 15 ) between $\hat{T}$ and $(Q^{u},Q^{v})$ shows that a multiplier will be uniquely determined as a function of $t,x,u,v,u_{t},v_{t},u_{x},v_{x},u_{tx},v_{tx},u_{xx},v_{xx},u_{txx},v_{txx},\ldots$ if $\hat{T}$ has no dependence on $u_{tt}$ , $v_{tt}$ , and their derivatives.
+In particular, the multiplier for a locally trivial conserved density $\hat{T}=D_{x}\Theta$ vanishes, since $E_{u_{t}}(D_{x}\Theta)=E_{v_{t}}(D_{x}\Theta)=0$ .
+Conversely, for a trivial multiplier $(Q^{u},Q^{v})=0$ ,
+the relation ( 15 ) implies that $\hat{T}=D_{x}\Theta+\hat{T}_{0}$ holds for some function $\hat{T}_{0}(t,x,u,v,u_{x},v_{x},u_{xx},v_{xx},\ldots)$ with no dependence on $u_{t}$ , $v_{t}$ , and their derivatives.
+Then the characteristic equation ( 13 ) yields the relation $D_{t}\hat{T}_{0}+D_{x}\hat{X}_{0}=0$ , which holds identically,
+where $\hat{X}_{0}=D_{t}\Theta-\hat{X}$ .
+This determines $\hat{T}_{0}=D_{x}\Theta_{0}$ and $\hat{X}_{0}=-D_{t}\Theta_{0}$ ,
+showing that $\hat{T}=D_{x}(\Theta+\Theta_{0})$ is locally trivial. Thus, there is a one-to-one relation between
+multipliers and conserved densities (up to equivalence).
+All multipliers $\displaystyle(Q^{u}(t,x,u,v,u_{t},v_{t},u_{x},v_{x},u_{tx},v_{tx},u_{xx},v_{xx},u_{txx},v_{txx},\ldots),$ (16) $\displaystyle Q^{v}(t,x,u,v,u_{t},v_{t},u_{x},v_{x},u_{tx},v_{tx},u_{xx},v_{xx},u_{txx},v_{txx},\ldots))$ (with a finite differential order)
+are determined by the condition that
+their summed product with the equations in the semilinear system ( 1 )
+is a total space-time divergence.
+Such divergences have the characterization that their variational derivative
+with respect to $u$ and $v$ vanishes identically [ 8 , 7 ] .
+This condition $\displaystyle\frac{\delta}{\delta u}\Big(\big(u_{tt}-a^{2}u_{xx}+f(u)+p(v)\big)Q^{u}+\big(v_{tt}-b^{2}v_{xx}+g(v)+q(u)\big)Q^{v}\Big)=0$ (17a) $\displaystyle\frac{\delta}{\delta v}\Big(\big(u_{tt}-a^{2}u_{xx}+f(u)+p(v)\big)Q^{u}+\big(v_{tt}-b^{2}v_{xx}+g(v)+q(u)\big)Q^{v}\Big)=0$ (17b) can be split in an explicit form with respect to $u_{tt},v_{tt},u_{ttx},v_{ttx},u_{ttxx},v_{ttxx},\ldots$ ,
+which yields an equivalent set of equations [ 4 , 5 , 6 ] $D_{t}^{2}Q^{u}-a^{2}D_{x}^{2}Q^{u}+f^{\prime}(u)Q^{u}+q^{\prime}(u)Q^{v}=0,\quad D_{t}^{2}Q^{v}-b^{2}D_{x}^{2}Q^{v}+g^{\prime}(v)Q^{v}+p^{\prime}(v)Q^{u}=0,$ (18) and $\displaystyle\partial_{u_{t}}Q^{u}=E_{u_{t}}(Q^{u}),\quad\partial_{u_{t}}Q^{v}=E_{v_{t}}(Q^{u}),\quad\partial_{v_{t}}Q^{u}=E_{u_{t}}(Q^{v}),\quad\partial_{v_{t}}Q^{v}=E_{v_{t}}(Q^{v}),$ (19) $\displaystyle\partial_{u_{tx}}Q^{u}=-E_{u_{t}}^{(1)}(Q^{u}),\ \partial_{u_{tx}}Q^{v}=-E_{v_{t}}^{(1)}(Q^{u}),\ \partial_{v_{tx}}Q^{u}=-E_{u_{t}}^{(1)}(Q^{v}),\ \partial_{v_{tx}}Q^{v}=-E_{v_{t}}^{(1)}(Q^{v}),$ $\displaystyle\partial_{u_{txx}}Q^{u}=-E_{u_{t}}^{(2)}(Q^{u}),\ \partial_{u_{txx}}Q^{v}=-E_{v_{t}}^{(2)}(Q^{u}),\ \partial_{v_{txx}}Q^{u}=-E_{u_{t}}^{(2)}(Q^{v}),\ \partial_{v_{txx}}Q^{v}=-E_{v_{t}}^{(2)}(Q^{v}),$ $\displaystyle\text{ etc. }$ holding for all solutions $(u(t,x),v(t,x))$ of the semilinear system ( 1 ).
+Here $E_{w}^{(1)}=\partial_{w_{x}}-2D_{x}\partial_{w_{xx}}+3D_{x}^{2}\partial_{w_{xxx}}-\cdots$ , $E_{w}^{(2)}=\partial_{w_{xx}}-3D_{x}\partial_{w_{xxx}}+6D_{x}^{2}\partial_{w_{xxxx}}-\cdots$ ,
+etc. denote higher (spatial) Euler operators [ 8 ] .
+These equations ( 18 )–( 19 ) constitute
+the standard determining system for multipliers [ 5 , 6 , 7 ] . In the case when the semilinear system ( 1 )
+is a Lagrangian system ( 3 ),
+the first equation ( 18 )
+is simply the determining equation for symmetries ${\rm X}=Q^{u}\partial_{u}+Q^{v}\partial_{v}$ in evolutionary form [ 8 , 11 , 7 ] .
+The second equation ( 19 ) is then equivalent to the condition
+that the Lagrangian ( 2 ) is invariant under ${\rm X}=Q^{u}\partial_{u}+Q^{v}\partial_{v}$ to within a total space-time divergence. Hence, in the Lagrangian case,
+the determining equations ( 18 ) and ( 19 )
+for multipliers are equivalent to the condition [ 12 ] that ${\rm X}=Q^{u}\partial_{u}+Q^{v}\partial_{v}$ is a variational symmetry
+of the semilinear system. In the general case,
+the first equation ( 18 ) instead is the adjoint of the symmetry determining equation,
+and its solutions $(Q^{u},Q^{v})$ are called adjoint-symmetries .
+The second equation ( 19 ) then comprises the Helmholtz conditions
+which are necessary and sufficient for $(Q^{u},Q^{v})$ to be
+an Euler-Lagrange expression ( 15 ).
+Consequently, in this case [ 13 , 8 , 5 , 6 ] ,
+multipliers are simply adjoint-symmetries that have a variational form,
+and the determination of conservation laws via multipliers is
+a kind of adjoint problem [ 4 ] of the determination of symmetries. For any solution of the multiplier determining equations ( 18 ) and ( 19 ),
+a conserved density and a flux can be recovered
+either by [ 14 , 7 ] directly integrating the relation ( 15 ) between $(Q^{u},Q^{v})$ and $\hat{T}$ ,
+or by [ 8 , 5 , 6 ] using a homotopy integral formula which expresses $\hat{T}$ in terms of $(Q^{u},Q^{v})$ (see also Ref. [ 15 , 16 ] ). A conservation law of the semilinear system ( 1 )
+is said to be of low order [ 17 ] if the only derivatives of $u,v$ that appear in its multiplier
+are related to the leading derivatives $u_{tt},v_{tt},u_{xx},v_{xx}$ in the system
+by differentiation with respect to $t,x$ .
+This means that the multiplier for a low-order conservation law is at most first-order, $Q=(Q^{u}(t,x,u,v,u_{t},v_{t},u_{x},v_{x}),Q^{v}(t,x,u,v,u_{t},v_{t},u_{x},v_{x})).$ (20) In general, for wave equations,
+conservation laws of physical importance, such as energy and momentum,
+are of low order,
+while conservation laws connected with integrability are typically of higher order. 3. Classification results We will now classify all low-order conservation laws ( 9 )
+admitted by the semilinear system ( 1 ).
+This means finding all multipliers ( 15 )
+with a general first-order form ( 20 ).
+The corresponding conserved densities and fluxes will then have the following
+general form. From relation ( 15 )
+and properties of the (spatial) Euler operator,
+a first-order multiplier ( 20 ) determines that a conserved density
+has the form $\hat{T}=T(t,x,u,v,u_{t},v_{t},u_{x},v_{x})+T_{0}+D_{x}\Theta$ where, without loss of generality,
+the function $T_{0}$ contains no purely first-order terms
+and no $t$ -derivatives of $u,v$ .
+The characteristic equation ( 13 ) then yields $D_{t}|_{\mathcal{E}}T+D_{t}T_{0}+D_{x}\hat{X}=0$ .
+This relation splits with respect to all derivatives of $u,v$ with order greater than two.
+Starting at the highest order terms,
+the splitting leads to $T_{0}=D_{x}\Theta+\Phi$ and $\hat{X}=-D_{t}\Theta+X+\Psi$ by a standard descent argument in derivatives of $u,v$ ,
+where $\Phi|_{\mathcal{E}}=0$ and $\Psi|_{\mathcal{E}}=0$ are trivial terms,
+and where $X(t,x,u,v,u_{t},v_{t},u_{x},v_{x})$ is first-order.
+Hence, the non-trivial part of $\hat{T}$ and $\hat{X}$ consists of
+only the first-order terms $T$ and $X$ .
+Conversely,
+a first-order conserved density $\hat{T}(t,x,u,v,u_{t},v_{t},u_{x},v_{x})$ and a first-order flux $\hat{X}(t,x,u,v,u_{t},v_{t},u_{x},v_{x})$ determine a first-order multiplier ( 20 )
+directly by the relation ( 15 ).
+Thus, we have established the following characterization of low-order conservation laws. Lemma 3.1 . For the semilinear system ( 1 ),
+a non-trivial conservation law ( 9 )
+will have a multiplier of first-order ( 20 )
+iff the conserved density and the flux, up to equivalence,
+are of first-order $\hat{T}=T(t,x,u,v,u_{t},v_{t},u_{x},v_{x}),\quad\hat{X}=X(t,x,u,v,u_{t},v_{t},u_{x},v_{x}).$ (21) Therefore, the class of low-order conservation laws consists of
+all admitted non-trivial conserved densities and fluxes
+with the form ( 21 ). 3.1. Multipliers, conserved densities and fluxes The classification of low-order conservation laws
+will be carried out modulo the equivalence transformations $\displaystyle u\rightarrow v,\quad f(u)\rightarrow q(u),\quad p(v)\rightarrow g(v),$ (22) $\displaystyle v\rightarrow u,\quad q(u)\rightarrow f(u),\quad g(v)\rightarrow p(v)$ and $\displaystyle u\rightarrow\alpha u,\quad f(u)\rightarrow\alpha f(\alpha u),\quad p(v)\rightarrow\alpha p(\beta v),\quad\alpha\neq 0$ (23) $\displaystyle v\rightarrow\beta v,\quad q(u)\rightarrow\beta q(\alpha u),\quad g(v)\rightarrow\beta p(\beta v),\quad\beta\neq 0$ under which the general form of the semilinear system ( 1 )
+is preserved. Based on the form of the equations ( 1a )–( 1b ) in the system,
+it is computationally convenient to divide the classification
+into three main cases:
+(I) $f(u)=g(v)=0$ ;
+(II) $f(u)\neq 0$ , $g(v)=0$ ; or $f(u)=0$ , $g(v)\neq 0$ ;
+(III) $f(u)\neq 0$ , $g(v)\neq 0$ .
+Note, under a reflection transformation ( 22 ),
+the case $f(u)=0$ , $g(v)\neq 0$ is equivalent to the case $f(u)\neq 0$ , $g(v)=0$ .
+For each case,
+we use Maple to set up and solve the determining system for multipliers. Proposition 3.1 . For the semilinear system of wave equations ( 1 )
+in the case $f(u)=g(v)=0$ ,
+the admitted conservation law multipliers consist of: $\displaystyle{\rm(a)}\qquad$ $\displaystyle a=b,\quad\text{arbitrary }p(v),q(u)$ $\displaystyle Q=(b^{2}tv_{x}+xv_{t},b^{2}tu_{x}+xu_{t})$ (24) $\displaystyle Q=(v_{x},u_{x})$ (25) $\displaystyle Q=(v_{t},u_{t})$ (26) $\displaystyle{\rm(b)}\qquad$ $\displaystyle a=b,\quad p(v)=\beta v^{k-1},\quad q(u)=\alpha u^{-k-1}$ $\displaystyle Q=(ktv_{t}+kxv_{x}+2v,ktu_{t}+kxu_{x}-2u)$ (27) $\displaystyle{\rm(c)}\qquad$ $\displaystyle a=b,\quad p(v)=\beta e^{\delta v},\quad q(u)=\alpha e^{\gamma u}$ $\displaystyle Q=((v_{t}\pm bv_{x})A(t,x)\pm 2(b/\delta)A_{x}(t,x),(u_{t}\pm bu_{x})A(t,x)\pm 2(b/\gamma)A_{x}(t,x))$ (28) $\displaystyle\text{where }A_{t}\mp bA_{x}=0$ Proposition 3.2 . For the semilinear system of wave equations ( 1 )
+in the case $f(u)\neq 0$ and $g(v)=0$ ,
+the admitted conservation law multipliers consist of: $\displaystyle{\rm(a)}\qquad$ $\displaystyle a=b,\quad f(u)=\kappa q(u),\quad\text{arbitrary }p(v),q(u)$ $\displaystyle Q=(b^{2}tv_{x}+xv_{t},b^{2}t(u_{x}-\kappa v_{x})+x(u_{t}-\kappa v_{t}))$ (29) $\displaystyle Q=(v_{x},u_{x}-\kappa v_{x})$ (30) $\displaystyle Q=(v_{t},u_{t}-\kappa v_{t})$ (31) $\displaystyle{\rm(b)}\qquad$ $\displaystyle a=b,\quad f(u)=\kappa q(u),\quad p(v)=\beta e^{\delta v},\quad q(u)=\alpha e^{\gamma u}$ $\displaystyle\begin{aligned} Q&=((v_{t}\pm bv_{x})A(t,x)+(2/\delta)A_{t}(t,x),\\
+&\qquad(u_{t}-\kappa v_{t}\pm b(u_{x}-\kappa v_{x}))A(t,x)+2(1/\gamma-\kappa/\delta)A_{t}(t,x))\end{aligned}$ (32) $\displaystyle\text{where }A_{t}\mp bA_{x}=0$ Proposition 3.3 . For the semilinear system of wave equations ( 1 )
+in the case $f(u)\neq 0$ and $g(v)\neq 0$ ,
+the admitted conservation law multipliers consist of: $\displaystyle{\rm(a)}\qquad$ $\displaystyle a\neq b,\quad f(u)=(1/\alpha)q(u)+\delta u,\quad g(v)=\alpha p(v)+\gamma v,\quad\text{arbitrary }p(v),q(u)$ $\displaystyle Q=(-\alpha A(t)B(x),A(t)B(x))$ (33) $\displaystyle\text{where }(a^{2}-b^{2})A^{\prime\prime}+(a^{2}\gamma-b^{2}\delta)A=0,\quad(a^{2}-b^{2})B^{\prime\prime}+(\gamma-\delta)B=0$ $\displaystyle{\rm(b)}\qquad$ $\displaystyle a=b,\quad f(u)=\beta q(u)+\gamma u,\quad g(v)=\alpha p(v)+\gamma v,\quad\text{arbitrary }p(v),q(u)$ $\displaystyle Q=(b^{2}t(\alpha u_{x}-v_{x})+x(\alpha u_{t}-v_{t}),b^{2}t(\beta v_{x}-u_{x})+x(\beta v_{t}-u_{t}))$ (34) $\displaystyle Q=(\alpha u_{x}-v_{x},\beta v_{x}-u_{x})$ (35) $\displaystyle Q=(\alpha u_{t}-v_{t},\beta v_{t}-u_{t})$ (36) $\displaystyle{\rm(c)}\qquad$ $\displaystyle a=b,\quad f(u)=(1/\alpha)q(u)+\gamma u,\quad g(v)=\alpha p(v)+\gamma v,\quad\text{arbitrary }p(v),q(u)$ $\displaystyle Q=(-\alpha A(t,x),A(t,x))$ (37) $\displaystyle\text{where }A_{tt}-b^{2}A_{xx}+\gamma A=0$ $\displaystyle{\rm(d)}\qquad$ $\displaystyle a=b,\quad f(u)=(1/\alpha)q(u),\quad g(v)=\alpha p(v),\quad\text{arbitrary }p(v),q(u)$ $\displaystyle Q=(-\alpha A(\zeta),A(\zeta))$ (38) $\displaystyle\text{where }\zeta=\alpha u_{t}-v_{t}\pm b(\alpha u_{x}-v_{x})$ $\displaystyle{\rm(e)}\qquad$ $\displaystyle a=b,\quad f(u)=\beta q(u),\quad g(v)=\alpha p(v),\quad p(v)=\kappa e^{\mu v},\quad q(u)=\lambda e^{\delta u}$ $\displaystyle\begin{aligned} Q&=((\alpha u_{t}-v_{t}\pm b(\alpha u_{x}-v_{x}))A(t,x)+2(\alpha/\delta-1/\mu)A_{t}(t,x),\\
+&\qquad(\beta v_{t}-u_{t}\pm b(\beta v_{x}-u_{x}))A(t,x)+2(\beta/\mu-1/\delta)A_{t}(t,x))\end{aligned}$ (39) $\displaystyle\text{where }A_{t}\mp bA_{x}=0$ $\displaystyle{\rm(f)}\qquad$ $\displaystyle a=b,\quad f(u)=\gamma u,\quad g(v)=\gamma v,\quad p(v)=\alpha/v,\quad q(u)=\beta/u$ $\displaystyle Q=(-v,u)$ (40) Each multiplier $Q$ determines
+a conserved density $\hat{T}$ and a flux $\hat{X}$ ,
+up to equivalence.
+The simplest way to obtain explicit expressions for them is by
+first splitting the characteristic equation ( 13 )
+with respect to $u_{xx}$ , $v_{xx}$ , $u_{tx}$ , $v_{tx}$ ,
+and next integrating the resulting linear system $\displaystyle\hat{T}_{u_{t}}-Q^{u}=0,\quad\hat{T}_{v_{t}}-Q^{v}=0,$ (41) $\displaystyle\hat{X}_{u_{t}}+\hat{T}_{u_{x}}=0,\quad\hat{X}_{v_{t}}+\hat{T}_{v_{x}}=0,$ (42) $\displaystyle\hat{X}_{u_{x}}+a^{2}\hat{T}_{u_{t}}=0,\quad\hat{X}_{v_{x}}+b^{2}\hat{T}_{v_{t}}=0,$ (43) $\displaystyle\hat{T}_{t}+u_{t}\hat{T}_{u}+v_{t}\hat{T}_{v}+\hat{X}_{x}+u_{x}\hat{X}_{u}+v_{x}\hat{X}_{v}-(f(u)+p(v))\hat{T}_{u_{t}}-(g(v)+q(u))\hat{T}_{v_{t}}=0.$ (44) This leads to the following main classification result,
+after the various overlapping cases in
+Propositions 3.1 , 3.2 , and 3.3 have been merged. Theorem 3.1 . All low-order conservation laws ( 21 ) admitted by
+the semilinear system of wave equations ( 1 )
+are given by, up to equivalence, the conserved densities and the fluxes: $\displaystyle{\rm(a)}\qquad$ $\displaystyle a\neq b,\quad f(u)=(1/\alpha)q(u)+\delta u,\quad g(v)=\alpha p(v)+\gamma v,\quad\text{arbitrary }p(v),q(u)$ $\displaystyle\begin{aligned} T_{1}&=\big((v_{t}-\alpha u_{t})A(t)+(\alpha u-v)A^{\prime}(t)\big)B(x)\\
+X_{1}&=\big((\alpha a^{2}u_{x}-b^{2}v_{x})B(x)+(b^{2}v-\alpha a^{2}u)B^{\prime}(x)\big)A(t)\end{aligned}$ (45) $\displaystyle\qquad\text{ where }(a^{2}-b^{2})A^{\prime\prime}+(a^{2}\gamma-b^{2}\delta)A=0,\quad(a^{2}-b^{2})B^{\prime\prime}+(\gamma-\delta)B=0$ $\displaystyle{\rm(b)}\qquad$ $\displaystyle a=b,\quad f(u)=\beta q(u)+\gamma u,\quad g(v)=\alpha p(v)+\gamma v,\quad\text{arbitrary }p(v),q(u)$ $\displaystyle\begin{aligned} T_{2}&=(\alpha\beta-1)\left(\int f(v)dv+\int g(u)du\right)-(u_{t}v_{t}+b^{2}u_{x}v_{x}+\gamma uv)\\
+&\qquad+\tfrac{1}{2}\alpha(v_{t}^{2}+b^{2}v_{x}^{2}+\gamma v^{2})+\tfrac{1}{2}\beta(u_{t}^{2}+b^{2}u_{x}^{2}+\gamma u^{2})\\
+X_{2}&=b^{2}\big(u_{t}(v_{x}-\beta u_{x})+v_{t}(u_{x}-\alpha v_{x})\big)\end{aligned}$ (46) $\displaystyle\begin{aligned} T_{3}&=(\beta u_{x}-v_{x})u_{t}+(\alpha v_{x}-u_{x})v_{t}\\
+X_{3}&=(\alpha\beta-1)\left(\int f(v)dv+\int g(u)du\right)+u_{t}v_{t}+b^{2}u_{x}v_{x}-\gamma uv\\
+&\qquad-\tfrac{1}{2}\alpha(v_{t}^{2}+b^{2}v_{x}^{2}-\gamma v^{2})-\tfrac{1}{2}\beta(u_{t}^{2}+b^{2}u_{x}^{2}-\gamma u^{2})\end{aligned}$ (47) $\displaystyle\begin{aligned} T_{4}&=(\alpha\beta-1)x\left(\int f(v)dv+\int g(u)du\right)-x(u_{t}v_{t}+b^{2}u_{x}v_{x}+\gamma uv)\\
+&\qquad+\tfrac{1}{2}\alpha x(u_{t}^{2}+b^{2}u_{x}^{2}+\gamma u^{2})+\tfrac{1}{2}\beta x(v_{t}^{2}+b^{2}v_{x}^{2}+\gamma v^{2})\\
+&\qquad+b^{2}t(\alpha u_{t}u_{x}+\beta v_{t}v_{x}-u_{t}v_{x}-u_{x}v_{t})\\
+X_{4}&=b^{2}(\alpha\beta-1)t\left(\int f(v)dv+\int g(u)du\right)+b^{2}t(u_{t}v_{t}+b^{2}u_{x}v_{x}-\gamma uv)\\
+&\qquad-\tfrac{1}{2}\alpha b^{2}t(u_{t}^{2}+b^{2}u_{x}^{2}-\gamma u^{2})-\tfrac{1}{2}\beta b^{2}t(v_{t}^{2}+b^{2}v_{x}^{2}-\gamma v^{2})\\
+&\qquad+b^{2}x(u_{t}v_{x}+u_{x}v_{t}-\alpha u_{t}u_{x}-\beta v_{t}v_{x})\end{aligned}$ (48) $\displaystyle{\rm(c)}\qquad$ $\displaystyle a=b,\quad f(u)=(1/\alpha)q(u)+\gamma u,\quad g(v)=\alpha p(v)+\gamma v,\quad\text{arbitrary }p(v),q(u)$ $\displaystyle\begin{aligned} T_{5}&=(\alpha u_{t}-v_{t})A(t,x)+(v-\alpha u)A_{t}(t,x)\\
+X_{5}&=b^{2}\big((v_{x}-\alpha u_{x})A(t,x)+(\alpha u-v)A_{x}(t,x)\big)\end{aligned}$ (49) $\displaystyle\qquad\text{ where }A_{tt}-b^{2}A_{xx}+\gamma A=0$ $\displaystyle{\rm(d)}\qquad$ $\displaystyle a=b,\quad f(u)=(1/\alpha)q(u),\quad g(v)=\alpha p(v),\quad\text{arbitrary }p(v),q(u)$ $\displaystyle\begin{aligned} T_{6}&=B(\zeta)\\
+X_{6}&=\mp bB(\zeta)\end{aligned}$ (50) $\displaystyle\qquad\text{ where }\zeta=\alpha u_{t}-v_{t}\pm b(\alpha u_{x}-v_{x})$ $\displaystyle{\rm(e)}\qquad$ $\displaystyle a=b,\quad f(u)=\beta q(u),\quad g(v)=\alpha p(v),\quad p(v)=\kappa e^{\mu v},\quad q(u)=\lambda e^{\delta u}$ $\displaystyle\begin{aligned} T_{7}&=\big((\alpha\beta-1)(\lambda\gamma\exp(\delta u)+\delta\kappa\exp(\gamma v))+\tfrac{1}{2}\delta\gamma\big(\alpha(u_{t}\pm bu_{x})^{2}+\beta(v_{t}\pm bv_{x})^{2}\big)\\
+&\qquad-\delta\gamma(u_{t}\pm bu_{x})(v_{t}\pm bv_{x})\big)A(t,x)+2\big((\delta\beta-\gamma)v_{t}+(\gamma\alpha-\delta)u_{t}\big)A_{t}(t,x)\\
+&\qquad+2\big((\delta-\gamma\alpha)u+(\gamma-\delta\beta)v\big)A_{tt}(t,x)\\
+X_{7}&=\pm b\Big(\big((\alpha\beta-1)(\lambda\gamma\exp(\delta u)+\delta\kappa\exp(\gamma v))-\tfrac{1}{2}\delta\gamma\big(\alpha(u_{t}\pm bu_{x})^{2}+\beta(v_{t}\pm bv_{x})^{2}\big)\\
+&\qquad+\delta\gamma(u_{t}\pm bu_{x})(v_{t}\pm bv_{x})\big)A(t,x)+2\big((\delta-\gamma\alpha)u_{x}+(\gamma-\delta\beta)v_{x}\big)A_{x}(t,x)\\
+&\qquad+2b^{2}\big((\delta\beta-\gamma)v+(\gamma\alpha-\delta)u\big)A_{xx}(t,x)\Big)\end{aligned}$ (51) $\displaystyle\qquad\text{ where }A_{t}\mp bA_{x}=0$ $\displaystyle{\rm(f)}\qquad$ $\displaystyle a=b,\quad f(u)=\gamma u,\quad g(v)=\gamma v,\quad p(v)=\alpha/v,\quad q(u)=\beta/u,\quad\gamma\neq 0$ $\displaystyle\begin{aligned} T_{8}&=uv_{t}-vu_{t}\\
+X_{8}&=b^{2}(vu_{x}-uv_{x})+(\beta-\alpha)x\end{aligned}$ (52) $\displaystyle{\rm(g)}\qquad$ $\displaystyle a=b,\quad f=g=0,\quad p(v)=\alpha v^{k-1},\quad q(u)=\beta u^{-k-1}$ $\displaystyle\begin{aligned} T_{9}&=kt(v_{t}u_{t}+b^{2}v_{x}u_{x})+kx(v_{x}u_{t}+u_{x}v_{t})+2(vu_{t}-uv_{t})+t(\alpha v^{k}-\beta u^{-k})\\
+X_{9}&=-b^{2}kt(v_{t}u_{x}+u_{t}v_{x})-kx(v_{t}u_{t}+b^{2}v_{x}u_{x})+x(\alpha v^{k}-\beta u^{-k})\end{aligned}$ (53) 3.2. Conserved quantities We now discuss the conserved quantities ( 6 ) that arise from
+the conservation laws in Theorem 3.1 for the semilinear system ( 1 ). The case of unequal wave speeds $a\neq b$ will be considered first. The conservation law ( 45 ) in part (a)
+is a linear expression in $u,v,u_{t},u_{x},v_{t},v_{x}$ .
+This conservation law is admitted
+because the wave equations ( 1a ) and ( 1b ) in the case $f(u)=(1/\alpha)q(u)+\delta u$ , $g(v)=\alpha p(v)+\gamma v$ , $a\neq b$ can be combined to yield a linear equation $(\alpha u-v)_{tt}-(\alpha a^{2}u-b^{2}v)_{xx}+\delta\alpha u-\gamma v=0.$ (54) Any linear PDE admits elementary conserved quantities which are given by
+the projection of solutions of the PDE
+onto modes that satisfy the adjoint linear system.
+The modes for the linear equation ( 54 ) consist of
+the multiplier expression ( 33 )
+which has the form $Q=(-\alpha F,F)$ where $F(t,x)=A(t)B(x)$ is a mode function
+satisfying the adjoint of equation ( 54 ), $(a^{2}-b^{2})F_{xx}+(\gamma-\delta)F=0,\quad(a^{2}-b^{2})F_{tt}+(\gamma a^{2}-\delta b^{2})F=0.$ (55) From this adjoint system,
+in the general case when $\gamma\neq\delta$ and $a^{2}\gamma\neq b^{2}\delta$ ,
+the mode function is a harmonic travelling wave $F=\exp(i(kx+wt))$ where $k=\sqrt{(\gamma-\delta)/(a^{2}-b^{2})}$ (56) is the reciprocal wave length,
+and $w=\sqrt{(a^{2}\gamma-b^{2}\delta)/(a^{2}-b^{2})}$ (57) is the frequency,
+given in terms of the wave speeds $a,b$ and the mass coefficients $\delta,\gamma$ in the wave equations ( 1a ) and ( 1b ).
+The resulting conserved quantities have the form ${\mathcal{C}}[u,v]=\int_{-\infty}^{\infty}((v_{t}-\alpha u_{t})+iw(\alpha u-v))\exp(i(kx+wt))\;dx.$ (58) (Note in some cases $k$ or $w$ will be imaginary,
+so the mode function becomes an exponential in $x$ or $t$ ;
+in all other cases,
+the mode function degenerates into a form
+where its dependence on $x$ or $t$ is a linear polynomial.) These conserved quantities ( 58 ) are the only ones admitted by
+the semilinear system ( 1 )
+when the wave speeds are unequal, $a\neq b$ .
+Next, the case of equal wave speeds, but with no Lagrangian being admitted,
+will be considered. The conservation law ( 49 ) in part (c)
+is a linear expression in $u,v,u_{t},u_{x},v_{t},v_{x}$ .
+It is admitted because the wave equations ( 1a ) and ( 1b )
+in the case $f(u)=(1/\alpha)q(u)+\gamma u$ , $g(v)=\alpha p(v)+\gamma v$ , $a=b$ can be combined into a linear wave equation for $\alpha u-v$ , $(\alpha u-v)_{tt}-b^{2}(\alpha u-v)_{xx}+\gamma(\alpha u-v)=0.$ (59) Similarly to part (a), there are elementary conserved quantities
+given by the projection of solutions of this linear equation
+onto modes that satisfy the adjoint linear system.
+Since the equation ( 59 ) is self-adjoint,
+the modes have the form given by the multiplier expression ( 37 )
+where the mode function $A(t,x)$ is the general solution of the wave equation $A_{tt}-b^{2}A_{xx}+\gamma A=0.$ (60) Note that $b>0$ is wave speed and $\gamma$ is the squared-mass coefficient.
+Solutions of this wave equation can be expressed as Fourier modes $A=\exp(i(kx\pm wt))$ where $w^{2}=b^{2}k^{2}+\gamma$ is the standard dispersion relation, with $k$ being arbitrary.
+In the case $\gamma=0$ ,
+the general solution is simply a linear combination of
+left-moving and right-moving travelling waves, $A=A_{\pm}(x\pm bt)$ .
+In the case $\gamma\neq 0$ ,
+the general solution depends on two arbitrary functions
+which can be identified with the amplitudes for the two Fourier modes,
+giving $A=\int_{-\infty}^{\infty}\exp(i(kx\pm wt))\hat{A}_{\pm}(k)dk$ .
+In both cases,
+the resulting conserved quantities are given by
+the expression ( 58 ), where $k$ is now an arbitrary parameter. The three conservation laws ( 46 ), ( 47 ), ( 48 ) in part (b)
+depend quadratically on $u_{t},u_{x},v_{t},v_{x}$ and the first two do not contain $t,x$ .
+They respectively yield a conserved energy and momentum $\displaystyle\begin{aligned} {\mathcal{C}}[u,v]_{\text{ener.}}&=\int_{-\infty}^{\infty}\bigg((\alpha\beta-1)\Big(\int f(v)dv+\int g(u)du\Big)+\tfrac{1}{2}(\alpha-1)(v_{t}^{2}+b^{2}v_{x}^{2}+\gamma v^{2})\\
+&\qquad+\tfrac{1}{2}(\beta-1)(u_{t}^{2}+b^{2}u_{x}^{2}+\gamma u^{2})+\tfrac{1}{2}\big((u_{t}-v_{t})^{2}+b^{2}(u_{x}-v_{x})^{2}+\gamma(u-v)^{2}\big)\bigg)\;dx,\end{aligned}$ (61) $\displaystyle\begin{aligned} {\mathcal{C}}[u,v]_{\text{mom.}}&=\int_{-\infty}^{\infty}\Big((\alpha-1)v_{t}v_{x}+(\beta-1)u_{t}u_{x}+(u_{t}-v_{t})(u_{x}-v_{x})\Big)\;dx,\end{aligned}$ (62) and a conserved boost-momentum $\displaystyle{\mathcal{C}}[u,v]_{\text{boost mom.}}$ $\displaystyle=\int_{-\infty}^{\infty}\bigg((\alpha\beta-1)x\left(\int f(v)dv+\int g(u)du\right)+\tfrac{1}{2}x\big((\alpha-1)(v_{t}^{2}+b^{2}v_{x}^{2}+\gamma v^{2})$ (63) $\displaystyle+(\beta-1)(u_{t}^{2}+b^{2}u_{x}^{2}+\gamma u^{2})+(u_{t}-v_{t})^{2}+b^{2}(u_{x}-v_{x})^{2}+\gamma(u-v)^{2}\big)$ $\displaystyle+b^{2}t\big((\alpha-1)v_{t}v_{x}+(\beta-1)u_{t}u_{x}+(u_{t}-v_{t})(v_{x}-u_{x})\big)\bigg)\;dx.$ The conserved energy will be positive
+when $\alpha>1$ , $\beta>1$ , and $\gamma>0$ .
+In contrast,
+the sign of the conserved momentum depends on the relative signs of $u_{t},u_{x}$ as well as $v_{t},v_{x}$ .
+When these signs are positive, corresponding to right-moving wave motion,
+the momentum is positive if $\alpha>1$ and $\beta>1$ ,
+whereas when the signs are negative, corresponding to left-moving wave motion,
+the momentum is negative if $\alpha>1$ and $\beta>1$ . The conservation law ( 51 ) in part (e)
+also depends quadratically on $u_{t},u_{x},v_{t},v_{x}$ .
+It yields a conserved hyperbolic-energy $\displaystyle{\mathcal{C}}[u,v;A(\xi)]_{\text{hyper. ener.}}$ $\displaystyle=\int_{-\infty}^{\infty}\bigg(\Big((\alpha\beta-1)(\lambda\gamma\exp(\delta u)+\delta\kappa\exp(\gamma v))+\tfrac{1}{2}\delta\gamma\big((\alpha-1)(u_{t}\pm bu_{x})^{2}$ (64) $\displaystyle+(\beta-1)(v_{t}\pm bv_{x})^{2}+(u_{t}-v_{t}\pm b(u_{x}-v_{x}))^{2}\big)\Big)A(x\pm bt)$ $\displaystyle\pm 2b\big((\delta\beta-\gamma)v_{t}+(\gamma\alpha-\delta)u_{t}\big)A^{\prime}(x\pm bt)+2b^{2}\big((\delta-\gamma\alpha)u$ $\displaystyle+(\gamma-\delta\beta)v\big)A^{\prime\prime}(x\pm bt)\bigg)\;dx$ which involves an arbitrary travelling wave function $A(\xi)$ and the light-cone derivatives $u_{t}\pm bu_{x}$ and $v_{t}\pm bv_{x}$ which represent the characteristic directions
+for the semilinear system ( 1 ) when $a=b$ .
+This energy quantity is positive when $\alpha>1$ , $\beta>1$ , $\lambda\gamma>0$ , $\delta\kappa>0$ , $\delta\gamma>0$ ,
+and $A=\text{const.}>0$ .
+Unlike parts (a) and (c),
+the appearance of an arbitrary function in the energy
+is not due to any linearity in the system ( 1 )
+but instead comes from the exponential form of the nonlinear terms $p(v)=\kappa e^{\mu v}$ , $q(u)=\lambda e^{\delta u}$ , $g(v)=\alpha p(v)$ , $f(u)=\beta q(u)$ .
+With this type of nonlinearity,
+the system ( 1 ) is analogous to
+the Liouville wave equation $w_{tt}-b^{2}w_{xx}+\gamma\exp(w)=0$ for which it is known that all solutions $w(t,x)$ are functions only of
+the moving coordinate $x\pm bt$ .
+Consequently,
+an arbitrary function of $x\pm bt$ is compatible with conservation of energy
+in such systems. The conservation law ( 50 ) in part (d)
+involves an arbitrary function of a linear combination of
+the light-cone derivatives $u_{t}\pm bu_{x}$ and $v_{t}\pm bv_{x}$ as given by $\zeta=\alpha u_{t}-v_{t}\pm b(\alpha u_{x}-v_{x})$ .
+Similarly to part (c),
+the wave equations ( 1a ) and ( 1b )
+in the case $f(u)=(1/\alpha)q(u)$ , $g(v)=\alpha p(v)$ , $a=b$ can be combined to yield the ordinary linear wave equation $(\alpha u-v)_{tt}-b^{2}(\alpha u-v)_{xx}=0.$ (65) This wave equation is well-known to admit any function of $\zeta$ as a conserved density.
+As a result,
+the corresponding conserved quantity for the semilinear system ( 1 )
+is given by ${\mathcal{C}}[u,v;B(\zeta)]_{\text{ener./mom.}}=\int_{-\infty}^{\infty}B(\alpha u_{t}-v_{t}\pm b(\alpha u_{x}-v_{x}))\;dx$ (66) where $B$ is an arbitrary function of $\zeta$ .
+When $B$ is linear in $\zeta$ ,
+this yields an elementary conserved quantity.
+When $B$ is nonlinear in $\zeta$ ,
+the conserved quantity is an energy-type quantity if $B$ is an even function
+or a momentum-type quantity if $B$ is an odd function. Lastly, the Lagrangian case will be considered. Among the preceding conserved quantities,
+the ones that are admitted in the case of a Lagrangian formulation ( 3 ) consist of
+the energy ( 61 ), momentum ( 62 ), boost momentum ( 63 ),
+and hyperbolic energy ( 64 ).
+Their multipliers thereby correspond to variational symmetries ${\rm X}=Q^{u}\partial_{u}+Q^{v}\partial_{v}$ ,
+which are respectively given by
+a time-translation ( 36 ),
+a space-translation ( 35 ),
+a Lorentz boost ( 34 ),
+and a generalized space-time translation combined with a generalized shift on $u,v$ ( 39 ). There are two additional conservation laws ( 52 ) and ( 53 ),
+in part (f) and (g) respectively,
+holding in the massless Lagrangian case $f=g=0$ , $p(v)=\alpha v^{k-1}$ , $q(u)=\beta u^{-k-1}$ , $a=b$ for which the nonlinearities are powers of $u$ and $v$ .
+In this case,
+the wave equations ( 1a ) and ( 1b ) are Euler-Lagrange equations
+with respect to $v$ and $u$ ,
+where the Lagrangian is given by $L=-u_{t}v_{t}+b^{2}u_{x}v_{x}+\alpha\int v^{k-1}dv+\beta\int u^{-k-1}du$ (67) with $\int w^{n-1}dw=\begin{cases}(1/n)w^{n}&n\neq 0\\
+\ln(w)&n=0\end{cases}.$ (68) The multipliers ( 40 ) and ( 27 )
+for these two conservation laws
+correspond to variational symmetries ${\rm X}=Q^{u}\partial_{u}+Q^{v}\partial_{v}$ of the Lagrangian system.
+The first multiplier ( 40 ) represents
+an infinitesimal rotation on $(u,v)$ ,
+so the resulting conserved quantity ${\mathcal{C}}[u,v]_{\text{rot. charge}}=\int_{-\infty}^{\infty}(uv_{t}-vu_{t})\;dx$ (69) is an $SO(2)$ rotation charge in the space $(u,v)$ .
+The second multiplier ( 27 ) represents
+an infinitesimal scaling on $(t,x,u,v)$ ,
+and hence the resulting conserved quantity is a dilational energy-momentum ${\mathcal{C}}[u,v]_{\text{ener.-mom.}}=\int_{-\infty}^{\infty}\big(kt(v_{t}u_{t}+b^{2}v_{x}u_{x})+kx(v_{x}u_{t}+u_{x}v_{t})+2(vu_{t}-uv_{t})+t(\alpha v^{k}-\beta u^{-k})\big)\;dx.$ (70) 4. Concluding remarks The system of nonlinearly coupled wave equations ( 1 )
+has a fairly rich structure of low-order conserved quantities,
+particularly when the wave speeds are equal, $a=b$ .
+These quantities include energy, momentum, and boost momentum,
+plus a dilational energy-momentum and a $SO(2)$ rotation charge
+in the Lagrangian case
+(when the only nonlinearities are due to the coupling between $u$ and $v$ ).
+In two non-Lagrangian cases
+(when the nonlinearities also comprise a self-coupling for both $u$ and $v$ ),
+additional energy-type conserved quantities arise,
+one involving arbitrary functions of
+the travelling wave coordinates $x\pm bt$ and the other involving arbitrary functions of a linear combination of
+the light-cone derivatives $u_{t}\pm bu_{x}$ and $v_{t}\pm bv_{x}$ . All of these conserved quantities will be useful in the analysis of
+solutions of this system.
+We will leave this analysis for elsewhere. An interesting problem for future work will be to look for
+higher-order conservation laws and higher-order symmetries,
+as this will detect if the system ( 1 ) is integrable
+for any special types of nonlinearities.
+In particular,
+this system is a natural two-component generalization of the Klein-Gordon equation
+which includes as special cases
+the Liouville equation,
+the sine-Gordon/sinh-Gordon equation,
+and the Tzetzeica equation,
+each of which are integrable in the sense of possessing
+an infinite hierarchy of conservation laws and symmetries
+(see e.g. Ref. [ 18 , 5 ] ). Acknowledgements S.C. Anco is supported by an NSERC research grant. References [1] K.R. Khusnutdinov and D.E. Pelinovsky, Wave Motion 38 (2003) 1–10. [2] P. Germain, Annales de L’Institut Fourier 61 (2011) 2463–2506. [3] A. Biswas, A.H. Kara, L. Morau, A.H. Bokhari, F.D. Zaman, Proceedings of the Romanian Academy Series A 15 (2014) 123–129. [4] S.C. Anco and G. Bluman, Phys. Rev. Lett. 78 (1997), 2869–2873. [5] S.C. Anco and G. Bluman, Euro. J. Appl. Math. 13 (2002), 545–566. [6] S.C. Anco and G. Bluman, Euro. J. Appl. Math. 13 (2002), 567–585. [7] G. Bluman, A. Cheviakov, S.C. Anco, Applications of Symmetry Methods to Partial Differential Equations ,
+Springer Applied Mathematics Series 168,
+Spring, New York, 2010. [8] P. Olver, Applications of Lie Groups to Differential Equations ,
+Springer-Verlag, New York, 1986. [9] A.H. Kara and F.M. Mahomed, Int. J. Theoretical Physics 39 (2000), 23–40. [10] G. Bluman, Temuerchaolu, S.C. Anco, J. Math. Anal. Appl. 322 (2006), 233–250. [11] G. Bluman and S.C. Anco, Symmetry and Integration Methods for Differential Equations ,
+Springer Applied Mathematics Series 154,
+Springer-Verlag, New York, 2002. [12] G. Bluman, A. Cheviakov, S.C. Anco,
+in: Group Analysis of Differential Equations and Integrable Systems
+(Proceedings of the Fourth International Workshop) ,
+(Cyprus, 2008), 13–35. [13] V.V. Zharinov, Teor. Mat. Fiz. 68 (1986), 163–171. English transl., Theor. Math. Phys. , 68 (1986), 745–751. [14] T. Wolf,
+A comparison of four approaches to the calculation of conservation laws, Euro. J. Appl. Math. 13 (2002), 129–152. [15] S.C. Anco, J. Phys. A: Math. and Gen. 36 (2003), 8623–8638. [16] D. Poole and W. Hereman, Applicable Analysis 89, no. 4 (2010), 433–455. [17] S.C. Anco,
+to appear in Int. J. Mod. Phys. B (2016).
+arXiv:math-ph/1512.01835. [18] M.J. Ablowitz and P.A. Clarkson, Solitons, nonlinear evolution equations and inverse scattering ,
+LMS Lecture Note Series 149,
+Cambridge University Press, 1991. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

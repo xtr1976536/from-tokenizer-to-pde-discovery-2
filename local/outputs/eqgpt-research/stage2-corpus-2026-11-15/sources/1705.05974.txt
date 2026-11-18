@@ -1,0 +1,145 @@
+New integrable semi-discretizations of the coupled nonlinear Schrödinger equations Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction 2 Semi-discretizations of the nonlinear Schrödinger equations 3 Continuum limit of the semi-discrete equations 4 Conclusion References License: arXiv.org perpetual non-exclusive license arXiv:1705.05974v1 [nlin.SI] 17 May 2017 New integrable semi-discretizations of the coupled nonlinear Schrödinger equations Sylvie A. Bronsard Dmitry E. Pelinovsky Affiliation: Department of Mathematics and Statistics, McMaster
+University, Hamilton, Ontario, Canada, L8S 4K1 August 24, 2026 Abstract We have undertaken an algorithmic search for new integrable semi-discretizations of physically
+relevant nonlinear partial differential equations. The search is performed
+by using a compatibility condition for the discrete Lax operators and symbolic computations.
+We have discovered a new integrable system of coupled nonlinear Schrödinger equations
+which combines elements of the Ablowitz–Ladik lattice and the triangular–lattice ribbon studied by
+Vakhnenko. We show that the continuum limit of the new integrable system is given by
+uncoupled complex modified Korteweg–de Vries equations and
+uncoupled nonlinear Schrödinger equations. Keywords: integrable semi-discretizations, derivative nonlinear Schrödinger equation,
+massive Thirring model, Kaup–Newell spectral problem, Ablowitz–Ladik lattice. 1 Introduction As was understood long ago, many nonlinear partial differential equations
+integrable with the inverse scattering transform can be semi-discretized in spatial coordinates
+in such a way as to preserve integrability.
+The pioneer example is the Ablowitz–Ladik lattice [ 2 , 3 ] , an integrable
+semi-discretization of the integrable nonlinear Schrödinger equation. The Ablowitz–Ladik lattice has inspired many
+groups to search for integrable semi-discretizations of other nonlinear evolution equations, e.g. [ 4 , 9 , 12 , 18 , 19 ] .
+The nonlinear ladder equation,
+the Toda lattice, the discrete modified Korteweg–de Vries equation, the discrete sine–Gordon equation in characteristic coordinates,
+and the nonlinear self-dual network equations are examples of integrable semi-discrete evolution equations
+related to the Ablowitz–Kaup–Newel–Segur (AKNS) spectral problem [ 1 ] . Other spectral problems have been semi-discretized only very recently. Tsuchida [ 17 ] considered
+nonlinear evolution equations related to the Kaup–Newell spectral problem and constructed integrable semi-discretizations
+of the derivative nonlinear Schrödinger equation, the Chen–Lee-Liu equation, and the Gerdjikov–Ivanov equations.
+The coupled Yajima–Oikawa system was semi-discretized by using the Hirota bilinear method in [ 6 ] .
+Generalization of integrable discretizations in the space of two spatial dimensions was considered by
+Zakharov [ 24 ] by using an algebro-geometric approach. The integrable triangular–lattice ribbon
+was recently studied by Vakhnenko [ 20 , 21 ] (see also a review in [ 22 ] )
+who further generalized the discrete AKNS spectral problem
+by including quadratic dependence on the spectral parameter. In a similar vein, one motivation for our work is to find an integrable
+semi-discretization of the massive Thirring model (MTM) [ 10 , 13 ] , $\left\{\begin{array}[]{l}i(u_{t}+u_{x})+v+u|v|^{2}=0,\\
+i(v_{t}-v_{x})+u+v|u|^{2}=0,\end{array}\right.$ (1) which has been used very recently in many studies related to stability of one-dimensional Dirac solitons [ 5 , 7 , 14 , 15 ] . Numerical methods based on various spatial semi-discretizations of the MTM
+were found to suffer from numerical instabilities and artifacts [ 8 , 16 ] . If we find a semi-discretization which
+preserves the integrability scheme of the MTM, then the discrete MTM should model stable
+Dirac solitons without numerical artifacts. The integrability scheme for the MTM is related to the Kaup–Newell spectral problem [ 11 ] .
+The same spectral problem is also related to the integrability scheme for the derivative nonlinear Schrödinger (dNLS) equation, $iu_{t}+u_{xx}+i(|u|^{2}u)_{x}=0.$ (2) In more details, the dNLS equation ( 2 ) is the compatibility condition $\vec{\varphi}_{xt}=\vec{\varphi}_{tx}$ for the system of linear equations $\vec{\varphi}_{x}=L(\lambda;u)\vec{\varphi}\quad\mbox{and}\quad\vec{\varphi}_{t}=A(\lambda;u)\vec{\varphi},$ (3) where $\lambda$ is a spectral parameter, while $L(\lambda;u)$ and $A(\lambda;u)$ are matrix operators given by $L(\lambda;u)=-i\lambda^{2}\sigma_{3}+\lambda\left(\begin{matrix}0&u\\
+-\bar{u}&0\end{matrix}\right)$ (4) and $A(\lambda;u)=i(\lambda^{2}|u|^{2}-2\lambda^{4})\sigma_{3}+\lambda\left(\begin{matrix}0&2\lambda^{2}u-|u|^{2}u\\
+-2\lambda^{2}\bar{u}+|u|^{2}\bar{u}&0\end{matrix}\right)+i\lambda\left(\begin{matrix}0&u_{x}\\
+\bar{u}_{x}&0\end{matrix}\right),$ (5) where $\sigma_{3}={\rm diag}(1,-1)$ is Pauli’s matrix. Similarly, the MTM system ( 1 ) is the compatibility condition $\vec{\varphi}_{xt}=\vec{\varphi}_{tx}$ for the system of linear equations $\vec{\varphi}_{x}=L(\lambda;u,v)\vec{\varphi}\quad\mbox{and}\quad\vec{\varphi}_{t}=A(\lambda;u,v)\vec{\varphi},$ (6) where $\lambda$ is a spectral parameter, while $L(\lambda;u,v)$ and $A(\lambda;u,v)$ are matrix operators given by $L(\lambda;u,v)=\frac{i}{4}(|u|^{2}-|v|^{2})\sigma_{3}-\frac{i\lambda}{2}\left(\begin{matrix}0&\overline{v}\\
+v&0\end{matrix}\right)+\frac{i}{2\lambda}\left(\begin{matrix}0&\overline{u}\\
+u&0\end{matrix}\right)+\frac{i}{4}\left(\lambda^{2}-\frac{1}{\lambda^{2}}\right)\sigma_{3}$ (7) and $A(\lambda;u,v)=-\frac{i}{4}(|u|^{2}+|v|^{2})\sigma_{3}-\frac{i\lambda}{2}\left(\begin{matrix}0&\overline{v}\\
+v&0\end{matrix}\right)-\frac{i}{2\lambda}\left(\begin{matrix}0&\overline{u}\\
+u&0\end{matrix}\right)+\frac{i}{4}\left(\lambda^{2}+\frac{1}{\lambda^{2}}\right)\sigma_{3}.$ (8) Compared to the matrix operators in ( 4 )–( 5 ),
+both $L$ and $A$ in ( 7 )–( 8 ) depend quadratically on $\lambda$ and $\lambda^{-1}$ , which makes
+analysis of the inverse scattering transform for the MTM sufficiently difficult [ 23 ] . By performing
+a transformation of the physical coordinates $x$ and $t$ to the characteristic coordinates $\xi=x-t$ and $\eta=x+t$ ,
+one can rewrite the MTM system ( 1 )
+and the Lax pair ( 6 ) in the form associated with the Kaup–Newell operator $L$ in ( 4 ).
+However, this transformation changes the Cauchy problem for the MTM system ( 1 )
+to the Goursat problem in characteristic coordinates and vice versa. Tsuchida [ 17 ] obtained semi-discretizations of the dNLS equation ( 2 ) and the MTM in characteristic coordinates
+by using the gauge transformation of the Kaup-Newell spectral problem
+to the AKNS spectral problem and by searching for a generalized spatial discretization of the AKNS problem.
+However, as is explained above, these semi-discretizations are not useful in the context of the Cauchy problem for the MTM system
+in physical coordinates ( 1 ). We have undertaken here a systematic search for the class of semi-discrete matrices $L$ and $A$ with a polynomial
+dependence on $z$ and $z^{-1}$ up to the quadratic (for $L$ ) and quartic (for $A$ ) orders,
+where $z$ is a new spectral parameter. As an outcome of our algorithmic computations,
+we have obtained a new semi-discretization of the coupled nonlinear Schrödinger equations. This new semi-discretization
+coincides with the higher-order commuting flow of the triangular–lattice ribbon [ 20 , 21 ] . The rest of this paper is organized as follows. Section 2 presents the discrete spectral problems for
+the Ablowitz–Ladik lattice, triangular–lattice ribbon, and the newly derived semi-discretization
+of the coupled nonlinear Schrödinger equations. Section 3 contains a study of the continuum limit
+in the new semi-discrete system. Section 4 concludes the paper with a summary. 2 Semi-discretizations of the nonlinear Schrödinger equations We are looking for an integrable semi-discrete system which appears as
+a compatibility condition for the system of linear equations $\vec{\varphi}_{n+1}=L_{n}(z)\vec{\varphi}_{n}\quad\mbox{and}\quad\frac{d}{dt}\vec{\varphi}_{n}=A_{n}(z)\vec{\varphi}_{n},$ (9) where $z$ is a spectral parameter, $n\in\mathbb{Z}$ , $t\in\mathbb{R}$ , while $L_{n}(z)$ and $A_{n}(z)$ are matrix operators containing potentials satisfying
+the compatibility condition $\frac{d}{dt}L_{n}(z)=A_{n+1}(z)L_{n}(z)-L_{n}(z)A_{n}(z).$ (10) The Ablowitz–Ladik lattice derived in [ 2 , 3 ] corresponds to the choice $L_{n}(z)=\left[\begin{array}[]{cc}z&q_{n}\\
+-\bar{q}_{n}&z^{-1}\end{array}\right],\quad A_{n}(z)=\left[\begin{array}[]{cc}az^{2}+aq_{n}\bar{q}_{n-1}&aq_{n}z+\bar{a}q_{n-1}z^{-1}\\
+-a\bar{q}_{n-1}z-\bar{a}\bar{q}_{n}z^{-1}&\bar{a}z^{-2}+\bar{a}q_{n-1}\bar{q}_{n}\end{array}\right],$ (11) where $a\in\mathbb{C}$ is arbitrary parameter
+and the complex-conjugate symmetry is preserved for the complex-valued potential $\{q_{n}\}_{n\in\mathbb{Z}}$ .
+Substituting ( 11 ) into ( 10 ) yields the Ablowitz–Ladik lattice $\frac{dq_{n}}{dt}=\alpha(q_{n+1}-q_{n-1})(1+|q_{n}|^{2})+i\beta(q_{n+1}+q_{n-1})(1+|q_{n}|^{2}),$ (12) where we have used $a=\alpha+i\beta$ with $\alpha,\beta\in\mathbb{R}$ . The $\alpha$ part
+of this system is also referred to as the discrete modified Korteweg-de Vries equation,
+while the $\beta$ part is referred to as the discrete nonlinear Schrödinger equation [ 1 ] .
+The two parts are related by the staggering transformation $q_{n}\mapsto i^{n}q_{n},\quad n\in\mathbb{Z}.$ The triangular–lattice ribbon derived in [ 20 , 21 ] corresponds to the choice $L_{n}(z)=\left[\begin{array}[]{cc}z^{2}-\bar{q}_{n}r_{n}&q_{n}z+r_{n}z^{-1}\\
+-\bar{r}_{n}z-\bar{q}_{n}z^{-1}&z^{-2}-q_{n}\bar{r}_{n}\end{array}\right]$ (13) and $A_{n}(z)=\left[\begin{array}[]{cc}az^{2}+aq_{n}\bar{r}_{n-1}&aq_{n}z+\bar{a}r_{n-1}z^{-1}\\
+-a\bar{r}_{n-1}z-\bar{a}\bar{q}_{n}z^{-1}&\bar{a}z^{-2}+\bar{a}r_{n-1}\bar{q}_{n}\end{array}\right],$ (14) where $a\in\mathbb{C}$ is arbitrary parameter and the complex-conjugate symmetry
+is preserved for the complex-valued potentials $\{q_{n},r_{n}\}_{n\in\mathbb{Z}}$ .
+Substituting ( 13 ) and ( 14 ) into ( 10 ) yields
+the triangular–lattice ribbon: $\displaystyle\frac{dq_{n}}{dt}$ $\displaystyle=$ $\displaystyle\alpha(r_{n}-r_{n-1})(1+|q_{n}|^{2})+i\beta(r_{n}+r_{n-1})(1+|q_{n}|^{2}),$ (15) $\displaystyle\frac{dr_{n}}{dt}$ $\displaystyle=$ $\displaystyle\alpha(q_{n+1}-q_{n})(1+|r_{n}|^{2})+i\beta(q_{n+1}+q_{n})(1+|r_{n}|^{2}),$ (16) where we have used $a=\alpha+i\beta$ with $\alpha,\beta\in\mathbb{R}$ . The $\alpha$ part
+of this system is referred to as the nonlinear self-dual network equations [ 1 ] .
+The $\beta$ part can be transformed to the $\alpha$ part by
+the staggering transformation $q_{n}\mapsto(-1)^{n}q_{n},\quad r_{n}\mapsto-i(-1)^{n}r_{n},\quad n\in\mathbb{Z}.$ Our search of the matrix operators $L_{n}(z)$ and $A_{n}(z)$ satisfying the compatibility condition ( 10 )
+generalizes the choices ( 11 ) and ( 13 )–( 14 ).
+We have considered a general quadratic polynomial in $z$ and $z^{-1}$ for $L_{n}(z)$ and a general quartic polynomial in $z$ and $z^{-1}$ for $A_{n}(z)$ . By working with
+the symbolic computation software based on Wolfram’s MATHEMATICA, we were able to
+satisfy the compatibility condition ( 10 ) in each order of $z$ and $z^{-1}$ if the matrix operators $L_{n}(z)$ and $A_{n}(z)$ are given in the form $L_{n}(z)=\left[\begin{array}[]{cc}z^{2}-\bar{q}_{n}r_{n}&q_{n}z+r_{n}z^{-1}\\
+-\bar{r}_{n}z-\bar{q}_{n}z^{-1}&z^{-2}-q_{n}\bar{r}_{n}\end{array}\right],\quad A_{n}(z)=\left[\begin{array}[]{cc}A_{11}(z)&A_{12}(z)\\
+A_{21}(z)&A_{22}(z)\end{array}\right]$ (17) with $\displaystyle A_{11}(z)$ $\displaystyle=$ $\displaystyle az^{4}+aq_{n}\bar{r}_{n-1}z^{2}+a\left(q_{n}\bar{q}_{n-1}+r_{n}\bar{r}_{n-1}+q_{n}\bar{q}_{n-1}|r_{n-1}|^{2}+|q_{n}|^{2}r_{n}\bar{r}_{n-1}+q_{n}^{2}\bar{r}_{n-1}^{2}\right)$ $\displaystyle\phantom{texttext}-\bar{a}\bar{q}_{n}r_{n-1}z^{-2},$ $\displaystyle A_{12}(z)$ $\displaystyle=$ $\displaystyle aq_{n}z^{3}+a(r_{n}+|q_{n}|^{2}r_{n}-q_{n}^{2}\bar{r}_{n-1})z+\bar{a}(q_{n-1}+q_{n-1}|r_{n-1}|^{2}+\bar{q}_{n}r_{n-1}^{2})z^{-1}+\bar{a}r_{n-1}z^{-3},$ $\displaystyle A_{21}(z)$ $\displaystyle=$ $\displaystyle-a\bar{r}_{n-1}z^{3}-a(\bar{q}_{n-1}+\bar{q}_{n-1}|r_{n-1}|^{2}+q_{n}\bar{r}_{n-1}^{2})z-\bar{a}(\bar{r}_{n}+|q_{n}|^{2}\bar{r}_{n}+\bar{q}^{2}_{n}r_{n-1})z^{-1}-\bar{a}\bar{q}_{n}z^{-3},$ $\displaystyle A_{22}(z)$ $\displaystyle=$ $\displaystyle-aq_{n}\bar{r}_{n-1}z^{2}+\bar{a}\left(q_{n-1}\bar{q}_{n}+r_{n-1}\bar{r}_{n}+q_{n-1}\bar{q}_{n}|r_{n-1}|^{2}+|q_{n}|^{2}r_{n-1}\bar{r}_{n}+\bar{q}_{n}^{2}r_{n-1}^{2}\right)$ $\displaystyle\phantom{texttext}+\bar{a}\bar{q}_{n}r_{n-1}z^{-2}+\bar{a}z^{-4}.$ The two potentials $\{q_{n},r_{n}\}_{n\in\mathbb{Z}}$ satisfy the lattice differential equations
+in the form: $\displaystyle\frac{dq_{n}}{dt}$ $\displaystyle=$ $\displaystyle\left[aq_{n+1}(1+|r_{n}|^{2})-\bar{a}q_{n-1}(1+|r_{n-1}|^{2})+\bar{q}_{n}(ar_{n}^{2}-\bar{a}r_{n-1}^{2})\right.$ (18) $\displaystyle\left.+q_{n}(ar_{n}\bar{r}_{n-1}-\bar{a}r_{n-1}\bar{r}_{n})\right](1+|q_{n}|^{2}),$ $\displaystyle\frac{dr_{n}}{dt}$ $\displaystyle=$ $\displaystyle\left[ar_{n+1}(1+|q_{n+1}|^{2})-\bar{a}r_{n-1}(1+|q_{n}|^{2})+\bar{r}_{n}(aq_{n+1}^{2}-\bar{a}q_{n}^{2})\right.$ (19) $\displaystyle\left.+r_{n}(aq_{n+1}\bar{q}_{n}-\bar{a}q_{n}\bar{q}_{n+1})\right](1+|r_{n}|^{2}).$ Comparing the matrix operators $L_{n}(z)$ in ( 13 ) and ( 17 ), we can see that
+they are identical to each other. On the other hand,
+the matrix operator $A_{n}(z)$ in ( 17 ) yields the next commuting flow
+to the matrix operator $A_{n}(z)$ in ( 14 ). Hence,
+the new system of lattice differential equations ( 18 )–( 19 ) is
+the next commuting flow of the triangular–lattice ribbon ( 15 )–( 16 ). 3 Continuum limit of the semi-discrete equations Here we derive the continuum limit of the semi-discrete equations ( 18 )–( 19 )
+and compare them with integrable continuous nonlinear equations.
+Setting $a=1$ in ( 18 )–( 19 ) yields $\displaystyle\frac{dq_{n}}{dt}$ $\displaystyle=$ $\displaystyle\left[q_{n+1}(1+|r_{n}|^{2})-q_{n-1}(1+|r_{n-1}|^{2})+\bar{q}_{n}(r_{n}^{2}-r_{n-1}^{2})\right.$ (20) $\displaystyle\left.+q_{n}(r_{n}\bar{r}_{n-1}-r_{n-1}\bar{r}_{n})\right](1+|q_{n}|^{2}),$ $\displaystyle\frac{dr_{n}}{dt}$ $\displaystyle=$ $\displaystyle\left[r_{n+1}(1+|q_{n+1}|^{2})-r_{n-1}(1+|q_{n}|^{2})+\bar{r}_{n}(q_{n+1}^{2}-q_{n}^{2})\right.$ (21) $\displaystyle\left.+r_{n}(q_{n+1}\bar{q}_{n}-q_{n}\bar{q}_{n+1})\right](1+|r_{n}|^{2}).$ By taking the asymptotic ansatz $\left\{\begin{array}[]{l}q_{n}(t)=\epsilon Q(\epsilon(n+2t),\epsilon^{3}t)+\mathcal{O}(\epsilon^{3}),\\
+r_{n}(t)=\epsilon R(\epsilon(n+2t),\epsilon^{3}t)+\mathcal{O}(\epsilon^{3}),\end{array}\right.$ we obtain the system of coupled complex modified Korteweg–de Vries equations
+at the leading order of $\mathcal{O}(\epsilon^{4})$ : $\displaystyle Q_{\tau}=\frac{1}{3}Q_{\xi\xi\xi}+2(|Q|^{2}+|R|^{2})Q_{\xi}+2(Q\bar{R}+\bar{Q}R)R_{\xi},$ (22) $\displaystyle R_{\tau}=\frac{1}{3}R_{\xi\xi\xi}+2(|Q|^{2}+|R|^{2})R_{\xi}+2(Q\bar{R}+\bar{Q}R)Q_{\xi},$ (23) where $\xi=\epsilon(n+2t)$ and $\tau=\epsilon^{3}t$ . Although the system of coupled equations
+( 22 )–( 23 ) may look as a new integrable system, it has a simple reduction
+to uncoupled complex modified Korteweg-de Vries equations. Indeed, let $U:=Q+R$ and $V:=Q-R$ . Then, adding and subtracting ( 22 ) and ( 23 ) yield
+the following two uncoupled complex modified Korteweg-de Vries equations: $\displaystyle U_{\tau}=\frac{1}{3}U_{\xi\xi\xi}+2|U|^{2}U_{\xi},$ (24) $\displaystyle V_{\tau}=\frac{1}{3}V_{\xi\xi\xi}+2|V|^{2}V_{\xi}.$ (25) Setting $a=i$ in ( 18 )–( 19 ) yields $\displaystyle\frac{dq_{n}}{dt}$ $\displaystyle=$ $\displaystyle i\left[q_{n+1}(1+|r_{n}|^{2})+q_{n-1}(1+|r_{n-1}|^{2})+\bar{q}_{n}(r_{n}^{2}+r_{n-1}^{2})\right.$ (26) $\displaystyle\left.+q_{n}(r_{n}\bar{r}_{n-1}+r_{n-1}\bar{r}_{n})\right](1+|q_{n}|^{2}),$ $\displaystyle\frac{dr_{n}}{dt}$ $\displaystyle=$ $\displaystyle i\left[r_{n+1}(1+|q_{n+1}|^{2})+r_{n-1}(1+|q_{n}|^{2})+\bar{r}_{n}(q_{n+1}^{2}+q_{n}^{2})\right.$ (27) $\displaystyle\left.+r_{n}(q_{n+1}\bar{q}_{n}+q_{n}\bar{q}_{n+1})\right](1+|r_{n}|^{2}).$ By taking the asymptotic ansatz $\left\{\begin{array}[]{l}q_{n}(t)=e^{2it}\left[\epsilon Q(\epsilon n,\epsilon^{2}t)+\mathcal{O}(\epsilon^{3})\right],\\
+r_{n}(t)=e^{2it}\left[\epsilon R(\epsilon n,\epsilon^{2}t)+\mathcal{O}(\epsilon^{3})\right],\end{array}\right.$ we obtain the system of coupled nonlinear Schrödinger equations
+at the leading order of $\mathcal{O}(\epsilon^{3})$ : $\displaystyle iQ_{\tau}+Q_{\xi\xi}+2|Q|^{2}Q+4|R|^{2}Q+2R^{2}\bar{Q}$ $\displaystyle=$ $\displaystyle 0,$ (28) $\displaystyle iR_{\tau}+R_{\xi\xi}+2|R|^{2}R+4|Q|^{2}R+2Q^{2}\bar{R}$ $\displaystyle=$ $\displaystyle 0,$ (29) where $\xi=\epsilon n$ and $\tau=\epsilon^{2}t$ . We can show again that the system of coupled equations
+( 28 )–( 29 ) can be reduced to an uncoupled system. By letting $U:=Q+R$ , $V:=Q-R$ and adding and subtracting equations ( 28 ) and ( 29 ),
+we obtain the two uncoupled nonlinear Schrödinger equations: $\displaystyle iU_{\tau}+U_{\xi\xi}+2|U|^{2}U$ $\displaystyle=$ $\displaystyle 0,$ (30) $\displaystyle iV_{\tau}+V_{\xi\xi}+2|V|^{2}V$ $\displaystyle=$ $\displaystyle 0.$ (31) Hence, the new semi-discrete system ( 18 )–( 19 ) is another integrable
+semi-discretization of the coupled nonlinear Schrödinger equations. 4 Conclusion We have derived a new integrable system of discrete coupled nonlinear Schrödinger equations by
+considering quadratic and quartic polynomials in the spectral parameter
+for the discrete Lax operators satisfying the compatibility condition.
+The novel system shares many properties with the integrable Ablowitz–Ladik lattice [ 2 , 3 ] and triangular–lattice ribbon studied by Vakhnenko [ 20 , 21 ] . It has two continuum reductions which are equivalent to uncoupled
+modified Korteweg–de Vries and nonlinear Schrödinger equations. The original goal of our study, finding an integrable semi-discretization of the massive Thirring model ( 1 ),
+has not been reached in our search. Modifications of the quadratic and quartic polynomials
+in the discrete Lax operators did not produce new integrable system of lattice differential equations.
+Although the integrable semi-discretizations of the derivative nonlinear Schrödinger
+equations ( 2 ) and the massive Thirring model in characteristic coordinates have been constructed
+in the literature [ 17 ] , it still remains an open problem to construct
+an integrable semi-discretization of the massive Thirring model in physical coordinates. Acknowledgement. We thank P.G. Kevrekidis (University of Massachusetts)
+for suggesting a search for integrable semi-discretization of the MTM system
+and Th. Ioannidou (University of Thessaloniki) for collaborating on a search for new semi-discretization of the derivative nonlinear Schrödinger
+equation. S.A. Bronsard is supported by the NSERC USRA grant for an undergraduate research. D.E. Pelinovsky is supported by
+the NSERC Discovery grant. References [1] M. J. Ablowitz and P.A. Clarkson, Solitons, Nonlinear Evolution Equations, and Inverse Scattering (Cambridge University Press, Cambridge, 1990). [2] M.J. Ablowitz and J.F. Ladik, “Nonlinear differential-difference equations”,
+J. Math. Phys. 16 (1975), 598–603. [3] M.J. Ablowitz and J.F. Ladik, “Nonlinear differential-difference equations
+and Fourier analysis, J. Math. Phys. 17 (1976), 1011–1018. [4] M.J. Ablowitz, Y. Ohta and A.D. Trubatch, “On discretizations of the vector nonlinear Schrödinger
+equation”, Phys. Lett. A 253 (1999), 287–304. [5] G. Berkolaiko, A. Comech, and A. Sukhtayev, “Vakhitov–Kolokolov and
+energy vanishing conditions for linear instability of solitary waves in models of
+classical self-interacting spinor fields”, Nonlinearity 28 (2015), 577–592. [6] J. Chen, Y. Chen, B.F. Feng, K. Maruno, and Y. Ohta, “An integrable
+semi-discretization of the coupled Yajima–Oikawa system”, J. Phys. A: Math. Theor. 49 (2016),
+165201 (19 pp). [7] A. Contreras, D.E. Pelinovsky, and Y. Shimabukuro, “ $L^{2}$ orbital stability of
+Dirac solitons in the massive Thirring model”, Communications in PDEs 41 (2016), 227–255. [8] J. Cuevas-Maraver, P.G. Kevrekidis, and A. Saxena,
+“Solitary waves in a discrete nonlinear Dirac equation”, J. Phys. A 48 (2015), 055204 (22 pp). [9] V.S. Gerdzhikov and M.I. Ivanov, “Hamiltonian structure of multicomponent
+nonliner Schrödinger equations in difference form”, Theor. Math. Phys. 52 (1982), 676–685. [10] D.J. Kaup and A.C. Newell, ”On the Coleman
+correspondence and the solution of the Massive Thirring model”,
+Lett. Nuovo Cimento 20 (1977), 325–331. [11] D. Kaup and A. Newell, “An exact solution for a derivative nonlinear Schrödinger equation”,
+J. Math. Phys. 19 (1978), 789–801. [12] P.P. Kulish, “Quantum difference nonlinear Schr¨odinger equation”, Lett. Math. Phys. 5 (1981), 191–197. [13] E.A. Kuznetzov and A.V. Mikhailov, “On the complete integrability
+of the two-dimensional classical Thirring model”,
+Theor. Math. Phys. 30 (1977), 193–200. [14] F.G. Mertens, N.R. Quintero, F. Cooper, A. Khare, and A. Saxena,
+“Nonlinear Dirac equation solitary waves in external fields”, Phys. Rev. E 86 (2012), 046602 (14pp). [15] D. E. Pelinovsky and Y. Shimabukuro, “Orbital stability of Dirac solitons”,
+Lett. Math. Phys. 104 (2014), 21–41. [16] S. Shao, N.R. Quintero, F.G. Mertens, F. Cooper, A. Khare, and A. Saxena,
+“Stability of solitary waves in the nonlinear Dirac equations with arbitrary nonlinearity”,
+Phys. Rev. E 90 (2014), 032915 (12pp). [17] T. Tsuchida, “Integrable discretizations of derivative nonlinear Schrödinger
+equations”, J. Phys. A: Math. Gen. 35 (2002), 7827–7847. [18] T. Tsuchida, H. Ujino and M. Wadati, “Integrable semi-discretization of the coupled modified KdV
+equations”, J. Math. Phys. 39 (1998), 4785–4813. [19] T. Tsuchida, H. Ujino and M. Wadati, “Integrable semi-discretization of the coupled nonlinear
+Schrödinger equations”, J. Phys. A: Math. Gen. 32 (1999), 2239–2262. [20] O.O. Vakhnenko, “Integrable nonlinear Schrödinger system on a triangular-lattice ribbon”,
+J. Phys. Soc. Japan 84 (2015), 014003 (12 pp). [21] O.O. Vakhnenko, “Nonlinear integrable model of Frenkel–like excitations on a ribbon of triangular lattice”,
+J. Math. Phys. 56 (2015), 033505 (21 pp). [22] O.O. Vakhnenko, “Semi-discrete integrable nonlinear Schrödinger system with background-cotrolled inter-site
+resonant coupling”, J. Nonlin. Math. Phys. 24 (2017), 250–302. [23] J. Villarroel, “The DBAR problem and the Thirring model”, Stud. Appl. Math. 84 (1991), 207–220. [24] D. Zakharov, “A discrete analogue of the Dirac operator and the discrete modified Novikov–Veselov hierarchy”,
+Int. Math. Research Notices 2010 (2010), 3463–3488. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

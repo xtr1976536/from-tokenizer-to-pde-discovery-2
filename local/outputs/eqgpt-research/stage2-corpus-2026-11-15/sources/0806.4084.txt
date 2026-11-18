@@ -1,0 +1,459 @@
+Existence and uniqueness results for the Boussinesq system with data in Lorentz spaces Skip to main content Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub Why HTML? Report Issue Back to Abstract Download PDF Contents Reading mode Colour theme Abstract 1 Introduction and main results 2 Tools and functional spaces 2.1 Lorentz spaces 2.2 Besov spaces 2.3 Product and paraproduct in Besov spaces 2.4 Estimates for the heat and Stokes equations 3 Existence of solutions with infinite energy 3.1 Global existence: the smooth case 3.2 Global existence: the general case 4 Uniqueness 4.1 A priori estimates with loss of regularity 4.2 Proof of Theorem 4.3 The limit case $p=2N$ 5 Appendix References License: arXiv.org perpetual non-exclusive license arXiv:0806.4084v1 [math.AP] 25 Jun 2008 Existence and uniqueness results
+for the Boussinesq system with data in Lorentz spaces Raphaël Danchin Note: Université Paris-Est, LAMA UMR 8050, 61 av.
+du Général de Gaulle, 94010 Créteil Cedex, France. E-mail: danchin$@$univ-paris12.fr Marius Paicu Note: Université Paris-Sud, Laboratoire de Mathématiques,
+Bâtiment 425, 91405 Orsay Cedex, France. Abstract This paper is devoted to the study of the Cauchy problem
+for the Boussinesq system with partial viscosity
+in dimension $N\geq 3.$ First we prove
+a global existence result for data
+in Lorentz spaces satisfying
+a smallness condition which
+is at the scaling of the equations.
+Second, we get
+a uniqueness result in Besov spaces
+with negative indices of regularity
+(despite the fact that there is
+no smoothing effect on the temperature).
+The proof relies
+on a priori estimates with loss of regularity
+for the nonstationary
+Stokes system with convection.
+As a corollary, we obtain
+a global existence and uniqueness result
+for small data in Lorentz spaces. MSC: 35Q35, 76N10, 35B65, 76D99 Key words: Boussinesq system, lorentz spaces,
+critical spaces, losing estimates. 1 Introduction and main results The present paper is devoted to the mathematical study
+of the so-called Boussinesq system with partial viscosity: $\begin{cases}\partial_{t}\theta+u\cdot\nabla\theta=0\\
+\partial_{t}u+u\cdot\nabla u-\nu\Delta u+\nabla\Pi=\theta\,e_{N}\\
+\,\mbox{div}\,u=0.\end{cases}$ (1) Above, $\theta=\theta(t,x)$ and $\Pi=\Pi(t,x)$ are real valued functions,
+and $u=u(t,x)$ is a time dependent
+vector field.
+We denote by $e_{N}$ the vertical
+unit vector of $\mathbb{R}^{N}$ .
+It is assumed that the space variable $x$ belongs
+to $\mathbb{R}^{N}.$ We supplement
+the system with Cauchy conditions $(\theta_{0},u_{0})$ at time $t=0$ and address the question of
+solvability for $t\geq 0$ . Boussinesq system arises in simplified models for geophysics
+in which case $u$ stands for the velocity field
+and the forcing term $\theta\,e_{N}$ is proportional
+either to the temperature, or to the salinity
+or to the density (see [ 17 ] ).
+Here, we shall call $\theta$ the temperature. Remark that the standard incompressible Navier-Stokes equations
+arise as a particular case of ( 1 ) (just take $\theta\equiv 0$ ). Hence, it is tempting to study whether the classical
+theory for the Navier-Stokes equations
+may be extended to those
+more general fluids.
+As far as one is concerned with global results, the main difficulty that
+we have to face is that $\theta$ is transported
+by the flow of $u.$ Hence it has
+no time decay nor gain of smoothness whatsoever
+and the standard approach for solving Navier-Stokes equations
+with a (given) source term is bound to fail.
+Nevertheless, in a recent paper (see [ 11 ] ),
+we have stated that system ( 1 ) has
+global finite energy weak solutions
+for any data $(\theta_{0},u_{0})$ in $L^{2}$ and
+that uniqueness holds true in dimension two.
+That result may be compared with Leray’s theorem [ 16 ] for the Navier-Stokes equations. In [ 11 ] , we have also obtained a global
+existence result (for small data)
+in the spirit of Fujita and Kato’s theorem (see [ 12 ] and [ 14 ] ) for the Navier-Stokes equations: Theorem 1 Let $N\geq 3.$ Let $\theta_{0}\in L^{\frac{N}{3}}(\mathbb{R}^{N})\cap\dot{B}^{0}_{N,1}(\mathbb{R}^{N})$ and $u_{0}\in L^{N,\infty}(\mathbb{R}^{N})\cap\dot{B}^{-1+\frac{N}{p}}_{p,1}(\mathbb{R}^{N})$ for some $p\in[N,\infty].$ There exists a positive $c$ depending only on $N$ and such that if $\|u_{0}\|_{L^{N,\infty}}+\nu^{-1}\|\theta_{0}\|_{L^{\frac{N}{3}}}\leq c\nu$ then Boussinesq system ( 1 ) admits a unique global
+solution $(\theta,u,\nabla\Pi)\in{\cal C}(\mathbb{R}_{+};\dot{B}^{0}_{N,1})\times\Bigl({\cal C}(\mathbb{R}_{+};\dot{B}^{\frac{N}{p}-1}_{p,1})\cap L^{1}_{loc}(\mathbb{R}_{+};\dot{B}^{\frac{N}{p}+1}_{p,1})\Bigr)^{N}\times\Bigl(L^{1}_{loc}(\mathbb{R}_{+};\dot{B}^{\frac{N}{p}-1}_{p,1})\Bigr)^{N}.$ Besides, from dimension $N=4$ on,
+space $L^{\frac{N}{3}}(\mathbb{R}^{N})$ may be
+replaced by $L^{\frac{N}{3},\infty}(\mathbb{R}^{N}).$ The reader is referred to section 2 for the definition of Lorentz spaces $L^{p,\infty}$ and Besov spaces $\dot{B}^{s}_{p,r}$ which have been used
+above. Remind that we have the (continuous) inclusions $\dot{B}^{0}_{N,1}\subset L^{N}\subset L^{N,\infty}.$ Theorem 1 may be interpreted in
+terms of scaling of Boussinesq system .
+Indeed, ( 1 ) is obviously invariant
+under the transform $u(t,x)\longmapsto\lambda u(\lambda^{2}t,\lambda x)\quad\text{and}\quad\theta(t,x)\longmapsto\lambda^{3}\theta(\lambda^{2}t,\lambda x)\quad\hbox{for all}\ \ \lambda>0.$ Hence data $(\theta_{0},u_{0})$ belong to a functional space $E$ which is at the scaling of the system
+if and only if the norm of $E$ is
+invariant by $u_{0}(x)\longmapsto\lambda u_{0}(\lambda x)\quad\text{and}\quad\theta_{0}(x)\longmapsto\lambda^{3}\theta_{0}(\lambda x).$ (2) In dimension $N\geq 3,$ the spaces $L^{\frac{N}{3}}\times\bigl(L^{N,\infty}\bigr)^{N}$ and $L^{\frac{N}{3},\infty}\times\bigl(L^{N,\infty}\bigr)^{N}$ satisfy ( 2 ).
+Hence, Theorem 1 is a global well-posedness
+result for suitably smooth data satisfying
+a scaling invariant smallness condition.
+In fact, prescribing additional regularity
+in homogeneous Besov spaces ensures that the velocity belongs to
+the set $L^{1}_{loc}(\mathbb{R}_{+};\hbox{Lip})$ of
+locally integrable functions in $t$ with values in the set of Lipschitz vector fields.
+This property was needed for
+uniqueness.
+Note in passing that the additional condition
+required for the initial velocity still
+satisfies ( 2 ). The present paper aims at
+weakening as much as possible the Besov space
+assumption. Ideally, we would like to
+consider general (small) data $(\theta_{0},u_{0})$ in
+the scaling invariant space $L^{\frac{N}{3},\infty}\times\bigl(L^{N,\infty}\bigr)^{N}.$ For proving existence, the strategy is the following.
+We smooth out the data so that Theorem 1 provides a sequence $(\theta^{n},u^{n})$ of global solutions
+which is bounded in $L^{\infty}\bigl(\mathbb{R}_{+};L^{\frac{N}{3},\infty}\times\bigl(L^{N,\infty}\bigr)^{N}\bigr).$ Obviously, those bounds are insufficient to pass
+to the limit in the nonlinear terms.
+However, the parabolicity of the second equation of ( 1 )
+provides additional regularity
+so that there is some chance to pass
+to the limit anyway
+provided $\theta_{0}$ belongs also to $L^{p,\infty}$ for some large enough $p.$ Those basic considerations will enable us to prove
+the following statement: Theorem 2 Let $u_{0}$ be a solenoidal vector field with
+coefficients in $L^{N,\infty}.$ Assume that $\theta_{0}$ belongs to • $L^{1}\cap L^{p,\infty}$ for some $p>3/2$ if $N=3,$ • $L^{4/3,\infty}\cap L^{p,\infty}$ for some $p>4/3$ if $N=4,$ • $L^{N/3,\infty}\cap L^{p,\infty}$ for some $p\geq N/3$ if $N\geq 5.$ There exists a constant $c>0$ depending only on $N,$ and such that if $\|u_{0}\|_{L^{3,\infty}}+\|\theta_{0}\|_{L^{1}}\leq c\nu\ \ \hbox{if}\ \ N=3,\qquad\|u_{0}\|_{L^{N,\infty}}+\|\theta_{0}\|_{L^{N/3,\infty}}\leq c\nu\ \ \hbox{if}\ \ N\geq 4$ (3) then system ( 1 ) has a global solution $(\theta,u,\nabla\Pi)$ with $u\in L^{\infty}(\mathbb{R}_{+};L^{N,\infty})$ and $\theta\in L^{\infty}(\mathbb{R}_{+};L^{1}\cap L^{p,\infty})\ \ \hbox{if}\ \ N=3,\qquad\theta\in L^{\infty}(\mathbb{R}_{+};L^{\frac{N}{3},\infty}\cap L^{p,\infty})\ \ \hbox{if}\ \ N\geq 4.$ Remark: In fact, the heat semi-group supplies
+some
+additional regularity properties for $u$ (that we
+shall use in the proof of Theorem 2 ). Note that from dimension $5$ on, one can take $p=N/3$ so that the above statement is a global
+existence result in a scaling invariant space
+for the system.
+The scaling of the system may still be almost achieved in dimension $4.$ In dimension $3$ however, it
+is very unlikely that an existence result may be proved
+for $\theta_{0}\in L^{1}$ and $u_{0}\in L^{N,\infty}$ (see Remark 4 for further explanations). As regards uniqueness, let us stress that
+for general $u_{0}$ in $L^{N,\infty}$ the function $e^{t\Delta}u_{0}$ (where $(e^{t\Delta})_{t>0}$ denotes the heat semi-group)
+need not be in $L^{1}_{loc}(\mathbb{R}_{+};\hbox{Lip}).$ Therefore, the velocity field of the
+solution constructed in Theorem 2 need not be in $L^{1}_{loc}(\mathbb{R}_{+};\hbox{Lip})$ either which precludes us from
+proving stability estimates
+for system ( 1 ) by mean of standard arguments.
+Indeed,
+we have to deal with a transport equation
+associated to a vector field which is not in $L^{1}_{loc}(\mathbb{R}_{+};\hbox{Lip}).$ This difficulty has been
+overcome in [ 11 ] in
+the framework of two-dimensional finite energy solutions.
+In the present paper, we shall see
+that similar arguments may be used to state uniqueness
+in dimension $N\geq 3.$ Theorem 3 Let $(\theta_{1},u_{1},\nabla\Pi_{1})$ and $(\theta_{2},u_{2},\nabla\Pi_{2})$ satisfy ( 1 ) with the same data.
+Assume that for some $p\in[1,2N[$ and $i=1,2,$ we have $\theta_{i}\in L^{\infty}_{T}(\dot{B}^{-1+\frac{N}{p}}_{p,\infty})\quad\!\!\text{and}\quad\!\!u_{i}\in L_{T}^{\infty}(\dot{B}^{-1+\frac{N}{p}}_{p,\infty})\cap\widetilde{L}_{T}^{1}(\dot{B}^{1+\frac{N}{p}}_{p,\infty}).$ There exists a constant $c>0$ depending only on $N$ and on $p$ such that if in addition $\|u_{1}\|_{\widetilde{L}_{T}^{1}(\dot{B}^{1+\frac{N}{p}}_{p,\infty})}+\nu^{-1}\|u_{2}\|_{L_{T}^{\infty}(\dot{B}^{-1+\frac{N}{p}}_{p,\infty})}\leq c$ (4) then $(\theta_{1},u_{1},\nabla\Pi_{1})\equiv(\theta_{2},u_{2},\nabla\Pi_{2})$ . In the above statement, the space $\widetilde{L}_{T}^{1}(\dot{B}^{1+\frac{N}{p}}_{p,\infty})$ is slightly larger
+than the set $L^{1}_{T}(\dot{B}^{1+\frac{N}{p}}_{p,\infty})$ of integrable functions over $[0,T]$ with values in the Besov space $\dot{B}^{1+\frac{N}{p}}_{p,\infty}$ (see section 2 ). Remark: The limit case $p=2N$ may be considered if the velocity
+field belongs to a Besov space with third index $1$ (see
+Theorem 5 ). Finally, putting
+together the embedding $L^{N,\infty}\hookrightarrow\dot{B}^{-1+\frac{N}{q}}_{q,\infty}$ for $q>N$ (see Lemma 2 below),
+the existence and uniqueness theorems,
+and the further regularity properties for the
+velocity given by the heat semi-group,
+one ends up with the following global well-posedness result: Theorem 4 Assume that $(\theta_{0},u_{0})$ satisfies
+the assumptions of Theorem 2 with $p=N.$ Then system ( 1 ) has
+a unique solution $(\theta,u,\nabla\Pi)$ such that $u\in L^{\infty}(\mathbb{R}_{+};L^{N,\infty}),$ $\theta\in L^{\infty}(\mathbb{R}_{+};L^{\frac{N}{3},\infty})$ if $N\geq 4$ and $\theta\in L^{1}(\mathbb{R}_{+};L^{1})$ if $N=3$ ,
+with moreover $u\in\widetilde{L}^{1}_{loc}(\dot{B}^{1+\frac{N}{q}}_{q,\infty})\quad\hbox{for all}\ \ q>N.$ The paper is structured as follows.
+In the next section, we present a few tools borrowed from
+harmonic and functional analysis.
+Section 3 is devoted
+to the proof of existence. The study of uniqueness
+is postponed in section 4 . Acknowledgments: The authors are indebted to the referee for fruitful
+remarks. 2 Tools and functional spaces 2.1 Lorentz spaces To start with,
+let us
+recall the definition of weak $L^{p}$ spaces (denoted by $L^{p,\infty}$ ): Definition 1 For $1\leq p<\infty,$ we denote by $L^{p,\infty}(\mathbb{R}^{N})$ (or
+simply $L^{p,\infty}$ ) the space of all
+real valued measurable functions over $\mathbb{R}^{N}$ such that $\|f\|_{L^{p,\infty}}:=\sup_{\lambda>0}\lambda\>\Bigl|\bigl\{x\in\mathbb{R}^{N}/|f(x)|>\lambda\bigr\}\Bigr|^{\frac{1}{p}}<\infty.$ Remark 1 The space $L^{p,\infty}$ may be alternatively defined
+by real interpolation: $L^{p,\infty}=(L^{\infty},L^{1})_{(\frac{1}{p},\infty)}.$ In other words, a function $f$ belongs to $L^{p,\infty}$ if and only if, for
+all $A>0$ , one may write $f=f^{A}+f_{A}$ for some functions $f_{A}\in L^{1}$ and $f^{A}$ in $L^{\infty}$ such that $\|f_{A}\|_{L^{1}}\leq CA^{1-1/p}\quad\hbox{and}\quad\|f^{A}\|_{L^{\infty}}\leq CA^{-1/p}.$ The “best constant” $C$ defines
+a norm which is equivalent
+to $\|f\|_{L^{p,\infty}}.$ The set ${\cal C}_{c}^{\infty}$ of smooth compactly supported
+functions is not dense in spaces $L^{p,\infty}.$ It turns out however that ${\cal C}_{c}^{\infty}$ is locally dense in $L^{p,\infty}$ (despite the fact that $L^{p,\infty}$ is not separable).
+More details are given in the following proposition. Proposition 1 For all $p\!\in]1,\infty[$ and $f\in L^{p,\infty},$ there exists a family $(f_{\varepsilon})_{\varepsilon>0}$ of ${\cal C}_{c}^{\infty}$ functions and a constant $C$ so that $\sup_{\varepsilon>0}\|f_{\varepsilon}\|_{L^{p,\infty}}\leq C\|f\|_{L^{p,\infty}}\quad\hbox{and}\quad f_{\varepsilon}\rightarrow f\quad\hbox{in}\ \ L^{1}+L^{\infty}.$ (5) Proof: Let $(\varphi_{\varepsilon})_{\varepsilon>0}$ be a family
+of mollifiers and $(\chi_{\varepsilon})_{\varepsilon>0},$ a family
+of cut-off functions with values
+in $[0,1],$ supported in $B(0,2\varepsilon^{-1})$ and equal to $1$ in a neighborhood of $B(0,\varepsilon^{-1}).$ Let $f\in L^{p,\infty}.$ For all $\varepsilon>0,$ set $f_{\varepsilon}:=\varphi_{\varepsilon}\star(\chi_{\varepsilon}f)$ and fix some $\eta>0.$ From the above definition and remark, it is obvious that $\|f_{\varepsilon}\|_{L^{p,\infty}}\leq C\|\chi_{\varepsilon}f\|_{L^{p,\infty}}\leq C\|f\|_{L^{p,\infty}}\quad\hbox{for all}\quad\varepsilon>0,$ and that one can find two functions $g\in L^{1}$ and $h\in L^{\infty}$ such that $f=g+h$ and $\|h\|_{L^{\infty}}\leq\eta/4$ (just take $A$ large enough). Let us split $f_{\varepsilon}-f$ as follows: $f_{\varepsilon}-f=\Bigl\{\varphi_{\varepsilon}\star\bigl(\chi_{\varepsilon}g\bigr)-\varphi_{\varepsilon}\star g\Bigr\}+\Bigl\{\varphi_{\varepsilon}\star g-g\Bigr\}+\Bigl\{\varphi_{\varepsilon}\star\bigl(\chi_{\varepsilon}h\bigr)-h\Bigr\}.$ On the one hand, Lebesgue dominated convergence theorem
+and standard results on convolution ensure
+that the first two terms between curly brackets
+have $L^{1}$ norm less than $\eta/2$ for small enough $\varepsilon.$ On the other hand, the $L^{\infty}$ norm
+of the last term is obviously less than $\eta/2$ for any $\varepsilon>0.$ It is now easy to complete the proof of the proposition. 2.2 Besov spaces In this subsection we define
+the Littlewood-Paley decomposition and
+the Besov spaces that we are going to work with.
+The reader is referred to the monographs [ 5 ] , [ 15 ] or [ 18 ] for a more detailed presentation. To start with, fix a smooth nonnegative radial function $\chi$ with support in the ball $\{|\xi|\leq\frac{4}{3}\},$ value $1$ over $\{|\xi|\leq\frac{3}{4}\},$ and such that $r\mapsto\chi(re_{r})$ be nonincreasing over $\mathbb{R}_{+}.$ Let $\varphi(\xi)=\chi(\xi/2)-\chi(\xi).$ We obviously have $\sum_{q\in{\mathbb{Z}}}\varphi(2^{-q}\xi)=1\quad\hbox{for all}\quad\xi\in\mathbb{R}^{N}\setminus\{0\}.$ (6) We define the spectral localization operators $\dot{\Delta}_{q}$ and $\dot{S}_{q}$ ( $q\in{\mathbb{Z}}$ ) by $\dot{\Delta}_{q}\;u:=\varphi(2^{-q}D)u\quad\text{and}\quad\dot{S}_{q}\,u:=\chi(2^{-q}D)u.$ For any tempered distribution $u\in\mathcal{S}^{\prime}(\mathbb{R}^{N})$ , functions $\dot{\Delta}_{q}u$ and $\dot{S}_{q}u$ are analytic with at most polynomial growth
+and $\displaystyle{u=\sum_{q\in{\mathbb{Z}}}\dot{\Delta}_{q}u}$ modulo polynomials (see e.g. [ 15 ] ). We shall often use the following quasi-orthogonality
+property : $\dot{\Delta}_{k}\dot{\Delta}_{q}u\equiv 0\quad\mbox{if}\quad|k-q|\geq 2\quad\mbox{and}\quad\dot{\Delta}_{k}(\dot{S}_{q-1}u\dot{\Delta}_{q}v)\equiv 0\quad\mbox{if}\quad|k-q|\geq 5.$ (7) Let us now recall the definition of
+homogeneous Besov spaces. Definition 2 Let $s\in\mathbb{R},\,(p,r)\in[1,\infty]^{2}$ and $u\in{\cal{S}}^{\prime}(\mathbb{R}^{N}).$ We set $\|u\|_{\dot{B}^{s}_{p,r}}:=\Big(\sum_{q\in{\mathbb{Z}}}2^{rqs}\|\dot{\Delta}_{q}\,u\|_{L^{p}}^{r}\Big)^{\frac{1}{r}}\quad\text{if}\quad r<\infty,\quad\text{and}\!\quad\|u\|_{\dot{B}^{s}_{p,\infty}}:=\sup_{q\in{\mathbb{Z}}}\,2^{qs}\|\dot{\Delta}_{q}\,u\|_{L^{p}}.$ • If $s<\frac{N}{p}$ or $s=\frac{N}{p}$ and $r=1$ then
+the homogeneous Besov space $\dot{B}^{s}_{p,r}:=\dot{B}^{s}_{p,r}(\mathbb{R}^{N})$ is defined as
+the set of those tempered distributions $u$ such that $\|u\|_{\dot{B}^{s}_{p,r}}<\infty.$ • If $\frac{N}{p}+k\leq s<\frac{N}{p}+k+1$ (or $s=\frac{N}{p}+k+1$ and $r=1$ ) for some $k\in\mathbb{N}$ then $\dot{B}^{s}_{p,r}$ is
+the set of tempered distributions $u$ so that $\partial^{\alpha}u\in\dot{B}^{s-k-1}_{p,r}$ for
+all multi-index $\alpha$ of length $k+1.$ Remark: Let us all also recall in passing that
+the nonhomogeneous Besov space $B^{s}_{p,r}$ is the set of tempered distributions $u$ such
+that 1 1 1 note
+that the definition is somewhat simpler
+than in the homogeneous framework since
+low frequencies cannot experience divergence. $\|u\|_{B^{s}_{p,r}}<\infty\quad\hbox{with}\quad\|u\|_{B^{s}_{p,r}}:=\|\dot{S}_{0}u\|_{L^{p}}+\bigl\|2^{qs}\|\dot{\Delta}_{q}u\|_{L^{p}}\bigr\|_{\ell^{r}(\mathbb{N})}.$ Remark: For all $s\in\mathbb{R},$ the Besov space $\dot{B}^{s}_{2,2}$ coincides
+with the homogeneous Sobolev space $\dot{H}^{s},$ and, if $s\in\mathbb{R}_{+}\setminus\mathbb{N}$ then $\dot{B}^{s}_{\infty,\infty}$ coincides
+with the homogeneous Hölder space $\dot{C}^{s}.$ The following Bernstein inequality will be of constant use in the paper. Lemma 1 Let $k\in\mathbb{N},$ $1\leq p_{1}\leq p_{2}\leq\infty$ and $\psi\in{\cal C}_{c}^{\infty}(\mathbb{R}^{N}).$ There exists a constant $C$ depending only on $k,$ $N$ and ${\rm Supp}\,\psi$ such that $\hskip 28.45274pt\|D^{k}\psi(2^{-q}D)u\|_{L^{p_{2}}}\leq C2^{q\bigl(k+N\bigl(\frac{1}{p_{1}}-\frac{1}{p_{2}}\bigr)\bigr)}\|\psi(2^{-q}D)u\|_{L^{p_{1}}}.$ We shall also use the following
+fundamental properties of Besov spaces. Proposition 2 (i) The set $\dot{B}^{s}_{p,r}(\mathbb{R}^{N})$ is a complete
+subspace of ${\cal S}^{\prime}(\mathbb{R}^{N})$ if and only if $s<N/p$ or $s=N/p$ and $r=1.$ (ii) There exists a positive constant $c$ so that $c^{-1}\|u\|_{\dot{B}^{s}_{p,r}}\leq\|\nabla u\|_{\dot{B}^{s-1}_{p,r}}\leq c\|u\|_{\dot{B}^{s}_{p,r}}.$ (8) (iii) For all $1\leq p_{1}\leq p_{2}\leq\infty$ and $1\leq r_{1}\leq r_{2}\leq\infty,$ we have $\dot{B}^{s}_{p_{1},r_{1}}\hookrightarrow\dot{B}^{s-N(\frac{1}{p_{1}}-\frac{1}{p_{2}})}_{p_{2},r_{2}}.$ (iv) If $p\in[1,\infty]$ then $\dot{B}^{\frac{N}{p}}_{p,1}\hookrightarrow\dot{B}^{\frac{N}{p}}_{p,\infty}\cap L^{\infty}.$ If $p$ is finite then space $\dot{B}^{\frac{N}{p}}_{p,1}$ is
+an algebra. (v) Real interpolation: $(\dot{B}^{s_{1}}_{p,r},\dot{B}^{s_{2}}_{p,r})_{\theta,\,r^{\prime}}=\dot{B}^{\theta s_{2}+(1-\theta)s_{1}}_{p,r^{\prime}}$ whenever $0<\theta<1$ and $1\leq p,r,r^{\prime}\!\leq~\!\!\infty.$ We shall often use the fact that
+Lorentz spaces
+are embedded in Besov spaces (see the proof in [ 11 ] ). Lemma 2 For any $1<p<q\leq\infty,$ we have $L^{p,\infty}(\mathbb{R}^{N})\hookrightarrow\dot{B}^{\frac{N}{q}-\frac{N}{p}}_{q,\infty}(\mathbb{R}^{N}).$ In order to pass to the limit
+in the nonlinear terms of System ( 1 ),
+the following compactness result in nonhomogeneous Besov spaces will be most
+useful. Lemma 3 For any $1<p<q\leq\infty,$ $\varepsilon>0$ and $\psi\in{\cal C}_{c}^{\infty},$ the
+map $u\mapsto\psi u$ is compact from $L^{p,\infty}(\mathbb{R}^{N})$ to $B^{\frac{N}{q}-\frac{N}{p}-\varepsilon}_{q,\infty}(\mathbb{R}^{N}).$ Proof: It is well known
+that $u\mapsto\psi u$ is a compact mapping
+from $B^{s}_{p,r}$ to $B^{s^{\prime}}_{p,r}$ whenever $s^{\prime}<s$ (see e.g [ 18 ] and the references therein).
+So it suffices to combine
+the previous lemma
+with the fact that, owing to $N/q-N/p<0,$ we have $\dot{B}^{\frac{N}{q}-\frac{N}{p}}_{q,\infty}\hookrightarrow B^{\frac{N}{q}-\frac{N}{p}}_{q,\infty}.$ 2.3 Product and paraproduct in Besov spaces In order to bound the nonlinear terms in system
+( 1 ),
+it will be useful to know how the product
+of two functions operates in Besov spaces.
+In fact, optimal results may be achieved
+by taking advantage of (basic) paradifferential calculus,
+a tool which was introduced by J.-M. Bony
+in [ 4 ] .
+More precisely, the product of two functions $f$ and $g$ may be decomposed according to $fg=\dot{T}_{f}g+\dot{T}_{g}f+\dot{R}(f,g)$ (9) where the paraproduct operator $\dot{T}$ is defined by
+the formula $\displaystyle{\,\dot{T}_{f}g:=\sum_{q}\dot{S}_{q\!-\!1}f\,\dot{\Delta}_{q}g},$ and the remainder operator, $\dot{R},$ by $\displaystyle{\,\dot{R}(f,g):=\sum_{q}\dot{\Delta}_{q}f\widetilde{\Delta}_{q}g}\quad\text{with}\quad\widetilde{\Delta}_{q}:=\dot{\Delta}_{q\!-\!1}+\dot{\Delta}_{q}+\dot{\Delta}_{q\!+\!1}.$ We shall make an extensive use of the following results
+of continuity for operators $\dot{T}$ and $\dot{R}$ (see the proof in e.g. [ 18 ] ): Proposition 3 Let $1\leq p,p_{1},p_{2},r,r_{1},r_{2}\leq\infty$ so that $\frac{1}{p}=\frac{1}{p_{1}}+\frac{1}{p_{2}}$ and $\frac{1}{r}=\frac{1}{r_{1}}+\frac{1}{r_{2}}.$ Operator $\dot{T}$ is continuous : • from $L^{\infty}\times\dot{B}^{t}_{p,r}$ to $\dot{B}^{t}_{p,r}$ for all $t\in\mathbb{R},$ • from $\dot{B}^{-s}_{p_{1},r_{1}}\times\dot{B}^{t}_{p_{2},r_{2}}$ to $\dot{B}^{t-s}_{p,r}$ for all $t\in\mathbb{R}$ and $s>0.$ Operator $\dot{R}$ is continuous: • from $\dot{B}^{s}_{p_{1},r_{1}}\times\dot{B}^{t}_{p_{2},r_{2}}$ to $\dot{B}^{s+t}_{p,r}$ for all $(s,t)\in\mathbb{R}^{2}$ such that $s+t>0,$ • from $\dot{B}^{s}_{p_{1},r_{1}}\times\dot{B}^{-s}_{p_{2},r_{2}}$ to $\dot{B}^{0}_{p,\infty}$ if $s\in\mathbb{R}$ and $\frac{1}{r_{1}}+\frac{1}{r_{2}}\geq 1.$ Combining the above continuity results with
+Bony’s decomposition ( 9 ),
+we get: Proposition 4 Let $(p,r)\in[1,\infty]^{2}$ and $(s_{1},s_{2})\in\mathbb{R}^{2}.$ The following inequalities hold true: • If $s_{1}+s_{2}+N\inf(0,1-\frac{2}{p})>0,$ $s_{1}<\frac{N}{p}$ and $s_{2}<\frac{N}{p}$ then $\|uv\|_{\dot{B}^{s_{1}+s_{2}-\frac{N}{p}}_{p,r}}\leq C\|u\|_{\dot{B}^{s_{1}}_{p,r}}\|v\|_{\dot{B}^{s_{2}}_{p,\infty}}.$ (10) If $s_{1}=\frac{N}{p}$ then $\|u\|_{\dot{B}^{\frac{N}{p}}_{p,r}}$ (resp. $\|v\|_{\dot{B}^{s_{2}}_{p,\infty}}$ )
+has to be replaced with $\|u\|_{\dot{B}^{\frac{N}{p}}_{p,r}\cap L^{\infty}}$ (resp. $\|v\|_{\dot{B}^{s_{2}}_{p,r}}$ ).
+If $s_{2}=\frac{N}{p}$ then $\|v\|_{\dot{B}^{\frac{N}{p}}_{p,\infty}}$ has to be replaced with $\|v\|_{\dot{B}^{\frac{N}{p}}_{p,\infty}\cap L^{\infty}}.$ • If $s_{1}+s_{2}=0,$ $s_{1}\in(-\frac{N}{p},\frac{N}{p}]$ and $p\geq 2$ then $\|uv\|_{\dot{B}^{-\frac{N}{p}}_{p,\infty}}\leq C\|u\|_{\dot{B}^{s_{1}}_{p,1}}\|v\|_{\dot{B}^{s_{2}}_{p,\infty}}.$ (11) • If $p\geq 2$ then $\|uv\|_{\dot{B}^{-\frac{N}{p}}_{p,\infty}}\leq C\|u\|_{\dot{B}^{-\frac{N}{p}}_{p,1}}\|v\|_{\dot{B}^{\frac{N}{p}}_{p,\infty}\cap L^{\infty}}.$ (12) • If $|s|<\frac{N}{p}$ and $p\geq 2$ or $-\frac{N}{p^{\prime}}<s<\frac{N}{p}$ and $p<2$ then $\|uv\|_{\dot{B}^{s}_{p,r}}\leq C\|u\|_{\dot{B}^{s}_{p,r}}\|v\|_{\dot{B}^{\frac{N}{p}}_{p,\infty}\cap L^{\infty}}.$ (13) 2.4 Estimates for the heat and Stokes equations We shall often use the following smoothing property
+for the heat equation which has been stated by J.-Y. Chemin in [ 6 ] . Proposition 5 Let $s\in\mathbb{R},$ $1\leq p,r,\rho_{1}\leq\infty.$ Let $u_{0}\in\dot{B}^{s}_{p,r}$ and $f\!\in\!\widetilde{L}_{T}^{\rho_{1}}(\dot{B}^{s\!-\!2\!+\!\frac{2}{\rho_{1}}}_{p,r}).$ Then the heat equation $\partial_{t}u-\nu\Delta u=f,\qquad u_{|t=0}=u_{0}$ admits a unique solution $u$ in $\widetilde{L}_{T}^{\infty}(\dot{B}^{s}_{p,r})\cap\widetilde{L}_{T}^{\rho_{1}}(\dot{B}^{s+\frac{2}{\rho_{1}}}_{p,r})$ and there exists a constant $C$ depending only on the
+dimension $N$ so that for all $t\in[0,T]$ and $\rho\geq\rho_{1}$ , we have: $\nu^{\frac{1}{\rho}}\|u\|_{\widetilde{L}_{t}^{\rho}(\dot{B}^{s+\frac{2}{\rho}}_{p,r})}\leq C\biggl(\|u_{0}\|_{\dot{B}^{s}_{p,r}}+\nu^{\frac{1}{\rho_{1}}-1}\|f\|_{\widetilde{L}_{t}^{\rho_{1}}(\dot{B}^{s-2+\frac{2}{\rho_{1}}}_{p,r})}\biggr).$ (14) In the above statement, spaces $\widetilde{L}_{T}^{\rho}(\dot{B}^{s}_{p,r})$ are defined along the lines of definition 2 with $\|u\|_{\widetilde{L}_{T}^{\rho}(\dot{B}^{s}_{p,r})}:=\Bigl\|2^{qs}\|\dot{\Delta}_{q}u\|_{L_{T}^{\rho}(L^{p})}\Bigr\|_{\ell^{r}({\mathbb{Z}})}.$ (15) Note that by virtue of Minkowski inequality, we have $\|u\|_{L_{T}^{\rho}(\dot{B}^{s}_{p,r})}\leq\|u\|_{\widetilde{L}_{T}^{\rho}(\dot{B}^{s}_{p,r})}\quad\text{for}\quad\rho\geq r,$ (16) and the opposite inequality if $\rho\leq r.$ We shall set $\widetilde{L}^{\rho}_{loc}(\mathbb{R}_{+};\dot{B}^{s}_{p,r})=\bigcap_{T>0}\widetilde{L}_{T}^{\rho}(\dot{B}^{s}_{p,r}).$ Remark 2 The above results of continuity for the paraproduct, remainder
+and product may be easily carried out to $\widetilde{L}_{T}^{\rho}(\dot{B}^{s}_{p,r})$ spaces.
+The time exponents just behave according to Hölder inequality. Remark 3 Since the Leray projector ${\cal P}$ over solenoidal vector fields
+maps $\dot{B}^{s}_{p,r}$ to $\dot{B}^{s}_{p,r}$ for every $s\in\mathbb{R}$ and $1\leq p,r\leq\infty,$ Proposition 5 may be extended to the nonstationary
+Stokes system $\left\{\begin{array}[]{l}\partial_{t}u-\nu\Delta u+\nabla\Pi=f,\qquad{\rm div}\,u=0,\\
+u_{|t=0}=u_{0},\end{array}\right.$ (17) with divergence free initial data $u_{0}\in\dot{B}^{s}_{p,r},$ and source term $f$ in $\widetilde{L}_{T}^{1}(\dot{B}^{s}_{p,r}).$ In particular, denoting ${\cal Q}={\rm Id}-{\cal P},$ we have the following a priori
+estimates for all $\rho\geq 1:$ $\nu^{\frac{1}{\rho}}\|u\|_{\widetilde{L}_{T}^{\rho}(\dot{B}^{s+\frac{2}{\rho}}_{p,r})}\leq C\biggl(\|u_{0}\|_{\dot{B}^{s}_{p,r}}+\|{\cal P}f\|_{\widetilde{L}_{T}^{1}(\dot{B}^{s}_{p,r})}\biggr)\quad\hbox{and}\quad\|\nabla\Pi\|_{\widetilde{L}_{T}^{1}(\dot{B}^{s}_{p,r})}\leq C\|{\cal Q}f\|_{\widetilde{L}_{T}^{1}(\dot{B}^{s}_{p,r})}.$ 3 Existence of solutions with infinite energy This section is devoted to the proof of Theorem 2 . The
+principle of the proof is standard: 1. approximate the data $(\theta_{0},u_{0})$ by a sequence $(\theta_{0}^{n},u_{0}^{n})_{n\in\mathbb{N}}$ of smooth solutions; 2. solve (globally) the Boussinesq system
+with data $(\theta_{0}^{n},u_{0}^{n});$ 3. resort to compactness arguments to
+prove the convergence of a subsequence; 4. pass to the limit in the system. 3.1 Global existence: the smooth case As a warm up, let us first consider the case $p=N$ which is easier to deal with.
+For notational simplicity, we agree that $L^{\frac{N}{3},\infty}$ stands for $L^{1}$ if $N=3.$ Let $(\theta_{0},u_{0})$ be in $\bigl(L^{\frac{N}{3},\infty}\cap L^{N,\infty}\bigr)\times\bigl(L^{N,\infty}\bigr)^{N}$ with $\,\mbox{div}\,u_{0}=0.$ According to (a slight generalization of) Proposition 1 , one
+can find a sequence $(\theta_{0}^{n},u_{0}^{n})_{n\in\mathbb{N}}$ of ${\cal C}_{c}^{\infty}$ functions which tends
+to $(\theta_{0},u_{0})$ in the sense of the distributions
+and such that in addition $\|\theta_{0}^{n}\|_{L^{\frac{N}{3},\infty}}\leq C\|\theta_{0}\|_{L^{\frac{N}{3},\infty}},\quad\|\theta_{0}^{n}\|_{L^{N,\infty}}\leq C\|\theta_{0}\|_{L^{N,\infty}},\quad\|u_{0}^{n}\|_{L^{N,\infty}}\leq C\|u_{0}\|_{L^{N,\infty}}.$ Note that projecting on the set of solenoidal
+vector fields is needed
+to ensure that $\,\mbox{div}\,u_{0}^{n}=0.$ This operation is harmless since ${\cal P}$ maps $L^{N,\infty}$ in $L^{N,\infty}.$ According to [ 11 ] Theorem 1.5, we deduce
+that there exists a positive constant $c$ so that if condition ( 3 ) is
+satisfied then system ( 1 )
+admits a unique global solution $(\theta^{n},u^{n})$ in ${\cal C}(\mathbb{R}_{+};\dot{B}^{0}_{N,1})$ with
+in addition $\|u^{n}(t)\|_{L^{N,\infty}}\leq C(\nu^{-1}\|\theta_{0}\|_{L^{\frac{N}{3},\infty}}+\|u_{0}\|_{L^{N,\infty}})\quad\hbox{for all}\ \ t\geq 0.$ As $\theta_{0}\in L^{\frac{N}{3},\infty}\cap L^{N,\infty}$ and $\,\mbox{div}\,u^{n}=0$ one can assert (see e.g Proposition 4.6 of [ 11 ] ) that $\|\theta^{n}(t)\|_{L^{\frac{N}{3},\infty}}\leq C\|\theta_{0}\|_{L^{\frac{N}{3},\infty}}\quad\text{and}\quad\|\theta^{n}(t)\|_{L^{N,\infty}}\leq C\|\theta_{0}\|_{L^{N,\infty}}\quad\hbox{for all}\ \ t\geq 0.$ Note that the above estimates
+are not sufficient to pass to the
+limit in the nonlinear terms of system ( 1 ).
+So we shall take advantage
+of the smoothing properties given by
+the Stokes operator
+in the equation for the velocity.
+Let $q$ be in $]N,\infty[.$ Putting together Remark 3 and the
+embedding $L^{N,\infty}\hookrightarrow\dot{B}^{\frac{N}{q}-1}_{q,\infty},$ we discover that $\nu\|u^{n}\|_{\widetilde{L}^{1}_{t}(\dot{B}^{\frac{N}{q}+1}_{q,\infty})}\leq C\Bigl(\|u_{0}\|_{L^{N,\infty}}+\|u^{n}\otimes u^{n}\|_{\widetilde{L}^{1}_{t}(\dot{B}^{\frac{N}{q}}_{q,\infty})}+\|\theta^{n}\|_{L^{1}_{t}(L^{N,\infty})}\Bigr).$ (18) Using Bony’s decomposition
+( 9 ) followed
+by Proposition 3 ,
+Remark 2 and Lemma 2 , we can write that $\begin{array}[]{lll}\|u^{n}\otimes u^{n}\|_{\widetilde{L}^{1}_{t}(\dot{B}^{\frac{N}{q}}_{q,\infty})}&\leq&C\|u^{n}\|_{L_{t}^{\infty}(\dot{B}^{-1}_{\infty,\infty})}\|u^{n}\|_{\widetilde{L}^{1}_{t}(\dot{B}^{\frac{N}{q}+1}_{q,\infty})},\\[6.45831pt]
+&\leq&C\|u^{n}\|_{L_{t}^{\infty}(L^{N,\infty})}\|u^{n}\|_{\widetilde{L}^{1}_{t}(\dot{B}^{\frac{N}{q}+1}_{q,\infty})}.\end{array}$ Plugging this latter inequality in ( 18 ),
+and assuming that $c$ is suitably small,
+we thus get $\nu\|u^{n}\|_{\widetilde{L}^{1}_{t}(\dot{B}^{\frac{N}{q}+1}_{q,\infty})}\leq C\bigl(\|u_{0}\|_{L^{N,\infty}}+t\|\theta_{0}\|_{L^{N,\infty}}\bigr).$ (19) Now, compactness arguments will enable us to pass
+to the limit. Indeed,
+we have proved that sequence $(\theta^{n},u^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}(\mathbb{R}_{+};L^{\frac{N}{3},\infty}\cap L^{N,\infty})\times\Bigl(L^{\infty}(\mathbb{R}_{+};L^{N,\infty})\cap\widetilde{L}^{1}_{loc}(\mathbb{R}_{+};\dot{B}^{\frac{N}{q}+1}_{q,\infty})\Bigr)^{N}\quad\text{for all}\quad q>N.$ So it is easy to show that sequence $(\partial_{t}\theta^{n})_{n\in\mathbb{N}}$ is bounded in the set
+of space derivatives of functions of $L^{\infty}(\mathbb{R}_{+};L^{\frac{N}{2},\infty}),$ which is
+embedded in $L^{\infty}(\mathbb{R}_{+};B^{-3+\frac{N}{q}}_{q,\infty}).$ Now, according to Lemma 3 ,
+for all $\psi\in{\cal C}_{c}^{\infty}$ the map $f\mapsto\psi f$ is compact from $L^{N,\infty}$ to $B^{-3+\frac{N}{q}}_{q,\infty}.$ So one may conclude by combining
+Ascoli theorem, Cantor diagonal process and interpolation that
+there exists some function $\theta\in L^{\infty}(\mathbb{R}_{+};L^{\frac{N}{3}}\cap L^{N,\infty})$ such that, up to extraction, $\psi\theta^{n}\rightarrow\psi\theta\quad\text{in}\quad L^{\infty}_{loc}(\mathbb{R}_{+};B^{-1+\frac{N}{q}-\varepsilon}_{q,\infty})\quad\text{for all}\quad\psi\in{\cal C}_{c}^{\infty},\quad\varepsilon\in]0,1[\quad\text{and}\quad q>N.$ Similar arguments show that $(u^{n}\otimes u^{n})_{n\in\mathbb{N}}$ is bounded in the
+space $L^{\infty}(\mathbb{R}_{+};L^{\frac{N}{2},\infty})$ and that $(\theta^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}(\mathbb{R}_{+};L^{\frac{N}{3},\infty})$ so that, using embeddings, we conclude that $(\partial_{t}u^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}(\mathbb{R}_{+};B^{-3+\frac{N}{q}}_{q,\infty}).$ Repeating the above compactness argument,
+we get some distribution $u\in L^{\infty}(\mathbb{R}_{+};L^{N,\infty})\cap\widetilde{L}^{1}_{loc}(\mathbb{R}_{+};\dot{B}^{\frac{N}{q}+1}_{q,\infty})$ so that, up to extraction, $\psi u^{n}\rightarrow\psi u\quad\text{in}\quad L^{\infty}_{loc}(\mathbb{R}_{+};B^{-1+\frac{N}{q}-\varepsilon}_{q,\infty})\quad\text{for all}\quad\psi\in{\cal C}_{c}^{\infty},\quad\varepsilon\in]0,1[\quad\text{and}\quad q>N.$ Interpolating with the uniform bounds in $\widetilde{L}^{1}_{loc}(\mathbb{R}_{+};\dot{B}^{1+\frac{N}{q}}_{q,\infty}),$ we discover that convergence for $(\psi u^{n})_{n\in\mathbb{N}}$ also holds in every space $\widetilde{L}^{r}_{loc}(\mathbb{R}_{+};B^{\frac{N}{q}+\frac{2}{r}-1-\varepsilon}_{q,\infty})$ with $r>1$ and $q>N,$ which suffices to pass to the limit
+in all the nonlinear terms.
+So $(\theta,u)$ is a (weak) solution
+to system ( 1 ). 3.2 Global existence: the general case Let us now prove the existence part
+of Theorem 2 in the general case.
+Let $u_{0}\in L^{N,\infty}$ and $\theta_{0}\in L^{\frac{N}{3},\infty}\cap L^{p,\infty}$ for some $p$ satisfying the conditions of Theorem 2 . Assume that the smallness condition ( 3 )
+is satisfied. As before, we solve system
+( 1 )
+with smoothed out data and obtain
+a solution $(\theta^{n},u^{n})$ in ${\cal C}(\mathbb{R}_{+};\dot{B}^{0}_{N,1})$ satisfying $\hfil\displaystyle\|u^{n}(t)\|_{L^{N,\infty}}\leq c(\nu^{-1}\|\theta_{0}\|_{L^{\frac{N}{3},\infty}}+\|u_{0}\|_{L^{N,\infty}}),$ $\hfil\displaystyle\|\theta^{n}(t)\|_{L^{\frac{N}{3},\infty}}\leq\|\theta_{0}\|_{L^{\frac{N}{3},\infty}}\!\!\quad\text{and}\!\!\quad\|\theta^{n}(t)\|_{L^{p,\infty}}\leq\|\theta_{0}\|_{L^{p,\infty}}.$ Note that $u^{n}$ satisfies $u^{n}(t)=\underbrace{\phantom{\!\!\!\!\!\!\!\int_{0}^{t}}e^{t\nu\Delta}u_{0}^{n}}_{u_{1}^{n}(t)}-\underbrace{\int_{0}^{t}e^{(t-\tau)\nu\Delta}{\cal P}\,\mbox{div}\,(u^{n}\otimes u^{n})\,d\tau}_{u_{2}^{n}(t)}+\underbrace{\int_{0}^{t}e^{(t-\tau)\nu\Delta}{\cal P}\bigl(\theta^{n}\,e_{N}\bigr)\,d\tau}_{u_{3}^{n}(t)}.$ By virtue of the embedding $L^{N,\infty}\hookrightarrow\dot{B}^{\frac{N}{q_{1}}-1}_{q_{1},\infty}$ for $q_{1}>N$ and of Proposition 5 , we get $u_{1}^{n}\in\widetilde{L}^{1}_{loc}(\mathbb{R}_{+};\dot{B}^{\frac{N}{q_{1}}+1}_{q_{1},\infty})\quad\text{uniformly with respect to}\,\ n\ \,\text{for}\ \,q_{1}>N.$ (20) Next, we notice that $(u^{n}\otimes u^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}(\mathbb{R}_{+};L^{\frac{N}{2},\infty})$ so that, combining the embedding $L^{\frac{N}{2},\infty}\hookrightarrow\dot{B}^{\frac{N}{q_{2}}-2}_{q_{2},\infty}$ for $q_{2}>N/2$ and Proposition 5 , $u_{2}^{n}\!\in\!L^{\infty}_{loc}(\mathbb{R}_{+};\dot{B}^{\frac{N}{q_{2}}-1}_{q_{2},\infty})\quad\text{uniformly with respect to}\ \,n\ \,\text{for}\ \,q_{2}>N/2.$ (21) Finally, $(\theta^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}(\mathbb{R}_{+};L^{p,\infty})$ and $L^{p,\infty}\hookrightarrow\dot{B}^{\frac{N}{q_{3}}-\frac{N}{p}}_{q_{3},\infty}$ for $q_{3}>p$ hence $u_{3}^{n}\!\in\!L^{\infty}_{loc}(\mathbb{R}_{+};\dot{B}^{\frac{N}{q_{3}}-\frac{N}{p}+2}_{q_{3},\infty})\quad\text{uniformly with respect to}\,\ n\ \,\text{for}\,\ q_{3}>p.$ (22) Therefore, compactness arguments
+similar to those which have been used in
+the previous section enable us to show that,
+up to extraction, $(\theta^{n},u^{n})_{n\in\mathbb{N}}$ tends in the sense of
+distributions to some $(\theta,u)$ such that $\theta\in L^{\infty}(\mathbb{R}_{+};L^{\frac{N}{3},\infty}\cap L^{p,\infty})$ and, for all $q_{1}>N,$ $q_{2}>N/2$ and $q_{3}>p,$ $u\in L^{\infty}(\mathbb{R}_{+};L^{N,\infty})\cap\Bigl(\widetilde{L}^{1}_{loc}(\mathbb{R}_{+};\dot{B}^{\frac{N}{q_{1}}+1}_{q_{1},\infty})+L_{loc}^{\infty}(\mathbb{R}_{+};\dot{B}^{\frac{N}{q_{2}}-1}_{q_{2},\infty}+\dot{B}^{\frac{N}{q_{3}}-\frac{N}{p}+2}_{q_{3},\infty})\Bigr).$ By interpolation with the uniform bounds
+stated above, we deduce that convergence holds true
+for all $\varepsilon\in]0,1[,$ $q>p,$ $q_{1}>N,$ $q_{2}>N/2$ and $q_{3}>p,$ • locally
+in $L^{\infty}_{loc}(\mathbb{R}_{+};B^{\frac{N}{q}-\frac{N}{p}-\varepsilon}_{q,\infty})$ for the temperature, • locally in $\widetilde{L}^{r}\bigl(\mathbb{R}_{+};B^{\frac{N}{q_{1}}-1+\frac{2}{r}-\varepsilon}_{q_{1},\infty}\bigr)+L_{loc}^{\infty}\Bigl(\mathbb{R}_{+};B^{\frac{N}{q_{2}}-1-\varepsilon}_{q_{2},\infty}+B^{\frac{N}{q_{3}}-\frac{N}{p}+2-\varepsilon}_{q_{3},\infty}\Bigr)$ for the velocity. Taking advantage of continuity
+properties for the paraproduct and the remainder,
+it is then possible to pass to the limit in $u^{n}_{1}\theta^{n},$ $u^{n}_{2}\theta^{n}$ and $u^{n}_{3}\theta^{n}$ whenever there exist
+some exponents $q>p,$ $q_{1}>N,$ $q_{2}>N/2$ and $q_{3}>p$ satisfying $\displaystyle\textstyle{\frac{N}{q}-\frac{N}{p}+\frac{N}{q_{1}}+1}$ $\displaystyle>$ $\displaystyle\textstyle{N\max\Bigl(0,\frac{1}{q}+\frac{1}{q_{1}}-1\Bigr),}$ (23) $\displaystyle\textstyle{\frac{N}{q}-\frac{N}{p}+\frac{N}{q_{2}}-1}$ $\displaystyle>$ $\displaystyle\textstyle{N\max\Bigl(0,\frac{1}{q}+\frac{1}{q_{2}}-1\Bigr),}$ (24) $\displaystyle\textstyle{\frac{N}{q}-\frac{N}{p}+\frac{N}{q_{3}}-\frac{N}{p}+2}$ $\displaystyle>$ $\displaystyle\textstyle{N\max\Bigl(0,\frac{1}{q}+\frac{1}{q_{3}}-1\Bigr).}$ (25) It is clear
+that the first condition is satisfied
+for $q$ close enough to $p.$ Next, second condition is verified if $q_{2}$ is close enough to $N/2$ provided $p>N/(N-1).$ Finally, one can find some $q_{3}$ so that the third
+condition be fulfilled if and only if $p>\frac{2N}{N+2}.$ Note that in dimension three, this implies
+that $p>3/2,$ and that in dimension four,
+we must have $p>4/3.$ From dimension five on,
+one may find some $q,$ $q_{1},$ $q_{2}$ and $q_{3}$ such that
+conditions ( 23 ), ( 24 )
+and ( 25 ) are satisfied with $p=N/3.$ That no further
+condition is needed to pass to the limit
+in $u^{n}\otimes u^{n}$ is left to the reader.
+As a matter of fact, because $u^{n}\otimes u^{n}=u^{n}\otimes(u^{n}_{1}+u^{n}_{2}+u^{n}_{3}),$ it suffices to put together the fact that $(u^{n})_{n\in\mathbb{N}}$ is bounded in $L^{\infty}_{loc}(\mathbb{R}_{+};L^{N,\infty})$ and the properties which have been stated above for
+sequences $(u^{n}_{1})_{n\in\mathbb{N}},$ $(u^{n}_{2})_{n\in\mathbb{N}}$ and $(u^{n}_{3})_{n\in\mathbb{N}}.$ Remark 4 In dimension three, one may prove
+global existence under the weaker condition that $p>6/5.$ This may be achieved by combining the bounds satisfied
+by $(u^{n}_{1})_{n\in\mathbb{N}},$ $(u^{n}_{2})_{n\in\mathbb{N}}$ and $(u^{n}_{3})_{n\in\mathbb{N}}$ with a bootstrap argument. It is not clear however that one can take $p\leq 6/5.$ Indeed, having $\theta^{n}$ in $L^{\infty}(\mathbb{R}_{+};L^{p,\infty})$ implies that $u^{n}_{3}$ is no better than $L^{\infty}_{loc}(\mathbb{R}_{+};\dot{B}^{\frac{3}{q_{3}}-\frac{3}{p}+2}_{q_{3},\infty})$ for all $q_{3}>p.$ Hence $p>6/5$ is needed to pass to the
+limit in ${\rm div}\,(\theta^{n}\,u^{n}_{3}).$ 4 Uniqueness Let us first
+give the heuristics of the proof of
+Theorem 3 . Consider two solutions $(\theta_{1},u_{1},\nabla\Pi_{1})$ and $(\theta_{2},u_{2},\nabla\Pi_{2})$ of system ( 1 ) corresponding
+to the same initial data.
+Assume that for some $1\leq p<2N,$ $(\theta_{i},u_{i})\in L^{\infty}_{T}(\dot{B}^{-1+\frac{N}{p}}_{p,\infty})\times\Bigl(L^{\infty}_{T}(\dot{B}^{-1+\frac{N}{p}}_{p,\infty})\cap\widetilde{L}^{1}_{T}(\dot{B}^{1+\frac{N}{p}}_{p,\infty})\Bigr)^{N}\quad\hbox{for}\ \ i=1,2.$ The system satisfied by the difference $(\delta\!\theta,\delta\!u,\nabla\delta\!\Pi)$ between the two
+solutions reads $\left\{\begin{array}[]{l}\partial_{t}\delta\!\theta+\,\mbox{div}\,(u_{1}\delta\!\theta)=-\,\mbox{div}\,(\theta_{2}\,\delta\!u),\\
+\partial_{t}\delta\!u+\,\mbox{div}\,(u_{1}\otimes\delta\!u)-\nu\Delta\delta\!u+\nabla\delta\!\Pi=-\,\mbox{div}\,(\delta\!u\otimes u_{2})+\delta\!\theta\,e_{N}.\end{array}\right.$ Note that the right-hand side of the first
+equation (which is a transport equation associated
+to the vector field $u_{1}$ )
+is (at least) one derivative
+less regular than $\theta_{2}.$ Because no smoothing property may be expected for
+such an equation, this obliges us
+to perform estimates in $L^{\infty}_{T}(\dot{B}^{-2+\frac{N}{p}}_{p,\infty})$ for $\delta\!\theta$ rather than in $L^{\infty}_{T}(\dot{B}^{-1+\frac{N}{p}}_{p,\infty}).$ Now, due to the coupling between the equations for $\delta\!u$ and $\delta\!\theta,$ this loss of one derivative also occurs in the estimates
+for $\delta\!u.$ This yields
+the constraint $p<2N$ when bounding
+the quadratic terms (see Proposition 4 ). The second difficulty that
+we have to face is much more serious:
+as the space $\widetilde{L}^{1}_{T}(\dot{B}^{1+\frac{N}{p}}_{p,\infty})$ fails to be embedded in $L^{1}_{T}(\hbox{Lip}),$ the vector field $u_{1}$ is not in $L^{1}_{T}(\hbox{Lip}).$ Therefore,
+the initial regularity of $\delta\!\theta$ need not be preserved
+during the evolution.
+It turns out however that $\dot{B}^{1+\frac{N}{p}}_{p,\infty}$ is embedded in the
+set ${\rm Loglip}$ of Log-Lipschitz functions
+so that one may resort to
+arguments similar to those used by H. Bahouri and J.-Y. Chemin
+in [ 3 ] to prove estimates with
+(small) loss of regularity.
+Of course, we will have to cope with
+the fact that, due to the “tilde”,
+the space $\widetilde{L}^{1}_{T}(\dot{B}^{1+\frac{N}{p}}_{p,\infty})$ is not quite embedded in $L^{1}_{T}({\rm Loglip}).$ Overcoming this ultimate difficulty is the purpose of the next subsection. 4.1 A priori estimates with loss of regularity This section is devoted to proving
+a priori estimates with loss of regularity for transport-diffusion equations of the type $\begin{cases}\partial_{t}\rho+\,\mbox{div}\,(\rho u)-\nu\Delta\rho=f\\
+\rho|_{t=0}=\rho_{0}\end{cases}$ (26) with $u$ a given solenoidal
+vector field with coefficients
+in $\widetilde{L}_{T}^{1}(\dot{B}^{1+\frac{N}{p}}_{p,\infty})$ or,
+more generally, for
+the nonstationary Stokes system $\left\{\begin{array}[]{l}\partial_{t}v+\,\mbox{div}\,(u\otimes v)-\nu\Delta v+\nabla\Pi=f,\\
+{\rm div}\,u=0.\end{array}\right.$ (27) Let us first state a result
+for equation ( 26 ) which is a trifle easier to deal with. Proposition 6 Let $1<p<\infty$ and $s\in\bigl]-1-\min\bigl(\frac{N}{p},\frac{N}{p^{\prime}}\bigr),1+\frac{N}{p}\bigr[.$ Let $\rho$ be
+a solution to the
+transport-diffusion equation ( 26 ) . There exists some $N_{0}\in\mathbb{N}$ depending only on the choice of the Littlewood-Paley
+decomposition, a universal constant $C_{0}$ and two constants $c$ and $C$ depending
+only on $s,$ $p$ and $N$ so that if $\|\nabla u\|_{\widetilde{L}_{T}^{1}(\dot{B}^{\frac{N}{p}}_{p,\infty})}\leq c$ (28) then $\varepsilon_{q}(t):=C\displaystyle\sum_{q^{\prime}\leq q}2^{q^{\prime}(1+\frac{N}{p})}\displaystyle\int_{0}^{t}\|\check{\Delta}_{q^{\prime}}u\|_{L^{p}}\,d\tau$ with $\check{\Delta}_{q^{\prime}}=\sum_{|\alpha|\leq N_{0}}\dot{\Delta}_{q^{\prime}+\alpha}$ satisfies $\varepsilon_{q}(T)-\varepsilon_{q^{\prime}}(T)\leq\textstyle{\frac{1}{2}\bigl(1+s+\min\bigl(\frac{N}{p},\frac{N}{p^{\prime}}\bigr)\bigr)(q-q^{\prime})}\quad\text{for all}\quad\!\!q\geq q^{\prime}$ and the following a priori estimate is
+satisfied for all $t\in[0,T]$ : $\hfil\displaystyle\sup_{\begin{subarray}{c}q\in{\mathbb{Z}}\\
+\tau\in[0,t]\end{subarray}}2^{qs-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}\rho(\tau)\|_{L^{p}}+\nu\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}2^{q(s+2)-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}\rho(\tau)\|_{L^{p}}\,d\tau\hfill$ $\hfil\displaystyle\hfill\leq C_{0}\biggl(\|\rho_{0}\|_{\dot{B}^{s}_{p,\infty}}+\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}2^{qs-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}f(\tau)\|_{L^{p}}\,d\tau\biggr).$ Proof: The proof is similar to that
+of Proposition 4.9
+in [ 11 ] (see also Theorem 3.12
+in [ 9 ] ).
+First, we localize equation
+( 26 ) in the Fourier space
+by mean of the operator $\dot{\Delta}_{q}.$ We get $\partial_{t}\dot{\Delta}_{q}\rho+\dot{S}_{q-1}u\cdot\nabla\dot{\Delta}_{q}\rho-\nu\Delta\dot{\Delta}_{q}\rho=\dot{\Delta}_{q}f+F_{q}$ with $F_{q}=F_{q}^{1}+F_{q}^{2}+F_{q}^{3}+F_{q}^{4}$ and 2 2 2 with the
+summation convention over repeated indices $i$ $\begin{array}[]{lll}F_{q}^{1}:=\displaystyle\sum_{|q^{\prime}-q|\leq 4}[\dot{S}_{q^{\prime}-1}u,\dot{\Delta}_{q}]\cdot\nabla\dot{\Delta}_{q^{\prime}}\rho,&&F_{q}^{2}:=\displaystyle\sum_{|q^{\prime}-q|\leq 1}\bigl(\dot{S}_{q-1}-\dot{S}_{q^{\prime}-1}\bigr)u\cdot\nabla\dot{\Delta}_{q}\dot{\Delta}_{q^{\prime}}\rho,\\
+F_{q}^{3}:=-\dot{\Delta}_{q}\Bigl(\displaystyle\sum_{|q^{\prime}\!-\!q|\leq 4}\!\!\dot{S}_{q^{\prime}-1}\partial_{i}\rho\,\dot{\Delta}_{q^{\prime}}u^{i}\Bigr),&&F_{q}^{4}:=-\!\displaystyle\sum_{q^{\prime}\geq q-3}\!\partial_{i}\dot{\Delta}_{q}\biggl(\dot{\Delta}_{q^{\prime}}\rho\Bigl(\displaystyle\sum_{|\alpha|\leq 1}\dot{\Delta}_{q^{\prime}\!+\!\alpha}\Bigr)u^{i}\biggr).\end{array}$ Multiply both sides by $|\dot{\Delta}_{q}\rho|^{p-1}\,\mbox{sgn}\,(\dot{\Delta}_{q}\rho),$ integrate over $\mathbb{R}^{N}$ and apply Hölder inequality.
+Owing to $\,\mbox{div}\,\dot{S}_{q-1}u=0,$ we get: $\frac{1}{p}\frac{d}{dt}\|\dot{\Delta}_{q}\rho\|_{L^{p}}^{p}-\nu\int_{\mathbb{R}^{N}}\Delta\dot{\Delta}_{q}\rho\,|\dot{\Delta}_{q}\rho|^{p-1}\,\mbox{sgn}\,(\dot{\Delta}_{q}\rho)\,dx\leq\Bigl(\|\dot{\Delta}_{q}f\|_{L^{p}}+\|F_{q}\|_{L^{p}}\Bigr)\|\dot{\Delta}_{q}\rho\|_{L^{p}}^{p-1}.$ Now, according to Lemma A.5 in [ 7 ] , there exists some constant $\kappa$ depending only on $N$ and on $\,\mbox{Supp}\,\varphi$ such that $-\int_{\mathbb{R}^{N}}\Delta\dot{\Delta}_{q}\rho\,|\dot{\Delta}_{q}\rho|^{p-1}\,\mbox{sgn}\,(\dot{\Delta}_{q}\rho)\,dx\geq\kappa 2^{2q}\|\dot{\Delta}_{q}\rho\|_{L^{p}}^{p}.$ Therefore, we end up with $\frac{1}{p}\frac{d}{dt}\|\dot{\Delta}_{q}\rho\|_{L^{p}}^{p}+\kappa\nu 2^{2q}\|\dot{\Delta}_{q}\rho\|_{L^{p}}^{p}\leq\Bigl(\|\dot{\Delta}_{q}f\|_{L^{p}}+\sum_{i=1}^{4}\|F_{q}^{i}\|_{L^{p}}\Bigr)\|\dot{\Delta}_{q}\rho\|_{L^{p}}^{p-1}.$ (29) In the following calculations, assume that $2\leq p<\infty.$ Using a standard commutation estimate for bounding $F_{q}^{1}$ (see e. g. [ 5 ] ) and the definition of operators $\dot{\Delta}_{q}$ and $\dot{S}_{q}$ yields $\begin{array}[]{ll}\!\!\|F_{q}^{1}\|_{L^{p}}\lesssim\!\displaystyle\sum_{|q^{\prime}\!-\!q|\leq 4}\!\|{\nabla\dot{S}_{q^{\prime}\!-\!1}u}\|_{L^{\infty}}\|\dot{\Delta}_{q^{\prime}}\rho\|_{L^{p}},&\!\|F_{q}^{2}\|_{L^{p}}\leq\displaystyle\sum_{|q^{\prime}-q|\leq 1}2^{q}\|{\check{\Delta}_{q}u}\|_{L^{\infty}}\|\dot{\Delta}_{q}\rho\|_{L^{p}},\\
+\!\!\|F_{q}^{3}\|_{L^{p}}\lesssim\!\displaystyle\sum_{q^{\prime}\leq q+2}\!2^{q^{\prime}}\|{\dot{\Delta}_{q^{\prime}}\rho}\|_{L^{\infty}}\|{\check{\Delta}_{q}u}\|_{L^{p}},&\!\|F_{q}^{4}\|_{L^{p}}\!\lesssim\!\!\displaystyle\sum_{q^{\prime}\!\geq\!q-3}\!2^{q(1\!+\!\frac{N}{p})}\|\dot{\Delta}_{q^{\prime}}\rho\|_{L^{p}}\|\check{\Delta}_{q^{\prime}}u\|_{L^{p}},\end{array}$ with $\check{\Delta}_{q}:=\sum_{|\alpha|\leq N_{0}}\dot{\Delta}_{q^{\prime}}$ for some large enough positive integer $N_{0}.$ Note that $\hfil\displaystyle\|{\nabla\dot{S}_{q^{\prime}-1}u}\|_{L^{\infty}}\leq C\sum_{q^{\prime\prime}<q^{\prime}-N_{0}}2^{q^{\prime\prime}(1+\frac{N}{p})}\|\check{\Delta}_{q^{\prime\prime}}u\|_{L^{p}},$ $\hfil\displaystyle\|{\check{\Delta}_{q}u}\|_{L^{\infty}}\leq C2^{q\frac{N}{p}}\|{\check{\Delta}_{q}u}\|_{L^{p}},\quad\|{\dot{\Delta}_{q^{\prime}}\rho}\|_{L^{\infty}}\leq C2^{q^{\prime}\frac{N}{p}}\|{\dot{\Delta}_{q^{\prime}}\rho}\|_{L^{p}},$ so that plugging the above inequalities in
+( 29 ), we get $\hfil\displaystyle\frac{1}{p}\frac{d}{dt}\|\dot{\Delta}_{q}\rho\|_{L^{p}}^{p}+\kappa\nu 2^{2q}\|\dot{\Delta}_{q}\rho\|_{L^{p}}^{p}\leq\Bigl(\|\dot{\Delta}_{q}f\|_{L^{p}}\hfill$ $\hfil\displaystyle\hfill+C\sum_{q^{\prime}\geq q-4}2^{(q-q^{\prime})(1+\frac{N}{p})}\varepsilon^{\prime}_{q^{\prime}}\|\Delta_{q^{\prime}}\rho\|_{L^{p}}+C\sum_{q^{\prime}\leq q}2^{(q^{\prime}-q)(1+\frac{N}{p})}\varepsilon^{\prime}_{q}\|\Delta_{q^{\prime}}\rho\|_{L^{p}}\Bigr)\|\dot{\Delta}_{q}\rho\|_{L^{p}}^{p-1}$ with $\varepsilon_{r}(t):=\displaystyle\int_{0}^{t}\sum_{r^{\prime}\leq r}2^{r^{\prime}(1+\frac{N}{p})}\|\check{\Delta}_{r^{\prime}}u\|_{L^{p}}\,d\tau.$ Let $\lambda>0$ be a large enough
+positive parameter (to be fixed hereafter).
+We set $\rho_{q}^{\lambda}(t):=2^{qs}e^{-\lambda\varepsilon_{q}(t)}\|\dot{\Delta}_{q}\rho(t)\|_{L^{p}}\quad\text{and}\quad f_{q}^{\lambda}(t):=2^{qs}e^{-\lambda\varepsilon_{q}(t)}\|\dot{\Delta}_{q}f(t)\|_{L^{p}}.$ Obviously, the above inequality rewrites $\hfil\displaystyle\frac{1}{p}\frac{d}{dt}(\rho_{q}^{\lambda})^{p}+\lambda\varepsilon^{\prime}_{q}(\rho_{q}^{\lambda})^{p}+\kappa\nu 2^{2q}(\rho_{q}^{\lambda})^{p}\leq(\rho_{q}^{\lambda})^{p-1}\hfill$ $\hfil\displaystyle\hfill\times\biggl(f_{q}^{\lambda}+C2^{qs}e^{-\lambda\varepsilon_{q}}\Bigl(\sum_{q^{\prime}\geq q-4}2^{(q-q^{\prime})(1+\frac{N}{p})}\varepsilon^{\prime}_{q^{\prime}}\|\Delta_{q^{\prime}}\rho\|_{L^{p}}+\sum_{q^{\prime}\leq q}2^{(q^{\prime}-q)(1+\frac{N}{p})}\varepsilon^{\prime}_{q}\|\Delta_{q^{\prime}}\rho\|_{L^{p}}\Bigr)\biggr)$ so that, performing a time integration, we eventually get: $\hfil\displaystyle\rho_{q}^{\lambda}(t)+\kappa\nu 2^{2q}\int_{0}^{t}\rho_{q}^{\lambda}(\tau)\,d\tau+\lambda\int_{0}^{t}\varepsilon^{\prime}_{q}(\tau)\rho_{q}^{\lambda}(\tau)\,d\tau\leq\rho_{q}^{\lambda}(0)+\int_{0}^{t}f_{q}^{\lambda}(\tau)\,d\tau\hfill$ $\hfil\displaystyle\hfill+C\sum_{q^{\prime}\geq q-4}2^{(q-q^{\prime})(1+\frac{N}{p}+s)}\int_{0}^{t}\varepsilon^{\prime}_{q^{\prime}}(\tau)e^{\lambda(\varepsilon_{q^{\prime}}(\tau)-\varepsilon_{q}(\tau))}\rho_{q^{\prime}}^{\lambda}(\tau)\,d\tau\hfill$ $\hfil\displaystyle\hfill+C\sum_{q^{\prime}\leq q}2^{(q^{\prime}-q)(1+\frac{N}{p}-s)}\int_{0}^{t}\varepsilon^{\prime}_{q}(\tau)e^{\lambda(\varepsilon_{q^{\prime}}(\tau)-\varepsilon_{q}(\tau))}\rho_{q^{\prime}}^{\lambda}(\tau)\,d\tau.$ Using the decomposition $\varepsilon^{\prime}_{q}(\tau)=\varepsilon^{\prime}_{q^{\prime}}(\tau)+(\varepsilon^{\prime}_{q}-\varepsilon^{\prime}_{q^{\prime}})(\tau)$ in the last term and the fact that
+sequence $(\varepsilon_{n})_{n\in{\mathbb{Z}}}$ is nonnegative
+and nondecreasing, we gather that for all $q\in{\mathbb{Z}},$ $\hfil\displaystyle\rho_{q}^{\lambda}(t)+\kappa\nu 2^{2q}\int_{0}^{t}\rho_{q}^{\lambda}(\tau)\,d\tau+\lambda\int_{0}^{t}\varepsilon^{\prime}_{q}(\tau)\rho_{q}^{\lambda}(\tau)\,d\tau\leq\rho_{q}^{\lambda}(0)+\int_{0}^{t}f_{q}^{\lambda}(\tau)\,d\tau\hfill$ $\hfil\displaystyle\hfill+C\sum_{q^{\prime}\geq q}2^{(q-q^{\prime})(1+\frac{N}{p}+s)}e^{\lambda(\varepsilon_{q^{\prime}}(t)-\varepsilon_{q}(t))}\int_{0}^{t}\varepsilon^{\prime}_{q^{\prime}}(\tau)\rho_{q^{\prime}}^{\lambda}(\tau)\,d\tau\hfill$ $\hfil\displaystyle\hfill+C\sum_{q^{\prime}\leq q}2^{(q^{\prime}-q)(1+\frac{N}{p}-s)}\int_{0}^{t}\varepsilon^{\prime}_{q^{\prime}}(\tau)\rho_{q^{\prime}}^{\lambda}(\tau)\,d\tau+\frac{C}{\lambda}\sum_{q^{\prime}\leq q}2^{(q^{\prime}-q)(1+\frac{N}{p}-s)}\sup_{\tau\in[0,t]}\rho_{q^{\prime}}^{\lambda}(\tau).$ Suppose now that the following condition is
+satisfied: $\sup_{q\in{\mathbb{Z}}}2^{q\bigl(1+\frac{N}{p}\bigr)}\|\check{\Delta}_{q}u\|_{L^{1}_{t}(L^{p})}\leq\varepsilon\log 2\quad\text{for some }\ \varepsilon\ \text{ such
+that }\ \lambda\varepsilon\leq\frac{1}{2}\bigl(\frac{N}{p}+1+s\bigr).$ (30) This ensures that for all $q^{\prime}\geq q,$ we have $2^{(q-q^{\prime})(1+\frac{N}{p}+s)}e^{\lambda(\varepsilon_{q^{\prime}}(t)-\varepsilon_{q}(t))}\leq 2^{\frac{q-q^{\prime}}{2}(1+\frac{N}{p}+s)}.$ Taking the supremum with respect to $q$ in
+the equation preceding ( 30 ),
+we thus get $\hfil\displaystyle\sup_{\begin{subarray}{c}q\in{\mathbb{Z}}\\
+\tau\in[0,t]\end{subarray}}\biggl(\rho_{q}^{\lambda}(\tau)+\kappa\nu 2^{2q}\int_{0}^{\tau}\rho_{q}^{\lambda}(\tau^{\prime})\,d\tau^{\prime}+\lambda\int_{0}^{\tau}\varepsilon^{\prime}_{q}(\tau^{\prime})\rho_{q}^{\lambda}(\tau^{\prime})\,d\tau^{\prime}\biggr)\leq\sup_{q\in{\mathbb{Z}}}\rho_{q}^{\lambda}(0)\hfill$ $\hfil\displaystyle\hfill+\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}f_{q}^{\lambda}(\tau)\,d\tau+C\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}\varepsilon^{\prime}_{q}(\tau)\rho_{q}^{\lambda}(\tau)\,d\tau+\frac{C}{\lambda}\sup_{\begin{subarray}{c}q\in{\mathbb{Z}}\\
+\tau\in[0,t]\end{subarray}}\rho_{q}^{\lambda}(\tau).$ Therefore, $\hfil\displaystyle\sup_{\begin{subarray}{c}q\in{\mathbb{Z}}\\
+\tau\in[0,t]\end{subarray}}\rho_{q}^{\lambda}(\tau)+\nu\sup_{q\in{\mathbb{Z}}}2^{2q}\int_{0}^{t}\rho_{q}^{\lambda}(\tau)\,d\tau+\lambda\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}\varepsilon^{\prime}_{q}(\tau)\rho_{q}^{\lambda}(\tau)\,d\tau\leq 3\|\rho_{0}\|_{\dot{B}^{s}_{p,\infty}}\hfill$ $\hfil\displaystyle\hfill+3\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}f_{q}^{\lambda}(\tau)\,d\tau+3C\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}\varepsilon^{\prime}_{q^{\prime}}(\tau)\rho_{q^{\prime}}^{\lambda}(\tau)\,d\tau+\frac{3C}{\lambda}\sup_{\begin{subarray}{c}q\in{\mathbb{Z}}\\
+\tau\in[0,t]\end{subarray}}\rho_{q}^{\lambda}(\tau).$ In order to conclude, it is only a matter of
+choosing $\lambda=6C.$ We get $\sup_{\begin{subarray}{c}q\in{\mathbb{Z}}\\
+\tau\in[0,t]\end{subarray}}\rho_{q}^{\lambda}(\tau)+\nu\sup_{q\in{\mathbb{Z}}}2^{2q}\int_{0}^{t}\rho_{q}^{\lambda}(\tau)\,d\tau\leq C_{0}\biggl(\|\rho_{0}\|_{\dot{B}^{s}_{p,\infty}}+\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}f_{q}^{\lambda}(\tau)\,d\tau\biggr).$ This is exactly what we wanted. In the case $p<2,$ the above bound for $F_{q}^{4}$ turns out to be wrong.
+It may be replaced however by
+the following inequality $\|F_{q}^{4}\|_{L^{p}}\!\leq C\displaystyle\sum_{q^{\prime}\!\geq\!q-3}\!2^{q(1\!+\!\frac{N}{p^{\prime}})}\|\Delta_{q^{\prime}}\rho\|_{L^{p^{\prime}}}\|\check{\Delta}_{q^{\prime}}u\|_{L^{p}}.$ Hence, knowing that $\|\dot{\Delta}_{q^{\prime}}\rho\|_{L^{p^{\prime}}}\leq C2^{q^{\prime}(\frac{N}{p}-\frac{N}{p^{\prime}})}\|\dot{\Delta}_{q^{\prime}}\rho\|_{L^{p}},$ the term $2^{(q-q^{\prime})(1+\frac{N}{p})}$ has to replaced by $2^{(q-q^{\prime})(1+\frac{N}{p^{\prime}})}$ in all the summations over
+indices $(q,q^{\prime})$ such that $q^{\prime}\geq q-4.$ Again, this leads to the desired inequality. Let us now extend the previous estimate
+to the nonstationary Stokes system ( 27 ). Proposition 7 Let $u$ be as in Proposition 6 and $v$ satisfy the nonstationary Stokes system $\eqref{eq:stokesns}.$ Then $\hfil\displaystyle\sup_{\begin{subarray}{c}q\in{\mathbb{Z}}\\
+\tau\in[0,t]\end{subarray}}2^{qs-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}v(\tau)\|_{L^{p}}+\nu\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}2^{q(s+2)-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}v(\tau)\|_{L^{p}}\,d\tau\hfill$ $\hfil\displaystyle\hfill\leq C_{0}\biggl(\|v_{0}\|_{\dot{B}^{s}_{p,\infty}}+\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}2^{qs-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}{\cal P}f(\tau)\|_{L^{p}}\,d\tau\biggr)$ where ${\cal P}$ stands for the Leray projector over solenoidal vector
+fields. Proof: Applying operator ${\cal P}$ to the identity $\partial_{t}\dot{\Delta}_{q}v+\dot{S}_{q-1}u\cdot\nabla\dot{\Delta}_{q}v-\nu\Delta\dot{\Delta}_{q}v=\dot{\Delta}_{q}f+F_{q},$ and using that ${\cal P}\dot{\Delta}_{q}v=\dot{\Delta}_{q}v,$ we get $\partial_{t}\dot{\Delta}_{q}v+\dot{S}_{q-1}u\cdot\nabla\dot{\Delta}_{q}v-\nu\Delta\dot{\Delta}_{q}v={\cal P}\dot{\Delta}_{q}f+{\cal P}F_{q}+[\dot{S}_{q-1}u,{\cal P}]\cdot\nabla\dot{\Delta}_{q}v.$ On the one hand, because ${\cal F}F_{q}$ is supported
+in some annulus $2^{q}C(0,r_{1},r_{2}),$ there exists a constant $C>0$ such that $\|{{\cal P}F_{q}}\|_{L^{p}}\leq C\|{F_{q}}\|_{L^{p}}.$ On the other hand,
+standard commutator estimates (see e.g. [ 5 ] )
+ensure that the new term $[\dot{S}_{q-1}u,{\cal P}]\cdot\nabla\dot{\Delta}_{q}v$ satisfies
+the same inequalities as $F_{q}^{1}.$ Arguing as for system ( 26 ), it is then
+easy to complete the proof. 4.2 Proof of Theorem 3 Remind that the system satisfied by the difference
+between the two solutions reads $\left\{\begin{array}[]{l}\partial_{t}\delta\!\theta+\,\mbox{div}\,(u_{1}\delta\!\theta)=-\,\mbox{div}\,(\theta_{2}\,\delta\!u),\\[6.45831pt]
+\partial_{t}\delta\!u+\,\mbox{div}\,(u_{1}\otimes\delta\!u)-\nu\Delta\delta\!u+\nabla\delta\!\Pi=-\,\mbox{div}\,(\delta\!u\otimes u_{2})+\delta\!\theta\,e_{N}.\end{array}\right.$ We aim at proving that $(\delta\!\theta,\delta\!u)\equiv 0.$ To achieve it, we shall apply
+proposition 6 or 7 to the two equations
+of the above system with $s=-2+\frac{N}{p}-\eta$ (for
+some positive $\eta$ such that $\eta<-1+N\min\bigl(\frac{2}{p},1\bigr),$ which is consistent with the assumption $p<2N$ ). So we first have to justify that $\delta\!\theta$ and $\delta\!u$ belong to $L^{\infty}_{T}(\dot{B}^{-3+\frac{N}{p}+\varepsilon}_{p,\infty})$ for all $\varepsilon\in]0,1[.$ Combining
+interpolation with the assumptions on the solutions $(u_{1},\theta_{1})$ and $(u_{2},\theta_{2}),$ we see that $u_{i}$ belongs to
+every space $\widetilde{L}^{r}_{T}(\dot{B}_{p,\infty}^{\frac{N}{p}-1+\frac{2}{r}})$ with $1\leq r\leq\infty.$ Because $\partial_{t}\delta\!\theta=-\,\mbox{div}\,\bigl(\theta_{2}u_{2}-\theta_{1}u_{1}),\qquad\delta\!\theta(0)=0,$ Proposition 4 and Hölder inequality
+enable us to get $\delta\!\theta\in{\cal C}([0,T];\dot{B}^{-3+\frac{N}{p}+\varepsilon}_{p,\infty})$ for all $\varepsilon\in]0,1[.$ Plugging this new information in the equation
+for $\delta\!u$ and using again Proposition 4 ,
+it is then easy to justify that $\delta\!u$ is also in $L^{\infty}_{T}(\dot{B}^{-3+\frac{N}{p}+\varepsilon}_{p,\infty})$ . One can now tackle the proof of
+uniqueness. Assume that the constant $c$ has been chosen so small as condition
+( 28 ) to be satisfied
+by the vector field $u_{1}.$ Denoting $\hfil\displaystyle\varepsilon_{q}(t)=C\sum_{q^{\prime}\leq q}2^{q^{\prime}(1+\frac{N}{p})}\|\check{\Delta}_{q^{\prime}}u_{1}\|_{L_{t}^{1}(L^{p})},$ $\hfil\displaystyle\delta\!\Theta(t):=\sup_{\begin{subarray}{c}\tau\in[0,t]\\
+q\in{\mathbb{Z}}\end{subarray}}2^{-q(-2+\frac{N}{p}-\eta)-\varepsilon_{q}(\tau)}\|{\dot{\Delta}_{q}\delta\!\theta(\tau)}\|_{L^{p}},$ $\hfil\displaystyle\delta\!U(t):=\sup_{\begin{subarray}{c}\tau\in[0,t]\\
+q\in{\mathbb{Z}}\end{subarray}}2^{-q(-2+\frac{N}{p}-\eta)-\varepsilon_{q}(\tau)}\|{\dot{\Delta}_{q}\delta\!u(\tau)}\|_{L^{p}}+\nu\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}2^{q(\frac{N}{p}-\eta)-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}\delta\!u\|_{L^{p}}\,d\tau,$ we thus get according to Propositions 6 and 7 , $\begin{array}[]{lll}\delta\!\Theta(t)&\!\!\!\!\leq&C\displaystyle\sup_{q}\displaystyle\int_{0}^{t}2^{q(-2+\frac{N}{p}-\eta)-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}\,\mbox{div}\,(\theta_{2}\,\delta\!u)\|_{L^{p}}\,d\tau,\\[8.61108pt]
+\delta\!U(t)&\!\!\!\!\leq&C\displaystyle\sup_{q}\!\!\displaystyle\int_{0}^{t}\!\!2^{q(\frac{N}{p}-2-\eta)-\varepsilon_{q}(\tau)}\bigl(\|\dot{\Delta}_{q}\!\,\mbox{div}\,(\delta\!u\otimes u_{2})\|_{L^{p}}\!+\!\|\dot{\Delta}_{q}\delta\!\theta\|_{L^{p}}\bigr)\,d\tau.\end{array}$ Let us admit that the nonlinear
+terms may be bounded as follows
+(see the proof in the appendix): $\hfil\displaystyle\displaystyle\sup_{q}\displaystyle\int_{0}^{t}2^{q(-2+\frac{N}{p}-\eta)-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}\,\mbox{div}\,\!(\theta_{2}\,\delta\!u)\|_{L^{p}}\,d\tau\hfill$ $\hfil\displaystyle\hfill\leq C\|\theta_{2}\|_{L_{t}^{\infty}(\dot{B}^{-1+\frac{N}{p}}_{p,\infty})}\displaystyle\sup_{q}\displaystyle\int_{0}^{t}2^{q(\frac{N}{p}-\eta)-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}\delta\!u\|_{L^{p}}\,d\tau,$ $\hfil\displaystyle\displaystyle\sup_{q}\displaystyle\int_{0}^{t}\!2^{q(-2+\frac{N}{p}-\eta)-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}\,\mbox{div}\,\!(\delta\!u\!\otimes\!u_{2})\|_{L^{p}}\,d\tau\hfill$ $\hfil\displaystyle\hfill\leq C\|u_{2}\|_{L_{t}^{\infty}(\dot{B}^{\frac{N}{p}-1}_{p,\infty})}\displaystyle\sup_{q}\int_{0}^{t}2^{q(\frac{N}{p}-\eta)-\varepsilon_{q}(\tau)}\|\dot{\Delta}_{q}\delta\!u\|_{L^{p}}\,d\tau.$ We eventually get $\begin{array}[]{lll}\delta\!\Theta(t)&\leq&C\nu^{-1}\|\theta_{2}\|_{L_{t}^{\infty}(\dot{B}^{-1+\frac{N}{p}}_{p,\infty})}\delta\!U(t),\\[4.30554pt]
+\delta\!U(t)&\leq&C\Bigl(\nu^{-1}\|u_{2}\|_{L_{t}^{\infty}(\dot{B}^{\frac{N}{p}-1}_{p,\infty})}\delta\!U(t)+\displaystyle\int_{0}^{t}\delta\!\Theta(\tau)\,d\tau\Bigr),\end{array}$ whence, if $c$ has been chosen small enough in ( 4 ), $\delta\!U(t)\leq C\nu^{-1}\int_{0}^{t}\|\theta_{2}\|_{L_{\tau}^{\infty}(\dot{B}^{\frac{N}{p}-1}_{p,\infty})}\delta\!U(\tau)\,d\tau.$ Gronwall
+Lemma thus ensures that $\delta\!U\equiv 0$ on $[0,T].$ Of course, this
+also entails that $\delta\!\theta\equiv 0$ on $[0,T].$ 4.3 The limit case $p=2N$ Carrying out the method which has been used in
+the previous section to the limit
+case $p=2N$ seems hopeless.
+Indeed,
+we would have to deal with the
+product $\theta_{2}\delta\!u$ while $\theta_{2}\in L^{\infty}_{T}(\dot{B}^{-\frac{1}{2}-\varepsilon}_{2N,\infty})$ and $\delta\!u\in\widetilde{L}^{1}_{T}(\dot{B}^{\frac{1}{2}-\varepsilon}_{2N,\infty})$ for some $\varepsilon>0,$ which does not make sense
+since the sum of indices of regularity is negative. In order to meet the index $p=2N,$ one may
+resort to
+Besov spaces with third index $1$ so as to have
+a velocity field
+in $L^{1}_{T}(\hbox{Lip}).$ Thus no losing a priori estimate is needed.
+On the other hand, due to the weak regularity
+assumptions,
+we shall be in the limit case for product laws
+in Proposition 4 so that a logarithmic interpolation
+argument (similar to that which has been used in [ 8 ] and [ 10 ] ) will be required. Let us state the result. Theorem 5 Let $(\theta_{1},u_{1},\nabla\Pi_{1})$ and $(\theta_{2},u_{2},\nabla\Pi_{2})$ satisfy ( 1 ) with the same data.
+Assume that $\theta_{i}\in L^{\infty}_{T}(\dot{B}^{-\frac{1}{2}}_{2N,\infty})\quad\!\!\text{and}\quad\!\!u_{i}\in L_{T}^{\infty}(\dot{B}^{-\frac{1}{2}}_{2N,1})\cap L_{T}^{1}(\dot{B}^{\frac{3}{2}}_{2N,1})\quad\text{for}\ \,i=1,2.$ Then $(\theta_{1},u_{1},\nabla\Pi_{1})\equiv(\theta_{2},u_{2},\nabla\Pi_{2})$ on $[0,T].$ Proof: We omit the proof of the fact that $(\delta\!\theta,\delta\!u,\nabla\delta\!\Pi)$ belongs to the space $G_{T}:=L^{\infty}_{T}(\dot{B}^{-\frac{3}{2}}_{2N,\infty}\big)\times\Big({\cal C}\big([0,T];\,\dot{B}^{-\frac{3}{2}}_{2N,\infty}\big)\cap\widetilde{L}^{1}_{T}\big(\dot{B}^{\frac{1}{2}}_{2N,\infty}\big)\Big)^{N}\times\Big(\widetilde{L}^{1}_{T}\big(\dot{B}^{-\frac{3}{2}}_{2N,\infty}\big)\Big)^{N}.$ In the following computations,
+the space $G_{T}$ will be endowed with the norm $\|(\theta,u,\nabla\Pi)\|_{G_{T}}\overset{d\acute{e}f}{=}\|\theta\|_{L^{\infty}_{T}(\dot{B}^{-\frac{3}{2}}_{2N,\infty})}+\|u\|_{L^{\infty}_{T}(\dot{B}^{-\frac{3}{2}}_{2N,\infty})}+\|u\|_{\widetilde{L}^{1}_{T}(\dot{B}^{\frac{1}{2}}_{2N,\infty})}+\|\nabla\Pi\|_{\widetilde{L}^{1}_{T}(\dot{B}^{-\frac{3}{2}}_{2N,\infty})}.$ A priori estimates for the transport
+equation (see e.g. the limit case in Proposition 4.7 of [ 11 ] ) and inequality
+( 11 ) guarantee that for all $t\leq T$ $\|\delta\!\theta\|_{L^{\infty}_{t}(\dot{B}^{-\frac{3}{2}}_{2N,\infty})}\leq C\exp\Big(C\|\nabla u_{1}\|_{L^{1}_{t}(\dot{B}^{\frac{1}{2}}_{2N,1})}\Big)\int_{0}^{t}\|\delta\!u\|_{\dot{B}^{\frac{1}{2}}_{2N,1}}\|\theta_{2}\|_{\dot{B}^{-\frac{1}{2}}_{2N,\infty}}\,d\tau.$ (31) Next, we have according to Proposition 3.2 of [ 2 ] and Inequality ( 16 ), $\hfil\displaystyle\|\delta\!u\|_{L^{\infty}_{t}(\dot{B}^{-\frac{3}{2}}_{2N,\infty})}+\nu\|\delta\!u\|_{\widetilde{L}^{1}_{t}(\dot{B}^{\frac{1}{2}}_{2N,\infty})}+\|\nabla\delta\!\Pi\|_{\widetilde{L}^{1}_{t}(\dot{B}^{-\frac{3}{2}}_{2N,\infty})}\hfill$ $\hfil\displaystyle\hfill\leq Ce^{C\|u_{1}\|_{L^{1}_{t}(\dot{B}^{\frac{3}{2}}_{2N,1})}}\int_{0}^{t}\|\delta\!\theta e_{N}-\,\mbox{div}\,(\delta\!u\otimes u_{2})\|_{\dot{B}^{-\frac{3}{2}}_{2N,\infty}}\,d\tau.$ Because $\,\mbox{div}\,\delta\!u=0,$ we have for $1\leq i\leq N,$ $\bigl(\,\mbox{div}\,(\delta\!u\otimes u_{2})\bigr)^{i}=\partial_{j}\bigl(\dot{T}_{\delta\!u^{j}}u_{2}^{i}+\dot{R}(\delta\!u^{j},u_{2}^{i})\bigr)+\dot{T}_{\partial_{j}u_{2}^{i}}\delta\!u^{j}.$ So using Proposition 3 ,
+we find that $\|\,\mbox{div}\,(\delta\!u\otimes u_{2})\|_{\dot{B}^{-\frac{3}{2}}_{2N,\infty}}\leq C\|\delta\!u\|_{\dot{B}^{-\frac{3}{2}}_{2N,\infty}}\|u_{2}\|_{\dot{B}^{\frac{3}{2}}_{2N,1}}.$ Now, taking advantage of Proposition 1.8 in [ 8 ] ,
+one may write $\|\delta\!u\|_{L^{1}_{t}(\dot{B}^{\frac{1}{2}}_{2N,1})}\leq C\|\delta u\|_{\widetilde{L}^{1}_{t}(\dot{B}^{\frac{1}{2}}_{2N,\infty})}\log\bigg(e+\frac{\|\delta\!u\|_{L^{1}_{t}(\dot{B}^{-\frac{1}{2}}_{2N,1})}+\|\delta\!u\|_{L^{1}_{t}(\dot{B}^{\frac{3}{2}}_{2N,1})}}{\|\delta\!u\|_{\widetilde{L}^{1}_{t}(\dot{B}^{\frac{1}{2}}_{2N,\infty})}}\bigg).$ Let us introduce the notation $\begin{array}[]{lll}V(t)&=&t\big(\|u_{1}\|_{L^{\infty}_{t}(\dot{B}^{-\frac{1}{2}}_{2N,1})}+\|u_{2}\|_{L^{\infty}_{t}(\dot{B}^{-\frac{1}{2}}_{2N,1})}\big)+\|u_{1}\|_{L^{1}_{t}(\dot{B}^{\frac{3}{2}}_{2N,1})}+\|u_{2}\|_{L^{1}_{t}(\dot{B}^{\frac{3}{2}}_{2N,1})},\\
+W(t)&=&\|\delta\!u\|_{L^{\infty}_{t}(B^{-\frac{3}{2}}_{2N,\infty})}+\|\delta\!u\|_{\widetilde{L}^{1}_{t}(\dot{B}^{\frac{1}{2}}_{2N,\infty})}+\|\nabla\delta\Pi\|_{\widetilde{L}^{1}_{t}(\dot{B}^{-\frac{3}{2}}_{2N,\infty})}.\end{array}$ Because $\|\delta\!u\|_{L^{1}_{t}(\dot{B}^{-\frac{1}{2}}_{2N,1})}+\|\delta\!u\|_{L^{1}_{t}(\dot{B}^{\frac{3}{2}}_{2N,1})}\leq V(t),$ and the map $x\longmapsto x\ln(e+\frac{y}{x})$ (for fixed $y\geq 0$ ) is nondecreasing over $\mathbb{R}_{+},$ we end up with $\hfil\displaystyle W(t)\leq Ce^{C\|u_{1}\|_{L^{1}_{t}(\dot{B}^{\frac{3}{2}}_{2N,1})}}\int_{0}^{t}\Bigl(\|u_{2}(s)\|_{\dot{B}^{\frac{3}{2}}_{2N,1}}+\|\theta_{2}(s)\|_{\dot{B}^{-\frac{1}{2}}_{2N,\infty}}\Bigr)W(s)\log\bigg(e+\frac{V(s)}{W(s)}\bigg)\,ds.$ Applying Osgood lemma (see e.g. [ 5 ] )
+thus yields $W\equiv 0$ on $[0,T]$ whence also $\delta\!\theta=0$ according to inequality ( 31 ).
+This completes the proof. 5 Appendix This appendix is devoted to proving the
+estimates for the convection terms
+that we used in section 4.2 . Lemma 4 Let $(\alpha_{q})_{q\in{\mathbb{Z}}}$ be
+a sequence of nonnegative
+functions over $[0,T].$ Let $s_{1},$ $s_{2},$ $p$ satisfy $1\leq p\leq\infty,\quad\frac{N}{p}+1>s_{1},\quad\frac{N}{p}>s_{2}\ \ \text{and}\ \ s_{1}+s_{2}>N\max\Bigl(0,\frac{2}{p}-1\Bigr).$ Assume that for all $q^{\prime}\geq q$ and $t\in[0,T],$ we have $0\leq\alpha_{q^{\prime}}(t)-\alpha_{q}(t)\leq\frac{1}{2}\biggl(s_{1}+s_{2}+N\min\Bigl(0,1-\frac{2}{p}\Bigr)\biggr)(q^{\prime}-q).$ (32) Then for all $r\in[1,\infty],$ there exists a constant $C$ depending only on $s_{1},$ $s_{2},$ $N$ and $p$ such that for
+all function $b$ and solenoidal vector field $a$ over $\mathbb{R}^{N},$ the following estimate holds true
+for all $t\in[0,T]$ : $\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}2^{q(s_{1}+s_{2}-1-\frac{N}{p})-\alpha_{q}(\tau)}\|\dot{\Delta}_{q}{\rm div}(ab)\|_{L^{p}}\,d\tau\leq C\|b\|_{\widetilde{L}_{t}^{r}(\dot{B}^{s_{1}}_{p,\infty})}\sup_{q\in{\mathbb{Z}}}\Bigl\|2^{qs_{2}-\alpha_{q}}\|\dot{\Delta}_{q}a\|_{L^{p}}\Bigr\|_{L_{t}^{r^{\prime}}}.$ Proof: The proof relies on Bony’s decomposition.
+Knowing that $\,\mbox{div}\,b=0,$ we have (with the usual
+summation convention over repeated indices): $\dot{\Delta}_{q}\,\mbox{div}\,(ab)=\dot{\Delta}_{q}\bigl(\dot{T}_{\partial_{j}b}a^{j}\bigr)+\dot{\Delta}_{q}\bigl(\dot{T}_{a^{j}}\partial_{j}b\bigr)+\dot{\Delta}_{q}\partial_{j}\dot{R}(a^{j},b).$ (33) By virtue of ( 7 ), one may write $\dot{\Delta}_{q}\bigl(\dot{T}_{\partial_{j}b}a^{j}\bigr)=\sum_{|q^{\prime}-q|\leq 4}\dot{\Delta}_{q}\bigl(\dot{S}_{q^{\prime}-1}\partial_{j}b\,\dot{\Delta}_{q^{\prime}}a^{j}\bigr).$ For the sake of simplicity, let us proceed as
+if $\dot{\Delta}_{q}\bigl(T_{\partial_{j}b}a^{j}\bigr)=\dot{S}_{q-1}\partial_{j}b\,\dot{\Delta}_{q}a^{j}$ (having ( 32 ) justifies this
+approximation).
+Using the definition of $\dot{S}_{q-1},$ we get $2^{q\bigl(s_{1}-1-\frac{N}{p}\bigr)}\|S_{q-1}\partial_{j}b\,\dot{\Delta}_{q}a^{j}\|_{L^{p}}\leq\|\dot{\Delta}_{q}a\|_{L^{p}}\sum_{q^{\prime}\leq q-2}2^{q^{\prime}(s_{1}\!-\!1\!-\!\frac{N}{p})}\|\dot{\Delta}_{q^{\prime}}\nabla b\|_{L^{\infty}}2^{(q-q^{\prime})(s_{1}\!-\!1\!-\!\frac{N}{p})}.$ In consequence, we have for all $0\leq t\leq T,$ $\hfil\displaystyle\int_{0}^{t}2^{q(s_{1}+s_{2}-1-\frac{N}{p})-\alpha_{q}(\tau)}\|\dot{S}_{q-1}\partial_{j}b\,\dot{\Delta}_{q}a^{j}\|_{L^{p}}\,d\tau\hfill$ $\hfil\displaystyle\hfill\leq\Bigl\|2^{qs_{2}-\alpha_{q}}\|\dot{\Delta}_{q}a\|_{L^{p}}\Bigr\|_{L_{t}^{r^{\prime}}}\sum_{q^{\prime}\leq q-2}2^{q^{\prime}(s_{1}-1-\frac{N}{p})}\|\dot{\Delta}_{q^{\prime}}\nabla b\|_{L_{t}^{r}(L^{\infty})}2^{(q-q^{\prime})(s_{1}-1-\frac{N}{p})}.$ Since $s_{1}-1-\frac{N}{p}<0,$ we thus get $\begin{array}[b]{r}\!\!\!\displaystyle{\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}2^{q(s_{1}+s_{2}-1-\frac{N}{p})-\alpha_{q}(\tau)}\|\dot{\Delta}_{q}\dot{T}_{\partial_{j}b}a^{j}\|_{L^{p}}\,d\tau}\\[6.45831pt]
+\!\!\!\leq C\|\nabla b\|_{\widetilde{L}_{t}^{r}(\dot{B}^{s_{1}-1-\frac{N}{p}}_{\infty,\infty})}\end{array}\sup_{q\in{\mathbb{Z}}}\Bigl\|2^{qs_{2}-\alpha_{q}}\|\dot{\Delta}_{q}a\|_{L^{p}}\Bigr\|_{L_{t}^{r^{\prime}}}.$ (34) Likewise, in order to bound the second term of ( 33 ), one
+may proceed as if $\dot{\Delta}_{q}\bigl(\dot{T}_{a^{j}}\partial_{j}b\bigr)=\dot{S}_{q-1}a^{j}\,\dot{\Delta}_{q}\partial_{j}b.$ Now, for all $0\leq\tau\leq T,$ we have $\hfil\displaystyle 2^{q(s_{1}+s_{2}-1-\frac{N}{p})-\alpha_{q}(\tau)}\|\dot{S}_{q-1}a^{j}\dot{\Delta}_{q}\partial_{j}b\|_{L^{p}}\hfill$ $\hfil\displaystyle\hfill\leq 2^{q(s_{1}-1)}\|\dot{\Delta}_{q}\nabla b\|_{L^{p}}\sum_{q^{\prime}\leq q-2}2^{-q^{\prime}(\frac{N}{p}-s_{2})-\alpha_{q}(\tau)}\|\dot{\Delta}_{q^{\prime}}a\|_{L^{\infty}}2^{(q^{\prime}-q)(\frac{N}{p}-s_{2})}.$ Knowing that $\alpha_{q}\geq\alpha_{q^{\prime}}$ for $q\geq q^{\prime},$ we deduce that $\hfil\displaystyle\int_{0}^{t}2^{q(s_{1}+s_{2}-1-\frac{N}{p})-\alpha_{q}(\tau)}\|\dot{S}_{q-1}a^{j}\dot{\Delta}_{q}\partial_{j}b\|_{L^{p}}\,d\tau\hfill$ $\hfil\displaystyle\hfill\leq 2^{q(s_{1}-1)}\|\dot{\Delta}_{q}\nabla b\|_{L_{t}^{r}(L^{p})}\sum_{q^{\prime}\leq q-2}\Bigl\|2^{-q^{\prime}(\frac{N}{p}-s_{2})-\alpha_{q^{\prime}}}\|\dot{\Delta}_{q^{\prime}}a\|_{L^{\infty}}\Bigr\|_{L_{t}^{r^{\prime}}}2^{(q^{\prime}-q)(\frac{N}{p}-s_{2})}.$ Combining Bernstein inequality and the fact that $s_{2}<\frac{N}{p},$ we thus conclude that $\begin{array}[b]{r}\!\!\!\displaystyle{\sup_{q\in{\mathbb{Z}}}\int_{0}^{t}2^{q(s_{1}+s_{2}-1-\frac{N}{p})-\alpha_{q}(\tau)}\|S_{q-1}a^{j}\dot{\Delta}_{q}\partial_{j}b\|_{L^{p}}\,d\tau\!\!\!}\\[6.45831pt]
+\leq C\|\nabla b\|_{\widetilde{L}_{t}^{r}(B^{s_{1}-1}_{p,\infty})}\end{array}\sup_{q\in{\mathbb{Z}}}\Bigl\|2^{qs_{2}-\alpha_{q}}\|\dot{\Delta}_{q}a\|_{L^{p}}\Bigr\|_{L_{t}^{r^{\prime}}}.$ (35) In order to treat the remainder term, we shall
+consider the cases $p\geq 2$ and $p<2.$ Let us start with the case $p\geq 2$ which is slightly easier. We have $\dot{\Delta}_{q}\partial_{j}\dot{R}(a^{j},b)=\sum_{q^{\prime}\geq q-3}\partial_{j}\dot{\Delta}_{q}\bigl(\dot{\Delta}_{q^{\prime}}a^{j}\widetilde{\Delta}_{q^{\prime}}b)\quad\text{with}\quad\widetilde{\Delta}_{q^{\prime}}=\dot{\Delta}_{q^{\prime}-1}+\dot{\Delta}_{q^{\prime}}+\dot{\Delta}_{q^{\prime}+1}.$ Because ${\cal F}\bigl(\partial_{j}\dot{\Delta}_{q}\bigl(\Delta_{q^{\prime}}a^{j}\widetilde{\Delta}_{q^{\prime}}b)\bigr)$ is supported
+in a ball of size $2^{q},$ Bernstein
+inequality ensures that $2^{q(s_{1}+s_{2}-1-\frac{N}{p})-\alpha_{q}(\tau)}\|\dot{\Delta}_{q}\partial_{j}\dot{R}(a^{j},b)\|_{L^{p}}\leq C\sum_{q^{\prime}\geq q-3}2^{q(s_{1}+s_{2})-\alpha_{q}(\tau)}\|\dot{\Delta}_{q^{\prime}}a\|_{L^{p}}\|\widetilde{\Delta}_{q^{\prime}}b\|_{L^{p}},$ whence $\hfil\displaystyle\int_{0}^{t}2^{q(s_{1}+s_{2}-1-\frac{N}{p})-\alpha_{q}(\tau)}\|\dot{\Delta}_{q}\partial_{j}\dot{R}(a^{j},b)\|_{L^{p}}\,d\tau\hfill$ $\hfil\displaystyle\hfill\leq C\sum_{q^{\prime}\geq q-3}\int_{0}^{t}2^{q^{\prime}s_{2}-\alpha_{q^{\prime}}(\tau)}\|\Delta_{q^{\prime}}a\|_{L^{p}}\,\bigl(2^{q^{\prime}s_{1}}\!\|\widetilde{\Delta}_{q^{\prime}}b\|_{L^{p}}\bigr)\,2^{(\alpha_{q^{\prime}}\!-\!\alpha_{q})(\tau)}2^{(q-q^{\prime})(s_{1}+s_{2})}.$ Thanks to assumption ( 32 ), we have $(\alpha_{q^{\prime}}-\alpha_{q})(\tau)+(q-q^{\prime})(s_{1}+s_{2})\leq(q-q^{\prime})\Bigl(\frac{s_{1}+s_{2}}{2}\Bigr)\quad\hbox{for all}\quad q^{\prime}\geq q.$ As $s_{1}+s_{2}>0,$ we end up for all $q\in{\mathbb{Z}}$ with $\int_{0}^{t}2^{q(s_{1}\!+\!s_{2}\!-\!1\!-\!\frac{N}{p})-\alpha_{q}(\tau)}\|\dot{\Delta}_{q}\partial_{j}\dot{R}(a^{j},b)\|_{L^{p}}\,d\tau\lesssim\|b\|_{\widetilde{L}_{t}^{r}(\dot{B}^{s_{1}}_{p,\infty})}\sup_{q\in{\mathbb{Z}}}\Bigl\|2^{qs_{2}-\alpha_{q}}\|\dot{\Delta}_{q}a\|_{L^{p}}\Bigr\|_{L_{t}^{r^{\prime}}},$ which, together with ( 33 ), ( 34 ) and ( 35 ),
+completes the proof in the case $p\geq 2.$ If $p<2,$ one may write (use Bernstein inequality) $2^{q(s_{1}\!+\!s_{2}\!-\!1\!-\!\frac{N}{p})-\alpha_{q}(\tau)}\|\dot{\Delta}_{q}\partial_{j}\dot{R}(a^{j},b)\|_{L^{p}}\leq C\!\sum_{q^{\prime}\geq q-3}2^{q(s_{1}\!+\!s_{2}\!+\!\frac{N}{p^{\prime}}\!-\!\frac{N}{p})-\alpha_{q}(\tau)}\|\dot{\Delta}_{q^{\prime}}a\|_{L^{p^{\prime}}}\|\widetilde{\Delta}_{q^{\prime}}b\|_{L^{p}}$ and use that $\|\dot{\Delta}_{q^{\prime}}a\|_{L^{p^{\prime}}}\leq C2^{q^{\prime}\bigl(\frac{N}{p}-\frac{N}{p^{\prime}}\bigr)}\|\dot{\Delta}_{q^{\prime}}a\|_{L^{p}}.$ Therefore, one may go along the lines
+of the case $p\geq 2.$ It is only a matter of changing
+the term $2^{(q-q^{\prime})(s_{1}+s_{2})}$ into $2^{(q-q^{\prime})(s_{1}+s_{2}+\frac{N}{p^{\prime}}-\frac{N}{p})}.$ References [1] H. Abidi , T. Hmidi : On the global
+well-posedness for Boussinesq system, Journal of
+Differential Equations , 233 (1) (2007) 199–220. [2] H. Abidi , M. Paicu : Existence globale pour
+un fluide inhomogène, Annales de l’Institut Fourier , 57 (3) (2007), 883–917. [3] H. Bahouri , J.-Y. Chemin :
+Équations de transport relatives à des champs de vecteurs
+non-lipschitziens et mécanique des fluides, Archive for Rational
+Mechanics and Analysis , 127 (1994), 159–181. [4] J.-M. Bony : Calcul
+symbolique et propagation des singularités pour les
+équations aux dérivées partielles non linéaires, Annales Scientifiques de l’École Normale Supérieure , 14 , (1981), 209–246. [5] J.-Y. Chemin : Fluides parfaits incompressibles. Astérisque, 230, 1995. [6] J.-Y. Chemin : Théorèmes d’unicité pour le
+système de Navier-Stokes tridimensionnel, Journal d’Analyse
+Mathématique , 77 (1999), 25–50. [7] R. Danchin : Local theory in critical spaces for
+compressible viscous and heat-conductive gases, Communications in
+Partial Differential Equations , 26 (7–8) (2001), 1183-1233
+and 27 (11–12) (2002), 2531-2532. [8] R. Danchin :
+Density-dependent incompressible viscous
+fluids in critical spaces, Proceedings of the Royal Society of
+Edinburgh , 133A (2003), 1311–1334. [9] R. Danchin : Estimates in Besov spaces for transport
+and transport-diffusion equations with almost Lipschitz
+coefficients, Revista Matemática Iberoamericana , 21 (2005)
+863–888. [10] R. Danchin :
+On the uniqueness in critical spaces
+for compressible Navier-Stokes equations, Nonlinear Differential Equations
+and Applications , 12 (2005), 111–128. [11] R. Danchin et M. Paicu :
+Le théorème de Leray et le théorème de Fujita-Kato
+pour le système de Boussinesq
+partiellement visqueux, to appear in Bulletin de la Société Mathématique de France . [12] H. Fujita , T. Kato :
+On the Navier-Stokes initial value problem I, Archive for
+Rational Mechanics and Analysis , 16 (1964), 269–315. [13] T. Hmidi , S. Keraani :
+On the global well-posedness of the two-dimensional Boussinesq
+system with a zero diffusivity, Advances in Differential Equations , 12 (4)
+(2007), 461–480. [14] T. Kato :
+Strong $L^{p}$ -solutions of the Navier-Stokes equation in $\mathbb{R}^{m},$ with applications to weak solutions, Mathematische
+Zeitschrift , 187 (1984)
+471–480. [15] P.-G. Lemarié-Rieusset : Recent progress in Navier-Stokes
+equations. Chapman & Hall/CRC Research Notes in Mathematics, 431
+(2002). [16] J. Leray :
+Sur le mouvement d’un liquide visqueux remplissant l’espace, Acta Mathematica , 63 (1934), 193–248. [17] J. Pedlosky : Geophysical fluid dynamics. Springer Verlag, New-York, 1987. [18] T. Runst , W. Sickel : Sobolev spaces of
+fractional order, Nemytskij operators, and nonlinear partial
+differential equations. de Gruyter Series in Nonlinear Analysis
+and Applications, 3. Walter de Gruyter & Co., Berlin, 1996. Experimental support, please view the build logs for errors. Generated by L A T E xml . Instructions for reporting errors We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: Click the "Report Issue" ( ) button, located in the page header. Tip: You can select the relevant text first, to include it in your report. Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . We gratefully acknowledge support from our major funders , member institutions , ,
+        and all contributors. About · Help · Contact · Subscribe · Copyright · Privacy · Accessibility · Operational Status (opens in new tab)

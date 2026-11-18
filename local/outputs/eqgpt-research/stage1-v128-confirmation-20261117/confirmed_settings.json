@@ -1,0 +1,37 @@
+{
+  "status": "CONFIRMED_FOR_VOCAB128_CANDIDATE_FOR_96_160",
+  "vocabulary": 128,
+  "seeds": [
+    525,
+    526,
+    527
+  ],
+  "scale_settings": {
+    "212": {
+      "learning_rate": 0.0001,
+      "weight_decay_matrix": 0.001
+    },
+    "636": {
+      "learning_rate": 5e-05,
+      "weight_decay_matrix": 0
+    }
+  },
+  "common": {
+    "cosine_epochs": 20,
+    "minimum_learning_rate": 1e-06,
+    "minimum_epochs": 30,
+    "patience": 15,
+    "min_delta": 0.0001,
+    "maximum_epochs": 80,
+    "batch_size": 128,
+    "gradient_clip": 1,
+    "optimizer": "Adam"
+  },
+  "schedule": "step after each completed epoch through T; eta_min used from T+1 onward; then hold",
+  "selection": "true best validation CE checkpoint; patience uses effective improvement anchor",
+  "limitations": [
+    "old-strategy comparison only paired at seed525",
+    "212/622 generalization gap persists",
+    "not established optimal for96/160"
+  ]
+}
