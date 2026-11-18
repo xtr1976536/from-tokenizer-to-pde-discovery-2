@@ -54,4 +54,4 @@
 - 虚拟环境、Git 元数据、缓存、操作系统旁路文件不归档；公开脚本中的凭据替换为环境变量。原始文件 SHA 与发布 SHA 分开保存，避免把脱敏文件误称逐字节原件。
 - 没有添加第三方内容的统一许可证；各上游源码/文献/数据的原许可证和来源继续适用。
 
-完整性核验和发布进度见 `manifests/`。权重上传完成后会加入最终 Release 附件核验清单。
+权重已全部上传并验证：419个唯一文件、446个原始路径，见 `manifests/weight_verification.json`。完整处理后Cylinder数据在独立 `processed-cylinder-v1` Release，下载说明见 `dataset_reference/README.md`。

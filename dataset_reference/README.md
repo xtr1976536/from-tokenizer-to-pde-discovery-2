@@ -60,3 +60,11 @@
 ## 来源与许可
 
 来源：[RealPDEBench dataset](https://huggingface.co/datasets/AI4Science-WestlakeU/RealPDEBench)，[上游代码](https://github.com/AI4Science-WestlakeU/RealPDEBench)。本次小样例为原发布数据摘录及其裁剪/取样版本，应遵循上游 **CC BY-NC 4.0**（[许可文本](https://creativecommons.org/licenses/by-nc/4.0/)），非商业使用并保留来源和修改说明；不以本仓库代码许可证替换数据许可。数据处理不表示原作者认可本项目。
+
+## 完整处理后数据集
+
+完整92条轨迹（约34GiB未压缩）独立发布到 [processed-cylinder-v1 Release](https://github.com/xtr1976536/from-tokenizer-to-pde-discovery-2/releases/tag/processed-cylinder-v1)：每轨迹一个 `processed-cylinder-<sim_id>.tar.gz`，另有 `processed-cylinder-metadata.tar.gz` 包含当前manifest、几何、归一化统计、官方索引审计、时间块划分与历史元数据。只发布处理后数据，不重复上传全量原始Arrow数据。
+
+完整附件核验后，`full_dataset_manifest.json` 会列出93个附件及其内部各文件的SHA-256。可用 `python download_processed.py --destination /path/to/data` 逐包下载、解压并验证；只取某一轨迹可加 `--trajectory 10031.h5`，metadata仍会下载。恢复的目录名是 `cylinder_numerical_stage2_v1`。请使用当前manifest确定实际训练/验证/test角色，history内的旧划分只作审计。
+
+完整派生数据继续适用上述RealPDEBench的CC BY-NC 4.0许可、归属和非商业条件；本项目裁剪、空间取样、mask和自定义划分均已在本页注明。
